@@ -44,7 +44,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.XuADY2);
   },
-  parent: fn(7992).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7993).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useDataToImproveDiscordSettingValue() {
         const cResult = c.c(2);

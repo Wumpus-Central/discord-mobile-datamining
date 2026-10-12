@@ -250,12 +250,12 @@ export default noop.memo(
           small = false;
         }
         let VJlc0S = dependencyMap;
-        const tmp = voiceStates(9307)();
+        const tmp = voiceStates(9308)();
         const tmp2 = voiceStates(5031)();
         let joinButtonText = closure_11(tmp, channel(4969).isThemeLight(tmp2));
         const obj = channel(4969);
-        const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
-        const obj2 = channel(10357);
+        const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
+        const obj2 = channel(10358);
         const items = [PermissionStore];
         const stateFromStores = channel(573).useStateFromStores(
           items,
@@ -286,9 +286,9 @@ export default noop.memo(
           tmp12 = tmp8;
         }
         const tmp3Result = channel(573);
-        const connectedUserLimit = channel(11990).useConnectedUserLimit({ channel, video: tmp12 });
-        const tmp3Result3 = channel(11990);
-        let connectedUserLimitFormatted = channel(11990).useConnectedUserLimitFormatted({
+        const connectedUserLimit = channel(11992).useConnectedUserLimit({ channel, video: tmp12 });
+        const tmp3Result3 = channel(11992);
+        let connectedUserLimitFormatted = channel(11992).useConnectedUserLimitFormatted({
           channel,
           video: tmp12,
           userCount: sum,
@@ -375,9 +375,9 @@ export default noop.memo(
               }
               const items3 = [joinButtonIconActive, { marginRight: 3, marginLeft: -1 }];
               if (isGuildStageVoiceResult) {
-                let VoiceNormalIcon = tmp3(8224).StageIcon;
+                let VoiceNormalIcon = tmp3(8225).StageIcon;
               } else {
-                VoiceNormalIcon = tmp3(8228).VoiceNormalIcon;
+                VoiceNormalIcon = tmp3(8229).VoiceNormalIcon;
               }
               const obj10 = { size: "xs", style: items3 };
               <VoiceNormalIcon size="xs" style={items3} />;
@@ -416,6 +416,6 @@ export default noop.memo(
             formatted = str(toUpperCase.VJlc0S);
           }
         }
-        const tmp3Result4 = channel(11990);
+        const tmp3Result4 = channel(11992);
       },
 );

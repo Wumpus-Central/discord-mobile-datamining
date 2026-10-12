@@ -1151,7 +1151,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   return closure_28(sharedValue, obj6);
 }));
 const results = [];
-let items = [fn(8699).AutocompleterResultTypes.GUILD, fn(8699).AutocompleterResultTypes.TEXT_CHANNEL, fn(8699).AutocompleterResultTypes.GROUP_DM, fn(8699).AutocompleterResultTypes.VOICE_CHANNEL, fn(8699).AutocompleterResultTypes.USER];
+let items = [fn(8700).AutocompleterResultTypes.GUILD, fn(8700).AutocompleterResultTypes.TEXT_CHANNEL, fn(8700).AutocompleterResultTypes.GROUP_DM, fn(8700).AutocompleterResultTypes.VOICE_CHANNEL, fn(8700).AutocompleterResultTypes.USER];
 ReactCompilerGating = fn(558);
 let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWrapperStyles() {
   const cResult = c.c(5);

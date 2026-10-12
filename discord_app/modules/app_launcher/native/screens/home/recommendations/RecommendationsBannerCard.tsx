@@ -91,11 +91,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp4 = cResult[2];
         }
         if (cResult[3] !== application) {
-          const shelfBadgeTypeIfActive = BaseAppRow(9246).getShelfBadgeTypeIfActive(application);
+          const shelfBadgeTypeIfActive = BaseAppRow(9247).getShelfBadgeTypeIfActive(application);
           cResult[3] = application;
           cResult[4] = shelfBadgeTypeIfActive;
           let tmp6 = shelfBadgeTypeIfActive;
-          const BaseAppRowResult = BaseAppRow(9246);
+          const BaseAppRowResult = BaseAppRow(9247);
         } else {
           tmp6 = cResult[4];
         }
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (isLandscape) {
-              BaseAppRow = BaseAppRow(11755).BaseAppRow;
+              BaseAppRow = BaseAppRow(11757).BaseAppRow;
               obj = { application: null, iconSource: null, onPress: null, isFirstRow: null, isLastRow: null };
               class T {
                 constructor() {
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 overrideImageUrl: null,
               };
               const tmp23 = RecommendationsBannerDefault;
-              obj8.isActivity = BaseAppRow(9246).isActivityApp(application);
+              obj8.isActivity = BaseAppRow(9247).isActivityApp(application);
               ({ id: obj10.applicationId, icon } = application);
               obj8.applicationIcon = icon;
               obj8.overrideImageUrl = overrideImageUrl;
@@ -342,12 +342,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               items6[1] = closure_6(BaseAppRow(5088).Text, obj18);
               obj16.children = items6;
               items5[1] = closure_7(View, obj16);
-              items5[2] = closure_6(BaseAppRow(6188).TableRowArrow, {});
+              items5[2] = closure_6(BaseAppRow(6189).TableRowArrow, {});
               obj14.children = items5;
               items4[1] = closure_7(View, obj14);
               obj4.children = items4;
-              tmp19Result2 = closure_7(BaseAppRow(6184).PressableOpacity, obj4);
-              const BaseAppRowResult1 = BaseAppRow(9246);
+              tmp19Result2 = closure_7(BaseAppRow(6185).PressableOpacity, obj4);
+              const BaseAppRowResult1 = BaseAppRow(9247);
             }
             class T {
               constructor() {
@@ -394,8 +394,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let result = tmp2;
       if (!(undefined !== showsPromoted && showsPromoted)) {
-        result = BaseAppRow(9246).isPromotedApplication(application);
-        const BaseAppRowResult2 = BaseAppRow(9246);
+        result = BaseAppRow(9247).isPromotedApplication(application);
+        const BaseAppRowResult2 = BaseAppRow(9247);
       }
       cResult[0] = application;
       cResult[1] = undefined !== showsPromoted && showsPromoted;
@@ -412,10 +412,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp = closure_8();
       if (!showsPromoted) {
-        showsPromoted = application(9246).isPromotedApplication(application);
-        const obj = application(9246);
+        showsPromoted = application(9247).isPromotedApplication(application);
+        const obj = application(9247);
       }
-      const shelfBadgeTypeIfActive = application(9246).getShelfBadgeTypeIfActive(application);
+      const shelfBadgeTypeIfActive = application(9247).getShelfBadgeTypeIfActive(application);
       let bot = application.bot;
       let id;
       if (bot != null) {
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         maybeFetchUserProfileDefault(id);
       }, items);
-      const obj2 = application(9246);
+      const obj2 = application(9247);
       const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({
         id: application.id,
         icon: application.icon,
@@ -448,7 +448,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           isFirstRow: isFirst,
           isLastRow: isLast,
         };
-        let tmp12Result2 = closure_6(tmp4(11755).BaseAppRow, obj5);
+        let tmp12Result2 = closure_6(tmp4(11757).BaseAppRow, obj5);
       } else {
         const items1 = [tmp.container, ,];
         let num = 8;
@@ -475,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           overrideImageUrl: null,
         };
         const tmp10Result = RecommendationsBannerDefault;
-        obj10.isActivity = tmp4(9246).isActivityApp(application);
+        obj10.isActivity = tmp4(9247).isActivityApp(application);
         ({ id: obj8.applicationId, icon } = application);
         obj10.applicationIcon = icon;
         obj10.overrideImageUrl = application.overrideImageUrl;
@@ -525,12 +525,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items6[1] = closure_6(tmp4(5088).Text, obj19);
         obj17.children = items6;
         items5[1] = closure_7(View, obj17);
-        items5[2] = closure_6(tmp4(6188).TableRowArrow, {});
+        items5[2] = closure_6(tmp4(6189).TableRowArrow, {});
         obj15.children = items5;
         items4[1] = closure_7(View, obj15);
         obj7.children = items4;
-        tmp12Result2 = closure_7(tmp4(6184).PressableOpacity, obj7);
-        const tmp4Result = tmp4(9246);
+        tmp12Result2 = closure_7(tmp4(6185).PressableOpacity, obj7);
+        const tmp4Result = tmp4(9247);
       }
       return tmp12Result2;
     };

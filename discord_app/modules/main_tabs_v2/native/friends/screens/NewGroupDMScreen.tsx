@@ -57,7 +57,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: "+51" };
+                          return { value: "IconComponent", done: null };
                         }
                       } else {
                         try {
@@ -154,7 +154,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                                 const obj5 = { value: closure_1_20(length, closure_2_2), done: false };
                                 return obj5;
                               } else {
-                                const obj6 = v3(7014);
+                                const obj6 = v3(7015);
                                 v3 = 1;
                                 dependencyMap = 1;
                                 const obj7 = {
@@ -191,7 +191,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               const obj = { value, done: true };
                               return obj;
                             } else {
-                              const tmp8 = v3(7016);
+                              const tmp8 = v3(7017);
                               const call = tmp8.call;
                               if (typeof call === "unknown") {
                                 tmp8(false, true);
@@ -205,7 +205,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             closure_128_3 = value;
                             v3 = 3;
                             dependencyMap = 1;
-                            const obj10 = { value: id(7481).monkeyPatchCall(), done: false };
+                            const obj10 = { value: id(7482).monkeyPatchCall(), done: false };
                             return obj10;
                           }
                         } catch (tmp26) {
@@ -291,7 +291,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserRowModes = fn(10216).UserRowModes;
+const UserRowModes = fn(10217).UserRowModes;
 const Constants = fn(1085);
 ({
   InstantInviteSources: map1,
@@ -410,7 +410,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -799,7 +799,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

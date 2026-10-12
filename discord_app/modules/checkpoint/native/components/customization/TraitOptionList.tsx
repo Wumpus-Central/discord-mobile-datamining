@@ -3,7 +3,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
-import inlineStyles from "../../../../../../_runtime/07576_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07577_inlineStyles.js";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";

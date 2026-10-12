@@ -15,16 +15,16 @@ let closure_4 = ["experimental_withBlurBackground", "onPress", "disabled", "chil
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles(() => {
-  const obj = { card: null, cardWithBlur: null };
-  const obj2 = {
-    padding: "y",
-    borderTopStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
-    borderTopEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
-    borderBottomStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
-    borderBottomEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+  const obj = {
+    card: {
+      padding: "y",
+      borderTopStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+      borderTopEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+      borderBottomStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+      borderBottomEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS,
+    },
+    cardWithBlur: { overflow: "hidden" },
   };
-  obj.card = obj2;
-  obj.cardWithBlur = { overflow: "hidden" };
   return obj;
 });
 let ReactCompilerGating = fn(558);
@@ -394,9 +394,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return jsx(Card.InternalCard, obj4);
     };
-tmp2.Icon = fn(6187).TableRowIcon;
+tmp2.Icon = fn(6188).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(6187).TableRowIconProps;
+export const RowButtonIconProps = fn(6188).TableRowIconProps;
 export const RowButton = tmp2;

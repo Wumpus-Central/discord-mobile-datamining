@@ -87,7 +87,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.nC2XBl);
   },
-  parent: fn(7992).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7993).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onOfficialMessageStyleSettingValueChange,
   useOptions: tmp3,

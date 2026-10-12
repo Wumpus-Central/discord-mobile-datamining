@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/06094_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/06095_fuzzysearch.js";
 import GuildRoleMemberActionCreatorsAll from "../../../../guild_settings/GuildRoleMemberActionCreators.tsx";
 import ShieldUserIcon from "../../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
 import AppLauncherOptionIconDefault from "../../base_components/AppLauncherOptionIcon.tsx";
@@ -207,7 +207,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleRow(guil
       }
       const obj4 = { label: tmp21, icon: tmp23, trailing: tmp26 };
       const merged = Object.assign(tmp6);
-      const tmp35 = closure_12(tmp(6179).TableRow, obj4, tmp5.id);
+      const tmp35 = closure_12(tmp(6180).TableRow, obj4, tmp5.id);
       cResult[20] = tmp5.id;
       cResult[21] = tmp6;
       cResult[22] = tmp21;
@@ -233,7 +233,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleRow(guil
           }
         }
         const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
-        const items2 = [closure_12(tmp(8216).GroupIcon, { size: "xxs", color: "text-muted" }), " ", stateFromStores];
+        const items2 = [closure_12(tmp(8217).GroupIcon, { size: "xxs", color: "text-muted" }), " ", stateFromStores];
         obj5.children = items2;
         tmp28 = closure_13(tmp(5088).Text, obj5);
       }
@@ -280,14 +280,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleRow(guil
     tmp8 = null;
     if (null != stateFromStores) {
       const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
-      const items2 = [closure_12(tmp2(8216).GroupIcon, { size: "xxs", color: "text-muted" }), " ", stateFromStores];
+      const items2 = [closure_12(tmp2(8217).GroupIcon, { size: "xxs", color: "text-muted" }), " ", stateFromStores];
       obj4.children = items2;
       tmp8 = closure_13(tmp2(5088).Text, obj4);
     }
   }
   obj2.trailing = tmp8;
   const merged1 = Object.assign(merged);
-  return closure_12(guildRole(6179).TableRow, obj2, guildRole.id);
+  return closure_12(guildRole(6180).TableRow, obj2, guildRole.id);
 });
 let closure_16 = tmp4;
 ReactCompilerGating = fn(558);

@@ -33,7 +33,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.tiCXaH);
   },
-  parent: fn(7992).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7993).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
     ? function useDmSpamFilterSettingOptions() {
         const cResult = c.c(1);
@@ -58,7 +58,7 @@ const radio = SettingBuilders.createRadio({
           return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
         }, []);
       },
-  useValue: fn(15095).useDerivedDmSpamFilterSettingValue,
+  useValue: fn(15118).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

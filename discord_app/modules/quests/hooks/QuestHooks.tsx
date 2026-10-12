@@ -577,7 +577,7 @@ function isQuestHiddenFromQuestHome(userStatus) {
   }
   return isQuestExpiredResult;
 }
-const useConsoleQuestUIStore = fn(7391).useConsoleQuestUIStore;
+const useConsoleQuestUIStore = fn(7392).useConsoleQuestUIStore;
 const QuestConstants = fn(5972);
 ({
   QuestTaskPlatform: closure_14,
@@ -675,10 +675,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
       lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const isEligibleForQuests = tmp(9165).getIsEligibleForQuests();
+        const isEligibleForQuests = tmp(9166).getIsEligibleForQuests();
         cResult[8] = isEligibleForQuests;
         let tmp19 = isEligibleForQuests;
-        const tmpResult6 = tmp(9165);
+        const tmpResult6 = tmp(9166);
       } else {
         tmp19 = cResult[8];
       }
@@ -825,7 +825,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
       lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
       const obj4 = obj(504);
-      isEligibleForQuests = obj(9165).getIsEligibleForQuests();
+      isEligibleForQuests = obj(9166).getIsEligibleForQuests();
       const items3 = [
         obj.fetchPolicy,
         isEligibleForQuests,
@@ -1765,11 +1765,11 @@ let tmp17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       if (cResult[3] !== id) {
-        const result = tmp(12964).isVideoQuestProgressing(id);
+        const result = tmp(12966).isVideoQuestProgressing(id);
         cResult[3] = id;
         cResult[4] = result;
         let tmp8 = result;
-        const tmpResult2 = tmp(12964);
+        const tmpResult2 = tmp(12966);
       } else {
         tmp8 = cResult[4];
       }
@@ -2155,7 +2155,7 @@ let tmp21 = ReactCompilerGating.isReactCompilerEnabled()
       quest = quest.quest;
       ({ questContent: importDefault, sourceQuestContent: dependencyMap } = quest);
       closure_3 = closure_56({ quest });
-      closure_4 = quest(9201).useGetQuestImpressionId();
+      closure_4 = quest(9202).useGetQuestImpressionId();
       return () => {
         const obj = QuestPlatformUtils;
         if (closure_3) {
@@ -2439,23 +2439,23 @@ let tmp24 = ReactCompilerGating.isReactCompilerEnabled()
       return noop.useMemo(
         () => ({
           handleComplete() {
-            return closure_0(9171).completeQuestPreview(closure_1_0);
+            return closure_0(9172).completeQuestPreview(closure_1_0);
           },
           handleProgress(random) {
-            return closure_0(9171).completeQuestPreview(closure_1_0, random);
+            return closure_0(9172).completeQuestPreview(closure_1_0, random);
           },
           handleResetStatusClick() {
-            return closure_0(9171).resetQuestPreviewStatus(closure_1_0);
+            return closure_0(9172).resetQuestPreviewStatus(closure_1_0);
           },
           handleResetDismissibilityClick() {
-            return closure_0(9171).resetQuestDismissibilityStatus(closure_1_0);
+            return closure_0(9172).resetQuestDismissibilityStatus(closure_1_0);
           },
           handleOverridePreviewClick(placement) {
-            return closure_0(9171).overrideQuestForPlacement(placement, closure_1_0);
+            return closure_0(9172).overrideQuestForPlacement(placement, closure_1_0);
           },
           handleResetHasBeenSeenClick() {
             const items = [closure_1_0];
-            return closure_0(9171).markAdContentUnseen(closure_0(5979).AdCreativeType.QUEST, items);
+            return closure_0(9172).markAdContentUnseen(closure_0(5979).AdCreativeType.QUEST, items);
           },
         }),
         items,
@@ -2669,11 +2669,11 @@ const tmp31 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = require("c");
       [tmp4, r10016] = closure_58(id.id);
       if (cResult[0] !== id) {
-        const result = withResult16(9203).supportedTaskPlatforms(id);
+        const result = withResult16(9204).supportedTaskPlatforms(id);
         cResult[0] = id;
         cResult[1] = result;
         obj3 = result;
-        const withResult16Result = withResult16(9203);
+        const withResult16Result = withResult16(9204);
       } else {
         obj3 = cResult[1];
       }
@@ -3999,11 +3999,11 @@ const tmp36 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (DARK != null) {
         if (cResult[4] === stateFromStores) {
         }
-        questAsset = tmp(9184).getQuestAsset(stateFromStores, tmp(9184).QuestAssetType.COSPONSOR_LOGO_TYPE, DARK);
+        questAsset = tmp(9185).getQuestAsset(stateFromStores, tmp(9185).QuestAssetType.COSPONSOR_LOGO_TYPE, DARK);
         cResult[4] = stateFromStores;
         cResult[5] = DARK;
         cResult[6] = questAsset;
-        const tmpResult3 = tmp(9184);
+        const tmpResult3 = tmp(9185);
       } else {
         tmp(4969).isThemeDark(tmp9) ? constants3.DARK : constants3.LIGHT;
         const tmpResult4 = tmp(4969);
@@ -4832,7 +4832,7 @@ export const useManuallyStartConsoleQuest = function useManuallyStartConsoleQues
           obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -4977,7 +4977,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -5000,7 +5000,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
                   c1 = 3;
                   c4 = 1;
                   const obj6 = {
-                    value: previewAdCreativeIds(12971).fetchBountyPreview(
+                    value: previewAdCreativeIds(12973).fetchBountyPreview(
                       arr,
                       previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE,
                     ),
@@ -5012,7 +5012,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
               c1 = 2;
               c4 = 1;
               const obj7 = {
-                value: previewAdCreativeIds(12971).fetchQuestHomeBounties(
+                value: previewAdCreativeIds(12973).fetchQuestHomeBounties(
                   previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE,
                 ),
                 done: false,
@@ -5056,7 +5056,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
               v0(false);
             }
             c4 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp34) {
           closure_2 = tmp34;

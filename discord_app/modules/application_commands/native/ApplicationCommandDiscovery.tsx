@@ -7,7 +7,7 @@ import Server from "../../../flow/Server.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import ApplicationCommandQueryTypes from "../ApplicationCommandQueryTypes.tsx";
-import _modDef9794 from "../../../../_runtime/metro/09794__.js";
+import _modDef9795 from "../../../../_runtime/metro/09795__.js";
 import ApplicationSectionHeader from "ApplicationSectionHeader.tsx";
 import ApplicationCommandDiscoveryManager from "../ApplicationCommandDiscoveryManager.tsx";
 import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories.tsx";
@@ -22,8 +22,8 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const ApplicationCommandConstants = fn(5403);
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = fn(12107).ITEM_HEIGHT;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(9716).AUTOCOMPLETE_ROW_HEIGHT;
+const ITEM_HEIGHT = fn(12109).ITEM_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(9717).AUTOCOMPLETE_ROW_HEIGHT;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
 const jsxProd = fn(21);
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       let tmp7 = bound(ref.useState(0), 2);
-      const commandDiscoveryManager = onPressSlashItem(12109).useCommandDiscoveryManager(first);
+      const commandDiscoveryManager = onPressSlashItem(12111).useCommandDiscoveryManager(first);
       if (cResult[1] !== channel) {
         const obj4 = { channel, type: "channel" };
         cResult[1] = channel;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp12 = cResult[3];
       }
-      const BuiltInCommandFilter = onPressSlashItem(9253).BuiltInCommandFilter;
+      const BuiltInCommandFilter = onPressSlashItem(9254).BuiltInCommandFilter;
       let tmp13 = canOnlyUseTextCommands ? BuiltInCommandFilter.ONLY_TEXT : BuiltInCommandFilter.ALLOW;
       if (cResult[4] === tmp13) {
         if (cResult[5] === tmp14) {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[9] === tmp15) {
             let tmp18 = cResult[10];
           }
-          const discovery = channel(9807).useDiscovery(tmp18);
+          const discovery = channel(9808).useDiscovery(tmp18);
           sectionDescriptors = discovery.sectionDescriptors;
           const activeSections = discovery.activeSections;
           commandsByActiveSection = discovery.commandsByActiveSection;
@@ -545,8 +545,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         let tmp3Result = 0 === section.data.length;
                                         if (tmp3Result) {
                                           const obj3 = {
-                                            lightSource: _modDef9794,
-                                            darkSource: _modDef9794,
+                                            lightSource: _modDef9795,
+                                            darkSource: _modDef9795,
                                             body: null,
                                             containerStyle: null,
                                             imageStyle: null,
@@ -866,7 +866,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[15] = X;
           tmp22 = X;
           tmp21 = items4;
-          const obj9 = channel(9807);
+          const obj9 = channel(9808);
         }
         const obj6 = { context: tmp11, filters: tmp15, options: tmp16, allowFetch: true };
         cResult[8] = tmp11;
@@ -879,7 +879,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = !canOnlyUseTextCommands;
       cResult[6] = obj7;
       tmp15 = obj7;
-      let tmpResult = onPressSlashItem(12109);
+      let tmpResult = onPressSlashItem(12111);
     }
   : function ApplicationCommandDiscovery(channel) {
       ({ onPressSlashItem: require, onHeightChange } = channel);
@@ -913,7 +913,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.applicationCommands = !canOnlyUseTextCommands;
       obj5.filters = obj6;
       obj5.options = { placeholderCount: 3, limit: commandDiscoveryManager, includeFrecency: true };
-      const discovery = channel(9807).useDiscovery(obj5);
+      const discovery = channel(9808).useDiscovery(obj5);
       const sectionDescriptors = discovery.sectionDescriptors;
       ({ activeSections: c11, commandsByActiveSection } = discovery);
       ({ hasMoreAfter: c13, filteredSectionId } = discovery);
@@ -1177,7 +1177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const section = item.section;
         let found;
         if (item.inputType === require("ApplicationCommandTypes").ApplicationCommandInputType.PLACEHOLDER) {
-          return filteredSectionId(onHeightChange(12110), {});
+          return filteredSectionId(onHeightChange(12112), {});
         } else {
           found = sectionDescriptors.find((id) => id.id === item.applicationId);
           const obj = {
@@ -1193,7 +1193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             showIcon: item.applicationId !== section.section.id,
             guildId: found.guild_id,
           };
-          return filteredSectionId(onHeightChange(12111), obj);
+          return filteredSectionId(onHeightChange(12113), obj);
         }
       };
       obj9.renderSectionHeader = function renderSectionHeader(section) {
@@ -1208,8 +1208,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp3Result = 0 === section.data.length;
         if (tmp3Result) {
           const obj3 = {
-            lightSource: _modDef9794,
-            darkSource: _modDef9794,
+            lightSource: _modDef9795,
+            darkSource: _modDef9795,
             body: null,
             containerStyle: null,
             imageStyle: null,

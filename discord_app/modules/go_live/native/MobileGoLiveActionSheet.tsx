@@ -14,7 +14,7 @@ import TableRadioRow from "../../../design/components/TableRow/native/TableRadio
 import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
 import StreamActionCreators from "../../../actions/StreamActionCreators.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
-import _modDef9537 from "../../../../_runtime/metro/09537__.js";
+import _modDef9538 from "../../../../_runtime/metro/09538__.js";
 import getStreamSettingsForPreset from "../utils/getStreamSettingsForPreset.tsx";
 import SpeedometerIcon from "../../../design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx";
 import ImageSparkleIcon from "../../../design/components/Icon/native/redesign/generated/ImageSparkleIcon.tsx";
@@ -232,8 +232,8 @@ export default noop.memo(
           const tmpResult5 = tmp(504);
           const goLiveUpsellVariant = guildPremiumTier(11058).useConfig(tmp21).goLiveUpsellVariant;
           let obj6 = guildPremiumTier(11058);
-          analyticsLocations = guildPremiumTier(6851)(
-            guildPremiumTier(6878).MOBILE_GO_LIVE_ACTION_SHEET,
+          analyticsLocations = guildPremiumTier(6852)(
+            guildPremiumTier(6879).MOBILE_GO_LIVE_ACTION_SHEET,
           ).analyticsLocations;
           const tmp25 = closure_16();
           ApplicationStreamingStore = tmp25;
@@ -349,7 +349,7 @@ export default noop.memo(
                       obj10.children = intl5.string(_modDef2374.nMcXo1);
                       const items = [closure_2_14(Text_Text.Text, obj10)];
                       const tmp8Result = NativeViewDefault;
-                      items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9537, size: "xs" });
+                      items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9538, size: "xs" });
                       obj9.children = items;
                       obj8.label = value2(tmp8Result, obj9);
                       if (null != maxSettingsForPreset2) {
@@ -411,10 +411,10 @@ export default noop.memo(
                       return obj1;
                     }
                   }
-                  const AnalyticsLocationProvider = tmp(6851).AnalyticsLocationProvider;
-                  BottomSheet = tmp(6839).BottomSheet;
-                  const BottomSheetScrollView = tmp(6306).BottomSheetScrollView;
-                  const SafeAreaPaddingView = tmp(6813).SafeAreaPaddingView;
+                  const AnalyticsLocationProvider = tmp(6852).AnalyticsLocationProvider;
+                  BottomSheet = tmp(6840).BottomSheet;
+                  const BottomSheetScrollView = tmp(6307).BottomSheetScrollView;
+                  const SafeAreaPaddingView = tmp(6814).SafeAreaPaddingView;
                   const _Symbol3 = Symbol;
                   class R {
                     constructor() {
@@ -1132,7 +1132,7 @@ export default noop.memo(
                                               }
                                               tmp84[0] = tmp25.section;
                                               tmp84[1] = cResult[56];
-                                              const tmp85 = closure_14(tmp22(6161), tmp84);
+                                              const tmp85 = closure_14(tmp22(6162), tmp84);
                                               cResult[57] = tmp25.section;
                                               class R {
                                                 constructor() {
@@ -1180,7 +1180,7 @@ export default noop.memo(
                                           }
                                           tmp76[0] = tmp25.section;
                                           tmp76[1] = tmp70;
-                                          const tmp77 = closure_14(tmp22(6161), tmp76);
+                                          const tmp77 = closure_14(tmp22(6162), tmp76);
                                           cResult[52] = tmp25.section;
                                           class R {
                                             constructor() {
@@ -1244,8 +1244,8 @@ export default noop.memo(
                                             return { user: currentUser, guildPremiumTier: premiumTier };
                                           }
                                         }
-                                        tmp72[2] = closure_14(tmp(6895).TableSwitchRow, obj7);
-                                        const tmp73 = closure_14(tmp(6264).TableRowGroup, tmp72);
+                                        tmp72[2] = closure_14(tmp(6896).TableSwitchRow, obj7);
+                                        const tmp73 = closure_14(tmp(6265).TableRowGroup, tmp72);
                                         cResult[49] = tmp35;
                                         cResult[50] = tmp68;
                                         cResult[51] = tmp73;
@@ -1320,9 +1320,9 @@ export default noop.memo(
                                       return { user: currentUser, guildPremiumTier: premiumTier };
                                     }
                                   }
-                                  obj8.children = closure_14(tmp22(9781), obj9);
+                                  obj8.children = closure_14(tmp22(9782), obj9);
                                   tmp59 = closure_14(tmp61, obj8);
-                                  const tmp22Result = tmp22(9781);
+                                  const tmp22Result = tmp22(9782);
                                 }
                                 class R {
                                   constructor() {
@@ -1371,7 +1371,7 @@ export default noop.memo(
                               }
                               tmp55[0] = tmp25.section;
                               tmp55[1] = tmp51;
-                              const tmp56 = closure_14(tmp22(6161), tmp55);
+                              const tmp56 = closure_14(tmp22(6162), tmp55);
                               cResult[36] = tmp25.section;
                               class R {
                                 constructor() {
@@ -1437,8 +1437,8 @@ export default noop.memo(
                             }
                           }
                           obj11.children = tmp48;
-                          obj10.children = closure_14(tmp(6262).TableRadioGroup, obj11);
-                          const tmp52 = closure_14(tmp(6264).TableRowGroup, obj10);
+                          obj10.children = closure_14(tmp(6263).TableRadioGroup, obj11);
+                          const tmp52 = closure_14(tmp(6265).TableRowGroup, obj10);
                           cResult[32] = value;
                           cResult[33] = tmp47;
                           cResult[34] = tmp48;
@@ -1584,7 +1584,7 @@ export default noop.memo(
             tmp26 = PRESET_MOBILE_DEFAULT;
           }
           PRESET_MOBILE_DEFAULT = tmp27.PRESET_MOBILE_DEFAULT;
-          const tmp23 = guildPremiumTier(6851);
+          const tmp23 = guildPremiumTier(6852);
           tmp28 =
             preset === ApplicationStreamPresets.PRESET_MOBILE_DEFAULT ||
             preset === ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE ||
@@ -1773,7 +1773,7 @@ export default noop.memo(
               obj10.children = intl5.string(_modDef2374.nMcXo1);
               const items = [closure_2_14(Text_Text.Text, obj10)];
               const tmp8Result = NativeViewDefault;
-              items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9537, size: "xs" });
+              items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9538, size: "xs" });
               obj9.children = items;
               obj8.label = value2(tmp8Result, obj9);
               if (null != maxSettingsForPreset2) {

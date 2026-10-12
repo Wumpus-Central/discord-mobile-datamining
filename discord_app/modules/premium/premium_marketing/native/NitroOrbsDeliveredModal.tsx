@@ -5,7 +5,7 @@ import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.t
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import CollectiblesActionCreators from "../../../collectibles/CollectiblesActionCreators.tsx";
 import useTrackImpressionDefault from "../../../app_analytics/useTrackImpression.tsx";
-import _modDef13610 from "../../../../../_runtime/metro/13610__.js";
+import _modDef13633 from "../../../../../_runtime/metro/13633__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const obj5 = { style: tmp4.background, onReady: tmp13 };
-        obj4.children = closure_10(onClose(12988).OrbsRewardBackground, obj5);
+        obj4.children = closure_10(onClose(12990).OrbsRewardBackground, obj5);
         const tmp17 = closure_10(View, obj4);
         cResult[7] = tmp4.background;
         cResult[8] = tmp17;
@@ -218,10 +218,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const rect = { style: tmp4.main, top: true, bottom: true, left: true, right: true, children: null };
           const obj6 = { style: tmp4.header, children: null };
           const obj7 = { onPress: onClose, variant: "overlay" };
-          obj6.children = closure_10(onClose(6893).ActionSheetCloseButton, obj7);
+          obj6.children = closure_10(onClose(6894).ActionSheetCloseButton, obj7);
           const items = [closure_10(View, obj6), ,];
           const obj8 = { style: tmp4.body, children: null };
-          const obj9 = { source: _modDef13610, style: tmp4.orbGraphic, resizeMode: "contain" };
+          const obj9 = { source: _modDef13633, style: tmp4.orbGraphic, resizeMode: "contain" };
           const items1 = [closure_10(FastImageDefault, obj9)];
           const obj10 = { children: null };
           const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp4.title, children: null };
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj15.children = items3;
           items[2] = closure_11(View, obj15);
           rect.children = items;
-          tmp22 = closure_11(onClose(6813).SafeAreaPaddingView, rect);
+          tmp22 = closure_11(onClose(6814).SafeAreaPaddingView, rect);
           const tmp6Result = FastImageDefault;
         }
         cResult[12] = P;
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const callback2 = noop.useCallback(() => _undefined(true), []);
-      obj3.children = closure_10(onClose(12988).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
+      obj3.children = closure_10(onClose(12990).OrbsRewardBackground, { style: tmp.background, onReady: callback2 });
       const items2 = [closure_10(View, obj3), ,];
       let tmp14Result = !tmp12Result;
       if (!tmp12Result) {
@@ -340,11 +340,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
         const obj6 = { style: tmp.header, children: null };
         const obj7 = { onPress: onClose, variant: "overlay" };
-        obj6.children = closure_10(onClose(6893).ActionSheetCloseButton, obj7);
+        obj6.children = closure_10(onClose(6894).ActionSheetCloseButton, obj7);
         const items3 = [closure_10(View, obj6), ,];
         const obj8 = { style: tmp.body, children: null };
-        const obj9 = { source: tmp2(13610), style: tmp.orbGraphic, resizeMode: "contain" };
-        const items4 = [closure_10(tmp2(6156), obj9)];
+        const obj9 = { source: tmp2(13633), style: tmp.orbGraphic, resizeMode: "contain" };
+        const items4 = [closure_10(tmp2(6157), obj9)];
         const obj10 = { children: null };
         const obj11 = { variant: "heading-lg/bold", color: "text-overlay-light", style: tmp.title, children: null };
         const intl = onClose(1126).intl;
@@ -379,8 +379,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj15.children = items6;
         items3[2] = closure_11(View, obj15);
         rect.children = items3;
-        tmp12Result = closure_11(onClose(6813).SafeAreaPaddingView, rect);
-        const tmp2Result = tmp2(6156);
+        tmp12Result = closure_11(onClose(6814).SafeAreaPaddingView, rect);
+        const tmp2Result = tmp2(6157);
       }
       items2[2] = tmp12Result;
       obj2.children = items2;

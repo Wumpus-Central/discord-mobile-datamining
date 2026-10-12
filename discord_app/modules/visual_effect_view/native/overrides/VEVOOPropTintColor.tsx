@@ -654,7 +654,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             cResult[28] = tmp45;
           }
           const obj5 = { disabled: !tmp8, initialValue: ref, onValueChange: Y };
-          const tmp42 = closure_8(first1(16324), obj5);
+          const tmp42 = closure_8(first1(16347), obj5);
           cResult[21] = !tmp8;
           cResult[22] = Y;
           cResult[23] = tmp42;
@@ -790,7 +790,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   };
   const ref = noop.useRef(first1);
-  obj7.subLabel = closure_8(backgroundColor(16324), {
+  obj7.subLabel = closure_8(backgroundColor(16347), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {

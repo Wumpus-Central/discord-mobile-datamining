@@ -35,7 +35,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(7992).MobileUserSettings.APPEARANCE,
+  parent: fn(7993).MobileUserSettings.APPEARANCE,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
     ? function useSyncedModePickerVisible() {
         const cResult = c.c(2);

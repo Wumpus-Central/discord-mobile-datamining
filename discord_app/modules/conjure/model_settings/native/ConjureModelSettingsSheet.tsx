@@ -5,13 +5,14 @@ import util from "../../../../intl/index.native.tsx";
 import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
+import conjureModelSettingsConnection from "../conjureModelSettingsConnection.tsx";
 import ConjureEffortPickerDefault from "ConjureEffortPicker.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ConjureConnectionStore from "../../connection/ConjureConnectionStore.tsx";
+import ConjureModelSettingsStore from "../ConjureModelSettingsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const sendModelSettings = fn(13213).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -20,7 +21,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = projectId(576).c(27);
       projectId = projectId.projectId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ConjureConnectionStore];
+        const items = [ConjureModelSettingsStore];
         cResult[0] = items;
         let first = items;
       } else {
@@ -28,7 +29,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== projectId) {
         const fn = function c() {
-          return ConjureConnectionStore.getModelSettings(projectId);
+          return ConjureModelSettingsStore.getModelSettings(projectId);
         };
         const items1 = [projectId];
         cResult[1] = projectId;
@@ -40,7 +41,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj = projectId(576);
+      let obj = projectId(576);
       const stateFromStores = projectId(504).useStateFromStores(first, tmp6, tmp7);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ConjureConnectionStore];
@@ -93,9 +94,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           constructor(arg0) {
             try {
               tmp = projectId;
-              tmp2 = sendModelSettings;
-              tmp3 = projectId;
-              tmp4 = sendModelSettings(projectId, projectId);
+              tmp2 = closure_0;
+              tmp3 = closure_2;
+              obj = closure_0(closure_2[8]);
+              tmp4 = projectId;
+              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
               return;
             } catch (err) {}
             return;
@@ -108,9 +111,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           constructor(arg0) {
             try {
               tmp = projectId;
-              tmp2 = sendModelSettings;
-              tmp3 = projectId;
-              tmp4 = sendModelSettings(projectId, projectId);
+              tmp2 = closure_0;
+              tmp3 = closure_2;
+              obj = closure_0(closure_2[8]);
+              tmp4 = projectId;
+              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
               return;
             } catch (err) {}
             return;
@@ -122,9 +127,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           constructor(arg0) {
             try {
               tmp = projectId;
-              tmp2 = sendModelSettings;
-              tmp3 = projectId;
-              tmp4 = sendModelSettings(projectId, projectId);
+              tmp2 = closure_0;
+              tmp3 = closure_2;
+              obj = closure_0(closure_2[8]);
+              tmp4 = projectId;
+              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
               return;
             } catch (err) {}
             return;
@@ -136,9 +143,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           constructor(arg0) {
             try {
               tmp = projectId;
-              tmp2 = sendModelSettings;
-              tmp3 = projectId;
-              tmp4 = sendModelSettings(projectId, projectId);
+              tmp2 = closure_0;
+              tmp3 = closure_2;
+              obj = closure_0(closure_2[8]);
+              tmp4 = projectId;
+              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
               return;
             } catch (err) {}
             return;
@@ -149,9 +158,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           constructor(arg0) {
             try {
               tmp = projectId;
-              tmp2 = sendModelSettings;
-              tmp3 = projectId;
-              tmp4 = sendModelSettings(projectId, projectId);
+              tmp2 = closure_0;
+              tmp3 = closure_2;
+              obj = closure_0(closure_2[8]);
+              tmp4 = projectId;
+              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
               return;
             } catch (err) {}
             return;
@@ -163,9 +174,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             constructor(arg0) {
               try {
                 tmp = projectId;
-                tmp2 = sendModelSettings;
-                tmp3 = projectId;
-                tmp4 = sendModelSettings(projectId, projectId);
+                tmp2 = closure_0;
+                tmp3 = closure_2;
+                obj = closure_0(closure_2[8]);
+                tmp4 = projectId;
+                sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
                 return;
               } catch (err) {}
               return;
@@ -185,14 +198,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ConjureModelSettingsContent(projectId) {
       projectId = projectId.projectId;
-      const items = [ConjureConnectionStore];
+      const items = [ConjureModelSettingsStore];
       const items1 = [projectId];
       const stateFromStores = projectId(504).useStateFromStores(
         items,
-        () => ConjureConnectionStore.getModelSettings(projectId),
+        () => ConjureModelSettingsStore.getModelSettings(projectId),
         items1,
       );
-      const obj = projectId(504);
+      let obj = projectId(504);
       const items2 = [ConjureConnectionStore];
       const items3 = [projectId];
       const stateFromStores1 = projectId(504).useStateFromStores(
@@ -210,7 +223,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let tierSettings1;
       const callback = noop.useCallback((arg0) => {
         try {
-          sendModelSettings(projectId, arg0);
+          conjureModelSettingsConnection.sendModelSettings(projectId, arg0);
         } catch (err) {}
       }, items6);
       if (stateFromStores != null) {

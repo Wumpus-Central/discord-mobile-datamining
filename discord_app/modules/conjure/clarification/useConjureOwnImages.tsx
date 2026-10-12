@@ -1,12 +1,13 @@
 // discord_app/modules/conjure/clarification/useConjureOwnImages.tsx
 import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
+import conjureAttachmentRequests from "../chat/conjureAttachmentRequests.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const require = fn;
+require = fn;
 function _toPropertyKey(obj) {
   let StringResult = obj;
   if (typeof obj === "object") {
@@ -38,10 +39,8 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-const ConjureConnectionStore = fn(13213);
-({ deleteStagedAttachment: metroRequire, importAttachmentFromUrl: closure_7 } = ConjureConnectionStore);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/clarification/useConjureOwnImages.tsx");
+let result = size.fileFinishedImporting("modules/conjure/clarification/useConjureOwnImages.tsx");
 
 export function inertOwnImageControls(image, selected) {
   return {
@@ -180,7 +179,8 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
         };
         obj.onRemove = function onRemove() {
           if (null != c2) {
-            timestampProducer(closure_0, tmp.attachment.id).catch(() => {
+            const result = conjureAttachmentRequests.deleteStagedAttachment(closure_0, tmp.attachment.id);
+            result.catch(() => {
 
             });
             closure_4((arg0) => {
@@ -203,10 +203,9 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
                 return dependencyMap;
               } else {
                 const items = [id];
-                return first(dependencyMap, items.map(closure_8));
+                return first(dependencyMap, items.map(closure_6));
               }
             });
-            const promise = timestampProducer(closure_0, tmp.attachment.id);
           }
         };
         obj.onUpload = function onUpload(promise) {
@@ -233,13 +232,14 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
               { attachment: null }.attachment = errorText;
               closure_1_4((arg0) => {
                 if (null != arg0[closure_0]) {
-                  closure_6(id, tmp2.attachment.id).catch(/* F157646 */ function() { ... });
-                  const promise = closure_6(id, tmp2.attachment.id);
+                  obj = closure_0(closure_2[5]);
+                  const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
+                  result.catch(/* F157968 */ function() { ... });
                 }
-                obj = {};
+                const obj2 = {};
                 const merged = Object.assign(arg0);
-                obj[closure_0] = obj;
-                return obj;
+                obj2[closure_0] = obj;
+                return obj2;
               });
               closure_129_0 = { busy: null, error: null };
               closure_1_6((arg0) => {
@@ -285,23 +285,25 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
           });
         };
         obj.onLink = function onLink(arg0) {
-          closure_0 = { busy: "link", error: null };
+          id = { busy: "link", error: null };
           closure_1_6((arg0) => {
             obj = {};
             const merged = Object.assign(arg0);
             obj[closure_0] = obj;
             return obj;
           });
-          return first2(id, arg0).then((attachment) => {
+          let result = id(_null[5]).importAttachmentFromUrl(id, arg0);
+          return result.then((attachment) => {
             closure_1_4((arg0) => {
               if (null != arg0[closure_0]) {
-                closure_6(id, tmp2.attachment.id).catch(/* F157646 */ function() { ... });
-                const promise = closure_6(id, tmp2.attachment.id);
+                obj = closure_0(closure_2[5]);
+                const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
+                result.catch(/* F157968 */ function() { ... });
               }
-              obj = {};
+              const obj2 = {};
               const merged = Object.assign(arg0);
-              obj[closure_0] = obj;
-              return obj;
+              obj2[closure_0] = obj;
+              return obj2;
             });
             closure_129_0 = { busy: null, error: null };
             closure_1_6((arg0) => {

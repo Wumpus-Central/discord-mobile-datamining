@@ -27,7 +27,7 @@ export default noop.memo(
         const participants = channel.participants;
         const tmp3 = closure_5();
         let obj = channel(576);
-        const isScreenLandscape = channel(8326).useIsScreenLandscape();
+        const isScreenLandscape = channel(8327).useIsScreenLandscape();
         let num = 3;
         if (0 === channel.row) {
           num = participants.length;
@@ -126,7 +126,7 @@ export default noop.memo(
           cResult[4] = items;
           tmp7 = items;
         }
-        let obj2 = channel(8326);
+        let obj2 = channel(8327);
       }
     : function StageGridRow(row) {
         ({ channel: require, participants } = row);

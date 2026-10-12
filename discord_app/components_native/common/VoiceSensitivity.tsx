@@ -13,7 +13,7 @@ import AppStateStore from "../../stores/native/AppStateStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1085).AppStates;
-const NativePermissionTypes = fn(7482).NativePermissionTypes;
+const NativePermissionTypes = fn(7483).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(5092);
@@ -659,7 +659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -677,7 +677,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c1 = 1;
                   c2 = 1;
                   const obj4 = {
-                    value: onThresholdChange(7499).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+                    value: onThresholdChange(7500).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
                     done: false,
                   };
                   return obj4;
@@ -699,7 +699,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   mediaEngine.on(auto(5137).MediaEngineEvent.VoiceActivity, callback);
                 }
                 c2 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp17) {
               c2 = tmp;

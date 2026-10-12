@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/projects/useIsPreviewlessProject.tsx
-import ConjureTypes from "../ConjureTypes.tsx";
+import ConjureProjectTypes from "ConjureProjectTypes.tsx";
 import ConjureProjectStore from "ConjureProjectStore.tsx";
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const project = ConjureProjectStore.getProject(closure_0);
           let isPreviewlessProjectResult = null != project;
           if (isPreviewlessProjectResult) {
-            isPreviewlessProjectResult = ConjureTypes.isPreviewlessProject(project);
+            isPreviewlessProjectResult = ConjureProjectTypes.isPreviewlessProject(project);
           }
           return isPreviewlessProjectResult;
         };
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const project = ConjureProjectStore.getProject(closure_0);
         let isPreviewlessProjectResult = null != project;
         if (isPreviewlessProjectResult) {
-          isPreviewlessProjectResult = ConjureTypes.isPreviewlessProject(project);
+          isPreviewlessProjectResult = ConjureProjectTypes.isPreviewlessProject(project);
         }
         return isPreviewlessProjectResult;
       });

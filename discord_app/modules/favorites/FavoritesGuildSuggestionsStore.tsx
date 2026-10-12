@@ -98,7 +98,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = isFreemium;
         cResult[2] = items1;
       } else {
-        const tmp9 = _slicedToArray(tmp(7099).useSelectedDismissibleContent(cResult[2]), 2);
+        const tmp9 = _slicedToArray(tmp(7100).useSelectedDismissibleContent(cResult[2]), 2);
         _require = tmp10;
         if (cResult[3] !== tmp9[1]) {
           class I {
@@ -168,7 +168,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp16;
         cResult[10] = obj3;
         tmp18 = obj3;
-        const tmpResult = tmp(7099);
+        const tmpResult = tmp(7100);
       }
       tmp6 = DismissibleContentShownStateStore(first);
     }

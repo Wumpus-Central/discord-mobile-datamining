@@ -11,7 +11,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function BlockedUserRow(userRecord) {
       const cResult = userRecord(576).c(29);
       userRecord = userRecord.userRecord;
-      analyticsLocations = analyticsLocations(6851)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6852)().analyticsLocations;
       if (cResult[0] === userRecord.globalName) {
         if (cResult[1] === userRecord.username) {
           let tmp4 = cResult[2];
@@ -97,7 +97,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 };
-                  const tmp25 = jsx(tmp(6179).TableRow, {
+                  const tmp25 = jsx(tmp(6180).TableRow, {
                     accessible: false,
                     icon: tmp8,
                     label: tmp14,
@@ -132,7 +132,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj7 = { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 };
-            const tmp16 = jsx(tmp(15060).RestrictedUserRowLabel, {
+            const tmp16 = jsx(tmp(15083).RestrictedUserRowLabel, {
               userRecord,
               accessibilityActions: tmp13,
               onAccessibilityAction: tmp7,
@@ -181,7 +181,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   : function BlockedUserRow(userRecord) {
       userRecord = userRecord.userRecord;
       let analyticsLocations;
-      analyticsLocations = analyticsLocations(6851)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6852)().analyticsLocations;
       const intl = userRecord(1126).intl;
       let username = userRecord.globalName;
       if (username == null) {
@@ -191,17 +191,13 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
       }
       const formatToPlainStringResult = intl.formatToPlainString(userRecord(1126).t.izBDZN, { name: username });
-      let obj = {
-        accessible: false,
-        icon: jsx(userRecord(1200).Avatar, {
-          user: userRecord,
-          guildId: "Array",
-          size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32,
-        }),
-        label: null,
-        onPress: handleOpenProfile,
-        trailing: null,
-      };
+      let obj = { accessible: false, icon: null, label: null, onPress: null, trailing: null };
+      let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32 };
+      obj.icon = jsx(userRecord(1200).Avatar, {
+        user: userRecord,
+        guildId: "Array",
+        size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32,
+      });
       const obj3 = {
         userRecord,
         accessibilityActions: null,
@@ -217,7 +213,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
       obj3.accessibilityActions = items;
-      obj.label = jsx(userRecord(15060).RestrictedUserRowLabel, {
+      obj.label = jsx(userRecord(15083).RestrictedUserRowLabel, {
         userRecord,
         accessibilityActions: null,
         onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -230,6 +226,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         },
       });
+      obj.onPress = handleOpenProfile;
       const obj4 = { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
       const intl2 = tmp2(1126).intl;
       obj4.text = intl2.string(userRecord(1126).t["PR/xUz"]);
@@ -244,15 +241,11 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         onPress: null,
       });
-      return jsx(userRecord(6179).TableRow, {
+      return jsx(userRecord(6180).TableRow, {
         accessible: false,
-        icon: jsx(userRecord(1200).Avatar, {
-          user: userRecord,
-          guildId: "Array",
-          size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32,
-        }),
+        icon: null,
         label: null,
-        onPress: handleOpenProfile,
+        onPress: null,
         trailing: null,
       });
     };

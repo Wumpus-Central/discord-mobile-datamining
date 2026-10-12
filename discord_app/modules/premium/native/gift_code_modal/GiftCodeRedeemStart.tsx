@@ -349,7 +349,7 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.string(sender(1126).t["1+tgC0"]);
       });
   }
-  obj = sender(6930);
+  obj = sender(6931);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);

@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -418,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7Result3 = first1(first2.useState(false), 2);
       first2 = tmp7Result3[0];
       closure_6 = tmp7Result3[1];
-      const tmp5 = attachment(8393)(attachment);
+      const tmp5 = attachment(8394)(attachment);
       [tmp17, c7] = first1(first2.useState(), 2);
       let intl = util.intl;
       let stringResult = intl.string(util.t.Y8ujqr);

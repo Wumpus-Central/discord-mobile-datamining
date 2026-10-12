@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef15208 from "../../../../_runtime/metro/15208__.js";
+import _modDef15231 from "../../../../_runtime/metro/15231__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -43,8 +43,8 @@ export default noop.memo(
             let tmp4 = cResult[2];
           }
           if (cResult[3] !== tmp3.badgeImage) {
-            const obj2 = { source: _modDef15208, style: tmp3.badgeImage };
-            const tmp9 = jsx(FastImageDefault, { source: _modDef15208, style: tmp3.badgeImage });
+            const obj2 = { source: _modDef15231, style: tmp3.badgeImage };
+            const tmp9 = jsx(FastImageDefault, { source: _modDef15231, style: tmp3.badgeImage });
             cResult[3] = tmp3.badgeImage;
             cResult[4] = tmp9;
             let tmp5 = tmp9;
@@ -79,8 +79,8 @@ export default noop.memo(
         const obj = { style: null, pointerEvents: "none", children: null };
         const items = [tmp.badgeImageContainer, style.style];
         obj.style = items;
-        const obj2 = { source: _modDef15208, style: tmp.badgeImage };
-        obj.children = jsx(FastImageDefault, { source: _modDef15208, style: tmp.badgeImage });
+        const obj2 = { source: _modDef15231, style: tmp.badgeImage };
+        obj.children = jsx(FastImageDefault, { source: _modDef15231, style: tmp.badgeImage });
         return (
           <View style={null} pointerEvents="none">
             {null}

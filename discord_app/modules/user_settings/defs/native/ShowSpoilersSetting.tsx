@@ -59,7 +59,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.QgwmVz);
   },
-  parent: fn(7992).MobileUserSettings.CHAT,
+  parent: fn(7993).MobileUserSettings.CHAT,
   useValue: fn(2041).RenderSpoilers.useSetting,
   onValueChange: function onShowSpoilersChange(arg0) {
     const RenderSpoilers = UserSettings.RenderSpoilers;

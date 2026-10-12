@@ -23,7 +23,7 @@ function resolveMessageCodedLinks(content) {
     let item = arr.forEach((item) => {
       ({ type, code } = item);
       if (code(5077).CodedLinkType.INVITE === type) {
-        const result = code(18100).queueMessageLinkFetch(
+        const result = code(18158).queueMessageLinkFetch(
           closure_3(function* () {
             if (c0 === 2) {
               c0 = 3;
@@ -35,7 +35,7 @@ function resolveMessageCodedLinks(content) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -63,7 +63,7 @@ function resolveMessageCodedLinks(content) {
                   return obj;
                 }
                 c0 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               } catch (tmp10) {
                 c0 = tmp;
                 throw tmp10;
@@ -71,9 +71,9 @@ function resolveMessageCodedLinks(content) {
             }
           }),
         );
-        const tmpResult = code(18100);
+        const tmpResult = code(18158);
       } else if (code(5077).CodedLinkType.TEMPLATE === type) {
-        const result1 = code(18100).queueMessageLinkFetch(
+        const result1 = code(18158).queueMessageLinkFetch(
           closure_3(function* () {
             if (c0 === 2) {
               c0 = 3;
@@ -85,7 +85,7 @@ function resolveMessageCodedLinks(content) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -113,7 +113,7 @@ function resolveMessageCodedLinks(content) {
                   return obj;
                 }
                 c0 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               } catch (tmp10) {
                 c0 = tmp;
                 throw tmp10;
@@ -121,7 +121,7 @@ function resolveMessageCodedLinks(content) {
             }
           }),
         );
-        const tmpResult5 = code(18100);
+        const tmpResult5 = code(18158);
       } else if (code(5077).CodedLinkType.BUILD_OVERRIDE !== type) {
         if (code(5077).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
           if (code(5077).CodedLinkType.EVENT !== type) {
@@ -141,21 +141,21 @@ function resolveMessageCodedLinks(content) {
                                       if (code(5077).CodedLinkType.USER_PROFILE !== type) {
                                         if (code(5077).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                                           if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
-                                            const result2 = code(18100).queueMessageLinkFetch(() => {
+                                            const result2 = code(18158).queueMessageLinkFetch(() => {
                                               const useGameOrganizationInviteFetch =
-                                                content(18107).useGameOrganizationInviteFetch;
+                                                content(18165).useGameOrganizationInviteFetch;
                                               const items = [code];
                                               return useGameOrganizationInviteFetch.fetchMany(items);
                                             });
-                                            const tmpResult7 = code(18100);
+                                            const tmpResult7 = code(18158);
                                           }
-                                          tmpResult6 = code(13507);
+                                          tmpResult6 = code(13530);
                                         } else {
                                           if (code(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
                                             if (code(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
                                               if (code(5077).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                const embedApplication = code(11746).getEmbedApplication(code);
-                                                const tmpResult8 = code(11746);
+                                                const embedApplication = code(11748).getEmbedApplication(code);
+                                                const tmpResult8 = code(11748);
                                               } else {
                                                 const _Error = Error;
                                                 const _HermesInternal = HermesInternal;
@@ -163,7 +163,7 @@ function resolveMessageCodedLinks(content) {
                                               }
                                             }
                                           }
-                                          closure_1(18110)(type, code);
+                                          closure_1(18168)(type, code);
                                         }
                                       }
                                     }
@@ -196,7 +196,7 @@ function resolveMessageCodedLinks(content) {
         const item = arr.forEach((item) => {
           ({ type, code } = item);
           if (code(5077).CodedLinkType.INVITE === type) {
-            const result = code(18100).queueMessageLinkFetch(
+            const result = code(18158).queueMessageLinkFetch(
               closure_3(function* () {
                 if (c0 === 2) {
                   c0 = 3;
@@ -208,7 +208,7 @@ function resolveMessageCodedLinks(content) {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -236,7 +236,7 @@ function resolveMessageCodedLinks(content) {
                       return obj;
                     }
                     c0 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   } catch (tmp10) {
                     c0 = tmp;
                     throw tmp10;
@@ -244,9 +244,9 @@ function resolveMessageCodedLinks(content) {
                 }
               }),
             );
-            const tmpResult = code(18100);
+            const tmpResult = code(18158);
           } else if (code(5077).CodedLinkType.TEMPLATE === type) {
-            const result1 = code(18100).queueMessageLinkFetch(
+            const result1 = code(18158).queueMessageLinkFetch(
               closure_3(function* () {
                 if (c0 === 2) {
                   c0 = 3;
@@ -258,7 +258,7 @@ function resolveMessageCodedLinks(content) {
                     const obj3 = { value, done: true };
                     return obj3;
                   } else {
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -286,7 +286,7 @@ function resolveMessageCodedLinks(content) {
                       return obj;
                     }
                     c0 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   } catch (tmp10) {
                     c0 = tmp;
                     throw tmp10;
@@ -294,7 +294,7 @@ function resolveMessageCodedLinks(content) {
                 }
               }),
             );
-            const tmpResult5 = code(18100);
+            const tmpResult5 = code(18158);
           } else if (code(5077).CodedLinkType.BUILD_OVERRIDE !== type) {
             if (code(5077).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
               if (code(5077).CodedLinkType.EVENT !== type) {
@@ -316,21 +316,21 @@ function resolveMessageCodedLinks(content) {
                                               if (
                                                 tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")
                                               ) {
-                                                const result2 = code(18100).queueMessageLinkFetch(() => {
+                                                const result2 = code(18158).queueMessageLinkFetch(() => {
                                                   const useGameOrganizationInviteFetch =
-                                                    content(18107).useGameOrganizationInviteFetch;
+                                                    content(18165).useGameOrganizationInviteFetch;
                                                   const items = [code];
                                                   return useGameOrganizationInviteFetch.fetchMany(items);
                                                 });
-                                                const tmpResult7 = code(18100);
+                                                const tmpResult7 = code(18158);
                                               }
-                                              tmpResult6 = code(13507);
+                                              tmpResult6 = code(13530);
                                             } else {
                                               if (code(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
                                                 if (code(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
                                                   if (code(5077).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                    const embedApplication = code(11746).getEmbedApplication(code);
-                                                    const tmpResult8 = code(11746);
+                                                    const embedApplication = code(11748).getEmbedApplication(code);
+                                                    const tmpResult8 = code(11748);
                                                   } else {
                                                     const _Error = Error;
                                                     const _HermesInternal = HermesInternal;
@@ -338,7 +338,7 @@ function resolveMessageCodedLinks(content) {
                                                   }
                                                 }
                                               }
-                                              closure_1(18110)(type, code);
+                                              closure_1(18168)(type, code);
                                             }
                                           }
                                         }

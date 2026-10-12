@@ -5,7 +5,7 @@ import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import conjureExternalConnections from "../../external_connections/conjureExternalConnections.tsx";
 import conjureProjectMenuItems from "../../projects/conjureProjectMenuItems.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import ConjureConnectionStore from "../../connection/ConjureConnectionStore.tsx";
+import ConjureSettingsStore from "../../settings/ConjureSettingsStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       ({ pending: pending2, connect } = conjureConnectActions);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [ConjureConnectionStore];
+        const items = [ConjureSettingsStore];
         cResult[0] = items;
         let first = items;
       } else {
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== projectId) {
         const fn = function s() {
-          return ConjureConnectionStore.getDeclaredConnections(projectId);
+          return ConjureSettingsStore.getDeclaredConnections(projectId);
         };
         const items1 = [projectId];
         cResult[1] = projectId;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [projectId];
       const stateFromStores = projectId(pending[7]).useStateFromStores(
         items,
-        () => ConjureConnectionStore.getDeclaredConnections(projectId),
+        () => ConjureSettingsStore.getDeclaredConnections(projectId),
         items1,
       );
       const items2 = [stateFromStores];

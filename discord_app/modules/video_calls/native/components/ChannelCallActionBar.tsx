@@ -943,7 +943,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channel(576).c(15);
       channel = channel.channel;
       const obj = channel(576);
-      const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
+      const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelRTCStore, AuthenticationStore];
         cResult[0] = items;
@@ -994,7 +994,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const obj2 = channel(10357);
+      const obj2 = channel(10358);
       const stateFromStores = channel(504).useStateFromStores(first, S);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
@@ -1176,8 +1176,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useActionBarPrimaryButtons(channel) {
       channel = channel.channel;
-      const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
-      const obj = channel(10357);
+      const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
+      const obj = channel(10358);
       const items = [ChannelRTCStore, AuthenticationStore];
       closure_1 = channel(504).useStateFromStores(items, () => {
         const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);

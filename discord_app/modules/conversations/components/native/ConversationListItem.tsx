@@ -11,7 +11,7 @@ import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7315).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7316).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -190,7 +190,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                         };
                                         const items1 = [tmp25, tmp54];
                                         obj6.children = items1;
-                                        const tmp60 = closure_9(tmp(6181).Card, obj6);
+                                        const tmp60 = closure_9(tmp(6182).Card, obj6);
                                         cResult[44] = conversation.title;
                                         cResult[45] = tmp13;
                                         cResult[46] = tmp4.card;
@@ -201,7 +201,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                       }
                                     }
                                     const obj7 = { style: tmp4.previewsMask, maskElement: tmp40, children: tmp50 };
-                                    const tmp57 = closure_8(navigation(6242), obj7);
+                                    const tmp57 = closure_8(navigation(6243), obj7);
                                     cResult[40] = tmp4.previewsMask;
                                     cResult[41] = tmp40;
                                     cResult[42] = tmp50;
@@ -218,7 +218,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             if (null == arr4) {
-                              let mapped = closure_8(navigation(9369), {});
+                              let mapped = closure_8(navigation(9370), {});
                             } else {
                               mapped = arr4.map((blocked) => {
                                 if (!blocked.blocked) {

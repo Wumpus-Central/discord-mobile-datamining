@@ -18,7 +18,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 let closure_6 = fn(5927).TINY_BRONCO_SETTINGS_LOCATION;
-const Constants = fn(7019);
+const Constants = fn(7020);
 ({ SafetySettingsNoticeAction: closure_7, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
@@ -180,7 +180,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           tmp21 = tmp24;
         }
         const obj4 = { type: "info", message: tmp11, role: "status", action: tmp17 };
-        const tmp20 = jsx(noticeType(7567).InlineNotice, {
+        const tmp20 = jsx(noticeType(7568).InlineNotice, {
           type: "info",
           message: tmp11,
           role: "status",
@@ -228,7 +228,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.text = intl2.string(noticeType(1126).t.hvVgAZ);
       obj3.onClick = callback;
       obj2.action = obj3;
-      obj.children = jsx(noticeType(7567).InlineNotice, { type: "info", message: null, role: "status", action: null });
+      obj.children = jsx(noticeType(7568).InlineNotice, { type: "info", message: null, role: "status", action: null });
       return <View style={closure_10().container}>{null}</View>;
     };
 fn(558);
@@ -386,7 +386,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { type: "info", message: tmp10, role: "status", action: tmp13 };
-        const tmp15 = jsx(tmp(7567).InlineNotice, { type: "info", message: tmp10, role: "status", action: tmp13 });
+        const tmp15 = jsx(tmp(7568).InlineNotice, { type: "info", message: tmp10, role: "status", action: tmp13 });
         cResult[7] = tmp10;
         cResult[8] = tmp15;
       } else {
@@ -460,7 +460,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1126).t.FDSSia);
       obj3.onClick = callback1;
       obj2.action = obj3;
-      obj.children = jsx(AGE_CONFIRMATION_NOTICE(7567).InlineNotice, {
+      obj.children = jsx(AGE_CONFIRMATION_NOTICE(7568).InlineNotice, {
         type: "info",
         message: null,
         role: "status",

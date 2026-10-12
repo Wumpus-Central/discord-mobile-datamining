@@ -86,13 +86,13 @@ function getScreens() {
   };
   return obj;
 }
-const GuildDirectoryCreate = fn(12006).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12008).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
-let obj2 = { safeArea: { marginTop: fn(6258).NAV_BAR_HEIGHT, flex: 1 } };
+let obj2 = { safeArea: { marginTop: fn(6259).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);
-let obj3 = { marginTop: fn(6258).NAV_BAR_HEIGHT, flex: 1 };
+let obj3 = { marginTop: fn(6259).NAV_BAR_HEIGHT, flex: 1 };
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function GuildDirectoryAddModalScreen(children) {

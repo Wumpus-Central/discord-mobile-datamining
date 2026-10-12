@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import FreeFormTextInputDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 import InstantInviteUtilsDefault from "../../../../utils/InstantInviteUtils.tsx";
-import _modDef8722 from "../../../../../_runtime/metro/08722__.js";
+import _modDef8723 from "../../../../../_runtime/metro/08723__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol2 = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp26 = closure_5(tmp(7091).SettingsIcon, {});
+                const tmp26 = closure_5(tmp(7092).SettingsIcon, {});
                 cResult[15] = tmp26;
                 let tmp24 = tmp26;
               } else {
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp4.settingsButton,
                 children: tmp24,
               };
-              const tmp29 = closure_5(tmp(6184).PressableOpacity, obj6);
+              const tmp29 = closure_5(tmp(6185).PressableOpacity, obj6);
               cResult[16] = onPressSettings;
               cResult[17] = tmp4.settingsButton;
               cResult[18] = tmp29;
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         containerStyle: emptyStateContainer,
         imageStyle: emptyStateArt,
         titleStyle: emptyStateTitle,
-        source: _modDef8722,
+        source: _modDef8723,
         title: tmp10,
         body: tmp11,
       });
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         containerStyle: emptyStateContainer,
         imageStyle: emptyStateArt,
         titleStyle: emptyStateTitle,
-        source: _modDef8722,
+        source: _modDef8723,
         title: tmp10,
         body: tmp11,
       };
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         containerStyle: tmp.emptyStateContainer,
         imageStyle: tmp.emptyStateArt,
         titleStyle: tmp.emptyStateTitle,
-        source: _modDef8722,
+        source: _modDef8723,
         title: null,
         body: null,
       };
@@ -331,8 +331,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.accessibilityLabel = intl3.string(stateFromStores(1126).t["3D5yo/"]);
       obj6.onPress = onPressSettings;
       obj6.style = tmp.settingsButton;
-      obj6.children = closure_5(stateFromStores(7091).SettingsIcon, {});
-      items2[1] = closure_5(stateFromStores(6184).PressableOpacity, obj6);
+      obj6.children = closure_5(stateFromStores(7092).SettingsIcon, {});
+      items2[1] = closure_5(stateFromStores(6185).PressableOpacity, obj6);
       obj4.children = items2;
       items1[1] = closure_6(View, obj4);
       const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };

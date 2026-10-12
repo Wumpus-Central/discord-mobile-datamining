@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/projects/native/removeConjureServerApp.tsx
-import ConjureActionCreators from "../ConjureActionCreators.tsx";
+import ConjurePublishActionCreators from "../../publish/ConjurePublishActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -7,8 +7,8 @@ let closure_4 = async function _removeConjureServerApp() {
   closure_3 = tmp2;
   closure_2 = tmp3;
   closure_130_0 = _require;
-  ConjureActionCreators;
-  await ConjureActionCreators.unpublishProject(closure_0.projectId, {
+  ConjurePublishActionCreators;
+  await ConjurePublishActionCreators.unpublishProject(closure_0.projectId, {
     guildId: closure_0.guildId,
     alsoRemovePreviewBot: true,
   }).catch(() => null);

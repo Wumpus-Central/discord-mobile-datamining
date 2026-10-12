@@ -100,9 +100,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         fontFamily: "System",
         fontSize: result,
         lineHeight: "code",
-        textAlign: false,
+        textAlign: "<string:4268818748>",
         width: num,
-        marginBottom: false,
+        marginBottom: "SUBSCRIPTION_PLANS_RESET",
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -119,9 +119,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         fontFamily: "System",
         fontSize: size * num,
         lineHeight: "code",
-        textAlign: false,
+        textAlign: "<string:4268818748>",
         width: size,
-        marginBottom: false,
+        marginBottom: "SUBSCRIPTION_PLANS_RESET",
       };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };

@@ -5,14 +5,14 @@ import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import BackgroundImageDefault from "../../../auth/native/components/atoms/BackgroundImage.tsx";
 import AgeRestrictedContentSettingsUtils from "../../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
-import _modDef6918 from "../../../../../_runtime/metro/06918__.js";
+import _modDef6919 from "../../../../../_runtime/metro/06919__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(6915).NsfwGateSource;
+const NsfwGateSource = fn(6916).NsfwGateSource;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp19 = cResult[7];
       }
       if (cResult[8] !== tmp4.image) {
-        const obj4 = { source: _modDef6918, style: tmp4.image };
+        const obj4 = { source: _modDef6919, style: tmp4.image };
         const tmp27 = closure_10(FastImageDefault, obj4);
         cResult[8] = tmp4.image;
         cResult[9] = tmp27;
@@ -254,12 +254,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
       }, items);
       let obj3 = { style: tmp.container, children: null };
-      const items1 = [closure_10(currentUser(6656), {}), , , , ,];
+      const items1 = [closure_10(currentUser(6657), {}), , , , ,];
       const obj4 = { source: null, style: null };
       const formatResult = intl3.format(guildId(1126).t.Z12LNW, obj);
-      obj4.source = currentUser(6918);
+      obj4.source = currentUser(6919);
       obj4.style = tmp.image;
-      items1[1] = closure_10(currentUser(6156), obj4);
+      items1[1] = closure_10(currentUser(6157), obj4);
       items1[2] = closure_10(guildId(5088).Heading, {
         style: tmp.header,
         variant: "heading-xl/extrabold",

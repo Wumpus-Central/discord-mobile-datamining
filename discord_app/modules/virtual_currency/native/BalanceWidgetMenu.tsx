@@ -9,7 +9,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import _mod9060 from "../hooks/index.tsx";
+import _mod9061 from "../hooks/index.tsx";
 import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton.tsx";
@@ -18,7 +18,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const ButtonEllipsis = Ellipsis(5395);
 require = fn;
 function BalanceWidgetMenu() {
-  str = str(9060).useFetchVirtualCurrencyBalance().balance;
+  str = str(9061).useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
@@ -40,7 +40,7 @@ function BalanceWidgetMenu() {
       obj5.analyticsLocations = items;
       obj5.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
       obj5.screen = constants2.ORBS;
-      const result = str(7262).openCollectiblesShopMobile(obj5);
+      const result = str(7263).openCollectiblesShopMobile(obj5);
     };
     obj3.primaryButtonConfig = obj4;
     let obj5 = { buttonText: null, onButtonPress: null };
@@ -55,7 +55,7 @@ function BalanceWidgetMenu() {
       });
       const obj2 = { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance };
       ActionSheetActionCreatorsDefault.hideActionSheet();
-      const obj4 = str(9167);
+      const obj4 = str(9168);
       obj4.openQuestHome({
         mergeExistingRoutes: true,
         filter: constants3.VIRTUAL_CURRENCY,
@@ -78,7 +78,7 @@ function BalanceWidgetMenu() {
   if (str2 == null) {
     str2 = "";
   }
-  let obj = str(9060);
+  let obj = str(9061);
   return (
     <closure_10
       accessibilityLabel={intl.formatToPlainString(str(1126).t.zPaLL9, { balance: str2 })}
@@ -215,7 +215,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
                 });
               };
-              obj.trailing = closure_9(closure_1(16047), {});
+              obj.trailing = closure_9(closure_1(16070), {});
               return closure_9(closure_10, obj);
             } else {
               return null;
@@ -243,7 +243,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
                 });
               };
-              obj.trailing = closure_9(closure_1(16047), {});
+              obj.trailing = closure_9(closure_1(16070), {});
               return closure_9(closure_10, obj);
             } else {
               return null;
@@ -280,7 +280,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC,
             });
           };
-          obj.trailing = closure_9(closure_1(16047), {});
+          obj.trailing = closure_9(closure_1(16070), {});
           return closure_9(closure_10, obj);
         } else {
           return null;
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let Ellipsis = require;
       let tmp = dependencyMap;
       const cResult = c.c(3);
-      const balance = _mod9060.useFetchVirtualCurrencyBalance().balance;
+      const balance = _mod9061.useFetchVirtualCurrencyBalance().balance;
       DismissibleContentUnsafeUtils;
       if (null == balance) {
         const _Symbol3 = Symbol;
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : function BalanceWidgetMenuWrapper() {
-      const balance = _mod9060.useFetchVirtualCurrencyBalance().balance;
+      const balance = _mod9061.useFetchVirtualCurrencyBalance().balance;
       DismissibleContentUnsafeUtils;
       if (null == balance) {
         const obj2 = { accessibilityLabel: null, trailing: null, isBusy: true };

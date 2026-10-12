@@ -78,7 +78,7 @@ function DropdownPrompt(guildId) {
   const handleSelectOption = _prompt(isNew[41])(guildId).handleSelectOption;
   const items1 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = stateFromStoresArray.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6824, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6825, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: _prompt.id,
       onSelect: function handleOptionSelected(arg0, arg1) {
@@ -143,7 +143,7 @@ function DropdownPrompt(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildOnboardingPromptsConstants = fn(6789);
+const GuildOnboardingPromptsConstants = fn(6790);
 ({ GuildOnboardingTab: closure_11, OnboardingPromptType: closure_12 } = GuildOnboardingPromptsConstants);
 const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const ReadStateTypes = fn(5967).ReadStateTypes;
@@ -372,7 +372,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           tmp26 = tmp29;
         }
         const obj7 = { style: tmp4.emptyContainerImage, source: tmp5Result };
-        const tmp15 = closure_15(tmp5(6156), obj7);
+        const tmp15 = closure_15(tmp5(6157), obj7);
         cResult[5] = tmp4.emptyContainerImage;
         cResult[6] = tmp5Result;
         cResult[7] = tmp15;
@@ -517,8 +517,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[6] !== tmp10) {
           if (null != tmp10) {
-            let selectedRoleIds = tmp(6794).getSelectedRoleIds(tmp10);
-            const tmpResult3 = tmp(6794);
+            let selectedRoleIds = tmp(6795).getSelectedRoleIds(tmp10);
+            const tmpResult3 = tmp(6795);
           } else {
             const _Set = Set;
             selectedRoleIds = new Set();
@@ -527,8 +527,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[7] = selectedRoleIds;
         } else if (cResult[8] !== tmp10) {
           if (null != tmp10) {
-            let selectedChannelIds = tmp(6794).getSelectedChannelIds(tmp10);
-            const tmpResult4 = tmp(6794);
+            let selectedChannelIds = tmp(6795).getSelectedChannelIds(tmp10);
+            const tmpResult4 = tmp(6795);
           } else {
             const _Set2 = Set;
             selectedChannelIds = new Set();
@@ -556,7 +556,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[14] === tmp13) {
                   let tmp24 = cResult[15];
                 }
-                ({ helpText, helpTextAdditional } = selectedOptionIds(6814)(tmp24));
+                ({ helpText, helpTextAdditional } = selectedOptionIds(6815)(tmp24));
                 if (cResult[16] === helpText) {
                   if (cResult[17] === helpTextAdditional) {
                     if (cResult[18] === tmp4) {
@@ -583,7 +583,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = tmp4;
                 cResult[19] = tmp28;
                 tmp27 = tmp28;
-                const tmp26 = selectedOptionIds(6814)(tmp24);
+                const tmp26 = selectedOptionIds(6815)(tmp24);
               }
             }
           }
@@ -1544,13 +1544,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () =>
           null != guildId
             ? () => {
-                guildId(6799).ackGuildFeature(
+                guildId(6800).ackGuildFeature(
                   closure_1_0,
                   constants.GUILD_ONBOARDING_QUESTION,
                   GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0),
                 );
-                const obj = guildId(6799);
-                const result = stateFromStores(6793).updateOnboardingResponses(closure_1_0);
+                const obj = guildId(6800);
+                const result = stateFromStores(6794).updateOnboardingResponses(closure_1_0);
               }
             : undefined,
         items3,

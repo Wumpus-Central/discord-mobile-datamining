@@ -8,7 +8,7 @@ import native from "../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import GuildRoleRecordUtilsAll from "../../../utils/GuildRoleRecordUtils.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import _modDef8556 from "../../../../_runtime/metro/08556__.js";
+import _modDef8557 from "../../../../_runtime/metro/08557__.js";
 import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
 import RolePillDefault from "../../../components_native/common/RolePill.tsx";
 import InvalidLink from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
@@ -25,7 +25,7 @@ const isGuildVocalChannelType = fn(2069).isGuildVocalChannelType;
 const isEveryoneRole = fn(2120).isEveryoneRole;
 const Constants = fn(1085);
 ({ MarketingURLs: closure_8, Fonts, ChannelTypes: closure_9 } = Constants);
-const GuildTemplateStates = fn(7030).GuildTemplateStates;
+const GuildTemplateStates = fn(7031).GuildTemplateStates;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(5092);
@@ -161,7 +161,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_14();
       const obj = guildTemplate(576);
       const typeConsolidationTextTransform =
-        guildTemplate(6662).useTypeConsolidationTextTransform("AcceptGuildTemplate");
+        guildTemplate(6663).useTypeConsolidationTextTransform("AcceptGuildTemplate");
       _modDef38(null != guildTemplate, "guild template cannot be null");
       _modDef38(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
       const bottom = useSafeAreaInsetsDefault().bottom;
@@ -507,7 +507,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                       returnKeyType: "done",
                       clearable: true,
                     };
-                    const tmp33 = closure_11(tmp(6285).TextInput, obj20);
+                    const tmp33 = closure_11(tmp(6286).TextInput, obj20);
                     cResult[23] = name;
                     cResult[24] = setName;
                     cResult[25] = name1;
@@ -588,7 +588,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[0] = guildTemplate.serializedSourceGuild.id;
       cResult[1] = guildTemplate.serializedSourceGuild.roles;
       cResult[2] = found;
-      const obj2 = guildTemplate(6662);
+      const obj2 = guildTemplate(6663);
     }
   : function GuildTemplateResolved(guildTemplate) {
       guildTemplate = guildTemplate.guildTemplate;
@@ -596,7 +596,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       ({ createServer, name, setName, icon, chooseIcon } = guildTemplate);
       const tmp = closure_14();
       const typeConsolidationTextTransform =
-        guildTemplate(6662).useTypeConsolidationTextTransform("AcceptGuildTemplate");
+        guildTemplate(6663).useTypeConsolidationTextTransform("AcceptGuildTemplate");
       _modDef38(null != guildTemplate, "guild template cannot be null");
       _modDef38(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
       const roles = guildTemplate.serializedSourceGuild.roles;
@@ -657,7 +657,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       obj6.errorMessage = name1;
       obj6.value = name;
       obj6.onChange = setName;
-      items1[3] = closure_11(guildTemplate(6285).TextInput, obj6);
+      items1[3] = closure_11(guildTemplate(6286).TextInput, obj6);
       const obj7 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = tmp2(1126).intl;
       obj7.children = intl3.format(guildTemplate(1126).t["2bprXx"], { guidelinesURL: constants.GUIDELINES });
@@ -825,7 +825,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         items[1] = channelCategoryIcon;
         const type = children.type;
         if (isGuildVocalChannelType(type)) {
-          let tmp10Result = _modDef8556;
+          let tmp10Result = _modDef8557;
         } else if (type === constants2.GUILD_CATEGORY) {
           tmp10Result = _modDef11358;
         } else {
@@ -895,7 +895,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             items[1] = channelCategoryIcon;
             const type = children.type;
             if (isGuildVocalChannelType(type)) {
-              let tmp10Result = _modDef8556;
+              let tmp10Result = _modDef8557;
             } else if (type === constants2.GUILD_CATEGORY) {
               tmp10Result = _modDef11358;
             } else {

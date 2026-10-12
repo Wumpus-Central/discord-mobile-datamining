@@ -149,9 +149,9 @@ function handleLocalActivityUpdate() {
 const Constants = fn(1085);
 ({ ChannelTypes: closure_11, ActivityActionTypes: closure_12 } = Constants);
 let items = [
-  fn(8699).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(8699).AutocompleterResultTypes.GROUP_DM,
-  fn(8699).AutocompleterResultTypes.USER,
+  fn(8700).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(8700).AutocompleterResultTypes.GROUP_DM,
+  fn(8700).AutocompleterResultTypes.USER,
 ];
 let c14 = null;
 let c15 = null;

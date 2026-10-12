@@ -23,8 +23,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, FlatList: metroRequire, StyleSheet } = get_ActivityIndicator);
-let closure_7 = fn(8763).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(6661).CreateGuildModalStates;
+let closure_7 = fn(8764).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(6662).CreateGuildModalStates;
 const Constants = fn(1085);
 ({
   AnalyticEvents: map1,
@@ -38,7 +38,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5092);
 let obj2 = {
   container: {
-    marginTop: fn(6258).NAV_BAR_HEIGHT,
+    marginTop: fn(6259).NAV_BAR_HEIGHT,
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
     alignItems: "center",
@@ -57,7 +57,7 @@ let obj2 = {
   separator: null,
 };
 let obj3 = {
-  marginTop: fn(6258).NAV_BAR_HEIGHT,
+  marginTop: fn(6259).NAV_BAR_HEIGHT,
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   alignItems: "center",

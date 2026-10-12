@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { title: null };
           const intl = tmp(1126).intl;
           obj2.title = intl.string(tmp(1126).t.KTjjrG);
-          const tmp9 = closure_6(tmp(6838).BottomSheetTitleHeader, obj2);
+          const tmp9 = closure_6(tmp(6839).BottomSheetTitleHeader, obj2);
           cResult[3] = tmp9;
           let tmp7 = tmp9;
         } else {
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [tmp12, tmp17, tmp20, tmp26];
         obj8.children = items;
         obj7.children = closure_7(View, obj8);
-        const tmp33 = closure_6(tmp(6839).BottomSheet, obj7);
+        const tmp33 = closure_6(tmp(6840).BottomSheet, obj7);
         cResult[14] = tmp4.container;
         cResult[15] = tmp12;
         cResult[16] = tmp17;

@@ -18,7 +18,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const PanGestureAnimationsDefault = PanGestureAnimations;
 
 require = fn;
-const ChannelCallStore = fn(10353);
+const ChannelCallStore = fn(10354);
 ({
   useChannelCallOrientationHandlers: closure_7,
   resetChannelCallStore: closure_8,
@@ -26,7 +26,7 @@ const ChannelCallStore = fn(10353);
   setVoiceChatDrawerState: c10,
   useIsVoiceChatFocused: closure_11,
 } = ChannelCallStore);
-let VoiceChatDrawerState = fn(10354).VoiceChatDrawerState;
+let VoiceChatDrawerState = fn(10355).VoiceChatDrawerState;
 const Constants = fn(10826);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
@@ -123,8 +123,8 @@ let closure_18 = noop.memo(
               return () => {
                 closure_1_1(10967).terminate();
                 const obj = closure_1_1(10967);
-                closure_1_1(10360).setHidden(false);
-                const obj2 = closure_1_1(10360);
+                closure_1_1(10361).setHidden(false);
+                const obj2 = closure_1_1(10361);
                 if (!obj3.isModalOpen(closure_1_34)) {
                   closure_1_8();
                 }
@@ -163,8 +163,8 @@ let closure_18 = noop.memo(
             return () => {
               closure_1_1(10967).terminate();
               const obj = closure_1_1(10967);
-              closure_1_1(10360).setHidden(false);
-              const obj2 = closure_1_1(10360);
+              closure_1_1(10361).setHidden(false);
+              const obj2 = closure_1_1(10361);
               if (!obj3.isModalOpen(closure_1_34)) {
                 closure_1_8();
               }

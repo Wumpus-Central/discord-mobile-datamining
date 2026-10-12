@@ -95,8 +95,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 userAvatarDecoration: null,
                 streamId: "Symbol",
                 ringing: null,
-                hasVideo: 0,
-                isSelf: 17,
+                hasVideo: "#222A1C",
+                isSelf: 100,
               };
               id = AuthenticationStore.getId();
               obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
@@ -212,8 +212,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   userAvatarDecoration: null,
                   streamId: "Symbol",
                   ringing: null,
-                  hasVideo: 0,
-                  isSelf: 17,
+                  hasVideo: "#222A1C",
+                  isSelf: 100,
                 };
                 id = AuthenticationStore.getId();
                 obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);

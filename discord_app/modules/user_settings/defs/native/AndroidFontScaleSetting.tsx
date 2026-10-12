@@ -6,7 +6,7 @@ import CircleMinusIcon from "../../../../design/components/Icon/native/redesign/
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useFontScaleStore = fn(15535).useFontScaleStore;
+const useFontScaleStore = fn(15558).useFontScaleStore;
 const FontScales = fn(1095).FontScales;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -136,7 +136,7 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t.i19n5L);
   },
-  parent: fn(7992).MobileUserSettings.APPEARANCE,
+  parent: fn(7993).MobileUserSettings.APPEARANCE,
   useProps: ReactCompilerGating.isReactCompilerEnabled()
     ? function useFontScaleSliderProps() {
         const cResult = c.c(13);

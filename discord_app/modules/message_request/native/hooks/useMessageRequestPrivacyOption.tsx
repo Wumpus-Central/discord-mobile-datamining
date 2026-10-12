@@ -164,7 +164,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 };
-          const tmp17 = jsx(tmp(6894).ActionSheetSwitchRow, {
+          const tmp17 = jsx(tmp(6895).ActionSheetSwitchRow, {
             label: tmp10,
             subLabel: tmp11,
             value: !tmp6,
@@ -220,7 +220,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       obj.value = tmp5;
       obj.onValueChange = callback;
       obj.disabled = hasItem1;
-      return jsx(id(6894).ActionSheetSwitchRow, {
+      return jsx(id(6895).ActionSheetSwitchRow, {
         label: null,
         subLabel: null,
         value: null,

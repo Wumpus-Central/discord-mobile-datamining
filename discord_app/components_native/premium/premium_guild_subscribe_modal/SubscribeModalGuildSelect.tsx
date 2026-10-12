@@ -416,7 +416,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.onClose = BoostingActionCreatorsAll.closeApplyBoostModal;
       const items3 = [closure_11(SearchBarNavDefault, obj4)];
       const obj5 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
-      obj5.children = closure_11(guildBoostSlots(6813).SafeAreaPaddingView, {
+      obj5.children = closure_11(guildBoostSlots(6814).SafeAreaPaddingView, {
         bottom: true,
         children: stateFromStoresArray.map((guild) => {
           const obj = {
@@ -446,5 +446,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       items3[1] = closure_11(memo, obj5);
       obj3.children = items3;
-      return closure_12(guildBoostSlots(6813).SafeAreaPaddingView, obj3);
+      return closure_12(guildBoostSlots(6814).SafeAreaPaddingView, obj3);
     };

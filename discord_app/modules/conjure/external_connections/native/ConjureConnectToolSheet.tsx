@@ -9,9 +9,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const formatMcpConnectionExpiry = fn(13213).formatMcpConnectionExpiry;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5092);
 let obj2 = {
   content: { gap: nativeDefault.space.PX_16 },
@@ -34,7 +33,7 @@ obj2.failedRow = {
   gap: nativeDefault.space.PX_12,
 };
 obj2.failedText = { flexShrink: 1 };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj6 = {
   flexDirection: "row",
@@ -48,13 +47,13 @@ const result = size.fileFinishedImporting("modules/conjure/external_connections/
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjureConnectToolSheet(projectId) {
       const cResult = connection(576).c(24);
-      const tmp4 = closure_8();
+      const tmp4 = closure_7();
       let obj = connection(576);
-      const mcpConnectionPanel = connection(17115).useMcpConnectionPanel(projectId.projectId);
+      const mcpConnectionPanel = connection(17151).useMcpConnectionPanel(projectId.projectId);
       connection = mcpConnectionPanel.connection;
       ({ loading, failed, mint } = mcpConnectionPanel);
       if (cResult[0] !== connection) {
-        const fn = function o() {
+        const fn = function l() {
           if (null != connection) {
             ClipboardUtils.copy(tmp.url);
             ToastUtils.presentLinkCopied();
@@ -67,164 +66,301 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[1];
       }
       if (cResult[2] !== mint) {
-        const fn2 = function b() {
-          const obj2 = {
-            key: "VibegrationsConnectToolRegenerate",
-            title: null,
-            content: null,
-            confirmText: null,
-            onConfirm: null,
-          };
-          const intl = util.intl;
-          obj2.title = intl.string(_modDef3849.avUWNd);
-          const intl2 = util.intl;
-          obj2.content = intl2.string(_modDef3849.YSh8bL);
-          const intl3 = util.intl;
-          obj2.confirmText = intl3.string(_modDef3849.Ise9RO);
-          obj2.onConfirm = function onConfirm() {
-            mint(true);
-          };
-          AlertModal.showConfirmModal(obj2);
-        };
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            obj1 = {
+              key: "VibegrationsConnectToolRegenerate",
+              title: null,
+              content: null,
+              confirmText: null,
+              onConfirm: null,
+            };
+            intl = closure_0(closure_2[11]).intl;
+            obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+            intl2 = closure_0(closure_2[11]).intl;
+            obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+            intl3 = closure_0(closure_2[11]).intl;
+            obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+            obj1.onConfirm = function onConfirm() {
+              mint(true);
+            };
+            showConfirmModalResult = obj.showConfirmModal(obj1);
+            return;
+          }
+        }
         cResult[2] = mint;
-        cResult[3] = fn2;
-        section = fn2;
+        cResult[3] = C;
+        section = C;
       } else {
-        section = cResult[3];
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            obj1 = {
+              key: "VibegrationsConnectToolRegenerate",
+              title: null,
+              content: null,
+              confirmText: null,
+              onConfirm: null,
+            };
+            intl = closure_0(closure_2[11]).intl;
+            obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+            intl2 = closure_0(closure_2[11]).intl;
+            obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+            intl3 = closure_0(closure_2[11]).intl;
+            obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+            obj1.onConfirm = function onConfirm() {
+              mint(true);
+            };
+            showConfirmModalResult = obj.showConfirmModal(obj1);
+            return;
+          }
+        }
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            obj1 = {
+              key: "VibegrationsConnectToolRegenerate",
+              title: null,
+              content: null,
+              confirmText: null,
+              onConfirm: null,
+            };
+            intl = closure_0(closure_2[11]).intl;
+            obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+            intl2 = closure_0(closure_2[11]).intl;
+            obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+            intl3 = closure_0(closure_2[11]).intl;
+            obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+            obj1.onConfirm = function onConfirm() {
+              mint(true);
+            };
+            showConfirmModalResult = obj.showConfirmModal(obj1);
+            return;
+          }
+        }
         const obj3 = { title: null };
         let intl = tmp(1126).intl;
         obj3.title = intl.string(mint(3849)["7937yd"]);
-        const tmp10 = closure_6(tmp(6838).BottomSheetTitleHeader, obj3);
-        cResult[4] = tmp10;
-        let tmp7 = tmp10;
+        const tmp9 = closure_5(tmp(6839).BottomSheetTitleHeader, obj3);
+        cResult[4] = tmp9;
       } else {
-        tmp7 = cResult[4];
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            obj1 = {
+              key: "VibegrationsConnectToolRegenerate",
+              title: null,
+              content: null,
+              confirmText: null,
+              onConfirm: null,
+            };
+            intl = closure_0(closure_2[11]).intl;
+            obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+            intl2 = closure_0(closure_2[11]).intl;
+            obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+            intl3 = closure_0(closure_2[11]).intl;
+            obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+            obj1.onConfirm = function onConfirm() {
+              mint(true);
+            };
+            showConfirmModalResult = obj.showConfirmModal(obj1);
+            return;
+          }
+        }
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            obj1 = {
+              key: "VibegrationsConnectToolRegenerate",
+              title: null,
+              content: null,
+              confirmText: null,
+              onConfirm: null,
+            };
+            intl = closure_0(closure_2[11]).intl;
+            obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+            intl2 = closure_0(closure_2[11]).intl;
+            obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+            intl3 = closure_0(closure_2[11]).intl;
+            obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+            obj1.onConfirm = function onConfirm() {
+              mint(true);
+            };
+            showConfirmModalResult = obj.showConfirmModal(obj1);
+            return;
+          }
+        }
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
         let intl2 = tmp(1126).intl;
         obj4.children = intl2.string(mint(3849).WltAg2);
-        const tmp14 = closure_6(tmp(5088).Text, obj4);
-        cResult[5] = tmp14;
-        let tmp11 = tmp14;
+        const tmp12 = closure_5(tmp(5088).Text, obj4);
+        cResult[5] = tmp12;
       } else {
-        tmp11 = cResult[5];
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            obj1 = {
+              key: "VibegrationsConnectToolRegenerate",
+              title: null,
+              content: null,
+              confirmText: null,
+              onConfirm: null,
+            };
+            intl = closure_0(closure_2[11]).intl;
+            obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+            intl2 = closure_0(closure_2[11]).intl;
+            obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+            intl3 = closure_0(closure_2[11]).intl;
+            obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+            obj1.onConfirm = function onConfirm() {
+              mint(true);
+            };
+            showConfirmModalResult = obj.showConfirmModal(obj1);
+            return;
+          }
+        }
       }
       if (cResult[6] === connection) {
-        if (cResult[7] === tmp6) {
-          if (cResult[8] === section) {
-            if (cResult[9] === loading) {
-              if (cResult[10] === tmp4.action) {
-                if (cResult[11] === tmp4.actions) {
-                  if (cResult[12] === tmp4.section) {
-                    if (cResult[14] === failed) {
-                      if (cResult[15] === loading) {
-                        if (cResult[16] === mint) {
-                          if (cResult[17] === tmp4.failedRow) {
-                            if (cResult[18] === tmp4.failedText) {
-                              let tmp24 = cResult[19];
-                            }
-                            if (cResult[20] === tmp4.content) {
-                              if (cResult[21] === tmp15) {
-                                if (cResult[22] === tmp24) {
-                                  let tmp30 = cResult[23];
-                                }
-                                return tmp30;
-                              }
-                            }
-                            const obj5 = { header: tmp7, children: null };
-                            const obj6 = { style: tmp4.content, children: null };
-                            const items = [tmp11, tmp15, tmp24];
-                            obj6.children = items;
-                            obj5.children = closure_7(View, obj6);
-                            const tmp34 = closure_6(tmp(6898).ActionSheet, obj5);
-                            cResult[20] = tmp4.content;
-                            cResult[21] = tmp15;
-                            cResult[22] = tmp24;
-                            cResult[23] = tmp34;
-                            tmp30 = tmp34;
-                          }
-                        }
-                      }
-                    }
-                    let tmp25 = null;
-                    if (failed) {
-                      const obj7 = { style: tmp4.failedRow, accessibilityRole: "alert", children: null };
-                      const obj8 = { style: tmp4.failedText, children: null };
-                      const obj9 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
-                      const intl8 = tmp(1126).intl;
-                      obj9.children = intl8.string(mint(3849).IAF2eN);
-                      obj8.children = closure_6(tmp(5088).Text, obj9);
-                      const items1 = [closure_6(View, obj8)];
-                      const obj10 = { variant: "secondary", size: "sm", text: null, loading: null, onPress: null };
-                      const intl9 = tmp(1126).intl;
-                      obj10.text = intl9.string(mint(3849)["eHMX/v"]);
-                      obj10.loading = loading;
-                      obj10.onPress = function onPress() {
-                        mint(false);
-                      };
-                      items1[1] = closure_6(tmp(5379).Button, obj10);
-                      obj7.children = items1;
-                      tmp25 = closure_7(View, obj7);
-                    }
-                    cResult[14] = failed;
-                    cResult[15] = loading;
-                    cResult[16] = mint;
-                    cResult[17] = tmp4.failedRow;
-                    cResult[18] = tmp4.failedText;
-                    cResult[19] = tmp25;
-                    tmp24 = tmp25;
-                  }
-                }
-              }
-            }
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            obj1 = {
+              key: "VibegrationsConnectToolRegenerate",
+              title: null,
+              content: null,
+              confirmText: null,
+              onConfirm: null,
+            };
+            intl = closure_0(closure_2[11]).intl;
+            obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+            intl2 = closure_0(closure_2[11]).intl;
+            obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+            intl3 = closure_0(closure_2[11]).intl;
+            obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+            obj1.onConfirm = function onConfirm() {
+              mint(true);
+            };
+            showConfirmModalResult = obj.showConfirmModal(obj1);
+            return;
           }
         }
       }
       if (null != connection) {
-        const obj11 = { style: tmp4.section, children: null };
-        const obj12 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            obj1 = {
+              key: "VibegrationsConnectToolRegenerate",
+              title: null,
+              content: null,
+              confirmText: null,
+              onConfirm: null,
+            };
+            intl = closure_0(closure_2[11]).intl;
+            obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+            intl2 = closure_0(closure_2[11]).intl;
+            obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+            intl3 = closure_0(closure_2[11]).intl;
+            obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+            obj1.onConfirm = function onConfirm() {
+              mint(true);
+            };
+            showConfirmModalResult = obj.showConfirmModal(obj1);
+            return;
+          }
+        }
+        const obj5 = { style: tmp4.section, children: null };
+        const obj6 = { variant: "text-xs/semibold", color: "text-muted", children: null };
         const intl4 = tmp(1126).intl;
-        obj12.children = intl4.string(mint(3849).UCwV3L);
-        const items2 = [closure_6(tmp(5088).Text, obj12), , ,];
-        const obj13 = { variant: "primary", children: null };
-        const obj14 = { variant: "text-sm/normal", color: "text-default", selectable: true, children: connection.url };
-        obj13.children = closure_6(tmp(5088).Text, obj14);
-        items2[1] = closure_6(tmp(6181).Card, obj13);
-        const obj15 = { style: tmp4.actions, children: null };
-        const obj16 = { style: tmp4.action, children: null };
-        const obj17 = { variant: "primary", size: "md", text: null, onPress: null };
+        obj6.children = intl4.string(mint(3849).UCwV3L);
+        const items = [closure_5(tmp(5088).Text, obj6), , ,];
+        const obj7 = { variant: "primary", children: null };
+        const obj8 = { variant: "text-sm/normal", color: "text-default", selectable: true, children: connection.url };
+        obj7.children = closure_5(tmp(5088).Text, obj8);
+        items[1] = closure_5(tmp(6182).Card, obj7);
+        const obj9 = { style: tmp4.actions, children: null };
+        const obj10 = { style: tmp4.action, children: null };
+        const obj11 = { variant: "primary", size: "md", text: null, onPress: null };
         const intl5 = tmp(1126).intl;
-        obj17.text = intl5.string(tmp(1126).t.OpuAlK);
-        obj17.onPress = tmp6;
-        obj16.children = closure_6(tmp(5379).Button, obj17);
-        const items3 = [closure_6(View, obj16)];
-        const obj18 = { style: tmp4.action, children: null };
-        const obj19 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
+        obj11.text = intl5.string(tmp(1126).t.OpuAlK);
+        obj11.onPress = tmp6;
+        obj10.children = closure_5(tmp(5379).Button, obj11);
+        const items1 = [closure_5(View, obj10)];
+        const obj12 = { style: tmp4.action, children: null };
+        const obj13 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
         const intl6 = tmp(1126).intl;
-        obj19.text = intl6.string(mint(3849).FBKOBq);
-        obj19.loading = loading;
-        obj19.onPress = section;
-        obj18.children = closure_6(tmp(5379).Button, obj19);
-        items3[1] = closure_6(View, obj18);
-        obj15.children = items3;
-        items2[2] = closure_7(View, obj15);
-        const obj20 = { variant: "text-xs/normal", color: "text-muted", children: null };
+        obj13.text = intl6.string(mint(3849).FBKOBq);
+        obj13.loading = loading;
+        obj13.onPress = section;
+        obj12.children = closure_5(tmp(5379).Button, obj13);
+        items1[1] = closure_5(View, obj12);
+        obj9.children = items1;
+        items[2] = closure_6(View, obj9);
+        const obj14 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl7 = tmp(1126).intl;
-        const obj21 = { time: formatMcpConnectionExpiry(connection) };
-        obj20.children = intl7.format(mint(3849).EQ8k1i, obj21);
-        items2[3] = closure_6(tmp(5088).Text, obj20);
-        obj11.children = items2;
-        let tmp16 = closure_7(View, obj11);
+        const obj15 = { time: tmp(17152).formatMcpConnectionExpiry(connection) };
+        obj14.children = intl7.format(mint(3849).EQ8k1i, obj15);
+        items[3] = closure_5(tmp(5088).Text, obj14);
+        obj5.children = items;
+        let tmp13 = closure_6(View, obj5);
+        const tmpResult = tmp(17152);
       } else {
-        tmp16 = null;
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            obj1 = {
+              key: "VibegrationsConnectToolRegenerate",
+              title: null,
+              content: null,
+              confirmText: null,
+              onConfirm: null,
+            };
+            intl = closure_0(closure_2[11]).intl;
+            obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+            intl2 = closure_0(closure_2[11]).intl;
+            obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+            intl3 = closure_0(closure_2[11]).intl;
+            obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+            obj1.onConfirm = function onConfirm() {
+              mint(true);
+            };
+            showConfirmModalResult = obj.showConfirmModal(obj1);
+            return;
+          }
+        }
         if (loading) {
-          const obj22 = { variant: "text-sm/normal", color: "text-muted", children: null };
+          class C {
+            constructor() {
+              obj = closure_0(closure_2[10]);
+              obj1 = {
+                key: "VibegrationsConnectToolRegenerate",
+                title: null,
+                content: null,
+                confirmText: null,
+                onConfirm: null,
+              };
+              intl = closure_0(closure_2[11]).intl;
+              obj1.title = intl.string(closure_1(closure_2[12]).avUWNd);
+              intl2 = closure_0(closure_2[11]).intl;
+              obj1.content = intl2.string(closure_1(closure_2[12]).YSh8bL);
+              intl3 = closure_0(closure_2[11]).intl;
+              obj1.confirmText = intl3.string(closure_1(closure_2[12]).Ise9RO);
+              obj1.onConfirm = function onConfirm() {
+                mint(true);
+              };
+              showConfirmModalResult = obj.showConfirmModal(obj1);
+              return;
+            }
+          }
+          const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
           let intl3 = tmp(1126).intl;
-          obj22.children = intl3.string(mint(3849).Q6xQTM);
-          tmp16 = closure_6(tmp(5088).Text, obj22);
+          obj16.children = intl3.string(mint(3849).Q6xQTM);
+          tmp13 = closure_5(tmp(5088).Text, obj16);
         }
       }
       cResult[6] = connection;
@@ -234,14 +370,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp4.action;
       ({ actions: tmp3[11], section } = tmp4);
       cResult[12] = section;
-      cResult[13] = tmp16;
-      let obj2 = connection(17115);
+      cResult[13] = tmp13;
+      let obj2 = connection(17151);
     }
   : function ConjureConnectToolSheet(projectId) {
       let connection;
       mint = undefined;
-      const tmp = closure_8();
-      const mcpConnectionPanel = connection(17115).useMcpConnectionPanel(projectId.projectId);
+      const tmp = closure_7();
+      const mcpConnectionPanel = connection(17151).useMcpConnectionPanel(projectId.projectId);
       connection = mcpConnectionPanel.connection;
       ({ loading, mint } = mcpConnectionPanel);
       const items = [connection];
@@ -275,54 +411,55 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { title: null };
       let intl = connection(1126).intl;
       obj3.title = intl.string(mint(3849)["7937yd"]);
-      obj2.header = closure_6(connection(6838).BottomSheetTitleHeader, obj3);
+      obj2.header = closure_5(connection(6839).BottomSheetTitleHeader, obj3);
       const obj4 = { style: tmp.content, children: null };
       const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
       let intl2 = connection(1126).intl;
       obj5.children = intl2.string(mint(3849).WltAg2);
-      const items2 = [closure_6(connection(5088).Text, obj5), ,];
+      const items2 = [closure_5(connection(5088).Text, obj5), ,];
       if (null != connection) {
         const obj6 = { style: tmp.section, children: null };
         const obj7 = { variant: "text-xs/semibold", color: "text-muted", children: null };
         const intl4 = tmp2(1126).intl;
         obj7.children = intl4.string(tmp8(3849).UCwV3L);
-        const items3 = [closure_6(tmp2(5088).Text, obj7), , ,];
+        const items3 = [closure_5(tmp2(5088).Text, obj7), , ,];
         const obj8 = { variant: "primary", children: null };
         const obj9 = { variant: "text-sm/normal", color: "text-default", selectable: true, children: connection.url };
-        obj8.children = closure_6(tmp2(5088).Text, obj9);
-        items3[1] = closure_6(tmp2(6181).Card, obj8);
+        obj8.children = closure_5(tmp2(5088).Text, obj9);
+        items3[1] = closure_5(tmp2(6182).Card, obj8);
         const obj10 = { style: tmp.actions, children: null };
         const obj11 = { style: tmp.action, children: null };
         const obj12 = { variant: "primary", size: "md", text: null, onPress: null };
         const intl5 = tmp2(1126).intl;
         obj12.text = intl5.string(tmp2(1126).t.OpuAlK);
         obj12.onPress = callback;
-        obj11.children = closure_6(tmp2(5379).Button, obj12);
-        const items4 = [closure_6(View, obj11)];
+        obj11.children = closure_5(tmp2(5379).Button, obj12);
+        const items4 = [closure_5(View, obj11)];
         const obj13 = { style: tmp.action, children: null };
         const obj14 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
         const intl6 = tmp2(1126).intl;
         obj14.text = intl6.string(tmp8(3849).FBKOBq);
         obj14.loading = loading;
         obj14.onPress = callback1;
-        obj13.children = closure_6(tmp2(5379).Button, obj14);
-        items4[1] = closure_6(View, obj13);
+        obj13.children = closure_5(tmp2(5379).Button, obj14);
+        items4[1] = closure_5(View, obj13);
         obj10.children = items4;
-        items3[2] = closure_7(View, obj10);
+        items3[2] = closure_6(View, obj10);
         const obj15 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl7 = tmp2(1126).intl;
-        const obj16 = { time: formatMcpConnectionExpiry(connection) };
+        const obj16 = { time: tmp2(17152).formatMcpConnectionExpiry(connection) };
         obj15.children = intl7.format(tmp8(3849).EQ8k1i, obj16);
-        items3[3] = closure_6(tmp2(5088).Text, obj15);
+        items3[3] = closure_5(tmp2(5088).Text, obj15);
         obj6.children = items3;
-        let tmp7Result = closure_7(View, obj6);
+        let tmp7Result = closure_6(View, obj6);
+        const tmp2Result = tmp2(17152);
       } else {
         tmp7Result = null;
         if (loading) {
           const obj17 = { variant: "text-sm/normal", color: "text-muted", children: null };
           let intl3 = tmp2(1126).intl;
           obj17.children = intl3.string(tmp8(3849).Q6xQTM);
-          tmp7Result = closure_6(tmp2(5088).Text, obj17);
+          tmp7Result = closure_5(tmp2(5088).Text, obj17);
         }
       }
       items2[1] = tmp7Result;
@@ -333,8 +470,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj20 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
         const intl8 = tmp2(1126).intl;
         obj20.children = intl8.string(tmp8(3849).IAF2eN);
-        obj19.children = closure_6(tmp2(5088).Text, obj20);
-        const items5 = [closure_6(View, obj19)];
+        obj19.children = closure_5(tmp2(5088).Text, obj20);
+        const items5 = [closure_5(View, obj19)];
         const obj21 = { variant: "secondary", size: "sm", text: null, loading: null, onPress: null };
         const intl9 = tmp2(1126).intl;
         obj21.text = intl9.string(tmp8(3849)["eHMX/v"]);
@@ -342,13 +479,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj21.onPress = function onPress() {
           mint(false);
         };
-        items5[1] = closure_6(tmp2(5379).Button, obj21);
+        items5[1] = closure_5(tmp2(5379).Button, obj21);
         obj18.children = items5;
-        tmp9Result2 = closure_7(View, obj18);
+        tmp9Result2 = closure_6(View, obj18);
       }
       items2[2] = tmp9Result2;
       obj4.children = items2;
-      obj2.children = closure_7(View, obj4);
-      return closure_6(connection(6898).ActionSheet, obj2);
+      obj2.children = closure_6(View, obj4);
+      return closure_5(connection(6899).ActionSheet, obj2);
     };
 export const CONJURE_CONNECT_TOOL_SHEET_KEY = "ConjureConnectToolSheet";

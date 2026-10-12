@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const lineClamp = fn(12576).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const lineClamp = fn(12578).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const Constants = fn(1085);
 ({ InAppNotificationTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsx = fn(21).jsx;
@@ -36,7 +36,7 @@ export default noop.memo(
         type = notification.type;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { size: "sm", color: nativeDefault.colors.WHITE };
-          const tmp8 = jsx(tmp(12682).ThemeDarkIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          const tmp8 = jsx(tmp(12684).ThemeDarkIcon, { size: "sm", color: nativeDefault.colors.WHITE });
           cResult[0] = tmp8;
           let first = tmp8;
         } else {
@@ -169,14 +169,14 @@ export default noop.memo(
         cResult[11] = notification;
         cResult[12] = N;
         cResult[13] = tmp15;
-        cResult[14] = jsx(type(12614).NotificationPressable, {
+        cResult[14] = jsx(type(12616).NotificationPressable, {
           icon: tmp9,
           header: tmp13,
           children: tmp15,
           onPress: N,
           notification,
         });
-        const tmp18 = jsx(type(12614).NotificationPressable, {
+        const tmp18 = jsx(type(12616).NotificationPressable, {
           icon: tmp9,
           header: tmp13,
           children: tmp15,
@@ -189,7 +189,7 @@ export default noop.memo(
         const type = notification.type;
         let obj = {
           style: closure_9().iconContainer,
-          children: jsx(notification(12682).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE }),
+          children: jsx(notification(12684).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE }),
         };
         const items = [notification.title];
         let obj2 = { size: "sm", color: type(587).colors.WHITE };
@@ -206,7 +206,7 @@ export default noop.memo(
         let obj3 = {
           icon: (
             <View style={closure_9().iconContainer}>
-              {jsx(notification(12682).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
+              {jsx(notification(12684).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
             </View>
           ),
           header: memo,
@@ -219,10 +219,10 @@ export default noop.memo(
           onPress: callback,
           notification,
         };
-        return jsx(notification(12614).NotificationPressable, {
+        return jsx(notification(12616).NotificationPressable, {
           icon: (
             <View style={closure_9().iconContainer}>
-              {jsx(notification(12682).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
+              {jsx(notification(12684).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
             </View>
           ),
           header: memo,

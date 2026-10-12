@@ -107,8 +107,8 @@ export const formatAuthoredAt = function formatAuthoredAt(authored_at) {
 export const formatHistoryTime = function formatHistoryTime(parseTimestampMsResult) {
   return new Date(parseTimestampMsResult).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
 };
-export const formatHistoryDateTime = function formatHistoryDateTime(arg0) {
-  return new Date(arg0).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+export const formatHistoryDateTime = function formatHistoryDateTime(parseTimestampMsResult) {
+  return new Date(parseTimestampMsResult).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
 };
 export { formatHistoryDay };
 export const groupHistoryByDay = function groupHistoryByDay(items, getMs, nowMs) {

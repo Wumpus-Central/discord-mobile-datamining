@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef6832 from "../../../../../_runtime/metro/06832__.js";
+import _modDef6833 from "../../../../../_runtime/metro/06833__.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import useAnimationDelayedAutoFocus from "../hooks/useAnimationDelayedAutoFocus.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -97,8 +97,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[17] === tmp10) {
                   const _Symbol = Symbol;
                   if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-                    const obj2 = { source: _modDef6832, size: tmp(1200).IconSizes.SMALL_20 };
-                    const tmp26 = jsx(tmp(1200).Icon, { source: _modDef6832, size: tmp(1200).IconSizes.SMALL_20 });
+                    const obj2 = { source: _modDef6833, size: tmp(1200).IconSizes.SMALL_20 };
+                    const tmp26 = jsx(tmp(1200).Icon, { source: _modDef6833, size: tmp(1200).IconSizes.SMALL_20 });
                     cResult[19] = tmp26;
                     let tmp23 = tmp26;
                   } else {
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     trailing: tmp23,
                   };
                   const merged = Object.assign(tmp6);
-                  const tmp32 = jsx(tmp(8579).FormRow, {
+                  const tmp32 = jsx(tmp(8580).FormRow, {
                     start: true,
                     end: true,
                     style: tmp16,
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       obj2.subLabel = fn;
-      obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(6832), size: native.IconSizes.SMALL_20 });
+      obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(6833), size: native.IconSizes.SMALL_20 });
       const merged1 = Object.assign(merged);
       return jsx(Form.FormRow, { start: true, end: true, style: null, label: null, subLabel: null, trailing: null });
     };

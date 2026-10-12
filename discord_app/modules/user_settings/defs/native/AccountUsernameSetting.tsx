@@ -84,7 +84,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(7992).MobileUserSettings.ACCOUNT,
+  parent: fn(7993).MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountUsernameSettingDescription() {

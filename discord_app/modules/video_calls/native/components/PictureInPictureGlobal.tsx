@@ -24,7 +24,7 @@ const usePipDimensionsDefault = tmp5(10837);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9383).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9384).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
 const ParticipantTypes = fn(5115).ParticipantTypes;
 const jsxProd = fn(21);
@@ -377,7 +377,7 @@ let closure_19 = noop.memo(
           }
           const tmpResult8 = tmp(504);
           const shouldForcePipOrientation = tmp(10834).useShouldForcePipOrientation(tmp31);
-          tmp(8326);
+          tmp(8327);
           if (cResult[20] === channel.id) {
             class M {
               constructor() {

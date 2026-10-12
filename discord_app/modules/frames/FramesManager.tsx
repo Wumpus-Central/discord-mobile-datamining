@@ -17,14 +17,14 @@ const prototype = function FramesManager() {
     },
     FRAME_LAUNCH(arg0) {
       ({ applicationId, analyticsContext } = arg0);
-      const result = applyArgumentsResult(14704).trackFrameSessionStart(applicationId, analyticsContext);
+      const result = applyArgumentsResult(14727).trackFrameSessionStart(applicationId, analyticsContext);
     },
     FRAME_LAUNCH_FAIL(arg0) {
       ({ applicationId, error, analyticsContext } = arg0);
-      const result = applyArgumentsResult(14704).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+      const result = applyArgumentsResult(14727).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
     },
     FRAME_STOP(applicationId) {
-      applyArgumentsResult(14704).trackFrameSessionEnd(applicationId.applicationId);
+      applyArgumentsResult(14727).trackFrameSessionEnd(applicationId.applicationId);
     },
     VOICE_CHANNEL_SELECT(arg0) {
       const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);
@@ -42,9 +42,9 @@ const prototype = function FramesManager() {
       if (!("unavailable" in guild)) {
         const allFrames = FramesStore.getAllFrames();
         for (const item10014 of allFrames) {
-          let tmp8 = item10014.surface.type !== applyArgumentsResult(8610).EmbeddedSurfaceType.MAIN;
+          let tmp8 = item10014.surface.type !== applyArgumentsResult(8611).EmbeddedSurfaceType.MAIN;
           if (tmp8) {
-            tmp8 = item10014.surface.type !== applyArgumentsResult(8610).EmbeddedSurfaceType.OVERLAY;
+            tmp8 = item10014.surface.type !== applyArgumentsResult(8611).EmbeddedSurfaceType.OVERLAY;
           }
           if (tmp8) {
             tmp8 = item10014.surface.guildId === guild.id;
@@ -76,7 +76,7 @@ const prototype = function FramesManager() {
     if (null != currentVoiceChannelId) {
       if (currentVoiceChannelId !== currentVoiceChannelId.channelId) {
         const obj2 = {
-          type: applyArgumentsResult(8610).EmbeddedSurfaceType.VOICE_CHANNEL,
+          type: applyArgumentsResult(8611).EmbeddedSurfaceType.VOICE_CHANNEL,
           channelId: currentVoiceChannelId,
         };
         const framesForSurface = FramesStore.getFramesForSurface(obj2);

@@ -290,7 +290,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   onSubmitEditing: J,
                   onFocus: tmp28,
                   onBlur: tmp31,
-                  leadingIcon: tmp(6739).MagnifyingGlassIcon,
+                  leadingIcon: tmp(6740).MagnifyingGlassIcon,
                   clearable: true,
                   returnKeyType: "search",
                   accessibilityRole: "search",
@@ -298,7 +298,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   autoCapitalize: "none",
                   disabled: tmp7,
                 };
-                const tmp36 = closure_7(tmp(6292).TextField, obj4);
+                const tmp36 = closure_7(tmp(6293).TextField, obj4);
                 cResult[29] = A;
                 cResult[30] = tmp28;
                 cResult[31] = J;
@@ -521,14 +521,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp14 = c8;
       const tmp5 = onChange(flag.useState(false), 2);
       const items6 = [
-        closure_7(options(6292).TextField, {
+        closure_7(options(6293).TextField, {
           placeholder,
           value,
           onChange: callback,
           onSubmitEditing: callback1,
           onFocus: callback2,
           onBlur: callback3,
-          leadingIcon: options(6739).MagnifyingGlassIcon,
+          leadingIcon: options(6740).MagnifyingGlassIcon,
           clearable: true,
           returnKeyType: "search",
           accessibilityRole: "search",

@@ -19,7 +19,7 @@ import AuthenticationStore from "../../../../../../../stores/AuthenticationStore
 require = fn;
 const Image = fn(17).Image;
 const ExperimentEmbedType = fn(5017).ExperimentEmbedType;
-const InviteTypes = fn(7423).InviteTypes;
+const InviteTypes = fn(7424).InviteTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()

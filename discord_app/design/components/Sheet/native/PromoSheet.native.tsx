@@ -96,7 +96,7 @@ export const PromoSheet = ReactCompilerGating.isReactCompilerEnabled()
                           obj2.contentStyles = tmp13.content;
                           obj2.backgroundComponent = undefined;
                           obj2.children = tmp34;
-                          const tmp42 = closure_8(tmp(6839).BottomSheet, obj2);
+                          const tmp42 = closure_8(tmp(6840).BottomSheet, obj2);
                           cResult[28] = undefined;
                           cResult[29] = tmp8;
                           cResult[30] = tmp13.content;
@@ -158,7 +158,7 @@ export const PromoSheet = ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = {};
           const merged1 = Object.assign(tmp7);
           obj7.style = tmp13.graphic;
-          let tmp17 = closure_8(tmp(9452).Graphic, obj7);
+          let tmp17 = closure_8(tmp(9453).Graphic, obj7);
         } else {
           tmp17 = null;
           if (null != illustration) {
@@ -215,7 +215,7 @@ export const PromoSheet = ReactCompilerGating.isReactCompilerEnabled()
             ? function SheetBackground(arg0) {
                 const obj = {};
                 const merged = Object.assign(arg0);
-                obj.children = closure_2_8(gradientColor(9453).ExpressiveGradient, {
+                obj.children = closure_2_8(gradientColor(9454).ExpressiveGradient, {
                   offsetBottom: 0.25,
                   color,
                   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
@@ -234,7 +234,7 @@ export const PromoSheet = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {};
         const merged1 = Object.assign(graphic);
         obj2.style = tmp2.graphic;
-        let tmp4Result = closure_8(gradientColor(9452).Graphic, obj2);
+        let tmp4Result = closure_8(gradientColor(9453).Graphic, obj2);
       } else {
         tmp4Result = null;
         if (null != illustration) {
@@ -267,5 +267,5 @@ export const PromoSheet = ReactCompilerGating.isReactCompilerEnabled()
       items1[2] = actions;
       obj6.children = items1;
       obj.children = closure_9(gradientColor(5377).Stack, obj6);
-      return closure_8(gradientColor(6839).BottomSheet, obj);
+      return closure_8(gradientColor(6840).BottomSheet, obj);
     };

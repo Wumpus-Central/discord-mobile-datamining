@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           if (cResult[40] !== cResult[36]) {
                             const obj9 = { sectionTitle: tmp49, children: null };
                             const obj10 = { gap: 14, children: tmp51 };
-                            obj9.children = closure_4(tmp(9560).GappedList, obj10);
+                            obj9.children = closure_4(tmp(9561).GappedList, obj10);
                             const tmp58 = closure_4(closure_10, obj9);
                             cResult[40] = tmp51;
                             cResult[41] = tmp58;
@@ -454,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             if (cResult[47] !== cResult[45]) {
                               const obj11 = { sectionTitle: tmp63, children: null };
                               const obj12 = { gap: 14, children: tmp65 };
-                              obj11.children = closure_4(tmp(9560).GappedList, obj12);
+                              obj11.children = closure_4(tmp(9561).GappedList, obj12);
                               const tmp72 = closure_4(closure_10, obj11);
                               cResult[47] = tmp65;
                               cResult[48] = tmp72;
@@ -486,7 +486,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         const items2 = [tmp8, tmp10, tmp73];
                                         obj14.children = items2;
                                         obj13.children = closure_6(View, obj14);
-                                        const tmp80 = closure_4(tmp(6839).BottomSheet, obj13);
+                                        const tmp80 = closure_4(tmp(6840).BottomSheet, obj13);
                                         cResult[57] = tmp4.container;
                                         cResult[58] = tmp8;
                                         cResult[59] = tmp73;
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               tmp69,
                             ];
                             obj15.children = items3;
-                            const tmp75 = closure_6(tmp(6306).BottomSheetScrollView, obj15);
+                            const tmp75 = closure_6(tmp(6307).BottomSheetScrollView, obj15);
                             cResult[49] = tmp4.content;
                             cResult[50] = tmp21;
                             cResult[51] = tmp36;
@@ -577,7 +577,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj16 = { roleColor: role_color, roleImage: image, roleName: name, guildId };
-              const tmp44 = closure_4(tmp(18550).GuildRoleSubscriptionRolePreview, obj16);
+              const tmp44 = closure_4(tmp(18608).GuildRoleSubscriptionRolePreview, obj16);
               cResult[26] = guildId;
               cResult[27] = image;
               cResult[28] = name;

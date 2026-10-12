@@ -12,9 +12,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6904);
+const Constants = fn(6905);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(6840).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6841).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -26,10 +26,10 @@ export default noop.memo(
     ? function NonUserBotProfileContent(arg0) {
         const cResult = trackUserProfileAction(576).c(70);
         ({ user, channel, displayProfile, scrollPosition } = arg0);
-        const tmp5 = userTag(8367)();
+        const tmp5 = userTag(8368)();
         let obj = trackUserProfileAction(576);
-        trackUserProfileAction = trackUserProfileAction(8314).useUserProfileAnalyticsContext().trackUserProfileAction;
-        const obj2 = trackUserProfileAction(8314);
+        trackUserProfileAction = trackUserProfileAction(8315).useUserProfileAnalyticsContext().trackUserProfileAction;
+        const obj2 = trackUserProfileAction(8315);
         let guild_id;
         if (channel != null) {
           guild_id = channel.guild_id;
@@ -41,25 +41,25 @@ export default noop.memo(
         const name = userTag(5409).useName(guild_id, id, user);
         const obj3 = userTag(5409);
         userTag = userTag(4962).useUserTag(user);
-        const tmp10 = userTag(8368)(displayProfile);
-        const tmp11 = userTag(8356)(ACTION_SHEET_MAX_WIDTH);
+        const tmp10 = userTag(8369)(displayProfile);
+        const tmp11 = userTag(8357)(ACTION_SHEET_MAX_WIDTH);
         if (cResult[0] === tmp11) {
           if (cResult[1] === scrollPosition) {
             let tmp12 = cResult[2];
           }
           ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } =
-            tmp4(8369)(tmp12));
+            tmp4(8370)(tmp12));
           if (cResult[3] === displayProfile) {
             if (cResult[4] === user) {
               let tmp15 = cResult[5];
             }
-            ({ theme, primaryColor, secondaryColor } = tmp4(8353)(tmp15));
+            ({ theme, primaryColor, secondaryColor } = tmp4(8354)(tmp15));
             if (cResult[6] === primaryColor) {
               if (cResult[7] === secondaryColor) {
                 if (cResult[8] === theme) {
                   let tmp17 = cResult[9];
                 }
-                const userProfileColors = tmp(8364).useUserProfileColors(tmp17);
+                const userProfileColors = tmp(8365).useUserProfileColors(tmp17);
                 ({ avatarBackground, containerBackground } = userProfileColors);
                 if (null == user) {
                   return null;
@@ -229,7 +229,7 @@ export default noop.memo(
                                                             channel,
                                                             style: tmp46,
                                                           };
-                                                          const tmp49 = closure_7(tmp4(10612), obj10);
+                                                          const tmp49 = closure_7(tmp4(10613), obj10);
                                                           cResult[51] = channel;
                                                           cResult[52] = displayProfile;
                                                           cResult[53] = tmp46;
@@ -269,7 +269,7 @@ export default noop.memo(
                                           onPressPronouns: tmp20,
                                           showBadgeToastOnPress: true,
                                         };
-                                        const tmp40 = closure_7(tmp4(10531), obj12);
+                                        const tmp40 = closure_7(tmp4(10532), obj12);
                                         cResult[34] = tmp10;
                                         cResult[35] = containerBackground;
                                         cResult[36] = name;
@@ -293,7 +293,7 @@ export default noop.memo(
                                   }
                                 }
                                 const obj13 = { user, guildId, backgroundColor: avatarBackground, disableStatus: true };
-                                const tmp27 = closure_7(tmp(8381).OpenableUserProfileAvatar, obj13);
+                                const tmp27 = closure_7(tmp(8382).OpenableUserProfileAvatar, obj13);
                                 cResult[23] = avatarBackground;
                                 cResult[24] = guildId;
                                 cResult[25] = user;
@@ -314,7 +314,7 @@ export default noop.memo(
                       blurAnimatedProps,
                       showBlur,
                     };
-                    const tmp23 = closure_7(tmp4(8370), obj14);
+                    const tmp23 = closure_7(tmp4(8371), obj14);
                     cResult[15] = bannerAnimatedStyle;
                     cResult[16] = tmp11;
                     cResult[17] = bannerImageAnimatedStyle;
@@ -335,7 +335,7 @@ export default noop.memo(
                   cResult[12] = handleCopyUsername;
                   tmp19 = handleCopyUsername;
                 }
-                const tmpResult = tmp(8364);
+                const tmpResult = tmp(8365);
               }
             }
             const obj15 = { theme, primaryColor, secondaryColor };
@@ -344,14 +344,14 @@ export default noop.memo(
             cResult[8] = theme;
             cResult[9] = obj15;
             tmp17 = obj15;
-            const tmp16 = tmp4(8353)(tmp15);
+            const tmp16 = tmp4(8354)(tmp15);
           }
           const obj16 = { user, displayProfile };
           cResult[3] = displayProfile;
           cResult[4] = user;
           cResult[5] = obj16;
           tmp15 = obj16;
-          const tmp13 = tmp4(8369)(tmp12);
+          const tmp13 = tmp4(8370)(tmp12);
         }
         const obj17 = { scrollPosition, bannerHeight: tmp11 };
         cResult[0] = tmp11;
@@ -365,8 +365,8 @@ export default noop.memo(
         let trackUserProfileAction;
         importDefault = undefined;
         const tmp3 = UserProfileSharedStylesDefault();
-        trackUserProfileAction = trackUserProfileAction(8314).useUserProfileAnalyticsContext().trackUserProfileAction;
-        let obj = trackUserProfileAction(8314);
+        trackUserProfileAction = trackUserProfileAction(8315).useUserProfileAnalyticsContext().trackUserProfileAction;
+        let obj = trackUserProfileAction(8315);
         let guild_id;
         if (channel != null) {
           guild_id = channel.guild_id;
@@ -388,7 +388,7 @@ export default noop.memo(
         });
         ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
         const tmp11 = useProfileThemeDefault({ user, displayProfile });
-        const userProfileColors = trackUserProfileAction(8364).useUserProfileColors({
+        const userProfileColors = trackUserProfileAction(8365).useUserProfileColors({
           theme,
           primaryColor,
           secondaryColor,
@@ -406,7 +406,7 @@ export default noop.memo(
             blurAnimatedProps,
             showBlur,
           };
-          const items = [closure_7(tmp(8370), obj3)];
+          const items = [closure_7(tmp(8371), obj3)];
           const obj4 = { style: contentAnimatedStyle, children: null };
           const obj5 = { user, guildId: null, backgroundColor: null, disableStatus: true };
           let guildId;
@@ -415,7 +415,7 @@ export default noop.memo(
           }
           obj5.guildId = guildId;
           obj5.backgroundColor = tmp13;
-          const items1 = [closure_7(tmp4(8381).OpenableUserProfileAvatar, obj5)];
+          const items1 = [closure_7(tmp4(8382).OpenableUserProfileAvatar, obj5)];
           const obj6 = { style: null, children: null };
           const items2 = [, ,];
           ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
@@ -463,7 +463,7 @@ export default noop.memo(
             trackUserProfileAction({ action: "PRESS_PRONOUNS" });
             ToastUtils.presentUserPronouns();
           };
-          obj8.children = closure_7(tmp(10531), obj9);
+          obj8.children = closure_7(tmp(10532), obj9);
           const items3 = [closure_7(View, obj8)];
           const obj11 = { style: tmp3.cards, children: null };
           const obj12 = { userId: user.id, displayProfile, channel, style: null };
@@ -471,7 +471,7 @@ export default noop.memo(
           const obj13 = { backgroundColor: containerBackground };
           items4[1] = obj13;
           obj12.style = items4;
-          obj11.children = closure_7(tmp(10612), obj12);
+          obj11.children = closure_7(tmp(10613), obj12);
           items3[1] = closure_7(View, obj11);
           obj6.children = items3;
           items1[1] = closure_8(View, obj6);
@@ -480,6 +480,6 @@ export default noop.memo(
           obj10.children = items;
           return closure_8(closure_9, obj10);
         }
-        const tmp4Result = trackUserProfileAction(8364);
+        const tmp4Result = trackUserProfileAction(8365);
       },
 );

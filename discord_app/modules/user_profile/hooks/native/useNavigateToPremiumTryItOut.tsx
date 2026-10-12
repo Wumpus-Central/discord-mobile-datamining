@@ -7,7 +7,7 @@ import UserProfileSettingsStore from "../../UserProfileSettingsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(8307).TrackUserProfileEditActions;
+let closure_5 = fn(8308).TrackUserProfileEditActions;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNavig
     closure_0 = arg0;
     let obj = {
       hasEdits: UserProfileSettingsStore.showNotice(),
-      resetPending: closure_0(6670).resetAllPending,
+      resetPending: closure_0(6671).resetAllPending,
       onHasEdits: closure_0(4985).dismissKeyboard,
       onConfirm() {
         const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId: initialTarget, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW });
@@ -58,6 +58,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNavig
         navigation.push(UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT, { initialTarget });
       }
     };
-    navigation(9633)(obj);
+    navigation(9634)(obj);
   }, items);
 });

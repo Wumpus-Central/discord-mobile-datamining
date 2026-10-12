@@ -367,7 +367,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -501,7 +501,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -609,7 +609,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(17552).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(17609).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1126).intl;
       dkHRkE = webhookType(1126).t.dkHRkE;
@@ -640,7 +640,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       }),
     };
     const obj4 = { children: null };
-    items[2] = closure_20(webhookType(6264).TableRowGroup, obj3);
+    items[2] = closure_20(webhookType(6265).TableRowGroup, obj3);
     obj4.children = items;
     return closure_22(closure_21, obj4);
   }

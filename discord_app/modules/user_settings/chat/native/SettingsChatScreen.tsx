@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef9770 from "../../../../../_runtime/metro/09770__.js";
+import _modDef9771 from "../../../../../_runtime/metro/09771__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -92,7 +92,7 @@ function getChatSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(7992).MobileUserSettings;
+const MobileUserSettings = fn(7993).MobileUserSettings;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -172,7 +172,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { style: tmp5.cardContent, children: null };
         const obj8 = {
           style: tmp5.cardIcon,
-          source: _modDef9770,
+          source: _modDef9771,
           size: tmp(1200).Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.PRIMARY_400,
         };
@@ -189,7 +189,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         items2[1] = closure_9(tmp(5088).Text, obj9);
         obj7.children = items2;
         obj6.children = closure_10(View, obj7);
-        obj5.children = closure_9(tmp(6181).Card, obj6);
+        obj5.children = closure_9(tmp(6182).Card, obj6);
         tmp15 = closure_9(View, obj5);
       }
       cResult[3] = stackNavigation;
@@ -222,7 +222,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: tmp3.cardContent, children: null };
         const obj7 = {
           style: tmp3.cardIcon,
-          source: _modDef9770,
+          source: _modDef9771,
           size: tmp(1200).Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.PRIMARY_400,
         };
@@ -239,7 +239,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         items2[1] = closure_9(tmp(5088).Text, obj8);
         obj6.children = items2;
         obj5.children = closure_10(View, obj6);
-        obj4.children = closure_9(tmp(6181).Card, obj5);
+        obj4.children = closure_9(tmp(6182).Card, obj5);
         tmp7Result = closure_9(View, obj4);
       }
       children[1] = tmp7Result;

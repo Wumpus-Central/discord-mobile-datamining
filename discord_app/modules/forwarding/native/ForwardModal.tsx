@@ -26,8 +26,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(11555).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10216).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11557).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10217).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5092);
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -427,7 +427,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         closure_0 = arg0;
                         closure_1_0(5301).openAlert(
                           "staff-to-non-staff-forward",
-                          closure_1_15(forwardOptions(11561), {
+                          closure_1_15(forwardOptions(11563), {
                             onConfirm() {
                               return closure_0(true);
                             },

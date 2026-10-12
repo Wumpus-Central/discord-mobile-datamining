@@ -33,9 +33,9 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["S3z+pV"]);
   },
-  parent: fn(7992).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7993).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
-  onValueChange: fn(14670).setSwitchIconsEnabled,
+  onValueChange: fn(14693).setSwitchIconsEnabled,
   hasIcon: true,
 });
 const size = fn(2);

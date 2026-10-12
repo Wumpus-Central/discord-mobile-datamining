@@ -217,7 +217,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(7992).MobileUserSettings.CHAT,
+  parent: fn(7993).MobileUserSettings.CHAT,
   useTrailing: tmp3,
   onPress: function onPressSetting() {
     let obj2 = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
@@ -232,7 +232,7 @@ const pressable = SettingBuilders.createPressable({
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -283,7 +283,7 @@ const pressable = SettingBuilders.createPressable({
             const obj17 = { emoji: closure_129_0 };
             const result = closure_0(tmp5[17]).showDoubleTapEmojiUpdatedToast(obj17);
             constants = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp12) {
           constants = tmp;

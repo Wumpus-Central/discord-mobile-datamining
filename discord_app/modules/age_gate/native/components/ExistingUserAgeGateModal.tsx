@@ -171,7 +171,7 @@ function getScreens(source, arg1, arg2) {
 }
 const AgeGateConstants = fn(1110);
 ({ AgeGateAnalyticAction: metroRequire, AgeGateSource: closure_7 } = AgeGateConstants);
-let closure_8 = fn(17983).ExistingUserAgeGateScreens;
+let closure_8 = fn(18040).ExistingUserAgeGateScreens;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -362,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.initialRouteName = closure_8.AgeGate;
         const intl = tmp(1126).intl;
         obj4.headerBackTitle = intl.string(tmp(1126).t["13/7kX"]);
-        return jsx(tmp(6687).Navigator, obj4);
+        return jsx(tmp(6688).Navigator, obj4);
       }
       const tmpResult = source(5909);
     };

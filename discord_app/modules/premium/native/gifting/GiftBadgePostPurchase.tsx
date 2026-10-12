@@ -19,7 +19,7 @@ const require = globalThis.__r;
 const initialize = formatToPlainString(504);
 require = fn;
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(12724);
+const GiftingBadgeConstants = fn(12726);
 ({
   getRemainingGiftsToNextTier: metroRequire,
   getTierForProgress: closure_7,
@@ -132,7 +132,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-        const tmp10 = closure_10(tmp(11536).GiftIcon, obj2);
+        const tmp10 = closure_10(tmp(11538).GiftIcon, obj2);
         const intl = tmp(1126).intl;
         const stringResult = intl.string(_modDef2664.g86YiI);
         cResult[3] = tmp10;
@@ -266,7 +266,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
       const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-      obj2.icon = closure_10(onSendGift(11536).GiftIcon, {
+      obj2.icon = closure_10(onSendGift(11538).GiftIcon, {
         size: "sm",
         color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
       });

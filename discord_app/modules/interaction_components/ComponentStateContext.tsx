@@ -593,11 +593,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      const obj5 = channel(7994);
-      const isThreadModerator = channel(6971).useIsThreadModerator(channel);
-      const tmpResult = channel(6971);
+      const obj5 = channel(7995);
+      const isThreadModerator = channel(6972).useIsThreadModerator(channel);
+      const tmpResult = channel(6972);
       let tmp9 = !stateFromStores;
-      const canUnarchiveThread = channel(6971).useCanUnarchiveThread(channel);
+      const canUnarchiveThread = channel(6972).useCanUnarchiveThread(channel);
       if (stateFromStores) {
         tmp9 = stateFromStores1;
       }

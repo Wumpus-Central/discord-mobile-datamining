@@ -7,8 +7,8 @@ import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBan
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const UserProfileBannerDefault = tmp5(8372);
-const EditButtonDefault = tmp5(14832);
+const UserProfileBannerDefault = tmp5(8373);
+const EditButtonDefault = tmp5(14855);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

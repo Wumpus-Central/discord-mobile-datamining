@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj7.text = intl.string(tmp4(1126).t["/Mmbfv"]);
               v1(4809).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
               dependencyMap = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp9) {
             dependencyMap = tmp;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp2 = closure_14();
       dependencyMap = tmp2;
-      closure_3 = _slicedToArray(userId(7994)(userId, guildId), 1)[0];
+      closure_3 = _slicedToArray(userId(7995)(userId, guildId), 1)[0];
       userId(5396)(() => {
         AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
       });

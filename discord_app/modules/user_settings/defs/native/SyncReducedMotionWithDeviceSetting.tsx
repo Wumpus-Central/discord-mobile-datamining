@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["St+DJK"]);
   },
-  parent: fn(7992).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7993).MobileUserSettings.ACCESSIBILITY,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useReducedMotionSyncSettingValue() {
         const cResult = c.c(2);

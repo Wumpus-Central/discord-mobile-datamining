@@ -8,7 +8,7 @@ import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import _modDef9769 from "../../../../../_runtime/metro/09769__.js";
+import _modDef9770 from "../../../../../_runtime/metro/09770__.js";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import NativeMenuActionCreatorsDefault from "../../../native_menu/native/NativeMenuActionCreators.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
@@ -20,7 +20,7 @@ const ReanimatedRexport = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10038);
+const DeviceConstants = fn(10039);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -225,7 +225,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.icon) {
-          const obj2 = { source: _modDef9769, style: tmp4.icon };
+          const obj2 = { source: _modDef9770, style: tmp4.icon };
           const tmp9 = options(native.Icon, obj2);
           cResult[3] = tmp4.icon;
           cResult[4] = tmp9;
@@ -275,7 +275,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp.labelContainer, style];
       obj.style = items;
       const items1 = [
-        options(native.Icon, { source: _modDef9769, style: tmp.icon }),
+        options(native.Icon, { source: _modDef9770, style: tmp.icon }),
         options(Text_Text.Text, {
           style: textStyle,
           color: "text-overlay-light",
@@ -851,20 +851,20 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp9.VIDEO !== type) {
           if (constants.VIDEO !== type) {
             if (tmp9.PHOTO === type) {
-              let tmp13 = null;
+              let tmp12 = null;
               if ("image/gif" === tmp2Result.getType(image.uri)) {
                 let obj2 = { style: tmp.mediaKeyboardItemLabelContainer, label: "GIF" };
-                tmp13 = closure_9(tmp2(channelId[20]).Caption, obj2);
+                tmp12 = closure_9(tmp2(channelId[20]).Caption, obj2);
               }
               tmp2Result = tmp2(channelId[19]);
             } else {
-              tmp13 = null;
+              tmp12 = null;
             }
           }
-          let tmp17 = !tmp5;
+          let tmp16 = !tmp5;
           if (!tmp5) {
-            tmp17 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
-            const tmp18 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
+            tmp16 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
+            const tmp17 = (stateFromStoresObject.uploadCount >= uploadLimit && disableWhenReachedLimit) || disabled;
           }
           const obj3 = { style: tmp.checkIconContainer, children: null };
           const obj4 = {
@@ -888,12 +888,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.accessibilityState = obj6;
           obj5.onPress = tmp7;
           obj5.onLongPress = tmp8;
-          obj5.disabled = tmp17;
+          obj5.disabled = tmp16;
           const items3 = [tmp.imageContainer, ,];
           let imageDisabled;
-          const tmp20 = onLongPressItem;
-          const tmp22 = closure_9(onLongPressItem, obj3);
-          if (tmp17) {
+          const tmp19 = onLongPressItem;
+          const tmp21 = closure_9(onLongPressItem, obj3);
+          if (tmp16) {
             imageDisabled = tmp.imageDisabled;
           }
           items3[1] = imageDisabled;
@@ -914,27 +914,27 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           obj7.source = size2;
           const size3 = { uri: image.uri, width: size, height: size };
           obj7.localImageSource = size3;
-          const items5 = [closure_9(tmp2(channelId[11]).ThumbnailImage, obj7), tmp13, ,];
-          let tmp19Result = null;
+          const items5 = [closure_9(tmp2(channelId[11]).ThumbnailImage, obj7), tmp12, ,];
+          let tmp18Result = null;
           if (tmp5) {
             const obj8 = { style: null };
             const items6 = [tmp.selectedOverlay];
             const size4 = { height: size, width: size };
             items6[1] = size4;
             obj8.style = items6;
-            tmp19Result = closure_9(tmp20, obj8);
+            tmp18Result = closure_9(tmp19, obj8);
           }
-          items5[2] = tmp19Result;
-          let tmp29 = null;
+          items5[2] = tmp18Result;
+          let tmp28 = null;
           if (tmp5) {
-            tmp29 = tmp22;
+            tmp28 = tmp21;
           }
-          items5[3] = tmp29;
+          items5[3] = tmp28;
           obj5.children = items5;
           return closure_10(includedUploadIds, obj5);
         }
         const obj9 = { label: tmp2(channelId[18]).getTimeFormat(image.playableDuration) };
-        tmp13 = closure_9(closure_14, obj9);
+        tmp12 = closure_9(closure_14, obj9);
         const tmp2Result2 = tmp2(channelId[18]);
       }
       const intl2 = tmp2(channelId[17]).intl;

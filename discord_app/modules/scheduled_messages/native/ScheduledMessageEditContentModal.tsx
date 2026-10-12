@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const arr = channelId(stateFromStores[16]);
                 }
                 c2 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               c2 = tmp;
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  const obj5 = v1(7369);
+                  const obj5 = v1(7370);
                   const obj4 = {
                     content: obj5.parse(stateFromStores, first).content,
                     flags: scheduledMessage.createArgs.flags,
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   v1 = 1;
                   dependencyMap = 1;
                   const obj7 = {
-                    value: tmp4(9292).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
+                    value: tmp4(9293).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4),
                     done: false,
                   };
                   return obj7;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const arr = v1(5934);
                 }
                 dependencyMap = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               dependencyMap = tmp;

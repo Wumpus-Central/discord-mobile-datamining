@@ -1,11 +1,13 @@
 // discord_app/modules/conjure/debug/ConjureDebugStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import ConjureTypes from "../ConjureTypes.tsx";
 import ConjurePerfTraceBatches from "perf_trace/ConjurePerfTraceBatches.tsx";
+import ConjureUsageTypes from "../usage/ConjureUsageTypes.tsx";
 
 require = fn;
-let closure_2 = [];
+let closure_2 = { pending: false, info: null, error: null, observedAt: null };
+let closure_3 = { phase: "idle" };
+let closure_4 = [];
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
@@ -14,6 +16,9 @@ const map4 = new Map();
 const map5 = new Map();
 const map6 = new Map();
 const map7 = new Map();
+const map8 = new Map();
+const map9 = new Map();
+const map10 = new Map();
 const Store = initializeDefault.Store;
 class ConjureDebugStore extends Store {}
 const prototype = ConjureDebugStore.prototype;
@@ -32,21 +37,21 @@ prototype["getFetchState"] = function getFetchState(arg0) {
   return str;
 };
 prototype["getLastCompaction"] = function getLastCompaction(projectId) {
-  value = map4.get(projectId);
+  value = map7.get(projectId);
   if (value == null) {
     value = null;
   }
   return value;
 };
 prototype["getLastTurnUsage"] = function getLastTurnUsage(projectId) {
-  value = map6.get(projectId);
+  value = map9.get(projectId);
   if (value == null) {
     value = null;
   }
   return value;
 };
 prototype["getLastCompactionDecline"] = function getLastCompactionDecline(projectId) {
-  value = map5.get(projectId);
+  value = map8.get(projectId);
   if (value == null) {
     value = null;
   }
@@ -66,16 +71,37 @@ prototype["getSandboxRestartState"] = function getSandboxRestartState(projectId)
   }
   return str;
 };
-prototype["getTimingTraces"] = function getTimingTraces(projectId) {
-  value = map7.get(projectId);
+prototype["getGitInfoState"] = function getGitInfoState(arg0) {
+  value = map4.get(arg0);
   if (value == null) {
     value = closure_2;
   }
   return value;
 };
+prototype["getRestartAgentState"] = function getRestartAgentState(arg0) {
+  value = map5.get(arg0);
+  if (value == null) {
+    value = closure_3;
+  }
+  return value;
+};
+prototype["getInstancePollRequestedAt"] = function getInstancePollRequestedAt(projectId) {
+  value = map6.get(projectId);
+  if (value == null) {
+    value = null;
+  }
+  return value;
+};
+prototype["getTimingTraces"] = function getTimingTraces(projectId) {
+  value = map10.get(projectId);
+  if (value == null) {
+    value = closure_4;
+  }
+  return value;
+};
 prototype["getTimingTrace"] = function getTimingTrace(projectId, traceId) {
   closure_0 = traceId;
-  value = map7.get(projectId);
+  value = map10.get(projectId);
   let found;
   if (value != null) {
     found = value.find((id) => id.id === closure_0);
@@ -95,7 +121,13 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
               if (0 === map5.size) {
                 if (0 === map6.size) {
                   if (0 === map7.size) {
-                    return false;
+                    if (0 === map8.size) {
+                      if (0 === map9.size) {
+                        if (0 === map10.size) {
+                          return false;
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -112,6 +144,9 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     map5.clear();
     map6.clear();
     map7.clear();
+    map8.clear();
+    map9.clear();
+    map10.clear();
   },
   CONJURE_DEBUG_STATUS_REQUESTED: function handleStatusRequested(projectId) {
     const result = map1.set(projectId.projectId, "loading");
@@ -121,8 +156,8 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     if ("open" === projectId.connState) {
       return false;
     } else {
-      let tmp14 = "pending" === map2.get(projectId);
-      if (tmp14) {
+      let tmp32 = "pending" === map2.get(projectId);
+      if (tmp32) {
         const obj = { outcome: "failed", reason: "Connection lost before the worker answered", observedAt: null };
         const _Date = Date;
         const date = new Date();
@@ -141,13 +176,44 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
       if (tmp12) {
         const result2 = map1.set(projectId, "failed");
       }
-      if (!tmp14) {
-        tmp14 = tmp6;
+      value = map4.get(projectId);
+      let pending;
+      if (value != null) {
+        pending = value.pending;
       }
-      if (!tmp14) {
-        tmp14 = tmp12;
+      if (true === pending) {
+        const obj4 = {};
+        const merged = Object.assign(value);
+        obj4.pending = false;
+        obj4.error = "Connection lost before the worker answered";
+        const result3 = map4.set(projectId, obj4);
       }
-      return tmp14 && undefined;
+      map6.delete(projectId);
+      value2 = map5.get(projectId);
+      let phase;
+      if (value2 != null) {
+        phase = value2.phase;
+      }
+      if ("pending" === phase) {
+        const obj5 = { phase: "failed", reason: "Connection lost before the worker answered", observedAt: null };
+        const _Date3 = Date;
+        const date2 = new Date();
+        obj5.observedAt = date2.toISOString();
+        const result4 = map5.set(projectId, obj5);
+      }
+      if (!tmp32) {
+        tmp32 = tmp6;
+      }
+      if (!tmp32) {
+        tmp32 = tmp12;
+      }
+      if (!tmp32) {
+        tmp32 = tmp17;
+      }
+      if (!tmp32) {
+        tmp32 = tmp26;
+      }
+      return tmp32 && undefined;
     }
   },
   CONJURE_DEBUG_STATUS_SET: function handleStatusSet(failed) {
@@ -161,7 +227,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     const result2 = map1.set(projectId, "failed");
   },
   CONJURE_DEBUG_COMPACTION_REPORT: function handleCompactionReport(tokensBefore) {
-    const result = map4.set(tokensBefore.projectId, {
+    const result = map7.set(tokensBefore.projectId, {
       tokensBefore: tokensBefore.tokensBefore,
       tokensAfter: tokensBefore.tokensAfter,
       retainedMessages: tokensBefore.retainedMessages,
@@ -170,7 +236,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     });
   },
   CONJURE_DEBUG_COMPACTION_DECLINED: function handleCompactionDeclined(promptCeiling) {
-    const result = map5.set(promptCeiling.projectId, {
+    const result = map8.set(promptCeiling.projectId, {
       promptCeiling: promptCeiling.promptCeiling,
       threshold: promptCeiling.threshold,
       projected: promptCeiling.projected,
@@ -199,10 +265,110 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
       observedAt: outcome.observedAt,
     });
   },
+  CONJURE_DEBUG_GIT_INFO_REQUESTED: function handleGitInfoRequested(projectId) {
+    projectId = projectId.projectId;
+    value = map4.get(projectId);
+    if (value == null) {
+      value = closure_2;
+    }
+    const obj = {};
+    const merged = Object.assign(value);
+    obj.pending = true;
+    const result = map4.set(projectId, obj);
+  },
+  CONJURE_DEBUG_GIT_INFO_RESULT: function handleGitInfoResult(arg0) {
+    ({ projectId, info, error, instanceSince, observedAt } = arg0);
+    value = map4.get(projectId);
+    if (value == null) {
+      value = closure_2;
+    }
+    if (null != info) {
+      const obj2 = { pending: false, info, error: null, observedAt };
+      let obj3 = obj2;
+    } else {
+      obj3 = {};
+      const merged = Object.assign(value);
+      obj3.pending = false;
+      if (error == null) {
+        error = "No answer";
+      }
+      obj3.error = error;
+      obj3.observedAt = observedAt;
+    }
+    const result = map4.set(projectId, obj3);
+    value2 = map5.get(projectId);
+    let phase;
+    if (value2 != null) {
+      phase = value2.phase;
+    }
+    if (tmp8) {
+      const obj5 = { phase: "restarted", instanceSince, observedAt };
+      const result1 = map5.set(projectId, obj5);
+    }
+    tmp8 = "restarting" === phase && null != instanceSince && instanceSince !== value2.instanceSince;
+  },
+  CONJURE_DEBUG_INSTANCE_POLL_REQUESTED: function handleInstancePollRequested(projectId) {
+    const result = map6.set(projectId.projectId, projectId.requestedAt);
+    return false;
+  },
+  CONJURE_DEBUG_INSTANCE_SEEN: function handleInstanceSeen(observedAt) {
+    ({ projectId, instanceSince } = observedAt);
+    map6.delete(projectId);
+    value = map5.get(projectId);
+    let phase;
+    if (value != null) {
+      phase = value.phase;
+    }
+    if (tmp4) {
+      const obj2 = { phase: "restarted", instanceSince, observedAt: observedAt.observedAt };
+      const result = map5.set(projectId, obj2);
+    }
+    tmp4 = "restarting" === phase && null != instanceSince && instanceSince !== value.instanceSince;
+  },
+  CONJURE_RESTART_AGENT_REQUESTED: function handleRestartAgentRequested(projectId) {
+    const result = map5.set(projectId.projectId, { phase: "pending" });
+  },
+  CONJURE_RESTART_AGENT_RESULT: function handleRestartAgentResult(arg0) {
+    ({ projectId, outcome, reason, instanceSince, observedAt } = arg0);
+    value = map5.get(projectId);
+    if (value != null) {
+      const phase = value.phase;
+    }
+    if ("restarting" === outcome) {
+      if ("pending" !== phase) {
+        return false;
+      } else {
+        if (instanceSince == null) {
+          instanceSince = null;
+        }
+        const obj2 = { phase: "restarting", instanceSince, startedAt: null };
+        const _Date = Date;
+        obj2.startedAt = Date.parse(observedAt);
+        const result = map5.set(projectId, obj2);
+      }
+    } else if ("timed_out" === outcome) {
+      if ("restarting" !== phase) {
+        return false;
+      } else {
+        if (reason == null) {
+          reason = "No new agent instance answered in time";
+        }
+        const obj3 = { phase: "failed", reason, observedAt };
+        const result1 = map5.set(projectId, obj3);
+      }
+    } else {
+      let str2 = reason;
+      if (reason == null) {
+        str2 = "no reason given";
+      }
+      const obj4 = { phase: "failed", reason: str2, observedAt };
+      const result2 = map5.set(projectId, obj4);
+    }
+  },
   CONJURE_DEBUG_TIMING_TRACE: function handleTimingTrace(live) {
     ({ projectId, batch } = live);
     let found;
-    let items = map7.get(projectId);
+    let items = map10.get(projectId);
     if (items == null) {
       items = [];
     }
@@ -217,7 +383,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
         started_at2.started_at + started_at2.as_of - (started_at.started_at + started_at.as_of),
     );
     const substr = sorted.slice(0, 100);
-    const result = map7.set(
+    const result = map10.set(
       projectId,
       substr.sort((started_at, started_at2) => started_at.started_at - started_at2.started_at),
     );
@@ -227,9 +393,9 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     if (0 === obj.runeCount(turn.total)) {
       return false;
     } else {
-      const result = map6.set(turn.projectId, turn);
+      const result = map9.set(turn.projectId, turn);
     }
-    obj = ConjureTypes;
+    obj = ConjureUsageTypes;
   },
   CONJURE_PROJECT_DELETE_SUCCESS: function handleProjectDeleteSuccess(projectId) {
     projectId = projectId.projectId;
@@ -241,6 +407,9 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     map5.delete(projectId);
     map6.delete(projectId);
     map7.delete(projectId);
+    map8.delete(projectId);
+    map9.delete(projectId);
+    map10.delete(projectId);
   },
 });
 const size = fn(2);

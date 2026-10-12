@@ -151,10 +151,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "APP_LAUNCHER_ONBOARDING_SET_LAST_SEEN_TIME_MS",
-          externalChildren: "APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA",
-          expandedChildren: null,
-          children: "bottom",
+          label: "absolute",
+          externalChildren: 90,
+          expandedChildren: "#3736BB",
+          children: "#4670E8",
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
         const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -171,10 +171,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "APP_LAUNCHER_ONBOARDING_SET_LAST_SEEN_TIME_MS",
-          externalChildren: "APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA",
-          expandedChildren: null,
-          children: "bottom",
+          label: "absolute",
+          externalChildren: 90,
+          expandedChildren: "#3736BB",
+          children: "#4670E8",
         });
       },
 );

@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12122);
+const NotificationPermissionConstants = fn(12124);
 ({
   EventActionType: c10,
   EventActionLocation: closure_11,
@@ -86,12 +86,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       closure_5(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         function handlePress() {
-          const pushNotificationPermission = onDismiss(12123).requestPushNotificationPermission(
+          const pushNotificationPermission = onDismiss(12125).requestPushNotificationPermission(
             constants2.ALLOW_TO_REQUEST,
             constants3.NOTIFICATION_CENTER,
             closure_1_8,
           );
-          const obj = onDismiss(12123);
+          const obj = onDismiss(12125);
           AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
             action: constants4.ACCEPT,
             prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
@@ -118,7 +118,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-        const tmp13 = closure_14(tmp(10345).BellSlashIcon, obj2);
+        const tmp13 = closure_14(tmp(10346).BellSlashIcon, obj2);
         cResult[5] = tmp13;
         let tmp10 = tmp13;
       } else {
@@ -183,7 +183,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
           const intl4 = tmp(1126).intl;
           const stringResult = intl4.string(tmp(1126).t.WAI6xu);
-          const tmp38 = closure_14(tmp(6207).XSmallIcon, { size: "sm", color: "icon-strong" });
+          const tmp38 = closure_14(tmp(6208).XSmallIcon, { size: "sm", color: "icon-strong" });
           cResult[16] = stringResult;
           cResult[17] = tmp38;
           let tmp35 = tmp38;
@@ -200,7 +200,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: tmp34,
             children: tmp35,
           };
-          const tmp41 = closure_14(tmp(6184).PressableHighlight, obj9);
+          const tmp41 = closure_14(tmp(6185).PressableHighlight, obj9);
           cResult[18] = tmp9;
           cResult[19] = tmp41;
           let tmp39 = tmp41;
@@ -250,7 +250,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { style: tmp.container, children: null };
       const obj2 = {
         style: tmp.iconContainer,
-        children: closure_14(onDismiss(10345).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
+        children: closure_14(onDismiss(10346).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
       };
       const items = [closure_14(View, obj2), ,];
       const obj4 = { style: tmp.contentContainer, children: null };
@@ -269,12 +269,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = onDismiss(1126).intl;
       obj9.text = intl3.string(onDismiss(1126).t.a4bgO0);
       obj9.onPress = function handlePress() {
-        const pushNotificationPermission = onDismiss(12123).requestPushNotificationPermission(
+        const pushNotificationPermission = onDismiss(12125).requestPushNotificationPermission(
           constants2.ALLOW_TO_REQUEST,
           constants3.NOTIFICATION_CENTER,
           closure_1_8,
         );
-        const obj = onDismiss(12123);
+        const obj = onDismiss(12125);
         AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
           action: constants4.ACCEPT,
           prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
@@ -299,8 +299,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl4 = onDismiss(1126).intl;
       obj10.accessibilityLabel = intl4.string(onDismiss(1126).t.WAI6xu);
-      obj10.children = closure_14(onDismiss(6207).XSmallIcon, { size: "sm", color: "icon-strong" });
-      items[2] = closure_14(onDismiss(6184).PressableHighlight, obj10);
+      obj10.children = closure_14(onDismiss(6208).XSmallIcon, { size: "sm", color: "icon-strong" });
+      items[2] = closure_14(onDismiss(6185).PressableHighlight, obj10);
       obj.children = items;
       return closure_15(View, obj);
     };

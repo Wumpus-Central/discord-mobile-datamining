@@ -5,7 +5,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _modDef9466 from "../../../../../../_runtime/metro/09466__.js";
+import _modDef9467 from "../../../../../../_runtime/metro/09467__.js";
 import EmojiIconDefault from "../../components/EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -114,7 +114,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 size: native.Icon.Sizes.SMALL,
                 color: nativeDefault.unsafe_rawColors.WHITE,
                 style: tmp4.subscriberCountIcon,
-                source: _modDef9466,
+                source: _modDef9467,
               };
               const tmp12 = timestampProducer(native.Icon, obj2);
               cResult[7] = tmp4.subscriberCountIcon;
@@ -193,7 +193,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           size: native.Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.WHITE,
           style: tmp.subscriberCountIcon,
-          source: _modDef9466,
+          source: _modDef9467,
         }),
       ];
       const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
@@ -217,7 +217,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const guild_id = highlightedCreatorGuild.guild_id;
       ({ quote, quote_attribution, quote_attribution_title } = highlightedCreatorGuild);
-      const tmp7 = guild_id(18474)(guild_id, 3, 60);
+      const tmp7 = guild_id(18532)(guild_id, 3, 60);
       dependencyMap = tmp7;
       const hasAllImperativeDetails = tmp7.hasAllImperativeDetails;
       if (cResult[0] === tmp7.details) {
@@ -227,7 +227,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp8) {
           const _Symbol2 = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp67 = closure_6(tmp6(18446), {});
+            const tmp67 = closure_6(tmp6(18504), {});
             cResult[3] = tmp67;
             let tmp65 = tmp67;
           } else {
@@ -512,7 +512,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             tmp18 = tmp20;
           }
           const obj19 = { style: tmp4.guildIcon, source: tmp11 };
-          const tmp14 = closure_6(tmp6(6156), obj19);
+          const tmp14 = closure_6(tmp6(6157), obj19);
           cResult[8] = tmp4.guildIcon;
           cResult[9] = tmp11;
           cResult[10] = tmp14;
@@ -546,12 +546,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const guild_id = highlightedCreatorGuild.guild_id;
       let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
       ({ quote, quote_attribution } = highlightedCreatorGuild);
-      const tmp6 = guild_id(18474)(guild_id, 3, 60);
+      const tmp6 = guild_id(18532)(guild_id, 3, 60);
       dependencyMap = tmp6;
       const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
       let items = [hasAllImperativeDetails, tmp6];
       if (tmp6.isLoading) {
-        const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18446), {}) };
+        const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18504), {}) };
         return closure_6(closure_4, obj2);
       } else if (hasAllImperativeDetails) {
         const details = tmp6.details;
@@ -562,7 +562,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: tmp.guildIcon, source: null };
         const obj6 = { uri: guildAvatarUrl };
         obj5.source = obj6;
-        const items1 = [closure_6(tmp5(6156), obj5)];
+        const items1 = [closure_6(tmp5(6157), obj5)];
         const obj7 = { style: tmp.cardHeaderContainer, children: null };
         const obj8 = {
           variant: "heading-md/extrabold",

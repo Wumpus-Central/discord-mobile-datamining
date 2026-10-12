@@ -51,26 +51,15 @@ export const showsOutdatedNotice = function showsOutdatedNotice(publish) {
 };
 export const publishNoticeMessage = function publishNoticeMessage(notice, arg1) {
   if (true === notice.channel_skipped) {
-    return _modDef3849.ev23Cw;
+    let ev23Cw = _modDef3849.ev23Cw;
   } else if (notice.update) {
-    const surface = notice.surface;
-    if ("bot" === surface) {
-      return _modDef3849.zfpeIL;
-    } else if ("widget" === surface) {
-      return _modDef3849.DxCfTh;
-    } else if ("automod" === surface) {
-      return _modDef3849["8ytGC3"];
-    } else {
-      return _modDef3849.WSmpBT;
-    }
+    ev23Cw = _modDef3849.gQzuLC;
+  } else if (null == arg1) {
+    ev23Cw = _modDef3849.MOrR29;
   } else {
-    if (null == arg1) {
-      let MOrR29 = _modDef3849.MOrR29;
-    } else {
-      MOrR29 = _modDef3849["/npn7F"];
-    }
-    return MOrR29;
+    ev23Cw = _modDef3849["/npn7F"];
   }
+  return ev23Cw;
 };
 export const withLivePublishCard = function withLivePublishCard(stateFromStores1, stateFromStores2) {
   let id = null;

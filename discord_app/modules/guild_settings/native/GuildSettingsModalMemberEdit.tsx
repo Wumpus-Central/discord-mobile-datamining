@@ -274,8 +274,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      fn = self(6200).getHeaderCloseButton(onClose);
-      let obj = self(6200);
+      fn = self(6201).getHeaderCloseButton(onClose);
+      let obj = self(6201);
     }
     let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
@@ -825,7 +825,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function MemberModalEdit(guildId) {
       const cResult = require("c").c(9);
       ({ userId, onClose, onRemove } = guildId);
-      const tmp4 = onClose(6169)(guildId.guildId);
+      const tmp4 = onClose(6170)(guildId.guildId);
       if (cResult[0] === tmp4) {
         if (cResult[1] === onClose) {
           if (cResult[2] === onRemove) {
@@ -849,7 +849,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp8;
           }
           const obj4 = { screens: tmp5, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: tmp6 };
-          const tmp11 = closure_18(tmp(6687).Navigator, obj4);
+          const tmp11 = closure_18(tmp(6688).Navigator, obj4);
           cResult[6] = tmp5;
           cResult[7] = tmp6;
           cResult[8] = tmp11;
@@ -894,7 +894,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(11435), obj);
+          return closure_2_18(onRemove(11437), obj);
         },
       };
       tmp = _require;
@@ -903,7 +903,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       onClose = onClose.onClose;
       const onRemove = onClose.onRemove;
       ({ guildId, userId } = onClose);
-      const tmp = onRemove(6169)(guildId);
+      const tmp = onRemove(6170)(guildId);
       closure_2 = tmp;
       const items = [onClose, onRemove, tmp];
       const memo = noop.useMemo(() => {
@@ -940,7 +940,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const merged = Object.assign(arg0);
               obj.guildId = guildId;
               obj.onBan = onBan;
-              return closure_2_18(onRemove(11435), obj);
+              return closure_2_18(onRemove(11437), obj);
             },
           },
         };
@@ -948,6 +948,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
       const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
       obj.initialRouteStack = items1;
-      return closure_18(onClose(6687).Navigator, obj);
+      return closure_18(onClose(6688).Navigator, obj);
     };
 export const GuildSettingsModalMemberEditScene = tmp6;

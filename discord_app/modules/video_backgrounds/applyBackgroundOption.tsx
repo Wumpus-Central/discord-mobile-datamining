@@ -52,7 +52,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -77,7 +77,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
             if (null == asset) {
               applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.NONE);
               c9 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             } else if (asset === closure_2_7) {
               applyBackgroundMediaFilterSettings(
                 closure_0,
@@ -85,7 +85,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
                 BaseConnectionEvent.FilterSettingsGraph.BACKGROUND_BLUR,
               );
               c9 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             } else {
               if (typeof asset !== "string") {
                 if (typeof asset !== "number") {

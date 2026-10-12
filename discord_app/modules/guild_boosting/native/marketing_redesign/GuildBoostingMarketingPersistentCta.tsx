@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     fractionalPremiumState,
                     premiumGroupRole,
                   };
-                  const tmp30 = closure_6(stateFromStores(7117), obj8);
+                  const tmp30 = closure_6(stateFromStores(7118), obj8);
                   cResult[19] = fractionalPremiumState;
                   cResult[20] = guild;
                   cResult[21] = premiumGroupRole;
@@ -286,14 +286,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = { style: null, textStyle: null, guild: null, size: null };
         ({ guildIcon: obj5.style, guildIconText: obj5.textStyle } = tmp4);
         obj10.guild = guild;
-        obj10.size = isVisible(6158).GuildIconSizes.LARGE;
-        const tmp19 = closure_6(stateFromStores(6158), obj10);
+        obj10.size = isVisible(6159).GuildIconSizes.LARGE;
+        const tmp19 = closure_6(stateFromStores(6159), obj10);
         cResult[8] = guild;
         cResult[9] = tmp4.guildIcon;
         cResult[10] = tmp4.guildIconText;
         cResult[11] = tmp19;
         tmp15 = tmp19;
-        const tmp18 = stateFromStores(6158);
+        const tmp18 = stateFromStores(6159);
       }
       const items3 = [tmp4.wrapper, animatedStyle];
       cResult[2] = animatedStyle;
@@ -375,9 +375,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: tmp.guildInfoContainer, children: null };
       const obj8 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
       const tmp4 = stateFromStores(5391);
-      obj8.size = isVisible(6158).GuildIconSizes.LARGE;
+      obj8.size = isVisible(6159).GuildIconSizes.LARGE;
       const items3 = [
-        closure_6(stateFromStores(6158), obj8),
+        closure_6(stateFromStores(6159), obj8),
         closure_6(isVisible(5088).Text, {
           style: tmp.guildName,
           variant: "text-md/bold",
@@ -389,7 +389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items4 = [closure_7(View, obj7)];
       const obj10 = {
         style: tmp.buttonContainer,
-        children: closure_6(stateFromStores(7117), {
+        children: closure_6(stateFromStores(7118), {
           guild,
           previousGuildSubscriptionSlot,
           useShortenedCTA: true,

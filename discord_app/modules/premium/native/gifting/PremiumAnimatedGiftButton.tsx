@@ -349,7 +349,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       const merged = Object.assign(accessibilityState);
       obj6.accessibilityState = { disabled };
       const merged1 = Object.assign(arg0);
-      obj6.children = jsx(tmp3(6105), {
+      obj6.children = jsx(tmp3(6106), {
         ref: tmp9,
         style: tmp7.animationRefresh,
         source: { uri: animationDataUrl },

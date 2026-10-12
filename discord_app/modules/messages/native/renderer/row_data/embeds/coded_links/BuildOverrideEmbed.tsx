@@ -10,7 +10,7 @@ import BuildOverrideStore2 from "../../../../../../build_overrides/BuildOverride
 import build_overrides_BuildOverrideUtils from "../../../../../../build_overrides/native/BuildOverrideUtils.tsx";
 import _modDef11362 from "../../../../../../../../_runtime/metro/11362__.js";
 import _modDef11363 from "../../../../../../../../_runtime/metro/11363__.js";
-import _modDef13501 from "../../../../../../../../_runtime/metro/13501__.js";
+import _modDef13524 from "../../../../../../../../_runtime/metro/13524__.js";
 import validateBuildOverrideDefault from "../../../../../../build_overrides/validateBuildOverride.tsx";
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
@@ -94,7 +94,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               obj3.titleColor = colors.titleColor;
               obj3.subtitle = id;
               obj3.subtitleColor = colors.subtitleColor;
-              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef13501).uri;
+              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef13524).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";

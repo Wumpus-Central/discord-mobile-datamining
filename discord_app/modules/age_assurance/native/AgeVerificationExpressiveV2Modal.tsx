@@ -66,7 +66,7 @@ function MethodsScreen(onClose) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -559,7 +559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj2 = { screens: tmp7, initialRouteName: constants.METHODS, headerBackTitle: tmp12 };
-              const tmp16 = closure_9(tmp(6687).Navigator, obj2);
+              const tmp16 = closure_9(tmp(6688).Navigator, obj2);
               cResult[10] = tmp7;
               cResult[11] = tmp16;
               const tmp14 = tmp16;
@@ -599,7 +599,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         render: null,
       };
       const obj = entryPoint(576);
-      obj4.headerLeft = entryPoint(6200).getHeaderCloseButton(closeModal);
+      obj4.headerLeft = entryPoint(6201).getHeaderCloseButton(closeModal);
       obj4.render = function render(arg0, navigation) {
         return closure_2_9(MethodsScreen, { entryPoint, navigation, onClose: closeModal, onComplete, modalSessionId });
       };
@@ -612,8 +612,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         headerLeft: null,
         render: null,
       };
-      const tmpResult4 = entryPoint(6200);
-      obj5.headerLeft = entryPoint(6200).getHeaderBackButton();
+      const tmpResult4 = entryPoint(6201);
+      obj5.headerLeft = entryPoint(6201).getHeaderBackButton();
       obj5.render = function render() {
         return closure_2_9(onClose(onComplete[43]), { onClose: closeModal, onComplete, modalSessionId });
       };
@@ -626,8 +626,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         headerLeft: null,
         render: null,
       };
-      const tmpResult5 = entryPoint(6200);
-      obj6.headerLeft = entryPoint(6200).getHeaderBackButton();
+      const tmpResult5 = entryPoint(6201);
+      obj6.headerLeft = entryPoint(6201).getHeaderBackButton();
       obj6.render = function render() {
         return closure_2_9(onClose(onComplete[44]), { onClose: closeModal, modalSessionId });
       };
@@ -638,7 +638,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4;
       cResult[5] = obj3;
       tmp7 = obj3;
-      const tmpResult6 = entryPoint(6200);
+      const tmpResult6 = entryPoint(6201);
     }
   : function AgeVerificationExpressiveV2Modal(entryPoint) {
       entryPoint = entryPoint.entryPoint;

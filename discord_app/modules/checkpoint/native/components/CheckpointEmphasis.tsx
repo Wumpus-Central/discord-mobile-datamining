@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
-import inlineStyles from "../../../../../_runtime/07576_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07577_inlineStyles.js";
 import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ const CHECKPOINT_PRIMARY = fn(5437).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PlatformUtils = fn(1383);
-const CheckpointCustomizationUtils = fn(15986);
+const CheckpointCustomizationUtils = fn(16009);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
 const createStyles = fn(5092);
 let obj4 = {

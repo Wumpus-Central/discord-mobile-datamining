@@ -700,7 +700,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[21] === tmp8) {
                   let tmp28 = cResult[22];
                 }
-                const wishlistButtonState = tmp(9032).useWishlistButtonState(tmp28);
+                const wishlistButtonState = tmp(9033).useWishlistButtonState(tmp28);
                 class I {
                   constructor() {
                     return closure_1_11.getId();
@@ -757,7 +757,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "IconComponent", done: "+51" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -796,7 +796,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         return obj;
                       } else {
                         c0 = 3;
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     } catch (tmp12) {
                       c0 = tmp;
@@ -820,7 +820,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[26] = tmp5;
                 cResult[27] = t10;
                 tmp31 = t10;
-                const tmpResult4 = tmp(9032);
+                const tmpResult4 = tmp(9033);
               }
             }
           }

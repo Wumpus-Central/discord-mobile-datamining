@@ -156,8 +156,8 @@ function getSKUShareURL(guildId, applicationId) {
     window.GLOBAL_ENV.WEBAPP_ENDPOINT +
     map1.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(6931).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(6933);
+let closure_4 = fn(6932).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(6934);
 ({
   getChannelsGameShopPrefix: closure_9,
   STOREFRONT_MARKETING_GUILD_ID: c10,
@@ -496,7 +496,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "backgroundColor", primaryIconLabel: "IconComponent" };
+          let obj4 = { primaryIconAsset: "Array", primaryIconLabel: "Set" };
         } else {
           const obj3 = StoreUtils;
           obj4 = {
@@ -513,7 +513,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "backgroundColor", primaryIconLabel: "IconComponent" };
+  return { primaryIconAsset: "Array", primaryIconLabel: "Set" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value2) {
   let obj = arg1;

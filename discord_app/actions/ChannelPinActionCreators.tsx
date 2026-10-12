@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelPinsStore from "../stores/ChannelPinsStore.tsx";
 
 const require = fn;
-const FetchState = fn(12821).FetchState;
+const FetchState = fn(12823).FetchState;
 const Constants = fn(1085);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
 let obj = {
@@ -22,7 +22,7 @@ let obj = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -41,7 +41,7 @@ let obj = {
               ({ id: closure_128_0, name: closure_128_1 } = tmp3);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(7901).unarchiveThreadIfNecessary(tmp3.id), done: false };
+              const obj5 = { value: tmp2(7902).unarchiveThreadIfNecessary(tmp3.id), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -121,7 +121,7 @@ let obj = {
               const obj4 = channelName(5299);
             });
             c3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp10) {
           c3 = tmp;
@@ -142,7 +142,7 @@ let obj = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -160,7 +160,7 @@ let obj = {
               channel = tmp4;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: id(7901).unarchiveThreadIfNecessary(channel.id), done: false };
+              const obj5 = { value: id(7902).unarchiveThreadIfNecessary(channel.id), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -192,7 +192,7 @@ let obj = {
               return closure_1(5299).show(obj2);
             });
             c3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp8) {
           c3 = tmp;

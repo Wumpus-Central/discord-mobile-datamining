@@ -9,8 +9,8 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Linking: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(9207).XboxLinkModalScenes;
-const GameConsoleConstants = fn(9221);
+const XboxLinkModalScenes = fn(9208).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9222);
 ({ XBOX_ANDROID_APP_LINK: closure_9, XBOX_IOS_APP_LINK: c10, XBOX_URL_BASE: closure_11 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const obj4 = { source: require("../../../../../../../_runtime/metro/12907__.js"), style: tmp4.image };
+        const obj4 = { source: require("../../../../../../../_runtime/metro/12909__.js"), style: tmp4.image };
         const tmp16 = closure_12(require("FastImage"), obj4);
         cResult[6] = tmp4.image;
         cResult[7] = tmp16;
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const obj10 = { source: require("../../../../../../../_runtime/metro/12908__.js"), style: tmp4.icon };
+              const obj10 = { source: require("../../../../../../../_runtime/metro/12910__.js"), style: tmp4.icon };
               let tmp36Result = closure_12(require("FastImage"), obj10);
               const tmp40 = require("FastImage");
             } else {
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       const obj5 = { source: null, style: null };
       const obj2 = first(navigation[12]);
-      obj5.source = require("../../../../../../../_runtime/metro/12907__.js");
+      obj5.source = require("../../../../../../../_runtime/metro/12909__.js");
       obj5.style = tmp.image;
       const items2 = [closure_12(require("FastImage"), obj5), , ,];
       const obj6 = {

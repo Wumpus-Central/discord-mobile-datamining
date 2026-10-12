@@ -7,7 +7,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AutomodPermissionUtils from "../AutomodPermissionUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
-import _modDef11456 from "../../../../_runtime/metro/11456__.js";
+import _modDef11458 from "../../../../_runtime/metro/11458__.js";
 import AutomodQuarantineUtils from "../AutomodQuarantineUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -24,7 +24,7 @@ let closure_6 = ["guildId", "guildName", "automodReason"];
 let closure_7 = ["guildName"];
 let closure_8 = ["guildName"];
 const View = fn(17).View;
-const QUARANTINE_USER_ALERT_KEY = fn(11448).QUARANTINE_USER_ALERT_KEY;
+const QUARANTINE_USER_ALERT_KEY = fn(11450).QUARANTINE_USER_ALERT_KEY;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_16, UserSettingsSections: closure_17 } = Constants);
 const GuildMemberFlags = fn(4736).GuildMemberFlags;
@@ -81,7 +81,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         const onClose = tmp4.onClose;
       }
       if (cResult[7] !== tmp12.mainIcon) {
-        const obj2 = { source: _modDef11456, size: native.Icon.Sizes.CUSTOM, style: tmp12.mainIcon };
+        const obj2 = { source: _modDef11458, size: native.Icon.Sizes.CUSTOM, style: tmp12.mainIcon };
         const tmp18 = closure_1_19(native.Icon, obj2);
         cResult[7] = tmp12.mainIcon;
         cResult[8] = tmp18;
@@ -193,7 +193,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp2.body, children: null };
       const tmp6 = common_AlertDefault;
       const items = [
-        closure_1_19(native.Icon, { source: _modDef11456, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }),
+        closure_1_19(native.Icon, { source: _modDef11458, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }),
         closure_1_19(Text_Text.Text, {
           style: tmp2.title,
           accessibilityRole: "header",
@@ -339,8 +339,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult = intl.string(util.t.TBeZmG);
       }
       const tmp = _objectWithoutProperties(arg0, closure_6);
-      const tmp2Result = tmp2(11457);
-      [require, tmp8] = tmp2(11457).useOpenFixQuarantinedProfileModal({ guildId });
+      const tmp2Result = tmp2(11459);
+      [require, tmp8] = tmp2(11459).useOpenFixQuarantinedProfileModal({ guildId });
       if (!tmp8) {
         const intl3 = tmp2(1126).intl;
         stringResult = intl3.string(tmp2(1126).t.FFj5Dt);

@@ -210,7 +210,7 @@ export const useFavoritesBetaTagDismissibleContent = ReactCompilerGating.isReact
       const isFreemium = require("FavoritesGuildExperiment").useFavoritesGuildConfig(first).isFreemium;
       if (cResult[1] === arg0) {
         if (cResult[2] === isFreemium) {
-          const tmp7 = _slicedToArray(tmp(7099).useSelectedDismissibleContent(cResult[3]), 2);
+          const tmp7 = _slicedToArray(tmp(7100).useSelectedDismissibleContent(cResult[3]), 2);
           _require = tmp8;
           const tmp9 = tmp7[0] === tmp(2049).DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
           closure_1 = tmp9;
@@ -239,7 +239,7 @@ export const useFavoritesBetaTagDismissibleContent = ReactCompilerGating.isReact
           cResult[5] = tmp9;
           cResult[6] = fn;
           tmp10 = fn;
-          const tmpResult2 = tmp(7099);
+          const tmpResult2 = tmp(7100);
         }
       }
       if (!isFreemium) {

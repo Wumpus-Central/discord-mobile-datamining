@@ -20,9 +20,9 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_7,
   StyleSheet,
 } = get_ActivityIndicator);
-const ChannelCallStore = fn(10353);
+const ChannelCallStore = fn(10354);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(10354);
+const ChannelCallConstants = fn(10355);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1085);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -367,7 +367,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = closure_13(tmp(6843).ActionSheetHeaderBar, {});
+        const tmp13 = closure_13(tmp(6844).ActionSheetHeaderBar, {});
         cResult[4] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -458,7 +458,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj4 = { style: tmp.aboveActionBarContainer, children: null };
       const animatedStyle = positionY(4850).useAnimatedStyle(fn);
-      const items = [closure_13(closure_27, { positionY }), closure_13(positionY(6843).ActionSheetHeaderBar, {})];
+      const items = [closure_13(closure_27, { positionY }), closure_13(positionY(6844).ActionSheetHeaderBar, {})];
       let tmp4Result = null != aboveActionBar;
       if (tmp4Result) {
         obj5 = { style: null, children: null };

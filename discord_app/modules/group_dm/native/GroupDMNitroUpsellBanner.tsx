@@ -7,7 +7,7 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef8080 from "../../../../_runtime/metro/08080__.js";
+import _modDef8081 from "../../../../_runtime/metro/08081__.js";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import GroupDMNitroCapExperimentDefault from "../GroupDMNitroCapExperiment.tsx";
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction.tsx";
@@ -874,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   size: "sm",
                   variant: "experimental_premium-primary",
                   shiny: tmp23,
-                  icon: _modDef8080,
+                  icon: _modDef8081,
                   onPress: tmp14,
                 };
                 const tmp26 = options(components_Button_Button.Button, obj9);
@@ -966,7 +966,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = !stateFromStores;
       }
       obj7.shiny = tmp15;
-      obj7.icon = _modDef8080;
+      obj7.icon = _modDef8081;
       obj7.onPress = tmp7Result;
       obj6.trailing = options(components_Button_Button.Button, obj7);
       const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

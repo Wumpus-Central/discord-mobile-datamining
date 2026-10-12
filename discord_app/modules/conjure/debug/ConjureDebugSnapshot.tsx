@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/debug/ConjureDebugSnapshot.tsx
-import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
+import ConjureDebugLogStore from "ConjureDebugLogStore.tsx";
 import ConjureDebugStore from "ConjureDebugStore.tsx";
 
 const size = fn(2);
@@ -14,7 +14,7 @@ export const conjureDebugSnapshot = function conjureDebugSnapshot(projectId) {
     last_compaction: ConjureDebugStore.getLastCompaction(projectId),
     last_compaction_decline: ConjureDebugStore.getLastCompactionDecline(projectId),
     timing_traces: ConjureDebugStore.getTimingTraces(projectId),
-    logs: ConjureProjectStore.getLogs(projectId),
+    logs: ConjureDebugLogStore.getLogs(projectId),
   };
   return JSON.stringify(obj, null, 2);
 };

@@ -4,7 +4,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import _modDef13415 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import _modDef13438 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -68,7 +68,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         obj2.legacyCopy = intl3.string(tmp(1126).t.xT1Vfn);
         const intl4 = tmp(1126).intl;
         const obj3 = { maxFileSize: null };
-        const tmpResult = tmp(7760);
+        const tmpResult = tmp(7761);
         obj3.maxFileSize = tmp(4769).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
         obj2.rolloutCopy = intl4.formatToPlainString(tmp(1126).t.IDAfOy, obj3);
         items[2] = tmpResult.getNitroFileUploadRolloutCopy(obj2);
@@ -101,7 +101,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { uri: _modDef13415 };
+        const obj5 = { uri: _modDef13438 };
         cResult[4] = obj5;
         let tmp12 = obj5;
       } else {
@@ -223,7 +223,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         end: VerticalGradient.END,
         style: tmp.gradient,
       };
-      obj8.uri = _modDef13415;
+      obj8.uri = _modDef13438;
       obj7.source = obj8;
       obj7.style = tmp.headerImage;
       items1[1] = closure_6(FastImageDefault, obj7);

@@ -526,7 +526,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let purchase;
       ({ previewSkuId, user, guildId } = arg0);
       const tmp = closure_13();
-      const tmp4 = purchase(8297)(previewSkuId);
+      const tmp4 = purchase(8298)(previewSkuId);
       const product = tmp4.product;
       _require = product;
       purchase = tmp4.purchase;
@@ -569,8 +569,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj.accessibilityLabel = formatToPlainStringResult;
       const obj3 = { style: tmp.nameplateGradientContainer, children: null };
       const items1 = [
-        closure_10(tmp10(9020).NameplateDummyUserPreview, { width: 100 }),
-        closure_10(tmp10(9020).NameplateDummyUserPreview, { width: 140 }),
+        closure_10(tmp10(9021).NameplateDummyUserPreview, { width: 100 }),
+        closure_10(tmp10(9021).NameplateDummyUserPreview, { width: 140 }),
       ];
       const obj4 = {
         style: tmp.nameplatePreviewGradient,
@@ -584,7 +584,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = items1;
       const items3 = [
         closure_11(View, obj3),
-        closure_10(tmp10(10627).NameplatePreview, {
+        closure_10(tmp10(10628).NameplatePreview, {
           nameplate: memo,
           user,
           guildId,
@@ -594,8 +594,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       ];
       const obj5 = { style: tmp.nameplateGradientContainer, children: null };
       const items4 = [
-        closure_10(tmp10(9020).NameplateDummyUserPreview, { width: 140 }),
-        closure_10(tmp10(9020).NameplateDummyUserPreview, { width: 100 }),
+        closure_10(tmp10(9021).NameplateDummyUserPreview, { width: 140 }),
+        closure_10(tmp10(9021).NameplateDummyUserPreview, { width: 100 }),
       ];
       const obj6 = {
         style: tmp.nameplatePreviewGradient,
@@ -621,19 +621,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ user, currentNameplate, guildId } = arg0);
       const tmp4 = closure_13();
       let obj = guildId(576);
-      const bottomSheetRef = guildId(8294).useBottomSheetRef().bottomSheetRef;
+      const bottomSheetRef = guildId(8295).useBottomSheetRef().bottomSheetRef;
       const tmp5 = _slicedToArray(noop.useState(undefined), 2);
       const first = tmp5[0];
       let tmp7 = currentNameplate;
       if (undefined !== first) {
         tmp7 = first;
       }
-      let obj2 = guildId(8294);
-      const analyticsLocations = first(6851)(first(6878).EDIT_NAMEPLATE_SHEET).analyticsLocations;
+      let obj2 = guildId(8295);
+      const analyticsLocations = first(6852)(first(6879).EDIT_NAMEPLATE_SHEET).analyticsLocations;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
           const obj = first(1265);
-          obj.track(constants.OPEN_POPOUT, { type: first(6878).EDIT_NAMEPLATE_SHEET, is_fullscreen: true });
+          obj.track(constants.OPEN_POPOUT, { type: first(6879).EDIT_NAMEPLATE_SHEET, is_fullscreen: true });
         };
         cResult[0] = fn;
         let first1 = fn;
@@ -714,7 +714,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 return tmp39;
                               }
                               const obj5 = { value: analyticsLocations, children: tmp36 };
-                              const tmp41 = closure_10(guildId(6851).AnalyticsLocationProvider, obj5);
+                              const tmp41 = closure_10(guildId(6852).AnalyticsLocationProvider, obj5);
                               cResult[28] = analyticsLocations;
                               cResult[29] = tmp36;
                               cResult[30] = tmp41;
@@ -730,7 +730,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           };
                           const items = [tmp25, tmp32];
                           obj6.children = items;
-                          const tmp38 = closure_11(guildId(6839).BottomSheet, obj6);
+                          const tmp38 = closure_11(guildId(6840).BottomSheet, obj6);
                           cResult[24] = bottomSheetRef;
                           cResult[25] = tmp32;
                           cResult[26] = tmp25;
@@ -746,9 +746,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     selectedSkuId: skuId1,
                     onApply: tmp11,
                     analyticsLocations,
-                    analyticsSource: tmp8(6878).EDIT_NAMEPLATE_SHEET,
+                    analyticsSource: tmp8(6879).EDIT_NAMEPLATE_SHEET,
                   };
-                  const tmp35 = closure_10(tmp8(8296), obj7);
+                  const tmp35 = closure_10(tmp8(8297), obj7);
                   cResult[18] = analyticsLocations;
                   cResult[19] = tmp11;
                   cResult[20] = skuId;
@@ -756,7 +756,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[22] = user;
                   cResult[23] = tmp35;
                   tmp32 = tmp35;
-                  const tmp8Result = tmp8(8296);
+                  const tmp8Result = tmp8(8297);
                 }
               }
             }
@@ -797,7 +797,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = first;
       cResult[3] = fn2;
       tmp11 = fn2;
-      const tmp9 = first(6851);
+      const tmp9 = first(6852);
     }
   : function EditNameplateActionSheet(arg0) {
       ({ user, currentNameplate, guildId } = arg0);
@@ -808,13 +808,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (undefined !== first) {
         tmp6 = first;
       }
-      let obj = guildId(8294);
+      let obj = guildId(8295);
       const tmp7 = first;
-      const analyticsLocations = first(6851)(first(6878).EDIT_NAMEPLATE_SHEET).analyticsLocations;
+      const analyticsLocations = first(6852)(first(6879).EDIT_NAMEPLATE_SHEET).analyticsLocations;
       const items = [first, guildId];
       const callback = noop.useCallback(() => {
         const obj = first(1265);
-        obj.track(constants.OPEN_POPOUT, { type: first(6878).EDIT_NAMEPLATE_SHEET, is_fullscreen: true });
+        obj.track(constants.OPEN_POPOUT, { type: first(6879).EDIT_NAMEPLATE_SHEET, is_fullscreen: true });
       }, []);
       const callback1 = noop.useCallback((arg0) => {
         const obj2 = { guildId, nameplate: null };
@@ -861,7 +861,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       let skuId;
       const obj6 = { style: tmp.bounceOffset };
-      const tmp8 = first(6851);
+      const tmp8 = first(6852);
       if (currentNameplate != null) {
         skuId = currentNameplate.skuId;
       }
@@ -873,9 +873,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj8.selectedSkuId = skuId1;
       obj8.onApply = callback1;
       obj8.analyticsLocations = analyticsLocations;
-      obj8.analyticsSource = tmp7(6878).EDIT_NAMEPLATE_SHEET;
-      items2[1] = closure_10(first(8296), obj8);
+      obj8.analyticsSource = tmp7(6879).EDIT_NAMEPLATE_SHEET;
+      items2[1] = closure_10(first(8297), obj8);
       obj4.children = items2;
-      obj3.children = closure_11(guildId(6839).BottomSheet, obj4);
-      return closure_10(guildId(6851).AnalyticsLocationProvider, obj3);
+      obj3.children = closure_11(guildId(6840).BottomSheet, obj4);
+      return closure_10(guildId(6852).AnalyticsLocationProvider, obj3);
     };

@@ -70,8 +70,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = isVisible(576);
       const stateFromStores = isVisible(504).useStateFromStores(tmp6, tmp7);
       let tmpResult = isVisible(504);
-      const tmp5Result = stateFromStores(13761);
-      ({ openPayment, buttonText } = stateFromStores(13761)(stateFromStores(6878).PREMIUM_MARKETING_FLOATING_CTA));
+      const tmp5Result = stateFromStores(13784);
+      ({ openPayment, buttonText } = stateFromStores(13784)(stateFromStores(6879).PREMIUM_MARKETING_FLOATING_CTA));
       if (cResult[2] !== backgroundColor) {
         let obj3 = tmp5(683)(backgroundColor);
         const hexResult = tmp5(683)(backgroundColor).alpha(0).hex();
@@ -443,7 +443,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj8 = { onPress: openPayment, text: buttonText };
-                const tmp32 = closure_7(tmp5(9781), obj8);
+                const tmp32 = closure_7(tmp5(9782), obj8);
                 cResult[20] = buttonText;
                 cResult[21] = openPayment;
                 cResult[22] = tmp32;
@@ -484,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp12;
       cResult[6] = items5;
       tmp14 = items5;
-      const tmp5ResultResult = stateFromStores(13761)(stateFromStores(6878).PREMIUM_MARKETING_FLOATING_CTA);
+      const tmp5ResultResult = stateFromStores(13784)(stateFromStores(6879).PREMIUM_MARKETING_FLOATING_CTA);
     }
   : function PremiumMarketingFloatingSubscribeButton(isVisible) {
       isVisible = isVisible.isVisible;

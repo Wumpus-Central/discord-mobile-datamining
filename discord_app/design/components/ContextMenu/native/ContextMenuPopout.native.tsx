@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06334_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06335_LegacyBaseButton.js";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -26,7 +26,7 @@ obj2.container = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(9364).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(9365).CONTEXT_MENU_MIN_WIDTH,
 };
 let obj3 = {
   position: "absolute",
@@ -34,12 +34,12 @@ let obj3 = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(9364).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(9365).CONTEXT_MENU_MIN_WIDTH,
 };
-obj2.titleContainer = { padding: fn(9364).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(9364).CONTEXT_MENU_ITEM_PADDING };
+obj2.titleContainer = { padding: fn(9365).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(9365).CONTEXT_MENU_ITEM_PADDING };
 obj2.divider = {
-  borderBottomWidth: fn(9364).CONTEXT_MENU_DIVIDER_HEIGHT,
+  borderBottomWidth: fn(9365).CONTEXT_MENU_DIVIDER_HEIGHT,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let closure_9 = createStyles.createStyles(obj2);
@@ -104,7 +104,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = {
         withSpring: visible(5378).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(9364).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(9365).CONTEXT_MENU_SPRING,
       };
       fn.__workletHash = 6862317967896;
       fn.__initData = __initData2;
@@ -148,7 +148,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {
         withSpring: visible(5378).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(9364).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(9365).CONTEXT_MENU_SPRING,
       };
     }
   : function ContextMenuBackdrop(onDismiss) {
@@ -164,7 +164,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = {
         withSpring: visible(5378).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(9364).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(9365).CONTEXT_MENU_SPRING,
       };
       fn.__workletHash = 7758377027899;
       fn.__initData = __initData3;
@@ -179,7 +179,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {
         withSpring: visible(5378).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(9364).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(9365).CONTEXT_MENU_SPRING,
       };
       const obj4 = visible(1382);
       const intl = visible(1126).intl;

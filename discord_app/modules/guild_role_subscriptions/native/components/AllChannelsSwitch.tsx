@@ -5,8 +5,8 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef18526 from "../../../../../_runtime/metro/18526__.js";
-import _modDef18527 from "../../../../../_runtime/metro/18527__.js";
+import _modDef18584 from "../../../../../_runtime/metro/18584__.js";
+import _modDef18585 from "../../../../../_runtime/metro/18585__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
 
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(15498).AllChannelAccessOptions;
+const AllChannelAccessOptions = fn(15521).AllChannelAccessOptions;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj5 = {
-              icon: _modDef18527,
+              icon: _modDef18585,
               label: tmp23,
               selected: channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS,
               onPress: tmp25,
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj6 = {
-          icon: _modDef18526,
+          icon: _modDef18584,
           label: tmp9,
           selected: channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS,
           onPress: tmp12,
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: null, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
       const items = [tmp.container, style.style];
       obj.style = items;
-      const obj2 = { icon: _modDef18526, label: null, selected: null, onPress: null, disabled: null };
+      const obj2 = { icon: _modDef18584, label: null, selected: null, onPress: null, disabled: null };
       const intl = util.intl;
       obj2.label = intl.string(util.t["vs2T+B"]);
       obj2.selected = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
@@ -349,7 +349,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj2.disabled = disabled;
       const items1 = [closure_5(closure_8, obj2), closure_5(View, { style: tmp.separator })];
-      const obj4 = { icon: _modDef18527, label: null, selected: null, onPress: null, disabled: null };
+      const obj4 = { icon: _modDef18585, label: null, selected: null, onPress: null, disabled: null };
       const intl2 = util.intl;
       obj4.label = intl2.string(util.t.l4Tr7X);
       obj4.selected = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;

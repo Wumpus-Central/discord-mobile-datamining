@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/shared/ConjureUtils.tsx
 import c from "../../../../_runtime/00576_c.js";
-import ConjureTypes from "../ConjureTypes.tsx";
+import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import ConjureGuildExperiment from "../experiments/ConjureGuildExperiment.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import GuildChannelStore_mod from "../../../stores/GuildChannelStore.tsx";
@@ -144,8 +144,8 @@ export const conjureSettingChannels = function conjureSettingChannels(stateFromS
 };
 export const getConjureProjectAccessSettings = function getConjureProjectAccessSettings(flags) {
   return {
-    isPublic: flags & ConjureTypes.ConjureProjectFlags.PUBLIC,
-    isShared: flags & ConjureTypes.ConjureProjectFlags.SHAREABLE,
+    isPublic: flags & ConjureProjectTypes.ConjureProjectFlags.PUBLIC,
+    isShared: flags & ConjureProjectTypes.ConjureProjectFlags.SHAREABLE,
   };
 };
 export { conjureChannelAppId };
@@ -348,7 +348,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
         if (cResult[4] === guild_id2) {
           let tmp12 = cResult[5];
         }
-        const isConjureGuildEnabled = tmp(6947).useIsConjureGuildEnabled(tmp12);
+        const isConjureGuildEnabled = tmp(6948).useIsConjureGuildEnabled(tmp12);
         if (cResult[6] === appChannelApplication) {
           if (cResult[7] === guild_id) {
             if (cResult[8] === stateFromStores) {
@@ -388,7 +388,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
         cResult[9] = isConjureGuildEnabled;
         cResult[10] = tmp17;
         tmp14 = tmp17;
-        const tmpResult4 = tmp(6947);
+        const tmpResult4 = tmp(6948);
       }
       const obj2 = { guildId: guild_id2, location };
       cResult[3] = location;

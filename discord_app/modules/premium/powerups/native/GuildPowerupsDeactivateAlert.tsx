@@ -38,10 +38,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ guildId, powerup } = arg0);
       const tmp4 = closure_6();
       _require = tmp4;
-      const tmp6 = onDeactivate(12277)(guildId, powerup);
+      const tmp6 = onDeactivate(12279)(guildId, powerup);
       onDeactivate = tmp6.onDeactivate;
       const error = tmp6.error;
-      const arr = onDeactivate(12278)(guildId, powerup);
+      const arr = onDeactivate(12280)(guildId, powerup);
       let obj = require("c");
       const logPowerupModalOpened = require("GuildPowerupAnalytics").useLogPowerupModalOpened(
         guildId,
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           size: "custom",
           style: { width: 40, height: 40 },
         };
-        const tmp10 = closure_4(tmp(6289).CircleErrorIcon, obj3);
+        const tmp10 = closure_4(tmp(6290).CircleErrorIcon, obj3);
         cResult[0] = tmp10;
         let first = tmp10;
       } else {

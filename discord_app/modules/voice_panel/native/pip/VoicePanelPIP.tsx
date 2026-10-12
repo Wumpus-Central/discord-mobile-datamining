@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06334_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06335_LegacyBaseButton.js";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import EmbeddedActivitiesActionCreatorsAll from "../../../activities/EmbeddedActivitiesActionCreators.tsx";
@@ -27,10 +27,10 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11970);
+const VoicePanelConstants = fn(11972);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11968).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17740).VoicePanelPIPModes;
+const VoicePanelControlsModes = fn(11970).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17797).VoicePanelPIPModes;
 const ActivityPanelModes = fn(6067).ActivityPanelModes;
 const isLaunched = fn(10802).isLaunched;
 const jsxProd = fn(21);

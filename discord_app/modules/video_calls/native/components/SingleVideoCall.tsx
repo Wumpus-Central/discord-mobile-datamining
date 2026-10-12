@@ -4,7 +4,7 @@ import showUserProfileActionSheetDefault from "../../../user_profile/native/show
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ChannelCallStore = fn(10353);
+const ChannelCallStore = fn(10354);
 ({ resetFocus: closure_4, toggleFocus: hasOwnProperty } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(576);
       const tmp4 = analyticsLocations;
       ({ bottom, right } = analyticsLocations(1631)());
-      analyticsLocations = analyticsLocations(6851)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6852)().analyticsLocations;
       if (cResult[0] !== channel.id) {
         function handleDoubleTap() {
           React4();

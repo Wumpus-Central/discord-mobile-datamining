@@ -10,14 +10,14 @@ import noop from "../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../modules/a11y/AccessibilityStore.tsx";
 
 const MessageTypes2 = _default(1101);
-const AutoModerationSystemMessageViewNativeComponent = _default(9374);
-const MessageViewNativeComponent = _default(9375);
-const SystemMessageViewNativeComponent = _default(9376);
+const AutoModerationSystemMessageViewNativeComponent = _default(9375);
+const MessageViewNativeComponent = _default(9376);
+const SystemMessageViewNativeComponent = _default(9377);
 require = fn;
 let closure_3 = ["message"];
 const View = fn(17).View;
 const MessageTypes = fn(1085).MessageTypes;
-const RowGeneratorConstants = fn(7747);
+const RowGeneratorConstants = fn(7748);
 ({ RowType: c10, Changeset: closure_11 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -268,6 +268,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = messageSizeCacheRef(noop.useState(0), 2);
 }
-export const DCDMessageView = fn(9375).default;
-export const DCDSystemMessageView = fn(9376).default;
-export const DCDAutoModerationSystemMessageView = fn(9374).default;
+export const DCDMessageView = fn(9376).default;
+export const DCDSystemMessageView = fn(9377).default;
+export const DCDAutoModerationSystemMessageView = fn(9375).default;

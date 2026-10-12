@@ -35,7 +35,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
     const intl = util.intl;
     return intl.string(util.t.xPHVBs);
   },
-  parent: fn(7992).MobileUserSettings.VOICE,
+  parent: fn(7993).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useOutputVolumeSettingValue() {

@@ -6,7 +6,7 @@ import Record from "../../lib/Record.tsx";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
 const require = fn;
-fn(6089).THE_GAME_AWARD_WINNER_SKUS;
+fn(6090).THE_GAME_AWARD_WINNER_SKUS;
 const Constants = fn(1085);
 ({
   GIFTABLE_CURRENCIES: hasOwnProperty,

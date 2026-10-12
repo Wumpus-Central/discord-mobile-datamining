@@ -14,7 +14,7 @@ require = fn;
 let closure_3 = fn(2069).isGuildSelectableChannelType;
 const Constants = fn(1085);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(9716);
+const ApplicationCommandsConstants = fn(9717);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
 const ChannelAutocompleteConstants = fn(5404);
 ({

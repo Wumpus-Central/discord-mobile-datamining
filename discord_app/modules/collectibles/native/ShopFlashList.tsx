@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import _mod8624 from "../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8625 from "../../../../discord_common/js/packages/flash-list/index.js";
 import useScrollToInitialIndexOnce from "hooks/useScrollToInitialIndexOnce.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onViewableItemsChanged,
           contentContainerStyle: tmp5.contentContainer,
         };
-        const tmp12 = jsx(_mod8624.FlashList, {
+        const tmp12 = jsx(_mod8625.FlashList, {
           ref,
           data,
           renderItem,
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flashListRef: ref,
         afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS,
       });
-      return jsx(_mod8624.FlashList, {
+      return jsx(_mod8625.FlashList, {
         ref,
         data,
         renderItem,

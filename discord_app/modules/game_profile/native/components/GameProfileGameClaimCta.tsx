@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -45,13 +45,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  v3(v3(8878).GameProfileTrackActionActions.ClaimGame);
+                  v3(v3(8879).GameProfileTrackActionActions.ClaimGame);
                   c1 = 1;
                   v3 = 1;
                   const obj4 = {
                     value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(
                       constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                      v3(7037).LoginHandoffSource.GAME_CLAIM,
+                      v3(7038).LoginHandoffSource.GAME_CLAIM,
                     ),
                     done: false,
                   };
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               } else {
                 v3 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp5) {
               v3 = tmp;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -148,13 +148,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  trackAction(v3(8878).GameProfileTrackActionActions.ClaimGame);
+                  trackAction(v3(8879).GameProfileTrackActionActions.ClaimGame);
                   v1 = 1;
                   v3 = 1;
                   const obj4 = {
-                    value: v1(7033).redirectDeveloperPortalWithHandoffToken(
+                    value: v1(7034).redirectDeveloperPortalWithHandoffToken(
                       constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                      v3(7037).LoginHandoffSource.GAME_CLAIM,
+                      v3(7038).LoginHandoffSource.GAME_CLAIM,
                     ),
                     done: false,
                   };
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               } else {
                 v3 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp5) {
               v3 = tmp;

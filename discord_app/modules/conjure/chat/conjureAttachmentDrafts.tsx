@@ -1,7 +1,8 @@
 // discord_app/modules/conjure/chat/conjureAttachmentDrafts.tsx
 import util from "../../../intl/index.native.tsx";
 import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
-import ConjureTypes from "../ConjureTypes.tsx";
+import ConjureAttachmentTypes from "ConjureAttachmentTypes.tsx";
+import conjureAttachmentRequests from "conjureAttachmentRequests.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import Dispatcher_mod from "../../../Dispatcher.tsx";
 
@@ -46,7 +47,7 @@ function getConjureAttachmentDrafts(projectId, chat) {
     tmp2 = tmp[chat];
   }
   if (tmp2 == null) {
-    tmp2 = closure_9;
+    tmp2 = closure_7;
   }
   return tmp2;
 }
@@ -68,8 +69,8 @@ function discardDraft(projectId, item10010) {
     URL.revokeObjectURL(item10010.previewUrl);
   }
   if (null != item10010.ref) {
-    hasOwnProperty(projectId, item10010.ref.id).catch(() => {});
-    const promise = hasOwnProperty(projectId, item10010.ref.id);
+    const result = conjureAttachmentRequests.deleteStagedAttachment(projectId, item10010.ref.id);
+    result.catch(() => {});
   }
 }
 function discardProject(projectId, arg1) {
@@ -81,7 +82,7 @@ function discardProject(projectId, arg1) {
     let nextResult = iter.next();
     while (iter !== undefined) {
       if (nextResult == null) {
-        nextResult = closure_9;
+        nextResult = closure_7;
       }
       for (const item10017 of nextResult) {
         if (tmp) {
@@ -113,7 +114,7 @@ function takeConjureAttachmentRefs(projectId, chat) {
       }
       continue;
     }
-    setDrafts(projectId, chat, closure_9);
+    setDrafts(projectId, chat, closure_7);
     return arr.flatMap((ref) => {
       if (null != ref.ref) {
         const items = [ref.ref];
@@ -126,21 +127,16 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const ConjureConnectionStore = fn(13213);
-({
-  deleteStagedAttachment: hasOwnProperty,
-  sendUserMessage: metroRequire,
-  uploadAttachmentBytes: closure_7,
-} = ConjureConnectionStore);
-let closure_9 = [];
-let c10 = 1;
+const sendUserMessage = fn(13218).sendUserMessage;
+let closure_7 = [];
+let c8 = 1;
 const zustandStore = fn(4989).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;
   const obj = { size: null };
-  const obj2 = ConjureTypes;
-  obj.size = obj2.formatConjureAttachmentLimit(ConjureTypes.conjureAttachmentLimit(contentType));
+  const obj2 = ConjureAttachmentTypes;
+  obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
   return intl.formatToPlainString(_modDef3849.JZ59Bo, obj);
 }
 let Dispatcher = Dispatcher_mod;
@@ -157,25 +153,26 @@ const subscription1 = Dispatcher.subscribe("CONJURE_PROJECT_DELETE_SUCCESS", (pr
   discardProject(projectId.projectId, { deleteFromWorker: false });
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/chat/conjureAttachmentDrafts.tsx");
+let result = size.fileFinishedImporting("modules/conjure/chat/conjureAttachmentDrafts.tsx");
 
 export const ConjureAttachmentDraftStore = zustandStore;
 export { getConjureAttachmentDrafts };
 export { conjureAttachmentTooLargeText };
 export const uploadConjureAttachment = function uploadConjureAttachment(arg0, size, name, contentType) {
   if (obj.isConjureAttachmentWithinLimit(size.size, contentType)) {
-    let resolved = React5(arg0, size, name, contentType);
+    const tmpResult = conjureAttachmentRequests;
+    let result = tmpResult.uploadAttachmentBytes(arg0, size, name, contentType);
   } else {
     const obj2 = { errorText: null };
     const intl = util.intl;
     const obj3 = { size: null };
-    const tmpResult = ConjureTypes;
-    obj3.size = tmpResult.formatConjureAttachmentLimit(ConjureTypes.conjureAttachmentLimit(contentType));
+    const tmpResult3 = ConjureAttachmentTypes;
+    obj3.size = tmpResult3.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
     obj2.errorText = intl.formatToPlainString(_modDef3849.JZ59Bo, obj3);
-    resolved = Promise.resolve(obj2);
-    const tmpResult2 = ConjureTypes;
+    result = Promise.resolve(obj2);
+    const tmpResult4 = ConjureAttachmentTypes;
   }
-  return resolved;
+  return result;
 };
 export const useConjureAttachmentDraftList = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureAttachmentDraftList(arg0, arg1) {
@@ -194,7 +191,7 @@ export const useConjureAttachmentDraftList = ReactCompilerGating.isReactCompiler
           tmp2 = tmp[closure_1];
         }
         if (tmp2 == null) {
-          tmp2 = closure_9;
+          tmp2 = closure_7;
         }
         return tmp2;
       };
@@ -213,7 +210,7 @@ export const useConjureAttachmentDraftList = ReactCompilerGating.isReactCompiler
           tmp2 = tmp[closure_1];
         }
         if (tmp2 == null) {
-          tmp2 = closure_9;
+          tmp2 = closure_7;
         }
         return tmp2;
       });
@@ -226,8 +223,8 @@ export const addConjureAttachmentDrafts = function addConjureAttachmentDrafts(pr
       const obj = { draft: null, upload: null };
       const obj2 = {};
       const merged = Object.assign(draft.draft);
-      closure_10 = tmp2 + 1;
-      obj2.localId = +closure_10;
+      closure_8 = tmp2 + 1;
+      obj2.localId = +closure_8;
       obj.draft = obj2;
       obj.upload = draft.upload;
       return obj;
@@ -246,15 +243,15 @@ export const addConjureAttachmentDrafts = function addConjureAttachmentDrafts(pr
     const arraySpreadResult = HermesBuiltin.arraySpread(getConjureAttachmentDrafts(projectId, chat), 0);
   }
 };
-export const removeConjureAttachmentDraft = function removeConjureAttachmentDraft(View, chat, arg2) {
+export const removeConjureAttachmentDraft = function removeConjureAttachmentDraft(id, chat, arg2) {
   closure_0 = arg2;
-  const tmp = zustandStore.getState().draftsByProject[View];
+  const tmp = zustandStore.getState().draftsByProject[id];
   let tmp2;
   if (tmp != null) {
     tmp2 = tmp[chat];
   }
   if (tmp2 == null) {
-    tmp2 = closure_9;
+    tmp2 = closure_7;
   }
   const found = tmp2.find((localId) => localId.localId === closure_0);
   if (null != found) {
@@ -263,20 +260,20 @@ export const removeConjureAttachmentDraft = function removeConjureAttachmentDraf
       URL.revokeObjectURL(found.previewUrl);
     }
     if (null != found.ref) {
-      hasOwnProperty(View, found.ref.id).catch(() => {});
-      const promise = hasOwnProperty(View, found.ref.id);
+      const result = conjureAttachmentRequests.deleteStagedAttachment(id, found.ref.id);
+      result.catch(() => {});
     }
     const found1 = tmp2.filter((localId) => localId.localId !== closure_0);
     const draftsByProject = zustandStore.getState().draftsByProject;
-    const obj2 = { draftsByProject: null };
-    const obj3 = {};
-    const merged = Object.assign(draftsByProject);
+    const obj3 = { draftsByProject: null };
     const obj4 = {};
-    const merged1 = Object.assign(draftsByProject[View]);
-    obj4[chat] = found1;
-    obj3[View] = obj4;
-    obj2.draftsByProject = obj3;
-    zustandStore.setState(obj2);
+    const merged = Object.assign(draftsByProject);
+    const obj5 = {};
+    const merged1 = Object.assign(draftsByProject[id]);
+    obj5[chat] = found1;
+    obj4[id] = obj5;
+    obj3.draftsByProject = obj4;
+    zustandStore.setState(obj3);
   }
 };
 export const clearConjureAttachmentDrafts = function clearConjureAttachmentDrafts(projectId, chat) {
@@ -286,7 +283,7 @@ export const clearConjureAttachmentDrafts = function clearConjureAttachmentDraft
       let tmp4 = discardDraft(arg0, item10010);
       continue;
     }
-    setDrafts(projectId, chat, closure_9);
+    setDrafts(projectId, chat, closure_7);
   }
 };
 export { takeConjureAttachmentRefs };
@@ -305,7 +302,7 @@ export const sendConjureCardReply = function sendConjureCardReply(projectId, imp
     chat = tmp.chat;
   }
   if (chat == null) {
-    chat = closure_9;
+    chat = closure_7;
   }
   if (chat.length > 0) {
     if (chat.every((status) => "ready" === status.status)) {
@@ -314,7 +311,7 @@ export const sendConjureCardReply = function sendConjureCardReply(projectId, imp
     const items = [];
     HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(attachments, 0));
     const obj2 = { clarificationAnswers };
-    timestampProducer(projectId, implementation_prompt, items, obj2);
+    sendUserMessage(projectId, implementation_prompt, items, obj2);
   }
   items1 = [];
 };

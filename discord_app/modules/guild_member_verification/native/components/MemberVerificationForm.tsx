@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let closure_8 = fn(6148).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6149).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1085).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -35,7 +35,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === phone) {
           let tmp6 = cResult[2];
         }
-        return initialVerification(6169)(tmp6);
+        return initialVerification(6170)(tmp6);
       }
       cResult[0] = id.verificationLevel;
       let phone1;
@@ -384,7 +384,7 @@ export default function MemberVerificationForm(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -410,7 +410,7 @@ export default function MemberVerificationForm(guild) {
                   closure_1_1(4809).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               } else {
                 VerificationLevels(null);
                 closure_2_8(true);

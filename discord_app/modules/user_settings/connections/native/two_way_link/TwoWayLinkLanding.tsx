@@ -34,7 +34,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
       ({ learnMoreLink, onNext } = platformType);
       const tmp4 = closure_8();
       const obj = platformType(576);
-      const twoWayLinkStyles = platformType(9214).useTwoWayLinkStyles();
+      const twoWayLinkStyles = platformType(9215).useTwoWayLinkStyles();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectedAccountsStore];
         cResult[0] = items;
@@ -57,7 +57,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      const obj2 = platformType(9214);
+      const obj2 = platformType(9215);
       const stateFromStores = platformType(504).useStateFromStores(first, tmp8);
       ({ container, content } = twoWayLinkStyles);
       if (imgStyle == null) {
@@ -233,7 +233,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = tmp18;
         }
         const obj7 = { source: img, style: tmp10 };
-        const tmp14 = closure_6(valueProps(6156), obj7);
+        const tmp14 = closure_6(valueProps(6157), obj7);
         cResult[6] = img;
         cResult[7] = tmp10;
         cResult[8] = tmp14;
@@ -270,7 +270,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[1] = imgStyle;
       obj5.style = items1;
-      const items2 = [closure_6(valueProps(6156), obj5), , ,];
+      const items2 = [closure_6(valueProps(6157), obj5), , ,];
       const obj6 = {
         variant: "heading-xl/bold",
         color: "mobile-text-heading-primary",
@@ -294,7 +294,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
         children: body,
       });
       const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-      const tmp10 = valueProps(6156);
+      const tmp10 = valueProps(6157);
       items2[3] = closure_6(closure_3, {
         style: tmp.valueProps,
         children: valueProps.map((label, index) => {

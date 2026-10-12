@@ -77,7 +77,7 @@ const route = SettingBuilders.createRoute({
         const intl = util.intl;
         return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
       },
-  parent: fn(7992).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7993).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: tmp2,
   screen: {
     route: fn(1085).UserSettingsSections.SECURE_FRAMES,

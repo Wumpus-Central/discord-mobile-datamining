@@ -44,7 +44,7 @@ function SortAndViewOptions(channel) {
   const items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12530, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12532, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -65,7 +65,7 @@ function SortAndViewOptions(channel) {
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_14(id(11837).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_14(id(11839).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -75,12 +75,12 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1126).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12531, dependencyMap.paths),
+      asyncRequireImpl(12533, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_14(channel(9075).TagIcon, { size: "xxs" });
+  obj.icon = closure_14(channel(9076).TagIcon, { size: "xxs" });
   return closure_14(channel(5379).Button, obj);
 }
 function getForumItemType(arg0) {
@@ -121,7 +121,7 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(11675).useForumChannelStore;
+const useForumChannelStore = fn(11677).useForumChannelStore;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 const Fonts = fn(1096).Fonts;
@@ -1905,7 +1905,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = tmp2(tmp3[17]).intl;
       obj12.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-      obj12.icon = require("../../../../_runtime/metro/12540__.js");
+      obj12.icon = require("../../../../_runtime/metro/12542__.js");
       obj12.disabled = tmp15;
       obj12.positionBottom = insets.bottom + require("native").space.PX_16;
       obj12.onPress = callback1;

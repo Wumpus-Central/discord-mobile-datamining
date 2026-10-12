@@ -20,10 +20,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDismissSheetOrCollapseDock() {
       const cResult = setRestingQuestDockMode(576).c(3);
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(15351).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(15374).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(15375).QuestBottomSheetContext,
+        setRestingQuestDockMode(15398).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       if (cResult[0] === isInQuestBottomSheet) {
         if (cResult[1] === setRestingQuestDockMode) {
@@ -45,10 +45,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useDismissSheetOrCollapseDock() {
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(15351).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(15374).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(15375).QuestBottomSheetContext,
+        setRestingQuestDockMode(15398).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       const items = [isInQuestBottomSheet, setRestingQuestDockMode];
       return noop.useCallback(() => {
@@ -69,7 +69,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_6();
       dependencyMap = tmp2;
       let obj = questId(576);
-      const questImpression = questId(9201).useQuestImpression();
+      const questImpression = questId(9202).useQuestImpression();
       if (cResult[0] === tmp2) {
         if (cResult[1] === questImpression) {
           if (cResult[2] === questId) {
@@ -155,7 +155,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const sourceQuestContent = questId.sourceQuestContent;
       const tmp = closure_6();
       dependencyMap = tmp;
-      const questImpression = questId(9201).useQuestImpression();
+      const questImpression = questId(9202).useQuestImpression();
       const items = [questId, tmp, questImpression, sourceQuestContent];
       return noop.useCallback(() => {
         closure_2();
@@ -259,7 +259,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
             const obj = { value, done: true };
             return obj;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -388,7 +388,7 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -419,16 +419,16 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
                 let captureAdUserAction = tmp4;
                 if (
                   obj12.shouldMigrateToAdAnalyticsInterface(
-                    tmp4(9173).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+                    tmp4(9174).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
                     "quest_bottom_sheet_mobile_activity",
                   )
                 ) {
-                  captureAdUserAction = captureAdUserAction(9174).captureAdUserAction;
+                  captureAdUserAction = captureAdUserAction(9175).captureAdUserAction;
                   const obj9 = {
-                    type: tmp4(9177).AdUserActionType.CLICK_INTERNAL,
+                    type: tmp4(9178).AdUserActionType.CLICK_INTERNAL,
                     adCreativeType: tmp4(5979).AdCreativeType.QUEST,
                     adCreativeId: closure_128_0,
-                    questContentCTA: tmp4(7415).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+                    questContentCTA: tmp4(7416).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
                     surfaceId: tmp4(5975).QuestContent.QUEST_BOTTOM_SHEET,
                     sourceQuestContent: closure_128_1,
                     impressionId: null,
@@ -445,12 +445,12 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
                   }
                   obj9.questContentPosition = questContentPosition;
                   captureAdUserAction(obj9);
-                  const captureAdUserActionResult = captureAdUserAction(9174);
+                  const captureAdUserActionResult = captureAdUserAction(9175);
                 } else {
                   const obj10 = {
                     questId: closure_128_0,
                     questContent: tmp4(5975).QuestContent.QUEST_BOTTOM_SHEET,
-                    questContentCTA: tmp4(7415).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+                    questContentCTA: tmp4(7416).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
                     questContentPosition: null,
                     impressionId: null,
                     sourceQuestContent: null,
@@ -466,11 +466,11 @@ export const useMobileActivityPressHandler = ReactCompilerGating.isReactCompiler
                   }
                   obj10.impressionId = id1;
                   obj10.sourceQuestContent = closure_128_1;
-                  const result = captureAdUserAction(7406).trackQuestContentClicked(obj10);
-                  const captureAdUserActionResult2 = captureAdUserAction(7406);
+                  const result = captureAdUserAction(7407).trackQuestContentClicked(obj10);
+                  const captureAdUserActionResult2 = captureAdUserAction(7407);
                 }
                 dependencyMap = 3;
-                obj12 = tmp4(9173);
+                obj12 = tmp4(9174);
               }
             } catch (tmp36) {
               dependencyMap = tmp;

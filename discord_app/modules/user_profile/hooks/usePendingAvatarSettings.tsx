@@ -14,7 +14,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = isTryItOut(576).c(15);
       isTryItOut = isTryItOut.isTryItOut;
       const guildId = isTryItOut.guildId;
-      const tmp4 = guildId(8287)(isTryItOut.analyticsLocations);
+      const tmp4 = guildId(8288)(isTryItOut.analyticsLocations);
       dependencyMap = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserProfileSettingsStore];
@@ -50,10 +50,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let setTryItOutAvatarDecoration = cResult[8];
           }
           if (isTryItOut) {
-            setTryItOutAvatar = tmp(8291).setTryItOutAvatar;
+            setTryItOutAvatar = tmp(8292).setTryItOutAvatar;
           }
           if (isTryItOut) {
-            setTryItOutAvatarDecoration = tmp(8291).setTryItOutAvatarDecoration;
+            setTryItOutAvatarDecoration = tmp(8292).setTryItOutAvatarDecoration;
           }
           if (cResult[9] === pendingAvatar) {
             if (cResult[10] === pendingAvatarDecoration) {
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function usePendingAvatarSettings(isTryItOut) {
       isTryItOut = isTryItOut.isTryItOut;
       const guildId = isTryItOut.guildId;
-      const tmp2 = guildId(8287)(isTryItOut.analyticsLocations);
+      const tmp2 = guildId(8288)(isTryItOut.analyticsLocations);
       dependencyMap = tmp2;
       const items = [UserProfileSettingsStore];
       const stateFromStoresObject = isTryItOut(573).useStateFromStoresObject(items, () => {
@@ -186,11 +186,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         setPendingAvatarDecoration: null,
       };
       if (isTryItOut) {
-        setTryItOutAvatar = tmp3(8291).setTryItOutAvatar;
+        setTryItOutAvatar = tmp3(8292).setTryItOutAvatar;
       }
       obj2.setPendingAvatar = setTryItOutAvatar;
       if (isTryItOut) {
-        setTryItOutAvatarDecoration = tmp3(8291).setTryItOutAvatarDecoration;
+        setTryItOutAvatarDecoration = tmp3(8292).setTryItOutAvatarDecoration;
       }
       obj2.setPendingAvatarDecoration = setTryItOutAvatarDecoration;
       return obj2;

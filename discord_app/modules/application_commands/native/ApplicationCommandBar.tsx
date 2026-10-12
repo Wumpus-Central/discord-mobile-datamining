@@ -1231,7 +1231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp22 = null != memo;
       if (tmp22) {
         const obj4 = { style: tmp.applicationIcon, source: memo };
-        tmp22 = c10(section(6156), obj4);
+        tmp22 = c10(section(6157), obj4);
       }
       const items5 = [
         tmp22,
@@ -1323,9 +1323,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = items5;
       const items8 = [
         closure_12(ref, obj3),
-        c10(command(8579).FormDivider, { style: tmp.applicationDescriptionDivider }),
+        c10(command(8580).FormDivider, { style: tmp.applicationDescriptionDivider }),
         c10(closure_15, { command, option: currentOption, optionState: tmp17 }),
-        c10(command(8579).FormDivider, { style: tmp.applicationDescriptionDivider }),
+        c10(command(8580).FormDivider, { style: tmp.applicationDescriptionDivider }),
       ];
       obj2.children = items8;
       return closure_12(ref, obj2);

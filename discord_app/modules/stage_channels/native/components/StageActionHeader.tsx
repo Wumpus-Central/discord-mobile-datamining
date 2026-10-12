@@ -10,8 +10,8 @@ import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
-import _modDef7718 from "../../../../../_runtime/metro/07718__.js";
-import _modDef8560 from "../../../../../_runtime/metro/08560__.js";
+import _modDef7719 from "../../../../../_runtime/metro/07719__.js";
+import _modDef8561 from "../../../../../_runtime/metro/08561__.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
@@ -38,7 +38,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5092);
 let obj = {
   header: {
-    height: fn(6258).NAV_BAR_HEIGHT,
+    height: fn(6259).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
@@ -64,7 +64,7 @@ obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.
 obj.iconContainer = obj5;
 obj.settingsButton = { marginRight: 4 };
 let obj3 = {
-  height: fn(6258).NAV_BAR_HEIGHT,
+  height: fn(6259).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 12,
@@ -313,11 +313,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp31 = null != stateFromStores;
             if (tmp31) {
               const obj4 = { style: tmp4.stageInfo, children: null };
-              const obj5 = { source: _modDef8560, size: tmp(1200).Icon.Sizes.SMALL, disableColor: true };
+              const obj5 = { source: _modDef8561, size: tmp(1200).Icon.Sizes.SMALL, disableColor: true };
               const items4 = [closure_12(tmp(1200).Icon, obj5), , , , ,];
               const obj6 = { variant: "text-xs/normal", style: tmp4.stageInfoTopic, children: tmp6 };
               items4[1] = closure_12(tmp(5088).Text, obj6);
-              const obj7 = { source: _modDef7718, size: tmp(1200).Icon.Sizes.SMALL, style: tmp4.icon };
+              const obj7 = { source: _modDef7719, size: tmp(1200).Icon.Sizes.SMALL, style: tmp4.icon };
               items4[2] = closure_12(tmp(1200).Icon, obj7);
               const obj8 = { variant: "text-xs/normal", children: actualStageSpeakerCount };
               items4[3] = closure_12(tmp(5088).Text, obj8);
@@ -416,11 +416,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp9Result = null != stateFromStores;
       if (tmp9Result) {
         const obj8 = { style: tmp.stageInfo, children: null };
-        const obj9 = { source: _modDef8560, size: tmp5(1200).Icon.Sizes.SMALL, disableColor: true };
+        const obj9 = { source: _modDef8561, size: tmp5(1200).Icon.Sizes.SMALL, disableColor: true };
         const items5 = [closure_12(tmp5(1200).Icon, obj9), , , , ,];
         const obj10 = { variant: "text-xs/normal", style: tmp.stageInfoTopic, children: tmp4 };
         items5[1] = closure_12(tmp5(5088).Text, obj10);
-        const obj11 = { source: _modDef7718, size: tmp5(1200).Icon.Sizes.SMALL, style: tmp.icon };
+        const obj11 = { source: _modDef7719, size: tmp5(1200).Icon.Sizes.SMALL, style: tmp.icon };
         items5[2] = closure_12(tmp5(1200).Icon, obj11);
         const obj12 = { variant: "text-xs/normal", children: actualStageSpeakerCount };
         items5[3] = closure_12(tmp5(5088).Text, obj12);

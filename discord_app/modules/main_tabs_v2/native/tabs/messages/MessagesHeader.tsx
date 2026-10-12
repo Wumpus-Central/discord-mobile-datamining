@@ -5,7 +5,7 @@ import _modDef5033 from "../../../../../../_runtime/metro/05033__.js";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import ButtonConstants from "../../../../../design/components/Button/native/ButtonConstants.native.tsx";
 import HeaderDebugOverlayDefault from "../../../../devtools/design_toggles/HeaderDebugOverlay.native.tsx";
-import _modDef6740 from "../../../../../../_runtime/metro/06740__.js";
+import _modDef6741 from "../../../../../../_runtime/metro/06741__.js";
 import useScaledTextLineHeight from "../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import MobileVisualRefreshExperiment from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import SearchPlatformUtilsDefault from "../../../../search/native/SearchPlatformUtils.tsx";
@@ -109,7 +109,7 @@ export default noop.memo(
           fn.__initData = __initData;
           const animatedStyle = scrollPosition(4850).useAnimatedStyle(fn);
           const tmpResult = scrollPosition(4850);
-          const isHomeDrawerEnabled = scrollPosition(16434).useIsHomeDrawerEnabled();
+          const isHomeDrawerEnabled = scrollPosition(16457).useIsHomeDrawerEnabled();
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
             const fn2 = function f() {
@@ -248,7 +248,7 @@ export default noop.memo(
               }
             }
             const obj4 = { size: "sm", color: nativeDefault.colors.WHITE };
-            const tmp18 = closure_6(scrollPosition(10308).PlusLargeIcon, obj4);
+            const tmp18 = closure_6(scrollPosition(10309).PlusLargeIcon, obj4);
             cResult[9] = tmp18;
             const tmp17 = tmp18;
           } else {
@@ -291,7 +291,7 @@ export default noop.memo(
             const intl = scrollPosition(1126).intl;
             obj5.accessibilityLabel = intl.string(scrollPosition(1126).t.jD1qzM);
             obj5.onPress = I;
-            const tmp20 = closure_6(scrollPosition(7573).IconButton, obj5);
+            const tmp20 = closure_6(scrollPosition(7574).IconButton, obj5);
             cResult[10] = tmp20;
             const tmp19 = tmp20;
           } else {
@@ -468,12 +468,12 @@ export default noop.memo(
                   onPress: E,
                   variant: "secondary",
                   size: "sm",
-                  icon: _modDef6740,
+                  icon: _modDef6741,
                   accessibilityLabel: null,
                 };
                 const intl2 = scrollPosition(1126).intl;
                 obj7.accessibilityLabel = intl2.string(scrollPosition(1126).t["5h0QOP"]);
-                const tmp33 = closure_6(scrollPosition(7573).IconButton, obj7);
+                const tmp33 = closure_6(scrollPosition(7574).IconButton, obj7);
                 const obj9 = { noMargin: true, onPress: tmp11, alternateVariant: true };
                 const tmp34 = closure_6(MessageRequestsButtonDefault, obj9);
                 cResult[18] = tmp33;
@@ -651,7 +651,7 @@ export default noop.memo(
             cResult[16] = tmp24;
             cResult[17] = tmp30;
           }
-          const tmpResult2 = scrollPosition(16434);
+          const tmpResult2 = scrollPosition(16457);
         }
         const items3 = [tmp4.headerPanel, tmp5];
         cResult[2] = tmp4.headerPanel;
@@ -683,7 +683,7 @@ export default noop.memo(
         fn.__initData = __initData2;
         const animatedStyle = obj.useAnimatedStyle(fn);
         let obj2 = { withSpring: height(5378).withSpring, scrollPosition };
-        const isHomeDrawerEnabled = height(16434).useIsHomeDrawerEnabled();
+        const isHomeDrawerEnabled = height(16457).useIsHomeDrawerEnabled();
         const callback = noop.useCallback(() => {
           const rootNavigationRef = height(headerPanel[14]).getRootNavigationRef();
           if (rootNavigationRef != null) {
@@ -716,10 +716,10 @@ export default noop.memo(
             }
           }
         }, []);
-        let obj3 = height(16434);
+        let obj3 = height(16457);
         const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
-        const tmp12 = scrollPosition(6201)("bespoke");
-        obj4.icon = closure_6(height(10308).PlusLargeIcon, { size: "sm", color: scrollPosition(587).colors.WHITE });
+        const tmp12 = scrollPosition(6202)("bespoke");
+        obj4.icon = closure_6(height(10309).PlusLargeIcon, { size: "sm", color: scrollPosition(587).colors.WHITE });
         const intl = height(1126).intl;
         obj4.accessibilityLabel = intl.string(height(1126).t.jD1qzM);
         obj4.onPress = callback3;
@@ -749,14 +749,14 @@ export default noop.memo(
           onPress: callback2,
           variant: "secondary",
           size: "sm",
-          icon: scrollPosition(6740),
+          icon: scrollPosition(6741),
           accessibilityLabel: null,
         };
         const intl3 = tmp3(1126).intl;
         obj10.accessibilityLabel = intl3.string(height(1126).t["5h0QOP"]);
         const items2 = [
-          closure_6(height(7573).IconButton, obj10),
-          closure_6(scrollPosition(16440), { noMargin: true, onPress: callback, alternateVariant: true }),
+          closure_6(height(7574).IconButton, obj10),
+          closure_6(scrollPosition(16463), { noMargin: true, onPress: callback, alternateVariant: true }),
           ,
         ];
         const obj11 = {
@@ -772,7 +772,7 @@ export default noop.memo(
         const intl4 = tmp3(1126).intl;
         obj11.text = intl4.string(height(1126).t.zIJnA6);
         items2[2] = closure_6(height(5379).Button, obj11);
-        items2[3] = closure_6(height(7573).IconButton, obj4);
+        items2[3] = closure_6(height(7574).IconButton, obj4);
         obj9.children = items2;
         items1[1] = closure_7(closure_4, obj9);
         const obj12 = { style: null };

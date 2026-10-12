@@ -370,7 +370,7 @@ class AddMembersBody {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(7489);
+const ChannelPermissionsConstants = fn(7490);
 ({ RowType: closure_14, MEMBER_REQUEST_COUNT: closure_15 } = ChannelPermissionsConstants);
 const Permissions = fn(1096).Permissions;
 const jsxProd = fn(21);
@@ -434,7 +434,7 @@ export default function AddMembersActionSheet(channel) {
         }
       }
     });
-    await closure_0(8603).savePermissionUpdates(channel.id, items);
+    await closure_0(8604).savePermissionUpdates(channel.id, items);
     if (1 === tmp7) {
       dependencyMap = 0;
       c5 = 3;
@@ -486,7 +486,7 @@ export default function AddMembersActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = closure_17(tmp12, obj7);
-      obj4.header = closure_17(tmp4(6838).BottomSheetTitleHeader, obj2);
+      obj4.header = closure_17(tmp4(6839).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = {
         channel,
@@ -498,7 +498,7 @@ export default function AddMembersActionSheet(channel) {
       };
       obj5.children = closure_17(AddMembersBody, obj6);
       obj4.children = closure_17(closure_8, obj5);
-      return closure_17(tmp4(6839).BottomSheet, obj4);
+      return closure_17(tmp4(6840).BottomSheet, obj4);
     }
     obj7 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1126).intl;

@@ -21,7 +21,7 @@ import GuestUtilsDefault from "../../../../../../../guests/GuestUtils.tsx";
 import _modDef11362 from "../../../../../../../../../_runtime/metro/11362__.js";
 import _modDef11363 from "../../../../../../../../../_runtime/metro/11363__.js";
 import InviteErrorUtils from "../../../../../../../../utils/InviteErrorUtils.tsx";
-import _modDef12487 from "../../../../../../../../../_runtime/metro/12487__.js";
+import _modDef12489 from "../../../../../../../../../_runtime/metro/12489__.js";
 import getHeaderTextForInvite from "../../../../../../getHeaderTextForInvite.tsx";
 import GuildRecord from "../../../../../../../../records/GuildRecord.tsx";
 import ApplicationStreamingStore from "../../../../../../../../stores/ApplicationStreamingStore.tsx";
@@ -71,7 +71,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
     tmp6 = require;
   }
   obj.headerText = str.toUpperCase();
-  obj.titleColor = tmp6(7750).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6(7751).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
   if (arg1) {
     const intl4 = tmp6(1126).intl;
     let stringResult = intl4.string(tmp6(1126).t["F/OLvL"]);
@@ -94,7 +94,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   obj.subtitle = stringResult;
   const intl5 = tmp6(1126).intl;
   obj.titleText = intl5.string(tmp6(1126).t["Jhx/ud"]);
-  const tmp6Result = tmp6(7750);
+  const tmp6Result = tmp6(7751);
   if (tmp6Result2.isThemeDark(theme)) {
     let tmpResult2 = _modDef11362;
   } else {
@@ -151,7 +151,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12487);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12489);
   let tmp17;
   if (null == tmp11) {
     let tmp18;

@@ -497,7 +497,7 @@ export default noop.memo(
         }, items2);
         const tmp16 = first1(noop.useState(true), 2);
         const items3 = [width, first1, first2, first3, memo];
-        const store = resizeMode(8450).useStore((orientation) => orientation.orientation);
+        const store = resizeMode(8451).useStore((orientation) => orientation.orientation);
         const layoutEffect = noop.useLayoutEffect(() => {
           let isAndroidResult = PlatformUtils.isAndroid();
           if (isAndroidResult) {
@@ -576,8 +576,8 @@ export default noop.memo(
           const obj3 = { animate: true, style: tmp2.spinner };
           tmp35 = ref(tmp18(10898), obj3);
         }
-        const tmp37 = store === resizeMode(8450).OrientationType.PORTRAIT;
-        const obj2 = resizeMode(8450);
+        const tmp37 = store === resizeMode(8451).OrientationType.PORTRAIT;
+        const obj2 = resizeMode(8451);
         if (tmp3Result.isAndroid()) {
           const obj4 = { onLayout: callback2, style: null, children: null };
           const items10 = [tmp2.center, closure_6.absoluteFillObject];

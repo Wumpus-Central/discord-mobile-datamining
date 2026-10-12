@@ -35,7 +35,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.ix8XIj);
   },
-  parent: fn(7992).MobileUserSettings.CHAT,
+  parent: fn(7993).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useDataSavingModeSettingValue() {
         const cResult = c.c(2);

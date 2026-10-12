@@ -422,7 +422,7 @@ export default noop.memo(
           cutouts,
           externalChildren: badge,
           expandedChildren: true,
-          children: "100%",
+          children: null,
         };
         let tmp11Result = null;
         if (null != channel) {
@@ -467,7 +467,7 @@ export default noop.memo(
           cutouts,
           externalChildren: badge,
           expandedChildren: true,
-          children: "100%",
+          children: null,
         });
       },
 );

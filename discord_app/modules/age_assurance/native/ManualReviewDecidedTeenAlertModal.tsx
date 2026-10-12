@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               variant: "text-md/normal",
               color: "text-link",
               onPress() {
-                const obj = closure_1_1(7497);
+                const obj = closure_1_1(7498);
                 const intl = closure_1_0(1126).intl;
                 return obj.openUrl(closure_1_1(2128).getArticleURL(intl.string(closure_1_1(3184).agiNYw)));
               },
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             variant: "text-md/normal",
             color: "text-link",
             onPress() {
-              const obj = closure_1_1(7497);
+              const obj = closure_1_1(7498);
               const intl = closure_1_0(1126).intl;
               return obj.openUrl(closure_1_1(2128).getArticleURL(intl.string(closure_1_1(3184).agiNYw)));
             },

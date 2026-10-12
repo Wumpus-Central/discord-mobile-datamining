@@ -144,6 +144,12 @@ const obj = {
     },
     loadAfterConnectionOpen: true,
   },
+  ConjureTurnNotificationManager: {
+    actions: ["CONJURE_TURN_NOTIFICATION", "CONJURE_TURN_SETTLED", "LOGOUT"],
+    inlineRequire() {
+      return require("ConjureTurnNotificationManager").default;
+    },
+  },
   ContactSyncLifecycleManager: {
     actions: ["POST_CONNECTION_OPEN"],
     inlineRequire() {

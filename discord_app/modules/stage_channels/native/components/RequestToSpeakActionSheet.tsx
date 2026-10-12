@@ -70,7 +70,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { label: first, subLabel: cResult[2], value: tmp5, onValueChange: tmp13 };
-        const tmp16 = options(tmp(6895).TableSwitchRow, obj3);
+        const tmp16 = options(tmp(6896).TableSwitchRow, obj3);
         cResult[5] = tmp5;
         cResult[6] = cResult[2];
         cResult[7] = tmp13;
@@ -175,7 +175,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj3 = { onPress: tmp13, icon: tmp17, label: cResult[6], trailing: tmp20 };
-          const tmp25 = closure_9(tmp(6179).TableRow, obj3);
+          const tmp25 = closure_9(tmp(6180).TableRow, obj3);
           cResult[10] = cResult[6];
           cResult[11] = tmp13;
           cResult[12] = tmp17;
@@ -250,7 +250,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp5Result = useAudienceRequestToSpeakStateDefault(stateFromStores, id);
       obj2.trailing = closure_9(channel(1200).Icon, { source: _modDef11000 });
-      return closure_9(channel(6179).TableRow, obj2);
+      return closure_9(channel(6180).TableRow, obj2);
     };
 ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = closure_11();
       if (cResult[0] !== analyticsLocations) {
         const items = [];
-        items[HermesBuiltin.arraySpread(analyticsLocations, 0)] = tmp4(6878).REQUEST_TO_SPEAK;
+        items[HermesBuiltin.arraySpread(analyticsLocations, 0)] = tmp4(6879).REQUEST_TO_SPEAK;
         cResult[0] = analyticsLocations;
         cResult[1] = items;
         let tmp7 = items;
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp7 = cResult[1];
       }
-      const analyticsLocations2 = tmp4(6851)(tmp7).analyticsLocations;
+      const analyticsLocations2 = tmp4(6852)(tmp7).analyticsLocations;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ChannelStore];
         cResult[2] = items1;
@@ -350,7 +350,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { channel: stateFromStores };
           items2[1] = closure_9(closure_13, obj5);
           obj3.children = items2;
-          const tmp28 = closure_10(tmp(6264).TableRowGroup, obj3);
+          const tmp28 = closure_10(tmp(6265).TableRowGroup, obj3);
           cResult[9] = stateFromStores;
           cResult[10] = tmp28;
           let tmp23 = tmp28;
@@ -421,14 +421,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return tmp55;
                         }
                         const obj9 = { value: analyticsLocations2, children: tmp52 };
-                        const tmp57 = closure_9(tmp(6851).AnalyticsLocationProvider, obj9);
+                        const tmp57 = closure_9(tmp(6852).AnalyticsLocationProvider, obj9);
                         cResult[37] = analyticsLocations2;
                         cResult[38] = tmp52;
                         cResult[39] = tmp57;
                         tmp55 = tmp57;
                       }
                       const obj10 = { scrollable: true, startExpanded: tmp20, children: tmp49 };
-                      const tmp54 = closure_9(tmp(6839).BottomSheet, obj10);
+                      const tmp54 = closure_9(tmp(6840).BottomSheet, obj10);
                       cResult[34] = tmp20;
                       cResult[35] = tmp49;
                       cResult[36] = tmp54;
@@ -436,7 +436,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj11 = { style: tmp6.container, onLayout: tmp22, children: tmp46 };
-                  const tmp51 = closure_9(tmp(6306).BottomSheetScrollView, obj11);
+                  const tmp51 = closure_9(tmp(6307).BottomSheetScrollView, obj11);
                   cResult[30] = tmp22;
                   cResult[31] = tmp6.container;
                   cResult[32] = tmp46;
@@ -489,8 +489,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = first;
       const items = [];
       const tmp5 = closure_11();
-      const tmp6 = first(6851);
-      items[HermesBuiltin.arraySpread(channelId.analyticsLocations, 0)] = first(6878).REQUEST_TO_SPEAK;
+      const tmp6 = first(6852);
+      items[HermesBuiltin.arraySpread(channelId.analyticsLocations, 0)] = first(6879).REQUEST_TO_SPEAK;
       const arraySpreadResult = HermesBuiltin.arraySpread(channelId.analyticsLocations, 0);
       const items1 = [ChannelStore];
       const stateFromStores = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
@@ -544,7 +544,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = { channel: stateFromStores };
         items2[1] = closure_9(closure_13, obj11);
         obj9.children = items2;
-        const items3 = [closure_10(tmp(6264).TableRowGroup, obj9)];
+        const items3 = [closure_10(tmp(6265).TableRowGroup, obj9)];
         const obj12 = { style: null, children: null };
         const obj13 = { paddingHorizontal: token };
         obj12.style = obj13;
@@ -564,9 +564,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items4[1] = closure_9(tmp3(11001), obj16);
         obj7.children = items4;
         obj6.children = closure_10(tmp(5377).Stack, obj7);
-        obj5.children = closure_9(tmp(6306).BottomSheetScrollView, obj6);
-        obj4.children = closure_9(tmp(6839).BottomSheet, obj5);
-        tmp14 = closure_9(tmp(6851).AnalyticsLocationProvider, obj4);
+        obj5.children = closure_9(tmp(6307).BottomSheetScrollView, obj6);
+        obj4.children = closure_9(tmp(6840).BottomSheet, obj5);
+        tmp14 = closure_9(tmp(6852).AnalyticsLocationProvider, obj4);
         const tmp3Result = tmp3(11001);
       }
       return tmp14;

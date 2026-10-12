@@ -239,7 +239,7 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(18281).AuditLogChange;
+const AuditLogChange = fn(18339).AuditLogChange;
 const Constants = fn(1085);
 const AuditLogActions = Constants.AuditLogActions;
 const AuditLogChangeKeys = Constants.AuditLogChangeKeys;
@@ -259,8 +259,8 @@ const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
   AuditLogActionTypes: closure_29,
 } = Constants);
 const ChannelFlags = fn(2072).ChannelFlags;
-const AutomodTriggerType = fn(11448).AutomodTriggerType;
-const GuildOnboardingMode = fn(6789).GuildOnboardingMode;
+const AutomodTriggerType = fn(11450).AutomodTriggerType;
+const GuildOnboardingMode = fn(6790).GuildOnboardingMode;
 const GuildScheduledEventsConstants = fn(2071);
 ({
   GuildScheduledEventEntityTypes: closure_33,
@@ -919,7 +919,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1126).t.MWp6H7;
           obj20[AuditLogChangeKeys.TEMPORARY] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj23 = {};
-          obj23[__3TkD(8510).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1126).t.XYZMbL;
+          obj23[__3TkD(8511).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1126).t.XYZMbL;
           __3TkD = obj23;
           obj20[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj20[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1126).t.gb1Owj;

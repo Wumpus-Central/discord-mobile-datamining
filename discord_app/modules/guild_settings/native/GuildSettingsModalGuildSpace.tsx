@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-          settingType: tmp2(18236).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18294).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-          settingType: tmp2(18236).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18294).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
           label: null,
           disabled: null,
         };
@@ -224,9 +224,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj8.disabled = !stateFromStores1;
         items4[1] = closure_8(closure_12, obj8);
         obj6.children = items4;
-        obj5.children = closure_9(tmp2(6264).TableRowGroup, obj6);
+        obj5.children = closure_9(tmp2(6265).TableRowGroup, obj6);
         obj4.children = closure_8(tmp2(5377).Stack, obj5);
-        const items5 = [closure_8(tmp2(8579).Form, obj4), closure_8(tmp2(6727).NavScrim, {})];
+        const items5 = [closure_8(tmp2(8580).Form, obj4), closure_8(tmp2(6728).NavScrim, {})];
         obj3.children = items5;
         tmp6 = closure_9(closure_10, obj3);
       }

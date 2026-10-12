@@ -60,7 +60,7 @@ function doRewardEarnedHapticFeedback() {
 let View = fn(17).View;
 const QuestConstants = fn(5972);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(15264);
+const BountiesModalConstants = fn(15287);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -212,8 +212,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                               const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                               const tmpResult = tmp(504);
-                              const balance = tmp(9060).useFetchVirtualCurrencyBalance().balance;
-                              const tmpResult2 = tmp(9060);
+                              const balance = tmp(9061).useFetchVirtualCurrencyBalance().balance;
+                              const tmpResult2 = tmp(9061);
                               [tmp25, _slicedToArray] = noop.useState(null);
                               if (tmp25 == null) {
                                 class F {
@@ -305,7 +305,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                                     const obj3 = { value, done: true };
                                     return obj3;
                                   } else {
-                                    return { value: "IconComponent", done: "+51" };
+                                    return { value: "IconComponent", done: null };
                                   }
                                 } else {
                                   try {
@@ -375,7 +375,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                                         }
                                       }
                                       ref = 3;
-                                      return { value: "IconComponent", done: "+51" };
+                                      return { value: "IconComponent", done: null };
                                     }
                                   } catch (tmp40) {
                                     if (tmp4 === c3) {
@@ -544,7 +544,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -608,7 +608,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 c5 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp40) {
               if (tmp4 === c3) {

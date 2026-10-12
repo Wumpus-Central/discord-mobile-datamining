@@ -10,9 +10,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17704;
+    let tmp4 = 17761;
   } else {
-    tmp4 = 17710;
+    tmp4 = 17767;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
@@ -102,7 +102,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj.children = items1;
-      return closure_8(mode(6845).LayerScope, obj);
+      return closure_8(mode(6846).LayerScope, obj);
     };
 let closure_15 = tmp4;
 ReactCompilerGating = fn(558);

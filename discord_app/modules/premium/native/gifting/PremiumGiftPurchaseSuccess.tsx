@@ -10,7 +10,7 @@ import PremiumGiftModal from "PremiumGiftModal.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SKUStore from "../../../../stores/game_store/SKUStore.tsx";
 
-const PremiumGiftBackgroundAnimationDefault = tmp15(10186);
+const PremiumGiftBackgroundAnimationDefault = tmp15(10187);
 require = fn;
 const View = fn(17).View;
 const SubscriptionIntervalTypes = fn(1392).SubscriptionIntervalTypes;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       giftCodeRecord = giftCodeRecord.giftCodeRecord;
       const tmp4 = closure_11();
       let obj = giftCodeRecord(576);
-      const nativeGiftContext = giftCodeRecord(10054).useNativeGiftContext();
+      const nativeGiftContext = giftCodeRecord(10055).useNativeGiftContext();
       ({ premiumType, planInterval, giftStyle } = nativeGiftContext);
       if (cResult[0] !== giftCodeRecord.code) {
         const giftCodeURL = tmp(5633).getGiftCodeURL(giftCodeRecord.code);
@@ -363,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             tmp51 = tmp54;
                           }
                           const obj8 = { text: tmp6, icon: _modDef5043, iconPosition: "end", onPress: tmp9 };
-                          const tmp50 = closure_8(tmp(8541).InputButton, obj8);
+                          const tmp50 = closure_8(tmp(8542).InputButton, obj8);
                           cResult[32] = tmp6;
                           cResult[33] = tmp9;
                           cResult[34] = tmp50;
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         subscriptionPlanId = tmp(4769).getPlanIdForPremiumType(premiumType, planInterval);
         const tmpResult2 = tmp(4769);
       }
-      let obj2 = giftCodeRecord(10054);
+      let obj2 = giftCodeRecord(10055);
       const tierDisplayNameByPlanId = PremiumUtilsDefault.getTierDisplayNameByPlanId(subscriptionPlanId);
       PremiumUtilsDefault;
       if (cResult[16] === giftCodeRecord) {
@@ -495,9 +495,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function PremiumGiftSuccessBody(giftCodeRecord) {
       giftCodeRecord = giftCodeRecord.giftCodeRecord;
       const tmp = closure_11();
-      const nativeGiftContext = giftCodeRecord(10054).useNativeGiftContext();
+      const nativeGiftContext = giftCodeRecord(10055).useNativeGiftContext();
       ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-      let obj = giftCodeRecord(10054);
+      let obj = giftCodeRecord(10055);
       const giftCodeURL = giftCodeRecord(5633).getGiftCodeURL(giftCodeRecord.code);
       if (null != giftCodeRecord.giftStyle) {
         giftStyle = giftCodeRecord.giftStyle;
@@ -522,7 +522,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ClipboardUtils.copy(giftCodeURL);
         const result = ToastUtils.presentCopiedToClipboard();
       }, items);
-      obj3.children = closure_8(giftCodeURL(10186), { giftStyle });
+      obj3.children = closure_8(giftCodeURL(10187), { giftStyle });
       const items1 = [closure_8(View, obj3), , , ,];
       const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: null };
       const intl = tmp2(1126).intl;
@@ -544,7 +544,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj10.children = intl3.string(giftCodeRecord(1126).t["qS+yMo"]);
       const items2 = [closure_8(giftCodeRecord(5088).Text, obj10)];
       obj5 = giftCodeURL(4769);
-      items2[1] = closure_8(giftCodeRecord(8541).InputButton, {
+      items2[1] = closure_8(giftCodeRecord(8542).InputButton, {
         text: giftCodeURL,
         icon: tmp6(5043),
         iconPosition: "end",

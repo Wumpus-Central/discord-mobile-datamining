@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Icon from "../../../void/Icon/native/Icon.tsx";
-import _modDef6189 from "../../../../../_runtime/metro/06189__.js";
+import _modDef6190 from "../../../../../_runtime/metro/06190__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const IconDefault = Icon;
@@ -36,7 +36,7 @@ export const TableRowArrow = ReactCompilerGating.isReactCompilerEnabled()
         return tmp5;
       }
       const obj2 = { style: tmp4.icon, color: tmp4.iconColor.color, source: null, size: null };
-      obj2.source = _modDef6189;
+      obj2.source = _modDef6190;
       obj2.size = Icon.IconSizes.CUSTOM;
       const tmp7 = jsx(IconDefault, { style: tmp4.icon, color: tmp4.iconColor.color, source: null, size: null });
       cResult[0] = tmp4.icon;
@@ -46,11 +46,11 @@ export const TableRowArrow = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function TableRowArrow() {
       const tmp = closure_4();
-      const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef6189, size: Icon.IconSizes.CUSTOM };
+      const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef6190, size: Icon.IconSizes.CUSTOM };
       return jsx(IconDefault, {
         style: tmp.icon,
         color: tmp.iconColor.color,
-        source: _modDef6189,
+        source: _modDef6190,
         size: Icon.IconSizes.CUSTOM,
       });
     };

@@ -11,11 +11,11 @@ require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(5745).match(showHint.usernameStatus);
-  let obj = { type: showHint(14960).NameValidationState.ERROR, message: null };
+  let obj = { type: showHint(14983).NameValidationState.ERROR, message: null };
   const P = showHint(5745).P;
   obj.message = P.select();
   const str = showHint(5745);
-  const obj2 = { type: showHint(14960).NameValidationState.AVAILABLE, message: null };
+  const obj2 = { type: showHint(14983).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(5745).P;
   obj2.message = P2.select();
   const withResult = match.with(obj, (children) =>
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const tmp34 = first1;
             }
             user.discriminator = tmp34;
-            yield closure_2_2(6670).saveAccountChanges(user, { close: false });
+            yield closure_2_2(6671).saveAccountChanges(user, { close: false });
             closure_129_0 = value;
             if (!closure_129_0.ok) {
               const v6OrEarlierAPIError = new closure_0(1295).V6OrEarlierAPIError(closure_129_0);

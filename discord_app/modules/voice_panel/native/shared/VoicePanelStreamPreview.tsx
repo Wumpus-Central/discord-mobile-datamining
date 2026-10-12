@@ -198,7 +198,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
                         }
                       }
                       const obj4 = { style: animatedStyle, layout, children: cResult[14] };
-                      const tmp30 = closure_7(tmp5(6761), obj4);
+                      const tmp30 = closure_7(tmp5(6762), obj4);
                       cResult[15] = animatedStyle;
                       cResult[16] = layout;
                       cResult[17] = cResult[14];
@@ -245,9 +245,9 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         const obj10 = { uri: previewUrl };
         obj9.source = obj10;
         obj9.style = closure_3.absoluteFill;
-        obj8.children = closure_7(tmp5(6156), obj9);
-        tmp18 = closure_7(tmp5(6761), obj8);
-        const tmp5Result = tmp5(6761);
+        obj8.children = closure_7(tmp5(6157), obj9);
+        tmp18 = closure_7(tmp5(6762), obj8);
+        const tmp5Result = tmp5(6762);
       }
       cResult[4] = layout;
       cResult[5] = tmp4.streamPreviewImage;
@@ -326,9 +326,9 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         const obj7 = { uri: previewUrl };
         obj6.source = obj7;
         obj6.style = closure_3.absoluteFill;
-        obj5.children = closure_7(tmp2(6156), obj6);
-        tmp14 = closure_7(tmp2(6761), obj5);
-        const tmp2Result = tmp2(6761);
+        obj5.children = closure_7(tmp2(6157), obj6);
+        tmp14 = closure_7(tmp2(6762), obj5);
+        const tmp2Result = tmp2(6762);
       }
       const items2 = [tmp14];
       const obj8 = { style: animatedStyle, layout, children: null };
@@ -353,7 +353,7 @@ export const VoicePanelStreamPreview = ReactCompilerGating.isReactCompilerEnable
         tmp18Result = closure_7(closure_10, obj11);
       }
       obj8.children = tmp18Result;
-      items2[1] = closure_7(stream(6761), obj8);
+      items2[1] = closure_7(stream(6762), obj8);
       obj4.children = items2;
       return closure_8(closure_9, obj4);
     };

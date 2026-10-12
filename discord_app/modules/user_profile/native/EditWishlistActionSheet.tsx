@@ -14,9 +14,9 @@ import UserProfileStore from "../UserProfileStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const getWishlistProductLines = fn(8981).getWishlistProductLines;
-let closure_12 = fn(8307).TrackUserProfileWishlistActions;
-const ACTION_SHEET_MAX_WIDTH = fn(6840).ACTION_SHEET_MAX_WIDTH;
+const getWishlistProductLines = fn(8982).getWishlistProductLines;
+let closure_12 = fn(8308).TrackUserProfileWishlistActions;
+const ACTION_SHEET_MAX_WIDTH = fn(6841).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(5092);
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       const tmpResult = wishlistId(504);
-      const analyticsLocations2 = analyticsContext(6851)(
+      const analyticsLocations2 = analyticsContext(6852)(
         tmp9,
-        tmp8(6878).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+        tmp8(6879).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
       ).analyticsLocations;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
@@ -129,8 +129,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp12 = cResult[4];
       }
-      const tmp8Result = analyticsContext(6851);
-      ({ cardWidth: closure_5, rowWidth } = analyticsContext(13098)(tmp12));
+      const tmp8Result = analyticsContext(6852);
+      ({ cardWidth: closure_5, rowWidth } = analyticsContext(13103)(tmp12));
       if (null != rowWidth) {
         let obj3 = { width: rowWidth };
       }
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp14 = analyticsContext(13098)(tmp12);
+      const tmp14 = analyticsContext(13103)(tmp12);
       const stateFromStores = wishlistId(504).useStateFromStores(tmp16, V);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class V {
@@ -555,18 +555,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (analyticsLocations1 == null) {
         analyticsLocations1 = [];
       }
-      analyticsLocations = analyticsContext(6851)(
+      analyticsLocations = analyticsContext(6852)(
         analyticsLocations1,
-        tmp4(6878).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+        tmp4(6879).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
       ).analyticsLocations;
       let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-      const tmp5 = analyticsContext(6851);
-      ({ cardWidth: c5, rowWidth } = analyticsContext(13098)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+      const tmp5 = analyticsContext(6852);
+      ({ cardWidth: c5, rowWidth } = analyticsContext(13103)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
       if (null != rowWidth) {
         let obj3 = { width: rowWidth };
         let tmp7 = obj3;
       }
-      let tmp6 = analyticsContext(13098)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+      let tmp6 = analyticsContext(13103)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
       const items1 = [value];
       stateFromStores = wishlistId(504).useStateFromStores(items1, () => WishlistStore.getWishlist(wishlistId));
       const tmp2Result = wishlistId(504);
@@ -651,8 +651,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj10.subLabel = intl3.string(wishlistId(1126).t.dw58pE);
       obj10.value = value;
       obj10.onValueChange = callback;
-      obj9.children = closure_14(wishlistId(6895).TableSwitchRow, obj10);
-      obj8.children = closure_14(wishlistId(6264).TableRowGroup, obj9);
+      obj9.children = closure_14(wishlistId(6896).TableSwitchRow, obj10);
+      obj8.children = closure_14(wishlistId(6265).TableRowGroup, obj9);
       const items8 = [closure_14(stateFromStores, obj8)];
       if (stateFromStores1) {
         if (null == stateFromStores) {
@@ -662,7 +662,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items8[1] = tmp16Result;
         obj6.children = items8;
         obj5.children = closure_15(tmp19, obj6);
-        obj4.children = closure_14(tmp2(6306).BottomSheetScrollView, obj5);
+        obj4.children = closure_14(tmp2(6307).BottomSheetScrollView, obj5);
         return closure_14(tmp4Result, obj4);
       }
       tmp16Result = null;
@@ -724,5 +724,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         });
         tmp16Result = closure_14(tmp19, obj12);
       }
-      tmp4Result = analyticsContext(10529);
+      tmp4Result = analyticsContext(10530);
     };

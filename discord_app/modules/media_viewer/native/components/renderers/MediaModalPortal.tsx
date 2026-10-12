@@ -374,7 +374,7 @@ export default noop.memo(
         const muted = paused.muted;
         ({ onLoad: dependencyMap, portal } = paused);
         ({ style, pointerEvents } = paused);
-        const tmp2 = muted(6646)(() => {
+        const tmp2 = muted(6647)(() => {
           let tmp;
           if (dependencyMap != null) {
             tmp = dependencyMap();
@@ -403,7 +403,7 @@ export default noop.memo(
             MediaPlayerManager.setLoopPlayback(tmp, true);
             return () => {
               loopPlayback.setLoopPlayback(portal, false);
-              muted(8397).unregisterView(portal);
+              muted(8398).unregisterView(portal);
               set.add(portal);
             };
           }

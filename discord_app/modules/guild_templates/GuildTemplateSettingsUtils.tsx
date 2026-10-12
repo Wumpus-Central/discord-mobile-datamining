@@ -80,7 +80,7 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled()
             closure_0 = asyncGeneratorStep(async (arg0) => {
               closure_129_0 = closure_0;
               tmp3(null);
-              await closure_2_1(7028).loadTemplatesForGuild(closure_0);
+              await closure_2_1(7029).loadTemplatesForGuild(closure_0);
               if (1 === tmp7) {
                 c4 = 0;
                 closure_129_1 = closure_3;
@@ -186,7 +186,7 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled()
         closure_0 = async function _fetchGuildTemplate2(arg0) {
           closure_129_0 = closure_0;
           tmp3(null);
-          await closure_2_1(7028).loadTemplatesForGuild(closure_0);
+          await closure_2_1(7029).loadTemplatesForGuild(closure_0);
           if (1 === tmp7) {
             c4 = 0;
             closure_129_1 = closure_3;

@@ -279,7 +279,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { onPress, text: null };
                   const intl = navigation(1126).intl;
                   obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-                  tmp = jsx(navigation(7088).HeaderActionButton, { onPress, text: null });
+                  tmp = jsx(navigation(7089).HeaderActionButton, { onPress, text: null });
                 }
                 return tmp;
               },
@@ -359,7 +359,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       const tmp2Result = navigation(12);
       const unmountEffect = navigation(5396).useUnmountEffect(() => {
-        channel(8689).resetSettings();
+        channel(8690).resetSettings();
       });
       const items2 = [channel];
       callback = noop.useCallback(() => {
@@ -386,26 +386,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj = { onPress, text: null };
               const intl = navigation(1126).intl;
               obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-              tmp = jsx(navigation(7088).HeaderActionButton, { onPress, text: null });
+              tmp = jsx(navigation(7089).HeaderActionButton, { onPress, text: null });
             }
             return tmp;
           },
         });
       }, items3);
       const callback1 = noop.useCallback((maxUses) => {
-        channel(8689).updateSettings({ maxUses });
+        channel(8690).updateSettings({ maxUses });
       }, []);
       const callback2 = noop.useCallback((maxAge) => {
-        channel(8689).updateSettings({ maxAge });
+        channel(8690).updateSettings({ maxAge });
       }, []);
       const callback3 = noop.useCallback((temporary) => {
-        channel(8689).updateSettings({ temporary });
+        channel(8690).updateSettings({ temporary });
       }, []);
       const callback4 = noop.useCallback((flags) => {
-        channel(8689).updateSettings({ flags });
+        channel(8690).updateSettings({ flags });
       }, []);
       const callback5 = noop.useCallback((roleIds) => {
-        channel(8689).updateSettings({ roleIds });
+        channel(8690).updateSettings({ roleIds });
       }, []);
       let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
       let obj5 = {
@@ -425,14 +425,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeRoleIds: null,
       };
       const tmp2Result2 = navigation(5396);
-      obj5.maxUsesOptions = channel(8684).getMaxUsesOptions;
+      obj5.maxUsesOptions = channel(8685).getMaxUsesOptions;
       ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
       obj5.onChangeMaxAge = callback2;
       obj5.onChangeMaxUses = callback1;
       obj5.onChangeTemporary = callback3;
       obj5.onChangeFlags = callback4;
       obj5.onChangeRoleIds = callback5;
-      obj4.children = jsx(channel(18560), {
+      obj4.children = jsx(channel(18618), {
         style: tmp.formContent,
         channel: first,
         guild,
@@ -448,7 +448,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeFlags: null,
         onChangeRoleIds: null,
       });
-      return jsx(navigation(8579).Form, { contentContainerStyle: tmp.formContainer, children: null });
+      return jsx(navigation(8580).Form, { contentContainerStyle: tmp.formContainer, children: null });
     };
 ReactCompilerGating = fn(558);
 let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };

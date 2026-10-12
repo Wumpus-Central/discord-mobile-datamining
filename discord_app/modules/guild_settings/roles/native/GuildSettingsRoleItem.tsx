@@ -1003,7 +1003,7 @@ export default noop.memo(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -1033,9 +1033,9 @@ export default noop.memo(
                     const obj = { value, done: true };
                     return obj;
                   }
-                  onPress(6097).deleteRole(guildId, tmp2.id);
+                  onPress(6098).deleteRole(guildId, tmp2.id);
                   c2 = 3;
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp16) {
                   c2 = tmp;
                   throw tmp16;
@@ -1165,7 +1165,7 @@ export default noop.memo(
                       const obj4 = { value, done: true };
                       return obj4;
                     } else {
-                      return { value: "IconComponent", done: "+51" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -1197,7 +1197,7 @@ export default noop.memo(
                       }
                       GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                       c2 = 3;
-                      return { value: "IconComponent", done: "+51" };
+                      return { value: "IconComponent", done: null };
                     } catch (tmp16) {
                       c2 = tmp;
                       throw tmp16;
@@ -1329,7 +1329,7 @@ export default noop.memo(
           if (null != prop) {
             const obj23 = {
               size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16,
-              source: require("../../../../../_runtime/metro/09466__.js"),
+              source: require("../../../../../_runtime/metro/09467__.js"),
               "aria-label": null,
               style: null,
             };

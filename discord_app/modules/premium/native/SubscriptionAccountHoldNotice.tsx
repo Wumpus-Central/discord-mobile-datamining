@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/SubscriptionAccountHoldNotice.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import _modDef13659 from "../../../../_runtime/metro/13659__.js";
+import _modDef13682 from "../../../../_runtime/metro/13682__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         ({ container, textContainer } = tmp4);
         if (cResult[0] !== tmp4.icon) {
-          const obj2 = { size: tmp(1200).IconSizes.MEDIUM, style: tmp4.icon, source: _modDef13659 };
+          const obj2 = { size: tmp(1200).IconSizes.MEDIUM, style: tmp4.icon, source: _modDef13682 };
           const tmp8 = closure_6(tmp(1200).Icon, obj2);
           cResult[0] = tmp4.icon;
           cResult[1] = tmp8;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
         const obj = { style: tmp.container, children: null };
         const obj2 = { style: tmp.textContainer, children: null };
-        const obj3 = { size: subscription(1200).IconSizes.MEDIUM, style: tmp.icon, source: _modDef13659 };
+        const obj3 = { size: subscription(1200).IconSizes.MEDIUM, style: tmp.icon, source: _modDef13682 };
         const items = [closure_6(subscription(1200).Icon, obj3)];
         const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
         const intl = subscription(1126).intl;

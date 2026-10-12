@@ -8,7 +8,7 @@ import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05391_LinearGradient.js";
 import NavigatorConstants from "../../Navigator/native/NavigatorConstants.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06306_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06307_BottomSheetModal.js";
 import NavScrim from "../../Navigator/native/NavScrim.android.tsx";
 import ActionSheetContextDefault from "../../../../modules/action_sheet/native/ActionSheetContext.tsx";
 import ActionSheetHeaderBar from "ActionSheetHeaderBar.native.tsx";
@@ -77,7 +77,7 @@ let closure_5 = [
 ];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_9, View: c10, Platform } = get_ActivityIndicator);
-const ActionSheetConstants = fn(6840);
+const ActionSheetConstants = fn(6841);
 ({
   ACTION_SHEET_START_HEIGHT_RATIO: closure_11,
   ACTION_SHEET_MAX_WIDTH: closure_12,
@@ -1047,7 +1047,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
           let tmp43 = cResult[29];
         }
         const layoutEffect = obj2.useLayoutEffect(tmp42, tmp43);
-        const bottomSheetImperativeHandle = tmp(6842).useBottomSheetImperativeHandle(tmp12, ref1);
+        const bottomSheetImperativeHandle = tmp(6843).useBottomSheetImperativeHandle(tmp12, ref1);
         if (cResult[30] === close) {
           if (cResult[31] === transitionState) {
             let tmp46 = cResult[32];
@@ -1438,7 +1438,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
                             let items = [tmp75, tmp79];
                             obj7.children = items;
                             obj6.children = closure_21(ref1, obj7);
-                            const tmp87 = closure_20(tmp(6845).LayerScope, obj6);
+                            const tmp87 = closure_20(tmp(6846).LayerScope, obj6);
                             cResult[67] = tmp74;
                             cResult[68] = tmp75;
                             class Be {
@@ -1577,7 +1577,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled()
         cResult[33] = items5;
         tmp47 = items5;
         tmp46 = re;
-        let tmpResult = tmp(6842);
+        let tmpResult = tmp(6843);
       }
       function te() {
         registerDismissHandler(closure_4);

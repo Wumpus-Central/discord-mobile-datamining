@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import showSimpleActionSheet from "../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef8664 from "../../../../_runtime/metro/08664__.js";
+import _modDef8665 from "../../../../_runtime/metro/08665__.js";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_128_0 = value;
                 tmp5(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp15) {
               c3 = tmp;
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const obj20 = {
                         style: tmp67,
-                        source: _modDef8664,
+                        source: _modDef8665,
                         color: tmp4.navbarRight.tintColor,
                         onPress: handleMoreActions,
                         accessibilityRole: "button",
@@ -458,7 +458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = noop.useMemo(() => action.getAction(), []);
       const tmp5 = _slicedToArray(noop.useState(false), 2);
       importDefault = tmp5[1];
-      memo(6206).useNavigatorBackPressHandler(memo(5372).BackPressHandler.minimize);
+      memo(6207).useNavigatorBackPressHandler(memo(5372).BackPressHandler.minimize);
       dependencyMap = noop.useCallback(
         asyncGeneratorStep(async () => {
           if (c3 === 2) {
@@ -471,7 +471,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -503,7 +503,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_128_0 = value;
                 closure_129_1(closure_128_0);
                 c3 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp15) {
               c3 = tmp;
@@ -514,7 +514,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [],
       );
       const obj2 = { type: null, name: null, properties: null };
-      let obj = memo(6206);
+      let obj = memo(6207);
       obj2.type = memo(1273).ImpressionTypes.VIEW;
       obj2.name = memo(1273).ImpressionNames.USER_AGREEMENTS;
       obj2.properties = { required_action: memo };
@@ -590,15 +590,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj41 = { top };
         items3[1] = obj41;
         obj21.style = items3;
-        obj21.source = tmp2(8664);
+        obj21.source = tmp2(8665);
         obj21.color = tmp.navbarRight.tintColor;
         obj21.onPress = handleMoreActions;
         const intl9 = tmp6(1126).intl;
         obj21.accessibilityLabel = intl9.string(tmp6(1126).t["UKOtz+"]);
-        items2[2] = closure_12(tmp2(8673), obj21);
+        items2[2] = closure_12(tmp2(8674), obj21);
         obj3.children = items2;
         tmp10 = closure_13(closure_6, obj3);
-        const tmp2Result = tmp2(8673);
+        const tmp2Result = tmp2(8674);
       }
       return tmp10;
     };

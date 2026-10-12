@@ -1,6 +1,7 @@
 // discord_app/modules/conjure/reminders/conjureReminderSlot.tsx
 import c from "../../../../_runtime/00576_c.js";
 import useConjureWindowFocusedDefault from "../shared/useConjureWindowFocused.native.tsx";
+import conjureChatTurns from "../chat/conjureChatTurns.tsx";
 import useConjurePublishActionDefault from "../publish/useConjurePublishAction.tsx";
 import conjurePublishCard from "../publish/conjurePublishCard.tsx";
 import conjureIdeasOffer from "conjureIdeasOffer.tsx";
@@ -193,7 +194,7 @@ function nextReminderClockState(projectId, projectId2, now) {
       if (hiddenAt == null) {
         hiddenAt = tmp;
       }
-      if (tmp - hiddenAt >= c9) {
+      if (tmp - hiddenAt >= c7) {
         const obj14 = {};
         obj12 = Object.assign(obj12);
         obj14.visitStartedAt = tmp;
@@ -215,10 +216,8 @@ function nextReminderClockState(projectId, projectId2, now) {
     }
   }
 }
-const ConjureChatStore = fn(12996);
-({ isStrandedSegment: metroRequire, turnSettled: closure_7 } = ConjureChatStore);
 let items = [60000, 180000, 600000];
-let c9 = 600000;
+let c7 = 600000;
 let items1 = [
   {
     key: "outdated",
@@ -298,7 +297,7 @@ let obj = {
     return showsOutdatedNoticeResult;
   },
 };
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureReminder(arg0, arr, arg2) {
       _require = arg0;
       const cResult = require("c").c(30);
@@ -311,22 +310,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp6 = arr[diff];
           if ("publish_notice" !== tmp6.kind) {
             if ("project_event" !== tmp6.kind) {
-              tmp5 = null;
-              if ("user" === tmp6.role) {
-                break;
-              } else {
-                tmp5 = tmp6;
-                if (closure_7(tmp6)) {
+              if ("context_boundary" !== tmp6.kind) {
+                tmp5 = null;
+                if ("user" === tmp6.role) {
                   break;
                 } else {
-                  tmp5 = null;
-                  if (!closure_6(arr, diff)) {
+                  let tmp8 = _require;
+                  let obj2 = require("conjureChatTurns");
+                  tmp5 = tmp6;
+                  if (obj2.turnSettled(tmp6)) {
                     break;
+                  } else {
+                    let tmp8Result = tmp8(12999);
+                    tmp5 = null;
+                    if (!tmp8Result.isStrandedSegment(arr, diff)) {
+                      break;
+                    }
                   }
                 }
               }
+              break;
             }
-            break;
           }
           diff = diff - 1;
           tmp5 = null;
@@ -767,7 +771,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                             }
-                            const effect = obj3.useEffect(tmp39, tmp41);
+                            const effect = obj5.useEffect(tmp39, tmp41);
                             if (cResult[24] === nextDueAt) {
                               class T {
                                 constructor() {
@@ -828,7 +832,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     return obj;
                                   }
                                 }
-                                const effect1 = obj3.useEffect(C, tmp44);
+                                const effect1 = obj5.useEffect(C, tmp44);
                                 return shown;
                               }
                               items = [nextDueAt];
@@ -975,7 +979,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const obj2 = {
+              const obj3 = {
                 projectId: tmp12,
                 draftHasText: tmp13,
                 publishing: tmp14,
@@ -989,8 +993,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[13] = tmp15;
               cResult[14] = tmp16;
               cResult[15] = tmp3;
-              cResult[16] = obj2;
-              tmp22 = obj2;
+              cResult[16] = obj3;
+              tmp22 = obj3;
             }
           }
         }
@@ -1259,8 +1263,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
     }
   : function useConjureReminder(projectId, arr, draftHasText) {
-      closure_0 = projectId;
-      const tmp = obj(17110)(projectId);
+      _require = projectId;
+      const tmp = obj2(17109)(projectId);
       let diff = arr.length - 1;
       let tmp4 = null;
       if (0 <= diff) {
@@ -1268,22 +1272,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = arr[diff];
           if ("publish_notice" !== tmp5.kind) {
             if ("project_event" !== tmp5.kind) {
-              tmp4 = null;
-              if ("user" === tmp5.role) {
-                break;
-              } else {
-                tmp4 = tmp5;
-                if (closure_7(tmp5)) {
+              if ("context_boundary" !== tmp5.kind) {
+                tmp4 = null;
+                if ("user" === tmp5.role) {
                   break;
                 } else {
-                  tmp4 = null;
-                  if (!closure_6(arr, diff)) {
+                  let tmp7 = _require;
+                  let obj = require("conjureChatTurns");
+                  tmp4 = tmp5;
+                  if (obj.turnSettled(tmp5)) {
                     break;
+                  } else {
+                    let tmp7Result = tmp7(12999);
+                    tmp4 = null;
+                    if (!tmp7Result.isStrandedSegment(arr, diff)) {
+                      break;
+                    }
                   }
                 }
               }
+              break;
             }
-            break;
           }
           diff = diff - 1;
           tmp4 = null;
@@ -1293,17 +1302,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const atResult = arr.at(-1);
-      obj = { projectId, draftHasText, publishing: null, drift: null, messageAt: null, visible: null };
+      obj2 = { projectId, draftHasText, publishing: null, drift: null, messageAt: null, visible: null };
       let publishing;
       if (tmp != null) {
         publishing = tmp.publishing;
       }
-      obj.publishing = true === publishing;
+      obj2.publishing = true === publishing;
       let isUpdate;
       if (tmp != null) {
         isUpdate = tmp.isUpdate;
       }
-      obj.drift = true === isUpdate;
+      obj2.drift = true === isUpdate;
       let bound = null;
       if (null != atResult) {
         let num = atResult.finished_at;
@@ -1316,27 +1325,27 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         bound = Math.max(atResult.created_at, num, num2);
       }
-      obj.messageAt = bound;
-      obj.visible = obj(11426)();
-      const tmp2 = obj(11426)();
+      obj2.messageAt = bound;
+      obj2.visible = obj2(11416)();
+      const tmp2 = obj2(11416)();
       [tmp15, tmp16] = obj3.useState(() => {
         const timestamp = Date.now();
-        obj = {};
-        const merged = Object.assign(obj);
+        const obj = {};
+        const merged = Object.assign(obj2);
         obj.now = timestamp;
         obj.visitStartedAt = timestamp;
         obj.draftTyped = false;
         obj.lastActivityAt = null;
         let bound = null;
-        if (null != obj.messageAt) {
+        if (null != obj2.messageAt) {
           const _Math = Math;
-          bound = Math.min(tmp.messageAt, timestamp);
+          bound = Math.min(obj2.messageAt, timestamp);
         }
         obj.lastMessageAt = bound;
         obj.seenAt = null;
         obj.unseen = false;
         let tmp5 = null;
-        if (!obj.visible) {
+        if (!obj2.visible) {
           tmp5 = timestamp;
         }
         obj.hiddenAt = tmp5;
@@ -1346,7 +1355,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       });
       dependencyMap = tmp16;
-      const tmp17 = nextReminderClockState(tmp15, obj, Date.now);
+      const tmp17 = nextReminderClockState(tmp15, obj2, Date.now);
       _slicedToArray = tmp17;
       let tmp18 = null;
       if (null != tmp4) {
@@ -1378,22 +1387,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp14 = _slicedToArray(
         obj3.useState(() => {
           const timestamp = Date.now();
-          obj = {};
-          const merged = Object.assign(obj);
+          const obj = {};
+          const merged = Object.assign(obj2);
           obj.now = timestamp;
           obj.visitStartedAt = timestamp;
           obj.draftTyped = false;
           obj.lastActivityAt = null;
           let bound = null;
-          if (null != obj.messageAt) {
+          if (null != obj2.messageAt) {
             const _Math = Math;
-            bound = Math.min(tmp.messageAt, timestamp);
+            bound = Math.min(obj2.messageAt, timestamp);
           }
           obj.lastMessageAt = bound;
           obj.seenAt = null;
           obj.unseen = false;
           let tmp5 = null;
-          if (!obj.visible) {
+          if (!obj2.visible) {
             tmp5 = timestamp;
           }
           obj.hiddenAt = tmp5;
@@ -1406,7 +1415,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       );
       ({ shown, nextDueAt } = selectConjureReminder(
         items1.map((key) => {
-          obj = {};
+          const obj = {};
           const merged = Object.assign(key);
           if ("outdated" !== key.key) {
             const backoffDelaysMs = key.backoffDelaysMs;
@@ -1429,16 +1438,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ));
       if ("outdated" === shown) {
         if (!tmp17.outdatedShown) {
-          const obj4 = {};
+          const obj5 = {};
           let merged = Object.assign(tmp17);
-          obj4.outdatedShown = true;
-          tmp16(obj4);
+          obj5.outdatedShown = true;
+          tmp16(obj5);
         }
         items = [projectId];
-        const effect = obj2.useEffect(() => {
+        const effect = obj4.useEffect(() => {
           function onActivity() {
             closure_1_2((arg0) => {
-              obj = {};
+              const obj = {};
               const merged = Object.assign(arg0);
               obj.outdatedUpdating = true;
               return obj;
@@ -1459,7 +1468,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           };
         }, items);
         items1 = [nextDueAt, tmp17.now];
-        const effect1 = obj2.useEffect(() => {
+        const effect1 = obj4.useEffect(() => {
           if (null != nextDueAt) {
             const _setTimeout = setTimeout;
             const _Math = Math;
@@ -1467,7 +1476,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const timeout = setTimeout(
               () =>
                 closure_1_2((arg0) => {
-                  obj = {};
+                  const obj = {};
                   const merged = Object.assign(arg0);
                   obj.now = Date.now();
                   return obj;
@@ -1482,32 +1491,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp17 !== tmp15) {
         tmp16(tmp17);
       }
-      const tmp20 = selectConjureReminder(
-        items1.map((key) => {
-          obj = {};
-          const merged = Object.assign(key);
-          if ("outdated" !== key.key) {
-            const backoffDelaysMs = key.backoffDelaysMs;
-            let idleDelayMs;
-            if (backoffDelaysMs != null) {
-              idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
-            }
-            if (idleDelayMs == null) {
-              idleDelayMs = key.idleDelayMs;
-            }
-            let num = idleDelayMs;
-          } else {
-            num = 0;
-          }
-          obj.idleDelayMs = num;
-          obj.eligible = null != obj3 && key.eligible(tmp6);
-          return obj;
-        }),
-        tmp17,
-      );
     };
 ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureReminderLayers(key) {
       const cResult = c.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1631,19 +1617,27 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       return arr;
     };
-function reminderSlotTurn(arg0) {
-  let diff = arg0.length - 1;
+function reminderSlotTurn(arr) {
+  let diff = arr.length - 1;
   if (0 <= diff) {
     while (true) {
-      let tmp2 = arg0[diff];
+      let tmp2 = arr[diff];
       if ("publish_notice" !== tmp2.kind) {
         if ("project_event" !== tmp2.kind) {
-          if ("user" === tmp2.role) {
-            break;
-          } else if (React5(tmp2)) {
-            return tmp2;
-          } else if (!timestampProducer(arg0, diff)) {
-            return null;
+          if ("context_boundary" !== tmp2.kind) {
+            if ("user" === tmp2.role) {
+              break;
+            } else {
+              let obj = conjureChatTurns;
+              if (obj.turnSettled(tmp2)) {
+                return tmp2;
+              } else {
+                let tmp4Result = conjureChatTurns;
+                if (!tmp4Result.isStrandedSegment(arr, diff)) {
+                  return null;
+                }
+              }
+            }
           }
         }
       }
@@ -1721,9 +1715,9 @@ export const markConjureReminderActivity = function markConjureReminderActivity(
     const item = value.forEach((fn) => fn());
   }
 };
-export const useConjureReminder = tmp4;
+export const useConjureReminder = tmp3;
 export { nextReminderLayers };
-export const useConjureReminderLayers = tmp5;
+export const useConjureReminderLayers = tmp4;
 export const useConjureUpdatingDots = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureUpdatingDots(arg0) {
       const cResult = require("c").c(9);

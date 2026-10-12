@@ -116,7 +116,7 @@ export const useFormattedSKUPrice = ReactCompilerGating.isReactCompilerEnabled()
           const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
         }
       }, items);
-      const items1 = [stateFromStores(7131)];
+      const items1 = [stateFromStores(7132)];
       const items2 = [tmp2];
       stateFromStores = require("initialize").useStateFromStores(
         items1,

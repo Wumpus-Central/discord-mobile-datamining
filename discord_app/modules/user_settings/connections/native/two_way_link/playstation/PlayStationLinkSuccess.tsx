@@ -6,7 +6,7 @@ import components_Button_Button from "../../../../../../design/components/Button
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef12910 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef12912 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,7 +28,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
       const tmp4 = closure_7();
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { uri: _modDef12910 };
+        const obj3 = { uri: _modDef12912 };
         cResult[0] = obj3;
         let first = obj3;
       } else {
@@ -171,7 +171,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       const obj2 = { style: twoWayLinkStyles.container, children: null };
       const obj3 = { style: twoWayLinkStyles.content, children: null };
-      const memo = noop.useMemo(() => ({ uri: _modDef12910 }), []);
+      const memo = noop.useMemo(() => ({ uri: _modDef12912 }), []);
       const items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), ,];
       const obj5 = {
         variant: "heading-xl/extrabold",

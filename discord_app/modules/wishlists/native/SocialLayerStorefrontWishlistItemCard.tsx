@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[30] = tmp36;
                   tmp29 = tmp36;
                 }
-                OWNED = tmp(8976).WishlistItemCardOverlay.OWNED;
+                OWNED = tmp(8977).WishlistItemCardOverlay.OWNED;
               }
             }
           }

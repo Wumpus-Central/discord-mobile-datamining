@@ -15,7 +15,7 @@ let closure_8 = async function _handleEnableSystemNotification() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -88,8 +88,8 @@ let closure_8 = async function _handleEnableSystemNotification() {
   }
 };
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_5 = fn(7482).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(12122);
+let closure_5 = fn(7483).NotificationAuthorizationStatus;
+const NotificationPermissionConstants = fn(12124);
 ({ EventActionType: metroRequire, EventActionLocation: closure_7 } = NotificationPermissionConstants);
 const SettingBuilders = fn(10663);
 const pressable = SettingBuilders.createPressable({
@@ -97,7 +97,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(7992).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7993).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_8.apply;

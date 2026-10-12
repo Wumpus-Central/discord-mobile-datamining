@@ -157,7 +157,7 @@ export default noop.memo(
                               onPress: tmp9,
                               children: tmp29,
                             };
-                            const tmp35 = closure_8(tmp(6184).PressableOpacity, obj3);
+                            const tmp35 = closure_8(tmp(6185).PressableOpacity, obj3);
                             cResult[26] = tmp9;
                             cResult[27] = tmp4.container;
                             cResult[28] = tmp29;
@@ -272,7 +272,7 @@ export default noop.memo(
             items2[1] = closure_8(View, obj6);
             obj3.children = items2;
             obj2.children = closure_9(View, obj3);
-            tmp5 = closure_8(tmp2(6184).PressableOpacity, obj2);
+            tmp5 = closure_8(tmp2(6185).PressableOpacity, obj2);
           }
         }
         return tmp5;

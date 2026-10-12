@@ -31,7 +31,7 @@ let closure_25 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -278,9 +278,9 @@ let closure_25 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const result = closure_1_0(2029).supportsEmbeddedSurface(application, closure_1_0(8610).EmbeddedSurfaceType.MAIN);
+                const result = closure_1_0(2029).supportsEmbeddedSurface(application, closure_1_0(8611).EmbeddedSurfaceType.MAIN);
                 const obj = closure_1_0(2029);
-                const result1 = closure_1_0(8512).isActivityInTextSupportedForChannel(type);
+                const result1 = closure_1_0(8513).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = result;
                 }
@@ -412,7 +412,7 @@ let closure_27 = async function _maybeSendPrimaryAppCommand(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -599,7 +599,7 @@ let closure_27 = async function _maybeSendPrimaryAppCommand(arg0) {
                     };
                   }
                 };
-                nonce(9801)(obj);
+                nonce(9802)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -699,7 +699,7 @@ let closure_29 = async function _joinEmbeddedActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -998,7 +998,7 @@ let closure_31 = async function _uploadImageAttachment(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1094,10 +1094,10 @@ let closure_33 = async function _sendEmbeddedActivityInviteUser() {
     } else {
       let content;
       if (null != closure_1_5) {
-        content = closure_1(7369).parse(channel, tmp2).content;
-        const obj = closure_1(7369);
+        content = closure_1(7370).parse(channel, tmp2).content;
+        const obj = closure_1(7370);
       }
-      const obj2 = closure_1(7178);
+      const obj2 = closure_1(7179);
       obj2.sendInvite(result, code.code, closure_1_3, closure_1_4, content);
     }
   });
@@ -1117,7 +1117,7 @@ let closure_34 = async function _validateTestMode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -1183,7 +1183,7 @@ let closure_35 = async function _refreshProxyTicket() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1299,14 +1299,14 @@ let closure_35 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_4 = fn(9247).getOrFetchApplicationCommandIndexForTarget;
+let closure_4 = fn(9248).getOrFetchApplicationCommandIndexForTarget;
 let closure_15 = fn(2024).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const ActivityPanelModes = fn(6067).ActivityPanelModes;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_17, AnalyticsGameOpenTypes: closure_18, ChannelTypes: closure_19, Endpoints: closure_20, PopoutWindowKeys: closure_21 } = Constants);
 const INSTALL_LESS_APP_IDS = fn(1373).INSTALL_LESS_APP_IDS;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
-const InviteTargetTypes = fn(7423).InviteTargetTypes;
+const InviteTargetTypes = fn(7424).InviteTargetTypes;
 let closure_26 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };
 let closure_28 = { OTHER: 0, [0]: "OTHER", NO_APPLICATION_ID: 1, [1]: "NO_APPLICATION_ID", UNKNOWN_USER_OR_APPLICATION: 2, [2]: "UNKNOWN_USER_OR_APPLICATION", INVALID_CHANNEL: 3, [3]: "INVALID_CHANNEL", LAUNCHABILITY_CHECK_FAILED_OTHER: 4, [4]: "LAUNCHABILITY_CHECK_FAILED_OTHER", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 5, [5]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", FAILED_ACTIVITY_LAUNCH_CHECKS: 7, [7]: "FAILED_ACTIVITY_LAUNCH_CHECKS", NOT_CONNECTED_TO_VOICE_CHANNEL: 8, [8]: "NOT_CONNECTED_TO_VOICE_CHANNEL", AIT_NOT_ENABLED_FOR_USER: 9, [9]: "AIT_NOT_ENABLED_FOR_USER", CHANNEL_CONTENT_GATED: 10, [10]: "CHANNEL_CONTENT_GATED" };
 const size = fn(2);

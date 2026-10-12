@@ -15,7 +15,7 @@ function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 const GuildsNodeType = fn(5963).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16715).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(16739).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({
@@ -189,9 +189,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Set",
               name: "Array",
-              color: "round",
-              expanded: "PX_80",
-              children: "\u00D2",
+              color: "apply",
+              expanded: -894742272,
+              children: 36770881,
             };
             const items = [overNode];
             element.children = items;
@@ -379,9 +379,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Set",
               name: "Array",
-              color: "round",
-              expanded: "PX_80",
-              children: "\u00D2",
+              color: "apply",
+              expanded: -894742272,
+              children: 36770881,
             };
             const items = [tmp2];
             element.children = items;
@@ -891,12 +891,12 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: "_getViewInfo",
-                    scrollPosition: null,
-                    dragRegion: -1,
-                    windowSize: false,
-                    dropComplete: "onGestureHandlerStateChange",
-                    listInsets: "onGestureHandlerEvent",
+                    gestureState: "GUILD_MEMBER_UPDATE",
+                    scrollPosition: "never",
+                    dragRegion: "always",
+                    windowSize: "heading-xxl/extrabold",
+                    dropComplete: "mobile-text-heading-primary",
+                    listInsets: null,
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                   obj.overState = state;
@@ -991,12 +991,12 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: "_getViewInfo",
-                  scrollPosition: null,
-                  dragRegion: -1,
-                  windowSize: false,
-                  dropComplete: "onGestureHandlerStateChange",
-                  listInsets: "onGestureHandlerEvent",
+                  gestureState: "GUILD_MEMBER_UPDATE",
+                  scrollPosition: "never",
+                  dragRegion: "always",
+                  windowSize: "heading-xxl/extrabold",
+                  dropComplete: "mobile-text-heading-primary",
+                  listInsets: null,
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
                 obj.overState = state;

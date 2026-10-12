@@ -11,12 +11,12 @@ import CallActionCreatorsDefault from "../../../../actions/CallActionCreators.ts
 import StreamerApplicationSelectors from "../../../go_live/utils/StreamerApplicationSelectors.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import _modDef10910 from "../../../../../_runtime/metro/10910__.js";
-import _modDef13580 from "../../../../../_runtime/metro/13580__.js";
-import _modDef13581 from "../../../../../_runtime/metro/13581__.js";
-import _modDef13582 from "../../../../../_runtime/metro/13582__.js";
-import _modDef13583 from "../../../../../_runtime/metro/13583__.js";
-import _modDef13584 from "../../../../../_runtime/metro/13584__.js";
-import _modDef13585 from "../../../../../_runtime/metro/13585__.js";
+import _modDef13603 from "../../../../../_runtime/metro/13603__.js";
+import _modDef13604 from "../../../../../_runtime/metro/13604__.js";
+import _modDef13605 from "../../../../../_runtime/metro/13605__.js";
+import _modDef13606 from "../../../../../_runtime/metro/13606__.js";
+import _modDef13607 from "../../../../../_runtime/metro/13607__.js";
+import _modDef13608 from "../../../../../_runtime/metro/13608__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -930,7 +930,7 @@ let closure_18 = noop.memo(
             const obj7 = { style: tmp2.row, children: null };
             let tmp22Result = null;
             if (user.isSpectating) {
-              const obj8 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13585), style: tmp21 };
+              const obj8 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13608), style: tmp21 };
               tmp22Result = closure_13(tmp8(1200).Icon, obj8);
             }
             const items3 = [tmp22Result, , , ,];
@@ -938,7 +938,7 @@ let closure_18 = noop.memo(
               items3[1] = null;
               let tmp22Result5 = null;
               if (tmp16) {
-                const obj9 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13582), style: tmp21 };
+                const obj9 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13605), style: tmp21 };
                 tmp22Result5 = closure_13(tmp8(1200).Icon, obj9);
               }
               items3[2] = tmp22Result5;
@@ -956,21 +956,21 @@ let closure_18 = noop.memo(
                 if (localVideoDisabled) {
                   const obj11 = {
                     size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16,
-                    source: channel(13583),
+                    source: channel(13606),
                     style: tmp2.voiceStatusIconMargin,
                     disableColor: true,
                   };
                   let obj12 = obj11;
                 } else {
-                  obj12 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13584), style: tmp21 };
+                  obj12 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13607), style: tmp21 };
                 }
                 closure_13(tmp8(1200).Icon, obj12);
               }
             } else {
               if (tmp8Result6.isThemeDark(stateFromStores)) {
-                let tmp5Result = channel(13580);
+                let tmp5Result = channel(13603);
               } else {
-                tmp5Result = channel(13581);
+                tmp5Result = channel(13604);
               }
               const obj13 = {
                 size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16,
@@ -1006,7 +1006,7 @@ let closure_18 = noop.memo(
           labelCallScreen = tmp3.labelCallScreen;
         }
         obj17.style = labelCallScreen;
-        obj14.label = closure_13(user(8579).FormRow.Label, obj17);
+        obj14.label = closure_13(user(8580).FormRow.Label, obj17);
         if (localVideoAutoDisabled) {
           const obj18 = { style: tmp2.autoDisabledVideo, children: null };
           const obj19 = { source: channel(10910), size: tmp8(1200).Icon.Sizes.EXTRA_SMALL, disableColor: true };
@@ -1030,7 +1030,7 @@ let closure_18 = noop.memo(
           }
         }
         obj14.subLabel = stringResult;
-        return closure_13(user(8579).FormRow, obj14);
+        return closure_13(user(8580).FormRow, obj14);
       },
 );
 ReactCompilerGating = fn(558);
@@ -1150,7 +1150,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           tmp21 = tmp27;
         }
         const obj7 = { text: cResult[4], style: labelCallScreen };
-        const tmp20 = closure_13(tmp(8579).FormSubLabel, obj7);
+        const tmp20 = closure_13(tmp(8580).FormSubLabel, obj7);
         cResult[5] = cResult[4];
         cResult[6] = labelCallScreen;
         cResult[7] = tmp20;
@@ -1185,7 +1185,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           labelCallScreen = tmp2.labelCallScreen;
         }
         obj3.style = labelCallScreen;
-        obj2.subLabel = closure_13(tmp3(8579).FormSubLabel, obj3);
+        obj2.subLabel = closure_13(tmp3(8580).FormSubLabel, obj3);
         const items1 = [closure_13(closure_18, obj2)];
         let tmp10Result = user.id !== AuthenticationStore.getId();
         if (tmp10Result) {
@@ -1265,7 +1265,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { onPress: tmp6, accessibilityRole: "button", style: tmp7, children: tmp12 };
-            const tmp17 = closure_13(tmp(6184).PressableOpacity, obj3);
+            const tmp17 = closure_13(tmp(6185).PressableOpacity, obj3);
             cResult[6] = tmp6;
             cResult[7] = tmp7;
             cResult[8] = tmp12;
@@ -1312,7 +1312,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = stringResult;
           tmp4Result = closure_13(tmp5(1200).LegacyText, obj2);
           obj.children = tmp4Result;
-          closure_13(channelId(6184).PressableOpacity, obj);
+          closure_13(channelId(6185).PressableOpacity, obj);
         }
       }
       return tmp3;
@@ -1361,7 +1361,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { onPress: tmp6, accessibilityRole: "button", style: tmp7, children: tmp12 };
-            const tmp17 = closure_13(tmp(6184).PressableOpacity, obj3);
+            const tmp17 = closure_13(tmp(6185).PressableOpacity, obj3);
             cResult[6] = tmp6;
             cResult[7] = tmp7;
             cResult[8] = tmp12;
@@ -1408,7 +1408,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = stringResult;
           tmp4Result = closure_13(tmp5(1200).LegacyText, obj2);
           obj.children = tmp4Result;
-          closure_13(channelId(6184).PressableOpacity, obj);
+          closure_13(channelId(6185).PressableOpacity, obj);
         }
       }
       return tmp3;
@@ -1613,15 +1613,15 @@ const memoResult = noop.memo(
           leading: null,
           trailing: null,
         };
-        const canRing = id(7026).useCanRing(id);
+        const canRing = id(7027).useCanRing(id);
         const obj5 = { text: name, style: null };
         let labelCallScreen = null;
         if (isActionSheet) {
           labelCallScreen = tmp.labelCallScreen;
         }
         obj5.style = labelCallScreen;
-        obj4.label = closure_13(id(8579).FormRow.Label, obj5);
-        const obj3 = id(7026);
+        obj4.label = closure_13(id(8580).FormRow.Label, obj5);
+        const obj3 = id(7027);
         obj4.leading = closure_13(id(1200).Avatar, {
           user: id,
           guildId: id2.guild_id,
@@ -1631,7 +1631,7 @@ const memoResult = noop.memo(
           obj4.trailing = null;
           const obj7 = {};
           const merged = Object.assign(obj4);
-          return closure_13(tmp2(8579).FormRow, obj7);
+          return closure_13(tmp2(8580).FormRow, obj7);
         } else {
           const obj8 = { channelId: null, userId: null, isActionSheet: null };
           id2 = id2.id;

@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   let newAnalyticsLoadId = tmp2;
                   newAnalyticsLoadId = undefined;
-                  newAnalyticsLoadId = args(10052).getNewAnalyticsLoadId();
-                  const obj7 = args(7121);
+                  newAnalyticsLoadId = args(10053).getNewAnalyticsLoadId();
+                  const obj7 = args(7122);
                   c3 = 1;
                   c4 = 1;
                   const obj4 = {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 args(5959).closeApplyBoostModal();
                 c4 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp10) {
               c4 = tmp;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -164,8 +164,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 let newAnalyticsLoadId = tmp2;
                 newAnalyticsLoadId = undefined;
-                newAnalyticsLoadId = args(10052).getNewAnalyticsLoadId();
-                const obj7 = args(7121);
+                newAnalyticsLoadId = args(10053).getNewAnalyticsLoadId();
+                const obj7 = args(7122);
                 c3 = 1;
                 c4 = 1;
                 const obj4 = {
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               args(5959).closeApplyBoostModal();
               c4 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp10) {
             c4 = tmp;

@@ -33,7 +33,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -436,7 +436,7 @@ let closure_20 = async function _authenticate(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -604,7 +604,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
             const tmp29 = new closure_1(10936)(obj2, "No application.");
             throw tmp29;
           } else {
-            IDENTIFY = closure_0(8457).OAuth2Scopes.IDENTIFY;
+            IDENTIFY = closure_0(8458).OAuth2Scopes.IDENTIFY;
             _authorize = function _authorize() {};
             let Storage2 = closure_0(510).Storage;
             value = Storage2.get(CachedTokens);

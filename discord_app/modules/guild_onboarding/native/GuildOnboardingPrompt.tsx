@@ -27,7 +27,7 @@ function formattedNameHighlight(children, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-let closure_12 = fn(6785).GuildOnboardingModalStates;
+let closure_12 = fn(6786).GuildOnboardingModalStates;
 const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
@@ -39,7 +39,7 @@ let obj2 = {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(6258).NAV_BAR_HEIGHT,
+    marginTop: fn(6259).NAV_BAR_HEIGHT,
     marginBottom: 16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -66,7 +66,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(6258).NAV_BAR_HEIGHT,
+  marginTop: fn(6259).NAV_BAR_HEIGHT,
   marginBottom: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -381,8 +381,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[9] !== tmp20) {
               if (null != tmp20) {
-                let selectedRoleIds = tmp(6794).getSelectedRoleIds(tmp20);
-                const tmpResult4 = tmp(6794);
+                let selectedRoleIds = tmp(6795).getSelectedRoleIds(tmp20);
+                const tmpResult4 = tmp(6795);
               } else {
                 const _Set = Set;
                 selectedRoleIds = new Set();
@@ -391,8 +391,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[10] = selectedRoleIds;
             } else if (cResult[11] !== tmp20) {
               if (null != tmp20) {
-                let selectedChannelIds = tmp(6794).getSelectedChannelIds(tmp20);
-                const tmpResult5 = tmp(6794);
+                let selectedChannelIds = tmp(6795).getSelectedChannelIds(tmp20);
+                const tmpResult5 = tmp(6795);
               } else {
                 const _Set2 = Set;
                 selectedChannelIds = new Set();
@@ -406,8 +406,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[16] === tmp23) {
                       let tmp33 = cResult[17];
                     }
-                    ({ helpText, helpTextAdditional } = selectedOptionIds(6814)(tmp33));
-                    const tmp36 = selectedOptionIds(6814)(tmp33);
+                    ({ helpText, helpTextAdditional } = selectedOptionIds(6815)(tmp33));
+                    const tmp36 = selectedOptionIds(6815)(tmp33);
                     const token = tmp(4818).useToken(selectedOptionIds(587).colors.BACKGROUND_BASE_LOWER);
                     if (cResult[18] !== token) {
                       const obj7 = selectedOptionIds(683)(token);
@@ -1710,7 +1710,7 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[17])().bottom + c17 + c17, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6824, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(6825, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
       onSelect(id, arg1) {

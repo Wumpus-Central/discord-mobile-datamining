@@ -185,7 +185,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj2 = { style: tmp4.iconContainer, children: null };
-                const obj3 = { style: tmp4.icon, source: user(7718), color: user(587).unsafe_rawColors.WHITE };
+                const obj3 = { style: tmp4.icon, source: user(7719), color: user(587).unsafe_rawColors.WHITE };
                 obj2.children = closure_9(channelId(1200).Icon, obj3);
                 tmp24 = closure_9(View, obj2);
               }
@@ -250,7 +250,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ];
       if (speaker) {
         const obj6 = { style: tmp.iconContainer, children: null };
-        const obj7 = { style: tmp.icon, source: user(7718), color: user(587).unsafe_rawColors.WHITE };
+        const obj7 = { style: tmp.icon, source: user(7719), color: user(587).unsafe_rawColors.WHITE };
         obj6.children = closure_9(native.Icon, obj7);
         speaker = closure_9(View, obj6);
       }
@@ -598,9 +598,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === onAccept) {
           let tmp7 = cResult[3];
         }
-        const stageBlockedUsers = tmp(7719).useStageBlockedUsers(channel.id);
-        const tmpResult = tmp(7719);
-        const stageIgnoredUsers = tmp(7719).useStageIgnoredUsers(channel.id);
+        const stageBlockedUsers = tmp(7720).useStageBlockedUsers(channel.id);
+        const tmpResult = tmp(7720);
+        const stageIgnoredUsers = tmp(7720).useStageIgnoredUsers(channel.id);
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
@@ -777,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   renderItem: tmp25,
                   itemSize: tmp19,
                 };
-                const tmp37 = closure_9(onAccept(6760), obj5);
+                const tmp37 = closure_9(onAccept(6761), obj5);
                 cResult[25] = tmp25;
                 cResult[26] = tmp4.container;
                 cResult[27] = tmp33;
@@ -809,11 +809,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { bottom: true, style: tmp4.buttons, onLayout: E, children: null };
         const items1 = [tmp11, tmp13];
         obj7.children = items1;
-        const tmp17 = closure_10(tmp(6813).SafeAreaPaddingView, obj7);
+        const tmp17 = closure_10(tmp(6814).SafeAreaPaddingView, obj7);
         cResult[9] = tmp4.buttons;
         cResult[10] = tmp11;
         cResult[11] = tmp17;
-        const tmpResult2 = tmp(7719);
+        const tmpResult2 = tmp(7720);
       }
       function handleJoin() {
         onAccept(channel);
@@ -832,9 +832,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_11();
       const tmp2 = items1(noop.useState(0), 2);
       dependencyMap = tmp2[1];
-      const stageBlockedUsers = channel(7719).useStageBlockedUsers(channel.id);
-      const obj = channel(7719);
-      const stageIgnoredUsers = channel(7719).useStageIgnoredUsers(channel.id);
+      const stageBlockedUsers = channel(7720).useStageBlockedUsers(channel.id);
+      const obj = channel(7720);
+      const stageIgnoredUsers = channel(7720).useStageIgnoredUsers(channel.id);
       const callback = noop.useCallback((nativeEvent) => {
         dependencyMap(nativeEvent.nativeEvent.layout.height);
       }, []);
@@ -856,7 +856,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items[1] = closure_9(channel(5379).Button, obj5);
       obj3.children = items;
       items1 = [];
-      const obj2 = channel(7719);
+      const obj2 = channel(7720);
       HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
       const obj6 = {
         scrollable: true,
@@ -864,7 +864,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           blockedUserCount: stageBlockedUsers.length,
           ignoredUserCount: stageIgnoredUsers.length,
         }),
-        footer: closure_10(channel(6813).SafeAreaPaddingView, obj3),
+        footer: closure_10(channel(6814).SafeAreaPaddingView, obj3),
         children: null,
       };
       const obj7 = {
@@ -875,7 +875,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         renderItem: null,
         itemSize: null,
       };
-      const tmp4 = closure_10(channel(6813).SafeAreaPaddingView, obj3);
+      const tmp4 = closure_10(channel(6814).SafeAreaPaddingView, obj3);
       const intl3 = channel(1126).intl;
       obj7.accessibilityLabel = intl3.string(channel(1126).t["3VoRLH"]);
       const items2 = [items1.length];
@@ -886,7 +886,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.itemSize = function getRowHeight() {
         return 48;
       };
-      const items3 = [closure_9(onAccept(6760), obj7), closure_9(View, { style: { height: tmp2[0] } })];
+      const items3 = [closure_9(onAccept(6761), obj7), closure_9(View, { style: { height: tmp2[0] } })];
       obj6.children = items3;
-      return closure_10(channel(6839).BottomSheet, obj6);
+      return closure_10(channel(6840).BottomSheet, obj6);
     };

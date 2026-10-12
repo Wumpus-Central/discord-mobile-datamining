@@ -21,7 +21,7 @@ let closure_3 = [
   "onPress",
   "onSettingsPress",
 ];
-const InAppNotificationConstants = fn(12576);
+const InAppNotificationConstants = fn(12578);
 ({
   MIN_SWIPE_VELOCITY: metroRequire,
   STARTED_SWIPE_THRESHOLD: closure_7,
@@ -90,11 +90,11 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
       }
       panning();
       if (cResult[10] !== tmp9) {
-        let result = tmp(12575).extractMetadataFromNotification(tmp9);
+        let result = tmp(12577).extractMetadataFromNotification(tmp9);
         cResult[10] = tmp9;
         cResult[11] = result;
         let tmp17 = result;
-        const tmpResult = tmp(12575);
+        const tmpResult = tmp(12577);
       } else {
         tmp17 = cResult[11];
       }
@@ -106,13 +106,13 @@ export const NotificationPressable = ReactCompilerGating.isReactCompilerEnabled(
         channelId = tmp19.channelId;
         const messageId = tmp19.messageId;
         const type = tmp19.type;
-        const inAppNotificationContext = tmp(12592).useInAppNotificationContext();
+        const inAppNotificationContext = tmp(12594).useInAppNotificationContext();
         const notificationGestureY = inAppNotificationContext.notificationGestureY;
         const velocityY = inAppNotificationContext.velocityY;
         const handleDismissNotification = inAppNotificationContext.handleDismissNotification;
         const initialized = inAppNotificationContext.initialized;
         panning = inAppNotificationContext.panning;
-        const tmpResult5 = tmp(12592);
+        const tmpResult5 = tmp(12594);
         const sharedValue = tmp(4850).useSharedValue(1);
         if (cResult[15] !== sharedValue) {
           class L {

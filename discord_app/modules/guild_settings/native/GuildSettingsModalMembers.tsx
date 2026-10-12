@@ -27,7 +27,7 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let items = [fn(8699).AutocompleterResultTypes.USER];
+let items = [fn(8700).AutocompleterResultTypes.USER];
 const createStyles = fn(5092);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
@@ -333,7 +333,7 @@ let closure_22 = noop.memo(
           };
           obj4.start = start;
           obj4.end = end;
-          return closure_17(guildMember(10299), obj4);
+          return closure_17(guildMember(10300), obj4);
         }
         const obj = guild(1503);
       },
@@ -961,12 +961,12 @@ export default noop.memo(
                 items: membersManagementActions,
                 children(ref) {
                   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-                  const obj = { source: closure_1_1(8664), accessibilityLabel: null, ref: null };
+                  const obj = { source: closure_1_1(8665), accessibilityLabel: null, ref: null };
                   const intl = closure_1_0(1126).intl;
                   obj.accessibilityLabel = intl.string(closure_1_0(1126).t.ogxXGq);
                   obj.ref = ref.ref;
                   const merged1 = Object.assign(merged);
-                  return closure_1_17(closure_1_0(7088).HeaderActionButton, obj);
+                  return closure_1_17(closure_1_0(7089).HeaderActionButton, obj);
                 },
               });
             },

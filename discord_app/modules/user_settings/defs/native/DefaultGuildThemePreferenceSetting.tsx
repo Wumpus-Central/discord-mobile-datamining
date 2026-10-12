@@ -50,7 +50,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.Q7mm4g);
   },
-  parent: fn(7992).MobileUserSettings.APPEARANCE,
+  parent: fn(7993).MobileUserSettings.APPEARANCE,
   useValue: fn(2041).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
     const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;

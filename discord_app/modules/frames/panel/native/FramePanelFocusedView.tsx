@@ -49,7 +49,7 @@ export default noop.memo(
           tmp8 = cResult[2];
         }
         const tmpResult = stateFromStores(504);
-        const baseActivityPanelFocusedView = stateFromStores(17710).useBaseActivityPanelFocusedView(tmp8);
+        const baseActivityPanelFocusedView = stateFromStores(17767).useBaseActivityPanelFocusedView(tmp8);
         ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = baseActivityPanelFocusedView);
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp14 = jsx(FramePanelHeaderDefault, {});
@@ -96,7 +96,7 @@ export default noop.memo(
               header: tmp11,
               children: tmp17,
             };
-            const tmp26 = jsx(tmp(17710).BaseActivityPanelFocusedView, {
+            const tmp26 = jsx(tmp(17767).BaseActivityPanelFocusedView, {
               transitionState,
               transitionCleanUp,
               updateActivityPanelModeToPIP: tmp15,
@@ -118,14 +118,14 @@ export default noop.memo(
         if (null != stateFromStores) {
           const obj4 = {
             frameId: stateFromStores,
-            level: tmp(17094).FrameStackLevel.AboveAppContent,
+            level: tmp(17134).FrameStackLevel.AboveAppContent,
             presentation: null,
           };
           const obj5 = { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig };
           obj4.presentation = obj5;
           tmp18 = jsx(FrameRenderTargetDefault, {
             frameId: stateFromStores,
-            level: tmp(17094).FrameStackLevel.AboveAppContent,
+            level: tmp(17134).FrameStackLevel.AboveAppContent,
             presentation: null,
           });
         }
@@ -134,7 +134,7 @@ export default noop.memo(
         cResult[8] = portraitSafeAreasConfig;
         cResult[9] = tmp18;
         tmp17 = tmp18;
-        const tmpResult2 = stateFromStores(17710);
+        const tmpResult2 = stateFromStores(17767);
       }
     : function FramePanelFocusedView(transitionState) {
         transitionState = transitionState.transitionState;

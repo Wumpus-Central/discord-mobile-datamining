@@ -4,13 +4,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef14392 from "../../../../../_runtime/metro/14392__.js";
-import _modDef14393 from "../../../../../_runtime/metro/14393__.js";
-import _modDef14394 from "../../../../../_runtime/metro/14394__.js";
-import _modDef14395 from "../../../../../_runtime/metro/14395__.js";
-import _modDef14396 from "../../../../../_runtime/metro/14396__.js";
-import _modDef14397 from "../../../../../_runtime/metro/14397__.js";
-import _modDef14398 from "../../../../../_runtime/metro/14398__.js";
+import _modDef14415 from "../../../../../_runtime/metro/14415__.js";
+import _modDef14416 from "../../../../../_runtime/metro/14416__.js";
+import _modDef14417 from "../../../../../_runtime/metro/14417__.js";
+import _modDef14418 from "../../../../../_runtime/metro/14418__.js";
+import _modDef14419 from "../../../../../_runtime/metro/14419__.js";
+import _modDef14420 from "../../../../../_runtime/metro/14420__.js";
+import _modDef14421 from "../../../../../_runtime/metro/14421__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const STATUS_PADDING = fn(1201).STATUS_PADDING;
 const StatusTypes = fn(1085).StatusTypes;
-const ChannelAnimationConstants = fn(13149);
+const ChannelAnimationConstants = fn(13154);
 ({ TYPING_ENTERING: closure_8, TYPING_EXITING: closure_9, CHANNEL_SPRING_CONFIG: c10 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -129,24 +129,24 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (tmp5) {
-              tmp = 14392;
+              tmp = 14415;
               let tmp14 = importDefault(tmp);
             } else if (tmp4) {
-              tmp14 = _modDef14393;
+              tmp14 = _modDef14416;
             } else if (tmp3) {
-              tmp14 = _modDef14394;
+              tmp14 = _modDef14417;
             } else if (StatusTypes.IDLE === status) {
-              tmp14 = _modDef14395;
+              tmp14 = _modDef14418;
             } else {
               if (StatusTypes.DND === status) {
-                tmp14 = _modDef14396;
+                tmp14 = _modDef14419;
               } else if (StatusTypes.OFFLINE !== status) {
                 if (StatusTypes.INVISIBLE !== status) {
                   const ONLINE = StatusTypes.ONLINE;
-                  tmp14 = _modDef14398;
+                  tmp14 = _modDef14421;
                 }
               }
-              tmp14 = _modDef14397;
+              tmp14 = _modDef14420;
             }
             cResult[7] = tmp3;
             cResult[8] = tmp4;
@@ -190,23 +190,23 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       obj.style = items;
       const obj2 = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
       if (streaming) {
-        let tmp4Result = _modDef14392;
+        let tmp4Result = _modDef14415;
       } else if (flag2) {
-        tmp4Result = _modDef14393;
+        tmp4Result = _modDef14416;
       } else if (flag) {
-        tmp4Result = _modDef14394;
+        tmp4Result = _modDef14417;
       } else if (StatusTypes.IDLE === status) {
-        tmp4Result = _modDef14395;
+        tmp4Result = _modDef14418;
       } else if (StatusTypes.DND === status) {
-        tmp4Result = _modDef14396;
+        tmp4Result = _modDef14419;
       } else {
         if (StatusTypes.OFFLINE !== status) {
           if (StatusTypes.INVISIBLE !== status) {
             const ONLINE = StatusTypes.ONLINE;
-            tmp4Result = _modDef14398;
+            tmp4Result = _modDef14421;
           }
         }
-        tmp4Result = _modDef14397;
+        tmp4Result = _modDef14420;
       }
       obj2.source = tmp4Result;
       obj.children = closure_1_11(React4, obj2);

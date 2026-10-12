@@ -12,7 +12,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj = {
   container: {
-    marginVertical: fn(11758).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -20,7 +20,7 @@ let obj = {
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11758).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -86,7 +86,7 @@ export default noop.memo(
           } else {
             if (cResult[8] !== stateFromStores) {
               const obj2 = { channel: stateFromStores };
-              const tmp15 = id(8650)(obj2);
+              const tmp15 = id(8651)(obj2);
               cResult[8] = stateFromStores;
               cResult[9] = tmp15;
               let tmp13 = tmp15;
@@ -129,7 +129,7 @@ export default noop.memo(
               selected,
               resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
             };
-            const tmp21 = jsx(id(16542), {
+            const tmp21 = jsx(id(16565), {
               onPress: tmp11,
               onLongPress: tmp12,
               style: tmp4.container,
@@ -212,13 +212,13 @@ export default noop.memo(
             resolvedUnreadSetting: null,
           };
           const obj3 = { channel: stateFromStores };
-          obj2.accessibilityLabel = id(8650)(obj3);
+          obj2.accessibilityLabel = id(8651)(obj3);
           const obj4 = { selected };
           obj2.accessibilityState = obj4;
           obj2.channel = stateFromStores;
           obj2.selected = selected;
           obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-          tmp7 = jsx(id(16542), {
+          tmp7 = jsx(id(16565), {
             onPress: callback,
             onLongPress: tmp6,
             style: tmp.container,
@@ -230,7 +230,7 @@ export default noop.memo(
             selected: null,
             resolvedUnreadSetting: null,
           });
-          const tmp10 = id(16542);
+          const tmp10 = id(16565);
         }
         return tmp7;
       },

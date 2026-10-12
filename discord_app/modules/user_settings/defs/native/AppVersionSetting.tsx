@@ -12,7 +12,7 @@ let obj = {
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10171).ClydeIcon,
+  IconComponent: fn(10172).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;
@@ -37,7 +37,7 @@ export default SettingBuilders.createStatic({
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10171).ClydeIcon,
+  IconComponent: fn(10172).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;

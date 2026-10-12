@@ -128,7 +128,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -176,7 +176,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
                 closure_129_0 = value;
                 navigateToScreenForTask(data, closure_129_0);
                 c4 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp15) {
               c4 = tmp;
@@ -223,7 +223,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -271,7 +271,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
                 closure_129_0 = value;
                 navigateToScreenForTask(data, closure_129_0);
                 c4 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp15) {
               c4 = tmp;

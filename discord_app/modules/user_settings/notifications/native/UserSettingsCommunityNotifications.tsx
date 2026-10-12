@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const mapped = keys.map(tmp16);
         const container = tmp4.container;
-        const Form = tmp(8579).Form;
+        const Form = tmp(8580).Form;
         const Stack = tmp(5377).Stack;
       }
     }
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }),
         };
         obj3.children = closure_4(tmp2(5377).Stack, obj4);
-        tmp5 = closure_4(tmp2(8579).Form, obj3);
+        tmp5 = closure_4(tmp2(8580).Form, obj3);
       }
       return tmp5;
     };

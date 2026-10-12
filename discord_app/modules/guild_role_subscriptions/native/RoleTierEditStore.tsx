@@ -42,7 +42,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     return (async () => {
       closure_1 = tmp3;
       priceTiers(1272).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
-      await closure_2_2(6958).getPriceTiers(priceTiers);
+      await closure_2_2(6959).getPriceTiers(priceTiers);
       if (1 === tmp7) {
         c2 = 0;
         priceTiers(1272).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));

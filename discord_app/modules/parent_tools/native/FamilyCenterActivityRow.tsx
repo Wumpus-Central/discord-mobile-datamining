@@ -17,7 +17,7 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(7259).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(7260).ACTION_TO_TEXT;
 const GuildFeatures = fn(1085).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -107,7 +107,7 @@ const memoResult = noop.memo(
                 const Text = tmp(5088).Text;
                 const _Date = Date;
                 const date = new Date(extractTimestampResult);
-                const result = tmp(7741).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+                const result = tmp(7742).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
                 if (cResult[14] === Text) {
                   if (cResult[15] === result) {
                     let tmp28 = cResult[16];
@@ -158,7 +158,7 @@ const memoResult = noop.memo(
                 cResult[15] = result;
                 cResult[16] = tmp30;
                 tmp28 = tmp30;
-                const tmpResult2 = tmp(7741);
+                const tmpResult2 = tmp(7742);
               }
               const obj5 = {
                 style: text,
@@ -235,7 +235,7 @@ const memoResult = noop.memo(
           const tmp3Result2 = UserUtilsDefault;
           const _Date = Date;
           const date = new Date(extractTimestampResult);
-          obj7.children = tmp6(7741).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+          obj7.children = tmp6(7742).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
           items2[1] = closure_8(tmp6(5088).Text, obj7);
           obj5.children = items2;
           items1[1] = closure_9(View, obj5);
@@ -465,7 +465,7 @@ const memoResult1 = noop.memo(
           const obj11 = { style: null, textStyle: null, guild: null, size: null, animate: true };
           ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp4);
           obj11.guild = stateFromStores;
-          obj11.size = tmp(6158).GuildIconSizes.NORMAL;
+          obj11.size = tmp(6159).GuildIconSizes.NORMAL;
           const tmp18 = closure_8(GuildIconDefault, obj11);
           cResult[5] = stateFromStores;
           cResult[6] = tmp4.avatar;
@@ -498,7 +498,7 @@ const memoResult1 = noop.memo(
           const obj4 = { style: null, textStyle: null, guild: null, size: null, animate: true };
           ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
           obj4.guild = stateFromStores;
-          obj4.size = tmp2(6158).GuildIconSizes.NORMAL;
+          obj4.size = tmp2(6159).GuildIconSizes.NORMAL;
           const items1 = [closure_8(GuildIconDefault, obj4)];
           const obj5 = { style: tmp.text, children: null };
           const obj6 = { style: tmp.headerContainer, children: null };

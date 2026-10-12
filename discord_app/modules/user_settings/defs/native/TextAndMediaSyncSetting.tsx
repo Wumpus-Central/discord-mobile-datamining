@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(7992).MobileUserSettings.CHAT,
+  parent: fn(7993).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useTextAndMediaSyncSettingValue() {
         const cResult = c.c(2);

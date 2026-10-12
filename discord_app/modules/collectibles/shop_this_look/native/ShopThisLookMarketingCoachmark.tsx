@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
-const UserProfileThemeTypes = fn(6904).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6905).UserProfileThemeTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });

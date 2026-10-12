@@ -6,14 +6,14 @@ import LottieAnimationViewDefault from "../../../../components_native/common/Lot
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import _modDef12190 from "../../../../../_runtime/metro/12190__.js";
-import _modDef12191 from "../../../../../_runtime/metro/12191__.js";
-import _mod12192 from "../../../../../_runtime/metro/12192__.js";
+import _modDef12192 from "../../../../../_runtime/metro/12192__.js";
+import _modDef12193 from "../../../../../_runtime/metro/12193__.js";
+import _mod12194 from "../../../../../_runtime/metro/12194__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const TextAreaCta = fn(11634).TextAreaCta;
+const TextAreaCta = fn(11636).TextAreaCta;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
@@ -306,10 +306,10 @@ export default noop.memo(
             cResult[18] = tmp34;
           }
           function renderAnimation() {
-            const obj = { style: noticeIcon.lottieAnimation, source: _mod12192, autoPlay: !stateFromStores };
+            const obj = { style: noticeIcon.lottieAnimation, source: _mod12194, autoPlay: !stateFromStores };
             return jsx(LottieAnimationViewDefault, {
               style: noticeIcon.lottieAnimation,
-              source: _mod12192,
+              source: _mod12194,
               autoPlay: !stateFromStores,
             });
           }
@@ -324,13 +324,13 @@ export default noop.memo(
     : function ChatInputGuardGuildMemberVerification(guildId) {
         guildId = guildId.guildId;
         const tmp = closure_7();
-        const currentUserGuildJoinRequest = guildId(6120).useCurrentUserGuildJoinRequest(guildId);
+        const currentUserGuildJoinRequest = guildId(6121).useCurrentUserGuildJoinRequest(guildId);
         let applicationStatus;
         if (currentUserGuildJoinRequest != null) {
           applicationStatus = currentUserGuildJoinRequest.applicationStatus;
         }
         if (guildId(4942).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-          let tmp8 = _modDef12190;
+          let tmp8 = _modDef12192;
           const intl3 = tmp2(1126).intl;
           let stringResult = intl3.string(tmp2(1126).t.lk30cY);
           let fn = function _() {
@@ -344,7 +344,7 @@ export default noop.memo(
             });
           };
         } else if (tmp2(4942).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-          tmp8 = _modDef12191;
+          tmp8 = _modDef12193;
           const intl2 = tmp2(1126).intl;
           stringResult = intl2.string(tmp2(1126).t["5iLvSx"]);
           fn = function _() {
@@ -357,7 +357,7 @@ export default noop.memo(
             obj4.subtitleText = intl.string(util.t["13tjTU"]);
             const result = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert(obj4);
           };
-          const tmp7 = jsx(tmp2(6207).XSmallIcon, {});
+          const tmp7 = jsx(tmp2(6208).XSmallIcon, {});
         } else {
           let intl = tmp2(1126).intl;
           stringResult = intl.string(tmp2(1126).t.rEBKvg);
@@ -369,7 +369,7 @@ export default noop.memo(
             const result = MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
           };
         }
-        let obj = guildId(6120);
+        let obj = guildId(6121);
         const items = [AccessibilityStore];
         const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
         const tmp2Result = guildId(504);
@@ -377,10 +377,10 @@ export default noop.memo(
           let obj2 = { style: tmp.noticeIcon, source: tmp8 };
           let tmp13Result = jsx(FastImageDefault, { style: tmp.noticeIcon, source: tmp8 });
         } else {
-          const obj3 = { style: tmp.lottieAnimation, source: tmp2(12192), autoPlay: !stateFromStores };
+          const obj3 = { style: tmp.lottieAnimation, source: tmp2(12194), autoPlay: !stateFromStores };
           tmp13Result = jsx(LottieAnimationViewDefault, {
             style: tmp.lottieAnimation,
-            source: tmp2(12192),
+            source: tmp2(12194),
             autoPlay: !stateFromStores,
           });
           const tmp14Result = LottieAnimationViewDefault;

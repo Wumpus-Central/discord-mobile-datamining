@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const util = TableRowArrow(1126);
 const SendMessageIcon = TableRowArrow(5040);
 const components_Button_Button = TableRowArrow(5379);
-const TableRowArrow2 = TableRowArrow(6188);
+const TableRowArrow2 = TableRowArrow(6189);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -123,7 +123,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -143,11 +143,11 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               }
               c3 = 1;
               const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-              const obj2 = tmp3(9246);
-              obj6.optionValues = tmp3(11667).parseOptionValuesForSend(commandContext.channel, command, {});
+              const obj2 = tmp3(9247);
+              obj6.optionValues = tmp3(11669).parseOptionValuesForSend(commandContext.channel, command, {});
               obj6.context = commandContext;
               obj6.sectionName = sectionName;
-              obj6.commandOrigin = tmp3(7246).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+              obj6.commandOrigin = tmp3(7247).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
               dependencyMap = 2;
               c4 = 1;
               const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };
@@ -173,7 +173,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             c3 = 0;
             closure_128_5(false);
             c4 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp27) {
           closure_2 = tmp27;

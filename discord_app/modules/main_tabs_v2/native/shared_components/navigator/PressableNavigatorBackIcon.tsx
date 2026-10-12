@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef9300 from "../../../../../../_runtime/metro/09300__.js";
+import _modDef9301 from "../../../../../../_runtime/metro/09301__.js";
 import MaskedBadgeDefault from "../MaskedBadge.tsx";
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -144,7 +144,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
           cResult[14] = formatToPlainStringResult;
         } else {
           if (cResult[15] !== tmp12.actionButtonIcon.tintColor) {
-            const obj5 = { source: _modDef9300, style: null };
+            const obj5 = { source: _modDef9301, style: null };
             const obj6 = { tintColor: tmp12.actionButtonIcon.tintColor };
             obj5.style = obj6;
             const tmp31 = closure_10(FastImageDefault, obj5);
@@ -186,7 +186,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
                   obj8.onPress = tmp23;
                   obj8.style = tmp12.actionButtonPressable;
                   obj8.children = tmp37;
-                  obj7.children = closure_10(tmp(6184).PressableOpacity, obj8);
+                  obj7.children = closure_10(tmp(6185).PressableOpacity, obj8);
                   const tmp48 = closure_10(PressableNavigatorButtonWrapperDefault, obj7);
                   cResult[25] = tmp23;
                   cResult[26] = tmp7;

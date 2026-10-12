@@ -365,13 +365,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
       options = heading.options;
       obj.children = options.map((item, index) => {
         const obj = {
-          label: onSortMethodChange(9192).getFilterTypeText(item.filter),
+          label: onSortMethodChange(9193).getFilterTypeText(item.filter),
           onPress(arg0) {
             return closure_2_8(closure_0, arg0);
           },
           checked: closure_4.some((group) => group.group === item.group && group.filter === arr.filter)
         };
-        return ref(onSortMethodChange(6176).TableCheckboxRow, obj, index);
+        return ref(onSortMethodChange(6177).TableCheckboxRow, obj, index);
       });
       return ref(TableRowGroup.TableRowGroup, obj, index);
     })

@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NativeCheckoutStore = fn(7143);
+const NativeCheckoutStore = fn(7144);
 ({
   createNativeStore: closure_7,
   NativeCheckoutStoreContext: closure_8,
@@ -421,7 +421,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         checkoutAnalyticsFields: View,
         analyticsInitialStep: closure_7,
       } = children);
-      const contextMetadata = order(6169)(() => {
+      const contextMetadata = order(6170)(() => {
         let id;
         if (order != null) {
           id = order.id;
@@ -434,7 +434,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { message: "Checkout session ID: " + id };
         return { loadId: id, startTime: Date.now() };
       });
-      redux = order(6169)(() => {
+      redux = order(6170)(() => {
         const obj = {};
         const merged = Object.assign(View);
         obj.load_id = contextMetadata.loadId;
@@ -501,8 +501,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { checkoutSucceeded: tmp2, order: null };
             ({ id: obj3.id, status: obj3.status } = orderRecord);
             obj2.order = { id: null, status: null };
-            checkoutInitParameters(10165).discardDraftOrder(obj2);
-            const obj = checkoutInitParameters(10165);
+            checkoutInitParameters(10166).discardDraftOrder(obj2);
+            const obj = checkoutInitParameters(10166);
             const obj5 = { id: null, status: null };
           }
         },
@@ -603,7 +603,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -654,7 +654,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               closure_1_10(false);
               c4 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp23) {
             c4 = tmp;

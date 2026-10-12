@@ -170,7 +170,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -204,7 +204,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                     v2(false);
                     showErrorToast(tmp26);
                     c5 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   } else {
                     c3 = 1;
                     const obj4 = { channelId: closure_0.id, source: "In-channel greet" };
@@ -290,7 +290,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -322,7 +322,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                       v2(false);
                       showErrorToast(tmp26);
                       c5 = 3;
-                      return { value: "IconComponent", done: "+51" };
+                      return { value: "IconComponent", done: null };
                     } else {
                       c3 = 1;
                       const obj4 = { channelId: id.id, source: "In-channel greet" };
@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = tmp(1126).intl;
       intl2.formatToPlainString(channel(1126).t.m0zYbV, { username: name });
       let obj5 = hasInputText(4962);
-      const showConvoStarterInDM = channel(11963).useShowConvoStarterInDM(channel);
+      const showConvoStarterInDM = channel(11965).useShowConvoStarterInDM(channel);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [StickersStore];
         cResult[6] = items2;
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp20 = cResult[9];
       }
-      const tmpResult7 = channel(11963);
+      const tmpResult7 = channel(11965);
       const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
       if (cResult[10] !== showConvoStarterInDM) {
         class U {
@@ -580,7 +580,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         withTiming: channel(5093).withTiming,
         STANDARD_EASING: channel(1200).STANDARD_EASING,
       };
-      const shouldAnimateSticker = channel(9757).useShouldAnimateSticker(false);
+      const shouldAnimateSticker = channel(9758).useShouldAnimateSticker(false);
       if (!showConvoStarterInDM) {
         class U {
           constructor() {
@@ -615,7 +615,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = tmp4.gradient;
         cResult[15] = tmp32;
       }
-      const tmpResult10 = channel(9757);
+      const tmpResult10 = channel(9758);
     }
   : function DMMessageStickerGreeting(channel) {
       channel = channel.channel;

@@ -17,7 +17,7 @@ import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx
 import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
-import _modDef7728 from "../../../../_runtime/metro/07728__.js";
+import _modDef7729 from "../../../../_runtime/metro/07729__.js";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import Modal from "../../../design/components/Modal/native/Modal.native.tsx";
@@ -47,7 +47,7 @@ function FamilyCenterPrereqLoading(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -207,7 +207,7 @@ function getScreens(userId, linkCode) {
   return obj;
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7259);
+const FamilyCenterConstants = fn(7260);
 ({
   FAMILY_CENTER_AGE_VERIFICATION_RESUME_TIMEOUT: closure_7,
   FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES: closure_8,
@@ -1117,7 +1117,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { source: _modDef10713, color: "#FFF" };
                 let tmp26 = closure_1_11(native.Icon, obj2);
               } else {
-                const obj3 = { source: _modDef7728, color: "#FFF" };
+                const obj3 = { source: _modDef7729, color: "#FFF" };
                 tmp26 = closure_1_11(native.Icon, obj3);
               }
               cResult[14] = icon;
@@ -1265,7 +1265,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { source: _modDef10713, color: "#FFF" };
         let tmp15Result = closure_1_11(native.Icon, obj7);
       } else {
-        const obj8 = { source: _modDef7728, color: "#FFF" };
+        const obj8 = { source: _modDef7729, color: "#FFF" };
         tmp15Result = closure_1_11(native.Icon, obj8);
       }
       const obj9 = { children: null };
@@ -2096,7 +2096,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       return closure_1_11(closure_23, obj);
     };
 let obj27 = { headerShown: true, headerLeft: null, headerTitle: null };
-const NavigatorHeader = fn(6200);
+const NavigatorHeader = fn(6201);
 obj27.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
 obj27.headerTitle = function headerTitle() {
   return null;
@@ -2150,13 +2150,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [linkCode, userId];
       const memo = noop.useMemo(() => getScreens(userId, linkCode), items);
       const obj = {
-        initialRouteName: userId(11529).FamilyCenterModalRequestSections.PREREQ_LOADING,
+        initialRouteName: userId(11531).FamilyCenterModalRequestSections.PREREQ_LOADING,
         screens: memo,
         headerBackTitle: null,
       };
       const intl = userId(1126).intl;
       obj.headerBackTitle = intl.string(userId(1126).t["13/7kX"]);
-      return closure_11(userId(10602).Modal, obj);
+      return closure_11(userId(10603).Modal, obj);
     };
 export const FamilyCenterModalRequestConfirm = tmp4;
 export const FamilyCenterModalRequestSuccess = tmp5;

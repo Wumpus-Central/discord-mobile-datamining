@@ -4,7 +4,7 @@ import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import FastImageDefault from "FastImage.tsx";
 import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
-import _modDef9640 from "../../../_runtime/metro/09640__.js";
+import _modDef9641 from "../../../_runtime/metro/09641__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -59,13 +59,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[9] === iconStyle) {
                 }
               }
-              let obj3 = { style: iconStyle, icon, value: name, size: tmp(6158).GuildIconSizes.XLARGE, animate: true };
-              const tmp24 = closure_7(onChangeIconPress(6158), obj3);
+              let obj3 = { style: iconStyle, icon, value: name, size: tmp(6159).GuildIconSizes.XLARGE, animate: true };
+              const tmp24 = closure_7(onChangeIconPress(6159), obj3);
               cResult[8] = icon;
               cResult[9] = iconStyle;
               cResult[10] = name;
               cResult[11] = tmp24;
-              const tmp23 = onChangeIconPress(6158);
+              const tmp23 = onChangeIconPress(6159);
             } else {
               if (cResult[12] !== icon) {
                 const source = tmp(1415).makeSource(icon);
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 let obj4 = { style: tmp15, source: tmp13 };
-                const tmp19 = closure_7(onChangeIconPress(6156), obj4);
+                const tmp19 = closure_7(onChangeIconPress(6157), obj4);
                 cResult[17] = tmp13;
                 cResult[18] = tmp15;
                 cResult[19] = tmp19;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     onPress: tmp11,
                     children: tmp31,
                   };
-                  const tmp41 = closure_7(tmp(6184).PressableOpacity, obj6);
+                  const tmp41 = closure_7(tmp(6185).PressableOpacity, obj6);
                   cResult[27] = tmp11;
                   cResult[28] = tmp31;
                   cResult[29] = tmp41;
@@ -154,9 +154,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             let tmp27 = null;
             if (!tmp4) {
-              const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(9640) };
-              tmp27 = closure_7(onChangeIconPress(6156), obj8);
-              const tmp30 = onChangeIconPress(6156);
+              const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(9641) };
+              tmp27 = closure_7(onChangeIconPress(6157), obj8);
+              const tmp30 = onChangeIconPress(6157);
             }
             cResult[20] = tmp4;
             cResult[21] = tmp6;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -355,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [tmp8];
       let tmp17 = null;
       if (!flag) {
-        let obj5 = { style: tmp.uploadIcon, source: _modDef9640 };
+        let obj5 = { style: tmp.uploadIcon, source: _modDef9641 };
         tmp17 = closure_7(FastImageDefault, obj5);
       }
       items1[1] = tmp17;

@@ -15,7 +15,7 @@ let closure_3 = ["isActive", "disableTint", "showBadge", "isSmallSize", "backgro
 let closure_4 = ["isSmallSize"];
 let closure_5 = ["notifications", "isMentioned"];
 const View = fn(17).View;
-const resetFocusTimer = fn(10353).resetFocusTimer;
+const resetFocusTimer = fn(10354).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ColorUtils = fn(4967);
@@ -183,7 +183,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                       style: tmp16,
                                                       children: tmp42,
                                                     };
-                                                    const tmp48 = closure_10(onPress(6184).PressableOpacity, obj3);
+                                                    const tmp48 = closure_10(onPress(6185).PressableOpacity, obj3);
                                                     cResult[46] = accessibilityLabel;
                                                     cResult[47] = accessibilityState;
                                                     cResult[48] = tmp42;

@@ -12,7 +12,7 @@ require = fn;
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SHARE_PREPARING_MODAL_KEY = fn(8484).SHARE_PREPARING_MODAL_KEY;
+const SHARE_PREPARING_MODAL_KEY = fn(8485).SHARE_PREPARING_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5092);
@@ -50,15 +50,15 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
       ({ animationDriver, channelId } = arg0);
       let tmp4 = closure_10();
       let obj = isModalOpen(576);
-      const headerLayoutAnimation = isModalOpen(13052).useHeaderLayoutAnimation(animationDriver);
+      const headerLayoutAnimation = isModalOpen(13057).useHeaderLayoutAnimation(animationDriver);
       if (cResult[0] === disableDownload) {
         if (cResult[1] === shareable) {
           if (cResult[2] === source) {
             let tmp6 = cResult[3];
           }
-          const mediaShareActions = tmp(8452).useMediaShareActions(tmp6);
+          const mediaShareActions = tmp(8453).useMediaShareActions(tmp6);
           const tmp9 = useShouldHideMediaOptionsDefault(channelId);
-          const tmpResult = tmp(8452);
+          const tmpResult = tmp(8453);
           isModalOpen = tmp(4976).useIsModalOpen(SHARE_PREPARING_MODAL_KEY);
           const tmpResult3 = tmp(4976);
           class T {
@@ -103,7 +103,7 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
           ({ navbarInner, navbarLeft } = tmp4);
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
             let intl = tmp(1126).intl;
-            const tmp24 = closure_8(tmp(6207).XSmallIcon, { size: "md", color: "interactive-text-active" });
+            const tmp24 = closure_8(tmp(6208).XSmallIcon, { size: "md", color: "interactive-text-active" });
             cResult[7] = intl.string(tmp(1126).t.cpT0Cq);
             cResult[8] = tmp24;
             let tmp21 = tmp24;
@@ -217,7 +217,7 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
                                 const obj8 = { style: navbarInner, children: null };
                                 const items1 = [tmp35, tmp39];
                                 obj8.children = items1;
-                                const tmp47 = closure_9(tmp(8489).MediaModalOverlayHeaderWrapper, obj8);
+                                const tmp47 = closure_9(tmp(8490).MediaModalOverlayHeaderWrapper, obj8);
                                 class T {
                                   constructor() {
                                     obj = closure_0(closure_2[13]);
@@ -360,18 +360,18 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
       cResult[2] = source;
       cResult[3] = obj17;
       tmp6 = obj17;
-      const obj2 = isModalOpen(13052);
+      const obj2 = isModalOpen(13057);
     }
   : function MediaModalOverlayHeader(arg0) {
       ({ source, contextName, contextIcon } = arg0);
       let isModalOpen;
       ({ onClose, disableDownload, disableMediaOverlayButton, shareable, animationDriver, channelId } = arg0);
       const tmp = closure_10();
-      const headerLayoutAnimation = isModalOpen(13052).useHeaderLayoutAnimation(animationDriver);
-      let obj = isModalOpen(13052);
-      const mediaShareActions = isModalOpen(8452).useMediaShareActions({ source, disableDownload, shareable });
+      const headerLayoutAnimation = isModalOpen(13057).useHeaderLayoutAnimation(animationDriver);
+      let obj = isModalOpen(13057);
+      const mediaShareActions = isModalOpen(8453).useMediaShareActions({ source, disableDownload, shareable });
       const tmp7 = useShouldHideMediaOptionsDefault(channelId);
-      const obj2 = isModalOpen(8452);
+      const obj2 = isModalOpen(8453);
       isModalOpen = isModalOpen(4976).useIsModalOpen(SHARE_PREPARING_MODAL_KEY);
       const obj3 = isModalOpen(4976);
       const fn = function _() {
@@ -404,7 +404,7 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
       const obj5 = { withTiming: isModalOpen(5093).withTiming, isPreparing: isModalOpen };
       let intl = tmp2(1126).intl;
       obj11.accessibilityLabel = intl.string(isModalOpen(1126).t.cpT0Cq);
-      obj11.icon = closure_8(isModalOpen(6207).XSmallIcon, { size: "md", color: "interactive-text-active" });
+      obj11.icon = closure_8(isModalOpen(6208).XSmallIcon, { size: "md", color: "interactive-text-active" });
       obj11.onPress = onClose;
       const items1 = [closure_8(MediaViewerOverlayButtonDefault, obj11)];
       let tmp10Result3 = null != contextName;
@@ -456,12 +456,12 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
               obj.accessibilityLabel = intl.string(isModalOpen(1126).t.PdRCRg);
               const tmp4 = MediaViewerOverlayButtonDefault;
               if (obj2.isAndroid()) {
-                let tmp2Result = closure_1_8(isModalOpen(13057).MoreVerticalIcon, {
+                let tmp2Result = closure_1_8(isModalOpen(13062).MoreVerticalIcon, {
                   size: "md",
                   color: "interactive-text-active",
                 });
               } else {
-                tmp2Result = closure_1_8(isModalOpen(9241).MoreHorizontalIcon, {
+                tmp2Result = closure_1_8(isModalOpen(9242).MoreHorizontalIcon, {
                   size: "md",
                   color: "interactive-text-active",
                 });
@@ -472,7 +472,7 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
               return closure_1_8(tmp4, obj);
             },
           };
-          tmp10Result4 = closure_8(tmp2(9362).ContextMenu, obj19);
+          tmp10Result4 = closure_8(tmp2(9363).ContextMenu, obj19);
         }
         items4[1] = tmp10Result4;
         obj17.children = items4;
@@ -480,7 +480,7 @@ export const MediaModalOverlayHeader = ReactCompilerGating.isReactCompilerEnable
       }
       items3[1] = tmp12Result;
       obj9.children = items3;
-      obj8.children = closure_9(isModalOpen(8489).MediaModalOverlayHeaderWrapper, obj9);
+      obj8.children = closure_9(isModalOpen(8490).MediaModalOverlayHeaderWrapper, obj9);
       obj6.children = closure_8(ReanimatedRexportDefault.View, obj8);
       return closure_8(ReanimatedRexportDefault.View, obj6);
     };

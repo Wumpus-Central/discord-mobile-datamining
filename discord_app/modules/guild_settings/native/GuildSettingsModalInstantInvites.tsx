@@ -11,7 +11,7 @@ import TableRowIcon from "../../../design/components/TableRow/native/TableRowIco
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
 import GuildAntiRaidTypes from "../../guild_antiraid/GuildAntiRaidTypes.tsx";
 import InstantInvite from "../../guild_instant_invites/native/InstantInvite.tsx";
-import _modDef13878 from "../../../../_runtime/metro/13878__.js";
+import _modDef13901 from "../../../../_runtime/metro/13901__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildIncidentsStore from "../../guild_antiraid/GuildIncidentsStore.tsx";
@@ -221,7 +221,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] !== invitesDisabled) {
           let tmp15 = null;
           if (invitesDisabled) {
-            const obj5 = { source: _modDef13878 };
+            const obj5 = { source: _modDef13901 };
             tmp15 = __initData(TableRowIcon.TableRowIcon, obj5);
           }
           cResult[5] = invitesDisabled;
@@ -279,7 +279,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       };
       let tmp7Result = null;
       if (invitesDisabled) {
-        const obj4 = { source: _modDef13878 };
+        const obj4 = { source: _modDef13901 };
         tmp7Result = __initData(TableRowIcon.TableRowIcon, obj4);
       }
       obj3.icon = tmp7Result;
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { guild: stateFromStores, invites: stateFromStores1, contentContainerStyle, showChannel: true };
-        const items2 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(tmp(6727).NavScrim, {})];
+        const items2 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(tmp(6728).NavScrim, {})];
         obj2.children = items2;
         tmp13 = closure_14(closure_13, obj2);
       }
@@ -384,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           contentContainerStyle: guildId.contentContainerStyle,
           showChannel: true,
         };
-        const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(6727).NavScrim, {})];
+        const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(6728).NavScrim, {})];
         obj2.children = items1;
         tmp6 = closure_14(closure_13, obj2);
       }

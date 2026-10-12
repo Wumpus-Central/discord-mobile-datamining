@@ -2,12 +2,13 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import useConjurePublishAction from "../useConjurePublishAction.tsx";
+import useConjurePublishActionDefault from "../useConjurePublishAction.tsx";
+import conjurePublishCard from "../conjurePublishCard.tsx";
 import conjureReminderSlot from "../../reminders/conjureReminderSlot.tsx";
+import useConjurePublishedAppNameDefault from "../useConjurePublishedAppName.tsx";
+import useConjurePublishedServerNameDefault from "../useConjurePublishedServerName.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-
-const useConjurePublishActionDefault = useConjurePublishAction;
 
 const _modDef3849 = tmp4(3849);
 require = fn;
@@ -16,90 +17,60 @@ const jsxProd = fn(21);
 fn(558);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function PublishedNoticeLine(projectId) {
-      const cResult = projectId(576).c(10);
-      projectId = projectId.projectId;
-      const notice = projectId.notice;
-      const context = noop.useContext(projectId(17110).ConjurePublishActionContext);
-      const tmp5 = context(17221)(projectId);
-      const tmp6 = context(17222)(projectId);
-      if (cResult[0] === context) {
-        if (cResult[1] === projectId) {
-          let tmp7 = cResult[2];
-        }
-        if (cResult[3] === tmp7) {
-          if (cResult[4] === tmp5) {
-            if (cResult[5] === notice) {
-              if (cResult[6] === tmp6) {
-                let tmp8 = cResult[7];
-              }
-              if (cResult[8] !== tmp8) {
-                const obj2 = { variant: "text-md/normal", color: "text-default", children: tmp8 };
-                const tmp14 = closure_5(tmp(5088).Text, obj2);
-                cResult[8] = tmp8;
-                cResult[9] = tmp14;
-                let tmp12 = tmp14;
-              } else {
-                tmp12 = cResult[9];
-              }
-              return tmp12;
-            }
+  ? function PublishedNoticeLine(arg0) {
+      const cResult = c.c(6);
+      ({ projectId, notice } = arg0);
+      const tmp4 = useConjurePublishedAppNameDefault(projectId);
+      const tmp5 = useConjurePublishedServerNameDefault(projectId);
+      if (cResult[0] === tmp4) {
+        if (cResult[1] === notice) {
+          if (cResult[2] === tmp5) {
+            let tmp6 = cResult[3];
           }
+          if (cResult[4] !== tmp6) {
+            const obj2 = { variant: "text-md/normal", color: "text-default", children: tmp6 };
+            const tmp11 = hasOwnProperty(Text_Text.Text, obj2);
+            cResult[4] = tmp6;
+            cResult[5] = tmp11;
+            let tmp9 = tmp11;
+          } else {
+            tmp9 = cResult[5];
+          }
+          return tmp9;
         }
-        const intl = tmp(1126).intl;
-        const obj3 = { name: tmp5, server: null, onOpen: null };
-        let str = tmp6;
-        const tmpResult = tmp(17223);
-        if (tmp6 == null) {
-          str = "";
-        }
-        obj3.server = str;
-        obj3.onOpen = tmp7;
-        const formatResult = intl.format(tmp(17223).publishNoticeMessage(notice, tmp6), obj3);
-        cResult[3] = tmp7;
-        cResult[4] = tmp5;
-        cResult[5] = notice;
-        cResult[6] = tmp6;
-        cResult[7] = formatResult;
-        tmp8 = formatResult;
-        const publishNoticeMessageResult = tmp(17223).publishNoticeMessage(notice, tmp6);
       }
-      const fn = function o() {
-        if (null != context) {
-          const result = useConjurePublishAction.openConjurePublishedApp(projectId, tmp);
-        }
-      };
-      cResult[0] = context;
-      cResult[1] = projectId;
-      cResult[2] = fn;
-      tmp7 = fn;
-      let obj = projectId(576);
+      const intl = util.intl;
+      const obj3 = { name: tmp4, server: null };
+      let str = tmp5;
+      const tmpResult = conjurePublishCard;
+      if (tmp5 == null) {
+        str = "";
+      }
+      obj3.server = str;
+      const formatResult = intl.format(conjurePublishCard.publishNoticeMessage(notice, tmp5), obj3);
+      cResult[0] = tmp4;
+      cResult[1] = notice;
+      cResult[2] = tmp5;
+      cResult[3] = formatResult;
+      tmp6 = formatResult;
+      const publishNoticeMessageResult = conjurePublishCard.publishNoticeMessage(notice, tmp5);
     }
   : function PublishedNoticeLine(projectId) {
       projectId = projectId.projectId;
-      const context = noop.useContext(projectId(17110).ConjurePublishActionContext);
-      const tmp3 = context(17222)(projectId);
-      const items = [context, projectId];
-      const callback = noop.useCallback(() => {
-        if (null != context) {
-          const result = useConjurePublishAction.openConjurePublishedApp(projectId, tmp);
-        }
-      }, items);
-      const intl = projectId(1126).intl;
-      const tmp2 = context(17221)(projectId);
-      const obj2 = { name: tmp2, server: null, onOpen: null };
-      let str = tmp3;
-      let obj = projectId(17223);
-      if (tmp3 == null) {
+      const tmp2 = useConjurePublishedServerNameDefault(projectId);
+      const intl = util.intl;
+      const tmp = useConjurePublishedAppNameDefault(projectId);
+      const obj2 = { name: tmp, server: null };
+      let str = tmp2;
+      if (tmp2 == null) {
         str = "";
       }
-      const publishNoticeMessageResult = projectId(17223).publishNoticeMessage(projectId.notice, tmp3);
+      const publishNoticeMessageResult = conjurePublishCard.publishNoticeMessage(projectId.notice, tmp2);
       obj2.server = str;
-      obj2.onOpen = callback;
-      return closure_5(projectId(5088).Text, {
+      return hasOwnProperty(Text_Text.Text, {
         variant: "text-md/normal",
         color: "text-default",
-        children: intl.format(projectId(17223).publishNoticeMessage(projectId.notice, tmp3), obj2),
+        children: intl.format(conjurePublishCard.publishNoticeMessage(projectId.notice, tmp2), obj2),
       });
     };
 ReactCompilerGating = fn(558);

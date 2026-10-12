@@ -7,7 +7,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import MobileEmojiPickerUpsellRestyleExperiment from "../../../premium/experiments/MobileEmojiPickerUpsellRestyleExperiment.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
-import _modDef9519 from "../../../../../_runtime/metro/09519__.js";
+import _modDef9520 from "../../../../../_runtime/metro/09520__.js";
 import PremiumExpressionPickerSearchUpsellDefault from "../../../premium/roadblocks/native/views/PremiumExpressionPickerSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -15,7 +15,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const util = NitroWheelIcon(1126);
 const native = NitroWheelIcon(1200);
 const PremiumUtils = NitroWheelIcon(4769);
-const NitroWheelIcon2 = NitroWheelIcon(9035);
+const NitroWheelIcon2 = NitroWheelIcon(9036);
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7 } = Constants);
@@ -317,13 +317,13 @@ export const PremiumSearchUpsell = noop.memo(
           } else {
             const obj6 = {
               style: nitroIcon.nitroIcon,
-              source: _modDef9519,
+              source: _modDef9520,
               disableColor: true,
               size: native.Icon.Sizes.MEDIUM,
             };
             tmp15Result = jsx(native.Icon, {
               style: nitroIcon.nitroIcon,
-              source: _modDef9519,
+              source: _modDef9520,
               disableColor: true,
               size: native.Icon.Sizes.MEDIUM,
             });
@@ -371,13 +371,13 @@ export const PremiumSearchUpsell = noop.memo(
         } else {
           const obj5 = {
             style: tmp.nitroIcon,
-            source: _modDef9519,
+            source: _modDef9520,
             disableColor: true,
             size: native.Icon.Sizes.MEDIUM,
           };
           tmp7Result = jsx(native.Icon, {
             style: tmp.nitroIcon,
-            source: _modDef9519,
+            source: _modDef9520,
             disableColor: true,
             size: native.Icon.Sizes.MEDIUM,
           });

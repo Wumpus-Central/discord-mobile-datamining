@@ -59,7 +59,7 @@ function shouldShowInviter(invite, isGuildMember) {
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, InviteStates: c10 } = Constants);
-let closure_11 = fn(12480).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(12482).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const createStyles = fn(5092);
@@ -164,7 +164,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != invite.inviter) {
             let tmp10 = null;
             if (null != invite.inviter) {
-              const obj2 = { avatarStyle: user.avatar, user: null, guildId: "Array", size: "nuppineula" };
+              const obj2 = { avatarStyle: user.avatar, user: null, guildId: "Array", size: true };
               const tmp16 = new UserRecord(invite.inviter);
               obj2.user = tmp16;
               obj2.size = native.AvatarSizes.XLARGE;
@@ -200,7 +200,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != invite.inviter) {
           let tmp2Result = null;
           if (null != invite.inviter) {
-            const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: "nuppineula" };
+            const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: true };
             const tmp14 = new UserRecord(invite.inviter);
             obj3.user = tmp14;
             obj3.size = native.AvatarSizes.XLARGE;
@@ -621,9 +621,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = isGuildMember(4962);
             }
           }
-          tmp3Result3 = tmp3(7422);
+          tmp3Result3 = tmp3(7423);
         }
-        tmp3Result = tmp3(7422);
+        tmp3Result = tmp3(7423);
       }
       const obj8 = { style: tmp.inviteJoinContainer, children: null };
       let tmp22 = null;
@@ -632,10 +632,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         if (!tmp3Result4.isFriendInvite(invite)) {
           const obj10 = { style: tmp.inviterIconWrapper, children: null };
           const obj12 = { source: memo, style: tmp.inviterIcon };
-          obj10.children = closure_12(isGuildMember(6156), obj12);
+          obj10.children = closure_12(isGuildMember(6157), obj12);
           tmp22 = closure_12(View, obj10);
         }
-        tmp3Result4 = tmp3(7422);
+        tmp3Result4 = tmp3(7423);
       }
       const items1 = [
         tmp22,
@@ -1217,11 +1217,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp8Result) {
         const obj9 = { style: tmp.embedDetailsCard, children: null };
         const obj10 = { event: guild_scheduled_event };
-        const items3 = [closure_12(tmp4(8530).GuildEventCardHeader, obj10), ,];
+        const items3 = [closure_12(tmp4(8531).GuildEventCardHeader, obj10), ,];
         const obj11 = { event: guild_scheduled_event };
-        items3[1] = closure_12(tmp4(8530).GuildEventCardMetaInfo, obj11);
+        items3[1] = closure_12(tmp4(8531).GuildEventCardMetaInfo, obj11);
         const obj12 = { event: guild_scheduled_event };
-        items3[2] = closure_12(tmp4(8530).GuildEventCardGuildInfo, obj12);
+        items3[2] = closure_12(tmp4(8531).GuildEventCardGuildInfo, obj12);
         obj9.children = items3;
         tmp8Result = closure_13(View, obj9);
       }

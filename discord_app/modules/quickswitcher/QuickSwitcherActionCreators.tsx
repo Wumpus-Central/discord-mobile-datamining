@@ -311,7 +311,7 @@ let closure_25 = async function _openInviteFromQuickSwitcher(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -352,7 +352,7 @@ let closure_25 = async function _openInviteFromQuickSwitcher(arg0) {
           const obj = closure_130_1(closure_130_2[15]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp20) {
       c4 = tmp;
@@ -374,23 +374,23 @@ const Constants = fn(1085);
 const isStaticChannelRoute = fn(2072).isStaticChannelRoute;
 const CollectibleShopTab = fn(1087).CollectibleShopTab;
 let obj = {};
-obj[fn(8699).AutocompleterQuerySymbols.USER] = fn(8699).AutocompleterResultTypes.USER;
-obj[fn(8699).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(8699).AutocompleterResultTypes.TEXT_CHANNEL;
-obj[fn(8699).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(8699).AutocompleterResultTypes.VOICE_CHANNEL;
-obj[fn(8699).AutocompleterQuerySymbols.GUILD] = fn(8699).AutocompleterResultTypes.GUILD;
-obj[fn(8699).AutocompleterQuerySymbols.GAME_PROFILE] = fn(8699).AutocompleterResultTypes.GAME_PROFILE;
+obj[fn(8700).AutocompleterQuerySymbols.USER] = fn(8700).AutocompleterResultTypes.USER;
+obj[fn(8700).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(8700).AutocompleterResultTypes.TEXT_CHANNEL;
+obj[fn(8700).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(8700).AutocompleterResultTypes.VOICE_CHANNEL;
+obj[fn(8700).AutocompleterQuerySymbols.GUILD] = fn(8700).AutocompleterResultTypes.GUILD;
+obj[fn(8700).AutocompleterQuerySymbols.GAME_PROFILE] = fn(8700).AutocompleterResultTypes.GAME_PROFILE;
 let closure_19 = Object.freeze(obj);
 const regExp = new RegExp(
   "^" +
-    fn(8699).AutocompleterQuerySymbols.USER +
+    fn(8700).AutocompleterQuerySymbols.USER +
     "|" +
-    fn(8699).AutocompleterQuerySymbols.TEXT_CHANNEL +
+    fn(8700).AutocompleterQuerySymbols.TEXT_CHANNEL +
     "|" +
-    fn(8699).AutocompleterQuerySymbols.VOICE_CHANNEL +
+    fn(8700).AutocompleterQuerySymbols.VOICE_CHANNEL +
     "|\\" +
-    fn(8699).AutocompleterQuerySymbols.GUILD +
+    fn(8700).AutocompleterQuerySymbols.GUILD +
     "|\\" +
-    fn(8699).AutocompleterQuerySymbols.GAME_PROFILE,
+    fn(8700).AutocompleterQuerySymbols.GAME_PROFILE,
 );
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quickswitcher/QuickSwitcherActionCreators.tsx");
@@ -443,10 +443,10 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
   _require = type;
   type = type.type;
   if (require("sortByMatchScore").AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-    if (tmp(8699).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-      if (tmp(8699).AutocompleterResultTypes.GROUP_DM !== type) {
-        if (tmp(8699).AutocompleterResultTypes.DM !== type) {
-          if (tmp(8699).AutocompleterResultTypes.USER === type) {
+    if (tmp(8700).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+      if (tmp(8700).AutocompleterResultTypes.GROUP_DM !== type) {
+        if (tmp(8700).AutocompleterResultTypes.DM !== type) {
+          if (tmp(8700).AutocompleterResultTypes.USER === type) {
             DispatcherDefault.dispatch({ type: "QUICKSWITCHER_HIDE" });
             trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, type);
             const obj3 = { type: "QUICKSWITCHER_SWITCH_TO", result: type };
@@ -462,7 +462,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -482,7 +482,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                       obj5.recipientIds = items;
                       dependencyMap = 1;
                       c3 = 1;
-                      const obj6 = { value: tmp2(7014).openPrivateChannel(obj5), done: false };
+                      const obj6 = { value: tmp2(7015).openPrivateChannel(obj5), done: false };
                       return obj6;
                     }
                   } else if (arg0 === 1) {
@@ -494,9 +494,9 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(11571).openChannelTabActive(closure_128_0, null);
+                    tmp5(11573).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp16) {
                   c3 = tmp;
@@ -515,7 +515,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -535,7 +535,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                       obj5.recipientIds = items;
                       dependencyMap = 1;
                       c3 = 1;
-                      const obj6 = { value: tmp2(7014).openPrivateChannel(obj5), done: false };
+                      const obj6 = { value: tmp2(7015).openPrivateChannel(obj5), done: false };
                       return obj6;
                     }
                   } else if (arg0 === 1) {
@@ -547,9 +547,9 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(11571).openChannelTabActive(closure_128_0, null);
+                    tmp5(11573).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp16) {
                   c3 = tmp;
@@ -576,7 +576,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
     trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, type);
     let obj4 = { type: "QUICKSWITCHER_SWITCH_TO", result: type };
     DispatcherDefault.dispatch(obj4);
-    tmp(11571).openChannelTabActive(channel.id, guildId);
-    const tmpResult = tmp(11571);
+    tmp(11573).openChannelTabActive(channel.id, guildId);
+    const tmpResult = tmp(11573);
   }
 };

@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16663 from "../../../../../_runtime/metro/16663__.js";
+import _modDef16687 from "../../../../../_runtime/metro/16687__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -140,11 +140,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
-          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(16663) };
-          const tmp19 = closure_6(markAsDismissed(6156), obj6);
+          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(16687) };
+          const tmp19 = closure_6(markAsDismissed(6157), obj6);
           cResult[11] = tmp4.image;
           cResult[12] = tmp19;
-          const tmp18 = markAsDismissed(6156);
+          const tmp18 = markAsDismissed(6157);
         } else {
           class N {
             constructor() {
@@ -307,7 +307,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t.kUUFbG);
       items[1] = closure_6(Text_Text.Text, obj4);
-      const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16663 };
+      const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16687 };
       items[2] = closure_6(FastImageDefault, obj5);
       const obj6 = {
         onPress: function handleCheckItOut() {

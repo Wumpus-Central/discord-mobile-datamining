@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj4 = {};
           const merged = Object.assign(tmp6);
-          obj4.icon = tmp(6113).ClipboardListIcon;
+          obj4.icon = tmp(6114).ClipboardListIcon;
           obj4.header = tmp12;
           obj4.subtitle = tmp13;
           obj4.buttons = tmp26;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj = {};
       const merged1 = Object.assign(merged);
-      obj.icon = guildId(6113).ClipboardListIcon;
+      obj.icon = guildId(6114).ClipboardListIcon;
       const intl = guildId(1126).intl;
       obj.header = intl.string(guildId(1126).t.zhfXbs);
       const intl2 = guildId(1126).intl;
@@ -163,5 +163,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items1[1] = closure_6(guildId(5379).Button, obj4);
       obj2.children = items1;
       obj.buttons = closure_8(closure_7, obj2);
-      return closure_6(onClose(6112), obj);
+      return closure_6(onClose(6113), obj);
     };

@@ -102,13 +102,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol2 = Symbol;
           ({ alert: _alert, illustrationContainer } = tmp10);
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            cResult[14] = tmp(6104);
+            cResult[14] = tmp(6105);
             class M {
               constructor() {
                 return closure_1_6.useReducedMotion;
               }
             }
-            const tmpResult4 = tmp(6104);
+            const tmpResult4 = tmp(6105);
           } else {
             const tmp23 = cResult[14];
           }

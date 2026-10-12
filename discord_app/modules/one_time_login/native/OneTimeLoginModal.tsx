@@ -623,7 +623,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj4 = { style: tmp.container, children: null };
       let obj5 = { style: tmp.centerContent, children: null };
       const obj6 = { source: null, style: null };
-      obj6.source = token(14061);
+      obj6.source = token(14084);
       obj6.style = tmp.logo;
       const items7 = [closure_12(FastImageDefault, obj6)];
       const obj7 = { style: tmp.loadingContainer, children: null };
@@ -652,7 +652,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj11.text = intl3.string(token(1126).t.FIEwfG);
       obj11.onPress = onPress;
       obj11.textStyle = tmp.link;
-      items10[1] = closure_12(token(6622).LinkButton, obj11);
+      items10[1] = closure_12(token(6623).LinkButton, obj11);
       obj9.children = items10;
       items9[1] = closure_13(callback1, obj9);
       obj4.children = items9;

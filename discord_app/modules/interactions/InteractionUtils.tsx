@@ -32,7 +32,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   } else if (2 === tmp7) {
     c3 = 0;
     c5 = 3;
-    return { value: "IconComponent", done: "+51" };
+    return { value: "IconComponent", done: null };
   } else if (3 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;

@@ -1,6 +1,7 @@
 // discord_app/modules/conjure/history/useConjureHistoryData.tsx
 import c from "../../../../_runtime/00576_c.js";
 import ConjureHistoryFormat from "ConjureHistoryFormat.tsx";
+import conjureHistoryRequests from "conjureHistoryRequests.tsx";
 import ConjureRestorePanelOp from "ConjureRestorePanelOp.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,14 +9,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ConjureConnectionStore = fn(13213);
-({
-  fetchDatabaseRestorePoints: closure_4,
-  fetchDatabaseRestoreWindow: hasOwnProperty,
-  fetchVersionHistory: metroRequire,
-} = ConjureConnectionStore);
 let ReactCompilerGating = fn(558);
-let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHistoryLoad(arg0) {
       closure_0 = arg0;
       const cResult = c.c(12);
@@ -33,13 +28,13 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
                 const _Date = Date;
                 obj2.nowMs = Date.now();
                 obj.state = obj2;
-                backups(obj);
+                _slicedToArray(obj);
               }
             },
             () => {
               if (!c0) {
                 const obj = { load, state: { status: "failed" } };
-                backups(obj);
+                _slicedToArray(obj);
               }
             },
           );
@@ -61,35 +56,35 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const fn2 = function l() {
-            backups(null);
+            _slicedToArray(null);
             dependencyMap((arg0) => arg0 + 1);
           };
           cResult[5] = fn2;
         }
         const _Symbol2 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          class B {
+          class D {
             constructor() {
               return closure_1((arg0) => arg0 + 1);
             }
           }
-          cResult[6] = B;
+          cResult[6] = D;
         } else {
-          class B {
+          class D {
             constructor() {
               return closure_1((arg0) => arg0 + 1);
             }
           }
         }
         if (cResult[7] === arg0) {
-          class B {
+          class D {
             constructor() {
               return closure_1((arg0) => arg0 + 1);
             }
           }
         }
         if (null == tmp5) {
-          class B {
+          class D {
             constructor() {
               return closure_1((arg0) => arg0 + 1);
             }
@@ -98,7 +93,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = tmp5;
           cResult[9] = state;
         } else {
-          class B {
+          class D {
             constructor() {
               return closure_1((arg0) => arg0 + 1);
             }
@@ -129,13 +124,13 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
               const _Date = Date;
               obj2.nowMs = Date.now();
               obj.state = obj2;
-              backups(obj);
+              _slicedToArray(obj);
             }
           },
           () => {
             if (!c0) {
               const obj = { load, state: { status: "failed" } };
-              backups(obj);
+              _slicedToArray(obj);
             }
           },
         );
@@ -144,7 +139,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         };
       }, items);
       const callback = noop.useCallback(() => {
-        backups(null);
+        _slicedToArray(null);
         closure_1((arg0) => arg0 + 1);
       }, []);
       if (null != tmp3) {
@@ -155,7 +150,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       }
     };
-let closure_8 = [];
+let closure_5 = [];
 ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/history/useConjureHistoryData.tsx");
@@ -183,8 +178,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp9;
       if (cResult[4] !== arg0) {
-        const fn = function b() {
-          return timestampProducer(closure_0);
+        const fn = function v() {
+          return conjureHistoryRequests.fetchVersionHistory(closure_0);
         };
         cResult[4] = arg0;
         cResult[5] = fn;
@@ -192,10 +187,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp11 = cResult[5];
       }
-      const tmp13 = refresh3(tmp11);
+      const tmp13 = state2(tmp11);
       if (cResult[6] !== arg0) {
-        const fn2 = function k() {
-          const items = [React4(closure_0, "stable"), hasOwnProperty(closure_0, "stable")];
+        const fn2 = function h() {
+          const items = [conjureHistoryRequests.fetchDatabaseRestorePoints(closure_0, "stable")];
+          items[1] = conjureHistoryRequests.fetchDatabaseRestoreWindow(closure_0, "stable");
           return Promise.all(items).then((result) => {
             [tmp, tmp2] = result;
             return { points, window: _window };
@@ -207,39 +203,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp14 = cResult[7];
       }
-      const tmp12Result = refresh3(tmp14);
-      backups = tmp12Result;
+      const tmp12Result = state2(tmp14);
+      const backups = tmp12Result;
       if (cResult[8] === tmp9) {
         if (cResult[9] === arg0) {
           let tmp16 = cResult[10];
         }
         const tmp12Result3 = tmp12(tmp16);
-        noop = tmp12Result3;
+        let state = tmp12Result3;
         if (cResult[11] === tmp9) {
           if (cResult[12] === arg0) {
             let tmp18 = cResult[13];
           }
           const tmp12Result4 = tmp12(tmp18);
-          let state2 = tmp12Result4;
+          state2 = tmp12Result4;
           const refresh = tmp12Result.refresh;
-          class D {
-            constructor() {
-              if (closure_1) {
-                tmp4 = closure_5;
-                tmp5 = closure_0;
-                str = "preview";
-                resolved = closure_5(closure_0, "preview");
-              } else {
-                tmp = globalThis;
-                _Promise = Promise;
-                tmp2 = null;
-                resolved = Promise.resolve(null);
-              }
-              return resolved;
-            }
-          }
           const refresh2 = tmp12Result3.refresh;
-          refresh3 = tmp12Result4.refresh;
+          const refresh3 = tmp12Result4.refresh;
           if (cResult[14] === refresh) {
             if (cResult[15] === refresh2) {
               if (cResult[16] === refresh3) {
@@ -249,88 +229,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[19] === tmp12Result) {
                   if (cResult[20] === tmp12Result3) {
                     if (cResult[21] === tmp12Result4) {
-                      let state = tmp13.state;
+                      state = tmp13.state;
                       if (cResult[27] === state.data) {
                         if (cResult[28] === state.status) {
                           let tmp25 = cResult[29];
                         }
-                        class L {
-                          constructor(arg0) {
-                            obj = { environment: arg0, backups: null };
-                            if ("preview" === arg0) {
-                              tmp = closure_3;
-                              tmp2 = closure_4;
-                              closure_0 = closure_3;
-                              closure_1 = closure_4;
-                              state = closure_3.state;
-                              state2 = closure_4.state;
-                              str = "failed";
-                              if ("failed" !== state.status) {
-                                if ("failed" !== state2.status) {
-                                  str2 = "loading";
-                                  if ("loading" !== state.status) {
-                                    if ("loading" !== state2.status) {
-                                      tmp3 = null;
-                                      if (null == state2.data) {
-                                        obj1 = { status: "failed" };
-                                      } else {
-                                        obj1 = { status: "loaded", data: null, nowMs: null };
-                                        obj5 = { points: null, window: null };
-                                        obj5.points = state.data;
-                                        obj5.window = state2.data;
-                                        obj1.data = obj5;
-                                        obj1.nowMs = state.nowMs;
-                                      }
-                                    }
-                                  }
-                                  obj1 = { status: "loading" };
-                                }
-                                obj6 = { state: null, retry: null, refresh: null };
-                                obj6.state = obj1;
-                                obj6.retry = function retry() {
-                                  closure_0.retry();
-                                  closure_1.retry();
-                                };
-                                obj6.refresh = function refresh() {
-                                  closure_0.refresh();
-                                  closure_1.refresh();
-                                };
-                                tmp4 = obj6;
-                              }
-                              obj1 = { status: "failed" };
-                            } else {
-                              obj.backups = closure_2;
-                              return obj;
-                            }
-                            return;
-                          }
-                        }
-                        class D {
-                          constructor() {
-                            if (closure_1) {
-                              tmp4 = closure_5;
-                              tmp5 = closure_0;
-                              str = "preview";
-                              resolved = closure_5(closure_0, "preview");
-                            } else {
-                              tmp = globalThis;
-                              _Promise = Promise;
-                              tmp2 = null;
-                              resolved = Promise.resolve(null);
-                            }
-                            return resolved;
-                          }
-                        }
+                        state2 = tmp12Result3.state;
+                        const tmp32 = "loaded" === state2.status ? state2.data : refresh;
                         if (cResult[30] === tmp21) {
                           if (cResult[31] === tmp20) {
-                            if (cResult[32] === tmp32) {
-                              if (cResult[33] === tmp30) {
-                                if (cResult[34] === tmp31) {
+                            if (cResult[32] === tmp33) {
+                              if (cResult[33] === tmp31) {
+                                if (cResult[34] === tmp32) {
                                   if (cResult[35] === tmp25) {
                                     if (cResult[36] === tmp13) {
-                                      let tmp33 = cResult[37];
+                                      let tmp34 = cResult[37];
                                     }
-                                    return tmp33;
+                                    return tmp34;
                                   }
                                 }
                               }
@@ -346,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           refreshAllBackups: null,
                           versionTitles: null,
                         };
-                        class P {
+                        class B {
                           constructor() {
                             tmp = refresh();
                             tmp2 = refresh();
@@ -355,104 +270,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                         obj2.databases = tmp21;
-                        obj2.previewBackups = tmp31;
-                        obj2.previewBackupsLoading = "loading" === tmp12Result3.state.status;
+                        obj2.previewBackups = tmp32;
+                        obj2.previewBackupsLoading = "loading" === state2.status;
                         obj2.refreshAllBackups = tmp20;
                         obj2.versionTitles = tmp25;
                         cResult[30] = tmp21;
                         cResult[31] = tmp20;
-                        class B {
-                          constructor() {
-                            if (closure_1) {
-                              tmp4 = closure_4;
-                              tmp5 = closure_0;
-                              str = "preview";
-                              resolved = closure_4(closure_0, "preview");
-                            } else {
-                              tmp = globalThis;
-                              _Promise = Promise;
-                              tmp2 = closure_8;
-                              resolved = Promise.resolve(closure_8);
-                            }
-                            return resolved;
-                          }
-                        }
+                        cResult[32] = "loading" === state2.status;
                         cResult[33] = !tmp9;
-                        cResult[34] = tmp31;
+                        cResult[34] = tmp32;
                         cResult[35] = tmp25;
                         cResult[36] = tmp13;
                         cResult[37] = obj2;
-                        tmp33 = obj2;
+                        tmp34 = obj2;
                       }
-                      class L {
-                        constructor(arg0) {
-                          obj = { environment: arg0, backups: null };
-                          if ("preview" === arg0) {
-                            tmp = closure_3;
-                            tmp2 = closure_4;
-                            closure_0 = closure_3;
-                            closure_1 = closure_4;
-                            state = closure_3.state;
-                            state2 = closure_4.state;
-                            str = "failed";
-                            if ("failed" !== state.status) {
-                              if ("failed" !== state2.status) {
-                                str2 = "loading";
-                                if ("loading" !== state.status) {
-                                  if ("loading" !== state2.status) {
-                                    tmp3 = null;
-                                    if (null == state2.data) {
-                                      obj1 = { status: "failed" };
-                                    } else {
-                                      obj1 = { status: "loaded", data: null, nowMs: null };
-                                      obj5 = { points: null, window: null };
-                                      obj5.points = state.data;
-                                      obj5.window = state2.data;
-                                      obj1.data = obj5;
-                                      obj1.nowMs = state.nowMs;
-                                    }
-                                  }
-                                }
-                                obj1 = { status: "loading" };
-                              }
-                              obj6 = { state: null, retry: null, refresh: null };
-                              obj6.state = obj1;
-                              obj6.retry = function retry() {
-                                closure_0.retry();
-                                closure_1.retry();
-                              };
-                              obj6.refresh = function refresh() {
-                                closure_0.refresh();
-                                closure_1.refresh();
-                              };
-                              tmp4 = obj6;
-                            }
-                            obj1 = { status: "failed" };
-                          } else {
-                            obj.backups = closure_2;
-                            return obj;
-                          }
-                          return;
-                        }
-                      }
-                      class D {
-                        constructor() {
-                          if (closure_1) {
-                            tmp4 = closure_5;
-                            tmp5 = closure_0;
-                            str = "preview";
-                            resolved = closure_5(closure_0, "preview");
-                          } else {
-                            tmp = globalThis;
-                            _Promise = Promise;
-                            tmp2 = null;
-                            resolved = Promise.resolve(null);
-                          }
-                          return resolved;
-                        }
-                      }
+                      const _Map = Map;
                       const map = new Map();
-                      class P {
+                      class B {
                         constructor() {
                           tmp = refresh();
                           tmp2 = refresh();
@@ -474,77 +308,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let tmp22 = cResult[26];
                   }
                   const mapped = arr.map(tmp22);
-                  class L {
-                    constructor(arg0) {
-                      obj = { environment: arg0, backups: null };
-                      if ("preview" === arg0) {
-                        tmp = closure_3;
-                        tmp2 = closure_4;
-                        closure_0 = closure_3;
-                        closure_1 = closure_4;
-                        state = closure_3.state;
-                        state2 = closure_4.state;
-                        str = "failed";
-                        if ("failed" !== state.status) {
-                          if ("failed" !== state2.status) {
-                            str2 = "loading";
-                            if ("loading" !== state.status) {
-                              if ("loading" !== state2.status) {
-                                tmp3 = null;
-                                if (null == state2.data) {
-                                  obj1 = { status: "failed" };
-                                } else {
-                                  obj1 = { status: "loaded", data: null, nowMs: null };
-                                  obj5 = { points: null, window: null };
-                                  obj5.points = state.data;
-                                  obj5.window = state2.data;
-                                  obj1.data = obj5;
-                                  obj1.nowMs = state.nowMs;
-                                }
-                              }
-                            }
-                            obj1 = { status: "loading" };
-                          }
-                          obj6 = { state: null, retry: null, refresh: null };
-                          obj6.state = obj1;
-                          obj6.retry = function retry() {
-                            closure_0.retry();
-                            closure_1.retry();
-                          };
-                          obj6.refresh = function refresh() {
-                            closure_0.refresh();
-                            closure_1.refresh();
-                          };
-                          tmp4 = obj6;
-                        }
-                        obj1 = { status: "failed" };
-                      } else {
-                        obj.backups = closure_2;
-                        return obj;
-                      }
-                      return;
-                    }
-                  }
-                  class D {
-                    constructor() {
-                      if (closure_1) {
-                        tmp4 = closure_5;
-                        tmp5 = closure_0;
-                        str = "preview";
-                        resolved = closure_5(closure_0, "preview");
-                      } else {
-                        tmp = globalThis;
-                        _Promise = Promise;
-                        tmp2 = null;
-                        resolved = Promise.resolve(null);
-                      }
-                      return resolved;
-                    }
-                  }
+                  cResult[18] = arr;
                   cResult[19] = tmp12Result;
                   cResult[20] = tmp12Result3;
                   cResult[21] = tmp12Result4;
-                  class P {
+                  class B {
                     constructor() {
                       tmp = refresh();
                       tmp2 = refresh();
@@ -555,77 +323,51 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[22] = mapped;
                 }
               }
-              class L {
-                constructor(arg0) {
-                  obj = { environment: arg0, backups: null };
-                  if ("preview" === arg0) {
-                    tmp = closure_3;
-                    tmp2 = closure_4;
-                    closure_0 = closure_3;
-                    closure_1 = closure_4;
-                    state = closure_3.state;
-                    state2 = closure_4.state;
-                    str = "failed";
-                    if ("failed" !== state.status) {
-                      if ("failed" !== state2.status) {
-                        str2 = "loading";
-                        if ("loading" !== state.status) {
-                          if ("loading" !== state2.status) {
-                            tmp3 = null;
-                            if (null == state2.data) {
-                              obj1 = { status: "failed" };
-                            } else {
-                              obj1 = { status: "loaded", data: null, nowMs: null };
-                              obj5 = { points: null, window: null };
-                              obj5.points = state.data;
-                              obj5.window = state2.data;
-                              obj1.data = obj5;
-                              obj1.nowMs = state.nowMs;
-                            }
+              const fn5 = function j(environment) {
+                const obj = { environment, backups: null };
+                if ("preview" === environment) {
+                  closure_0 = state;
+                  closure_1 = state2;
+                  state = state.state;
+                  state2 = state2.state;
+                  if ("failed" !== state.status) {
+                    if ("failed" !== state2.status) {
+                      if ("loading" !== state.status) {
+                        if ("loading" !== state2.status) {
+                          if (null == state2.data) {
+                            let obj2 = { status: "failed" };
+                          } else {
+                            obj2 = { status: "loaded", data: null, nowMs: null };
+                            const obj3 = { points: state.data, window: state2.data };
+                            obj2.data = obj3;
+                            obj2.nowMs = state.nowMs;
                           }
                         }
-                        obj1 = { status: "loading" };
                       }
-                      obj6 = { state: null, retry: null, refresh: null };
-                      obj6.state = obj1;
-                      obj6.retry = function retry() {
+                      obj2 = { status: "loading" };
+                    }
+                    const obj4 = {
+                      state: obj2,
+                      retry() {
                         closure_0.retry();
                         closure_1.retry();
-                      };
-                      obj6.refresh = function refresh() {
+                      },
+                      refresh() {
                         closure_0.refresh();
                         closure_1.refresh();
-                      };
-                      tmp4 = obj6;
-                    }
-                    obj1 = { status: "failed" };
-                  } else {
-                    obj.backups = closure_2;
-                    return obj;
+                      },
+                    };
                   }
-                  return;
+                  obj2 = { status: "failed" };
+                } else {
+                  obj.backups = backups;
+                  return obj;
                 }
-              }
-              class D {
-                constructor() {
-                  if (closure_1) {
-                    tmp4 = closure_5;
-                    tmp5 = closure_0;
-                    str = "preview";
-                    resolved = closure_5(closure_0, "preview");
-                  } else {
-                    tmp = globalThis;
-                    _Promise = Promise;
-                    tmp2 = null;
-                    resolved = Promise.resolve(null);
-                  }
-                  return resolved;
-                }
-              }
+              };
               cResult[23] = tmp12Result;
               cResult[24] = tmp12Result3;
               cResult[25] = tmp12Result4;
-              class P {
+              class B {
                 constructor() {
                   tmp = refresh();
                   tmp2 = refresh();
@@ -633,11 +375,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              cResult[26] = L;
-              tmp22 = L;
+              cResult[26] = fn5;
+              tmp22 = fn5;
             }
           }
-          class P {
+          class B {
             constructor() {
               tmp = refresh();
               tmp2 = refresh();
@@ -648,49 +390,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = refresh;
           cResult[15] = refresh2;
           cResult[16] = refresh3;
-          cResult[17] = P;
-          tmp20 = P;
+          cResult[17] = B;
+          tmp20 = B;
         }
-        class D {
-          constructor() {
-            if (closure_1) {
-              tmp4 = closure_5;
-              tmp5 = closure_0;
-              str = "preview";
-              resolved = closure_5(closure_0, "preview");
-            } else {
-              tmp = globalThis;
-              _Promise = Promise;
-              tmp2 = null;
-              resolved = Promise.resolve(null);
-            }
-            return resolved;
+        const fn4 = function y() {
+          if (closure_1) {
+            let databaseRestoreWindow = conjureHistoryRequests.fetchDatabaseRestoreWindow(closure_0, "preview");
+          } else {
+            databaseRestoreWindow = Promise.resolve(null);
           }
-        }
+          return databaseRestoreWindow;
+        };
         cResult[11] = tmp9;
         cResult[12] = arg0;
-        tmp18 = D;
+        tmp18 = fn4;
       }
-      class B {
-        constructor() {
-          if (closure_1) {
-            tmp4 = closure_4;
-            tmp5 = closure_0;
-            str = "preview";
-            resolved = closure_4(closure_0, "preview");
-          } else {
-            tmp = globalThis;
-            _Promise = Promise;
-            tmp2 = closure_8;
-            resolved = Promise.resolve(closure_8);
-          }
-          return resolved;
+      const fn3 = function w() {
+        if (closure_1) {
+          let databaseRestorePoints = conjureHistoryRequests.fetchDatabaseRestorePoints(closure_0, "preview");
+        } else {
+          databaseRestorePoints = Promise.resolve(closure_5);
         }
-      }
+        return databaseRestorePoints;
+      };
       cResult[8] = tmp9;
       cResult[9] = arg0;
-      cResult[10] = B;
-      tmp16 = B;
+      cResult[10] = fn3;
+      tmp16 = fn3;
     }
   : function useConjureHistoryData(arg0, arg1) {
       closure_0 = arg0;
@@ -699,11 +425,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = noop.useMemo(() => ConjureRestorePanelOp.restorePanelEnvironments(closure_1), items);
       const hasItem = memo.includes("preview");
       const items1 = [arg0];
-      const tmp2 = refresh2(noop.useCallback(() => timestampProducer(closure_0), items1));
+      const tmp2 = state(noop.useCallback(() => conjureHistoryRequests.fetchVersionHistory(closure_0), items1));
       const items2 = [arg0];
-      const tmp3 = refresh2(
+      const tmp3 = state(
         noop.useCallback(() => {
-          const items = [React4(closure_0, "stable"), hasOwnProperty(closure_0, "stable")];
+          const items = [conjureHistoryRequests.fetchDatabaseRestorePoints(closure_0, "stable")];
+          items[1] = conjureHistoryRequests.fetchDatabaseRestoreWindow(closure_0, "stable");
           return Promise.all(items).then((result) => {
             [tmp, tmp2] = result;
             return { points, window: _window };
@@ -712,29 +439,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       noop = tmp3;
       const items3 = [arg0, hasItem];
-      const tmp4 = refresh2(
+      const tmp4 = state(
         noop.useCallback(() => {
           if (hasItem) {
-            let resolved = React4(closure_0, "preview");
+            let databaseRestorePoints = conjureHistoryRequests.fetchDatabaseRestorePoints(closure_0, "preview");
           } else {
-            resolved = Promise.resolve(closure_8);
+            databaseRestorePoints = Promise.resolve(closure_5);
           }
-          return resolved;
+          return databaseRestorePoints;
         }, items3),
       );
+      state = tmp4;
       const items4 = [arg0, hasItem];
-      const tmp5 = refresh2(
+      const tmp5 = state(
         noop.useCallback(() => {
           if (hasItem) {
-            let resolved = hasOwnProperty(closure_0, "preview");
+            let databaseRestoreWindow = conjureHistoryRequests.fetchDatabaseRestoreWindow(closure_0, "preview");
           } else {
-            resolved = Promise.resolve(null);
+            databaseRestoreWindow = Promise.resolve(null);
           }
-          return resolved;
+          return databaseRestoreWindow;
         }, items4),
       );
       const refresh = tmp3.refresh;
-      refresh2 = tmp4.refresh;
+      const refresh2 = tmp4.refresh;
       const refresh3 = tmp5.refresh;
       const items5 = [refresh, refresh2, refresh3];
       const callback = noop.useCallback(() => {
@@ -742,7 +470,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         refresh2();
         refresh3();
       }, items5);
-      let state = tmp2.state;
+      state = tmp2.state;
       const items6 = [state];
       const mapped = memo.map((environment) => {
         const obj = { environment, backups: null };
@@ -790,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         sharedDatabase: !hasItem,
         versions: tmp2,
         databases: mapped,
-        previewBackups: "loaded" === state2.status ? state2.data : refresh3,
+        previewBackups: "loaded" === state2.status ? state2.data : state2,
         previewBackupsLoading: "loading" === state2.status,
         refreshAllBackups: callback,
         versionTitles: noop.useMemo(() => {

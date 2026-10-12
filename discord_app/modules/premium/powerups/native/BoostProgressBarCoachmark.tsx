@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[12] === tmp13) {
               let tmp16 = cResult[13];
             }
-            const coachmark = tmp(9442).useCoachmark(guild.targetRef, tmp16);
+            const coachmark = tmp(9443).useCoachmark(guild.targetRef, tmp16);
             return null;
           }
         }
@@ -155,6 +155,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.onButtonPress = callback1;
         return obj;
       }, items2);
-      const coachmark = guild(9442).useCoachmark(guild.targetRef, memo);
+      const coachmark = guild(9443).useCoachmark(guild.targetRef, memo);
       return null;
     };

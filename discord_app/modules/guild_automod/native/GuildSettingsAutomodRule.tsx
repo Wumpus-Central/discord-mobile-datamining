@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const useAutomodRulesList = fn(18242).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(18244);
+const useAutomodRulesList = fn(18300).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(18302);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(11448).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(11450).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               c3 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp20) {
             c3 = tmp;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 c3 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp20) {
               c3 = tmp;
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -556,7 +556,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             let v0 = 1;
                             c5 = 2;
                             c6 = 1;
-                            const obj6 = { value: closure_0(11453).deleteAutomodRule(id, closure_0), done: false };
+                            const obj6 = { value: closure_0(11455).deleteAutomodRule(id, closure_0), done: false };
                             return obj6;
                           }
                         } else if (1 === tmp7) {
@@ -584,7 +584,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           v0(closure_130_1, closure_0);
                           closure_1.pop();
                           c6 = 3;
-                          return { value: "IconComponent", done: "+51" };
+                          return { value: "IconComponent", done: null };
                         }
                       } catch (tmp41) {
                         closure_3 = tmp41;

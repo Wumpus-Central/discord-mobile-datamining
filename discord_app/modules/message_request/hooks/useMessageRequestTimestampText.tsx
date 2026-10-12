@@ -150,9 +150,9 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
         let str = "";
         let timestampString;
         if (null != extractTimestampResult) {
-          timestampString = tmp(7922).getTimestampString(extractTimestampResult);
+          timestampString = tmp(7923).getTimestampString(extractTimestampResult);
           str = forResult;
-          const tmpResult2 = tmp(7922);
+          const tmpResult2 = tmp(7923);
         }
         cResult[3] = stateFromStores;
         cResult[4] = messageRequestPreview;
@@ -183,8 +183,8 @@ export const useMessageRequestRelativeTimestampText = ReactCompilerGating.isReac
         }
         let str = "";
         if (null != extractTimestampResult) {
-          str = tmp(7922).getTimestampString(extractTimestampResult);
-          const tmpResult = tmp(7922);
+          str = tmp(7923).getTimestampString(extractTimestampResult);
+          const tmpResult = tmp(7923);
         }
         return str;
       }

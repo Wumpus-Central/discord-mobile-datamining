@@ -5,7 +5,7 @@ import PlatformUtils2 from "../../utils/PlatformUtils.tsx";
 import useToken from "../../design/tokens/native/useToken.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import _modDef8404 from "../../../_runtime/metro/08404__.js";
+import _modDef8405 from "../../../_runtime/metro/08405__.js";
 import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onValueChange: L,
           onResponderGrant: tmp26,
         };
-        const tmp31 = closure_7(_modDef8404, obj3);
+        const tmp31 = closure_7(_modDef8405, obj3);
         cResult[22] = PRIMARY_400;
         cResult[23] = tmp9;
         cResult[24] = minTrackColor;
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj = useToken;
       const obj3 = { style: tmp4.leftIcon };
-      const tmp7Result = _modDef8404;
+      const tmp7Result = _modDef8405;
       obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
       obj4.maximumValue = maxVolume;
       obj4.minimumTrackTintColor = minTrackColor;

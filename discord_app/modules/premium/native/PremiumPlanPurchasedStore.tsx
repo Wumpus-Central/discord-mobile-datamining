@@ -96,8 +96,8 @@ export const reset = function reset() {
       initiatedPurchaseFromNewFlow: false,
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "emoji",
-      onPaymentDismiss: "flexDirection",
+      onPaymentSuccess: "code",
+      onPaymentDismiss: "getGuild",
     });
   });
 };

@@ -127,8 +127,8 @@ class NotificationSettings extends PureComponent {
         const _HermesInternal = HermesInternal;
         const tmpResult2 = ActionSheetActionCreatorsDefault;
         const obj2 = { guildId };
-        tmpResult2.openLazy(asyncRequireImpl(10462, dependencyMap.paths), "muteSettings" + guildId, obj2);
-        const tmp7 = asyncRequireImpl(10462, dependencyMap.paths);
+        tmpResult2.openLazy(asyncRequireImpl(10463, dependencyMap.paths), "muteSettings" + guildId, obj2);
+        const tmp7 = asyncRequireImpl(10463, dependencyMap.paths);
       }
     };
     applyArgumentsResult.handleToggleChange = function handleToggleChange(mobile_push, arg1, NotificationLabel) {
@@ -367,11 +367,11 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     const intl2 = tmp7(1126).intl;
     obj4.helperText = intl2.string(tmp7(1126).t["8wbTQ6"]);
     const obj5 = { label: formatResult, onPress: self.handleMutePress, arrow: !muted };
-    obj4.children = closure_1_27(tmp7(6179).TableRow, obj5);
-    const items = [closure_1_27(tmp7(6264).TableRowGroup, obj4, "mute")];
+    obj4.children = closure_1_27(tmp7(6180).TableRow, obj5);
+    const items = [closure_1_27(tmp7(6265).TableRowGroup, obj4, "mute")];
     let tmp10Result = null;
     if (muted) {
-      const obj6 = { muteConfig, type: tmp7(10464).MuteSettingType.SERVER };
+      const obj6 = { muteConfig, type: tmp7(10465).MuteSettingType.SERVER };
       tmp10Result = closure_1_27(MutedUntilTextDefault, obj6, "muted-until");
     }
     items[1] = tmp10Result;
@@ -614,7 +614,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = guildId(504);
-      const shouldUseNewNotificationSystem = guildId(10444).useShouldUseNewNotificationSystem(
+      const shouldUseNewNotificationSystem = guildId(10445).useShouldUseNewNotificationSystem(
         "NotificationSettingsModalNative",
       );
       if (cResult[9] === tmp18) {
@@ -632,7 +632,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const merged = Object.assign(tmp13);
       const obj3 = { guildId, channels: tmp18, navigation, shouldUseNewNotificationSystem };
-      const tmpResult2 = guildId(10444);
+      const tmpResult2 = guildId(10445);
       cResult[9] = tmp18;
       cResult[10] = guildId;
       cResult[11] = navigation;
@@ -687,18 +687,18 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const tmp3 = _objectWithoutProperties(stateFromStoresObject, closure_4);
       const obj4 = { children: null };
-      const obj3 = guildId(10444);
+      const obj3 = guildId(10445);
       const merged = Object.assign(tmp3);
       const items2 = [
         closure_27(NotificationSettings, {
           guildId,
           channels: memo,
           navigation,
-          shouldUseNewNotificationSystem: guildId(10444).useShouldUseNewNotificationSystem(
+          shouldUseNewNotificationSystem: guildId(10445).useShouldUseNewNotificationSystem(
             "NotificationSettingsModalNative",
           ),
         }),
-        closure_27(guildId(6727).NavScrim, {}),
+        closure_27(guildId(6728).NavScrim, {}),
       ];
       obj4.children = items2;
       return closure_28(closure_29, obj4);

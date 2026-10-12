@@ -719,7 +719,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(18286), { action: log.action }), , ,];
+  const items2 = [closure_14(user(18344), { action: log.action }), , ,];
   const obj7 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -769,7 +769,7 @@ prototype["render"] = function render() {
         obj8.source = source;
         obj8.size = tmp10(1200).AvatarSizes.SMALL;
         obj7.children = closure_14(tmp20, obj8);
-        items2[1] = closure_14(tmp10(6184).PressableOpacity, obj7);
+        items2[1] = closure_14(tmp10(6185).PressableOpacity, obj7);
         obj9 = {
           accessibilityRole: "button",
           accessibilityState: null,
@@ -785,14 +785,14 @@ prototype["render"] = function render() {
         obj9.disabled = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj9.children = items3;
-        items2[2] = closure_15(tmp10(6184).PressableOpacity, obj9);
+        items2[2] = closure_15(tmp10(6185).PressableOpacity, obj9);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj11 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj11.style = items4;
           obj11.size = tmp10(1200).Icon.Sizes.CUSTOM;
-          obj11.source = tmp18(14829);
+          obj11.source = tmp18(14852);
           tmp17Result = closure_14(tmp10(1200).Icon, obj11);
         }
         items2[3] = tmp17Result;
@@ -804,7 +804,7 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj4.children = items5;
-        return closure_15(tmp10(6181).Card, obj4);
+        return closure_15(tmp10(6182).Card, obj4);
       }
     }
   }

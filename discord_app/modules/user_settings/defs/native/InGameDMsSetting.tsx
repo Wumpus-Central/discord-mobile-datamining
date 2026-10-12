@@ -108,7 +108,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
   },
-  parent: fn(7992).MobileUserSettings.CONNECTED_GAMES,
+  parent: fn(7993).MobileUserSettings.CONNECTED_GAMES,
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
     ? function useInGameDMsSettingOptions() {
         const cResult = c.c(3);

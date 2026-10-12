@@ -37,7 +37,7 @@ let closure_5 = async function _editScheduledMessage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -135,11 +135,11 @@ function openSendTimeActionSheet(title) {
   title = title.title;
   ({ startDate: importDefault, scheduledMessageId: dependencyMap, onSelect: asyncGeneratorStep, onClear } = title);
   ({ key, entryPoint, isEditing, channelId } = title);
-  const result = title(9293).trackScheduledMessageTimePickerOpened({ entryPoint, isEditing, channelId });
-  let obj = title(9293);
+  const result = title(9294).trackScheduledMessageTimePickerOpened({ entryPoint, isEditing, channelId });
+  let obj = title(9294);
   let obj3 = { key, header: { title }, hasIcons: false, options: null };
-  let obj2 = title(6890);
-  const presetScheduledTimes = title(9293).getPresetScheduledTimes();
+  let obj2 = title(6891);
+  const presetScheduledTimes = title(9294).getPresetScheduledTimes();
   const items = [
     ...presetScheduledTimes.map((label) => {
       title = label.value;
@@ -166,11 +166,11 @@ function openSendTimeActionSheet(title) {
       createReminder: null,
       onClose: null,
     };
-    const tmp2 = asyncRequireImpl(12661, dependencyMap.paths);
+    const tmp2 = asyncRequireImpl(12663, dependencyMap.paths);
     obj3.minimumDate = ScheduledMessageUtils.getEarliestScheduledTime();
     obj3.maximumDate = ScheduledMessageUtils.getLatestScheduledTime(closure_1_2);
     obj3.getError = function getError(isBefore) {
-      return title(9293).getScheduledTimeError(isBefore, dependencyMap);
+      return title(9294).getScheduledTimeError(isBefore, dependencyMap);
     };
     obj3.createReminder = function createReminder(arg0) {
       return closure_1_3(defaultValue(4702)(arg0));
@@ -192,7 +192,7 @@ function openSendTimeActionSheet(title) {
   HermesBuiltin.arraySpread(items2, tmp4 + 1);
   obj3.options = items;
   const result1 = obj2.showSimpleActionSheet(obj3);
-  let obj4 = title(9293);
+  let obj4 = title(9294);
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessagesUtils.native.tsx");
@@ -228,8 +228,8 @@ export const openScheduleMessageActionSheet = function openScheduleMessageAction
   if (null != currentTimestamp) {
     let defaultScheduledTime = _modDef4702(currentTimestamp);
   } else {
-    defaultScheduledTime = tmp2(9293).getDefaultScheduledTime();
-    const tmp2Result = tmp2(9293);
+    defaultScheduledTime = tmp2(9294).getDefaultScheduledTime();
+    const tmp2Result = tmp2(9294);
   }
   obj2.startDate = defaultScheduledTime;
   obj2.onSelect = function onSelect(toISOString) {
@@ -274,13 +274,13 @@ export const pickScheduledMessageTime = function pickScheduledMessageTime(arg0) 
   openSendTimeActionSheet(obj);
 };
 export const showScheduledMessagesModal = function showScheduledMessagesModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9295, dependencyMap.paths), {}, "scheduled-messages-modal", {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9296, dependencyMap.paths), {}, "scheduled-messages-modal", {
     presentation: "modal",
   });
 };
 export const openScheduledMessageEditContentModal = function openScheduledMessageEditContentModal(scheduledMessage) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(12878, dependencyMap.paths),
+    asyncRequireImpl(12880, dependencyMap.paths),
     { scheduledMessage },
     "scheduled-message-edit-content",
     { presentation: "modal" },

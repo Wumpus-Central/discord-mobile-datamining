@@ -16,7 +16,7 @@ let closure_5 = createStyles.createStyles({
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(9298).MIN_HEADER_HEIGHT,
+    height: fn(9299).MIN_HEADER_HEIGHT,
   },
 });
 const ReactCompilerGating = fn(558);
@@ -27,7 +27,7 @@ let obj = {
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(9298).MIN_HEADER_HEIGHT,
+    height: fn(9299).MIN_HEADER_HEIGHT,
   },
 };
 const size = fn(2);

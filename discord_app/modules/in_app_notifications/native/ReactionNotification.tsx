@@ -87,7 +87,7 @@ function ReactorNotificationIcon(notification) {
   }
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(12576);
+const InAppNotificationConstants = fn(12578);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Constants = fn(1085);
@@ -1039,7 +1039,7 @@ export default function ReactionNotification(notification) {
   const callback1 = obj2.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(12593, dependencyMap.paths),
+        asyncRequireImpl(12595, dependencyMap.paths),
         { channelId: id },
         "in-app-notification-settings-modal",
       ),

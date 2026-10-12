@@ -1,8 +1,7 @@
 // discord_app/modules/conjure/chat/ConjureAwaitingUser.tsx
-import ConjureChatStore from "ConjureChatStore.tsx";
+import conjureChatTurns from "conjureChatTurns.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const turnSettled = ConjureChatStore.turnSettled;
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureAwaitingUser.tsx");
 
 export const activeAwaitingUser = function activeAwaitingUser(message, isNewest) {
@@ -19,9 +18,10 @@ export const activeAwaitingUser = function activeAwaitingUser(message, isNewest)
         awaitingUser = null;
         if (null != message.secretRequest) {
           awaitingUser = null;
-          if (turnSettled(message)) {
+          if (obj.turnSettled(message)) {
             awaitingUser = message.awaitingUser;
           }
+          obj = conjureChatTurns;
         }
       }
     }

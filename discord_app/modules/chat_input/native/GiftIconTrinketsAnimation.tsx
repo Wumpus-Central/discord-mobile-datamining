@@ -9,7 +9,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const initialize = APNGPlayer(504);
 const PlatformUtils = APNGPlayer(1382);
 const StringUtils = APNGPlayer(2031);
-const APNGPlayer2 = APNGPlayer(9011);
+const APNGPlayer2 = APNGPlayer(9012);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

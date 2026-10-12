@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-          const tmp12 = closure_5(tmp(8228).VoiceNormalIcon, obj2);
+          const tmp12 = closure_5(tmp(8229).VoiceNormalIcon, obj2);
           cResult[4] = tmp12;
           let tmp9 = tmp12;
         } else {
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (0 !== stateFromStores) {
         const obj2 = { style: tmp.container, children: null };
         const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-        const items2 = [closure_5(tmp2(8228).VoiceNormalIcon, obj3)];
+        const items2 = [closure_5(tmp2(8229).VoiceNormalIcon, obj3)];
         const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
         items2[1] = closure_5(tmp2(5088).Text, obj4);
         obj2.children = items2;

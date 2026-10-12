@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef12390 from "../../../../../_runtime/metro/12390__.js";
+import _modDef12392 from "../../../../../_runtime/metro/12392__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { source: _modDef12390 };
+        const obj3 = { source: _modDef12392 };
         const tmp13 = React4(FastImageDefault, obj3);
         cResult[2] = tmp13;
         let tmp9 = tmp13;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { children: null };
       const items = [React4(React3, { style: tmp.border })];
       const obj3 = { style: tmp.container, children: null };
-      const obj4 = { source: _modDef12390 };
+      const obj4 = { source: _modDef12392 };
       const items1 = [React4(FastImageDefault, obj4)];
       const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
       const intl = util.intl;

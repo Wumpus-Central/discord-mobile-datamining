@@ -21,12 +21,12 @@ import PaymentFlowStartedTriggerPoint from "../../experiments/trigger_points/Pay
 import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet.tsx";
 import TreasureChestBannerSpotIllustration from "../../../design/components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx";
-import _modDef13815 from "../../../../_runtime/metro/13815__.js";
-import _modDef13816 from "../../../../_runtime/metro/13816__.js";
-import _modDef13817 from "../../../../_runtime/metro/13817__.js";
-import _modDef13818 from "../../../../_runtime/metro/13818__.js";
-import _modDef13819 from "../../../../_runtime/metro/13819__.js";
-import _modDef13820 from "../../../../_runtime/metro/13820__.js";
+import _modDef13838 from "../../../../_runtime/metro/13838__.js";
+import _modDef13839 from "../../../../_runtime/metro/13839__.js";
+import _modDef13840 from "../../../../_runtime/metro/13840__.js";
+import _modDef13841 from "../../../../_runtime/metro/13841__.js";
+import _modDef13842 from "../../../../_runtime/metro/13842__.js";
+import _modDef13843 from "../../../../_runtime/metro/13843__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -154,7 +154,7 @@ function PlanSection(showBoostOnlyLabels) {
   }, plan.productId));
   if (shouldShowModernBoostFlow) {
     let obj2 = { title: showBoostOnlyLabels.label, hasIcons: true, children: mapped };
-    let tmp7Result = closure_31(shouldShowModernBoostFlow(6264).TableRowGroup, obj2);
+    let tmp7Result = closure_31(shouldShowModernBoostFlow(6265).TableRowGroup, obj2);
   } else {
     let obj3 = { children: mapped };
     tmp7Result = closure_31(closure_7, obj3);
@@ -165,8 +165,8 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
   if (null != productIdFromSubscription) {
     if (obj3.isValidBundleProductId(productIdFromSubscription)) {
       if (null == productIdFromSubscription2) {
-        let toggledIntervalProduct = tmp7(7125).getToggledIntervalProduct(productIdFromSubscription);
-        let tmp7Result = tmp7(7125);
+        let toggledIntervalProduct = tmp7(7126).getToggledIntervalProduct(productIdFromSubscription);
+        let tmp7Result = tmp7(7126);
       } else {
         toggledIntervalProduct = productIdFromSubscription;
       }
@@ -191,27 +191,27 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
         })) {
           items = [];
           const arraySpreadResult = HermesBuiltin.arraySpread(plans, 0);
-          items[arraySpreadResult] = tmp7(7125).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
+          items[arraySpreadResult] = tmp7(7126).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
           tmp3 = items;
-          const tmp7Result2 = tmp7(7125);
+          const tmp7Result2 = tmp7(7126);
         }
       }
       return tmp3;
     }
-    obj3 = toggledIntervalProduct(7125);
+    obj3 = toggledIntervalProduct(7126);
   }
   return plans;
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let useNativeCheckoutStore = fn(7143).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(13810);
+let useNativeCheckoutStore = fn(7144).useNativeCheckoutStore;
+const PremiumPlanSelectStore = fn(13833);
 ({ setIsPurchasing: closure_14, usePremiumPlanSelectStore: closure_15 } = PremiumPlanSelectStore);
 const PremiumConstants = fn(1392);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_16, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_17, PRICE_PLACEHOLDER: closure_18, PremiumSubscriptionSKUs: closure_19, PremiumTypes: closure_20, SubscriptionIntervalTypes: closure_21, SubscriptionPlans: closure_22 } = PremiumConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_23, AnalyticsObjects: closure_24, AnalyticsObjectTypes: closure_25, Fonts, HorizontalGradient: closure_26, PaymentGateways: closure_27, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
-const ColorConstants = fn(7151);
+const ColorConstants = fn(7152);
 ({ getPremiumGradientColor: closure_28, Gradients: closure_29 } = ColorConstants);
 const ItemPurchaseType = fn(5071).ItemPurchaseType;
 const jsxProd = fn(21);
@@ -355,7 +355,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
   obj.children = items;
   return __initData4(Stack_Stack.Stack, obj);
 });
-let closure_37 = { [_modDef13818]: "imgWumpusNitro", [_modDef13820]: "imgWumpusNitroBoost", [_modDef13817]: "imgWumpusNitroClassic", [_modDef13819]: "imgWumpusNitroClassicBoost", [_modDef13816]: "imgWumpusNitroTier0", [_modDef13815]: "imgBoost" };
+let closure_37 = { [_modDef13841]: "imgWumpusNitro", [_modDef13843]: "imgWumpusNitroBoost", [_modDef13840]: "imgWumpusNitroClassic", [_modDef13842]: "imgWumpusNitroClassicBoost", [_modDef13839]: "imgWumpusNitroTier0", [_modDef13838]: "imgBoost" };
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostDeltaPriceTrailing(arg0) {
   const cResult = c.c(8);
@@ -721,21 +721,21 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanRo
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("../../../../_runtime/metro/13815__.js");
+    let tmp7Result = require("../../../../_runtime/metro/13838__.js");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_20.TIER_1) {
-      tmp7Result = require("../../../../_runtime/metro/13819__.js");
+      tmp7Result = require("../../../../_runtime/metro/13842__.js");
     } else {
-      tmp7Result = require("../../../../_runtime/metro/13820__.js");
+      tmp7Result = require("../../../../_runtime/metro/13843__.js");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_20.TIER_0 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13816__.js");
+      tmp7Result = require("../../../../_runtime/metro/13839__.js");
     } else if (closure_20.TIER_1 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13817__.js");
+      tmp7Result = require("../../../../_runtime/metro/13840__.js");
     } else if (closure_20.TIER_2 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13818__.js");
+      tmp7Result = require("../../../../_runtime/metro/13841__.js");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -1706,7 +1706,7 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1818,7 +1818,7 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
                 const obj2 = { tags: { source: "showPremiumActivatedAlert.nullSubscription" } };
                 const result = premiumTypeSubscription(4784).captureBillingException(error, obj2);
                 const obj4 = premiumTypeSubscription(4784);
-                closure_1(5934).popWithKey(premiumTypeSubscription(7129).PREMIUM_KEY);
+                closure_1(5934).popWithKey(premiumTypeSubscription(7130).PREMIUM_KEY);
                 if (navigation.canGoBack()) {
                   navigation.goBack();
                 }

@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { checked: tmp6Result };
-          const tmp16 = closure_6(tmp(6177).FormCheckbox, obj2);
+          const tmp16 = closure_6(tmp(6178).FormCheckbox, obj2);
           cResult[6] = tmp6Result;
           cResult[7] = tmp16;
         } else {
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const obj5 = { checked: tmp3 };
-        const items = [closure_6(tmp4(6177).FormCheckbox, obj5)];
+        const items = [closure_6(tmp4(6178).FormCheckbox, obj5)];
         const obj6 = {
           variant: "text-xs/medium",
           color: "text-muted",

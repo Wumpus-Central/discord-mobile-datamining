@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(14176);
+const GuildReportRaidModalConstants = fn(14199);
 ({
   getReportRaidHelpArticleURL: closure_7,
   getReportRaidTypeLabel: closure_8,
@@ -110,7 +110,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp13) {
             const obj4 = { hasIcons: false, children: tmp13 };
-            const tmp17 = closure_10(tmp(6264).TableRowGroup, obj4);
+            const tmp17 = closure_10(tmp(6265).TableRowGroup, obj4);
             cResult[10] = tmp13;
             cResult[11] = tmp17;
             let tmp15 = tmp17;
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {

@@ -6,7 +6,7 @@ const require = globalThis.__r;
 
 require = fn;
 const QuestDockMode = fn(5972).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15347).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15370).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj = { questDockContentCollapsed: null };
@@ -39,7 +39,7 @@ export default noop.memo(
         ({ children, hideOnExpand } = arg0);
         _require = tmp4;
         const tmp5 = closure_7();
-        const activeQuestDockMode = noop.useContext(tmp(15348).QuestDockGestureContext).activeQuestDockMode;
+        const activeQuestDockMode = noop.useContext(tmp(15371).QuestDockGestureContext).activeQuestDockMode;
         let obj = require("c");
         class C {
           constructor() {
@@ -101,7 +101,7 @@ export default noop.memo(
             }
           }
           const obj3 = { style: tmp8, animatedProps, children };
-          const tmp12 = jsx(activeQuestDockMode(6761), { style: tmp8, animatedProps, children });
+          const tmp12 = jsx(activeQuestDockMode(6762), { style: tmp8, animatedProps, children });
           cResult[3] = children;
           cResult[4] = tmp8;
           cResult[5] = animatedProps;
@@ -122,7 +122,7 @@ export default noop.memo(
           tmp = hideOnExpand;
         }
         hideOnExpand = tmp;
-        const activeQuestDockMode = noop.useContext(hideOnExpand(15348).QuestDockGestureContext).activeQuestDockMode;
+        const activeQuestDockMode = noop.useContext(hideOnExpand(15371).QuestDockGestureContext).activeQuestDockMode;
         const tmp2 = closure_7();
         class D {
           constructor() {
@@ -174,6 +174,6 @@ export default noop.memo(
         const obj4 = { style: null, animatedProps, children: children.children };
         const items = [tmp2.questDockContentCollapsed, animatedStyle];
         obj4.style = items;
-        return jsx(activeQuestDockMode(6761), { style: null, animatedProps, children: children.children });
+        return jsx(activeQuestDockMode(6762), { style: null, animatedProps, children: children.children });
       },
 );

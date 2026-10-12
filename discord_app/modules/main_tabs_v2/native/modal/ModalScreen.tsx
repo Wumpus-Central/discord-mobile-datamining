@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      const layoutEffect = noop.useLayoutEffect(() => modal(7196).trackAppUIViewed("ModalScreen"), []);
+      const layoutEffect = noop.useLayoutEffect(() => modal(7197).trackAppUIViewed("ModalScreen"), []);
       ({ left, right } = useSafeAreaInsetsDefault());
       const tmp13 = useSafeAreaInsetsDefault();
       const items = [absoluteFillObject.absoluteFillObject];
@@ -322,10 +322,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.transitionState = null;
       obj5.onClose = callback;
       const items2 = [<modal.modal />];
-      tmp7Result = modal(17579);
+      tmp7Result = modal(17636);
       let isIOSResult = modal(1382).isIOS();
       if (isIOSResult) {
-        isIOSResult = closure_10(tmp7(17101).PortalKeyboardRenderer, { portal: false });
+        isIOSResult = closure_10(tmp7(17141).PortalKeyboardRenderer, { portal: false });
       }
       items2[1] = isIOSResult;
       obj4.children = items2;

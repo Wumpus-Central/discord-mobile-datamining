@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp28 = tmp49;
           tmp29 = forResult;
           tmp30 = tmp43;
-          Form = tmp(8579).Form;
+          Form = tmp(8580).Form;
           Stack = tmp(5377).Stack;
         }
         const tmp4Result = tmp4(5763);
@@ -583,7 +583,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2[1] = closure_10(tmp(5088).Text, obj12);
         obj9.children = items2;
         obj8.children = closure_11(tmp(5377).Stack, obj9);
-        const items3 = [closure_10(tmp(8579).Form, obj8), closure_10(tmp(6727).NavScrim, {})];
+        const items3 = [closure_10(tmp(8580).Form, obj8), closure_10(tmp(6728).NavScrim, {})];
         obj11.children = items3;
         return closure_11(closure_12, obj11);
       }

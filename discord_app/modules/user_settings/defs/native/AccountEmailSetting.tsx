@@ -46,7 +46,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["w/qqKK"]);
   },
-  parent: fn(7992).MobileUserSettings.ACCOUNT,
+  parent: fn(7993).MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountEmailSettingTrailing() {
         const cResult = c.c(2);

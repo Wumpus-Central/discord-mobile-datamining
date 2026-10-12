@@ -405,11 +405,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = tmp16;
       }
       const tmpResult = channel(504);
-      const tmp13 = closure_10(channel(11595).GuildIconWithChannelType, {
+      const tmp13 = closure_10(channel(11597).GuildIconWithChannelType, {
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(11595).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(11597).GuildIconWithChannelTypeSizes.SMALL_32,
       });
       cResult[3] = channel;
       cResult[4] = stateFromStores;
@@ -419,7 +419,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(11595).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(11597).GuildIconWithChannelTypeSizes.SMALL_32,
       };
     }
   : function FailedChannelRow(channel) {
@@ -437,11 +437,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channel(504);
       const tmp3 = useChannelNameDefault(channel);
       const items1 = [
-        closure_10(channel(11595).GuildIconWithChannelType, {
+        closure_10(channel(11597).GuildIconWithChannelType, {
           "aria-label": "",
           guild: stateFromStores,
           channel,
-          size: channel(11595).GuildIconWithChannelTypeSizes.SMALL_32,
+          size: channel(11597).GuildIconWithChannelTypeSizes.SMALL_32,
         }),
         closure_10(channel(5088).Text, {
           style: tmp.label,

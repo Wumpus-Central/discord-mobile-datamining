@@ -303,7 +303,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj4 = { color: tmp5(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-          const tmp35 = closure_8(tmp(9241).MoreHorizontalIcon, obj4);
+          const tmp35 = closure_8(tmp(9242).MoreHorizontalIcon, obj4);
           class E {
             constructor() {
               currentUser = null;
@@ -465,7 +465,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { source: applicationIconSource, size: tmp5(1200).AvatarSizes.XLARGE };
         const items4 = [closure_8(tmp5(1200).Avatar, obj9), ,];
         const obj10 = { color: tmp2(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-        items4[1] = closure_8(tmp5(9241).MoreHorizontalIcon, obj10);
+        items4[1] = closure_8(tmp5(9242).MoreHorizontalIcon, obj10);
         const obj11 = { source: userAvatarSource, size: tmp5(1200).AvatarSizes.XLARGE };
         items4[2] = closure_8(tmp5(1200).Avatar, obj11);
         obj8.children = items4;

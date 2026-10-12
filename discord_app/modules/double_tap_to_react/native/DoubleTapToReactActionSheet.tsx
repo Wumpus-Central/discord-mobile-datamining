@@ -885,7 +885,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: "+51" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -939,7 +939,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     500,
                                   );
                                   c3 = 3;
-                                  return { value: "IconComponent", done: "+51" };
+                                  return { value: "IconComponent", done: null };
                                 } catch (tmp23) {
                                   c3 = tmp;
                                   throw tmp23;
@@ -1214,7 +1214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1254,13 +1254,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 emoji_name: closure_129_2.name,
                 emoji_animated: closure_129_2.animated,
                 recommended: closure_129_4.current,
-                location: tmp22(6878).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+                location: tmp22(6879).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
               };
               tmp22(1265).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
               c3 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             } catch (tmp24) {
               c3 = tmp;
               throw tmp24;

@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
           }
           const obj5 = {};
           const merged = Object.assign(tmp6);
-          obj5.icon = tmp(6781).ListViewIcon;
+          obj5.icon = tmp(6782).ListViewIcon;
           obj5.header = tmp17;
           obj5.buttons = tmp32;
           const tmp43 = closure_7(MemberVerificationAlertDefault, obj5);
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   const obj3 = {};
   const obj = guildId(573);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(6781).ListViewIcon;
+  obj3.icon = guildId(6782).ListViewIcon;
   obj3.header = formatToPlainStringResult;
   const obj4 = { children: null };
   const obj5 = { variant: "secondary", text: null, onPress: null };
@@ -268,5 +268,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   items4[1] = closure_7(guildId(5379).Button, obj6);
   obj4.children = items4;
   obj3.buttons = closure_9(closure_8, obj4);
-  return closure_7(onClose(6112), obj3);
+  return closure_7(onClose(6113), obj3);
 });

@@ -33,7 +33,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.cUMdH0);
   },
-  parent: fn(7992).MobileUserSettings.VOICE,
+  parent: fn(7993).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAutomaticGainControlSettingValue() {
         const cResult = c.c(2);

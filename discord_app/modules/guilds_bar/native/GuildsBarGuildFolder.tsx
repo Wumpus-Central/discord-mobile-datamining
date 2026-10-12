@@ -14,7 +14,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import ReanimatedNativeViewDefault from "../../core/native/ReanimatedNativeView.tsx";
-import _modDef8161 from "../../../../_runtime/metro/08161__.js";
+import _modDef8162 from "../../../../_runtime/metro/08162__.js";
 import ListUtils from "../../../utils/ListUtils.tsx";
 import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -65,15 +65,15 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
   }
 }
 const GuildsNodeType = fn(5963).GuildsNodeType;
-const GuildsBarDnDStore = fn(16718);
+const GuildsBarDnDStore = fn(16742);
 ({ useItemDragState: c10, useFolderBGHeightOffset: closure_11 } = GuildsBarDnDStore);
-let GuildsBarConstants = fn(16723);
+let GuildsBarConstants = fn(16747);
 ({
   DEFAULT_FOLDER_COLOR: closure_12,
   isDefaultFolderColor: map1,
   normalizeFolderColor: closure_14,
 } = GuildsBarConstants);
-GuildsBarConstants = fn(16715);
+GuildsBarConstants = fn(16739);
 ({ TRANSITION_PHYSICS: closure_15, FOLDER_SPRING_PHYSICS: closure_16 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
@@ -188,7 +188,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const obj3 = { style: tmp12, guild: stateFromStores, size: tmp(6158).GuildIconSizes.XXSMALL, selected };
+          const obj3 = { style: tmp12, guild: stateFromStores, size: tmp(6159).GuildIconSizes.XXSMALL, selected };
           const tmp16 = closure_17(GuildIconDefault, obj3, combined);
           cResult[7] = stateFromStores;
           cResult[8] = selected;
@@ -367,7 +367,7 @@ const memoResult = noop.memo(
           { height: token + token1 + (token + 2 * token1) * totalItems + tmp4 },
         ];
         obj6.style = items1;
-        return closure_17(token2(6761), obj6);
+        return closure_17(token2(6762), obj6);
       },
 );
 const __initData3 = {
@@ -491,7 +491,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
                 return tmp19;
               }
               const obj3 = { style: tmp18, children };
-              const tmp21 = closure_17(tmp5(6761), obj3);
+              const tmp21 = closure_17(tmp5(6762), obj3);
               cResult[11] = children;
               cResult[12] = tmp18;
               cResult[13] = tmp21;
@@ -654,7 +654,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       if ("icon" !== tintStyle2.type) {
         return null;
       } else if (cResult[0] !== tintStyle2.tintStyle) {
-        const obj2 = { source: _modDef8161, style: null };
+        const obj2 = { source: _modDef8162, style: null };
         tintStyle = tintStyle2.tintStyle;
         obj2.style = tintStyle;
         const tmp6 = constants(FastImageDefault, obj2);
@@ -667,7 +667,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       let tmp = null;
       if ("icon" === item.type) {
-        const obj = { source: _modDef8161, style: item.tintStyle };
+        const obj = { source: _modDef8162, style: item.tintStyle };
         tmp = constants(FastImageDefault, obj);
       }
       return tmp;

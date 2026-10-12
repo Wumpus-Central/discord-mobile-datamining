@@ -6,7 +6,7 @@ import useResourceChannelsDefault from "../useResourceChannels.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_3 = fn(17000).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(17024).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       guildId = guildId.guildId;
       let obj = guildId(576);
       token = guildId(4818).useToken(token(587).modules.mobile.TABLE_ROW_ICON_SIZE);
-      const arr = token(17001)(guildId);
+      const arr = token(17025)(guildId);
       if (cResult[0] !== guildId) {
         function handleChannelPress(channelId) {
           const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(guildId, channelId);
@@ -37,8 +37,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[9] !== cResult[5]) {
               let obj3 = { children: null };
               let obj4 = { hasIcons: true, children: tmp6 };
-              obj3.children = jsx(tmp(6894).ActionSheetRow.Group, { hasIcons: true, children: tmp6 });
-              const tmp12 = jsx(tmp(6898).ActionSheet, { children: null });
+              obj3.children = jsx(tmp(6895).ActionSheetRow.Group, { hasIcons: true, children: tmp6 });
+              const tmp12 = jsx(tmp(6899).ActionSheet, { children: null });
               cResult[9] = tmp6;
               cResult[10] = tmp12;
               let tmp10 = tmp12;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = guildId(4818);
       let obj2 = { children: null };
       const arr = useResourceChannelsDefault(guildId);
-      obj2.children = jsx(guildId(6894).ActionSheetRow.Group, {
+      obj2.children = jsx(guildId(6895).ActionSheetRow.Group, {
         hasIcons: true,
         children: useResourceChannelsDefault(guildId).map((label) => {
           const resourceChannelIconURL = height(dependencyMap[10]).getResourceChannelIconURL(label);
@@ -129,5 +129,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           );
         }),
       });
-      return jsx(guildId(6898).ActionSheet, { children: null });
+      return jsx(guildId(6899).ActionSheet, { children: null });
     };

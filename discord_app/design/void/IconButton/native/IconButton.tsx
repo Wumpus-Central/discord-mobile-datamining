@@ -190,7 +190,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.disableColor = disableColor;
       obj2.source = source;
       obj.children = jsx(size(1200).Icon, { size: REFRESH_SMALL_16, style: null, disableColor: null, source: null });
-      return jsx(size(6184).PressableOpacity, {
+      return jsx(size(6185).PressableOpacity, {
         accessibilityRole: "button",
         accessibilityLabel: tmp6,
         accessibilityElementsHidden: accessibilityHidden,

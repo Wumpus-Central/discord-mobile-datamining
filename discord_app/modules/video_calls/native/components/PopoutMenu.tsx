@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Patterns from "../../../../../_runtime/05059_Patterns.js";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06334_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06335_LegacyBaseButton.js";
 import FormRowDefault from "../../../../design/void/Form/native/FormRow.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -454,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
             }
-            const Gesture = onOpen(6334).Gesture;
+            const Gesture = onOpen(6335).Gesture;
             const LongPressResult = Gesture.LongPress();
             function be() {
               ReanimatedRexport.runOnJS(Oe)();
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { gesture: tmp37, children: null };
               const obj8 = { ref, children: trigger };
               obj6.children = closure_6(first1, obj8);
-              const items2 = [closure_6(onOpen(6334).GestureDetector, obj6)];
+              const items2 = [closure_6(onOpen(6335).GestureDetector, obj6)];
               class De {
                 constructor() {
                   tmp = closure_0;

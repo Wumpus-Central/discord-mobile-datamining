@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
-import inlineStyles from "../../../../../_runtime/07576_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07577_inlineStyles.js";
 import showLongPressForumPostActionSheetDefault from "../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import showThreadLongPressActionSheetDefault from "../../../threads/native/components/showThreadLongPressActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -19,7 +19,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11758);
+const RedesignChannelListConstants = fn(11760);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1085).Permissions;
 const UnreadSetting = fn(5967).UnreadSetting;

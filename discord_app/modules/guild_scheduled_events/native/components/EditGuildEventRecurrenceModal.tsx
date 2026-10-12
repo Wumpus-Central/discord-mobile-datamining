@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const tmp5 = onCloseModal;
       ({ left, right } = onCloseModal(1631)());
-      const tmp7 = onCloseModal(8525)(recurrenceId, guildEvent.id);
+      const tmp7 = onCloseModal(8526)(recurrenceId, guildEvent.id);
       dependencyMap = tmp7;
       if (cResult[0] === tmp7) {
         if (cResult[1] === guildEvent) {
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[7] === schedule) {
                   let tmp18 = cResult[8];
                 }
-                const tmp11Result = tmp11(tmp5(8528)(tmp18), 2);
+                const tmp11Result = tmp11(tmp5(8529)(tmp18), 2);
                 const first2 = tmp11Result[0];
                 error = tmp11Result[1].error;
                 if (cResult[9] === tmp8) {
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: "+51" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -410,7 +410,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -468,13 +468,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
       dependencyMap = tmp3;
       const tmp2 = useSafeAreaInsetsDefault();
-      const baseScheduleForRecurrence = guildEvent(8520).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-      let obj = guildEvent(8520);
-      const scheduleForRecurrenceWithException = guildEvent(8520).getScheduleForRecurrenceWithException(
+      const baseScheduleForRecurrence = guildEvent(8521).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+      let obj = guildEvent(8521);
+      const scheduleForRecurrenceWithException = guildEvent(8521).getScheduleForRecurrenceWithException(
         baseScheduleForRecurrence,
         tmp3,
       );
-      let obj2 = guildEvent(8520);
+      let obj2 = guildEvent(8521);
       [c5, c6] = schedule(noop.useState(scheduleForRecurrenceWithException), 2);
       const tmp7 = schedule(noop.useState(null), 2);
       const first = tmp7[0];
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       action = closure_8(guildEvent(5379).Button, obj3);
       let obj5 = {
         style: null,
-        children: closure_8(guildEvent(6687).Navigator, {
+        children: closure_8(guildEvent(6688).Navigator, {
           screens: {
             [closure_11.TIME]: {
               title: "",

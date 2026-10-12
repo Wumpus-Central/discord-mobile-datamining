@@ -12,7 +12,7 @@ function onClose() {
   ModalActionCreatorsDefault.pop();
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(12400).ContactSyncScenes;
+const ContactSyncScenes = fn(12402).ContactSyncScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj2 = {
@@ -20,7 +20,7 @@ let obj2 = {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
-    paddingTop: fn(6258).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(6259).NAV_BAR_HEIGHT + 32,
   },
 };
 let closure_10 = createStyles.createStyles(obj2);
@@ -37,7 +37,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         _require = asyncGeneratorStep(async (arg0) => {
           closure_1 = tmp3;
           closure_0(true);
-          await first(12406).updateName(closure_0);
+          await first(12408).updateName(closure_0);
           if (1 === tmp7) {
             c3 = 0;
             const obj7 = { text: null, variant: "critical" };
@@ -120,7 +120,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp16;
         tmp13 = tmp16;
       }
-      const tmp12 = jsx(onNext(12420), { onNext, onRemoveName: S, loading: tmp6, initialName: undefined });
+      const tmp12 = jsx(onNext(12422), { onNext, onRemoveName: S, loading: tmp6, initialName: undefined });
       cResult[2] = tmp6;
       cResult[3] = undefined;
       cResult[4] = tmp12;
@@ -139,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = async function _onNext2(arg0) {
         _require(true);
-        await tmp3(12406).updateName(closure_0);
+        await tmp3(12408).updateName(closure_0);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null, variant: "critical" };
@@ -181,7 +181,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         str = "";
       }
       obj3.initialName = str;
-      obj2.children = jsx(onNext(12420), {
+      obj2.children = jsx(onNext(12422), {
         onNext,
         onRemoveName() {
           return onNext(null);
@@ -201,7 +201,7 @@ const obj6 = {
   headerLeft: null,
   title: "",
 };
-const NavigatorHeader = fn(6200);
+const NavigatorHeader = fn(6201);
 obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
 obj5[ContactSyncScenes.NAME_INPUT] = obj6;
 ReactCompilerGating = fn(558);
@@ -209,7 +209,7 @@ let obj3 = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   justifyContent: "center",
-  paddingTop: fn(6258).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(6259).NAV_BAR_HEIGHT + 32,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");

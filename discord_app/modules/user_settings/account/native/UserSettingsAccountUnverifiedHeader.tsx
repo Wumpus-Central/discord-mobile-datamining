@@ -8,7 +8,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 const initialize = PressableOpacity(504);
 const Text_Text = PressableOpacity(5088);
-const Pressables = PressableOpacity(6184);
+const Pressables = PressableOpacity(6185);
 require = fn;
 function handleOpenEmailVerification() {
   EmailVerificationModalActionCreatorsDefault.open();

@@ -901,7 +901,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const throttleDurationForChannel = width(11185).useThrottleDurationForChannel(channel.id);
       width = isScreenLandscape(1497)().width;
       let obj = width(11185);
-      isScreenLandscape = width(8326).useIsScreenLandscape();
+      isScreenLandscape = width(8327).useIsScreenLandscape();
       const items = [width, isScreenLandscape];
       const memo = noop.useMemo(() => {
         let num = 3;
@@ -915,7 +915,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
         return obj;
       }, items);
-      const obj2 = width(8326);
+      const obj2 = width(8327);
       const tmp4 = _slicedToArray(
         width(11185).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
         2,

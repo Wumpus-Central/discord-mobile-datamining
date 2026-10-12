@@ -26,10 +26,10 @@ import ForumPostUnreadCountStore from "ForumPostUnreadCountStore.tsx";
 import ForumSearchStore from "ForumSearchStore.tsx";
 
 const ThreadSortOrder = tmp(2074);
-const ForumUtils = tmp(7006);
-const ThreadUtils = tmp(7922);
+const ForumUtils = tmp(7007);
+const ThreadUtils = tmp(7923);
 require = fn;
-const ForumTimestampFormats = fn(6974).ForumTimestampFormats;
+const ForumTimestampFormats = fn(6975).ForumTimestampFormats;
 const Constants = fn(1085);
 ({
   AnalyticsObjectTypes: closure_20,
@@ -1997,9 +1997,9 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
       const fn = function b() {
         if (null == searchQuery) {
           if (null != ref.current) {
-            closure_1(9328).clearForumSearch(user.id);
+            closure_1(9329).clearForumSearch(user.id);
             tmp.current = null;
-            const obj2 = closure_1(9328);
+            const obj2 = closure_1(9329);
           }
         }
         if (null != searchQuery) {
@@ -2039,8 +2039,8 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               } else {
-                closure_1(9328).clearForumSearch(user.id);
-                const obj = closure_1(9328);
+                closure_1(9329).clearForumSearch(user.id);
+                const obj = closure_1(9329);
               }
             }
           }
@@ -2091,9 +2091,9 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = isSearchLoading.useEffect(() => {
         if (null == searchQuery) {
           if (null != ref.current) {
-            closure_1(9328).clearForumSearch(user.id);
+            closure_1(9329).clearForumSearch(user.id);
             tmp.current = null;
-            const obj2 = closure_1(9328);
+            const obj2 = closure_1(9329);
           }
         }
         if (null != searchQuery) {
@@ -2133,8 +2133,8 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               } else {
-                closure_1(9328).clearForumSearch(user.id);
-                const obj = closure_1(9328);
+                closure_1(9329).clearForumSearch(user.id);
+                const obj = closure_1(9329);
               }
             }
           }

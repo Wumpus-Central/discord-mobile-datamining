@@ -34,11 +34,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp3 = closure_6();
       dependencyMap = tmp3;
       let obj = selectionActionComponent(576);
-      const obj2 = selectionActionComponent(8256);
+      const obj2 = selectionActionComponent(8257);
       const tmp5 = first(
         noop.useState(
           new Set(
-            selectionActionComponent(8256).getInitialStringSelectOptions(
+            selectionActionComponent(8257).getInitialStringSelectOptions(
               selectionActionComponent,
               selectionActionComponent.containerId,
             ),
@@ -634,7 +634,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = submitSelectedSelections;
       tmp9 = submitSelectedSelections;
       set = new Set(
-        selectionActionComponent(8256).getInitialStringSelectOptions(
+        selectionActionComponent(8257).getInitialStringSelectOptions(
           selectionActionComponent,
           selectionActionComponent.containerId,
         ),
@@ -649,10 +649,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
       let tmp = callback();
       dependencyMap = tmp;
-      let obj = selectionActionComponent(8256);
+      let obj = selectionActionComponent(8257);
       let tmp3 = first(
         noop.useState(
-          new Set(selectionActionComponent(8256).getInitialStringSelectOptions(selectionActionComponent, containerId)),
+          new Set(selectionActionComponent(8257).getInitialStringSelectOptions(selectionActionComponent, containerId)),
         ),
         2,
       );
@@ -766,7 +766,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         allowEmpty: null,
       };
       set = new Set(
-        selectionActionComponent(8256).getInitialStringSelectOptions(selectionActionComponent, containerId),
+        selectionActionComponent(8257).getInitialStringSelectOptions(selectionActionComponent, containerId),
       );
       const tmp9 = memo;
       if (selectionOptionItemWithDescription) {

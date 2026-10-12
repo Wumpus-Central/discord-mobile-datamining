@@ -16,7 +16,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 
 const native = GestureDetector(4827);
-const LegacyBaseButton = GestureDetector(6334);
+const LegacyBaseButton = GestureDetector(6335);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
@@ -142,7 +142,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj4 = {
-                  mode: setMode(17708).MorphablePanelModes.PANEL,
+                  mode: setMode(17765).MorphablePanelModes.PANEL,
                   panGestureEnabled: true,
                   pipState,
                   swipeRequiresPop: true,
@@ -236,7 +236,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
       const callback = noop.useCallback(fn, items2);
       const obj3 = {
-        mode: landscape(17708).MorphablePanelModes.PANEL,
+        mode: landscape(17765).MorphablePanelModes.PANEL,
         panGestureEnabled: true,
         pipState,
         swipeRequiresPop: true,
@@ -244,7 +244,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         onPanMinimizeGestureEnd: callback,
         disableHorizontalSafeAreas: true,
       };
-      obj2.gesture = setMode(17708)(obj3);
+      obj2.gesture = setMode(17765)(obj3);
       obj2.headerWrapperStyles = memo;
       obj2.headerStyles = memo1;
       obj2.styles = tmp;

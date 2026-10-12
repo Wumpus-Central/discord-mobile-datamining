@@ -19,10 +19,10 @@ export default function PerLetterEffect(name) {
   const items1 = [closure_7().container, containerStyle];
   obj.style = items1;
   const memo = noop.useMemo(() => {
-    const regex = colors(10268)();
+    const regex = colors(10269)();
     closure_1 = 0;
-    let obj = name(10269);
-    return name(10269)
+    let obj = name(10270);
+    return name(10270)
       .splitGraphemes(regex)
       .map((children, index) => {
         regex.lastIndex = 0;
@@ -58,7 +58,7 @@ export default function PerLetterEffect(name) {
     accessibilityLabel = name;
   }
   obj2.accessibilityLabel = accessibilityLabel;
-  const items2 = [textStyle, { lineHeight: "r" }];
+  const items2 = [textStyle, { lineHeight: "top" }];
   obj2.style = items2;
   obj2.children = memo;
   obj.children = jsx(name(5088).Text, {});

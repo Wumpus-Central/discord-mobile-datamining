@@ -35,10 +35,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = sharedValue(576).c(7);
       ({ width, height, style } = arg0);
       if (undefined === width) {
-        width = tmp(8967).COLLECTIBLES_SHOP_CARD_WIDTH;
+        width = tmp(8968).COLLECTIBLES_SHOP_CARD_WIDTH;
       }
       if (height == null) {
-        height = tmp(8967).COLLECTIBLES_SHOP_CARD_HEIGHT;
+        height = tmp(8968).COLLECTIBLES_SHOP_CARD_HEIGHT;
       }
       const tmp4Result = closure_5(width, height);
       let obj = sharedValue(576);
@@ -92,12 +92,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : (width) => {
       let COLLECTIBLES_SHOP_CARD_WIDTH = width.width;
       if (COLLECTIBLES_SHOP_CARD_WIDTH === undefined) {
-        COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(8967).COLLECTIBLES_SHOP_CARD_WIDTH;
+        COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(8968).COLLECTIBLES_SHOP_CARD_WIDTH;
       }
       let COLLECTIBLES_SHOP_CARD_HEIGHT = width.height;
       sharedValue = undefined;
       if (COLLECTIBLES_SHOP_CARD_HEIGHT == null) {
-        COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(8967).COLLECTIBLES_SHOP_CARD_HEIGHT;
+        COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(8968).COLLECTIBLES_SHOP_CARD_HEIGHT;
       }
       const tmp3Result = closure_5(COLLECTIBLES_SHOP_CARD_WIDTH, COLLECTIBLES_SHOP_CARD_HEIGHT);
       sharedValue = sharedValue(4850).useSharedValue(0.3);

@@ -7,7 +7,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
-import BottomSheetModal from "../../../../../_runtime/06306_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06307_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
@@ -24,7 +24,7 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const resetFocus = fn(10353).resetFocus;
+const resetFocus = fn(10354).resetFocus;
 const InstantInviteSources = fn(1085).InstantInviteSources;
 const Permissions = fn(1096).Permissions;
 const jsxProd = fn(21);

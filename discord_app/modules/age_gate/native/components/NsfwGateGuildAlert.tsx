@@ -7,7 +7,7 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const NsfwGateSource = fn(6915).NsfwGateSource;
+const NsfwGateSource = fn(6916).NsfwGateSource;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;

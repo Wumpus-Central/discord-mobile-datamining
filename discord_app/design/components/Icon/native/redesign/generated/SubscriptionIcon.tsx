@@ -2,7 +2,7 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod15248 from "../../../../../../../_runtime/metro/15248__.js";
+import _mod15271 from "../../../../../../../_runtime/metro/15271__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ export const SubscriptionIcon = ReactCompilerGating.isReactCompilerEnabled()
         ICON_STRONG = nativeDefault.colors.ICON_STRONG;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod15248;
+        const tmpResult = _mod15271;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -65,5 +65,5 @@ export const SubscriptionIcon = ReactCompilerGating.isReactCompilerEnabled()
       }
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
-      return jsx(BaseIconImage.BaseIconImage, { source: _mod15248, color: ICON_STRONG, style: color.style });
+      return jsx(BaseIconImage.BaseIconImage, { source: _mod15271, color: ICON_STRONG, style: color.style });
     };

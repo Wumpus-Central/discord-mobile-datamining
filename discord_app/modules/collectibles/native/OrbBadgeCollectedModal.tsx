@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod9060 from "../../virtual_currency/hooks/index.tsx";
+import _mod9061 from "../../virtual_currency/hooks/index.tsx";
 import BalanceWidgetPill from "../../virtual_currency/native/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -55,7 +55,7 @@ let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? function HeaderRight(initialRenderedBalance) {
       const cResult = c.c(3);
-      const balance = _mod9060.useFetchVirtualCurrencyBalance().balance;
+      const balance = _mod9061.useFetchVirtualCurrencyBalance().balance;
       if (cResult[0] === balance) {
         if (cResult[1] === initialRenderedBalance) {
           let tmp4 = cResult[2];
@@ -72,7 +72,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   : function HeaderRight(initialRenderedBalance) {
       return timestampProducer(BalanceWidgetPill.BalanceWidgetPill, {
         initialRenderedBalance,
-        balance: _mod9060.useFetchVirtualCurrencyBalance().balance,
+        balance: _mod9061.useFetchVirtualCurrencyBalance().balance,
       });
     };
 const constants = { ROOT: "ROOT" };
@@ -141,11 +141,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { source: null, style: null };
-        const obj3 = { uri: onPressViewBadge(12989) };
+        const obj3 = { uri: onPressViewBadge(12991) };
         obj2.source = obj3;
         obj2.style = tmp4.background;
-        let tmp10Result = closure_6(onPressViewBadge(6156), obj2);
-        const tmp14 = onPressViewBadge(6156);
+        let tmp10Result = closure_6(onPressViewBadge(6157), obj2);
+        const tmp14 = onPressViewBadge(6157);
       } else {
         class B {
           constructor() {
@@ -154,11 +154,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const obj4 = { uri: onPressViewBadge(12990) };
+        const obj4 = { uri: onPressViewBadge(12992) };
         tmp11[0] = obj4;
-        tmp11[1] = onPressViewBadge(12989);
+        tmp11[1] = onPressViewBadge(12991);
         tmp11[2] = tmp4.background;
-        tmp10Result = closure_6(tmp(8425).VideoComponent, tmp11);
+        tmp10Result = closure_6(tmp(8426).VideoComponent, tmp11);
       }
       cResult[6] = background;
       background = tmp4.background;
@@ -183,13 +183,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       if (stateFromStores) {
         const obj3 = { source: null, style: null };
-        const obj4 = { uri: onPressViewBadge(12989) };
+        const obj4 = { uri: onPressViewBadge(12991) };
         obj3.source = obj4;
         obj3.style = tmp.background;
-        let tmp9Result = closure_6(onPressViewBadge(6156), obj3);
+        let tmp9Result = closure_6(onPressViewBadge(6157), obj3);
         let tmp12 = onPressViewBadge;
         let tmp13 = closure_6;
-        const tmp15 = onPressViewBadge(6156);
+        const tmp15 = onPressViewBadge(6157);
       } else {
         const obj5 = {
           source: null,
@@ -200,11 +200,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           pauseWhileAppInactive: true,
           paused: false,
         };
-        const obj6 = { uri: onPressViewBadge(12990) };
+        const obj6 = { uri: onPressViewBadge(12992) };
         obj5.source = obj6;
-        obj5.poster = onPressViewBadge(12989);
+        obj5.poster = onPressViewBadge(12991);
         obj5.style = tmp.background;
-        tmp9Result = closure_6(tmp2(8425).VideoComponent, obj5);
+        tmp9Result = closure_6(tmp2(8426).VideoComponent, obj5);
         tmp12 = onPressViewBadge;
         tmp13 = closure_6;
       }
@@ -214,10 +214,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { source: null, style: null };
       const obj9 = { uri: null };
       const obj = modalKey(504);
-      obj9.uri = tmp12(9047);
+      obj9.uri = tmp12(9048);
       obj8.source = obj9;
       obj8.style = tmp.orbBadge;
-      const items4 = [tmp13(tmp12(6156), obj8)];
+      const items4 = [tmp13(tmp12(6157), obj8)];
       const obj10 = { style: tmp.bottomContainer, children: null };
       const obj11 = { style: tmp.textContainer, children: null };
       const obj12 = { variant: "heading-xl/bold", color: "text-overlay-light", style: tmp.text, children: null };
@@ -245,7 +245,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       items4[1] = closure_7(closure_4, obj10);
       obj7.children = items4;
       rect.children = closure_7(closure_4, obj7);
-      items3[1] = tmp13(modalKey(6813).SafeAreaPaddingView, rect);
+      items3[1] = tmp13(modalKey(6814).SafeAreaPaddingView, rect);
       obj2.children = items3;
       return closure_7(closure_4, obj2);
     };

@@ -57,7 +57,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["pS+K2L"]);
   },
-  parent: fn(7992).MobileUserSettings.VOICE,
+  parent: fn(7993).MobileUserSettings.VOICE,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useInputModeSettingTrailing() {
         let Q8gkVL = dependencyMap;

@@ -139,7 +139,7 @@ function getBlockedUserInGDMTableRows(arg0) {
   tmp3 = ignoredUserIds.length > 0;
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(14005);
+const SharedSpaceWarningConstants = fn(14028);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
@@ -228,7 +228,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[12] !== tmp7) {
           const obj3 = { users: tmp7, size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32 };
-          const tmp11 = closure_10(tmp(10279).FacepileGroupDMAvatar, obj3);
+          const tmp11 = closure_10(tmp(10280).FacepileGroupDMAvatar, obj3);
           cResult[12] = tmp7;
           cResult[13] = tmp11;
           let tmp9 = tmp11;
@@ -264,7 +264,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
       } else {
         const obj4 = { users: found, size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32 };
-        return closure_10(tmp(10279).FacepileGroupDMAvatar, obj4);
+        return closure_10(tmp(10280).FacepileGroupDMAvatar, obj4);
       }
       const obj = userIds(504);
     };

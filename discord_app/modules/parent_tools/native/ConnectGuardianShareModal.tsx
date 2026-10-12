@@ -21,8 +21,8 @@ function ConnectGuardianShareScreen() {
     ModalActionCreatorsDefault.pop();
   }, []);
   let obj = getLinkCode(1126);
-  getLinkCode = getLinkCode(11530).useFamilyCenterActions({ onError: callback }).getLinkCode;
-  const obj2 = getLinkCode(11530);
+  getLinkCode = getLinkCode(11532).useFamilyCenterActions({ onError: callback }).getLinkCode;
+  const obj2 = getLinkCode(11532);
   const items = [FamilyCenterStore];
   const stateFromStores = getLinkCode(573).useStateFromStores(items, () => FamilyCenterStore.getLinkCode());
   const obj3 = getLinkCode(573);
@@ -69,7 +69,7 @@ function ConnectGuardianShareScreen() {
         expiresAt: stateFromStores1,
         onRefresh: getLinkCode,
       };
-      let tmp11Result = closure_6(tmp2(15137).ConnectGuardianCard, obj11);
+      let tmp11Result = closure_6(tmp2(15160).ConnectGuardianCard, obj11);
     }
     const obj12 = { children: null };
     const obj13 = { children: null };
@@ -78,11 +78,11 @@ function ConnectGuardianShareScreen() {
     items3[1] = closure_7(getLinkCode(5377).Stack, obj9);
     obj5.children = items3;
     obj13.children = closure_7(getLinkCode(5377).Stack, obj5);
-    obj12.children = closure_6(getLinkCode(7515).ModalContent, obj13);
-    return closure_6(getLinkCode(7514).ModalScreen, obj12);
+    obj12.children = closure_6(getLinkCode(7516).ModalContent, obj13);
+    return closure_6(getLinkCode(7515).ModalScreen, obj12);
   }
-  tmp11Result = closure_6(View, { style: tmp.loading, children: closure_6(getLinkCode(6153).ActivityIndicator, {}) });
-  const obj14 = { style: tmp.loading, children: closure_6(getLinkCode(6153).ActivityIndicator, {}) };
+  tmp11Result = closure_6(View, { style: tmp.loading, children: closure_6(getLinkCode(6154).ActivityIndicator, {}) });
+  const obj14 = { style: tmp.loading, children: closure_6(getLinkCode(6154).ActivityIndicator, {}) };
 }
 const View = fn(17).View;
 const jsxProd = fn(21);

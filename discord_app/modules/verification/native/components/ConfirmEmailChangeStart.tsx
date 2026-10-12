@@ -42,8 +42,8 @@ export default function ConfirmEmailChangeStart() {
     const obj5 = { style: tmp.container, children: null };
     let obj6 = { style: tmp.image, source: null };
     const formatResult = intl.format(tmp2(1126).t.oMFSgi, obj3);
-    obj6.source = navigation(6281);
-    const items1 = [closure_9(navigation(6156), obj6), , ,];
+    obj6.source = navigation(6282);
+    const items1 = [closure_9(navigation(6157), obj6), , ,];
     let obj7 = {
       style: tmp.title,
       accessibilityRole: "header",

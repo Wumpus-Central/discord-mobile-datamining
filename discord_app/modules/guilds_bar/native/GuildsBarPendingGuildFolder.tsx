@@ -187,9 +187,9 @@ export default noop.memo(
     : function GuildsBarPendingGuildFolder(id) {
         id = id.id;
         ({ expanded, childNodes } = id);
-        let obj = id(16727);
+        let obj = id(16751);
         importDefault = usePendingFolderGuildIdsDefault();
-        const guildsBarAnimatedWrapperStyles = id(16727).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = id(16751).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: false,
         });
@@ -227,7 +227,7 @@ export default noop.memo(
             onPress() {
               const result = id(5057).triggerHapticFeedback(id(5057).HapticFeedbackTypes.IMPACT_LIGHT);
               const obj = id(5057);
-              const result1 = closure_1(6097).toggleGuildFolderExpand(closure_1_0);
+              const result1 = closure_1(6098).toggleGuildFolderExpand(closure_1_0);
             },
           }),
           items2,
@@ -244,10 +244,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "row",
-          config: "center",
-          externalChildren: "flex-start",
-          children: 8,
+          preventClipping: 2003,
+          config: null,
+          externalChildren: null,
+          children: false,
         };
         const obj3 = id(4850);
         obj4.id = "" + id;
@@ -262,10 +262,10 @@ export default noop.memo(
         let tmp8Result = null;
         if (expanded) {
           const obj5 = { folderId: id, totalItems: childNodes.length };
-          tmp8Result = jsx(tmp(16726).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+          tmp8Result = jsx(tmp(16750).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
         }
         obj4.externalChildren = tmp8Result;
-        obj4.children = jsx(id(13124).HourglassIcon, {});
+        obj4.children = jsx(id(13129).HourglassIcon, {});
         return jsx(GuildsBarAnimatedItemWrapperDefault, {
           id: null,
           accessibilityActions: null,
@@ -278,10 +278,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "row",
-          config: "center",
-          externalChildren: "flex-start",
-          children: 8,
+          preventClipping: 2003,
+          config: null,
+          externalChildren: null,
+          children: false,
         });
       },
 );

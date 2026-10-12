@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (null == burstReactionAnimationSource) {
               return null;
             } else {
-              const tmp25 = importDefault(tmp14 ? 7968 : 6105);
+              const tmp25 = importDefault(tmp14 ? 7969 : 6106);
               if (cResult[15] === tmp8) {
                 if (cResult[16] === tmp14) {
                   let num13 = 1.2;
@@ -157,6 +157,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const merged1 = Object.assign(merged);
         const merged2 = Object.assign(obj3);
         obj4.source = burstReactionAnimationSource;
-        return jsx(importDefault(withFadeOut ? 7968 : 6105), { style: tmp2.content, loop: false, speed: null });
+        return jsx(importDefault(withFadeOut ? 7969 : 6106), { style: tmp2.content, loop: false, speed: null });
       }
     };

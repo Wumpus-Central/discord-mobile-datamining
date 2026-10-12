@@ -1,9 +1,8 @@
 // discord_app/modules/conjure/agent_activity/ConjureTodoState.tsx
-import ConjureChatStore from "../chat/ConjureChatStore.tsx";
+import conjureChatTurns from "../chat/conjureChatTurns.tsx";
 import ConjureTimelineTree from "ConjureTimelineTree.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const turnSettled = ConjureChatStore.turnSettled;
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoState.tsx");
 
 export function todoMark(status, flag2) {
@@ -26,9 +25,9 @@ export const todoLabel = function todoLabel(activeForm, todoMarkResult) {
   text = activeForm.text;
 };
 export const checklistLive = function checklistLive(memo) {
-  const tmp = turnSettled(memo);
-  let tmp2 = !tmp;
-  if (!tmp) {
+  const turnSettledResult = conjureChatTurns.turnSettled(memo);
+  let tmp2 = !turnSettledResult;
+  if (!turnSettledResult) {
     tmp2 = true !== memo.stopRequested;
   }
   return tmp2;

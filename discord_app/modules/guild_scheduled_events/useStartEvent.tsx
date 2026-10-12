@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               c7 = 4;
               c8 = 1;
-              return { value: closure_0(8668).navigateToEvent(closure_131_0, closure_131_2), done: false };
+              return { value: closure_0(8669).navigateToEvent(closure_131_0, closure_131_2), done: false };
             }
           } else if (4 === tmp8) {
             if (arg0 === 1) {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               c7 = 5;
               c8 = 1;
-              return { value: closure_0(8668).postStartActions(closure_131_0, closure_131_2), done: false };
+              return { value: closure_0(8669).postStartActions(closure_131_0, closure_131_2), done: false };
             }
           } else if (arg0 === 1) {
             c8 = 3;
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c7 = 3;
                   c8 = 1;
                   const obj7 = {
-                    value: closure_1(8667).preStartEventActions(closure_131_0, closure_131_3),
+                    value: closure_1(8668).preStartEventActions(closure_131_0, closure_131_3),
                     done: false,
                   };
                   return obj7;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     c7 = 4;
                     c8 = 1;
                     const obj10 = {
-                      value: closure_1(8667).setEventAsActive(closure_131_0, closure_131_1),
+                      value: closure_1(8668).setEventAsActive(closure_131_0, closure_131_1),
                       done: false,
                     };
                     return obj10;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   } else {
                     c7 = 5;
                     c8 = 1;
-                    const obj13 = { value: closure_0(8668).navigateToEvent(closure_131_0, closure_131_2), done: false };
+                    const obj13 = { value: closure_0(8669).navigateToEvent(closure_131_0, closure_131_2), done: false };
                     return obj13;
                   }
                 } else if (5 === tmp7) {
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     c7 = 6;
                     c8 = 1;
                     const obj15 = {
-                      value: closure_0(8668).postStartActions(closure_131_0, closure_131_2),
+                      value: closure_0(8669).postStartActions(closure_131_0, closure_131_2),
                       done: false,
                     };
                     return obj15;

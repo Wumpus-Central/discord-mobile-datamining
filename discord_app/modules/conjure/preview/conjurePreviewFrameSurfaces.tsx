@@ -1,30 +1,30 @@
 // discord_app/modules/conjure/preview/conjurePreviewFrameSurfaces.tsx
-import ConjureTypes from "../ConjureTypes.tsx";
+import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const items = [
   {
     type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL,
-    declaredBy: ConjureTypes.ConjureSupportedSurface.APP_CHANNEL,
+    declaredBy: ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL,
   },
   ,
 ];
 const obj = {
   type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL,
-  declaredBy: ConjureTypes.ConjureSupportedSurface.APP_CHANNEL,
+  declaredBy: ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL,
 };
 items[1] = {
   type: EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL,
-  declaredBy: ConjureTypes.ConjureSupportedSurface.VOICE_CHANNEL,
+  declaredBy: ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL,
 };
 const obj2 = {
   type: EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL,
-  declaredBy: ConjureTypes.ConjureSupportedSurface.VOICE_CHANNEL,
+  declaredBy: ConjureProjectTypes.ConjureSupportedSurface.VOICE_CHANNEL,
 };
 items[2] = {
   type: EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN,
-  declaredBy: ConjureTypes.ConjureSupportedSurface.ACTIVITY,
+  declaredBy: ConjureProjectTypes.ConjureSupportedSurface.ACTIVITY,
 };
 let mapped = items.map((type) => type.type);
 const items1 = [

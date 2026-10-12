@@ -9,7 +9,7 @@ import StageInstanceStore from "StageInstanceStore.tsx";
 require = fn;
 const constants = fn(5892).RequestToSpeakPermissionStates;
 const Permissions = fn(1085).Permissions;
-const RowType = fn(7489).RowType;
+const RowType = fn(7490).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 

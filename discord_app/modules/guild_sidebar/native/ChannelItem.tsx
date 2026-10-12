@@ -7,7 +7,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
-import _modDef16543 from "../../../../_runtime/metro/16543__.js";
+import _modDef16566 from "../../../../_runtime/metro/16566__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -130,7 +130,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (tmp5) {
-          let tmp11 = _modDef16543;
+          let tmp11 = _modDef16566;
           let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
         } else {
           if (cResult[10] === channel) {
@@ -218,7 +218,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (tmp2) {
-          let tmp12 = _modDef16543;
+          let tmp12 = _modDef16566;
           let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
           let tmp9 = require;
         } else {
@@ -242,7 +242,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           obj19 = {};
         }
         const merged = Object.assign(obj19);
-        return closure_1_14(tmp9(12085).BaseChannelIcon, obj10);
+        return closure_1_14(tmp9(12087).BaseChannelIcon, obj10);
       }
     };
 ReactCompilerGating = fn(558);
@@ -379,7 +379,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         status,
         isMobileOnline,
         isVROnline,
-        statusStyle: null,
+        statusStyle: "scalar",
       };
       const items4 = [tmp.avatarStatus];
       if (avatarStatusSelected) {

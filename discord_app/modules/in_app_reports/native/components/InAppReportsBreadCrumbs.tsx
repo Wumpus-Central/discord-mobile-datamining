@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (0 === found.length) {
             return null;
           } else if (cResult[2] !== menuName) {
-            const REPORT_TO_MOD = tmp(7724).ReportMenuTypeSets.REPORT_TO_MOD;
+            const REPORT_TO_MOD = tmp(7725).ReportMenuTypeSets.REPORT_TO_MOD;
             const hasItem = REPORT_TO_MOD.has(menuName);
             const intl = tmp(1126).intl;
             const string = intl.string;

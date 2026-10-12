@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import _modDef10331 from "../../../../_runtime/metro/10331__.js";
+import _modDef10332 from "../../../../_runtime/metro/10332__.js";
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers.tsx";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const enabled = _location(10752).useConfig(tmp11).enabled;
         if (cResult[5] === enabled) {
           if (cResult[6] === tmp12) {
-            const tmp15 = _slicedToArray(channelId(7099).useSelectedDismissibleContent(cResult[7]), 2);
+            const tmp15 = _slicedToArray(channelId(7100).useSelectedDismissibleContent(cResult[7]), 2);
             noop = tmp17;
             const first = tmp15[0];
             const _Symbol = Symbol;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj5 = { size: "custom", style: tmp4.nitroWheelIcon, color: tmp9(587).unsafe_rawColors.WHITE };
-              const tmp28 = jsx(channelId(9035).NitroWheelIcon, {
+              const tmp28 = jsx(channelId(9036).NitroWheelIcon, {
                 size: "custom",
                 style: tmp4.nitroWheelIcon,
                 color: tmp9(587).unsafe_rawColors.WHITE,
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[15] = tmp7;
             cResult[16] = tmp4;
             cResult[17] = tmp28;
-            const tmpResult = channelId(7099);
+            const tmpResult = channelId(7100);
           }
         }
         if (enabled) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7Result = _location(10756)(obj3);
       closure_5 = tmp7Result;
       let tmp7 = _location(10756);
-      channelId(7099);
+      channelId(7100);
       if (obj4.useConfig({ location: _location }).enabled) {
         if ("staff" !== groupDMNitroAudience) {
           const items = [tmp3(2049).DismissibleContent.NITRO_GDM_CAP_COACHMARK];
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl3 = util.intl;
           obj.buttonLabel = intl3.string(GroupDMNitroUpsellModel.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
           if (closure_4) {
-            let tmp7 = _modDef10331;
+            let tmp7 = _modDef10332;
           } else {
             const obj4 = {
               size: "custom",
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           return obj;
         }, items1);
-        const coachmark = tmp3(9442).useCoachmark(ref, memo);
+        const coachmark = tmp3(9443).useCoachmark(ref, memo);
         const obj5 = { ref, collapsable: false, children: channelId.children };
         return (
           <closure_5 ref={ref} collapsable={false}>

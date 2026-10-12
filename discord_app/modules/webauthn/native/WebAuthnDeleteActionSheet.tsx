@@ -214,8 +214,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { title: null, trailing: null };
       let intl = credential(1126).intl;
       obj2.title = intl.formatToPlainString(credential(1126).t.mI3CoL, { keyName: credential.name });
-      obj2.trailing = closure_4(credential(6893).ActionSheetCloseButton, { onPress: handleClose });
-      const items = [closure_4(credential(6838).BottomSheetTitleHeader, obj2), , ,];
+      obj2.trailing = closure_4(credential(6894).ActionSheetCloseButton, { onPress: handleClose });
+      const items = [closure_4(credential(6839).BottomSheetTitleHeader, obj2), , ,];
       const obj4 = { style: tmp.content, children: null };
       const obj5 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
       const intl2 = credential(1126).intl;
@@ -265,5 +265,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj8.children = closure_4(credential(5379).Button, obj9);
       items[3] = closure_4(View, obj8);
       obj.children = items;
-      return closure_5(credential(6839).BottomSheet, obj);
+      return closure_5(credential(6840).BottomSheet, obj);
     };

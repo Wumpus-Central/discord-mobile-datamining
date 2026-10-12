@@ -4,8 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
-import _modDef13878 from "../../../../_runtime/metro/13878__.js";
-import _modDef13879 from "../../../../_runtime/metro/13879__.js";
+import _modDef13901 from "../../../../_runtime/metro/13901__.js";
+import _modDef13902 from "../../../../_runtime/metro/13902__.js";
 import PremiumGuildPreviewDefault from "PremiumGuildPreview.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -29,7 +29,7 @@ const Constants = fn(1085);
   AnalyticsSections: closure_14,
   GUILD_BOOST_APPLY_COOLDOWN_DAYS: closure_15,
 } = Constants);
-const Gradients = fn(7151).Gradients;
+const Gradients = fn(7152).Gradients;
 const BoostPurchaseIntent = fn(5008).BoostPurchaseIntent;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
@@ -186,7 +186,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 return obj.isGuildBoostSlotCanceled(slots);
               }
             }
-            const obj5 = { style: tmp2.pendingCancellationIcon, source: _modDef13878 };
+            const obj5 = { style: tmp2.pendingCancellationIcon, source: _modDef13901 };
             const tmp29 = collapsedCategories(FastImageDefault, obj5);
             cResult[14] = tmp2.pendingCancellationIcon;
             cResult[15] = tmp29;
@@ -243,7 +243,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = null;
         if (null != stateFromStores) {
           const obj2 = { style: tmp.pendingCancellation, children: null };
-          const obj3 = { style: tmp.pendingCancellationIcon, source: _modDef13878 };
+          const obj3 = { style: tmp.pendingCancellationIcon, source: _modDef13901 };
           const items1 = [collapsedCategories(FastImageDefault, obj3)];
           const obj4 = { style: tmp.pendingCancellationMessage, variant: "text-sm/medium", children: null };
           const intl = util.intl;
@@ -263,7 +263,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       ({ guild, isModifyingSubscription, slots, onPremiumGuildSubscribe } = arg0);
       const tmp4 = closure_21();
       if (cResult[0] !== tmp4.subscribeImage) {
-        const obj2 = { style: tmp4.subscribeImage, source: _modDef13879 };
+        const obj2 = { style: tmp4.subscribeImage, source: _modDef13902 };
         const tmp9 = collapsedCategories(FastImageDefault, obj2);
         cResult[0] = tmp4.subscribeImage;
         cResult[1] = tmp9;
@@ -376,7 +376,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       ({ guild, isModifyingSubscription } = arg0);
       const tmp = closure_21();
       const obj = { children: null };
-      const obj2 = { style: tmp.subscribeImage, source: _modDef13879 };
+      const obj2 = { style: tmp.subscribeImage, source: _modDef13902 };
       const items = [collapsedCategories(FastImageDefault, obj2), , , , ,];
       const obj3 = {
         style: tmp.header,
@@ -417,7 +417,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       onPremiumGuildSubscribe = onPremiumGuildSubscribe.onPremiumGuildSubscribe;
       const tmp4 = closure_21();
       const obj = previousGuildSubscriptionSlots(576);
-      const guildSubscriptionRemovalSource = previousGuildSubscriptionSlots(13889).useGuildSubscriptionRemovalSource();
+      const guildSubscriptionRemovalSource = previousGuildSubscriptionSlots(13912).useGuildSubscriptionRemovalSource();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
@@ -445,7 +445,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      const obj2 = previousGuildSubscriptionSlots(13889);
+      const obj2 = previousGuildSubscriptionSlots(13912);
       const stateFromStores = previousGuildSubscriptionSlots(504).useStateFromStores(first, tmp8);
       if (null == stateFromStores) {
         if (cResult[3] !== tmp4.loading) {
@@ -529,7 +529,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     if (cResult[31] !== guild) {
                       const obj7 = { guild };
-                      const tmp42 = closure_18(onPremiumGuildSubscribe(13880), obj7);
+                      const tmp42 = closure_18(onPremiumGuildSubscribe(13903), obj7);
                       cResult[31] = guild;
                       cResult[32] = tmp42;
                       let tmp39 = tmp42;
@@ -641,7 +641,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp35 = tmp37;
               }
               const obj14 = { style: tmp4.guildPreview, guild: stateFromStores };
-              const tmp32 = closure_18(onPremiumGuildSubscribe(13880), obj14);
+              const tmp32 = closure_18(onPremiumGuildSubscribe(13903), obj14);
               cResult[20] = stateFromStores;
               cResult[21] = tmp4.guildPreview;
               cResult[22] = tmp32;
@@ -661,7 +661,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[15] = tmp23;
         }
         const obj17 = { style: tmp4.transferImage, source: guildSubscriptionRemovalSource };
-        const tmp13 = closure_18(onPremiumGuildSubscribe(6156), obj17);
+        const tmp13 = closure_18(onPremiumGuildSubscribe(6157), obj17);
         cResult[5] = tmp4.transferImage;
         cResult[6] = guildSubscriptionRemovalSource;
         cResult[7] = tmp13;
@@ -673,8 +673,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
       ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
       const tmp = closure_21();
-      const guildSubscriptionRemovalSource = prop(13889).useGuildSubscriptionRemovalSource();
-      const obj = prop(13889);
+      const guildSubscriptionRemovalSource = prop(13912).useGuildSubscriptionRemovalSource();
+      const obj = prop(13912);
       const items = [GuildStore];
       const stateFromStores = prop(504).useStateFromStores(items, () => {
         const found = prop.find(
@@ -695,7 +695,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const obj4 = { children: null };
         const obj5 = { style: tmp.transferImage, source: guildSubscriptionRemovalSource };
-        const items1 = [closure_18(onPremiumGuildSubscribe(6156), obj5), , , , ,];
+        const items1 = [closure_18(onPremiumGuildSubscribe(6157), obj5), , , , ,];
         const obj6 = {
           style: tmp.header,
           variant: "heading-lg/extrabold",
@@ -716,7 +716,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         obj10.children = intl3.format(tmp2(1126).t["5zQYEz"], { guildCount: 1 });
         const items2 = [closure_18(tmp2(5088).Text, obj10), , ,];
         const obj11 = { style: tmp.guildPreview, guild: stateFromStores };
-        items2[1] = closure_18(onPremiumGuildSubscribe(13880), obj11);
+        items2[1] = closure_18(onPremiumGuildSubscribe(13903), obj11);
         const obj12 = { style: tmp.previewHeader, variant: "eyebrow", color: "text-default", children: null };
         const intl4 = tmp2(1126).intl;
         const obj13 = { slotCount: prop.length };
@@ -730,7 +730,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         obj14.end = tmp2(1105).HorizontalGradient.END;
         obj14.colors = Gradients.PREMIUM_GUILD;
         const obj15 = { guild };
-        obj14.children = closure_18(onPremiumGuildSubscribe(13880), obj15);
+        obj14.children = closure_18(onPremiumGuildSubscribe(13903), obj15);
         items2[3] = closure_18(onPremiumGuildSubscribe(5391), obj14);
         obj9.children = items2;
         items1[3] = closure_19(closure_6, obj9);
@@ -772,7 +772,7 @@ export default function SubscribeModalConfirmation(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

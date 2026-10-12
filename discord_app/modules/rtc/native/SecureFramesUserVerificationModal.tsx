@@ -15,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(8829);
+const SecureFramesConstants = fn(8830);
 ({
   USER_VERIFICATION_CHUNK_SIZE: closure_9,
   USER_VERIFICATION_LENGTH: c10,
@@ -289,15 +289,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj = { userId, channelId };
             const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
             if (enabled) {
-              let userVerificationDeeplink = showShareActionSheet(8828).getUserVerificationDeeplink(userId, tmp);
-              const showShareActionSheetResult = showShareActionSheet(8828);
+              let userVerificationDeeplink = showShareActionSheet(8829).getUserVerificationDeeplink(userId, tmp);
+              const showShareActionSheetResult = showShareActionSheet(8829);
             } else {
               userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
             }
-            showShareActionSheet = showShareActionSheet(8481).showShareActionSheet;
+            showShareActionSheet = showShareActionSheet(8482).showShareActionSheet;
             obj2 = { message: userVerificationDeeplink };
             showShareActionSheet(obj2, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-            const showShareActionSheetResult1 = showShareActionSheet(8481);
+            const showShareActionSheetResult1 = showShareActionSheet(8482);
           }
         }
       }, items4);

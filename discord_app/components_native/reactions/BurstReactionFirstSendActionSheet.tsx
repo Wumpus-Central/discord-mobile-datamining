@@ -260,7 +260,7 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     const tmp4Result = DismissibleContentUnsafeUtils;
     const obj4 = { channelId, messageId, emoji };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(7964, dependencyMap.paths),
+      asyncRequireImpl(7965, dependencyMap.paths),
       "BurstReactionFirstSendActionSheet",
       obj4,
     );

@@ -15,7 +15,7 @@ const AppLauncherNativeConstants = fn(1502);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(11817).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(11819).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
 const createStyles = fn(5092);
 let obj2 = {
@@ -98,11 +98,11 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
         application = section.application;
       }
       if (cResult[0] !== application) {
-        const appLauncherIconSource = scrollOffsetY(11727).getAppLauncherIconSource(application);
+        const appLauncherIconSource = scrollOffsetY(11729).getAppLauncherIconSource(application);
         cResult[0] = application;
         cResult[1] = appLauncherIconSource;
         loadingIcon = appLauncherIconSource;
-        const tmpResult = scrollOffsetY(11727);
+        const tmpResult = scrollOffsetY(11729);
       } else {
         loadingIcon = cResult[1];
       }
@@ -482,10 +482,10 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
       if (str == null) {
         str = "";
       }
-      const tmp9 = section(8268);
+      const tmp9 = section(8269);
       if (null != memo) {
         const obj8 = { style: tmp.appIcon, source: memo };
-        let tmp15 = closure_6(tmp8(6156), obj8);
+        let tmp15 = closure_6(tmp8(6157), obj8);
         let tmp16 = closure_6;
       } else {
         const obj9 = { style: null };
@@ -506,7 +506,7 @@ export const AppLauncherCommandViewHeader = ReactCompilerGating.isReactCompilerE
       const obj11 = { style: null };
       let items3 = [tmp.headerBannerOverlay, animatedStyle2];
       obj11.style = items3;
-      const items4 = [tmp16(section(4850).View, obj11), tmp16(section(11817), { onPress: onPress.onPressBack }), , ,];
+      const items4 = [tmp16(section(4850).View, obj11), tmp16(section(11819), { onPress: onPress.onPressBack }), , ,];
       const obj12 = {
         lineClamp: 1,
         animated: true,

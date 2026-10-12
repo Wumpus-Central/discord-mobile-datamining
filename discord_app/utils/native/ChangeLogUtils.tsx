@@ -256,7 +256,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   }
   let obj = output(576);
   const forResult = Symbol.for("react.early_return_sentinel");
-  const result = output(8126).splitParagraphAtImages(node.content);
+  const result = output(8127).splitParagraphAtImages(node.content);
   if (true === state.changelogImagesDisabled) {
     if (cResult[9] === node.content) {
       if (cResult[10] === output) {
@@ -298,7 +298,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     cResult[12] = outputResult;
     tmp13 = outputResult;
   } else {
-    output(8126);
+    output(8127);
   }
   if (cResult[18] === Paragraph) {
     if (cResult[19] === output) {
@@ -347,7 +347,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   cResult[21] = tmp4;
   cResult[22] = T;
   tmp20 = T;
-  const tmpResult = output(8126);
+  const tmpResult = output(8127);
 }) : (function ChangeLogParagraph(state) {
   ({ node, output } = state);
   state = state.state;
@@ -361,7 +361,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   if (Paragraph == null) {
     Paragraph = output(5088).Text;
   }
-  const result = output(8126).splitParagraphAtImages(node.content);
+  const result = output(8127).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -399,7 +399,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     }
     return tmp7;
   }
-  let obj = output(8126);
+  let obj = output(8127);
   tmp7 = <Paragraph key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
 });

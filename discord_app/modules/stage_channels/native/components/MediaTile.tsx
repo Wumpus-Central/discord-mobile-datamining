@@ -31,7 +31,7 @@ export default noop.memo(
         const width = participant(1497)().width;
         const obj2 = channel(11159);
         const tmp6 = participant;
-        const isScreenLandscape = channel(8326).useIsScreenLandscape();
+        const isScreenLandscape = channel(8327).useIsScreenLandscape();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelRTCStore];
           cResult[0] = items;
@@ -146,7 +146,7 @@ export default noop.memo(
         cResult[4] = items2;
         tmp11 = items2;
         tmp10 = fn;
-        const obj3 = channel(8326);
+        const obj3 = channel(8327);
       }
     : function MediaTile(channel) {
         channel = channel.channel;
@@ -156,8 +156,8 @@ export default noop.memo(
         const speakerTileStyles = channel(11159).useSpeakerTileStyles();
         const obj = channel(11159);
         const tmp5 = participant;
-        const isScreenLandscape = channel(8326).useIsScreenLandscape();
-        const obj2 = channel(8326);
+        const isScreenLandscape = channel(8327).useIsScreenLandscape();
+        const obj2 = channel(8327);
         const items = [ChannelRTCStore];
         const items1 = [channel.id, participant.id];
         const stateFromStores = channel(504).useStateFromStores(

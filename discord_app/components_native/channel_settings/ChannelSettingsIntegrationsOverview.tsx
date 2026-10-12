@@ -33,7 +33,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (linkedLobby != null) {
         application_id = linkedLobby.application_id;
       }
-      let name = channel(6857).useGetOrFetchApplication(application_id);
+      let name = channel(6858).useGetOrFetchApplication(application_id);
       if (null == name) {
         return null;
       } else {
@@ -48,7 +48,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[1] !== name) {
           const obj4 = { application: name };
-          const tmp10 = closure_6(navigation(8611), obj4);
+          const tmp10 = closure_6(navigation(8612), obj4);
           cResult[1] = name;
           cResult[2] = tmp10;
           let tmp7 = tmp10;
@@ -64,7 +64,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj5 = { title: name2, hasIcons: true, children: null };
-          TableRow = TableRow(6179).TableRow;
+          TableRow = TableRow(6180).TableRow;
           const obj6 = { label: null, icon: null, arrow: true, onPress: null };
           name2 = name.name;
           obj6.label = name2;
@@ -72,7 +72,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           obj6.onPress = tmp11;
           tmp = closure_6(TableRow, obj6);
           obj5.children = tmp;
-          const tmp14 = closure_6(TableRow(6264).TableRowGroup, obj5);
+          const tmp14 = closure_6(TableRow(6265).TableRowGroup, obj5);
           name = name.name;
           cResult[6] = name;
           cResult[7] = tmp7;
@@ -87,7 +87,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = fn;
         tmp11 = fn;
       }
-      const obj3 = channel(6857);
+      const obj3 = channel(6858);
     }
   : function LinkedLobbyFormSection(channel) {
       channel = channel.channel;
@@ -98,7 +98,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (linkedLobby != null) {
         application_id = linkedLobby.application_id;
       }
-      const getOrFetchApplication = channel(6857).useGetOrFetchApplication(application_id);
+      const getOrFetchApplication = channel(6858).useGetOrFetchApplication(application_id);
       let tmp5 = null;
       if (null != getOrFetchApplication) {
         const obj3 = { title: null, hasIcons: true, children: null };
@@ -110,8 +110,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         obj4.onPress = function onPress() {
           closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
         };
-        obj3.children = closure_6(tmp(6179).TableRow, obj4);
-        tmp5 = closure_6(tmp(6264).TableRowGroup, obj3);
+        obj3.children = closure_6(tmp(6180).TableRow, obj4);
+        tmp5 = closure_6(tmp(6265).TableRowGroup, obj3);
       }
       return tmp5;
     };
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[14] === screenContainer.screenContainer) {
                 }
-                Form = Form(8579).Form;
+                Form = Form(8580).Form;
                 const obj4 = { style: screenContainer.screenContainer, children: tmp20 };
                 tmp = closure_6(Form, obj4);
                 screenContainer = screenContainer.screenContainer;
@@ -226,11 +226,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj7.label = intl.string(Form(1126).t.jp25Id);
           const intl2 = Form(1126).intl;
           obj7.subLabel = intl2.string(Form(1126).t.mKIOkI);
-          obj7.icon = closure_6(Form(17436).WebhookIcon, {});
+          obj7.icon = closure_6(Form(17493).WebhookIcon, {});
           obj7.onPress = function onPress() {
             return navigation.push(ChannelSettingsSections.WEBHOOKS);
           };
-          const items2 = [closure_6(Form(6179).TableRow, obj7)];
+          const items2 = [closure_6(Form(6180).TableRow, obj7)];
           let hasItem = set.has(stateFromStores.type);
           if (hasItem) {
             const obj8 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
@@ -238,16 +238,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj8.label = intl3.string(Form(1126).t.OrV60r);
             const intl4 = Form(1126).intl;
             obj8.subLabel = intl4.string(Form(1126).t.rQREJl);
-            obj8.icon = closure_6(Form(17545).ChannelsFollowedIcon, {});
+            obj8.icon = closure_6(Form(17602).ChannelsFollowedIcon, {});
             obj8.onPress = function onPress() {
               return navigation.push(ChannelSettingsSections.CHANNELS_FOLLOWED);
             };
-            hasItem = closure_6(Form(6179).TableRow, obj8);
+            hasItem = closure_6(Form(6180).TableRow, obj8);
           }
           const obj9 = { hasIcons: true, children: null };
           items2[1] = hasItem;
           obj9.children = items2;
-          tmp12Result = closure_7(Form(6264).TableRowGroup, obj9);
+          tmp12Result = closure_7(Form(6265).TableRowGroup, obj9);
         }
         cResult[4] = canManageWebhooks;
         cResult[5] = stateFromStores;

@@ -22,7 +22,7 @@ const rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(6258).NAV_BAR_HEIGHT,
+  height: fn(6259).NAV_BAR_HEIGHT,
 };
 obj2.stepContainer = rect;
 let closure_10 = createStyles.createStyles(obj2);

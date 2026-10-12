@@ -140,7 +140,7 @@ let obj5 = {
     return intl.string(_modDef2206.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(15229).RefreshIcon,
+  IconComponent: fn(15252).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useBuildOverrideActiveDescription() {
         const cResult = c.c(3);
@@ -227,7 +227,7 @@ export default SettingBuilders.createStatic({
     return intl.string(_modDef2206.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(15229).RefreshIcon,
+  IconComponent: fn(15252).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useBuildOverrideActiveDescription() {
         const cResult = c.c(3);

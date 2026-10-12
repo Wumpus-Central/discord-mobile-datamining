@@ -6,12 +6,12 @@ import native from "../../../../design/void/native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06094_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/06095_fuzzysearch.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import SearchBarNavDefault from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 import HubActionCreatorsDefault from "../../../../actions/HubActionCreators.tsx";
-import _modDef12508 from "../../../../../_runtime/metro/12508__.js";
+import _modDef12510 from "../../../../../_runtime/metro/12510__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12480).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12482).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const createStyles = fn(5092);
@@ -42,7 +42,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(9);
       const tmp4 = closure_12();
       if (cResult[0] !== tmp4.emptyStateImage) {
-        const obj2 = { style: tmp4.emptyStateImage, source: _modDef12508 };
+        const obj2 = { style: tmp4.emptyStateImage, source: _modDef12510 };
         const tmp9 = options(FastImageDefault, obj2);
         cResult[0] = tmp4.emptyStateImage;
         cResult[1] = tmp9;
@@ -93,7 +93,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   : function EmptyState() {
       const tmp = closure_12();
       const obj = { style: tmp.emptyWrapper, children: null };
-      const obj2 = { style: tmp.emptyStateImage, source: _modDef12508 };
+      const obj2 = { style: tmp.emptyStateImage, source: _modDef12510 };
       const items = [options(FastImageDefault, obj2)];
       const obj3 = {
         style: tmp.emptyStateTitle,
@@ -171,7 +171,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {

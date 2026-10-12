@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const tmp8Result3 = guildId(10704);
               }
             } else {
-              const tmp8Result4 = guildId(6802);
+              const tmp8Result4 = guildId(6803);
               const obj5 = { section: constants.CHANNEL_BROWSER };
               const result2 = tmp8Result4.updateOptInChannelsImmediate(
                 guildId,
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const tmp8Result3 = guildId(10704);
             }
           } else {
-            const tmp8Result4 = guildId(6802);
+            const tmp8Result4 = guildId(6803);
             const obj5 = { section: constants.CHANNEL_BROWSER };
             const result2 = tmp8Result4.updateOptInChannelsImmediate(guildId, channelId, !isChannelOptedInResult, obj5);
           }

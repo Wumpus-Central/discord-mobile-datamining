@@ -21,7 +21,7 @@ export default {
     );
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(8885, dependencyMap.paths),
+      asyncRequireImpl(8886, dependencyMap.paths),
       "game-profile-" + gameId,
       { gameId, source, sourceUserId },
       stackingBehavior,
@@ -32,7 +32,7 @@ export default {
     ({ source, initialScrollOffset, initialTab } = gameId);
     DispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(8885, dependencyMap.paths), "game-profile-" + gameId, {
+    obj2.openLazy(asyncRequireImpl(8886, dependencyMap.paths), "game-profile-" + gameId, {
       gameId,
       source,
       initialScrollOffset,

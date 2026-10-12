@@ -6,7 +6,7 @@ import UserSettingsProtoActionCreators from "../../../../user_settings/UserSetti
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/06094_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/06095_fuzzysearch.js";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -953,6 +953,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4.renderItem = callback3;
       obj4.onScroll = callback2;
-      obj3.children = dailyCapOverridden(ref(8624).FlashList, obj4);
+      obj3.children = dailyCapOverridden(ref(8625).FlashList, obj4);
       return dailyCapOverridden(first1, obj3);
     };

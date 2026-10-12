@@ -453,7 +453,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { source: memo, style: null };
       const items2 = [style, tmp.media, dimensions];
       obj4.style = items2;
-      obj3.children = closure_15(imageFinishedLoading(6156), obj4);
+      obj3.children = closure_15(imageFinishedLoading(6157), obj4);
       const items3 = [closure_15(imageFinishedLoading(4850).View, obj3)];
       const obj5 = {
         source: { uri: source.uri },
@@ -473,7 +473,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj6 = { children: null };
       obj5.blurRadius = num;
-      items3[1] = closure_15(imageFinishedLoading(6156), obj5, source.uri);
+      items3[1] = closure_15(imageFinishedLoading(6157), obj5, source.uri);
       obj6.children = items3;
       return closure_17(closure_16, obj6);
     };

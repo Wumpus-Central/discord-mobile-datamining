@@ -35,8 +35,8 @@ let obj3 = {
 };
 obj2.menu = {
   paddingTop: nativeDefault.space.PX_4,
-  paddingLeft: fn(17131).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(17131).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(17194).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(17194).MESSAGE_EDGE_INSET,
 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -105,8 +105,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let obj4 = {
   paddingTop: nativeDefault.space.PX_4,
-  paddingLeft: fn(17131).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(17131).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(17194).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(17194).MESSAGE_EDGE_INSET,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanBotPreview.tsx");

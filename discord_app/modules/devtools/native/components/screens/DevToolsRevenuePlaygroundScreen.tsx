@@ -206,7 +206,7 @@ function FriendAnniversary() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -304,7 +304,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -722,7 +722,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(7169).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(7170).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -735,16 +735,16 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16034, dependencyMap.paths),
+          asyncRequireImpl(16057, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(6179).TableRow, obj2)];
+  items = [closure_17(premiumTrialOffer(6180).TableRow, obj2)];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(6179).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(6180).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -756,7 +756,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16034, dependencyMap.paths),
+          asyncRequireImpl(16057, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -764,7 +764,7 @@ function TrialOfferSheetExample() {
     },
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(6264).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(6265).TableRowGroup, obj3);
 }
 function PaymentFlowTest() {
   const obj = {
@@ -894,7 +894,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp = closure_4(arg0, 3);
             const subLabel = tmp[0];
             return closure_17(
-              subLabel(6895).TableSwitchRow,
+              subLabel(6896).TableSwitchRow,
               {
                 label: tmp[2].label,
                 subLabel,
@@ -946,7 +946,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         children: stateFromStores.map((item) => {
           [tmp, tmp2] = item;
           return closure_17(
-            closure_0(6895).TableSwitchRow,
+            closure_0(6896).TableSwitchRow,
             {
               label: tmp3,
               subLabel: tmp,

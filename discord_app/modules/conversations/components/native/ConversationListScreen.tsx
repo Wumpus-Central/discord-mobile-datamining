@@ -22,7 +22,7 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(7315);
+const ConversationConstants = fn(7316);
 ({
   MAX_CONVERSATIONS_PER_CHANNEL: closure_9,
   MOBILE_FETCH_LIMIT: c10,
@@ -164,7 +164,7 @@ export default function ConversationListScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -309,7 +309,7 @@ export default function ConversationListScreen() {
   obj8.ListFooterComponent = memo1;
   obj8.onViewableItemsChanged = callback1;
   obj8.viewabilityConfig = viewabilityConfig;
-  obj7.children = jsx(tmp(8624).FlashList, {
+  obj7.children = jsx(tmp(8625).FlashList, {
     data: memo,
     renderItem,
     keyExtractor,

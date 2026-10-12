@@ -50,8 +50,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== nextBlockedTrait) {
         let nitroLockedMessage;
         if (null != nextBlockedTrait) {
-          nitroLockedMessage = onNext(16018).getNitroLockedMessage(nextBlockedTrait);
-          const tmpResult = onNext(16018);
+          nitroLockedMessage = onNext(16041).getNitroLockedMessage(nextBlockedTrait);
+          const tmpResult = onNext(16041);
         }
         cResult[0] = nextBlockedTrait;
         cResult[1] = nitroLockedMessage;
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   onNext(4818);
                   if (cResult[14] !== activeRoute) {
                     const intl = onNext(1126).intl;
-                    if (activeRoute === onNext(15979).CheckpointRoute.PROFILE_WIDGET) {
+                    if (activeRoute === onNext(16002).CheckpointRoute.PROFILE_WIDGET) {
                       let PDTjLN = onNext(1126).t.i4jeWR;
                     } else {
                       PDTjLN = onNext(1126).t.PDTjLN;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     cResult[14] = activeRoute;
                     cResult[15] = stringResult;
                   } else if (cResult[16] !== activeRoute) {
-                    if (activeRoute === onNext(15979).CheckpointRoute.FINALIZE_CHARACTER) {
+                    if (activeRoute === onNext(16002).CheckpointRoute.FINALIZE_CHARACTER) {
                       const intl3 = onNext(1126).intl;
                       let stringResult1 = intl3.string(onNext(1126).t["R3BPH+"]);
                     } else {
@@ -95,11 +95,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const intl2 = onNext(1126).intl;
                         stringResult1 = intl2.string(onNext(1126).t.PDTjLN);
                       }
-                      tmpResult4 = onNext(15979);
+                      tmpResult4 = onNext(16002);
                     }
                     cResult[16] = activeRoute;
                     cResult[17] = stringResult1;
-                  } else if (activeRoute === onNext(15979).CheckpointRoute.HOME) {
+                  } else if (activeRoute === onNext(16002).CheckpointRoute.HOME) {
                     if (cResult[18] === tmp14) {
                       if (cResult[19] === tmp7.homeContainer) {
                         let tmp49 = cResult[20];
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           }
                           if (cResult[30] !== tmp58) {
                             const obj5 = { variant: "text-sm/medium", children: tmp58 };
-                            const tmp62 = closure_7(nextBlockedTrait(15996), obj5);
+                            const tmp62 = closure_7(nextBlockedTrait(16019), obj5);
                             cResult[30] = tmp58;
                             cResult[31] = tmp62;
                             let tmp60 = tmp62;
@@ -182,19 +182,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const obj7 = {
-                        Icon: onNext(8400).PlayIcon,
+                        Icon: onNext(8401).PlayIcon,
                         label: tmp51,
                         onPress: tmp11,
                         disabled: tmp6,
                         accessibilityState: tmp53,
                       };
-                      const tmp57 = closure_7(nextBlockedTrait(16026), obj7);
+                      const tmp57 = closure_7(nextBlockedTrait(16049), obj7);
                       cResult[24] = tmp11;
                       cResult[25] = tmp6;
                       cResult[26] = tmp53;
                       cResult[27] = tmp57;
                       tmp54 = tmp57;
-                      const tmp12Result = nextBlockedTrait(16026);
+                      const tmp12Result = nextBlockedTrait(16049);
                     }
                     const items1 = [tmp14, tmp7.homeContainer];
                     cResult[18] = tmp14;
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                               const obj12 = {
-                                Icon: onNext(10291).ArrowSmallRightIcon,
+                                Icon: onNext(10292).ArrowSmallRightIcon,
                                 iconPosition: "end",
                                 iconSize: "md",
                                 label: tmp20,
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 accessibilityLabel: tmp39,
                                 accessibilityState: tmp40,
                               };
-                              const tmp44 = closure_7(nextBlockedTrait(16026), obj12);
+                              const tmp44 = closure_7(nextBlockedTrait(16049), obj12);
                               cResult[52] = tmp11;
                               cResult[53] = tmp20;
                               cResult[54] = tmp36;
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               cResult[57] = tmp40;
                               cResult[58] = tmp44;
                               tmp41 = tmp44;
-                              const tmp12Result2 = nextBlockedTrait(16026);
+                              const tmp12Result2 = nextBlockedTrait(16049);
                             }
                           }
                         }

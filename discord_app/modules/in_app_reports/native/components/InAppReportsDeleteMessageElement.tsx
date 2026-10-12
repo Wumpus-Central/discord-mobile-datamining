@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onPress: C,
           icon: tmp21,
         };
-        const tmp26 = jsx(reportId(13543), {
+        const tmp26 = jsx(reportId(13566), {
           title: tmp15,
           disabledTitle: tmp16,
           description: tmp17,
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.disabled = tmp[0];
       obj2.onPress = callback;
       obj2.icon = jsx(message(5049).TrashIcon, { color: "text-feedback-critical" });
-      return jsx(reportId(13543), {
+      return jsx(reportId(13566), {
         title: null,
         disabledTitle: null,
         description: null,

@@ -80,8 +80,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let isDismissedResult = null != userStatus1;
       if (isDismissedResult) {
-        isDismissedResult = tmp(7386).isDismissed(questDockQuest.userStatus, tmp(5975).QuestContent.QUEST_BAR_MOBILE);
-        const tmpResult7 = tmp(7386);
+        isDismissedResult = tmp(7387).isDismissed(questDockQuest.userStatus, tmp(5975).QuestContent.QUEST_BAR_MOBILE);
+        const tmpResult7 = tmp(7387);
       }
       if (questDockQuest != null) {
         const userStatus = questDockQuest.userStatus;
@@ -92,16 +92,16 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("initialize");
       const isQuestExpired = require("hooks/QuestHooks").useIsQuestExpired(questDockQuest);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const isEligibleForQuests = tmp(9165).getIsEligibleForQuests();
+        const isEligibleForQuests = tmp(9166).getIsEligibleForQuests();
         cResult[3] = isEligibleForQuests;
-        const tmpResult9 = tmp(9165);
+        const tmpResult9 = tmp(9166);
       }
       if (cResult[4] !== bounty) {
-        const questDockAdCreativeId = tmp(15354).getQuestDockAdCreativeId(bounty);
+        const questDockAdCreativeId = tmp(15377).getQuestDockAdCreativeId(bounty);
         cResult[4] = bounty;
         cResult[5] = questDockAdCreativeId;
         let tmp16 = questDockAdCreativeId;
-        const tmpResult10 = tmp(15354);
+        const tmpResult10 = tmp(15377);
       } else {
         tmp16 = cResult[5];
       }
@@ -253,7 +253,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   : function useIsMobileQuestDockRenderedBase(type) {
       _require = type;
       const questDockQuest = require("AdCreativeUtils").getQuestDockQuest(type);
-      const tmp4 = questDockAdCreativeId(6626)();
+      const tmp4 = questDockAdCreativeId(6627)();
       const obj = require("AdCreativeUtils");
       const items = [QuestStore];
       let userStatus1;
@@ -268,8 +268,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let isDismissedResult = null != userStatus1;
       if (isDismissedResult) {
-        isDismissedResult = tmp(7386).isDismissed(questDockQuest.userStatus, tmp(5975).QuestContent.QUEST_BAR_MOBILE);
-        const tmpResult = tmp(7386);
+        isDismissedResult = tmp(7387).isDismissed(questDockQuest.userStatus, tmp(5975).QuestContent.QUEST_BAR_MOBILE);
+        const tmpResult = tmp(7387);
       }
       let claimedAt;
       if (questDockQuest != null) {
@@ -861,7 +861,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -899,7 +899,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                         };
                         v2 = 2;
                         v3 = 1;
-                        const obj10 = { value: v3(11612).launchActivityInBotDM(obj9), done: false };
+                        const obj10 = { value: v3(11614).launchActivityInBotDM(obj9), done: false };
                         return obj10;
                       }
                     }
@@ -922,7 +922,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                   return obj;
                 }
                 v3 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               } catch (tmp16) {
                 v3 = tmp;
                 throw tmp16;

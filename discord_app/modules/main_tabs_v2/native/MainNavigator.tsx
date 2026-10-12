@@ -60,7 +60,7 @@ function getAccountStanding() {
   return require("SuspendedUserPage").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(16343).StackNavigationAnimationSettings;
+let closure_7 = fn(16366).StackNavigationAnimationSettings;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -137,9 +137,9 @@ function getChannelScreen() {
       },
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(9297).renderHeader };
+      const obj = { headerShown: true, header: styles(9298).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(9297).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(9298).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -650,9 +650,9 @@ export default noop.memo(
                 },
               },
               options(arg0) {
-                const obj = { headerShown: true, header: styles(9297).renderHeader };
+                const obj = { headerShown: true, header: styles(9298).renderHeader };
                 ({ navigation, route } = arg0);
-                const merged = Object.assign(styles(9297).getDefaultChannelStackHeaderProps(navigation, route));
+                const merged = Object.assign(styles(9298).getDefaultChannelStackHeaderProps(navigation, route));
                 const merged1 = Object.assign(animation2);
                 obj.animation = animation;
                 return obj;
@@ -741,9 +741,9 @@ export default noop.memo(
                 },
               },
               options(arg0) {
-                const obj = { headerShown: true, header: styles(9297).renderHeader };
+                const obj = { headerShown: true, header: styles(9298).renderHeader };
                 ({ navigation, route } = arg0);
-                const merged = Object.assign(styles(9297).getDefaultChannelStackHeaderProps(navigation, route));
+                const merged = Object.assign(styles(9298).getDefaultChannelStackHeaderProps(navigation, route));
                 const merged1 = Object.assign(animation2);
                 obj.animation = animation;
                 return obj;
@@ -824,7 +824,7 @@ export default noop.memo(
                     if (closure_1_15) {
                       str = "default";
                     }
-                    const merged = Object.assign(animation(9297).getDefaultStackHeaderProps(navigation.navigation));
+                    const merged = Object.assign(animation(9298).getDefaultStackHeaderProps(navigation.navigation));
                     const merged1 = Object.assign(animation2);
                     return { orientation: str, headerShown: false };
                   },
@@ -873,9 +873,9 @@ export default noop.memo(
                     },
                   },
                   options(arg0) {
-                    const obj = { headerShown: true, header: styles(9297).renderHeader };
+                    const obj = { headerShown: true, header: styles(9298).renderHeader };
                     ({ navigation, route } = arg0);
-                    const merged = Object.assign(styles(9297).getDefaultChannelStackHeaderProps(navigation, route));
+                    const merged = Object.assign(styles(9298).getDefaultChannelStackHeaderProps(navigation, route));
                     const merged1 = Object.assign(animation2);
                     obj.animation = animation;
                     return obj;
@@ -896,7 +896,7 @@ export default noop.memo(
               name: "conversations",
               getComponent: getConversationsComponent,
               options() {
-                return stateFromStores(9636)();
+                return stateFromStores(9637)();
               },
             }),
             collapsed(closure_16.Screen, { name: "auth", getComponent: getAuthComponent, options }),
@@ -957,7 +957,7 @@ export default noop.memo(
                 str = "modal";
               }
               const obj = {};
-              const merged = Object.assign(stateFromStores(9636)({ presentation: str }));
+              const merged = Object.assign(stateFromStores(9637)({ presentation: str }));
               const params3 = route.params;
               let presentation;
               if (params3 != null) {
@@ -1013,7 +1013,7 @@ export default noop.memo(
                   if (closure_1_15) {
                     str = "default";
                   }
-                  const merged = Object.assign(animation(9297).getDefaultStackHeaderProps(navigation.navigation));
+                  const merged = Object.assign(animation(9298).getDefaultStackHeaderProps(navigation.navigation));
                   const merged1 = Object.assign(animation2);
                   return { orientation: str, headerShown: false };
                 },
@@ -1062,9 +1062,9 @@ export default noop.memo(
                   },
                 },
                 options(arg0) {
-                  const obj = { headerShown: true, header: styles(9297).renderHeader };
+                  const obj = { headerShown: true, header: styles(9298).renderHeader };
                   ({ navigation, route } = arg0);
-                  const merged = Object.assign(styles(9297).getDefaultChannelStackHeaderProps(navigation, route));
+                  const merged = Object.assign(styles(9298).getDefaultChannelStackHeaderProps(navigation, route));
                   const merged1 = Object.assign(animation2);
                   obj.animation = animation;
                   return obj;
@@ -1085,7 +1085,7 @@ export default noop.memo(
             name: "conversations",
             getComponent: getConversationsComponent,
             options() {
-              return stateFromStores(9636)();
+              return stateFromStores(9637)();
             },
           };
           const obj8 = { name: "auth", getComponent: getAuthComponent, options };
@@ -1106,7 +1106,7 @@ export default noop.memo(
           items1[7] = collapsed(closure_16.Screen, {
             name: "settings",
             options() {
-              const tmp = stateFromStores(9636);
+              const tmp = stateFromStores(9637);
               let obj2;
               if (obj.isIpadOS()) {
                 obj2 = { presentation: "modal" };
@@ -1123,13 +1123,13 @@ export default noop.memo(
             name: "sidebar",
             getComponent: getChannelDetailsComponent,
             options() {
-              return stateFromStores(9636)({ lockOrientation: false });
+              return stateFromStores(9637)({ lockOrientation: false });
             },
           });
           const obj16 = {
             name: "settings",
             options() {
-              const tmp = stateFromStores(9636);
+              const tmp = stateFromStores(9637);
               let obj2;
               if (obj.isIpadOS()) {
                 obj2 = { presentation: "modal" };
@@ -1146,7 +1146,7 @@ export default noop.memo(
             name: "sidebar",
             getComponent: getChannelDetailsComponent,
             options() {
-              return stateFromStores(9636)({ lockOrientation: false });
+              return stateFromStores(9637)({ lockOrientation: false });
             },
           };
           tmp5Result = PlatformUtils2;
@@ -1186,7 +1186,7 @@ export default noop.memo(
                 }
                 str2 = str3;
               }
-              const merged = Object.assign(stateFromStores(9636)({ presentation: str2 }));
+              const merged = Object.assign(stateFromStores(9637)({ presentation: str2 }));
               return obj;
             },
             getComponent: getModalComponent,

@@ -8,8 +8,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef8404 from "../../../../../_runtime/metro/08404__.js";
-import PaginationDefault from "../../../../../_runtime/10115_Pagination.js";
+import _modDef8405 from "../../../../../_runtime/metro/08405__.js";
+import PaginationDefault from "../../../../../_runtime/10116_Pagination.js";
 import _modDef10713 from "../../../../../_runtime/metro/10713__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(18347);
+const GuildSettingsRoleConstants = fn(18405);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_14(_modDef8404, {
+        children: closure_14(_modDef8405, {
           maximumValue: values.length - 1,
           minimumTrackTintColor: values[value].color,
           minimumValue: closure_9.COSMETIC,

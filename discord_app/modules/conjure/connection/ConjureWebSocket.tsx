@@ -122,14 +122,20 @@ prototype["sendPublish"] = function sendPublish() {
   const error = new Error("WebSocket not open");
   throw error;
 };
-prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined) {
+prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined, name) {
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
     if (self.socket.readyState === WebSocket.OPEN) {
       const socket = self.socket;
-      const _JSON = JSON;
       const obj = { type: "draft_patch_notes", nonce: combined };
+      if (null != name) {
+        const obj2 = { project_name: name };
+        let obj3 = obj2;
+      } else {
+        obj3 = {};
+      }
+      const merged = Object.assign(obj3);
       socket.send(JSON.stringify(obj));
     }
   }
@@ -249,6 +255,34 @@ prototype["sendForceCompaction"] = function sendForceCompaction() {
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendUndoContextSwitch"] = function sendUndoContextSwitch(id) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "undo_context_switch", id };
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendSmartContext"] = function sendSmartContext(enabled) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "set_smart_context", enabled };
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendRestartSandbox"] = function sendRestartSandbox() {
   const self = this;
   if (null != this.socket) {
@@ -257,6 +291,39 @@ prototype["sendRestartSandbox"] = function sendRestartSandbox() {
       const socket = self.socket;
       const _JSON = JSON;
       socket.send(JSON.stringify({ type: "restart_sandbox" }));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendDebugGitInfoRequest"] = function sendDebugGitInfoRequest(arg0) {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
+  }
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const tmp2 = flag ? { lite: true } : {};
+      const obj = { type: "debug_git_info_request" };
+      const merged = Object.assign(tmp2);
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendRestartAgent"] = function sendRestartAgent(clear_alarm) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "restart_agent", clear_alarm };
+      socket.send(JSON.stringify(obj));
     }
   }
   const error = new Error("WebSocket not open");

@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_3(ContentDismissActionType.USER_DISMISS);
             }
           }
-          const tmp19 = closure_6(tmp(7104).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
+          const tmp19 = closure_6(tmp(7105).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
           cResult[14] = tmp19;
           const tmp18 = tmp19;
         } else {
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [
         closure_6(View, {
           style: tmp.illustration,
-          children: closure_6(markAsDismissed(7104).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
+          children: closure_6(markAsDismissed(7105).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }),
         }),
         ,
       ];
@@ -333,5 +333,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = items3;
       obj2.children = closure_7(markAsDismissed(5377).Stack, obj3);
       obj.children = closure_6(View, obj2);
-      return closure_6(markAsDismissed(6839).BottomSheet, obj);
+      return closure_6(markAsDismissed(6840).BottomSheet, obj);
     };

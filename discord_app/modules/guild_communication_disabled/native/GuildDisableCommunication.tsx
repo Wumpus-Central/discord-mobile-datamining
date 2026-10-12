@@ -394,7 +394,7 @@ export default noop.memo(
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -439,7 +439,7 @@ export default noop.memo(
                   obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
                   v1();
                   c3 = 3;
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp18) {
                 c3 = tmp;
@@ -494,7 +494,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -543,7 +543,7 @@ export default noop.memo(
                 obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
                 closure_129_2();
                 c3 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp18) {
               c3 = tmp;

@@ -10,7 +10,7 @@ import useAllowFriendsFromMutualGuildsOnly from "../../content_and_social/useAll
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16257);
+const UserSettingsSafetySelectedGuildStore = fn(16280);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
 let closure_6 = fn(10664).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
@@ -194,7 +194,7 @@ const toggle = SettingBuilders.createToggle({
         return stringResult;
       },
   useDescription: tmp5,
-  parent: fn(7992).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7993).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: tmp4,
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     const tmp = closure_4();

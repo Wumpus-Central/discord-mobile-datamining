@@ -66,7 +66,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -140,7 +140,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
           c3 = 0;
           closure_129_2(false);
           c5 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp50) {
         if (tmp5 === c3) {
@@ -270,5 +270,5 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   items7[3] = closure_10(entry(5379).Button, obj22);
   obj5.children = items7;
   obj4.children = closure_12(View, obj5);
-  return closure_10(entry(6181).Card, obj4);
+  return closure_10(entry(6182).Card, obj4);
 });

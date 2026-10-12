@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === verifiedContainer.id) {
           let tmp5 = cResult[2];
         }
-        const roleIconProps = tmp(6882).useRoleIconProps(tmp5);
+        const roleIconProps = tmp(6883).useRoleIconProps(tmp5);
         if (cResult[3] !== verifiedContainer.name) {
           let name = verifiedContainer.name;
           importDefault = name;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 accessible: false,
                                 children: tmp38,
                               };
-                              const tmp44 = closure_6(tmp(6184).PressableHighlight, obj3);
+                              const tmp44 = closure_6(tmp(6185).PressableHighlight, obj3);
                               cResult[25] = tmp12;
                               cResult[26] = tmp14.container;
                               cResult[27] = tmp15;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = verifiedContainer.id;
         cResult[7] = handlePress;
         tmp12 = handlePress;
-        const tmpResult = tmp(6882);
+        const tmpResult = tmp(6883);
       }
       const obj11 = { guildId, roleId: verifiedContainer.id, size: 12 };
       cResult[0] = guildId;
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ guildId, color } = role);
       const DeveloperMode = role(2041).DeveloperMode;
       const setting = DeveloperMode.useSetting();
-      const roleIconProps = role(6882).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
+      const roleIconProps = role(6883).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
       let name = role.name;
       let combined = name;
       if (role.name.length > closure_5) {
@@ -287,8 +287,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj5.guildId = guildId;
         obj5.roleColor = color;
-        let tmp10Result = closure_6(combined(6899), obj5);
-        const tmp15 = combined(6899);
+        let tmp10Result = closure_6(combined(6900), obj5);
+        const tmp15 = combined(6900);
       } else {
         const items = [tmp9.bubble];
         if (null != color) {
@@ -308,9 +308,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { style: tmp9.roleIcon, children: null };
         const obj10 = {};
         const merged = Object.assign(roleIconProps);
-        obj9.children = closure_6(combined(6901), obj10);
+        obj9.children = closure_6(combined(6902), obj10);
         tmp10Result2 = closure_6(View, obj9);
-        const tmp18 = combined(6901);
+        const tmp18 = combined(6902);
       }
       items1[1] = tmp10Result2;
       items1[2] = closure_6(role(5088).Text, {
@@ -320,5 +320,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       obj4.children = items1;
       obj3.children = closure_7(View, obj4);
-      return closure_6(role(6184).PressableHighlight, obj3);
+      return closure_6(role(6185).PressableHighlight, obj3);
     };

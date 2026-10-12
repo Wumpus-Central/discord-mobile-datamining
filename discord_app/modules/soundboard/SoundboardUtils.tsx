@@ -109,7 +109,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -180,9 +180,9 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
               tmp23 = null;
               if (closure_130_16(closure_129_1)) {
                 (function playCustomJoinSound(sound, id) {
-                  closure_1_0(7047).playSoundLocally(id, sound);
-                  const obj = closure_1_0(7047);
-                  const result = closure_1_0(7057).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  closure_1_0(7048).playSoundLocally(id, sound);
+                  const obj = closure_1_0(7048);
+                  const result = closure_1_0(7058).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }
@@ -193,7 +193,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
         }
       }
       c4 = 3;
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     } catch (tmp33) {
       c4 = tmp;
       throw tmp33;
@@ -388,9 +388,9 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
         tmp6 = require;
       }
       if (null != joinSound.joinSound) {
-        let ADDED = tmp6(7048).AnalyticsChangeType.UPDATED;
+        let ADDED = tmp6(7049).AnalyticsChangeType.UPDATED;
       } else {
-        ADDED = tmp6(7048).AnalyticsChangeType.ADDED;
+        ADDED = tmp6(7049).AnalyticsChangeType.ADDED;
       }
       joinSound.joinSound = {
         soundId: guildId.soundId,
@@ -404,7 +404,7 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
       }
       obj2.guild_id = num;
       obj2.change_type = ADDED;
-      obj2.sound_type = tmp6(7048).AnalyticsSoundType.ENTRY;
+      obj2.sound_type = tmp6(7049).AnalyticsSoundType.ENTRY;
       obj2.sound_source = CUSTOM;
       AnalyticsUtilsDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj2);
     },

@@ -15,7 +15,7 @@ export const openAddMembersActionSheet = function openAddMembersActionSheet(stat
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(8619, dependencyMap.paths), "channel-add-members-" + stateFromStores.id, {
+  obj2.openLazy(asyncRequireImpl(8620, dependencyMap.paths), "channel-add-members-" + stateFromStores.id, {
     channel: stateFromStores,
     canSkip: flag,
   });

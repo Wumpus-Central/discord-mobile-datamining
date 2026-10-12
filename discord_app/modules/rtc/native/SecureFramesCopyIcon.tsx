@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp6) {
         const obj2 = { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" };
-        const tmp14 = jsx(tmp(7573).IconButton, {
+        const tmp14 = jsx(tmp(7574).IconButton, {
           icon: tmp7,
           variant: "secondary",
           onPress: tmp6,

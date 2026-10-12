@@ -37,8 +37,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6132).addPostConnectionCallback;
-let closure_10 = fn(7140).handleMobileWebCheckoutStatus;
+fn(6133).addPostConnectionCallback;
+let closure_10 = fn(7141).handleMobileWebCheckoutStatus;
 const Constants = fn(1085);
 ({
   AnalyticEvents: map1,
@@ -50,12 +50,12 @@ const Constants = fn(1085);
 } = Constants);
 const StaticChannelRoute = fn(2072).StaticChannelRoute;
 const StreamTypes = fn(5898).StreamTypes;
-const NativePermissionTypes = fn(7482).NativePermissionTypes;
+const NativePermissionTypes = fn(7483).NativePermissionTypes;
 let closure_22 = fn(10863).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_23 = fn(7259).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_23 = fn(7260).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5071).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(14050).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(7992).MobileUserSettings;
+const SHARE_SCREEN_MODAL_KEY = fn(14073).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(7993).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -211,7 +211,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj20 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "nuppineula" };
+      const obj20 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj25 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj20.navigationSettings = obj25;
       rootNavigationRef1(inviteCode[31])(obj20);
@@ -302,7 +302,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(14062, dependencyMap.paths),
+                    asyncRequireImpl(14085, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -371,7 +371,7 @@ export default function handleSupportedURL(payload) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -440,7 +440,7 @@ export default function handleSupportedURL(payload) {
                       const obj3 = payload(paths[49]);
                     }
                     c4 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp35) {
                   c4 = tmp;
@@ -474,7 +474,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -533,7 +533,7 @@ export default function handleSupportedURL(payload) {
                     const obj4 = tmp4(paths[52]);
                   }
                   c2 = 3;
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 } catch (tmp37) {
                   c2 = tmp;
                   throw tmp37;
@@ -614,7 +614,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -677,11 +677,11 @@ export default function handleSupportedURL(payload) {
                         const obj5 = closure_1(5934);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7093).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7093);
+                        dependencyMap(7094).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7094);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(6874).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(6875).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -791,7 +791,7 @@ export default function handleSupportedURL(payload) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -1050,7 +1050,7 @@ export default function handleSupportedURL(payload) {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: "+51" };
+                          return { value: "IconComponent", done: null };
                         }
                       } else {
                         try {
@@ -1101,7 +1101,7 @@ export default function handleSupportedURL(payload) {
                               openConjureProject(closure_129_4, closure_130_12);
                             }
                             c4 = 3;
-                            return { value: "IconComponent", done: "+51" };
+                            return { value: "IconComponent", done: null };
                           }
                         } catch (tmp17) {
                           c4 = tmp;

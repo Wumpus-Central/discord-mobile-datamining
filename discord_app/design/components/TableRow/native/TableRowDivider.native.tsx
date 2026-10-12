@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const TABLE_DIVIDER_WIDTH = fn(6175).TABLE_DIVIDER_WIDTH;
+const TABLE_DIVIDER_WIDTH = fn(6176).TABLE_DIVIDER_WIDTH;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles((arg0, arg1) => {

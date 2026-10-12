@@ -9,7 +9,7 @@ import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperim
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const ThreadHooks = tmp(6971);
+const ThreadHooks = tmp(6972);
 require = fn;
 let closure_5 = fn(5085).GUILD_OFFICIAL_HIGHLIGHT_ALPHA;
 const Constants = fn(1085);

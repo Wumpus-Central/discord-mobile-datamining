@@ -234,7 +234,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
     obj = AdAnalyticsInterfaceExperiment;
   }
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15375, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15398, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       questContentPosition,
       sourceQuestContent,
@@ -702,7 +702,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -731,7 +731,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                   return obj;
                 } else {
                   v3 = 3;
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp9) {
                 v3 = tmp;
@@ -911,7 +911,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           const obj43 = {
             onPress: function showQuestEnrollmentBlockedBottomSheet() {
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(15422, dependencyMap.paths),
+                asyncRequireImpl(15445, dependencyMap.paths),
                 "QuestEnrollmentBlockedBottomSheet",
                 { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent },
               );
@@ -1059,7 +1059,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             } else {
               const obj3 = { questId: quest.id, questContentPosition, sourceQuestContent };
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(15375, dependencyMap.paths),
+                asyncRequireImpl(15398, dependencyMap.paths),
                 "QuestBottomSheet",
                 obj3,
               );
@@ -1104,7 +1104,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
               logger.log("Navigating to console connection action sheet");
               trackClick(AnalyticsTypes.QuestContentCTA.VIEW_REQUIREMENTS);
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(15375, dependencyMap.paths),
+                asyncRequireImpl(15398, dependencyMap.paths),
                 "QuestBottomSheet",
                 { questId: quest.id, questContentPosition, sourceQuestContent },
               );
@@ -1143,7 +1143,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {

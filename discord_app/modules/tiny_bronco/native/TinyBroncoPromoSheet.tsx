@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = dismissOnce;
       const isVerifiedTeen = dismissOnce(5909).useIsVerifiedTeen();
       let obj2 = dismissOnce(5909);
-      dismissOnce = dismissOnce(14975).useDismissOnce(markAsDismissed.markAsDismissed);
+      dismissOnce = dismissOnce(14998).useDismissOnce(markAsDismissed.markAsDismissed);
       if (cResult[0] !== dismissOnce) {
         const fn = function o() {
           dismissOnce(ContentDismissActionType.USER_DISMISS);
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { text: null, onPress: null };
       const intl = tmp(1126).intl;
-      const obj3 = dismissOnce(14975);
+      const obj3 = dismissOnce(14998);
       if (isVerifiedTeen) {
         class M {
           constructor() {
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       const isVerifiedTeen = dismissOnce(5909).useIsVerifiedTeen();
       let obj = dismissOnce(5909);
-      dismissOnce = dismissOnce(14975).useDismissOnce(markAsDismissed.markAsDismissed);
+      dismissOnce = dismissOnce(14998).useDismissOnce(markAsDismissed.markAsDismissed);
       const items = [dismissOnce];
       const items1 = [dismissOnce];
       const callback = noop.useCallback(() => {
@@ -279,10 +279,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
       const obj5 = { source: null, style: null, resizeMode: "contain" };
-      let obj2 = dismissOnce(14975);
-      obj5.source = tmp14(14976);
+      let obj2 = dismissOnce(14998);
+      obj5.source = tmp14(14999);
       obj5.style = tmp.illustration;
-      obj4.illustration = closure_8(tmp14(6156), obj5);
+      obj4.illustration = closure_8(tmp14(6157), obj5);
       const intl2 = tmp2(1126).intl;
       obj4.title = intl2.string(tmp14(3152).GdTVPF);
       const intl3 = tmp2(1126).intl;
@@ -306,5 +306,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items5[1] = closure_8(dismissOnce(5379).Button, obj10);
       obj8.children = items5;
       obj4.actions = closure_9(dismissOnce(5958).ButtonGroup, obj8);
-      return closure_8(dismissOnce(10323).PromoSheet, obj4);
+      return closure_8(dismissOnce(10324).PromoSheet, obj4);
     };

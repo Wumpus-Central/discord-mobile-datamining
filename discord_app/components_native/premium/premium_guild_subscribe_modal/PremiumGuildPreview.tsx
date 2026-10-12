@@ -6,14 +6,14 @@ import native from "../../../design/void/native.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
 import GuildIcon from "../../../modules/guild/native/GuildIcon.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
-import _modDef13881 from "../../../../_runtime/metro/13881__.js";
-import _modDef13882 from "../../../../_runtime/metro/13882__.js";
-import _modDef13883 from "../../../../_runtime/metro/13883__.js";
-import _modDef13884 from "../../../../_runtime/metro/13884__.js";
-import _modDef13885 from "../../../../_runtime/metro/13885__.js";
-import _modDef13886 from "../../../../_runtime/metro/13886__.js";
-import _modDef13887 from "../../../../_runtime/metro/13887__.js";
-import _modDef13888 from "../../../../_runtime/metro/13888__.js";
+import _modDef13904 from "../../../../_runtime/metro/13904__.js";
+import _modDef13905 from "../../../../_runtime/metro/13905__.js";
+import _modDef13906 from "../../../../_runtime/metro/13906__.js";
+import _modDef13907 from "../../../../_runtime/metro/13907__.js";
+import _modDef13908 from "../../../../_runtime/metro/13908__.js";
+import _modDef13909 from "../../../../_runtime/metro/13909__.js";
+import _modDef13910 from "../../../../_runtime/metro/13910__.js";
+import _modDef13911 from "../../../../_runtime/metro/13911__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
@@ -22,29 +22,29 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 function getTierIcon(theme, tier) {
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp20 = _modDef13882;
-    const tmp19 = _modDef13881;
+    let tmp20 = _modDef13905;
+    const tmp19 = _modDef13904;
     if (obj4.isThemeDark(theme)) {
       tmp20 = tmp19;
     }
     return tmp20;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp15 = _modDef13884;
-    const tmp14 = _modDef13883;
+    let tmp15 = _modDef13907;
+    const tmp14 = _modDef13906;
     if (obj3.isThemeDark(theme)) {
       tmp15 = tmp14;
     }
     return tmp15;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp10 = _modDef13886;
-    const tmp9 = _modDef13885;
+    let tmp10 = _modDef13909;
+    const tmp9 = _modDef13908;
     if (obj2.isThemeDark(theme)) {
       tmp10 = tmp9;
     }
     return tmp10;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5 = _modDef13888;
-    const tmp4 = _modDef13887;
+    let tmp5 = _modDef13911;
+    const tmp4 = _modDef13910;
     if (obj.isThemeDark(theme)) {
       tmp5 = tmp4;
     }

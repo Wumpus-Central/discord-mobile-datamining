@@ -40,7 +40,7 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7747);
+const RowGeneratorConstants = fn(7748);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -285,9 +285,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "Symbol",
           shouldInitialScroll: "Array",
-          animated: "2026-01-favorites-server",
-          scrollPosition: "user",
-          focusTargetId: null,
+          animated: -17.06,
+          scrollPosition: -31.573,
+          focusTargetId: -1.624,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -319,10 +319,10 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9337).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9338).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9337);
+          const obj = applyArgumentsResult(9338);
           applyArgumentsResult(5103).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
@@ -361,9 +361,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "asc",
-        selectedChannelId: "asc",
-        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
+        messageChannel: true,
+        selectedChannelId: "switch",
+        tapLinkData: null,
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

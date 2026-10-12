@@ -180,13 +180,13 @@ function trackInvite(channelId) {
   }
   tmp8 = null != id1 && result1;
 }
-const ReferencedMessageState = fn(7312).ReferencedMessageState;
-const SlowmodeType = fn(7374).SlowmodeType;
+const ReferencedMessageState = fn(7313).ReferencedMessageState;
+const SlowmodeType = fn(7375).SlowmodeType;
 const Constants = fn(1085);
 const AbortCodes = Constants.AbortCodes;
 ({ AnalyticEvents: closure_27, Endpoints: closure_28, Permissions, ChannelTypes: closure_29, LoggingInviteTypes: closure_30, SendTypes: items, InviteStates: closure_32, MessageFlags: closure_33, MAX_MESSAGES_FOR_JUMP: closure_34, MessageTypes: closure_35, AllowedMentionTypes: closure_36, HelpdeskArticles: closure_37, MarketingURLs: closure_38, MessageReferenceTypes: closure_39, LOCAL_BOT_ID: closure_40, NON_USER_BOT_DISCRIMINATOR: closure_41, MessageStates: closure_42, ActivityActionTypes: closure_43 } = Constants);
-const LinkType = fn(7376).LinkType;
-const GuildTemplateStates = fn(7030).GuildTemplateStates;
+const LinkType = fn(7377).LinkType;
+const GuildTemplateStates = fn(7031).GuildTemplateStates;
 const MessageConstants = fn(5085);
 ({ FileUploadErrorTypes: closure_46, MessageSendLocation: closure_47 } = MessageConstants);
 const MediaPlayerManager = fn(17).NativeModules.MediaPlayerManager;
@@ -525,7 +525,7 @@ let obj17 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -567,7 +567,7 @@ let obj17 = {
               return obj7;
             } else {
               dependencyMap = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           }
         } catch (tmp11) {
@@ -749,7 +749,7 @@ let obj17 = {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -820,7 +820,7 @@ let obj17 = {
                 tmp30 = closure_128_2.connectionId === GatewayConnectionStore.lastTimeConnectedChanged();
               }
               closure_128_3 = tmp30;
-              const obj3 = tmp2(7209);
+              const obj3 = tmp2(7210);
               const result = obj3.recordChannelFetchedLocal(closure_129_0, closure_129_1, closure_129_2, closure_129_3, closure_129_4, closure_128_2.messages);
               const obj12 = { type: "LOCAL_MESSAGES_LOADED", guildId: closure_128_0.guild_id, channelId: closure_129_0, users: closure_128_2.users, members: closure_128_2.members, messages: closure_128_2.messages, stale: !closure_128_3 };
               tmp2(584).dispatch(obj12);
@@ -849,7 +849,7 @@ let obj17 = {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -880,7 +880,7 @@ let obj17 = {
                   if (!orCreate.hasMoreAfter) {
                     c2 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: v0(2111).tryLoadAsync(async () => closure_1(7198).load(closure_1_1, c0, closure_1)), done: false };
+                    const obj6 = { value: v0(2111).tryLoadAsync(async () => closure_1(7199).load(closure_1_1, c0, closure_1)), done: false };
                     return obj6;
                   }
                   const obj2 = tmp2(5752);
@@ -1062,7 +1062,7 @@ let obj17 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1087,7 +1087,7 @@ let obj17 = {
               } else {
                 dependencyMap = 1;
                 c4 = 1;
-                const obj6 = { value: tmp2(13596)(closure_0), done: false };
+                const obj6 = { value: tmp2(13619)(closure_0), done: false };
                 return obj6;
               }
             }
@@ -1108,15 +1108,15 @@ let obj17 = {
               const nonce = closure_130_3.nonce;
               closure_0 = nonce;
               if (nonce == null) {
-                closure_0 = closure_0(9806).createNonce();
-                const obj = closure_0(9806);
+                closure_0 = closure_0(9807).createNonce();
+                const obj = closure_0(9807);
               }
               closure_129_1 = closure_0;
               const obj9 = {};
               const merged = Object.assign(closure_130_3);
               obj9.nonce = closure_129_1;
               closure_130_3 = obj9;
-              closure_129_2 = tmp2(9701).backgroundify(function _trySend() {
+              closure_129_2 = tmp2(9702).backgroundify(function _trySend() {
                 return closure_2_55._sendMessage(closure_1_0, closure_1_1, dependencyMap);
               }, undefined);
               if (null == closure_130_3.scheduledTimestamp) {
@@ -1126,7 +1126,7 @@ let obj17 = {
                 closure_129_2();
               } else {
                 if (closure_130_2) {
-                  if (closure_130_0 !== closure_0(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+                  if (closure_130_0 !== closure_0(6924).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
                     const _HermesInternal = HermesInternal;
                     logger.info("Waiting for channel " + closure_130_0 + " to be ready before sending.");
                     new Promise((arg0, arg1) => {
@@ -1142,7 +1142,7 @@ let obj17 = {
                 closure_129_2();
               }
               c4 = 3;
-              const obj3 = tmp2(9701);
+              const obj3 = tmp2(9702);
             }
           }
         } catch (tmp61) {
@@ -1314,7 +1314,7 @@ let obj17 = {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1632,14 +1632,14 @@ let obj17 = {
               if (null == closure_131_18) {
                 c6 = 0;
                 c8 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               } else {
                 attachments2 = closure_131_18.attachments;
                 uploader = closure_131_18.uploader;
                 if (closure_131_11) {
                   c6 = 0;
                   c8 = 3;
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
                 if (null != attachments2) {
                   closure_131_17.message.attachments = attachments2.map((item, index) => channelId(inviteAnalyticsMetadata[45]).getAttachmentPayload(item, index));
@@ -1698,19 +1698,19 @@ let obj17 = {
               logger.info("Queueing message to be sent LogId:" + rounded);
               emojiUsed(inviteAnalyticsMetadata[72]).enqueue(channel, (ok) => {
                 if (ok.ok) {
-                  id(13597).donateSentMessage(content, channelId);
+                  id(13620).donateSentMessage(content, channelId);
                   let obj4 = { sendAnalytics: null, poll: null };
                   let obj5 = { duration: tmp, queueSize: length };
                   obj4.sendAnalytics = obj5;
                   obj4.poll = poll;
                   closure_4_55.receiveMessage(channelId, ok.body, true, obj4);
-                  const obj15 = id(13597);
+                  const obj15 = id(13620);
                   request = request.getRequest(id(11).cast(channelId));
                   if (null != request) {
                     ({ guildId, userId, applicationStatus } = request);
                     let obj7 = { guildId, channelId, messageId: ok.body.id, joinRequestStatus: applicationStatus, joinRequestUserId: userId };
-                    let result = closure_0(6118).trackMemberApplicationInterviewMessage(obj7);
-                    const obj19 = closure_0(6118);
+                    let result = closure_0(6119).trackMemberApplicationInterviewMessage(obj7);
+                    const obj19 = closure_0(6119);
                   }
                   let result1 = MessageRoundtripTrackerStore.recordMessageSendApiResponse(stickerById);
                   if (closure_2_13 === constants3.REPLY) {
@@ -2026,7 +2026,7 @@ let obj17 = {
                               let obj6 = id(584);
                             }
                           } else {
-                            const AUTOMOD_ERROR_CODES = closure_0(7881).AUTOMOD_ERROR_CODES;
+                            const AUTOMOD_ERROR_CODES = closure_0(7882).AUTOMOD_ERROR_CODES;
                             if (AUTOMOD_ERROR_CODES.has(ok.body.code)) {
                               const obj33 = { type: "MESSAGE_SEND_FAILED_AUTOMOD", messageData, errorResponseBody: null };
                               const obj34 = { code: ok.body.code, message: ok.body.message };
@@ -2077,7 +2077,7 @@ let obj17 = {
                       if (body2 != null) {
                         attachments1 = body2.attachments;
                       }
-                      let result2 = closure_4_55.sendExplicitMediaClydeError(channelId, attachments1, closure_0(8242).TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                      let result2 = closure_4_55.sendExplicitMediaClydeError(channelId, attachments1, closure_0(8243).TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                     }
                     const obj38 = { type: "MESSAGE_SEND_FAILED", messageId, channelId, shouldNotify: !c2.doNotNotifyOnError, reason: EXPLICIT_CONTENT };
                     id(584).dispatch(obj38);
@@ -2092,14 +2092,14 @@ let obj17 = {
                       message1 = ok.err.message;
                     }
                     obj40.errorMessage = message1;
-                    let result3 = closure_0(9266).logMessageSendFailure(obj40);
-                    const obj12 = closure_0(9266);
-                    let result4 = id(7753).cancelPendingSendRequests(channelId);
+                    let result3 = closure_0(9267).logMessageSendFailure(obj40);
+                    const obj12 = closure_0(9267);
+                    let result4 = id(7754).cancelPendingSendRequests(channelId);
                     const item3 = result4.forEach((messageId) => {
                       logger.log("Cancelling pending message", messageId.nonce);
                       id(channel3[46]).dispatch({ type: "MESSAGE_SEND_FAILED", messageId: messageId.nonce, channelId: messageId.channelId });
                     });
-                    const obj14 = id(7753);
+                    const obj14 = id(7754);
                   }
                   id(ok);
                 }
@@ -2162,7 +2162,7 @@ let obj17 = {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2194,7 +2194,7 @@ let obj17 = {
               })(tmp2, tmp3);
               c2 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp2(7901).unarchiveThreadIfNecessary(tmp3), done: false };
+              const obj5 = { value: tmp2(7902).unarchiveThreadIfNecessary(tmp3), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2232,16 +2232,16 @@ let obj17 = {
             })(closure_129_0, closure_129_1);
             let obj6 = { channelId: closure_129_0, messageId: closure_129_1, content: closure_129_2, isCrossposted: closure_128_1, allowed_mentions: closure_128_0, components: closure_129_3 };
             closure_128_2 = obj6;
-            const obj8 = { type: tmp3(7753).MessageDataType.EDIT, message: closure_128_2 };
-            tmp2(7753).enqueue(obj8, (hasErr) => {
+            const obj8 = { type: tmp3(7754).MessageDataType.EDIT, message: closure_128_2 };
+            tmp2(7754).enqueue(obj8, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = channelId(7881).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = channelId(7882).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
-                const obj = { type: channelId(7753).MessageDataType.EDIT, message };
+                const obj = { type: channelId(7754).MessageDataType.EDIT, message };
                 const obj3 = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: obj, errorResponseBody: null };
                 const obj4 = { code: hasErr.body.code, message: hasErr.body.message };
                 obj3.errorResponseBody = obj4;
@@ -2269,7 +2269,7 @@ let obj17 = {
               const obj6 = { channelId, messageId };
             });
             dependencyMap = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp13) {
           dependencyMap = tmp;
@@ -2292,7 +2292,7 @@ let obj17 = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2309,7 +2309,7 @@ let obj17 = {
               let message2;
               c2 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp5(7901).unarchiveThreadIfNecessary(tmp2), done: false };
+              const obj5 = { value: tmp5(7902).unarchiveThreadIfNecessary(tmp2), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2332,7 +2332,7 @@ let obj17 = {
               const obj9 = tmp2(1295);
             }
             dependencyMap = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp9) {
           dependencyMap = tmp;
@@ -2356,7 +2356,7 @@ let obj17 = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2373,7 +2373,7 @@ let obj17 = {
               let message2;
               c2 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp5(7901).unarchiveThreadIfNecessary(tmp2), done: false };
+              const obj5 = { value: tmp5(7902).unarchiveThreadIfNecessary(tmp2), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2396,7 +2396,7 @@ let obj17 = {
               const obj9 = tmp2(1295);
             }
             dependencyMap = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp9) {
           dependencyMap = tmp;
@@ -2410,7 +2410,7 @@ let obj17 = {
     closure_1 = id;
     closure_2 = mapped;
     return (async () => {
-      await v1(7901).unarchiveThreadIfNecessary(tmp4);
+      await v1(7902).unarchiveThreadIfNecessary(tmp4);
       const HTTP = tmp4(1295).HTTP;
       const request = { url: closure_1_28.MESSAGE(closure_128_0, closure_128_1), body: { attachments: closure_128_2 }, oldFormErrors: true, rejectWithError: tmp4(1295).rejectWithMigratedError() };
       return HTTP.patch(request);
@@ -2434,7 +2434,7 @@ let obj17 = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2464,7 +2464,7 @@ let obj17 = {
               } else {
                 c2 = 1;
                 dependencyMap = 1;
-                const obj5 = { value: id(7901).unarchiveThreadIfNecessary(channelId), done: false };
+                const obj5 = { value: id(7902).unarchiveThreadIfNecessary(channelId), done: false };
                 return obj5;
               }
             }
@@ -2520,7 +2520,7 @@ let obj17 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

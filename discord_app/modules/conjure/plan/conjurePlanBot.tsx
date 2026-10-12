@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/conjurePlanBot.tsx
 import Server from "../../../flow/Server.tsx";
-import ConjureTypes from "../ConjureTypes.tsx";
+import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import conjurePlanTags from "conjurePlanTags.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -89,9 +89,9 @@ export const getConjurePlanBotInteraction = function getConjurePlanBotInteractio
   bot = proposal;
   const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(
     proposal,
-    ConjureTypes.ConjureSupportedSurface.APPLICATION_COMMANDS,
+    ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS,
   );
-  if (!obj2.planDeclaresSurface(proposal, ConjureTypes.ConjureSupportedSurface.BOT)) {
+  if (!obj2.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.BOT)) {
     if (!planDeclaresSurfaceResult) {
       return null;
     }

@@ -58,7 +58,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         return obj.hslToRgbWorklet({ h: hue.get(), s: 1, l: 0.5 });
       };
       const obj2 = hue(4850);
-      fn.__closure = { hslToRgbWorklet: hue(14825).hslToRgbWorklet, hue };
+      fn.__closure = { hslToRgbWorklet: hue(14848).hslToRgbWorklet, hue };
       fn.__workletHash = 8814597686728;
       fn.__initData = __initData;
       const fn2 = function s(arg0, arg1) {
@@ -68,7 +68,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const runOnJSResult = ReanimatedRexport.runOnJS(closure_1);
         }
       };
-      const obj3 = { hslToRgbWorklet: hue(14825).hslToRgbWorklet, hue };
+      const obj3 = { hslToRgbWorklet: hue(14848).hslToRgbWorklet, hue };
       fn2.__closure = { runOnJS: hue(4850).runOnJS, setColor: tmp6 };
       fn2.__workletHash = 8277631711655;
       fn2.__initData = __initData2;
@@ -157,7 +157,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       let obj = hue(4850);
-      S.__closure = { hslToRgbWorklet: hue(14825).hslToRgbWorklet, hue };
+      S.__closure = { hslToRgbWorklet: hue(14848).hslToRgbWorklet, hue };
       S.__workletHash = 3837299793738;
       S.__initData = __initData3;
       const fn = function _(arg0, arg1) {
@@ -167,7 +167,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const runOnJSResult = ReanimatedRexport.runOnJS(closure_1);
         }
       };
-      const obj2 = { hslToRgbWorklet: hue(14825).hslToRgbWorklet, hue };
+      const obj2 = { hslToRgbWorklet: hue(14848).hslToRgbWorklet, hue };
       fn.__closure = { runOnJS: hue(4850).runOnJS, setColor: tmp2[1] };
       fn.__workletHash = 12285995316583;
       fn.__initData = __initData4;
@@ -243,7 +243,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[11] === tmp6) {
                     let tmp8 = cResult[12];
                   }
-                  const panGesture = tmp(6334).usePanGesture(tmp8);
+                  const panGesture = tmp(6335).usePanGesture(tmp8);
                   if (cResult[13] === panGesture) {
                     if (cResult[14] === saturation) {
                       if (cResult[15] === value) {
@@ -258,7 +258,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[15] = value;
                   cResult[16] = obj3;
                   tmp10 = obj3;
-                  let tmpResult = tmp(6334);
+                  let tmpResult = tmp(6335);
                 }
               }
               const obj4 = { onBegin: tmp4, onUpdate: tmp5, onFinalize: tmp6 };
@@ -281,7 +281,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const size = {
         saturation,
-        normalizeValue: tmp(14825).normalizeValue,
+        normalizeValue: tmp(14848).normalizeValue,
         width,
         value,
         height,
@@ -301,7 +301,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const size1 = {
         saturation,
-        normalizeValue: tmp(14825).normalizeValue,
+        normalizeValue: tmp(14848).normalizeValue,
         width,
         value,
         height,
@@ -458,7 +458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let obj2 = {
-          hsvToRgbWorklet: tmp(14825).hsvToRgbWorklet,
+          hsvToRgbWorklet: tmp(14848).hsvToRgbWorklet,
           hue,
           saturation,
           value,
@@ -629,7 +629,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = { onPanUpdate, onPanFinalize };
       let obj2 = hue(4850);
       fn.__closure = {
-        hsvToRgbWorklet: hue(14825).hsvToRgbWorklet,
+        hsvToRgbWorklet: hue(14848).hsvToRgbWorklet,
         hue,
         saturation,
         value,
@@ -661,7 +661,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.style = items1;
       let obj5 = { gesture: closure_20(saturation, value, colorBoxWidth, first1, obj).gesture, children: null };
       let obj3 = {
-        hsvToRgbWorklet: hue(14825).hsvToRgbWorklet,
+        hsvToRgbWorklet: hue(14848).hsvToRgbWorklet,
         hue,
         saturation,
         value,
@@ -673,7 +673,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hitSlop: { top: result, bottom: result, left: result, right: result },
         children: closure_6(closure_13, { hue, colorBoxStyle, colorBoxInnerStyle }),
       });
-      const items2 = [closure_6(hue(6334).GestureDetector, obj5)];
+      const items2 = [closure_6(hue(6335).GestureDetector, obj5)];
       const obj7 = { onLayout: callback1, pointerEvents: "box-none", style: null };
       const items3 = [tmp.selector, animatedStyle, selectorStyle];
       obj7.style = items3;

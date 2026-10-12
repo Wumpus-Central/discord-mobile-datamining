@@ -5,8 +5,8 @@ import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef13736 from "../../../../../_runtime/metro/13736__.js";
-import _modDef13737 from "../../../../../_runtime/metro/13737__.js";
+import _modDef13759 from "../../../../../_runtime/metro/13759__.js";
+import _modDef13760 from "../../../../../_runtime/metro/13760__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -41,9 +41,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = cResult[3];
         }
         if (tmpResult.isThemeDark(tmp6)) {
-          let tmp5Result = _modDef13736;
+          let tmp5Result = _modDef13759;
         } else {
-          tmp5Result = _modDef13737;
+          tmp5Result = _modDef13760;
         }
         if (cResult[4] !== tmp5Result) {
           const obj2 = { accessible: true, accessibilityLabel: tmp9, accessibilityRole: "header", source: tmp5Result };
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
       const tmp8 = FastImageDefault;
       if (obj3.isThemeDark(tmp4)) {
-        let tmp2Result = _modDef13736;
+        let tmp2Result = _modDef13759;
       } else {
-        tmp2Result = _modDef13737;
+        tmp2Result = _modDef13760;
       }
       obj2.source = tmp2Result;
       const items1 = [React4(tmp8, obj2)];

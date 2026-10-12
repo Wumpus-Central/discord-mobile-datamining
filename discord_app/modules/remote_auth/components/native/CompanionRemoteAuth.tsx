@@ -104,7 +104,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       let obj2 = navigation(1503);
-      const state = navigation(16393).useAuthWebsocket(first, true).state;
+      const state = navigation(16416).useAuthWebsocket(first, true).state;
       if (cResult[1] !== navigation) {
         class E {
           constructor() {
@@ -122,7 +122,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      if (state.step === navigation(16392).RemoteAuthStep.PENDING_REMOTE_INIT) {
+      if (state.step === navigation(16415).RemoteAuthStep.PENDING_REMOTE_INIT) {
         class E {
           constructor() {
             goBackResult = closure_0.goBack();
@@ -178,7 +178,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = navigation(16393);
+      const tmpResult = navigation(16416);
       cResult[7] = context;
       cResult[8] = E;
       cResult[9] = state;
@@ -207,13 +207,13 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       let obj = navigation(1503);
       const tmp5 = fingerprint;
-      const state = navigation(16393).useAuthWebsocket(callback, true).state;
+      const state = navigation(16416).useAuthWebsocket(callback, true).state;
       const items = [navigation];
       const callback1 = noop.useCallback(() => {
         navigation.goBack();
       }, items);
       fingerprint = null;
-      if (state.step === navigation(16392).RemoteAuthStep.PENDING_REMOTE_INIT) {
+      if (state.step === navigation(16415).RemoteAuthStep.PENDING_REMOTE_INIT) {
         fingerprint = state.fingerprint;
       }
       const items1 = [fingerprint];
@@ -228,10 +228,10 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const obj4 = { headerText: null, children: null };
-      const obj3 = navigation(16393);
+      const obj3 = navigation(16416);
       const intl = tmp2(1126).intl;
       obj4.headerText = intl.string(navigation(1126).t["7fNJgA"]);
-      const tmp5Result = tmp5(6653);
+      const tmp5Result = tmp5(6654);
       obj4.children = closure_7(View, {
         style: tmp.statusContainer,
         children: renderSteps(state, tmp, callback1, context),

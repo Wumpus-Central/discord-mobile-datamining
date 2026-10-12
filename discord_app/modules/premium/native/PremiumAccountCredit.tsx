@@ -33,8 +33,8 @@ let obj2 = {
   creditDescription: null,
 };
 let size = {
-  width: fn(6861).GameIconImageSize[fn(undefined, 6861).GameIconSizes.SMALL],
-  height: fn(6861).GameIconImageSize[fn(undefined, 6861).GameIconSizes.SMALL],
+  width: fn(6862).GameIconImageSize[fn(undefined, 6862).GameIconSizes.SMALL],
+  height: fn(6862).GameIconImageSize[fn(undefined, 6862).GameIconSizes.SMALL],
   alignItems: "center",
   justifyContent: "center",
 };
@@ -319,8 +319,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp46Result = timestampProducer(View, obj12);
             } else {
               const obj14 = { size: GameIcon.GameIconSizes.SMALL, skuId: str };
-              tmp46Result = timestampProducer(intl(6861), obj14);
-              const intlResult = intl(6861);
+              tmp46Result = timestampProducer(intl(6862), obj14);
+              const intlResult = intl(6862);
             }
             cResult[37] = tmp7;
             cResult[38] = str;

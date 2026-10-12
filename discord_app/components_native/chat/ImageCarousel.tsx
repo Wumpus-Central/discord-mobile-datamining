@@ -8,7 +8,7 @@ import ReanimatedRexportDefault from "../../modules/reanimated/ReanimatedRexport
 import timing from "../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../design/animation/reanimated/spring/spring.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
-import _modDef6620 from "../../../_runtime/metro/06620__.js";
+import _modDef6621 from "../../../_runtime/metro/06621__.js";
 import Upload from "../../lib/uploader/Upload.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../modules/media_uploads/native/showUploadPreviewActionSheet.tsx";
@@ -20,8 +20,8 @@ import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7243).DraftType;
-const ImageCarouselConstants = fn(10019);
+const DraftType = fn(7244).DraftType;
+const ImageCarouselConstants = fn(10020);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
@@ -1218,7 +1218,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                                             }
                                             if (cResult[37] !== tmp4.closeButtonIcon) {
                                               const obj3 = {
-                                                source: _modDef6620,
+                                                source: _modDef6621,
                                                 size: native.Icon.Sizes.MEDIUM,
                                                 color: nativeDefault.unsafe_rawColors.PRIMARY_500,
                                                 style: tmp4.closeButtonIcon,
@@ -1452,7 +1452,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const items6 = [tmp.closeContainer, tmp8];
       obj6.style = items6;
       obj6.children = closure_1_11(native.Icon, {
-        source: _modDef6620,
+        source: _modDef6621,
         size: native.Icon.Sizes.MEDIUM,
         color: nativeDefault.unsafe_rawColors.PRIMARY_500,
         style: tmp.closeButtonIcon,

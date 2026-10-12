@@ -52,7 +52,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -83,8 +83,8 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             tmp75(true);
             v0(false);
             v0 = 2;
-            const result = closure_0(7511).isCurrentUserSuspended();
-            const obj7 = closure_0(7543);
+            const result = closure_0(7512).isCurrentUserSuspended();
+            const obj7 = closure_0(7544);
             if (result) {
               c5 = 4;
               c6 = 1;
@@ -96,7 +96,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               const obj9 = { value: obj7.fetchAgeVerificationMethodsV2(), done: false };
               return obj9;
             }
-            const obj6 = closure_0(7511);
+            const obj6 = closure_0(7512);
           }
         } else if (1 === tmp9) {
           v0 = 0;
@@ -156,7 +156,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             tmp75(false);
           }
           c6 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp75) {
         if (tmp5 === v0) {

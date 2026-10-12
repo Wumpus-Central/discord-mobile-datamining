@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef9537 from "../../../../_runtime/metro/09537__.js";
+import _modDef9538 from "../../../../_runtime/metro/09538__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef17637 from "../../../../_runtime/metro/17637__.js";
+import _modDef17694 from "../../../../_runtime/metro/17694__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        let obj2 = { source: _modDef17637, style: tmp4.image };
+        let obj2 = { source: _modDef17694, style: tmp4.image };
         const tmp19 = closure_7(FastImageDefault, obj2);
         cResult[10] = tmp4.image;
         cResult[11] = tmp19;
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = {
-          source: _modDef9537,
+          source: _modDef9538,
           size: tmp(1200).IconSizes.MEDIUM,
           style: tmp4.nitroWheel,
           disableColor: true,
@@ -356,13 +356,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.info, children: null };
       const obj5 = { source: null, style: null };
       const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-      obj5.source = _modDef17637;
+      obj5.source = _modDef17694;
       obj5.style = tmp.image;
       const items2 = [closure_7(FastImageDefault, obj5), ,];
       const obj6 = { style: tmp.titleContainer, children: null };
       const items3 = [
         closure_7(markAsDismissed(1200).Icon, {
-          source: _modDef9537,
+          source: _modDef9538,
           size: markAsDismissed(1200).IconSizes.MEDIUM,
           style: tmp.nitroWheel,
           disableColor: true,
@@ -407,5 +407,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj10.children = items5;
       items4[1] = closure_8(View, obj10);
       obj3.children = items4;
-      return closure_8(markAsDismissed(6839).BottomSheet, obj3);
+      return closure_8(markAsDismissed(6840).BottomSheet, obj3);
     };

@@ -12,7 +12,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import PlatformsDefault from "../../../lib/Platforms.tsx";
 import ConnectedAccountsActionCreatorsDefault from "../../../actions/ConnectedAccountsActionCreators.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import inlineStyles from "../../../../_runtime/07576_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07577_inlineStyles.js";
 import authorizeConnectionDefault from "../../connections/authorizeConnection.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -248,7 +248,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] !== stateFromStores) {
-        const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" };
+        const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" };
         const tmp15 = map1(native.Avatar, obj3);
         cResult[4] = stateFromStores;
         cResult[5] = tmp15;
@@ -282,7 +282,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
       const items1 = [map1(View, { style: tmp.avatarInnerBorder })];
       const obj3 = { style: tmp.avatarInnerBorder };
-      items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" });
+      items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" });
       obj2.children = items1;
       return closure_1_14(View, obj2);
     };
@@ -331,8 +331,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== tmp7) {
         let obj3 = { title: null, leading: null };
         let obj4 = { onPress: tmp7 };
-        obj3.leading = closure_13(tmp(6893).ActionSheetCloseButton, obj4);
-        const tmp10 = closure_13(tmp(6838).BottomSheetTitleHeader, obj3);
+        obj3.leading = closure_13(tmp(6894).ActionSheetCloseButton, obj4);
+        const tmp10 = closure_13(tmp(6839).BottomSheetTitleHeader, obj3);
         cResult[4] = tmp7;
         cResult[5] = tmp10;
         let tmp8 = tmp10;
@@ -427,7 +427,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const intl3 = tmp(1126).intl;
             const stringResult2 = intl3.string(tmp(1126).t.ItuabN);
             const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-            const tmp43 = closure_13(tmp(12869).WindowLaunchIcon, obj10);
+            const tmp43 = closure_13(tmp(12871).WindowLaunchIcon, obj10);
             cResult[26] = stringResult2;
             cResult[27] = tmp43;
             let tmp40 = tmp43;
@@ -490,7 +490,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     onDismiss: tmp11,
                     children: tmp55,
                   };
-                  const tmp60 = closure_13(tmp(6839).BottomSheet, obj13);
+                  const tmp60 = closure_13(tmp(6840).BottomSheet, obj13);
                   cResult[41] = tmp4.content;
                   cResult[42] = tmp55;
                   cResult[43] = tmp8;
@@ -551,9 +551,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const theme = markAsDismissed(4827).useThemeContext().theme;
       let obj2 = { startExpanded: true, contentStyles: tmp.content, header: null, onDismiss: null, children: null };
       let obj = markAsDismissed(4827);
-      obj2.header = closure_13(markAsDismissed(6838).BottomSheetTitleHeader, {
+      obj2.header = closure_13(markAsDismissed(6839).BottomSheetTitleHeader, {
         title: null,
-        leading: closure_13(markAsDismissed(6893).ActionSheetCloseButton, { onPress: handleCancel }),
+        leading: closure_13(markAsDismissed(6894).ActionSheetCloseButton, { onPress: handleCancel }),
       });
       obj2.onDismiss = function onDismiss() {
         return markAsDismissed(ContentDismissActionType.DISMISS);
@@ -580,9 +580,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       obj10.text = intl3.string(markAsDismissed(1126).t.ItuabN);
       let obj3 = {
         title: null,
-        leading: closure_13(markAsDismissed(6893).ActionSheetCloseButton, { onPress: handleCancel }),
+        leading: closure_13(markAsDismissed(6894).ActionSheetCloseButton, { onPress: handleCancel }),
       };
-      obj10.icon = closure_13(markAsDismissed(12869).WindowLaunchIcon, {
+      obj10.icon = closure_13(markAsDismissed(12871).WindowLaunchIcon, {
         size: "sm",
         color: nativeDefault.colors.WHITE,
       });
@@ -609,7 +609,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items1[2] = closure_14(markAsDismissed(5377).Stack, obj9);
       obj4.children = items1;
       obj2.children = closure_14(markAsDismissed(5377).Stack, obj4);
-      return closure_13(markAsDismissed(6839).BottomSheet, obj2);
+      return closure_13(markAsDismissed(6840).BottomSheet, obj2);
     };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/local_app_detection/native/RobloxConnectionCoachmark.tsx");
@@ -622,7 +622,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocalAppDetectionStore];
         const fn = function s() {
-          return appInstalled.isAppInstalled(stateFromStores(13984).DetectableAppNames.ROBLOX);
+          return appInstalled.isAppInstalled(stateFromStores(14007).DetectableAppNames.ROBLOX);
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -734,7 +734,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   : function useShouldShowRobloxConnectionCoachmark() {
       const items = [LocalAppDetectionStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-        appInstalled.isAppInstalled(stateFromStores(13984).DetectableAppNames.ROBLOX),
+        appInstalled.isAppInstalled(stateFromStores(14007).DetectableAppNames.ROBLOX),
       );
       const tmp2 = hasRoloxAccount(noop.useState(false), 2);
       const first = tmp2[0];

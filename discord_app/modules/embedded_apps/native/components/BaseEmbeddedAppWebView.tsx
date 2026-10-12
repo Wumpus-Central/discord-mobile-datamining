@@ -6,7 +6,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
-import WebView from "../../../../../_runtime/07521_WebView.js";
+import WebView from "../../../../../_runtime/07522_WebView.js";
 import getPostMessageJavaScriptDefault from "../utils/getPostMessageJavaScript.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -301,7 +301,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                 const obj2 = { value, done: true };
                                                                 return obj2;
                                                               } else {
-                                                                return { value: "IconComponent", done: "+51" };
+                                                                return { value: "IconComponent", done: null };
                                                               }
                                                             } else {
                                                               try {
@@ -376,7 +376,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                   );
                                                                   closure_2_23(true);
                                                                   c5 = 3;
-                                                                  return { value: "IconComponent", done: "+51" };
+                                                                  return { value: "IconComponent", done: null };
                                                                 }
                                                               } catch (tmp10) {
                                                                 c5 = tmp;
@@ -629,7 +629,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                   const obj2 = { value, done: true };
                                                                   return obj2;
                                                                 } else {
-                                                                  return { value: "IconComponent", done: "+51" };
+                                                                  return { value: "IconComponent", done: null };
                                                                 }
                                                               } else {
                                                                 try {
@@ -1093,7 +1093,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1294,7 +1294,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1523,7 +1523,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -1579,7 +1579,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                     );
                     closure_1_24(true);
                     c5 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp10) {
                   c5 = tmp;
@@ -1666,7 +1666,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {

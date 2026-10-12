@@ -164,7 +164,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -214,7 +214,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
             if ("Cancelled" === errorStr) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             } else if (null != base64) {
               if ("image/png" === mimeType) {
                 closure_129_11(base64);
@@ -248,7 +248,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -295,7 +295,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
               }
               c5 = 0;
               c6 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             } else {
               if (null != _undefined) {
                 if (null != first1) {
@@ -315,7 +315,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
               }
               c5 = 0;
               c6 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           }
         } else {
@@ -538,10 +538,10 @@ export default function GuildSettingsStickerCreate(stickerId) {
     obj18.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj18);
   } else {
-    tmp32Result = tmp32(tmp31(18320).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(18378).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp32Result;
-  items4[1] = onPressEmoji(stickerId(6184).PressableHighlight, obj16);
+  items4[1] = onPressEmoji(stickerId(6185).PressableHighlight, obj16);
   const obj20 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
   const intl7 = tmp31(1126).intl;
   obj20.children = intl7.string(stickerId(1126).t["3BQmiC"]);
@@ -575,7 +575,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     let tmp32Result2 = tmp32(EmojiDefault, obj22);
     const tmp14Result5 = EmojiDefault;
   } else {
-    tmp32Result2 = tmp32(tmp31(8960).ReactionIcon, { size: "md", color: "text-subtle" });
+    tmp32Result2 = tmp32(tmp31(8961).ReactionIcon, { size: "md", color: "text-subtle" });
   }
   const items5 = [tmp32Result2];
   if (null != first1) {
@@ -591,7 +591,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     children: combined,
   });
   obj21.children = items5;
-  items4[3] = closure_17(stickerId(6184).PressableHighlight, obj21);
+  items4[3] = closure_17(stickerId(6185).PressableHighlight, obj21);
   const obj24 = {
     ref: ref1,
     label: null,
@@ -620,7 +620,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
       current2.scrollToEnd({ animated: true });
     }
   };
-  items4[4] = onPressEmoji(stickerId(6285).TextInput, obj24);
+  items4[4] = onPressEmoji(stickerId(6286).TextInput, obj24);
   const obj26 = { ref: ref2, maxLength: 100, label: null, placeholder: null, onChange: null, onFocus: null };
   const intl11 = tmp31(1126).intl;
   obj26.label = intl11.string(stickerId(1126).t.uGccej);
@@ -628,7 +628,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
   obj26.placeholder = intl12.string(stickerId(1126).t.zwR0fa);
   obj26.onChange = tmp8;
   obj26.onFocus = onFocus;
-  items4[5] = onPressEmoji(stickerId(6773).TextArea, obj26);
+  items4[5] = onPressEmoji(stickerId(6774).TextArea, obj26);
   const obj27 = {
     onPress: function handleSave() {
       const self = this;

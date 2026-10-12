@@ -6,7 +6,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef7728 from "../../../../../_runtime/metro/07728__.js";
+import _modDef7729 from "../../../../../_runtime/metro/07729__.js";
 import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           const obj5 = {
                             accessibilityLabel: tmp35,
                             onPress: onClose,
-                            source: _modDef7728,
+                            source: _modDef7729,
                             style: tmp4.rightButton,
                           };
                           const tmp40 = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = util.intl;
       obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
       obj6.onPress = screen.onClose;
-      obj6.source = _modDef7728;
+      obj6.source = _modDef7729;
       obj6.style = tmp.rightButton;
       obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
       items1[2] = hasOwnProperty(View, obj5);

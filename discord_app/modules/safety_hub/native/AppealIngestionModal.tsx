@@ -112,7 +112,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   return obj;
 }
 let View = fn(17).View;
-const SafetyHubConstants = fn(7512);
+const SafetyHubConstants = fn(7513);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
@@ -408,7 +408,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -612,7 +612,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -634,7 +634,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     v2 = 2;
                     c5 = 1;
                     const obj6 = {
-                      value: tmp27(11472).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                      value: tmp27(11474).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                       done: false,
                     };
                     return obj6;
@@ -649,8 +649,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   if (body != null) {
                     code = body.code;
                   }
-                  closure_129_4(safetyHubAppealSignal(7511).getRequestReviewErrorFromCode(code));
-                  const obj2 = safetyHubAppealSignal(7511);
+                  closure_129_4(safetyHubAppealSignal(7512).getRequestReviewErrorFromCode(code));
+                  const obj2 = safetyHubAppealSignal(7512);
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;

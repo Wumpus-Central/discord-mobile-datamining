@@ -5,7 +5,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../native.tsx";
 import Pressables from "../../Pressables/native/Pressables.tsx";
-import _modDef6620 from "../../../../../_runtime/metro/06620__.js";
+import _modDef6621 from "../../../../../_runtime/metro/06621__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -80,7 +80,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       if (cResult[3] !== tmp4.closeIcon) {
-        const obj3 = { source: _modDef6620, style: tmp4.closeIcon, size: native.Icon.Sizes.MEDIUM };
+        const obj3 = { source: _modDef6621, style: tmp4.closeIcon, size: native.Icon.Sizes.MEDIUM };
         const tmp12 = React5(native.Icon, obj3);
         cResult[3] = tmp4.closeIcon;
         cResult[4] = tmp12;
@@ -122,7 +122,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj.hitSlop = { top: 8, bottom: 8, right: 8 };
       const tmp = closure_9();
       obj.children = React5(native.Icon, {
-        source: _modDef6620,
+        source: _modDef6621,
         style: closure_9().closeIcon,
         size: native.Icon.Sizes.MEDIUM,
       });

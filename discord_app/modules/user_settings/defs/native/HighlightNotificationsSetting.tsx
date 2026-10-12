@@ -33,7 +33,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(7992).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7993).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);

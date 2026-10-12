@@ -23,12 +23,12 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(12544).GuildPrompts;
+const GuildPrompts = fn(12546).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5092);
 let obj2 = {
-  container: { flex: 1, flexGrow: 2, marginTop: fn(6258).NAV_BAR_HEIGHT },
+  container: { flex: 1, flexGrow: 2, marginTop: fn(6259).NAV_BAR_HEIGHT },
   guildIcon: { alignSelf: "center", marginTop: 16 },
   title: { marginBottom: 8, textAlign: "center" },
   description: { textAlign: "center" },
@@ -38,7 +38,7 @@ let obj2 = {
   redesignGrowSpacing: null,
   redesignButtonContainer: null,
 };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(6258).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(6259).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -72,7 +72,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp7);
-      const insets = handleClose(6664)().insets;
+      const insets = handleClose(6665)().insets;
       const tmpResult = require("initialize");
       [obj3, dependencyMap] = ref(noop.useState(null), 2);
       const tmp11 = ref(noop.useState(""), 2);
@@ -244,13 +244,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                       obj5.error = tmp43;
                       obj5.onFocus = J;
                       obj5.onBlur = Q;
-                      const tmp50 = closure_10(tmp9(6284), obj5);
+                      const tmp50 = closure_10(tmp9(6285), obj5);
                       cResult[34] = first1;
                       cResult[35] = tmp4.input;
                       cResult[36] = tmp4.redesignTextInput;
                       cResult[37] = tmp43;
                       cResult[38] = tmp50;
-                      const tmp9Result = tmp9(6284);
+                      const tmp9Result = tmp9(6285);
                     }
                   }
                   const obj6 = { style: header, children: null };
@@ -275,12 +275,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[20] = tmp29;
                 tmp27 = tmp29;
               }
-              const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6158).GuildIconSizes.XLARGE };
-              const tmp21 = closure_10(tmp9(6158), obj8);
+              const obj8 = { style: tmp4.guildIcon, guild: stateFromStores, size: tmp(6159).GuildIconSizes.XLARGE };
+              const tmp21 = closure_10(tmp9(6159), obj8);
               cResult[13] = stateFromStores;
               cResult[14] = tmp4.guildIcon;
               cResult[15] = tmp21;
-              const tmp9Result2 = tmp9(6158);
+              const tmp9Result2 = tmp9(6159);
             }
             const items2 = [tmp4.container, tmp16];
             cResult[10] = tmp4.container;
@@ -297,7 +297,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       _require = first1(function* () {
         tmp30(null);
         let nick = 1;
-        yield closure_0(6809).updateGuildSelfMember(closure_0, { nick });
+        yield closure_0(6810).updateGuildSelfMember(closure_0, { nick });
         if (1 === tmp7) {
           nick = 0;
           closure_128_0 = tmp30;

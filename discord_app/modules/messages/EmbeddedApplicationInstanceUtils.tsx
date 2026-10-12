@@ -18,7 +18,7 @@ function getJoinOrStartButtonState(channel) {
     tmp6 = require;
   }
   obj.text = stringResult;
-  const result = tmp6(8512).isActivitiesInTextEnabled(channel.channel);
+  const result = tmp6(8513).isActivitiesInTextEnabled(channel.channel);
   if (null != embeddedActivity) {
     if (null != currentEmbeddedActivity) {
       if (embeddedActivity.launchId === currentEmbeddedActivity.launchId) {
@@ -80,7 +80,7 @@ function getJoinOrStartButtonState(channel) {
     }
     return obj;
   }
-  const tmp6Result = tmp6(8512);
+  const tmp6Result = tmp6(8513);
 }
 const ReactCompilerGating = fn(558);
 const size = fn(2);

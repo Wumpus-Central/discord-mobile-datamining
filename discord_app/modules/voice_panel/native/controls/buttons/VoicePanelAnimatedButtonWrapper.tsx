@@ -9,7 +9,7 @@ import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(11970).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11972).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj2 = {

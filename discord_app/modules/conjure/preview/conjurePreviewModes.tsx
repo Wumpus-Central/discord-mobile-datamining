@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/preview/conjurePreviewModes.tsx
-import ConjureTypes from "../ConjureTypes.tsx";
+import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -36,13 +36,15 @@ export const previewCapabilitiesFromSurfaces = function previewCapabilitiesFromS
         hasBotDm: null,
       };
       if (widgetResolvable) {
-        widgetResolvable = previewSupportedSurfaces.includes(ConjureTypes.ConjureSupportedSurface.PROFILE_WIDGET);
+        widgetResolvable = previewSupportedSurfaces.includes(
+          ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET,
+        );
       }
       obj.hasProfileWidget = widgetResolvable;
       if (botDmResolvable) {
-        let hasItem = previewSupportedSurfaces.includes(ConjureTypes.ConjureSupportedSurface.BOT);
+        let hasItem = previewSupportedSurfaces.includes(ConjureProjectTypes.ConjureSupportedSurface.BOT);
         if (!hasItem) {
-          hasItem = previewSupportedSurfaces.includes(ConjureTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
+          hasItem = previewSupportedSurfaces.includes(ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
         }
         botDmResolvable = hasItem;
       }

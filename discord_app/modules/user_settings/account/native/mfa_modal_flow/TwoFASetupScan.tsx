@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[1];
       }
       const tmp5 = _slicedToArray(noop.useState(false), 2);
-      const twoFASetupStyles = totpSecret(15015).useTwoFASetupStyles();
+      const twoFASetupStyles = totpSecret(15038).useTwoFASetupStyles();
       if (cResult[2] === twoFASetupStyles.modalHeader) {
         if (cResult[3] === twoFASetupStyles.text) {
           let tmp10 = cResult[4];
@@ -136,8 +136,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj7 = { bottom: true, style: tmp9, children: null };
                 const items = [tmp14, tmp20, tmp24, tmp33];
                 obj7.children = items;
-                obj6.children = closure_5(tmp(6813).SafeAreaPaddingView, obj7);
-                const tmp39 = closure_4(tmp(15011).TwoFASetupModalScreen, obj6);
+                obj6.children = closure_5(tmp(6814).SafeAreaPaddingView, obj7);
+                const tmp39 = closure_4(tmp(15034).TwoFASetupModalScreen, obj6);
                 cResult[25] = tmp4.container;
                 cResult[26] = tmp24;
                 cResult[27] = tmp33;
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp36 = tmp39;
               }
               const obj8 = { accessibilityRole: "button", onPress: tmp7, children: tmp30 };
-              const tmp35 = closure_4(tmp(6184).PressableOpacity, obj8);
+              const tmp35 = closure_4(tmp(6185).PressableOpacity, obj8);
               cResult[22] = tmp7;
               cResult[23] = tmp30;
               cResult[24] = tmp35;
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = twoFASetupStyles.text;
       cResult[4] = items2;
       tmp10 = items2;
-      const tmpResult = totpSecret(15015);
+      const tmpResult = totpSecret(15038);
     }
   : function TwoFASetupScan(totpSecret) {
       totpSecret = totpSecret.totpSecret;
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_1(true);
         ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
       }, items);
-      const twoFASetupStyles = totpSecret(15015).useTwoFASetupStyles();
+      const twoFASetupStyles = totpSecret(15038).useTwoFASetupStyles();
       const obj2 = { bottom: true, style: tmp.container, children: null };
       const obj3 = { style: null, children: null };
       const items1 = [,];
@@ -219,8 +219,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { children: null };
       obj6.children = stringResult;
       obj5.children = closure_4(totpSecret(1200).LegacyText, obj6);
-      items2[3] = closure_4(totpSecret(6184).PressableOpacity, obj5);
+      items2[3] = closure_4(totpSecret(6185).PressableOpacity, obj5);
       obj2.children = items2;
-      obj7.children = closure_5(totpSecret(6813).SafeAreaPaddingView, obj2);
-      return closure_4(totpSecret(15011).TwoFASetupModalScreen, obj7);
+      obj7.children = closure_5(totpSecret(6814).SafeAreaPaddingView, obj2);
+      return closure_4(totpSecret(15034).TwoFASetupModalScreen, obj7);
     };

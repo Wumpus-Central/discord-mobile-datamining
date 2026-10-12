@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(10353).useChannelCallStore;
+const useChannelCallStore = fn(10354).useChannelCallStore;
 const Constants = fn(10826);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = useChannelCallStore(S);
       const tmp7 = sharedValue;
       sharedValue = height(4850).useSharedValue(0);
-      const Gesture = tmp(6334).Gesture;
+      const Gesture = tmp(6335).Gesture;
       const tmpResult = height(4850);
       const PanResult = Gesture.Pan();
       class L {
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = tmp19;
         }
         const obj6 = { gesture: failOffsetXResult, children: tmp11 };
-        const tmp15 = jsx(tmp(6334).GestureDetector, { gesture: failOffsetXResult, children: tmp11 });
+        const tmp15 = jsx(tmp(6335).GestureDetector, { gesture: failOffsetXResult, children: tmp11 });
         cResult[4] = failOffsetXResult;
         cResult[5] = tmp11;
         cResult[6] = tmp15;
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const height = sharedValue(1497)().height;
       const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
       sharedValue = height(4850).useSharedValue(0);
-      const Gesture = height(6334).Gesture;
+      const Gesture = height(6335).Gesture;
       let obj = height(4850);
       const PanResult = Gesture.Pan();
       const fn = function h(translationY) {
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.background, children: null };
       const animatedStyle = obj9.useAnimatedStyle(fn2);
       let obj4 = { interpolate: height(4850).interpolate, position: sharedValue, height };
-      obj5.children = jsx(height(6334).GestureDetector, {
+      obj5.children = jsx(height(6335).GestureDetector, {
         gesture: failOffsetXResult,
         children: jsx(sharedValue(4850).View, { style: animatedStyle, children: children.children }),
       });

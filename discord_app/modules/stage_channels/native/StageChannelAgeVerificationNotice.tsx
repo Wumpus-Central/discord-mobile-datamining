@@ -85,7 +85,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               style: closure_1.linkText,
               onPress() {
-                const obj = closure_1(7497);
+                const obj = closure_1(7498);
                 const result = obj.showAgeVerificationGetStartedModal({
                   entryPoint: onConfirmPress(5918).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
                 });
@@ -139,7 +139,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               style: closure_1.linkText,
               onPress() {
-                const obj = closure_1(7497);
+                const obj = closure_1(7498);
                 const result = obj.showAgeVerificationGetStartedModal({
                   entryPoint: onConfirmPress(5918).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
                 });

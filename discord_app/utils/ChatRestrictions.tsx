@@ -52,7 +52,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "backgroundColor",
+    animation: "code",
   },
   {
     check(arg0) {

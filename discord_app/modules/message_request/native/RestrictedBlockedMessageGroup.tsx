@@ -13,10 +13,10 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5092);
-let obj2 = { toggle: { marginLeft: fn(17606).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
+let obj2 = { toggle: { marginLeft: fn(17663).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginLeft: fn(17606).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
+let obj3 = { marginLeft: fn(17663).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");
 
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = mapped;
         }
       }
-      const tmp15 = closure_5(renderMessage(6184).PressableOpacity, {
+      const tmp15 = closure_5(renderMessage(6185).PressableOpacity, {
         style: tmp4.toggle,
         accessibilityRole: "button",
         accessibilityState: tmp8,

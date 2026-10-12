@@ -48,7 +48,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -174,7 +174,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
             }
             v0 = 0;
             c6 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp44) {
           if (tmp4 === v0) {
@@ -246,7 +246,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
   }
   let obj9 = { children: null };
   let obj2 = modalSessionId(5909);
-  obj9.children = closure_7(modalSessionId(7515).ModalContent, {
+  obj9.children = closure_7(modalSessionId(7516).ModalContent, {
     children: closure_7(modalSessionId(5377).Stack, {
       align: "center",
       justify: "center",
@@ -254,5 +254,5 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       children: tmp15,
     }),
   });
-  return closure_7(modalSessionId(7514).ModalScreen, obj9);
+  return closure_7(modalSessionId(7515).ModalScreen, obj9);
 }

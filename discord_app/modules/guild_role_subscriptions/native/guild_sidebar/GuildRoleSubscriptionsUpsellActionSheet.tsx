@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16658 from "../../../../../_runtime/metro/16658__.js";
+import _modDef16682 from "../../../../../_runtime/metro/16682__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -48,11 +48,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: markAsDismissed(16658) };
-          const tmp12 = closure_6(markAsDismissed(6156), obj2);
+          const obj2 = { source: markAsDismissed(16682) };
+          const tmp12 = closure_6(markAsDismissed(6157), obj2);
           cResult[5] = tmp12;
           let tmp8 = tmp12;
-          const tmp11 = markAsDismissed(6156);
+          const tmp11 = markAsDismissed(6157);
         } else {
           tmp8 = cResult[5];
         }
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { startExpanded: true, onDismiss: tmp6, children: null };
           const items = [tmp8, tmp15, tmp20, tmp25, tmp33];
           obj8.children = items;
-          const tmp39 = closure_7(tmp(6839).BottomSheet, obj8);
+          const tmp39 = closure_7(tmp(6840).BottomSheet, obj8);
           cResult[23] = tmp25;
           cResult[24] = tmp33;
           cResult[25] = tmp6;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         children: null,
       };
-      const obj2 = { source: _modDef16658 };
+      const obj2 = { source: _modDef16682 };
       const items = [closure_6(FastImageDefault, obj2), , , ,];
       const obj3 = {
         style: tmp.title,

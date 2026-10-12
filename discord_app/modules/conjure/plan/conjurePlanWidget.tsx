@@ -194,18 +194,17 @@ function buildConjurePlanWidgetRendererProps(widget_config, widget_preview, tmp1
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const getAttachmentUrl = fn(13213).getAttachmentUrl;
 const localizedStrings = [];
-let closure_8 = {};
-let c9 = 256;
+let closure_7 = {};
+let c8 = 256;
 let ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureWidgetImageSrcs(arg0, arg1) {
       _require = arg0;
       dependencyMap = arg1;
       const cResult = require("c").c(4);
       let obj = require("c");
-      _slicedToArray = _slicedToArray(noop.useState(closure_8), 2)[1];
+      _slicedToArray = _slicedToArray(noop.useState(closure_7), 2)[1];
       if (cResult[0] === arg1) {
         if (cResult[1] === arg0) {
           let tmp4 = cResult[2];
@@ -214,7 +213,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const effect = noop.useEffect(tmp4, tmp5);
         return tmp3;
       }
-      const fn = function o() {
+      const fn = function u() {
         let obj = closure_1;
         if (closure_1 == null) {
           obj = {};
@@ -225,8 +224,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           Promise.all(
             entries.map((item) => {
               const tmp = closure_2(item, 2);
-              closure_0 = tmp[0];
-              return getAttachmentUrl(c0, tmp[1].id).then(
+              _true = tmp[0];
+              const attachmentUrl = _true(closure_1[10]).getAttachmentUrl(c0, tmp[1].id);
+              return attachmentUrl.then(
                 (result) => {
                   const items = [closure_0, result];
                   return items;
@@ -255,12 +255,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = items;
       tmp5 = items;
       tmp4 = fn;
-      const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
+      const tmp2 = _slicedToArray(noop.useState(closure_7), 2);
     }
   : function useConjureWidgetImageSrcs(arg0, arg1) {
       closure_0 = arg0;
       closure_1 = arg1;
-      const tmp = _slicedToArray(noop.useState(closure_8), 2);
+      const tmp = _slicedToArray(noop.useState(closure_7), 2);
       _slicedToArray = tmp[1];
       let items = [arg0, arg1];
       const effect = noop.useEffect(() => {
@@ -274,9 +274,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           Promise.all(
             entries.map((item) => {
               [, tmp] = item;
-              return getAttachmentUrl(c0, tmp.id).then(
+              const attachmentUrl = _true(closure_1[10]).getAttachmentUrl(c0, tmp.id);
+              return attachmentUrl.then(
                 (result) => {
-                  const items = [closure_1_0, result];
+                  const items = [_true, result];
                   return items;
                 },
                 () => null,
@@ -359,7 +360,7 @@ export const useConjurePlanWidget = ReactCompilerGating.isReactCompilerEnabled()
       if (widget_preview != null) {
         images = widget_preview.images;
       }
-      const tmp12Result = closure_15(arg0, images);
+      const tmp12Result = closure_14(arg0, images);
       if (cResult[5] === widget_config) {
         if (cResult[6] === tmp12Result) {
           if (cResult[7] === stateFromStores) {
@@ -409,7 +410,7 @@ export const useConjurePlanWidget = ReactCompilerGating.isReactCompilerEnabled()
       const items = [stateFromStores1];
       const stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores1.locale);
       let obj = require("initialize");
-      const items1 = [memo];
+      const items1 = [closure_5];
       stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
         const project = ConjureProjectStore.getProject(closure_0);
         let prop;
@@ -432,10 +433,10 @@ export const useConjurePlanWidget = ReactCompilerGating.isReactCompilerEnabled()
       if (widget_preview != null) {
         images = widget_preview.images;
       }
-      const tmp3Result = closure_15(arg0, images);
+      const tmp3Result = closure_14(arg0, images);
       closure_5 = tmp3Result;
       const items2 = [widget_config, widget_preview, tmp3Result, stateFromStores];
-      memo = stateFromStores.useMemo(() => {
+      const memo = stateFromStores.useMemo(() => {
         let tmp2 = null;
         if (null != widget_config) {
           tmp2 = null;

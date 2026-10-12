@@ -14,7 +14,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9429).EmojiPickerSource;
+const EmojiPickerSource = fn(9430).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1085).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1393).EmojiIntention;
 const jsxProd = fn(21);

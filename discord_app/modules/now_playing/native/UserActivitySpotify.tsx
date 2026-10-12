@@ -3,13 +3,13 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef8277 from "../../../../_runtime/metro/08277__.js";
+import _modDef8278 from "../../../../_runtime/metro/08278__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8458);
+const SpotifyConstants = fn(8459);
 ({
   SPOTIFY_APP_PROTOCOL: metroRequire,
   SpotifyEndpoints: closure_7,
@@ -302,7 +302,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: _modDef8277 };
+        let obj2 = { source: _modDef8278 };
         const tmp8 = closure_9(tmp(5379).Button.Icon, obj2);
         cResult[2] = tmp8;
         let tmp5 = tmp8;
@@ -347,7 +347,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
       activity = activity.activity;
       let obj = { style: activity.style, children: null };
       let obj2 = {
-        icon: closure_9(activity(5379).Button.Icon, { source: _modDef8277 }),
+        icon: closure_9(activity(5379).Button.Icon, { source: _modDef8278 }),
         text: null,
         size: "sm",
         onPress: null,

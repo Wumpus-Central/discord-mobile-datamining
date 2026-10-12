@@ -44,7 +44,7 @@ let closure_18 = async function _handleThumbnailUpload() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -164,7 +164,7 @@ prototype["_initialize"] = function _initialize() {
     currentAppIntent = currentAppIntent.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(7443).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(7444).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = obj2.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
         const tmp2Result = closure_1(5106);
@@ -193,7 +193,7 @@ prototype["_initialize"] = function _initialize() {
         }
         const tmp9Result = tmp9(5900);
       }
-      const obj3 = currentUserActiveStream(7443);
+      const obj3 = currentUserActiveStream(7444);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");

@@ -22,13 +22,13 @@ function VerificationListItem(verification) {
         let tmp9 = cResult[2];
       }
       if (cResult[3] !== verification2.timestamp) {
-        const secureFramesUserVerifiedTimestamp = TableRow(8828).getSecureFramesUserVerifiedTimestamp(
+        const secureFramesUserVerifiedTimestamp = TableRow(8829).getSecureFramesUserVerifiedTimestamp(
           verification2.timestamp,
         );
         cResult[3] = verification2.timestamp;
         cResult[4] = secureFramesUserVerifiedTimestamp;
         let tmp10 = secureFramesUserVerifiedTimestamp;
-        const TableRowResult = TableRow(8828);
+        const TableRowResult = TableRow(8829);
       } else {
         tmp10 = cResult[4];
       }
@@ -44,7 +44,7 @@ function VerificationListItem(verification) {
       }
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp17 = jsx(TableRow(6207).XSmallIcon, {});
+        const tmp17 = jsx(TableRow(6208).XSmallIcon, {});
         cResult[7] = tmp17;
         let tmp15 = tmp17;
       } else {
@@ -52,7 +52,7 @@ function VerificationListItem(verification) {
       }
       if (cResult[8] !== tmp9) {
         const obj3 = { onPress: tmp9, children: tmp15 };
-        const tmp20 = jsx(TableRow(6184).PressableHighlight, { onPress: tmp9, children: tmp15 });
+        const tmp20 = jsx(TableRow(6185).PressableHighlight, { onPress: tmp9, children: tmp15 });
         cResult[8] = tmp9;
         cResult[9] = tmp20;
         let tmp18 = tmp20;
@@ -67,7 +67,7 @@ function VerificationListItem(verification) {
           }
         }
       }
-      TableRow = TableRow(6179).TableRow;
+      TableRow = TableRow(6180).TableRow;
       const obj5 = { label: tmp12, subLabel: tmp10, start: start2, end: end2, trailing: tmp18 };
       tmp7 = <TableRow label={tmp12} subLabel={tmp10} start={start2} end={end2} trailing={tmp18} />;
       cResult[10] = end2;
@@ -105,12 +105,12 @@ function VerificationListItem(verification) {
     obj.subLabel = memo;
     obj.start = start;
     obj.end = end;
-    const obj7 = { onPress: callback, children: jsx(userId(6207).XSmallIcon, {}) };
-    obj.trailing = jsx(userId(6184).PressableHighlight, {
+    const obj7 = { onPress: callback, children: jsx(userId(6208).XSmallIcon, {}) };
+    obj.trailing = jsx(userId(6185).PressableHighlight, {
       onPress: callback,
-      children: jsx(userId(6207).XSmallIcon, {}),
+      children: jsx(userId(6208).XSmallIcon, {}),
     });
-    return jsx(userId(6179).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
+    return jsx(userId(6180).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
   }
 }
 function SectionListItem(title) {
@@ -227,7 +227,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp4) {
         const obj4 = { label: tmp5, subLabel: tmp8, onPress: tmp4, start: true, end: true };
-        const tmp13 = jsx(tmp(6179).TableRow, { label: tmp5, subLabel: tmp8, onPress: tmp4, start: true, end: true });
+        const tmp13 = jsx(tmp(6180).TableRow, { label: tmp5, subLabel: tmp8, onPress: tmp4, start: true, end: true });
         cResult[4] = tmp4;
         cResult[5] = tmp13;
         let tmp11 = tmp13;
@@ -256,7 +256,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = intl2.string(userId(1126).t.kgAfXN);
       obj.subLabel = jsx(userId(5088).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
       obj.onPress = callback;
-      return jsx(userId(6179).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
+      return jsx(userId(6180).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -269,8 +269,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = userId(576).c(29);
       const tmp4 = closure_7();
       let obj = userId(576);
-      userId = userId(6682).useSettingNavigationRoute().params.userId;
-      const obj2 = userId(6682);
+      userId = userId(6683).useSettingNavigationRoute().params.userId;
+      const obj2 = userId(6683);
       const navigation = userId(1503).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp13 = cResult[7];
         }
         const layoutEffect = items1.useLayoutEffect(tmp13);
-        const secureFramesUserVerifiedKeys = tmp(16237).useSecureFramesUserVerifiedKeys(userId);
+        const secureFramesUserVerifiedKeys = tmp(16260).useSecureFramesUserVerifiedKeys(userId);
         if (cResult[8] === userId) {
           if (cResult[9] === secureFramesUserVerifiedKeys) {
             items1 = cResult[10];
@@ -380,7 +380,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   contentContainerStyle: tmp4.listContent,
                   ListFooterComponent: tmp24,
                 };
-                const tmp32 = jsx(tmp(8624).FlashList, {
+                const tmp32 = jsx(tmp(8625).FlashList, {
                   keyExtractor,
                   getItemType,
                   renderItem,
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         obj6 = items1;
-        const tmpResult2 = tmp(16237);
+        const tmpResult2 = tmp(16260);
       }
       class T {
         constructor() {
@@ -494,8 +494,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function SettingsSecureFramesVerificationsScreen() {
       const tmp = closure_7();
-      userId = userId(6682).useSettingNavigationRoute().params.userId;
-      let obj = userId(6682);
+      userId = userId(6683).useSettingNavigationRoute().params.userId;
+      let obj = userId(6683);
       const navigation = userId(1503).useNavigation();
       const obj2 = userId(1503);
       let items = [UserStore];
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         navigation.setOptions(obj);
       });
       const obj4 = navigation(4962);
-      secureFramesUserVerifiedKeys = userId(16237).useSecureFramesUserVerifiedKeys(userId);
+      secureFramesUserVerifiedKeys = userId(16260).useSecureFramesUserVerifiedKeys(userId);
       const items1 = [userId, secureFramesUserVerifiedKeys];
       const items2 = [navigation, secureFramesUserVerifiedKeys];
       const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -551,13 +551,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         contentContainerStyle: tmp.listContent,
         ListFooterComponent: null,
       };
-      const obj5 = userId(16237);
+      const obj5 = userId(16260);
       obj7.ListFooterComponent = (
         <View style={tmp.listFooter}>
           <closure_16 userId={userId} />
         </View>
       );
-      obj6.children = jsx(userId(8624).FlashList, {
+      obj6.children = jsx(userId(8625).FlashList, {
         keyExtractor,
         getItemType,
         renderItem,

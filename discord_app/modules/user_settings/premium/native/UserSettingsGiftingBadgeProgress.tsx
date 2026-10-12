@@ -15,7 +15,7 @@ import BadgeDirectoryStore from "../../../badges/BadgeDirectoryStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_8 = fn(8316).getSingleRequirementThreshold;
+let closure_8 = fn(8317).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const UserSettingsGiftingBadgeProgress = "UserSettingsGiftingBadgeProgress";
@@ -346,8 +346,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       analyticsLocation = analyticsLocation.analyticsLocation;
       const tmp = closure_13();
       importDefault = tmp;
-      dependencyMap = analyticsLocation(10099).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
-      let obj = analyticsLocation(10099);
+      dependencyMap = analyticsLocation(10100).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
+      let obj = analyticsLocation(10100);
       const analyticsLocations = useAnalyticsLocationsDefault(
         AnalyticsLocationDefault.USER_SETTINGS_GIFT_INVENTORY,
       ).analyticsLocations;
@@ -403,7 +403,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         items1[1] = closure_9(closure_6, obj6);
         const obj7 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
         const obj8 = { size: "sm", color: tmp4(587).unsafe_rawColors.WHITE };
-        obj7.icon = closure_9(tmp2(11536).GiftIcon, obj8);
+        obj7.icon = closure_9(tmp2(11538).GiftIcon, obj8);
         const intl2 = tmp2(1126).intl;
         obj7.text = intl2.string(tmp4(2664).DZnomS);
         obj7.onPress = function onPress() {
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let items = [BadgeDirectoryStore];
         const fn = function h() {
           singleRequirementProgress = singleRequirementProgress.getSingleRequirementProgress(
-            analyticsLocation(8308).BadgeId.GIFTING,
+            analyticsLocation(8309).BadgeId.GIFTING,
           );
           let num;
           if (singleRequirementProgress != null) {
@@ -446,12 +446,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj2 = {
             badgeProgress: num,
-            currentTier: singleRequirementProgress.getCurrentTier(analyticsLocation(8308).BadgeId.GIFTING),
-            nextTier: singleRequirementProgress.getNextTier(analyticsLocation(8308).BadgeId.GIFTING),
-            giftsRemaining: singleRequirementProgress.getRemainingToNextTier(analyticsLocation(8308).BadgeId.GIFTING),
+            currentTier: singleRequirementProgress.getCurrentTier(analyticsLocation(8309).BadgeId.GIFTING),
+            nextTier: singleRequirementProgress.getNextTier(analyticsLocation(8309).BadgeId.GIFTING),
+            giftsRemaining: singleRequirementProgress.getRemainingToNextTier(analyticsLocation(8309).BadgeId.GIFTING),
             tiers: null,
           };
-          const badgeById = obj.getBadgeById(analyticsLocation(8308).BadgeId.GIFTING);
+          const badgeById = obj.getBadgeById(analyticsLocation(8309).BadgeId.GIFTING);
           let tiers;
           if (badgeById != null) {
             tiers = badgeById.tiers;
@@ -473,7 +473,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ badgeProgress, currentTier } = stateFromStoresObject);
       ({ nextTier, giftsRemaining, tiers } = stateFromStoresObject);
       let tmpResult = analyticsLocation(504);
-      const isGiftingBadgeComplexArtEnabled = analyticsLocation(10099).useIsGiftingBadgeComplexArtEnabled(
+      const isGiftingBadgeComplexArtEnabled = analyticsLocation(10100).useIsGiftingBadgeComplexArtEnabled(
         UserSettingsGiftingBadgeProgress,
       );
       if (0 === badgeProgress) {
@@ -526,7 +526,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                           size: "sm",
                                                           color: tmp7(587).unsafe_rawColors.WHITE,
                                                         };
-                                                        const tmp49 = closure_9(tmp(11536).GiftIcon, obj3);
+                                                        const tmp49 = closure_9(tmp(11538).GiftIcon, obj3);
                                                         let intl = tmp(1126).intl;
                                                         const stringResult = intl.string(tmp7(2664).DZnomS);
                                                         cResult[87] = tmp49;
@@ -850,7 +850,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const giftingBadgeProgressPercent = tmp(10099).getGiftingBadgeProgressPercent(
+        const giftingBadgeProgressPercent = tmp(10100).getGiftingBadgeProgressPercent(
           badgeProgress,
           currentTier,
           nextTier,
@@ -859,9 +859,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[34] = currentTier;
         cResult[35] = nextTier;
         cResult[36] = giftingBadgeProgressPercent;
-        const tmpResult4 = tmp(10099);
+        const tmpResult4 = tmp(10100);
       }
-      const tmpResult3 = analyticsLocation(10099);
+      const tmpResult3 = analyticsLocation(10100);
     }
   : function UserSettingsGiftingBadgeProgress(analyticsLocation) {
       analyticsLocation = analyticsLocation.analyticsLocation;
@@ -910,7 +910,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ badgeProgress, currentTier } = stateFromStoresObject);
       ({ nextTier, tiers, giftsRemaining } = stateFromStoresObject);
       let obj = analyticsLocation(504);
-      const isGiftingBadgeComplexArtEnabled = analyticsLocation(10099).useIsGiftingBadgeComplexArtEnabled(
+      const isGiftingBadgeComplexArtEnabled = analyticsLocation(10100).useIsGiftingBadgeComplexArtEnabled(
         UserSettingsGiftingBadgeProgress,
       );
       if (0 === badgeProgress) {
@@ -919,18 +919,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         let tmp19 = closure_8(currentTier);
         const tmp25 = closure_8(nextTier);
-        const giftingBadgeProgressPercent = tmp7(10099).getGiftingBadgeProgressPercent(
+        const giftingBadgeProgressPercent = tmp7(10100).getGiftingBadgeProgressPercent(
           badgeProgress,
           currentTier,
           nextTier,
         );
-        const tmp7Result = tmp7(10099);
-        let giftingBadgeTierIconUrl = tmp7(10099).getGiftingBadgeTierIconUrl(
+        const tmp7Result = tmp7(10100);
+        let giftingBadgeTierIconUrl = tmp7(10100).getGiftingBadgeTierIconUrl(
           currentTier,
           isGiftingBadgeComplexArtEnabled,
         );
-        const tmp7Result3 = tmp7(10099);
-        const giftingBadgeTierIconUrl1 = tmp7(10099).getGiftingBadgeTierIconUrl(
+        const tmp7Result3 = tmp7(10100);
+        const giftingBadgeTierIconUrl1 = tmp7(10100).getGiftingBadgeTierIconUrl(
           nextTier,
           isGiftingBadgeComplexArtEnabled,
         );
@@ -964,7 +964,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp13 = null != giftingBadgeTierIconUrl;
         if (tmp13) {
           const obj9 = { icon: giftingBadgeTierIconUrl, size: 36, style: { margin: 4 } };
-          tmp13 = closure_9(tmp4(10105), obj9);
+          tmp13 = closure_9(tmp4(10106), obj9);
         }
         let items1 = [tmp13, ,];
         const obj10 = {
@@ -977,7 +977,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp15Result = null != giftingBadgeTierIconUrl1;
         if (tmp15Result) {
           const obj11 = { icon: giftingBadgeTierIconUrl1, size: 36, style: { margin: 4 } };
-          tmp15Result = closure_9(tmp4(10105), obj11);
+          tmp15Result = closure_9(tmp4(10106), obj11);
         }
         items1[2] = tmp15Result;
         obj8.children = items1;
@@ -1014,7 +1014,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items5 = [closure_10(closure_6, obj7), , , ,];
         const obj19 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
         const obj20 = { size: "sm", color: tmp4(587).unsafe_rawColors.WHITE };
-        obj19.icon = closure_9(tmp7(11536).GiftIcon, obj20);
+        obj19.icon = closure_9(tmp7(11538).GiftIcon, obj20);
         const intl4 = tmp7(1126).intl;
         obj19.text = intl4.string(tmp4(2664).DZnomS);
         obj19.onPress = function onPress() {
@@ -1035,9 +1035,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj23.children = intl5.string(tmp4(2664).WZ4cXA);
         const items6 = [closure_9(tmp7(5088).Text, obj23)];
         if (tmp11Result) {
-          let ChevronSmallDownIcon = tmp7(13842).ChevronSmallUpIcon;
+          let ChevronSmallDownIcon = tmp7(13865).ChevronSmallUpIcon;
         } else {
-          ChevronSmallDownIcon = tmp7(10532).ChevronSmallDownIcon;
+          ChevronSmallDownIcon = tmp7(10533).ChevronSmallDownIcon;
         }
         const obj24 = { color: tmp4(587).colors.INTERACTIVE_ICON_DEFAULT };
         items6[1] = closure_9(ChevronSmallDownIcon, obj24);
@@ -1098,5 +1098,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.children = items5;
         return closure_10(closure_6, obj6);
       }
-      let obj2 = analyticsLocation(10099);
+      let obj2 = analyticsLocation(10100);
     };

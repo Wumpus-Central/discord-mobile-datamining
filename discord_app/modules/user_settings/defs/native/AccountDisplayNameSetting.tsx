@@ -45,7 +45,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["9AjdkD"]);
   },
-  parent: fn(7992).MobileUserSettings.ACCOUNT,
+  parent: fn(7993).MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountDisplayNameSettingTrailing() {
         const cResult = c.c(2);

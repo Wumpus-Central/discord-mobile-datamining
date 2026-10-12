@@ -12,7 +12,7 @@ import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef15505 from "../../../../../_runtime/metro/15505__.js";
+import _modDef15528 from "../../../../../_runtime/metro/15528__.js";
 import FastAssetImageDefault from "../components/FastAssetImage.tsx";
 import GuildRoleSubscriptionCardAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -31,11 +31,11 @@ function CancelSubscriptionButtonFooter(guild) {
   const tmp = closure_13();
   [tmp3, c3] = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
   const tmp2 = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
-  const analyticsLocations = subscription(6851)(
-    subscription(6878).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL,
+  const analyticsLocations = subscription(6852)(
+    subscription(6879).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL,
   ).analyticsLocations;
-  const tmp5 = subscription(6851);
-  const cancelSubscription1 = subscription(9398).useCancelSubscription(subscription.id, subscription.isACOM);
+  const tmp5 = subscription(6852);
+  const cancelSubscription1 = subscription(9399).useCancelSubscription(subscription.id, subscription.isACOM);
   cancelSubscription = cancelSubscription1.cancelSubscription;
   isPurchasedViaAppleGeneric = subscription.isPurchasedViaAppleGeneric;
   const items = [guild.name, , , , , , ,];
@@ -57,7 +57,7 @@ function CancelSubscriptionButtonFooter(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -368,7 +368,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp51 = cResult[27];
                 }
                 if (cResult[28] !== tmp4.cactus) {
-                  const obj15 = { source: _modDef15505, style: tmp4.cactus };
+                  const obj15 = { source: _modDef15528, style: tmp4.cactus };
                   const tmp58 = collapsed(FastImageDefault, obj15);
                   cResult[28] = tmp4.cactus;
                   cResult[29] = tmp58;
@@ -506,7 +506,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length,
       });
       const obj10 = { variant: "text-sm/medium", color: "interactive-text-default", children: guild.name };
-      obj13.source = _modDef15505;
+      obj13.source = _modDef15528;
       obj13.style = tmp.cactus;
       items2[6] = collapsed(FastImageDefault, obj13);
       obj7.children = items2;

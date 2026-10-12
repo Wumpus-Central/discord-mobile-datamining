@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const QuestConstants = fn(5972);
 ({ QuestDockMode: hasOwnProperty, QuestsExperimentLocations: metroRequire } = QuestConstants);
-const QuestDockConstants = fn(15347);
+const QuestDockConstants = fn(15370);
 ({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_7 } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -86,14 +86,14 @@ export default noop.memo(
     ? function QuestDockBountyHeader() {
         const cResult = activeQuestDockMode(576).c(67);
         let obj = activeQuestDockMode(576);
-        const questDockBounty = activeQuestDockMode(15377).useQuestDockBounty();
+        const questDockBounty = activeQuestDockMode(15400).useQuestDockBounty();
         const tmp5 = closure_11();
         let str = questDockBounty.productName;
         if (str == null) {
           str = "";
         }
-        activeQuestDockMode = noop.useContext(tmp(15348).QuestDockGestureContext).activeQuestDockMode;
-        let obj2 = activeQuestDockMode(15377);
+        activeQuestDockMode = noop.useContext(tmp(15371).QuestDockGestureContext).activeQuestDockMode;
+        let obj2 = activeQuestDockMode(15400);
         const fn = function o() {
           let num = 1;
           if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
@@ -142,9 +142,9 @@ export default noop.memo(
           PROMOTED_LABEL_OPACITY,
           QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
         };
-        const tmp9 = bountyCreative(8394)(activeQuestDockMode);
+        const tmp9 = bountyCreative(8395)(activeQuestDockMode);
         const isBountiesAndroidQuestBarSmokeAnimationEnabled = activeQuestDockMode(
-          15459,
+          15482,
         ).useIsBountiesAndroidQuestBarSmokeAnimationEnabled(constants.QUESTS_BAR_MOBILE);
         if (cResult[0] !== isBountiesAndroidQuestBarSmokeAnimationEnabled) {
           const tmp12 = tmp(1382).isAndroid() && isBountiesAndroidQuestBarSmokeAnimationEnabled;
@@ -155,16 +155,16 @@ export default noop.memo(
         } else {
           tmp11 = cResult[1];
         }
-        const tmpResult8 = activeQuestDockMode(15459);
-        const smokeArtSize = activeQuestDockMode(15458).useSmokeArtSize();
+        const tmpResult8 = activeQuestDockMode(15482);
+        const smokeArtSize = activeQuestDockMode(15481).useSmokeArtSize();
         ({ width, height } = smokeArtSize);
         if (cResult[2] === height) {
           if (cResult[3] === width) {
             let tmp14 = cResult[4];
           }
-          bountyCreative = tmp(15377).useBountyCreative(questDockBounty);
-          const tmpResult11 = tmp(15377);
-          const actionSheetPressHandler = tmp(15344).useActionSheetPressHandler(bountyCreative);
+          bountyCreative = tmp(15400).useBountyCreative(questDockBounty);
+          const tmpResult11 = tmp(15400);
+          const actionSheetPressHandler = tmp(15367).useActionSheetPressHandler(bountyCreative);
           if (cResult[5] !== bountyCreative) {
             const fn3 = function v() {
               const obj2 = { creative: bountyCreative, isTargetedDisclosure: true, trackingCtx: null };
@@ -184,7 +184,7 @@ export default noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp21 = closure_8(tmp8(15466), {});
+            const tmp21 = closure_8(tmp8(15489), {});
             cResult[7] = tmp21;
             let tmp19 = tmp21;
           } else {
@@ -203,12 +203,12 @@ export default noop.memo(
                 let tmp23 = cResult[13];
               }
               if (cResult[14] !== (tmp9 === QuestDockMode.EXPANDED)) {
-                const obj5 = { surface: tmp(15458).QuestDockBountySmokeSurface.COLLAPSED, paused: tmp24 };
-                const tmp28 = closure_8(tmp8(15458), obj5);
+                const obj5 = { surface: tmp(15481).QuestDockBountySmokeSurface.COLLAPSED, paused: tmp24 };
+                const tmp28 = closure_8(tmp8(15481), obj5);
                 cResult[14] = tmp24;
                 cResult[15] = tmp28;
                 let tmp25 = tmp28;
-                const tmp8Result = tmp8(15458);
+                const tmp8Result = tmp8(15481);
               } else {
                 tmp25 = cResult[15];
               }
@@ -277,7 +277,7 @@ export default noop.memo(
                                       }
                                       if (cResult[45] !== tmp17) {
                                         const obj7 = { onPress: tmp17, accessibilityRole: "button", children: tmp51 };
-                                        const tmp56 = closure_8(tmp(6184).PressableOpacity, obj7);
+                                        const tmp56 = closure_8(tmp(6185).PressableOpacity, obj7);
                                         cResult[45] = tmp17;
                                         cResult[46] = tmp56;
                                         let tmp54 = tmp56;
@@ -318,18 +318,18 @@ export default noop.memo(
                                                         promotedLabelLeading: true,
                                                         collapsedContent: tmp19,
                                                         secondaryContentWidth:
-                                                          tmp(15466).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH,
+                                                          tmp(15489).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH,
                                                         children: null,
                                                       };
                                                       const items = [tmp32, tmp69];
                                                       obj8.children = items;
-                                                      const tmp76 = closure_9(tmp8(15448), obj8);
+                                                      const tmp76 = closure_9(tmp8(15471), obj8);
                                                       cResult[63] = actionSheetPressHandler;
                                                       cResult[64] = tmp69;
                                                       cResult[65] = tmp32;
                                                       cResult[66] = tmp76;
                                                       tmp73 = tmp76;
-                                                      const tmp8Result2 = tmp8(15448);
+                                                      const tmp8Result2 = tmp8(15471);
                                                     }
                                                   }
                                                   const obj9 = { style: tmp5.wrapper, children: null };
@@ -354,7 +354,7 @@ export default noop.memo(
                                               tmp65 = tmp68;
                                             }
                                             const obj11 = { style: tmp50, children: tmp58 };
-                                            const tmp64 = closure_8(tmp8(6761), obj11);
+                                            const tmp64 = closure_8(tmp8(6762), obj11);
                                             cResult[52] = tmp50;
                                             cResult[53] = tmp58;
                                             cResult[54] = tmp64;
@@ -383,7 +383,7 @@ export default noop.memo(
                                     tmp50 = items3;
                                   }
                                   const obj13 = { style: tmp39, children: tmp43 };
-                                  const tmp49 = closure_8(tmp8(6761), obj13);
+                                  const tmp49 = closure_8(tmp8(6762), obj13);
                                   cResult[38] = tmp39;
                                   cResult[39] = tmp43;
                                   cResult[40] = tmp49;
@@ -438,7 +438,7 @@ export default noop.memo(
                         };
                         const obj17 = { uri: questDockBounty.productIcon };
                         obj16.source = obj17;
-                        tmp37 = closure_8(tmp8(6156), obj16);
+                        tmp37 = closure_8(tmp8(6157), obj16);
                       }
                       cResult[24] = questDockBounty.productIcon;
                       cResult[25] = tmp5.productIcon;
@@ -461,7 +461,7 @@ export default noop.memo(
                 }
               }
               const obj19 = { style: tmp23, needsOffscreenAlphaCompositing: tmp11, children: tmp25 };
-              const tmp31 = closure_8(tmp8(6761), obj19, str3);
+              const tmp31 = closure_8(tmp8(6762), obj19, str3);
               cResult[16] = tmp11;
               cResult[17] = str3;
               cResult[18] = tmp23;
@@ -480,14 +480,14 @@ export default noop.memo(
           cResult[9] = tmp5.smokeArt;
           cResult[10] = items6;
           tmp22 = items6;
-          const tmpResult12 = tmp(15344);
+          const tmpResult12 = tmp(15367);
         }
         const size = { width, height };
         cResult[2] = height;
         cResult[3] = width;
         cResult[4] = size;
         tmp14 = size;
-        const tmpResult10 = activeQuestDockMode(15458);
+        const tmpResult10 = activeQuestDockMode(15481);
       }
     : function QuestDockBountyHeader() {
         const questDockBounty = activeQuestDockMode(height[9]).useQuestDockBounty();

@@ -37,7 +37,7 @@ export default noop.memo(
           }
           const stateFromStores = tmp(504).useStateFromStores(first, tmp7);
           const tmpResult = tmp(504);
-          const canBypassSlowmode = tmp(7375).useCanBypassSlowmode(channel);
+          const canBypassSlowmode = tmp(7376).useCanBypassSlowmode(channel);
           if (channel.hasTypingText) {
             if (!canBypassSlowmode) {
               if (stateFromStores <= 0) {
@@ -92,7 +92,7 @@ export default noop.memo(
                 const obj4 = { onPress: tmp14, style: tmp4.container, children: null };
                 const items1 = [tmp15, tmp18];
                 obj4.children = items1;
-                const tmp23 = closure_6(tmp(6184).PressableOpacity, obj4);
+                const tmp23 = closure_6(tmp(6185).PressableOpacity, obj4);
                 cResult[13] = tmp14;
                 cResult[14] = tmp4.container;
                 cResult[15] = tmp15;
@@ -104,12 +104,12 @@ export default noop.memo(
           }
           if (cResult[4] === canBypassSlowmode) {
           }
-          const tmpResult3 = tmp(7375);
-          const slowmodeIndicatorText = tmp(7375).getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
+          const tmpResult3 = tmp(7376);
+          const slowmodeIndicatorText = tmp(7376).getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
           cResult[4] = canBypassSlowmode;
           cResult[5] = stateFromStores;
           cResult[6] = slowmodeIndicatorText;
-          const tmpResult4 = tmp(7375);
+          const tmpResult4 = tmp(7376);
         }
         const fn = function u() {
           return SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType);

@@ -12,8 +12,8 @@ require = fn;
 const StaticChannelRoute = fn(2072).StaticChannelRoute;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_7, Routes: closure_8 } = Constants);
-const GuildOnboardingTab = fn(6789).GuildOnboardingTab;
-let closure_10 = fn(6785).CHANNELS_AND_ROLES_MODAL_KEY;
+const GuildOnboardingTab = fn(6790).GuildOnboardingTab;
+let closure_10 = fn(6786).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/native/openStaticChannelRoute.tsx");
 

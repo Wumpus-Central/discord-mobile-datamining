@@ -998,11 +998,11 @@ export const useImminentUpcomingGuildEvents = ReactCompilerGating.isReactCompile
       return noop.useMemo(
         () =>
           stateFromStores.filter((status) => {
-            const eventSchedule = closure_1_0(8526).getEventSchedule(status);
+            const eventSchedule = closure_1_0(8527).getEventSchedule(status);
             ({ startTime, endTime } = eventSchedule);
-            const obj = closure_1_0(8526);
+            const obj = closure_1_0(8527);
             let toISOStringResult1;
-            const obj2 = closure_1_0(8520);
+            const obj2 = closure_1_0(8521);
             if (endTime != null) {
               toISOStringResult1 = endTime.toISOString();
             }

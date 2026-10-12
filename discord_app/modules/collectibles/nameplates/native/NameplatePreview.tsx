@@ -55,7 +55,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
     } else {
       tmp12 = cResult[4];
     }
-    const pendingAvatarDecoration = guildId(8283)(tmp12).pendingAvatarDecoration;
+    const pendingAvatarDecoration = guildId(8284)(tmp12).pendingAvatarDecoration;
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [AccessibilityStore];
@@ -261,9 +261,9 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
                             }
                             let tmp61 = null != tmp30;
                             if (tmp61) {
-                              const obj7 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: user(10263).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
-                              tmp61 = closure_7(guildId(10262), obj7);
-                              const tmp13Result2 = guildId(10262);
+                              const obj7 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: user(10264).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
+                              tmp61 = closure_7(guildId(10263), obj7);
+                              const tmp13Result2 = guildId(10263);
                             }
                             cResult[38] = tmp30;
                             cResult[39] = guildId;
@@ -282,7 +282,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
                         }
                       }
                       const obj9 = { nameplate: tmp9, style: tmp6Result.nameplate, fullOpacity: true, animate: tmp5 };
-                      const tmp55 = closure_7(guildId(9021), obj9);
+                      const tmp55 = closure_7(guildId(9022), obj9);
                       cResult[31] = tmp5;
                       cResult[32] = tmp9;
                       cResult[33] = tmp6Result.nameplate;
@@ -300,7 +300,7 @@ export const NameplatePreview = ReactCompilerGating.isReactCompilerEnabled() ? (
                   }
                 }
               }
-              const tmpResult7 = user(8373);
+              const tmpResult7 = user(8374);
               const avatarSource = tmpResult7.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
               cResult[18] = guildId;
               cResult[19] = pendingAvatarSrc;

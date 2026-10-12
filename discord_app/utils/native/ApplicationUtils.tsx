@@ -36,7 +36,7 @@ export const installApplication = function installApplication(arg0) {
         LinkingDefault.openURL(customInstallUrl);
       },
     };
-    return customInstallUrl(8490).handleClick(obj2);
+    return customInstallUrl(8491).handleClick(obj2);
   } else {
     if (null != integrationTypesConfig) {
       const _Object = Object;

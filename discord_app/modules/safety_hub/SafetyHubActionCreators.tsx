@@ -27,7 +27,7 @@ let closure_11 = async function _getSafetyHubData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -244,7 +244,7 @@ let closure_11 = async function _getSafetyHubData() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp11) {
       c0 = tmp;
@@ -266,7 +266,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -331,7 +331,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = classificationId(7511);
+                      obj3 = classificationId(7512);
                     }
                   }
                   const obj2 = {
@@ -392,7 +392,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(7511);
+                    obj3 = classificationId(7512);
                   }
                 }
                 const obj2 = {
@@ -425,7 +425,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp11) {
         c1 = tmp;
@@ -450,7 +450,7 @@ let closure_13 = async function _requestReview(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -520,7 +520,7 @@ let closure_13 = async function _requestReview(arg0) {
           return obj;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp15) {
         c3 = tmp;
@@ -543,7 +543,7 @@ let closure_14 = async function _requestSuspendedUserAgeVerification() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -610,7 +610,7 @@ let closure_14 = async function _requestSuspendedUserAgeVerification() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -640,7 +640,7 @@ let closure_16 = async function _checkSuspendedUserAgeVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -713,7 +713,7 @@ let closure_16 = async function _checkSuspendedUserAgeVerification() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -745,7 +745,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -820,7 +820,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -829,7 +829,7 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
     }
   })();
 };
-const SafetyHubConstants = fn(7512);
+const SafetyHubConstants = fn(7513);
 ({
   AGE_CHECK_POLL_INTERVAL_MS: metroRequire,
   AGE_CHECK_MAX_POLL_ATTEMPTS: closure_7,

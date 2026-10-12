@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           setOptions(obj);
         } else {
-          setOptions({ headerRight: "r" });
+          setOptions({ headerRight: "top" });
         }
       }, items5);
       const obj5 = { style: tmp.container, children: null };
@@ -410,17 +410,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_6(null);
                 closure_8("");
               },
-              children: tmp27(tmp3(6295).CircleXIcon, { size: "xs" }),
+              children: tmp27(tmp3(6296).CircleXIcon, { size: "xs" }),
             };
-            let tmp27Result = tmp27(tmp3(6184).PressableOpacity, obj12);
+            let tmp27Result = tmp27(tmp3(6185).PressableOpacity, obj12);
           } else {
             tmp27Result = null;
           }
           const obj13 = { children: null };
           const obj14 = { hasIcons: true, children: null };
           obj8.trailing = tmp27Result;
-          obj14.children = tmp27(tmp3(6179).TableRow, obj8);
-          const items6 = [tmp27(tmp3(6264).TableRowGroup, obj14)];
+          obj14.children = tmp27(tmp3(6180).TableRow, obj8);
+          const items6 = [tmp27(tmp3(6265).TableRowGroup, obj14)];
           const obj15 = { style: tmp.hint, children: null };
           const obj16 = { variant: "text-sm/medium", color: "text-muted", children: null };
           let intl2 = tmp3(1126).intl;
@@ -449,8 +449,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             closure_10(tmp2);
           };
-          obj18.children = tmp27(tmp3(6895).TableSwitchRow, obj17);
-          items7[1] = tmp27(tmp3(6264).TableRowGroup, obj18);
+          obj18.children = tmp27(tmp3(6896).TableSwitchRow, obj17);
+          items7[1] = tmp27(tmp3(6265).TableRowGroup, obj18);
           let tmp27Result3 = null;
           if (!tmp2) {
             const obj19 = { hasIcons: false, children: null };
@@ -476,8 +476,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               actions_AlertActionCreatorsDefault.show(obj2);
             };
-            obj19.children = tmp27(tmp3(6179).TableRow, obj20);
-            tmp27Result3 = tmp27(tmp3(6264).TableRowGroup, obj19);
+            obj19.children = tmp27(tmp3(6180).TableRow, obj20);
+            tmp27Result3 = tmp27(tmp3(6265).TableRowGroup, obj19);
           }
           items7[2] = tmp27Result3;
           obj6.children = items7;
@@ -503,9 +503,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           str2 = "";
         }
         obj21.name = str2;
-        tmp27Result4 = tmp27(tag(6819), obj21);
+        tmp27Result4 = tmp27(tag(6820), obj21);
         tmp31 = tag;
-        const tmp32 = tag(6819);
+        const tmp32 = tag(6820);
       }
-      tmp27Result4 = tmp27(tmp3(8960).ReactionIcon, {});
+      tmp27Result4 = tmp27(tmp3(8961).ReactionIcon, {});
     };

@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_1(5934).pop();
             },
             onCountrySelected(countryCode) {
-              return closure_1_1(6733).setCountryCode(countryCode);
+              return closure_1_1(6734).setCountryCode(countryCode);
             },
           });
         };
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
           return () => {
-            closure_1_1(6725).runAfterInteractions(closure_1_1(6764).setCountrySelectorClosed, 400);
+            closure_1_1(6726).runAfterInteractions(closure_1_1(6765).setCountrySelectorClosed, 400);
           };
         };
         const items = [];
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_1(5934).pop();
             },
             onCountrySelected(countryCode) {
-              return closure_1_1(6733).setCountryCode(countryCode);
+              return closure_1_1(6734).setCountryCode(countryCode);
             },
           });
         };
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const effect = noop.useEffect(
         () => () => {
-          closure_1_1(6725).runAfterInteractions(closure_1_1(6764).setCountrySelectorClosed, 400);
+          closure_1_1(6726).runAfterInteractions(closure_1_1(6765).setCountrySelectorClosed, 400);
         },
         [],
       );

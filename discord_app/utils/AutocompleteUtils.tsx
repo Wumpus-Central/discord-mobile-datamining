@@ -11,7 +11,7 @@ import UserUtilsDefault from "UserUtils.tsx";
 import RegexUtilsDefault from "RegexUtils.tsx";
 import useChannelName from "../modules/channel/useChannelName.tsx";
 import StickersTypes from "../modules/stickers/StickersTypes.tsx";
-import fuzzysearchDefault from "../../_runtime/06094_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/06095_fuzzysearch.js";
 import autocompleter_sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import GuildUtilsDefault from "GuildUtils.tsx";
 import OnboardingHomeUtils from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
@@ -456,18 +456,18 @@ let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1085);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(6092).AutocompleterResultTypes;
+fn(6093).AutocompleterResultTypes;
 const StaticChannelId = fn(2072).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(6093).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(6093).default.MENTION_HERE;
-const MENTION_GAME = fn(6093).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(6093).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(6093).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(6094).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(6094).default.MENTION_HERE;
+const MENTION_GAME = fn(6094).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(6094).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(6094).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({
@@ -1867,7 +1867,8 @@ export default {
         return hasItem;
       },
       type,
-      allowEmptyQueries: false,
+      allowEmptyQueries:
+        "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}",
     };
     obj.channels = this.queryChannels(obj2).map((record) => record.record);
     return obj;
@@ -2045,7 +2046,7 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7046);
+              obj2 = flag(7047);
             }
           });
         });

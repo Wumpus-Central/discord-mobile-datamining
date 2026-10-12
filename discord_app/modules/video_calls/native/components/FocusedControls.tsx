@@ -5,7 +5,7 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import inlineStyles from "../../../../../_runtime/07576_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07577_inlineStyles.js";
 import RevealProvider from "RevealProvider.tsx";
 import useGlobalStatusIndicatorState from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
 import GlobalStatusIndicator from "../../../connectivity/native/components/GlobalStatusIndicator.tsx";
@@ -93,7 +93,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const rect = { top: tmp9, left: isTouchingLeftScreenEdge, right: true, children: tmp10 };
-        const tmp14 = closure_7(reveal(6813).SafeAreaPaddingView, rect);
+        const tmp14 = closure_7(reveal(6814).SafeAreaPaddingView, rect);
         cResult[3] = isTouchingLeftScreenEdge;
         cResult[4] = tmp9;
         cResult[5] = tmp10;
@@ -144,7 +144,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         right: true,
         children: closure_7(closure_5, { style: tmp.headerContainer, children: header }),
       };
-      obj4.children = closure_7(reveal(6813).SafeAreaPaddingView, rect);
+      obj4.children = closure_7(reveal(6814).SafeAreaPaddingView, rect);
       return closure_7(derivedValue(4850).View, obj4);
     };
 ReactCompilerGating = fn(558);
@@ -345,8 +345,8 @@ export default noop.memo(
           TIMING_CONFIG,
           revealOpacity: derivedValue1,
         };
-        const analyticsLocations = globalStatusIndicatorHeightSharedValue(6851)(
-          tmp8(6878).FOCUSED_VOICE_CONTROLS,
+        const analyticsLocations = globalStatusIndicatorHeightSharedValue(6852)(
+          tmp8(6879).FOCUSED_VOICE_CONTROLS,
         ).analyticsLocations;
         const tmp15 = globalStatusIndicatorHeightSharedValue(10919)();
         closure_7 = tmp15;
@@ -514,7 +514,7 @@ export default noop.memo(
         cResult[4] = compositeInstanceId1;
         cResult[5] = handleOpenDrawer;
         tmp19 = handleOpenDrawer;
-        const tmp8Result = globalStatusIndicatorHeightSharedValue(6851);
+        const tmp8Result = globalStatusIndicatorHeightSharedValue(6852);
       }
     : function FocusedControlsRevamped(disableGradient) {
         ({ expandedControls, actionBar, forceReveal } = disableGradient);
@@ -592,8 +592,8 @@ export default noop.memo(
         fn.__initData = __initData10;
         const animatedStyle = tmpResult4.useAnimatedStyle(fn);
         const obj4 = { withTiming: timing.withTiming, top: derivedValue, TIMING_CONFIG, revealOpacity: derivedValue1 };
-        analyticsLocations = globalStatusIndicatorHeightSharedValue(6851)(
-          tmp5(6878).FOCUSED_VOICE_CONTROLS,
+        analyticsLocations = globalStatusIndicatorHeightSharedValue(6852)(
+          tmp5(6879).FOCUSED_VOICE_CONTROLS,
         ).analyticsLocations;
         closure_7 = tmp5(10919)();
         if (containerStyle == null) {

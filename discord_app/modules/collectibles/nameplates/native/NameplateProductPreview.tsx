@@ -119,8 +119,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             size: native.AvatarSizes.NORMAL,
             avatarDecoration: tmp9,
             animate: !stateFromStores,
-            autoStatusCutout: false,
-            "aria-hidden": false,
+            autoStatusCutout: null,
+            "aria-hidden": 11.5,
           };
           const tmp25 = timestampProducer(native.Avatar, obj5);
           cResult[12] = tmp9;
@@ -131,7 +131,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           if (cResult[9] === id) {
           }
-          tmp8 = tmp8(10262);
+          tmp8 = tmp8(10263);
           const obj6 = {
             userId: currentUser.id,
             userName: id,
@@ -201,8 +201,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           size: native.AvatarSizes.NORMAL,
           avatarDecoration,
           animate: !stateFromStores,
-          autoStatusCutout: false,
-          "aria-hidden": false,
+          autoStatusCutout: null,
+          "aria-hidden": 11.5,
         };
         return timestampProducer(native.Avatar, obj);
       }, items1);

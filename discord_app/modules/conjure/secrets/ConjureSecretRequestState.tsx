@@ -2,6 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
+import conjureChatTurns from "../chat/conjureChatTurns.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +17,6 @@ function isSecretsSavedMessage(content) {
   }
   return tmp5;
 }
-const turnSettled = fn(12996).turnSettled;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
@@ -52,7 +52,8 @@ export const secretRequestStatuses = function secretRequestStatuses(memo, stateF
           tmp10 = render_id;
           tmp11 = flag2;
           if (0 !== fields.length) {
-            let set = turnSettled(tmp7);
+            let obj2 = conjureChatTurns;
+            let set = obj2.turnSettled(tmp7);
             tmp10 = render_id;
             tmp11 = flag2;
             if (set) {

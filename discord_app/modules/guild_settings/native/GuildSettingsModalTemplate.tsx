@@ -21,8 +21,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = Form(1126);
 const Text_Text = Form(5088);
-const SceneLoadingIndicator = Form(6726);
-const Form2 = Form(8579);
+const SceneLoadingIndicator = Form(6727);
+const Form2 = Form(8580);
 require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
@@ -548,7 +548,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -628,7 +628,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
             let obj2 = { headerLeft: fn, headerRight: null };
             if (first) {
-              let fn2 = () => first(handleSave(6200).HeaderSubmittingIndicator, {});
+              let fn2 = () => first(handleSave(6201).HeaderSubmittingIndicator, {});
             } else if (closure_12) {
               fn2 = () => {
                 const obj = { onPress: handleSave, text: null, disabled: null };
@@ -858,7 +858,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1627,7 +1627,7 @@ let closure_16 = noop.memo(
         };
         const tmp = _slicedToArray(noop.useState(false), 2);
         _slicedToArray = tmp[1];
-        const tmp3 = guildTemplate(18391)(guildTemplate.code);
+        const tmp3 = guildTemplate(18449)(guildTemplate.code);
         noop = tmp3;
         let obj = { spacing: guildTemplate(587).space.PX_12, children: null };
         let obj2 = { label: null, children: null };

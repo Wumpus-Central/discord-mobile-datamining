@@ -376,7 +376,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             return null == closure_1_9.getGameById(arg0);
           }
         }
-        const games = tmp(7008).useGames(tmp7);
+        const games = tmp(7009).useGames(tmp7);
         const _Symbol2 = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
@@ -629,7 +629,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = stateFromStores;
         cResult[11] = obj2;
         tmp23 = obj2;
-        const tmpResult = tmp(7008);
+        const tmpResult = tmp(7009);
       }
       let obj = first1(576);
     }
@@ -647,8 +647,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         });
       }, []);
       const memo = noop.useMemo(() => first.filter((item) => null == gameById.getGameById(item)), items);
-      const games = rawGameMentionIds(7008).useGames(memo);
-      let obj = rawGameMentionIds(7008);
+      const games = rawGameMentionIds(7009).useGames(memo);
+      let obj = rawGameMentionIds(7009);
       const items1 = [GameStore, UserStore, GameAutocompleteStore];
       const items2 = [rawGameMentionIds];
       let obj2 = rawGameMentionIds(504);

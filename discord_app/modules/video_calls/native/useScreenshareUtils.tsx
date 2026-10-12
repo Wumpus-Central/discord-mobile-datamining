@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp4Result = analyticsLocations(11058);
       const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
-      analyticsLocations = tmp4(6851)().analyticsLocations;
+      analyticsLocations = tmp4(6852)().analyticsLocations;
       let tmp18 = null != stateFromStores1;
       if (tmp18) {
         tmp18 = stateFromStores1.state === ApplicationStreamStates.ACTIVE;

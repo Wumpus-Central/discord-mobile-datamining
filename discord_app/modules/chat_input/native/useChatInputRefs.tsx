@@ -17,8 +17,8 @@ import SlowmodeStore from "../../../stores/SlowmodeStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const DraftType = fn(7243).DraftType;
-let closure_11 = fn(9383).updateChatInputContainerHeight;
+const DraftType = fn(7244).DraftType;
+let closure_11 = fn(9384).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const COMMAND_SENTINEL = fn(5404).COMMAND_SENTINEL;
 const MessageSendLocation = fn(5085).MessageSendLocation;
@@ -39,7 +39,7 @@ export default function useChatInputRefs(chatInputProps) {
   const chatInputNative = noop.useRef(null);
   const chatInputSendButton = noop.useRef(null);
   const chatInputTextFlushedResponses = noop.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(6169)(() =>
+  const tmp2 = chatInputTextFieldHeight(6170)(() =>
     ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex),
   );
   closure_12 = tmp2;
@@ -68,7 +68,7 @@ export default function useChatInputRefs(chatInputProps) {
     };
   }, items2);
   const state = noop.useRef(
-    chatInputTextFieldHeight(6169)(() => ({
+    chatInputTextFieldHeight(6170)(() => ({
       editId: null,
       focused: false,
       selectionStart: 0,
@@ -390,7 +390,7 @@ export default function useChatInputRefs(chatInputProps) {
                   const merged = Object.assign(ref.current);
                   obj4.chatInputRef = chatInputRef;
                   obj2.params = obj4;
-                  const result = threadCreationCallback(11671).chatInputSendApplicationCommand(obj2);
+                  const result = threadCreationCallback(11673).chatInputSendApplicationCommand(obj2);
                 },
               );
             }
@@ -415,8 +415,8 @@ export default function useChatInputRefs(chatInputProps) {
                     tmp8 = chatInputRef;
                     obj3.chatInputRef = chatInputRef;
                     obj2.params = obj3;
-                    const result = chatInputProps(11671).chatInputHandleSendText(obj2);
-                    const obj = chatInputProps(11671);
+                    const result = chatInputProps(11673).chatInputHandleSendText(obj2);
+                    const obj = chatInputProps(11673);
                   }
                   const keyboardType = chatInputProps(4987).getKeyboardType();
                   if (keyboardType === chatInputProps(1629).KeyboardTypes.SYSTEM) {

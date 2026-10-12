@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_showSimpleActionSheet from "../../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
-import ConjureTypes from "../../ConjureTypes.tsx";
+import ConjureLandingModelChoices from "../ConjureLandingModelChoices.tsx";
 import ConjureEffortPicker from "../../model_settings/native/ConjureEffortPicker.tsx";
 import ConjureTemplateWizardSheet from "../../templates/native/ConjureTemplateWizardSheet.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -15,7 +15,7 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(13213);
+const ConjureConnectionStore = fn(13218);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8, stageModelSettings: closure_9 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -58,7 +58,7 @@ export default function ConjureCreateSheet(guildId) {
   _slicedToArray = tmp4[1];
   [CONJURE_DEFAULT_TIER_SETTINGS, c5] = _slicedToArray(noop.useState(null), 2);
   if (CONJURE_DEFAULT_TIER_SETTINGS == null) {
-    CONJURE_DEFAULT_TIER_SETTINGS = require("ConjureTypes").CONJURE_DEFAULT_TIER_SETTINGS;
+    CONJURE_DEFAULT_TIER_SETTINGS = require("ConjureLandingModelChoices").CONJURE_DEFAULT_TIER_SETTINGS;
   }
   const tmp2Result = _slicedToArray(noop.useState(false), 2);
   first1 = tmp2Result[0];
@@ -81,7 +81,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -176,7 +176,7 @@ export default function ConjureCreateSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -215,7 +215,7 @@ export default function ConjureCreateSheet(guildId) {
           return obj;
         }
         c2 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } catch (tmp10) {
         c2 = tmp;
         throw tmp10;
@@ -246,7 +246,7 @@ export default function ConjureCreateSheet(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -450,7 +450,7 @@ export default function ConjureCreateSheet(guildId) {
     const obj = ActionSheetActionCreators;
     obj2.content = collapsed(ConjureEffortPicker.ConjureEffortPickerSheet, {
       initialSettings: CONJURE_DEFAULT_TIER_SETTINGS,
-      tiers: ConjureTypes.CONJURE_LANDING_TIER_SEATS,
+      tiers: ConjureLandingModelChoices.CONJURE_LANDING_TIER_SEATS,
       choices,
       onChange,
     });
@@ -468,8 +468,8 @@ export default function ConjureCreateSheet(guildId) {
     guildId = wizard;
     if (null == wizard.wizard) {
       if (!first1) {
-        callback((arg0) => wizard(str[19]).startConjureTemplateProject(arg0, wizard)).catch(() => {});
-        const promise = callback((arg0) => wizard(str[19]).startConjureTemplateProject(arg0, wizard));
+        callback((arg0) => wizard(str[18]).startConjureTemplateProject(arg0, wizard)).catch(() => {});
+        const promise = callback((arg0) => wizard(str[18]).startConjureTemplateProject(arg0, wizard));
       }
     } else {
       const obj2 = {
@@ -534,15 +534,15 @@ export default function ConjureCreateSheet(guildId) {
     if (0 === tmp15) {
       str2 = "text-feedback-warning";
     }
-    let obj16 = { variant: "text-sm/normal", color: str2, children: tmp17(tmp14[28]).conjureAppSlotsLeftLabel(tmp15) };
-    tmp24Result = tmp24(tmp17(tmp14[26]).Text, obj16);
-    const tmp17Result = tmp17(tmp14[28]);
+    let obj16 = { variant: "text-sm/normal", color: str2, children: tmp17(tmp14[27]).conjureAppSlotsLeftLabel(tmp15) };
+    tmp24Result = tmp24(tmp17(tmp14[25]).Text, obj16);
+    const tmp17Result = tmp17(tmp14[27]);
   }
   items8[3] = tmp24Result;
   let tmp24Result2 = null;
   if (null != tmp12) {
     let obj17 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp12 };
-    tmp24Result2 = tmp24(tmp17(tmp14[26]).Text, obj17);
+    tmp24Result2 = tmp24(tmp17(tmp14[25]).Text, obj17);
   }
   items8[4] = tmp24Result2;
   const obj18 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
@@ -610,7 +610,7 @@ export default function ConjureCreateSheet(guildId) {
       obj.onPress = function onPress() {
         return closure_17(closure_0);
       };
-      return callback(guildId(str[25]).TableRow, obj, name.id);
+      return callback(guildId(str[24]).TableRow, obj, name.id);
     }),
   });
   obj25.children = items13;
@@ -644,7 +644,7 @@ export default function ConjureCreateSheet(guildId) {
       obj.onPress = function onPress() {
         return closure_17(closure_0);
       };
-      return callback(guildId(str[25]).TableRow, obj, name.id);
+      return callback(guildId(str[24]).TableRow, obj, name.id);
     }),
   };
   items15[1] = callback(require("TableRowGroup").TableRowGroup, {
@@ -652,7 +652,7 @@ export default function ConjureCreateSheet(guildId) {
     children: items7.map((label) => {
       guildId = label;
       return callback(
-        guildId(str[25]).TableRow,
+        guildId(str[24]).TableRow,
         {
           label,
           arrow: true,

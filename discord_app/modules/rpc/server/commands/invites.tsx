@@ -8,10 +8,10 @@ const InstantInviteSources = fn(1085).InstantInviteSources;
 const Constants = fn(1096);
 ({ RPCCommands, RPCErrors: metroRequire } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14713);
+const CONTEXT_MENU_ICON_NAMES = fn(14736);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
-const items = [fn(8457).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(8457).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
+const items = [fn(8458).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(8458).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
 obj4[fn(5639).RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.handler = function handler(arg0) {
@@ -28,7 +28,7 @@ obj3.handler = function handler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -94,8 +94,8 @@ obj3.handler = function handler(arg0) {
                   const obj13 = { value: tmp3(10853).sendEmbeddedActivityInviteUser(obj11), done: false };
                   return obj13;
                 }
-                channel = tmp3(14720).validateOpenInviteDialog(tmp68).channel;
-                const obj5 = tmp3(14720);
+                channel = tmp3(14743).validateOpenInviteDialog(tmp68).channel;
+                const obj5 = tmp3(14743);
               }
             }
           }
@@ -115,7 +115,7 @@ obj3.handler = function handler(arg0) {
         } else {
           c2 = 0;
           connectedActivityLocation = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp61) {
         if (tmp4 === c2) {

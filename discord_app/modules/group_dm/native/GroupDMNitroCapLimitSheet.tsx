@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp8Result = useGroupDMNitroUpsellActionDefault;
       obj11.text = intl3.string(_location(10749).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
       const tmp2Result = _location(10749);
-      obj11.icon = closure_11(_location(9035).NitroWheelIcon, {
+      obj11.icon = closure_11(_location(9036).NitroWheelIcon, {
         style: tmp.nitroWheelIcon,
         color: nativeDefault.unsafe_rawColors.WHITE,
         size: "custom",
@@ -225,5 +225,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items3[2] = closure_12(View, obj10);
       obj5.children = items3;
       obj13.children = closure_12(View, obj5);
-      return closure_11(_location(6839).BottomSheet, obj13);
+      return closure_11(_location(6840).BottomSheet, obj13);
     };

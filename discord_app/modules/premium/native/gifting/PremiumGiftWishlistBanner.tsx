@@ -12,13 +12,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let constants = fn(6931).WishlistRecommendationReason;
+let constants = fn(6932).WishlistRecommendationReason;
 const PremiumConstants = fn(1392);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1087).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8307).UserProfileSections;
+const UserProfileSections = fn(8308).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
@@ -515,7 +515,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "IconComponent", done: "+51" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -916,7 +916,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {

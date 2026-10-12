@@ -88,7 +88,7 @@ let closure_10 = noop.memo(
                   }
                 }
                 if (null != imageSource) {
-                  tmp6 = tmp6(6156);
+                  tmp6 = tmp6(6157);
                   const obj = { style: imageStyle, source: imageSource, resizeMode: "cover" };
                   let tmp19 = <tmp6 style={imageStyle} source={imageSource} resizeMode="cover" />;
                 } else {
@@ -124,8 +124,8 @@ let closure_10 = noop.memo(
       }
     : function RecommendationBannerEmbedded(applicationId) {
         let heroMediaDimensions;
-        let obj = heroMediaDimensions(10621);
-        heroMediaDimensions = heroMediaDimensions(11769).useHeroMediaDimensions({
+        let obj = heroMediaDimensions(10622);
+        heroMediaDimensions = heroMediaDimensions(11771).useHeroMediaDimensions({
           width: obj.useRequiredAppLauncherContext().width,
         });
         const tmp4 = useEmbeddedActivityBackgroundDefault({

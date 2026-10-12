@@ -4,7 +4,7 @@ import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore.tsx";
 
 const ReanimatedRexport = fn(4850);
 const obj2 = { customKeyboardHeight: null, keyboardHeight: null, keyboardType: null };
-const useCustomKeyboardHeight = fn(6667);
+const useCustomKeyboardHeight = fn(6668);
 obj2.customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
 const useSystemKeyboardHeight = fn(1897);
 obj2.keyboardHeight = useSystemKeyboardHeight.getSystemKeyboardHeight();

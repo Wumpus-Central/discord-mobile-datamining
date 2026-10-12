@@ -187,13 +187,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       let obj4 = { style: tmp9.content, speed: num8, onAnimationFinish: M };
       const merged = Object.assign(tmp5);
-      const tmp25 = isAnimationComplete(6105);
+      const tmp25 = isAnimationComplete(6106);
       cResult[9] = tmp5;
       cResult[10] = tmp9.content;
       cResult[11] = num8;
       cResult[12] = M;
-      cResult[13] = jsx(isAnimationComplete(6105), { style: tmp9.content, speed: num8, onAnimationFinish: M });
-      const tmp27 = jsx(isAnimationComplete(6105), { style: tmp9.content, speed: num8, onAnimationFinish: M });
+      cResult[13] = jsx(isAnimationComplete(6106), { style: tmp9.content, speed: num8, onAnimationFinish: M });
+      const tmp27 = jsx(isAnimationComplete(6106), { style: tmp9.content, speed: num8, onAnimationFinish: M });
     }
   : function FadeOutLottieAnimation(onComplete) {
       onComplete = onComplete.onComplete;
@@ -260,9 +260,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           closure_2(true);
         };
         const merged1 = Object.assign(merged);
-        obj3.children = jsx(isAnimationComplete(6105), { style: tmp2.content, speed: null, onAnimationFinish: null });
+        obj3.children = jsx(isAnimationComplete(6106), { style: tmp2.content, speed: null, onAnimationFinish: null });
         let tmp14Result = jsx(isAnimationComplete(4850).View, { style: tmp12, children: null });
-        const tmp16 = isAnimationComplete(6105);
+        const tmp16 = isAnimationComplete(6106);
       } else {
         tmp14Result = null;
       }

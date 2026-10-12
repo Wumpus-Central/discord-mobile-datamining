@@ -11,7 +11,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(7143).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7144).useNativeCheckoutStore;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const GiftingOrigin = fn(1392).GiftingOrigin;
 const jsxProd = fn(21);
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {

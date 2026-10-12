@@ -74,8 +74,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
         const obj2 = { value: none, label: null, icon: null };
         const intl = tmp(1126).intl;
         obj2.label = intl.string(tmp(1126).t.fUdMeO);
-        const obj3 = { IconComponent: tmp(9371).DenyIcon };
-        obj2.icon = jsx(tmp(6187).TableRowIcon, { IconComponent: tmp(9371).DenyIcon });
+        const obj3 = { IconComponent: tmp(9372).DenyIcon };
+        obj2.icon = jsx(tmp(6188).TableRowIcon, { IconComponent: tmp(9372).DenyIcon });
         cResult[1] = obj2;
         let tmp7 = obj2;
       } else {
@@ -86,7 +86,7 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
         const intl2 = tmp(1126).intl;
         obj4.label = intl2.string(tmp(1126).t.LhSyL8);
         const obj5 = { IconComponent: tmp(11097).BlurBackgroundIcon };
-        obj4.icon = jsx(tmp(6187).TableRowIcon, { IconComponent: tmp(11097).BlurBackgroundIcon });
+        obj4.icon = jsx(tmp(6188).TableRowIcon, { IconComponent: tmp(11097).BlurBackgroundIcon });
         cResult[2] = obj4;
         let tmp10 = obj4;
       } else {

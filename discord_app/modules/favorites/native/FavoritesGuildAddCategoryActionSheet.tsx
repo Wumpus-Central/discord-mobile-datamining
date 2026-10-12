@@ -44,7 +44,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { title: null };
           const intl = tmp(1126).intl;
           obj2.title = intl.string(tmp(1126).t["ISN+NM"]);
-          const tmp13 = closure_6(tmp(6838).BottomSheetTitleHeader, obj2);
+          const tmp13 = closure_6(tmp(6839).BottomSheetTitleHeader, obj2);
           cResult[5] = tmp13;
           let tmp11 = tmp13;
         } else {
@@ -100,7 +100,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const items = [tmp18, tmp25];
             obj3.children = items;
-            const tmp30 = closure_7(tmp(6839).BottomSheet, obj3);
+            const tmp30 = closure_7(tmp(6840).BottomSheet, obj3);
             cResult[15] = tmp4.body;
             cResult[16] = tmp4.content;
             cResult[17] = tmp25;
@@ -126,7 +126,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           returnKeyType: "done",
           onSubmitEditing: tmp9,
         };
-        const tmp21 = closure_6(tmp(6285).TextInput, obj5);
+        const tmp21 = closure_6(tmp(6286).TextInput, obj5);
         cResult[8] = tmp9;
         cResult[9] = value;
         cResult[10] = tmp21;
@@ -166,7 +166,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { title: null };
       const intl = value(1126).intl;
       obj3.title = intl.string(value(1126).t["ISN+NM"]);
-      obj2.header = closure_6(value(6838).BottomSheetTitleHeader, obj3);
+      obj2.header = closure_6(value(6839).BottomSheetTitleHeader, obj3);
       const obj4 = {
         label: null,
         placeholder: null,
@@ -185,7 +185,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.value = value;
       obj4.maxLength = maxLength;
       obj4.onSubmitEditing = callback;
-      const items1 = [closure_6(value(6285).TextInput, obj4)];
+      const items1 = [closure_6(value(6286).TextInput, obj4)];
       const obj5 = { text: null, onPress: null, disabled: null };
       const intl4 = value(1126).intl;
       obj5.text = intl4.string(value(1126).t.CumH4u);
@@ -193,7 +193,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.disabled = !result;
       items1[1] = closure_6(value(5379).Button, obj5);
       obj2.children = items1;
-      return closure_7(value(6839).BottomSheet, obj2);
+      return closure_7(value(6840).BottomSheet, obj2);
     };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx");

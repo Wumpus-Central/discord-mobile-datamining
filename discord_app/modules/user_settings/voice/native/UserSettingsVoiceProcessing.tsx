@@ -454,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           value: echoCancellation,
           onValueChange: inputMode(11088).handleEchoCancellationChange,
         };
-        obj2.children = closure_5(inputMode(6895).TableSwitchRow, obj3);
+        obj2.children = closure_5(inputMode(6896).TableSwitchRow, obj3);
         const tmp14 = closure_5(inputMode(11072).UserSettingsTableRowGroup, obj2);
         cResult[4] = echoCancellation;
         cResult[5] = tmp14;
@@ -489,7 +489,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           value: automaticGainControl,
           onValueChange: inputMode(11088).handleAutomaticGainControlChange,
         };
-        const tmp25 = closure_5(inputMode(6895).TableSwitchRow, obj4);
+        const tmp25 = closure_5(inputMode(6896).TableSwitchRow, obj4);
         cResult[9] = automaticGainControl;
         cResult[10] = tmp25;
         let tmp23 = tmp25;
@@ -541,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj7.onValueChange = function onValueChange(vadUseKrisp) {
           return AudioActionCreatorsDefault.setMode(inputMode, { vadUseKrisp });
         };
-        tmp27 = closure_5(inputMode(6895).TableSwitchRow, obj7);
+        tmp27 = closure_5(inputMode(6896).TableSwitchRow, obj7);
       }
       cResult[11] = advancedVoiceActivitySupported;
       cResult[12] = inputMode;

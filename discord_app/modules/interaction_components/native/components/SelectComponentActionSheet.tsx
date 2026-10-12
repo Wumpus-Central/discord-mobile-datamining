@@ -12,7 +12,7 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(6840).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(6841).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5092);
@@ -311,7 +311,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5Result = closure_8(tmp6(5379).Button, obj3);
       }
       obj.trailing = tmp5Result;
-      const children = [closure_8(renderIcon(6838).BottomSheetTitleHeader, obj)];
+      const children = [closure_8(renderIcon(6839).BottomSheetTitleHeader, obj)];
       let tmp5Result4 = null;
       if (null != onQueryChange) {
         tmp5Result4 = null;
@@ -352,8 +352,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             }
             onQueryChange(ref);
           };
-          tmp5Result4 = closure_8(selectedOptions(8625), obj4);
-          const tmp13 = selectedOptions(8625);
+          tmp5Result4 = closure_8(selectedOptions(8626), obj4);
+          const tmp13 = selectedOptions(8626);
         }
       }
       children[1] = tmp5Result4;

@@ -8,7 +8,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import PencilIcon from "../../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import _modDef11683 from "../../../../../_runtime/metro/11683__.js";
+import _modDef11685 from "../../../../../_runtime/metro/11685__.js";
 import ArrowAngleLeftUpIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -26,7 +26,7 @@ let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(16890);
+const createICYMIStyles = fn(16914);
 let closure_14 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {
@@ -114,7 +114,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(4);
       const tmp4 = closure_14(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef11683, size: native.IconSizes.SMALL };
+        const obj2 = { source: _modDef11685, size: native.IconSizes.SMALL };
         const tmp8 = closure_1_8(native.Icon, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
@@ -146,7 +146,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function UploadPlaceholder() {
       const obj = { style: closure_14(false).uploadContainer, children: null };
-      const items = [closure_1_8(native.Icon, { source: _modDef11683, size: native.IconSizes.SMALL })];
+      const items = [closure_1_8(native.Icon, { source: _modDef11685, size: native.IconSizes.SMALL })];
       const obj3 = { variant: "text-md/normal", color: "text-strong", children: null };
       const intl = util.intl;
       obj3.children = intl.string(util.t["3UB9ad"]);
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ customStatusExtra, renderForScreenshot, variant } = id);
       closure_14(renderForScreenshot);
       const obj = id(576);
-      const gradientBottom = id(9306).useGradientBottom();
+      const gradientBottom = id(9307).useGradientBottom();
       let backgroundColor;
       if (gradientBottom != null) {
         backgroundColor = gradientBottom.backgroundColor;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const obj2 = id(9306);
+      const obj2 = id(9307);
       const stateFromStores = id(504).useStateFromStores(tmp12, A);
       if (customStatusExtra.emoji_id != null) {
         class A {

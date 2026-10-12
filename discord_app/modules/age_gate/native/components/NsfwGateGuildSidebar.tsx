@@ -9,7 +9,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(6915).NsfwGateSource;
+const NsfwGateSource = fn(6916).NsfwGateSource;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[11] !== stateFromStores) {
               let obj2 = { guild: stateFromStores, showExtraButtons: false };
-              const tmp21 = closure_12(stateFromStores(16549), obj2);
+              const tmp21 = closure_12(stateFromStores(16572), obj2);
               cResult[11] = stateFromStores;
               cResult[12] = tmp21;
               let tmp18 = tmp21;

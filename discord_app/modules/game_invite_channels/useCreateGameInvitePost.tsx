@@ -9,7 +9,7 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import SlowmodeStore from "../../stores/SlowmodeStore.tsx";
 
 require = fn;
-const SlowmodeType = fn(7374).SlowmodeType;
+const SlowmodeType = fn(7375).SlowmodeType;
 const ActivityActionTypes = fn(1085).ActivityActionTypes;
 const ChannelFlags = fn(2072).ChannelFlags;
 const ReactCompilerGating = fn(558);
@@ -522,7 +522,7 @@ export const useCreateGameInvitePost = ReactCompilerGating.isReactCompilerEnable
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {

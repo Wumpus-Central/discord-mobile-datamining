@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_6();
       channel = channel.channel;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_4(tmp(8772).BellIcon, { size: "md", color: "interactive-text-default" });
+        const tmp7 = closure_4(tmp(8773).BellIcon, { size: "md", color: "interactive-text-default" });
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [tmp12, tmp16, tmp21, tmp26, tmp32];
         obj9.children = items;
         obj8.children = closure_5(View, obj9);
-        const tmp40 = closure_4(tmp(6839).BottomSheet, obj8);
+        const tmp40 = closure_4(tmp(6840).BottomSheet, obj8);
         cResult[18] = tmp4.content;
         cResult[19] = tmp26;
         cResult[20] = tmp32;
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: closure_4(View, {
           style: tmp.iconBackground,
           "aria-hidden": true,
-          children: closure_4(channel(8772).BellIcon, { size: "md", color: "interactive-text-default" }),
+          children: closure_4(channel(8773).BellIcon, { size: "md", color: "interactive-text-default" }),
         }),
       };
       const items = [closure_4(View, obj3), , , ,];
@@ -270,5 +270,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items[4] = closure_4(View, obj8);
       obj2.children = items;
       obj.children = closure_5(View, obj2);
-      return closure_4(channel(6839).BottomSheet, obj);
+      return closure_4(channel(6840).BottomSheet, obj);
     };

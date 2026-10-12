@@ -71,8 +71,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (stateFromStores1 != null) {
               colorStrings = stateFromStores1.colorStrings;
             }
-            const processColorStringsArray = tmp(7979).useProcessColorStringsArray(colorStrings);
-            const tmpResult9 = tmp(7979);
+            const processColorStringsArray = tmp(7980).useProcessColorStringsArray(colorStrings);
+            const tmpResult9 = tmp(7980);
             const isRoleStyleAndRoleColorsEligibleForERC = tmpResult9.useIsRoleStyleAndRoleColorsEligibleForERC(
               guildId,
               message.author.id,
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       message,
                                       rowGenerator,
                                     };
-                                    const tmp57 = closure_7(guildId(9373), obj2);
+                                    const tmp57 = closure_7(guildId(9374), obj2);
                                     cResult[35] = message;
                                     cResult[36] = tmp57;
                                     let tmp52 = tmp57;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[15] = tmp32;
               tmp30 = tmp32;
             }
-            const tmpResult8 = tmp(7979);
+            const tmpResult8 = tmp(7980);
             const calendarFormatResult = tmp(4793).calendarFormat(message.timestamp, true, setting);
             cResult[10] = setting;
             cResult[11] = message.timestamp;

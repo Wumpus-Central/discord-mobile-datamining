@@ -8,7 +8,7 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9221).GAME_CONSOLE_ALERT_MODAL_LOCATION;
+let closure_4 = fn(9222).GAME_CONSOLE_ALERT_MODAL_LOCATION;
 const Constants = fn(1085);
 ({ InputModes: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;

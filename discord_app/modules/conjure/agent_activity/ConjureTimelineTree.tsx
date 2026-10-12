@@ -42,6 +42,7 @@ function buildTimelineTree(steps, arg1) {
             kind: "step",
             detail: [],
             detailDrivenBy: [],
+            detailError: [],
             status: "running",
             screenshots: [],
             browserSessions: [],
@@ -59,6 +60,7 @@ function buildTimelineTree(steps, arg1) {
                 kind: "task",
                 detail: [],
                 detailDrivenBy: [],
+                detailError: [],
                 status: "running",
                 screenshots: [],
                 browserSessions: [],
@@ -89,6 +91,7 @@ function buildTimelineTree(steps, arg1) {
           kind: "task",
           detail: [],
           detailDrivenBy: [],
+          detailError: [],
           status: "running",
           screenshots: [],
           browserSessions: [],
@@ -108,6 +111,7 @@ function buildTimelineTree(steps, arg1) {
         kind: "task",
         detail: [],
         detailDrivenBy: [],
+        detailError: [],
         status: "running",
         screenshots: [],
         browserSessions: [],
@@ -227,7 +231,8 @@ function buildTimelineTree(steps, arg1) {
         }
         if ("node" === _undefined.kind) {
           if (null != _undefined.node) {
-            ({ node, task_id } = _undefined);
+            const node = _undefined.node;
+            const task_id = _undefined.task_id;
             ({ id, node_kind } = node);
             if (node_kind == null) {
               node_kind = "step";
@@ -259,7 +264,29 @@ function buildTimelineTree(steps, arg1) {
             }
             if (null != node.detail) {
               ({ detail: tmp23.detail, detail } = node);
-              tmp18Result.detailDrivenBy = detail.map(() => null);
+              tmp18Result.detailDrivenBy = detail.map((item, index) => {
+                const detail_driven_by = node.detail_driven_by;
+                let tmp;
+                if (detail_driven_by != null) {
+                  tmp = detail_driven_by[index];
+                }
+                if (tmp == null) {
+                  tmp = null;
+                }
+                return tmp;
+              });
+              const detail1 = node.detail;
+              tmp18Result.detailError = detail1.map((item, index) => {
+                const detail_error = node.detail_error;
+                let tmp;
+                if (detail_error != null) {
+                  tmp = detail_error[index];
+                }
+                if (tmp == null) {
+                  tmp = null;
+                }
+                return tmp;
+              });
             }
             if (null != node.append_detail) {
               let driven_by = node.driven_by;
@@ -276,7 +303,25 @@ function buildTimelineTree(steps, arg1) {
                 HermesBuiltin.arraySpread(tmp18Result.detailDrivenBy, 0),
               );
               tmp18Result.detailDrivenBy = items1;
-              const arraySpreadResult3 = HermesBuiltin.arraySpread(tmp18Result.detailDrivenBy, 0);
+              const items2 = [];
+              const append_detail1 = node.append_detail;
+              const arraySpreadResult5 = HermesBuiltin.arraySpread(tmp18Result.detailDrivenBy, 0);
+              HermesBuiltin.arraySpread(
+                append_detail1.map((item, index) => {
+                  const append_detail_error = node.append_detail_error;
+                  let tmp;
+                  if (append_detail_error != null) {
+                    tmp = append_detail_error[index];
+                  }
+                  if (tmp == null) {
+                    tmp = null;
+                  }
+                  return tmp;
+                }),
+                HermesBuiltin.arraySpread(tmp18Result.detailError, 0),
+              );
+              tmp18Result.detailError = items2;
+              const arraySpreadResult7 = HermesBuiltin.arraySpread(tmp18Result.detailError, 0);
             }
             if (null != node.status) {
               tmp18Result.status = node.status;
@@ -304,8 +349,8 @@ function buildTimelineTree(steps, arg1) {
           tmp14.labelKey = "error";
           tmp14.status = "failed";
           if (tmp17) {
-            const items2 = [_undefined.message];
-            tmp14.detail = items2;
+            const items3 = [_undefined.message];
+            tmp14.detail = items3;
           }
           tmp17 = null != _undefined.message && "" !== _undefined.message;
         }

@@ -46,10 +46,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_8();
       dependencyMap = tmp5;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const componentRenderStats = tmp(12634).getComponentRenderStats();
+        const componentRenderStats = tmp(12636).getComponentRenderStats();
         cResult[1] = componentRenderStats;
         let tmp6 = componentRenderStats;
-        const tmpResult = tmp(12634);
+        const tmpResult = tmp(12636);
       } else {
         tmp6 = cResult[1];
       }
@@ -67,8 +67,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { children: null };
           let obj3 = { title: "Component Profiler", hasIcons: false, children: null };
           const obj4 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: first };
-          obj3.children = closure_5(tmp(6179).TableRow, obj4);
-          let items = [closure_5(tmp(6264).TableRowGroup, obj3)];
+          obj3.children = closure_5(tmp(6180).TableRow, obj4);
+          let items = [closure_5(tmp(6265).TableRowGroup, obj3)];
           const _Object2 = Object;
           const keys1 = Object.keys(tmp6);
           items[1] = keys1.map((item) => {
@@ -124,15 +124,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ];
           obj7.children = items1;
           obj6.subLabel = closure_7(tmp(5088).Text, obj7);
-          obj5.children = closure_5(tmp(6179).TableRow, obj6);
-          tmp12 = closure_5(tmp(6264).TableRowGroup, obj5);
+          obj5.children = closure_5(tmp(6180).TableRow, obj6);
+          tmp12 = closure_5(tmp(6265).TableRowGroup, obj5);
         }
         cResult[3] = tmp5.monospace;
         cResult[4] = tmp12;
       } else {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_5(tmp(15944).DevToolsProfilingUseStateFromStores, {});
+          const tmp19 = closure_5(tmp(15967).DevToolsProfilingUseStateFromStores, {});
           cResult[5] = tmp19;
           let tmp17 = tmp19;
         } else {

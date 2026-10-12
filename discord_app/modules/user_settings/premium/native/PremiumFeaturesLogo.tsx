@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
-import _modDef7154 from "../../../../../_runtime/metro/07154__.js";
-import _modDef9417 from "../../../../../_runtime/metro/09417__.js";
+import _modDef7155 from "../../../../../_runtime/metro/07155__.js";
+import _modDef9418 from "../../../../../_runtime/metro/09418__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,10 +17,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       ({ premiumType, style } = arg0);
       if (premiumType === PremiumTypes.TIER_0) {
-        let tmp5 = _modDef9417;
+        let tmp5 = _modDef9418;
         let tmp6 = importDefault;
       } else {
-        tmp5 = _modDef7154;
+        tmp5 = _modDef7155;
         tmp6 = importDefault;
       }
       if (cResult[0] !== premiumType) {
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp10;
         }
       }
-      const tmp11 = jsx(tmp6(6156), {
+      const tmp11 = jsx(tmp6(6157), {
         accessible: true,
         accessibilityLabel: tmp8,
         accessibilityRole: "header",
@@ -57,11 +57,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function PremiumFeaturesLogo(premiumType) {
       premiumType = premiumType.premiumType;
       if (premiumType === PremiumTypes.TIER_0) {
-        let tmp3 = _modDef9417;
+        let tmp3 = _modDef9418;
         let tmp = importDefault;
       } else {
         tmp = importDefault;
-        tmp3 = _modDef7154;
+        tmp3 = _modDef7155;
       }
       const obj = {
         accessible: true,
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         resizeMode: "contain",
         source: null,
       };
-      const tmpResult = tmp(6156);
+      const tmpResult = tmp(6157);
       obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
       obj.style = premiumType.style;
       obj.source = tmp3;

@@ -377,12 +377,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != channel) {
         tmp9 = null;
         if (null != GuildStore.getGuild(channel.guild_id)) {
-          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6158).GuildIconSizes.LARGE };
+          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6159).GuildIconSizes.LARGE };
           tmp9 = options(GuildIconDefault, obj2);
         }
       }
       closure_13(tmp5(4808).presentFriendRequestAcceptedToast);
-      const obj3 = { header: options(tmp5(6838).BottomSheetTitleHeader, { title: stringResult }), children: null };
+      const obj3 = { header: options(tmp5(6839).BottomSheetTitleHeader, { title: stringResult }), children: null };
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
       let plainText;
@@ -408,5 +408,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items1[1] = tmp14Result2;
       obj4.children = items1;
       obj3.children = collapsed(View, obj4);
-      return options(tmp5(6898).ActionSheet, obj3);
+      return options(tmp5(6899).ActionSheet, obj3);
     };

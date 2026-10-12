@@ -18,17 +18,17 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = {
-  [USER_INTERACTION]: fn(8198).ChatIcon,
-  [USER_CALLED]: fn(11534).PhoneIcon,
+  [USER_INTERACTION]: fn(8199).ChatIcon,
+  [USER_CALLED]: fn(11536).PhoneIcon,
   [USER_ADD]: fn(4815).FriendsIcon,
-  [GUILD_ADD]: fn(13857).ServerGridIcon,
-  [GUILD_INTERACTION]: fn(8200).ThreadIcon,
-  [PURCHASES]: fn(7557).CreditCardIcon,
+  [GUILD_ADD]: fn(13880).ServerGridIcon,
+  [GUILD_INTERACTION]: fn(8201).ThreadIcon,
+  [PURCHASES]: fn(7558).CreditCardIcon,
   [TOTAL_VOICE_MINUTES]: fn(5051).ClockIcon,
-  [GIFTS]: fn(11536).GiftIcon,
+  [GIFTS]: fn(11538).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
-  fn(7259).TeenActionDisplayType);
+  fn(7260).TeenActionDisplayType);
 let createStyles = fn(5092);
 let obj3 = {
   row: {
@@ -207,7 +207,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       obj = container(576);
-      const ageSpecificText = container(11533).useAgeSpecificText(tmp4, tmp5);
+      const ageSpecificText = container(11535).useAgeSpecificText(tmp4, tmp5);
       container = useIsInAdultAgeGroupDefault();
       if (cResult[2] === ageSpecificText) {
         if (cResult[3] === container) {
@@ -231,7 +231,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                         obj3.text = intl3.string(tmp(1126).t["NX+WJN"]);
                         obj3.onPress = ModalActionCreatorsDefault.pop;
                         obj2.children = closure_6(tmp(5379).Button, obj3);
-                        const tmp36 = closure_6(tmp(11539).ModalFooter, obj2);
+                        const tmp36 = closure_6(tmp(11541).ModalFooter, obj2);
                         cResult[25] = tmp36;
                         let tmp34 = tmp36;
                       } else {
@@ -275,10 +275,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = container(11533);
-      const sortedActivityTypeConfigs = container(7741).getSortedActivityTypeConfigs();
-      const ModalScreen = tmp(7514).ModalScreen;
-      const ModalContent = tmp(7515).ModalContent;
+      const tmpResult = container(11535);
+      const sortedActivityTypeConfigs = container(7742).getSortedActivityTypeConfigs();
+      const ModalScreen = tmp(7515).ModalScreen;
+      const ModalContent = tmp(7516).ModalContent;
       const container2 = groupHeader.container;
       if (cResult[12] === ageSpecificText) {
         if (cResult[13] === groupHeader.groupHeader) {
@@ -343,7 +343,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: ageSpecificText,
       };
-      const tmpResult2 = container(7741);
+      const tmpResult2 = container(7742);
     }
   : function FamilyCenterModalDataTooltipScreen() {
       const tmp = closure_11();

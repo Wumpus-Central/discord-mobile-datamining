@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ onClose, modalSessionId, classificationId, entryPoint, navigation } = arg0);
       const tmp4 = closure_7();
       let obj = navigation(576);
-      const isSuspendedUser = navigation(7511).useIsSuspendedUser();
+      const isSuspendedUser = navigation(7512).useIsSuspendedUser();
       if (cResult[0] !== navigation) {
         const fn = function l() {
           navigation.navigate(
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const ageVerificationMethods = useAgeVerificationMethodsDefault(tmp7).ageVerificationMethods;
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp12 = closure_5(navigation(7516).ShieldSpotIllustration, { height: 100, width: 177 });
+            const tmp12 = closure_5(navigation(7517).ShieldSpotIllustration, { height: 100, width: 177 });
             cResult[6] = tmp12;
             let tmp10 = tmp12;
           } else {
@@ -134,8 +134,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj7 = { children: null };
                     const items = [tmp30, tmp35];
                     obj7.children = items;
-                    obj6.children = closure_6(navigation(7515).ModalContent, obj7);
-                    const tmp41 = closure_5(navigation(7514).ModalScreen, obj6);
+                    obj6.children = closure_6(navigation(7516).ModalContent, obj7);
+                    const tmp41 = closure_5(navigation(7515).ModalScreen, obj6);
                     cResult[29] = tmp30;
                     cResult[30] = tmp35;
                     cResult[31] = tmp41;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp30 = tmp32;
                 }
                 const obj9 = { ageVerificationMethods, modalSessionId };
-                const tmp29 = closure_5(navigation(7711).AgeVerificationMethodsContainer, obj9);
+                const tmp29 = closure_5(navigation(7712).AgeVerificationMethodsContainer, obj9);
                 cResult[20] = ageVerificationMethods;
                 cResult[21] = modalSessionId;
                 cResult[22] = tmp29;
@@ -195,14 +195,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp6;
       cResult[5] = obj13;
       tmp7 = obj13;
-      const obj2 = navigation(7511);
+      const obj2 = navigation(7512);
     }
   : function AgeVerificationEmbeddedIntroScreen(arg0) {
       ({ entryPoint, navigation } = arg0);
       ({ onClose, modalSessionId, classificationId } = arg0);
       const tmp = closure_7();
       const items = [navigation];
-      const isSuspendedUser = navigation(7511).useIsSuspendedUser();
+      const isSuspendedUser = navigation(7512).useIsSuspendedUser();
       const callback = noop.useCallback(() => {
         navigation.navigate(
           AgeVerificationGetStartedModal.AgeVerificationGetStartedModalScenes.GOOGLE_WALLET_VERIFICATION,
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { children: null };
       const obj4 = { align: "center", justify: "center", spacing: 24, children: null };
       const obj5 = { align: "center", justify: "center", spacing: 16, children: null };
-      const items1 = [closure_5(navigation(7516).ShieldSpotIllustration, { height: 100, width: 177 })];
+      const items1 = [closure_5(navigation(7517).ShieldSpotIllustration, { height: 100, width: 177 })];
       const obj6 = { align: "center", justify: "center", spacing: 8, children: null };
       const obj7 = {
         accessibilityRole: "header",
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: null,
       };
-      let obj = navigation(7511);
+      let obj = navigation(7512);
       obj7.children = navigation(5909).getAgeVerificationGetStartedTitle(entryPoint);
       const items2 = [closure_5(navigation(5088).Text, obj7)];
       const obj9 = { variant: "text-md/medium", color: "text-strong", style: tmp.header, children: null };
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.children = items1;
       const items3 = [
         closure_6(navigation(5377).Stack, obj5),
-        closure_5(navigation(7711).AgeVerificationMethodsContainer, {
+        closure_5(navigation(7712).AgeVerificationMethodsContainer, {
           ageVerificationMethods: useAgeVerificationMethodsDefault({
             onClose,
             classificationId,
@@ -253,6 +253,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       items4[1] = closure_5(navigation(5088).Text, obj11);
       obj3.children = items4;
-      obj2.children = closure_6(navigation(7515).ModalContent, obj3);
-      return closure_5(navigation(7514).ModalScreen, obj2);
+      obj2.children = closure_6(navigation(7516).ModalContent, obj3);
+      return closure_5(navigation(7515).ModalScreen, obj2);
     };

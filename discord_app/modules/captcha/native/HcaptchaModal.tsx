@@ -215,7 +215,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     return closure_1_11.getCurrentUser();
                   }
                 }
-                const tmp49 = closure_12(tmp(10258).XLargeIcon, { color: null });
+                const tmp49 = closure_12(tmp(10259).XLargeIcon, { color: null });
                 cResult[25] = tmp49;
                 let obj2 = { color: null };
                 const tmp48 = tmp49;
@@ -282,7 +282,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp9.closeButtonHitArea,
                 children: tmp48,
               };
-              const tmp52 = closure_12(tmp(6184).PressableOpacity, obj5);
+              const tmp52 = closure_12(tmp(6185).PressableOpacity, obj5);
               cResult[26] = O;
               cResult[27] = tmp9.closeButtonHitArea;
               cResult[28] = tmp52;
@@ -313,12 +313,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const merged = Object.assign(tmp4);
         obj8.languageCode = LocaleStore.locale;
         obj8.onMessage = onMessage;
-        obj7.children = closure_12(tmp18(17964), obj8);
+        obj7.children = closure_12(tmp18(18021), obj8);
         const tmp40 = closure_12(closure_8, obj7);
         cResult[15] = tmp4;
         cResult[16] = onMessage;
         cResult[17] = tmp40;
-        const tmp18Result = tmp18(17964);
+        const tmp18Result = tmp18(18021);
       }
       let tmp28Result = !tmp16;
       if (!tmp16) {
@@ -426,11 +426,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(tmp);
       obj8.languageCode = LocaleStore.locale;
       obj8.onMessage = onMessage;
-      obj7.children = closure_12(onPress(17964), obj8);
+      obj7.children = closure_12(onPress(18021), obj8);
       items3[1] = closure_12(closure_8, obj7);
       const obj9 = { style: null, pointerEvents: "box-none", children: null };
       const items4 = [tmp2.closeButtonContainer];
-      const tmp9Result = onPress(17964);
+      const tmp9Result = onPress(18021);
       items4[1] = { paddingTop: rect.top + onPress(587).space.PX_8, paddingLeft: rect.left + onPress(587).space.PX_16 };
       obj9.style = items4;
       const obj11 = {
@@ -448,8 +448,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         paddingTop: rect.top + onPress(587).space.PX_8,
         paddingLeft: rect.left + onPress(587).space.PX_16,
       };
-      obj11.children = closure_12(onMessage(10258).XLargeIcon, { color: onPress(587).colors.INTERACTIVE_ICON_DEFAULT });
-      obj9.children = closure_12(onMessage(6184).PressableOpacity, obj11);
+      obj11.children = closure_12(onMessage(10259).XLargeIcon, { color: onPress(587).colors.INTERACTIVE_ICON_DEFAULT });
+      obj9.children = closure_12(onMessage(6185).PressableOpacity, obj11);
       items3[2] = closure_12(closure_8, obj9);
       obj3.children = items3;
       return closure_13(closure_8, obj3);

@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp8Result) {
         const obj2 = { style: closure_12.logo, source: tmp8Result, accessibilityLabel: tmp11 };
-        const tmp16 = collapsed(tmp10(6156), obj2);
+        const tmp16 = collapsed(tmp10(6157), obj2);
         cResult[3] = tmp8Result;
         cResult[4] = tmp16;
         let tmp13 = tmp16;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2 = shared;
       const intl = util.intl;
       obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
-      const items1 = [collapsed(tmp6(6156), obj4)];
+      const items1 = [collapsed(tmp6(6157), obj4)];
       const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
       const intl2 = util.intl;
       obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);

@@ -13,9 +13,9 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
 import _modDef11359 from "../../../../_runtime/metro/11359__.js";
-import _modDef11982 from "../../../../_runtime/metro/11982__.js";
+import _modDef11984 from "../../../../_runtime/metro/11984__.js";
 import MemberActionUtils from "../MemberActionUtils.tsx";
-import _modDef11985 from "../../../../_runtime/metro/11985__.js";
+import _modDef11987 from "../../../../_runtime/metro/11987__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -620,7 +620,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                         items[1] = map1(View, obj3);
                         let tmp6Result = completed;
                         if (completed) {
-                          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef11985 };
+                          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef11987 };
                           tmp6Result = __initData(native.Icon, obj6);
                         }
                         items[2] = tmp6Result;
@@ -899,7 +899,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             items[1] = map1(View, obj3);
             let tmp6Result = completed;
             if (completed) {
-              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef11985 };
+              const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef11987 };
               tmp6Result = __initData(native.Icon, obj6);
             }
             items[2] = tmp6Result;
@@ -959,7 +959,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 obj3.children = items1;
                 items[1] = map1(View, obj3);
                 const obj7 = { style: closure_1.circle, children: null };
-                const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef11982 };
+                const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef11984 };
                 obj7.children = __initData(native.Icon, obj8);
                 items[2] = __initData(View, obj7);
                 obj.children = items;
@@ -1001,7 +1001,7 @@ const memoResult = noop.memo(
         const cResult = channel(576).c(5);
         channel = channel.channel;
         const obj = channel(576);
-        const canSeeOnboardingHome = channel(6924).useCanSeeOnboardingHome(channel.guild_id);
+        const canSeeOnboardingHome = channel(6925).useCanSeeOnboardingHome(channel.guild_id);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GuildMemberStore];
           cResult[0] = items;
@@ -1024,7 +1024,7 @@ const memoResult = noop.memo(
         } else {
           tmp7 = cResult[2];
         }
-        const obj2 = channel(6924);
+        const obj2 = channel(6925);
         const stateFromStores = channel(573).useStateFromStores(first, tmp7);
         const tmpResult = channel(573);
         let tmp9 = null;
@@ -1046,8 +1046,8 @@ const memoResult = noop.memo(
       }
     : function MemberActionChatInputBannerGuarded(channel) {
         channel = channel.channel;
-        const canSeeOnboardingHome = channel(6924).useCanSeeOnboardingHome(channel.guild_id);
-        const obj = channel(6924);
+        const canSeeOnboardingHome = channel(6925).useCanSeeOnboardingHome(channel.guild_id);
+        const obj = channel(6925);
         const items = [GuildMemberStore];
         const stateFromStores = channel(573).useStateFromStores(items, () => {
           const selfMember = GuildMemberStore.getSelfMember(channel.guild_id);

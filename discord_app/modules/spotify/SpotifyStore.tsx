@@ -529,7 +529,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8458);
+const SpotifyConstants = fn(8459);
 ({
   getSpotifyResourceType: map1,
   isSpotifyParty: closure_14,

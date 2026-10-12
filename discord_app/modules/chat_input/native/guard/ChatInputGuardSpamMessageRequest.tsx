@@ -138,13 +138,13 @@ export default noop.memo(
           UserStore.getUser(channel.getRecipientId()),
         );
         let obj2 = channel(504);
-        dependencyMap = channel(12168).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+        dependencyMap = channel(12170).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
         const items1 = [navigation];
         const callback = noop.useCallback(() => {
           navigation.pop();
         }, items1);
-        const obj3 = channel(12168);
-        const messageRequestActions = channel(12160).useMessageRequestActions({
+        const obj3 = channel(12170);
+        const messageRequestActions = channel(12162).useMessageRequestActions({
           user: stateFromStores,
           onError: function handleRequestError() {
             const obj2 = { text: null, variant: "critical" };
@@ -182,7 +182,7 @@ export default noop.memo(
           buttonSecondaryDisabled: null,
           buttonSecondaryLoading: null,
         };
-        const obj4 = channel(12160);
+        const obj4 = channel(12162);
         const obj5 = {
           user: stateFromStores,
           onError: function handleRequestError() {
@@ -218,7 +218,7 @@ export default noop.memo(
         };
         obj6.buttonSecondaryDisabled = tmp7;
         obj6.buttonSecondaryLoading = isUserProfileLoading;
-        return jsx(navigation(12166), {
+        return jsx(navigation(12168), {
           type: "button-action",
           message: null,
           subtext: null,

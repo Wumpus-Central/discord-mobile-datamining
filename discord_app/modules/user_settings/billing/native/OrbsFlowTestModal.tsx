@@ -88,7 +88,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9344);
+const NativeStackNavigator = fn(9345);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 let ReactCompilerGating = fn(558);
 const createStyles = fn(5092);
@@ -97,7 +97,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function OrbsFlowTestModal() {
       const cResult = accessibilityNativeStackOptions(576).c(5);
       let obj = accessibilityNativeStackOptions(576);
-      accessibilityNativeStackOptions = accessibilityNativeStackOptions(6687).useAccessibilityNativeStackOptions();
+      accessibilityNativeStackOptions = accessibilityNativeStackOptions(6688).useAccessibilityNativeStackOptions();
       if (cResult[0] !== accessibilityNativeStackOptions) {
         const fn = function n(navigation) {
           const obj = {

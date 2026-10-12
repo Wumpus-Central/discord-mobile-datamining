@@ -34,7 +34,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import NotificationCenterStore from "../NotificationCenterStore.tsx";
 
-const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16853);
+const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16877);
 require = fn;
 function getMessageContentPreviewV2(item) {
   item = item.item;
@@ -557,7 +557,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             str = "text-muted";
           }
           const obj5 = { textColor: str };
-          const result = tmp(8138).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
+          const result = tmp(8139).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
           if (null == iconType) {
             if (cResult[15] === Text) {
               if (cResult[16] === tmp28) {
@@ -604,7 +604,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj8 = { style: tmp3.messagePreviewIconV2Container, children: null };
             if (constants4.ATTACHMENT === iconType) {
-              let tmp35 = guild_id(11683);
+              let tmp35 = guild_id(11685);
               const obj9 = { source: tmp35, size: tmp(1200).IconSizes.SMALL, style: null };
               messagePreviewIconV2 = tmp3.messagePreviewIconV2;
               obj9.style = messagePreviewIconV2;
@@ -613,12 +613,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             } else if (constants4.STICKER !== iconType) {
               tmp35 = null;
               if (constants4.VOICE_MESSAGE === iconType) {
-                tmp35 = guild_id(7718);
+                tmp35 = guild_id(7719);
               }
             }
-            tmp35 = guild_id(9796);
+            tmp35 = guild_id(9797);
           }
-          const tmpResult6 = tmp(8138);
+          const tmpResult6 = tmp(8139);
         }
         const items5 = [tmp26, prop];
         cResult[12] = tmp26;
@@ -746,7 +746,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         str = "text-muted";
       }
       const items5 = [
-        item(8138).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }),
+        item(8139).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }),
       ];
       if (null == iconType) {
         items5[1] = tmp12;
@@ -757,7 +757,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const obj9 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
         if (constants4.ATTACHMENT === iconType) {
-          let tmp15 = guild_id(11683);
+          let tmp15 = guild_id(11685);
           const obj10 = { source: tmp15, size: null, style: null };
           SMALL = tmp3(1200).IconSizes.SMALL;
           obj10.size = SMALL;
@@ -768,12 +768,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (constants4.STICKER !== iconType) {
           tmp15 = null;
           if (constants4.VOICE_MESSAGE === iconType) {
-            tmp15 = guild_id(7718);
+            tmp15 = guild_id(7719);
           }
         }
-        tmp15 = guild_id(9796);
+        tmp15 = guild_id(9797);
       }
-      const tmp3Result = item(8138);
+      const tmp3Result = item(8139);
     };
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
@@ -970,7 +970,7 @@ let closure_39 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[44]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[45]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16850).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16874).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };

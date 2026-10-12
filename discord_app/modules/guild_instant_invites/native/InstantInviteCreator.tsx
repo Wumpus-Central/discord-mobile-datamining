@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const native = Stack(1200);
 const Stack_Stack = Stack(5377);
-const DetailedGuildIdentityUserRow = Stack(10299);
+const DetailedGuildIdentityUserRow = Stack(10300);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

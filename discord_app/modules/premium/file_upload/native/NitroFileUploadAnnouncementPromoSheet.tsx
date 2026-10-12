@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp10 = jsx(tmp(17665).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        const tmp10 = jsx(tmp(17722).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
         cResult[6] = tmp10;
         const tmp9 = tmp10;
       } else {
@@ -177,14 +177,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = I;
       cResult[15] = tmp11;
       cResult[16] = tmp21;
-      cResult[17] = jsx(markAsDismissed(10323).PromoSheet, {
+      cResult[17] = jsx(markAsDismissed(10324).PromoSheet, {
         illustration: tmp11,
         title: tmp14,
         description: tmp15,
         onDismiss: I,
         actions: tmp21,
       });
-      const tmp23 = jsx(markAsDismissed(10323).PromoSheet, {
+      const tmp23 = jsx(markAsDismissed(10324).PromoSheet, {
         illustration: tmp11,
         title: tmp14,
         description: tmp15,

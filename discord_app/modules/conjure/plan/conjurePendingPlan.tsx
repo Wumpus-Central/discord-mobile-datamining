@@ -1,8 +1,7 @@
 // discord_app/modules/conjure/plan/conjurePendingPlan.tsx
-import ConjureChatStore from "../chat/ConjureChatStore.tsx";
+import conjureChatTurns from "../chat/conjureChatTurns.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const turnSettled = ConjureChatStore.turnSettled;
 let result = size.fileFinishedImporting("modules/conjure/plan/conjurePendingPlan.tsx");
 
 export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
@@ -19,7 +18,8 @@ export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
       while (true) {
         let tmp4 = memo[diff];
         if ("assistant" === tmp4.role) {
-          if (!turnSettled(tmp4)) {
+          let obj = conjureChatTurns;
+          if (!obj.turnSettled(tmp4)) {
             break;
           } else if ("plan_implemented" === tmp4.kind) {
             break;

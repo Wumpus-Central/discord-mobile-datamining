@@ -100,7 +100,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["0N1s81"]);
   },
-  parent: fn(7992).MobileUserSettings.ACCOUNT,
+  parent: fn(7993).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountSecurityKeysSettingTrailing() {

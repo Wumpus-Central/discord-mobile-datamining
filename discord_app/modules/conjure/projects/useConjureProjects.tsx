@@ -30,6 +30,7 @@ function conjureEntriesEqual(nextExpiry, nextExpiry2) {
         projectId.projectId === nextExpiry2.entries[index].projectId &&
         projectId.activity === nextExpiry2.entries[index].activity &&
         projectId.name === nextExpiry2.entries[index].name &&
+        projectId.project.updated_at === nextExpiry2.entries[index].project.updated_at &&
         projectId.guildId === nextExpiry2.entries[index].guildId &&
         projectId.guildName === nextExpiry2.entries[index].guildName &&
         projectId.notInServer === nextExpiry2.entries[index].notInServer &&
@@ -231,7 +232,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first1 = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function p() {
+        const fn = function v() {
           return collectEntries(closure_0);
         };
         cResult[1] = arg0;

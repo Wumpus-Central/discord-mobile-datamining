@@ -626,7 +626,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const badgeIndicatorIds = targetUsername(10579).useBadgeDirectoryBadgeIndicators(tmp43).badgeIndicatorIds;
+              const badgeIndicatorIds = targetUsername(10580).useBadgeDirectoryBadgeIndicators(tmp43).badgeIndicatorIds;
               class U {
                 constructor() {
                   currentUser = closure_1_7.getCurrentUser();
@@ -689,7 +689,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl = targetUsername(1126).intl;
               const obj3 = { username: targetUsername };
               stringResult = intl.formatToPlainString(targetUsername(1126).t.EIcwoe, obj3);
-              const tmpResult8 = targetUsername(10579);
+              const tmpResult8 = targetUsername(10580);
             }
             const obj4 = { badges: stateFromStoresArray, enabled: !tmp17 };
             cResult[28] = stateFromStoresArray;
@@ -847,7 +847,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { badges: stateFromStoresArray, enabled: null };
         let tmp33Result = !tmp10;
         obj3.enabled = tmp33Result;
-        const badgeIndicatorIds = targetUsername(10579).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
+        const badgeIndicatorIds = targetUsername(10580).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
         if (null != targetUserId && targetUserId !== stateFromStores) {
           if (null != targetUsername) {
             const intl2 = targetUsername(1126).intl;
@@ -898,7 +898,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (!stateFromStores1) {
-            const obj10 = { style: tmp.centered, children: closure_10(targetUsername(6153).ActivityIndicator, {}) };
+            const obj10 = { style: tmp.centered, children: closure_10(targetUsername(6154).ActivityIndicator, {}) };
             closure_10(closure_5, obj10);
           }
           let result1 = (diff - result) / 4;
@@ -961,7 +961,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const intl = targetUsername(1126).intl;
         formatToPlainStringResult = intl.string(targetUsername(1126).t.UqnlQF);
-        const tmp6Result6 = targetUsername(10579);
+        const tmp6Result6 = targetUsername(10580);
       } else {
         throw new TypeError("Trying to call a non-function");
       }

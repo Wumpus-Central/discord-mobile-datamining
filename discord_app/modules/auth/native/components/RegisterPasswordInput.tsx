@@ -17,7 +17,7 @@ require = fn;
 let user = ["ref"];
 let closure_4 = ["password"];
 let closure_5 = ["password"];
-const RegistrationUIStore = fn(16348);
+const RegistrationUIStore = fn(16371);
 ({ setRegistrationErrors: c10, useRegistrationUIStore: closure_11 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_12, jsx: map1, Fragment: closure_14 } = jsxProd);
@@ -553,7 +553,7 @@ export const RegisterPasswordInput = ReactCompilerGating.isReactCompilerEnabled(
               errorMessage: tmp20,
               status: undefined,
             };
-            const tmp52 = closure_13(onPasswordChange(6285).TextInput, obj4);
+            const tmp52 = closure_13(onPasswordChange(6286).TextInput, obj4);
             cResult[27] = W;
             cResult[28] = onSubmitEditing;
             cResult[29] = password;

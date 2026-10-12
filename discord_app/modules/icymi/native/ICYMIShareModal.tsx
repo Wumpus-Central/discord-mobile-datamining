@@ -23,7 +23,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AbortCodes = fn(1085).AbortCodes;
-const UserRowModes = fn(10216).UserRowModes;
+const UserRowModes = fn(10217).UserRowModes;
 const MessageSendLocation = fn(5085).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -394,7 +394,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -442,7 +442,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -488,7 +488,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           return obj;
                         }
                         c1 = 3;
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       } catch (tmp17) {
                         c1 = tmp;
                         throw tmp17;
@@ -509,7 +509,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               );
               linkText(forwardToChannel[21]).pop();
               v3 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp7) {
             v3 = tmp;
@@ -549,7 +549,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -596,7 +596,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -642,7 +642,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           return obj;
                         }
                         c1 = 3;
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       } catch (tmp17) {
                         c1 = tmp;
                         throw tmp17;
@@ -663,7 +663,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               );
               tmp3(tmp2[21]).pop();
               c4 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp7) {
             c4 = tmp;
@@ -711,10 +711,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj4.headerStatusBarHeight = num + nativeDefault.space.PX_8;
       obj3 = title(1382);
-      obj4.headerLeft = tmp11(6200).getHeaderCloseButton(callback);
+      obj4.headerLeft = tmp11(6201).getHeaderCloseButton(callback);
       ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } =
         tmp5);
-      const items1 = [closure_11(title(6209).Header, obj4), ,];
+      const items1 = [closure_11(title(6210).Header, obj4), ,];
       let obj5 = {
         rowMode: UserRowModes.TOGGLE,
         onSelectedDestinationChange: tmp[1],
@@ -723,7 +723,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         disableGradient: true,
         disableStickySections: true,
       };
-      const tmp11Result = tmp11(6200);
+      const tmp11Result = tmp11(6201);
       const sum = rect.bottom + nativeDefault.space.PX_8;
       obj5.insetEnd = sum + nativeDefault.space.PX_96;
       items1[1] = closure_11(SearchableDestinationListDefault, obj5);
@@ -776,7 +776,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -805,7 +805,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   c5 = 2;
                   c6 = 1;
-                  const obj6 = { value: entry(16941).sendMessageWithEmbed(obj5), done: false };
+                  const obj6 = { value: entry(16965).sendMessageWithEmbed(obj5), done: false };
                   return obj6;
                 }
               } else if (1 === tmp7) {
@@ -885,7 +885,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -913,7 +913,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                 };
                 c5 = 2;
                 c6 = 1;
-                const obj7 = { value: entry(16941).sendMessageWithEmbed(obj6), done: false };
+                const obj7 = { value: entry(16965).sendMessageWithEmbed(obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp7) {

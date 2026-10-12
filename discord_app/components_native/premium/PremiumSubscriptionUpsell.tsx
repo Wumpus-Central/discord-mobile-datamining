@@ -12,8 +12,8 @@ import LinearGradientDefault from "../../../_runtime/05391_LinearGradient.js";
 import FastImageDefault from "../common/FastImage.tsx";
 import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef13807 from "../../../_runtime/metro/13807__.js";
-import _modDef13808 from "../../../_runtime/metro/13808__.js";
+import _modDef13830 from "../../../_runtime/metro/13830__.js";
+import _modDef13831 from "../../../_runtime/metro/13831__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -21,7 +21,7 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7151).Gradients;
+const Gradients = fn(7152).Gradients;
 const PremiumConstants = fn(1392);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } =
   PremiumConstants);
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[6] === tmp4.subtitle) {
               if (cResult[7] === tmp4.title) {
                 if (cResult[9] !== tmp4.upsellFeatureSubLogo) {
-                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13807 };
+                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13830 };
                   const tmp22 = options(FastImageDefault, obj2);
                   cResult[9] = tmp4.upsellFeatureSubLogo;
                   cResult[10] = tmp22;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp19 = cResult[10];
                 }
                 if (cResult[11] !== tmp4.upsellFeatureLogoTier2) {
-                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13808 };
+                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13831 };
                   const tmp26 = options(FastImageDefault, obj4);
                   cResult[11] = tmp4.upsellFeatureLogoTier2;
                   cResult[12] = tmp26;
@@ -379,11 +379,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = { style: tmp.upsellFeatures, children: null };
         const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
         intlResult1 = PremiumUtilsDefault;
-        obj11.source = _modDef13807;
+        obj11.source = _modDef13830;
         const items4 = [options(FastImageDefault, obj11), ,];
         const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
         const intlResult2 = FastImageDefault;
-        obj12.source = _modDef13808;
+        obj12.source = _modDef13831;
         items4[1] = options(FastImageDefault, obj12);
         const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
         const intlResult3 = FastImageDefault;

@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(17740).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(17797).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5092);
@@ -215,7 +215,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj4 = { style: { flex: 1 }, children: null };
                 const obj5 = { spacing: 20, speed: 0.2, children: tmp26 };
-                const items2 = [closure_15(tmp(17912).Marquee, obj5)];
+                const items2 = [closure_15(tmp(17969).Marquee, obj5)];
                 const obj6 = {
                   start: { x: 0, y: 0 },
                   end: { x: 1, y: 0 },
@@ -329,7 +329,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               if (contentMessage.attachments.length > 0) {
                 str2 = "";
                 if (null != activeMediaPlayerSource.attachmentIndex) {
-                  str2 = tmp4(8393)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
+                  str2 = tmp4(8394)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
                 }
               }
             }
@@ -356,7 +356,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             if (memo) {
               const obj6 = { style: { flex: 1 }, children: null };
               const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-              const items3 = [closure_15(tmp2(17912).Marquee, obj7)];
+              const items3 = [closure_15(tmp2(17969).Marquee, obj7)];
               const obj8 = {
                 start: { x: 0, y: 0 },
                 end: { x: 1, y: 0 },
@@ -471,7 +471,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp18 = closure_15(tmp(8541).BackgroundBlurFill, { blurAmount: 0.05 });
+            const tmp18 = closure_15(tmp(8542).BackgroundBlurFill, { blurAmount: 0.05 });
             cResult[9] = tmp18;
             let tmp16 = tmp18;
           } else {
@@ -483,7 +483,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp23 = closure_15(tmp(6204).ArrowLargeLeftIcon, { size: "sm" });
+              const tmp23 = closure_15(tmp(6205).ArrowLargeLeftIcon, { size: "sm" });
               cResult[13] = tmp23;
               let tmp21 = tmp23;
             } else {
@@ -501,7 +501,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp32 = closure_15(tmp(10258).XLargeIcon, { size: "sm" });
+                      const tmp32 = closure_15(tmp(10259).XLargeIcon, { size: "sm" });
                       cResult[22] = tmp32;
                       let tmp30 = tmp32;
                     } else {
@@ -648,7 +648,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: null, children: null };
       const items1 = [tmp.pipControls, animatedStyle];
       obj3.style = items1;
-      const items2 = [closure_15(message(8541).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
+      const items2 = [closure_15(message(8542).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
       const obj4 = {
         disabled: !visible,
         style: null,
@@ -656,7 +656,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityRole: "button",
         accessibilityLabel: stringResult,
-        children: closure_15(message(6204).ArrowLargeLeftIcon, { size: "sm" }),
+        children: closure_15(message(6205).ArrowLargeLeftIcon, { size: "sm" }),
       };
       const items3 = [,];
       ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
@@ -669,7 +669,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityRole: "button",
         accessibilityLabel: string2Result,
-        children: closure_15(message(10258).XLargeIcon, { size: "sm" }),
+        children: closure_15(message(10259).XLargeIcon, { size: "sm" }),
       };
       const items4 = [,];
       ({ pipButton: arr5[0], dismissButton: arr5[1] } = tmp);

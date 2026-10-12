@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     v2 = 2;
                     c5 = 1;
                     const obj5 = {
-                      value: closure_0(16574).saveGuildThemeNuxPreference(tmp48, closure_1_6),
+                      value: closure_0(16597).saveGuildThemeNuxPreference(tmp48, closure_1_6),
                       done: false,
                     };
                     return obj5;
@@ -306,8 +306,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores;
       let callback1;
       const tmp = closure_14();
-      [tmp5, c2] = noop.useState(guildId(16574).getInitialGuildThemeNuxSelection);
-      const tmp4 = _slicedToArray(noop.useState(guildId(16574).getInitialGuildThemeNuxSelection), 2);
+      [tmp5, c2] = noop.useState(guildId(16597).getInitialGuildThemeNuxSelection);
+      const tmp4 = _slicedToArray(noop.useState(guildId(16597).getInitialGuildThemeNuxSelection), 2);
       [tmp7, c3] = noop.useState(null);
       const tmp6 = _slicedToArray(noop.useState(null), 2);
       [tmp9, c4] = noop.useState(false);
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.onDismiss = callback3;
       obj3.contentStyles = tmp.container;
       const items7 = [
-        closure_10(markAsDismissed(16575), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
+        closure_10(markAsDismissed(16598), { themeSettings: stateFromStores1, isPersonal: tmp10 }),
         ,
         ,
         ,
@@ -486,14 +486,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl5 = tmp2(1126).intl;
       obj8.label = intl5.string(guildId(1126).t.aN3RNQ);
       obj8.value = guildId(5027).GuildThemeSourcePreference.GUILD;
-      const items8 = [closure_10(guildId(6261).TableRadioRow, obj8)];
+      const items8 = [closure_10(guildId(6262).TableRadioRow, obj8)];
       const obj9 = { label: null, value: null };
       const intl6 = tmp2(1126).intl;
       obj9.label = intl6.string(guildId(1126).t.js8y7t);
       obj9.value = guildId(5027).GuildThemeSourcePreference.PERSONAL;
-      items8[1] = closure_10(guildId(6261).TableRadioRow, obj9);
+      items8[1] = closure_10(guildId(6262).TableRadioRow, obj9);
       obj7.children = items8;
-      obj6.children = closure_11(guildId(6262).TableRadioGroup, obj7);
+      obj6.children = closure_11(guildId(6263).TableRadioGroup, obj7);
       items7[3] = closure_10(closure_6, obj6);
       let tmp20Result = null;
       if (tmp10) {
@@ -501,7 +501,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = { type: "warning", message: null, role: "status" };
         const intl7 = tmp2(1126).intl;
         obj11.message = intl7.string(tmp2(1126).t.tTHQAy);
-        obj10.children = closure_10(tmp2(7567).InlineNotice, obj11);
+        obj10.children = closure_10(tmp2(7568).InlineNotice, obj11);
         tmp20Result = closure_10(tmp21, obj10);
       }
       items7[4] = tmp20Result;
@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != tmp7) {
         const obj12 = { style: tmp.warning, children: null };
         const obj13 = { type: "critical", message: tmp7, role: "alert" };
-        obj12.children = closure_10(tmp2(7567).InlineNotice, obj13);
+        obj12.children = closure_10(tmp2(7568).InlineNotice, obj13);
         tmp20Result2 = closure_10(tmp21, obj12);
       }
       items7[5] = tmp20Result2;
@@ -526,6 +526,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj14.children = closure_10(guildId(5379).Button, obj15);
       items7[6] = closure_10(closure_6, obj14);
       obj3.children = items7;
-      return closure_11(guildId(6839).BottomSheet, obj3);
+      return closure_11(guildId(6840).BottomSheet, obj3);
     };
 export const GUILD_THEME_NUX_ACTION_SHEET_KEY = "GuildThemeNuxActionSheet";

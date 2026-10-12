@@ -22,7 +22,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -165,7 +165,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(9065).DevShelfFetchState;
+const DevShelfFetchState = fn(9066).DevShelfFetchState;
 const AbortCodes = fn(1085).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = {

@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp9Result = null != memo;
           if (tmp9Result) {
             let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-            tmp9Result = closure_5(isLoadingEmbed(6156), obj2);
+            tmp9Result = closure_5(isLoadingEmbed(6157), obj2);
           }
           let obj3 = { children: null };
           const items6 = [tmp9Result];

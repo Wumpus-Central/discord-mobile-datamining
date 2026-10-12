@@ -40,7 +40,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(7992).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7993).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useFriendRequestsEveryoneSettingValue() {
         const cResult = c.c(2);

@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5092);
 let obj2 = {
   row: {
-    height: fn(6258).NAV_BAR_HEIGHT,
+    height: fn(6259).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -26,7 +26,7 @@ let obj2 = {
   logOut: null,
 };
 let obj3 = {
-  height: fn(6258).NAV_BAR_HEIGHT,
+  height: fn(6259).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",

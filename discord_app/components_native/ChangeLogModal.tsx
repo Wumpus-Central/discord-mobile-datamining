@@ -11,8 +11,8 @@ import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef9769 from "../../_runtime/metro/09769__.js";
-import _modDef15822 from "../../_runtime/metro/15822__.js";
+import _modDef9770 from "../../_runtime/metro/09770__.js";
+import _modDef15845 from "../../_runtime/metro/15845__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -198,7 +198,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      const items = [closure_7(_modDef15822, obj4)];
+      const items = [closure_7(_modDef15845, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -248,14 +248,14 @@ prototype["renderVideo"] = function renderVideo() {
     const obj10 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef9769,
+      source: _modDef9770,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1200).IconSizes.CUSTOM,
       iconStyle: tmp.playIcon,
     };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(6184).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(6185).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;

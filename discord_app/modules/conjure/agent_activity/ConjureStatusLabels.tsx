@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/agent_activity/ConjureStatusLabels.tsx
 import util from "../../../intl/index.native.tsx";
 import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
-import ConjureTypes from "../ConjureTypes.tsx";
+import ConjureUsageTypes from "../usage/ConjureUsageTypes.tsx";
 
 require = fn;
 function thinkingLabel(saving) {
@@ -25,12 +25,18 @@ function thinkingLabel(saving) {
   if (flag4 === undefined) {
     flag4 = false;
   }
+  let flag5 = saving.publishPending;
+  if (flag5 === undefined) {
+    flag5 = false;
+  }
   let tmp = null != activity;
   if (tmp) {
     tmp = "end" !== activity.phase;
   }
   if (flag4) {
     let xnCAaP = _modDef3849["1jqaAc"];
+  } else if (flag5) {
+    xnCAaP = _modDef3849.xCdlEF;
   } else if (flag2) {
     xnCAaP = _modDef3849.M4KI5F;
   } else if (flag3) {
@@ -60,6 +66,11 @@ const result = size.fileFinishedImporting("modules/conjure/agent_activity/Conjur
 export const INDICATOR_PASS_MS = 1000;
 export const INDICATOR_PASS_STAGGER_MS = 1800;
 export const RECALLING_LINES = items;
+export const isPublishLineSwitch = function isPublishLineSwitch(line, text) {
+  const intl = util.intl;
+  const stringResult = intl.string(_modDef3849.xCdlEF);
+  return (line === stringResult) !== (text === stringResult);
+};
 export const recallingLine = function recallingLine(current) {
   const intl = util.intl;
   return intl.string(items[current % items.length]);
@@ -89,7 +100,7 @@ export const thinkingLine = function thinkingLine(saving) {
   return intl.string(thinkingLabel(saving));
 };
 export const runesUsedLabels = function runesUsedLabels(projectUsage) {
-  const runesFromUsdResult = ConjureTypes.runesFromUsd(projectUsage.cost_usd);
+  const runesFromUsdResult = ConjureUsageTypes.runesFromUsd(projectUsage.cost_usd);
   const obj2 = { text: null, aria: null };
   const intl = util.intl;
   obj2.text = intl.formatToPlainString(_modDef3849.gMuw5d, { runes: runesFromUsdResult.toLocaleString() });

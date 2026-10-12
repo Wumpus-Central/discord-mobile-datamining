@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
       const tmp4 = closure_7();
       const obj = markAsDismissed(576);
-      const bottomSheetRef1 = markAsDismissed(8294).useBottomSheetRef();
+      const bottomSheetRef1 = markAsDismissed(8295).useBottomSheetRef();
       ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
       if (cResult[0] !== markAsDismissed) {
         const fn = function h() {
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] !== bottomSheetClose) {
           const obj3 = { variant: "floating", onPress: bottomSheetClose };
-          const tmp11 = closure_5(tmp(6843).ActionSheetHeaderBar, obj3);
+          const tmp11 = closure_5(tmp(6844).ActionSheetHeaderBar, obj3);
           cResult[5] = bottomSheetClose;
           cResult[6] = tmp11;
           let tmp9 = tmp11;
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       header: tmp12,
                       children: tmp29,
                     };
-                    const tmp35 = closure_5(tmp(6839).BottomSheet, obj5);
+                    const tmp35 = closure_5(tmp(6840).BottomSheet, obj5);
                     cResult[24] = bottomSheetRef;
                     cResult[25] = tmp6;
                     cResult[26] = tmp12;
@@ -164,13 +164,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp8;
       tmp7 = tmp8;
       const obj10 = { source: imageSource, style: tmp4.image };
-      const obj2 = markAsDismissed(8294);
+      const obj2 = markAsDismissed(8295);
     }
   : function GenericUpsellActionSheet(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
       ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
       const tmp = closure_7();
-      const bottomSheetRef1 = markAsDismissed(8294).useBottomSheetRef();
+      const bottomSheetRef1 = markAsDismissed(8295).useBottomSheetRef();
       ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
       const obj2 = {
         ref: bottomSheetRef,
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { children: null };
       const items = [
         closure_5(FastImageDefault, { source: imageSource, style: tmp.image }),
-        closure_5(markAsDismissed(6843).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose }),
+        closure_5(markAsDismissed(6844).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose }),
       ];
       obj3.children = items;
       obj2.header = closure_6(View, obj3);
@@ -208,5 +208,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ];
       obj5.children = items1;
       obj2.children = closure_6(View, obj5);
-      return closure_5(markAsDismissed(6839).BottomSheet, obj2);
+      return closure_5(markAsDismissed(6840).BottomSheet, obj2);
     };

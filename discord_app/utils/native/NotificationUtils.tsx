@@ -8,7 +8,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 const require = globalThis.__r;
 
 require = fn;
-const PermissionStateType = fn(12121).PermissionStateType;
+const PermissionStateType = fn(12123).PermissionStateType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");
@@ -72,7 +72,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -86,7 +86,7 @@ export default {
             return obj;
           } else {
             c0 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp4) {
           c0 = tmp;
@@ -97,8 +97,8 @@ export default {
   },
   shouldRequestNotification: true,
   playNotificationSound(bit_message1) {
-    let num = _volume;
-    if (_volume === undefined) {
+    let num = volume;
+    if (volume === undefined) {
       num = 1;
     }
     SoundUtils.playSound(bit_message1, num, undefined, soundpack);

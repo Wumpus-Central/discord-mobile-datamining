@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const AvatarUtils = UnknownGameIcon(1415);
 const shared = UnknownGameIcon(4969);
-const UnknownGameIcon2 = UnknownGameIcon(7688);
+const UnknownGameIcon2 = UnknownGameIcon(7689);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

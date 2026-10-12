@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj5 = { startExpanded: true, children: null };
                       const obj6 = { style: contentWrapper, children: tmp30 };
                       obj5.children = closure_6(View, obj6);
-                      const tmp37 = closure_6(tmp(6839).BottomSheet, obj5);
+                      const tmp37 = closure_6(tmp(6840).BottomSheet, obj5);
                       cResult[27] = tmp4.contentWrapper;
                       cResult[28] = tmp30;
                       cResult[29] = tmp37;
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = items1;
         obj2.children = closure_7(View, obj3);
         obj5.children = closure_6(View, obj2);
-        tmp5Result = closure_6(tmp2(6839).BottomSheet, obj5);
+        tmp5Result = closure_6(tmp2(6840).BottomSheet, obj5);
       }
       return tmp5Result;
     };

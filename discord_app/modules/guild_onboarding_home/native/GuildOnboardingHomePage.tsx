@@ -9,7 +9,7 @@ import GuildOnboardingHomeSettingsStore from "../GuildOnboardingHomeSettingsStor
 import GuildOnboardingMemberActionStore from "../GuildOnboardingMemberActionStore.tsx";
 
 require = fn;
-const NO_SETTINGS = fn(6925).NO_SETTINGS;
+const NO_SETTINGS = fn(6926).NO_SETTINGS;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
@@ -45,7 +45,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj2 = guildId(4850);
       const stateFromStores = tmp(504).useStateFromStores(first, I);
-      const tmp9 = stateFromStores(6926)(guildId);
+      const tmp9 = stateFromStores(6927)(guildId);
       let tmp10 = !tmp9;
       if (!tmp9) {
         class I {
@@ -145,7 +145,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         GuildOnboardingHomeSettingsStore.getSettings(guildId),
       );
       let tmp4 = stateFromStores;
-      const tmp5 = stateFromStores(6926)(guildId);
+      const tmp5 = stateFromStores(6927)(guildId);
       let tmp6 = !tmp5;
       if (!tmp5) {
         let num;
@@ -210,14 +210,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         let obj3 = { guildId, scrollValue: sharedValue, children: null };
         const obj4 = { guildId, hideDescription: tmp5 };
-        const items3 = [closure_9(tmp4(16994), obj4)];
+        const items3 = [closure_9(tmp4(17018), obj4)];
         if (tmp5) {
           let obj5 = { children: null };
           const obj6 = { guildId };
-          const items4 = [closure_9(tmp4(16999), obj6), ,];
+          const items4 = [closure_9(tmp4(17023), obj6), ,];
           const obj7 = { guildId };
-          items4[1] = closure_9(tmp4(17003), obj7);
-          tmp4 = tmp4(17004);
+          items4[1] = closure_9(tmp4(17027), obj7);
+          tmp4 = tmp4(17028);
           const obj8 = { guildId };
           tmp = closure_9(tmp4, obj8);
           items4[2] = tmp;
@@ -225,12 +225,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp12Result = closure_11(closure_10, obj5);
         } else {
           const obj9 = { guildId };
-          tmp12Result = closure_9(tmp4(17007), obj9);
+          tmp12Result = closure_9(tmp4(17031), obj9);
         }
         items3[1] = tmp12Result;
         obj3.children = items3;
-        closure_11(tmp4(17010), obj3);
-        const tmp4Result = tmp4(17010);
+        closure_11(tmp4(17034), obj3);
+        const tmp4Result = tmp4(17034);
       }
       let obj2 = guildId(504);
     };

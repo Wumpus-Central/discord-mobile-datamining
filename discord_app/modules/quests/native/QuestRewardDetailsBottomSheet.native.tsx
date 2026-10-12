@@ -245,10 +245,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestR
   const stateFromStores = quest(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   let obj = quest(504);
   const tmp4 = quest;
-  const defaultRewardName = quest(9189).getDefaultRewardName(quest.config, stateFromStores);
+  const defaultRewardName = quest(9190).getDefaultRewardName(quest.config, stateFromStores);
   const obj3 = { direction: "vertical", spacing: memo(587).space.PX_16, style: tmp.wrapper, children: null };
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(587).space.PX_16, children: null };
-  const items3 = [closure_6(memo(12973), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [closure_6(memo(12975), { quest, height: 56, width: 56, withAnimation: true }), ];
   const obj5 = { direction: "vertical", spacing: memo(587).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj6 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1126).intl;
@@ -268,10 +268,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestR
     obj7.children = items6;
     tmp9Result = closure_7(closure_8, obj7);
   }
-  const obj2 = quest(9189);
+  const obj2 = quest(9190);
   items5[1] = tmp9Result;
   obj3.children = items5;
-  return closure_6(quest(6839).BottomSheet, { startExpanded: true, children: closure_7(quest(5377).Stack, obj3) });
+  return closure_6(quest(6840).BottomSheet, { startExpanded: true, children: closure_7(quest(5377).Stack, obj3) });
 });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestRewardDetailsBottomSheet.native.tsx");

@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
               _undefined(null);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(17053).remixConjureProjectInto(project, first), done: false };
+              const obj5 = { value: tmp2(17073).remixConjureProjectInto(project, first), done: false };
               return obj5;
             }
           }

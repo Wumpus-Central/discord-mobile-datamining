@@ -30,8 +30,8 @@ const ChannelRecord = fn(2069);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11555).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10216).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11557).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10217).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(5092);
@@ -127,7 +127,7 @@ export default function ShareScreen(appEntryKey) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -220,7 +220,7 @@ export default function ShareScreen(appEntryKey) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "IconComponent", done: "+51" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -392,7 +392,7 @@ export default function ShareScreen(appEntryKey) {
               closure_129_8(false);
               closure_129_9.current = false;
               React = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else if (arg0 === 1) {
             React = 3;

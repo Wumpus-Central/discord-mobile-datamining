@@ -87,7 +87,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[9] === tmp6) {
                 let tmp8 = cResult[10];
               }
-              const panGesture = tmp(6334).usePanGesture(tmp8);
+              const panGesture = tmp(6335).usePanGesture(tmp8);
               if (cResult[11] !== panGesture) {
                 const obj3 = { gesture: panGesture };
                 cResult[11] = panGesture;

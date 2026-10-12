@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       let obj = modalSessionId(576);
-      const initiateAgeVerification1 = modalSessionId(7561).useInitiateAgeVerification(tmp5);
+      const initiateAgeVerification1 = modalSessionId(7562).useInitiateAgeVerification(tmp5);
       ({ loading, initiateAgeVerification } = initiateAgeVerification1);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = modalSessionId(1126).intl;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp23 = closure_9(modalSessionId(7516).ShieldSpotIllustration, {});
+            const tmp23 = closure_9(modalSessionId(7517).ShieldSpotIllustration, {});
             cResult[12] = tmp23;
             let tmp21 = tmp23;
           } else {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     );
                   }),
                 };
-                const tmp35 = closure_9(modalSessionId(6264).TableRowGroup, obj5);
+                const tmp35 = closure_9(modalSessionId(6265).TableRowGroup, obj5);
                 cResult[20] = arr;
                 cResult[21] = tmp35;
                 let tmp33 = tmp35;
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             } else {
               v3 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp10) {
             v3 = tmp;
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = modalSessionId;
       cResult[8] = items4;
       arr = items4;
-      const tmpResult = modalSessionId(7561);
+      const tmpResult = modalSessionId(7562);
     }
   : function GetStartedScreen(modalSessionId) {
       modalSessionId = modalSessionId.modalSessionId;
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -384,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               } else {
                 c0 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp5) {
               c0 = tmp;
