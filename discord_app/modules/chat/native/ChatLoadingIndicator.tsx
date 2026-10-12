@@ -1,6 +1,6 @@
-// === Module 12857: ChatLoadingIndicator ===
+// === Module 12859: ChatLoadingIndicator ===
 
-// Module 12857 (ChatLoadingIndicator)
+// Module 12859 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -520,7 +520,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       if (!stateFromStores1) {
         return tmp18;
       } else if (cResult[11] !== tmp18) {
-        PressableOpacity = PressableOpacity(6184).PressableOpacity;
+        PressableOpacity = PressableOpacity(6185).PressableOpacity;
         let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
         tmp = closure_13(PressableOpacity, obj4);
         cResult[11] = tmp18;
@@ -611,7 +611,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(6184).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(6185).PressableOpacity, obj8);
   }
   return tmp7Result;
 });

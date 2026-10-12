@@ -1,6 +1,6 @@
-// === Module 17133: ConjureRepliedMessage ===
+// === Module 17197: chat/ConjureRepliedMessage ===
 
-// Module 17133 (ConjureRepliedMessage)
+// Module 17197 (chat/ConjureRepliedMessage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,9 +8,9 @@ import native from "native" /* 1200 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import UserUtils from "UserUtils" /* 4962 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 17031 */;
-import ConjureMessageAuthor from "ConjureMessageAuthor" /* 17134 */;
-import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 17140 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 17105 */;
+import ConjureMessageAuthor from "ConjureMessageAuthor" /* 17198 */;
+import ConjureSelectedMentionDefault from "ConjureSelectedMention" /* 17204 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,10 +18,10 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(17131).MESSAGE_EDGE_INSET + fn(17131).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(17131).MESSAGE_CONTENT_INSET - 4 - diff;
+const diff = fn(17194).MESSAGE_EDGE_INSET + fn(17194).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(17194).MESSAGE_CONTENT_INSET - 4 - diff;
 const createStyles = fn(5092);
-let obj2 = { root: { marginLeft: diff - fn(17131).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
+let obj2 = { root: { marginLeft: diff - fn(17194).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
 const rect = { position: "absolute", left: 0, top: 9, bottom: 0, width: diff1, borderTopWidth: 2, borderLeftWidth: 2, borderColor: nativeDefault.colors.SPINE_DEFAULT, borderTopLeftRadius: Math.round(0.25 * diff1) };
 obj2.spine = rect;
 obj2.avatar = { marginRight: 4 };
@@ -29,7 +29,7 @@ obj2.name = { flexShrink: 0, marginRight: 4, maxWidth: "40%" };
 obj2.content = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginLeft: diff - fn(17131).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" };
+let obj3 = { marginLeft: diff - fn(17194).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureRepliedMessage.tsx");
 
@@ -215,8 +215,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   replied = replied.replied;
   const onJump = replied.onJump;
   const tmp = closure_8();
-  const messageAuthorUser = replied(17134).useMessageAuthorUser(replied.userId);
-  const obj = replied(17134);
+  const messageAuthorUser = replied(17198).useMessageAuthorUser(replied.userId);
+  const obj = replied(17198);
   let str = replied(4962).useName(messageAuthorUser);
   if (str == null) {
     str = "";
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   if (null != messageAuthorUser) {
     const obj5 = { style: tmp.avatar, children: null };
     const obj6 = { userId: replied.userId, size: tmp2(1200).AvatarSizes.SIZE_16 };
-    obj5.children = closure_6(tmp2(17134).ConjureUserAvatar, obj6);
+    obj5.children = closure_6(tmp2(17198).ConjureUserAvatar, obj6);
     tmp11Result = closure_6(closure_5, obj5);
   }
   items1[1] = tmp11Result;

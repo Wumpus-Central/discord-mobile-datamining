@@ -1,11 +1,11 @@
-// === Module 15510: EmojiIcon ===
+// === Module 15533: EmojiIcon ===
 
-// Module 15510 (EmojiIcon)
+// Module 15533 (EmojiIcon)
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import EmojiDefault from "Emoji" /* 6819 */;
-import _modDef9466 from "module_9466" /* 9466 */;
-import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15511 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import EmojiDefault from "Emoji" /* 6820 */;
+import _modDef9467 from "module_9467" /* 9467 */;
+import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15534 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default function EmojiIcon(size) {
       const obj2 = { resizeMode: "contain", style: null, source: null };
       size = { width: num, height: num };
       obj2.style = size;
-      obj2.source = _modDef9466;
+      obj2.source = _modDef9467;
       tmp4 = jsx(FastImageDefault, { resizeMode: "contain", style: null, source: null });
     }
     let tmp8Result = tmp4;

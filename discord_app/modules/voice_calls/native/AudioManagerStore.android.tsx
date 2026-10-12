@@ -1,6 +1,6 @@
-// === Module 8786: AudioManagerStore ===
+// === Module 8787: AudioManagerStore ===
 
-// Module 8786 (AudioManagerStore)
+// Module 8787 (AudioManagerStore)
 import _modDef12 from "module_12" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -8,7 +8,7 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import Constants2 from "Constants" /* 5117 */;
-import NativeAudioManagerModuleDefault from "NativeAudioManagerModule" /* 8787 */;
+import NativeAudioManagerModuleDefault from "NativeAudioManagerModule" /* 8788 */;
 import size from "module_2" /* 2 */;
 
 const NativeAudioManagerModule_mod = NativeAudioManagerModuleDefault;

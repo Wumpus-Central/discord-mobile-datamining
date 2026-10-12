@@ -1,6 +1,6 @@
-// === Module 18193: StageChannelRequestToSpeakMessageManager ===
+// === Module 18251: StageChannelRequestToSpeakMessageManager ===
 
-// Module 18193 (StageChannelRequestToSpeakMessageManager)
+// Module 18251 (StageChannelRequestToSpeakMessageManager)
 import MessageTypes from "MessageTypes" /* 1101 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -8,7 +8,7 @@ import MessageStore from "MessageStore" /* 5432 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
 const MessageFlags = fn(1085).MessageFlags;
@@ -32,8 +32,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(18194).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
-                  const tmp11Result = userId(18194);
+                  const result = userId(18252).sendStageRequestToSpeakEphemeralMessage(channelId, user, requestToSpeakTimestamp);
+                  const tmp11Result = userId(18252);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -48,8 +48,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  closure_1(7178).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = closure_1(7178);
+                  closure_1(7179).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = closure_1(7179);
                 }
               }
             }

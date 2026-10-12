@@ -1,9 +1,9 @@
-// === Module 7541: ManualReviewFallbackGate ===
+// === Module 7542: ManualReviewFallbackGate ===
 
-// Module 7541 (ManualReviewFallbackGate)
-import SafetyHubUtils from "SafetyHubUtils" /* 7511 */;
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7542 */;
-import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 7543 */;
+// Module 7542 (ManualReviewFallbackGate)
+import SafetyHubUtils from "SafetyHubUtils" /* 7512 */;
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7543 */;
+import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 7544 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -128,7 +128,7 @@ export const shouldShowManualReviewFallback = function shouldShowManualReviewFal
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {

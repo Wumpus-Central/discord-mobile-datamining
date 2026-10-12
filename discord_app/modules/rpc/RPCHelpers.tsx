@@ -8,8 +8,8 @@ import UrlDefault from "Url" /* 1386 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5079 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
 import useMessageAuthor from "useMessageAuthor" /* 5627 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7178 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8457 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7179 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8458 */;
 import getURLForApplicationDefault from "getURLForApplication" /* 10808 */;
 import RPCErrorDefault from "RPCError" /* 10936 */;
 import transformUserDefault from "transformUser" /* 10946 */;
@@ -127,7 +127,7 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -250,7 +250,7 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -297,7 +297,7 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp26) {
       closure_5 = tmp26;

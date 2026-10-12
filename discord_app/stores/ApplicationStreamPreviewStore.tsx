@@ -1,6 +1,6 @@
-// === Module 7445: ApplicationStreamPreviewStore ===
+// === Module 7446: ApplicationStreamPreviewStore ===
 
-// Module 7445 (ApplicationStreamPreviewStore)
+// Module 7446 (ApplicationStreamPreviewStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

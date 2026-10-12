@@ -1,11 +1,11 @@
-// === Module 8039: NewThreadSystemMessage ===
+// === Module 8040: NewThreadSystemMessage ===
 
-// Module 8039 (NewThreadSystemMessage)
+// Module 8040 (NewThreadSystemMessage)
 import util from "util" /* 1126 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7978 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7980 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7982 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7979 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7981 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7983 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;

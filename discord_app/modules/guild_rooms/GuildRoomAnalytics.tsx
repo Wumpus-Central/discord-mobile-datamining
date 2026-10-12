@@ -1,15 +1,15 @@
-// === Module 7469: GuildRoomAnalytics ===
+// === Module 7470: GuildRoomAnalytics ===
 
-// Module 7469 (GuildRoomAnalytics)
+// Module 7470 (GuildRoomAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
-import GuildRoomUtils from "GuildRoomUtils" /* 7451 */;
-import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 7453 */;
+import GuildRoomUtils from "GuildRoomUtils" /* 7452 */;
+import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 7454 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 import VoiceStateStore from "VoiceStateStore" /* 5113 */;
-import GuildRoomStore from "GuildRoomStore" /* 7448 */;
+import GuildRoomStore from "GuildRoomStore" /* 7449 */;
 
 require = fn;
 function getBaseProperties(merged) {

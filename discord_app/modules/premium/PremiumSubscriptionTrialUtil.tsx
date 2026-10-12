@@ -1,11 +1,11 @@
-// === Module 8088: PremiumSubscriptionTrialUtil ===
+// === Module 8089: PremiumSubscriptionTrialUtil ===
 
-// Module 8088 (PremiumSubscriptionTrialUtil)
+// Module 8089 (PremiumSubscriptionTrialUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import UserStore from "UserStore" /* 1390 */;
 import SubscriptionStore from "SubscriptionStore" /* 4775 */;
-import UserOfferStore from "UserOfferStore" /* 7172 */;
+import UserOfferStore from "UserOfferStore" /* 7173 */;
 
 require = fn;
 const PremiumConstants = fn(1392);

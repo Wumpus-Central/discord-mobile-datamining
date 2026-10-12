@@ -4,7 +4,7 @@
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 5002 */;
-import VoiceChatModalContext from "VoiceChatModalContext" /* 10359 */;
+import VoiceChatModalContext from "VoiceChatModalContext" /* 10360 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ function MainCallScreen(channel) {
   channel = channel.channel;
   let isConnectedToVoiceChannel;
   const tmp = closure_14();
-  isConnectedToVoiceChannel = isConnectedToVoiceChannel(10357).useIsConnectedToVoiceChannel(channel);
+  isConnectedToVoiceChannel = isConnectedToVoiceChannel(10358).useIsConnectedToVoiceChannel(channel);
   const id = noop.useId();
   const items = [isConnectedToVoiceChannel, id];
   const effect = noop.useEffect(() => {
@@ -26,7 +26,7 @@ function MainCallScreen(channel) {
       const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key, lockEnabled: false });
     };
   }, items);
-  let obj = isConnectedToVoiceChannel(10357);
+  let obj = isConnectedToVoiceChannel(10358);
   const isChannelContentGated = isConnectedToVoiceChannel(5924).useIsChannelContentGated(channel);
   const effect1 = noop.useEffect(() => {
     function dismissOAuthModal() {
@@ -57,7 +57,7 @@ function MainCallScreen(channel) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -92,7 +92,7 @@ function MainCallScreen(channel) {
           } else {
             closure_129_0 = true;
             c3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp7) {
           c3 = tmp;
@@ -147,7 +147,7 @@ function MainCallScreen(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ChannelCallScreens = fn(10354).ChannelCallScreens;
+const ChannelCallScreens = fn(10355).ChannelCallScreens;
 const ComponentActions = fn(1085).ComponentActions;
 let closure_11 = fn(10863).OAUTH2_AUTHORIZE_MODAL_KEY;
 const jsxProd = fn(21);
@@ -336,7 +336,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function CallWi
         let tmp29 = null;
         if (tmp13) {
           const obj9 = { channel };
-          tmp29 = closure_12(tmp5(10352), obj9);
+          tmp29 = closure_12(tmp5(10353), obj9);
         }
         cResult[13] = channel;
         cResult[14] = tmp13;
@@ -466,7 +466,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function CallWi
   let tmp18Result = null;
   if (tmp11[0]) {
     const obj9 = { channel };
-    tmp18Result = closure_12(tmp2(10352), obj9);
+    tmp18Result = closure_12(tmp2(10353), obj9);
   }
   obj8.children = tmp18Result;
   items3[1] = closure_12(closure_6, obj8);
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
   }
   if (cResult[2] !== tmp6) {
     const obj4 = { screens: tmp6, initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN };
-    const tmp9 = closure_12(tmp(6687).Navigator, obj4);
+    const tmp9 = closure_12(tmp(6688).Navigator, obj4);
     cResult[2] = tmp6;
     cResult[3] = tmp9;
     let tmp7 = tmp9;
@@ -545,6 +545,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
     },
     initialRouteName: ChannelCallScreens.MAIN_CALL_SCREEN
   };
-  obj.children = closure_12(channel(6687).Navigator, obj2);
+  obj.children = closure_12(channel(6688).Navigator, obj2);
   return closure_12(GuildThemeGuildIdOverrideContextDefault.Provider, obj);
 });

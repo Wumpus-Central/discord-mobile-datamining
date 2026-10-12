@@ -4,7 +4,7 @@
 import MarkupReactRules from "MarkupReactRules" /* 5080 */;
 import combineMarkupRulesDefault from "combineMarkupRules" /* 5401 */;
 import MarkupRulesDefault from "MarkupRules" /* 5402 */;
-import MarkupParserAll from "MarkupParser" /* 8004 */;
+import MarkupParserAll from "MarkupParser" /* 8005 */;
 import apply_mod from "module_12" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;

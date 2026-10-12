@@ -1,13 +1,13 @@
-// === Module 8948: GameProfileSection ===
+// === Module 8949: GameProfileSection ===
 
-// Module 8948 (GameProfileSection)
+// Module 8949 (GameProfileSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6905 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 8946 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6906 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 8947 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;

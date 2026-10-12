@@ -1,9 +1,9 @@
-// === Module 12383: ChannelSafeAreaBottom ===
+// === Module 12385: ChannelSafeAreaBottom ===
 
-// Module 12383 (ChannelSafeAreaBottom)
-import ChannelSafeAreaBottomNoopDefault from "ChannelSafeAreaBottomNoop" /* 12384 */;
-import ChannelSafeAreaBottomAnimatedDefault from "ChannelSafeAreaBottomAnimated" /* 12385 */;
-import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 10367 */;
+// Module 12385 (ChannelSafeAreaBottom)
+import ChannelSafeAreaBottomNoopDefault from "ChannelSafeAreaBottomNoop" /* 12386 */;
+import ChannelSafeAreaBottomAnimatedDefault from "ChannelSafeAreaBottomAnimated" /* 12387 */;
+import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 10368 */;
 import size from "module_2" /* 2 */;
 
 if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {

@@ -1,18 +1,18 @@
-// === Module 12112: ApplicationCommandsCategories ===
+// === Module 12114: ApplicationCommandsCategories ===
 
-// Module 12112 (ApplicationCommandsCategories)
+// Module 12114 (ApplicationCommandsCategories)
 import nativeDefault from "native" /* 587 */;
 import HapticUtils from "HapticUtils" /* 5057 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5058 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11927 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11929 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
-const ApplicationCommandsCategoriesConstants = fn(12107);
+const ApplicationCommandsCategoriesConstants = fn(12109);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: closure_7 } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
@@ -184,7 +184,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   obj3.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj3.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(6184).PressableOpacity, {
+  return jsx(section(6185).PressableOpacity, {
     onPress() {
       return importDefault(dependencyMap);
     },

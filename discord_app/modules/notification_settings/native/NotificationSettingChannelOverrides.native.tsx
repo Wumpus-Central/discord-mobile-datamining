@@ -1,15 +1,15 @@
-// === Module 18557: NotificationSettingChannelOverrides ===
+// === Module 18615: NotificationSettingChannelOverrides ===
 
-// Module 18557 (NotificationSettingChannelOverrides)
+// Module 18615 (NotificationSettingChannelOverrides)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6094 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 6801 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6095 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 6802 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 6800 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 6801 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 

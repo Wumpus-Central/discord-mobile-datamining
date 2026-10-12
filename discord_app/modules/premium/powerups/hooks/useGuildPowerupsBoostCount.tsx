@@ -1,9 +1,9 @@
-// === Module 8029: useGuildPowerupsBoostCount ===
+// === Module 8030: useGuildPowerupsBoostCount ===
 
-// Module 8029 (useGuildPowerupsBoostCount)
+// Module 8030 (useGuildPowerupsBoostCount)
 import GameServerExperiment from "GameServerExperiment" /* 5026 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8030 */;
+import GameServerStore from "GameServerStore" /* 8031 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5007 */;
 

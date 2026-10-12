@@ -1,9 +1,9 @@
-// === Module 10389: useSafetyAlertsSettingOrDefault ===
+// === Module 10390: useSafetyAlertsSettingOrDefault ===
 
-// Module 10389 (useSafetyAlertsSettingOrDefault)
+// Module 10390 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useUserIsTeen from "useUserIsTeen" /* 7737 */;
+import useUserIsTeen from "useUserIsTeen" /* 7738 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 import UserStore from "UserStore" /* 1390 */;
 

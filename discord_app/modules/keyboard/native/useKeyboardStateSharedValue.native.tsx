@@ -1,12 +1,12 @@
-// === Module 11707: useKeyboardStateSharedValue ===
+// === Module 11709: useKeyboardStateSharedValue ===
 
-// Module 11707 (useKeyboardStateSharedValue)
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10372 */;
+// Module 11709 (useKeyboardStateSharedValue)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10373 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1499 */;
 
 const ReanimatedRexport = fn(4850);
 const obj2 = { customKeyboardHeight: null, keyboardHeight: null, keyboardType: null };
-const useCustomKeyboardHeight = fn(6667);
+const useCustomKeyboardHeight = fn(6668);
 obj2.customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
 const useSystemKeyboardHeight = fn(1897);
 obj2.keyboardHeight = useSystemKeyboardHeight.getSystemKeyboardHeight();

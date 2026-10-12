@@ -1,8 +1,8 @@
-// === Module 8633: AddModerators ===
+// === Module 8634: AddModerators ===
 
-// Module 8633 (AddModerators)
+// Module 8634 (AddModerators)
 import nativeDefault from "native" /* 587 */;
-import HeaderActionButton from "HeaderActionButton" /* 7088 */;
+import HeaderActionButton from "HeaderActionButton" /* 7089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["guildId", "onChannelCreated"];
 const View = fn(17).View;
-const RowType = fn(7489).RowType;
+const RowType = fn(7490).RowType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5092);

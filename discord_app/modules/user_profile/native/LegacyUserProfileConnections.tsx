@@ -8,20 +8,20 @@ import ToastUtils from "ToastUtils" /* 4808 */;
 import HapticUtils from "HapticUtils" /* 5057 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import PlatformsDefault from "Platforms" /* 5763 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8490 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8491 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import StreamerModeStore from "StreamerModeStore" /* 4963 */;
-import UserProfileStore from "UserProfileStore" /* 7320 */;
+import UserProfileStore from "UserProfileStore" /* 7321 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, PlatformTypes: closure_11, ThemeTypes: closure_12 } = Constants);
-const MetadataFields = fn(6876).MetadataFields;
+const MetadataFields = fn(6877).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const createStyles = fn(5092);
@@ -62,8 +62,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
     metadata = {};
   }
   if (showMetadata) {
-    const createdAtDate = tmp(6875).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], account.locale);
-    const tmpResult = tmp(6875);
+    const createdAtDate = tmp(6876).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], account.locale);
+    const tmpResult = tmp(6876);
   }
   if (showMetadata) {
     const type = account.type;
@@ -515,8 +515,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
   }
   let createdAtDate = null;
   if (showMetadata) {
-    createdAtDate = account(6875).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], locale);
-    let obj2 = account(6875);
+    createdAtDate = account(6876).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], locale);
+    let obj2 = account(6876);
   }
   if (showMetadata) {
     const type = account.type;
@@ -646,7 +646,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedUse
       }
     }, items3);
     if (null != platformUserUrl) {
-      let PressableOpacity = tmp23(6184).PressableOpacity;
+      let PressableOpacity = tmp23(6185).PressableOpacity;
     } else {
       PressableOpacity = closure_4;
     }
@@ -838,7 +838,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedApp
                   const obj = { style: closure_1.connectedAccountPoweredByText, children: null };
                   let tmp5 = null;
                   if (null != applicationRoleConnection.application.bot) {
-                    const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "Array" };
+                    const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "a" };
                     const tmp12 = new UserRecord(applicationRoleConnection.application.bot);
                     obj2.user = tmp12;
                     obj2.size = native.AvatarSizes.SIZE_16;
@@ -922,7 +922,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedApp
       const obj = { style: closure_1.connectedAccountPoweredByText, children: null };
       let tmp5 = null;
       if (null != applicationRoleConnection.application.bot) {
-        const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "Array" };
+        const obj2 = { style: tmp3.connectedAccountPoweredByAvatar, user: null, size: null, guildId: "a" };
         const tmp12 = new UserRecord(applicationRoleConnection.application.bot);
         obj2.user = tmp12;
         obj2.size = native.AvatarSizes.SIZE_16;

@@ -1,6 +1,6 @@
-// === Module 12818: ChannelFollowerStatsStore ===
+// === Module 12820: ChannelFollowerStatsStore ===
 
-// Module 12818 (ChannelFollowerStatsStore)
+// Module 12820 (ChannelFollowerStatsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

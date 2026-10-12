@@ -1,6 +1,6 @@
-// === Module 15061: AccountIgnoredUsersSetting ===
+// === Module 15084: AccountIgnoredUsersSetting ===
 
-// Module 15061 (AccountIgnoredUsersSetting)
+// Module 15084 (AccountIgnoredUsersSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -42,7 +42,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
   return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
 });
 const route = SettingBuilders.createRoute({
-  IconComponent: fn(6649).EyeSlashIcon,
+  IconComponent: fn(6650).EyeSlashIcon,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["93ZDWE"]);
@@ -79,7 +79,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
   }),
-  parent: fn(7992).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7993).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1085).UserSettingsSections.IGNORED_USERS,
     getComponent() {

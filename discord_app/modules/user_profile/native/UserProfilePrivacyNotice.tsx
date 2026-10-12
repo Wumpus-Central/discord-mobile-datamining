@@ -1,16 +1,16 @@
-// === Module 13372: UserProfilePrivacyNotice ===
+// === Module 13395: UserProfilePrivacyNotice ===
 
-// Module 13372 (UserProfilePrivacyNotice)
+// Module 13395 (UserProfilePrivacyNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5046 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6184 */;
-import XSmallIcon from "XSmallIcon" /* 6207 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7099 */;
-import useUserIsTeen from "useUserIsTeen" /* 7737 */;
+import Pressables from "Pressables" /* 6185 */;
+import XSmallIcon from "XSmallIcon" /* 6208 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7100 */;
+import useUserIsTeen from "useUserIsTeen" /* 7738 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp38 = closure_7(tmp(6207).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+                      const tmp38 = closure_7(tmp(6208).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
                       cResult[25] = tmp38;
                       let tmp36 = tmp38;
                     } else {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                       tmp42 = tmp44;
                     }
                     const obj4 = { accessibilityRole: "button", accessibilityLabel: tmp33, onPress: tmp35, style: tmp4.closeButton, children: tmp36 };
-                    const tmp41 = closure_7(tmp(6184).PressableOpacity, obj4);
+                    const tmp41 = closure_7(tmp(6185).PressableOpacity, obj4);
                     cResult[26] = tmp4.closeButton;
                     cResult[27] = tmp35;
                     cResult[28] = tmp41;

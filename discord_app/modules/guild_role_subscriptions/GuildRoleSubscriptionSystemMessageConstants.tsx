@@ -1,6 +1,6 @@
-// === Module 8010: GuildRoleSubscriptionSystemMessageConstants ===
+// === Module 8011: GuildRoleSubscriptionSystemMessageConstants ===
 
-// Module 8010 (GuildRoleSubscriptionSystemMessageConstants)
+// Module 8011 (GuildRoleSubscriptionSystemMessageConstants)
 import util from "util" /* 1126 */;
 import StickersTypes from "StickersTypes" /* 5750 */;
 import size from "module_2" /* 2 */;

@@ -2,10 +2,10 @@
 
 // Module 10783 (UploadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DraftStore from "DraftStore" /* 7243 */;
-import UploadStore from "UploadStore" /* 7886 */;
+import DraftStore from "DraftStore" /* 7244 */;
+import UploadStore from "UploadStore" /* 7887 */;
 
-const DraftType = fn(7243).DraftType;
+const DraftType = fn(7244).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/native/UploadActionCreators.tsx");
 

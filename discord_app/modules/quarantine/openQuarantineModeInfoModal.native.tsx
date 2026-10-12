@@ -1,6 +1,6 @@
-// === Module 6099: openQuarantineModeInfoModal ===
+// === Module 6100: openQuarantineModeInfoModal ===
 
-// Module 6099 (openQuarantineModeInfoModal)
+// Module 6100 (openQuarantineModeInfoModal)
 import ChatInputUtils from "ChatInputUtils" /* 4985 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import noop from "module_19" /* 19 */;

@@ -1,11 +1,11 @@
-// === Module 17694: ActivityPanelUtils ===
+// === Module 17751: ActivityPanelUtils ===
 
-// Module 17694 (ActivityPanelUtils)
+// Module 17751 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4739 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 10480 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 10481 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;

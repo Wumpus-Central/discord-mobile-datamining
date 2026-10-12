@@ -1,6 +1,6 @@
-// === Module 8778: SegmentedControl ===
+// === Module 8779: SegmentedControl ===
 
-// Module 8778 (SegmentedControl)
+// Module 8779 (SegmentedControl)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;

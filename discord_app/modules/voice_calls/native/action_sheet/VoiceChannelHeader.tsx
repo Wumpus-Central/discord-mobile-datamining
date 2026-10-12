@@ -1,21 +1,21 @@
-// === Module 13587: VoiceChannelHeader ===
+// === Module 13610: VoiceChannelHeader ===
 
-// Module 13587 (VoiceChannelHeader)
+// Module 13610 (VoiceChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
-import Pressables from "Pressables" /* 6184 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 6795 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8682 */;
-import _modDef10331 from "module_10331" /* 10331 */;
+import Pressables from "Pressables" /* 6185 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6796 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8683 */;
+import _modDef10332 from "module_10332" /* 10332 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 10748 */;
 import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11016 */;
-import CallStateHooks from "CallStateHooks" /* 13588 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13589 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 13590 */;
+import CallStateHooks from "CallStateHooks" /* 13611 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13612 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13613 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -414,7 +414,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { size: channel(1200).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
   if (isRoleRequiredDefault(channel)) {
-    let tmp5Result = tmp5(13592);
+    let tmp5Result = tmp5(13615);
   } else {
     tmp5Result = tmp5(11127);
   }
@@ -466,14 +466,14 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
     }
     return tmp7;
   }
-  const tmp8 = collapsed(closure_15, { onPress, iconSource: _modDef10331, iconStyle: tmp4.icons, accessibilityLabel: first });
+  const tmp8 = collapsed(closure_15, { onPress, iconSource: _modDef10332, iconStyle: tmp4.icons, accessibilityLabel: first });
   cResult[1] = onPress;
   cResult[2] = tmp4.icons;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-  const obj2 = { onPress, iconSource: _modDef10331, iconStyle: tmp4.icons, accessibilityLabel: first };
+  const obj2 = { onPress, iconSource: _modDef10332, iconStyle: tmp4.icons, accessibilityLabel: first };
 }) : (function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10331, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef10332, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return collapsed(closure_15, obj);

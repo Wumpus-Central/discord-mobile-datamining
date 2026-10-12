@@ -1,22 +1,22 @@
-// === Module 10362: ChatView ===
+// === Module 10363: ChatView ===
 
-// Module 10362 (ChatView)
+// Module 10363 (ChatView)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import ChatInputUtils from "ChatInputUtils" /* 4985 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7013 */;
-import SummaryActionCreators from "SummaryActionCreators" /* 9675 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 10366 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 10380 */;
-import MessagesDefault from "Messages" /* 10482 */;
-import ChatInputDefault from "ChatInput" /* 11630 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11964 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 12201 */;
-import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12378 */;
-import ChatPlaceholderDefault from "ChatPlaceholder" /* 12379 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12383 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12386 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7014 */;
+import SummaryActionCreators from "SummaryActionCreators" /* 9676 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 10367 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 10381 */;
+import MessagesDefault from "Messages" /* 10483 */;
+import ChatInputDefault from "ChatInput" /* 11632 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11966 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 12203 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12380 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 12381 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12385 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12388 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

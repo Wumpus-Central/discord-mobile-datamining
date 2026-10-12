@@ -1,6 +1,6 @@
-// === Module 9440: BurstReactionToggle ===
+// === Module 9441: BurstReactionToggle ===
 
-// Module 9440 (BurstReactionToggle)
+// Module 9441 (BurstReactionToggle)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import timing from "timing" /* 5093 */;
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstRea
     tmp6 = tmp5;
   }
   const ref = noop.useRef(null);
-  const tmp8 = tmp6(9441)(ref);
+  const tmp8 = tmp6(9442)(ref);
   importDefault = tmp8;
   if (cResult[0] === tmp8) {
     if (cResult[1] === onPress) {
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstRea
         }
         if (cResult[10] !== INTERACTIVE_TEXT_DEFAULT) {
           const obj3 = { color: INTERACTIVE_TEXT_DEFAULT };
-          const tmp19 = jsx(tmp(9407).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
+          const tmp19 = jsx(tmp(9408).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
           cResult[10] = INTERACTIVE_TEXT_DEFAULT;
           cResult[11] = tmp19;
           let tmp17 = tmp19;
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstRea
     tmp5 = tmp2;
   }
   const ref = noop.useRef(null);
-  importDefault = tmp5(9441)(ref);
+  importDefault = tmp5(9442)(ref);
   obj = {
     onPress: function handleOnPress() {
       closure_1(ContentDismissActionType.AUTO);
@@ -307,7 +307,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BurstRea
   const obj2 = { style: null, ref, children: null };
   const items = [closure_13().container, closure_12(isActive).containerStyle];
   obj2.style = items;
-  obj2.children = jsx(tmp11(9407).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
+  obj2.children = jsx(tmp11(9408).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
   obj.children = jsx(tmp5(4850).View, { style: null, ref, children: null });
   return <Pressable onPress={function handleOnPress() {
     closure_1(ContentDismissActionType.AUTO);

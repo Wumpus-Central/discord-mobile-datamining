@@ -1,19 +1,19 @@
-// === Module 7567: InlineNotice ===
+// === Module 7568: InlineNotice ===
 
-// Module 7567 (InlineNotice)
+// Module 7568 (InlineNotice)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import HelpMessageDefault from "HelpMessage" /* 7568 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 7569 */;
-import NewInlineNotice from "NewInlineNotice" /* 7570 */;
+import HelpMessageDefault from "HelpMessage" /* 7569 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 7570 */;
+import NewInlineNotice from "NewInlineNotice" /* 7571 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const InlineNotice = "InlineNotice";
-let obj = { critical: fn(7568).HelpMessageTypes.ERROR, warning: fn(7568).HelpMessageTypes.WARNING, info: fn(7568).HelpMessageTypes.INFO, positive: fn(7568).HelpMessageTypes.SUCCESS };
+let obj = { critical: fn(7569).HelpMessageTypes.ERROR, warning: fn(7569).HelpMessageTypes.WARNING, info: fn(7569).HelpMessageTypes.INFO, positive: fn(7569).HelpMessageTypes.SUCCESS };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/mana/components/InlineNotice/InlineNotice.native.tsx");

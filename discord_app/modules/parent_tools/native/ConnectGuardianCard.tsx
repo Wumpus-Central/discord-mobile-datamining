@@ -1,16 +1,16 @@
-// === Module 15137: ConnectGuardianCard ===
+// === Module 15160: ConnectGuardianCard ===
 
-// Module 15137 (ConnectGuardianCard)
+// Module 15160 (ConnectGuardianCard)
 import nativeDefault from "native" /* 587 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15134 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15157 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7259).FAMILY_CENTER_REQUEST_QR_CODE_URL;
+let closure_6 = fn(7260).FAMILY_CENTER_REQUEST_QR_CODE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5092);

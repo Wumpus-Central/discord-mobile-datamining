@@ -1,7 +1,7 @@
-// === Module 12047: SearchTokenStreamerModeUtils ===
+// === Module 12049: SearchTokenStreamerModeUtils ===
 
-// Module 12047 (SearchTokenStreamerModeUtils)
-import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 12045 */;
+// Module 12049 (SearchTokenStreamerModeUtils)
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 12047 */;
 import StreamerModeStore from "StreamerModeStore" /* 4963 */;
 
 require = fn;

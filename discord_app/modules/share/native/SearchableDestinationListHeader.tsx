@@ -1,12 +1,12 @@
-// === Module 11566: SearchableDestinationListHeader ===
+// === Module 11568: SearchableDestinationListHeader ===
 
-// Module 11566 (SearchableDestinationListHeader)
+// Module 11568 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
-import _mod6209 from "module_6209" /* 6209 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6626 */;
-import HeaderShared from "HeaderShared" /* 9297 */;
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
+import _mod6210 from "module_6210" /* 6210 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 6627 */;
+import HeaderShared from "HeaderShared" /* 9298 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,11 +35,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
       let tmp7 = cResult[2];
     }
     if (cResult[3] !== onClose) {
-      const headerCloseButton = subtitle(6200).getHeaderCloseButton(onClose);
+      const headerCloseButton = subtitle(6201).getHeaderCloseButton(onClose);
       cResult[3] = onClose;
       cResult[4] = headerCloseButton;
       let tmp8 = headerCloseButton;
-      const tmpResult = subtitle(6200);
+      const tmpResult = subtitle(6201);
     } else {
       tmp8 = cResult[4];
     }
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
       if (!tmpResult3.isIOS()) {
         let num3 = top;
       } else {
-        subtitle(6626);
+        subtitle(6627);
         num3 = 0;
       }
       cResult[5] = top;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     const obj2 = { headerStyle: tmp6, title, headerTitle: tmp7, headerTitleAlign: "center", headerLeft: tmp8, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
     ({ headerLeftContainer: obj5.headerLeftContainerStyle, headerRightContainer: obj5.headerRightContainerStyle } = tmp4);
     obj2.headerStatusBarHeight = sum;
-    const tmp14 = jsx(subtitle(6209).Header, { headerStyle: tmp6, title, headerTitle: tmp7, headerTitleAlign: "center", headerLeft: tmp8, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
+    const tmp14 = jsx(subtitle(6210).Header, { headerStyle: tmp6, title, headerTitle: tmp7, headerTitleAlign: "center", headerLeft: tmp8, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
     cResult[7] = headerRight;
     cResult[8] = tmp4.header;
     cResult[9] = tmp4.headerLeftContainer;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     num = 0;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  return jsx(_mod6209.Header, {
+  return jsx(_mod6210.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

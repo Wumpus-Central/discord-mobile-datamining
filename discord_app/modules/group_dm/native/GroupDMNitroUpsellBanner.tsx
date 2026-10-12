@@ -1,6 +1,6 @@
-// === Module 17403: GroupDMNitroUpsellBanner ===
+// === Module 17460: GroupDMNitroUpsellBanner ===
 
-// Module 17403 (GroupDMNitroUpsellBanner)
+// Module 17460 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,11 +9,11 @@ import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import spring from "spring" /* 5378 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import _modDef8080 from "module_8080" /* 8080 */;
+import _modDef8081 from "module_8081" /* 8081 */;
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 10749 */;
 import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 10752 */;
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 10756 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 17404 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 17461 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
@@ -832,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
                 tmp34 = tmp36;
               }
             }
-            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef8080, onPress: tmp14 };
+            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef8081, onPress: tmp14 };
             const tmp26 = options(components_Button_Button.Button, obj9);
             cResult[17] = tmp14;
             cResult[18] = tmp21;
@@ -904,7 +904,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
     tmp15 = !stateFromStores;
   }
   obj7.shiny = tmp15;
-  obj7.icon = _modDef8080;
+  obj7.icon = _modDef8081;
   obj7.onPress = tmp7Result;
   obj6.trailing = options(components_Button_Button.Button, obj7);
   const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

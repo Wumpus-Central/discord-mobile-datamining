@@ -1,6 +1,6 @@
-// === Module 18651: ErrorScreen ===
+// === Module 18709: ErrorScreen ===
 
-// Module 18651 (ErrorScreen)
+// Module 18709 (ErrorScreen)
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -32,7 +32,7 @@ export default function ErrorScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ export default function ErrorScreen() {
           c3 = 0;
           closure_129_0(false);
           c5 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp32) {
         if (tmp4 === c3) {

@@ -1,10 +1,10 @@
-// === Module 15797: UserSettingsCommunityNotifications ===
+// === Module 15820: UserSettingsCommunityNotifications ===
 
-// Module 15797 (UserSettingsCommunityNotifications)
+// Module 15820 (UserSettingsCommunityNotifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1126 */;
-import TableRowGroup from "TableRowGroup" /* 6264 */;
-import TableSwitchRow from "TableSwitchRow" /* 6895 */;
+import TableRowGroup from "TableRowGroup" /* 6265 */;
+import TableSwitchRow from "TableSwitchRow" /* 6896 */;
 import noop from "module_19" /* 19 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 10694 */;
 
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     const mapped = keys.map(tmp16);
     const container = tmp4.container;
-    const Form = tmp(8579).Form;
+    const Form = tmp(8580).Form;
     const Stack = tmp(5377).Stack;
   }
 }) : (function UserSettingsCommunityNotifications() {
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         })
     };
     obj3.children = closure_4(tmp2(5377).Stack, obj4);
-    tmp5 = closure_4(tmp2(8579).Form, obj3);
+    tmp5 = closure_4(tmp2(8580).Form, obj3);
   }
   return tmp5;
 });

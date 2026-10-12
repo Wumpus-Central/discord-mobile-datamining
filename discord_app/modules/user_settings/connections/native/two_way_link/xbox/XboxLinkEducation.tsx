@@ -1,15 +1,15 @@
-// === Module 12909: XboxLinkEducation ===
+// === Module 12911: XboxLinkEducation ===
 
-// Module 12909 (XboxLinkEducation)
+// Module 12911 (XboxLinkEducation)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6813 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9214 */;
-import _modDef12910 from "module_12910" /* 12910 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9215 */;
+import _modDef12912 from "module_12912" /* 12912 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   }
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj10 = { uri: _modDef12910 };
+    const obj10 = { uri: _modDef12912 };
     cResult[16] = obj10;
     let tmp18 = obj10;
   } else {
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   const obj3 = { style: twoWayLinkStyles.container, children: null };
   const obj4 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef12910 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef12912 }), []);
   const items = [timestampProducer(FastImageDefault, { source: memo, style: tmp.image }), , ];
   const obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;

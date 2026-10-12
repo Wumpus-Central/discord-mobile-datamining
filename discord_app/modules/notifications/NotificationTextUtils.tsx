@@ -1,6 +1,6 @@
-// === Module 12568: NotificationTextUtils ===
+// === Module 12570: NotificationTextUtils ===
 
-// Module 12568 (NotificationTextUtils)
+// Module 12570 (NotificationTextUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -15,15 +15,15 @@ import useChannelName from "useChannelName" /* 5421 */;
 import isMessageMentioned from "isMessageMentioned" /* 5632 */;
 import AgeGateUtils from "AgeGateUtils" /* 5924 */;
 import isChannelFocused from "isChannelFocused" /* 6072 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6079 */;
-import ThreadNotificationSettings from "ThreadNotificationSettings" /* 6083 */;
-import isForwardMessage from "isForwardMessage" /* 7001 */;
-import MessageParserDefault from "MessageParser" /* 7369 */;
-import IsolateString from "IsolateString" /* 7372 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8003 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8393 */;
-import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 12570 */;
-import FocusModeUtils from "FocusModeUtils" /* 12571 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6080 */;
+import ThreadNotificationSettings from "ThreadNotificationSettings" /* 6084 */;
+import isForwardMessage from "isForwardMessage" /* 7002 */;
+import MessageParserDefault from "MessageParser" /* 7370 */;
+import IsolateString from "IsolateString" /* 7373 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8004 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8394 */;
+import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 12572 */;
+import FocusModeUtils from "FocusModeUtils" /* 12573 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import LurkingStore from "LurkingStore" /* 4751 */;
 import MessageRequestStore from "MessageRequestStore" /* 6055 */;
@@ -39,7 +39,7 @@ import SelfPresenceStore from "SelfPresenceStore" /* 5759 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2059 */;
 import UserStore from "UserStore" /* 1390 */;
-import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 12569 */;
+import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 12571 */;
 
 const isForwardMessageDefault = isForwardMessage;
 

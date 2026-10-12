@@ -1,11 +1,11 @@
-// === Module 18496: FormImagePicker ===
+// === Module 18554: FormImagePicker ===
 
-// Module 18496 (FormImagePicker)
+// Module 18554 (FormImagePicker)
 import nativeDefault from "native" /* 587 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import utils_UploadUtilsDefault from "utils/UploadUtils" /* 7768 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8673 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 7769 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8674 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ let closure_13 = async function _pickImage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ let closure_13 = async function _pickImage() {
             closure_130_0(obj);
           }
           c4 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp17) {
         c4 = tmp;

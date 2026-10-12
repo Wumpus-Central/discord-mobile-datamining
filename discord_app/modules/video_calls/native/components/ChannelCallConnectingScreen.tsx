@@ -9,9 +9,9 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5889 */;
-import BottomSheetModal from "BottomSheetModal" /* 6306 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6839 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8682 */;
+import BottomSheetModal from "BottomSheetModal" /* 6307 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8683 */;
 import UserSettingsVoiceDefault from "UserSettingsVoice" /* 11072 */;
 import VoiceChatHeaderIconDefault from "VoiceChatHeaderIcon" /* 11099 */;
 import _modDef11100 from "module_11100" /* 11100 */;
@@ -26,7 +26,7 @@ import SessionsStore from "SessionsStore" /* 5112 */;
 
 require = fn;
 const View = fn(17).View;
-const resetFocus = fn(10353).resetFocus;
+const resetFocus = fn(10354).resetFocus;
 const InstantInviteSources = fn(1085).InstantInviteSources;
 const Permissions = fn(1096).Permissions;
 const jsxProd = fn(21);

@@ -1,6 +1,6 @@
-// === Module 16048: OrbCheckoutMenu ===
+// === Module 16071: OrbCheckoutMenu ===
 
-// Module 16048 (OrbCheckoutMenu)
+// Module 16071 (OrbCheckoutMenu)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -27,13 +27,13 @@ export default function OrbCheckoutMenu() {
             closure_1_1(closure_1_2[7]).open("ORB_CHECKOUT_SUCCESS", { text: "Successfully redeemed item with Orbs" });
           }
       };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13431, dependencyMap.paths), obj2);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13454, dependencyMap.paths), obj2);
     }
   }, items);
   let obj = { children: null };
   const items1 = [
     closure_5(value(5088).Text, { style: tmp.title, variant: "text-md/bold", children: "Redeem SKU for Orbs" }),
-    closure_5(value(6285).TextInput, {
+    closure_5(value(6286).TextInput, {
       containerStyle: tmp.textInput,
       label: "SKU ID",
       value,
@@ -46,5 +46,5 @@ export default function OrbCheckoutMenu() {
     closure_5(value(5379).Button, { text: "Open Orbs Checkout", variant: "primary", onPress: callback, disabled: null == value })
   ];
   obj.children = items1;
-  return closure_6(value(6181).Card, obj);
+  return closure_6(value(6182).Card, obj);
 };

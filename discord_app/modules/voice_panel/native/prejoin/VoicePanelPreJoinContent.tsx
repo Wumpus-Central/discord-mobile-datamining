@@ -1,6 +1,6 @@
-// === Module 17835: VoicePanelPreJoinContent ===
+// === Module 17892: VoicePanelPreJoinContent ===
 
-// Module 17835 (VoicePanelPreJoinContent)
+// Module 17892 (VoicePanelPreJoinContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -13,20 +13,20 @@ import spring from "spring" /* 5378 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5889 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
-import NativeViewDefault from "NativeView" /* 6161 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6289 */;
-import StreamActionCreators from "StreamActionCreators" /* 7443 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7492 */;
-import FormComponents from "FormComponents" /* 8796 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8971 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11575 */;
+import NativeViewDefault from "NativeView" /* 6162 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6290 */;
+import StreamActionCreators from "StreamActionCreators" /* 7444 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7493 */;
+import FormComponents from "FormComponents" /* 8797 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8972 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11577 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import GameConsoleStore from "GameConsoleStore" /* 5111 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 14001 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 14024 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -44,17 +44,17 @@ function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
 }
 let closure_3 = ["transitionState", "transitionCleanUp"];
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(11970).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(11973).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(11972).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(11975).EDGE_GUTTER;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_22, AnalyticsSections: closure_23, Permissions: closure_24 } = Constants);
-const constants4 = fn(14005).VoiceChannelWarningSurfaces;
+const constants4 = fn(14028).VoiceChannelWarningSurfaces;
 const Features = fn(5117).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28, Fragment: closure_29 } = jsxProd);
 const createStyles = fn(5092);
-let obj = { contentWrapper: { paddingTop: EDGE_GUTTER + fn(11974).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 }, channelInfoWrapper: { paddingHorizontal: 16 }, subheading: { textAlign: "center", paddingTop: 16, paddingBottom: 16 }, previewImageWrapper: null, previewImage: null, activityInfoWrapper: null, activityInfoHeader: null, joinButtonWrapper: null, optInChannelsContainer: null, blockedMemberWarning: null, consolePreJoinPadding: null };
-let obj3 = { paddingTop: EDGE_GUTTER + fn(11974).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 };
+let obj = { contentWrapper: { paddingTop: EDGE_GUTTER + fn(11976).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 }, channelInfoWrapper: { paddingHorizontal: 16 }, subheading: { textAlign: "center", paddingTop: 16, paddingBottom: 16 }, previewImageWrapper: null, previewImage: null, activityInfoWrapper: null, activityInfoHeader: null, joinButtonWrapper: null, optInChannelsContainer: null, blockedMemberWarning: null, consolePreJoinPadding: null };
+let obj3 = { paddingTop: EDGE_GUTTER + fn(11976).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 };
 obj.previewImageWrapper = { position: "relative", width: "100%", aspectRatio: 1.7777777777777777, borderRadius: nativeDefault.radii.lg, overflow: "hidden", justifyContent: "center", backgroundColor: nativeDefault.colors.BLACK };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -456,7 +456,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                               const obj4 = { value, done: true };
                               return obj4;
                             } else {
-                              return { value: "IconComponent", done: "+51" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -540,7 +540,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                 const obj4 = { value, done: true };
                                 return obj4;
                               } else {
-                                return { value: "IconComponent", done: "+51" };
+                                return { value: "IconComponent", done: null };
                               }
                             } else {
                               try {
@@ -626,7 +626,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                   const obj4 = { value, done: true };
                                   return obj4;
                                 } else {
-                                  return { value: "IconComponent", done: "+51" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -707,7 +707,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                   const obj4 = { value, done: true };
                                   return obj4;
                                 } else {
-                                  return { value: "IconComponent", done: "+51" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -785,7 +785,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                   const obj4 = { value, done: true };
                                   return obj4;
                                 } else {
-                                  return { value: "IconComponent", done: "+51" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -887,7 +887,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                             const obj4 = { value, done: true };
                                             return obj4;
                                           } else {
-                                            return { value: "IconComponent", done: "+51" };
+                                            return { value: "IconComponent", done: null };
                                           }
                                         } else {
                                           try {
@@ -971,7 +971,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                       const obj4 = { value, done: true };
                                       return obj4;
                                     } else {
-                                      return { value: "IconComponent", done: "+51" };
+                                      return { value: "IconComponent", done: null };
                                     }
                                   } else {
                                     try {
@@ -1055,7 +1055,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                     const obj4 = { value, done: true };
                                     return obj4;
                                   } else {
-                                    return { value: "IconComponent", done: "+51" };
+                                    return { value: "IconComponent", done: null };
                                   }
                                 } else {
                                   try {
@@ -1133,7 +1133,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                 const obj4 = { value, done: true };
                                 return obj4;
                               } else {
-                                return { value: "IconComponent", done: "+51" };
+                                return { value: "IconComponent", done: null };
                               }
                             } else {
                               try {
@@ -1216,7 +1216,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                               const obj4 = { value, done: true };
                               return obj4;
                             } else {
-                              return { value: "IconComponent", done: "+51" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -1295,7 +1295,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                             const obj4 = { value, done: true };
                             return obj4;
                           } else {
-                            return { value: "IconComponent", done: "+51" };
+                            return { value: "IconComponent", done: null };
                           }
                         } else {
                           try {
@@ -1375,7 +1375,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                         const obj4 = { value, done: true };
                         return obj4;
                       } else {
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -1457,7 +1457,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -1583,7 +1583,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -2817,10 +2817,10 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/Voic
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelPreJoinWrapper() {
   const cResult = channelId(576).c(8);
-  const context = noop.useContext(guildId(11969));
+  const context = noop.useContext(guildId(11971));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp5 = guildId(17724)(channelId);
+  const tmp5 = guildId(17781)(channelId);
   dependencyMap = tmp5;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [SortedVoiceStateStore, VoiceChannelBlockedUserStore, EmbeddedActivitiesStore, MediaEngineStore, ApplicationStreamingStore];
@@ -2836,7 +2836,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         let tmp13 = cResult[5];
       }
       const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp12, tmp13, tmp(17838).areVoicePanelPreJoinContentPropsEqual);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp12, tmp13, tmp(17895).areVoicePanelPreJoinContentPropsEqual);
       if (cResult[6] !== stateFromStores) {
         const obj2 = { item: stateFromStores, renderItem };
         const tmp22 = closure_27(tmp(4827).TransitionItem, obj2);
@@ -2896,10 +2896,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   tmp12 = fn;
   let obj = channelId(576);
 }) : (function VoicePanelPreJoinWrapper() {
-  const context = noop.useContext(guildId(11969));
+  const context = noop.useContext(guildId(11971));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(17724)(channelId);
+  const tmp2 = guildId(17781)(channelId);
   dependencyMap = tmp2;
   let items = [SortedVoiceStateStore, VoiceChannelBlockedUserStore, EmbeddedActivitiesStore, MediaEngineStore, ApplicationStreamingStore];
   let items1 = [tmp2, channelId, guildId];
@@ -2939,6 +2939,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       };
       return obj;
     }
-  }, items1, channelId(17838).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(17895).areVoicePanelPreJoinContentPropsEqual);
   return closure_27(channelId(4827).TransitionItem, { item: stateFromStores, renderItem });
 }));

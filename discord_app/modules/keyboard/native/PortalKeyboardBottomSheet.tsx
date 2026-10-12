@@ -1,6 +1,6 @@
-// === Module 11902: PortalKeyboardBottomSheet ===
+// === Module 11904: PortalKeyboardBottomSheet ===
 
-// Module 11902 (PortalKeyboardBottomSheet)
+// Module 11904 (PortalKeyboardBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
@@ -8,11 +8,11 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import HapticUtils from "HapticUtils" /* 5057 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
 import isChannelFocused from "isChannelFocused" /* 6072 */;
-import BottomSheetModal from "BottomSheetModal" /* 6306 */;
-import native from "native" /* 8541 */;
+import BottomSheetModal from "BottomSheetModal" /* 6307 */;
+import native from "native" /* 8542 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9693 */;
+import NativeMenuStore from "NativeMenuStore" /* 9694 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -25,7 +25,7 @@ const PlatformUtils = fn(1382);
 let closure_9 = PlatformUtils.isIOS();
 const createStyles = fn(5092);
 let obj3 = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
-let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8541).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8541).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8542).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8542).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
 obj3.headerContainer = size;
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
 obj3.headerContainerScreenReaderEnabled = { marginBottom: -nativeDefault.space.PX_8 };

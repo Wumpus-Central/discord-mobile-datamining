@@ -1,6 +1,6 @@
-// === Module 13168: UserProfileModeratorActions ===
+// === Module 13173: UserProfileModeratorActions ===
 
-// Module 13168 (UserProfileModeratorActions)
+// Module 13173 (UserProfileModeratorActions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,14 +9,14 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2073 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
-import TableRow from "TableRow" /* 6179 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7487 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
+import TableRow from "TableRow" /* 6180 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7488 */;
 import GuildMemberUtils from "GuildMemberUtils" /* 11391 */;
 import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11397 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 11439 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 11443 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12361 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 11441 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 11445 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12363 */;
 import noop from "module_19" /* 19 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 5948 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -358,7 +358,7 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[36]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(12179, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(12181, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(<closure_17 key="move-to-channel" label={null} hint={null} sublabel={null} icon={null} onPress={null} />);
       }

@@ -1,6 +1,6 @@
-// === Module 8915: GameProfileStoreLinksActionSheet ===
+// === Module 8916: GameProfileStoreLinksActionSheet ===
 
-// Module 8915 (GameProfileStoreLinksActionSheet)
+// Module 8916 (GameProfileStoreLinksActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
@@ -8,9 +8,9 @@ import LinkingDefault from "Linking" /* 4806 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import BottomSheetModal from "BottomSheetModal" /* 6306 */;
-import ActionSheet from "ActionSheet" /* 6898 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8887 */;
+import BottomSheetModal from "BottomSheetModal" /* 6307 */;
+import ActionSheet from "ActionSheet" /* 6899 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8888 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -101,8 +101,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                 const obj6 = { contentContainerStyle: tmp8, children: null };
                 const items = [tmp18, tmp27];
                 obj6.children = items;
-                obj5.children = closure_5(trackAction(6306).BottomSheetScrollView, obj6);
-                const tmp34 = closure_4(trackAction(6898).ActionSheet, obj5);
+                obj5.children = closure_5(trackAction(6307).BottomSheetScrollView, obj6);
+                const tmp34 = closure_4(trackAction(6899).ActionSheet, obj5);
                 cResult[24] = tmp18;
                 cResult[25] = tmp27;
                 cResult[26] = tmp8;

@@ -1,15 +1,15 @@
-// === Module 17993: AutomodRemovedContentSheet ===
+// === Module 18050: AutomodRemovedContentSheet ===
 
-// Module 17993 (AutomodRemovedContentSheet)
+// Module 18050 (AutomodRemovedContentSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5434 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6838 */;
-import ActionSheet from "ActionSheet" /* 6898 */;
-import RowGeneratorDefault from "RowGenerator" /* 7746 */;
-import ChatItemDefault from "ChatItem" /* 9373 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
+import ActionSheet from "ActionSheet" /* 6899 */;
+import RowGeneratorDefault from "RowGenerator" /* 7747 */;
+import ChatItemDefault from "ChatItem" /* 9374 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodR
   if (thread != null) {
     name = thread.name;
   }
-  let obj2 = { header: jsx(message(6838).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
+  let obj2 = { header: jsx(message(6839).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
   obj.subtitle = name;
   const obj3 = { style: tmp.content, children: null };
   if (null != memo) {
@@ -195,5 +195,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodR
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;
-  return jsx(message(6898).ActionSheet, { header: jsx(message(6838).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
+  return jsx(message(6899).ActionSheet, { header: jsx(message(6839).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
 });

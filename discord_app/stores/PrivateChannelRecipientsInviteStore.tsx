@@ -1,16 +1,16 @@
-// === Module 14021: PrivateChannelRecipientsInviteStore ===
+// === Module 14044: PrivateChannelRecipientsInviteStore ===
 
-// Module 14021 (PrivateChannelRecipientsInviteStore)
+// Module 14044 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import StringUtils from "StringUtils" /* 2031 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 8703 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 8704 */;
 import ExperimentStore from "ExperimentStore" /* 5016 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7347 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7348 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import ConsentStore from "ConsentStore" /* 5932 */;
-import FrecencyStore from "FrecencyStore" /* 6086 */;
+import FrecencyStore from "FrecencyStore" /* 6087 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;

@@ -1,14 +1,14 @@
-// === Module 16636: GuildPowerupsProgressBar ===
+// === Module 16660: GuildPowerupsProgressBar ===
 
-// Module 16636 (GuildPowerupsProgressBar)
+// Module 16660 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 587 */;
 import timing from "timing" /* 5093 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12215 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16639 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12217 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16663 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16637 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16661 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   }
   let obj = guildId(576);
   const stateFromStores = guildId(573).useStateFromStores(first, tmp7, tmp8);
-  stateFromStores1(16638)(stateFromStores);
+  stateFromStores1(16662)(stateFromStores);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [GuildBoostingProgressBarPersistedStore];
     cResult[4] = items2;

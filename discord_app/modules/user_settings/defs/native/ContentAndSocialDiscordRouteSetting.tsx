@@ -1,11 +1,11 @@
-// === Module 16273: ContentAndSocialDiscordRouteSetting ===
+// === Module 16296: ContentAndSocialDiscordRouteSetting ===
 
-// Module 16273 (ContentAndSocialDiscordRouteSetting)
+// Module 16296 (ContentAndSocialDiscordRouteSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import FriendsIcon from "FriendsIcon" /* 4815 */;
-import SettingsConstants from "SettingsConstants" /* 7992 */;
-import ContentAndSocialScreen from "ContentAndSocialScreen" /* 16255 */;
+import SettingsConstants from "SettingsConstants" /* 7993 */;
+import ContentAndSocialScreen from "ContentAndSocialScreen" /* 16278 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

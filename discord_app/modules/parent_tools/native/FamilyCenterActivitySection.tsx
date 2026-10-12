@@ -1,19 +1,19 @@
-// === Module 15155: FamilyCenterActivitySection ===
+// === Module 15178: FamilyCenterActivitySection ===
 
-// Module 15155 (FamilyCenterActivitySection)
+// Module 15178 (FamilyCenterActivitySection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7739 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7741 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 15150 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7740 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7742 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 15173 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7259);
+const FamilyCenterConstants = fn(7260);
 ({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: closure_7, TeenActionDisplayType: closure_8 } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -153,9 +153,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   displayType = displayType.displayType;
   const tmp4 = closure_13();
   const obj = displayType(576);
-  const actionsForDisplayType = displayType(15150).useActionsForDisplayType(displayType);
-  const obj2 = displayType(15150);
-  const actionTotalsForDisplayType = displayType(15150).useActionTotalsForDisplayType(displayType);
+  const actionsForDisplayType = displayType(15173).useActionsForDisplayType(displayType);
+  const obj2 = displayType(15173);
+  const actionTotalsForDisplayType = displayType(15173).useActionTotalsForDisplayType(displayType);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = {};
     cResult[0] = obj4;
@@ -163,11 +163,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   } else {
     first = cResult[0];
   }
-  const obj3 = displayType(15150);
-  const familyCenterActions = displayType(11530).useFamilyCenterActions(first);
+  const obj3 = displayType(15173);
+  const familyCenterActions = displayType(11532).useFamilyCenterActions(first);
   const loadMore = familyCenterActions.loadMore;
   const isMoreLoading = familyCenterActions.isMoreLoading;
-  const tmpResult = displayType(11530);
+  const tmpResult = displayType(11532);
   [tmp10, dependencyMap] = noop.useState(closure_7);
   if (cResult[1] === actionsForDisplayType) {
     if (cResult[2] === displayType) {
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                   const obj9 = { style: tmp4.loadMore, accessibilityLabel: tmp13, accessibilityRole: "button", onPress: tmp12, children: null };
                   const obj10 = { style: tmp4.loadMoreButton, variant: "text-xs/semibold", color: "text-overlay-light", children: tmp13 };
                   obj9.children = closure_9(tmp(5088).Text, obj10);
-                  tmp33Result = closure_9(tmp(6184).PressableOpacity, obj9);
+                  tmp33Result = closure_9(tmp(6185).PressableOpacity, obj9);
                 }
                 obj6.children = tmp33Result;
                 closure_9(closure_6, obj6);
@@ -320,11 +320,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
 }) : (function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  const actionsForDisplayType = displayType(15150).useActionsForDisplayType(displayType);
-  const obj = displayType(15150);
-  const actionTotalsForDisplayType = displayType(15150).useActionTotalsForDisplayType(displayType);
-  const obj2 = displayType(15150);
-  const familyCenterActions = displayType(11530).useFamilyCenterActions({});
+  const actionsForDisplayType = displayType(15173).useActionsForDisplayType(displayType);
+  const obj = displayType(15173);
+  const actionTotalsForDisplayType = displayType(15173).useActionTotalsForDisplayType(displayType);
+  const obj2 = displayType(15173);
+  const familyCenterActions = displayType(11532).useFamilyCenterActions({});
   const loadMore = familyCenterActions.loadMore;
   const tmp6 = _slicedToArray(noop.useState(closure_7), 2);
   dependencyMap = tmp6[1];
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     const formatToPlainStringResult = intl.formatToPlainString(loadMore(2568)["7dMmJY"], obj4);
     const obj5 = { style: loadMoreButton.container, children: null };
     const obj6 = { displayType };
-    const items1 = [closure_9(closure_12, obj6), substr.map((action) => closure_1_9(loadMore(15156), { action }, action.event_id)), ];
+    const items1 = [closure_9(closure_12, obj6), substr.map((action) => closure_1_9(loadMore(15179), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj5.children = items1;
@@ -358,11 +358,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         const obj10 = { style: loadMoreButton.loadMore, accessibilityLabel: formatToPlainStringResult, accessibilityRole: "button", onPress: tmp7, children: null };
         const obj11 = { style: loadMoreButton.loadMoreButton, variant: "text-xs/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
         obj10.children = closure_9(tmp(5088).Text, obj11);
-        tmp17Result = closure_9(tmp(6184).PressableOpacity, obj10);
+        tmp17Result = closure_9(tmp(6185).PressableOpacity, obj10);
       }
       obj7.children = tmp17Result;
       closure_9(closure_6, obj7);
     }
   }
-  const obj3 = displayType(11530);
+  const obj3 = displayType(11532);
 });

@@ -1,13 +1,13 @@
-// === Module 9510: PremiumUpsellGradientBackground ===
+// === Module 9511: PremiumUpsellGradientBackground ===
 
-// Module 9510 (PremiumUpsellGradientBackground)
+// Module 9511 (PremiumUpsellGradientBackground)
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Gradients = fn(7151).Gradients;
+const Gradients = fn(7152).Gradients;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj2 = { gradient: null };

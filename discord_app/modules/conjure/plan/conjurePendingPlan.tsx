@@ -1,10 +1,9 @@
-// === Module 17257: conjurePendingPlan ===
+// === Module 17178: conjurePendingPlan ===
 
-// Module 17257 (conjurePendingPlan)
-import ConjureChatStore from "ConjureChatStore" /* 12996 */;
+// Module 17178 (conjurePendingPlan)
+import conjureChatTurns from "conjureChatTurns" /* 12999 */;
 import size from "module_2" /* 2 */;
 
-const turnSettled = ConjureChatStore.turnSettled;
 let result = size.fileFinishedImporting("modules/conjure/plan/conjurePendingPlan.tsx");
 
 export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
@@ -21,7 +20,8 @@ export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
       while (true) {
         let tmp4 = memo[diff];
         if ("assistant" === tmp4.role) {
-          if (!turnSettled(tmp4)) {
+          let obj = conjureChatTurns;
+          if (!obj.turnSettled(tmp4)) {
             break;
           } else if ("plan_implemented" === tmp4.kind) {
             break;

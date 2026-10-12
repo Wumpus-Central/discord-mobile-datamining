@@ -1,8 +1,8 @@
 // === Module 11190: GuildNSFW ===
 
 // Module 11190 (GuildNSFW)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7498 */;
 import GatedContentDefault from "GatedContent" /* 11191 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;

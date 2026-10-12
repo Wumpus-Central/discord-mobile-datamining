@@ -1,15 +1,15 @@
-// === Module 10281: ChannelRow ===
+// === Module 10282: ChannelRow ===
 
-// Module 10281 (ChannelRow)
+// Module 10282 (ChannelRow)
 import nativeDefault from "native" /* 587 */;
 import _modDef4702 from "module_4702" /* 4702 */;
 import DateUtils from "DateUtils" /* 4793 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import TextIcon2 from "TextIcon" /* 8207 */;
-import ForumIcon from "ForumIcon" /* 8215 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10282 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11595 */;
+import TextIcon2 from "TextIcon" /* 8208 */;
+import ForumIcon from "ForumIcon" /* 8216 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10283 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 11597 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -24,7 +24,7 @@ const useChannelNameDefault = useChannelName;
 require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress", "onLongPress", "trailing", "subLabel", "label"];
 const View = fn(17).View;
-const UserRowModes = fn(10216).UserRowModes;
+const UserRowModes = fn(10217).UserRowModes;
 const ReadStateTypes = fn(5967).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -232,8 +232,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         obj2.guild = stateFromStores;
         obj2.channel = tmp4;
-        obj2.size = tmp(11595).GuildIconWithChannelTypeSizes.SMALL_32;
-        const tmp34 = closure_14(tmp(11595).GuildIconWithChannelType, obj2);
+        obj2.size = tmp(11597).GuildIconWithChannelTypeSizes.SMALL_32;
+        const tmp34 = closure_14(tmp(11597).GuildIconWithChannelType, obj2);
       }
       cResult[26] = tmp4;
       cResult[27] = stateFromStores;

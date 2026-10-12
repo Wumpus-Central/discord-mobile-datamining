@@ -1,13 +1,13 @@
-// === Module 13053: MediaViewerThumbnails ===
+// === Module 13058: MediaViewerThumbnails ===
 
-// Module 13053 (MediaViewerThumbnails)
+// Module 13058 (MediaViewerThumbnails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useToken from "useToken" /* 4818 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4851 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13054 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const VisualEffectViewDefault = View(5365);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8418);
+const Constants = fn(8419);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

@@ -1,15 +1,15 @@
-// === Module 15804: AppIconRows ===
+// === Module 15827: AppIconRows ===
 
-// Module 15804 (AppIconRows)
+// Module 15827 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
-import AppIconTypes from "AppIconTypes" /* 9469 */;
-import AppIconUtils from "AppIconUtils" /* 13724 */;
-import AppIconRowDefault from "AppIconRow" /* 15805 */;
+import AppIconTypes from "AppIconTypes" /* 9470 */;
+import AppIconUtils from "AppIconUtils" /* 13747 */;
+import AppIconRowDefault from "AppIconRow" /* 15828 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 11937 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 11939 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -41,7 +41,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
   } else {
     onLongPress = cResult[0];
   }
-  const TableRowGroup = tmp(6264).TableRowGroup;
+  const TableRowGroup = tmp(6265).TableRowGroup;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.N4YDao);
@@ -121,7 +121,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_9(merged(6264).TableRowGroup, obj2);
+    obj.children = closure_9(merged(6265).TableRowGroup, obj2);
     return closure_9(View, obj);
   }
 });

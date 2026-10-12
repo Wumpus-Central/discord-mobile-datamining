@@ -1,9 +1,9 @@
-// === Module 15406: QuestGameLogotype ===
+// === Module 15429: QuestGameLogotype ===
 
-// Module 15406 (QuestGameLogotype)
+// Module 15429 (QuestGameLogotype)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5378 */;
-import FastImageDefault from "FastImage" /* 6156 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -152,7 +152,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         obj4.style = items1;
-        SvgUri = SvgUri(7576).SvgUri;
+        SvgUri = SvgUri(7577).SvgUri;
         let size = { height: "100%", width: "100%", uri: assetUrl, onError };
         obj4.children = <SvgUri height="100%" width="100%" uri={assetUrl} onError={onError} />;
         let tmp18Result = <closure_5 style={null}>{null}</closure_5>;

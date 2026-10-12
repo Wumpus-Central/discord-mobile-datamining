@@ -7,14 +7,14 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1355 from "module_1355" /* 1355 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7114 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10252 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7115 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10253 */;
 import SpotifyStore from "SpotifyStore" /* 5760 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 import DetectableGameStore from "DetectableGameStore" /* 2037 */;
 import IdleStore from "IdleStore" /* 5888 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7112 */;
-import LocalActivityStore from "LocalActivityStore" /* 10647 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7113 */;
+import LocalActivityStore from "LocalActivityStore" /* 10648 */;
 import PresenceStore from "PresenceStore" /* 5108 */;
 import SessionsStore from "SessionsStore" /* 5112 */;
 

@@ -1,6 +1,6 @@
-// === Module 16104: BuildOverrideActiveSetting ===
+// === Module 16127: BuildOverrideActiveSetting ===
 
-// Module 16104 (BuildOverrideActiveSetting)
+// Module 16127 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -8,11 +8,11 @@ import _modDef2206 from "module_2206" /* 2206 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11341 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14808 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15098 */;
-import DevToolsContent from "DevToolsContent" /* 16098 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14831 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15121 */;
+import DevToolsContent from "DevToolsContent" /* 16121 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10483 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10484 */;
 
 require = fn;
 function handleBuildOverrideActivePress() {
@@ -136,7 +136,7 @@ let obj5 = {
     return intl.string(_modDef2206.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(15229).RefreshIcon,
+  IconComponent: fn(15252).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(3);
     const tmp4 = closure_7();
@@ -219,7 +219,7 @@ export default SettingBuilders.createStatic({
     return intl.string(_modDef2206.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(15229).RefreshIcon,
+  IconComponent: fn(15252).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(3);
     const tmp4 = closure_7();

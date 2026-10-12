@@ -1,27 +1,27 @@
-// === Module 12584: MessagePreviewText ===
+// === Module 12586: MessagePreviewText ===
 
-// Module 12584 (MessagePreviewText)
+// Module 12586 (MessagePreviewText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1107 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import useMessageAuthor from "useMessageAuthor" /* 5627 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7001 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9313 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12575 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12585 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 12586 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 12587 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 12590 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12591 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7002 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9314 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 12577 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12587 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 12588 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 12589 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 12592 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12593 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(12576);
+const InAppNotificationConstants = fn(12578);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);

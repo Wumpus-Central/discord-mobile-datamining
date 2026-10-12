@@ -1,6 +1,6 @@
-// === Module 8281: avatar_decorations/AvatarDecorationUtils ===
+// === Module 8282: avatar_decorations/AvatarDecorationUtils ===
 
-// Module 8281 (avatar_decorations/AvatarDecorationUtils)
+// Module 8282 (avatar_decorations/AvatarDecorationUtils)
 import native from "native" /* 1200 */;
 import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1416 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
@@ -48,5 +48,5 @@ export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutFo
 export const openAvatarDecorationActionSheet = function openAvatarDecorationActionSheet(arg0) {
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8282, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8283, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

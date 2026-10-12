@@ -1,6 +1,6 @@
-// === Module 9590: TabBar ===
+// === Module 9591: TabBar ===
 
-// Module 9590 (TabBar)
+// Module 9591 (TabBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;

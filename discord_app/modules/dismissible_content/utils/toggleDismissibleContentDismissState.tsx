@@ -1,6 +1,6 @@
-// === Module 15899: toggleDismissibleContentDismissState ===
+// === Module 15922: toggleDismissibleContentDismissState ===
 
-// Module 15899 (toggleDismissibleContentDismissState)
+// Module 15922 (toggleDismissibleContentDismissState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod19 from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
@@ -13,7 +13,7 @@ const UserSettingsProtoActionCreators = obj(2046);
 const DismissibleContentUtils = obj(2050);
 const DismissibleContentTypes = obj(2056);
 const VersionedDismissibleContentUtils = obj(2063);
-const DismissibleContentFrameworkActionCreators = obj(10325);
+const DismissibleContentFrameworkActionCreators = obj(10326);
 _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
 

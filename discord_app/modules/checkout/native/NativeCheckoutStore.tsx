@@ -1,15 +1,15 @@
-// === Module 7143: NativeCheckoutStore ===
+// === Module 7144: NativeCheckoutStore ===
 
-// Module 7143 (NativeCheckoutStore)
+// Module 7144 (NativeCheckoutStore)
 import _mod1267 from "module_1267" /* 1267 */;
 import _mod4733 from "module_4733" /* 4733 */;
-import OrderActionCreators from "OrderActionCreators" /* 6944 */;
-import ContextUtilsDefault from "ContextUtils" /* 7147 */;
-import payments_OrderActionCreators from "payments/OrderActionCreators" /* 7148 */;
+import OrderActionCreators from "OrderActionCreators" /* 6945 */;
+import ContextUtilsDefault from "ContextUtils" /* 7148 */;
+import payments_OrderActionCreators from "payments/OrderActionCreators" /* 7149 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import OrderRecord from "OrderRecord" /* 7144 */;
+import OrderRecord from "OrderRecord" /* 7145 */;
 
 require = fn;
 const OrderStatus = fn(5071).OrderStatus;
@@ -103,7 +103,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -198,7 +198,7 @@ export const createNativeStore = function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -340,7 +340,7 @@ export const createNativeStore = function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -453,7 +453,7 @@ export const createNativeStore = function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -525,7 +525,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             c4 = 0;
             closure_130_0({ isCreateOrderLoading: false });
             c6 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp42) {
           closure_3 = tmp42;
@@ -561,7 +561,7 @@ export const createNativeStore = function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -632,7 +632,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             c3 = 0;
             closure_129_0({ isCreateOrderLoading: false });
             c5 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp41) {
           closure_2 = tmp41;

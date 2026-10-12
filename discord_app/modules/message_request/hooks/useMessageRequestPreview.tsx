@@ -1,12 +1,12 @@
-// === Module 12333: useMessageRequestPreview ===
+// === Module 12335: useMessageRequestPreview ===
 
-// Module 12333 (useMessageRequestPreview)
+// Module 12335 (useMessageRequestPreview)
 import _modDef12 from "module_12" /* 12 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MessageStore from "MessageStore" /* 5432 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
-import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 12334 */;
+import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 12336 */;
 
 require = fn;
 function loadMessageRequestData() {
@@ -30,7 +30,7 @@ let closure_11 = async function _loadMessageRequestData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_11 = async function _loadMessageRequestData() {
             c3 = 0;
             closure_128_9 = null;
             c4 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           } else {
             closure_128_12();
             c1 = 2;
@@ -105,7 +105,7 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     while (true) {

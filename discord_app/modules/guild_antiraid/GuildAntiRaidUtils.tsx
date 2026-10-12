@@ -1,10 +1,10 @@
-// === Module 8043: GuildAntiRaidUtils ===
+// === Module 8044: GuildAntiRaidUtils ===
 
-// Module 8043 (GuildAntiRaidUtils)
+// Module 8044 (GuildAntiRaidUtils)
 import util from "util" /* 1126 */;
 import _modDef4702 from "module_4702" /* 4702 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8045 */;
-import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 8044 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8046 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 8045 */;
 import size from "module_2" /* 2 */;
 
 ({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: closure_4, getTimeframes: hasOwnProperty } = GuildAntiRaidConstants);

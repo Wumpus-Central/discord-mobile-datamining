@@ -1,13 +1,13 @@
-// === Module 9121: PromotionsStore ===
+// === Module 9122: PromotionsStore ===
 
-// Module 9121 (PromotionsStore)
+// Module 9122 (PromotionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 9155 */;
+import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 9156 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import PromotionRecord from "PromotionRecord" /* 9122 */;
+import PromotionRecord from "PromotionRecord" /* 9123 */;
 import UserStore from "UserStore" /* 1390 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 9123 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 9124 */;
 
 const require = fn;
 function createEmptyPromotionsByType() {

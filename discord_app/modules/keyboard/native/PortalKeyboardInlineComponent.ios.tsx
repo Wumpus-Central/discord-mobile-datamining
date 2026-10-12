@@ -1,6 +1,6 @@
-// === Module 12378: PortalKeyboardInlineComponent ===
+// === Module 12380: PortalKeyboardInlineComponent ===
 
-// Module 12378 (PortalKeyboardInlineComponent)
+// Module 12380 (PortalKeyboardInlineComponent)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
@@ -25,7 +25,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     first = cResult[0];
   }
-  const tmp9 = id(6304)(first);
+  const tmp9 = id(6305)(first);
   noop = tmp9;
   let obj = messagesRef(576);
   let obj2 = noop;
@@ -115,8 +115,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 ref.current = true;
                 const obj2 = messagesRef(4988);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10374).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(10374);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10375).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(10375);
               }
             }
           }
@@ -187,7 +187,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const id = noop.useId();
   const tmp2 = id(4987)();
   dependencyMap = tmp2;
-  let tmp4 = id(6304)({ includeCustomKeyboard: false });
+  let tmp4 = id(6305)({ includeCustomKeyboard: false });
   noop = tmp4;
   let tmp3 = id(1897)();
   const keyboardContextForType = messagesRef(4987).useKeyboardContextForType(messagesRef(1629).KeyboardTypes.SYSTEM);
@@ -229,8 +229,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 ref.current = true;
                 const obj2 = messagesRef(4988);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10374).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(10374);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(10375).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(10375);
               }
             }
           }

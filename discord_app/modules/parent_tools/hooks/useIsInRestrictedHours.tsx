@@ -1,10 +1,10 @@
-// === Module 17975: useIsInRestrictedHours ===
+// === Module 18032: useIsInRestrictedHours ===
 
-// Module 17975 (useIsInRestrictedHours)
+// Module 18032 (useIsInRestrictedHours)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import UserStore from "UserStore" /* 1390 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7258 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7259 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

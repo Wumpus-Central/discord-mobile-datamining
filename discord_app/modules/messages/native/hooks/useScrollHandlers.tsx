@@ -5,13 +5,13 @@ import LoggerDefault from "Logger" /* 3 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
 import QuestTypes from "QuestTypes" /* 5975 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 9599 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9601 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 9600 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9602 */;
 import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10677 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useChatBottomManagerUIStore = fn(9383);
+const useChatBottomManagerUIStore = fn(9384);
 ({ updateIsAtBottom: closure_4, updateShouldShowJumpToPresentButton: hasOwnProperty } = useChatBottomManagerUIStore);
 let closure_6 = new LoggerDefault("useScrollHandlers");
 const ReactCompilerGating = fn(558);

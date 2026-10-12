@@ -1,10 +1,10 @@
-// === Module 17151: ConjurePlanTypeTags ===
+// === Module 17289: ConjurePlanTypeTags ===
 
-// Module 17151 (ConjurePlanTypeTags)
+// Module 17289 (ConjurePlanTypeTags)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import conjurePlanTags from "conjurePlanTags" /* 17143 */;
+import conjurePlanTags from "conjurePlanTags" /* 17283 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,14 +14,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = {};
-obj[fn(6946).ConjureSupportedSurface.APP_CHANNEL] = fn(8233).AppsIcon;
-obj[fn(6946).ConjureSupportedSurface.VOICE_CHANNEL] = fn(8228).VoiceNormalIcon;
-obj[fn(6946).ConjureSupportedSurface.ACTIVITY] = fn(17152).ActivitiesIcon;
-obj[fn(6946).ConjureSupportedSurface.OVERLAY] = fn(9211).GameControllerIcon;
-obj[fn(6946).ConjureSupportedSurface.PROFILE_WIDGET] = fn(17154).WidgetsIcon;
-obj[fn(6946).ConjureSupportedSurface.AUTOMOD] = fn(10408).ShieldIcon;
-obj[fn(6946).ConjureSupportedSurface.BOT] = fn(11433).RobotIcon;
-obj[fn(6946).ConjureSupportedSurface.APPLICATION_COMMANDS] = fn(10619).SlashBoxIcon;
+obj[fn(6947).ConjureSupportedSurface.APP_CHANNEL] = fn(8234).AppsIcon;
+obj[fn(6947).ConjureSupportedSurface.VOICE_CHANNEL] = fn(8229).VoiceNormalIcon;
+obj[fn(6947).ConjureSupportedSurface.ACTIVITY] = fn(17290).ActivitiesIcon;
+obj[fn(6947).ConjureSupportedSurface.OVERLAY] = fn(9212).GameControllerIcon;
+obj[fn(6947).ConjureSupportedSurface.PROFILE_WIDGET] = fn(17292).WidgetsIcon;
+obj[fn(6947).ConjureSupportedSurface.AUTOMOD] = fn(10409).ShieldIcon;
+obj[fn(6947).ConjureSupportedSurface.BOT] = fn(11435).RobotIcon;
+obj[fn(6947).ConjureSupportedSurface.APPLICATION_COMMANDS] = fn(10620).SlashBoxIcon;
 const createStyles = fn(5092);
 let obj3 = { tags: { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_4, columnGap: nativeDefault.space.PX_12 }, tag: null };
 const obj4 = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_4, columnGap: nativeDefault.space.PX_12 };

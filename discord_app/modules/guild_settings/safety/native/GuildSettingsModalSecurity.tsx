@@ -1,12 +1,12 @@
-// === Module 18340: GuildSettingsModalSecurity ===
+// === Module 18398: GuildSettingsModalSecurity ===
 
-// Module 18340 (GuildSettingsModalSecurity)
+// Module 18398 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8637 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8638 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8639 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -349,7 +349,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return closure_1_8.getProps().mfaLevel;
                             }
                           }
-                          tmp55[0] = stateFromStores(15022);
+                          tmp55[0] = stateFromStores(15045);
                           tmp55[1] = tmp4.image;
                           const tmp56 = closure_11(tmp54, tmp55);
                           cResult[35] = tmp4.image;
@@ -807,9 +807,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj10 = { style: tmp.center, children: null };
   const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  obj11.source = stateFromStores(15022);
+  obj11.source = stateFromStores(15045);
   obj11.style = tmp.image;
-  const items6 = [closure_11(stateFromStores(6156), obj11), ];
+  const items6 = [closure_11(stateFromStores(6157), obj11), ];
   const obj12 = { style: tmp.infoWrapper, children: null };
   const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1126).intl;
@@ -819,7 +819,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   obj10.children = items6;
   items5[1] = closure_12(View, obj10);
   obj3.children = items5;
-  const items7 = [closure_12(View, obj3), closure_11(guildId(6727).NavScrim, {})];
+  const items7 = [closure_12(View, obj3), closure_11(guildId(6728).NavScrim, {})];
   obj9.children = items7;
   return closure_12(closure_13, obj9);
 });

@@ -1,6 +1,6 @@
-// === Module 12170: QuarantineConstants ===
+// === Module 12172: QuarantineConstants ===
 
-// Module 12170 (QuarantineConstants)
+// Module 12172 (QuarantineConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quarantine/QuarantineConstants.tsx");

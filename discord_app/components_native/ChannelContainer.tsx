@@ -1,13 +1,13 @@
-// === Module 12561: ChannelContainer ===
+// === Module 12563: ChannelContainer ===
 
-// Module 12561 (ChannelContainer)
+// Module 12563 (ChannelContainer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4938 */;
 import useChatLayoutDefault from "useChatLayout" /* 4979 */;
-import common_NotificationsDefault from "common/Notifications" /* 12562 */;
-import useChannelStylesShared from "useChannelStylesShared" /* 12685 */;
+import common_NotificationsDefault from "common/Notifications" /* 12564 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 12687 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4751 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -137,7 +137,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
           let tmp21 = cResult[13];
         }
         const effect = noop.useEffect(tmp20, tmp21);
-        const channelStyles = tmp(12685).useChannelStyles();
+        const channelStyles = tmp(12687).useChannelStyles();
         if (cResult[14] === channel) {
           if (cResult[15] === stateFromStores) {
             let tmp25 = cResult[16];
@@ -207,14 +207,14 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
           tmp29 = null;
           if (stateFromStores) {
             const obj5 = { channel };
-            tmp29 = closure_10(tmp9(12686), obj5);
+            tmp29 = closure_10(tmp9(12688), obj5);
           }
         }
         cResult[14] = channel;
         cResult[15] = stateFromStores;
         cResult[16] = tmp29;
         tmp25 = tmp29;
-        const tmpResult4 = tmp(12685);
+        const tmpResult4 = tmp(12687);
       }
     }
   }
@@ -321,7 +321,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(channelId(12686), obj4);
+      tmp15 = closure_10(channelId(12688), obj4);
     }
   }
   const items3 = [tmp15, children.children, ];

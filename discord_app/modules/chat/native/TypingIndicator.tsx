@@ -1,6 +1,6 @@
-// === Module 11636: TypingIndicator ===
+// === Module 11638: TypingIndicator ===
 
-// Module 11636 (TypingIndicator)
+// Module 11638 (TypingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,14 +9,14 @@ import native from "native" /* 4827 */;
 import spring from "spring" /* 5378 */;
 import springPresets from "springPresets" /* 5382 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 11638 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11641 */;
-import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 11642 */;
-import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 11643 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 11640 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11643 */;
+import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 11644 */;
+import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 11645 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5091 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5989 */;
-import TypingStore from "TypingStore" /* 11637 */;
+import TypingStore from "TypingStore" /* 11639 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -28,8 +28,8 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return __initData(closure_23, obj, arg0);
 }
 const View = fn(17).View;
-let style_owner_user_id = fn(9383).useChatShowingAutoComplete;
-const SlowmodeType = fn(7374).SlowmodeType;
+let style_owner_user_id = fn(9384).useChatShowingAutoComplete;
+const SlowmodeType = fn(7375).SlowmodeType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

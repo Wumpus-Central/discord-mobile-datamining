@@ -1,11 +1,12 @@
-// === Module 11423: restartConjureAppFrames ===
+// === Module 11431: restartConjureAppFrames ===
 
-// Module 11423 (restartConjureAppFrames)
+// Module 11431 (restartConjureAppFrames)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
 import leaveFrame from "leaveFrame" /* 10821 */;
 import FramesStore from "FramesStore" /* 10807 */;
 
 require = fn;
+const isLaunched = fn(10802).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/native/restartConjureAppFrames.tsx");
 
@@ -15,25 +16,31 @@ export default function restartConjureAppFrames(applicationId) {
     const items = [];
     HermesBuiltin.arraySpread(FramesStore.getAllFrames(), 0);
     const found = items.filter((applicationId) => applicationId.applicationId === closure_0);
-    for (const item10006 of found) {
-      let surface = item10006.surface;
+    for (const item10007 of found) {
+      let surface = item10007.surface;
+      let launch;
+      if (isLaunched(item10007)) {
+        launch = item10007.data.launch;
+      }
+      let tmp6 = launch;
       let mainFrame = FramesStore.getMainFrame();
       let id;
       if (mainFrame != null) {
         id = mainFrame.id;
       }
       let obj = leaveFrame;
-      let leaveFrameResult = obj.leaveFrame(item10006.id);
+      let leaveFrameResult = obj.leaveFrame(item10007.id);
       let obj2 = FramesActionCreatorsDefault;
-      let obj3 = { applicationId: arg0, surface: null };
+      let obj3 = { applicationId: arg0, surface: null, launch: null };
       obj3.surface = surface;
+      obj3.launch = tmp6;
       let launchFrameResult = obj2.launchFrame(obj3);
       let catchPromise = launchFrameResult.catch(() => {
 
       });
-      if (id !== item10006.id) {
-        let tmp10Result = FramesActionCreatorsDefault;
-        let demoteMainFrameResult = tmp10Result.demoteMainFrame(item10006.id);
+      if (id !== item10007.id) {
+        let tmp14Result = FramesActionCreatorsDefault;
+        let demoteMainFrameResult = tmp14Result.demoteMainFrame(item10007.id);
       }
       continue;
     }

@@ -1,12 +1,12 @@
-// === Module 18145: RedesignAddAvatarModal ===
+// === Module 18203: RedesignAddAvatarModal ===
 
-// Module 18145 (RedesignAddAvatarModal)
+// Module 18203 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 587 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18124 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18182 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8284 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
 
 const require = globalThis.__r;
 
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -513,7 +513,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(7768).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(7769).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -550,23 +550,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14820);
-              obj11.description = tmp2(8293).generateAvatarDescription();
+              const obj = tmp2(14843);
+              obj11.description = tmp2(8294).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(8293);
+              const obj3 = tmp2(8294);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(8288).setPendingChanges(obj12);
-            const obj4 = tmp2(8288);
+            tmp2(8289).setPendingChanges(obj12);
+            const obj4 = tmp2(8289);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8290).announcePendingAvatarChange(str);
+            const result = tmp2(8291).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(8290);
+            const obj6 = tmp2(8291);
           }
           closure_129_1(true);
         }

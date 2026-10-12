@@ -1,20 +1,20 @@
-// === Module 12429: NUFGuildTemplates ===
+// === Module 12431: NUFGuildTemplates ===
 
-// Module 12429 (NUFGuildTemplates)
+// Module 12431 (NUFGuildTemplates)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
-import Navigator from "Navigator" /* 6687 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12405 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12431 */;
-import GuildTemplatesDefault from "GuildTemplates" /* 12433 */;
-import CreationIntentDefault from "CreationIntent" /* 12462 */;
-import components_JoinServerDefault from "components/JoinServer" /* 12476 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12477 */;
-import HubEmailConnectionModalDefault from "HubEmailConnectionModal" /* 12489 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
+import Navigator from "Navigator" /* 6688 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12407 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12433 */;
+import GuildTemplatesDefault from "GuildTemplates" /* 12435 */;
+import CreationIntentDefault from "CreationIntent" /* 12464 */;
+import components_JoinServerDefault from "components/JoinServer" /* 12478 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12479 */;
+import HubEmailConnectionModalDefault from "HubEmailConnectionModal" /* 12491 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import DefaultRouteStore from "DefaultRouteStore" /* 4943 */;
@@ -41,7 +41,7 @@ let closure_16 = async function _onCreateGuild(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -81,7 +81,7 @@ let closure_16 = async function _onCreateGuild(arg0) {
         const obj10 = { flow_type: closure_130_8.GUILD_CREATE_MODAL, from_step: closure_130_11.CREATE_SERVER, to_step: "modal_closed" };
         closure_130_1(closure_130_2[13]).track(closure_130_7.USER_FLOW_TRANSITION, obj10);
         c4 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp9) {
       c4 = tmp;
@@ -105,7 +105,7 @@ let closure_17 = async function _onCreateServer(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -136,7 +136,7 @@ let closure_17 = async function _onCreateServer(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } catch (tmp8) {
         c3 = tmp;
         throw tmp8;
@@ -211,7 +211,7 @@ function getScreens() {
       };
       const intl = guildTemplate(1126).intl;
       obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12029), obj);
+      return closure_14(closure_1(12031), obj);
     }
   };
   const obj5 = {
@@ -240,7 +240,7 @@ function getScreens() {
       };
       const intl = guildTemplate(1126).intl;
       obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12029), obj);
+      return closure_14(closure_1(12031), obj);
     }
   };
   impressionProperties[constants.JOIN_SERVER] = {
@@ -318,7 +318,7 @@ function getScreens() {
       };
       const intl = guildId(1126).intl;
       obj.buttonText = intl.string(guildId(1126).t["uHXB+F"]);
-      return closure_14(closure_1(12511), obj);
+      return closure_14(closure_1(12513), obj);
     }
   };
   const obj9 = {
@@ -342,8 +342,8 @@ function getScreens() {
 const Keyboard = fn(17).Keyboard;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, NOOP: closure_9 } = Constants);
-const GuildTemplateId = fn(12430).GuildTemplateId;
-const CreateGuildConstants = fn(6661);
+const GuildTemplateId = fn(12432).GuildTemplateId;
+const CreateGuildConstants = fn(6662);
 ({ CreateGuildModalStates: closure_11, GuildTemplateTriggers: closure_12, NUXGuildTemplatesAnalytics: map1 } = CreateGuildConstants);
 const jsx = fn(21).jsx;
 let impressionProperties = { impression_group: fn(1273).ImpressionGroups.GUILD_ADD_FLOW };

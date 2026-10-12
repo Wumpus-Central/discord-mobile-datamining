@@ -1,6 +1,6 @@
-// === Module 15521: OutputVolumeSetting ===
+// === Module 15544: OutputVolumeSetting ===
 
-// Module 15521 (OutputVolumeSetting)
+// Module 15544 (OutputVolumeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -35,7 +35,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
     const intl = util.intl;
     return intl.string(util.t.xPHVBs);
   },
-  parent: fn(7992).MobileUserSettings.VOICE,
+  parent: fn(7993).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useOutputVolumeSettingValue() {
     const cResult = c.c(2);

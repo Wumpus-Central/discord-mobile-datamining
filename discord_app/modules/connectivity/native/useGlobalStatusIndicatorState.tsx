@@ -149,8 +149,8 @@ export const useGlobalStatusIndicatorState = ReactCompilerGating.isReactCompiler
       if (channelId == null) {
         channelId = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      tmp23 = tmp(7481).getVoiceChannelKey(channelId) !== openModalKey;
-      const tmpResult12 = tmp(7481);
+      tmp23 = tmp(7482).getVoiceChannelKey(channelId) !== openModalKey;
+      const tmpResult12 = tmp(7482);
     }
     cResult[8] = openModalKey;
     cResult[9] = tmp8;
@@ -214,8 +214,8 @@ export const useGlobalStatusIndicatorState = ReactCompilerGating.isReactCompiler
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
-    tmp12 = tmp(7481).getVoiceChannelKey(channelId) !== tmp11;
-    const tmpResult = tmp(7481);
+    tmp12 = tmp(7482).getVoiceChannelKey(channelId) !== tmp11;
+    const tmpResult = tmp(7482);
   }
   const obj4 = stateFromStores(11020);
   const isVoicePanelShowing = stateFromStores(11026).useIsVoicePanelShowing();

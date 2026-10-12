@@ -1,14 +1,14 @@
-// === Module 18473: CreatorHighlightSection ===
+// === Module 18531: CreatorHighlightSection ===
 
-// Module 18473 (CreatorHighlightSection)
+// Module 18531 (CreatorHighlightSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import LinkingDefault from "Linking" /* 4806 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import _modDef9466 from "module_9466" /* 9466 */;
-import EmojiIconDefault from "EmojiIcon" /* 15510 */;
+import _modDef9467 from "module_9467" /* 9467 */;
+import EmojiIconDefault from "EmojiIcon" /* 15533 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSe
           let tmp6 = cResult[6];
         }
         if (cResult[7] !== tmp4.subscriberCountIcon) {
-          const obj2 = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp4.subscriberCountIcon, source: _modDef9466 };
+          const obj2 = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp4.subscriberCountIcon, source: _modDef9467 };
           const tmp12 = timestampProducer(native.Icon, obj2);
           cResult[7] = tmp4.subscriberCountIcon;
           cResult[8] = tmp12;
@@ -113,7 +113,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSe
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj.style = items;
-  const items1 = [timestampProducer(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef9466 }), ];
+  const items1 = [timestampProducer(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef9467 }), ];
   const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["3NNXPW"]);
@@ -131,7 +131,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
   const typeConsolidationEyebrow = require("useTypeConsolidationTextTransform").useTypeConsolidationEyebrow("CreatorHighlightSection", "text-xs/semibold");
   const guild_id = highlightedCreatorGuild.guild_id;
   ({ quote, quote_attribution, quote_attribution_title } = highlightedCreatorGuild);
-  const tmp7 = guild_id(18474)(guild_id, 3, 60);
+  const tmp7 = guild_id(18532)(guild_id, 3, 60);
   dependencyMap = tmp7;
   const hasAllImperativeDetails = tmp7.hasAllImperativeDetails;
   if (cResult[0] === tmp7.details) {
@@ -141,7 +141,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
     if (tmp8) {
       const _Symbol2 = Symbol;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp67 = closure_6(tmp6(18446), {});
+        const tmp67 = closure_6(tmp6(18504), {});
         cResult[3] = tmp67;
         let tmp65 = tmp67;
       } else {
@@ -399,7 +399,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
         tmp18 = tmp20;
       }
       const obj19 = { style: tmp4.guildIcon, source: tmp11 };
-      const tmp14 = closure_6(tmp6(6156), obj19);
+      const tmp14 = closure_6(tmp6(6157), obj19);
       cResult[8] = tmp4.guildIcon;
       cResult[9] = tmp11;
       cResult[10] = tmp14;
@@ -429,12 +429,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(18474)(guild_id, 3, 60);
+  const tmp6 = guild_id(18532)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18446), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18504), {}) };
     return closure_6(closure_4, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;
@@ -445,7 +445,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
     const obj5 = { style: tmp.guildIcon, source: null };
     const obj6 = { uri: guildAvatarUrl };
     obj5.source = obj6;
-    const items1 = [closure_6(tmp5(6156), obj5), ];
+    const items1 = [closure_6(tmp5(6157), obj5), ];
     const obj7 = { style: tmp.cardHeaderContainer, children: null };
     const obj8 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: guildName };
     const items2 = [closure_6(tmp2(5088).Text, obj8), ];

@@ -1,6 +1,6 @@
-// === Module 12030: CreateGuild ===
+// === Module 12032: CreateGuild ===
 
-// Module 12030 (CreateGuild)
+// Module 12032 (CreateGuild)
 import nativeDefault from "native" /* 587 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5371 */;
 import noop from "module_19" /* 19 */;
@@ -409,12 +409,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
   }
   let tmp9Result = !!isStaffResult;
   obj6.autoFocus = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(6285).TextInput, obj6);
+  items1[3] = closure_7(isScreenReaderEnabled(6286).TextInput, obj6);
   if (tmp9Result) {
     const obj7 = { onValueChange: onStaffOnlyChange, value: guild.staffOnly, start: true, end: true, label: "Staff Only", subLabel: null };
     const intl4 = tmp4(1126).intl;
     obj7.subLabel = intl4.string(tmp4(1126).t.edQ5va);
-    tmp9Result = closure_7(tmp4(6895).TableSwitchRow, obj7);
+    tmp9Result = closure_7(tmp4(6896).TableSwitchRow, obj7);
   }
   items1[4] = tmp9Result;
   const obj8 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -453,8 +453,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
           message2 = error.message;
         }
         const obj11 = { children: message2 };
-        tmp9Result2 = closure_7(ref(6621), obj11);
-        const tmp12Result = ref(6621);
+        tmp9Result2 = closure_7(ref(6622), obj11);
+        const tmp12Result = ref(6622);
       }
     }
   }

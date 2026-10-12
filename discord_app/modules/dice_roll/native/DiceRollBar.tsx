@@ -1,6 +1,6 @@
-// === Module 12090: DiceRollBar ===
+// === Module 12092: DiceRollBar ===
 
-// Module 12090 (DiceRollBar)
+// Module 12092 (DiceRollBar)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
@@ -10,7 +10,7 @@ import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(11631).useDiceRollState;
+const useDiceRollState = fn(11633).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 300;

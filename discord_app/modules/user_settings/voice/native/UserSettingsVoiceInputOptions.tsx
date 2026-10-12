@@ -3,7 +3,7 @@
 // Module 11078 (UserSettingsVoiceInputOptions)
 import util from "util" /* 1126 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 6890 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 6891 */;
 import VoiceSensitivityDefault from "VoiceSensitivity" /* 11079 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         obj3.onValueChange = function onValueChange(autoThreshold) {
           return AudioActionCreatorsDefault.setMode(inputMode, { autoThreshold });
         };
-        const items2 = [closure_6(tmp(6895).TableSwitchRow, obj3), ];
+        const items2 = [closure_6(tmp(6896).TableSwitchRow, obj3), ];
         const obj4 = { label: null, subLabel: null };
         const intl6 = tmp(1126).intl;
         obj4.label = intl6.string(tmp(1126).t["o+2oMK"]);
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         };
         obj5.children = closure_6(VoiceSensitivityDefault, obj6);
         obj4.subLabel = closure_6(View, obj5);
-        items2[1] = closure_6(tmp(6179).TableRow, obj4);
+        items2[1] = closure_6(tmp(6180).TableRow, obj4);
         obj2.children = items2;
         const tmp23 = closure_8(closure_7, obj2);
       }
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj7 = { style: iter.value, variant: "text-md/medium", color: "text-muted", children: cResult[5] };
     tmp18[1] = closure_6(tmp(5088).Text, obj7);
     tmp18[2] = handleInputModePress;
-    const tmp20 = closure_6(tmp(6179).TableRow, tmp18);
+    const tmp20 = closure_6(tmp(6180).TableRow, tmp18);
     cResult[6] = iter.value;
     cResult[7] = cResult[5];
     cResult[8] = tmp20;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   obj4.children = stringResult;
   obj3.trailing = closure_6(inputMode(5088).Text, obj4);
   obj3.onPress = handleInputModePress;
-  const items1 = [closure_6(inputMode(6179).TableRow, obj3), ];
+  const items1 = [closure_6(inputMode(6180).TableRow, obj3), ];
   let tmp4Result = null;
   if (inputMode !== InputModes.PUSH_TO_TALK) {
     const obj5 = { children: null };
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj6.onValueChange = function onValueChange(autoThreshold) {
       return AudioActionCreatorsDefault.setMode(inputMode, { autoThreshold });
     };
-    const items2 = [closure_6(tmp(6895).TableSwitchRow, obj6), ];
+    const items2 = [closure_6(tmp(6896).TableSwitchRow, obj6), ];
     const obj7 = { label: null, subLabel: null };
     const intl6 = tmp(1126).intl;
     obj7.label = intl6.string(tmp(1126).t["o+2oMK"]);
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     };
     obj8.children = closure_6(VoiceSensitivityDefault, obj9);
     obj7.subLabel = closure_6(View, obj8);
-    items2[1] = closure_6(tmp(6179).TableRow, obj7);
+    items2[1] = closure_6(tmp(6180).TableRow, obj7);
     obj5.children = items2;
     tmp4Result = closure_8(closure_7, obj5);
   }

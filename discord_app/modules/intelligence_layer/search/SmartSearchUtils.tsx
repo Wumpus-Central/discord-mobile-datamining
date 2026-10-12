@@ -1,10 +1,10 @@
-// === Module 12037: SmartSearchUtils ===
+// === Module 12039: SmartSearchUtils ===
 
-// Module 12037 (SmartSearchUtils)
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12038 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 12039 */;
-import QueryTokenizer from "QueryTokenizer" /* 12040 */;
-import SearchUtils from "SearchUtils" /* 12041 */;
+// Module 12039 (SmartSearchUtils)
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12040 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 12041 */;
+import QueryTokenizer from "QueryTokenizer" /* 12042 */;
+import SearchUtils from "SearchUtils" /* 12043 */;
 
 require = fn;
 function isUnsupportedFilterToken(type) {
@@ -15,11 +15,11 @@ function isUnsupportedFilterToken(type) {
   return tmp;
 }
 SmartSearchResultsStoreDefault;
-const SmartSearchConstants = fn(12036);
+const SmartSearchConstants = fn(12038);
 ({ MAX_PRESENTED_CITATIONS: c3, SUGGESTED_SEARCH_CHANNEL_KEY_DELIMITER: closure_4 } = SmartSearchConstants);
 const Constants = fn(1085);
 ({ SearchTokenTypes, SearchTypes: hasOwnProperty } = Constants);
-const SearchTabs = fn(9312).SearchTabs;
+const SearchTabs = fn(9313).SearchTabs;
 let items = [, ];
 ({ FILTER_IN: arr[0], ANSWER_IN: arr[1] } = SearchTokenTypes);
 const set = new Set(items);

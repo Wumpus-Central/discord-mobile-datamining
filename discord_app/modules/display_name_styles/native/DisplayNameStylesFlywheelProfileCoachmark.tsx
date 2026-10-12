@@ -1,10 +1,10 @@
-// === Module 17496: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 17553: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 17496 (DisplayNameStylesFlywheelProfileCoachmark)
+// Module 17553 (DisplayNameStylesFlywheelProfileCoachmark)
 import c from "c" /* 576 */;
 import _modDef2958 from "module_2958" /* 2958 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 17497 */;
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 17554 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -177,6 +177,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     }
   }), items2);
   const obj2 = markAsDismissed(4769);
-  const coachmark = visible(9442).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(9443).useCoachmark(visible.targetRef, memo);
   return null;
 });

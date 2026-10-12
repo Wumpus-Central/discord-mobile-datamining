@@ -1,13 +1,13 @@
-// === Module 7254: NewChannelsStore ===
+// === Module 7255: NewChannelsStore ===
 
-// Module 7254 (NewChannelsStore)
+// Module 7255 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import NSFWContentGate from "NSFWContentGate" /* 5943 */;
 import SidebarActionTypes from "SidebarActionTypes" /* 6063 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6799 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6800 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

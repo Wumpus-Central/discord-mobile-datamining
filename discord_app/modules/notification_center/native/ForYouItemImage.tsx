@@ -1,21 +1,21 @@
-// === Module 16859: ForYouItemImage ===
+// === Module 16883: ForYouItemImage ===
 
-// Module 16859 (ForYouItemImage)
+// Module 16883 (ForYouItemImage)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6058 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import Pressables from "Pressables" /* 6184 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8303 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8373 */;
-import _modDef8750 from "module_8750" /* 8750 */;
-import _modDef16861 from "module_16861" /* 16861 */;
-import _modDef16862 from "module_16862" /* 16862 */;
-import _modDef16863 from "module_16863" /* 16863 */;
-import _modDef16864 from "module_16864" /* 16864 */;
-import _modDef16865 from "module_16865" /* 16865 */;
-import _modDef16866 from "module_16866" /* 16866 */;
-import _modDef16867 from "module_16867" /* 16867 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import Pressables from "Pressables" /* 6185 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8374 */;
+import _modDef8751 from "module_8751" /* 8751 */;
+import _modDef16885 from "module_16885" /* 16885 */;
+import _modDef16886 from "module_16886" /* 16886 */;
+import _modDef16887 from "module_16887" /* 16887 */;
+import _modDef16888 from "module_16888" /* 16888 */;
+import _modDef16889 from "module_16889" /* 16889 */;
+import _modDef16890 from "module_16890" /* 16890 */;
+import _modDef16891 from "module_16891" /* 16891 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -23,53 +23,53 @@ import UserStore from "UserStore" /* 1390 */;
 require = fn;
 function getFallbackIcon(type, fallbackImage) {
   if (NotificationCenterItemsTypes.NotificationCenterItems.MISSED_MESSAGES === type) {
-    const obj2 = { icon: _modDef8750, color: fallbackImage.fallbackImage.color };
+    const obj2 = { icon: _modDef8751, color: fallbackImage.fallbackImage.color };
     return obj2;
   } else if (NotificationCenterItemsTypes.NotificationCenterItems.FRIEND_REQUEST_REMINDER === type) {
-    const obj3 = { icon: _modDef16861, color: fallbackImage.fallbackImage.color };
+    const obj3 = { icon: _modDef16885, color: fallbackImage.fallbackImage.color };
     return obj3;
   } else {
     if (NotificationCenterItemsTypes.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED !== type) {
       if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES !== type) {
         if (NotificationCenterItemsTypes.NotificationCenterItems.MISSED_MESSAGES !== type) {
           if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES === type) {
-            const obj4 = { icon: _modDef16863, color: fallbackImage.fallbackImage.color };
+            const obj4 = { icon: _modDef16887, color: fallbackImage.fallbackImage.color };
             return obj4;
           } else {
-            const obj = { icon: _modDef16864, color: fallbackImage.fallbackImage.color };
+            const obj = { icon: _modDef16888, color: fallbackImage.fallbackImage.color };
             return obj;
           }
         }
       }
     }
-    const obj5 = { icon: _modDef16862, color: fallbackImage.fallbackImageV2.color, backgroundStyle: fallbackImage.guildGridBackground };
+    const obj5 = { icon: _modDef16886, color: fallbackImage.fallbackImageV2.color, backgroundStyle: fallbackImage.guildGridBackground };
     return obj5;
   }
 }
 function getLifecycleIcon(item_enum) {
   if (item_enum === NotificationCenterItemsTypes.ItemEnum.UPDATE_PROFILE) {
-    const obj2 = { source: _modDef16865 };
-    let tmp5 = jsx(FastImageDefault, { source: _modDef16865 });
+    const obj2 = { source: _modDef16889 };
+    let tmp5 = jsx(FastImageDefault, { source: _modDef16889 });
   } else {
     if (item_enum !== NotificationCenterItemsTypes.ItemEnum.FIND_FRIENDS) {
       if (item_enum !== NotificationCenterItemsTypes.ItemEnum.ADD_FRIEND) {
         if (item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE) {
-          const obj3 = { source: _modDef16867, style: { width: "105%" } };
-          tmp5 = jsx(FastImageDefault, { source: _modDef16867, style: { width: "105%" } });
+          const obj3 = { source: _modDef16891, style: { width: "105%" } };
+          tmp5 = jsx(FastImageDefault, { source: _modDef16891, style: { width: "105%" } });
         } else {
-          const obj = { source: _modDef16864 };
-          tmp5 = jsx(native.Icon, { source: _modDef16864 });
+          const obj = { source: _modDef16888 };
+          tmp5 = jsx(native.Icon, { source: _modDef16888 });
         }
       }
     }
-    const obj4 = { source: _modDef16866, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
-    tmp5 = jsx(native.Icon, { source: _modDef16866, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE });
+    const obj4 = { source: _modDef16890, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
+    tmp5 = jsx(native.Icon, { source: _modDef16890, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE });
   }
   return tmp5;
 }
 const View = fn(17).View;
 const getGuildAcronym = fn(2083).getGuildAcronym;
-const Constants = fn(16860);
+const Constants = fn(16884);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
 let createStyles = fn(5092);

@@ -1,11 +1,11 @@
-// === Module 9805: PlaintextResolvers ===
+// === Module 9806: PlaintextResolvers ===
 
-// Module 9805 (PlaintextResolvers)
+// Module 9806 (PlaintextResolvers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4768 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import SlateUtils from "SlateUtils" /* 7373 */;
+import SlateUtils from "SlateUtils" /* 7374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmojiStore from "EmojiStore" /* 5987 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6034 */;

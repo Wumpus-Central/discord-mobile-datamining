@@ -1,6 +1,6 @@
-// === Module 12708: CollectiblesShopGiftPurchaseSection ===
+// === Module 12710: CollectiblesShopGiftPurchaseSection ===
 
-// Module 12708 (CollectiblesShopGiftPurchaseSection)
+// Module 12710 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -10,11 +10,11 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8316 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8317 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7143).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7144).useNativeCheckoutStore;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
 const PremiumConstants = fn(1392);
@@ -188,7 +188,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

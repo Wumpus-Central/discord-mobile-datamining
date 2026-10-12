@@ -1,24 +1,24 @@
-// === Module 8967: CollectiblesShopCardV2 ===
+// === Module 8968: CollectiblesShopCardV2 ===
 
-// Module 8967 (CollectiblesShopCardV2)
+// Module 8968 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7274 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7275 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8300 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8970 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 9033 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9035 */;
-import DiceIcon from "DiceIcon" /* 9036 */;
-import LimitedTimeBadgeDefault from "LimitedTimeBadge" /* 9038 */;
-import OrbsIcon from "OrbsIcon" /* 9039 */;
-import WishlistButton from "WishlistButton" /* 9041 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7275 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7276 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8301 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8971 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 9034 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9036 */;
+import DiceIcon from "DiceIcon" /* 9037 */;
+import LimitedTimeBadgeDefault from "LimitedTimeBadge" /* 9039 */;
+import OrbsIcon from "OrbsIcon" /* 9040 */;
+import WishlistButton from "WishlistButton" /* 9042 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7263 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7264 */;
 
 const require = globalThis.__r;
 

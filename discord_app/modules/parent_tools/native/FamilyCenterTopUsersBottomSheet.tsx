@@ -1,16 +1,16 @@
-// === Module 15153: FamilyCenterTopUsersBottomSheet ===
+// === Module 15176: FamilyCenterTopUsersBottomSheet ===
 
-// Module 15153 (FamilyCenterTopUsersBottomSheet)
+// Module 15176 (FamilyCenterTopUsersBottomSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import _modDef2568 from "module_2568" /* 2568 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import TableRow2 from "TableRow" /* 6179 */;
-import TableRowGroup from "TableRowGroup" /* 6264 */;
-import ActionSheet from "ActionSheet" /* 6898 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7741 */;
+import TableRow2 from "TableRow" /* 6180 */;
+import TableRowGroup from "TableRowGroup" /* 6265 */;
+import ActionSheet from "ActionSheet" /* 6899 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7742 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -34,7 +34,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRow
         return tmp7;
       } else {
         if (cResult[11] !== tmp8) {
-          const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "Array" };
+          const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "r" };
           const tmp20 = React4(native.Avatar, obj2);
           cResult[11] = tmp8;
           cResult[12] = tmp20;
@@ -92,7 +92,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRow
     const obj2 = { label: null, subLabel: null, icon: null };
     obj2.label = UserUtilsDefault.getName(user);
     obj2.subLabel = topUserOrGuildDescription;
-    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
     obj2.icon = React4(native.Avatar, obj4);
     return React4(TableRow2.TableRow, obj2);
   }

@@ -1,6 +1,6 @@
-// === Module 10264: useDisplayNameStylesAccessibleColors ===
+// === Module 10265: useDisplayNameStylesAccessibleColors ===
 
-// Module 10264 (useDisplayNameStylesAccessibleColors)
+// Module 10265 (useDisplayNameStylesAccessibleColors)
 import _modDef683 from "module_683" /* 683 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1409 */;
 import ColorUtils from "ColorUtils" /* 4967 */;

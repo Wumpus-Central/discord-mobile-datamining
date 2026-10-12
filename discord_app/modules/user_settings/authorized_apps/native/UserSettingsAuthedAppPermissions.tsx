@@ -1,9 +1,9 @@
-// === Module 15202: UserSettingsAuthedAppPermissions ===
+// === Module 15225: UserSettingsAuthedAppPermissions ===
 
-// Module 15202 (UserSettingsAuthedAppPermissions)
+// Module 15225 (UserSettingsAuthedAppPermissions)
 import Text_Text from "Text/Text" /* 5088 */;
-import disclosures2 from "disclosures" /* 9228 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15196 */;
+import disclosures2 from "disclosures" /* 9229 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15219 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_2_5(items(6867).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(587).colors.STATUS_POSITIVE });
+        items[0] = closure_2_5(items(6868).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(587).colors.STATUS_POSITIVE });
         items[1] = closure_2_5(items(5088).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);

@@ -1,20 +1,20 @@
-// === Module 9206: XboxLinkModal ===
+// === Module 9207: XboxLinkModal ===
 
-// Module 9206 (XboxLinkModal)
+// Module 9207 (XboxLinkModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Navigator from "Navigator" /* 6687 */;
-import HeaderActionButton from "HeaderActionButton" /* 7088 */;
-import _modDef7728 from "module_7728" /* 7728 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9205 */;
-import XboxLinkLandingDefault from "XboxLinkLanding" /* 9208 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9214 */;
-import XboxLinkPreConnectDefault from "XboxLinkPreConnect" /* 9216 */;
-import XboxLinkDiscordConsentDefault from "XboxLinkDiscordConsent" /* 9220 */;
-import XboxLinkSuccessDefault from "XboxLinkSuccess" /* 12906 */;
-import XboxLinkEducationDefault from "XboxLinkEducation" /* 12909 */;
-import XboxLinkErrorDefault from "XboxLinkError" /* 12911 */;
-import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 12915 */;
+import Navigator from "Navigator" /* 6688 */;
+import HeaderActionButton from "HeaderActionButton" /* 7089 */;
+import _modDef7729 from "module_7729" /* 7729 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9206 */;
+import XboxLinkLandingDefault from "XboxLinkLanding" /* 9209 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9215 */;
+import XboxLinkPreConnectDefault from "XboxLinkPreConnect" /* 9217 */;
+import XboxLinkDiscordConsentDefault from "XboxLinkDiscordConsent" /* 9221 */;
+import XboxLinkSuccessDefault from "XboxLinkSuccess" /* 12908 */;
+import XboxLinkEducationDefault from "XboxLinkEducation" /* 12911 */;
+import XboxLinkErrorDefault from "XboxLinkError" /* 12913 */;
+import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 12917 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ function getScreens(headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(onClose(9215).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return jsx(onClose(9216).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
         return jsx(XboxLinkPreConnectDefault, {});
@@ -51,7 +51,7 @@ function getScreens(headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(onClose(9215).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return jsx(onClose(9216).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
@@ -87,7 +87,7 @@ function getScreens(headerStyle) {
     }
   };
 }
-const XboxLinkModalScenes = fn(9207).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9208).XboxLinkModalScenes;
 const PlatformTypes = fn(1085).PlatformTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -103,10 +103,10 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function Clo
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef7728, onPress: first, accessibilityLabel: null };
+    const obj2 = { source: _modDef7729, onPress: first, accessibilityLabel: null };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
-    const tmp8 = jsx(HeaderActionButton.HeaderActionButton, { source: _modDef7728, onPress: first, accessibilityLabel: null });
+    const tmp8 = jsx(HeaderActionButton.HeaderActionButton, { source: _modDef7729, onPress: first, accessibilityLabel: null });
     cResult[1] = tmp8;
     let tmp5 = tmp8;
   } else {
@@ -115,7 +115,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function Clo
   return tmp5;
 }) : (function CloseButton() {
   const obj = {
-    source: _modDef7728,
+    source: _modDef7729,
     onPress: function onClose() {
       return XboxLinkModalActionCreatorsDefault.hideModal();
     },
@@ -124,7 +124,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function Clo
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7728,
+    source: _modDef7729,
     onPress: function onClose() {
       return XboxLinkModalActionCreatorsDefault.hideModal();
     },
@@ -170,13 +170,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const tmpResult = useAccountLinkStepTracking;
 }) : (function XboxLinkModal(locationStack) {
   let twoWayLinkStyles;
-  twoWayLinkStyles = twoWayLinkStyles(9214).useTwoWayLinkStyles();
+  twoWayLinkStyles = twoWayLinkStyles(9215).useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => getScreens(twoWayLinkStyles), items);
-  const obj = twoWayLinkStyles(9214);
-  const accountLinkStepTracking = twoWayLinkStyles(12915).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
+  const obj = twoWayLinkStyles(9215);
+  const accountLinkStepTracking = twoWayLinkStyles(12917).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
   const obj3 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1126).intl;
   obj3.headerBackTitle = intl.string(twoWayLinkStyles(1126).t["13/7kX"]);
-  return jsx(twoWayLinkStyles(6687).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null });
+  return jsx(twoWayLinkStyles(6688).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null });
 });

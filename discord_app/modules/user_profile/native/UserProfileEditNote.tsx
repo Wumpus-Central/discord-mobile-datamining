@@ -1,7 +1,7 @@
-// === Module 13176: UserProfileEditNote ===
+// === Module 13181: UserProfileEditNote ===
 
-// Module 13176 (UserProfileEditNote)
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
+// Module 13181 (UserProfileEditNote)
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         if (closure_5 == null) {
           str = "";
         }
-        const tmp2 = closure_1_1(9633);
+        const tmp2 = closure_1_1(9634);
         tmp2({
           hasEdits: str !== closure_6,
           onHasEdits: closure_1_0(4985).dismissKeyboard,

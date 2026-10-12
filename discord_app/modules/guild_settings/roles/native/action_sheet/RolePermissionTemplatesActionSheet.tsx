@@ -1,15 +1,15 @@
-// === Module 18373: RolePermissionTemplatesActionSheet ===
+// === Module 18431: RolePermissionTemplatesActionSheet ===
 
-// Module 18373 (RolePermissionTemplatesActionSheet)
+// Module 18431 (RolePermissionTemplatesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6838 */;
-import ActionSheet from "ActionSheet" /* 6898 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 18351 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
+import ActionSheet from "ActionSheet" /* 6899 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 18409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
       let obj2 = { title: null };
       let intl = tmp(1126).intl;
       obj2.title = intl.string(tmp(1126).t.KgCkoQ);
-      const tmp12 = jsx(tmp(6838).BottomSheetTitleHeader, { title: null });
+      const tmp12 = jsx(tmp(6839).BottomSheetTitleHeader, { title: null });
       cResult[7] = tmp12;
       const tmp11 = tmp12;
     } else {
@@ -136,14 +136,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RolePerm
       const obj3 = { header: tmp11, startExpanded: true, children: null };
       const obj4 = { style: tmp4.templateContainer, children: tmp13 };
       obj3.children = <View style={tmp4.templateContainer}>{tmp13}</View>;
-      const tmp21 = jsx(tmp(6898).ActionSheet, { header: tmp11, startExpanded: true, children: null });
+      const tmp21 = jsx(tmp(6899).ActionSheet, { header: tmp11, startExpanded: true, children: null });
       cResult[11] = tmp4.templateContainer;
       cResult[12] = tmp13;
       cResult[13] = tmp21;
       tmp18 = tmp21;
     }
     const obj5 = { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId };
-    const tmp17 = jsx(onPermissionsChanged(18351), { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
+    const tmp17 = jsx(onPermissionsChanged(18409), { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId });
     cResult[8] = guildId;
     cResult[9] = tmp10;
     cResult[10] = tmp17;

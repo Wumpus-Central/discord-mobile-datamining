@@ -1,7 +1,7 @@
 // === Module 10967: ChannelCallModalManager ===
 
 // Module 10967 (ChannelCallModalManager)
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7481 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7482 */;
 import UserStore from "UserStore" /* 1390 */;
 import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;

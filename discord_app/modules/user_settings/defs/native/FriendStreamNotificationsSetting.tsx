@@ -1,10 +1,10 @@
-// === Module 15774: FriendStreamNotificationsSetting ===
+// === Module 15797: FriendStreamNotificationsSetting ===
 
-// Module 15774 (FriendStreamNotificationsSetting)
+// Module 15797 (FriendStreamNotificationsSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import SettingsConstants from "SettingsConstants" /* 7992 */;
-import GoLiveNotificationUtils from "GoLiveNotificationUtils" /* 15775 */;
+import SettingsConstants from "SettingsConstants" /* 7993 */;
+import GoLiveNotificationUtils from "GoLiveNotificationUtils" /* 15798 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

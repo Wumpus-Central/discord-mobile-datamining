@@ -2,7 +2,7 @@
 
 // Module 10918 (useCurrentEmbeddedApplication)
 import c from "c" /* 576 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6857 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6858 */;
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10919 */;
 import _slicedToArray from "module_32" /* 32 */;
 

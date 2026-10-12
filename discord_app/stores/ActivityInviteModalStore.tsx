@@ -1,17 +1,17 @@
-// === Module 14009: ActivityInviteModalStore ===
+// === Module 14032: ActivityInviteModalStore ===
 
-// Module 14009 (ActivityInviteModalStore)
+// Module 14032 (ActivityInviteModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import sortByMatchScore from "sortByMatchScore" /* 8699 */;
+import sortByMatchScore from "sortByMatchScore" /* 8700 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import LocalActivityStore from "LocalActivityStore" /* 10647 */;
+import LocalActivityStore from "LocalActivityStore" /* 10648 */;
 import PresenceStore from "PresenceStore" /* 5108 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6922 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6923 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
@@ -138,7 +138,7 @@ function handleLocalActivityUpdate() {
 }
 const Constants = fn(1085);
 ({ ChannelTypes: closure_11, ActivityActionTypes: closure_12 } = Constants);
-let items = [fn(8699).AutocompleterResultTypes.TEXT_CHANNEL, fn(8699).AutocompleterResultTypes.GROUP_DM, fn(8699).AutocompleterResultTypes.USER];
+let items = [fn(8700).AutocompleterResultTypes.TEXT_CHANNEL, fn(8700).AutocompleterResultTypes.GROUP_DM, fn(8700).AutocompleterResultTypes.USER];
 let c14 = null;
 let c15 = null;
 items = [];

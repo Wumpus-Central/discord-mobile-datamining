@@ -1,6 +1,6 @@
-// === Module 12375: JoinRequestRejectionReasonActionSheet ===
+// === Module 12377: JoinRequestRejectionReasonActionSheet ===
 
-// Module 12375 (JoinRequestRejectionReasonActionSheet)
+// Module 12377 (JoinRequestRejectionReasonActionSheet)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ class JoinRequestRejectionReasonActionSheet {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

@@ -1,14 +1,14 @@
-// === Module 17630: MobileSurvey ===
+// === Module 17687: MobileSurvey ===
 
-// Module 17630 (MobileSurvey)
+// Module 17687 (MobileSurvey)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import LinkingDefault from "Linking" /* 4806 */;
 import _modDef11126 from "module_11126" /* 11126 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 16057 */;
+import SurveyActionCreators from "SurveyActionCreators" /* 16080 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SurveyStore from "SurveyStore" /* 7471 */;
+import SurveyStore from "SurveyStore" /* 7472 */;
 
 const require = globalThis.__r;
 
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
                 return obj;
               }
               c0 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             } catch (tmp9) {
               c0 = tmp;
               throw tmp9;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MobileSu
               return obj;
             }
             c0 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           } catch (tmp9) {
             c0 = tmp;
             throw tmp9;

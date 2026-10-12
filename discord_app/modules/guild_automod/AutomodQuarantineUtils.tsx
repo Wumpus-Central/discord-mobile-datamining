@@ -1,12 +1,12 @@
-// === Module 11457: AutomodQuarantineUtils ===
+// === Module 11459: AutomodQuarantineUtils ===
 
-// Module 11457 (AutomodQuarantineUtils)
+// Module 11459 (AutomodQuarantineUtils)
 import util from "util" /* 1126 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4756 */;
-import openUserSettings2 from "openUserSettings" /* 7093 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10642 */;
+import openUserSettings2 from "openUserSettings" /* 7094 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10643 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10577 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10578 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -81,7 +81,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "backgroundColor", bio: "IconComponent" };
+      const obj = { nick: "Array", bio: "Set" };
       guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -141,7 +141,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "backgroundColor", bio: "IconComponent" };
+    const obj = { nick: "Array", bio: "Set" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

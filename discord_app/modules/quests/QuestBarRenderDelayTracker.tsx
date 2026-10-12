@@ -1,6 +1,6 @@
-// === Module 9196: QuestBarRenderDelayTracker ===
+// === Module 9197: QuestBarRenderDelayTracker ===
 
-// Module 9196 (QuestBarRenderDelayTracker)
+// Module 9197 (QuestBarRenderDelayTracker)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5729 */;

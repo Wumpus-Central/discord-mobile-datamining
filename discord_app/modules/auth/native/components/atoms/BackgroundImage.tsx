@@ -1,11 +1,11 @@
-// === Module 6656: BackgroundImage ===
+// === Module 6657: BackgroundImage ===
 
-// Module 6656 (BackgroundImage)
+// Module 6657 (BackgroundImage)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4969 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import _modDef6657 from "module_6657" /* 6657 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import _modDef6658 from "module_6658" /* 6658 */;
+import _modDef6659 from "module_6659" /* 6659 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,9 +50,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Backgrou
     tmp13 = obj4;
   } else {
     if (tmpResult.isThemeDark(tmp6)) {
-      let tmp5Result2 = _modDef6657;
+      let tmp5Result2 = _modDef6658;
     } else {
-      tmp5Result2 = _modDef6658;
+      tmp5Result2 = _modDef6659;
     }
     tmpResult = shared;
   }
@@ -76,15 +76,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Backgrou
     } else {
       let tmp2 = dependencyMap;
       if (obj2.isThemeDark(closure_2)) {
-        tmp2 = 6657;
+        tmp2 = 6658;
         let tmp4Result = importDefault(tmp2);
       } else {
-        tmp4Result = _modDef6658;
+        tmp4Result = _modDef6659;
       }
       obj2 = shared;
     }
   }, items);
   const merged = Object.assign(memo);
-  obj.children = jsx(flag(6156), {});
+  obj.children = jsx(flag(6157), {});
   return <closure_4 style={absoluteFill.absoluteFill}>{null}</closure_4>;
 });

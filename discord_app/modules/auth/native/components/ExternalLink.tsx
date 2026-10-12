@@ -1,6 +1,6 @@
-// === Module 16383: ExternalLink ===
+// === Module 16406: ExternalLink ===
 
-// Module 16383 (ExternalLink)
+// Module 16406 (ExternalLink)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting("modules/auth/native/components/Extern
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExternalLink(externalURL) {
   const cResult = externalURL(576).c(22);
   externalURL = externalURL.externalURL;
-  const tmp5 = closure_9(navigation(6625)());
+  const tmp5 = closure_9(navigation(6626)());
   const obj = externalURL(576);
   const tmp4 = navigation;
   navigation = externalURL(1503).useNavigation();
@@ -66,10 +66,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
     const obj3 = { children: null };
     const intl = tmp(1126).intl;
     obj3.children = intl.string(tmp(1126).t["0Niu/F"]);
-    const tmp14 = closure_7(tmp4(6655), obj3);
+    const tmp14 = closure_7(tmp4(6656), obj3);
     cResult[5] = tmp14;
     let tmp11 = tmp14;
-    const tmp4Result = tmp4(6655);
+    const tmp4Result = tmp4(6656);
   } else {
     tmp11 = cResult[5];
   }

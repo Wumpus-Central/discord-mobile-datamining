@@ -1,10 +1,10 @@
-// === Module 12650: useBookmarksPagination ===
+// === Module 12652: useBookmarksPagination ===
 
-// Module 12650 (useBookmarksPagination)
-import SavedMessagesTypes from "SavedMessagesTypes" /* 9681 */;
-import SavedMessagesActions from "SavedMessagesActions" /* 12649 */;
+// Module 12652 (useBookmarksPagination)
+import SavedMessagesTypes from "SavedMessagesTypes" /* 9682 */;
+import SavedMessagesActions from "SavedMessagesActions" /* 12651 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 9680 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 9681 */;
 
 const require = globalThis.__r;
 

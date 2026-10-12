@@ -7,7 +7,7 @@ import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5950 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8326 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8327 */;
 import UserSummaryItemDefault from "UserSummaryItem" /* 10723 */;
 import SpeakerTile from "SpeakerTile" /* 11159 */;
 import StageSectionHeaderDefault from "StageSectionHeader" /* 11166 */;
@@ -860,7 +860,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageCha
   const throttleDurationForChannel = width(11185).useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1497)().width;
   let obj = width(11185);
-  isScreenLandscape = width(8326).useIsScreenLandscape();
+  isScreenLandscape = width(8327).useIsScreenLandscape();
   const items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
     let num = 3;
@@ -874,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageCha
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj2 = width(8326);
+  const obj2 = width(8327);
   const tmp4 = _slicedToArray(width(11185).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
 });

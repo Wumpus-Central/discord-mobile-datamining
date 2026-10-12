@@ -1,17 +1,17 @@
-// === Module 6681: UserSettingsConfirmPassword ===
+// === Module 6682: UserSettingsConfirmPassword ===
 
-// Module 6681 (UserSettingsConfirmPassword)
+// Module 6682 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6284 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6621 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6682 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6683 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 6685 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6285 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6622 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6683 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6684 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 6686 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ class UserSettingsConfirmPasswordInner {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

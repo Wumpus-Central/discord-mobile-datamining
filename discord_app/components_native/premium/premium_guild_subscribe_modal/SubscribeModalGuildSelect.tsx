@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 587 */;
 import BoostingActionCreatorsAll from "BoostingActionCreators" /* 5959 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5970 */;
-import SearchBarNavDefault from "SearchBarNav" /* 7087 */;
+import SearchBarNavDefault from "SearchBarNav" /* 7088 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -398,7 +398,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Subscrib
   obj4.onClose = BoostingActionCreatorsAll.closeApplyBoostModal;
   const items3 = [closure_11(SearchBarNavDefault, obj4), ];
   const obj5 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
-  obj5.children = closure_11(guildBoostSlots(6813).SafeAreaPaddingView, {
+  obj5.children = closure_11(guildBoostSlots(6814).SafeAreaPaddingView, {
     bottom: true,
     children: stateFromStoresArray.map((guild) => {
       const obj = {
@@ -417,5 +417,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Subscrib
   });
   items3[1] = closure_11(memo, obj5);
   obj3.children = items3;
-  return closure_12(guildBoostSlots(6813).SafeAreaPaddingView, obj3);
+  return closure_12(guildBoostSlots(6814).SafeAreaPaddingView, obj3);
 });

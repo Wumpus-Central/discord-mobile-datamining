@@ -1,6 +1,6 @@
-// === Module 15694: LanguageSetting ===
+// === Module 15717: LanguageSetting ===
 
-// Module 15694 (LanguageSetting)
+// Module 15717 (LanguageSetting)
 import util from "util" /* 1126 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 
@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(15695).LanguageIcon,
+  IconComponent: fn(15718).LanguageIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useLanguageSettingTrailing() {
     const cResult = stateFromStores(576).c(4);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

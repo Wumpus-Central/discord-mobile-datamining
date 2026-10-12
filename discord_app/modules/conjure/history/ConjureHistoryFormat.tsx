@@ -1,6 +1,6 @@
-// === Module 17116: ConjureHistoryFormat ===
+// === Module 17115: ConjureHistoryFormat ===
 
-// Module 17116 (ConjureHistoryFormat)
+// Module 17115 (ConjureHistoryFormat)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import getTimestampString from "getTimestampString" /* 5448 */;
@@ -109,8 +109,8 @@ export const formatAuthoredAt = function formatAuthoredAt(authored_at) {
 export const formatHistoryTime = function formatHistoryTime(parseTimestampMsResult) {
   return new Date(parseTimestampMsResult).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
 };
-export const formatHistoryDateTime = function formatHistoryDateTime(arg0) {
-  return new Date(arg0).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+export const formatHistoryDateTime = function formatHistoryDateTime(parseTimestampMsResult) {
+  return new Date(parseTimestampMsResult).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
 };
 export { formatHistoryDay };
 export const groupHistoryByDay = function groupHistoryByDay(items, getMs, nowMs) {

@@ -1,6 +1,6 @@
-// === Module 12132: PostReactionPermissionNudgeExperiment ===
+// === Module 12134: PostReactionPermissionNudgeExperiment ===
 
-// Module 12132 (PostReactionPermissionNudgeExperiment)
+// Module 12134 (PostReactionPermissionNudgeExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

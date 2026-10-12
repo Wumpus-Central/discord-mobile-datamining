@@ -1,6 +1,6 @@
-// === Module 14033: getSoundString ===
+// === Module 14056: getSoundString ===
 
-// Module 14033 (getSoundString)
+// Module 14056 (getSoundString)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundString.tsx");

@@ -1,6 +1,6 @@
-// === Module 8702: LinkRecord ===
+// === Module 8703: LinkRecord ===
 
-// Module 8702 (LinkRecord)
+// Module 8703 (LinkRecord)
 import Record from "Record" /* 1405 */;
 
 const Routes = fn(1085).Routes;

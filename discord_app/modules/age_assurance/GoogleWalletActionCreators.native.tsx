@@ -1,9 +1,9 @@
-// === Module 7546: GoogleWalletActionCreators ===
+// === Module 7547: GoogleWalletActionCreators ===
 
-// Module 7546 (GoogleWalletActionCreators)
+// Module 7547 (GoogleWalletActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7511 */;
-import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 7547 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7512 */;
+import NativeDigitalCredentialModuleDefault from "NativeDigitalCredentialModule" /* 7548 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -19,7 +19,7 @@ let closure_6 = async function _requestGoogleWalletVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -97,7 +97,7 @@ let closure_7 = async function _verifyGoogleWalletCredential() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -152,7 +152,7 @@ let closure_7 = async function _verifyGoogleWalletCredential() {
             return obj;
           }
           c1 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp6) {
         c1 = tmp;
@@ -172,7 +172,7 @@ let closure_8 = async function _checkGoogleWalletAvailable() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

@@ -1,18 +1,18 @@
-// === Module 14862: UserProfileAvatarDecorationEditButton ===
+// === Module 14885: UserProfileAvatarDecorationEditButton ===
 
-// Module 14862 (UserProfileAvatarDecorationEditButton)
+// Module 14885 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8281 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9015 */;
-import _modDef13453 from "module_13453" /* 13453 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8282 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9016 */;
+import _modDef13476 from "module_13476" /* 13476 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(6904).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(6905).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1096).NOOP;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
@@ -250,8 +250,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                         obj2.children = jsx(CutoutableAvatarDecorationDefault, { avatarDecoration, size: COLLECTIBLES_PREVIEW_SIZE - 2 * nativeDefault.space.PX_4, animate: false });
                         let tmp7 = <hasOwnProperty style={closure_3.previewContainer}>{null}</hasOwnProperty>;
                       } else {
-                        const obj = { source: _modDef13453, style: closure_3.noneIcon };
-                        tmp7 = jsx(native.Icon, { source: _modDef13453, style: closure_3.noneIcon });
+                        const obj = { source: _modDef13476, style: closure_3.noneIcon };
+                        tmp7 = jsx(native.Icon, { source: _modDef13476, style: closure_3.noneIcon });
                       }
                       return tmp7;
                     }

@@ -1,11 +1,11 @@
-// === Module 10180: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 10181: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 10180 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 10181 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10155 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10156 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(7143).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7144).useNativeCheckoutStore;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const GiftingOrigin = fn(1392).GiftingOrigin;
 const jsxProd = fn(21);
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

@@ -1,7 +1,7 @@
-// === Module 8187: useShowMemberVerificationGate ===
+// === Module 8188: useShowMemberVerificationGate ===
 
-// Module 8187 (useShowMemberVerificationGate)
-import MemberVerificationUtils from "MemberVerificationUtils" /* 6170 */;
+// Module 8188 (useShowMemberVerificationGate)
+import MemberVerificationUtils from "MemberVerificationUtils" /* 6171 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;

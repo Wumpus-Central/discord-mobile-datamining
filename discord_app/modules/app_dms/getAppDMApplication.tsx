@@ -1,8 +1,8 @@
-// === Module 11905: getAppDMApplication ===
+// === Module 11907: getAppDMApplication ===
 
-// Module 11905 (getAppDMApplication)
+// Module 11907 (getAppDMApplication)
 import ApplicationStore from "ApplicationStore" /* 5440 */;
-import UserProfileStore from "UserProfileStore" /* 7320 */;
+import UserProfileStore from "UserProfileStore" /* 7321 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const size = fn(2);

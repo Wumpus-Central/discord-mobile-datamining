@@ -19,8 +19,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoBac
   const cResult = analyticsContext(576).c(13);
   title = title.title;
   let obj = analyticsContext(576);
-  analyticsContext = analyticsContext(9538).useAnalyticsContext();
-  let obj2 = analyticsContext(9538);
+  analyticsContext = analyticsContext(9539).useAnalyticsContext();
+  let obj2 = analyticsContext(9539);
   const lastUsedVideoBackgroundOption = analyticsContext(5258).useLastUsedVideoBackgroundOption();
   let obj3 = analyticsContext(5258);
   const videoBackgroundRadioOptions = analyticsContext(11096).useVideoBackgroundRadioOptions();
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoBac
       }
     }
     const obj5 = { hasIcons: true, title, value: tmp7, onChange: tmp6, accessibilityLabel: tmp9, children: tmp11 };
-    const tmp17 = jsx(tmp(6262).TableRadioGroup, { hasIcons: true, title, value: tmp7, onChange: tmp6, accessibilityLabel: tmp9, children: tmp11 });
+    const tmp17 = jsx(tmp(6263).TableRadioGroup, { hasIcons: true, title, value: tmp7, onChange: tmp6, accessibilityLabel: tmp9, children: tmp11 });
     cResult[8] = tmp6;
     cResult[9] = tmp7;
     cResult[10] = tmp11;

@@ -1,19 +1,19 @@
-// === Module 6194: IdentityVerificationField ===
+// === Module 6195: IdentityVerificationField ===
 
-// Module 6194 (IdentityVerificationField)
+// Module 6195 (IdentityVerificationField)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4942 */;
-import MobilePhoneIcon2 from "MobilePhoneIcon" /* 6641 */;
-import EnvelopeIcon from "EnvelopeIcon" /* 6769 */;
+import MobilePhoneIcon2 from "MobilePhoneIcon" /* 6642 */;
+import EnvelopeIcon from "EnvelopeIcon" /* 6770 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const Text_Text = CheckmarkLargeIcon(5088);
 const components_Button_Button = CheckmarkLargeIcon(5379);
-const CheckmarkLargeIcon2 = CheckmarkLargeIcon(6195);
+const CheckmarkLargeIcon2 = CheckmarkLargeIcon(6196);
 require = fn;
 function getLabel(arg0, arg1) {
   if (MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL === arg0) {

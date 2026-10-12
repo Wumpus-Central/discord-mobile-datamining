@@ -1,8 +1,8 @@
-// === Module 12019: GuildDirectoryTemplates ===
+// === Module 12021: GuildDirectoryTemplates ===
 
-// Module 12019 (GuildDirectoryTemplates)
+// Module 12021 (GuildDirectoryTemplates)
 import native from "native" /* 1200 */;
-import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 12020 */;
+import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 12022 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,9 +10,9 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(12001);
+const GuildDirectoryConstants = fn(12003);
 ({ getHubGuildTemplatesMap: metroRequire, HubGuildTemplateId: closure_7 } = GuildDirectoryConstants);
-const GuildDirectoryCreate = fn(12006).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12008).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5092);
@@ -45,7 +45,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTemplat
       }
     }
     const obj2 = { Icon: tmp3, message: guildTemplate.label, onPress: tmp4 };
-    const tmp8 = closure_9(onGuildTemplatePress(12028), obj2);
+    const tmp8 = closure_9(onGuildTemplatePress(12030), obj2);
     cResult[5] = guildTemplate.label;
     cResult[6] = tmp3;
     cResult[7] = tmp4;
@@ -63,7 +63,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTemplat
 }) : (function GuildTemplatesItem(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
-  return closure_9(onGuildTemplatePress(12028), {
+  return closure_9(onGuildTemplatePress(12030), {
     Icon() {
       return options(native.Icon, { source: GuildDirectoryTemplatesIcons.GUILD_TEMPLATE_ICONS[guildTemplate.id], disableColor: true, style: { width: 48, height: 48 } });
     },

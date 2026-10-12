@@ -1,8 +1,8 @@
-// === Module 8531: useCanInviteForGuildEvent ===
+// === Module 8532: useCanInviteForGuildEvent ===
 
-// Module 8531 (useCanInviteForGuildEvent)
+// Module 8532 (useCanInviteForGuildEvent)
 import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
-import canViewInviteModal from "canViewInviteModal" /* 8532 */;
+import canViewInviteModal from "canViewInviteModal" /* 8533 */;
 import StageInstanceStore from "StageInstanceStore" /* 2070 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;

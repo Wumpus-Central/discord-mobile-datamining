@@ -1,15 +1,15 @@
-// === Module 17547: IntegrationsSettingsWebhooksOverview ===
+// === Module 17604: IntegrationsSettingsWebhooksOverview ===
 
-// Module 17547 (IntegrationsSettingsWebhooksOverview)
+// Module 17604 (IntegrationsSettingsWebhooksOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
-import NavScrim from "NavScrim" /* 6727 */;
-import Form from "Form" /* 8579 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17549 */;
+import NavScrim from "NavScrim" /* 6728 */;
+import Form from "Form" /* 8580 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17606 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -18,7 +18,7 @@ import GuildChannelStore_mod from "GuildChannelStore" /* 4748 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import UserStore from "UserStore" /* 1390 */;
-import WebhooksStore from "WebhooksStore" /* 17548 */;
+import WebhooksStore from "WebhooksStore" /* 17605 */;
 
 require = fn;
 let closure_3 = ["channelId", "user"];
@@ -349,7 +349,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Create
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -473,7 +473,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function Create
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -567,7 +567,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(17552).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(17609).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1126).intl;
       dkHRkE = webhookType(1126).t.dkHRkE;
@@ -589,7 +589,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
         })
     };
     const obj4 = { children: null };
-    items[2] = closure_20(webhookType(6264).TableRowGroup, obj3);
+    items[2] = closure_20(webhookType(6265).TableRowGroup, obj3);
     obj4.children = items;
     return closure_22(closure_21, obj4);
   }

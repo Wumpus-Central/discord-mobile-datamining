@@ -1,20 +1,20 @@
-// === Module 7406: AnalyticsActions ===
+// === Module 7407: AnalyticsActions ===
 
-// Module 7406 (AnalyticsActions)
+// Module 7407 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
 import QuestTypes from "QuestTypes" /* 5975 */;
 import AdCreativeType from "AdCreativeType" /* 5979 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7183 */;
-import QuestDataUtils from "QuestDataUtils" /* 7386 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7409 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7410 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7412 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7415 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7184 */;
+import QuestDataUtils from "QuestDataUtils" /* 7387 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7410 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7411 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7413 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7416 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7407 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7408 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1370 */;
-import QuestStore from "QuestStore" /* 7390 */;
+import QuestStore from "QuestStore" /* 7391 */;
 
 require = fn;
 function trackQuestEvent(sourceQuestContent) {
@@ -203,7 +203,7 @@ let closure_12 = async function _getCommonClickEventProperties(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

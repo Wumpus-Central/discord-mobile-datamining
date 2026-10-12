@@ -1,10 +1,10 @@
-// === Module 13402: WishlistViewerCoachmark ===
+// === Module 13425: WishlistViewerCoachmark ===
 
-// Module 13402 (WishlistViewerCoachmark)
+// Module 13425 (WishlistViewerCoachmark)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import _modDef13403 from "module_13403" /* 13403 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import _modDef13426 from "module_13426" /* 13426 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const cResult = c.c(6);
   const tmp3 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13403 };
+    const obj2 = { uri: _modDef13426 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -49,7 +49,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const tmp = closure_7();
   const obj = { style: tmp.imageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef13403 };
+  const obj3 = { uri: _modDef13426 };
   obj2.source = obj3;
   obj2.style = tmp.image;
   obj.children = jsx(FastImageDefault, { source: null, style: null });
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
       if (cResult[10] === tmp9) {
         let tmp13 = cResult[11];
       }
-      const coachmark = markAsDismissed(9442).useCoachmark(onViewWishlist.anchorRef, tmp13);
+      const coachmark = markAsDismissed(9443).useCoachmark(onViewWishlist.anchorRef, tmp13);
       return null;
     }
   }

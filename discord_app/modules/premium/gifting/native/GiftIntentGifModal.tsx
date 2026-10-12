@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -61,7 +61,7 @@ let closure_14 = async function _sendGiftIntentGif(arg0) {
     obj12.location_stack = items;
     closure_130_1(closure_130_2[12]).track(closure_130_8.GIFT_INTENT_MESSAGE_SENT, obj12);
     c4 = 3;
-    return { value: "IconComponent", done: "+51" };
+    return { value: "IconComponent", done: null };
   }
   const id = closure_129_0.id;
   await closure_130_1(closure_130_2[10]).sendMessage(id, closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_3.url), true, { location: closure_130_9.GIFTING });

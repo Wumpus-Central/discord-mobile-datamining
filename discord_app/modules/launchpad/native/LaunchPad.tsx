@@ -1,6 +1,6 @@
-// === Module 17924: LaunchPad ===
+// === Module 17981: LaunchPad ===
 
-// Module 17924 (LaunchPad)
+// Module 17981 (LaunchPad)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -10,24 +10,24 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import ChatInputUtils from "ChatInputUtils" /* 4985 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6184 */;
-import AutocompleterDefault from "Autocompleter" /* 8700 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 8712 */;
+import Pressables from "Pressables" /* 6185 */;
+import AutocompleterDefault from "Autocompleter" /* 8701 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 8713 */;
 import RouteManagerDefault from "RouteManager" /* 11200 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 12687 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14808 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 12689 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14831 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4802 */;
-import ChannelListStore from "ChannelListStore" /* 7248 */;
+import ChannelListStore from "ChannelListStore" /* 7249 */;
 import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 6073 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6034 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7408 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6077 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7409 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6078 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 14020 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 14043 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 import SortedGuildStore from "SortedGuildStore" /* 5963 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
@@ -1153,7 +1153,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   return closure_28(sharedValue, obj6);
 }));
 const results = [];
-let items = [fn(8699).AutocompleterResultTypes.GUILD, fn(8699).AutocompleterResultTypes.TEXT_CHANNEL, fn(8699).AutocompleterResultTypes.GROUP_DM, fn(8699).AutocompleterResultTypes.VOICE_CHANNEL, fn(8699).AutocompleterResultTypes.USER];
+let items = [fn(8700).AutocompleterResultTypes.GUILD, fn(8700).AutocompleterResultTypes.TEXT_CHANNEL, fn(8700).AutocompleterResultTypes.GROUP_DM, fn(8700).AutocompleterResultTypes.VOICE_CHANNEL, fn(8700).AutocompleterResultTypes.USER];
 ReactCompilerGating = fn(558);
 let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWrapperStyles() {
   const cResult = c.c(5);

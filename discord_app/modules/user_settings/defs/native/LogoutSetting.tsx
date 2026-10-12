@@ -1,6 +1,6 @@
-// === Module 15834: LogoutSetting ===
+// === Module 15857: LogoutSetting ===
 
-// Module 15834 (LogoutSetting)
+// Module 15857 (LogoutSetting)
 import Storage2 from "Storage" /* 510 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import useAlertStore from "useAlertStore" /* 5301 */;
 import AlertModal from "AlertModal" /* 5305 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5889 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5930 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6679 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6680 */;
 import DoorExitIcon from "DoorExitIcon" /* 10992 */;
 import PushNotificationDefault from "PushNotification" /* 11031 */;
 import jsxProd from "jsxProd" /* 21 */;

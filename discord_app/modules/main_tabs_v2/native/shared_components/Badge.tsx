@@ -1,6 +1,6 @@
-// === Module 9302: Badge ===
+// === Module 9303: Badge ===
 
-// Module 9302 (Badge)
+// Module 9303 (Badge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;

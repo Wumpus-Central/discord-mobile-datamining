@@ -1,12 +1,12 @@
-// === Module 6116: GuildJoinRequestActionCreators ===
+// === Module 6117: GuildJoinRequestActionCreators ===
 
-// Module 6116 (GuildJoinRequestActionCreators)
+// Module 6117 (GuildJoinRequestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4942 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6118 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6119 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6117 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6118 */;
 
 require = fn;
 let closure_9 = async function _fetchGuildJoinRequests(arg0) {
@@ -25,7 +25,7 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -101,7 +101,7 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
               }
             }
             c7 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else if (2 === tmp7) {
           c5 = 0;
@@ -174,7 +174,7 @@ let closure_11 = async function _removeGuildJoinRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -242,7 +242,7 @@ let closure_12 = async function _ackUserGuildJoinRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -278,7 +278,7 @@ let closure_12 = async function _ackUserGuildJoinRequest(arg0) {
         const obj10 = { type: "ACK_APPROVED_GUILD_JOIN_REQUEST", id: closure_130_1, guildId: closure_130_0 };
         closure_131_1(closure_131_2[6]).dispatch(obj10);
         c7 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
@@ -363,7 +363,7 @@ let closure_14 = async function _resetGuildJoinRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -431,7 +431,7 @@ let closure_15 = async function _fetchRequestToJoinGuilds() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -467,7 +467,7 @@ let closure_15 = async function _fetchRequestToJoinGuilds() {
         const obj7 = { type: "USER_JOIN_REQUEST_GUILDS_FETCH", guilds: closure_128_0.body };
         closure_129_1(closure_129_2[6]).dispatch(obj7);
         c3 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -496,7 +496,7 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

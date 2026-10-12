@@ -1,12 +1,12 @@
-// === Module 6808: NotificationSettingsModalActionCreators ===
+// === Module 6809: NotificationSettingsModalActionCreators ===
 
-// Module 6808 (NotificationSettingsModalActionCreators)
+// Module 6809 (NotificationSettingsModalActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import shared from "shared" /* 4969 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6803 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 6805 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6804 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 6806 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
 
@@ -135,7 +135,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -190,7 +190,7 @@ export default {
             return obj;
           } else {
             c3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp11) {
           c3 = tmp;

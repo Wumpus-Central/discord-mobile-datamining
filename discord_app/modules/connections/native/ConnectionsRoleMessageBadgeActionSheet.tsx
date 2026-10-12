@@ -14,11 +14,11 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056
 import Text_Text from "Text/Text" /* 5088 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
 import PlatformsDefault from "Platforms" /* 5763 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6195 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 6875 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8303 */;
-import BotTagDefault from "BotTag" /* 8766 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6196 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 6876 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
+import BotTagDefault from "BotTag" /* 8767 */;
 import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 10715 */;
 import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 10719 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -33,7 +33,7 @@ import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityS
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(6876).OperatorTypes;
+const OperatorTypes = fn(6877).OperatorTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
@@ -245,7 +245,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutChecks
       const items1 = [null, , , ];
       let tmp26 = null;
       if (null != tmp7) {
-        const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+        const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "a" };
         tmp26 = value3(native.Avatar, obj6);
       }
       items1[1] = tmp26;
@@ -357,7 +357,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutChecks
         const items1 = [null, , , ];
         let tmp26 = null;
         if (null != tmp7) {
-          const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+          const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "a" };
           tmp26 = value3(native.Avatar, obj6);
         }
         items1[1] = tmp26;

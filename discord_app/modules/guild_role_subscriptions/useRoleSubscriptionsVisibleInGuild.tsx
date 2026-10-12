@@ -1,9 +1,9 @@
-// === Module 6952: useRoleSubscriptionsVisibleInGuild ===
+// === Module 6953: useRoleSubscriptionsVisibleInGuild ===
 
-// Module 6952 (useRoleSubscriptionsVisibleInGuild)
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6953 */;
-import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 6954 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 6960 */;
+// Module 6953 (useRoleSubscriptionsVisibleInGuild)
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6954 */;
+import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 6955 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 6961 */;
 import ImpersonateStore from "ImpersonateStore" /* 2118 */;
 import GuildStore from "GuildStore" /* 2087 */;
 

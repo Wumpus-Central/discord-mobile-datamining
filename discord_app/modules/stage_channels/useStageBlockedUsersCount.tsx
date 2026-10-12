@@ -1,6 +1,6 @@
-// === Module 7719: useStageBlockedUsersCount ===
+// === Module 7720: useStageBlockedUsersCount ===
 
-// Module 7719 (useStageBlockedUsersCount)
+// Module 7720 (useStageBlockedUsersCount)
 import StageChannelParticipants from "StageChannelParticipants" /* 5950 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5896 */;
 

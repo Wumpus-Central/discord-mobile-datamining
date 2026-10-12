@@ -1,23 +1,23 @@
-// === Module 17978: AcceptInviteManager ===
+// === Module 18035: AcceptInviteManager ===
 
-// Module 17978 (AcceptInviteManager)
+// Module 18035 (AcceptInviteManager)
 import router_utils from "router_utils" /* 1112 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7422 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 8952 */;
-import FriendInviteUtils from "FriendInviteUtils" /* 17980 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7423 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 8953 */;
+import FriendInviteUtils from "FriendInviteUtils" /* 18037 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import InviteStore from "InviteStore" /* 5073 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7359).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(7360).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1085);
 ({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
@@ -135,7 +135,7 @@ const prototype = function AcceptInviteManager() {
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           const obj4 = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17979, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(18036, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
           flag = false;
         }
       }

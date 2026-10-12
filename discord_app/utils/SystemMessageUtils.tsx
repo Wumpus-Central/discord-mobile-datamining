@@ -1,6 +1,6 @@
-// === Module 8003: SystemMessageUtils ===
+// === Module 8004: SystemMessageUtils ===
 
-// Module 8003 (SystemMessageUtils)
+// Module 8004 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1126 */;
 import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4738 */;
@@ -8,13 +8,13 @@ import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
 import useChannelName from "useChannelName" /* 5421 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5434 */;
 import useMessageAuthor from "useMessageAuthor" /* 5627 */;
-import MarkupParser from "MarkupParser" /* 8004 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8008 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8009 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8011 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8012 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8013 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8014 */;
+import MarkupParser from "MarkupParser" /* 8005 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8009 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8010 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8012 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8013 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8014 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8015 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MessageRecord from "MessageRecord" /* 4761 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

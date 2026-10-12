@@ -2,9 +2,9 @@
 
 // Module 11412 (ConjureAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ConjureUtils from "ConjureUtils" /* 6945 */;
+import ConjureUtils from "ConjureUtils" /* 6946 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10651 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
 
 require = fn;
 function conjureLocation(project_id, isPreview) {
@@ -49,9 +49,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureAnalytics.tsx");
 
 export const ConjureErrorCodes = { BUILD_FAILED: "BUILD_FAILED", HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED", AGENT_ERROR: "AGENT_ERROR", PUBLISH_FAILED: "PUBLISH_FAILED", WS_OPEN_FAILED: "WS_OPEN_FAILED", SEND_FAILED: "SEND_FAILED", RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR", RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR" };
-export const trackConjureTurnResulted = function trackConjureTurnResulted(project_id, result) {
-  const project = ConjureProjectStore.getProject(project_id);
-  const obj2 = { project_id, project_name: null, application_id: null, preview_application_id: null };
+export const trackConjureTurnResulted = function trackConjureTurnResulted(projectId, result) {
+  const project = ConjureProjectStore.getProject(projectId);
+  const obj2 = { project_id: projectId, project_name: null, application_id: null, preview_application_id: null };
   let name;
   if (project != null) {
     name = project.name;
@@ -170,14 +170,14 @@ export const trackConjureDeployed = function trackConjureDeployed(project_id, is
   const merged1 = Object.assign(conjureLocation(project_id, isPreview));
   AnalyticsUtilsDefault.track(AnalyticEvents.VIBEGRATION_DEPLOYED, obj3);
 };
-export const trackConjureErrored = function trackConjureErrored(project_id, arg1) {
+export const trackConjureErrored = function trackConjureErrored(projectId, arg1) {
   ({ message, details, isPreview } = arg1);
   ({ location: _location, code } = arg1);
   if (isPreview === undefined) {
     isPreview = true;
   }
-  const project = ConjureProjectStore.getProject(project_id);
-  const obj2 = { project_id, project_name: null, application_id: null, preview_application_id: null };
+  const project = ConjureProjectStore.getProject(projectId);
+  const obj2 = { project_id: projectId, project_name: null, application_id: null, preview_application_id: null };
   let name;
   if (project != null) {
     name = project.name;
@@ -209,7 +209,7 @@ export const trackConjureErrored = function trackConjureErrored(project_id, arg1
   obj2.preview_application_id = prop;
   const merged = Object.assign(obj2);
   obj3.is_preview = isPreview;
-  const merged1 = Object.assign(conjureLocation(project_id, isPreview));
+  const merged1 = Object.assign(conjureLocation(projectId, isPreview));
   obj3.error_location = _location;
   obj3.error_code = code;
   let substr1 = null;

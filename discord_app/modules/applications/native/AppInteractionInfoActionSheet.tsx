@@ -1,10 +1,10 @@
-// === Module 12824: AppInteractionInfoActionSheet ===
+// === Module 12826: AppInteractionInfoActionSheet ===
 
-// Module 12824 (AppInteractionInfoActionSheet)
+// Module 12826 (AppInteractionInfoActionSheet)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8303 */;
-import UserActionCreators from "UserActionCreators" /* 8305 */;
-import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 12825 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
+import UserActionCreators from "UserActionCreators" /* 8306 */;
+import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 12827 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -28,20 +28,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
   const bottom = useSafeAreaInsetsDefault().bottom;
   if (cResult[0] !== onBack) {
     const obj2 = { onBack };
-    const tmp8 = closure_8(tmp5(12825), obj2);
+    const tmp8 = closure_8(tmp5(12827), obj2);
     cResult[0] = onBack;
     cResult[1] = tmp8;
   }
   const interactionMetadata = message.interactionMetadata;
   let tmp9;
   if (interactionMetadata != null) {
-    tmp9 = interactionMetadata.authorizing_integration_owners[tmp(undefined, 9234).ApplicationIntegrationType.USER_INSTALL];
+    tmp9 = interactionMetadata.authorizing_integration_owners[tmp(undefined, 9235).ApplicationIntegrationType.USER_INSTALL];
   }
   importDefault = tmp9;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp10;
   if (interactionMetadata2 != null) {
-    tmp10 = interactionMetadata2.authorizing_integration_owners[tmp(undefined, 9234).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp10 = interactionMetadata2.authorizing_integration_owners[tmp(undefined, 9235).ApplicationIntegrationType.GUILD_INSTALL];
   }
   dependencyMap = tmp10;
   const interactionMetadata3 = message.interactionMetadata;
@@ -163,11 +163,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
             return closure_7.getUser(id);
           }
         }
-        const obj3 = { guild: stateFromStores1, size: tmp(6158).GuildIconSizes.SMALL_32 };
-        const tmp37 = closure_8(tmp5(6158), obj3);
+        const obj3 = { guild: stateFromStores1, size: tmp(6159).GuildIconSizes.SMALL_32 };
+        const tmp37 = closure_8(tmp5(6159), obj3);
         cResult[15] = stateFromStores1;
         cResult[16] = tmp37;
-        const tmp5Result = tmp5(6158);
+        const tmp5Result = tmp5(6159);
       } else {
         class F {
           constructor() {
@@ -321,7 +321,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
         items4[1] = closure_9(stateFromStores, obj11);
         obj9.children = items4;
         tmp52[1] = closure_9(stateFromStores, obj9);
-        tmp51 = closure_8(tmp(6184).PressableOpacity, tmp52);
+        tmp51 = closure_8(tmp(6185).PressableOpacity, tmp52);
       }
       cResult[56] = guildId;
       cResult[57] = tmp25;
@@ -366,13 +366,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
   let tmp5;
   const memo = noop.useMemo(() => closure_2_8(ContextMenuSubmenuActionSheetHeaderDefault, { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9234).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9235).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9234).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9235).ApplicationIntegrationType.GUILD_INSTALL];
   }
   noop = tmp7;
   const interactionMetadata3 = message.interactionMetadata;
@@ -413,8 +413,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
   }
   if (null != stateFromStores1) {
     const obj5 = { style: tmp.itemContainer, children: null };
-    const obj6 = { guild: stateFromStores1, size: tmp10(6158).GuildIconSizes.SMALL_32 };
-    const items5 = [closure_8(onBack(6158), obj6), ];
+    const obj6 = { guild: stateFromStores1, size: tmp10(6159).GuildIconSizes.SMALL_32 };
+    const items5 = [closure_8(onBack(6159), obj6), ];
     const obj7 = { style: tmp.itemLabel, children: null };
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
     const items6 = [closure_8(tmp10(5088).Text, obj8), ];
@@ -427,7 +427,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
     items5[1] = closure_9(id, obj7);
     obj5.children = items5;
     let tmp26 = closure_9(id, obj5);
-    const tmp2Result = onBack(6158);
+    const tmp2Result = onBack(6159);
   } else {
     tmp26 = null;
     if (null != stateFromStores) {
@@ -452,7 +452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
       items7[1] = closure_9(id, obj14);
       obj12.children = items7;
       obj11.children = closure_9(id, obj12);
-      tmp26 = closure_8(tmp10(6184).PressableOpacity, obj11);
+      tmp26 = closure_8(tmp10(6185).PressableOpacity, obj11);
     }
   }
   const obj18 = { header: memo, bodyStyles: { paddingBottom: onBack(1631)().bottom }, children: null };
@@ -479,9 +479,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
     items10[1] = closure_9(id, obj22);
     obj20.children = items10;
     obj19.children = closure_9(id, obj20);
-    tmp32 = closure_8(tmp10(6184).PressableOpacity, obj19);
+    tmp32 = closure_8(tmp10(6185).PressableOpacity, obj19);
   }
   items9[1] = tmp32;
   obj18.children = items9;
-  return closure_9(message(6839).BottomSheet, obj18);
+  return closure_9(message(6840).BottomSheet, obj18);
 });

@@ -1,6 +1,6 @@
-// === Module 7046: StickerSendability ===
+// === Module 7047: StickerSendability ===
 
-// Module 7046 (StickerSendability)
+// Module 7047 (StickerSendability)
 import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
 import StickersUtils from "StickersUtils" /* 5749 */;

@@ -1,7 +1,7 @@
-// === Module 8855: usePlayingGameActivities ===
+// === Module 8856: usePlayingGameActivities ===
 
-// Module 8855 (usePlayingGameActivities)
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 8856 */;
+// Module 8856 (usePlayingGameActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 8857 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import PresenceStore from "PresenceStore" /* 5108 */;

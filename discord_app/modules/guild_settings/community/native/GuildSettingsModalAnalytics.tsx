@@ -1,10 +1,10 @@
-// === Module 18421: GuildSettingsModalAnalytics ===
+// === Module 18479: GuildSettingsModalAnalytics ===
 
-// Module 18421 (GuildSettingsModalAnalytics)
+// Module 18479 (GuildSettingsModalAnalytics)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7033 */;
-import GuildSettingsAnalyticsCardDefault from "GuildSettingsAnalyticsCard" /* 18442 */;
+import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7034 */;
+import GuildSettingsAnalyticsCardDefault from "GuildSettingsAnalyticsCard" /* 18500 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
               const result = closure_2_8.DEVELOPER_PORTAL_GUILD_ANALYTICS(guild_id);
               c1 = 1;
               guild_id = 1;
-              const obj6 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(result, guild_id(7037).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
+              const obj6 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(result, guild_id(7038).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             return obj;
           } else {
             guild_id = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp5) {
           guild_id = tmp;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
           str2 = "alert";
         }
         obj3.role = str2;
-        tmp19Result = closure_9(tmp(7567).InlineNotice, obj3);
+        tmp19Result = closure_9(tmp(7568).InlineNotice, obj3);
       }
       cResult[8] = notice;
       cResult[9] = tmp19Result;
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
               }
               const _Symbol4 = Symbol;
               if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp57 = closure_9(tmp(6727).NavScrim, {});
+                const tmp57 = closure_9(tmp(6728).NavScrim, {});
                 cResult[25] = tmp57;
                 let tmp55 = tmp57;
               } else {
@@ -242,31 +242,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       const intl5 = tmp(1126).intl;
       obj11.description = intl5.string(tmp(1126).t.KiRbLJ);
       const tmp33 = GuildSettingsAnalyticsCardDefault;
-      const merged = Object.assign(tmp(18422).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
+      const merged = Object.assign(tmp(18480).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
       const items3 = [closure_9(tmp33, obj11), , , ];
       const obj12 = { metricKey: "communicators", title: null, description: null };
-      const tmpResult7 = tmp(18422);
+      const tmpResult7 = tmp(18480);
       const intl6 = tmp(1126).intl;
       obj12.title = intl6.string(tmp(1126).t.DDAHdQ);
       const intl7 = tmp(1126).intl;
       obj12.description = intl7.string(tmp(1126).t.HxWUkU);
       const tmp36 = GuildSettingsAnalyticsCardDefault;
-      const merged1 = Object.assign(tmp(18422).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
+      const merged1 = Object.assign(tmp(18480).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
       items3[1] = closure_9(tmp36, obj12);
       const obj13 = { metricKey: "new_members", title: null };
-      const tmpResult8 = tmp(18422);
+      const tmpResult8 = tmp(18480);
       const intl8 = tmp(1126).intl;
       obj13.title = intl8.string(tmp(1126).t.hYeOqC);
       const tmp39 = GuildSettingsAnalyticsCardDefault;
-      const merged2 = Object.assign(tmp(18422).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
+      const merged2 = Object.assign(tmp(18480).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
       items3[2] = closure_9(tmp39, obj13);
       const obj14 = { metricKey: "new_member_retention", title: null, description: null };
-      const tmpResult9 = tmp(18422);
+      const tmpResult9 = tmp(18480);
       const intl9 = tmp(1126).intl;
       obj14.title = intl9.string(tmp(1126).t.jj7OPw);
       const intl10 = tmp(1126).intl;
       obj14.description = intl10.string(tmp(1126).t.MQCslz);
-      const tmpResult10 = tmp(18422);
+      const tmpResult10 = tmp(18480);
       const merged3 = Object.assign(tmpResult10.getGuildAnalyticsCardProps(analytics.pctRetained, analytics.pctRetainedChange, stateFromStores, true));
       items3[3] = closure_9(GuildSettingsAnalyticsCardDefault, obj14);
       obj10.children = items3;
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const items = [LocaleStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => locale.locale);
   let obj = guildId(504);
-  const guildAnalyticsOverview = guildId(18422).useGuildAnalyticsOverview(guildId);
+  const guildAnalyticsOverview = guildId(18480).useGuildAnalyticsOverview(guildId);
   ({ analytics, notice } = guildAnalyticsOverview);
   const items1 = [guildId];
   let obj3 = { style: tmp.container, contentContainerStyle: null, children: null };
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             const result = closure_1_8.DEVELOPER_PORTAL_GUILD_ANALYTICS(guildId);
             v1 = 1;
             v3 = 1;
-            const obj6 = { value: v1(7033).redirectDeveloperPortalWithHandoffToken(result, v3(7037).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
+            const obj6 = { value: v1(7034).redirectDeveloperPortalWithHandoffToken(result, v3(7038).LoginHandoffSource.GUILD_ANALYTICS_SETTING), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -338,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
           return obj;
         } else {
           v3 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp5) {
         v3 = tmp;
@@ -349,7 +349,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   let obj4 = { spacing: nativeDefault.space.PX_16, children: null };
   let obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = guildId(1126).intl;
-  let obj2 = guildId(18422);
+  let obj2 = guildId(18480);
   obj5.children = intl.string(guildId(1126).t.NIZ60a).trim();
   const items3 = [closure_9(guildId(5088).Text, obj5), , , , ];
   let tmp9Result = null;
@@ -361,7 +361,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       str2 = "alert";
     }
     obj7.role = str2;
-    tmp9Result = closure_9(tmp2(7567).InlineNotice, obj7);
+    tmp9Result = closure_9(tmp2(7568).InlineNotice, obj7);
   }
   items3[1] = tmp9Result;
   const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
@@ -382,31 +382,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     const intl5 = tmp2(1126).intl;
     obj11.description = intl5.string(tmp2(1126).t.KiRbLJ);
     const tmp11Result = GuildSettingsAnalyticsCardDefault;
-    const merged = Object.assign(tmp2(18422).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
+    const merged = Object.assign(tmp2(18480).getGuildAnalyticsCardProps(analytics.visitors, analytics.visitorsChange, stateFromStores));
     const items4 = [closure_9(tmp11Result, obj11), , , ];
     const obj12 = { metricKey: "communicators", title: null, description: null };
-    const tmp2Result = tmp2(18422);
+    const tmp2Result = tmp2(18480);
     const intl6 = tmp2(1126).intl;
     obj12.title = intl6.string(tmp2(1126).t.DDAHdQ);
     const intl7 = tmp2(1126).intl;
     obj12.description = intl7.string(tmp2(1126).t.HxWUkU);
     const tmp11Result4 = GuildSettingsAnalyticsCardDefault;
-    const merged1 = Object.assign(tmp2(18422).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
+    const merged1 = Object.assign(tmp2(18480).getGuildAnalyticsCardProps(analytics.communicators, analytics.communicatorsChange, stateFromStores));
     items4[1] = closure_9(tmp11Result4, obj12);
     const obj13 = { metricKey: "new_members", title: null };
-    const tmp2Result4 = tmp2(18422);
+    const tmp2Result4 = tmp2(18480);
     const intl8 = tmp2(1126).intl;
     obj13.title = intl8.string(tmp2(1126).t.hYeOqC);
     const tmp11Result5 = GuildSettingsAnalyticsCardDefault;
-    const merged2 = Object.assign(tmp2(18422).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
+    const merged2 = Object.assign(tmp2(18480).getGuildAnalyticsCardProps(analytics.newMembers, analytics.newMembersChange, stateFromStores));
     items4[2] = closure_9(tmp11Result5, obj13);
     const obj14 = { metricKey: "new_member_retention", title: null, description: null };
-    const tmp2Result5 = tmp2(18422);
+    const tmp2Result5 = tmp2(18480);
     const intl9 = tmp2(1126).intl;
     obj14.title = intl9.string(tmp2(1126).t.jj7OPw);
     const intl10 = tmp2(1126).intl;
     obj14.description = intl10.string(tmp2(1126).t.MQCslz);
-    const tmp2Result6 = tmp2(18422);
+    const tmp2Result6 = tmp2(18480);
     const merged3 = Object.assign(tmp2Result6.getGuildAnalyticsCardProps(analytics.pctRetained, analytics.pctRetainedChange, stateFromStores, true));
     items4[3] = closure_9(GuildSettingsAnalyticsCardDefault, obj14);
     obj10.children = items4;
@@ -417,7 +417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   items3[4] = tmp7Result;
   obj4.children = items3;
   obj3.children = closure_10(guildId(5377).Stack, obj4);
-  const items5 = [closure_9(ScrollView, obj3), closure_9(guildId(6727).NavScrim, {})];
+  const items5 = [closure_9(ScrollView, obj3), closure_9(guildId(6728).NavScrim, {})];
   obj15.children = items5;
   return closure_10(closure_11, obj15);
 });

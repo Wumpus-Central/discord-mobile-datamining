@@ -13,13 +13,13 @@ import UserUtilsDefault from "UserUtils" /* 4962 */;
 import RegexUtilsDefault from "RegexUtils" /* 5076 */;
 import useChannelName from "useChannelName" /* 5421 */;
 import StickersTypes from "StickersTypes" /* 5750 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6094 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6095 */;
-import GuildUtilsDefault from "GuildUtils" /* 6096 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 6924 */;
-import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 7044 */;
-import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 7045 */;
-import isSoundValidDefault from "isSoundValid" /* 7053 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6095 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6096 */;
+import GuildUtilsDefault from "GuildUtils" /* 6097 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 6925 */;
+import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 7045 */;
+import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 7046 */;
+import isSoundValidDefault from "isSoundValid" /* 7054 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmojiStore from "EmojiStore" /* 5987 */;
 import SoundboardStore from "SoundboardStore" /* 5428 */;
@@ -29,7 +29,7 @@ import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6034 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import FrecencyStore from "FrecencyStore" /* 6086 */;
+import FrecencyStore from "FrecencyStore" /* 6087 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4748 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
@@ -41,7 +41,7 @@ import RelationshipStore from "RelationshipStore" /* 4760 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
 import UserStore from "UserStore" /* 1390 */;
-import SKUStore from "SKUStore" /* 6087 */;
+import SKUStore from "SKUStore" /* 6088 */;
 
 const require = globalThis.__r;
 
@@ -428,18 +428,18 @@ let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1085);
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = Constants);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = Constants);
-fn(6092).AutocompleterResultTypes;
+fn(6093).AutocompleterResultTypes;
 const StaticChannelId = fn(2072).StaticChannelId;
 const logger = new LoggerDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
 const re48 = tmp7;
 let closure_49 = [];
-const MENTION_EVERYONE = fn(6093).default.MENTION_EVERYONE;
-const MENTION_HERE = fn(6093).default.MENTION_HERE;
-const MENTION_GAME = fn(6093).default.MENTION_GAME;
-const MENTION_TIMESTAMP = fn(6093).default.MENTION_TIMESTAMP;
-const LAUNCHABLE_APPLICATIONS = fn(6093).default.LAUNCHABLE_APPLICATIONS;
+const MENTION_EVERYONE = fn(6094).default.MENTION_EVERYONE;
+const MENTION_HERE = fn(6094).default.MENTION_HERE;
+const MENTION_GAME = fn(6094).default.MENTION_GAME;
+const MENTION_TIMESTAMP = fn(6094).default.MENTION_TIMESTAMP;
+const LAUNCHABLE_APPLICATIONS = fn(6094).default.LAUNCHABLE_APPLICATIONS;
 class AutocompleteBoostersCache {
   constructor() {
     merged = Object.assign({ lastFrecencyVersion: null, lastRelationshipVersion: null, lastPrivateChannelsVersion: null, cache: null });
@@ -1739,7 +1739,7 @@ export default {
         return hasItem;
       },
       type,
-      allowEmptyQueries: false
+      allowEmptyQueries: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}"
     };
     obj.channels = this.queryChannels(obj2).map((record) => record.record);
     return obj;
@@ -1904,7 +1904,7 @@ export default {
                   closure_2_5.push(obj);
                 }
               }
-              obj2 = flag(7046);
+              obj2 = flag(7047);
             }
           });
         });

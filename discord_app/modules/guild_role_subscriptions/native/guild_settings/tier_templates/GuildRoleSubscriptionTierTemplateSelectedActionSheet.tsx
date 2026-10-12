@@ -1,6 +1,6 @@
-// === Module 18541: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
+// === Module 18599: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
 
-// Module 18541 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
+// Module 18599 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import noop from "module_19" /* 19 */;
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
           return tmp29;
         }
         const obj5 = { backdropOpacity: 0.8, onDismiss: tmp5, children: tmp25 };
-        const tmp31 = closure_5(tmp(6839).BottomSheet, obj5);
+        const tmp31 = closure_5(tmp(6840).BottomSheet, obj5);
         cResult[20] = tmp5;
         cResult[21] = tmp25;
         cResult[22] = tmp31;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     const obj7 = { contentContainerStyle: tmp6, children: null };
     const items = [tmp7, tmp8, tmp12, tmp13, tmp20];
     obj7.children = items;
-    const tmp24 = closure_6(tmp(6306).BottomSheetScrollView, obj7);
+    const tmp24 = closure_6(tmp(6307).BottomSheetScrollView, obj7);
     cResult[14] = tmp20;
     cResult[15] = tmp6;
     cResult[16] = tmp24;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   };
   items[4] = closure_5(markAsDismissed(5380).BaseTextButton, obj6);
   obj3.children = items;
-  obj2.children = closure_6(markAsDismissed(6306).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(6307).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(6839).BottomSheet, obj);
+  return closure_5(markAsDismissed(6840).BottomSheet, obj);
 });

@@ -1,25 +1,21 @@
-// === Module 11411: ConjureActionCreators ===
+// === Module 11413: ConjureActionCreators ===
 
-// Module 11411 (ConjureActionCreators)
+// Module 11413 (ConjureActionCreators)
+import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import ConjureTypes from "ConjureTypes" /* 6946 */;
-import UserActionCreators from "UserActionCreators" /* 8305 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
+import UserActionCreators from "UserActionCreators" /* 8306 */;
 import conjureAppInServer from "conjureAppInServer" /* 11409 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11412 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11413 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 import UserStore from "UserStore" /* 1390 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10651 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
 
 require = fn;
-function reloadConjureAppFrames(application_id) {
-  ConjurePlatformUtilsDefault.reloadAppFrames(application_id);
-}
 function listProjects() {
   const self = this;
-  const apply = closure_14.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -27,7 +23,7 @@ function listProjects() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _listProjects() {
+let closure_13 = async function _listProjects() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -42,7 +38,7 @@ let closure_14 = async function _listProjects() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -72,7 +68,7 @@ let closure_14 = async function _listProjects() {
               type = projectsFetchState.type;
             }
             if ("loading" !== type) {
-              closure_10 = tmp37;
+              closure_9 = tmp37;
               const obj5 = { type: "CONJURE_PROJECTS_FETCH_START", guildId: tmp37 };
               DispatcherDefault.dispatch(obj5);
               c4 = 1;
@@ -90,16 +86,16 @@ let closure_14 = async function _listProjects() {
               return obj8;
             } else {
               if (null != tmp37) {
-                if (tmp37 !== closure_10) {
-                  closure_11 = tmp37;
+                if (tmp37 !== closure_9) {
+                  closure_10 = tmp37;
                 }
               }
               let tmp42 = null == tmp37;
               if (tmp42) {
-                tmp42 = null != closure_10;
+                tmp42 = null != closure_9;
               }
               if (tmp42) {
-                c12 = true;
+                c11 = true;
               }
             }
           }
@@ -121,10 +117,10 @@ let closure_14 = async function _listProjects() {
             body = value.body;
             const obj11 = { type: "CONJURE_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
             closure_131_1(closure_131_2[6]).dispatch(obj11);
-            closure_131_12 = false;
+            closure_131_11 = false;
             (function forgetMissingProjects() {
               const self = this;
-              const apply = closure_1_16.apply;
+              const apply = closure_1_15.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -135,15 +131,15 @@ let closure_14 = async function _listProjects() {
             c4 = 0;
             const obj = closure_131_1(closure_131_2[6]);
           }
-          closure_130_2 = closure_131_11;
-          closure_131_11 = null;
+          closure_130_2 = closure_131_10;
+          closure_131_10 = null;
           if (null == closure_130_2) {
-            if (closure_131_12) {
-              closure_131_12 = false;
-              closure_131_13();
+            if (closure_131_11) {
+              closure_131_11 = false;
+              closure_131_12();
             }
           }
-          closure_131_13(closure_130_2);
+          closure_131_12(closure_130_2);
         }
         c6 = 3;
       } catch (tmp51) {
@@ -157,7 +153,7 @@ let closure_14 = async function _listProjects() {
     }
   })();
 };
-let closure_16 = async function _forgetMissingProjects() {
+let closure_15 = async function _forgetMissingProjects() {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -168,7 +164,7 @@ let closure_16 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     while (true) {
@@ -187,30 +183,30 @@ let closure_16 = async function _forgetMissingProjects() {
           closure_2 = tmp4;
           closure_130_0 = undefined;
           closure_130_1 = undefined;
-          if (!c15) {
-            c15 = true;
+          if (!c14) {
+            c14 = true;
             resourceIds = resourceIds.getResourceIds(constants.CONJURING_PROJECT);
             _require = resourceIds[Symbol.iterator]();
             if (_require !== undefined) {
               c5 = 1;
               closure_130_0 = tmp36;
               if (null == closure_131_6.getProject(closure_130_0)) {
-                let obj5 = closure_131_0(closure_131_2[11]);
+                let obj5 = closure_131_0(closure_131_2[8]);
                 if (obj5.isConjureProjectUnread(closure_130_0)) {
-                  let obj6 = closure_131_0(closure_131_2[12]);
+                  let obj6 = closure_131_0(closure_131_2[9]);
                   let _Math = Math;
                   c6 = 2;
                   c7 = 1;
                   let obj7 = { value: obj6.sleep(5000 * Math.random()), done: false };
                   return obj7;
                 } else {
-                  let tmp46 = closure_131_17(closure_130_0);
+                  let tmp46 = closure_131_16(closure_130_0);
                 }
               }
             }
           }
           c7 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else if (1 === tmp4) {
         c5 = 0;
@@ -230,20 +226,20 @@ let closure_16 = async function _forgetMissingProjects() {
           c5 = 2;
           c6 = 4;
           c7 = 1;
-          let obj9 = { value: closure_131_20(closure_130_0), done: false };
+          let obj9 = { value: closure_131_26(closure_130_0), done: false };
           return obj9;
         }
       } else if (3 === tmp4) {
         c5 = 1;
         closure_130_2 = ReadStateStore;
-        let obj2 = closure_131_0(closure_131_2[13]);
+        let obj2 = closure_131_0(closure_131_2[10]);
         closure_130_1 = obj2.createFailureStatus(closure_130_2);
         let tmp14 = 403 !== closure_130_1;
         if (tmp14) {
           tmp14 = 404 !== closure_130_1;
         }
         if (!tmp14) {
-          let tmp21 = closure_131_17(closure_130_0);
+          let tmp21 = closure_131_16(closure_130_0);
         }
       } else if (arg0 === 1) {
         c7 = 3;
@@ -264,7 +260,127 @@ let closure_16 = async function _forgetMissingProjects() {
 function forgetProject(projectId) {
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId });
 }
-let closure_19 = async function _fetchProjectLimit() {
+function drainMissingProjects() {
+  const self = this;
+  const apply = closure_23.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_23 = async function _drainMissingProjects() {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    while (true) {
+      c7 = 2;
+      let tmp5 = c6;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          let obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_3 = tmp;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          c21 = true;
+          closure_130_0 = [];
+          closure_1 = dependencyMap;
+          _require = dependencyMap[Symbol.iterator]();
+          if (_require === undefined) {
+            closure_131_21 = false;
+            if (0 !== closure_130_0.length) {
+              let failResult = closure_131_17.fail(() => {
+                for (const item10005 of closure_1_0) {
+                  let addResult = set.add(item10005);
+                  continue;
+                }
+                if (!closure_2_21) {
+                  closure_2_22();
+                }
+              });
+            } else {
+              let succeedResult = closure_131_17.succeed();
+            }
+            c7 = 3;
+          } else {
+            c5 = 1;
+            closure_130_1 = tmp38;
+            let deleteResult = closure_131_20.delete(closure_130_1);
+            if (!closure_131_19.has(closure_130_1)) {
+              let addResult = closure_131_19.add(closure_130_1);
+              if (null == closure_131_6.getProject(closure_130_1)) {
+                closure_130_2 = undefined;
+                c5 = 2;
+                c6 = 3;
+                c7 = 1;
+                let obj5 = { value: closure_131_26(closure_130_1), done: false };
+                return obj5;
+              }
+            }
+          }
+        }
+      } else if (1 === tmp5) {
+        c5 = 0;
+        _require.return();
+        throw ReadStateStore;
+      } else {
+        if (2 === tmp5) {
+          c5 = 1;
+          closure_130_4 = ReadStateStore;
+          let obj2 = closure_131_0(closure_131_2[10]);
+          closure_130_2 = obj2.createFailureStatus(closure_130_4);
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          _require.return();
+          c7 = 3;
+          let obj = { value, done: true };
+          return obj;
+        } else {
+          closure_130_3 = value;
+          let num2 = 200;
+          if (!closure_130_3.ok) {
+            num2 = closure_130_3.status;
+          }
+          closure_130_2 = num2;
+          c5 = 1;
+        }
+        if (200 !== closure_130_2) {
+          if (403 !== closure_130_2) {
+            if (404 !== closure_130_2) {
+              let deleteResult1 = closure_131_19.delete(closure_130_1);
+              let arr = closure_130_0.push(closure_130_1);
+            }
+          }
+          let tmp32 = closure_131_16(closure_130_1);
+        }
+      }
+      c5 = 0;
+    }
+  }
+};
+let closure_25 = async function _fetchProjectLimit() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -275,7 +391,7 @@ let closure_19 = async function _fetchProjectLimit() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -294,7 +410,7 @@ let closure_19 = async function _fetchProjectLimit() {
           closure_129_0 = undefined;
           let max_projects;
           currentUser = currentUser.getCurrentUser();
-          let id;
+          id = undefined;
           if (currentUser != null) {
             id = currentUser.id;
           }
@@ -304,9 +420,9 @@ let closure_19 = async function _fetchProjectLimit() {
           }
           closure_129_0 = c0;
           if (null != c0) {
-            if (closure_18 !== tmp18) {
+            if (closure_24 !== tmp18) {
               if (!ConjureProjectStore.hasFetchedProjectLimit()) {
-                closure_18 = tmp18;
+                closure_24 = tmp18;
                 max_projects = null;
                 c3 = 1;
                 const HTTP = HTTPUtils.HTTP;
@@ -334,8 +450,8 @@ let closure_19 = async function _fetchProjectLimit() {
           max_projects = value.body.max_projects;
           c3 = 0;
         }
-        if (closure_130_18 === closure_129_0) {
-          closure_130_18 = null;
+        if (closure_130_24 === closure_129_0) {
+          closure_130_24 = null;
         }
         const currentUser1 = closure_130_5.getCurrentUser();
         let id1;
@@ -362,7 +478,7 @@ let closure_19 = async function _fetchProjectLimit() {
 };
 function getProject() {
   const self = this;
-  const apply = closure_21.apply;
+  const apply = closure_27.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -370,7 +486,7 @@ function getProject() {
   }
   return applyArgumentsResult;
 }
-let closure_21 = async function _getProject(arg0) {
+let closure_27 = async function _getProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -399,7 +515,7 @@ let closure_21 = async function _getProject(arg0) {
     return closure_130_2;
   })();
 };
-let closure_22 = async function _createProject(arg0) {
+let closure_28 = async function _createProject(arg0) {
   let flags = arg0;
   c6 = 0;
   c7 = 0;
@@ -415,7 +531,7 @@ let closure_22 = async function _createProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -435,7 +551,7 @@ let closure_22 = async function _createProject(arg0) {
             flags = flags.flags;
             PUBLIC = flags;
             if (flags == null) {
-              PUBLIC = ConjureTypes.ConjureProjectFlags.PUBLIC;
+              PUBLIC = ConjureProjectTypes.ConjureProjectFlags.PUBLIC;
             }
             c5 = 1;
             const HTTP = HTTPUtils.HTTP;
@@ -452,9 +568,9 @@ let closure_22 = async function _createProject(arg0) {
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_1 = closure_4;
-          const result = closure_131_0(closure_131_2[13]).classifyCreateFailure(closure_130_1);
-          const obj5 = closure_131_0(closure_131_2[13]);
-          const conjureCreateError = new closure_131_0(closure_131_2[13]).ConjureCreateError(result, closure_131_0(closure_131_2[13]).createFailureStatus(closure_130_1));
+          const result = closure_131_0(closure_131_2[10]).classifyCreateFailure(closure_130_1);
+          const obj5 = closure_131_0(closure_131_2[10]);
+          const conjureCreateError = new closure_131_0(closure_131_2[10]).ConjureCreateError(result, closure_131_0(closure_131_2[10]).createFailureStatus(closure_130_1));
           throw conjureCreateError;
         } else if (arg0 === 1) {
           c7 = 3;
@@ -487,7 +603,7 @@ let closure_22 = async function _createProject(arg0) {
 };
 function patchProject() {
   const self = this;
-  const apply = closure_24.apply;
+  const apply = closure_30.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -495,7 +611,7 @@ function patchProject() {
   }
   return applyArgumentsResult;
 }
-let closure_24 = async function _patchProject(arg0) {
+let closure_30 = async function _patchProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -513,98 +629,9 @@ let closure_24 = async function _patchProject(arg0) {
     return closure_130_0;
   })();
 };
-let closure_25 = async function _setProjectIcon(arg0) {
-  closure_0 = arg0;
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  return (async (arg0, value) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "IconComponent", done: "+51" };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_3 = tmp3;
-            closure_2 = tmp7;
-            closure_130_0 = undefined;
-            closure_130_1 = undefined;
-            const obj5 = { icon };
-            c5 = 1;
-            c6 = 1;
-            const obj6 = { value: patchProject(closure_0, obj5), done: false };
-            return obj6;
-          }
-        } else {
-          if (1 === tmp7) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
-            } else {
-              closure_130_0 = value;
-              if (closure_130_0.ok) {
-                closure_130_1 = closure_130_0.body.preview_application_id;
-                if (null != closure_130_1) {
-                  c4 = 1;
-                  c5 = 3;
-                  c6 = 1;
-                  const obj8 = { value: closure_131_0(closure_131_2[14]).fetchApplication(closure_130_1), done: false };
-                  return obj8;
-                }
-              }
-            }
-          } else {
-            if (2 === tmp7) {
-              c4 = 0;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-          c6 = 3;
-        }
-      } catch (tmp21) {
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp21;
-        } else {
-          c5 = tmp;
-        }
-      }
-    }
-  })();
-};
-function deleteProject() {
+function updateProjectSettings() {
   const self = this;
-  const apply = closure_27.apply;
+  const apply = closure_32.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -612,7 +639,102 @@ function deleteProject() {
   }
   return applyArgumentsResult;
 }
-let closure_27 = async function _deleteProject() {
+let closure_32 = async function _updateProjectSettings(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "IconComponent", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          c5 = 1;
+          c6 = 1;
+          const obj5 = { value: patchProject(closure_0, closure_1), done: false };
+          return obj5;
+        }
+      } else {
+        if (1 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_130_1 = value;
+            if (closure_130_1.ok) {
+              if (null != closure_130_0.icon) {
+                closure_130_2 = closure_130_1.body.preview_application_id;
+                if (null != closure_130_2) {
+                  c4 = 1;
+                  c5 = 3;
+                  c6 = 1;
+                  const obj7 = { value: closure_131_0(closure_131_2[13]).fetchApplication(closure_130_2), done: false };
+                  return obj7;
+                }
+              }
+            }
+          }
+        } else {
+          if (2 === tmp7) {
+            c4 = 0;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            c4 = 0;
+          }
+          c4 = 0;
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c6 = 3;
+      }
+    } catch (tmp25) {
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp25;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
+function deleteProject() {
+  const self = this;
+  const apply = closure_34.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_34 = async function _deleteProject() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -627,7 +749,7 @@ let closure_27 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -694,287 +816,56 @@ let closure_27 = async function _deleteProject() {
     }
   })();
 };
-let closure_28 = async function _unpublishProject(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp7 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: "+51" };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp5;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          closure_130_0 = closure_0;
-          ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2 } = closure_1);
-          c6 = 1;
-          c7 = 1;
-          return { value: "Set", done: true };
-        }
-      } else if (1 === tmp8) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c5 = 1;
-          const HTTP = closure_131_0(closure_131_2[10]).HTTP;
-          const request = { url: closure_131_7.CONJURE_PROJECT_UNPUBLISH(closure_130_0), body: null, rejectWithError: false };
-          const obj5 = { guild_id: closure_130_1, also_remove_preview_bot: closure_130_2 };
-          request.body = obj5;
-          c6 = 3;
-          c7 = 1;
-          const obj6 = { value: HTTP.post(request), done: false };
-          return obj6;
-        }
-      } else if (2 === tmp8) {
-        c5 = 0;
-        closure_131_29(closure_130_0);
-        throw closure_4;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 0;
-        closure_131_29(closure_130_0);
-        c7 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        c5 = 0;
-        closure_131_29(closure_130_0);
-        c7 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp28) {
-      closure_4 = tmp28;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp28;
-      } else {
-        c6 = tmp;
-      }
-    }
-  }
-};
-function refreshConjureInstallState(projectId) {
-  const project = ConjureProjectStore.getProject(projectId);
-  if (null != project) {
-    getProject(projectId).catch(() => {
-
-    });
-    const promise = getProject(projectId);
-    const obj = UserActionCreators;
-    const profile = obj.fetchProfile(conjureAppInServer.conjureProductionBotUserId(project), { withMutualGuilds: true });
-    profile.catch(() => {
-
-    });
-  }
-}
-let closure_30 = async function _refreshPublishedProject(arg0, arg1) {
-  closure_0 = arg0;
-  let isPreview = arg1;
-  c4 = 0;
-  c5 = 0;
-  let iter = (async (arg0, value) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: "+51" };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_3 = tmp5;
-            closure_2 = tmp2;
-            let isPreview2;
-            closure_130_0 = closure_0;
-            isPreview2 = isPreview.isPreview;
-            let body;
-            closure_130_3 = undefined;
-            closure_130_4 = undefined;
-            let project;
-            closure_130_6 = undefined;
-            c4 = 1;
-            c5 = 1;
-            return { value: "Set", done: true };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            c4 = 2;
-            c5 = 1;
-            const obj7 = { value: closure_131_20(closure_130_0), done: false };
-            return obj7;
-          }
-        } else {
-          if (2 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj9 = { value, done: true };
-              return obj9;
-            } else {
-              body = value.body;
-              closure_130_3 = body.bot_permissions_changed;
-              closure_130_4 = body.integration_installed;
-              project = body.project;
-              if (isPreview2) {
-                let application_id = tmp61.preview_application_id;
-              } else {
-                application_id = tmp61.application_id;
-              }
-              closure_130_6 = application_id;
-              if (null != closure_130_6) {
-                const obj11 = { type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: closure_130_6 };
-                closure_131_1(closure_131_2[6]).dispatch(obj11);
-                const obj8 = closure_131_1(closure_131_2[6]);
-                c4 = 3;
-                c5 = 1;
-                const obj12 = { value: closure_131_0(closure_131_2[14]).fetchApplication(closure_130_6), done: false };
-                return obj12;
-              } else {
-                const obj13 = { isPreview: isPreview2 };
-                closure_131_0(closure_131_2[7]).trackConjureDeployed(closure_130_0, obj13);
-                c5 = 3;
-                const obj6 = closure_131_0(closure_131_2[7]);
-              }
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj14 = { value, done: true };
-              return obj14;
-            } else {
-              const widgetConfigs = closure_131_0(closure_131_2[17]).fetchWidgetConfigs(closure_130_6, { force: true });
-              c4 = 4;
-              c5 = 1;
-              const obj15 = {
-                value: widgetConfigs.catch(() => {
-
-                          }),
-                done: false
-              };
-              return obj15;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj16 = { value, done: true };
-            return obj16;
-          } else if (!isPreview2) {
-            closure_131_9(closure_130_6);
-          }
-          let tmp12 = closure_130_4;
-          if (closure_130_4) {
-            tmp12 = !closure_130_3;
-          }
-          if (tmp12) {
-            const result = closure_131_0(closure_131_2[18]).reloadAppFramesAfterDeploy(closure_130_6);
-            const obj = closure_131_0(closure_131_2[18]);
-          }
-        }
-      } catch (tmp50) {
-        c5 = tmp;
-        throw tmp50;
-      }
-    }
-  })();
-  iter.next();
-  return iter;
-};
 const Endpoints = fn(1085).Endpoints;
 const ReadStateTypes = fn(5967).ReadStateTypes;
+let c9 = null;
 let c10 = null;
-let c11 = null;
-let c12 = false;
-let c15 = false;
-let c18 = null;
+let c11 = false;
+let c14 = false;
+let closure_17 = new BackoffDefault(30000, 300000);
+let id = null;
+const set = new Set();
+const set1 = new Set();
+let c21 = false;
+let c24 = null;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/ConjureActionCreators.tsx");
 
-export const trackPublishFailed = function trackPublishFailed(projectId, message, isPreview) {
-  const obj2 = { location: "publish", code: ConjureAnalytics.ConjureErrorCodes.PUBLISH_FAILED, message: null, details: null, isPreview: null };
-  let str = "";
-  if (isPreview) {
-    str = "-preview";
-  }
-  obj2.message = "publish" + str + " failed";
-  obj2.details = message;
-  obj2.isPreview = isPreview;
-  ConjureAnalytics.trackConjureErrored(projectId, obj2);
-};
-export { reloadConjureAppFrames };
-export const reloadConjureProjectFrames = function reloadConjureProjectFrames(arg0) {
-  const project = ConjureProjectStore.getProject(arg0);
-  if (null != project) {
-    ConjurePlatformUtilsDefault.reloadAppFrames(project.application_id);
-    if (!obj2.isPreviewlessProject(project)) {
-      let prop = project.preview_application_id;
-      if (prop == null) {
-        prop = null;
-      }
-      ConjurePlatformUtilsDefault.reloadAppFrames(prop);
-      const tmp2Result = ConjurePlatformUtilsDefault;
-    }
-    obj2 = ConjureTypes;
-  }
-};
 export { listProjects };
+export const loadMissingConjureProjects = function loadMissingConjureProjects(arg0) {
+  const currentUser = UserStore.getCurrentUser();
+  id = undefined;
+  if (currentUser != null) {
+    id = currentUser.id;
+  }
+  if (id == null) {
+    id = null;
+  }
+  if (id !== id) {
+    set.clear();
+    set1.clear();
+    closure_17.cancel();
+  }
+  const iter = arg0[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp10 = nextResult;
+    if (!set.has(nextResult)) {
+      let addResult = set1.add(tmp10);
+    }
+    continue;
+  }
+  let pending = c21;
+  if (!c21) {
+    pending = closure_17.pending;
+  }
+  if (!pending) {
+    drainMissingProjects();
+  }
+};
 export const fetchProjectLimit = function fetchProjectLimit() {
   const self = this;
-  const apply = closure_19.apply;
+  const apply = closure_25.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -985,7 +876,7 @@ export const fetchProjectLimit = function fetchProjectLimit() {
 export { getProject };
 export const createProject = function createProject() {
   const self = this;
-  const apply = closure_22.apply;
+  const apply = closure_28.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -993,18 +884,9 @@ export const createProject = function createProject() {
   }
   return applyArgumentsResult;
 };
-export const updateProjectSettings = function updateProjectSettings(first2, arg1) {
-  return patchProject(first2, arg1);
-};
-export const setProjectIcon = function setProjectIcon() {
-  const self = this;
-  const apply = closure_25.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
+export { updateProjectSettings };
+export const setProjectIcon = function setProjectIcon(arg0, icon) {
+  return updateProjectSettings(arg0, { icon });
 };
 export const setGuildHints = function setGuildHints(first2, arg1) {
   return patchProject(first2, arg1);
@@ -1018,45 +900,20 @@ export const deleteProjectInBackground = function deleteProjectInBackground(id, 
     }
   }, arg1);
 };
-export const unpublishProject = function unpublishProject() {
-  const self = this;
-  const apply = closure_28.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+export const refreshConjureInstallState = function refreshConjureInstallState(projectId) {
+  const project = ConjureProjectStore.getProject(projectId);
+  if (null != project) {
+    getProject(projectId).catch(() => {
+
+    });
+    const promise = getProject(projectId);
+    const obj = UserActionCreators;
+    const profile = obj.fetchProfile(conjureAppInServer.conjureProductionBotUserId(project), { withMutualGuilds: true });
+    profile.catch(() => {
+
+    });
   }
-  return applyArgumentsResult;
 };
-export { refreshConjureInstallState };
 export const setSelectedProjectForGuild = function setSelectedProjectForGuild(guildId, projectId) {
   DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId, projectId });
-};
-export const refreshPublishedProject = function refreshPublishedProject() {
-  const self = this;
-  const apply = closure_30.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-export const setComposerDraft = function setComposerDraft(projectId, draft) {
-  DispatcherDefault.dispatch({ type: "CONJURE_COMPOSER_DRAFT_SET", projectId, draft });
-};
-export const setChatSidebarWidth = function setChatSidebarWidth(width) {
-  DispatcherDefault.dispatch({ type: "CONJURE_CHAT_SIDEBAR_WIDTH_SET", width });
-};
-export const setBuilderPreviewApplicationId = function setBuilderPreviewApplicationId(applicationId) {
-  DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId });
-};
-export const setBuilderPreviewMobile = function setBuilderPreviewMobile(enabled) {
-  DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled });
-};
-export const setBuilderPreviewLandscape = function setBuilderPreviewLandscape(landscape) {
-  DispatcherDefault.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape });
-};
-export const markLogsSeen = function markLogsSeen(projectId) {
-  DispatcherDefault.dispatch({ type: "CONJURE_LOGS_SEEN", projectId });
 };

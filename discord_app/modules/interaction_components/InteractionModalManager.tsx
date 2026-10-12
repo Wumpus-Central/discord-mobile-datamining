@@ -1,14 +1,14 @@
-// === Module 18071: InteractionModalManager ===
+// === Module 18129: InteractionModalManager ===
 
-// Module 18071 (InteractionModalManager)
+// Module 18129 (InteractionModalManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 14780 */;
-import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 18083 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 18086 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 14804 */;
+import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 18141 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 18144 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
-import InteractionStore from "InteractionStore" /* 7883 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import InteractionStore from "InteractionStore" /* 7884 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 let require = fn;
 let closure_8 = async function _handleInteractionModalCreate(arg0) {
@@ -22,7 +22,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -107,7 +107,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
           let obj = closure_130_1(closure_130_2[9]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp19) {
       c4 = tmp;

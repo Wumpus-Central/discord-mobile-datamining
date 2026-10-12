@@ -1,10 +1,10 @@
-// === Module 7736: IarSettingsUpsellsConfigScFiltersGraphicMedia ===
+// === Module 7737: IarSettingsUpsellsConfigScFiltersGraphicMedia ===
 
-// Module 7736 (IarSettingsUpsellsConfigScFiltersGraphicMedia)
+// Module 7737 (IarSettingsUpsellsConfigScFiltersGraphicMedia)
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6999 */;
-import MenuTypes from "MenuTypes" /* 7722 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7000 */;
+import MenuTypes from "MenuTypes" /* 7723 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

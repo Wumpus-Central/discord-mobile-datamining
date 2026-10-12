@@ -1,6 +1,6 @@
-// === Module 11911: useRequest ===
+// === Module 11913: useRequest ===
 
-// Module 11911 (useRequest)
+// Module 11913 (useRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -33,7 +33,7 @@ export default function useRequest(archiveSubscriptionListing) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -83,7 +83,7 @@ export default function useRequest(archiveSubscriptionListing) {
                 c4 = 0;
                 closure_130_1(false);
                 c6 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               } else {
                 if (closure_129_1 instanceof tmp6(tmp4[4])) {
                   let tmp37 = closure_129_1;

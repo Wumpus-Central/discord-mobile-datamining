@@ -1,14 +1,14 @@
-// === Module 18085: InteractionIframeModal ===
+// === Module 18143: InteractionIframeModal ===
 
-// Module 18085 (InteractionIframeModal)
+// Module 18143 (InteractionIframeModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 5372 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6664 */;
-import BotTagDefault from "BotTag" /* 8766 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
+import BotTagDefault from "BotTag" /* 8767 */;
 import makeIframeIdDefault from "makeIframeId" /* 10929 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 18086 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 18144 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,9 +34,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
   ({ application, title, id } = arg0);
   id2 = application.id;
   const obj = id2(576);
-  const iframeModalState = id2(18073).useIframeModalState(arg0);
+  const iframeModalState = id2(18131).useIframeModalState(arg0);
   ({ queryParams, iframeUrl } = iframeModalState);
-  let obj2 = id2(18073);
+  let obj2 = id2(18131);
   [r10030, importDefault] = noop.useState(makeIframeIdDefault);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { includeKeyboardHeight: true };
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
             return true;
           }
         }
-        const tmp24 = closure_7(tmp(10258).XLargeIcon, {});
+        const tmp24 = closure_7(tmp(10259).XLargeIcon, {});
         cResult[17] = tmp24;
         const tmp23 = tmp24;
       } else {
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
         cResult[25] = tmp35;
       }
       const obj9 = { accessibilityRole: "button", accessibilityLabel: tmp21, onPress: A, style: tmp4.closeButton, children: tmp23 };
-      const tmp27 = closure_7(tmp(6184).PressableOpacity, obj9);
+      const tmp27 = closure_7(tmp(6185).PressableOpacity, obj9);
       cResult[18] = A;
       cResult[19] = tmp4.closeButton;
       cResult[20] = tmp27;

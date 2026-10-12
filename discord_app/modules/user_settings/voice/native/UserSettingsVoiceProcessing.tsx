@@ -7,9 +7,9 @@ import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
-import TableRadioRow from "TableRadioRow" /* 6261 */;
-import TableRadioGroup from "TableRadioGroup" /* 6262 */;
-import TableSwitchRow from "TableSwitchRow" /* 6895 */;
+import TableRadioRow from "TableRadioRow" /* 6262 */;
+import TableRadioGroup from "TableRadioGroup" /* 6263 */;
+import TableSwitchRow from "TableSwitchRow" /* 6896 */;
 import UserSettingsVoice from "UserSettingsVoice" /* 11072 */;
 import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11088 */;
 import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11089 */;
@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   if (cResult[4] !== echoCancellation) {
     const obj2 = { title: tmp8, hasIcons: false, children: null };
     const obj3 = { label: tmp10, value: echoCancellation, onValueChange: inputMode(11088).handleEchoCancellationChange };
-    obj2.children = closure_5(inputMode(6895).TableSwitchRow, obj3);
+    obj2.children = closure_5(inputMode(6896).TableSwitchRow, obj3);
     const tmp14 = closure_5(inputMode(11072).UserSettingsTableRowGroup, obj2);
     cResult[4] = echoCancellation;
     cResult[5] = tmp14;
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   }
   if (cResult[9] !== automaticGainControl) {
     const obj4 = { label: tmp19, subLabel: tmp20, value: automaticGainControl, onValueChange: inputMode(11088).handleAutomaticGainControlChange };
-    const tmp25 = closure_5(inputMode(6895).TableSwitchRow, obj4);
+    const tmp25 = closure_5(inputMode(6896).TableSwitchRow, obj4);
     cResult[9] = automaticGainControl;
     cResult[10] = tmp25;
     let tmp23 = tmp25;
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj7.onValueChange = function onValueChange(vadUseKrisp) {
       return AudioActionCreatorsDefault.setMode(inputMode, { vadUseKrisp });
     };
-    tmp27 = closure_5(inputMode(6895).TableSwitchRow, obj7);
+    tmp27 = closure_5(inputMode(6896).TableSwitchRow, obj7);
   }
   cResult[11] = advancedVoiceActivitySupported;
   cResult[12] = inputMode;

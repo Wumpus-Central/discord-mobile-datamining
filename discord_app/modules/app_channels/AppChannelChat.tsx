@@ -1,8 +1,8 @@
-// === Module 9314: AppChannelChat ===
+// === Module 9315: AppChannelChat ===
 
-// Module 9314 (AppChannelChat)
+// Module 9315 (AppChannelChat)
 import SidebarActionTypes from "SidebarActionTypes" /* 6063 */;
-import SidebarActionCreatorsDefault from "SidebarActionCreators" /* 9315 */;
+import SidebarActionCreatorsDefault from "SidebarActionCreators" /* 9316 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6061 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 

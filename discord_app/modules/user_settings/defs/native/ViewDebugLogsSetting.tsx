@@ -1,6 +1,6 @@
-// === Module 15840: ViewDebugLogsSetting ===
+// === Module 15863: ViewDebugLogsSetting ===
 
-// Module 15840 (ViewDebugLogsSetting)
+// Module 15863 (ViewDebugLogsSetting)
 import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
@@ -10,16 +10,16 @@ import UserSettings from "UserSettings" /* 2041 */;
 import ClockIcon from "ClockIcon" /* 5051 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6838 */;
-import ActionSheetRow from "ActionSheetRow" /* 6894 */;
-import ActionSheet from "ActionSheet" /* 6898 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9635 */;
-import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10347 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 14041 */;
-import WrenchIcon from "WrenchIcon" /* 15841 */;
-import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15843 */;
-import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15846 */;
-import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15847 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
+import ActionSheetRow from "ActionSheetRow" /* 6895 */;
+import ActionSheet from "ActionSheet" /* 6899 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9636 */;
+import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10348 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 14064 */;
+import WrenchIcon from "WrenchIcon" /* 15864 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15866 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15869 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15870 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
@@ -75,7 +75,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ViewDeb
 }) : (function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return closure_5(title(6894).ActionSheetRow, {
+  return closure_5(title(6895).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {

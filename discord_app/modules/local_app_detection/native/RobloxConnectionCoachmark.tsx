@@ -1,6 +1,6 @@
-// === Module 17639: RobloxConnectionCoachmark ===
+// === Module 17696: RobloxConnectionCoachmark ===
 
-// Module 17639 (RobloxConnectionCoachmark)
+// Module 17696 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,15 +12,15 @@ import themes from "themes" /* 4825 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4938 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import PlatformsDefault from "Platforms" /* 5763 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6874 */;
-import openUserSettings from "openUserSettings" /* 7093 */;
-import inlineStyles from "inlineStyles" /* 7576 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9204 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6875 */;
+import openUserSettings from "openUserSettings" /* 7094 */;
+import inlineStyles from "inlineStyles" /* 7577 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9205 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
 import UserStore from "UserStore" /* 1390 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13983 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 14006 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -219,7 +219,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserIc
     tmp9 = cResult[3];
   }
   if (cResult[4] !== stateFromStores) {
-    const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" };
+    const obj3 = { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" };
     const tmp15 = map1(native.Avatar, obj3);
     cResult[4] = stateFromStores;
     cResult[5] = tmp15;
@@ -252,7 +252,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserIc
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [map1(View, { style: tmp.avatarInnerBorder }), ];
   const obj3 = { style: tmp.avatarInnerBorder };
-  items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" });
+  items1[1] = map1(native.Avatar, { size: native.AvatarSizes.NORMAL, user: stateFromStores, guildId: "r" });
   obj2.children = items1;
   return closure_1_14(View, obj2);
 });
@@ -297,8 +297,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   if (cResult[4] !== tmp7) {
     let obj3 = { title: null, leading: null };
     let obj4 = { onPress: tmp7 };
-    obj3.leading = closure_13(tmp(6893).ActionSheetCloseButton, obj4);
-    const tmp10 = closure_13(tmp(6838).BottomSheetTitleHeader, obj3);
+    obj3.leading = closure_13(tmp(6894).ActionSheetCloseButton, obj4);
+    const tmp10 = closure_13(tmp(6839).BottomSheetTitleHeader, obj3);
     cResult[4] = tmp7;
     cResult[5] = tmp10;
     let tmp8 = tmp10;
@@ -393,7 +393,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
         const intl3 = tmp(1126).intl;
         const stringResult2 = intl3.string(tmp(1126).t.ItuabN);
         const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-        const tmp43 = closure_13(tmp(12869).WindowLaunchIcon, obj10);
+        const tmp43 = closure_13(tmp(12871).WindowLaunchIcon, obj10);
         cResult[26] = stringResult2;
         cResult[27] = tmp43;
         let tmp40 = tmp43;
@@ -450,7 +450,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
                 }
               }
               const obj13 = { startExpanded: true, contentStyles: tmp4.content, header: tmp8, onDismiss: tmp11, children: tmp55 };
-              const tmp60 = closure_13(tmp(6839).BottomSheet, obj13);
+              const tmp60 = closure_13(tmp(6840).BottomSheet, obj13);
               cResult[41] = tmp4.content;
               cResult[42] = tmp55;
               cResult[43] = tmp8;
@@ -510,7 +510,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   const theme = markAsDismissed(4827).useThemeContext().theme;
   let obj2 = { startExpanded: true, contentStyles: tmp.content, header: null, onDismiss: null, children: null };
   let obj = markAsDismissed(4827);
-  obj2.header = closure_13(markAsDismissed(6838).BottomSheetTitleHeader, { title: null, leading: closure_13(markAsDismissed(6893).ActionSheetCloseButton, { onPress: handleCancel }) });
+  obj2.header = closure_13(markAsDismissed(6839).BottomSheetTitleHeader, { title: null, leading: closure_13(markAsDismissed(6894).ActionSheetCloseButton, { onPress: handleCancel }) });
   obj2.onDismiss = function onDismiss() {
     return markAsDismissed(ContentDismissActionType.DISMISS);
   };
@@ -534,8 +534,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   const obj10 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = markAsDismissed(1126).intl;
   obj10.text = intl3.string(markAsDismissed(1126).t.ItuabN);
-  let obj3 = { title: null, leading: closure_13(markAsDismissed(6893).ActionSheetCloseButton, { onPress: handleCancel }) };
-  obj10.icon = closure_13(markAsDismissed(12869).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  let obj3 = { title: null, leading: closure_13(markAsDismissed(6894).ActionSheetCloseButton, { onPress: handleCancel }) };
+  obj10.icon = closure_13(markAsDismissed(12871).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj10.onPress = function handleConnect() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -556,7 +556,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RobloxConnec
   items1[2] = closure_14(markAsDismissed(5377).Stack, obj9);
   obj4.children = items1;
   obj2.children = closure_14(markAsDismissed(5377).Stack, obj4);
-  return closure_13(markAsDismissed(6839).BottomSheet, obj2);
+  return closure_13(markAsDismissed(6840).BottomSheet, obj2);
 });
 size = fn(2);
 let result = size.fileFinishedImporting("modules/local_app_detection/native/RobloxConnectionCoachmark.tsx");
@@ -568,7 +568,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocalAppDetectionStore];
     const fn = function s() {
-      return appInstalled.isAppInstalled(stateFromStores(13984).DetectableAppNames.ROBLOX);
+      return appInstalled.isAppInstalled(stateFromStores(14007).DetectableAppNames.ROBLOX);
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -675,7 +675,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   const tmpResult2 = stateFromStores(504);
 }) : (function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13984).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(14007).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

@@ -1,9 +1,9 @@
-// === Module 8831: SecureFramesTracking ===
+// === Module 8832: SecureFramesTracking ===
 
-// Module 8831 (SecureFramesTracking)
+// Module 8832 (SecureFramesTracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8315 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8316 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;

@@ -2,8 +2,8 @@
 
 // Module 10684 (isSocialLayerApplication)
 import Constants from "Constants" /* 1085 */;
-import scopes2 from "scopes" /* 9226 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9232 */;
+import scopes2 from "scopes" /* 9227 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9233 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationFlags = Constants.ApplicationFlags;

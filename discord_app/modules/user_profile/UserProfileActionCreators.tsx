@@ -1,16 +1,16 @@
-// === Module 8291: UserProfileActionCreators ===
+// === Module 8292: UserProfileActionCreators ===
 
-// Module 8291 (UserProfileActionCreators)
+// Module 8292 (UserProfileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import shared from "shared" /* 4969 */;
-import InlineUploaderDefault from "InlineUploader" /* 6671 */;
-import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 6675 */;
-import MessageParserDefault from "MessageParser" /* 7369 */;
-import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 8292 */;
+import InlineUploaderDefault from "InlineUploader" /* 6672 */;
+import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 6676 */;
+import MessageParserDefault from "MessageParser" /* 7370 */;
+import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 8293 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -26,7 +26,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -85,7 +85,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
             c9 = 1;
           } else {
             c9 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         }
       } else if (1 === tmp7) {

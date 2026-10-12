@@ -1,6 +1,6 @@
-// === Module 6288: ErrorText ===
+// === Module 6289: ErrorText ===
 
-// Module 6288 (ErrorText)
+// Module 6289 (ErrorText)
 import shared from "shared" /* 4969 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,7 +49,7 @@ export const ErrorText = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const effect = noop.useEffect(tmp6, tmp7);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp11 = closure_3(tmp(6289).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" });
+    const tmp11 = closure_3(tmp(6290).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" });
     cResult[5] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -95,7 +95,7 @@ export const ErrorText = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }, items);
   const obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
-  const items1 = [closure_3(nodeText(6289).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(5088).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
+  const items1 = [closure_3(nodeText(6290).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(5088).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
   obj2.children = items1;
   return closure_4(nodeText(5377).Stack, obj2);
 });

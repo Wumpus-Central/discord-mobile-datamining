@@ -1,19 +1,19 @@
-// === Module 18447: GuildSettingsRoleSubscriptionWelcomeView ===
+// === Module 18505: GuildSettingsRoleSubscriptionWelcomeView ===
 
-// Module 18447 (GuildSettingsRoleSubscriptionWelcomeView)
+// Module 18505 (GuildSettingsRoleSubscriptionWelcomeView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import NavigatorConstants from "NavigatorConstants" /* 6258 */;
-import ErrorBlockDefault from "ErrorBlock" /* 11919 */;
-import WarningNoticeDefault from "WarningNotice" /* 18449 */;
-import EligibilityActionSheet from "EligibilityActionSheet" /* 18452 */;
-import HowItWorksSectionDefault from "HowItWorksSection" /* 18460 */;
-import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 18464 */;
-import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 18473 */;
+import NavigatorConstants from "NavigatorConstants" /* 6259 */;
+import ErrorBlockDefault from "ErrorBlock" /* 11921 */;
+import WarningNoticeDefault from "WarningNotice" /* 18507 */;
+import EligibilityActionSheet from "EligibilityActionSheet" /* 18510 */;
+import HowItWorksSectionDefault from "HowItWorksSection" /* 18518 */;
+import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 18522 */;
+import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 18531 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback = noop.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(18452, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
+    return obj.openLazy(asyncRequireImpl(18510, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
       eligibility,
       onRequireModeratorMFAClick() {
         navigation.push(constants.SECURITY);
@@ -113,9 +113,9 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(15475).CREATOR_REVENUE_PORTAL_URL;
+const creatorPortalUrl = fn(15498).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const constants = fn(18448).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(18506).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(5092);

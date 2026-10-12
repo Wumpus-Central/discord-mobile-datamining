@@ -1,6 +1,6 @@
-// === Module 7196: TTIAnalyticsUtils ===
+// === Module 7197: TTIAnalyticsUtils ===
 
-// Module 7196 (TTIAnalyticsUtils)
+// Module 7197 (TTIAnalyticsUtils)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -9,9 +9,9 @@ import RootNavigationRef from "RootNavigationRef" /* 4977 */;
 import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4983 */;
 import DeviceUtils from "DeviceUtils" /* 5068 */;
 import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 5233 */;
-import AppStartInfo2 from "AppStartInfo" /* 7360 */;
+import AppStartInfo2 from "AppStartInfo" /* 7361 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CacheStore from "CacheStore" /* 7197 */;
+import CacheStore from "CacheStore" /* 7198 */;
 import ExperimentStore from "ExperimentStore" /* 5016 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -112,7 +112,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -228,7 +228,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
           }
         })();
         c6 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp6) {
       c6 = tmp;
@@ -247,7 +247,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -304,7 +304,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
         const merged2 = Object.assign(closure_133_0);
         closure_134_1(closure_134_2[19]).track(closure_134_10.APP_UI_VIEWED, obj9, { logEventProperties: true });
         c8 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp7) {
       c8 = tmp;
@@ -333,7 +333,7 @@ let closure_28 = async function _trackAppUIViewed() {
       const obj7 = { value, done: true };
       return obj7;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -490,7 +490,7 @@ let closure_28 = async function _trackAppUIViewed() {
           })(closure_131_6);
         }
         c6 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp57) {
       c6 = tmp;
@@ -530,7 +530,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -566,7 +566,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
         closure_133_0 = ThemeStore(closure_3, closure_2, value);
         closure_132_1(closure_132_2[19]).track(closure_132_10.APP_LAUNCH_COMPLETED, closure_133_0, { logEventProperties: true });
         c8 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp21) {
       c8 = tmp;
@@ -575,7 +575,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7359).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(7360).ACCEPT_INVITE_MODAL_KEY;
 const StaticChannelRoutes = fn(2072).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1279);

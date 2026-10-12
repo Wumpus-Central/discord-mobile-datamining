@@ -11,13 +11,13 @@ import ToastUtils from "ToastUtils" /* 4808 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
-import TableRow2 from "TableRow" /* 6179 */;
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
-import TableRowGroup2 from "TableRowGroup" /* 6264 */;
-import TextInput from "TextInput" /* 6285 */;
-import HeaderActionButton from "HeaderActionButton" /* 7088 */;
-import Form from "Form" /* 8579 */;
-import BotTagDefault from "BotTag" /* 8766 */;
+import TableRow2 from "TableRow" /* 6180 */;
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
+import TableRowGroup2 from "TableRowGroup" /* 6265 */;
+import TextInput from "TextInput" /* 6286 */;
+import HeaderActionButton from "HeaderActionButton" /* 7089 */;
+import Form from "Form" /* 8580 */;
+import BotTagDefault from "BotTag" /* 8767 */;
 import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 11392 */;
 import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 11396 */;
 import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11397 */;
@@ -216,8 +216,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      fn = self(6200).getHeaderCloseButton(onClose);
-      let obj = self(6200);
+      fn = self(6201).getHeaderCloseButton(onClose);
+      let obj = self(6201);
     }
     let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
@@ -695,7 +695,7 @@ let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSett
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberModalEdit(guildId) {
   const cResult = require("c").c(9);
   ({ userId, onClose, onRemove } = guildId);
-  const tmp4 = onClose(6169)(guildId.guildId);
+  const tmp4 = onClose(6170)(guildId.guildId);
   if (cResult[0] === tmp4) {
     if (cResult[1] === onClose) {
       if (cResult[2] === onRemove) {
@@ -719,7 +719,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberMo
         return tmp8;
       }
       const obj4 = { screens: tmp5, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: tmp6 };
-      const tmp11 = closure_18(tmp(6687).Navigator, obj4);
+      const tmp11 = closure_18(tmp(6688).Navigator, obj4);
       cResult[6] = tmp5;
       cResult[7] = tmp6;
       cResult[8] = tmp11;
@@ -764,7 +764,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberMo
       const merged = Object.assign(arg0);
       obj.guildId = guildId;
       obj.onBan = onBan;
-      return closure_2_18(onRemove(11435), obj);
+      return closure_2_18(onRemove(11437), obj);
     }
   };
   tmp = _require;
@@ -772,7 +772,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberMo
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  const tmp = onRemove(6169)(guildId);
+  const tmp = onRemove(6170)(guildId);
   closure_2 = tmp;
   const items = [onClose, onRemove, tmp];
   const memo = noop.useMemo(() => {
@@ -809,7 +809,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberMo
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_18(onRemove(11435), obj);
+          return closure_2_18(onRemove(11437), obj);
         }
       }
     };
@@ -817,6 +817,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberMo
   let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
   const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
   obj.initialRouteStack = items1;
-  return closure_18(onClose(6687).Navigator, obj);
+  return closure_18(onClose(6688).Navigator, obj);
 });
 export const GuildSettingsModalMemberEditScene = tmp6;

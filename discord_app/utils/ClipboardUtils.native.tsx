@@ -1,7 +1,7 @@
-// === Module 6885: ClipboardUtils ===
+// === Module 6886: ClipboardUtils ===
 
-// Module 6885 (ClipboardUtils)
-import _modDef6886 from "module_6886" /* 6886 */;
+// Module 6886 (ClipboardUtils)
+import _modDef6887 from "module_6887" /* 6887 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = async function _copy(arg0) {
@@ -15,7 +15,7 @@ let closure_3 = async function _copy(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -29,7 +29,7 @@ let closure_3 = async function _copy(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          _modDef6886.setString(closure_0);
+          _modDef6887.setString(closure_0);
           if (dependencyMap != null) {
             dependencyMap();
           }
@@ -47,7 +47,7 @@ let closure_3 = async function _copy(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp13) {
       c2 = tmp;
@@ -70,5 +70,5 @@ export const copy = function copy() {
   return applyArgumentsResult;
 };
 export const getString = function getString() {
-  return _modDef6886.getString();
+  return _modDef6887.getString();
 };

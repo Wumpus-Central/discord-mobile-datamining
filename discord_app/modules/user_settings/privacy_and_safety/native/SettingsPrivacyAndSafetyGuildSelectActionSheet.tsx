@@ -1,6 +1,6 @@
-// === Module 16258: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
+// === Module 16281: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
 
-// Module 16258 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
+// Module 16281 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
@@ -47,7 +47,7 @@ function queryGuilds(query) {
   }
   return reduced;
 }
-const UserSettingsSafetySelectedGuildStore = fn(16257);
+const UserSettingsSafetySelectedGuildStore = fn(16280);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: closure_9 } = UserSettingsSafetySelectedGuildStore);
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
@@ -207,11 +207,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     function renderIcon(value) {
       if (value.value === closure_1_7) {
-        let tmp6 = jsx(iter(14945).GuildSelectDefaultIcon, {});
+        let tmp6 = jsx(iter(14968).GuildSelectDefaultIcon, {});
       } else {
-        const obj = { guild: value.guild, size: iter(6158).GuildIconSizes.SMALL_32 };
-        tmp6 = jsx(closure_1(6158), { guild: value.guild, size: iter(6158).GuildIconSizes.SMALL_32 });
-        const tmp4 = closure_1(6158);
+        const obj = { guild: value.guild, size: iter(6159).GuildIconSizes.SMALL_32 };
+        tmp6 = jsx(closure_1(6159), { guild: value.guild, size: iter(6159).GuildIconSizes.SMALL_32 });
+        const tmp4 = closure_1(6159);
       }
       return tmp6;
     }
@@ -223,11 +223,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
     function renderHeaderIcon(value) {
       if (value.value === closure_1_7) {
-        let tmp6 = jsx(iter(14945).GuildSelectDefaultIcon, { size: "xs" });
+        let tmp6 = jsx(iter(14968).GuildSelectDefaultIcon, { size: "xs" });
       } else {
-        const obj = { guild: value.guild, size: iter(6158).GuildIconSizes.XSMALL };
-        tmp6 = jsx(closure_1(6158), { guild: value.guild, size: iter(6158).GuildIconSizes.XSMALL });
-        const tmp4 = closure_1(6158);
+        const obj = { guild: value.guild, size: iter(6159).GuildIconSizes.XSMALL };
+        tmp6 = jsx(closure_1(6159), { guild: value.guild, size: iter(6159).GuildIconSizes.XSMALL });
+        const tmp4 = closure_1(6159);
       }
       return tmp6;
     }

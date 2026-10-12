@@ -1,6 +1,6 @@
-// === Module 12041: SearchUtils ===
+// === Module 12043: SearchUtils ===
 
-// Module 12041 (SearchUtils)
+// Module 12043 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,8 +8,8 @@ import util from "util" /* 1126 */;
 import _modDef4702 from "module_4702" /* 4702 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 12040 */;
-import SearchTokens from "SearchTokens" /* 12042 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 12042 */;
+import SearchTokens from "SearchTokens" /* 12044 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;
@@ -22,7 +22,7 @@ import UserStore from "UserStore" /* 1390 */;
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(9312).SearchTabs;
+const SearchTabs = fn(9313).SearchTabs;
 const Constants = fn(1085);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({ SearchPopoutModes: map1, IS_SEARCH_ANSWER_TOKEN: closure_14, IS_SEARCH_FILTER_TOKEN: closure_15, SearchModes: closure_16, ME, GuildFeatures: closure_17 } = Constants);

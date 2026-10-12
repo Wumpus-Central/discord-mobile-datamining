@@ -1,6 +1,6 @@
-// === Module 7896: useIsAccessibilityServiceEnabled ===
+// === Module 7897: useIsAccessibilityServiceEnabled ===
 
-// Module 7896 (useIsAccessibilityServiceEnabled)
+// Module 7897 (useIsAccessibilityServiceEnabled)
 import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5303 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
 import module_570 from "module_570" /* 570 */;

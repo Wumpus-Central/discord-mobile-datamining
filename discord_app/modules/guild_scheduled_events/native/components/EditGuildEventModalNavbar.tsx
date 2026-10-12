@@ -1,15 +1,15 @@
-// === Module 8537: EditGuildEventModalNavbar ===
+// === Module 8538: EditGuildEventModalNavbar ===
 
-// Module 8537 (EditGuildEventModalNavbar)
+// Module 8538 (EditGuildEventModalNavbar)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6662 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6813 */;
-import HeaderActionButton from "HeaderActionButton" /* 7088 */;
-import _modDef7728 from "module_7728" /* 7728 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8519 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6663 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
+import HeaderActionButton from "HeaderActionButton" /* 7089 */;
+import _modDef7729 from "module_7729" /* 7729 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8520 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
                         cResult[32] = tmp44;
                         tmp41 = tmp44;
                       }
-                      const obj5 = { accessibilityLabel: tmp35, onPress: onClose, source: _modDef7728, style: tmp4.rightButton };
+                      const obj5 = { accessibilityLabel: tmp35, onPress: onClose, source: _modDef7729, style: tmp4.rightButton };
                       const tmp40 = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
                       cResult[27] = onClose;
                       cResult[28] = tmp4.rightButton;
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
   const intl2 = util.intl;
   obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj6.onPress = screen.onClose;
-  obj6.source = _modDef7728;
+  obj6.source = _modDef7729;
   obj6.style = tmp.rightButton;
   obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
   items1[2] = hasOwnProperty(View, obj5);

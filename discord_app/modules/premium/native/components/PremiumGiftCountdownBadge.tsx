@@ -1,6 +1,6 @@
-// === Module 10111: PremiumGiftCountdownBadge ===
+// === Module 10112: PremiumGiftCountdownBadge ===
 
-// Module 10111 (PremiumGiftCountdownBadge)
+// Module 10112 (PremiumGiftCountdownBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;

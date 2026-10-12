@@ -3,14 +3,14 @@
 // Module 11116 (game_console/GameConsoleAlertUtils)
 import util from "util" /* 1126 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9204 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9205 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9221).GAME_CONSOLE_ALERT_MODAL_LOCATION;
+let closure_4 = fn(9222).GAME_CONSOLE_ALERT_MODAL_LOCATION;
 const Constants = fn(1085);
 ({ InputModes: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;

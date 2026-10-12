@@ -1,12 +1,12 @@
-// === Module 8073: InGameMessageNuxSystemMessage ===
+// === Module 8074: InGameMessageNuxSystemMessage ===
 
-// Module 8073 (InGameMessageNuxSystemMessage)
+// Module 8074 (InGameMessageNuxSystemMessage)
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7971 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7978 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7980 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7982 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7972 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7979 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7981 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7983 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
 
 require = fn;

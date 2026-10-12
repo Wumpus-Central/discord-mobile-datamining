@@ -1,6 +1,6 @@
-// === Module 17598: SpamMessageList ===
+// === Module 17655: SpamMessageList ===
 
-// Module 17598 (SpamMessageList)
+// Module 17655 (SpamMessageList)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
@@ -9,12 +9,12 @@ import useMountEffectDefault from "useMountEffect" /* 5396 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5729 */;
 import MetricEvents from "MetricEvents" /* 5734 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 17599 */;
+import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 17656 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const MessageRequestEmptyDefault = tmp2(17593);
+const MessageRequestEmptyDefault = tmp2(17650);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
@@ -470,10 +470,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpamMess
   const tmp = closure_11();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  dependencyMap = goToMessageRequestPreview(17592).useSpamMessageRequestCount();
+  dependencyMap = goToMessageRequestPreview(17649).useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj = goToMessageRequestPreview(17592);
-  const hasSingleMessageRequest = goToMessageRequestPreview(17590).useListHasSingleSpamMessageRequest();
+  let obj = goToMessageRequestPreview(17649);
+  const hasSingleMessageRequest = goToMessageRequestPreview(17647).useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
     const obj2 = { num_spam_message_requests };
@@ -532,5 +532,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpamMess
     obj4.data = items;
     return closure_8(closure_6, obj4);
   }
-  let obj2 = goToMessageRequestPreview(17590);
+  let obj2 = goToMessageRequestPreview(17647);
 });

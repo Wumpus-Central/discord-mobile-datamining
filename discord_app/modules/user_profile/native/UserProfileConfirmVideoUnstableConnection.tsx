@@ -1,6 +1,6 @@
-// === Module 12365: UserProfileConfirmVideoUnstableConnection ===
+// === Module 12367: UserProfileConfirmVideoUnstableConnection ===
 
-// Module 12365 (UserProfileConfirmVideoUnstableConnection)
+// Module 12367 (UserProfileConfirmVideoUnstableConnection)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AlertModal from "AlertModal" /* 5305 */;

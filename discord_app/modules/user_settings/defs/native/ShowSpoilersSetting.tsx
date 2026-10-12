@@ -1,6 +1,6 @@
-// === Module 15745: ShowSpoilersSetting ===
+// === Module 15768: ShowSpoilersSetting ===
 
-// Module 15745 (ShowSpoilersSetting)
+// Module 15768 (ShowSpoilersSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
@@ -59,7 +59,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.QgwmVz);
   },
-  parent: fn(7992).MobileUserSettings.CHAT,
+  parent: fn(7993).MobileUserSettings.CHAT,
   useValue: fn(2041).RenderSpoilers.useSetting,
   onValueChange: function onShowSpoilersChange(arg0) {
     const RenderSpoilers = UserSettings.RenderSpoilers;

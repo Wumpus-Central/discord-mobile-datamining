@@ -1,6 +1,6 @@
-// === Module 7971: resolveMessageContentColors ===
+// === Module 7972: resolveMessageContentColors ===
 
-// Module 7971 (resolveMessageContentColors)
+// Module 7972 (resolveMessageContentColors)
 import nativeDefault from "native" /* 587 */;
 import shared from "shared" /* 4969 */;
 import createStyles_mod from "createStyles" /* 5092 */;

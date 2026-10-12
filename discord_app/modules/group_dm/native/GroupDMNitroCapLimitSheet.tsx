@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9518 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9519 */;
 import PremiumMarketingUtil from "PremiumMarketingUtil" /* 10755 */;
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 10756 */;
 import noop from "module_19" /* 19 */;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
   const tmp8Result = useGroupDMNitroUpsellActionDefault;
   obj11.text = intl3.string(_location(10749).getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
   const tmp2Result = _location(10749);
-  obj11.icon = closure_11(_location(9035).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: "custom" });
+  obj11.icon = closure_11(_location(9036).NitroWheelIcon, { style: tmp.nitroWheelIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: "custom" });
   obj11.shiny = !stateFromStores;
   obj11.loading = loading;
   let tmp16 = null;
@@ -174,5 +174,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
   items3[2] = closure_12(View, obj10);
   obj5.children = items3;
   obj13.children = closure_12(View, obj5);
-  return closure_11(_location(6839).BottomSheet, obj13);
+  return closure_11(_location(6840).BottomSheet, obj13);
 });

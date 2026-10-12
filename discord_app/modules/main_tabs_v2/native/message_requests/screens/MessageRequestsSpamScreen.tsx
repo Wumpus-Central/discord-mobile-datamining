@@ -1,8 +1,8 @@
-// === Module 17600: MessageRequestsSpamScreen ===
+// === Module 17657: MessageRequestsSpamScreen ===
 
-// Module 17600 (MessageRequestsSpamScreen)
+// Module 17657 (MessageRequestsSpamScreen)
 import c from "c" /* 576 */;
-import SpamMessageListDefault from "SpamMessageList" /* 17598 */;
+import SpamMessageListDefault from "SpamMessageList" /* 17655 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,47 +1,77 @@
-// === Module 17084: conjurePreviewTargets ===
+// === Module 17123: conjurePreviewTargets ===
 
-// Module 17084 (conjurePreviewTargets)
+// Module 17123 (conjurePreviewTargets)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import ConjurePreviewMode from "ConjurePreviewMode" /* 17080 */;
+import ConjurePreviewMode from "ConjurePreviewMode" /* 17114 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
 
 export const previewTargets = function previewTargets(modes, frameSurfaceOptions) {
   closure_0 = frameSurfaceOptions;
+  let items = stateFromStores3;
+  if (stateFromStores3 === undefined) {
+    items = [];
+  }
   return modes.flatMap((mode) => {
     if ("frame" === mode) {
-      let mapped = mode.map((surface) => ({ mode, surface }));
+      let flatMapResult = mode.flatMap((surface) => {
+        mode = surface;
+        if (surface === mode(dependencyMap[0]).EmbeddedSurfaceType.APP_CHANNEL) {
+          if (length.length > 1) {
+            let mapped = length.map((appChannel) => ({ mode: surface, surface, appChannel }));
+          }
+          return mapped;
+        }
+        mapped = [{ mode, surface }];
+        const obj = { mode, surface };
+      });
     } else {
-      const obj = { mode };
-      mapped = [obj];
+      let obj = { mode };
+      flatMapResult = [obj];
     }
-    return mapped;
+    return flatMapResult;
   });
 };
 export const previewTargetKey = function previewTargetKey(target) {
-  if ("frame" === target.mode) {
-    const _HermesInternal = HermesInternal;
-    let mode = "frame-" + target.surface;
+  if ("frame" !== target.mode) {
+    let mode = target.mode;
+  } else if (null == target.appChannel) {
+    const _HermesInternal2 = HermesInternal;
+    mode = "frame-" + target.surface;
   } else {
-    mode = target.mode;
+    const _HermesInternal = HermesInternal;
+    mode = "frame-" + target.surface + "-" + target.appChannel;
   }
   return mode;
 };
 export const activePreviewTarget = function activePreviewTarget(activeMode, frameSurface) {
+  let tmp = appChannel;
+  if (appChannel === undefined) {
+    tmp = null;
+  }
   if (null == activeMode) {
     return null;
-  } else if ("frame" === activeMode) {
-    const obj2 = { mode: activeMode, surface: frameSurface };
+  } else if ("frame" !== activeMode) {
+    const obj2 = { mode: activeMode };
+  } else if (null == tmp) {
+    const obj3 = { mode: activeMode, surface: frameSurface };
   } else {
-    const obj = { mode: activeMode };
+    const obj = { mode: activeMode, surface: frameSurface, appChannel: tmp };
   }
 };
-export const getPreviewTargetLabel = function getPreviewTargetLabel(memo2) {
-  const mode = memo2.mode;
+export const getPreviewTargetLabel = function getPreviewTargetLabel(memo1) {
+  const mode = memo1.mode;
   if ("frame" === mode) {
-    return ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo2.surface);
+    if (null == memo1.appChannel) {
+      let previewFrameSurfaceLabel = ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo1.surface);
+    } else {
+      const intl4 = util.intl;
+      const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo1.surface), channel: memo1.appChannel };
+      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef3849["6xVl+N"], obj);
+    }
+    return previewFrameSurfaceLabel;
   } else if ("widget" === mode) {
     const intl3 = util.intl;
     return intl3.string(_modDef3849.y5GiL1);
@@ -53,9 +83,14 @@ export const getPreviewTargetLabel = function getPreviewTargetLabel(memo2) {
     return intl.string(_modDef3849.tjpaGN);
   }
 };
-export const selectPreviewTarget = function selectPreviewTarget(mode, fn, fn2) {
+export const selectPreviewTarget = function selectPreviewTarget(mode, fn, fn2, fn3) {
   if ("frame" === mode.mode) {
     fn2(mode.surface);
+    if (null != mode.appChannel) {
+      if (fn3 != null) {
+        fn3(mode.appChannel);
+      }
+    }
   }
   fn(mode.mode);
 };

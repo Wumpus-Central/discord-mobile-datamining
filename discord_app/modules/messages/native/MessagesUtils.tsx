@@ -1,6 +1,6 @@
-// === Module 9382: messages/MessagesUtils ===
+// === Module 9383: messages/MessagesUtils ===
 
-// Module 9382 (messages/MessagesUtils)
+// Module 9383 (messages/MessagesUtils)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -24,25 +24,25 @@ import MediaFormatTesters from "MediaFormatTesters" /* 5419 */;
 import InteractionComponentUtils from "InteractionComponentUtils" /* 5436 */;
 import InteractionTypes from "InteractionTypes" /* 5442 */;
 import QuestTypes from "QuestTypes" /* 5975 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6144 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6995 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7178 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7242 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7899 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7900 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7901 */;
-import Tracking from "Tracking" /* 7903 */;
-import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 8187 */;
-import QuestActionCreators from "QuestActionCreators" /* 9171 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9384 */;
-import computeScrollData from "computeScrollData" /* 9598 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 9599 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 9603 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 9604 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6145 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6996 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7179 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7243 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7900 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7901 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7902 */;
+import Tracking from "Tracking" /* 7904 */;
+import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 8188 */;
+import QuestActionCreators from "QuestActionCreators" /* 9172 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9385 */;
+import computeScrollData from "computeScrollData" /* 9599 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 9600 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 9604 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 9605 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7312 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7313 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 5891 */;
@@ -120,7 +120,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -155,7 +155,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 const findMessageIndexResult = findMessageIndex(SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id));
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -209,8 +209,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9383).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(7747);
+let closure_5 = fn(9384).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(7748);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_17, MessageEmbedTypes: closure_18, MessageTypes: closure_19, Permissions: closure_20, MAX_MESSAGES_PER_CHANNEL: closure_21 } = Constants);
@@ -269,7 +269,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "o" };
+          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "Array" };
           return obj3;
         }
       }

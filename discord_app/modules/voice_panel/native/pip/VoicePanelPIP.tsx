@@ -1,6 +1,6 @@
-// === Module 17839: VoicePanelPIP ===
+// === Module 17896: VoicePanelPIP ===
 
-// Module 17839 (VoicePanelPIP)
+// Module 17896 (VoicePanelPIP)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4739 */;
@@ -8,16 +8,16 @@ import native from "native" /* 4827 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import ExternalPipDefault from "ExternalPip" /* 5221 */;
 import spring from "spring" /* 5378 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10372 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10373 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
 import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10853 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11969 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11976 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17738 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17739 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17741 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17840 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11971 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11978 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17795 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17796 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17798 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17897 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import FramesStore from "FramesStore" /* 10807 */;
@@ -29,10 +29,10 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11970);
+const VoicePanelConstants = fn(11972);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11968).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17740).VoicePanelPIPModes;
+const VoicePanelControlsModes = fn(11970).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17797).VoicePanelPIPModes;
 const ActivityPanelModes = fn(6067).ActivityPanelModes;
 const isLaunched = fn(10802).isLaunched;
 const jsxProd = fn(21);

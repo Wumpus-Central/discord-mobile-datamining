@@ -1,8 +1,8 @@
-// === Module 14989: AgeGroupConfirmAccountStatusSetting ===
+// === Module 15012: AgeGroupConfirmAccountStatusSetting ===
 
-// Module 14989 (AgeGroupConfirmAccountStatusSetting)
-import SettingsConstants from "SettingsConstants" /* 7992 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14984 */;
+// Module 15012 (AgeGroupConfirmAccountStatusSetting)
+import SettingsConstants from "SettingsConstants" /* 7993 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 15007 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

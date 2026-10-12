@@ -1,12 +1,12 @@
-// === Module 16527: ThreadChannel ===
+// === Module 16550: ThreadChannel ===
 
-// Module 16527 (ThreadChannel)
+// Module 16550 (ThreadChannel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import transitionToChannel from "transitionToChannel" /* 5103 */;
-import inlineStyles from "inlineStyles" /* 7576 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10454 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16528 */;
+import inlineStyles from "inlineStyles" /* 7577 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10455 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16551 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -21,7 +21,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11758);
+const RedesignChannelListConstants = fn(11760);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1085).Permissions;
 const UnreadSetting = fn(5967).UnreadSetting;

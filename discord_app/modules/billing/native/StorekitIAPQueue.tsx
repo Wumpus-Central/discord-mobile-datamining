@@ -1,7 +1,7 @@
-// === Module 12761: StorekitIAPQueue ===
+// === Module 12763: StorekitIAPQueue ===
 
-// Module 12761 (StorekitIAPQueue)
-import utils_PriceUtils from "utils/PriceUtils" /* 6940 */;
+// Module 12763 (StorekitIAPQueue)
+import utils_PriceUtils from "utils/PriceUtils" /* 6941 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -139,7 +139,7 @@ prototype["processQueue"] = function processQueue() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

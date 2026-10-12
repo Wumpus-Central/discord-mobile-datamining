@@ -1,6 +1,6 @@
-// === Module 15608: useDisplayNameStylesHandleApply ===
+// === Module 15631: useDisplayNameStylesHandleApply ===
 
-// Module 15608 (useDisplayNameStylesHandleApply)
+// Module 15631 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

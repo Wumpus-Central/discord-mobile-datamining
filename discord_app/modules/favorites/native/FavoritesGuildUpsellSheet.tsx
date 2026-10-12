@@ -1,12 +1,12 @@
-// === Module 10316: FavoritesGuildUpsellSheet ===
+// === Module 10317: FavoritesGuildUpsellSheet ===
 
-// Module 10316 (FavoritesGuildUpsellSheet)
+// Module 10317 (FavoritesGuildUpsellSheet)
 import router_utils from "router_utils" /* 1112 */;
 import _modDef3442 from "module_3442" /* 3442 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9393 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9394 */;
-import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10317 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10322 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9394 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9395 */;
+import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10318 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10323 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   const cResult = analyticsLocations(576).c(22);
   ({ limit, source, variant } = arg0);
   if (undefined === limit) {
-    limit = tmp(10313).FREE_FAVORITE_LIMIT;
+    limit = tmp(10314).FREE_FAVORITE_LIMIT;
   }
   let str = "channel_context_menu";
   if (undefined !== source) {
@@ -32,10 +32,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   if (undefined !== variant) {
     str2 = variant;
   }
-  analyticsLocations = first(10317)(str).analyticsLocations;
+  analyticsLocations = first(10318)(str).analyticsLocations;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
-      first(5056).hideActionSheet(analyticsLocations(10315).FAVORITES_UPSELL_SHEET_KEY);
+      first(5056).hideActionSheet(analyticsLocations(10316).FAVORITES_UPSELL_SHEET_KEY);
     };
     cResult[0] = fn;
     first = fn;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
       if (cResult[4] === limit) {
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp17 = closure_6(tmp(10318).FavoritesSpotIllustration, {});
+          const tmp17 = closure_6(tmp(10319).FavoritesSpotIllustration, {});
           cResult[6] = tmp17;
           let tmp15 = tmp17;
         } else {
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
               }
             }
             const obj4 = { title: tmp7, description: tmp11, illustration: tmp15, actions: tmp31 };
-            const tmp36 = closure_6(tmp(10323).PromoSheet, obj4);
+            const tmp36 = closure_6(tmp(10324).PromoSheet, obj4);
             cResult[18] = tmp31;
             cResult[19] = tmp7;
             cResult[20] = tmp11;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
 }) : (function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(10313).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(10314).FREE_FAVORITE_LIMIT;
   }
   let str = limit.source;
   if (str === undefined) {
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   }
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault(str).analyticsLocations;
   importDefault = noop.useCallback(() => {
-    closure_1(5056).hideActionSheet(analyticsLocations(10315).FAVORITES_UPSELL_SHEET_KEY);
+    closure_1(5056).hideActionSheet(analyticsLocations(10316).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = analyticsLocations(1126).intl;
   const tmp8 = _modDef3442;
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     formatToPlainStringResult = intl2.string(tmp3(3442)["WaP/lz"]);
   }
   obj.description = formatToPlainStringResult;
-  obj.illustration = closure_6(analyticsLocations(10318).FavoritesSpotIllustration, {});
+  obj.illustration = closure_6(analyticsLocations(10319).FavoritesSpotIllustration, {});
   const obj3 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = tmp7(1126).intl;
   obj3.text = intl3.string(analyticsLocations(1126).t.pj0XBN);
@@ -210,5 +210,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   });
   obj4.children = items;
   obj.actions = closure_7(analyticsLocations(5958).ButtonGroup, obj4);
-  return closure_6(analyticsLocations(10323).PromoSheet, obj);
+  return closure_6(analyticsLocations(10324).PromoSheet, obj);
 });

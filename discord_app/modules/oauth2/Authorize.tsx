@@ -1,12 +1,12 @@
-// === Module 9225: Authorize ===
+// === Module 9226: Authorize ===
 
-// Module 9225 (Authorize)
+// Module 9226 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
 import QueryStringUtils from "QueryStringUtils" /* 5075 */;
 import keysSorter from "keysSorter" /* 5984 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8457 */;
-import scopes from "scopes" /* 9226 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8458 */;
+import scopes from "scopes" /* 9227 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
 

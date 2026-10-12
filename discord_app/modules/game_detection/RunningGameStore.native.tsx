@@ -4,10 +4,10 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SocialSdkGameResolver from "SocialSdkGameResolver" /* 10655 */;
-import OverlayTypes from "OverlayTypes" /* 14280 */;
+import OverlayTypes from "OverlayTypes" /* 14303 */;
 import GameStore from "GameStore" /* 2020 */;
 import DetectableGameStore from "DetectableGameStore" /* 2037 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7112 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7113 */;
 
 require = fn;
 const Store = initializeDefault.Store;

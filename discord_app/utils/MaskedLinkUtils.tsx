@@ -1,12 +1,12 @@
-// === Module 8490: MaskedLinkUtils ===
+// === Module 8491: MaskedLinkUtils ===
 
-// Module 8490 (MaskedLinkUtils)
+// Module 8491 (MaskedLinkUtils)
 import openURLDefault from "openURL" /* 4800 */;
-import LinkAnalyticsUtilsDefault from "LinkAnalyticsUtils" /* 8494 */;
-import BlockedDomainStore from "BlockedDomainStore" /* 8491 */;
+import LinkAnalyticsUtilsDefault from "LinkAnalyticsUtils" /* 8495 */;
+import BlockedDomainStore from "BlockedDomainStore" /* 8492 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import MaskedLinkStore from "MaskedLinkStore" /* 8492 */;
+import MaskedLinkStore from "MaskedLinkStore" /* 8493 */;
 import MessageStore from "MessageStore" /* 5432 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
@@ -208,13 +208,13 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
           tmp3Result8.track(constants2.URL_CLICKED, obj4);
           const obj5 = require("MaskedLinkStoreMethodsAdditional");
         }
-        if (tmp3(6084)(channelId)) {
+        if (tmp3(6085)(channelId)) {
           const obj6 = { cta_type: "inline_link", target: tmp8 };
           tmp3(1265).track(constants2.CHANGE_LOG_CTA_CLICKED, obj6);
           const tmp3Result9 = tmp3(1265);
         }
       }
-      tmp3(8494).trackLinkClicked(tmp8);
+      tmp3(8495).trackLinkClicked(tmp8);
       if (null == onClick) {
         const obj7 = { skipExtensionCheck: "a", analyticsLocations: items, messageId, channelId };
         require("getOnClick").default(tmp8, obj7);
@@ -223,9 +223,9 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        tmp3(13039).show(tmp8);
+        tmp3(13044).show(tmp8);
         onCancel();
-        const tmp3Result11 = tmp3(13039);
+        const tmp3Result11 = tmp3(13044);
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
@@ -256,9 +256,9 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
             preventDefault.preventDefault();
           }
           if (tmp56) {
-            const obj8 = { url: tmp8, trustUrl: tmp53(13046).trustProtocol, onConfirm: handleConfirm, onCancel, isProtocol: true, contextKey };
-            tmp3(13044).show(obj8);
-            const tmp3Result12 = tmp3(13044);
+            const obj8 = { url: tmp8, trustUrl: tmp53(13051).trustProtocol, onConfirm: handleConfirm, onCancel, isProtocol: true, contextKey };
+            tmp3(13049).show(obj8);
+            const tmp3Result12 = tmp3(13049);
           } else {
             const punycodeLinkResult = tmp53(5405).punycodeLink(tmp8);
             let displayTarget = tmp8;
@@ -266,21 +266,21 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
               displayTarget = punycodeLinkResult.displayTarget;
             }
             const tmp53Result = tmp53(5405);
-            const obj9 = { url: displayTarget, trustUrl: tmp53(13046).trustDomain, onConfirm: handleConfirm, onCancel, isProtocol: false, contextKey };
-            tmp3(13044).show(obj9);
-            const tmp3Result13 = tmp3(13044);
+            const obj9 = { url: displayTarget, trustUrl: tmp53(13051).trustDomain, onConfirm: handleConfirm, onCancel, isProtocol: false, contextKey };
+            tmp3(13049).show(obj9);
+            const tmp3Result13 = tmp3(13049);
           }
         }
         if (null == preventDefault) {
           handleConfirm();
         } else if (flag2) {
           const obj11 = { messageId: tmp13, channelId, guildId: tmp14, sourceChannelId: tmp12, sourceGuildId: tmp11 };
-          let result = tmp3(8494).trackAnnouncementMessageLinkClicked(obj11);
-          const tmp3Result14 = tmp3(8494);
+          let result = tmp3(8495).trackAnnouncementMessageLinkClicked(obj11);
+          const tmp3Result14 = tmp3(8495);
         }
         const obj10 = require("MaskedLinkStoreMethodsAdditional");
       }
-      const tmp3Result10 = tmp3(8494);
+      const tmp3Result10 = tmp3(8495);
     } catch (err) {
       const _encodeURI = encodeURI;
       const encodeURIResult = encodeURI(tmp2);

@@ -1,6 +1,6 @@
-// === Module 8761: InstantInviteFriendsList ===
+// === Module 8762: InstantInviteFriendsList ===
 
-// Module 8761 (InstantInviteFriendsList)
+// Module 8762 (InstantInviteFriendsList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,8 +8,8 @@ import native from "native" /* 1200 */;
 import RootNavigationRef from "RootNavigationRef" /* 4977 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6184 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 8762 */;
+import Pressables from "Pressables" /* 6185 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 8763 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 5906 */;
 

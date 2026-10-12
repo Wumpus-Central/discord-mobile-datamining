@@ -1,6 +1,6 @@
-// === Module 11853: AppLauncherCommandOptionActionSheet ===
+// === Module 11855: AppLauncherCommandOptionActionSheet ===
 
-// Module 11853 (AppLauncherCommandOptionActionSheet)
+// Module 11855 (AppLauncherCommandOptionActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -62,7 +62,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
           }
         }
     };
-    obj3.children = jsx(tmp(6893).ActionSheetCloseButton, {
+    obj3.children = jsx(tmp(6894).ActionSheetCloseButton, {
       onPress() {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           onDismiss = onDismiss.onDismiss;
@@ -124,7 +124,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
                 obj5.startExpanded = tmp14;
                 obj5.header = tmp24;
                 obj5.children = tmp27;
-                const tmp36 = jsx(tmp(6839).BottomSheet, {}, tmp6.name);
+                const tmp36 = jsx(tmp(6840).BottomSheet, {}, tmp6.name);
                 cResult[24] = tmp6.name;
                 cResult[25] = tmp7;
                 cResult[26] = tmp13;
@@ -183,7 +183,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
   const obj3 = { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null };
   const obj4 = {
     style: { alignSelf: "flex-start" },
-    children: jsx(merged(6893).ActionSheetCloseButton, {
+    children: jsx(merged(6894).ActionSheetCloseButton, {
       onPress() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         const onDismiss = merged.onDismiss;
@@ -193,7 +193,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       }
     })
   };
-  obj3.leading = <View style={{ alignSelf: "flex-start" }}>{jsx(merged(6893).ActionSheetCloseButton, {
+  obj3.leading = <View style={{ alignSelf: "flex-start" }}>{jsx(merged(6894).ActionSheetCloseButton, {
     onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       const onDismiss = merged.onDismiss;
@@ -204,10 +204,10 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
   })}</View>;
   ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
   obj3.trailing = jsx(merged(1200).Spacer, { size: 24 });
-  obj.header = jsx(merged(6838).BottomSheetTitleHeader, { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null });
+  obj.header = jsx(merged(6839).BottomSheetTitleHeader, { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null });
   const obj9 = { style: null, children };
   const items = [tmp2.contentContainer, contentContainerStyles];
   obj9.style = items;
   obj.children = <View style={null}>{children}</View>;
-  return jsx(merged(6839).BottomSheet, {}, option.name);
+  return jsx(merged(6840).BottomSheet, {}, option.name);
 });

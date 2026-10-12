@@ -1,6 +1,6 @@
-// === Module 9333: useHandleJoinThreadVoice ===
+// === Module 9334: useHandleJoinThreadVoice ===
 
-// Module 9333 (useHandleJoinThreadVoice)
+// Module 9334 (useHandleJoinThreadVoice)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
 
@@ -51,7 +51,7 @@ export default function useHandleJoinThreadVoice(arg0) {
     } else {
       value.openGuildVoiceModal(closure_129_0, "Thread Header");
       c3 = 3;
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
     await guildId(c2[4])(c2[6], c2.paths);
     return value.openMemberVerificationModal(closure_128_0);

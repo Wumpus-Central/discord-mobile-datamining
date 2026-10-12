@@ -1,30 +1,30 @@
-// === Module 16916: ICYMITopicsScreen ===
+// === Module 16940: ICYMITopicsScreen ===
 
-// Module 16916 (ICYMITopicsScreen)
+// Module 16940 (ICYMITopicsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import BookCheckIcon from "BookCheckIcon" /* 8202 */;
-import ForumIcon from "ForumIcon" /* 8215 */;
-import GameControllerIcon from "GameControllerIcon" /* 9211 */;
-import FoodIcon from "FoodIcon" /* 9568 */;
-import BicycleIcon from "BicycleIcon" /* 9570 */;
-import TvIcon from "TvIcon" /* 10241 */;
-import MusicIcon from "MusicIcon" /* 10247 */;
-import MedalIcon from "MedalIcon" /* 10275 */;
-import RobotIcon from "RobotIcon" /* 11433 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 11537 */;
-import PencilSparkleIcon from "PencilSparkleIcon" /* 12813 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14632 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 15532 */;
-import ScienceIcon from "ScienceIcon" /* 16918 */;
-import PaintbrushThinIcon from "PaintbrushThinIcon" /* 16919 */;
+import BookCheckIcon from "BookCheckIcon" /* 8203 */;
+import ForumIcon from "ForumIcon" /* 8216 */;
+import GameControllerIcon from "GameControllerIcon" /* 9212 */;
+import FoodIcon from "FoodIcon" /* 9569 */;
+import BicycleIcon from "BicycleIcon" /* 9571 */;
+import TvIcon from "TvIcon" /* 10242 */;
+import MusicIcon from "MusicIcon" /* 10248 */;
+import MedalIcon from "MedalIcon" /* 10276 */;
+import RobotIcon from "RobotIcon" /* 11435 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 11539 */;
+import PencilSparkleIcon from "PencilSparkleIcon" /* 12815 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 14655 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 15555 */;
+import ScienceIcon from "ScienceIcon" /* 16942 */;
+import PaintbrushThinIcon from "PaintbrushThinIcon" /* 16943 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16910 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16934 */;
 
 require = fn;
 function primaryCategoryToEmojiIcon(categoryid) {
@@ -60,7 +60,7 @@ function primaryCategoryToEmojiIcon(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(16917).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(16941).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5092);
@@ -191,7 +191,7 @@ export default function ICYMITopicsScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

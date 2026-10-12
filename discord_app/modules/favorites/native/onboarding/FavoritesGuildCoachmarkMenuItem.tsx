@@ -1,14 +1,14 @@
-// === Module 16647: FavoritesGuildCoachmarkMenuItem ===
+// === Module 16671: FavoritesGuildCoachmarkMenuItem ===
 
-// Module 16647 (FavoritesGuildCoachmarkMenuItem)
+// Module 16671 (FavoritesGuildCoachmarkMenuItem)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3442 from "module_3442" /* 3442 */;
-import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10328 */;
+import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10329 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 2068 */;
 
-const LayerScope2 = LayerScope(6845);
+const LayerScope2 = LayerScope(6846);
 require = fn;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
@@ -43,7 +43,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
     tmp8 = cResult[3];
   }
   const tmpResult = markPopoverAsDismissed(504);
-  const favoritesMenuItemPopoverDismissibleContent = markPopoverAsDismissed(10328).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
+  const favoritesMenuItemPopoverDismissibleContent = markPopoverAsDismissed(10329).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
   ({ shouldShowPopover, markPopoverAsDismissed } = favoritesMenuItemPopoverDismissibleContent);
   if (cResult[4] !== markPopoverAsDismissed) {
     class S {
@@ -150,7 +150,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
     cResult[15] = tmp14;
     cResult[16] = obj2;
   }
-  const tmpResult2 = markPopoverAsDismissed(10328);
+  const tmpResult2 = markPopoverAsDismissed(10329);
 }) : (function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   let stateFromStores;
   let markPopoverAsDismissed;

@@ -1,6 +1,6 @@
-// === Module 9718: MediaPostMultipleThumbnailActionSheet ===
+// === Module 9719: MediaPostMultipleThumbnailActionSheet ===
 
-// Module 9718 (MediaPostMultipleThumbnailActionSheet)
+// Module 9719 (MediaPostMultipleThumbnailActionSheet)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import noop from "module_19" /* 19 */;
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaPos
                   return tmp50;
                 }
                 const obj8 = { backdropOpacity: 0.8, onDismiss: tmp5, children: tmp46 };
-                const tmp52 = closure_5(tmp(6839).BottomSheet, obj8);
+                const tmp52 = closure_5(tmp(6840).BottomSheet, obj8);
                 cResult[34] = tmp5;
                 cResult[35] = tmp46;
                 cResult[36] = tmp52;
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaPos
       const obj10 = { contentContainerStyle: tmp7, children: null };
       const items1 = [tmp18, tmp24, tmp27, tmp32, tmp35, tmp40];
       obj10.children = items1;
-      const tmp45 = closure_6(tmp(6306).BottomSheetScrollView, obj10);
+      const tmp45 = closure_6(tmp(6307).BottomSheetScrollView, obj10);
       cResult[25] = tmp24;
       cResult[26] = tmp32;
       cResult[27] = tmp40;
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MediaPos
   };
   items2[5] = closure_5(markAsDismissed(5379).Button, obj9);
   obj3.children = items2;
-  obj2.children = closure_6(markAsDismissed(6306).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(6307).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(6839).BottomSheet, obj);
+  return closure_5(markAsDismissed(6840).BottomSheet, obj);
 });

@@ -1,14 +1,14 @@
-// === Module 13719: ProgressWheel ===
+// === Module 13742: ProgressWheel ===
 
-// Module 13719 (ProgressWheel)
+// Module 13742 (ProgressWheel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4818 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import inlineStyles from "inlineStyles" /* 7576 */;
-import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13702 */;
-import _modDef13720 from "module_13720" /* 13720 */;
-import _modDef13721 from "module_13721" /* 13721 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import inlineStyles from "inlineStyles" /* 7577 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13725 */;
+import _modDef13743 from "module_13743" /* 13743 */;
+import _modDef13744 from "module_13744" /* 13744 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
           let tmp23 = cResult[10];
         }
         if (altImage == null) {
-          altImage = _modDef13721;
+          altImage = _modDef13744;
         }
         if (cResult[11] !== altImage) {
           const obj5 = { uri: altImage };
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
   }
   let tmp12 = tmp10;
   if (tmp10) {
-    const obj9 = { source: _modDef13720, style: tmp4.glowImage };
+    const obj9 = { source: _modDef13743, style: tmp4.glowImage };
     tmp12 = React4(FastImageDefault, obj9);
     const tmp5Result = FastImageDefault;
   }
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
   let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
-    const obj4 = { source: _modDef13720, style: tmp.glowImage };
+    const obj4 = { source: _modDef13743, style: tmp.glowImage };
     tmp9 = React4(FastImageDefault, obj4);
     const tmp4Result = FastImageDefault;
   }
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
   const obj5 = { cx: 80, cy: 80, r: 77, stroke, strokeWidth: 6, fill: "transparent", strokeDasharray, strokeDashoffset: strokeDasharray * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" };
   const tmp4Result3 = inlineStylesDefault;
   if (altImage == null) {
-    altImage = _modDef13721;
+    altImage = _modDef13744;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj3.children = items;

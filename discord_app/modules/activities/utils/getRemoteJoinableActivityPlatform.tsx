@@ -4,7 +4,7 @@
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import ActivityFlagUtils from "ActivityFlagUtils" /* 10657 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 6797 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 6798 */;
 import SessionsStore from "SessionsStore" /* 5112 */;
 
 require = fn;

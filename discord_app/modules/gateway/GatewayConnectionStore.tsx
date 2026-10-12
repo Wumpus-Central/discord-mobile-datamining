@@ -7,10 +7,10 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import DiscordAppStateDefault from "DiscordAppState" /* 6071 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13905 */;
-import ConnectionStateDefault from "ConnectionState" /* 13919 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13940 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13948 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13928 */;
+import ConnectionStateDefault from "ConnectionState" /* 13942 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13963 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13971 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -21,7 +21,7 @@ import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 import RTCRegionStore from "RTCRegionStore" /* 5211 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5759 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7428 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7429 */;
 
 require = fn;
 let closure_25 = async function _handleConnectionOpen(arg0) {
@@ -39,7 +39,7 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -172,7 +172,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1085);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
-fn(13905).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(13928).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -504,9 +504,9 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(13905).socket;
+          const socket = closure_0(13928).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(13905).socket;
+            const socket2 = closure_0(13928).socket;
             socket2.streamDelete(item);
           }
         });

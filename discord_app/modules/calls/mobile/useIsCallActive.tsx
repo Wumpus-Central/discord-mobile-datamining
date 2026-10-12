@@ -1,6 +1,6 @@
-// === Module 7998: useIsCallActive ===
+// === Module 7999: useIsCallActive ===
 
-// Module 7998 (useIsCallActive)
+// Module 7999 (useIsCallActive)
 import CallStore from "CallStore" /* 5758 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
 

@@ -1,9 +1,9 @@
-// === Module 7993: canReplyToMessage ===
+// === Module 7994: canReplyToMessage ===
 
-// Module 7993 (canReplyToMessage)
+// Module 7994 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1101 */;
-import ThreadHooks from "ThreadHooks" /* 6971 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7994 */;
+import ThreadHooks from "ThreadHooks" /* 6972 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import UserStore from "UserStore" /* 1390 */;

@@ -1,10 +1,10 @@
-// === Module 9700: UploaderBase ===
+// === Module 9701: UploaderBase ===
 
-// Module 9700 (UploaderBase)
+// Module 9701 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 7766 */;
-import UploadTargets from "UploadTargets" /* 7789 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 7767 */;
+import UploadTargets from "UploadTargets" /* 7790 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -114,7 +114,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -381,7 +381,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

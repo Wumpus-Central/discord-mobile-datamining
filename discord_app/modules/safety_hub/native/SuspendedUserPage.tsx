@@ -1,6 +1,6 @@
-// === Module 17615: SuspendedUserPage ===
+// === Module 17672: SuspendedUserPage ===
 
-// Module 17615 (SuspendedUserPage)
+// Module 17672 (SuspendedUserPage)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,16 +8,16 @@ import util from "util" /* 1126 */;
 import LinkingDefault from "Linking" /* 4806 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5930 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6813 */;
-import IconButton from "IconButton" /* 7573 */;
-import _modDef7728 from "module_7728" /* 7728 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 14995 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
+import IconButton from "IconButton" /* 7574 */;
+import _modDef7729 from "module_7729" /* 7729 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 15018 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7536 */;
+import SafetyHubStore from "SafetyHubStore" /* 7537 */;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(7512);
+const SafetyHubConstants = fn(7513);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspende
     const intl = util.intl;
     obj4.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj4.onPress = tmp9;
-    obj4.icon = _modDef7728;
+    obj4.icon = _modDef7729;
     const items2 = [React5(IconButton.IconButton, obj4), ];
     const obj5 = { style: tmp4.text, onPress: tmp10, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
     const intl2 = util.intl;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suspende
     obj4.onPress = function onClose() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    obj4.icon = _modDef7728;
+    obj4.icon = _modDef7729;
     const items1 = [React5(IconButton.IconButton, obj4), ];
     const obj5 = {
       style: tmp.text,

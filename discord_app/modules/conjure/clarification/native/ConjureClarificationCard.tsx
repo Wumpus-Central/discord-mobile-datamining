@@ -1,8 +1,8 @@
-// === Module 17238: ConjureClarificationCard ===
+// === Module 17300: ConjureClarificationCard ===
 
-// Module 17238 (ConjureClarificationCard)
+// Module 17300 (ConjureClarificationCard)
 import nativeDefault from "native" /* 587 */;
-import ConjureClarification from "ConjureClarification" /* 17241 */;
+import ConjureClarification from "ConjureClarification" /* 17303 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -86,11 +86,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   let id = tmp23;
   closure_13 = tmp24;
   if (cResult[5] !== tmp23) {
-    const isImageQuestionResult = clarification(17239).isImageQuestion(tmp23);
+    const isImageQuestionResult = clarification(17301).isImageQuestion(tmp23);
     cResult[5] = tmp23;
     cResult[6] = isImageQuestionResult;
     let tmp25 = isImageQuestionResult;
-    const tmpResult = clarification(17239);
+    const tmpResult = clarification(17301);
   } else {
     tmp25 = cResult[6];
   }
@@ -102,11 +102,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     }
     let optionHeader = tmp27;
   } else {
-    optionHeader = clarification(17239).answeredOptionIds(first1[tmp23.id]);
-    const tmpResult5 = clarification(17239);
+    optionHeader = clarification(17301).answeredOptionIds(first1[tmp23.id]);
+    const tmpResult5 = clarification(17301);
   }
   const tmp6Result7 = first1(noop.useState(tmp17), 2);
-  const conjureOwnImages = clarification(17240).useConjureOwnImages(projectId, first1, tmp9);
+  const conjureOwnImages = clarification(17302).useConjureOwnImages(projectId, first1, tmp9);
   if (cResult[7] === first1) {
     if (cResult[8] === clarification) {
       if (cResult[9] === bound) {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                   }
                   let multiSelectAnswerResult = null;
                   if (tmp24) {
-                    const tmpResult7 = clarification(17241);
+                    const tmpResult7 = clarification(17303);
                     multiSelectAnswerResult = tmpResult7.multiSelectAnswer(tmp23, optionHeader, str, conjureOwnImages.multiPartFor(tmp23));
                   }
                   if (cResult[21] === str) {
@@ -205,10 +205,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                                         if (cResult[55] !== onDismiss) {
                                                           let tmp66 = null;
                                                           if (null != onDismiss) {
-                                                            const obj9 = { variant: "tertiary", size: "sm", icon: closure_6(clarification(6207).XSmallIcon, { size: "sm" }), onPress: onDismiss, accessibilityLabel: null };
+                                                            const obj9 = { variant: "tertiary", size: "sm", icon: closure_6(clarification(6208).XSmallIcon, { size: "sm" }), onPress: onDismiss, accessibilityLabel: null };
                                                             const intl4 = clarification(1126).intl;
                                                             obj9.accessibilityLabel = intl4.string(onSubmit(3849).qVXlk0);
-                                                            tmp66 = closure_6(clarification(7573).IconButton, obj9);
+                                                            tmp66 = closure_6(clarification(7574).IconButton, obj9);
                                                           }
                                                           cResult[55] = onDismiss;
                                                           cResult[56] = tmp66;
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                                                                                               const obj11 = { style: tmp4.card, children: null };
                                                                                                               let items = [tmp69, tmp73, tmp77, tmp84, tmp91, tmp93];
                                                                                                               obj11.children = items;
-                                                                                                              const tmp107 = closure_7(onSubmit(17149), obj11);
+                                                                                                              const tmp107 = closure_7(onSubmit(17278), obj11);
                                                                                                               cResult[93] = tmp4.card;
                                                                                                               cResult[94] = tmp69;
                                                                                                               cResult[95] = tmp73;
@@ -388,8 +388,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                                                                   tmp90 = tmp50;
                                                                                 }
                                                                                 obj16.fallback = tmp90;
-                                                                                tmp86Result = closure_6(onSubmit(17248), obj16);
-                                                                                const tmp88 = onSubmit(17248);
+                                                                                tmp86Result = closure_6(onSubmit(17307), obj16);
+                                                                                const tmp88 = onSubmit(17307);
                                                                               }
                                                                               cResult[73] = tmp21;
                                                                               cResult[74] = tmp16;
@@ -410,8 +410,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                                             }
                                                             if (tmp25) {
                                                               const obj17 = { projectId, question: tmp23, selectedIds: optionHeader, disabled: tmp21, onPick: tmp29, own: conjureOwnImages.controlsFor(tmp23, tmp21) };
-                                                              let mapped = closure_6(onSubmit(17242), obj17);
-                                                              const tmp82 = onSubmit(17242);
+                                                              let mapped = closure_6(onSubmit(17304), obj17);
+                                                              const tmp82 = onSubmit(17304);
                                                             } else if (tmp24) {
                                                               const obj18 = { hasIcons: false, children: null };
                                                               options = tmp23.options;
@@ -442,7 +442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                                                 };
                                                                 return closure_6(clarification(optionHeader[19]).TableCheckboxRow, obj, label.id);
                                                               });
-                                                              mapped = closure_6(clarification(6264).TableRowGroup, obj18);
+                                                              mapped = closure_6(clarification(6265).TableRowGroup, obj18);
                                                             } else {
                                                               const options1 = tmp23.options;
                                                               mapped = options1.map((answer) => {
@@ -555,7 +555,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                               });
                                             };
                                             obj23.onSubmitEditing = tmp43;
-                                            tmp51 = closure_6(clarification(6285).TextInput, obj23);
+                                            tmp51 = closure_6(clarification(6286).TextInput, obj23);
                                           }
                                           cResult[40] = tmp43;
                                           cResult[41] = str;
@@ -627,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                   }
                   let entityAnswerResult = null;
                   if (null != tmp23.input) {
-                    const tmpResult8 = clarification(17241);
+                    const tmpResult8 = clarification(17303);
                     const input = tmp23.input;
                     let tmp37 = tmp16[tmp23.id];
                     if (tmp37 == null) {
@@ -731,7 +731,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   cResult[11] = tmp23.id;
   cResult[12] = le;
   tmp28 = le;
-  const tmpResult6 = clarification(17240);
+  const tmpResult6 = clarification(17302);
 }) : (function ConjureClarificationCard(onSubmit) {
   ({ projectId, clarification } = onSubmit);
   onSubmit = onSubmit.onSubmit;
@@ -770,7 +770,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   closure_13 = tmp16;
   let t = dependencyMap;
   const tmp9 = first(noop.useState({}), 2);
-  const isImageQuestionResult = clarification(17239).isImageQuestion(clarification.questions[bound]);
+  const isImageQuestionResult = clarification(17301).isImageQuestion(clarification.questions[bound]);
   c14 = isImageQuestionResult;
   if (true === clarification.questions[bound].multi_select) {
     let tmp20 = tmp8[tmp15.id];
@@ -779,12 +779,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     }
     let answeredOptionIdsResult = tmp20;
   } else {
-    answeredOptionIdsResult = tmp17(17239).answeredOptionIds(first[tmp15.id]);
-    const tmp17Result = tmp17(17239);
+    answeredOptionIdsResult = tmp17(17301).answeredOptionIds(first[tmp15.id]);
+    const tmp17Result = tmp17(17301);
   }
   c15 = answeredOptionIdsResult;
-  const obj2 = clarification(17239);
-  const conjureOwnImages = clarification(17240).useConjureOwnImages(projectId, first, tmp4);
+  const obj2 = clarification(17301);
+  const conjureOwnImages = clarification(17302).useConjureOwnImages(projectId, first, tmp4);
   let items = [first, clarification, bound, onSubmit, clarification.questions[bound].id];
   callback = obj.useCallback((arg0) => {
     if (null != onSubmit) {
@@ -858,13 +858,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   }
   let multiSelectAnswerResult = null;
   if (true === clarification.questions[bound].multi_select) {
-    const tmp17Result5 = tmp17(17241);
+    const tmp17Result5 = tmp17(17303);
     multiSelectAnswerResult = tmp17Result5.multiSelectAnswer(tmp15, answeredOptionIdsResult, str, conjureOwnImages.multiPartFor(tmp15));
   }
   c19 = multiSelectAnswerResult;
   let entityAnswerResult = null;
   if (null != clarification.questions[bound].input) {
-    const tmp17Result6 = tmp17(17241);
+    const tmp17Result6 = tmp17(17303);
     const input = tmp15.input;
     let tmp30 = tmp10[tmp15.id];
     if (tmp30 == null) {
@@ -947,13 +947,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
       });
     };
     obj4.onSubmitEditing = callback4;
-    tmp40 = c6(tmp17(6285).TextInput, obj4);
+    tmp40 = c6(tmp17(6286).TextInput, obj4);
   }
   let obj6 = { style: tmp.card, children: null };
   const obj7 = { style: tmp.footer, children: null };
   const obj8 = { style: tmp.customField, children: null };
   let tmp47 = null;
-  const tmp17Result4 = clarification(17240);
+  const tmp17Result4 = clarification(17302);
   if (clarification.questions.length > 1) {
     const obj9 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     const intl3 = tmp17(1126).intl;
@@ -966,10 +966,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   const items6 = [c7(c5, obj8), ];
   let tmp49Result = null;
   if (null != onDismiss) {
-    const obj12 = { variant: "tertiary", size: "sm", icon: tmp49(tmp17(6207).XSmallIcon, { size: "sm" }), onPress: onDismiss, accessibilityLabel: null };
+    const obj12 = { variant: "tertiary", size: "sm", icon: tmp49(tmp17(6208).XSmallIcon, { size: "sm" }), onPress: onDismiss, accessibilityLabel: null };
     const intl4 = tmp17(1126).intl;
     obj12.accessibilityLabel = intl4.string(tmp44(3849).qVXlk0);
-    tmp49Result = tmp49(tmp17(7573).IconButton, obj12);
+    tmp49Result = tmp49(tmp17(7574).IconButton, obj12);
   }
   items6[1] = tmp49Result;
   obj7.children = items6;
@@ -984,8 +984,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   items7[1] = tmp49Result5;
   if (isImageQuestionResult) {
     const obj14 = { projectId, question: tmp15, selectedIds: answeredOptionIdsResult, disabled: tmp13, onPick: callback1, own: conjureOwnImages.controlsFor(tmp15, tmp13) };
-    let tmp49Result6 = tmp49(tmp44(17242), obj14);
-    const tmp44Result = tmp44(17242);
+    let tmp49Result6 = tmp49(tmp44(17304), obj14);
+    const tmp44Result = tmp44(17304);
   } else if (tmp16) {
     const obj15 = { hasIcons: false, children: null };
     options = tmp15.options;
@@ -1016,7 +1016,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
       };
       return _undefined2(clarification(optionHeader[19]).TableCheckboxRow, obj, label.id);
     });
-    tmp49Result6 = tmp49(tmp17(6264).TableRowGroup, obj15);
+    tmp49Result6 = tmp49(tmp17(6265).TableRowGroup, obj15);
   } else {
     const options1 = tmp15.options;
     tmp49Result6 = options1.map((answer) => {
@@ -1076,8 +1076,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
       tmp57 = tmp40;
     }
     obj16.fallback = tmp57;
-    tmp49Result7 = tmp49(tmp44(17248), obj16);
-    const tmp44Result2 = tmp44(17248);
+    tmp49Result7 = tmp49(tmp44(17307), obj16);
+    const tmp44Result2 = tmp44(17307);
   }
   items7[3] = tmp49Result7;
   let tmp58 = null;

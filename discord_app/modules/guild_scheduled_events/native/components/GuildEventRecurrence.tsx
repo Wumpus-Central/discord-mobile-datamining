@@ -1,9 +1,9 @@
-// === Module 8663: GuildEventRecurrence ===
+// === Module 8664: GuildEventRecurrence ===
 
-// Module 8663 (GuildEventRecurrence)
+// Module 8664 (GuildEventRecurrence)
 import nativeDefault from "native" /* 587 */;
-import ScheduleUtils from "ScheduleUtils" /* 8520 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8534 */;
+import ScheduleUtils from "ScheduleUtils" /* 8521 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8535 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -407,8 +407,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  let obj2 = guildEventId(8525)(recurrenceId, id);
-  const tmp6 = guildEventId(8525);
+  let obj2 = guildEventId(8526)(recurrenceId, id);
+  const tmp6 = guildEventId(8526);
   const items1 = [c6];
   stateFromStores1 = recurrenceId(504).useStateFromStores(items1, () => {
     let guild_id;
@@ -430,9 +430,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   if (stateFromStores2 == null) {
     stateFromStores2 = stateFromStores1;
   }
-  closure_5 = recurrenceId(8572).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
-  const tmp2Result5 = recurrenceId(8572);
-  const eventScheduleById = recurrenceId(8526).useEventScheduleById(guildEventId, recurrenceId);
+  closure_5 = recurrenceId(8573).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
+  const tmp2Result5 = recurrenceId(8573);
+  const eventScheduleById = recurrenceId(8527).useEventScheduleById(guildEventId, recurrenceId);
   let toISOStringResult;
   if (eventScheduleById != null) {
     const startTime = eventScheduleById.startTime;
@@ -493,8 +493,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
       children: null
     };
     const obj5 = { isActive, event: stateFromStores, showUserCount: false, showCreator: false, recurrenceId };
-    obj4.children = closure_8(tmp2(8530).GuildEventCardHeader, obj5);
-    const items5 = [closure_8(tmp2(6184).PressableOpacity, obj4), ];
+    obj4.children = closure_8(tmp2(8531).GuildEventCardHeader, obj5);
+    const items5 = [closure_8(tmp2(6185).PressableOpacity, obj4), ];
     const obj6 = { style: tmp.actions, children: null };
     if (tmp21Result) {
       const obj7 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
@@ -516,13 +516,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
       }
     };
     obj8.style = tmp.secondarySmallButton;
-    const obj9 = { source: tmp5(8664), size: tmp2(1200).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
+    const obj9 = { source: tmp5(8665), size: tmp2(1200).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
     obj8.children = closure_8(tmp2(1200).Icon, obj9);
-    items6[1] = closure_8(tmp2(6184).PressableOpacity, obj8);
+    items6[1] = closure_8(tmp2(6185).PressableOpacity, obj8);
     obj6.children = items6;
     items5[1] = closure_9(stateFromStores1, obj6);
     obj3.children = items5;
     return closure_9(stateFromStores1, obj3);
   }
-  const tmp2Result6 = recurrenceId(8526);
+  const tmp2Result6 = recurrenceId(8527);
 });

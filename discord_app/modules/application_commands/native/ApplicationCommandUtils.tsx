@@ -1,16 +1,16 @@
-// === Module 11927: application_commands/ApplicationCommandUtils ===
+// === Module 11929: application_commands/ApplicationCommandUtils ===
 
-// Module 11927 (application_commands/ApplicationCommandUtils)
+// Module 11929 (application_commands/ApplicationCommandUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import _modDef1988 from "module_1988" /* 1988 */;
 import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5403 */;
-import DraftStore from "DraftStore" /* 7243 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7246 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9262 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10020 */;
-import _modDef11928 from "module_11928" /* 11928 */;
-import _modDef11929 from "module_11929" /* 11929 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7907 */;
+import DraftStore from "DraftStore" /* 7244 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7247 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9263 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10021 */;
+import _modDef11930 from "module_11930" /* 11930 */;
+import _modDef11931 from "module_11931" /* 11931 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7908 */;
 import size from "module_2" /* 2 */;
 
 const DraftType = DraftStore.DraftType;
@@ -23,9 +23,9 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef11928);
+      return AvatarUtilsDefault.makeSource(_modDef11930);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef11929);
+      return AvatarUtilsDefault.makeSource(_modDef11931);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };

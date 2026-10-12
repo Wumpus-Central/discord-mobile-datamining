@@ -1,13 +1,13 @@
-// === Module 17945: LaunchPadMembers ===
+// === Module 18002: LaunchPadMembers ===
 
-// Module 17945 (LaunchPadMembers)
+// Module 18002 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import GuildChannelUserListDefault from "GuildChannelUserList" /* 10746 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 11892 */;
-import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 17401 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 11894 */;
+import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 17458 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
@@ -46,7 +46,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
       }
-      return { channelId: "code", type: -938979046 };
+      return { channelId: "code", type: true };
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -195,7 +195,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    return { channelId: "code", type: -938979046 };
+    return { channelId: "code", type: true };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };

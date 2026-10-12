@@ -1,6 +1,6 @@
-// === Module 7443: StreamActionCreators ===
+// === Module 7444: StreamActionCreators ===
 
-// Module 7443 (StreamActionCreators)
+// Module 7444 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
@@ -10,14 +10,14 @@ import ChannelUtils from "ChannelUtils" /* 5414 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5889 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7014 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7016 */;
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 7446 */;
-import transitionToStreamDefault from "transitionToStream" /* 7480 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7017 */;
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 7447 */;
+import transitionToStreamDefault from "transitionToStream" /* 7481 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GameConsoleStore from "GameConsoleStore" /* 5111 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 7444 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7445 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 7445 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 7446 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -93,7 +93,7 @@ let closure_19 = async function _fetchStreamPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -342,7 +342,7 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(7480)(closure_1_1);
+          closure_1(7481)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);

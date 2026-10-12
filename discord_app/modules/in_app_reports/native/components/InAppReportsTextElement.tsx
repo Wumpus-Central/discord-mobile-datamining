@@ -1,6 +1,6 @@
-// === Module 7744: InAppReportsTextElement ===
+// === Module 7745: InAppReportsTextElement ===
 
-// Module 7744 (InAppReportsTextElement)
+// Module 7745 (InAppReportsTextElement)
 import Text_Text from "Text/Text" /* 5088 */;
 import CustomMarkupAll from "CustomMarkup" /* 5399 */;
 import noop from "module_19" /* 19 */;

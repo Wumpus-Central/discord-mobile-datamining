@@ -5,7 +5,7 @@ import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5416 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7492 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7493 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 
@@ -383,7 +383,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (!blocked) {
         tmp22 = ignored;
       }
-      const LegacyPressable = tmp(6334).LegacyPressable;
+      const LegacyPressable = tmp(6335).LegacyPressable;
       const intl = tmp(1126).intl;
       const obj11 = { name };
       const tmp5Result = tmp5(5409);

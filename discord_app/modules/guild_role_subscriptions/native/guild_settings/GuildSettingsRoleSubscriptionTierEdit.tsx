@@ -1,6 +1,6 @@
-// === Module 18538: GuildSettingsRoleSubscriptionTierEdit ===
+// === Module 18596: GuildSettingsRoleSubscriptionTierEdit ===
 
-// Module 18538 (GuildSettingsRoleSubscriptionTierEdit)
+// Module 18596 (GuildSettingsRoleSubscriptionTierEdit)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,30 +10,30 @@ import dismissible_content from "dismissible_content" /* 2049 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6813 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6955 */;
-import FormHeaderDefault from "FormHeader" /* 8676 */;
-import DismissibleActionSheet from "DismissibleActionSheet" /* 10013 */;
-import ErrorBlockDefault from "ErrorBlock" /* 11919 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15482 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18490 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 18501 */;
-import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 18507 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 18513 */;
-import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 18531 */;
-import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 18533 */;
-import _modDef18539 from "module_18539" /* 18539 */;
-import ActionableNoticeDefault from "ActionableNotice" /* 18540 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6956 */;
+import FormHeaderDefault from "FormHeader" /* 8677 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 10014 */;
+import ErrorBlockDefault from "ErrorBlock" /* 11921 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15505 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18548 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 18559 */;
+import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 18565 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 18571 */;
+import GuildRoleSubscriptionTierDesignModal from "GuildRoleSubscriptionTierDesignModal" /* 18589 */;
+import GuildRoleSubscriptionTierDetailsModal from "GuildRoleSubscriptionTierDetailsModal" /* 18591 */;
+import _modDef18597 from "module_18597" /* 18597 */;
+import ActionableNoticeDefault from "ActionableNotice" /* 18598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4743 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 18495 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 18553 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const FetchState = fn(4743).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(15475).GuildRoleSubscriptionsTierScenes;
+const GuildRoleSubscriptionsTierScenes = fn(15498).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -72,7 +72,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18539 };
+        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18597 };
         const tmp17 = closure_1_14(native.Icon, obj5);
         cResult[6] = tmp17;
         let tmp15 = tmp17;
@@ -156,7 +156,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
   const obj7 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const obj4 = { style: tmp.actionHeader, children: buttonText };
   const obj5 = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18539 });
+  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18597 });
   obj7.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {

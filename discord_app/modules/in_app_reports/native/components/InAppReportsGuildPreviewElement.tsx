@@ -1,13 +1,13 @@
-// === Module 13537: InAppReportsGuildPreviewElement ===
+// === Module 13560: InAppReportsGuildPreviewElement ===
 
-// Module 13537 (InAppReportsGuildPreviewElement)
+// Module 13560 (InAppReportsGuildPreviewElement)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ColorUtils from "ColorUtils" /* 4967 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import GuildIcon from "GuildIcon" /* 6158 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6662 */;
+import GuildIcon from "GuildIcon" /* 6159 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6663 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;

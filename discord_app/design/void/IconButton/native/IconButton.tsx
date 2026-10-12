@@ -1,10 +1,10 @@
-// === Module 13577: IconButton/IconButton ===
+// === Module 13600: IconButton/IconButton ===
 
-// Module 13577 (IconButton/IconButton)
+// Module 13600 (IconButton/IconButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import Pressables from "Pressables" /* 6184 */;
+import Pressables from "Pressables" /* 6185 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -147,7 +147,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function SquareIconBu
   obj2.disableColor = disableColor;
   obj2.source = source;
   obj.children = jsx(size(1200).Icon, { size: REFRESH_SMALL_16, style: null, disableColor: null, source: null });
-  return jsx(size(6184).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: tmp6, accessibilityElementsHidden: accessibilityHidden, onPress, disabled, style: null, children: null });
+  return jsx(size(6185).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: tmp6, accessibilityElementsHidden: accessibilityHidden, onPress, disabled, style: null, children: null });
 });
 let closure_8 = tmp2;
 tmp2.Sizes = Sizes;

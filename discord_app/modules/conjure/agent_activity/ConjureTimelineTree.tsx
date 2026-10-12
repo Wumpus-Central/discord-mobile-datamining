@@ -1,6 +1,6 @@
-// === Module 17166: ConjureTimelineTree ===
+// === Module 17176: ConjureTimelineTree ===
 
-// Module 17166 (ConjureTimelineTree)
+// Module 17176 (ConjureTimelineTree)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -39,13 +39,13 @@ function buildTimelineTree(steps, arg1) {
         if (null != value) {
           return value;
         } else {
-          const obj3 = { id, kind: "step", detail: [], detailDrivenBy: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
+          const obj3 = { id, kind: "step", detail: [], detailDrivenBy: [], detailError: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
           const result = map1.set(combined, obj3);
           if (null != taskId) {
             value3 = map.get(taskId);
             if (null == value3) {
               const obj4 = { taskId, task: null, steps: null };
-              const obj5 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
+              const obj5 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], detailError: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
               obj4.task = obj5;
               obj4.steps = [];
               const result1 = map.set(taskId, obj4);
@@ -64,7 +64,7 @@ function buildTimelineTree(steps, arg1) {
       value4 = map.get(taskId);
       if (null == value4) {
         const obj7 = { taskId, task: null, steps: null };
-        const obj8 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
+        const obj8 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], detailError: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
         obj7.task = obj8;
         obj7.steps = [];
         const result2 = map.set(taskId, obj7);
@@ -72,7 +72,7 @@ function buildTimelineTree(steps, arg1) {
       }
       task = value4.task;
     } else if (task == null) {
-      const obj9 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
+      const obj9 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], detailError: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
       task = obj9;
     }
     return task;
@@ -185,7 +185,8 @@ function buildTimelineTree(steps, arg1) {
         }
         if ("node" === _undefined.kind) {
           if (null != _undefined.node) {
-            ({ node, task_id } = _undefined);
+            const node = _undefined.node;
+            const task_id = _undefined.task_id;
             ({ id, node_kind } = node);
             if (node_kind == null) {
               node_kind = "step";
@@ -217,7 +218,29 @@ function buildTimelineTree(steps, arg1) {
             }
             if (null != node.detail) {
               ({ detail: tmp23.detail, detail } = node);
-              tmp18Result.detailDrivenBy = detail.map(() => null);
+              tmp18Result.detailDrivenBy = detail.map((item, index) => {
+                const detail_driven_by = node.detail_driven_by;
+                let tmp;
+                if (detail_driven_by != null) {
+                  tmp = detail_driven_by[index];
+                }
+                if (tmp == null) {
+                  tmp = null;
+                }
+                return tmp;
+              });
+              const detail1 = node.detail;
+              tmp18Result.detailError = detail1.map((item, index) => {
+                const detail_error = node.detail_error;
+                let tmp;
+                if (detail_error != null) {
+                  tmp = detail_error[index];
+                }
+                if (tmp == null) {
+                  tmp = null;
+                }
+                return tmp;
+              });
             }
             if (null != node.append_detail) {
               let driven_by = node.driven_by;
@@ -231,7 +254,22 @@ function buildTimelineTree(steps, arg1) {
               const append_detail = node.append_detail;
               HermesBuiltin.arraySpread(append_detail.map(() => driven_by), HermesBuiltin.arraySpread(tmp18Result.detailDrivenBy, 0));
               tmp18Result.detailDrivenBy = items1;
-              const arraySpreadResult3 = HermesBuiltin.arraySpread(tmp18Result.detailDrivenBy, 0);
+              const items2 = [];
+              const append_detail1 = node.append_detail;
+              const arraySpreadResult5 = HermesBuiltin.arraySpread(tmp18Result.detailDrivenBy, 0);
+              HermesBuiltin.arraySpread(append_detail1.map((item, index) => {
+                const append_detail_error = node.append_detail_error;
+                let tmp;
+                if (append_detail_error != null) {
+                  tmp = append_detail_error[index];
+                }
+                if (tmp == null) {
+                  tmp = null;
+                }
+                return tmp;
+              }), HermesBuiltin.arraySpread(tmp18Result.detailError, 0));
+              tmp18Result.detailError = items2;
+              const arraySpreadResult7 = HermesBuiltin.arraySpread(tmp18Result.detailError, 0);
             }
             if (null != node.status) {
               tmp18Result.status = node.status;
@@ -259,8 +297,8 @@ function buildTimelineTree(steps, arg1) {
           tmp14.labelKey = "error";
           tmp14.status = "failed";
           if (tmp17) {
-            const items2 = [_undefined.message];
-            tmp14.detail = items2;
+            const items3 = [_undefined.message];
+            tmp14.detail = items3;
           }
           tmp17 = null != _undefined.message && "" !== _undefined.message;
         }

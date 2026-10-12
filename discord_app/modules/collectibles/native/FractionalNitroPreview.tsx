@@ -1,13 +1,13 @@
-// === Module 13414: FractionalNitroPreview ===
+// === Module 13437: FractionalNitroPreview ===
 
-// Module 13414 (FractionalNitroPreview)
+// Module 13437 (FractionalNitroPreview)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6822 */;
-import _modDef13415 from "module_13415" /* 13415 */;
-import NitroIconDefault from "NitroIcon" /* 13416 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6823 */;
+import _modDef13438 from "module_13438" /* 13438 */;
+import NitroIconDefault from "NitroIcon" /* 13439 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -44,7 +44,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
     obj2.legacyCopy = intl3.string(tmp(1126).t.xT1Vfn);
     const intl4 = tmp(1126).intl;
     const obj3 = { maxFileSize: null };
-    const tmpResult = tmp(7760);
+    const tmpResult = tmp(7761);
     obj3.maxFileSize = tmp(4769).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
     obj2.rolloutCopy = intl4.formatToPlainString(tmp(1126).t.IDAfOy, obj3);
     items[2] = tmpResult.getNitroFileUploadRolloutCopy(obj2);
@@ -77,7 +77,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
     tmp7 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { uri: _modDef13415 };
+    const obj5 = { uri: _modDef13438 };
     cResult[4] = obj5;
     let tmp12 = obj5;
   } else {
@@ -181,7 +181,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
   const obj8 = { uri: null };
   const obj4 = require("PremiumUtils");
   const obj6 = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
-  obj8.uri = _modDef13415;
+  obj8.uri = _modDef13438;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);

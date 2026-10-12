@@ -1,6 +1,6 @@
-// === Module 9240: ConnectAccountStep ===
+// === Module 9241: ConnectAccountStep ===
 
-// Module 9240 (ConnectAccountStep)
+// Module 9241 (ConnectAccountStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,9 +10,9 @@ import shared from "shared" /* 4969 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import PlatformsDefault from "Platforms" /* 5763 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6195 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6852 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9204 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6196 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6853 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9205 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -256,7 +256,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
         }
       }
       const obj4 = { color: tmp5(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-      const tmp35 = closure_8(tmp(9241).MoreHorizontalIcon, obj4);
+      const tmp35 = closure_8(tmp(9242).MoreHorizontalIcon, obj4);
       class E {
         constructor() {
           currentUser = null;
@@ -413,7 +413,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     const obj9 = { source: applicationIconSource, size: tmp5(1200).AvatarSizes.XLARGE };
     const items4 = [closure_8(tmp5(1200).Avatar, obj9), , ];
     const obj10 = { color: tmp2(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-    items4[1] = closure_8(tmp5(9241).MoreHorizontalIcon, obj10);
+    items4[1] = closure_8(tmp5(9242).MoreHorizontalIcon, obj10);
     const obj11 = { source: userAvatarSource, size: tmp5(1200).AvatarSizes.XLARGE };
     items4[2] = closure_8(tmp5(1200).Avatar, obj11);
     obj8.children = items4;

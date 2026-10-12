@@ -1,11 +1,11 @@
-// === Module 15025: AccountViewBackupCodesSetting ===
+// === Module 15048: AccountViewBackupCodesSetting ===
 
-// Module 15025 (AccountViewBackupCodesSetting)
+// Module 15048 (AccountViewBackupCodesSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 15019 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 15026 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 15042 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 15049 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,7 +67,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnViewB
       const intl3 = closure_0(1126).intl;
       obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
       obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-      closure_1(15026)(obj);
+      closure_1(15049)(obj);
       return false;
     };
     cResult[0] = fn;
@@ -101,7 +101,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnViewB
     const intl3 = closure_0(1126).intl;
     obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
     obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-    closure_1(15026)(obj);
+    closure_1(15049)(obj);
     return false;
   }, []);
 });
@@ -110,8 +110,8 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(7992).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(14937).useIs2FAEnabled,
+  parent: fn(7993).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(14960).useIs2FAEnabled,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (function useOnViewBackups() {
     const cResult = c.c(1);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -139,7 +139,7 @@ const route = SettingBuilders.createRoute({
         const intl3 = closure_0(1126).intl;
         obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
         obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-        closure_1(15026)(obj);
+        closure_1(15049)(obj);
         return false;
       };
       cResult[0] = fn;
@@ -173,7 +173,7 @@ const route = SettingBuilders.createRoute({
       const intl3 = closure_0(1126).intl;
       obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
       obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-      closure_1(15026)(obj);
+      closure_1(15049)(obj);
       return false;
     }, []);
   }),

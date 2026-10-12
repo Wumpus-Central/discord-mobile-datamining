@@ -1,6 +1,6 @@
-// === Module 11827: useLaunchingActivityButtonState ===
+// === Module 11829: useLaunchingActivityButtonState ===
 
-// Module 11827 (useLaunchingActivityButtonState)
+// Module 11829 (useLaunchingActivityButtonState)
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import FramesStore from "FramesStore" /* 10807 */;

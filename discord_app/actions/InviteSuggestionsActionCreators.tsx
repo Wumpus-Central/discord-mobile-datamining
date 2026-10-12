@@ -1,9 +1,9 @@
-// === Module 8715: InviteSuggestionsActionCreators ===
+// === Module 8716: InviteSuggestionsActionCreators ===
 
-// Module 8715 (InviteSuggestionsActionCreators)
+// Module 8716 (InviteSuggestionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 8716 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8697 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 8717 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8698 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");

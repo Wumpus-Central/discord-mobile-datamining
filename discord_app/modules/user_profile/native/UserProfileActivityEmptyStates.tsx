@@ -1,6 +1,6 @@
-// === Module 13360: UserProfileActivityEmptyStates ===
+// === Module 13383: UserProfileActivityEmptyStates ===
 
-// Module 13360 (UserProfileActivityEmptyStates)
+// Module 13383 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,7 +8,7 @@ import util from "util" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7014 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

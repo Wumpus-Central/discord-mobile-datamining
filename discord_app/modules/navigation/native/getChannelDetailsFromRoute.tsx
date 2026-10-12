@@ -1,14 +1,14 @@
-// === Module 14802: getChannelDetailsFromRoute ===
+// === Module 6075: getChannelDetailsFromRoute ===
 
-// Module 14802 (getChannelDetailsFromRoute)
+// Module 6075 (getChannelDetailsFromRoute)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
+const result = size.fileFinishedImporting("modules/navigation/native/getChannelDetailsFromRoute.tsx");
 
 export default function getChannelDetailsFromRoute(currentRoute) {
-  let flag = arg1;
-  if (arg1 === undefined) {
+  let flag = isChatLockedOpen;
+  if (isChatLockedOpen === undefined) {
     flag = false;
   }
   const coerceChannelRouteResult = NavigationRouteUtils.coerceChannelRoute(currentRoute);

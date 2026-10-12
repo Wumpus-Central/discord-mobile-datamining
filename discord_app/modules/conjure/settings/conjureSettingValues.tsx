@@ -1,6 +1,6 @@
-// === Module 17069: conjureSettingValues ===
+// === Module 17095: conjureSettingValues ===
 
-// Module 17069 (conjureSettingValues)
+// Module 17095 (conjureSettingValues)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingValues.tsx");

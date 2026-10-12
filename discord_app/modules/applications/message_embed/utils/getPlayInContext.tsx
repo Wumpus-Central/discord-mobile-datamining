@@ -1,6 +1,6 @@
-// === Module 11609: getPlayInContext ===
+// === Module 11611: getPlayInContext ===
 
-// Module 11609 (getPlayInContext)
+// Module 11611 (getPlayInContext)
 import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 10876 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;

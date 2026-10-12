@@ -1,6 +1,6 @@
-// === Module 9021: Nameplate ===
+// === Module 9022: Nameplate ===
 
-// Module 9021 (Nameplate)
+// Module 9022 (Nameplate)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
@@ -98,7 +98,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
         let tmp24 = cResult[8];
       }
       if (cResult[9] !== nameplate) {
-        const nameplateAssets = APNGPlayer(9022).getNameplateAssets(nameplate);
+        const nameplateAssets = APNGPlayer(9023).getNameplateAssets(nameplate);
         cResult[9] = nameplate;
         class B {
           constructor() {
@@ -108,7 +108,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
         }
         cResult[10] = nameplateAssets;
         let tmp26 = nameplateAssets;
-        const APNGPlayerResult3 = APNGPlayer(9022);
+        const APNGPlayerResult3 = APNGPlayer(9023);
       } else {
         tmp26 = cResult[10];
       }
@@ -180,7 +180,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
                   }
                 }
                 obj4.style = img.img;
-                let tmp37 = closure_7(tmp15(6156), obj4);
+                let tmp37 = closure_7(tmp15(6157), obj4);
                 cResult[19] = tmp28;
                 cResult[20] = str;
                 img = img.img;
@@ -194,7 +194,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
                   return obj;
                 }
               }
-              APNGPlayer = APNGPlayer(9011).APNGPlayer;
+              APNGPlayer = APNGPlayer(9012).APNGPlayer;
               const obj6 = { url: str, style: img.img, autoplay: true };
               tmp37 = closure_7(APNGPlayer, obj6);
               APNGPlayerResult4 = APNGPlayer(1382);
@@ -340,7 +340,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
   const tmpResult = flag6(4850);
   const backgroundGradientColors = flag6(1990).getBackgroundGradientColors(nameplate.palette, tmp6);
   const tmpResult4 = flag6(1990);
-  const nameplateAssets = flag6(9022).getNameplateAssets(nameplate);
+  const nameplateAssets = flag6(9023).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
   if (tmp12) {
@@ -375,17 +375,17 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Namepl
     const tmp5Result = tmp5(5391);
   }
   const items4 = [tmp15Result, ];
-  const tmpResult5 = flag6(9022);
+  const tmpResult5 = flag6(9023);
   if (tmpResult6.isAndroid()) {
     if (tmp12) {
       const obj5 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp17 = closure_7(tmp(9011).APNGPlayer, obj5);
+      let tmp17 = closure_7(tmp(9012).APNGPlayer, obj5);
     }
     items4[1] = tmp17;
     obj3.children = items4;
     return closure_8(tmp5(4850).View, obj3);
   }
-  tmp17 = closure_7(tmp5(6156), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
+  tmp17 = closure_7(tmp5(6157), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
   const obj6 = { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" };
   tmpResult6 = flag6(1382);
 });

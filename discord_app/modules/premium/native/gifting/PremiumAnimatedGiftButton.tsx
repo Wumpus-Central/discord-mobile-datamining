@@ -1,6 +1,6 @@
-// === Module 11947: PremiumAnimatedGiftButton ===
+// === Module 11949: PremiumAnimatedGiftButton ===
 
-// Module 11947 (PremiumAnimatedGiftButton)
+// Module 11949 (PremiumAnimatedGiftButton)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import noop from "module_19" /* 19 */;
@@ -327,7 +327,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
   const merged = Object.assign(accessibilityState);
   obj6.accessibilityState = { disabled };
   const merged1 = Object.assign(arg0);
-  obj6.children = jsx(tmp3(6105), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
+  obj6.children = jsx(tmp3(6106), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
   obj5.children = jsx(require("Pressables").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
   return jsx(stateFromStores(4850).View, { exiting: FadeOut, children: null });
 });

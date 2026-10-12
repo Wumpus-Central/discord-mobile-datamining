@@ -1,6 +1,6 @@
-// === Module 14111: MobileNativeUpdateUtils ===
+// === Module 14134: MobileNativeUpdateUtils ===
 
-// Module 14111 (MobileNativeUpdateUtils)
+// Module 14134 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
@@ -20,7 +20,7 @@ let closure_5 = async function _checkForNewerBuild() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

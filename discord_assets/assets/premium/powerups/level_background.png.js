@@ -1,6 +1,6 @@
-// === Module 16586: ? ===
+// === Module 16609: ? ===
 
-// Module 16586
+// Module 16609
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/powerups/level_background.png.js");

@@ -1,6 +1,6 @@
-// === Module 17054: conjureProjectActions ===
+// === Module 17074: conjureProjectActions ===
 
-// Module 17054 (conjureProjectActions)
+// Module 17074 (conjureProjectActions)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
@@ -8,10 +8,10 @@ import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import CopyIcon from "CopyIcon" /* 5042 */;
 import AlertModal from "AlertModal" /* 5305 */;
 import ChannelUtils from "ChannelUtils" /* 5414 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
-import conjureProjectMute from "conjureProjectMute" /* 11425 */;
-import ConjureArchivePicker from "ConjureArchivePicker" /* 17041 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 17059 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import conjureProjectMute from "conjureProjectMute" /* 11415 */;
+import ConjureArchivePicker from "ConjureArchivePicker" /* 17059 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 17079 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,7 @@ let closure_9 = async function _importIntoProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -86,7 +86,7 @@ let closure_9 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1126).intl;
-          await tmp3(17041).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3849).Owerd3));
+          await tmp3(17059).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3849).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1126).intl;
@@ -120,9 +120,9 @@ let closure_9 = async function _importIntoProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(13213);
+const ConjureConnectionStore = fn(13218);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(10651);
+const ConjureProjectStore = fn(10652);
 ({ canRemixProject: metroRequire, isProjectOwner: closure_7 } = ConjureProjectStore);
 const StaticChannelRoute = fn(2072).StaticChannelRoute;
 const size = fn(2);

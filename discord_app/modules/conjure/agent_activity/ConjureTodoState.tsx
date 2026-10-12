@@ -1,11 +1,10 @@
-// === Module 17237: ConjureTodoState ===
+// === Module 17175: ConjureTodoState ===
 
-// Module 17237 (ConjureTodoState)
-import ConjureChatStore from "ConjureChatStore" /* 12996 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 17166 */;
+// Module 17175 (ConjureTodoState)
+import conjureChatTurns from "conjureChatTurns" /* 12999 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 17176 */;
 import size from "module_2" /* 2 */;
 
-const turnSettled = ConjureChatStore.turnSettled;
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoState.tsx");
 
 export function todoMark(status, flag2) {
@@ -28,9 +27,9 @@ export const todoLabel = function todoLabel(activeForm, todoMarkResult) {
   text = activeForm.text;
 };
 export const checklistLive = function checklistLive(memo) {
-  const tmp = turnSettled(memo);
-  let tmp2 = !tmp;
-  if (!tmp) {
+  const turnSettledResult = conjureChatTurns.turnSettled(memo);
+  let tmp2 = !turnSettledResult;
+  if (!turnSettledResult) {
     tmp2 = true !== memo.stopRequested;
   }
   return tmp2;

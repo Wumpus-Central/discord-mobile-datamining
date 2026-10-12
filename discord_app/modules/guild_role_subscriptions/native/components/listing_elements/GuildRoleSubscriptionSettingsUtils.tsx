@@ -1,6 +1,6 @@
-// === Module 16983: GuildRoleSubscriptionSettingsUtils ===
+// === Module 17007: GuildRoleSubscriptionSettingsUtils ===
 
-// Module 16983 (GuildRoleSubscriptionSettingsUtils)
+// Module 17007 (GuildRoleSubscriptionSettingsUtils)
 import StoreUtils from "StoreUtils" /* 5644 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4743 */;
 

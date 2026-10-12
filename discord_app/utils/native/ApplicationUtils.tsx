@@ -7,7 +7,7 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import LinkingDefault from "Linking" /* 4806 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8457 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8458 */;
 import Constants2 from "Constants" /* 10863 */;
 import authorizeCallbackDefault from "authorizeCallback" /* 10864 */;
 import size from "module_2" /* 2 */;
@@ -30,7 +30,7 @@ export const installApplication = function installApplication(arg0) {
           LinkingDefault.openURL(customInstallUrl);
         }
     };
-    return customInstallUrl(8490).handleClick(obj2);
+    return customInstallUrl(8491).handleClick(obj2);
   } else {
     if (null != integrationTypesConfig) {
       const _Object = Object;

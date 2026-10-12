@@ -1,13 +1,13 @@
-// === Module 16509: MessagesItemSuggestedFriendsHeader ===
+// === Module 16532: MessagesItemSuggestedFriendsHeader ===
 
-// Module 16509 (MessagesItemSuggestedFriendsHeader)
+// Module 16532 (MessagesItemSuggestedFriendsHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8394 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10225 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8395 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10226 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

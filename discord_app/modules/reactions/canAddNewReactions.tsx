@@ -1,6 +1,6 @@
-// === Module 7989: canAddNewReactions ===
+// === Module 7990: canAddNewReactions ===
 
-// Module 7989 (canAddNewReactions)
+// Module 7990 (canAddNewReactions)
 import GuildVerificationStore from "GuildVerificationStore" /* 5891 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 

@@ -1,6 +1,6 @@
-// === Module 18488: ListingImageUtil ===
+// === Module 18546: ListingImageUtil ===
 
-// Module 18488 (ListingImageUtil)
+// Module 18546 (ListingImageUtil)
 import StoreUtils from "StoreUtils" /* 5644 */;
 import size from "module_2" /* 2 */;
 

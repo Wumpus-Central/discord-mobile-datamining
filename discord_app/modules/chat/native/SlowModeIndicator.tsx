@@ -1,12 +1,12 @@
-// === Module 11657: SlowModeIndicator ===
+// === Module 11659: SlowModeIndicator ===
 
-// Module 11657 (SlowModeIndicator)
+// Module 11659 (SlowModeIndicator)
 import nativeDefault from "native" /* 587 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7375 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7376 */;
 import TimerIcon from "TimerIcon" /* 10763 */;
 import noop from "module_19" /* 19 */;
-import SlowmodeStore from "SlowmodeStore" /* 7374 */;
+import SlowmodeStore from "SlowmodeStore" /* 7375 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -37,7 +37,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const stateFromStores = tmp(504).useStateFromStores(first, tmp7);
     const tmpResult = tmp(504);
-    const canBypassSlowmode = tmp(7375).useCanBypassSlowmode(channel);
+    const canBypassSlowmode = tmp(7376).useCanBypassSlowmode(channel);
     if (channel.hasTypingText) {
       if (!canBypassSlowmode) {
         if (stateFromStores <= 0) {
@@ -86,7 +86,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj4 = { onPress: tmp14, style: tmp4.container, children: null };
           const items1 = [tmp15, tmp18];
           obj4.children = items1;
-          const tmp23 = closure_6(tmp(6184).PressableOpacity, obj4);
+          const tmp23 = closure_6(tmp(6185).PressableOpacity, obj4);
           cResult[13] = tmp14;
           cResult[14] = tmp4.container;
           cResult[15] = tmp15;
@@ -98,12 +98,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[4] === canBypassSlowmode) {
     }
-    const tmpResult3 = tmp(7375);
-    const slowmodeIndicatorText = tmp(7375).getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
+    const tmpResult3 = tmp(7376);
+    const slowmodeIndicatorText = tmp(7376).getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
     cResult[4] = canBypassSlowmode;
     cResult[5] = stateFromStores;
     cResult[6] = slowmodeIndicatorText;
-    const tmpResult4 = tmp(7375);
+    const tmpResult4 = tmp(7376);
   }
   const fn = function u() {
     return SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType);

@@ -1,14 +1,14 @@
-// === Module 15014: TwoFASetupLanding ===
+// === Module 15037: TwoFASetupLanding ===
 
-// Module 15014 (TwoFASetupLanding)
+// Module 15037 (TwoFASetupLanding)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6813 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 15011 */;
-import TwoFASetupStyles from "TwoFASetupStyles" /* 15015 */;
-import _modDef15016 from "module_15016" /* 15016 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 15034 */;
+import TwoFASetupStyles from "TwoFASetupStyles" /* 15038 */;
+import _modDef15039 from "module_15039" /* 15039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
   const twoFASetupStyles = TwoFASetupStyles.useTwoFASetupStyles();
   ({ container, container: container2 } = tmp4);
   if (cResult[0] !== tmp4.authIcon) {
-    const obj3 = { source: _modDef15016, style: tmp4.authIcon };
+    const obj3 = { source: _modDef15039, style: tmp4.authIcon };
     const tmp10 = React4(FastImageDefault, obj3);
     cResult[0] = tmp4.authIcon;
     cResult[1] = tmp10;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TwoFASet
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
   const obj5 = { source: null, style: null };
-  obj5.source = _modDef15016;
+  obj5.source = _modDef15039;
   obj5.style = tmp.authIcon;
   const items = [React4(FastImageDefault, obj5), , ];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };

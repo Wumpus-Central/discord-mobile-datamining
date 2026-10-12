@@ -1,8 +1,8 @@
-// === Module 7095: GuildBoostingMarketingOverview ===
+// === Module 7096: GuildBoostingMarketingOverview ===
 
-// Module 7095 (GuildBoostingMarketingOverview)
+// Module 7096 (GuildBoostingMarketingOverview)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7116 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7117 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;

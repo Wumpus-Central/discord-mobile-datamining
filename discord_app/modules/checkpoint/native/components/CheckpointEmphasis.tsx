@@ -1,12 +1,12 @@
-// === Module 16003: CheckpointEmphasis ===
+// === Module 16026: CheckpointEmphasis ===
 
-// Module 16003 (CheckpointEmphasis)
+// Module 16026 (CheckpointEmphasis)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import useFontScale from "useFontScale" /* 5386 */;
-import inlineStyles from "inlineStyles" /* 7576 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10514 */;
+import inlineStyles from "inlineStyles" /* 7577 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10515 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -18,7 +18,7 @@ const CHECKPOINT_PRIMARY = fn(5437).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PlatformUtils = fn(1383);
-const CheckpointCustomizationUtils = fn(15986);
+const CheckpointCustomizationUtils = fn(16009);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
 const createStyles = fn(5092);
 let obj4 = { container: { paddingHorizontal: nativeDefault.space.PX_6 }, emphasis: { flexDirection: "row", alignItems: "center" }, text: null };

@@ -1,9 +1,9 @@
-// === Module 9218: TwoWayLinkPreConnect ===
+// === Module 9219: TwoWayLinkPreConnect ===
 
-// Module 9218 (TwoWayLinkPreConnect)
+// Module 9219 (TwoWayLinkPreConnect)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6874 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6875 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -32,7 +32,7 @@ let closure_13 = async function _authorizeLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

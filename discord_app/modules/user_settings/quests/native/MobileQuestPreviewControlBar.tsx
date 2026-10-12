@@ -1,13 +1,13 @@
-// === Module 15429: MobileQuestPreviewControlBar ===
+// === Module 15452: MobileQuestPreviewControlBar ===
 
-// Module 15429 (MobileQuestPreviewControlBar)
+// Module 15452 (MobileQuestPreviewControlBar)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6891 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6892 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7390 */;
+import QuestStore from "QuestStore" /* 7391 */;
 
 require = fn;
 class MobileQuestPreviewControlBar {
@@ -97,7 +97,7 @@ class MobileQuestPreviewControlBar {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -162,7 +162,7 @@ class MobileQuestPreviewControlBar {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -227,7 +227,7 @@ class MobileQuestPreviewControlBar {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

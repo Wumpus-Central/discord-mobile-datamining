@@ -1,11 +1,11 @@
-// === Module 13852: GuildBoostingMarketingProgressBarMarker ===
+// === Module 13875: GuildBoostingMarketingProgressBarMarker ===
 
-// Module 13852 (GuildBoostingMarketingProgressBarMarker)
+// Module 13875 (GuildBoostingMarketingProgressBarMarker)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5378 */;
-import _modDef13853 from "module_13853" /* 13853 */;
-import _modDef13854 from "module_13854" /* 13854 */;
-import _modDef13855 from "module_13855" /* 13855 */;
+import _modDef13876 from "module_13876" /* 13876 */;
+import _modDef13877 from "module_13877" /* 13877 */;
+import _modDef13878 from "module_13878" /* 13878 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const BoostedGuildTiers = fn(1085).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const TierMarkerPositions = { [BoostedGuildTiers.NONE]: 0, [BoostedGuildTiers.TIER_1]: 0.3333333333333333, [BoostedGuildTiers.TIER_2]: 0.6666666666666666, [BoostedGuildTiers.TIER_3]: 1 };
-let obj2 = { [TIER_1]: _modDef13853, [TIER_2]: _modDef13854, [TIER_3]: _modDef13855 };
+let obj2 = { [TIER_1]: _modDef13876, [TIER_2]: _modDef13877, [TIER_3]: _modDef13878 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
 let createStyles = fn(5092);
 let obj4 = { progressBarMarkerInnerCircle: { width: 17.5, height: 17.5, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }, progressBarMarkerInnerCircleBackground: { width: "100%", height: "100%", borderRadius: 17.5, position: "absolute" }, progressBarMarkerInnerCircleIcon: { width: 16, height: 16 }, progressBarMarkerInnerCircleIconUnlocked: null };
@@ -408,11 +408,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
                                 let tmp33 = cResult[27];
                               }
                               if (cResult[28] !== tier) {
-                                const tierName = useReducedMotion(8024).getTierName(tier, { useLevels: false });
+                                const tierName = useReducedMotion(8025).getTierName(tier, { useLevels: false });
                                 cResult[28] = tier;
                                 cResult[29] = tierName;
                                 let tmp38 = tierName;
-                                const tmpResult4 = useReducedMotion(8024);
+                                const tmpResult4 = useReducedMotion(8025);
                               } else {
                                 tmp38 = cResult[29];
                               }
@@ -469,8 +469,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
                           }
                           if (tmp34) {
                             const obj8 = { source: tmp5(10713), style: tmp4.progressBarMarkerUnlockedIcon };
-                            tmp34 = closure_6(tmp5(6156), obj8);
-                            const tmp5Result = tmp5(6156);
+                            tmp34 = closure_6(tmp5(6157), obj8);
+                            const tmp5Result = tmp5(6157);
                           }
                           cResult[24] = tmp4.progressBarMarkerUnlockedIcon;
                           cResult[25] = tmp11;
@@ -628,13 +628,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
     }
     if (tmp20Result) {
       const obj8 = { source: tmp2(10713), style: tmp.progressBarMarkerUnlockedIcon };
-      tmp20Result = closure_6(tmp2(6156), obj8);
-      const tmp2Result = tmp2(6156);
+      tmp20Result = closure_6(tmp2(6157), obj8);
+      const tmp2Result = tmp2(6157);
     }
     const items5 = [tmp20Result, ];
     const obj9 = { variant: "text-xs/medium", children: null };
     const tmp5Result = useReducedMotion(4850);
-    obj9.children = useReducedMotion(8024).getTierName(tier, { useLevels: false });
+    obj9.children = useReducedMotion(8025).getTierName(tier, { useLevels: false });
     items5[1] = closure_6(useReducedMotion(5088).Text, obj9);
     obj7.children = items5;
     items3[2] = closure_7(PREMIUM_PERK_PINK, obj7);

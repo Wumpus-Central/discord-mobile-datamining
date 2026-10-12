@@ -1,6 +1,6 @@
-// === Module 14008: EmailSettingsStore ===
+// === Module 14031: EmailSettingsStore ===
 
-// Module 14008 (EmailSettingsStore)
+// Module 14031 (EmailSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

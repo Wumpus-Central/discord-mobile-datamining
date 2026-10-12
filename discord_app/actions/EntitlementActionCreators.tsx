@@ -1,6 +1,6 @@
-// === Module 7115: EntitlementActionCreators ===
+// === Module 7116: EntitlementActionCreators ===
 
-// Module 7115 (EntitlementActionCreators)
+// Module 7116 (EntitlementActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -23,7 +23,7 @@ let closure_5 = async function _fetchUserEntitlements(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

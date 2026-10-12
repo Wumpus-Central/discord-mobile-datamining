@@ -1,8 +1,8 @@
-// === Module 17645: DisplayNameStylesFlywheelMobileActionSheet ===
+// === Module 17702: DisplayNameStylesFlywheelMobileActionSheet ===
 
-// Module 17645 (DisplayNameStylesFlywheelMobileActionSheet)
+// Module 17702 (DisplayNameStylesFlywheelMobileActionSheet)
 import nativeDefault from "native" /* 587 */;
-import openUserSettings from "openUserSettings" /* 7093 */;
+import openUserSettings from "openUserSettings" /* 7094 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   markAsDismissed(4969).isThemeDark(ref(5031)());
   const tmp7 = closure_11();
   const obj2 = markAsDismissed(4969);
-  const typeConsolidationTextTransform = markAsDismissed(6662).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
+  const typeConsolidationTextTransform = markAsDismissed(6663).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function y() {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   } else {
     [tmp9, tmp10] = cResult;
   }
-  const obj3 = markAsDismissed(6662);
+  const obj3 = markAsDismissed(6663);
   const stateFromStores = markAsDismissed(504).useStateFromStores(tmp9, tmp10);
   if (cResult[2] !== stateFromStores) {
     let result = tmp5(4769).canUsePremiumProfileCustomization(stateFromStores);
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6725).runAfterInteractions(() => { ... });
+              markAsDismissed(6726).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
           tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
           obj = closure_0(closure_2[16]);
           openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-            markAsDismissed(6725).runAfterInteractions(() => { ... });
+            markAsDismissed(6726).runAfterInteractions(() => { ... });
           });
           return;
         }
@@ -131,12 +131,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6725).runAfterInteractions(() => { ... });
+              markAsDismissed(6726).runAfterInteractions(() => { ... });
             });
             return;
           }
         }
-        const tmp21 = closure_9(tmp(6843).ActionSheetHeaderBar, { onPress: null });
+        const tmp21 = closure_9(tmp(6844).ActionSheetHeaderBar, { onPress: null });
         cResult[13] = markAsDismissed;
         cResult[14] = tmp21;
         const obj4 = { onPress: null };
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
               return;
             }
           }
-          const tmp23 = closure_9(tmp(17646).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+          const tmp23 = closure_9(tmp(17703).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
         }
         class O {
           constructor() {
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6725).runAfterInteractions(() => { ... });
+              markAsDismissed(6726).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6725).runAfterInteractions(() => { ... });
+              markAsDismissed(6726).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6725).runAfterInteractions(() => { ... });
+              markAsDismissed(6726).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
             tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
             obj = closure_0(closure_2[16]);
             openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-              markAsDismissed(6725).runAfterInteractions(() => { ... });
+              markAsDismissed(6726).runAfterInteractions(() => { ... });
             });
             return;
           }
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
         tmp2 = closure_2 ? tmp.PROFILE_CUSTOMIZATION : tmp.PROFILE_CUSTOMIZATION_TRY_IT_OUT;
         obj = closure_0(closure_2[16]);
         openUserSettingsResult = obj.openUserSettings({ screen: tmp2 }, () => {
-          markAsDismissed(6725).runAfterInteractions(() => { ... });
+          markAsDismissed(6726).runAfterInteractions(() => { ... });
         });
         return;
       }
@@ -284,8 +284,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const isThemeDarkResult = markAsDismissed(4969).isThemeDark(ref(5031)());
   const tmp6 = closure_11();
   const obj2 = markAsDismissed(4969);
-  const typeConsolidationTextTransform = markAsDismissed(6662).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
-  const obj3 = markAsDismissed(6662);
+  const typeConsolidationTextTransform = markAsDismissed(6663).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
+  const obj3 = markAsDismissed(6663);
   const items = [UserStore];
   const stateFromStores = markAsDismissed(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj4 = markAsDismissed(504);
@@ -303,8 +303,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const items2 = [markAsDismissed];
   const callback = noop.useCallback(() => {
     openUserSettings.openUserSettings({ screen: c2 ? timestampProducer.PROFILE_CUSTOMIZATION : timestampProducer.PROFILE_CUSTOMIZATION_TRY_IT_OUT }, () => {
-      markAsDismissed(6725).runAfterInteractions(() => {
-        markAsDismissed(7093).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
+      markAsDismissed(6726).runAfterInteractions(() => {
+        markAsDismissed(7094).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
           closure_1_0(constants.TAKE_ACTION);
           const result = closure_2_0(4938).UNSAFE_markDismissibleContentAsDismissed(closure_2_0(2049).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK, { dismissAction: constants.INDIRECT_ACTION });
         });
@@ -322,7 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const obj6 = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: null };
   const obj7 = { style: tmp6.content, children: null };
   const items4 = [
-    closure_9(markAsDismissed(6843).ActionSheetHeaderBar, {
+    closure_9(markAsDismissed(6844).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp15Result = enabled;
   if (enabled) {
-    tmp15Result = closure_9(tmp2(17646).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp15Result = closure_9(tmp2(17703).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp15Result, ];
   if (enabled) {
@@ -381,20 +381,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     items4[4] = closure_10(View, obj13);
     obj7.children = items4;
     obj12.children = closure_10(View, obj7);
-    obj6.children = closure_9(tmp2(6813).SafeAreaPaddingView, obj12);
-    return closure_9(tmp2(6839).BottomSheet, obj6);
+    obj6.children = closure_9(tmp2(6814).SafeAreaPaddingView, obj12);
+    return closure_9(tmp2(6840).BottomSheet, obj6);
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(17650) };
+      const obj17 = { uri: tmp4(17707) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
-      let tmp15Result2 = closure_9(tmp4(6156), obj16);
-      const tmp4Result = tmp4(6156);
+      let tmp15Result2 = closure_9(tmp4(6157), obj16);
+      const tmp4Result = tmp4(6157);
     } else {
-      const obj18 = { url: tmp4(17650), style: tmp6.image, autoplay: true };
-      tmp15Result2 = closure_9(tmp2(9011).APNGPlayer, obj18);
+      const obj18 = { url: tmp4(17707), style: tmp6.image, autoplay: true };
+      tmp15Result2 = closure_9(tmp2(9012).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1382);
   }

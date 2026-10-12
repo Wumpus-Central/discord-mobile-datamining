@@ -2,7 +2,7 @@
 
 // Module 10690 (useChannelLoading)
 import hooks_useMountEffectDefault from "hooks/useMountEffect" /* 5397 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9382 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

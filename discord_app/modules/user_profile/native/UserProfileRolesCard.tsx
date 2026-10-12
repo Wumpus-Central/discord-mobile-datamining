@@ -1,14 +1,14 @@
-// === Module 6881: UserProfileRolesCard ===
+// === Module 6882: UserProfileRolesCard ===
 
-// Module 6881 (UserProfileRolesCard)
+// Module 6882 (UserProfileRolesCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
-import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 6899 */;
-import RoleIconDefault from "RoleIcon" /* 6901 */;
-import UserProfileRoleUtils from "UserProfileRoleUtils" /* 6902 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 6900 */;
+import RoleIconDefault from "RoleIcon" /* 6902 */;
+import UserProfileRoleUtils from "UserProfileRoleUtils" /* 6903 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
@@ -91,7 +91,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleItem(rol
       if (cResult[3] === role.id) {
         let tmp9 = cResult[4];
       }
-      const roleIconProps = tmp(6882).useRoleIconProps(tmp9);
+      const roleIconProps = tmp(6883).useRoleIconProps(tmp9);
       const tags = role.tags;
       let guild_connections;
       if (tags != null) {
@@ -107,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleItem(rol
         cResult[5] = obj2;
         cResult[6] = obj3;
       }
-      guildId(6884);
+      guildId(6885);
       if (cResult[7] === tmp4) {
         if (cResult[8] === role.id) {
           let tmp20 = cResult[9];
@@ -125,8 +125,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleItem(rol
                 intl = role(closure_2[15]).intl;
                 obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
                 obj.onPress = function onPress() {
-                  role(6885).copy(customIconSrc.id);
-                  const obj = role(6885);
+                  role(6886).copy(customIconSrc.id);
+                  const obj = role(6886);
                   role(4808).roleIdCopied(dependencyMap);
                 };
                 items = [];
@@ -187,8 +187,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleItem(rol
                             intl = role(closure_2[15]).intl;
                             obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
                             obj.onPress = function onPress() {
-                              role(6885).copy(customIconSrc.id);
-                              const obj = role(6885);
+                              role(6886).copy(customIconSrc.id);
+                              const obj = role(6886);
                               role(4808).roleIdCopied(dependencyMap);
                             };
                             items = [];
@@ -227,8 +227,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleItem(rol
                               intl = role(closure_2[15]).intl;
                               obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
                               obj.onPress = function onPress() {
-                                role(6885).copy(customIconSrc.id);
-                                const obj = role(6885);
+                                role(6886).copy(customIconSrc.id);
+                                const obj = role(6886);
                                 role(4808).roleIdCopied(dependencyMap);
                               };
                               items = [];
@@ -267,7 +267,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleItem(rol
                           obj4.style = role2.role;
                           tmp2 = tmp23();
                           obj4.children = tmp2;
-                          let tmp24Result = tmp24(tmp(6184).PressableHighlight, obj4);
+                          let tmp24Result = tmp24(tmp(6185).PressableHighlight, obj4);
                         } else {
                           const obj5 = { style: null, children: null };
                           class T {
@@ -278,8 +278,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleItem(rol
                               intl = role(closure_2[15]).intl;
                               obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
                               obj.onPress = function onPress() {
-                                role(6885).copy(customIconSrc.id);
-                                const obj = role(6885);
+                                role(6886).copy(customIconSrc.id);
+                                const obj = role(6886);
                                 role(4808).roleIdCopied(dependencyMap);
                               };
                               items = [];
@@ -390,8 +390,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleItem(rol
             intl = role(closure_2[15]).intl;
             obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
             obj.onPress = function onPress() {
-              role(6885).copy(customIconSrc.id);
-              const obj = role(6885);
+              role(6886).copy(customIconSrc.id);
+              const obj = role(6886);
               role(4808).roleIdCopied(dependencyMap);
             };
             items = [];
@@ -439,7 +439,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleItem(rol
       cResult[8] = role.id;
       cResult[9] = E;
       tmp20 = E;
-      let tmpResult = tmp(6882);
+      let tmpResult = tmp(6883);
     }
     const obj6 = { guildId, roleId: role.id, size };
     cResult[2] = guildId;
@@ -681,7 +681,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         if (cResult[11] === style) {
         }
         const obj2 = { title: tmp13, style, children: tmp15 };
-        tmp2 = closure_9(guildId(6903), obj2);
+        tmp2 = closure_9(guildId(6904), obj2);
         cResult[11] = style;
         cResult[12] = tmp15;
         cResult[13] = tmp2;
@@ -727,8 +727,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(closure_16, obj3);
-    tmp4 = closure_9(guildId(6903), obj2);
-    const tmp7 = guildId(6903);
+    tmp4 = closure_9(guildId(6904), obj2);
+    const tmp7 = guildId(6904);
   }
   return tmp4;
 });

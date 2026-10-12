@@ -1,6 +1,6 @@
-// === Module 17252: chat/ConjureAwaitingUser ===
+// === Module 17311: chat/ConjureAwaitingUser ===
 
-// Module 17252 (chat/ConjureAwaitingUser)
+// Module 17311 (chat/ConjureAwaitingUser)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
@@ -12,7 +12,7 @@ const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const createStyles = fn(5092);
 let obj2 = { ring: null };
-const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(17149).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
+const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: fn(17278).CONJURE_NATIVE_CARD_RADIUS + PX_4 };
 obj2.ring = rect;
 let closure_6 = createStyles.createStyles(obj2);
 const __initData = { code: "function ConjureAwaitingUserTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };

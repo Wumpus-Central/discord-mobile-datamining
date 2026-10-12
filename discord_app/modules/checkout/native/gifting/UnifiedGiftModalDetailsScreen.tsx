@@ -1,8 +1,8 @@
-// === Module 10184: UnifiedGiftModalDetailsScreen ===
+// === Module 10185: UnifiedGiftModalDetailsScreen ===
 
-// Module 10184 (UnifiedGiftModalDetailsScreen)
+// Module 10185 (UnifiedGiftModalDetailsScreen)
 import nativeDefault from "native" /* 587 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10183 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10184 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

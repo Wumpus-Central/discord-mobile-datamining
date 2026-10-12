@@ -1,6 +1,6 @@
-// === Module 9548: CustomEmojiContent ===
+// === Module 9549: CustomEmojiContent ===
 
-// Module 9548 (CustomEmojiContent)
+// Module 9549 (CustomEmojiContent)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -9,12 +9,12 @@ import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 5992 */;
-import openUserSettings from "openUserSettings" /* 7093 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9393 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9546 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9550 */;
-import StarIcon from "StarIcon" /* 9552 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 9555 */;
+import openUserSettings from "openUserSettings" /* 7094 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9394 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9547 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9551 */;
+import StarIcon from "StarIcon" /* 9553 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9556 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5988 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
@@ -277,7 +277,7 @@ export default function CustomEmojiContent(emojiNode) {
     if (setting) {
       const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9554, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9555, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
       }
       const intl3 = tmp2(nonce[27]).intl;
       obj22.accessibilityLabel = intl3.string(tmp2(nonce[27]).t.PdRCRg);

@@ -1,23 +1,23 @@
-// === Module 9282: ReactionsSpotIllustration ===
+// === Module 9283: ReactionsSpotIllustration ===
 
-// Module 9282 (ReactionsSpotIllustration)
+// Module 9283 (ReactionsSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import assetHelpers from "assetHelpers" /* 6272 */;
-import _modDef9283 from "module_9283" /* 9283 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import assetHelpers from "assetHelpers" /* 6273 */;
 import _modDef9284 from "module_9284" /* 9284 */;
 import _modDef9285 from "module_9285" /* 9285 */;
+import _modDef9286 from "module_9286" /* 9286 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef9283 }, 3: null };
-let obj2 = { uri: _modDef9283 };
-obj[2] = { uri: _modDef9284 };
-const obj3 = { uri: _modDef9284 };
-obj[3] = { uri: _modDef9285 };
+let obj = { 1: null, 2: { uri: _modDef9284 }, 3: null };
+let obj2 = { uri: _modDef9284 };
+obj[2] = { uri: _modDef9285 };
+const obj3 = { uri: _modDef9285 };
+obj[3] = { uri: _modDef9286 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef9285 };
+const obj4 = { uri: _modDef9286 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ReactionsSpotIllustration.native.tsx");
 

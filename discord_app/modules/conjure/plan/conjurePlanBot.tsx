@@ -1,9 +1,9 @@
-// === Module 17148: conjurePlanBot ===
+// === Module 17288: conjurePlanBot ===
 
-// Module 17148 (conjurePlanBot)
+// Module 17288 (conjurePlanBot)
 import Server from "Server" /* 1998 */;
-import ConjureTypes from "ConjureTypes" /* 6946 */;
-import conjurePlanTags from "conjurePlanTags" /* 17143 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
+import conjurePlanTags from "conjurePlanTags" /* 17283 */;
 import size from "module_2" /* 2 */;
 
 function isAppCommand(kind) {
@@ -85,8 +85,8 @@ const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanBot.t
 
 export const getConjurePlanBotInteraction = function getConjurePlanBotInteraction(proposal) {
   bot = proposal;
-  const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(proposal, ConjureTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
-  if (!obj2.planDeclaresSurface(proposal, ConjureTypes.ConjureSupportedSurface.BOT)) {
+  const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
+  if (!obj2.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.BOT)) {
     if (!planDeclaresSurfaceResult) {
       return null;
     }

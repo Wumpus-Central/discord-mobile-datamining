@@ -1,9 +1,9 @@
-// === Module 18181: SavedMessagesManager ===
+// === Module 18239: SavedMessagesManager ===
 
-// Module 18181 (SavedMessagesManager)
-import SavedMessagesActions from "SavedMessagesActions" /* 12649 */;
+// Module 18239 (SavedMessagesManager)
+import SavedMessagesActions from "SavedMessagesActions" /* 12651 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
 let closure_3 = async function _refreshSavedMessages() {
@@ -17,7 +17,7 @@ let closure_3 = async function _refreshSavedMessages() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_3 = async function _refreshSavedMessages() {
       } else {
         const result = closure_128_0(closure_128_1[2]).showOverdueRemindersToast();
         c2 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp11) {
       c2 = tmp;

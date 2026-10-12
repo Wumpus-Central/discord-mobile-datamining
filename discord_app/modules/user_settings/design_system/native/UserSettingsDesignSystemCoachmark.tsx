@@ -1,10 +1,10 @@
-// === Module 16144: UserSettingsDesignSystemCoachmark ===
+// === Module 16167: UserSettingsDesignSystemCoachmark ===
 
-// Module 16144 (UserSettingsDesignSystemCoachmark)
+// Module 16167 (UserSettingsDesignSystemCoachmark)
 import c from "c" /* 576 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6813 */;
-import LayerScope from "LayerScope" /* 6845 */;
-import _modDef16145 from "module_16145" /* 16145 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
+import LayerScope from "LayerScope" /* 6846 */;
+import _modDef16168 from "module_16168" /* 16168 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,9 +25,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   [tmp9, r10029] = noop.useState(false);
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-  const obj3 = visible(16142);
-  [r10035, r10036] = visible(16142).useCanRotate();
-  const tmp10 = _slicedToArray(visible(16142).useCanRotate(), 2);
+  const obj3 = visible(16165);
+  [r10035, r10036] = visible(16165).useCanRotate();
+  const tmp10 = _slicedToArray(visible(16165).useCanRotate(), 2);
   const tmp11 = _slicedToArray(noop.useState(false), 2);
   const first1 = _slicedToArray(noop.useState("primary"), 2)[0];
   const tmp12 = _slicedToArray(noop.useState("primary"), 2);
@@ -65,7 +65,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
         return closure_1(false);
       }
     }
-    tmp21[0] = _modDef16145;
+    tmp21[0] = _modDef16168;
     cResult[2] = tmp21;
   } else {
     class Y {
@@ -181,7 +181,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
       buttonVariant: null,
       gradientColor: null
     };
-    const obj2 = { type: "image", src: { uri: _modDef16145 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef16168 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;

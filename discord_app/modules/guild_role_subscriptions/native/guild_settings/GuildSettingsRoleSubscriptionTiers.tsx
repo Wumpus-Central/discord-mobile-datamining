@@ -1,6 +1,6 @@
-// === Module 18499: GuildSettingsRoleSubscriptionTiers ===
+// === Module 18557: GuildSettingsRoleSubscriptionTiers ===
 
-// Module 18499 (GuildSettingsRoleSubscriptionTiers)
+// Module 18557 (GuildSettingsRoleSubscriptionTiers)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,17 +8,17 @@ import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import PriceUtils from "PriceUtils" /* 6939 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8673 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15497 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15501 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 18498 */;
-import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 18502 */;
-import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 18503 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import PriceUtils from "PriceUtils" /* 6940 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8674 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15520 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15524 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 18556 */;
+import GuildRoleSettingsActionCreatorsAll from "GuildRoleSettingsActionCreators" /* 18560 */;
+import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 18561 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8638 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8639 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4743 */;
 
@@ -41,7 +41,7 @@ function getPriceText(first2, first1) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const MAX_SUBSCRIPTION_TIERS = fn(15475).MAX_SUBSCRIPTION_TIERS;
+const MAX_SUBSCRIPTION_TIERS = fn(15498).MAX_SUBSCRIPTION_TIERS;
 const Constants = fn(1085);
 ({ CurrencyCodes: map1, GuildSettingsSections: closure_14, GuildSettingsSubsections: closure_15 } = Constants);
 const SubscriptionIntervalTypes = fn(1392).SubscriptionIntervalTypes;
@@ -297,11 +297,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
     tmp9 = undefined !== stateFromStores;
   }
   const tmpResult = editStateId(573);
-  const first1 = _slicedToArray(groupListingId(15497).useName(editStateId), 1)[0];
-  const obj3 = groupListingId(15497);
-  const first2 = _slicedToArray(groupListingId(15497).usePriceTier(editStateId), 1)[0];
-  const obj4 = groupListingId(15497);
-  const first3 = _slicedToArray(groupListingId(15497).useImage(editStateId, 250), 1)[0];
+  const first1 = _slicedToArray(groupListingId(15520).useName(editStateId), 1)[0];
+  const obj3 = groupListingId(15520);
+  const first2 = _slicedToArray(groupListingId(15520).usePriceTier(editStateId), 1)[0];
+  const obj4 = groupListingId(15520);
+  const first3 = _slicedToArray(groupListingId(15520).useImage(editStateId, 250), 1)[0];
   let first4;
   if (stateFromStores != null) {
     first4 = stateFromStores.subscription_plans[0];
@@ -420,7 +420,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
                           }
                         }
                         if (tmp44 === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp47 = closure_17(tmp(9723).PencilIcon, {});
+                          const tmp47 = closure_17(tmp(9724).PencilIcon, {});
                           class H {
                             constructor() {
                               obj = closure_1(closure_3[12]);
@@ -526,7 +526,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
           tmp21[0] = tmp4.tierIcon;
           const obj11 = { uri: first3 };
           tmp21[2] = obj11;
-          tmp18 = closure_17(guildId(6156), tmp21);
+          tmp18 = closure_17(guildId(6157), tmp21);
         }
         cResult[10] = first3;
         cResult[11] = tmp4.tierIcon;
@@ -553,7 +553,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
   cResult[4] = first4;
   cResult[5] = tmp15;
   tmp14 = tmp15;
-  const obj5 = groupListingId(15497);
+  const obj5 = groupListingId(15520);
 }) : (function EditListingButton(editStateId) {
   editStateId = editStateId.editStateId;
   ({ guildId: importDefault, groupListingId: importAll } = editStateId);
@@ -592,7 +592,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
   const obj5 = {
     onPress: editStateId.onPress,
     onLongPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18500, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18558, dependencyMap.paths), "TierArchiveOrDelete", { editStateId, guildId, groupListingId });
     },
     children: null
   };
@@ -627,7 +627,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditLi
   items2[1] = closure_18(closure_7, obj9);
   obj8.children = items2;
   items1[1] = closure_18(closure_7, obj8);
-  items1[2] = closure_17(editStateId(9723).PencilIcon, {});
+  items1[2] = closure_17(editStateId(9724).PencilIcon, {});
   obj5.children = items1;
   obj10.children = closure_18(closure_24, obj5);
   return closure_17(closure_7, obj10);
@@ -717,7 +717,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6200).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6201).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -736,7 +736,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6200).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6201).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -755,7 +755,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6200).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6201).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -773,7 +773,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6200).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6201).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -791,7 +791,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                               obj.title = intl.string(guildId(1126).t.pXbGYc);
                               const intl2 = guildId(1126).intl;
                               obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                              return closure_1_17(guildId(6200).NavigatorHeader, obj);
+                              return closure_1_17(guildId(6201).NavigatorHeader, obj);
                             }
               };
               setOptionsResult = closure_1.setOptions(obj);
@@ -852,7 +852,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                       obj.title = intl.string(guildId(1126).t.pXbGYc);
                       const intl2 = guildId(1126).intl;
                       obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                      return closure_1_17(guildId(6200).NavigatorHeader, obj);
+                      return closure_1_17(guildId(6201).NavigatorHeader, obj);
                     }
           };
           setOptionsResult = closure_1.setOptions(obj);
@@ -871,7 +871,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                       obj.title = intl.string(guildId(1126).t.pXbGYc);
                       const intl2 = guildId(1126).intl;
                       obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-                      return closure_1_17(guildId(6200).NavigatorHeader, obj);
+                      return closure_1_17(guildId(6201).NavigatorHeader, obj);
                     }
           };
           setOptionsResult = closure_1.setOptions(obj);
@@ -932,7 +932,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
         obj.title = intl.string(guildId(1126).t.pXbGYc);
         const intl2 = guildId(1126).intl;
         obj.subtitle = intl2.string(guildId(1126).t["KzCF/6"]);
-        return closure_1_17(guildId(6200).NavigatorHeader, obj);
+        return closure_1_17(guildId(6201).NavigatorHeader, obj);
       }
     });
   });
@@ -992,7 +992,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
             if (first != null) {
               id = first.id;
             }
-            guildEligibleForTierTemplates(18502).pushTierEditScene(navigation, {
+            guildEligibleForTierTemplates(18560).pushTierEditScene(navigation, {
               groupListingId: id,
               initialEditStateId,
               onBeforeDispatchNewListing(id) {
@@ -1006,7 +1006,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildS
                 });
               }
             });
-            let obj = guildEligibleForTierTemplates(18502);
+            let obj = guildEligibleForTierTemplates(18560);
             const obj2 = {
               groupListingId: id,
               initialEditStateId,

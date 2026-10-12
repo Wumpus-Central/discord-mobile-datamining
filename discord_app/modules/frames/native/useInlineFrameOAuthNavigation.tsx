@@ -1,6 +1,6 @@
-// === Module 17089: useInlineFrameOAuthNavigation ===
+// === Module 17129: useInlineFrameOAuthNavigation ===
 
-// Module 17089 (useInlineFrameOAuthNavigation)
+// Module 17129 (useInlineFrameOAuthNavigation)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -49,7 +49,7 @@ export default function useInlineFrameOAuthNavigation(arg0) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {

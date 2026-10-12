@@ -1,11 +1,11 @@
-// === Module 15236: FriendRequestsEveryoneSetting ===
+// === Module 15259: FriendRequestsEveryoneSetting ===
 
-// Module 15236 (FriendRequestsEveryoneSetting)
+// Module 15259 (FriendRequestsEveryoneSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6683 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15073 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6684 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15096 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(7992).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7993).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsEveryoneSettingValue() {
     const cResult = c.c(2);
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;

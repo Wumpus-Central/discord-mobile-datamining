@@ -1,6 +1,6 @@
-// === Module 16041: DevSettingsActions ===
+// === Module 16064: DevSettingsActions ===
 
-// Module 16041 (DevSettingsActions)
+// Module 16064 (DevSettingsActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DevSettingsStore from "DevSettingsStore" /* 5091 */;
 

@@ -1,24 +1,24 @@
-// === Module 14813: ProfileCustomizationSettingScreen ===
+// === Module 14836: ProfileCustomizationSettingScreen ===
 
-// Module 14813 (ProfileCustomizationSettingScreen)
+// Module 14836 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ChatInputUtils from "ChatInputUtils" /* 4985 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6670 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9633 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10642 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14814 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 14834 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14921 */;
-import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 14922 */;
-import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 14931 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6671 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9634 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10643 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14837 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 14857 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14944 */;
+import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 14945 */;
+import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 14954 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10577 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8284 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10578 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
 
 const require = globalThis.__r;
 
@@ -76,7 +76,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj2 = obj5(4818);
   const nativeStackNavigation = obj5(1503).useNativeStackNavigation();
   let obj3 = obj5(1503);
-  const params = obj5(6682).useSettingNavigationRoute().params;
+  const params = obj5(6683).useSettingNavigationRoute().params;
   let autoFocusElement;
   if (params != null) {
     autoFocusElement = params.autoFocusElement;
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }
-  let obj4 = obj5(6682);
+  let obj4 = obj5(6683);
   const obj6 = { items: tmp13, pageWidth: tmp8[0], defaultIndex: null, onPageChange: null, onPageChangeStart: null };
   if (field === ProfileCustomizationSubsection.GUILD) {
     class D {
@@ -141,7 +141,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj = { hasEdits: stateFromStores, resetPending: UserSettingsAccountActionCreators.resetAllPending, onHasEdits: ChatInputUtils.dismissKeyboard, onConfirm };
     return maybeShowDiscardChangesAlertDefault(obj);
   };
-  const segmentedControlState = obj5(8529).useSegmentedControlState(obj6);
+  const segmentedControlState = obj5(8530).useSegmentedControlState(obj6);
   const activeIndex = segmentedControlState.activeIndex;
   const tmp18 = items[activeIndex.get(activeIndex)];
   if (tmp18 == null) {
@@ -265,7 +265,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp35 = cResult[11];
   }
-  const tmpResult = obj5(8529);
+  const tmpResult = obj5(8530);
   stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
   closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
   if (cResult[12] === tmp29) {
@@ -402,7 +402,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -434,7 +434,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   closure_128_3(true);
                 }
                 c2 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               c2 = tmp;

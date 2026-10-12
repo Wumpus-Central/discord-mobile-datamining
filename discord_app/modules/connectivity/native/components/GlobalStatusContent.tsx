@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import useThemeDefault from "useTheme" /* 5031 */;
-import StatusBarDefault from "StatusBar" /* 10360 */;
+import StatusBarDefault from "StatusBar" /* 10361 */;
 import ChannelCallModalDefault from "ChannelCallModal" /* 10825 */;
 import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10849 */;
 import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11022 */;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
               }
               tmp22 = tmp5ResultResult;
             }
-            const isScreenLandscape = tmp(8326).useIsScreenLandscape();
+            const isScreenLandscape = tmp(8327).useIsScreenLandscape();
             if (cResult[15] !== isScreenLandscape) {
               let isModalOpenResult = isScreenLandscape;
               if (isScreenLandscape) {
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
             cResult[18] = num11;
             cResult[19] = obj4;
             tmp33 = obj4;
-            const tmpResult6 = tmp(8326);
+            const tmpResult6 = tmp(8327);
           }
         }
       }

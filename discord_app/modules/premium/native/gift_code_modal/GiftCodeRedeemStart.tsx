@@ -1,6 +1,6 @@
-// === Module 10500: GiftCodeRedeemStart ===
+// === Module 10501: GiftCodeRedeemStart ===
 
-// Module 10500 (GiftCodeRedeemStart)
+// Module 10501 (GiftCodeRedeemStart)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
@@ -11,24 +11,24 @@ import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import GiftCodeUtils from "GiftCodeUtils" /* 5633 */;
 import _mod5745 from "module_5745" /* 5745 */;
-import GameIcon from "GameIcon" /* 6861 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6930 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7047 */;
-import ExperimentalGameControllerLinkIcon from "ExperimentalGameControllerLinkIcon" /* 8949 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 9000 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10156 */;
-import actions_GiftCodeActionCreatorsDefault from "actions/GiftCodeActionCreators" /* 10493 */;
-import GiftCodeRedeemModal from "GiftCodeRedeemModal" /* 10499 */;
-import SlayerStorefrontGiftPreviewDefault from "SlayerStorefrontGiftPreview" /* 10508 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 10510 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10626 */;
-import NameplatePreview from "NameplatePreview" /* 10627 */;
-import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 10628 */;
+import GameIcon from "GameIcon" /* 6862 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6931 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7048 */;
+import ExperimentalGameControllerLinkIcon from "ExperimentalGameControllerLinkIcon" /* 8950 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 9001 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10157 */;
+import actions_GiftCodeActionCreatorsDefault from "actions/GiftCodeActionCreators" /* 10494 */;
+import GiftCodeRedeemModal from "GiftCodeRedeemModal" /* 10500 */;
+import SlayerStorefrontGiftPreviewDefault from "SlayerStorefrontGiftPreview" /* 10509 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 10511 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10627 */;
+import NameplatePreview from "NameplatePreview" /* 10628 */;
+import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 10629 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GiftCodeStore from "GiftCodeStore" /* 10490 */;
+import GiftCodeStore from "GiftCodeStore" /* 10491 */;
 import UserStore from "UserStore" /* 1390 */;
-import SKUStore from "SKUStore" /* 6087 */;
+import SKUStore from "SKUStore" /* 6088 */;
 
 require = fn;
 function getGiftCodeHeaderText(isSubscription) {
@@ -282,7 +282,7 @@ function getGiftCodeHeaderText(isSubscription) {
       return intl.string(sender(1126).t["1+tgC0"]);
     });
   }
-  obj = sender(6930);
+  obj = sender(6931);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);

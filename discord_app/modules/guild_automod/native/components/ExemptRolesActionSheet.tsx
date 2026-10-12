@@ -1,8 +1,8 @@
-// === Module 18276: ExemptRolesActionSheet ===
+// === Module 18334: ExemptRolesActionSheet ===
 
-// Module 18276 (ExemptRolesActionSheet)
+// Module 18334 (ExemptRolesActionSheet)
 import RoleNameDefault from "RoleName" /* 11395 */;
-import ExemptionActionSheetDefault from "ExemptionActionSheet" /* 18277 */;
+import ExemptionActionSheetDefault from "ExemptionActionSheet" /* 18335 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
 
@@ -131,5 +131,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExemptRo
   obj2.getSearchText = getRoleName;
   obj2.renderLabel = renderRoleName;
   obj2.onSave = onSave;
-  return jsx(stateFromStores(18277), { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null });
+  return jsx(stateFromStores(18335), { title: null, searchPlaceholder: null, listId: "automod-exempt-roles", items: null, initialSelected: null, getId: null, getSearchText: null, renderLabel: null, onSave: null });
 });

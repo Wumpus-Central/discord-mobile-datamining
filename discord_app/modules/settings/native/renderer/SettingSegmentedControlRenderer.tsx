@@ -1,14 +1,14 @@
-// === Module 14957: SettingSegmentedControlRenderer ===
+// === Module 14980: SettingSegmentedControlRenderer ===
 
-// Module 14957 (SettingSegmentedControlRenderer)
+// Module 14980 (SettingSegmentedControlRenderer)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 14811 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14946 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14947 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 14834 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14969 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14970 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14944 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14967 */;
 
 const require = globalThis.__r;
 
@@ -201,13 +201,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingS
   const memo = noop.useMemo(() => {
     const items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(14811).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(14834).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(14946).getSettingTitle(id);
+      obj.label = items(14969).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);

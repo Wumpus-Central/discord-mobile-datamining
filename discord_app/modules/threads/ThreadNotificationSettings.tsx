@@ -1,6 +1,6 @@
-// === Module 6083: ThreadNotificationSettings ===
+// === Module 6084: ThreadNotificationSettings ===
 
-// Module 6083 (ThreadNotificationSettings)
+// Module 6084 (ThreadNotificationSettings)
 import FlagUtils from "FlagUtils" /* 1403 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;

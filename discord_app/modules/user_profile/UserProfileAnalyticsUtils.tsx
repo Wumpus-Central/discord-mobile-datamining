@@ -1,20 +1,20 @@
-// === Module 8315: UserProfileAnalyticsUtils ===
+// === Module 8316: UserProfileAnalyticsUtils ===
 
-// Module 8315 (UserProfileAnalyticsUtils)
+// Module 8316 (UserProfileAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
-import useDisplayProfile from "useDisplayProfile" /* 8310 */;
-import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8322 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8316 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6796 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7347 */;
+import useDisplayProfile from "useDisplayProfile" /* 8311 */;
+import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8323 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8317 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6797 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7348 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import PresenceStore from "PresenceStore" /* 5108 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
-import UserProfileStore from "UserProfileStore" /* 7320 */;
+import UserProfileStore from "UserProfileStore" /* 7321 */;
 
 require = fn;
 function getProfileProperties(guildMemberProfile) {
@@ -259,8 +259,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(constants3.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(6796).FetchState;
-const constants = fn(8307).TrackUserProfileProperties;
+const FetchState = fn(6797).FetchState;
+const constants = fn(8308).TrackUserProfileProperties;
 const Constants = fn(1085);
 ({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = Constants);
 const StatusTypes = fn(1096).StatusTypes;

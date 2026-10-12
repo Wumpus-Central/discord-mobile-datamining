@@ -1,6 +1,6 @@
-// === Module 7370: AutocompleteBoundaryUtils ===
+// === Module 7371: AutocompleteBoundaryUtils ===
 
-// Module 7370 (AutocompleteBoundaryUtils)
+// Module 7371 (AutocompleteBoundaryUtils)
 import Constants from "Constants" /* 1085 */;
 import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5404 */;
 import size from "module_2" /* 2 */;

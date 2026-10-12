@@ -1,6 +1,6 @@
-// === Module 13096: CollectiblesSKUSourceType ===
+// === Module 13101: CollectiblesSKUSourceType ===
 
-// Module 13096 (CollectiblesSKUSourceType)
+// Module 13101 (CollectiblesSKUSourceType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesSKUSourceType.tsx");

@@ -1,10 +1,10 @@
-// === Module 15815: UploadDebugLogsSetting ===
+// === Module 15838: UploadDebugLogsSetting ===
 
-// Module 15815 (UploadDebugLogsSetting)
+// Module 15838 (UploadDebugLogsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import DebugUploadManager from "DebugUploadManager" /* 12628 */;
+import DebugUploadManager from "DebugUploadManager" /* 12630 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

@@ -1,17 +1,17 @@
-// === Module 13774: BoostedGuildTierProgressCircle ===
+// === Module 13797: BoostedGuildTierProgressCircle ===
 
-// Module 13774 (BoostedGuildTierProgressCircle)
+// Module 13797 (BoostedGuildTierProgressCircle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8024 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8029 */;
-import ProgressCircleDefault from "ProgressCircle" /* 12328 */;
-import Tier048Px from "Tier048Px" /* 13775 */;
-import _modDef13779 from "module_13779" /* 13779 */;
-import _modDef13780 from "module_13780" /* 13780 */;
-import _modDef13781 from "module_13781" /* 13781 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8025 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8030 */;
+import ProgressCircleDefault from "ProgressCircle" /* 12330 */;
+import Tier048Px from "Tier048Px" /* 13798 */;
+import _modDef13802 from "module_13802" /* 13802 */;
+import _modDef13803 from "module_13803" /* 13803 */;
+import _modDef13804 from "module_13804" /* 13804 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -156,13 +156,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostedG
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tier048PxSource1 = _modDef13779;
+          let tier048PxSource1 = _modDef13802;
         } else if (constants.TIER_2 !== premiumTier) {
           if (constants.TIER_3 === premiumTier) {
-            tier048PxSource1 = _modDef13781;
+            tier048PxSource1 = _modDef13804;
           }
         }
-        tier048PxSource1 = _modDef13780;
+        tier048PxSource1 = _modDef13803;
       }
       cResult[8] = guild;
       cResult[9] = theme;
@@ -206,11 +206,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostedG
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tmp2Result4 = _modDef13779;
+          let tmp2Result4 = _modDef13802;
         } else if (constants.TIER_2 === premiumTier) {
-          tmp2Result4 = _modDef13780;
+          tmp2Result4 = _modDef13803;
         } else if (constants.TIER_3 === premiumTier) {
-          tmp2Result4 = _modDef13781;
+          tmp2Result4 = _modDef13804;
         }
       }
       const obj5 = { source: tmp2Result4, style: tmp.guildTierIcon, accessibilityElementsHidden: true, importantForAccessibility: "no" };

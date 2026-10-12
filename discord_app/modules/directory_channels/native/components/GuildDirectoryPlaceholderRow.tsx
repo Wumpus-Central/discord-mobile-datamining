@@ -1,8 +1,8 @@
-// === Module 12032: GuildDirectoryPlaceholderRow ===
+// === Module 12034: GuildDirectoryPlaceholderRow ===
 
-// Module 12032 (GuildDirectoryPlaceholderRow)
+// Module 12034 (GuildDirectoryPlaceholderRow)
 import nativeDefault from "native" /* 587 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12033 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 12035 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

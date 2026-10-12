@@ -1,9 +1,9 @@
-// === Module 11619: useRowManager ===
+// === Module 11621: useRowManager ===
 
-// Module 11619 (useRowManager)
+// Module 11621 (useRowManager)
 import Client from "Client" /* 5027 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 9599 */;
-import createChannelStreamDefault from "createChannelStream" /* 11620 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 9600 */;
+import createChannelStreamDefault from "createChannelStream" /* 11622 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 16001: ? ===
+// === Module 16024: ? ===
 
-// Module 16001
+// Module 16024
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/voice-soundwave.png.js");

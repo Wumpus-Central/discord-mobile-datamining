@@ -1,15 +1,15 @@
-// === Module 16058: DevToolsTogglesScreen ===
+// === Module 16081: DevToolsTogglesScreen ===
 
-// Module 16058 (DevToolsTogglesScreen)
+// Module 16081 (DevToolsTogglesScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6094 */;
-import TableRowGroup from "TableRowGroup" /* 6264 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6664 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6095 */;
+import TableRowGroup from "TableRowGroup" /* 6265 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DesignTogglesStore from "DesignTogglesStore" /* 6203 */;
+import DesignTogglesStore from "DesignTogglesStore" /* 6204 */;
 import DevSettingsStore from "DevSettingsStore" /* 5091 */;
 
 require = fn;
@@ -61,7 +61,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Toggle
         }
       }
       const obj2 = { label: description, labelLineClamp: 1, subLabel: toggleName, subLabelLineClamp: 1, onPress: tmp4, trailing: tmp5 };
-      const tmp10 = closure_9(tmp(6179).TableRow, obj2, toggleName);
+      const tmp10 = closure_9(tmp(6180).TableRow, obj2, toggleName);
       cResult[6] = description;
       cResult[7] = tmp4;
       cResult[8] = tmp5;
@@ -70,7 +70,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Toggle
       tmp8 = tmp10;
     }
     const obj3 = { value, onValueChange };
-    const tmp7 = closure_9(tmp(6896).FormSwitch, obj3);
+    const tmp7 = closure_9(tmp(6897).FormSwitch, obj3);
     cResult[3] = onValueChange;
     cResult[4] = value;
     cResult[5] = tmp7;
@@ -88,7 +88,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Toggle
   toggleName = toggleName.toggleName;
   const description = toggleName.description;
   ({ value, onValueChange } = toggleName);
-  return closure_9(toggleName(6179).TableRow, {
+  return closure_9(toggleName(6180).TableRow, {
     label: description,
     labelLineClamp: 1,
     subLabel: toggleName,
@@ -96,7 +96,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Toggle
     onPress() {
       ToastActionCreatorsDefault.open(toggleName, { text: description });
     },
-    trailing: closure_9(toggleName(6896).FormSwitch, { value, onValueChange })
+    trailing: closure_9(toggleName(6897).FormSwitch, { value, onValueChange })
   }, toggleName);
 });
 ReactCompilerGating = fn(558);
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   const tmp7 = _slicedToArray(noop.useState(""), 2);
   first1 = tmp7[0];
   let obj = first1(576);
-  const manaTextMigrationHighlightRestartNotice = first1(14254).useManaTextMigrationHighlightRestartNotice();
+  const manaTextMigrationHighlightRestartNotice = first1(14277).useManaTextMigrationHighlightRestartNotice();
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DesignTogglesStore];
     cResult[1] = items;
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     }
     tmp13 = cResult[4];
   }
-  const tmpResult = first1(14254);
+  const tmpResult = first1(14277);
   const stateFromStores = first1(504).useStateFromStores(tmp10, C, tmp13, tmp(504).statesWillNeverBeEqual);
   const sum = nativeDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault(first).insets.bottom;
   if (cResult[5] !== sum) {
@@ -395,13 +395,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         label: "Clear All",
         variant: "danger",
         onPress() {
-              first1(16059).clearAll();
-              const obj = first1(16059);
-              first1(16041).clearAll();
+              first1(16082).clearAll();
+              const obj = first1(16082);
+              first1(16064).clearAll();
             },
         arrow: true
       };
-      const tmp19 = closure_9(tmp(6179).TableRow, obj3);
+      const tmp19 = closure_9(tmp(6180).TableRow, obj3);
       cResult[10] = tmp19;
       const tmp18 = tmp19;
     } else {
@@ -452,10 +452,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       const items2 = [tmp18, ];
       const obj5 = { label: null };
       const obj6 = { size: "md", placeholder: "Search design toggles", onChange: tmp7[1] };
-      obj5.label = closure_9(tmp(6738).SearchField, obj6);
-      items2[1] = closure_9(tmp(6179).TableRow, obj5);
+      obj5.label = closure_9(tmp(6739).SearchField, obj6);
+      items2[1] = closure_9(tmp(6180).TableRow, obj5);
       obj4.children = items2;
-      const tmp22 = closure_10(tmp(6264).TableRowGroup, obj4);
+      const tmp22 = closure_10(tmp(6265).TableRowGroup, obj4);
       cResult[11] = tmp22;
       const tmp20 = tmp22;
     } else {
@@ -534,12 +534,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
                     description: tmp[2],
                     value: tmp[1],
                     onValueChange(arg0) {
-                      return first1(16059).toggle(first, arg0);
+                      return first1(16082).toggle(first, arg0);
                     }
                   }, toggleName);
                 })
         };
-        tmp24 = closure_9(tmp(6264).TableRowGroup, obj7);
+        tmp24 = closure_9(tmp(6265).TableRowGroup, obj7);
       }
       cResult[12] = stateFromStores;
       cResult[13] = tmp24;
@@ -723,8 +723,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   let tmp = closure_12();
   const tmp3 = _slicedToArray(noop.useState(""), 2);
   const query = tmp3[0];
-  const manaTextMigrationHighlightRestartNotice = query(14254).useManaTextMigrationHighlightRestartNotice();
-  let obj = query(14254);
+  const manaTextMigrationHighlightRestartNotice = query(14277).useManaTextMigrationHighlightRestartNotice();
+  let obj = query(14277);
   const tmp5 = query;
   const items = [DesignTogglesStore];
   const items1 = [query];
@@ -750,13 +750,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   obj3.contentContainerStyle = items2;
   const obj5 = { title: "Actions", hasIcons: false, children: null };
   const items3 = [
-    closure_9(query(6179).TableRow, {
+    closure_9(query(6180).TableRow, {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(16059).clearAll();
-        const obj = first(16059);
-        first(16041).clearAll();
+        first(16082).clearAll();
+        const obj = first(16082);
+        first(16064).clearAll();
       },
       arrow: true
     }),
@@ -767,15 +767,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     label: "Clear All",
     variant: "danger",
     onPress() {
-      first(16059).clearAll();
-      const obj = first(16059);
-      first(16041).clearAll();
+      first(16082).clearAll();
+      const obj = first(16082);
+      first(16064).clearAll();
     },
     arrow: true
   };
-  items3[1] = closure_9(query(6179).TableRow, { label: closure_9(query(6738).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] }) });
+  items3[1] = closure_9(query(6180).TableRow, { label: closure_9(query(6739).SearchField, { size: "md", placeholder: "Search design toggles", onChange: tmp3[1] }) });
   obj5.children = items3;
-  const items4 = [closure_10(query(6264).TableRowGroup, obj5), , ];
+  const items4 = [closure_10(query(6265).TableRowGroup, obj5), , ];
   let tmp7Result = null;
   if (stateFromStores.length > 0) {
     const obj8 = {
@@ -788,12 +788,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
             description: tmp3,
             value: tmp2,
             onValueChange(arg0) {
-              return first(16059).toggle(query, arg0);
+              return first(16082).toggle(query, arg0);
             }
           }, tmp);
         })
     };
-    tmp7Result = closure_9(tmp5(6264).TableRowGroup, obj8);
+    tmp7Result = closure_9(tmp5(6265).TableRowGroup, obj8);
   }
   const obj9 = { spacing: 16, children: null };
   items4[1] = tmp7Result;

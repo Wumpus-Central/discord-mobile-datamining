@@ -7,7 +7,7 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
-import inlineStyles from "inlineStyles" /* 7576 */;
+import inlineStyles from "inlineStyles" /* 7577 */;
 import RevealProvider from "RevealProvider" /* 10827 */;
 import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 11023 */;
 import GlobalStatusIndicator from "GlobalStatusIndicator" /* 11028 */;
@@ -83,7 +83,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
       }
     }
     const rect = { top: tmp9, left: isTouchingLeftScreenEdge, right: true, children: tmp10 };
-    const tmp14 = closure_7(reveal(6813).SafeAreaPaddingView, rect);
+    const tmp14 = closure_7(reveal(6814).SafeAreaPaddingView, rect);
     cResult[3] = isTouchingLeftScreenEdge;
     cResult[4] = tmp9;
     cResult[5] = tmp10;
@@ -128,7 +128,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
   const animatedStyle = obj2.useAnimatedStyle(fn2);
   const obj4 = { style: animatedStyle, children: null };
   const rect = { top: !tmp3, left: isTouchingLeftScreenEdge, right: true, children: closure_7(closure_5, { style: tmp.headerContainer, children: header }) };
-  obj4.children = closure_7(reveal(6813).SafeAreaPaddingView, rect);
+  obj4.children = closure_7(reveal(6814).SafeAreaPaddingView, rect);
   return closure_7(derivedValue(4850).View, obj4);
 });
 ReactCompilerGating = fn(558);
@@ -283,7 +283,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   fn3.__initData = __initData7;
   const animatedStyle = tmpResult10.useAnimatedStyle(fn3);
   let obj2 = { withTiming: channel(5093).withTiming, top: derivedValue, TIMING_CONFIG, revealOpacity: derivedValue1 };
-  const analyticsLocations = globalStatusIndicatorHeightSharedValue(6851)(tmp8(6878).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+  const analyticsLocations = globalStatusIndicatorHeightSharedValue(6852)(tmp8(6879).FOCUSED_VOICE_CONTROLS).analyticsLocations;
   const tmp15 = globalStatusIndicatorHeightSharedValue(10919)();
   closure_7 = tmp15;
   if (cResult[0] === analyticsLocations) {
@@ -435,7 +435,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[4] = compositeInstanceId1;
   cResult[5] = handleOpenDrawer;
   tmp19 = handleOpenDrawer;
-  const tmp8Result = globalStatusIndicatorHeightSharedValue(6851);
+  const tmp8Result = globalStatusIndicatorHeightSharedValue(6852);
 }) : (function FocusedControlsRevamped(disableGradient) {
   ({ expandedControls, actionBar, forceReveal } = disableGradient);
   ({ header, children } = disableGradient);
@@ -506,7 +506,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   fn.__initData = __initData10;
   const animatedStyle = tmpResult4.useAnimatedStyle(fn);
   const obj4 = { withTiming: timing.withTiming, top: derivedValue, TIMING_CONFIG, revealOpacity: derivedValue1 };
-  analyticsLocations = globalStatusIndicatorHeightSharedValue(6851)(tmp5(6878).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+  analyticsLocations = globalStatusIndicatorHeightSharedValue(6852)(tmp5(6879).FOCUSED_VOICE_CONTROLS).analyticsLocations;
   closure_7 = tmp5(10919)();
   if (containerStyle == null) {
     containerStyle = derivedValue.absoluteFill;

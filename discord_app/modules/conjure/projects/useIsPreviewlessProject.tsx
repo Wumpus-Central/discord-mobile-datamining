@@ -1,8 +1,8 @@
-// === Module 17064: useIsPreviewlessProject ===
+// === Module 17084: useIsPreviewlessProject ===
 
-// Module 17064 (useIsPreviewlessProject)
-import ConjureTypes from "ConjureTypes" /* 6946 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10651 */;
+// Module 17084 (useIsPreviewlessProject)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsPre
       const project = ConjureProjectStore.getProject(closure_0);
       let isPreviewlessProjectResult = null != project;
       if (isPreviewlessProjectResult) {
-        isPreviewlessProjectResult = ConjureTypes.isPreviewlessProject(project);
+        isPreviewlessProjectResult = ConjureProjectTypes.isPreviewlessProject(project);
       }
       return isPreviewlessProjectResult;
     };
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsPre
     const project = ConjureProjectStore.getProject(closure_0);
     let isPreviewlessProjectResult = null != project;
     if (isPreviewlessProjectResult) {
-      isPreviewlessProjectResult = ConjureTypes.isPreviewlessProject(project);
+      isPreviewlessProjectResult = ConjureProjectTypes.isPreviewlessProject(project);
     }
     return isPreviewlessProjectResult;
   });

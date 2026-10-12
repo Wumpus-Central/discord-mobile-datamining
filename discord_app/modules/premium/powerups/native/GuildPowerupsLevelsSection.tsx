@@ -1,10 +1,10 @@
-// === Module 12299: GuildPowerupsLevelsSection ===
+// === Module 12301: GuildPowerupsLevelsSection ===
 
-// Module 12299 (GuildPowerupsLevelsSection)
+// Module 12301 (GuildPowerupsLevelsSection)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12300 */;
-import MarketingCardsScroller from "MarketingCardsScroller" /* 12304 */;
+import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12302 */;
+import MarketingCardsScroller from "MarketingCardsScroller" /* 12306 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -152,8 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   obj2.title = intl.string(listings(2600)["TXY/b0"]);
   const intl2 = util.intl;
   obj2.description = intl2.string(listings(2600).aJv4PB);
-  const items1 = [closure_5(listings(12288), obj2), ];
-  const tmp3 = listings(12288);
+  const items1 = [closure_5(listings(12290), obj2), ];
+  const tmp3 = listings(12290);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

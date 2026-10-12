@@ -1,18 +1,18 @@
-// === Module 17617: PictureInPictureGlobal ===
+// === Module 17674: PictureInPictureGlobal ===
 
-// Module 17617 (PictureInPictureGlobal)
+// Module 17674 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1200 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6038 */;
-import NavigatorConstants from "NavigatorConstants" /* 6258 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7481 */;
+import NavigatorConstants from "NavigatorConstants" /* 6259 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7482 */;
 import transitionToActivityDefault from "transitionToActivity" /* 10824 */;
 import PictureInPictureDefault from "PictureInPicture" /* 10833 */;
 import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 10835 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17618 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17675 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
@@ -26,7 +26,7 @@ const usePipDimensionsDefault = tmp5(10837);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9383).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9384).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
 const ParticipantTypes = fn(5115).ParticipantTypes;
 const jsxProd = fn(21);
@@ -361,7 +361,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     }
     const tmpResult8 = tmp(504);
     const shouldForcePipOrientation = tmp(10834).useShouldForcePipOrientation(tmp31);
-    tmp(8326);
+    tmp(8327);
     if (cResult[20] === channel.id) {
       class M {
         constructor() {

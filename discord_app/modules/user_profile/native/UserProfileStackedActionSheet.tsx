@@ -1,15 +1,15 @@
-// === Module 10529: UserProfileStackedActionSheet ===
+// === Module 10530: UserProfileStackedActionSheet ===
 
-// Module 10529 (UserProfileStackedActionSheet)
+// Module 10530 (UserProfileStackedActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6184 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6204 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6839 */;
-import Form from "Form" /* 8579 */;
+import Pressables from "Pressables" /* 6185 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6205 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
+import Form from "Form" /* 8580 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -116,7 +116,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileS
         obj3.ItemSeparatorComponent = tmp12;
         obj3.contentContainerStyle = tmp15;
         obj3.renderItem = tmp16;
-        const tmp21 = closure_8(tmp(6306).BottomSheetFlatList, obj3);
+        const tmp21 = closure_8(tmp(6307).BottomSheetFlatList, obj3);
         cResult[16] = arr;
         cResult[17] = tmp5;
         cResult[18] = tmp10.list;
@@ -171,7 +171,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileS
     index = index.index;
     return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
   };
-  return closure_8(data(6306).BottomSheetFlatList, obj);
+  return closure_8(data(6307).BottomSheetFlatList, obj);
 });
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileStackedActionSheetSectionList(arg0) {
@@ -251,7 +251,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileS
   obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
     return closure_2_8(Form.FormDivider, { style: divider.divider });
   };
-  return closure_8(renderItem(6306).BottomSheetSectionList, obj);
+  return closure_8(renderItem(6307).BottomSheetSectionList, obj);
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");

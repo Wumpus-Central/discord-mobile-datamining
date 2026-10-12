@@ -1,12 +1,12 @@
-// === Module 17920: LaunchPadWrapper ===
+// === Module 17977: LaunchPadWrapper ===
 
-// Module 17920 (LaunchPadWrapper)
+// Module 17977 (LaunchPadWrapper)
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import HapticUtils from "HapticUtils" /* 5057 */;
 import RouteManagerDefault from "RouteManager" /* 11200 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17918 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 17975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 17115: ConjureMcpConnectionPanel ===
+// === Module 17151: ConjureMcpConnectionPanel ===
 
-// Module 17115 (ConjureMcpConnectionPanel)
+// Module 17151 (ConjureMcpConnectionPanel)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,8 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const fetchProjectMcpConnection = fn(13213).fetchProjectMcpConnection;
-let closure_6 = {
+let closure_5 = {
   setTimeout(arg0, arg1) {
     return setTimeout(arg0, arg1);
   },
@@ -24,7 +23,7 @@ class McpConnectionPanel {
   constructor(arg0, arg1) {
     tmp = importDefault;
     if (importDefault === undefined) {
-      tmp = closure_6;
+      tmp = closure_5;
     }
     merged = Object.assign({ state: null, generation: 0, timer: null, disposed: false });
     merged[0] = { connection: null, loading: true, failed: false };
@@ -52,7 +51,7 @@ prototype["mint"] = function mint(dependencyMap) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -92,7 +91,7 @@ prototype["mint"] = function mint(dependencyMap) {
           c2 = 0;
           if (closure_129_1.isStale(closure_128_1)) {
             c4 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           } else {
             let connection = null;
             if (!closure_129_0) {
@@ -206,9 +205,9 @@ export const useMcpConnectionPanel = ReactCompilerGating.isReactCompilerEnabled(
   [tmp4, dependencyMap] = noop.useState(first);
   _slicedToArray = noop.useRef(null);
   if (cResult[1] !== arg0) {
-    let fn = function u() {
+    let fn = function l() {
       if (typeof McpConnectionPanel === "function") {
-        const fn = (regenerate) => fetchProjectMcpConnection(merged, { regenerate });
+        const fn = (regenerate) => merged(dependencyMap[5]).fetchProjectMcpConnection(merged, { regenerate });
         const merged = Object.assign({ state: null, generation: 0, timer: null, disposed: false });
         merged[0] = { connection: null, loading: true, failed: false };
         merged.fetchConnection = fn;
@@ -240,7 +239,7 @@ export const useMcpConnectionPanel = ReactCompilerGating.isReactCompilerEnabled(
   }
   const effect = noop.useEffect(tmp5, tmp6);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function f(dependencyMap) {
+    const fn2 = function h(dependencyMap) {
       const current = ref.current;
       if (current != null) {
         current.mint(dependencyMap).catch(() => {
@@ -272,7 +271,7 @@ export const useMcpConnectionPanel = ReactCompilerGating.isReactCompilerEnabled(
   const items = [arg0];
   const effect = noop.useEffect(() => {
     if (typeof McpConnectionPanel === "function") {
-      const fn = (regenerate) => fetchProjectMcpConnection(merged, { regenerate });
+      const fn = (regenerate) => merged(dependencyMap[5]).fetchProjectMcpConnection(merged, { regenerate });
       const merged = Object.assign({ state: null, generation: 0, timer: null, disposed: false });
       merged[0] = { connection: null, loading: true, failed: false };
       merged.fetchConnection = fn;

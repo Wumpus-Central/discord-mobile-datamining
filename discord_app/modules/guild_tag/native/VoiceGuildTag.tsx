@@ -1,13 +1,13 @@
-// === Module 16536: VoiceGuildTag ===
+// === Module 16559: VoiceGuildTag ===
 
-// Module 16536 (VoiceGuildTag)
+// Module 16559 (VoiceGuildTag)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(7887).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7888).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let PlatformUtils = fn(1382);
@@ -67,16 +67,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceGui
     if (stateFromStores != null) {
       primaryGuild1 = stateFromStores.primaryGuild;
     }
-    const userPrimaryGuild = tmp(8289).getUserPrimaryGuild(primaryGuild1);
+    const userPrimaryGuild = tmp(8290).getUserPrimaryGuild(primaryGuild1);
     ({ tag, guildId } = userPrimaryGuild);
     let tmp18 = null;
     let guildTagBadgeUrl;
     if (null != guildId) {
       tmp18 = null;
       if (null != tag) {
-        guildTagBadgeUrl = tmp(8289).getGuildTagBadgeUrl(guildId, tmp17, GuildTagBadgeSize.SIZE_12);
+        guildTagBadgeUrl = tmp(8290).getGuildTagBadgeUrl(guildId, tmp17, GuildTagBadgeSize.SIZE_12);
         tmp18 = forResult;
-        const tmpResult4 = tmp(8289);
+        const tmpResult4 = tmp(8290);
       }
     }
     let primaryGuild2;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceGui
     let tmp13 = tag;
     let tmp12 = tmp18;
     let tmp11 = guildTagBadgeUrl;
-    const tmpResult3 = tmp(8289);
+    const tmpResult3 = tmp(8290);
   } else {
     tmp11 = cResult[5];
     tmp12 = cResult[6];
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceGui
       const obj3 = { uri: tmp11 };
       obj2.source = obj3;
       obj2.size = GuildTagBadgeSize.SIZE_12;
-      const tmp25 = closure_5(tmp(8858).GuildTagBadge, obj2);
+      const tmp25 = closure_5(tmp(8859).GuildTagBadge, obj2);
       cResult[8] = tmp11;
       cResult[9] = tmp25;
       let tmp22 = tmp25;
@@ -163,18 +163,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceGui
   if (stateFromStores != null) {
     primaryGuild = stateFromStores.primaryGuild;
   }
-  const userPrimaryGuild = userId(8289).getUserPrimaryGuild(primaryGuild);
+  const userPrimaryGuild = userId(8290).getUserPrimaryGuild(primaryGuild);
   ({ tag, guildId } = userPrimaryGuild);
   if (null != guildId) {
     if (null != tag) {
       const obj3 = { style: tmp.gapContainer, children: null };
       const obj4 = { style: tmp.tagContainer, children: null };
-      const guildTagBadgeUrl = tmp2(8289).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
+      const guildTagBadgeUrl = tmp2(8290).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
       const obj5 = { source: null, size: null };
       const obj6 = { uri: guildTagBadgeUrl };
       obj5.source = obj6;
       obj5.size = GuildTagBadgeSize.SIZE_12;
-      const items2 = [closure_5(tmp2(8858).GuildTagBadge, obj5), ];
+      const items2 = [closure_5(tmp2(8859).GuildTagBadge, obj5), ];
       const obj7 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
       items2[1] = closure_5(tmp2(5088).Text, obj7);
       obj4.children = items2;

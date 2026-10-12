@@ -1,12 +1,12 @@
-// === Module 7720: StageSettingsActionSheet ===
+// === Module 7721: StageSettingsActionSheet ===
 
-// Module 7720 (StageSettingsActionSheet)
+// Module 7721 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2073 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7483 */;
-import ReportModals from "ReportModals" /* 7721 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9696 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7484 */;
+import ReportModals from "ReportModals" /* 7722 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9697 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

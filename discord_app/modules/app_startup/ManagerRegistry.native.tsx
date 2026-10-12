@@ -1,7 +1,7 @@
-// === Module 17977: ManagerRegistry ===
+// === Module 18034: ManagerRegistry ===
 
-// Module 17977 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 18658 */;
+// Module 18034 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 18716 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -139,6 +139,12 @@ const obj = {
       return require("CommunicationDisabledManager").default;
     },
     loadAfterConnectionOpen: true
+  },
+  ConjureTurnNotificationManager: {
+    actions: ["CONJURE_TURN_NOTIFICATION", "CONJURE_TURN_SETTLED", "LOGOUT"],
+    inlineRequire() {
+      return require("ConjureTurnNotificationManager").default;
+    }
   },
   ContactSyncLifecycleManager: {
     actions: ["POST_CONNECTION_OPEN"],

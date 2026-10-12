@@ -1,10 +1,10 @@
-// === Module 9463: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 9464: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 9463 (RoleSubscriptionEmojiUpsellAlert)
+// Module 9464 (RoleSubscriptionEmojiUpsellAlert)
 import util from "util" /* 1126 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
-import _modDef9270 from "module_9270" /* 9270 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 9464 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
+import _modDef9271 from "module_9271" /* 9271 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 9465 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubs
     name = stateFromStores.name;
   }
   if (cResult[3] !== name) {
-    const obj2 = { image: tmp4(9270), title: null, description: null };
+    const obj2 = { image: tmp4(9271), title: null, description: null };
     let intl = tmp(1126).intl;
     obj2.title = intl.string(tmp(1126).t.cBjkcx);
     const intl2 = tmp(1126).intl;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubs
       cResult[17] = tmp21;
     }
     const obj5 = { alertWidth: diff, upsellItem: tmp11 };
-    const tmp18 = jsx(tmp(9467).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
+    const tmp18 = jsx(tmp(9468).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
     cResult[11] = diff;
     cResult[12] = tmp11;
     cResult[13] = tmp18;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleSubs
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef9270, title: null, description: null };
+    const obj = { image: _modDef9271, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

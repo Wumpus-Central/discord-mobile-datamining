@@ -1,6 +1,6 @@
-// === Module 16758: useSubtitleStyles ===
+// === Module 16782: useSubtitleStyles ===
 
-// Module 16758 (useSubtitleStyles)
+// Module 16782 (useSubtitleStyles)
 import createStyles from "createStyles" /* 5092 */;
 import size from "module_2" /* 2 */;
 

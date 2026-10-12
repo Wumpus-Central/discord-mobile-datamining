@@ -1,6 +1,6 @@
-// === Module 8701: ThreadMemberListStore ===
+// === Module 8702: ThreadMemberListStore ===
 
-// Module 8701 (ThreadMemberListStore)
+// Module 8702 (ThreadMemberListStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -10,7 +10,7 @@ import UserUtilsDefault from "UserUtils" /* 4962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6979 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6980 */;
 import PresenceStore from "PresenceStore" /* 5108 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5759 */;
 import UserStore from "UserStore" /* 1390 */;

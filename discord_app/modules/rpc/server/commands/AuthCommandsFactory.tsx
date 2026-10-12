@@ -1,6 +1,6 @@
-// === Module 14755: AuthCommandsFactory ===
+// === Module 14779: AuthCommandsFactory ===
 
-// Module 14755 (AuthCommandsFactory)
+// Module 14779 (AuthCommandsFactory)
 import Storage3 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import RPCErrorDefault from "RPCError" /* 10936 */;
@@ -35,7 +35,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -374,7 +374,7 @@ let closure_20 = async function _authenticate(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -533,7 +533,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
             const tmp29 = new closure_1(10936)(obj2, "No application.");
             throw tmp29;
           } else {
-            IDENTIFY = closure_0(8457).OAuth2Scopes.IDENTIFY;
+            IDENTIFY = closure_0(8458).OAuth2Scopes.IDENTIFY;
             _authorize = function _authorize() {
 
             };

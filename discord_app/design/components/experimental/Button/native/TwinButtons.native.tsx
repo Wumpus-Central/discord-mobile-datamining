@@ -1,6 +1,6 @@
-// === Module 8543: TwinButtons ===
+// === Module 8544: TwinButtons ===
 
-// Module 8543 (TwinButtons)
+// Module 8544 (TwinButtons)
 import nativeDefault from "native" /* 587 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import noop from "module_19" /* 19 */;

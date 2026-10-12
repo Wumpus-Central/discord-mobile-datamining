@@ -3,7 +3,7 @@
 // Module 10667 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7014 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 

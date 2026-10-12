@@ -1,15 +1,15 @@
-// === Module 9260: ThreadCreationHooks ===
+// === Module 9261: ThreadCreationHooks ===
 
-// Module 9260 (ThreadCreationHooks)
+// Module 9261 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import ThreadHooks from "ThreadHooks" /* 6971 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6975 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7178 */;
-import MessageParserDefault from "MessageParser" /* 7369 */;
+import ThreadHooks from "ThreadHooks" /* 6972 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6976 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7179 */;
+import MessageParserDefault from "MessageParser" /* 7370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7004 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7005 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import MessageStore from "MessageStore" /* 5432 */;
@@ -456,8 +456,8 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7243).DraftType;
-const SlowmodeType = fn(7374).SlowmodeType;
+const DraftType = fn(7244).DraftType;
+const SlowmodeType = fn(7375).SlowmodeType;
 const ThreadConstants = fn(1125);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1085);
@@ -526,7 +526,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -621,7 +621,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
             }
             parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp43) {
           c7 = tmp;
@@ -676,7 +676,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -771,7 +771,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
             }
             parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp43) {
           c7 = tmp;
@@ -858,7 +858,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1099,7 +1099,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

@@ -1,6 +1,6 @@
-// === Module 9705: shouldCheckUploadSizeOnlyAfterCompression ===
+// === Module 9706: shouldCheckUploadSizeOnlyAfterCompression ===
 
-// Module 9705 (shouldCheckUploadSizeOnlyAfterCompression)
+// Module 9706 (shouldCheckUploadSizeOnlyAfterCompression)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
 import UserStore from "UserStore" /* 1390 */;
 

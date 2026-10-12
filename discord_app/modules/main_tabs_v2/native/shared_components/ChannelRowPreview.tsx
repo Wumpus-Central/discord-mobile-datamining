@@ -1,6 +1,6 @@
-// === Module 12586: ChannelRowPreview ===
+// === Module 12588: ChannelRowPreview ===
 
-// Module 12586 (ChannelRowPreview)
+// Module 12588 (ChannelRowPreview)
 import c from "c" /* 576 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import useToken from "useToken" /* 4818 */;
@@ -8,20 +8,20 @@ import LinkIcon from "LinkIcon" /* 5038 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import createStyles from "createStyles" /* 5092 */;
 import useFontScale from "useFontScale" /* 5386 */;
-import RowGeneratorDefault from "RowGenerator" /* 7746 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7750 */;
-import ImageIcon from "ImageIcon" /* 8214 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8263 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 9321 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9323 */;
-import AttachmentIcon from "AttachmentIcon" /* 10027 */;
-import MusicIcon from "MusicIcon" /* 10247 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10514 */;
+import RowGeneratorDefault from "RowGenerator" /* 7747 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7751 */;
+import ImageIcon from "ImageIcon" /* 8215 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8264 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 9322 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9324 */;
+import AttachmentIcon from "AttachmentIcon" /* 10028 */;
+import MusicIcon from "MusicIcon" /* 10248 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10515 */;
 import VideoIcon from "VideoIcon" /* 10770 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11756 */;
-import ChannelListLayout from "ChannelListLayout" /* 11759 */;
-import StickerIcon from "StickerIcon" /* 12267 */;
-import useFormattedMessagePreview from "useFormattedMessagePreview" /* 12574 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11758 */;
+import ChannelListLayout from "ChannelListLayout" /* 11761 */;
+import StickerIcon from "StickerIcon" /* 12269 */;
+import useFormattedMessagePreview from "useFormattedMessagePreview" /* 12576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
@@ -573,7 +573,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function NativeChanne
     obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
     return obj;
   }, items);
-  return closure_8(gifAutoPlay(9373), {
+  return closure_8(gifAutoPlay(9374), {
     pointerEvents: "none",
     horizontalOffset: 0,
     modifyRow(message) {

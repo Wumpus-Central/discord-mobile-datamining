@@ -1,6 +1,6 @@
-// === Module 17107: MediaKeyboardFloatingSend ===
+// === Module 17147: MediaKeyboardFloatingSend ===
 
-// Module 17107 (MediaKeyboardFloatingSend)
+// Module 17147 (MediaKeyboardFloatingSend)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
@@ -8,7 +8,7 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7907 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7908 */;
 
 const require = globalThis.__r;
 

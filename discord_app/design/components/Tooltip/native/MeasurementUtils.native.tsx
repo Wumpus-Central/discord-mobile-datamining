@@ -1,6 +1,6 @@
-// === Module 9449: MeasurementUtils ===
+// === Module 9450: MeasurementUtils ===
 
-// Module 9449 (MeasurementUtils)
+// Module 9450 (MeasurementUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function retryMeasurements() {
@@ -24,7 +24,7 @@ let closure_4 = async function _retryMeasurements(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

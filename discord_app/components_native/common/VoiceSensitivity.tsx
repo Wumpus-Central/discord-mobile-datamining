@@ -15,7 +15,7 @@ import AppStateStore from "AppStateStore" /* 1999 */;
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1085).AppStates;
-const NativePermissionTypes = fn(7482).NativePermissionTypes;
+const NativePermissionTypes = fn(7483).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(5092);
@@ -641,7 +641,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSen
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -658,7 +658,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSen
               closure_0 = tmp4;
               c1 = 1;
               c2 = 1;
-              const obj4 = { value: onThresholdChange(7499).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
+              const obj4 = { value: onThresholdChange(7500).hasPermission(constants.AUDIO, { showAuthorizationError: false }), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -678,7 +678,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceSen
               mediaEngine.on(auto(5137).MediaEngineEvent.VoiceActivity, callback);
             }
             c2 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp17) {
           c2 = tmp;

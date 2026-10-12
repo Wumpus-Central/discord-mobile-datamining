@@ -1,9 +1,9 @@
 // === Module 11408: conjureServerAppRemoval ===
 
 // Module 11408 (conjureServerAppRemoval)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6852 */;
-import ConjureUtils from "ConjureUtils" /* 6945 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6853 */;
+import ConjureUtils from "ConjureUtils" /* 6946 */;
 import conjureAppInServer from "conjureAppInServer" /* 11409 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -215,7 +215,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -249,7 +249,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;

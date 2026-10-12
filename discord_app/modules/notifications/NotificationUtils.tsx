@@ -1,6 +1,6 @@
-// === Module 10444: notifications/NotificationUtils ===
+// === Module 10445: notifications/NotificationUtils ===
 
-// Module 10444 (notifications/NotificationUtils)
+// Module 10445 (notifications/NotificationUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;

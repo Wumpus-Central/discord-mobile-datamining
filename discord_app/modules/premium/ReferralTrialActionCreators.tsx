@@ -1,10 +1,10 @@
-// === Module 7175: ReferralTrialActionCreators ===
+// === Module 7176: ReferralTrialActionCreators ===
 
-// Module 7175 (ReferralTrialActionCreators)
+// Module 7176 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7176 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7177 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
@@ -56,7 +56,7 @@ let closure_12 = async function _createReferralTrials(arg0) {
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {

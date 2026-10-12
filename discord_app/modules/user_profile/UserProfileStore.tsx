@@ -1,18 +1,18 @@
-// === Module 7320: UserProfileStore ===
+// === Module 7321: UserProfileStore ===
 
-// Module 7320 (UserProfileStore)
+// Module 7321 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
 import Timers from "Timers" /* 2060 */;
-import WidgetType from "WidgetType" /* 7321 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7322 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7325 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7326 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7328 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7329 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7330 */;
+import WidgetType from "WidgetType" /* 7322 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7323 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7326 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7327 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7329 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7330 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7331 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

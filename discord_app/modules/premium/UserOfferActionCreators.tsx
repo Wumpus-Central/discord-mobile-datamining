@@ -1,13 +1,13 @@
-// === Module 8091: UserOfferActionCreators ===
+// === Module 8092: UserOfferActionCreators ===
 
-// Module 8091 (UserOfferActionCreators)
+// Module 8092 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8092 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7176 */;
-import UserOfferStore from "UserOfferStore" /* 7172 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8093 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7177 */;
+import UserOfferStore from "UserOfferStore" /* 7173 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -63,7 +63,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj8 = closure_2;
           if (closure_2 === undefined) {
-            obj8 = { offerId: "backgroundColor", paymentGatewayOverride: "IconComponent" };
+            obj8 = { offerId: "Array", paymentGatewayOverride: "Set" };
           }
           closure_136_2 = obj8;
           closure_136_3 = closure_3;

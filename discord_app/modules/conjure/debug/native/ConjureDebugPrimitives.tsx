@@ -1,13 +1,13 @@
-// === Module 17291: ConjureDebugPrimitives ===
+// === Module 17340: ConjureDebugPrimitives ===
 
-// Module 17291 (ConjureDebugPrimitives)
+// Module 17340 (ConjureDebugPrimitives)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 17288 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 17337 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5092);
-let obj2 = { toolbar: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 }, toolbarStatus: { flex: 1 }, section: null, statRow: null, statRowHead: null, statLabel: null, statValue: null, meterTrack: null, meterFill: null, meterFillCritical: null };
+let obj2 = { toolbar: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 }, toolbarStatus: { flex: 1 }, section: null, statRow: null, statRowHead: null, statLabel: null, statValue: null, statGroup: null, statValueGroup: null, meterTrack: null, meterFill: null, meterFillCritical: null };
 let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12 };
 obj2.section = { gap: nativeDefault.space.PX_8 };
 let obj4 = { gap: nativeDefault.space.PX_8 };
@@ -26,14 +26,17 @@ obj2.statRowHead = { flexDirection: "row", alignItems: "baseline", justifyConten
 obj2.statLabel = { flexShrink: 1 };
 obj2.statValue = { flexShrink: 1, textAlign: "right" };
 let obj6 = { flexDirection: "row", alignItems: "baseline", justifyContent: "space-between", gap: nativeDefault.space.PX_12 };
+obj2.statGroup = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+obj2.statValueGroup = { flexShrink: 1, justifyContent: "flex-end" };
+let obj7 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.meterTrack = { height: 4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, overflow: "hidden" };
-let obj7 = { height: 4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, overflow: "hidden" };
+let obj8 = { height: 4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, overflow: "hidden" };
 obj2.meterFill = { height: "100%", backgroundColor: nativeDefault.colors.TEXT_BRAND };
-let obj8 = { height: "100%", backgroundColor: nativeDefault.colors.TEXT_BRAND };
+let obj9 = { height: "100%", backgroundColor: nativeDefault.colors.TEXT_BRAND };
 obj2.meterFillCritical = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let closure_7 = createStyles.createStyles(obj2);
 fn(558);
-let obj9 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let obj10 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function DebugSnapshotToolbar(arg0) {
   const cResult = c.c(13);
@@ -199,92 +202,135 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DebugNote(ch
 });
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function DebugStatRow(arg0) {
-  const cResult = c.c(19);
-  ({ label, value, hint, critical } = arg0);
+  const cResult = c.c(30);
+  ({ label, value, hint, critical, icon, state } = arg0);
   const tmp5 = closure_7();
-  if (cResult[0] !== label) {
-    const obj2 = { variant: "text-sm/normal", color: "text-muted", children: label };
-    const tmp8 = hasOwnProperty(Text_Text.Text, obj2);
-    cResult[0] = label;
-    cResult[1] = tmp8;
-    let tmp6 = tmp8;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] === tmp5.statLabel) {
-    if (cResult[3] === tmp6) {
-      let tmp9 = cResult[4];
+  if (cResult[0] === tmp5.statGroup) {
+    if (cResult[1] === tmp5.statLabel) {
+      let tmp6 = cResult[2];
     }
-    let str = "text-default";
-    if (tmp4) {
-      str = "text-feedback-critical";
+    if (cResult[3] !== label) {
+      const obj2 = { variant: "text-sm/normal", color: "text-muted", children: label };
+      const tmp9 = hasOwnProperty(Text_Text.Text, obj2);
+      cResult[3] = label;
+      cResult[4] = tmp9;
+      let tmp7 = tmp9;
+    } else {
+      tmp7 = cResult[4];
     }
-    if (cResult[5] === tmp5.statValue) {
-      if (cResult[6] === str) {
-        if (cResult[7] === value) {
-          let tmp11 = cResult[8];
+    if (cResult[5] === icon) {
+      if (cResult[6] === tmp6) {
+        if (cResult[7] === tmp7) {
+          let tmp10 = cResult[8];
         }
-        if (cResult[9] === tmp5.statRowHead) {
-          if (cResult[10] === tmp9) {
-            if (cResult[11] === tmp11) {
-              let tmp14 = cResult[12];
-            }
-            if (cResult[13] !== hint) {
-              let tmp19 = null;
-              if (null != hint) {
-                const obj3 = { variant: "text-xs/normal", color: "text-muted", children: hint };
-                tmp19 = hasOwnProperty(Text_Text.Text, obj3);
-              }
-              cResult[13] = hint;
-              cResult[14] = tmp19;
-              let tmp18 = tmp19;
-            } else {
-              tmp18 = cResult[14];
-            }
-            if (cResult[15] === tmp5.statRow) {
-              if (cResult[16] === tmp14) {
-                if (cResult[17] === tmp18) {
-                  let tmp21 = cResult[18];
-                }
-                return tmp21;
-              }
-            }
-            const obj4 = { style: tmp5.statRow, children: null };
-            const items = [tmp14, tmp18];
-            obj4.children = items;
-            const tmp24 = timestampProducer(React4, obj4);
-            cResult[15] = tmp5.statRow;
-            cResult[16] = tmp14;
-            cResult[17] = tmp18;
-            cResult[18] = tmp24;
-            tmp21 = tmp24;
+        if (cResult[9] === tmp5.statGroup) {
+          if (cResult[10] === tmp5.statValueGroup) {
+            let tmp14 = cResult[11];
           }
+          let str = "text-default";
+          if (tmp4) {
+            str = "text-feedback-critical";
+          }
+          if (cResult[12] === tmp5.statValue) {
+            if (cResult[13] === str) {
+              if (cResult[14] === value) {
+                let tmp15 = cResult[15];
+              }
+              if (cResult[16] === state) {
+                if (cResult[17] === tmp14) {
+                  if (cResult[18] === tmp15) {
+                    let tmp18 = cResult[19];
+                  }
+                  if (cResult[20] === tmp5.statRowHead) {
+                    if (cResult[21] === tmp10) {
+                      if (cResult[22] === tmp18) {
+                        let tmp22 = cResult[23];
+                      }
+                      if (cResult[24] !== hint) {
+                        let tmp27 = null;
+                        if (null != hint) {
+                          const obj3 = { variant: "text-xs/normal", color: "text-muted", children: hint };
+                          tmp27 = hasOwnProperty(Text_Text.Text, obj3);
+                        }
+                        cResult[24] = hint;
+                        cResult[25] = tmp27;
+                        let tmp26 = tmp27;
+                      } else {
+                        tmp26 = cResult[25];
+                      }
+                      if (cResult[26] === tmp5.statRow) {
+                        if (cResult[27] === tmp26) {
+                          if (cResult[28] === tmp22) {
+                            let tmp29 = cResult[29];
+                          }
+                          return tmp29;
+                        }
+                      }
+                      const obj4 = { style: tmp5.statRow, children: null };
+                      const items = [tmp22, tmp26];
+                      obj4.children = items;
+                      const tmp32 = timestampProducer(React4, obj4);
+                      cResult[26] = tmp5.statRow;
+                      cResult[27] = tmp26;
+                      cResult[28] = tmp22;
+                      cResult[29] = tmp32;
+                      tmp29 = tmp32;
+                    }
+                  }
+                  const obj5 = { style: tmp5.statRowHead, children: null };
+                  const items1 = [tmp10, tmp18];
+                  obj5.children = items1;
+                  const tmp25 = timestampProducer(React4, obj5);
+                  cResult[20] = tmp5.statRowHead;
+                  cResult[21] = tmp10;
+                  cResult[22] = tmp18;
+                  cResult[23] = tmp25;
+                  tmp22 = tmp25;
+                }
+              }
+              const obj6 = { style: tmp14, children: null };
+              const items2 = [state, tmp15];
+              obj6.children = items2;
+              const tmp21 = timestampProducer(React4, obj6);
+              cResult[16] = state;
+              cResult[17] = tmp14;
+              cResult[18] = tmp15;
+              cResult[19] = tmp21;
+              tmp18 = tmp21;
+            }
+          }
+          const obj7 = { variant: "text-sm/medium", color: str, style: tmp5.statValue, children: value };
+          const tmp17 = hasOwnProperty(Text_Text.Text, obj7);
+          cResult[12] = tmp5.statValue;
+          cResult[13] = str;
+          cResult[14] = value;
+          cResult[15] = tmp17;
+          tmp15 = tmp17;
         }
-        const obj5 = { style: tmp5.statRowHead, children: null };
-        const items1 = [tmp9, tmp11];
-        obj5.children = items1;
-        const tmp17 = timestampProducer(React4, obj5);
-        cResult[9] = tmp5.statRowHead;
-        cResult[10] = tmp9;
-        cResult[11] = tmp11;
-        cResult[12] = tmp17;
-        tmp14 = tmp17;
+        const items3 = [, ];
+        ({ statValueGroup: arr3[0], statGroup: arr3[1] } = tmp5);
+        cResult[9] = tmp5.statGroup;
+        cResult[10] = tmp5.statValueGroup;
+        cResult[11] = items3;
+        tmp14 = items3;
       }
     }
-    const obj6 = { variant: "text-sm/medium", color: str, style: tmp5.statValue, children: value };
-    const tmp13 = hasOwnProperty(Text_Text.Text, obj6);
-    cResult[5] = tmp5.statValue;
-    cResult[6] = str;
-    cResult[7] = value;
+    const obj8 = { style: tmp6, children: null };
+    const items4 = [icon, tmp7];
+    obj8.children = items4;
+    const tmp13 = timestampProducer(React4, obj8);
+    cResult[5] = icon;
+    cResult[6] = tmp6;
+    cResult[7] = tmp7;
     cResult[8] = tmp13;
-    tmp11 = tmp13;
+    tmp10 = tmp13;
   }
-  const tmp10 = hasOwnProperty(React4, { style: tmp5.statLabel, children: tmp6 });
-  cResult[2] = tmp5.statLabel;
-  cResult[3] = tmp6;
-  cResult[4] = tmp10;
-  tmp9 = tmp10;
-  const obj7 = { style: tmp5.statLabel, children: tmp6 };
+  const items5 = [, ];
+  ({ statLabel: arr[0], statGroup: arr[1] } = tmp5);
+  cResult[0] = tmp5.statGroup;
+  cResult[1] = tmp5.statLabel;
+  cResult[2] = items5;
+  tmp6 = items5;
   tmp4 = undefined !== critical && critical;
 }) : (function DebugStatRow(arg0) {
   ({ hint, critical } = arg0);
@@ -292,24 +338,38 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function DebugStatRow
   if (critical === undefined) {
     critical = false;
   }
+  ({ icon, state } = arg0);
   const tmp = closure_7();
   const obj = { style: tmp.statRow, children: null };
   const obj2 = { style: tmp.statRowHead, children: null };
-  const items = [hasOwnProperty(React4, { style: tmp.statLabel, children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: label }) }), ];
+  const obj3 = { style: null, children: null };
+  const items = [, ];
+  ({ statLabel: arr[0], statGroup: arr[1] } = tmp);
+  obj3.style = items;
+  const items1 = [icon, hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", children: label })];
+  obj3.children = items1;
+  const items2 = [timestampProducer(React4, obj3), ];
+  const obj4 = { style: null, children: null };
+  const items3 = [, ];
+  ({ statValueGroup: arr4[0], statGroup: arr4[1] } = tmp);
+  obj4.style = items3;
+  const items4 = [state, ];
   let str = "text-default";
   if (critical) {
     str = "text-feedback-critical";
   }
-  items[1] = hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: str, style: tmp.statValue, children: value });
-  obj2.children = items;
-  const items1 = [timestampProducer(React4, obj2), ];
+  items4[1] = hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: str, style: tmp.statValue, children: value });
+  obj4.children = items4;
+  items2[1] = timestampProducer(React4, obj4);
+  obj2.children = items2;
+  const items5 = [timestampProducer(React4, obj2), ];
   let tmp4Result = null;
   if (null != hint) {
-    const obj5 = { variant: "text-xs/normal", color: "text-muted", children: hint };
-    tmp4Result = hasOwnProperty(Text_Text.Text, obj5);
+    const obj6 = { variant: "text-xs/normal", color: "text-muted", children: hint };
+    tmp4Result = hasOwnProperty(Text_Text.Text, obj6);
   }
-  items1[1] = tmp4Result;
-  obj.children = items1;
+  items5[1] = tmp4Result;
+  obj.children = items5;
   return timestampProducer(React4, obj);
 });
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 10230: GameRelationshipActionCreators ===
+// === Module 10231: GameRelationshipActionCreators ===
 
-// Module 10230 (GameRelationshipActionCreators)
+// Module 10231 (GameRelationshipActionCreators)
 import util from "util" /* 1126 */;
 import shared from "shared" /* 4969 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
@@ -42,7 +42,7 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 7341: GuildVersions ===
+// === Module 7342: GuildVersions ===
 
-// Module 7341 (GuildVersions)
+// Module 7342 (GuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2091 */;
@@ -75,7 +75,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

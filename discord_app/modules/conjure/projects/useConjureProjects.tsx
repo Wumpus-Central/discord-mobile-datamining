@@ -1,22 +1,22 @@
-// === Module 12995: useConjureProjects ===
+// === Module 12997: useConjureProjects ===
 
-// Module 12995 (useConjureProjects)
+// Module 12997 (useConjureProjects)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6947 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6948 */;
 import conjureAppInServer from "conjureAppInServer" /* 11409 */;
-import ConjureActivity from "ConjureActivity" /* 12340 */;
+import ConjureActivity from "ConjureActivity" /* 12342 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
-import UserProfileStore from "UserProfileStore" /* 7320 */;
+import UserProfileStore from "UserProfileStore" /* 7321 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
-import ConjureChatStore from "ConjureChatStore" /* 12996 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10651 */;
+import ConjureChatStore from "ConjureChatStore" /* 12998 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ function conjureEntriesEqual(nextExpiry, nextExpiry2) {
   let everyResult = nextExpiry.nextExpiry === nextExpiry2.nextExpiry && nextExpiry.entries.length === nextExpiry2.entries.length;
   if (everyResult) {
     const entries = nextExpiry.entries;
-    everyResult = entries.every((projectId, index) => null != nextExpiry2.entries[index] && projectId.projectId === nextExpiry2.entries[index].projectId && projectId.activity === nextExpiry2.entries[index].activity && projectId.name === nextExpiry2.entries[index].name && projectId.guildId === nextExpiry2.entries[index].guildId && projectId.guildName === nextExpiry2.entries[index].guildName && projectId.notInServer === nextExpiry2.entries[index].notInServer && projectId.guild === nextExpiry2.entries[index].guild);
+    everyResult = entries.every((projectId, index) => null != nextExpiry2.entries[index] && projectId.projectId === nextExpiry2.entries[index].projectId && projectId.activity === nextExpiry2.entries[index].activity && projectId.name === nextExpiry2.entries[index].name && projectId.project.updated_at === nextExpiry2.entries[index].project.updated_at && projectId.guildId === nextExpiry2.entries[index].guildId && projectId.guildName === nextExpiry2.entries[index].guildName && projectId.notInServer === nextExpiry2.entries[index].notInServer && projectId.guild === nextExpiry2.entries[index].guild);
   }
   return everyResult;
 }
@@ -201,7 +201,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePr
     first1 = cResult[0];
   }
   if (cResult[1] !== arg0) {
-    const fn = function p() {
+    const fn = function v() {
       return collectEntries(closure_0);
     };
     cResult[1] = arg0;

@@ -1,13 +1,13 @@
-// === Module 12878: ScheduledMessageEditContentModal ===
+// === Module 12880: ScheduledMessageEditContentModal ===
 
-// Module 12878 (ScheduledMessageEditContentModal)
+// Module 12880 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6184 */;
-import MessageParserDefault from "MessageParser" /* 7369 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9293 */;
-import HeaderShared from "HeaderShared" /* 9297 */;
+import Pressables from "Pressables" /* 6185 */;
+import MessageParserDefault from "MessageParser" /* 7370 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 9294 */;
+import HeaderShared from "HeaderShared" /* 9298 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
               const arr = channelId(stateFromStores[16]);
             }
             c2 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp9) {
           c2 = tmp;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -198,11 +198,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj5 = v1(7369);
+            const obj5 = v1(7370);
             const obj4 = { content: obj5.parse(stateFromStores, first).content, flags: scheduledMessage.createArgs.flags };
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(9292).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
+            const obj7 = { value: tmp4(9293).editScheduledMessage(scheduledMessage.scheduledMessageId, obj4), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
             const arr = v1(5934);
           }
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp9) {
         dependencyMap = tmp;

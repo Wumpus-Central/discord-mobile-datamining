@@ -1,11 +1,11 @@
-// === Module 17832: GameTagChiplet ===
+// === Module 17889: GameTagChiplet ===
 
-// Module 17832 (GameTagChiplet)
+// Module 17889 (GameTagChiplet)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import GuildTag from "GuildTag" /* 8858 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8878 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8879 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import GuildTag from "GuildTag" /* 8859 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8880 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

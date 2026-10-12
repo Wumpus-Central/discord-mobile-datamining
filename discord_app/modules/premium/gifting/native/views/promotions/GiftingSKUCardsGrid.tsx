@@ -1,22 +1,22 @@
-// === Module 12735: GiftingSKUCardsGrid ===
+// === Module 12737: GiftingSKUCardsGrid ===
 
-// Module 12735 (GiftingSKUCardsGrid)
+// Module 12737 (GiftingSKUCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import useCurrentUser from "useCurrentUser" /* 8302 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8848 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9027 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10506 */;
+import useCurrentUser from "useCurrentUser" /* 8303 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8849 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9028 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10507 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7268).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7269).isAvatarDecorationRecord;
 const isNameplateRecord = fn(1991).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

@@ -1,17 +1,17 @@
-// === Module 16957: NewContentPill ===
+// === Module 16981: NewContentPill ===
 
-// Module 16957 (NewContentPill)
+// Module 16981 (NewContentPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5378 */;
-import GuildIcon from "GuildIcon" /* 6158 */;
-import ICYMITypes from "ICYMITypes" /* 8466 */;
-import ICYMIUtils from "ICYMIUtils" /* 8470 */;
-import ClipView from "ClipView" /* 9016 */;
+import GuildIcon from "GuildIcon" /* 6159 */;
+import ICYMITypes from "ICYMITypes" /* 8467 */;
+import ICYMIUtils from "ICYMIUtils" /* 8471 */;
+import ClipView from "ClipView" /* 9017 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import ICYMIStore from "ICYMIStore" /* 8453 */;
+import ICYMIStore from "ICYMIStore" /* 8454 */;
 
 const GuildIconDefault = GuildIcon;
 const ClipViewDefault = ClipView;

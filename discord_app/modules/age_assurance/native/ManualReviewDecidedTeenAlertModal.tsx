@@ -1,12 +1,12 @@
-// === Module 7712: ManualReviewDecidedTeenAlertModal ===
+// === Module 7713: ManualReviewDecidedTeenAlertModal ===
 
-// Module 7712 (ManualReviewDecidedTeenAlertModal)
+// Module 7713 (ManualReviewDecidedTeenAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3184 from "module_3184" /* 3184 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import AlertModal from "AlertModal" /* 5305 */;
-import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 7713 */;
+import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 7714 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
         variant: "text-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(7497);
+          const obj = closure_1_1(7498);
           const intl = closure_1_0(1126).intl;
           return obj.openUrl(closure_1_1(2128).getArticleURL(intl.string(closure_1_1(3184).agiNYw)));
         },
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
       variant: "text-md/normal",
       color: "text-link",
       onPress() {
-        const obj = closure_1_1(7497);
+        const obj = closure_1_1(7498);
         const intl = closure_1_0(1126).intl;
         return obj.openUrl(closure_1_1(2128).getArticleURL(intl.string(closure_1_1(3184).agiNYw)));
       },

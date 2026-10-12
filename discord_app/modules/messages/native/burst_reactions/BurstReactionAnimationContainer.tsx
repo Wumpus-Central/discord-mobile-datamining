@@ -1,6 +1,6 @@
-// === Module 17620: BurstReactionAnimationContainer ===
+// === Module 17677: BurstReactionAnimationContainer ===
 
-// Module 17620 (BurstReactionAnimationContainer)
+// Module 17677 (BurstReactionAnimationContainer)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
@@ -21,7 +21,7 @@ let obj2 = { background: null, fill: null, dismissTextContainer: null, dismissTe
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BLACK;
-obj3.opacity = fn(7925).BACKDROP_OPACITY;
+obj3.opacity = fn(7926).BACKDROP_OPACITY;
 obj2.background = obj3;
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
@@ -156,7 +156,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
           const items = [markAsDismissed.fill, animatedStyle];
           obj2.style = items;
           const obj3 = {
-            activeOpacity: fill(7925).BACKDROP_OPACITY,
+            activeOpacity: fill(7926).BACKDROP_OPACITY,
             onPress() {
               return constants(() => markAsDismissed(constants.UNKNOWN));
             },
@@ -174,7 +174,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
                 closure_1_7();
               }
             };
-            tmpResult = animatedStyle(first(7967), obj7);
+            tmpResult = animatedStyle(first(7968), obj7);
           }
           obj5.children = tmpResult;
           items1[1] = animatedStyle(handleComponentFinish, obj5);
@@ -197,7 +197,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
           return animatedStyle(fill(1200).OverlayView, obj);
         }
     };
-    tmp2 = animatedStyle(animationData(10012), obj4);
+    tmp2 = animatedStyle(animationData(10013), obj4);
     cResult[4] = animatedStyle;
     cResult[5] = animationData;
     cResult[6] = dismissTextContainer;
@@ -280,7 +280,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
       const items = [markAsDismissed.fill, closure_7];
       obj2.style = items;
       const obj3 = {
-        activeOpacity: closure_0(7925).BACKDROP_OPACITY,
+        activeOpacity: closure_0(7926).BACKDROP_OPACITY,
         onPress() {
           closure_4(false);
           closure_5.current = false;
@@ -301,7 +301,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
             ref.current = false;
           }
         };
-        tmpResult = closure_1_8(first(7967), obj7);
+        tmpResult = closure_1_8(first(7968), obj7);
       }
       obj5.children = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj5);
@@ -323,8 +323,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BurstR
       obj.children = closure_1_8(first(4850).View, obj2);
       return closure_1_8(closure_0(1200).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10012), obj3);
-    let tmp11 = animationData(10012);
+    tmp8 = closure_8(animationData(10013), obj3);
+    let tmp11 = animationData(10013);
   }
   return tmp8;
 });

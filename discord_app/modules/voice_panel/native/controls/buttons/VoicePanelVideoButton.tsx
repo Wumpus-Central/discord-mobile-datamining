@@ -1,17 +1,17 @@
-// === Module 17872: VoicePanelVideoButton ===
+// === Module 17929: VoicePanelVideoButton ===
 
-// Module 17872 (VoicePanelVideoButton)
+// Module 17929 (VoicePanelVideoButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import CameraRive from "CameraRive" /* 4904 */;
 import useAlertStore from "useAlertStore" /* 5301 */;
 import StreamPermissionUtils from "StreamPermissionUtils" /* 5907 */;
-import CallsUtils from "CallsUtils" /* 8785 */;
+import CallsUtils from "CallsUtils" /* 8786 */;
 import VideoIcon from "VideoIcon" /* 10770 */;
 import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 10851 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 12851 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 13166 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17873 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 12853 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 13171 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17930 */;
 import noop from "module_19" /* 19 */;
 import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10831 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

@@ -1,9 +1,9 @@
-// === Module 17253: ConjureSettingsRequestCard ===
+// === Module 17312: ConjureSettingsRequestCard ===
 
-// Module 17253 (ConjureSettingsRequestCard)
+// Module 17312 (ConjureSettingsRequestCard)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 17061 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 17081 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         const obj5 = { style: tmp4.card, children: null };
         const items = [tmp7, tmp15, tmp21];
         obj5.children = items;
-        const tmp27 = closure_5(note(17149), obj5);
+        const tmp27 = closure_5(note(17278), obj5);
         cResult[12] = tmp4.card;
         cResult[13] = tmp15;
         cResult[14] = tmp21;
@@ -136,5 +136,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   }
   const intl2 = tmp8(1126).intl;
   note = intl2.string(tmp4(3849).XuOf5s);
-  tmp6 = request(17149);
+  tmp6 = request(17278);
 });

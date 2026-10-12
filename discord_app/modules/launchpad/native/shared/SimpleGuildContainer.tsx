@@ -1,15 +1,15 @@
-// === Module 17928: SimpleGuildContainer ===
+// === Module 17985: SimpleGuildContainer ===
 
-// Module 17928 (SimpleGuildContainer)
+// Module 17985 (SimpleGuildContainer)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 9301 */;
-import GuildsBarActivityIndicatorDefault from "GuildsBarActivityIndicator" /* 16767 */;
-import CutoutImageDefault from "CutoutImage" /* 17929 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 9302 */;
+import GuildsBarActivityIndicatorDefault from "GuildsBarActivityIndicator" /* 16791 */;
+import CutoutImageDefault from "CutoutImage" /* 17986 */;
 import noop from "module_19" /* 19 */;
 
-const GuildsBarActivityIndicator = isCurrentUserConnected(16767);
+const GuildsBarActivityIndicator = isCurrentUserConnected(16791);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);

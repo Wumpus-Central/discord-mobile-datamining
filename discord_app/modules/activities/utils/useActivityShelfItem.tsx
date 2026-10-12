@@ -1,20 +1,20 @@
-// === Module 11733: useActivityShelfItem ===
+// === Module 11735: useActivityShelfItem ===
 
-// Module 11733 (useActivityShelfItem)
+// Module 11735 (useActivityShelfItem)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import Server from "Server" /* 1998 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4739 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6857 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9232 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6858 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9233 */;
 import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10803 */;
 import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10812 */;
 import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10918 */;
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10919 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10962 */;
-import getPlatformDefault from "getPlatform" /* 11716 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11734 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11735 */;
+import getPlatformDefault from "getPlatform" /* 11718 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11736 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11737 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
@@ -37,7 +37,7 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = referrerId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(6851)().analyticsLocations;
+  analyticsLocations = context(6852)().analyticsLocations;
   closure_13 = context(10919)();
   obj = canLaunchContextlessFrame;
   closure_14 = obj.canLaunchContextlessFrame(application);
@@ -59,7 +59,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -131,7 +131,7 @@ function useOnActivityItemSelected(arg0) {
           } else if (1 === tmp8) {
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           } else {
             if (2 === tmp8) {
               if (arg0 === 1) {
@@ -152,7 +152,7 @@ function useOnActivityItemSelected(arg0) {
             } else if (3 === tmp8) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             } else if (4 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
@@ -170,7 +170,7 @@ function useOnActivityItemSelected(arg0) {
               c3 = 0;
             }
             c5 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
           c3 = 0;
           c5 = 3;
@@ -200,7 +200,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -256,7 +256,7 @@ function useOnActivityItemSelected(arg0) {
             return obj;
           }
           c0 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         } catch (tmp17) {
           c0 = tmp;
           throw tmp17;

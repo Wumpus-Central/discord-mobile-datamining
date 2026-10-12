@@ -1,6 +1,6 @@
-// === Module 17556: IntegrationsSettingsEditWebhook ===
+// === Module 17613: IntegrationsSettingsEditWebhook ===
 
-// Module 17556 (IntegrationsSettingsEditWebhook)
+// Module 17613 (IntegrationsSettingsEditWebhook)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,13 +9,13 @@ import AvatarUtils from "AvatarUtils" /* 1415 */;
 import useNavigation from "useNavigation" /* 1503 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import common_AlertDefault from "common/Alert" /* 5398 */;
-import NavScrim from "NavScrim" /* 6727 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
-import HeaderShared from "HeaderShared" /* 9297 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9304 */;
-import openChannelPickerDefault from "openChannelPicker" /* 12178 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17549 */;
-import IconLabelBlockDefault from "IconLabelBlock" /* 17557 */;
+import NavScrim from "NavScrim" /* 6728 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import HeaderShared from "HeaderShared" /* 9298 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9305 */;
+import openChannelPickerDefault from "openChannelPicker" /* 12180 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17606 */;
+import IconLabelBlockDefault from "IconLabelBlock" /* 17614 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
@@ -258,7 +258,7 @@ prototype["render"] = function render() {
     }
   }
   obj5.errorMessage = first;
-  items1[1] = closure_11(webhookId(6285).TextInput, obj5);
+  items1[1] = closure_11(webhookId(6286).TextInput, obj5);
   const obj6 = { title: null, hasIcons: true, children: null };
   const intl4 = tmp3(1126).intl;
   obj6.title = intl4.string(webhookId(1126).t.GK18KJ);
@@ -268,11 +268,11 @@ prototype["render"] = function render() {
   obj7.onPress = self.handleChannelChange;
   const obj8 = { size: webhookId(1200).Icon.Sizes.CUSTOM, source: null, style: null };
   const tmp3Result = webhookId(5421);
-  obj8.source = webhookId(8158).getChannelIcon(channel);
+  obj8.source = webhookId(8159).getChannelIcon(channel);
   obj8.style = tmp.channelIcon;
   obj7.icon = closure_11(webhookId(1200).Icon, obj8);
-  obj6.children = closure_11(webhookId(6179).TableRow, obj7);
-  items1[2] = closure_11(webhookId(6264).TableRowGroup, obj6);
+  obj6.children = closure_11(webhookId(6180).TableRow, obj7);
+  items1[2] = closure_11(webhookId(6265).TableRowGroup, obj6);
   let tmp2Result4 = null;
   if (null != token) {
     const obj9 = { title: null, hasIcons: false, children: null };
@@ -284,8 +284,8 @@ prototype["render"] = function render() {
     obj10.label = "" + aPIBaseURL + closure_7.WEBHOOK_INTEGRATION(webhookId, token);
     obj10.onPress = self.handleCopyUrl;
     obj10.trailing = tmp2Result;
-    obj9.children = closure_11(tmp3(6179).TableRow, obj10);
-    tmp2Result4 = closure_11(tmp3(6264).TableRowGroup, obj9);
+    obj9.children = closure_11(tmp3(6180).TableRow, obj10);
+    tmp2Result4 = closure_11(tmp3(6265).TableRowGroup, obj9);
     const tmp3Result4 = tmp3(1295);
   }
   items1[3] = tmp2Result4;
@@ -293,11 +293,11 @@ prototype["render"] = function render() {
   const obj12 = { variant: "danger", onPress: self.handleDeleteWebhook, label: null };
   const intl6 = tmp3(1126).intl;
   obj12.label = intl6.string(webhookId(1126).t.oyYWHE);
-  obj11.children = closure_11(webhookId(6179).TableRow, obj12);
-  items1[4] = closure_11(webhookId(6264).TableRowGroup, obj11);
+  obj11.children = closure_11(webhookId(6180).TableRow, obj12);
+  items1[4] = closure_11(webhookId(6265).TableRowGroup, obj11);
   obj2.children = items1;
   obj.children = closure_12(webhookId(5377).Stack, obj2);
-  return closure_11(webhookId(8579).Form, obj);
+  return closure_11(webhookId(8580).Form, obj);
 };
 EditWebhook.contextType = fn(4827).ThemeContext;
 const ReactCompilerGating = fn(558);

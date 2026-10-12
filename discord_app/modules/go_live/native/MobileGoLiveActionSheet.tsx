@@ -11,12 +11,12 @@ import BaseIconImage from "BaseIconImage" /* 4817 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
-import NativeViewDefault from "NativeView" /* 6161 */;
-import TableRadioRow from "TableRadioRow" /* 6261 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6641 */;
-import StreamActionCreators from "StreamActionCreators" /* 7443 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9269 */;
-import _modDef9537 from "module_9537" /* 9537 */;
+import NativeViewDefault from "NativeView" /* 6162 */;
+import TableRadioRow from "TableRadioRow" /* 6262 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6642 */;
+import StreamActionCreators from "StreamActionCreators" /* 7444 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9270 */;
+import _modDef9538 from "module_9538" /* 9538 */;
 import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 11054 */;
 import SpeedometerIcon from "SpeedometerIcon" /* 11059 */;
 import ImageSparkleIcon from "ImageSparkleIcon" /* 11061 */;
@@ -227,7 +227,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const tmpResult5 = tmp(504);
     const goLiveUpsellVariant = guildPremiumTier(11058).useConfig(tmp21).goLiveUpsellVariant;
     let obj6 = guildPremiumTier(11058);
-    analyticsLocations = guildPremiumTier(6851)(guildPremiumTier(6878).MOBILE_GO_LIVE_ACTION_SHEET).analyticsLocations;
+    analyticsLocations = guildPremiumTier(6852)(guildPremiumTier(6879).MOBILE_GO_LIVE_ACTION_SHEET).analyticsLocations;
     const tmp25 = closure_16();
     ApplicationStreamingStore = tmp25;
     if (cResult[10] === tmp14) {
@@ -321,7 +321,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 obj10.children = intl5.string(_modDef2374.nMcXo1);
                 const items = [closure_2_14(Text_Text.Text, obj10), ];
                 const tmp8Result = NativeViewDefault;
-                items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9537, size: "xs" });
+                items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9538, size: "xs" });
                 obj9.children = items;
                 obj8.label = value2(tmp8Result, obj9);
                 if (null != maxSettingsForPreset2) {
@@ -383,10 +383,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 return obj1;
               }
             }
-            const AnalyticsLocationProvider = tmp(6851).AnalyticsLocationProvider;
-            BottomSheet = tmp(6839).BottomSheet;
-            const BottomSheetScrollView = tmp(6306).BottomSheetScrollView;
-            const SafeAreaPaddingView = tmp(6813).SafeAreaPaddingView;
+            const AnalyticsLocationProvider = tmp(6852).AnalyticsLocationProvider;
+            BottomSheet = tmp(6840).BottomSheet;
+            const BottomSheetScrollView = tmp(6307).BottomSheetScrollView;
+            const SafeAreaPaddingView = tmp(6814).SafeAreaPaddingView;
             const _Symbol3 = Symbol;
             class R {
               constructor() {
@@ -1053,7 +1053,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                         }
                                         tmp84[0] = tmp25.section;
                                         tmp84[1] = cResult[56];
-                                        const tmp85 = closure_14(tmp22(6161), tmp84);
+                                        const tmp85 = closure_14(tmp22(6162), tmp84);
                                         cResult[57] = tmp25.section;
                                         class R {
                                           constructor() {
@@ -1101,7 +1101,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                     }
                                     tmp76[0] = tmp25.section;
                                     tmp76[1] = tmp70;
-                                    const tmp77 = closure_14(tmp22(6161), tmp76);
+                                    const tmp77 = closure_14(tmp22(6162), tmp76);
                                     cResult[52] = tmp25.section;
                                     class R {
                                       constructor() {
@@ -1165,8 +1165,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                       return { user: currentUser, guildPremiumTier: premiumTier };
                                     }
                                   }
-                                  tmp72[2] = closure_14(tmp(6895).TableSwitchRow, obj7);
-                                  const tmp73 = closure_14(tmp(6264).TableRowGroup, tmp72);
+                                  tmp72[2] = closure_14(tmp(6896).TableSwitchRow, obj7);
+                                  const tmp73 = closure_14(tmp(6265).TableRowGroup, tmp72);
                                   cResult[49] = tmp35;
                                   cResult[50] = tmp68;
                                   cResult[51] = tmp73;
@@ -1241,9 +1241,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                 return { user: currentUser, guildPremiumTier: premiumTier };
                               }
                             }
-                            obj8.children = closure_14(tmp22(9781), obj9);
+                            obj8.children = closure_14(tmp22(9782), obj9);
                             tmp59 = closure_14(tmp61, obj8);
-                            const tmp22Result = tmp22(9781);
+                            const tmp22Result = tmp22(9782);
                           }
                           class R {
                             constructor() {
@@ -1292,7 +1292,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         }
                         tmp55[0] = tmp25.section;
                         tmp55[1] = tmp51;
-                        const tmp56 = closure_14(tmp22(6161), tmp55);
+                        const tmp56 = closure_14(tmp22(6162), tmp55);
                         cResult[36] = tmp25.section;
                         class R {
                           constructor() {
@@ -1358,8 +1358,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       }
                     }
                     obj11.children = tmp48;
-                    obj10.children = closure_14(tmp(6262).TableRadioGroup, obj11);
-                    const tmp52 = closure_14(tmp(6264).TableRowGroup, obj10);
+                    obj10.children = closure_14(tmp(6263).TableRadioGroup, obj11);
+                    const tmp52 = closure_14(tmp(6265).TableRowGroup, obj10);
                     cResult[32] = value;
                     cResult[33] = tmp47;
                     cResult[34] = tmp48;
@@ -1505,7 +1505,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       tmp26 = PRESET_MOBILE_DEFAULT;
     }
     PRESET_MOBILE_DEFAULT = tmp27.PRESET_MOBILE_DEFAULT;
-    const tmp23 = guildPremiumTier(6851);
+    const tmp23 = guildPremiumTier(6852);
     tmp28 = preset === ApplicationStreamPresets.PRESET_MOBILE_DEFAULT || preset === ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE || preset === ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY;
   }
   const fn = function f(arg0) {
@@ -1669,7 +1669,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           obj10.children = intl5.string(_modDef2374.nMcXo1);
           const items = [closure_2_14(Text_Text.Text, obj10), ];
           const tmp8Result = NativeViewDefault;
-          items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9537, size: "xs" });
+          items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9538, size: "xs" });
           obj9.children = items;
           obj8.label = value2(tmp8Result, obj9);
           if (null != maxSettingsForPreset2) {

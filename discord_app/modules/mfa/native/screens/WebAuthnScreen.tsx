@@ -1,17 +1,17 @@
-// === Module 15955: WebAuthnScreen ===
+// === Module 15978: WebAuthnScreen ===
 
-// Module 15955 (WebAuthnScreen)
+// Module 15978 (WebAuthnScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 5942 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 6630 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 15957 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6631 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 15980 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const buttonDefault = tmp15(15956);
+const buttonDefault = tmp15(15979);
 require = fn;
 let jsx = fn(21).jsx;
 const createStyles = fn(5092);
@@ -155,16 +155,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
                   const intl = finish(1126).intl;
                   dependencyMap(intl.string(finish(1126).t.xSCvBf));
                 } else {
-                  const result = finish(6632).captureWebAuthnException(error, {});
+                  const result = finish(6633).captureWebAuthnException(error, {});
                   dependencyMap(error.message);
-                  const tmpResult = finish(6632);
+                  const tmpResult = finish(6633);
                 }
               });
               cleanupPromise = catchPromise.finally(() => closure_1_1(false));
               return;
             }
           }
-          const tmp27 = jsx(finish(15042).KeyImage, {});
+          const tmp27 = jsx(finish(15065).KeyImage, {});
           cResult[7] = stringResult;
           cResult[8] = stringResult1;
           cResult[9] = tmp27;
@@ -181,9 +181,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
                 const intl = finish(1126).intl;
                 dependencyMap(intl.string(finish(1126).t.xSCvBf));
               } else {
-                const result = finish(6632).captureWebAuthnException(error, {});
+                const result = finish(6633).captureWebAuthnException(error, {});
                 dependencyMap(error.message);
-                const tmpResult = finish(6632);
+                const tmpResult = finish(6633);
               }
             });
             cleanupPromise = catchPromise.finally(() => closure_1_1(false));
@@ -205,9 +205,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
                   const intl = finish(1126).intl;
                   dependencyMap(intl.string(finish(1126).t.xSCvBf));
                 } else {
-                  const result = finish(6632).captureWebAuthnException(error, {});
+                  const result = finish(6633).captureWebAuthnException(error, {});
                   dependencyMap(error.message);
-                  const tmpResult = finish(6632);
+                  const tmpResult = finish(6633);
                 }
               });
               cleanupPromise = catchPromise.finally(() => closure_1_1(false));
@@ -235,9 +235,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
             const intl = finish(1126).intl;
             dependencyMap(intl.string(finish(1126).t.xSCvBf));
           } else {
-            const result = finish(6632).captureWebAuthnException(error, {});
+            const result = finish(6633).captureWebAuthnException(error, {});
             dependencyMap(error.message);
-            const tmpResult = finish(6632);
+            const tmpResult = finish(6633);
           }
         });
         cleanupPromise = catchPromise.finally(() => closure_1_1(false));
@@ -279,9 +279,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
         const intl = finish(1126).intl;
         dependencyMap(intl.string(finish(1126).t.xSCvBf));
       } else {
-        const result = finish(6632).captureWebAuthnException(error, {});
+        const result = finish(6633).captureWebAuthnException(error, {});
         dependencyMap(error.message);
-        const tmpResult = finish(6632);
+        const tmpResult = finish(6633);
       }
     }).finally(() => _undefined(false));
   }, items1);
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   obj3.headerText = intl.string(finish(1126).t.saHocI);
   const intl2 = finish(1126).intl;
   obj3.subtitle = intl2.string(finish(1126).t.YpMrqM);
-  obj3.headerImage = challenge(finish(15042).KeyImage, {});
+  obj3.headerImage = challenge(finish(15065).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj4 = { authenticatorSelection, setAuthenticator: tmpResult[1], inProgress: null };

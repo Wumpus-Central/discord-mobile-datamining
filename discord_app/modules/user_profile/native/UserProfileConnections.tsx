@@ -1,6 +1,6 @@
-// === Module 13374: UserProfileConnections ===
+// === Module 13397: UserProfileConnections ===
 
-// Module 13374 (UserProfileConnections)
+// Module 13397 (UserProfileConnections)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -11,15 +11,15 @@ import useToken from "useToken" /* 4818 */;
 import shared from "shared" /* 4969 */;
 import HapticUtils from "HapticUtils" /* 5057 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import TableRow from "TableRow" /* 6179 */;
-import TableRowGroup from "TableRowGroup" /* 6264 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
-import UserProfileCardDefault from "UserProfileCard" /* 6903 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8490 */;
+import TableRow from "TableRow" /* 6180 */;
+import TableRowGroup from "TableRowGroup" /* 6265 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import UserProfileCardDefault from "UserProfileCard" /* 6904 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8491 */;
 import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 10730 */;
 import _modDef10735 from "module_10735" /* 10735 */;
 import _modDef10736 from "module_10736" /* 10736 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 13378 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 13401 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 import StreamerModeStore from "StreamerModeStore" /* 4963 */;
@@ -51,11 +51,11 @@ function generateMetadataForPlatform(arg0) {
   }
 }
 const View = fn(17).View;
-let Constants = fn(6904);
+let Constants = fn(6905);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8, CARD_PADDING } = Constants);
 Constants = fn(1085);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(6876).MetadataFields;
+const MetadataFields = fn(6877).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1200).Icon.Sizes.REFRESH_SMALL_16;
@@ -842,7 +842,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   application = application.application;
   const tmp4 = closure_16();
   let obj = trackUserProfileAction(576);
-  trackUserProfileAction = trackUserProfileAction(8314).useUserProfileAnalyticsContext().trackUserProfileAction;
+  trackUserProfileAction = trackUserProfileAction(8315).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (cResult[0] !== application) {
     const iconSource = application.getIconSource(closure_7);
     cResult[0] = application;
@@ -912,8 +912,8 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             return;
           }
         }
-        tmp18 = closure_12(tmp(6179).TableRow, obj5);
-        const tmp20 = closure_12(tmp(6179).TableRow, obj5);
+        tmp18 = closure_12(tmp(6180).TableRow, obj5);
+        const tmp20 = closure_12(tmp(6180).TableRow, obj5);
       }
       let tmp15;
       if (null != tmp5) {
@@ -949,7 +949,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[3] = trackUserProfileAction;
   cResult[4] = C;
   tmp8 = C;
-  let obj2 = trackUserProfileAction(8314);
+  let obj2 = trackUserProfileAction(8315);
 }) : (function UserAccountApplicationConnection(application) {
   application = application.application;
   let str;
@@ -1321,7 +1321,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(13375)(userId));
+  ({ connections, appIdentities } = theme(13398)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
@@ -1336,8 +1336,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
     obj4.title = intl.string(tmp2(1126).t["3fe7U5"]);
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(6264).TableRowGroup, obj5);
-    return closure_12(tmp5(6903), obj4);
+    obj4.children = closure_12(tmp2(6265).TableRowGroup, obj5);
+    return closure_12(tmp5(6904), obj4);
   }
   return null;
 });

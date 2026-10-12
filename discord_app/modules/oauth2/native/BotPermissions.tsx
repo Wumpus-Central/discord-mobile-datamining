@@ -1,12 +1,12 @@
-// === Module 12900: BotPermissions ===
+// === Module 12902: BotPermissions ===
 
-// Module 12900 (BotPermissions)
+// Module 12902 (BotPermissions)
 import nativeDefault from "native" /* 587 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
-import XSmallIcon from "XSmallIcon" /* 6207 */;
-import permissions from "permissions" /* 9237 */;
+import XSmallIcon from "XSmallIcon" /* 6208 */;
+import permissions from "permissions" /* 9238 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 15405: VideoQuestModalReward ===
+// === Module 15428: VideoQuestModalReward ===
 
-// Module 15405 (VideoQuestModalReward)
+// Module 15428 (VideoQuestModalReward)
 import nativeDefault from "native" /* 587 */;
-import QuestUtils from "QuestUtils" /* 9167 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15387 */;
+import QuestUtils from "QuestUtils" /* 9168 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15410 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,9 +23,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     str = size;
   }
   const obj = quest(576);
-  quest = quest(15382).useVideoQuestModalContext().quest;
-  const tmpResult = quest(15382);
-  const questTaskDetails = quest(9170).useQuestTaskDetails(quest);
+  quest = quest(15405).useVideoQuestModalContext().quest;
+  const tmpResult = quest(15405);
+  const questTaskDetails = quest(9171).useQuestTaskDetails(quest);
   if (cResult[0] !== quest.id) {
     const fn = function s() {
       const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
@@ -124,7 +124,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[7] = tmp10;
   tmp9 = tmp10;
   const obj7 = { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: tmp7, withAnimation: withRewardTileAnimation };
-  const tmpResult2 = quest(9170);
+  const tmpResult2 = quest(9171);
 }) : (function VideoQuestModalReward(style) {
   const withQuestName = style.withQuestName;
   let tmp = undefined === withQuestName;
@@ -139,14 +139,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  quest = quest(15382).useVideoQuestModalContext().quest;
-  const obj = quest(15382);
+  quest = quest(15405).useVideoQuestModalContext().quest;
+  const obj = quest(15405);
   const items = [quest.id];
-  const questTaskDetails = quest(9170).useQuestTaskDetails(quest);
+  const questTaskDetails = quest(9171).useQuestTaskDetails(quest);
   const callback = noop.useCallback(() => {
     const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
   }, items);
-  const obj2 = quest(9170);
+  const obj2 = quest(9171);
   const obj3 = { justify: "center", align: "center", spacing: nativeDefault.space.PX_24, style: style.style, children: null };
   const items1 = [closure_4(QuestProgressIndicatorDefault, { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: callback, withAnimation: withRewardTileAnimation }), ];
   const obj5 = { align: "center", spacing: nativeDefault.space.PX_4, onLayout: onTextBlockLayout, children: null };

@@ -1,6 +1,6 @@
-// === Module 8597: useLegacyTextMigrationHighlight ===
+// === Module 8598: useLegacyTextMigrationHighlight ===
 
-// Module 8597 (useLegacyTextMigrationHighlight)
+// Module 8598 (useLegacyTextMigrationHighlight)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DevSettingsStore from "DevSettingsStore" /* 5091 */;

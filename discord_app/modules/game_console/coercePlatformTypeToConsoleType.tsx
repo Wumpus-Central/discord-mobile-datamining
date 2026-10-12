@@ -2,7 +2,7 @@
 
 // Module 11109 (coercePlatformTypeToConsoleType)
 import Constants from "Constants" /* 1085 */;
-import GameConsoleConstants from "GameConsoleConstants" /* 9221 */;
+import GameConsoleConstants from "GameConsoleConstants" /* 9222 */;
 import size from "module_2" /* 2 */;
 
 const GameConsoleTypes = GameConsoleConstants.GameConsoleTypes;

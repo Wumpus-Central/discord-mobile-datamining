@@ -6,7 +6,7 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4938 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import FastImageDefault from "FastImage" /* 6156 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import _modDef10762 from "module_10762" /* 10762 */;
 import noop from "module_19" /* 19 */;
 
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatGDMU
                           }
                         }
                         const obj14 = { showGradient: true, scrollable: true, startExpanded: true, header: tmp12, footer: tmp31, children: tmp81 };
-                        const tmp86 = closure_5(tmp(6839).BottomSheet, obj14);
+                        const tmp86 = closure_5(tmp(6840).BottomSheet, obj14);
                         cResult[55] = tmp31;
                         cResult[56] = tmp81;
                         cResult[57] = tmp12;
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatGDMU
                     const obj15 = { children: null };
                     const items = [tmp37, tmp42, tmp77];
                     obj15.children = items;
-                    const tmp83 = closure_6(tmp(6306).BottomSheetScrollView, obj15);
+                    const tmp83 = closure_6(tmp(6307).BottomSheetScrollView, obj15);
                     cResult[51] = tmp37;
                     cResult[52] = tmp42;
                     cResult[53] = tmp77;
@@ -404,6 +404,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChatGDMU
   obj12.children = items5;
   items3[2] = closure_6(View, obj12);
   obj9.children = items3;
-  obj.children = closure_6(onClick(6306).BottomSheetScrollView, obj9);
-  return closure_5(onClick(6839).BottomSheet, obj);
+  obj.children = closure_6(onClick(6307).BottomSheetScrollView, obj9);
+  return closure_5(onClick(6840).BottomSheet, obj);
 });

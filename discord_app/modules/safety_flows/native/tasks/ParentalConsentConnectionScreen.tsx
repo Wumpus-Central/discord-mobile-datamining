@@ -1,21 +1,21 @@
-// === Module 18642: ParentalConsentConnectionScreen ===
+// === Module 18700: ParentalConsentConnectionScreen ===
 
-// Module 18642 (ParentalConsentConnectionScreen)
+// Module 18700 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import _modDef2862 from "module_2862" /* 2862 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15134 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 15157 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7258 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7259 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7259).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7260).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
@@ -126,7 +126,7 @@ export default function ParentalConsentConnectionScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -194,7 +194,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2862.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2862["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(15135, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(15158, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);

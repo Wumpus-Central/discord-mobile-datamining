@@ -1,6 +1,6 @@
-// === Module 11995: useSearchContext ===
+// === Module 11997: useSearchContext ===
 
-// Module 11995 (useSearchContext)
+// Module 11997 (useSearchContext)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;

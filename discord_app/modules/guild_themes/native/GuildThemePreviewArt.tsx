@@ -1,11 +1,11 @@
-// === Module 16576: GuildThemePreviewArt ===
+// === Module 16599: GuildThemePreviewArt ===
 
-// Module 16576 (GuildThemePreviewArt)
+// Module 16599 (GuildThemePreviewArt)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 16577 */;
+import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay" /* 16600 */;
 import noop from "module_19" /* 19 */;
 
 const GuildThemePresets = obj(4973);

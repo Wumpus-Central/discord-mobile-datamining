@@ -1,9 +1,9 @@
-// === Module 16537: useShallowArrayMemo ===
+// === Module 16560: useShallowArrayMemo ===
 
-// Module 16537 (useShallowArrayMemo)
+// Module 16560 (useShallowArrayMemo)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
-import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 16538 */;
+import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 16561 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

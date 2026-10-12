@@ -1,20 +1,20 @@
-// === Module 17405: ChannelsScreen ===
+// === Module 17462: ChannelsScreen ===
 
-// Module 17405 (ChannelsScreen)
+// Module 17462 (ChannelsScreen)
 import util from "util" /* 1126 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12055 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12057 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5116 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12061 */;
-import SearchQueryStore from "SearchQueryStore" /* 12048 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12063 */;
+import SearchQueryStore from "SearchQueryStore" /* 12050 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9312);
+const SearchConstants = fn(9313);
 ({ EMPTY_VOICE_STATES: closure_7, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(9311).SearchResultContentEntityTypes;
+let closure_10 = fn(9312).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

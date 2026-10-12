@@ -1,14 +1,9 @@
-// === Module 7926: getBurstAnimation ===
+// === Module 7927: getBurstAnimation ===
 
-// Module 7926 (getBurstAnimation)
+// Module 7927 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
-  {
-    load() {
-      return closure_0(7927);
-    }
-  },
   {
     load() {
       return closure_0(7928);
@@ -93,14 +88,14 @@ const items = [
     load() {
       return closure_0(7944);
     }
-  }
-];
-const items1 = [
+  },
   {
     load() {
       return closure_0(7945);
     }
-  },
+  }
+];
+const items1 = [
   {
     load() {
       return closure_0(7946);
@@ -185,6 +180,11 @@ const items1 = [
     load() {
       return closure_0(7962);
     }
+  },
+  {
+    load() {
+      return closure_0(7963);
+    }
   }
 ];
 let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1, arg2) {
@@ -198,7 +198,7 @@ let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1, arg2) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

@@ -3,8 +3,8 @@
 // Module 11401 (GuildEnableCommunicationAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
-import useUserCommunicationDisabledDefault from "useUserCommunicationDisabled" /* 7994 */;
-import CountDownDefault from "CountDown" /* 9641 */;
+import useUserCommunicationDisabledDefault from "useUserCommunicationDisabled" /* 7995 */;
+import CountDownDefault from "CountDown" /* 9642 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
           obj7.text = intl.string(tmp4(1126).t["/Mmbfv"]);
           v1(4809).open("GUILD_ENABLE_COMMUNICATION_SUCCESS", obj7);
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp9) {
         dependencyMap = tmp;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEna
   };
   const tmp2 = closure_14();
   dependencyMap = tmp2;
-  closure_3 = _slicedToArray(userId(7994)(userId, guildId), 1)[0];
+  closure_3 = _slicedToArray(userId(7995)(userId, guildId), 1)[0];
   userId(5396)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
   });

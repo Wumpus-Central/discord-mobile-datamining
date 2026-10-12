@@ -1,12 +1,12 @@
-// === Module 16880: ForYouUnreadClearedState ===
+// === Module 16904: ForYouUnreadClearedState ===
 
-// Module 16880 (ForYouUnreadClearedState)
+// Module 16904 (ForYouUnreadClearedState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import _modDef10041 from "module_10041" /* 10041 */;
+import _modDef10042 from "module_10042" /* 10042 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp4.icon) {
-    const obj3 = { source: _modDef10041, style: tmp4.icon, color: tmp4.icon.color };
+    const obj3 = { source: _modDef10042, style: tmp4.icon, color: tmp4.icon.color };
     const tmp12 = React4(native.Icon, obj3);
     cResult[2] = tmp4.icon;
     cResult[3] = tmp12;
@@ -107,7 +107,7 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
 }) : (function ForYouUnreadClearedState() {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef10041, style: tmp.icon, color: tmp.icon.color }), ];
+  const items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef10042, style: tmp.icon, color: tmp.icon.color }), ];
   const obj4 = { children: null };
   const obj5 = { color: "mobile-text-heading-primary", variant: "text-md/semibold", style: tmp.headerText, children: null };
   const intl = util.intl;

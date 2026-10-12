@@ -1,6 +1,6 @@
-// === Module 16857: ForYouItemActionButtons ===
+// === Module 16881: ForYouItemActionButtons ===
 
-// Module 16857 (ForYouItemActionButtons)
+// Module 16881 (ForYouItemActionButtons)
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
@@ -8,11 +8,11 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import parseURLDefault from "parseURL" /* 5069 */;
 import timing from "timing" /* 5093 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6058 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7014 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7017 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10229 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 14049 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16456 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10230 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 14072 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16479 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -1033,7 +1033,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemActio
   const callback4 = notification_center_v2.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(14049)({ payload: closure_1(5069)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(14072)({ payload: closure_1(5069)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {
@@ -1070,7 +1070,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemActio
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1107,7 +1107,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemActio
         closure_128_1();
         focusChatInput(closure_128_0.message_channel_id);
         navigation = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } catch (tmp18) {
         navigation = tmp;
         throw tmp18;

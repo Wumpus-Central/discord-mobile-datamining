@@ -1,8 +1,8 @@
-// === Module 14951: useAutoScrollToSetting ===
+// === Module 14974: useAutoScrollToSetting ===
 
-// Module 14951 (useAutoScrollToSetting)
+// Module 14974 (useAutoScrollToSetting)
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14944 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14967 */;
 
 const require = globalThis.__r;
 
@@ -23,14 +23,14 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(14811).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(14946).getInitialScrollIndex(current, memo);
+    if (tmp(14834).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14969).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(14946);
+      const tmpResult = tmp(14969);
     }
   }
   const items = [memo, flag, ref, navigation, current];

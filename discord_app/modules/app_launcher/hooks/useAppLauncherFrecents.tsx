@@ -1,19 +1,19 @@
-// === Module 11804: useAppLauncherFrecents ===
+// === Module 11806: useAppLauncherFrecents ===
 
-// Module 11804 (useAppLauncherFrecents)
+// Module 11806 (useAppLauncherFrecents)
 import c from "c" /* 576 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6859 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9246 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9807 */;
-import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 9809 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6860 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9247 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9808 */;
+import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 9810 */;
 import getPrimaryAppCommand from "getPrimaryAppCommand" /* 10859 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6796 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6797 */;
 import UserStore from "UserStore" /* 1390 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 11805 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 11807 */;
 
 require = fn;
-const FetchState = fn(6796).FetchState;
+const FetchState = fn(6797).FetchState;
 const WATCH_YOUTUBE_PROD_APP_ID = fn(2024).WATCH_YOUTUBE_PROD_APP_ID;
 const ApplicationCommandConstants = fn(5403);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
@@ -204,7 +204,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
       }
       dependencyMap = tmp20;
-      const sortApplicationsViaFrecency = context(11806).useSortApplicationsViaFrecency(cResult[10], tmp16);
+      const sortApplicationsViaFrecency = context(11808).useSortApplicationsViaFrecency(cResult[10], tmp16);
       const _Symbol = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
@@ -232,7 +232,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
         tmp22 = cResult[15];
       }
-      const tmpResult5 = context(11806);
+      const tmpResult5 = context(11808);
       stateFromStores1 = context(504).useStateFromStores(tmp21, tmp22);
       if (cResult[16] !== stateFromStores1) {
         class T {

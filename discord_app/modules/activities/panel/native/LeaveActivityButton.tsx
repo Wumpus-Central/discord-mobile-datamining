@@ -1,6 +1,6 @@
-// === Module 17723: LeaveActivityButton ===
+// === Module 17780: LeaveActivityButton ===
 
-// Module 17723 (LeaveActivityButton)
+// Module 17780 (LeaveActivityButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;

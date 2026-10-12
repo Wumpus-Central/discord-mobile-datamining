@@ -1,12 +1,12 @@
-// === Module 9561: EmojiPickerCategories ===
+// === Module 9562: EmojiPickerCategories ===
 
-// Module 9561 (EmojiPickerCategories)
+// Module 9562 (EmojiPickerCategories)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import HapticUtils from "HapticUtils" /* 5057 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5058 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9562 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9563 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

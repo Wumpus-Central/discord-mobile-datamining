@@ -1,9 +1,9 @@
-// === Module 14828: HuePicker ===
+// === Module 14851: HuePicker ===
 
-// Module 14828 (HuePicker)
+// Module 14851 (HuePicker)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14825 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14848 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -60,7 +60,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHue
           if (cResult[9] === tmp6) {
             let tmp8 = cResult[10];
           }
-          const panGesture = tmp(6334).usePanGesture(tmp8);
+          const panGesture = tmp(6335).usePanGesture(tmp8);
           if (cResult[11] !== panGesture) {
             const obj3 = { gesture: panGesture };
             cResult[11] = panGesture;

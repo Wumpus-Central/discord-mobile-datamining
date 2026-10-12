@@ -1,8 +1,8 @@
-// === Module 14981: handleOpenUnconfirmedAgeGroupSupportArticle ===
+// === Module 15004: handleOpenUnconfirmedAgeGroupSupportArticle ===
 
-// Module 14981 (handleOpenUnconfirmedAgeGroupSupportArticle)
+// Module 15004 (handleOpenUnconfirmedAgeGroupSupportArticle)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7498 */;
 import LocationMetadataStore from "LocationMetadataStore" /* 10815 */;
 
 const TinyBroncoConstants = fn(5927);

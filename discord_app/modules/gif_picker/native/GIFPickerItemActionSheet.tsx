@@ -1,14 +1,14 @@
-// === Module 9750: GIFPickerItemActionSheet ===
+// === Module 9751: GIFPickerItemActionSheet ===
 
-// Module 9750 (GIFPickerItemActionSheet)
+// Module 9751 (GIFPickerItemActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 9735 */;
-import GifIcon from "GifIcon" /* 9751 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 9736 */;
+import GifIcon from "GifIcon" /* 9752 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,17 +30,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GIFPicke
   item = item.item;
   const tmp4 = closure_7();
   if (cResult[0] !== item.url) {
-    const gifUrlKeyResult = tmp(9735).gifUrlKey(item.url);
+    const gifUrlKeyResult = tmp(9736).gifUrlKey(item.url);
     cResult[0] = item.url;
     cResult[1] = gifUrlKeyResult;
     let tmp5 = gifUrlKeyResult;
-    const tmpResult = tmp(9735);
+    const tmpResult = tmp(9736);
   } else {
     tmp5 = cResult[1];
   }
   let obj = item(576);
-  const isFavoriteGIF = item(9739).useIsFavoriteGIF(tmp5);
-  const tmpResult2 = item(9739);
+  const isFavoriteGIF = item(9740).useIsFavoriteGIF(tmp5);
+  const tmpResult2 = item(9740);
   ({ width, height } = isFavoriteGIF(1497)());
   const bound = Math.min((width - 2 * isFavoriteGIF(587).space.PX_16) / item.width, 0.5 * height / item.height);
   const result = item.width * bound;

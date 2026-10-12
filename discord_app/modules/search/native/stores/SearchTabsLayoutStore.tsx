@@ -1,18 +1,18 @@
-// === Module 12060: SearchTabsLayoutStore ===
+// === Module 12062: SearchTabsLayoutStore ===
 
-// Module 12060 (SearchTabsLayoutStore)
+// Module 12062 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 12037 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12038 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 12039 */;
-import SearchUtils from "SearchUtils" /* 12041 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 12039 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12040 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 12041 */;
+import SearchUtils from "SearchUtils" /* 12043 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SearchMessageStore from "SearchMessageStore" /* 6062 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12061 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 12062 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12063 */;
-import SearchQueryStore from "SearchQueryStore" /* 12048 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12063 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 12064 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12065 */;
+import SearchQueryStore from "SearchQueryStore" /* 12050 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {
@@ -194,7 +194,7 @@ function computeLayoutForAll() {
   return flag;
 }
 SmartSearchResultsStoreDefault;
-const SearchConstants = fn(9312);
+const SearchConstants = fn(9313);
 ({ SearchTabs: c10, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_12 } = SearchConstants);
 let closure_13 = [];
 const map = new Map();

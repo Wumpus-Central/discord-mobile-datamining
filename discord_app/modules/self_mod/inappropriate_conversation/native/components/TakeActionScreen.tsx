@@ -1,11 +1,11 @@
-// === Module 16074: TakeActionScreen ===
+// === Module 16097: TakeActionScreen ===
 
-// Module 16074 (TakeActionScreen)
+// Module 16097 (TakeActionScreen)
 import nativeDefault from "native" /* 587 */;
 import LinkingDefault from "Linking" /* 4806 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7017 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7025 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10394 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7026 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10395 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ const require = globalThis.__r;
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(10381);
+const Constants = fn(10382);
 ({ MODAL_LOCATION_CONTEXT_MOBILE: c10, NOFILTR_URL: closure_11, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
                 let obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -288,7 +288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
             v1 = 1;
             dependencyMap = 1;
             const obj5 = {
-              value: tmp4(7721).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
+              value: tmp4(7722).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
                         dependencyMap(true);
                         const obj2 = { text: null, variant: "success" };
                         const intl = closure_0(1126).intl;
@@ -309,9 +309,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
           throw value;
         } else if (arg0 !== 2) {
           closure_128_5(false);
-          const result = v1(7025).showReportSuccessToast(closure_128_0, closure_128_1);
-          closure_128_3(tmp4(10394).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-          const obj = v1(7025);
+          const result = v1(7026).showReportSuccessToast(closure_128_0, closure_128_1);
+          closure_128_3(tmp4(10395).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          const obj = v1(7026);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

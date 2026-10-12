@@ -1,9 +1,9 @@
-// === Module 13428: useVirtualCurrencyData ===
+// === Module 13451: useVirtualCurrencyData ===
 
-// Module 13428 (useVirtualCurrencyData)
+// Module 13451 (useVirtualCurrencyData)
 import c from "c" /* 576 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7274 */;
-import _mod9060 from "module_9060" /* 9060 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7275 */;
+import _mod9061 from "module_9061" /* 9061 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled
     if (cResult[1] === product) {
       let tmp4 = cResult[2];
     }
-    const balance = _mod9060.useFetchVirtualCurrencyBalance().balance;
+    const balance = _mod9061.useFetchVirtualCurrencyBalance().balance;
     let tmp7 = null;
     if (null != tmp4) {
       tmp7 = null;
@@ -39,7 +39,7 @@ export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled
     cResult[5] = tmp4;
     cResult[6] = obj2;
     tmp8 = obj2;
-    const tmpResult = _mod9060;
+    const tmpResult = _mod9061;
   }
   const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount });
   cResult[0] = hasShopDiscount;
@@ -51,7 +51,7 @@ export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled
 }) : (function useVirtualCurrencyData(product, hasShopDiscount) {
   const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount });
   const obj2 = { product, hasShopDiscount };
-  const balance = _mod9060.useFetchVirtualCurrencyBalance().balance;
+  const balance = _mod9061.useFetchVirtualCurrencyBalance().balance;
   const items = [productOrbPrice, balance];
   return {
     price: productOrbPrice,

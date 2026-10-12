@@ -1,10 +1,10 @@
-// === Module 8085: useIsEligibleSenderForReferralProgram ===
+// === Module 8086: useIsEligibleSenderForReferralProgram ===
 
-// Module 8085 (useIsEligibleSenderForReferralProgram)
+// Module 8086 (useIsEligibleSenderForReferralProgram)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8086 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7174 */;
+import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8087 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7175 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,12 +1,12 @@
-// === Module 17322: SearchScreenLayout ===
+// === Module 17379: SearchScreenLayout ===
 
-// Module 17322 (SearchScreenLayout)
+// Module 17379 (SearchScreenLayout)
 import c from "c" /* 576 */;
-import AppFreezerDefault from "AppFreezer" /* 16958 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 17323 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 17433 */;
+import AppFreezerDefault from "AppFreezer" /* 16982 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 17380 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 17490 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12048 */;
+import SearchQueryStore from "SearchQueryStore" /* 12050 */;
 
 require = fn;
 const View = fn(17).View;

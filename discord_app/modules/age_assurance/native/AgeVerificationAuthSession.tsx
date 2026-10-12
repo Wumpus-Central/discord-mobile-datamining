@@ -1,6 +1,6 @@
-// === Module 7531: AgeVerificationAuthSession ===
+// === Module 7532: AgeVerificationAuthSession ===
 
-// Module 7531 (AgeVerificationAuthSession)
+// Module 7532 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
@@ -34,7 +34,7 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

@@ -1,14 +1,14 @@
-// === Module 17351: ChannelContent ===
+// === Module 17408: ChannelContent ===
 
-// Module 17351 (ChannelContent)
+// Module 17408 (ChannelContent)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 6795 */;
-import WarningIcon from "WarningIcon" /* 7571 */;
-import LockIcon from "LockIcon" /* 8222 */;
-import ChannelListLayout from "ChannelListLayout" /* 11759 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16544 */;
-import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 17352 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6796 */;
+import WarningIcon from "WarningIcon" /* 7572 */;
+import LockIcon from "LockIcon" /* 8223 */;
+import ChannelListLayout from "ChannelListLayout" /* 11761 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16567 */;
+import guild_channels_ChannelTitleDefault from "guild_channels/ChannelTitle" /* 17409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ if (PlatformUtils.isIOS()) {
   num = 2;
 }
 let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
-let obj4 = { opacity: fn(11758).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj4 = { opacity: fn(11760).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1382);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

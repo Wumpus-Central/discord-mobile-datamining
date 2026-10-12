@@ -1,15 +1,15 @@
-// === Module 12115: ApplicationCommandBar ===
+// === Module 12117: ApplicationCommandBar ===
 
-// Module 12115 (ApplicationCommandBar)
+// Module 12117 (ApplicationCommandBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import usePreviousDefault from "usePrevious" /* 5922 */;
-import Pressables from "Pressables" /* 6184 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11927 */;
-import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 12116 */;
+import Pressables from "Pressables" /* 6185 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11929 */;
+import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 12118 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -1107,7 +1107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
   let tmp22 = null != memo;
   if (tmp22) {
     const obj4 = { style: tmp.applicationIcon, source: memo };
-    tmp22 = c10(section(6156), obj4);
+    tmp22 = c10(section(6157), obj4);
   }
   const items5 = [tmp22, c10(command(5088).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
   options = command.options;
@@ -1181,7 +1181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
   }
   items5[3] = tmp19Result;
   obj3.children = items5;
-  const items8 = [closure_12(ref, obj3), c10(command(8579).FormDivider, { style: tmp.applicationDescriptionDivider }), c10(closure_15, { command, option: currentOption, optionState: tmp17 }), c10(command(8579).FormDivider, { style: tmp.applicationDescriptionDivider })];
+  const items8 = [closure_12(ref, obj3), c10(command(8580).FormDivider, { style: tmp.applicationDescriptionDivider }), c10(closure_15, { command, option: currentOption, optionState: tmp17 }), c10(command(8580).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj2.children = items8;
   return closure_12(ref, obj2);
 });

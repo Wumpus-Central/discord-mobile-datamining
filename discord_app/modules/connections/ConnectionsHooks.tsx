@@ -1,6 +1,6 @@
-// === Module 7224: ConnectionsHooks ===
+// === Module 7225: ConnectionsHooks ===
 
-// Module 7224 (ConnectionsHooks)
+// Module 7225 (ConnectionsHooks)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1390 */;
 require = fn;
 const Constants = fn(1085);
 ({ ACTIVITY_PLATFORM_TYPES: closure_7, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(7225).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(7226).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];

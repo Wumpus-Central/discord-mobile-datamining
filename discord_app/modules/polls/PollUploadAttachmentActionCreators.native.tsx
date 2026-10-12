@@ -1,9 +1,9 @@
-// === Module 11912: PollUploadAttachmentActionCreators ===
+// === Module 11914: PollUploadAttachmentActionCreators ===
 
-// Module 11912 (PollUploadAttachmentActionCreators)
-import FileManagerUtils from "FileManagerUtils" /* 8331 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9262 */;
-import PollAttachmentUtils from "PollAttachmentUtils" /* 11913 */;
+// Module 11914 (PollUploadAttachmentActionCreators)
+import FileManagerUtils from "FileManagerUtils" /* 8332 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9263 */;
+import PollAttachmentUtils from "PollAttachmentUtils" /* 11915 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -52,7 +52,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       } else if (1 === tmp8) {
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } else if (2 === tmp8) {
         if (arg0 === 1) {
           c8 = 3;
@@ -67,7 +67,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_3) {
             c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           } else {
             filePathForGif = closure_132_0(closure_132_2[3]).getFilePathForGif(fileNameFromGifUrl);
             const obj9 = closure_132_0(closure_132_2[4]);
@@ -91,7 +91,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_5) {
             c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           } else {
             c7 = 4;
             c8 = 1;
@@ -168,8 +168,8 @@ let closure_8 = async function _removeAllPollUploadAttachments(arg0) {
   }
   return value;
 };
-const DraftType = fn(7243).DraftType;
-const POLL_ATTACHMENT_FOLDER = fn(7970).POLL_ATTACHMENT_FOLDER;
+const DraftType = fn(7244).DraftType;
+const POLL_ATTACHMENT_FOLDER = fn(7971).POLL_ATTACHMENT_FOLDER;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 

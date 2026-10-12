@@ -1,9 +1,9 @@
-// === Module 17046: ConjureTemplates ===
+// === Module 17066: ConjureTemplates ===
 
-// Module 17046 (ConjureTemplates)
+// Module 17066 (ConjureTemplates)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 13213 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 13218 */;
 import size from "module_2" /* 2 */;
 
 const sendUserMessage = ConjureConnectionStore.sendUserMessage;

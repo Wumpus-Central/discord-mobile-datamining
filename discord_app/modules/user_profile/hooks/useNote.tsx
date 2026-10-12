@@ -1,10 +1,10 @@
-// === Module 13172: useNote ===
+// === Module 13177: useNote ===
 
-// Module 13172 (useNote)
+// Module 13177 (useNote)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import NoteStore from "NoteStore" /* 13173 */;
+import NoteStore from "NoteStore" /* 13178 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ let closure_8 = async function _fetchNote() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

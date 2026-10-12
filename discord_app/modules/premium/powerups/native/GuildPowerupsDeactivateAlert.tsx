@@ -1,12 +1,12 @@
-// === Module 12276: GuildPowerupsDeactivateAlert ===
+// === Module 12278: GuildPowerupsDeactivateAlert ===
 
-// Module 12276 (GuildPowerupsDeactivateAlert)
+// Module 12278 (GuildPowerupsDeactivateAlert)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2600 from "module_2600" /* 2600 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12277 */;
-import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12278 */;
+import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12279 */;
+import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12280 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -31,15 +31,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   ({ guildId, powerup } = arg0);
   const tmp4 = closure_6();
   _require = tmp4;
-  const tmp6 = onDeactivate(12277)(guildId, powerup);
+  const tmp6 = onDeactivate(12279)(guildId, powerup);
   onDeactivate = tmp6.onDeactivate;
   const error = tmp6.error;
-  const arr = onDeactivate(12278)(guildId, powerup);
+  const arr = onDeactivate(12280)(guildId, powerup);
   let obj = require("c");
   const logPowerupModalOpened = require("GuildPowerupAnalytics").useLogPowerupModalOpened(guildId, powerup, require("GuildPowerupAnalytics").ModalType.DEACTIVATE);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { color: tmp5(587).colors.INTERACTIVE_ICON_DEFAULT, size: "custom", style: { width: 40, height: 40 } };
-    const tmp10 = closure_4(tmp(6289).CircleErrorIcon, obj3);
+    const tmp10 = closure_4(tmp(6290).CircleErrorIcon, obj3);
     cResult[0] = tmp10;
     let first = tmp10;
   } else {

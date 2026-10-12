@@ -1,6 +1,6 @@
-// === Module 7793: DetectedFileSize ===
+// === Module 7794: DetectedFileSize ===
 
-// Module 7793 (DetectedFileSize)
+// Module 7794 (DetectedFileSize)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _getDetectedFileSize(arg0) {
@@ -14,7 +14,7 @@ let closure_1 = async function _getDetectedFileSize(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

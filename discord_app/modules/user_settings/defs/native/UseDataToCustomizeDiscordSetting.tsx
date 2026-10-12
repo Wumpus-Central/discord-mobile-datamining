@@ -1,14 +1,14 @@
-// === Module 15113: UseDataToCustomizeDiscordSetting ===
+// === Module 15136: UseDataToCustomizeDiscordSetting ===
 
-// Module 15113 (UseDataToCustomizeDiscordSetting)
+// Module 15136 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
 import common_AlertDefault from "common/Alert" /* 5398 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15073 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 15111 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 15112 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15096 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 15134 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 15135 */;
 import ConsentStore from "ConsentStore" /* 5932 */;
 
 require = fn;
@@ -44,7 +44,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(7992).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7993).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

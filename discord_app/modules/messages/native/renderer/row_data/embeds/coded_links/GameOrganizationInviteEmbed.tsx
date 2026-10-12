@@ -1,18 +1,18 @@
-// === Module 13508: GameOrganizationInviteEmbed ===
+// === Module 13531: GameOrganizationInviteEmbed ===
 
-// Module 13508 (GameOrganizationInviteEmbed)
+// Module 13531 (GameOrganizationInviteEmbed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2438 from "module_2438" /* 2438 */;
 import ColorUtils from "ColorUtils" /* 4967 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7750 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7888 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10484 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7751 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7889 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10485 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(9609).CodedLinkExtendedType;
-const constants = fn(10485).GameOrganizationInviteStates;
-const InviteTypes = fn(7423).InviteTypes;
+const CodedLinkExtendedType = fn(9610).CodedLinkExtendedType;
+const constants = fn(10486).GameOrganizationInviteStates;
+const InviteTypes = fn(7424).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx");
 

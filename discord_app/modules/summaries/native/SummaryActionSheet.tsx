@@ -10,13 +10,13 @@ import ToastUtils from "ToastUtils" /* 4808 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import ChannelUtils from "ChannelUtils" /* 5414 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7901 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7918 */;
-import showShareActionSheet from "showShareActionSheet" /* 8481 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7902 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7919 */;
+import showShareActionSheet from "showShareActionSheet" /* 8482 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import MessageStore from "MessageStore" /* 5432 */;
-import SummaryStore from "SummaryStore" /* 9614 */;
+import SummaryStore from "SummaryStore" /* 9615 */;
 
 require = fn;
 const View = fn(17).View;
@@ -72,8 +72,8 @@ export default function SummaryActionSheet(summary) {
         guild_id1 = channel.guild_id;
       }
       const obj2 = { guildId: guild_id1 };
-      tmpResult.openLazy(asyncRequireImpl(9649, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
-      const tmp7 = asyncRequireImpl(9649, dependencyMap.paths);
+      tmpResult.openLazy(asyncRequireImpl(9650, dependencyMap.paths), "GuildHighlightsNotifications", obj2);
+      const tmp7 = asyncRequireImpl(9650, dependencyMap.paths);
     }
   }, items);
   const items2 = [summary, channel, message];

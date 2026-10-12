@@ -1,6 +1,6 @@
-// === Module 15525: NoiseSuppressionKrispSetting ===
+// === Module 15548: NoiseSuppressionKrispSetting ===
 
-// Module 15525 (NoiseSuppressionKrispSetting)
+// Module 15548 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -118,7 +118,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(7992).MobileUserSettings.VOICE,
+  parent: fn(7993).MobileUserSettings.VOICE,
   useValue() {
     return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },

@@ -1,14 +1,14 @@
-// === Module 10179: SocialLayerStorefrontGiftProductDetails ===
+// === Module 10180: SocialLayerStorefrontGiftProductDetails ===
 
-// Module 10179 (SocialLayerStorefrontGiftProductDetails)
+// Module 10180 (SocialLayerStorefrontGiftProductDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6857 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9028 */;
-import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10160 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6858 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9029 */;
+import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -155,9 +155,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
   sku = sku.sku;
   let getOrFetchApplication;
   const tmp = closure_8();
-  getOrFetchApplication = getOrFetchApplication(6857).useGetOrFetchApplication(sku.applicationId);
-  let obj = getOrFetchApplication(6857);
-  const userPrice = getOrFetchApplication(10160).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
+  getOrFetchApplication = getOrFetchApplication(6858).useGetOrFetchApplication(sku.applicationId);
+  let obj = getOrFetchApplication(6858);
+  const userPrice = getOrFetchApplication(10161).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
   const items = [getOrFetchApplication];
   const memo = noop.useMemo(() => {
     let applicationIconSource = null;

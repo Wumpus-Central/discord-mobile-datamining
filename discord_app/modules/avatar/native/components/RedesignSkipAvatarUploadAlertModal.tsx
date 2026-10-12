@@ -1,6 +1,6 @@
-// === Module 18144: RedesignSkipAvatarUploadAlertModal ===
+// === Module 18202: RedesignSkipAvatarUploadAlertModal ===
 
-// Module 18144 (RedesignSkipAvatarUploadAlertModal)
+// Module 18202 (RedesignSkipAvatarUploadAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AlertModal from "AlertModal" /* 5305 */;

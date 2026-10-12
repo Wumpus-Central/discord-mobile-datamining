@@ -1,11 +1,11 @@
-// === Module 8766: BotTag ===
+// === Module 8767: BotTag ===
 
-// Module 8766 (BotTag)
+// Module 8767 (BotTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8767 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

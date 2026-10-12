@@ -1,16 +1,16 @@
-// === Module 12005: GuildDirectoryAddModal ===
+// === Module 12007: GuildDirectoryAddModal ===
 
-// Module 12005 (GuildDirectoryAddModal)
+// Module 12007 (GuildDirectoryAddModal)
 import c from "c" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import useInitialValueDefault from "useInitialValue" /* 6169 */;
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6813 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12004 */;
-import GuildDirectoryCreateOrAddDefault from "GuildDirectoryCreateOrAdd" /* 12007 */;
-import GuildDirectoryCreateOrAddDescriptionDefault from "GuildDirectoryCreateOrAddDescription" /* 12015 */;
-import GuildDirectoryTemplatesDefault from "GuildDirectoryTemplates" /* 12019 */;
-import CreateGuildContainerDefault from "CreateGuildContainer" /* 12029 */;
+import useInitialValueDefault from "useInitialValue" /* 6170 */;
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12006 */;
+import GuildDirectoryCreateOrAddDefault from "GuildDirectoryCreateOrAdd" /* 12009 */;
+import GuildDirectoryCreateOrAddDescriptionDefault from "GuildDirectoryCreateOrAddDescription" /* 12017 */;
+import GuildDirectoryTemplatesDefault from "GuildDirectoryTemplates" /* 12021 */;
+import CreateGuildContainerDefault from "CreateGuildContainer" /* 12031 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -88,13 +88,13 @@ function getScreens() {
   };
   return obj;
 }
-const GuildDirectoryCreate = fn(12006).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12008).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
-let obj2 = { safeArea: { marginTop: fn(6258).NAV_BAR_HEIGHT, flex: 1 } };
+let obj2 = { safeArea: { marginTop: fn(6259).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);
-let obj3 = { marginTop: fn(6258).NAV_BAR_HEIGHT, flex: 1 };
+let obj3 = { marginTop: fn(6259).NAV_BAR_HEIGHT, flex: 1 };
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildDirectoryAddModalScreen(children) {
   const cResult = c.c(3);

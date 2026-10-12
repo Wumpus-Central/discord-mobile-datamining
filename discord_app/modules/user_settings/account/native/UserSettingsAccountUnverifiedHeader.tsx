@@ -1,16 +1,16 @@
-// === Module 6685: UserSettingsAccountUnverifiedHeader ===
+// === Module 6686: UserSettingsAccountUnverifiedHeader ===
 
-// Module 6685 (UserSettingsAccountUnverifiedHeader)
+// Module 6686 (UserSettingsAccountUnverifiedHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6197 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6198 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const initialize = PressableOpacity(504);
 const Text_Text = PressableOpacity(5088);
-const Pressables = PressableOpacity(6184);
+const Pressables = PressableOpacity(6185);
 require = fn;
 function handleOpenEmailVerification() {
   EmailVerificationModalActionCreatorsDefault.open();

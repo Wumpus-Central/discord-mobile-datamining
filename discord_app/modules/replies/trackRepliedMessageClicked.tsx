@@ -3,8 +3,8 @@
 // Module 10775 (trackRepliedMessageClicked)
 import Constants from "Constants" /* 1085 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7312 */;
-import maybeCreateMessageRecordFromSnapshotDefault from "maybeCreateMessageRecordFromSnapshot" /* 8956 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7313 */;
+import maybeCreateMessageRecordFromSnapshotDefault from "maybeCreateMessageRecordFromSnapshot" /* 8957 */;
 import size from "module_2" /* 2 */;
 
 const ReferencedMessageState = ReferencedMessageStore.ReferencedMessageState;

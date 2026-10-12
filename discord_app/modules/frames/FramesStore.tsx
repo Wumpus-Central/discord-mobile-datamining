@@ -62,48 +62,62 @@ prototype["getFramesForChannel"] = function getFramesForChannel(id) {
 };
 FramesStoreClass.displayName = "FramesStore";
 const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
-  FRAME_LAUNCH_START: function handleFrameLaunchStart(applicationId) {
-    ({ frameId, surface, hostWindowKey } = applicationId);
-    const obj = { id: frameId, applicationId: applicationId.applicationId, intent: timestampProducer(surface), surface, state: "loading", data: null, hostWindowKey: null };
+  FRAME_LAUNCH_START: function handleFrameLaunchStart(arg0) {
+    ({ frameId, surface, hostWindowKey } = arg0);
+    ({ applicationId, launch, launchRequestId } = arg0);
+    const obj = { id: frameId, applicationId, intent: timestampProducer(surface), surface, state: "loading", data: null, hostWindowKey: null, launch: null, launchRequestId: null };
     if (hostWindowKey == null) {
       hostWindowKey = null;
     }
     obj.hostWindowKey = hostWindowKey;
+    obj.launch = launch;
+    obj.launchRequestId = launchRequestId;
     const result = map.set(frameId, obj);
     const tmp = timestampProducer(surface);
   },
   FRAME_LAUNCH: function handleFrameLaunch(arg0) {
-    ({ frameId, hostWindowKey } = arg0);
+    ({ frameId, hostWindowKey, launchRequestId } = arg0);
     ({ proxyTicket, launch } = arg0);
     value = map.get(frameId);
     if (null != value) {
-      const tmp8 = getURLForApplicationDefault(value.applicationId);
-      if (null == tmp8) {
-        map.delete(frameId);
-        if (frameId === frameId) {
-          frameId = null;
+      if (!tmp2) {
+        const tmp5 = getURLForApplicationDefault(value.applicationId);
+        if (null == tmp5) {
+          map.delete(frameId);
+          if (frameId === frameId) {
+            frameId = null;
+          }
+        } else {
+          const obj3 = { id: null, applicationId: null, intent: null, surface: null, launchRequestId: null, state: "launched", data: null };
+          ({ id: obj2.id, applicationId: obj2.applicationId, intent: obj2.intent, surface: obj2.surface, launchRequestId: obj2.launchRequestId } = value);
+          const obj5 = { url: tmp5, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null, hostWindowKey: null, launch: null };
+          const _Date = Date;
+          obj5.connectedSince = Date.now();
+          obj5.layoutMode = constants2.FOCUSED;
+          obj5.activityPanelMode = ActivityPanelModes.PANEL;
+          obj5.proxyTicket = proxyTicket;
+          if (hostWindowKey == null) {
+            hostWindowKey = null;
+          }
+          obj5.hostWindowKey = hostWindowKey;
+          obj5.launch = launch;
+          obj3.data = obj5;
+          const result = map.set(frameId, obj3);
         }
-      } else {
-        const obj3 = { id: null, applicationId: null, intent: null, surface: null, state: "launched", data: null };
-        ({ id: obj2.id, applicationId: obj2.applicationId, intent: obj2.intent, surface: obj2.surface } = value);
-        const obj5 = { url: tmp8, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null, hostWindowKey: null, launch: null };
-        const _Date = Date;
-        obj5.connectedSince = Date.now();
-        obj5.layoutMode = constants2.FOCUSED;
-        obj5.activityPanelMode = ActivityPanelModes.PANEL;
-        obj5.proxyTicket = proxyTicket;
-        if (hostWindowKey == null) {
-          hostWindowKey = null;
-        }
-        obj5.hostWindowKey = hostWindowKey;
-        obj5.launch = launch;
-        obj3.data = obj5;
-        const result = map.set(frameId, obj3);
       }
+      tmp2 = null != launchRequestId && value.launchRequestId !== launchRequestId;
     }
+    return false;
   },
-  FRAME_LAUNCH_FAIL: function handleFrameLaunchFail(frameId) {
-    frameId = frameId.frameId;
+  FRAME_LAUNCH_FAIL: function handleFrameLaunchFail(arg0) {
+    ({ frameId, launchRequestId } = arg0);
+    value = map.get(frameId);
+    if (null != value) {
+      if (tmp2) {
+        return false;
+      }
+      tmp2 = null != launchRequestId && value.launchRequestId !== launchRequestId;
+    }
     map.delete(frameId);
     if (frameId === frameId) {
       frameId = null;

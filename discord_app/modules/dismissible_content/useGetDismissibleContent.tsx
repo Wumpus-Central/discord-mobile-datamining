@@ -1,6 +1,6 @@
-// === Module 7100: useGetDismissibleContent ===
+// === Module 7101: useGetDismissibleContent ===
 
-// Module 7100 (useGetDismissibleContent)
+// Module 7101 (useGetDismissibleContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2048 */;

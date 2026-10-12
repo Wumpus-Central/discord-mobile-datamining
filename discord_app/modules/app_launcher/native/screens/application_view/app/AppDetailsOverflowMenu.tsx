@@ -1,8 +1,8 @@
-// === Module 11819: AppDetailsOverflowMenu ===
+// === Module 11821: AppDetailsOverflowMenu ===
 
-// Module 11819 (AppDetailsOverflowMenu)
+// Module 11821 (AppDetailsOverflowMenu)
 import ToastUtils from "ToastUtils" /* 4808 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 7731: Arrow ===
+// === Module 7732: Arrow ===
 
-// Module 7731 (Arrow)
+// Module 7732 (Arrow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import _modDef7732 from "module_7732" /* 7732 */;
+import _modDef7733 from "module_7733" /* 7733 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,8 +21,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Arrow() 
   const cResult = c.c(2);
   const tmp4 = closure_4();
   if (cResult[0] !== tmp4.tintColor) {
-    const obj2 = { source: _modDef7732, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor };
-    const tmp8 = jsx(native.Icon, { source: _modDef7732, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor });
+    const obj2 = { source: _modDef7733, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor };
+    const tmp8 = jsx(native.Icon, { source: _modDef7733, size: native.Icon.Sizes.MEDIUM, style: tmp4.tintColor });
     cResult[0] = tmp4.tintColor;
     cResult[1] = tmp8;
     let tmp5 = tmp8;
@@ -32,5 +32,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Arrow() 
   return tmp5;
 }) : (function Arrow() {
   const tmp = closure_4();
-  return jsx(native.Icon, { source: _modDef7732, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
+  return jsx(native.Icon, { source: _modDef7733, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
 });

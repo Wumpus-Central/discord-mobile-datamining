@@ -1,12 +1,12 @@
-// === Module 16030: CaptchaTestModal ===
+// === Module 16053: CaptchaTestModal ===
 
-// Module 16030 (CaptchaTestModal)
+// Module 16053 (CaptchaTestModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
-import Navigator from "Navigator" /* 6687 */;
-import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 16032 */;
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
+import Navigator from "Navigator" /* 6688 */;
+import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 16055 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -33,7 +33,7 @@ function CaptchaTestScreen(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -175,11 +175,11 @@ obj2.footerButton = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { margin: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 let closure_9 = createStyles.createStyles(obj2);
-const prop = fn(16031).HCAPTCHA_DIFFICULTY_OPTIONS;
+const prop = fn(16054).HCAPTCHA_DIFFICULTY_OPTIONS;
 const options = prop.map((label) => ({ name: label.label, value: label.value }));
-let items = [fn(16032).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(16032).CaptchaDeciderType.SMITE_RQDATA];
+let items = [fn(16055).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(16055).CaptchaDeciderType.SMITE_RQDATA];
 const set = new Set(items);
-const prop1 = fn(16031).CAPTCHA_DECIDER_TYPE_OPTIONS;
+const prop1 = fn(16054).CAPTCHA_DECIDER_TYPE_OPTIONS;
 const mapped = prop1.map((label) => ({ name: label.label, value: label.value }));
 const options2 = mapped.filter((value) => set.has(value.value));
 const constants = { TEST_CAPTCHA: "TEST_CAPTCHA" };

@@ -1,7 +1,7 @@
-// === Module 16554: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 16577: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 16554 (useFavoritesGuildAutoAddedThreadsAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10311 */;
+// Module 16577 (useFavoritesGuildAutoAddedThreadsAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10312 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 import FavoriteStore from "FavoriteStore" /* 2068 */;
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGui
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildAutoAddedThreadsAction() {
   const cResult = hasAccess(576).c(13);
   let obj = hasAccess(576);
-  hasAccess = hasAccess(10312).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+  hasAccess = hasAccess(10313).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function u() {
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const obj2 = hasAccess(10312);
+  const obj2 = hasAccess(10313);
   if (hasAccess) {
     hasAccess = tmpResult.useStateFromStores(tmp4, tmp5);
   }
@@ -92,8 +92,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   tmp11 = fn2;
   const tmpResult2 = hasAccess(504);
 }) : (function useFavoritesGuildAutoAddedThreadsAction() {
-  hasAccess = hasAccess(10312).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
-  let obj = hasAccess(10312);
+  hasAccess = hasAccess(10313).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+  let obj = hasAccess(10313);
   const items = [UserStore];
   if (hasAccess) {
     hasAccess = obj2.useStateFromStores(items, () => {

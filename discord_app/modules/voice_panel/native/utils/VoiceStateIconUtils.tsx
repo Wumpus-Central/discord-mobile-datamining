@@ -1,6 +1,6 @@
-// === Module 8798: VoiceStateIconUtils ===
+// === Module 8799: VoiceStateIconUtils ===
 
-// Module 8798 (VoiceStateIconUtils)
+// Module 8799 (VoiceStateIconUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import VoiceStateStore from "VoiceStateStore" /* 5113 */;

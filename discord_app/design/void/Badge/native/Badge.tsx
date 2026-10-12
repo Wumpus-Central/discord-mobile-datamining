@@ -1,13 +1,13 @@
-// === Module 14410: Badge/Badge ===
+// === Module 14433: Badge/Badge ===
 
-// Module 14410 (Badge/Badge)
+// Module 14433 (Badge/Badge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import NumberUtils from "NumberUtils" /* 1901 */;
 import shared from "shared" /* 4969 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8596 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8597 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 

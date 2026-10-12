@@ -1,6 +1,6 @@
-// === Module 17059: openConjureRemoveAppAlert ===
+// === Module 17079: openConjureRemoveAppAlert ===
 
-// Module 17059 (openConjureRemoveAppAlert)
+// Module 17079 (openConjureRemoveAppAlert)
 import useAlertStore from "useAlertStore" /* 5301 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -63,7 +63,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                   let tmp37 = null;
                                   if (null != tmp12) {
                                     let obj2 = { variant: "text-sm/normal", color: "text-muted", children: tmp12 };
-                                    tmp37 = closure_6(tmp(tmp2[13]).Text, obj2);
+                                    tmp37 = closure_6(tmp(tmp2[14]).Text, obj2);
                                   }
                                   cResult[28] = tmp12;
                                   cResult[29] = tmp37;
@@ -75,7 +75,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                   let tmp40 = null;
                                   if (null != tmp7) {
                                     let obj3 = { variant: "text-sm/medium", color: "text-feedback-critical", children: tmp7 };
-                                    tmp40 = closure_6(tmp(tmp2[13]).Text, obj3);
+                                    tmp40 = closure_6(tmp(tmp2[14]).Text, obj3);
                                   }
                                   cResult[30] = tmp7;
                                   cResult[31] = tmp40;
@@ -104,7 +104,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                           let obj4 = { variant: "secondary", text: null };
                                           const intl4 = tmp(tmp2[8]).intl;
                                           obj4.text = intl4.string(tmp(tmp2[8]).t["ETE/oC"]);
-                                          const tmp56 = closure_6(tmp(tmp2[15]).AlertActionButton, obj4);
+                                          const tmp56 = closure_6(tmp(tmp2[16]).AlertActionButton, obj4);
                                           cResult[41] = tmp56;
                                           let tmp54 = tmp56;
                                         } else {
@@ -132,7 +132,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                           }
                                         }
                                         let obj6 = { title: tmp23, content: tmp26, extraContent: tmp42, actions: tmp57 };
-                                        const tmp63 = closure_6(tmp(tmp2[15]).AlertModal, obj6);
+                                        const tmp63 = closure_6(tmp(tmp2[16]).AlertModal, obj6);
                                         cResult[44] = tmp42;
                                         cResult[45] = tmp57;
                                         cResult[46] = tmp23;
@@ -141,7 +141,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                         tmp61 = tmp63;
                                       }
                                       let obj7 = { variant: "destructive", text: cResult[37], onPress: tmp21 };
-                                      const tmp52 = closure_6(tmp(tmp2[15]).AlertActionButton, obj7);
+                                      const tmp52 = closure_6(tmp(tmp2[16]).AlertActionButton, obj7);
                                       cResult[38] = tmp21;
                                       cResult[39] = cResult[37];
                                       cResult[40] = tmp52;
@@ -149,10 +149,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                     }
                                   }
                                 }
-                                let obj8 = { spacing: 12, children: null };
+                                const obj8 = { spacing: 12, children: null };
                                 const items1 = [tmp30, tmp36, tmp39];
                                 obj8.children = items1;
-                                const tmp44 = closure_7(tmp(tmp2[14]).Stack, obj8);
+                                const tmp44 = closure_7(tmp(tmp2[15]).Stack, obj8);
                                 cResult[32] = tmp39;
                                 cResult[33] = tmp30;
                                 cResult[34] = tmp36;
@@ -194,7 +194,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                       cResult[22] = result1;
                     }
                     const obj11 = { variant: "heading-lg/bold", color: "none", style: tmp15.title, children: tmp16 };
-                    const result2 = tmp(tmp2[7]).conjureTitleWithAppTag(closure_6(tmp(tmp2[13]).Text, obj11));
+                    const result2 = tmp(tmp2[7]).conjureTitleWithAppTag(closure_6(tmp(tmp2[14]).Text, obj11));
                     cResult[17] = tmp15.title;
                     cResult[18] = tmp16;
                     cResult[19] = result2;
@@ -214,7 +214,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -232,12 +232,16 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                         closure_128_0 = undefined;
                         closure_128_1 = undefined;
                         v3(null);
-                        const obj8 = tmp2(first[11]);
+                        let tmp37 = tmp2;
+                        let deleteProject = first;
                         if (closure_1_4) {
-                          let deleteProjectResult = obj8.deleteProject(tmp2.id);
+                          tmp37 = tmp37(deleteProject[11]);
+                          deleteProject = tmp37.deleteProject;
+                          let deleteProjectResult = deleteProject(tmp2.id);
                         } else {
                           const obj5 = { alsoRemovePreviewBot };
-                          deleteProjectResult = obj8.unpublishProject(tmp2.id, obj5);
+                          deleteProjectResult = tmp37(deleteProject[12]).unpublishProject(tmp2.id, obj5);
+                          const tmp37Result = tmp37(deleteProject[12]);
                         }
                         deleteProjectResult.catch(() => null);
                         alsoRemovePreviewBot = 1;
@@ -272,18 +276,18 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                       } else {
                         if (!closure_1_4) {
                           const obj7 = { text: null, variant: "success" };
-                          const obj = target(first[12]);
+                          const obj = target(first[13]);
                           obj7.text = tmp2(first[7]).conjureRemoveAppSuccess(closure_1);
                           obj.open("CONJURE_APP_REMOVED", obj7);
                           const obj3 = tmp2(first[7]);
                         }
                         v3 = 3;
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     }
-                  } catch (tmp39) {
+                  } catch (tmp40) {
                     v3 = tmp;
-                    throw tmp39;
+                    throw tmp40;
                   }
                 }
               });
@@ -355,7 +359,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -372,12 +376,16 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             asyncGeneratorStep(null);
-            const obj8 = tmp3(11411);
+            let tmp37 = tmp3;
+            let deleteProject = dependencyMap;
             if (_slicedToArray) {
-              let deleteProjectResult = obj8.deleteProject(user.id);
+              tmp37 = tmp37(11413);
+              deleteProject = tmp37.deleteProject;
+              let deleteProjectResult = deleteProject(user.id);
             } else {
               const obj5 = { alsoRemovePreviewBot };
-              deleteProjectResult = obj8.unpublishProject(user.id, obj5);
+              deleteProjectResult = tmp37(11411).unpublishProject(user.id, obj5);
+              const tmp37Result = tmp37(11411);
             }
             deleteProjectResult.catch(() => null);
             dependencyMap = 1;
@@ -413,17 +421,17 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
             if (!closure_129_4) {
               const obj7 = { text: null, variant: "success" };
               const obj = tmp2(4809);
-              obj7.text = tmp3(17060).conjureRemoveAppSuccess(closure_129_1);
+              obj7.text = tmp3(17080).conjureRemoveAppSuccess(closure_129_1);
               obj.open("CONJURE_APP_REMOVED", obj7);
-              const obj3 = tmp3(17060);
+              const obj3 = tmp3(17080);
             }
             c3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         }
-      } catch (tmp39) {
+      } catch (tmp40) {
         c3 = tmp;
-        throw tmp39;
+        throw tmp40;
       }
     }
   };
@@ -461,7 +469,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   }
   let obj3 = { title: null, content: null, extraContent: null, actions: null };
   const tmp12 = closure_9();
-  obj3.title = tmp9(tmp8[7]).conjureTitleWithAppTag(closure_6(tmp9(tmp8[13]).Text, { variant: "heading-lg/bold", color: "none", style: tmp12.title, children: formatToPlainStringResult }));
+  obj3.title = tmp9(tmp8[7]).conjureTitleWithAppTag(closure_6(tmp9(tmp8[14]).Text, { variant: "heading-lg/bold", color: "none", style: tmp12.title, children: formatToPlainStringResult }));
   if ("delete" === action.action) {
     let result3 = tmp9(tmp8[7]).conjureDeleteProjectBody(target);
     const tmp9Result8 = tmp9(tmp8[7]);
@@ -487,23 +495,23 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   let tmp17Result3 = null;
   if (null != result2) {
     let obj7 = { variant: "text-sm/normal", color: "text-muted", children: result2 };
-    tmp17Result3 = closure_6(tmp9(tmp8[13]).Text, obj7);
+    tmp17Result3 = closure_6(tmp9(tmp8[14]).Text, obj7);
   }
   items[1] = tmp17Result3;
   let tmp17Result4 = null;
   if (null != tmp4) {
-    let obj8 = { variant: "text-sm/medium", color: "text-feedback-critical", children: tmp4 };
-    tmp17Result4 = closure_6(tmp9(tmp8[13]).Text, obj8);
+    const obj8 = { variant: "text-sm/medium", color: "text-feedback-critical", children: tmp4 };
+    tmp17Result4 = closure_6(tmp9(tmp8[14]).Text, obj8);
   }
   items[2] = tmp17Result4;
-  obj3.extraContent = closure_7(tmp9(tmp8[14]).Stack, { spacing: 12, children: items });
+  obj3.extraContent = closure_7(tmp9(tmp8[15]).Stack, { spacing: 12, children: items });
   const intl3 = tmp9(tmp8[8]).intl;
   const tmp15Result2 = tmp15(tmp8[9]);
   const obj9 = { children: null };
   let obj4 = { variant: "heading-lg/bold", color: "none", style: tmp12.title, children: formatToPlainStringResult };
   const tmp9Result7 = tmp9(tmp8[7]);
   const items1 = [
-    closure_6(tmp9(tmp8[15]).AlertActionButton, {
+    closure_6(tmp9(tmp8[16]).AlertActionButton, {
       variant: "destructive",
       text: intl3.string("delete" === action.action ? tmp15Result2.aC42bN : tmp15Result2.BGF8VT),
       onPress: function submit() {
@@ -522,10 +530,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   const obj11 = { variant: "secondary", text: null };
   const intl4 = tmp9(tmp8[8]).intl;
   obj11.text = intl4.string(tmp9(tmp8[8]).t["ETE/oC"]);
-  items1[1] = closure_6(tmp9(tmp8[15]).AlertActionButton, obj11);
+  items1[1] = closure_6(tmp9(tmp8[16]).AlertActionButton, obj11);
   obj9.children = items1;
   obj3.actions = closure_7(closure_8, obj9);
-  return closure_6(tmp9(tmp8[15]).AlertModal, obj3);
+  return closure_6(tmp9(tmp8[16]).AlertModal, obj3);
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/openConjureRemoveAppAlert.tsx");

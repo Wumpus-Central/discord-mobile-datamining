@@ -1,15 +1,15 @@
-// === Module 18040: UploadLogsActionSheet ===
+// === Module 18098: UploadLogsActionSheet ===
 
-// Module 18040 (UploadLogsActionSheet)
+// Module 18098 (UploadLogsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6838 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6839 */;
-import DebugUploadManager from "DebugUploadManager" /* 12628 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
+import DebugUploadManager from "DebugUploadManager" /* 12630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadLo
       let obj2 = { title: null };
       const intl = tmp(1126).intl;
       obj2.title = intl.string(tmp(1126).t.KTjjrG);
-      const tmp9 = closure_6(tmp(6838).BottomSheetTitleHeader, obj2);
+      const tmp9 = closure_6(tmp(6839).BottomSheetTitleHeader, obj2);
       cResult[3] = tmp9;
       let tmp7 = tmp9;
     } else {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadLo
     const items = [tmp12, tmp17, tmp20, tmp26];
     obj8.children = items;
     obj7.children = closure_7(View, obj8);
-    const tmp33 = closure_6(tmp(6839).BottomSheet, obj7);
+    const tmp33 = closure_6(tmp(6840).BottomSheet, obj7);
     cResult[14] = tmp4.container;
     cResult[15] = tmp12;
     cResult[16] = tmp17;

@@ -1,13 +1,13 @@
-// === Module 17036: ConjurePublishNotesSheet ===
+// === Module 17116: ConjurePublishNotesSheet ===
 
-// Module 17036 (ConjurePublishNotesSheet)
+// Module 17116 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
-import ConjureUtils from "ConjureUtils" /* 6945 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12179 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 17037 */;
+import ConjureUtils from "ConjureUtils" /* 6946 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12181 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 17117 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -229,7 +229,7 @@ export default function ConjurePublishNotesSheet(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -255,8 +255,8 @@ export default function ConjurePublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + trimmed + tmp34;
                 }
-                const parsed = tmp3(7369).parse(found, combined);
-                const tmp31Result = tmp3(7178);
+                const parsed = tmp3(7370).parse(found, combined);
+                const tmp31Result = tmp3(7179);
                 const obj5 = { location: constants.CONJURE_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;
@@ -285,10 +285,10 @@ export default function ConjurePublishNotesSheet(guildId) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = guildId(17037).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
+              const result = guildId(17117).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
               closure_129_21();
               dependencyMap = 0;
-              const obj = guildId(17037);
+              const obj = guildId(17117);
             }
           }
           const _Error = Error;

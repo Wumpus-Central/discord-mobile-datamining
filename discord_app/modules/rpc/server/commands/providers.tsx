@@ -1,6 +1,6 @@
-// === Module 14730: providers ===
+// === Module 14754: providers ===
 
-// Module 14730 (providers)
+// Module 14754 (providers)
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10939 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
@@ -58,7 +58,7 @@ obj2 = {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -122,7 +122,7 @@ obj2 = {
                   if (closure_0.aborted) {
                     const result = handleSocketDisconnected();
                     c7 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   } else {
                     const subscription = provider(connection_redirect[10]).subscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
                     let ComponentDispatch = closure_0(connection_redirect[11]).ComponentDispatch;
@@ -221,7 +221,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

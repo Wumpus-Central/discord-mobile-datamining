@@ -1,6 +1,6 @@
-// === Module 18338: GuildSettingsModalIntegrationPlatform ===
+// === Module 18396: GuildSettingsModalIntegrationPlatform ===
 
-// Module 18338 (GuildSettingsModalIntegrationPlatform)
+// Module 18396 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
@@ -8,18 +8,18 @@ import shared from "shared" /* 4969 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import common_AlertDefault from "common/Alert" /* 5398 */;
 import PlatformsDefault from "Platforms" /* 5763 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import TableRow from "TableRow" /* 6179 */;
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
-import TableRowGroup from "TableRowGroup" /* 6264 */;
-import TableSwitchRow from "TableSwitchRow" /* 6895 */;
-import HeaderActionButton from "HeaderActionButton" /* 7088 */;
-import openUserSettings from "openUserSettings" /* 7093 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8637 */;
-import IntegrationTypes from "IntegrationTypes" /* 18269 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18299 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import TableRow from "TableRow" /* 6180 */;
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
+import TableRowGroup from "TableRowGroup" /* 6265 */;
+import TableSwitchRow from "TableSwitchRow" /* 6896 */;
+import HeaderActionButton from "HeaderActionButton" /* 7089 */;
+import openUserSettings from "openUserSettings" /* 7094 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
+import IntegrationTypes from "IntegrationTypes" /* 18327 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 18357 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8638 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8639 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       tmp28 = tmp49;
       tmp29 = forResult;
       tmp30 = tmp43;
-      Form = tmp(8579).Form;
+      Form = tmp(8580).Form;
       Stack = tmp(5377).Stack;
     }
     const tmp4Result = tmp4(5763);
@@ -532,7 +532,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     items2[1] = closure_10(tmp(5088).Text, obj12);
     obj9.children = items2;
     obj8.children = closure_11(tmp(5377).Stack, obj9);
-    const items3 = [closure_10(tmp(8579).Form, obj8), closure_10(tmp(6727).NavScrim, {})];
+    const items3 = [closure_10(tmp(8580).Form, obj8), closure_10(tmp(6728).NavScrim, {})];
     obj11.children = items3;
     return closure_11(closure_12, obj11);
   }

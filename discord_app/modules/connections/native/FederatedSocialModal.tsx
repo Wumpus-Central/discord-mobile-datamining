@@ -1,6 +1,6 @@
-// === Module 12940: FederatedSocialModal ===
+// === Module 12942: FederatedSocialModal ===
 
-// Module 12940 (FederatedSocialModal)
+// Module 12942 (FederatedSocialModal)
 import PlatformsDefault from "Platforms" /* 5763 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -25,7 +25,7 @@ function FederatedSocialModalScreen(onClose) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -177,11 +177,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Federate
     tmp4 = cResult[1];
   }
   if (cResult[2] !== platformType.onClose) {
-    const headerBackButton = tmp(6200).getHeaderBackButton(platformType.onClose);
+    const headerBackButton = tmp(6201).getHeaderBackButton(platformType.onClose);
     cResult[2] = platformType.onClose;
     cResult[3] = headerBackButton;
     let tmp10 = headerBackButton;
-    const tmpResult = tmp(6200);
+    const tmpResult = tmp(6201);
   } else {
     tmp10 = cResult[3];
   }

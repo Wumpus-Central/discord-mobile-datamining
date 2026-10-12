@@ -1,8 +1,8 @@
-// === Module 6115: MemberVerificationAlertCancelPending ===
+// === Module 6116: MemberVerificationAlertCancelPending ===
 
-// Module 6115 (MemberVerificationAlertCancelPending)
-import MemberVerificationAlertDefault from "MemberVerificationAlert" /* 6112 */;
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6116 */;
+// Module 6116 (MemberVerificationAlertCancelPending)
+import MemberVerificationAlertDefault from "MemberVerificationAlert" /* 6113 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6117 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -231,5 +231,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   items1[1] = closure_6(guildId(5379).Button, obj3);
   obj2.children = items1;
   obj.buttons = closure_8(closure_7, obj2);
-  return closure_6(onClose(6112), obj);
+  return closure_6(onClose(6113), obj);
 });

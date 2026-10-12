@@ -1,10 +1,10 @@
-// === Module 17918: LaunchPadPullTabCache ===
+// === Module 17975: LaunchPadPullTabCache ===
 
-// Module 17918 (LaunchPadPullTabCache)
+// Module 17975 (LaunchPadPullTabCache)
 import Storage2 from "Storage" /* 510 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useWindowDimensions from "useWindowDimensions" /* 1497 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6624 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6625 */;
 import LaunchPadConstants from "LaunchPadConstants" /* 10659 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 7252: FavoritesSuggestionStore ===
+// === Module 7253: FavoritesSuggestionStore ===
 
-// Module 7252 (FavoritesSuggestionStore)
+// Module 7253 (FavoritesSuggestionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

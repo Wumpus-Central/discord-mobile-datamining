@@ -1,13 +1,13 @@
-// === Module 7471: SurveyStore ===
+// === Module 7472: SurveyStore ===
 
-// Module 7471 (SurveyStore)
+// Module 7472 (SurveyStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import _modDef4702 from "module_4702" /* 4702 */;
-import surveyFetch from "surveyFetch" /* 7472 */;
+import surveyFetch from "surveyFetch" /* 7473 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5020 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;

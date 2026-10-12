@@ -1,14 +1,14 @@
-// === Module 7902: ArchivedThreadsStore ===
+// === Module 7903: ArchivedThreadsStore ===
 
-// Module 7902 (ArchivedThreadsStore)
+// Module 7903 (ArchivedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 2074 */;
 import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2076 */;
-import ForumUtils from "ForumUtils" /* 7006 */;
-import Tracking from "Tracking" /* 7903 */;
+import ForumUtils from "ForumUtils" /* 7007 */;
+import Tracking from "Tracking" /* 7904 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;

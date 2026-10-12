@@ -1,12 +1,12 @@
-// === Module 17156: ConjureNativeMarkdown ===
+// === Module 17212: ConjureNativeMarkdown ===
 
-// Module 17156 (ConjureNativeMarkdown)
+// Module 17212 (ConjureNativeMarkdown)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 5079 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 17157 */;
-import useConjureRevealedText from "useConjureRevealedText" /* 17158 */;
+import ConjureMarkdownBlocks from "ConjureMarkdownBlocks" /* 17213 */;
+import useConjureRevealedText from "useConjureRevealedText" /* 17214 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,11 +34,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
   let tmp4 = closure_10();
   _require = tmp4;
   if (cResult[0] !== source) {
-    const splitMarkdownBlocksResult = tmp(17157).splitMarkdownBlocks(source);
+    const splitMarkdownBlocksResult = tmp(17213).splitMarkdownBlocks(source);
     cResult[0] = source;
     cResult[1] = splitMarkdownBlocksResult;
     marker = splitMarkdownBlocksResult;
-    const tmpResult = tmp(17157);
+    const tmpResult = tmp(17213);
   } else {
     marker = cResult[1];
   }

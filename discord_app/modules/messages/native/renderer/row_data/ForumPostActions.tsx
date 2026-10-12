@@ -1,11 +1,11 @@
-// === Module 7892: ForumPostActions ===
+// === Module 7893: ForumPostActions ===
 
-// Module 7892 (ForumPostActions)
+// Module 7893 (ForumPostActions)
 import Constants from "Constants" /* 1085 */;
 import ReactionUtils from "ReactionUtils" /* 4762 */;
-import _modDef6196 from "module_6196" /* 6196 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7890 */;
-import _modDef7893 from "module_7893" /* 7893 */;
+import _modDef6197 from "module_6197" /* 6197 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7891 */;
+import _modDef7894 from "module_7894" /* 7894 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -26,7 +26,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: -67108072, displayName: 16778008 };
+        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: 139838776465526940000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, displayName: -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008524798074479366 };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
         const obj6 = emojiId(str2[10]);
@@ -72,17 +72,17 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
   const getAssetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed;
   if (isFollowing) {
-    let assetUriForEmbed = getAssetUriForEmbed(_modDef6196);
+    let assetUriForEmbed = getAssetUriForEmbed(_modDef6197);
     let tmp6 = importDefault;
     let tmp8 = require;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(_modDef7893);
+    assetUriForEmbed = getAssetUriForEmbed(_modDef7894);
     tmp6 = importDefault;
     tmp8 = require;
   }
   if (null != assetUriForEmbed) {
     let stringResult;
-    const assetUriForEmbed1 = tmp8(7890).getAssetUriForEmbed(tmp6(5039));
+    const assetUriForEmbed1 = tmp8(7891).getAssetUriForEmbed(tmp6(5039));
     if (!hasReactions) {
       let emoji;
       if (defaultReaction != null) {
@@ -106,11 +106,11 @@ export const createForumPostActions = function createForumPostActions(arg0) {
       const intl4 = tmp8(1126).intl;
       obj.cta = intl4.string(tmp8(1126).t.C5UQC9);
       const tmp6Result = tmp6(2128);
-      obj.icon = tmp8(7890).getAssetUriForEmbed(tmp6(7894));
-      const tmp8Result3 = tmp8(7890);
-      obj.closeIcon = tmp8(7890).getAssetUriForEmbed(tmp6(6777));
+      obj.icon = tmp8(7891).getAssetUriForEmbed(tmp6(7895));
+      const tmp8Result3 = tmp8(7891);
+      obj.closeIcon = tmp8(7891).getAssetUriForEmbed(tmp6(6778));
       tmp14 = obj;
-      const tmp8Result4 = tmp8(7890);
+      const tmp8Result4 = tmp8(7891);
     }
     const obj4 = { numDisplayedReactions: 3, isFollowing, followIcon: assetUriForEmbed, followLabel: null, shareIcon: null, shareLabel: null, defaultReaction: null, addReactLabel: null, sharePrompt: null };
     const intl5 = tmp8(1126).intl;
@@ -131,7 +131,7 @@ export const createForumPostActions = function createForumPostActions(arg0) {
     return obj4;
   } else {
     const _HermesInternal = HermesInternal;
-    tmp6(1255).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 6196 : 7893));
+    tmp6(1255).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 6197 : 7894));
     const tmp6Result2 = tmp6(1255);
   }
 };

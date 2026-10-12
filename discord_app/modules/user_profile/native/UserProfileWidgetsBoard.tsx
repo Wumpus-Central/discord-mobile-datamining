@@ -1,20 +1,20 @@
-// === Module 13227: UserProfileWidgetsBoard ===
+// === Module 13250: UserProfileWidgetsBoard ===
 
-// Module 13227 (UserProfileWidgetsBoard)
+// Module 13250 (UserProfileWidgetsBoard)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import StringUtils from "StringUtils" /* 2031 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7325 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7326 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8878 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8879 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 13233 */;
-import QuoteIcon from "QuoteIcon" /* 13234 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 13242 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 13350 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7326 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7327 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8880 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 13256 */;
+import QuoteIcon from "QuoteIcon" /* 13257 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 13265 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 13373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -22,7 +22,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileSections = fn(8307).UserProfileSections;
+const UserProfileSections = fn(8308).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
@@ -867,7 +867,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     arr2 = cResult[4];
   }
   const type = widget.type;
-  if (userId(7321).WidgetType.FAVORITE_GAMES === type) {
+  if (userId(7322).WidgetType.FAVORITE_GAMES === type) {
     if (cResult[5] === tmp12) {
       if (cResult[6] === result) {
         if (cResult[7] === disableInteraction) {
@@ -889,7 +889,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     num4 = 10;
     cResult[10] = tmp56;
   } else {
-    if (tmp(7321).WidgetType.CURRENT_GAMES === type) {
+    if (tmp(7322).WidgetType.CURRENT_GAMES === type) {
       if (cResult[11] === tmp10) {
         if (cResult[12] === arr2) {
           let arr5 = cResult[13];
@@ -985,8 +985,8 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
       cResult[13] = substr;
       arr5 = substr;
     } else {
-      if (tmp(7321).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-        if (tmp(7321).WidgetType.PLAYED_GAMES !== type) {
+      if (tmp(7322).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+        if (tmp(7322).WidgetType.PLAYED_GAMES !== type) {
           return null;
         }
       }
@@ -1085,11 +1085,11 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
       arr3 = substr1;
     }
     if (cResult[51] !== widget) {
-      const widgetTitle = tmp(13236).getWidgetTitle(widget);
+      const widgetTitle = tmp(13259).getWidgetTitle(widget);
       cResult[51] = widget;
       cResult[52] = widgetTitle;
       let tmp60 = widgetTitle;
-      const tmpResult2 = tmp(13236);
+      const tmpResult2 = tmp(13259);
     } else {
       tmp60 = cResult[52];
     }
@@ -1129,7 +1129,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
             }
           }
           const obj14 = { style: cardStyle, title: tmp60, trailingAction: tmp62, children: tmp66 };
-          const tmp72 = closure_9(disableInteraction(6903), obj14);
+          const tmp72 = closure_9(disableInteraction(6904), obj14);
           cResult[61] = cardStyle;
           cResult[62] = tmp60;
           cResult[63] = tmp62;
@@ -1145,7 +1145,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
     if (tmp63) {
       const obj15 = { userId, widget };
-      tmp63 = closure_9(disableInteraction(13240), obj15);
+      tmp63 = closure_9(disableInteraction(13263), obj15);
     }
     cResult[53] = disableInteraction;
     cResult[54] = stateFromStores;
@@ -1353,7 +1353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const tmp5 = closure_13();
   const obj = userId(576);
   const tmp4 = undefined === isVisible || isVisible;
-  const displayableBoardWidgets = userId(13354).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(13377).useDisplayableBoardWidgets(userId);
   let num = 0;
   closure_15(tmp4, displayableBoardWidgets.length > 0);
   if (0 === displayableBoardWidgets.length) {
@@ -1396,7 +1396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     cResult[6] = fn;
     tmp8 = fn;
   }
-  const tmpResult = userId(13354);
+  const tmpResult = userId(13377);
 }) : (function UserProfileWidgetsBoard(userId) {
   userId = userId.userId;
   let flag = userId.isVisible;
@@ -1405,7 +1405,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }
   const cardStyle = userId.cardStyle;
   const tmp = closure_13();
-  const displayableBoardWidgets = userId(13354).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(13377).useDisplayableBoardWidgets(userId);
   closure_15(flag, displayableBoardWidgets.length > 0);
   let tmp3 = null;
   if (0 !== displayableBoardWidgets.length) {

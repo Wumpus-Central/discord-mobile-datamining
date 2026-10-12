@@ -1,6 +1,6 @@
-// === Module 6774: TextAreaField ===
+// === Module 6775: TextAreaField ===
 
-// Module 6774 (TextAreaField)
+// Module 6775 (TextAreaField)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -9,11 +9,11 @@ import noop from "module_19" /* 19 */;
 const util = prop(1126);
 const native = prop(4820);
 const Text_Text = prop(5088);
-const useTextField = prop(6293);
-const InputFieldContainer2 = prop(6300);
-const NativeTextInput = prop(6303);
-const propsForNativeTextInput = prop(6617);
-const useCharacterLimitAnnouncement = prop(6775);
+const useTextField = prop(6294);
+const InputFieldContainer2 = prop(6301);
+const NativeTextInput = prop(6304);
+const propsForNativeTextInput = prop(6618);
+const useCharacterLimitAnnouncement = prop(6776);
 require = fn;
 let closure_2 = ["ref"];
 const View = fn(17).View;

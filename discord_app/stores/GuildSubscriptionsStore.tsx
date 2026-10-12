@@ -1,10 +1,10 @@
-// === Module 6979: GuildSubscriptionsStore ===
+// === Module 6980: GuildSubscriptionsStore ===
 
-// Module 6979 (GuildSubscriptionsStore)
+// Module 6980 (GuildSubscriptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FavoritesUtils from "FavoritesUtils" /* 2090 */;
-import GuildSubscriptionsDefault from "GuildSubscriptions" /* 6981 */;
+import GuildSubscriptionsDefault from "GuildSubscriptions" /* 6982 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 5016 */;
 import LurkingStore from "LurkingStore" /* 4751 */;
@@ -186,7 +186,7 @@ function handleSpotifyUpdate() {
   }
   return false;
 }
-const EVERYONE_CHANNEL_ID = fn(6980).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(6981).EVERYONE_CHANNEL_ID;
 const Constants = fn(1085);
 ({ ChannelSections, ChannelTypes: closure_19 } = Constants);
 let closure_20 = new GuildSubscriptionsDefault((subscriptions) => {

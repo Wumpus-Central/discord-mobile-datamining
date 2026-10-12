@@ -1,19 +1,19 @@
-// === Module 18037: StreamFeedbackActionSheet ===
+// === Module 18095: StreamFeedbackActionSheet ===
 
-// Module 18037 (StreamFeedbackActionSheet)
+// Module 18095 (StreamFeedbackActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import FeedbackUtils from "FeedbackUtils" /* 9653 */;
-import trackStreamProblemDefault from "trackStreamProblem" /* 17895 */;
-import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 18039 */;
+import FeedbackUtils from "FeedbackUtils" /* 9654 */;
+import trackStreamProblemDefault from "trackStreamProblem" /* 17952 */;
+import shouldShowLogUploadForCategory from "shouldShowLogUploadForCategory" /* 18097 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Constants = fn(9650);
+const Constants = fn(9651);
 ({ FeedbackCategory: hasOwnProperty, FeedbackType: metroRequire, StreamFeedbackOption: closure_7 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -22,8 +22,8 @@ const result = size.fileFinishedImporting("components_native/calls/stream/Stream
 export default function StreamFeedbackActionSheet(stream) {
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
-  dependencyMap = stream(7425).useGetStreamApplication(stream);
-  let obj = stream(7425);
+  dependencyMap = stream(7426).useGetStreamApplication(stream);
+  let obj = stream(7426);
   const items = [AuthenticationStore];
   const stateFromStores = stream(504).useStateFromStores(items, () => AuthenticationStore.getId() === stream.ownerId);
   const intl = stream(1126).intl;
@@ -46,13 +46,13 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl5 = tmp(1126).intl;
   obj3.problemsHeader = intl5.string(stream(1126).t["6Y1t5P"]);
   const stringResult1 = intl2.string(stream(1126).t["0uxA2V"]);
-  obj3.problemOptions = stream(9653).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  obj3.problemOptions = stream(9654).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   let obj4 = { value: constants2.FREEFORM, label: null };
   const intl6 = tmp(1126).intl;
   obj4.label = intl6.string(stream(1126).t.emlT91);
   obj3.freeformConfig = obj4;
   let obj5 = { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null };
-  const tmpResult = stream(9653);
+  const tmpResult = stream(9654);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
@@ -116,7 +116,7 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18040, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18098, dependencyMap.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
           const obj7 = { mediaSessionId: null, rtcConnectionId: null };
           const tmp22Result = ActionSheetActionCreatorsDefault;
         }
@@ -125,5 +125,5 @@ export default function StreamFeedbackActionSheet(stream) {
       ToastUtils.presentFeedbackSent();
     }
   };
-  return jsx(tmp10(18038), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
+  return jsx(tmp10(18096), { headerLabel: stringResult, showHeaderCloseButton: true, ratingBody: null, categoriesHeader: null, optionsTree: null, trackOpen: null, trackReport: null });
 };

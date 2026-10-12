@@ -1,6 +1,6 @@
-// === Module 13054: useMediaItemSpoilerState ===
+// === Module 13059: useMediaItemSpoilerState ===
 
-// Module 13054 (useMediaItemSpoilerState)
+// Module 13059 (useMediaItemSpoilerState)
 import native from "native" /* 1200 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
@@ -20,8 +20,8 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
   const cResult = mediaItemHasSpoiler(576).c(7);
   let obj = mediaItemHasSpoiler(576);
   const tmp = mediaItemHasSpoiler;
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8391).useMediaItemHasSpoiler(arg0);
-  let obj2 = mediaItemHasSpoiler(8391);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8392).useMediaItemHasSpoiler(arg0);
+  let obj2 = mediaItemHasSpoiler(8392);
   [tmp6, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   const tmp5 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   let num = 0;
@@ -84,8 +84,8 @@ export const useMediaItemSpoilerState = ReactCompilerGating.isReactCompilerEnabl
   tmp8 = fn;
   const obj4 = mediaItemHasSpoiler(4850);
 }) : (function useMediaItemSpoilerState(arg0) {
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8391).useMediaItemHasSpoiler(arg0);
-  let obj = mediaItemHasSpoiler(8391);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8392).useMediaItemHasSpoiler(arg0);
+  let obj = mediaItemHasSpoiler(8392);
   const tmp = mediaItemHasSpoiler;
   [tmp5, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   const tmp4 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);

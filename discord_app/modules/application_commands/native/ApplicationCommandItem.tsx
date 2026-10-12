@@ -1,8 +1,8 @@
-// === Module 12111: ApplicationCommandItem ===
+// === Module 12113: ApplicationCommandItem ===
 
-// Module 12111 (ApplicationCommandItem)
+// Module 12113 (ApplicationCommandItem)
 import nativeDefault from "native" /* 587 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11927 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11929 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(9716).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(9717).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5092);
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
                           const obj4 = { accessibilityLabel: tmp14, style: tmp19, accessibilityRole: "button", onPress, children: null };
                           const items1 = [tmp25, tmp36, tmp40];
                           obj4.children = items1;
-                          const tmp45 = closure_8(section(6184).PressableOpacity, obj4);
+                          const tmp45 = closure_8(section(6185).PressableOpacity, obj4);
                           cResult[32] = onPress;
                           cResult[33] = tmp36;
                           cResult[34] = tmp40;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
                 }
                 if (tmp26) {
                   const obj8 = { style: tmp5.applicationCommandIcon, source: tmp10 };
-                  tmp26 = closure_7(guildId(6156), obj8);
+                  tmp26 = closure_7(guildId(6157), obj8);
                 }
                 cResult[17] = tmp10;
                 cResult[18] = tmp4;
@@ -192,12 +192,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       tmp14 = formatToPlainStringResult;
     }
     const tmpResult3 = section(504);
-    const applicationCommandsIconSource = section(11927).getApplicationCommandsIconSource(section, stateFromStores);
+    const applicationCommandsIconSource = section(11929).getApplicationCommandsIconSource(section, stateFromStores);
     cResult[4] = stateFromStores;
     cResult[5] = section;
     cResult[6] = applicationCommandsIconSource;
     tmp10 = applicationCommandsIconSource;
-    const tmpResult4 = section(11927);
+    const tmpResult4 = section(11929);
   }
   const fn = function c() {
     if (null != guildId) {

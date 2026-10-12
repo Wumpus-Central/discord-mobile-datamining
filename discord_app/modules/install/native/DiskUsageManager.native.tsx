@@ -1,14 +1,14 @@
-// === Module 15850: DiskUsageManager ===
+// === Module 15873: DiskUsageManager ===
 
-// Module 15850 (DiskUsageManager)
+// Module 15873 (DiskUsageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import NativeClientInfoModule from "NativeClientInfoModule" /* 1367 */;
-import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 9701 */;
-import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 15851 */;
+import BackgroundTaskManagerDefault from "BackgroundTaskManager" /* 9702 */;
+import NativeDiskUsageModuleDefault from "NativeDiskUsageModule" /* 15874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
 function isStable() {
@@ -35,7 +35,7 @@ let closure_11 = async function _measureAndReportInstallSize() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

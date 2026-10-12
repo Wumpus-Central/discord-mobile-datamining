@@ -1,7 +1,7 @@
-// === Module 16851: useGetOrFetchNotificationCenterItemApplications ===
+// === Module 16875: useGetOrFetchNotificationCenterItemApplications ===
 
-// Module 16851 (useGetOrFetchNotificationCenterItemApplications)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6857 */;
+// Module 16875 (useGetOrFetchNotificationCenterItemApplications)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6858 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -39,7 +39,7 @@ export const useGetOrFetchNotificationCenterItemsApplications = ReactCompilerGat
   } else {
     _require = cResult[1];
   }
-  return set(6857)(tmp3);
+  return set(6858)(tmp3);
 }) : (function useGetOrFetchNotificationCenterItemsApplications(arg0) {
   closure_0 = arg0;
   let items = [arg0];

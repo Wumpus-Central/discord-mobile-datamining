@@ -1,6 +1,6 @@
-// === Module 13370: UserProfilePrivateInfoBanner ===
+// === Module 13393: UserProfilePrivateInfoBanner ===
 
-// Module 13370 (UserProfilePrivateInfoBanner)
+// Module 13393 (UserProfilePrivateInfoBanner)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;

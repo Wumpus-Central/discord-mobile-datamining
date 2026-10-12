@@ -5,12 +5,12 @@ import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5106 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6851 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
-import useIsRemoteDefault from "useIsRemote" /* 6972 */;
-import StreamActionCreators from "StreamActionCreators" /* 7443 */;
-import CallsUtils from "CallsUtils" /* 8785 */;
-import VoiceChatHooks from "VoiceChatHooks" /* 10357 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6852 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
+import useIsRemoteDefault from "useIsRemote" /* 6973 */;
+import StreamActionCreators from "StreamActionCreators" /* 7444 */;
+import CallsUtils from "CallsUtils" /* 8786 */;
+import VoiceChatHooks from "VoiceChatHooks" /* 10358 */;
 import CallBarActionAll from "CallBarAction" /* 10841 */;
 import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 10844 */;
 import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 10851 */;
@@ -855,7 +855,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActionBa
   const cResult = channel(576).c(15);
   channel = channel.channel;
   const obj = channel(576);
-  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore, AuthenticationStore];
     cResult[0] = items;
@@ -906,7 +906,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActionBa
       }
     }
   }
-  const obj2 = channel(10357);
+  const obj2 = channel(10358);
   const stateFromStores = channel(504).useStateFromStores(first, S);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
@@ -1084,8 +1084,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActionBa
   const tmpResult6 = channel(504);
 }) : (function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
-  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(10357);
+  const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(10358);
   const items = [ChannelRTCStore, AuthenticationStore];
   closure_1 = channel(504).useStateFromStores(items, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);

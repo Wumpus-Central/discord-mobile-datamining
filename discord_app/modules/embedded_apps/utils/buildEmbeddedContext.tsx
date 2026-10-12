@@ -2,11 +2,11 @@
 
 // Module 10940 (buildEmbeddedContext)
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4739 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8610 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
 import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10809 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import FramesStore from "FramesStore" /* 10807 */;
-import InteractionStore from "InteractionStore" /* 7883 */;
+import InteractionStore from "InteractionStore" /* 7884 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;

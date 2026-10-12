@@ -1,23 +1,23 @@
-// === Module 16464: ActivitiesTogetherSpotIllustration ===
+// === Module 16487: ActivitiesTogetherSpotIllustration ===
 
-// Module 16464 (ActivitiesTogetherSpotIllustration)
+// Module 16487 (ActivitiesTogetherSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import assetHelpers from "assetHelpers" /* 6272 */;
-import _modDef16465 from "module_16465" /* 16465 */;
-import _modDef16466 from "module_16466" /* 16466 */;
-import _modDef16467 from "module_16467" /* 16467 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import assetHelpers from "assetHelpers" /* 6273 */;
+import _modDef16488 from "module_16488" /* 16488 */;
+import _modDef16489 from "module_16489" /* 16489 */;
+import _modDef16490 from "module_16490" /* 16490 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16465 }, 3: null };
-let obj2 = { uri: _modDef16465 };
-obj[2] = { uri: _modDef16466 };
-const obj3 = { uri: _modDef16466 };
-obj[3] = { uri: _modDef16467 };
+let obj = { 1: null, 2: { uri: _modDef16488 }, 3: null };
+let obj2 = { uri: _modDef16488 };
+obj[2] = { uri: _modDef16489 };
+const obj3 = { uri: _modDef16489 };
+obj[3] = { uri: _modDef16490 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef16467 };
+const obj4 = { uri: _modDef16490 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ActivitiesTogetherSpotIllustration.native.tsx");
 

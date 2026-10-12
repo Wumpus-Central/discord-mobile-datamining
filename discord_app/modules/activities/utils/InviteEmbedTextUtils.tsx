@@ -1,6 +1,6 @@
-// === Module 13516: InviteEmbedTextUtils ===
+// === Module 13539: InviteEmbedTextUtils ===
 
-// Module 13516 (InviteEmbedTextUtils)
+// Module 13539 (InviteEmbedTextUtils)
 import util from "util" /* 1126 */;
 import _modDef3054 from "module_3054" /* 3054 */;
 import NicknameUtils from "NicknameUtils" /* 5409 */;

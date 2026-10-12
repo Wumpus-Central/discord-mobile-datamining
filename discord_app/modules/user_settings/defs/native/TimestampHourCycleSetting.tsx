@@ -1,6 +1,6 @@
-// === Module 15748: TimestampHourCycleSetting ===
+// === Module 15771: TimestampHourCycleSetting ===
 
-// Module 15748 (TimestampHourCycleSetting)
+// Module 15771 (TimestampHourCycleSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
@@ -59,7 +59,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(7992).MobileUserSettings.APPEARANCE,
+  parent: fn(7993).MobileUserSettings.APPEARANCE,
   useValue: fn(2041).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;

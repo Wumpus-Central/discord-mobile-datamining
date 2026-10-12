@@ -1,6 +1,6 @@
-// === Module 18568: clips/ClipsManager ===
+// === Module 18626: clips/ClipsManager ===
 
-// Module 18568 (clips/ClipsManager)
+// Module 18626 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
@@ -8,22 +8,22 @@ import UserSettings from "UserSettings" /* 2041 */;
 import DiscordNativeDefault from "DiscordNative" /* 4731 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5137 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
-import isClipsEnabled from "isClipsEnabled" /* 13594 */;
-import ClipsExperiment from "ClipsExperiment" /* 13595 */;
+import isClipsEnabled from "isClipsEnabled" /* 13617 */;
+import ClipsExperiment from "ClipsExperiment" /* 13618 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7428 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7429 */;
 import ClipsStore from "ClipsStore" /* 2018 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(7430).getSystemAnalyticsInfo;
-const ClipsConstants = fn(7762);
+const getSystemAnalyticsInfo = fn(7431).getSystemAnalyticsInfo;
+const ClipsConstants = fn(7763);
 ({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1, CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_14, ClipsHardwareClassification: closure_15, CLIP_RUNTIME: closure_16 } = ClipsConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
@@ -217,7 +217,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

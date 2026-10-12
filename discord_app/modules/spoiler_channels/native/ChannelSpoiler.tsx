@@ -1,13 +1,13 @@
-// === Module 12391: ChannelSpoiler ===
+// === Module 12393: ChannelSpoiler ===
 
-// Module 12391 (ChannelSpoiler)
+// Module 12393 (ChannelSpoiler)
 import nativeDefault from "native" /* 587 */;
 import RootNavigationRef from "RootNavigationRef" /* 4977 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5106 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
 import GatedContentDefault from "GatedContent" /* 11191 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11969 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11971 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(11968).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11970).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5092);
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = noop.useContext(tmp6(11969)).setControlsMode;
+  setControlsMode = noop.useContext(tmp6(11971)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
@@ -186,8 +186,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     }
   }, items3);
   if (null != stateFromStores1) {
-    channelIconComponent = tmp(8158).getChannelIconComponent(stateFromStores1);
-    const tmpResult = tmp(8158);
+    channelIconComponent = tmp(8159).getChannelIconComponent(stateFromStores1);
+    const tmpResult = tmp(8159);
   }
   if (null != channelIconComponent) {
     let obj3 = { style: { flexDirection: "row", alignItems: "center", gap: 4, flexShrink: 1 }, children: null };
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
         const intl2 = tmp(1126).intl;
         obj13.children = intl2.string(tmp(1126).t["/QvRak"]);
         obj12.children = closure_10(tmp(5088).Text, obj13);
-        tmp24Result = closure_10(tmp(6184).PressableHighlight, obj12);
+        tmp24Result = closure_10(tmp(6185).PressableHighlight, obj12);
       }
       items5[2] = tmp24Result;
       const obj14 = { style: tmp4.divider };

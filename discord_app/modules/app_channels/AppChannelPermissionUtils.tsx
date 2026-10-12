@@ -4,7 +4,7 @@
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import AppChannelPermissions from "AppChannelPermissions" /* 4757 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 6948 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 6949 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
 
 require = fn;

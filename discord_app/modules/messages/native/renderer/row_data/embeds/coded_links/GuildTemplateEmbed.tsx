@@ -1,17 +1,17 @@
-// === Module 13500: GuildTemplateEmbed ===
+// === Module 13523: GuildTemplateEmbed ===
 
-// Module 13500 (GuildTemplateEmbed)
+// Module 13523 (GuildTemplateEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7030 */;
-import Constants from "Constants" /* 7423 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7750 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7888 */;
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7031 */;
+import Constants from "Constants" /* 7424 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7751 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7889 */;
 import _modDef11362 from "module_11362" /* 11362 */;
 import _modDef11363 from "module_11363" /* 11363 */;
-import _modDef13501 from "module_13501" /* 13501 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7179 */;
+import _modDef13524 from "module_13524" /* 13524 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7180 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -63,7 +63,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj10.titleColor = colors.titleColor;
     obj10.subtitle = formatToPlainStringResult;
     obj10.subtitleColor = colors.subtitleColor;
-    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef13501).uri;
+    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef13524).uri;
     ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
     const intl6 = util.intl;
     obj10.acceptLabelText = intl6.string(util.t["a3Gl+e"]);

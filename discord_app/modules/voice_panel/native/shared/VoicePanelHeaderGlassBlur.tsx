@@ -1,11 +1,11 @@
-// === Module 11979: VoicePanelHeaderGlassBlur ===
+// === Module 11981: VoicePanelHeaderGlassBlur ===
 
-// Module 11979 (VoicePanelHeaderGlassBlur)
+// Module 11981 (VoicePanelHeaderGlassBlur)
 import useThemeDefault from "useTheme" /* 5031 */;
 import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5364 */;
 import spring from "spring" /* 5378 */;
-import NativeViewDefault from "NativeView" /* 6161 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6761 */;
+import NativeViewDefault from "NativeView" /* 6162 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6762 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

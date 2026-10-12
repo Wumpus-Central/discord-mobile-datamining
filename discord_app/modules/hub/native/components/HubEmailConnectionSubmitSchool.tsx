@@ -1,15 +1,15 @@
-// === Module 12502: HubEmailConnectionSubmitSchool ===
+// === Module 12504: HubEmailConnectionSubmitSchool ===
 
-// Module 12502 (HubEmailConnectionSubmitSchool)
+// Module 12504 (HubEmailConnectionSubmitSchool)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import useNavigation from "useNavigation" /* 1503 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6284 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6664 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12489 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6285 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12491 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12480).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12482).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5092);
@@ -48,7 +48,7 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

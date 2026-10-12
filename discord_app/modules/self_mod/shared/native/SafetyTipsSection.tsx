@@ -1,8 +1,8 @@
-// === Module 10402: SafetyTipsSection ===
+// === Module 10403: SafetyTipsSection ===
 
-// Module 10402 (SafetyTipsSection)
+// Module 10403 (SafetyTipsSection)
 import nativeDefault from "native" /* 587 */;
-import SafetyTipsRowDefault from "SafetyTipsRow" /* 7703 */;
+import SafetyTipsRowDefault from "SafetyTipsRow" /* 7704 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
   showHeader = showHeader.showHeader;
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp7 = closure_4(safetyTips(10403).SafetyBookletSpotIllustration, {});
+    const tmp7 = closure_4(safetyTips(10404).SafetyBookletSpotIllustration, {});
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
   const safetyTips = children.safetyTips;
   let showHeader = children.showHeader;
   const tmp = closure_6();
-  const items = [closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10403).SafetyBookletSpotIllustration, {}) }), , ];
+  const items = [closure_4(View, { style: tmp.image, children: closure_4(safetyTips(10404).SafetyBookletSpotIllustration, {}) }), , ];
   if (showHeader) {
     const obj2 = { style: tmp.text, variant: "heading-xl/semibold", children: null };
     const intl = tmp3(1126).intl;
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyTi
   const items1 = [showHeader, closure_4(safetyTips(5088).Text, { style: tmp.text, accessibilityRole: "header", variant: "text-md/medium", color: "text-default", children: children.description })];
   obj4.children = items1;
   items[1] = closure_5(safetyTips(5377).Stack, obj4);
-  const obj = { style: tmp.image, children: closure_4(safetyTips(10403).SafetyBookletSpotIllustration, {}) };
+  const obj = { style: tmp.image, children: closure_4(safetyTips(10404).SafetyBookletSpotIllustration, {}) };
   const obj5 = { style: tmp.text, accessibilityRole: "header", variant: "text-md/medium", color: "text-default", children: children.description };
   items[2] = closure_4(View, { style: tmp.tips, children: safetyTips.map((tip, index) => React4(SafetyTipsRowDefault, { index: index + 1, tip, end: index === safetyTips.length - 1 }, index)) });
   obj3.children = items;

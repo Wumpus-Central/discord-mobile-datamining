@@ -1,10 +1,10 @@
-// === Module 10055: GiftCodeRecord ===
+// === Module 10056: GiftCodeRecord ===
 
-// Module 10055 (GiftCodeRecord)
+// Module 10056 (GiftCodeRecord)
 import _modDef4702 from "module_4702" /* 4702 */;
 import Record from "Record" /* 1405 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7177 */;
-import PromotionRecord from "PromotionRecord" /* 9122 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7178 */;
+import PromotionRecord from "PromotionRecord" /* 9123 */;
 import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4770 */;
 
 const require = fn;

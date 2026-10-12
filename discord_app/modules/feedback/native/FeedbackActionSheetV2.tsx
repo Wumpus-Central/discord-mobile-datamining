@@ -1,6 +1,6 @@
-// === Module 18038: FeedbackActionSheetV2 ===
+// === Module 18096: FeedbackActionSheetV2 ===
 
-// Module 18038 (FeedbackActionSheetV2)
+// Module 18096 (FeedbackActionSheetV2)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,7 +10,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056
 import useMountEffectDefault from "useMountEffect" /* 5396 */;
 import usePreviousDefault from "usePrevious" /* 5922 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import RatingSelectorDefault from "RatingSelector" /* 9654 */;
+import RatingSelectorDefault from "RatingSelector" /* 9655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ function closeActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet();
 }
 const View = fn(17).View;
-const FeedbackRating = fn(9650).FeedbackRating;
+const FeedbackRating = fn(9651).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5092);
@@ -139,8 +139,8 @@ export default function FeedbackActionSheetV2(optionsTree) {
         }
       }
       obj4.hideHelpdeskLink = hideHelpdeskLink;
-      obj2.pushLazy(asyncRequireImpl(9672, dependencyMap.paths), obj4);
-      const tmp11 = asyncRequireImpl(9672, dependencyMap.paths);
+      obj2.pushLazy(asyncRequireImpl(9673, dependencyMap.paths), obj4);
+      const tmp11 = asyncRequireImpl(9673, dependencyMap.paths);
     } else {
       let obj = { rating: first2, category: null, reason: null, dontShowAgain: null, feedback: "" };
       value2 = undefined;
@@ -212,7 +212,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
       obj6.onPress = function onPress() {
         return closure_9(!first1);
       };
-      tmp37Result = tmp37(tmp20(6176).TableCheckboxRow, obj6);
+      tmp37Result = tmp37(tmp20(6177).TableCheckboxRow, obj6);
     }
     const obj7 = { children: null };
     items2[2] = tmp37Result;
@@ -229,7 +229,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
           hasIcons: false,
           children: first.map((label, index) => {
                   closure_0 = label;
-                  return closure_7(optionsTree(6179).TableRow, {
+                  return closure_7(optionsTree(6180).TableRow, {
                     label: label.label,
                     labelLineClamp: 2,
                     onPress() {
@@ -238,7 +238,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
                   }, index);
                 })
         };
-        obj9.children = closure_7(tmp20(6264).TableRowGroup, obj10);
+        obj9.children = closure_7(tmp20(6265).TableRowGroup, obj10);
         const items3 = [closure_7(closure_5, obj9), ];
         const obj11 = { variant: "secondary", size: "sm", text: null, onPress: null };
         const intl2 = tmp20(1126).intl;
@@ -261,7 +261,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
       const problemOptions = first4.problemOptions;
       obj14.children = problemOptions.map((label, index) => {
         closure_0 = label;
-        return closure_7(optionsTree(6179).TableRow, {
+        return closure_7(optionsTree(6180).TableRow, {
           label: label.label,
           labelLineClamp: 2,
           onPress() {
@@ -269,7 +269,7 @@ export default function FeedbackActionSheetV2(optionsTree) {
           }
         }, index);
       });
-      obj13.children = closure_7(tmp20(6264).TableRowGroup, obj14);
+      obj13.children = closure_7(tmp20(6265).TableRowGroup, obj14);
       const items4 = [closure_7(closure_5, obj13), ];
       const obj15 = { variant: "secondary", size: "sm", text: null, onPress: null };
       let intl = tmp20(1126).intl;
@@ -304,13 +304,13 @@ export default function FeedbackActionSheetV2(optionsTree) {
   let tmp40Result = null;
   if (showHeaderCloseButton) {
     const obj18 = { onPress };
-    tmp40Result = tmp40(tmp20(6893).ActionSheetCloseButton, obj18);
+    tmp40Result = tmp40(tmp20(6894).ActionSheetCloseButton, obj18);
   }
   obj17.trailing = tmp40Result;
-  obj16.header = closure_7(optionsTree(6838).BottomSheetTitleHeader, obj17);
+  obj16.header = closure_7(optionsTree(6839).BottomSheetTitleHeader, obj17);
   const obj19 = { contentContainerStyle: null, children: tmp33Result };
   const items5 = [tmp.container, { paddingBottom: tmp.container.padding + bottom }];
   obj19.contentContainerStyle = items5;
-  obj16.children = closure_7(optionsTree(6306).BottomSheetScrollView, obj19);
-  return closure_7(optionsTree(6839).BottomSheet, obj16);
+  obj16.children = closure_7(optionsTree(6307).BottomSheetScrollView, obj19);
+  return closure_7(optionsTree(6840).BottomSheet, obj16);
 };

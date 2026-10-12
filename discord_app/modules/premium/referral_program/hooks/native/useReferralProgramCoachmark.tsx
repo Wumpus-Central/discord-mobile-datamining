@@ -1,12 +1,12 @@
-// === Module 17489: useReferralProgramCoachmark ===
+// === Module 17546: useReferralProgramCoachmark ===
 
-// Module 17489 (useReferralProgramCoachmark)
+// Module 17546 (useReferralProgramCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import openUserSettings from "openUserSettings" /* 7093 */;
-import _modDef17490 from "module_17490" /* 17490 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import openUserSettings from "openUserSettings" /* 7094 */;
+import _modDef17547 from "module_17547" /* 17547 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,8 +24,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Referr
   const cResult = c.c(5);
   const tmp3 = closure_9();
   if (cResult[0] !== tmp3.coachmarkImage) {
-    const obj2 = { source: _modDef17490, style: tmp3.coachmarkImage };
-    const tmp8 = jsx(FastImageDefault, { source: _modDef17490, style: tmp3.coachmarkImage });
+    const obj2 = { source: _modDef17547, style: tmp3.coachmarkImage };
+    const tmp8 = jsx(FastImageDefault, { source: _modDef17547, style: tmp3.coachmarkImage });
     cResult[0] = tmp3.coachmarkImage;
     cResult[1] = tmp8;
     let tmp4 = tmp8;
@@ -47,8 +47,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Referr
 }) : (function ReferralProgramCoachmarkImg() {
   const tmp = closure_9();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
-  const obj2 = { source: _modDef17490, style: tmp.coachmarkImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef17490, style: tmp.coachmarkImage });
+  const obj2 = { source: _modDef17547, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef17547, style: tmp.coachmarkImage });
   return <View style={tmp.coachmarkImageContainer}>{null}</View>;
 });
 ReactCompilerGating = fn(558);
@@ -67,7 +67,7 @@ export const useReferralProgramCoachmark = ReactCompilerGating.isReactCompilerEn
   const isEligibleSenderForReferralProgram = require("useIsEligibleSenderForReferralProgram").useIsEligibleSenderForReferralProgram(result);
   if (cResult[0] === disabled) {
     if (cResult[1] === isEligibleSenderForReferralProgram) {
-      const tmp8 = _slicedToArray(tmp(7099).useSelectedDismissibleContent(cResult[2]), 2);
+      const tmp8 = _slicedToArray(tmp(7100).useSelectedDismissibleContent(cResult[2]), 2);
       _require = tmp9;
       const _Symbol = Symbol;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -167,7 +167,7 @@ export const useReferralProgramCoachmark = ReactCompilerGating.isReactCompilerEn
       cResult[12] = S;
       cResult[13] = tmp19;
       cResult[14] = obj4;
-      const tmpResult = tmp(7099);
+      const tmpResult = tmp(7100);
     }
   }
   if (isEligibleSenderForReferralProgram) {

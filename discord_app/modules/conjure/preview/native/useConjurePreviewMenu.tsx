@@ -1,13 +1,13 @@
-// === Module 17125: useConjurePreviewMenu ===
+// === Module 17164: useConjurePreviewMenu ===
 
-// Module 17125 (useConjurePreviewMenu)
+// Module 17164 (useConjurePreviewMenu)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
-import conjureExternalConnections from "conjureExternalConnections" /* 13226 */;
-import conjureProjectMenuItems from "conjureProjectMenuItems" /* 17127 */;
+import conjureExternalConnections from "conjureExternalConnections" /* 17153 */;
+import conjureProjectMenuItems from "conjureProjectMenuItems" /* 17166 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 13213 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 13230 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   const conjureConnectActions = projectId(connect[5]).useConjureConnectActions(projectId, projectId(connect[6]).presentError);
   ({ pending: pending2, connect } = conjureConnectActions);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ConjureConnectionStore];
+    const items = [ConjureSettingsStore];
     cResult[0] = items;
     let first = items;
   } else {
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   }
   if (cResult[1] !== projectId) {
     const fn = function s() {
-      return ConjureConnectionStore.getDeclaredConnections(projectId);
+      return ConjureSettingsStore.getDeclaredConnections(projectId);
     };
     const items1 = [projectId];
     cResult[1] = projectId;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   let obj = projectId(pending[5]);
   const items = [pending2];
   const items1 = [projectId];
-  const stateFromStores = projectId(pending[7]).useStateFromStores(items, () => ConjureConnectionStore.getDeclaredConnections(projectId), items1);
+  const stateFromStores = projectId(pending[7]).useStateFromStores(items, () => ConjureSettingsStore.getDeclaredConnections(projectId), items1);
   const items2 = [stateFromStores];
   const memo = refresh.useMemo(() => conjureExternalConnections.externalConnectionOffers(stateFromStores), items2);
   const items3 = [pending2, memo, refreshApplicationId, pending];

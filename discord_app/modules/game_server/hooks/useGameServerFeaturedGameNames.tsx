@@ -1,8 +1,8 @@
-// === Module 12313: useGameServerFeaturedGameNames ===
+// === Module 12315: useGameServerFeaturedGameNames ===
 
-// Module 12313 (useGameServerFeaturedGameNames)
+// Module 12315 (useGameServerFeaturedGameNames)
 import c from "c" /* 576 */;
-import useGame from "useGame" /* 7008 */;
+import useGame from "useGame" /* 7009 */;
 import GameServerConstants from "GameServerConstants" /* 5009 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -3,7 +3,7 @@
 // Module 11384 (GuildIncidentActionsActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8043 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8044 */;
 import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 11386 */;
 import GuildRaidLockdownFeedbackActionSheetDefault from "GuildRaidLockdownFeedbackActionSheet" /* 11388 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 require = fn;
 const GuildIncidentsActionSheetStore = fn(11385);
 ({ resetGuildIncidentsActionSheetStore: hasOwnProperty, setInitialTime: metroRequire, setPauseDms: closure_7, setPauseInvites: closure_8, setTime: closure_9, useGuildIncidentsActionSheetStore: c10 } = GuildIncidentsActionSheetStore);
-const getTimeframes = fn(8044).getTimeframes;
+const getTimeframes = fn(8045).getTimeframes;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
@@ -28,19 +28,19 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
   const cResult = onClose(576).c(15);
   onClose = onClose.onClose;
   if (cResult[0] !== onClose) {
-    const ActionSheet = map(6898).ActionSheet;
+    const ActionSheet = map(6899).ActionSheet;
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { title: null };
       const intl = map(1126).intl;
       obj2.title = intl.string(map(1126).t.vKYZzc);
-      const tmp11 = closure_14(map(6838).BottomSheetTitleHeader, obj2);
+      const tmp11 = closure_14(map(6839).BottomSheetTitleHeader, obj2);
       cResult[6] = tmp11;
       let tmp9 = tmp11;
     } else {
       tmp9 = cResult[6];
     }
-    Group = map(6894).ActionSheetRow.Group;
+    Group = map(6895).ActionSheetRow.Group;
     map = getTimeframes().map;
     const mapped = map((label) => closure_1_14(onClose(dependencyMap[12]).ActionSheetRow, {
       label: label.label,
@@ -96,9 +96,9 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
   const obj2 = { title: null };
   const intl = onClose(1126).intl;
   obj2.title = intl.string(onClose(1126).t.vKYZzc);
-  const items = [closure_14(onClose(6838).BottomSheetTitleHeader, obj2), ];
+  const items = [closure_14(onClose(6839).BottomSheetTitleHeader, obj2), ];
   const arr = getTimeframes();
-  items[1] = closure_14(onClose(6894).ActionSheetRow.Group, {
+  items[1] = closure_14(onClose(6895).ActionSheetRow.Group, {
     hasIcons: false,
     children: getTimeframes().map((label) => closure_1_14(onClose(dependencyMap[12]).ActionSheetRow, {
       label: label.label,
@@ -109,7 +109,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
     }, label.value))
   });
   obj.children = items;
-  return closure_15(onClose(6898).ActionSheet, obj);
+  return closure_15(onClose(6899).ActionSheet, obj);
 });
 class GuildIncidentActionsActionSheet {
   constructor(arg0) {

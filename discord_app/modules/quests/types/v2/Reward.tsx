@@ -1,8 +1,8 @@
-// === Module 7404: Reward ===
+// === Module 7405: Reward ===
 
-// Module 7404 (Reward)
+// Module 7405 (Reward)
 import QuestTypes from "QuestTypes" /* 5975 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7395 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7396 */;
 import size from "module_2" /* 2 */;
 
 function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_platform) {

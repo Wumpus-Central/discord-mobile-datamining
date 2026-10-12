@@ -1,6 +1,6 @@
-// === Module 8237: useGameProfileObscured ===
+// === Module 8238: useGameProfileObscured ===
 
-// Module 8237 (useGameProfileObscured)
+// Module 8238 (useGameProfileObscured)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import utils from "utils" /* 6042 */;

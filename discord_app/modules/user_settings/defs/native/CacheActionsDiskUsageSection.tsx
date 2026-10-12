@@ -1,6 +1,6 @@
-// === Module 15849: CacheActionsDiskUsageSection ===
+// === Module 15872: CacheActionsDiskUsageSection ===
 
-// Module 15849 (CacheActionsDiskUsageSection)
+// Module 15872 (CacheActionsDiskUsageSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,8 +8,8 @@ import PlatformUtils from "PlatformUtils" /* 1382 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
 import FileSizeUtils from "FileSizeUtils" /* 5640 */;
-import Card from "Card" /* 6181 */;
-import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 15852 */;
+import Card from "Card" /* 6182 */;
+import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 15875 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -632,7 +632,7 @@ export const useDiskUsageMeasurement = function useDiskUsageMeasurement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,10 +1,10 @@
-// === Module 8524: GuildEventRsvpUtils ===
+// === Module 8525: GuildEventRsvpUtils ===
 
-// Module 8524 (GuildEventRsvpUtils)
+// Module 8525 (GuildEventRsvpUtils)
 import util from "util" /* 1126 */;
-import ScheduleUtils from "ScheduleUtils" /* 8520 */;
-import useEventException from "useEventException" /* 8525 */;
-import useEventSchedule from "useEventSchedule" /* 8526 */;
+import ScheduleUtils from "ScheduleUtils" /* 8521 */;
+import useEventException from "useEventException" /* 8526 */;
+import useEventSchedule from "useEventSchedule" /* 8527 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6054 */;
 

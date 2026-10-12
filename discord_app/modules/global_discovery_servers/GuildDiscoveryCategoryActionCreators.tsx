@@ -1,10 +1,10 @@
-// === Module 16909: GuildDiscoveryCategoryActionCreators ===
+// === Module 16933: GuildDiscoveryCategoryActionCreators ===
 
-// Module 16909 (GuildDiscoveryCategoryActionCreators)
+// Module 16933 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16910 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16934 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ let closure_7 = async function _maybeFetchGuildDiscoveryCategories() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -210,7 +210,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
         closure_130_1(closure_130_2[5]).dispatch(obj10);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp18) {
       closure_3 = tmp18;

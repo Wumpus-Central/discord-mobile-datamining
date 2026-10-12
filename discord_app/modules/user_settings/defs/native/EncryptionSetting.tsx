@@ -1,10 +1,10 @@
-// === Module 16234: EncryptionSetting ===
+// === Module 16257: EncryptionSetting ===
 
-// Module 16234 (EncryptionSetting)
+// Module 16257 (EncryptionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 16235 */;
+import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 16258 */;
 import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5131 */;
 
 require = fn;
@@ -73,7 +73,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
   }),
-  parent: fn(7992).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7993).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: tmp2,
   screen: {
     route: fn(1085).UserSettingsSections.SECURE_FRAMES,

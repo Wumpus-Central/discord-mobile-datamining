@@ -1,9 +1,9 @@
-// === Module 8765: DiscordTag ===
+// === Module 8766: DiscordTag ===
 
-// Module 8765 (DiscordTag)
+// Module 8766 (DiscordTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BotTagDefault from "BotTag" /* 8766 */;
+import BotTagDefault from "BotTag" /* 8767 */;
 import noop from "module_19" /* 19 */;
 
 const Text_Text = Text(5088);

@@ -1,9 +1,9 @@
-// === Module 9306: ClientThemesOverrides ===
+// === Module 9307: ClientThemesOverrides ===
 
-// Module 9306 (ClientThemesOverrides)
+// Module 9307 (ClientThemesOverrides)
 import c from "c" /* 576 */;
 import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4936 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9307 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9308 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 11460: MediaChannelActionCreators ===
+// === Module 11462: MediaChannelActionCreators ===
 
-// Module 11460 (MediaChannelActionCreators)
+// Module 11462 (MediaChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -48,7 +48,7 @@ let closure_6 = async function _unfurlEmbedUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,18 +1,18 @@
-// === Module 11413: ConjurePlatformUtils ===
+// === Module 11421: ConjurePlatformUtils ===
 
-// Module 11413 (ConjurePlatformUtils)
+// Module 11421 (ConjurePlatformUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9234 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9235 */;
 import ApplicationUtils from "ApplicationUtils" /* 10862 */;
 import PushNotificationDefault from "PushNotification" /* 11031 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 11415 */;
-import conjurePreviewCall from "conjurePreviewCall" /* 11417 */;
-import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 11419 */;
-import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 11420 */;
-import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 11423 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 11423 */;
+import conjurePreviewCall from "conjurePreviewCall" /* 11425 */;
+import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 11427 */;
+import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 11428 */;
+import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 11431 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10651 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
 
 const require = globalThis.__r;
 
@@ -220,7 +220,7 @@ let closure_14 = async function _relayPreviewCapture(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -287,7 +287,7 @@ let closure_14 = async function _relayPreviewCapture(arg0) {
               const obj9 = { value: { status: "unavailable" }, done: true };
               return obj9;
             } else if (null == onAccepted) {
-              let obj10 = { uploadToken: "r" };
+              let obj10 = { uploadToken: "top" };
             } else {
               c7 = 2;
               c8 = 1;
@@ -363,7 +363,7 @@ let closure_14 = async function _relayPreviewCapture(arg0) {
     }
   }
 };
-let closure_16 = async function _inspectConjurePreviewPoint(arg0) {
+let closure_17 = async function _inspectConjurePreviewPoint(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -374,7 +374,7 @@ let closure_16 = async function _inspectConjurePreviewPoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -442,7 +442,7 @@ let closure_16 = async function _inspectConjurePreviewPoint(arg0) {
     }
   }
 };
-let closure_17 = async function _relayPreviewControl(arg0) {
+let closure_18 = async function _relayPreviewControl(arg0) {
   if (c10 === 2) {
     c10 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -453,7 +453,7 @@ let closure_17 = async function _relayPreviewControl(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -579,7 +579,7 @@ let closure_17 = async function _relayPreviewControl(arg0) {
           if (Array.isArray(closure_133_7.results)) {
             closure_4 = 0;
             items = [];
-            closure_4 = HermesBuiltin.arraySpread(closure_134_19.drain(closure_133_0), closure_4);
+            closure_4 = HermesBuiltin.arraySpread(closure_134_20.drain(closure_133_0), closure_4);
             closure_4 = HermesBuiltin.arraySpread(closure_133_6.drain(), closure_4);
             closure_133_8 = items;
             if (0 === closure_133_8.length) {
@@ -621,11 +621,12 @@ let closure_17 = async function _relayPreviewControl(arg0) {
   }
 };
 const isLaunched = fn(10802).isLaunched;
-const LocalNotificationTypes = fn(11414).LocalNotificationTypes;
-let items = [fn(8457).OAuth2Scopes.BOT, fn(8457).OAuth2Scopes.APPLICATIONS_COMMANDS];
+const LocalNotificationTypes = fn(11422).LocalNotificationTypes;
+let items = [fn(8458).OAuth2Scopes.BOT, fn(8458).OAuth2Scopes.APPLICATIONS_COMMANDS];
 let c15 = 0;
-let c18 = 0;
-const conjurePreviewControlLease = fn(11419);
+let c16 = 0;
+let c19 = 0;
+const conjurePreviewControlLease = fn(11427);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -644,8 +645,8 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
   }
   if (null != tmp3) {
     const obj2 = { id: null, timeoutMs: null, retryMs: null };
-    const sum = c18 + 1;
-    c18 = sum;
+    const sum = c19 + 1;
+    c19 = sum;
     const _Date = Date;
     const _HermesInternal = HermesInternal;
     obj2.id = "control-end-" + sum + "-" + Date.now();
@@ -719,8 +720,8 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj5 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(11422);
-let closure_19 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
+const conjurePreviewOperationSurfaces = fn(11430);
+let closure_20 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
   if (project != null) {
@@ -728,14 +729,14 @@ let closure_19 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
   }
   let tmp3 = null;
   if (null != prop) {
-    const conjureBuilderPreviewFrame = iframeId(11415).getConjureBuilderPreviewFrame(prop);
+    const conjureBuilderPreviewFrame = iframeId(11423).getConjureBuilderPreviewFrame(prop);
     let tmp7 = null;
     if (null != conjureBuilderPreviewFrame) {
       const obj3 = { applicationId: prop, launched: isLaunched(conjureBuilderPreviewFrame) };
       tmp7 = obj3;
     }
     tmp3 = tmp7;
-    const obj2 = iframeId(11415);
+    const obj2 = iframeId(11423);
   }
   let launched;
   if (tmp3 != null) {
@@ -756,13 +757,13 @@ let closure_19 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
     }
     let tmp12 = null;
     if (null != prop1) {
-      const conjureBuilderPreviewFrame1 = iframeId(11415).getConjureBuilderPreviewFrame(prop1);
+      const conjureBuilderPreviewFrame1 = iframeId(11423).getConjureBuilderPreviewFrame(prop1);
       iframeId = null;
       if (isLaunched(conjureBuilderPreviewFrame1)) {
         iframeId = conjureBuilderPreviewFrame1.data.iframeId;
       }
       tmp12 = iframeId;
-      const obj5 = iframeId(11415);
+      const obj5 = iframeId(11423);
     }
     iframeId = tmp12;
     const obj6 = {
@@ -862,7 +863,7 @@ export default {
   },
   relayPreviewControl() {
     const self = this;
-    const apply = closure_17.apply;
+    const apply = closure_18.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -884,12 +885,12 @@ export default {
         iframeId = conjureBuilderPreviewFrame.data.iframeId;
       }
       tmp3 = iframeId;
-      let obj = require("conjurePreviewSurface");
+      const obj = require("conjurePreviewSurface");
     }
     if (null != tmp3) {
       const obj2 = { id: null, timeoutMs: null, retryMs: null };
-      const sum = c18 + 1;
-      c18 = sum;
+      const sum = c19 + 1;
+      c19 = sum;
       const _Date = Date;
       const _HermesInternal = HermesInternal;
       obj2.id = "control-abort-" + sum + "-" + Date.now();
@@ -967,18 +968,88 @@ export default {
     const result = conjurePreviewControlLease2.releaseConjureControlLeases(projectId);
   },
   beginPreviewOperation(projectId) {
-    closure_19.begin(projectId);
+    closure_20.begin(projectId);
   },
   endPreviewOperation(projectId) {
-    closure_19.end(projectId);
+    closure_20.end(projectId);
   },
   reloadAppFrames(application_id) {
     restartConjureAppFramesDefault(application_id);
   }
 };
+export const setConjurePreviewFrameVisibility = function setConjurePreviewFrameVisibility(iframeId, visible) {
+  const sum = c15 + 1;
+  c15 = sum;
+  const obj2 = { id: "visibility-" + sum, timeoutMs: 15000, retryMs: require("conjurePreviewCall").CONTROL_RETRY_MS };
+  _require = "set-visibility";
+  obj4 = undefined;
+  const previewCallTypesResult = require("conjurePreviewCall").previewCallTypes("set-visibility");
+  c2 = previewCallTypesResult;
+  obj4 = { type: previewCallTypesResult.request, id: obj2.id };
+  const merged = Object.assign({ revision: sum, visible });
+  let obj = { revision: sum, visible };
+  const obj3 = require("conjurePreviewCall");
+  const webViewProxy = require("WebView").getWebViewProxy(iframeId);
+  const timestamp = Date.now();
+  const obj5 = require("WebView");
+  new Promise((arg0, arg1) => {
+    closure_0 = arg0;
+    function cleanup() {
+      clearTimeout(closure_3);
+      if (null != c2) {
+        const _clearInterval = clearInterval;
+        clearInterval(c2);
+      }
+      closure_4.remove();
+    }
+    const timeout = setTimeout(() => {
+      clearTimeout(closure_3);
+      if (null != c2) {
+        const _clearInterval = clearInterval;
+        clearInterval(c2);
+      }
+      closure_4.remove();
+      const previewFrameCallTimeout = new conjurePreviewCall.PreviewFrameCallTimeout(c0, obj2.timeoutMs);
+      closure_1(previewFrameCallTimeout);
+    }, obj2.timeoutMs);
+    closure_4 = closure_4.addOnMessageListener((data) => {
+      try {
+        const _JSON = JSON;
+        const parsed = JSON.parse(data.data);
+        if (obj.isResultEnvelope(parsed, _null.ack, obj2.id)) {
+          if (null != _null) {
+            const _clearInterval = clearInterval;
+            clearInterval(_null);
+          }
+          _null = null;
+        } else {
+          if (tmp5Result.isResultEnvelope(parsed, tmp8.result, obj2.id)) {
+            cleanup();
+            closure_0(parsed);
+          }
+          tmp5Result = conjurePreviewCall;
+        }
+        obj = conjurePreviewCall;
+        tmp8 = _null;
+      } catch (err) {
+        return tmp;
+      }
+    });
+    closure_4.injectJavaScript(require("getPostMessageJavaScript")(timeout)).catch(() => {
+
+    });
+    const interval = setInterval(function post() {
+      closure_4.injectJavaScript(obj2(obj4[13])(closure_3)).catch(() => {
+
+      });
+    }, obj2.retryMs);
+  }).catch(() => {
+
+  });
+};
 export const inspectConjurePreviewPoint = function inspectConjurePreviewPoint() {
   const self = this;
-  const apply = closure_16.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

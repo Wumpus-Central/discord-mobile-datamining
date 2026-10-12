@@ -1,9 +1,9 @@
-// === Module 17330: pages/ErrorScreen ===
+// === Module 17387: pages/ErrorScreen ===
 
-// Module 17330 (pages/ErrorScreen)
+// Module 17387 (pages/ErrorScreen)
 import c from "c" /* 576 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6664 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
 import noop from "module_19" /* 19 */;
 
 const Text_Text = tmp(5088);

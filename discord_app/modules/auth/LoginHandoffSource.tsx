@@ -1,6 +1,6 @@
-// === Module 7037: LoginHandoffSource ===
+// === Module 7038: LoginHandoffSource ===
 
-// Module 7037 (LoginHandoffSource)
+// Module 7038 (LoginHandoffSource)
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import ChannelConstants from "ChannelConstants" /* 2072 */;
 import LinkUtils from "LinkUtils" /* 5422 */;

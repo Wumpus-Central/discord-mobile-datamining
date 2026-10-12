@@ -1,6 +1,6 @@
-// === Module 17028: usePaginatedMemberApplications ===
+// === Module 17052: usePaginatedMemberApplications ===
 
-// Module 17028 (usePaginatedMemberApplications)
+// Module 17052 (usePaginatedMemberApplications)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -37,7 +37,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

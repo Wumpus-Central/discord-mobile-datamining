@@ -1,6 +1,6 @@
-// === Module 15737: UserSettingsText ===
+// === Module 15760: UserSettingsText ===
 
-// Module 15737 (UserSettingsText)
+// Module 15760 (UserSettingsText)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
@@ -8,12 +8,12 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5260 */;
-import TableRadioRow from "TableRadioRow" /* 6261 */;
-import TableRadioGroup from "TableRadioGroup" /* 6262 */;
-import TableRowGroup from "TableRowGroup" /* 6264 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6679 */;
-import TableSwitchRow from "TableSwitchRow" /* 6895 */;
-import _modDef9770 from "module_9770" /* 9770 */;
+import TableRadioRow from "TableRadioRow" /* 6262 */;
+import TableRadioGroup from "TableRadioGroup" /* 6263 */;
+import TableRowGroup from "TableRowGroup" /* 6265 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6680 */;
+import TableSwitchRow from "TableSwitchRow" /* 6896 */;
+import _modDef9771 from "module_9771" /* 9771 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 import SubscriptionStore from "SubscriptionStore" /* 4775 */;
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                       }
                       function renderNitroUpsellText() {
                         const obj = { style: closure_0.nitroUpsell, children: null };
-                        const items = [__initData(native.Icon, { source: _modDef9770, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
+                        const items = [__initData(native.Icon, { source: _modDef9771, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
                         const obj3 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
                         const intl = util.intl;
                         obj3.children = intl.format(util.t.uW1zul, {

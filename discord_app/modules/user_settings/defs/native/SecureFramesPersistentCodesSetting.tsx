@@ -1,10 +1,10 @@
-// === Module 16238: SecureFramesPersistentCodesSetting ===
+// === Module 16261: SecureFramesPersistentCodesSetting ===
 
-// Module 16238 (SecureFramesPersistentCodesSetting)
+// Module 16261 (SecureFramesPersistentCodesSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import updatePersistentCodesEnabled from "updatePersistentCodesEnabled" /* 16239 */;
+import updatePersistentCodesEnabled from "updatePersistentCodesEnabled" /* 16262 */;
 import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 5131 */;
 
 require = fn;
@@ -38,7 +38,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.opw5ls);
   },
-  parent: fn(7992).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7993).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useSecureFramesPersistentCodesValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

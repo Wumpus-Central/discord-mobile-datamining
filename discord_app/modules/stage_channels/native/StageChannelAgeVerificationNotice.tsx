@@ -1,6 +1,6 @@
-// === Module 7496: StageChannelAgeVerificationNotice ===
+// === Module 7497: StageChannelAgeVerificationNotice ===
 
-// Module 7496 (StageChannelAgeVerificationNotice)
+// Module 7497 (StageChannelAgeVerificationNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
@@ -8,7 +8,7 @@ import CircleInformationIcon from "CircleInformationIcon" /* 5046 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 5909 */;
 import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5949 */;
-import WarningIcon2 from "WarningIcon" /* 7571 */;
+import WarningIcon2 from "WarningIcon" /* 7572 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -73,7 +73,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
             color: "text-default",
             style: closure_1.linkText,
             onPress() {
-              const obj = closure_1(7497);
+              const obj = closure_1(7498);
               const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(5918).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
               if (closure_1_0 != null) {
                 closure_1_0();
@@ -124,7 +124,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageCh
             color: "text-default",
             style: closure_1.linkText,
             onPress() {
-              const obj = closure_1(7497);
+              const obj = closure_1(7498);
               const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(5918).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
               if (closure_1_0 != null) {
                 closure_1_0();

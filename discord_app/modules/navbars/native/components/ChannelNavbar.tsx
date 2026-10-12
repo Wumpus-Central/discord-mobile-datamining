@@ -1,6 +1,6 @@
-// === Module 12554: ChannelNavbar ===
+// === Module 12556: ChannelNavbar ===
 
-// Module 12554 (ChannelNavbar)
+// Module 12556 (ChannelNavbar)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,10 +11,10 @@ import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 493
 import UserUtilsDefault from "UserUtils" /* 4962 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import Pressables from "Pressables" /* 6184 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8158 */;
-import isStreamingDefault from "isStreaming" /* 8384 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10234 */;
+import Pressables from "Pressables" /* 6185 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8159 */;
+import isStreamingDefault from "isStreaming" /* 8385 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10235 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -110,8 +110,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelTitle
     if (cResult[7] !== stateFromStores) {
       let channelIcon = null;
       if (null != stateFromStores) {
-        channelIcon = channelId(8158).getChannelIcon(stateFromStores);
-        const tmpResult5 = channelId(8158);
+        channelIcon = channelId(8159).getChannelIcon(stateFromStores);
+        const tmpResult5 = channelId(8159);
       }
       class C {
         constructor() {
@@ -1317,7 +1317,7 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled() ? (fu
         obj.disabled = disabled;
         obj.style = style;
         obj.children = children;
-        const children1 = [closure_16(closure_1(8673), obj), ];
+        const children1 = [closure_16(closure_1(8674), obj), ];
         let tmp3Result = null;
         if (hasActivitiesPrivateChannelTooltip) {
           const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -1337,8 +1337,8 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled() ? (fu
             }
             return tmp2;
           };
-          tmp3Result = closure_16(closure_1(10012), obj2);
-          const tmp4Result = closure_1(10012);
+          tmp3Result = closure_16(closure_1(10013), obj2);
+          const tmp4Result = closure_1(10013);
         }
         children1[1] = tmp3Result;
         return closure_17(closure_4, { children: children1 }, index);
@@ -1384,7 +1384,7 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled() ? (fu
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      const children1 = [closure_16(closure_1(8673), obj), ];
+      const children1 = [closure_16(closure_1(8674), obj), ];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -1404,8 +1404,8 @@ export const ChannelButtons = ReactCompilerGating.isReactCompilerEnabled() ? (fu
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10012), obj2);
-        const tmp4Result = closure_1(10012);
+        tmp3Result = closure_16(closure_1(10013), obj2);
+        const tmp4Result = closure_1(10013);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

@@ -7,16 +7,16 @@ import Server from "Server" /* 1998 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4739 */;
 import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 6040 */;
 import ContentClassificationReference from "ContentClassificationReference" /* 6041 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7246 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7247 */;
 import getURLForApplicationDefault from "getURLForApplication" /* 10808 */;
-import getPlatformDefault from "getPlatform" /* 11716 */;
+import getPlatformDefault from "getPlatform" /* 11718 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
 
-const isVoiceEmbeddedActivityDefault = combined(10480);
+const isVoiceEmbeddedActivityDefault = combined(10481);
 require = fn;
 function participantFromServer(userId) {
   return { userId: userId.user_id, sessionId: userId.session_id, nonce: userId.nonce };

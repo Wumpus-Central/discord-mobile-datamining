@@ -1,10 +1,10 @@
-// === Module 15603: RoleColorsSetting ===
+// === Module 15626: RoleColorsSetting ===
 
-// Module 15603 (RoleColorsSetting)
+// Module 15626 (RoleColorsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14670 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14693 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
@@ -77,7 +77,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.uSOPWm);
   },
-  parent: fn(7992).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7993).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: tmp3

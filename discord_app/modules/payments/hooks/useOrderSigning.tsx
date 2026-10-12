@@ -1,6 +1,6 @@
-// === Module 9070: useOrderSigning ===
+// === Module 9071: useOrderSigning ===
 
-// Module 9070 (useOrderSigning)
+// Module 9071 (useOrderSigning)
 import BillingUtils from "BillingUtils" /* 4784 */;
 import BillingErrorDefault from "BillingError" /* 4791 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -70,7 +70,7 @@ export const useOrderSigning = function useOrderSigning(order) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

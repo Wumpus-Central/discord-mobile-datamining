@@ -1,6 +1,6 @@
-// === Module 10327: useCanShowFavoritesGuildOnboarding ===
+// === Module 10328: useCanShowFavoritesGuildOnboarding ===
 
-// Module 10327 (useCanShowFavoritesGuildOnboarding)
+// Module 10328 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;

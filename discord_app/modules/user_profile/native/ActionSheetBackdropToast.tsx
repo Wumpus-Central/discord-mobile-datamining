@@ -1,6 +1,6 @@
-// === Module 13404: ActionSheetBackdropToast ===
+// === Module 13427: ActionSheetBackdropToast ===
 
-// Module 13404 (ActionSheetBackdropToast)
+// Module 13427 (ActionSheetBackdropToast)
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
@@ -12,7 +12,7 @@ const ReanimatedRexportDefault = tmp5(4850);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ACTION_SHEET_START_HEIGHT_RATIO = fn(6840).ACTION_SHEET_START_HEIGHT_RATIO;
+const ACTION_SHEET_START_HEIGHT_RATIO = fn(6841).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsx = fn(21).jsx;
 let c7 = 24;
 let c8 = 200;
@@ -42,7 +42,7 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
   const height = useWindowDimensionsDefault().height;
   let result = height * ACTION_SHEET_START_HEIGHT_RATIO;
   importDefault = result;
-  const diff = height - isExpanded(6258).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+  const diff = height - isExpanded(6259).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   dependencyMap = diff;
   let obj = isExpanded(576);
   const sharedValue = isExpanded(4850).useSharedValue(0);
@@ -287,7 +287,7 @@ export const ActionSheetBackdropToast = ReactCompilerGating.isReactCompilerEnabl
   const height = useWindowDimensionsDefault().height;
   let result = height * ACTION_SHEET_START_HEIGHT_RATIO;
   importDefault = result;
-  const diff = height - isExpanded(6258).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
+  const diff = height - isExpanded(6259).NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   dependencyMap = diff;
   const sharedValue = isExpanded(4850).useSharedValue(0);
   let obj = isExpanded(4850);

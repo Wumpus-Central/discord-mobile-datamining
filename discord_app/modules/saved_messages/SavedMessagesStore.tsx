@@ -1,10 +1,10 @@
-// === Module 9680: SavedMessagesStore ===
+// === Module 9681: SavedMessagesStore ===
 
-// Module 9680 (SavedMessagesStore)
+// Module 9681 (SavedMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5434 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 9681 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 9682 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -138,7 +138,7 @@ let closure_7 = 0;
 let set = new Set();
 const set1 = new Set();
 let nextBefore = null;
-let FAILED = fn(9681).BookmarksFetchState.LOADED_FINISHED;
+let FAILED = fn(9682).BookmarksFetchState.LOADED_FINISHED;
 let c12 = false;
 let c13 = null;
 const set2 = new Set();

@@ -1,22 +1,22 @@
-// === Module 8953: GameProfileAnnouncements ===
+// === Module 8954: GameProfileAnnouncements ===
 
-// Module 8953 (GameProfileAnnouncements)
+// Module 8954 (GameProfileAnnouncements)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import DateUtils from "DateUtils" /* 4793 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import CustomMarkupAll from "CustomMarkup" /* 5399 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6626 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8878 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8884 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 8946 */;
-import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 8954 */;
-import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 8955 */;
-import ImageWithPlaceholder from "ImageWithPlaceholder" /* 8958 */;
-import ReactionIcon from "ReactionIcon" /* 8960 */;
-import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 8965 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6627 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8885 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 8947 */;
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 8955 */;
+import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 8956 */;
+import ImageWithPlaceholder from "ImageWithPlaceholder" /* 8959 */;
+import ReactionIcon from "ReactionIcon" /* 8961 */;
+import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 8966 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -24,7 +24,7 @@ const GameProfileSkeletonDefault = GameProfileSkeleton;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(8919).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(8920).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 120;
@@ -231,7 +231,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const obj = require("c");
   const tmp = _require;
-  const tmp11 = onPress(tmp(8948).GameProfileSectionSkeleton, { showViewAllSkeleton: true, skeletonTitleWidth: 200, children: onPress(GameProfileSkeletonCardRowDefault, { style: skeletonCardsScroller, contentContainerStyle: skeletonCardsContainer, children: tmp7 }) });
+  const tmp11 = onPress(tmp(8949).GameProfileSectionSkeleton, { showViewAllSkeleton: true, skeletonTitleWidth: 200, children: onPress(GameProfileSkeletonCardRowDefault, { style: skeletonCardsScroller, contentContainerStyle: skeletonCardsContainer, children: tmp7 }) });
   cResult[2] = tmp4.skeletonCardsContainer;
   cResult[3] = tmp4.skeletonCardsScroller;
   cResult[4] = tmp7;
@@ -1290,13 +1290,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAn
                             const _Date = Date;
                             const date = new Date(message.timestamp);
                             obj6.createdAt = date;
-                            obj6.expiryLabel = tmp(8955).getPollExpiryLabel(poll);
+                            obj6.expiryLabel = tmp(8956).getPollExpiryLabel(poll);
                             const formatResult = intl2.format(tmp(1126).t.t0FTsH, obj6);
                             cResult[35] = message.timestamp;
                             cResult[36] = poll;
                             cResult[37] = formatResult;
                             tmp44 = formatResult;
-                            const tmpResult = tmp(8955);
+                            const tmpResult = tmp(8956);
                           }
                         }
                       }
@@ -1473,7 +1473,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollAn
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj9.createdAt = date;
-    obj9.expiryLabel = message(8955).getPollExpiryLabel(poll);
+    obj9.expiryLabel = message(8956).getPollExpiryLabel(poll);
     obj8.children = intl2.format(message(1126).t.t0FTsH, obj9);
     obj7.children = onPress(message(5088).Text, obj8);
     items[2] = onPress(closure_5, obj7);

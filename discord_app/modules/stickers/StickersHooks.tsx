@@ -1,16 +1,16 @@
-// === Module 9757: StickersHooks ===
+// === Module 9758: StickersHooks ===
 
-// Module 9757 (StickersHooks)
+// Module 9758 (StickersHooks)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
 import StickersUtils from "StickersUtils" /* 5749 */;
 import StickersTypes from "StickersTypes" /* 5750 */;
-import StickerSendability from "StickerSendability" /* 7046 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8572 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 9740 */;
-import StickersActionCreators from "StickersActionCreators" /* 9758 */;
+import StickerSendability from "StickerSendability" /* 7047 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8573 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 9741 */;
+import StickersActionCreators from "StickersActionCreators" /* 9759 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -832,7 +832,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: "+51" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -913,7 +913,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: "+51" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -992,7 +992,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: "+51" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -1072,7 +1072,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: "+51" };
+                      return { value: "IconComponent", done: null };
                     }
                   } else {
                     try {
@@ -1148,7 +1148,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -1225,7 +1225,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -1348,7 +1348,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

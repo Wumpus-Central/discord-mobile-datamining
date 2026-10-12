@@ -1,6 +1,6 @@
-// === Module 7119: GuildBoostPurchasingUtils ===
+// === Module 7120: GuildBoostPurchasingUtils ===
 
-// Module 7119 (GuildBoostPurchasingUtils)
+// Module 7120 (GuildBoostPurchasingUtils)
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
@@ -27,7 +27,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

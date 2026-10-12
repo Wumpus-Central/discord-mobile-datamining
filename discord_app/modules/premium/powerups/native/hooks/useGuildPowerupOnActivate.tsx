@@ -1,11 +1,11 @@
-// === Module 12271: useGuildPowerupOnActivate ===
+// === Module 12273: useGuildPowerupOnActivate ===
 
-// Module 12271 (useGuildPowerupOnActivate)
+// Module 12273 (useGuildPowerupOnActivate)
 import BoostingActionCreators from "BoostingActionCreators" /* 5959 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8024 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8025 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7118 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7119 */;
 
 const require = globalThis.__r;
 
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                        return PERK(5934).popWithKey(diff(7129).PREMIUM_KEY);
+                        return PERK(5934).popWithKey(diff(7130).PREMIUM_KEY);
                       },
               onPaymentSuccess() {
                         const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(GuildBoostSlotStore.boostSlots);
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                         }
                       },
               onPaymentDismiss() {
-                        return PERK(5934).popWithKey(diff(7129).PREMIUM_KEY);
+                        return PERK(5934).popWithKey(diff(7130).PREMIUM_KEY);
                       }
             };
             const result = tmp17(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);

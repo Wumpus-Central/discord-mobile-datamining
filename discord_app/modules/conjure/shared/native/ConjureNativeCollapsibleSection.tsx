@@ -1,12 +1,12 @@
-// === Module 17150: ConjureNativeCollapsibleSection ===
+// === Module 17280: ConjureNativeCollapsibleSection ===
 
-// Module 17150 (ConjureNativeCollapsibleSection)
+// Module 17280 (ConjureNativeCollapsibleSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6905 */;
-import native from "native" /* 8541 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10532 */;
+import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6906 */;
+import native from "native" /* 8542 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10533 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         obj5.onPress = onToggleExpanded;
         const obj7 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
         obj5.children = React4(ChevronSmallRightIcon, obj7);
-        tmp9Result = React4(tmp4(8541).PressableScale, obj5);
+        tmp9Result = React4(tmp4(8542).PressableScale, obj5);
       }
     }
     items1[1] = tmp9Result;

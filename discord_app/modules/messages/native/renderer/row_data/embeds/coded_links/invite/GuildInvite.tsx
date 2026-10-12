@@ -1,6 +1,6 @@
-// === Module 13490: invite/GuildInvite ===
+// === Module 13513: invite/GuildInvite ===
 
-// Module 13490 (invite/GuildInvite)
+// Module 13513 (invite/GuildInvite)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -11,20 +11,20 @@ import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7750 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7888 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7890 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8158 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8510 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8870 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 9609 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 9610 */;
-import GuestUtilsDefault from "GuestUtils" /* 9611 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7751 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7889 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7891 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8159 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8511 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8871 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 9610 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 9611 */;
+import GuestUtilsDefault from "GuestUtils" /* 9612 */;
 import _modDef11362 from "module_11362" /* 11362 */;
 import _modDef11363 from "module_11363" /* 11363 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 12486 */;
-import _modDef12487 from "module_12487" /* 12487 */;
-import getHeaderTextForInvite from "getHeaderTextForInvite" /* 13491 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 12488 */;
+import _modDef12489 from "module_12489" /* 12489 */;
+import getHeaderTextForInvite from "getHeaderTextForInvite" /* 13514 */;
 import GuildRecord from "GuildRecord" /* 2083 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -34,7 +34,7 @@ import InviteStore from "InviteStore" /* 5073 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 import Constants_mod from "Constants" /* 1085 */;
-import Constants_mod from "Constants" /* 7423 */;
+import Constants_mod from "Constants" /* 7424 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -71,7 +71,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
     tmp6 = require;
   }
   obj.headerText = str.toUpperCase();
-  obj.titleColor = tmp6(7750).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6(7751).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
   if (arg1) {
     const intl4 = tmp6(1126).intl;
     let stringResult = intl4.string(tmp6(1126).t["F/OLvL"]);
@@ -94,7 +94,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   obj.subtitle = stringResult;
   const intl5 = tmp6(1126).intl;
   obj.titleText = intl5.string(tmp6(1126).t["Jhx/ud"]);
-  const tmp6Result = tmp6(7750);
+  const tmp6Result = tmp6(7751);
   if (tmp6Result2.isThemeDark(theme)) {
     let tmpResult2 = _modDef11362;
   } else {
@@ -151,7 +151,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12487);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12489);
   let tmp17;
   if (null == tmp11) {
     let tmp18;

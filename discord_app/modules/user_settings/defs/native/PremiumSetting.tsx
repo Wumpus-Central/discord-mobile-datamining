@@ -1,13 +1,13 @@
-// === Module 15240: PremiumSetting ===
+// === Module 15263: PremiumSetting ===
 
-// Module 15240 (PremiumSetting)
+// Module 15263 (PremiumSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PremiumUtils from "PremiumUtils" /* 4769 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7136 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10494 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13665 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15241 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7137 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10495 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13688 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15264 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 import SubscriptionStore from "SubscriptionStore" /* 4775 */;
@@ -79,7 +79,7 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(9035).NitroWheelIcon,
+  IconComponent: fn(9036).NitroWheelIcon,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumSettingTrailing() {
     const cResult = c.c(1);

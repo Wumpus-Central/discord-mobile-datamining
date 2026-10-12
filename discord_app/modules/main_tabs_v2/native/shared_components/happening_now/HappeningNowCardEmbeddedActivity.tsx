@@ -1,18 +1,18 @@
-// === Module 16498: HappeningNowCardEmbeddedActivity ===
+// === Module 16521: HappeningNowCardEmbeddedActivity ===
 
-// Module 16498 (HappeningNowCardEmbeddedActivity)
+// Module 16521 (HappeningNowCardEmbeddedActivity)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15566);
+const HappeningNowConstants = fn(15589);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7 } = HappeningNowConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);

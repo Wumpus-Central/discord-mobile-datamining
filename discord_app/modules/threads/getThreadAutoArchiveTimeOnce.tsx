@@ -1,6 +1,6 @@
-// === Module 6085: getThreadAutoArchiveTimeOnce ===
+// === Module 6086: getThreadAutoArchiveTimeOnce ===
 
-// Module 6085 (getThreadAutoArchiveTimeOnce)
+// Module 6086 (getThreadAutoArchiveTimeOnce)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;

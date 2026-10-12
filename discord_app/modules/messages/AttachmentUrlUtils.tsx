@@ -1,6 +1,6 @@
-// === Module 9317: AttachmentUrlUtils ===
+// === Module 9318: AttachmentUrlUtils ===
 
-// Module 9317 (AttachmentUrlUtils)
+// Module 9318 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import URLUtilsDefault from "URLUtils" /* 1384 */;
@@ -233,7 +233,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

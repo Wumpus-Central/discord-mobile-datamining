@@ -1,13 +1,13 @@
-// === Module 9028: SlayerStorefrontItemCard ===
+// === Module 9029: SlayerStorefrontItemCard ===
 
-// Module 9028 (SlayerStorefrontItemCard)
+// Module 9029 (SlayerStorefrontItemCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6930 */;
-import tinycolorDefault from "tinycolor" /* 7273 */;
-import DominantColorUtils from "DominantColorUtils" /* 9029 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6931 */;
+import tinycolorDefault from "tinycolor" /* 7274 */;
+import DominantColorUtils from "DominantColorUtils" /* 9030 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

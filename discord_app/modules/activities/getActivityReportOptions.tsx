@@ -1,6 +1,6 @@
-// === Module 18042: getActivityReportOptions ===
+// === Module 18100: getActivityReportOptions ===
 
-// Module 18042 (getActivityReportOptions)
+// Module 18100 (getActivityReportOptions)
 import util from "util" /* 1126 */;
 import Constants from "Constants" /* 2024 */;
 import size from "module_2" /* 2 */;

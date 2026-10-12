@@ -1,11 +1,11 @@
-// === Module 14779: FramesManager ===
+// === Module 14803: FramesManager ===
 
-// Module 14779 (FramesManager)
+// Module 14803 (FramesManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import leaveFrame from "leaveFrame" /* 10821 */;
-import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 14780 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 14804 */;
 import FramesStore from "FramesStore" /* 10807 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
 const Constants = fn(1085);
@@ -19,14 +19,14 @@ const prototype = function FramesManager() {
     },
     FRAME_LAUNCH(arg0) {
       ({ applicationId, analyticsContext } = arg0);
-      const result = applyArgumentsResult(14704).trackFrameSessionStart(applicationId, analyticsContext);
+      const result = applyArgumentsResult(14727).trackFrameSessionStart(applicationId, analyticsContext);
     },
     FRAME_LAUNCH_FAIL(arg0) {
       ({ applicationId, error, analyticsContext } = arg0);
-      const result = applyArgumentsResult(14704).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+      const result = applyArgumentsResult(14727).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
     },
     FRAME_STOP(applicationId) {
-      applyArgumentsResult(14704).trackFrameSessionEnd(applicationId.applicationId);
+      applyArgumentsResult(14727).trackFrameSessionEnd(applicationId.applicationId);
     },
     VOICE_CHANNEL_SELECT(arg0) {
       const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);
@@ -44,9 +44,9 @@ const prototype = function FramesManager() {
       if (!("unavailable" in guild)) {
         const allFrames = FramesStore.getAllFrames();
         for (const item10014 of allFrames) {
-          let tmp8 = item10014.surface.type !== applyArgumentsResult(8610).EmbeddedSurfaceType.MAIN;
+          let tmp8 = item10014.surface.type !== applyArgumentsResult(8611).EmbeddedSurfaceType.MAIN;
           if (tmp8) {
-            tmp8 = item10014.surface.type !== applyArgumentsResult(8610).EmbeddedSurfaceType.OVERLAY;
+            tmp8 = item10014.surface.type !== applyArgumentsResult(8611).EmbeddedSurfaceType.OVERLAY;
           }
           if (tmp8) {
             tmp8 = item10014.surface.guildId === guild.id;
@@ -77,7 +77,7 @@ const prototype = function FramesManager() {
     currentVoiceChannelId = currentVoiceChannelId.currentVoiceChannelId;
     if (null != currentVoiceChannelId) {
       if (currentVoiceChannelId !== currentVoiceChannelId.channelId) {
-        const obj2 = { type: applyArgumentsResult(8610).EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
+        const obj2 = { type: applyArgumentsResult(8611).EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
         const framesForSurface = FramesStore.getFramesForSurface(obj2);
         for (const item10005 of framesForSurface) {
           let obj = applyArgumentsResult(10821);

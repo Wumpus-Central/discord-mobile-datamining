@@ -1,12 +1,12 @@
-// === Module 7318: ConversationPreviewStore ===
+// === Module 7319: ConversationPreviewStore ===
 
-// Module 7318 (ConversationPreviewStore)
+// Module 7319 (ConversationPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import privDefault from "priv" /* 1457 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 5434 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7316 */;
-import ConversationsUtils from "ConversationsUtils" /* 7317 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7317 */;
+import ConversationsUtils from "ConversationsUtils" /* 7318 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -109,8 +109,8 @@ function evictWhere(fn) {
   }
   return flag;
 }
-let obj = { max: fn(7315).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
-const navigation = new privDefault({ max: fn(7315).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
+let obj = { max: fn(7316).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex };
+const navigation = new privDefault({ max: fn(7316).MAX_PREVIEW_CONVERSATIONS, dispose: clearMessageIndex });
 let map = new Map();
 const map1 = new Map();
 const Store = initializeDefault.Store;

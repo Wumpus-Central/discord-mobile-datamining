@@ -4,8 +4,8 @@
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 7487 */;
-import StatusBarDefault from "StatusBar" /* 10360 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 7488 */;
+import StatusBarDefault from "StatusBar" /* 10361 */;
 import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10849 */;
 import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11022 */;
 import PushNotificationDefault from "PushNotification" /* 11031 */;
@@ -114,8 +114,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
         }
       }
     }
-    const stageBlockedUsersCount = tmp(7719).useStageBlockedUsersCount(tmp17);
-    const tmpResult4 = tmp(7719);
+    const stageBlockedUsersCount = tmp(7720).useStageBlockedUsersCount(tmp17);
+    const tmpResult4 = tmp(7720);
     if (channel != null) {
       class S {
         constructor() {
@@ -123,8 +123,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
         }
       }
     }
-    const stageIgnoredUsersCount = tmp(7719).useStageIgnoredUsersCount(tmp19);
-    const tmpResult5 = tmp(7719);
+    const stageIgnoredUsersCount = tmp(7720).useStageIgnoredUsersCount(tmp19);
+    const tmpResult5 = tmp(7720);
     if (channel != null) {
       class S {
         constructor() {
@@ -150,7 +150,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -170,14 +170,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
                 if (null != id) {
                   if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
                     const obj5 = { entryPoint: tmp41(5918).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                    const result = stringResult(7497).showAgeVerificationGetStartedModal(obj5);
-                    const obj4 = stringResult(7497);
+                    const result = stringResult(7498).showAgeVerificationGetStartedModal(obj5);
+                    const obj4 = stringResult(7498);
                   } else {
                     v0(true);
                     v0 = 1;
                     c4 = 2;
                     c5 = 1;
-                    const obj6 = { value: tmp41(7487).audienceAckRequestToSpeak(id, false), done: false };
+                    const obj6 = { value: tmp41(7488).audienceAckRequestToSpeak(id, false), done: false };
                     return obj6;
                   }
                   obj9 = id(5949);
@@ -196,8 +196,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
               v0 = 0;
               v0(false);
               if (null == key.getKey()) {
-                stateFromStores(7483).openStageChannel(id);
-                const obj8 = stateFromStores(7483);
+                stateFromStores(7484).openStageChannel(id);
+                const obj8 = stateFromStores(7484);
               }
             }
             v0 = 0;
@@ -405,7 +405,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -423,14 +423,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
             if (null != id) {
               if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
                 const obj5 = { entryPoint: tmp41(5918).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                const result = tmp3(7497).showAgeVerificationGetStartedModal(obj5);
-                const obj4 = tmp3(7497);
+                const result = tmp3(7498).showAgeVerificationGetStartedModal(obj5);
+                const obj4 = tmp3(7498);
               } else {
                 dependencyMap(true);
                 dependencyMap = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj6 = { value: tmp41(7487).audienceAckRequestToSpeak(id, false), done: false };
+                const obj6 = { value: tmp41(7488).audienceAckRequestToSpeak(id, false), done: false };
                 return obj6;
               }
               obj9 = channel(5949);
@@ -449,8 +449,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
           dependencyMap = 0;
           closure_129_3(false);
           if (null == key.getKey()) {
-            tmp27(7483).openStageChannel(closure_129_0);
-            const obj8 = tmp27(7483);
+            tmp27(7484).openStageChannel(closure_129_0);
+            const obj8 = tmp27(7484);
           }
         }
         dependencyMap = 0;
@@ -495,13 +495,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChann
   if (channel != null) {
     id1 = channel.id;
   }
-  const stageBlockedUsersCount = channel(7719).useStageBlockedUsersCount(id1);
-  let obj2 = channel(7719);
+  const stageBlockedUsersCount = channel(7720).useStageBlockedUsersCount(id1);
+  let obj2 = channel(7720);
   let id2;
   if (channel != null) {
     id2 = channel.id;
   }
-  let stageIgnoredUsersCount = channel(7719).useStageIgnoredUsersCount(id2);
+  let stageIgnoredUsersCount = channel(7720).useStageIgnoredUsersCount(id2);
   channel(11020);
   if (channel != null) {
     const id = channel.id;
@@ -797,12 +797,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalSt
             cResult[13] = tmp24;
             tmp22 = tmp24;
           }
-          const channelIconWithGuild = tmp(8158).getChannelIconWithGuild(channel, guild);
+          const channelIconWithGuild = tmp(8159).getChannelIconWithGuild(channel, guild);
           cResult[8] = channel;
           cResult[9] = guild;
           cResult[10] = channelIconWithGuild;
           tmp20 = channelIconWithGuild;
-          const tmpResult4 = tmp(8158);
+          const tmpResult4 = tmp(8159);
         }
       }
     }
@@ -856,7 +856,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalSt
           const obj3 = { style: tmp.noticeContainer, children: null };
           const obj4 = { animated: true, barStyle: str };
           const items2 = [closure_10(StatusBarDefault, obj4), , ];
-          const obj5 = { style: activeSpeakerIcon, size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: tmp8(8158).getChannelIconWithGuild(channel, guild) };
+          const obj5 = { style: activeSpeakerIcon, size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: tmp8(8159).getChannelIconWithGuild(channel, guild) };
           items2[1] = closure_10(tmp8(1200).Icon, obj5);
           let tmp13Result = "" !== str2;
           if (tmp13Result) {
@@ -895,7 +895,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalSt
           items2[2] = closure_11(tmp8(1200).LegacyText, obj8);
           obj3.children = items2;
           tmp13Result2 = closure_11(View, obj3);
-          const tmp8Result2 = tmp8(8158);
+          const tmp8Result2 = tmp8(8159);
         }
         return tmp13Result2;
       }

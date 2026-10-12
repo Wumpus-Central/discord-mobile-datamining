@@ -1,7 +1,7 @@
 // === Module 11410: removeConjureServerApp ===
 
 // Module 11410 (removeConjureServerApp)
-import ConjureActionCreators from "ConjureActionCreators" /* 11411 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11411 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -9,8 +9,8 @@ let closure_4 = async function _removeConjureServerApp() {
   closure_3 = tmp2;
   closure_2 = tmp3;
   closure_130_0 = _require;
-  ConjureActionCreators;
-  await ConjureActionCreators.unpublishProject(closure_0.projectId, { guildId: closure_0.guildId, alsoRemovePreviewBot: true }).catch(() => null);
+  ConjurePublishActionCreators;
+  await ConjurePublishActionCreators.unpublishProject(closure_0.projectId, { guildId: closure_0.guildId, alsoRemovePreviewBot: true }).catch(() => null);
   closure_130_1 = value;
   if (closure_130_1 != null) {
     const ok = closure_130_1.ok;

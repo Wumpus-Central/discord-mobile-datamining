@@ -1,10 +1,10 @@
-// === Module 13396: UserProfileRemediatedNotice ===
+// === Module 13419: UserProfileRemediatedNotice ===
 
-// Module 13396 (UserProfileRemediatedNotice)
+// Module 13419 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7017 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8367 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8368 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 

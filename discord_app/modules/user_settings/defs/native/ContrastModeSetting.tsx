@@ -1,12 +1,12 @@
-// === Module 15685: ContrastModeSetting ===
+// === Module 15708: ContrastModeSetting ===
 
-// Module 15685 (ContrastModeSetting)
+// Module 15708 (ContrastModeSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 10609 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14670 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15584 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 10610 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14693 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15607 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
@@ -32,7 +32,7 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t["TYyfO/"]);
   },
-  parent: fn(7992).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7993).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },

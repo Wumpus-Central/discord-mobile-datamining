@@ -1,16 +1,16 @@
-// === Module 12948: AppStoreOverlayStatsCarousel ===
+// === Module 12950: AppStoreOverlayStatsCarousel ===
 
-// Module 12948 (AppStoreOverlayStatsCarousel)
+// Module 12950 (AppStoreOverlayStatsCarousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
-import AnalyticsActions from "AnalyticsActions" /* 7406 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7415 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 12949 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 12950 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
+import AnalyticsActions from "AnalyticsActions" /* 7407 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7416 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 12951 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 12952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
     first = cResult[0];
   }
   let obj = onRatingPress(576);
-  const nativeGesture = onRatingPress(6334).useNativeGesture(first);
+  const nativeGesture = onRatingPress(6335).useNativeGesture(first);
   dependencyMap = length.useRef(0);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function h() {
@@ -554,7 +554,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   cResult[6] = R;
   tmp11 = R;
   tmp7 = stats.length <= 2;
-  const tmpResult = onRatingPress(6334);
+  const tmpResult = onRatingPress(6335);
 }) : (function AppStoreOverlayStatsCarousel(arg0) {
   ({ stats, onRatingPress: require, onCarouselScroll } = arg0);
   let length;

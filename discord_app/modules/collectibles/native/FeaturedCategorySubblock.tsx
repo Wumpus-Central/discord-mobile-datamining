@@ -1,15 +1,15 @@
-// === Module 16215: FeaturedCategorySubblock ===
+// === Module 16238: FeaturedCategorySubblock ===
 
-// Module 16215 (FeaturedCategorySubblock)
+// Module 16238 (FeaturedCategorySubblock)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7262 */;
-import VisibilitySensorDefault from "VisibilitySensor" /* 16213 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7263 */;
+import VisibilitySensorDefault from "VisibilitySensor" /* 16236 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7263 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7264 */;
 
-const FastImageDefault = tmp12(6156);
+const FastImageDefault = tmp12(6157);
 require = fn;
 let closure_4 = fn(1087).CollectiblesMobileShopScreen;
 const Constants = fn(1085);
@@ -111,9 +111,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subblock) => {
   const tmp = closure_9();
   importDefault = subblock(1503).useNavigation();
   let obj = subblock(1503);
-  dependencyMap = subblock(8970).useCollectiblesAnalyticsContext();
+  dependencyMap = subblock(8971).useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
-  let obj2 = subblock(8970);
+  let obj2 = subblock(8971);
   let items = [stateFromStores];
   stateFromStores = subblock(504).useStateFromStores(items, () => CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId));
   let obj3 = subblock(504);
@@ -130,8 +130,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subblock) => {
     const _Date = Date;
     date = new Date(unpublishedAt);
   }
-  let obj5 = { onChange: subblock(16195).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
-  let obj4 = subblock(16195);
+  let obj5 = { onChange: subblock(16218).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
+  let obj4 = subblock(16218);
   const obj6 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, style: null, children: null };
   const intl = tmp2(1126).intl;
   obj6.accessibilityLabel = intl.formatToPlainString(subblock(1126).t.FNtLb3, { category: subblock.name });
@@ -187,13 +187,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((subblock) => {
   }
   const items1 = [tmp11Result, ];
   const obj8 = { radius: nativeDefault.radii.lg };
-  let result = subblock(7275).shouldShowLimitedTimeBadge(date);
+  let result = subblock(7276).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj11 = { style: tmp.limitedTimeBadge };
-    result = closure_7(tmp2(9033).LimitedTimeBadge, obj11);
+    result = closure_7(tmp2(9034).LimitedTimeBadge, obj11);
   }
   items1[1] = result;
   obj6.children = items1;
-  obj5.children = closure_8(subblock(6184).PressableOpacity, obj6);
+  obj5.children = closure_8(subblock(6185).PressableOpacity, obj6);
   return closure_7(tmp13, obj5);
 });

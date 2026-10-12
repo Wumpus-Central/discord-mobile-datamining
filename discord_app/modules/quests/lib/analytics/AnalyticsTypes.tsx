@@ -1,6 +1,6 @@
-// === Module 7415: AnalyticsTypes ===
+// === Module 7416: AnalyticsTypes ===
 
-// Module 7415 (AnalyticsTypes)
+// Module 7416 (AnalyticsTypes)
 import QuestTypes from "QuestTypes" /* 5975 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 11858: AppLauncherTextInputOption ===
+// === Module 11860: AppLauncherTextInputOption ===
 
-// Module 11858 (AppLauncherTextInputOption)
+// Module 11860 (AppLauncherTextInputOption)
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9426 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 9432 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9427 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 9433 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -322,17 +322,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
       const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
     }
   }, items2);
-  let obj = onChangeText(10621);
-  const animationDelayedAutoFocus = onChangeText(11854).useAnimationDelayedAutoFocus(autoFocus, () => {
+  let obj = onChangeText(10622);
+  const animationDelayedAutoFocus = onChangeText(11856).useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(10622).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(10623).AppLauncherEntrypoint.VOICE) {
     let TextInput = tmp4(1200).TextInput;
   } else {
-    TextInput = guildId(11859);
+    TextInput = guildId(11861);
   }
   const items3 = [tmp.container, , ];
   if (hasError) {
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
           const result1 = openEmojiPickerActionSheet.openEmojiPickerActionSheet({ pickerIntention: EmojiIntention.CHAT, autoFocus: false, startExpanded: false, onPressEmoji, guildId, onClose });
         }
     };
-    tmp14Result = tmp14(guildId(11860), obj5);
+    tmp14Result = tmp14(guildId(11862), obj5);
   }
   items4[1] = tmp14Result;
   obj3.children = items4;

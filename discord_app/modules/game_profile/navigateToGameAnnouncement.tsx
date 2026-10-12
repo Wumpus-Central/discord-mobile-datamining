@@ -1,6 +1,6 @@
-// === Module 8965: navigateToGameAnnouncement ===
+// === Module 8966: navigateToGameAnnouncement ===
 
-// Module 8965 (navigateToGameAnnouncement)
+// Module 8966 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -16,7 +16,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
               }
             }
             c4 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {

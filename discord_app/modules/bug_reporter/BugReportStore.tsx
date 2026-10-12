@@ -1,6 +1,6 @@
-// === Module 12624: BugReportStore ===
+// === Module 12626: BugReportStore ===
 
-// Module 12624 (BugReportStore)
+// Module 12626 (BugReportStore)
 import ZustandStore from "ZustandStore" /* 4989 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// === Module 18621: NativeIntentsManager ===
+// === Module 18679: NativeIntentsManager ===
 
-// Module 18621 (NativeIntentsManager)
+// Module 18679 (NativeIntentsManager)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import getChannelIcon from "getChannelIcon" /* 13150 */;
-import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 18622 */;
-import IntentsBindingsDefault from "IntentsBindings" /* 18623 */;
+import getChannelIcon from "getChannelIcon" /* 13155 */;
+import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 18680 */;
+import IntentsBindingsDefault from "IntentsBindings" /* 18681 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -15,7 +15,7 @@ import PermissionStore from "PermissionStore" /* 4750 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
 function indexingEnabled() {

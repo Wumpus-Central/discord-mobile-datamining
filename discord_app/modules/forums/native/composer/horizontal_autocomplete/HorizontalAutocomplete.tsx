@@ -1,6 +1,6 @@
-// === Module 10011: HorizontalAutocomplete ===
+// === Module 10012: HorizontalAutocomplete ===
 
-// Module 10011 (HorizontalAutocomplete)
+// Module 10012 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,10 +10,10 @@ import UserUtilsDefault from "UserUtils" /* 4962 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import timing from "timing" /* 5093 */;
 import useMountEffectDefault from "useMountEffect" /* 5396 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import RoleIconUtils from "RoleIconUtils" /* 6883 */;
-import RoleIconDefault from "RoleIcon" /* 6901 */;
-import _modDef8261 from "module_8261" /* 8261 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import RoleIconUtils from "RoleIconUtils" /* 6884 */;
+import RoleIconDefault from "RoleIcon" /* 6902 */;
+import _modDef8262 from "module_8262" /* 8262 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
@@ -298,8 +298,8 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled() ? (function Role(colorS
     if (cResult[4] !== stateFromStores) {
       let roleIconData = null;
       if (null != stateFromStores) {
-        roleIconData = guildId(6883).getRoleIconData(stateFromStores, 30);
-        const tmpResult2 = guildId(6883);
+        roleIconData = guildId(6884).getRoleIconData(stateFromStores, 30);
+        const tmpResult2 = guildId(6884);
       }
       cResult[4] = stateFromStores;
       cResult[5] = roleIconData;
@@ -371,7 +371,7 @@ obj8.Role = ReactCompilerGating.isReactCompilerEnabled() ? (function Role(colorS
       const obj6 = { style: tmp4.roleIcon, children: null };
       const obj7 = { name, src: null, unicodeEmoji: null, size: 24 };
       ({ customIconSrc: obj5.src, unicodeEmoji: obj5.unicodeEmoji } = tmp9);
-      obj6.children = closure_11(id(6901), obj7);
+      obj6.children = closure_11(id(6902), obj7);
       tmp12 = closure_11(closure_4, obj6);
     }
     cResult[6] = tmp9;
@@ -500,10 +500,10 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel(
     }
   }
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8261;
+    let channelIconWithGuild = _modDef8262;
   } else {
-    channelIconWithGuild = tmp(8158).getChannelIconWithGuild(channel, stateFromStores);
-    const tmpResult4 = tmp(8158);
+    channelIconWithGuild = tmp(8159).getChannelIconWithGuild(channel, stateFromStores);
+    const tmpResult4 = tmp(8159);
   }
   cResult[4] = channel;
   cResult[5] = stateFromStores;
@@ -514,10 +514,10 @@ obj8.Channel = ReactCompilerGating.isReactCompilerEnabled() ? (function Channel(
   channel(504);
   [][0] = channel;
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8261;
+    let channelIconWithGuild = _modDef8262;
   } else {
-    channelIconWithGuild = tmp2(8158).getChannelIconWithGuild(channel, tmp5);
-    const tmp2Result = tmp2(8158);
+    channelIconWithGuild = tmp2(8159).getChannelIconWithGuild(channel, tmp5);
+    const tmp2Result = tmp2(8159);
   }
   const tmp = closure_13();
   const tmp8 = closure_11(channel(1200).Icon, { source: channelIconWithGuild });

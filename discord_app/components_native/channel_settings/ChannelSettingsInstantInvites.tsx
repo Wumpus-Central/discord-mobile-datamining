@@ -1,21 +1,21 @@
-// === Module 17525: ChannelSettingsInstantInvites ===
+// === Module 17582: ChannelSettingsInstantInvites ===
 
-// Module 17525 (ChannelSettingsInstantInvites)
+// Module 17582 (ChannelSettingsInstantInvites)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import InstantInvite from "InstantInvite" /* 10288 */;
+import InstantInvite from "InstantInvite" /* 10289 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 9697 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 9698 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
 
-const FastestListDefault = tmp2(6743);
-const _modDef10306 = tmp2(10306);
+const FastestListDefault = tmp2(6744);
 const _modDef10307 = tmp2(10307);
-const InstantInviteSelfMeasurerDefault = tmp2(17526);
+const _modDef10308 = tmp2(10308);
+const InstantInviteSelfMeasurerDefault = tmp2(17583);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1085).ChannelSettingsSections;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      const obj5 = { lightSource: _modDef10306, darkSource: _modDef10307, title: null, body: null };
+      const obj5 = { lightSource: _modDef10307, darkSource: _modDef10308, title: null, body: null };
       const intl = tmpResult(1126).intl;
       obj5.title = intl.string(tmpResult(1126).t["+nLJkZ"]);
       const intl2 = tmpResult(1126).intl;
@@ -324,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   }
   const obj8 = { style: tmp.content, children: null };
   tmp = closure_9;
-  const items8 = [closure_9(tmpResult(6726).SceneLoadingIndicator, {}), ];
+  const items8 = [closure_9(tmpResult(6727).SceneLoadingIndicator, {}), ];
   tmpResult = null;
   if (memo1.length > 0) {
     tmp2 = InstantInviteSelfMeasurerDefault;

@@ -1,6 +1,6 @@
-// === Module 11440: KickConfirmModal ===
+// === Module 11442: KickConfirmModal ===
 
-// Module 11440 (KickConfirmModal)
+// Module 11442 (KickConfirmModal)
 import KickConfirmDefault from "KickConfirm" /* 11407 */;
 import noop from "module_19" /* 19 */;
 

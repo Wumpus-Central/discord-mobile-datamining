@@ -1,6 +1,6 @@
-// === Module 13212: ConjureCustomWidgetSheet ===
+// === Module 13217: ConjureCustomWidgetSheet ===
 
-// Module 13212 (ConjureCustomWidgetSheet)
+// Module 13217 (ConjureCustomWidgetSheet)
 import nativeDefault from "native" /* 587 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(13213);
+const ConjureConnectionStore = fn(13218);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8 } = ConjureConnectionStore);
 const Routes = fn(1085).Routes;
 const StaticChannelRoute = fn(2072).StaticChannelRoute;
@@ -29,7 +29,7 @@ export default function ConjureCustomWidgetSheet() {
   const tmp4 = _slicedToArray(memo.useState(null), 2);
   [tmp7, asyncGeneratorStep] = memo.useState(false);
   _slicedToArray = memo.useRef(false);
-  memo = memo.useMemo(() => first(6945).resolveConjureWorkspaceGuildId("VibegrationsCustomWidgetSheet"), []);
+  memo = memo.useMemo(() => first(6946).resolveConjureWorkspaceGuildId("VibegrationsCustomWidgetSheet"), []);
   const callback = memo.useCallback((arg0) => {
     closure_1(arg0);
     dependencyMap(null);
@@ -46,7 +46,7 @@ export default function ConjureCustomWidgetSheet() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -133,7 +133,7 @@ export default function ConjureCustomWidgetSheet() {
         closure_129_4.current = false;
         closure_129_3(false);
         c5 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } catch (tmp70) {
         if (tmp5 === c3) {
           c5 = tmp3;
@@ -150,7 +150,7 @@ export default function ConjureCustomWidgetSheet() {
   let obj2 = { title: null };
   let intl = value(1126).intl;
   obj2.title = intl.string(_modDef3849.yI85oV);
-  obj.header = closure_11(value(6838).BottomSheetTitleHeader, obj2);
+  obj.header = closure_11(value(6839).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.body, children: null };
   const obj4 = { label: null, placeholder: null, description: null, errorMessage: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = value(1126).intl;
@@ -162,9 +162,9 @@ export default function ConjureCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(13211).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(13216).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
-  const items1 = [closure_11(value(6773).TextArea, obj4), ];
+  const items1 = [closure_11(value(6774).TextArea, obj4), ];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
   const intl5 = tmp12(1126).intl;
   obj5.text = intl5.string(_modDef3849.MDZXiK);
@@ -174,6 +174,6 @@ export default function ConjureCustomWidgetSheet() {
   items1[1] = closure_11(value(5379).Button, obj5);
   obj3.children = items1;
   obj.children = closure_12(View, obj3);
-  return closure_11(value(6898).ActionSheet, obj);
+  return closure_11(value(6899).ActionSheet, obj);
 };
 export const CONJURE_CUSTOM_WIDGET_SHEET_KEY = "VibegrationsCustomWidgetSheet";

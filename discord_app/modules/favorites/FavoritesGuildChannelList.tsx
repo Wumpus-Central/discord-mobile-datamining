@@ -1,9 +1,9 @@
-// === Module 16705: FavoritesGuildChannelList ===
+// === Module 16729: FavoritesGuildChannelList ===
 
-// Module 16705 (FavoritesGuildChannelList)
+// Module 16729 (FavoritesGuildChannelList)
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7013 */;
-import ChannelListState from "ChannelListState" /* 7250 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7014 */;
+import ChannelListState from "ChannelListState" /* 7251 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
@@ -11,9 +11,9 @@ import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6054 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6034 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 6806 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 6807 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7249 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7250 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
@@ -250,7 +250,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10312).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10313).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -567,7 +567,7 @@ const ChannelRecord = fn(2069);
 let closure_19 = fn(4749).createFavoritesGuildChannelRecord;
 const FavoritesConstants = fn(2078);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(7256).ChannelListChannelNoticeRow;
+const constants = fn(7257).ChannelListChannelNoticeRow;
 const Permissions = fn(1096).Permissions;
 let items = [EmbeddedActivitiesStore, FavoriteStore, GatewayConnectionStore, GuildScheduledEventStore, ActiveJoinedThreadsStore, JoinedThreadsStore, CategoryCollapseStore, ChannelStore, PermissionStore, ReadStateStore, SelectedChannelStore, UserGuildSettingsStore];
 const ReactCompilerGating = fn(558);
@@ -852,7 +852,7 @@ export const useFavoritesGuildChannelList = ReactCompilerGating.isReactCompilerE
       }
     }
     let flag2 = false;
-    if (tmp22 <= tmp(7250).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+    if (tmp22 <= tmp(7251).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
       class F {
         constructor() {
           tmp = hasAccess;

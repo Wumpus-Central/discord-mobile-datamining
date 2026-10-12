@@ -1,6 +1,6 @@
-// === Module 6121: useCanReapplyToRejectedMemberVerificationApplication ===
+// === Module 6122: useCanReapplyToRejectedMemberVerificationApplication ===
 
-// Module 6121 (useCanReapplyToRejectedMemberVerificationApplication)
+// Module 6122 (useCanReapplyToRejectedMemberVerificationApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -37,7 +37,7 @@ export const useCanReapplyToRejectedMemberVerificationApplication = function use
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -77,7 +77,7 @@ export const useCanReapplyToRejectedMemberVerificationApplication = function use
         c4 = 0;
         tmp3(false);
         c5 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } catch (tmp18) {
         closure_3 = tmp18;
         if (tmp4 === c4) {

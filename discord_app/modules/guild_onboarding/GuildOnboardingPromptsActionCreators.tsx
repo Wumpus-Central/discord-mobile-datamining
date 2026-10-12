@@ -1,6 +1,6 @@
-// === Module 6787: GuildOnboardingPromptsActionCreators ===
+// === Module 6788: GuildOnboardingPromptsActionCreators ===
 
-// Module 6787 (GuildOnboardingPromptsActionCreators)
+// Module 6788 (GuildOnboardingPromptsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
@@ -8,7 +8,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6788 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6789 */;
 
 require = fn;
 function fetchOnboardingPrompts(guildId) {
@@ -39,7 +39,7 @@ let closure_14 = async function _maybeFetchOnboardingPrompts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -144,7 +144,7 @@ function _trackOnboardingDirectJoin(guildId) {
   obj5.in_onboarding = true;
   obj4.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj5);
 }
-let closure_8 = fn(6789).serverApiResponseToClientState;
+let closure_8 = fn(6790).serverApiResponseToClientState;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, Endpoints: c10, GuildFeatures: closure_11 } = Constants);
 const GuildMemberFlags = fn(4736).GuildMemberFlags;

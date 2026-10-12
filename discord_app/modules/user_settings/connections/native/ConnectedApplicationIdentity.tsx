@@ -1,6 +1,6 @@
-// === Module 15221: ConnectedApplicationIdentity ===
+// === Module 15244: ConnectedApplicationIdentity ===
 
-// Module 15221 (ConnectedApplicationIdentity)
+// Module 15244 (ConnectedApplicationIdentity)
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5088 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
 import Icon from "Icon" /* 5381 */;
 import common_AlertDefault from "common/Alert" /* 5398 */;
-import InfoBoxDefault from "InfoBox" /* 10509 */;
+import InfoBoxDefault from "InfoBox" /* 10510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

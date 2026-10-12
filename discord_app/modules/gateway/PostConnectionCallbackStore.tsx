@@ -1,7 +1,7 @@
-// === Module 6132: PostConnectionCallbackStore ===
+// === Module 6133: PostConnectionCallbackStore ===
 
-// Module 6132 (PostConnectionCallbackStore)
-import NewUserStore from "NewUserStore" /* 6133 */;
+// Module 6133 (PostConnectionCallbackStore)
+import NewUserStore from "NewUserStore" /* 6134 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 

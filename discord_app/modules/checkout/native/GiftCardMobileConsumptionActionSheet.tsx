@@ -1,6 +1,6 @@
-// === Module 7103: GiftCardMobileConsumptionActionSheet ===
+// === Module 7104: GiftCardMobileConsumptionActionSheet ===
 
-// Module 7103 (GiftCardMobileConsumptionActionSheet)
+// Module 7104 (GiftCardMobileConsumptionActionSheet)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import _modDef2274 from "module_2274" /* 2274 */;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
           return closure_3(ContentDismissActionType.USER_DISMISS);
         }
       }
-      const tmp19 = closure_6(tmp(7104).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
+      const tmp19 = closure_6(tmp(7105).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
       cResult[14] = tmp19;
       const tmp18 = tmp19;
     } else {
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
   const items2 = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items2;
   const obj3 = { spacing: nativeDefault.space.PX_16, children: null };
-  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(7104).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
+  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(7105).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
   const obj5 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1126).intl;
   obj5.children = intl.string(_modDef2274.V3DI1E);
@@ -311,5 +311,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
   obj3.children = items3;
   obj2.children = closure_7(markAsDismissed(5377).Stack, obj3);
   obj.children = closure_6(View, obj2);
-  return closure_6(markAsDismissed(6839).BottomSheet, obj);
+  return closure_6(markAsDismissed(6840).BottomSheet, obj);
 });

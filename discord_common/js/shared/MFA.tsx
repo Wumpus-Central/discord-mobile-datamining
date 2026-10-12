@@ -1,6 +1,6 @@
-// === Module 15961: MFA ===
+// === Module 15984: MFA ===
 
-// Module 15961 (MFA)
+// Module 15984 (MFA)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -25,7 +25,7 @@ let closure_4 = async function _finishMFACheck(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

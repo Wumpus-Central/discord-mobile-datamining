@@ -1,17 +1,17 @@
-// === Module 16827: YouBarICYMIButton ===
+// === Module 16851: YouBarICYMIButton ===
 
-// Module 16827 (YouBarICYMIButton)
+// Module 16851 (YouBarICYMIButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import RootNavigationRef from "RootNavigationRef" /* 4977 */;
-import FlashIcon from "FlashIcon" /* 13131 */;
-import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16828 */;
-import YouBarButtonDefault from "YouBarButton" /* 16829 */;
+import FlashIcon from "FlashIcon" /* 13136 */;
+import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16852 */;
+import YouBarButtonDefault from "YouBarButton" /* 16853 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(15350).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(15373).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };

@@ -1,11 +1,11 @@
-// === Module 8670: StageSparkle ===
+// === Module 8671: StageSparkle ===
 
-// Module 8670 (StageSparkle)
+// Module 8671 (StageSparkle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import _modDef8671 from "module_8671" /* 8671 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import _modDef8672 from "module_8672" /* 8672 */;
+import _modDef8673 from "module_8673" /* 8673 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSp
   const cResult = c.c(16);
   ({ style, IconComponent, icon } = arg0);
   if (undefined === icon) {
-    icon = _modDef8671;
+    icon = _modDef8672;
   }
   const tmp4 = closure_8();
   if (cResult[0] === style) {
@@ -43,7 +43,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSp
               let tmp14 = cResult[9];
             }
             if (cResult[10] !== tmp4.sparkles) {
-              const obj2 = { style: tmp4.sparkles, source: _modDef8672 };
+              const obj2 = { style: tmp4.sparkles, source: _modDef8673 };
               const tmp22 = timestampProducer(FastImageDefault, obj2);
               cResult[10] = tmp4.sparkles;
               cResult[11] = tmp22;
@@ -99,7 +99,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSp
 }) : (function StageSparkleInner(style) {
   ({ IconComponent, icon } = style);
   if (icon === undefined) {
-    icon = _modDef8671;
+    icon = _modDef8672;
   }
   const tmp3 = closure_8();
   const obj = { style: null, children: null };
@@ -117,8 +117,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSp
   }
   obj2.children = tmp6Result;
   const items1 = [timestampProducer(View, obj2), ];
-  const obj5 = { style: tmp3.sparkles, source: tmp10(8672) };
-  items1[1] = timestampProducer(tmp10(6156), obj5);
+  const obj5 = { style: tmp3.sparkles, source: tmp10(8673) };
+  items1[1] = timestampProducer(tmp10(6157), obj5);
   obj.children = items1;
   return React5(View, obj);
 });

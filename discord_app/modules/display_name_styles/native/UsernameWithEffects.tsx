@@ -1,6 +1,6 @@
-// === Module 10262: UsernameWithEffects ===
+// === Module 10263: UsernameWithEffects ===
 
-// Module 10262 (UsernameWithEffects)
+// Module 10263 (UsernameWithEffects)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
@@ -13,10 +13,10 @@ import Text_Text from "Text/Text" /* 5088 */;
 import useTypographyVariantRemap from "useTypographyVariantRemap" /* 5098 */;
 import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 5628 */;
 import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 5629 */;
-import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 8853 */;
-import types from "types" /* 10263 */;
-import useDisplayNameStylesAccessibleColors from "useDisplayNameStylesAccessibleColors" /* 10264 */;
-import PerLetterEffectDefault from "PerLetterEffect" /* 10267 */;
+import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 8854 */;
+import types from "types" /* 10264 */;
+import useDisplayNameStylesAccessibleColors from "useDisplayNameStylesAccessibleColors" /* 10265 */;
+import PerLetterEffectDefault from "PerLetterEffect" /* 10268 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -144,7 +144,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           if (cResult[9] !== displayNameStylesFont) {
             let tmp18;
             if (null != displayNameStylesFont) {
-              const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
+              const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
               tmp18 = obj3;
             }
             cResult[9] = displayNameStylesFont;
@@ -706,7 +706,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let STATIC = userName.effectDisplayType;
   ({ userId, guildId } = userName);
   if (STATIC === undefined) {
-    STATIC = userName(10263).EffectDisplayType.STATIC;
+    STATIC = userName(10264).EffectDisplayType.STATIC;
   }
   ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
   if (ignoreDisabledStylesSetting === undefined) {
@@ -717,10 +717,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp6 = num2(5628)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
   const displayNameStylesEnabled = userName(5629).useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
   const obj = userName(5629);
-  const displayNameStylesFont = userName(8853).useDisplayNameStylesFont({ displayNameStyles: tmp6, ignoreDisabledStylesSetting });
+  const displayNameStylesFont = userName(8854).useDisplayNameStylesFont({ displayNameStyles: tmp6, ignoreDisabledStylesSetting });
   let tmp10;
   if (null != displayNameStylesFont) {
-    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
+    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
     tmp10 = obj3;
   }
   let num = merged.lineClamp;
@@ -736,12 +736,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp11 = tmp12;
   }
-  const obj2 = userName(8853);
+  const obj2 = userName(8854);
   const token = userName(4818).useToken(tmp4(587).colors.BACKGROUND_BASE_LOW);
   const tmp7Result = userName(4818);
   const token1 = userName(4818).useToken(tmp4(587).colors.WHITE);
   const tmp7Result7 = userName(4818);
-  const displayNameStylesAccessibleColors = userName(10264).useDisplayNameStylesAccessibleColors({ displayNameStyles: tmp6, backgroundColor: token });
+  const displayNameStylesAccessibleColors = userName(10265).useDisplayNameStylesAccessibleColors({ displayNameStyles: tmp6, backgroundColor: token });
   let first;
   if (displayNameStylesAccessibleColors.length > 0) {
     first = displayNameStylesAccessibleColors[0];
@@ -814,14 +814,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp26Result = closure_14(str, num2);
   if (displayNameStylesEnabled) {
     if (null != tmp6) {
-      if (STATIC !== tmp7(10263).EffectDisplayType.PLAIN) {
+      if (STATIC !== tmp7(10264).EffectDisplayType.PLAIN) {
         if (null != colorVariants) {
           const items1 = [merged.style, tmp11];
           if (tmp7Result11.doesEffectImpactLayout(effectId)) {
             const layoutImpact = tmp26Result.layoutImpact;
           }
           if (effectId === tmp7(1409).DisplayNameEffect.GUMMY) {
-            const tmp4Result = tmp4(10267);
+            const tmp4Result = tmp4(10268);
             let str3 = tmp7(4821).getNodeText(userName);
             if (str3 == null) {
               str3 = "";

@@ -1,6 +1,6 @@
-// === Module 7433: VideoStreamStats ===
+// === Module 7434: VideoStreamStats ===
 
-// Module 7433 (VideoStreamStats)
+// Module 7434 (VideoStreamStats)
 import TimeUtils from "TimeUtils" /* 5121 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5271 */;
 

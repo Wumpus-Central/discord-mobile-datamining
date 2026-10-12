@@ -1,10 +1,10 @@
-// === Module 8086: useMaybeFetchReferralsRemaining ===
+// === Module 8087: useMaybeFetchReferralsRemaining ===
 
-// Module 8086 (useMaybeFetchReferralsRemaining)
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7108 */;
+// Module 8087 (useMaybeFetchReferralsRemaining)
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7174 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7175 */;
 
 const require = globalThis.__r;
 
@@ -127,10 +127,10 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
   let tmp = flag;
-  const hasDiscountApplied = flag(8087).useHasDiscountApplied();
-  const obj2 = flag(8087);
-  const hasActiveTrial = flag(8088).useHasActiveTrial();
-  const tmp6 = fetched(7108)();
+  const hasDiscountApplied = flag(8088).useHasDiscountApplied();
+  const obj2 = flag(8088);
+  const hasActiveTrial = flag(8089).useHasActiveTrial();
+  const tmp6 = fetched(7109)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
@@ -162,5 +162,5 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
       const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
-  const obj3 = flag(8088);
+  const obj3 = flag(8089);
 });

@@ -1,6 +1,6 @@
-// === Module 15796: CommunityActivityAlertsSetting ===
+// === Module 15819: CommunityActivityAlertsSetting ===
 
-// Module 15796 (CommunityActivityAlertsSetting)
+// Module 15819 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -33,7 +33,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
   },
-  parent: fn(7992).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7993).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["0PhAOH"]);

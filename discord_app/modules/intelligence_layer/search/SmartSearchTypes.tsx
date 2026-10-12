@@ -1,6 +1,6 @@
-// === Module 12039: SmartSearchTypes ===
+// === Module 12041: SmartSearchTypes ===
 
-// Module 12039 (SmartSearchTypes)
+// Module 12041 (SmartSearchTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/SmartSearchTypes.tsx");

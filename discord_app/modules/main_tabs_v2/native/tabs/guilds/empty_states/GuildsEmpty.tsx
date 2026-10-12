@@ -1,6 +1,6 @@
-// === Module 16699: GuildsEmpty ===
+// === Module 16723: GuildsEmpty ===
 
-// Module 16699 (GuildsEmpty)
+// Module 16723 (GuildsEmpty)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,8 +9,8 @@ import getInitialNavigationState from "getInitialNavigationState" /* 4978 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12431 */;
-import CheersSpotIllustration from "CheersSpotIllustration" /* 16700 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12433 */;
+import CheersSpotIllustration from "CheersSpotIllustration" /* 16724 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -305,16 +305,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     tmp11 = cResult[2];
   }
-  selectedGuildId(8971)(tmp11);
+  selectedGuildId(8972)(tmp11);
   if (cResult[3] === selectedGuildId) {
     if (cResult[4] === navigation) {
       let tmp13 = cResult[5];
       let tmp14 = cResult[6];
     }
     const effect = noop.useEffect(tmp13, tmp14);
-    const isScreenLandscape = tmp(8326).useIsScreenLandscape();
-    const tmpResult3 = tmp(8326);
-    const youBarTotalHeight = tmp(15352).useYouBarTotalHeight();
+    const isScreenLandscape = tmp(8327).useIsScreenLandscape();
+    const tmpResult3 = tmp(8327);
+    const youBarTotalHeight = tmp(15375).useYouBarTotalHeight();
     if (!stateFromStores) {
       return null;
     } else {
@@ -395,7 +395,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[9] = items2;
       tmp20 = items2;
     }
-    const tmpResult4 = tmp(15352);
+    const tmpResult4 = tmp(15375);
   }
   const fn2 = function w() {
     if (null != selectedGuildId) {
@@ -455,7 +455,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = navigation(573);
   obj3.type = navigation(1273).ImpressionTypes.VIEW;
   obj3.name = navigation(1273).ImpressionNames.GUILDS_EMPTY_NUX;
-  selectedGuildId(8971)(obj3);
+  selectedGuildId(8972)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -489,9 +489,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }, items1);
-  const tmp7 = selectedGuildId(8971);
-  const isScreenLandscape = navigation(8326).useIsScreenLandscape();
-  navigation(15352);
+  const tmp7 = selectedGuildId(8972);
+  const isScreenLandscape = navigation(8327).useIsScreenLandscape();
+  navigation(15375);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };

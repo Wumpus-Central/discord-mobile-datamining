@@ -1,6 +1,6 @@
-// === Module 7039: getPreviousSafeRouteForNsfwReturn ===
+// === Module 7040: getPreviousSafeRouteForNsfwReturn ===
 
-// Module 7039 (getPreviousSafeRouteForNsfwReturn)
+// Module 7040 (getPreviousSafeRouteForNsfwReturn)
 import Constants from "Constants" /* 1085 */;
 import AgeGateUtils from "AgeGateUtils" /* 5924 */;
 import SpoilerChannelUtils from "SpoilerChannelUtils" /* 5944 */;

@@ -1,9 +1,9 @@
-// === Module 7921: ApplicationCommandStore ===
+// === Module 7922: ApplicationCommandStore ===
 
-// Module 7921 (ApplicationCommandStore)
+// Module 7922 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7242 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7243 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6061 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;

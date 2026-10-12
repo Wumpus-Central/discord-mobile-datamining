@@ -1,6 +1,6 @@
-// === Module 7992: SettingsConstants ===
+// === Module 7993: SettingsConstants ===
 
-// Module 7992 (SettingsConstants)
+// Module 7993 (SettingsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/core/native/SettingsConstants.tsx");

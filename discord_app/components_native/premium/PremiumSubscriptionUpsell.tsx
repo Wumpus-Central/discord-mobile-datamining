@@ -1,6 +1,6 @@
-// === Module 13806: PremiumSubscriptionUpsell ===
+// === Module 13829: PremiumSubscriptionUpsell ===
 
-// Module 13806 (PremiumSubscriptionUpsell)
+// Module 13829 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,11 +11,11 @@ import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6195 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9423 */;
-import _modDef13807 from "module_13807" /* 13807 */;
-import _modDef13808 from "module_13808" /* 13808 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6196 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9424 */;
+import _modDef13830 from "module_13830" /* 13830 */;
+import _modDef13831 from "module_13831" /* 13831 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -23,7 +23,7 @@ import UserStore from "UserStore" /* 1390 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7151).Gradients;
+const Gradients = fn(7152).Gradients;
 const PremiumConstants = fn(1392);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
         if (cResult[6] === tmp4.subtitle) {
           if (cResult[7] === tmp4.title) {
             if (cResult[9] !== tmp4.upsellFeatureSubLogo) {
-              const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13807 };
+              const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13830 };
               const tmp22 = options(FastImageDefault, obj2);
               cResult[9] = tmp4.upsellFeatureSubLogo;
               cResult[10] = tmp22;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
               tmp19 = cResult[10];
             }
             if (cResult[11] !== tmp4.upsellFeatureLogoTier2) {
-              const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13808 };
+              const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13831 };
               const tmp26 = options(FastImageDefault, obj4);
               cResult[11] = tmp4.upsellFeatureLogoTier2;
               cResult[12] = tmp26;
@@ -286,11 +286,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     intlResult1 = PremiumUtilsDefault;
-    obj11.source = _modDef13807;
+    obj11.source = _modDef13830;
     const items4 = [options(FastImageDefault, obj11), , ];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const intlResult2 = FastImageDefault;
-    obj12.source = _modDef13808;
+    obj12.source = _modDef13831;
     items4[1] = options(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const intlResult3 = FastImageDefault;

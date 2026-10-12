@@ -1,6 +1,6 @@
-// === Module 8654: useGuildScheduledEvents ===
+// === Module 8655: useGuildScheduledEvents ===
 
-// Module 8654 (useGuildScheduledEvents)
+// Module 8655 (useGuildScheduledEvents)
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6054 */;
-import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 8655 */;
+import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 8656 */;
 
 const require = globalThis.__r;
 
@@ -912,11 +912,11 @@ export const useImminentUpcomingGuildEvents = ReactCompilerGating.isReactCompile
   }, items1);
   const items2 = [stateFromStores];
   return noop.useMemo(() => stateFromStores.filter((status) => {
-    const eventSchedule = closure_1_0(8526).getEventSchedule(status);
+    const eventSchedule = closure_1_0(8527).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = closure_1_0(8526);
+    const obj = closure_1_0(8527);
     let toISOStringResult1;
-    const obj2 = closure_1_0(8520);
+    const obj2 = closure_1_0(8521);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

@@ -1,10 +1,10 @@
-// === Module 12031: GuildDirectoryRow ===
+// === Module 12033: GuildDirectoryRow ===
 
-// Module 12031 (GuildDirectoryRow)
+// Module 12033 (GuildDirectoryRow)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import GuildIconDefault from "GuildIcon" /* 6158 */;
-import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 12009 */;
+import GuildIconDefault from "GuildIcon" /* 6159 */;
+import GuildDirectoryMoreMenuDefault from "GuildDirectoryMoreMenu" /* 12011 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -114,7 +114,7 @@ export default noop.memo(function GuildDirectoryRow(entry) {
           c3 = 0;
           closure_129_2(false);
           c5 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp50) {
         if (tmp5 === c3) {
@@ -231,5 +231,5 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   items7[3] = closure_10(entry(5379).Button, obj22);
   obj5.children = items7;
   obj4.children = closure_12(View, obj5);
-  return closure_10(entry(6181).Card, obj4);
+  return closure_10(entry(6182).Card, obj4);
 });

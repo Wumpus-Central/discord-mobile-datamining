@@ -1,7 +1,7 @@
-// === Module 14804: useRequestGatewaySocket ===
+// === Module 14827: useRequestGatewaySocket ===
 
-// Module 14804 (useRequestGatewaySocket)
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 9703 */;
+// Module 14827 (useRequestGatewaySocket)
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 9704 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

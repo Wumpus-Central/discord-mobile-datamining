@@ -1,6 +1,6 @@
-// === Module 15097: StaffOnlyFindYourFriendsDeletionSetting ===
+// === Module 15120: StaffOnlyFindYourFriendsDeletionSetting ===
 
-// Module 15097 (StaffOnlyFindYourFriendsDeletionSetting)
+// Module 15120 (StaffOnlyFindYourFriendsDeletionSetting)
 import c from "c" /* 576 */;
 import _mod4733 from "module_4733" /* 4733 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -21,7 +21,7 @@ let closure_9 = async function _onFindYourFriendsDeletionPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -146,7 +146,7 @@ const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(7992).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7993).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: useIsFindYourFriendsDeletionDisabled,
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -158,7 +158,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(15098).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15121).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useIsFindYourFriendsDeletionTrailing() {
     const cResult = c.c(2);
     const tmp2 = closure_8();

@@ -1,6 +1,6 @@
-// === Module 8723: InstantInviteShareApps ===
+// === Module 8724: InstantInviteShareApps ===
 
-// Module 8723 (InstantInviteShareApps)
+// Module 8724 (InstantInviteShareApps)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InstantInviteConstants = fn(8724);
+const InstantInviteConstants = fn(8725);
 ({ SHARE_ITEMS: closure_7, SHARE_ITEMS_DEFAULT: closure_8 } = InstantInviteConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
@@ -36,7 +36,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     first = cResult[0];
   }
   const tmp6 = _slicedToArray(noop.useState(closure_8), 2);
-  const nativeGesture = onItemPressed(6334).useNativeGesture(first);
+  const nativeGesture = onItemPressed(6335).useNativeGesture(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function x() {
       Promise.all(React5.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
@@ -118,7 +118,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
             tmp22[0] = nativeGesture;
             tmp22[1] = tmp17;
-            const tmp23 = jsx(tmp(6334).GestureDetector, tmp22);
+            const tmp23 = jsx(tmp(6335).GestureDetector, tmp22);
             cResult[16] = nativeGesture;
             cResult[17] = tmp17;
             cResult[18] = tmp23;
@@ -272,7 +272,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[4] = tmp4.contentContainer;
   cResult[5] = items1;
   tmp12 = items1;
-  let tmpResult = onItemPressed(6334);
+  let tmpResult = onItemPressed(6335);
 }) : (function InstantInviteShareApps(onItemPressed) {
   onItemPressed = onItemPressed.onItemPressed;
   dependencyMap = undefined;
@@ -281,7 +281,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj = onItemPressed(5386);
   [arr, c2] = noop.useState(closure_8);
   const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
-  const gesture = onItemPressed(6334).useNativeGesture({ disallowInterruption: true });
+  const gesture = onItemPressed(6335).useNativeGesture({ disallowInterruption: true });
   const effect = noop.useEffect(() => {
     Promise.all(React5.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
       const items = [];
@@ -398,5 +398,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj.children = tmpResult;
     return <closure_1_5 key={type.type} style={{ maxWidth: 76 * closure_1 }}>{null}</closure_1_5>;
   })}</closure_6>;
-  return jsx(onItemPressed(6334).GestureDetector, { gesture, children });
+  return jsx(onItemPressed(6335).GestureDetector, { gesture, children });
 }));

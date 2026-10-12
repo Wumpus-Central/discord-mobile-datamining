@@ -1,13 +1,13 @@
-// === Module 18023: DmSettingsUpsellActionSheet ===
+// === Module 18081: DmSettingsUpsellActionSheet ===
 
-// Module 18023 (DmSettingsUpsellActionSheet)
+// Module 18081 (DmSettingsUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6683 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 14112 */;
-import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 18020 */;
-import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 18024 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6684 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 14135 */;
+import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 18078 */;
+import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 18082 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -108,12 +108,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
         tmp14 = cResult[12];
       }
       if (cResult[13] !== tmp4.headerImage) {
-        let obj2 = { source: stateFromStores(10400), style: tmp4.headerImage };
-        const tmp19 = closure_6(stateFromStores(6156), obj2);
+        let obj2 = { source: stateFromStores(10401), style: tmp4.headerImage };
+        const tmp19 = closure_6(stateFromStores(6157), obj2);
         cResult[13] = tmp4.headerImage;
         cResult[14] = tmp19;
         let tmp15 = tmp19;
-        const tmp18 = stateFromStores(6156);
+        const tmp18 = stateFromStores(6157);
       } else {
         tmp15 = cResult[14];
       }
@@ -161,12 +161,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
           tmp30 = cResult[23];
         }
         if (cResult[24] !== stateFromStores) {
-          const obj6 = { guild: stateFromStores, size: tmp(6158).GuildIconSizes.SMALL_32 };
-          const tmp37 = closure_6(stateFromStores(6158), obj6);
+          const obj6 = { guild: stateFromStores, size: tmp(6159).GuildIconSizes.SMALL_32 };
+          const tmp37 = closure_6(stateFromStores(6159), obj6);
           cResult[24] = stateFromStores;
           cResult[25] = tmp37;
           let tmp33 = tmp37;
-          const tmp36 = stateFromStores(6158);
+          const tmp36 = stateFromStores(6159);
         } else {
           tmp33 = cResult[25];
         }
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
                 const items2 = [tmp15, tmp22, tmp27, tmp45, tmp51, tmp56, tmp61];
                 obj12.children = items2;
                 obj11.children = closure_7(View, obj12);
-                const tmp68 = closure_6(tmp(6898).ActionSheet, obj11);
+                const tmp68 = closure_6(tmp(6899).ActionSheet, obj11);
                 cResult[46] = tmp4.container;
                 cResult[47] = tmp22;
                 cResult[48] = tmp27;
@@ -334,8 +334,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
   if (null != stateFromStores) {
     let obj2 = { startExpanded: true, children: null };
     let obj3 = { style: tmp.container, children: null };
-    const obj4 = { source: stateFromStores(10400), style: tmp.headerImage };
-    const items2 = [closure_6(stateFromStores(6156), obj4), , , , , , ];
+    const obj4 = { source: stateFromStores(10401), style: tmp.headerImage };
+    const items2 = [closure_6(stateFromStores(6157), obj4), , , , , , ];
     const obj5 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     let intl = tmp2(1126).intl;
     obj5.children = intl.string(tmp2(1126).t.w2BvnL);
@@ -352,9 +352,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
     const items3 = [closure_6(tmp2(5088).Text, obj9), ];
     const obj10 = { style: tmp.guildInfo, children: null };
     const obj11 = { guild: stateFromStores, size: null };
-    const tmp11 = stateFromStores(6156);
-    obj11.size = tmp2(6158).GuildIconSizes.SMALL_32;
-    const items4 = [closure_6(stateFromStores(6158), obj11), ];
+    const tmp11 = stateFromStores(6157);
+    obj11.size = tmp2(6159).GuildIconSizes.SMALL_32;
+    const items4 = [closure_6(stateFromStores(6159), obj11), ];
     const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores.name };
     items4[1] = closure_6(tmp2(5088).Text, obj12);
     obj10.children = items4;
@@ -409,8 +409,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DmSettin
     items2[6] = closure_6(tmp2(5088).Text, obj15);
     obj3.children = items2;
     obj2.children = closure_7(View, obj3);
-    tmp6 = closure_6(tmp2(6898).ActionSheet, obj2);
-    const tmp12 = stateFromStores(6158);
+    tmp6 = closure_6(tmp2(6899).ActionSheet, obj2);
+    const tmp12 = stateFromStores(6159);
   }
   return tmp6;
 });

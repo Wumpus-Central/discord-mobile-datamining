@@ -1,6 +1,6 @@
-// === Module 7200: FileSystemStore ===
+// === Module 7201: FileSystemStore ===
 
-// Module 7200 (FileSystemStore)
+// Module 7201 (FileSystemStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -56,7 +56,7 @@ function refresh() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -134,7 +134,7 @@ function refresh() {
             }
           }
           c3 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp38) {
         c3 = tmp;

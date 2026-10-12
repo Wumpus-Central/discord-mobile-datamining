@@ -1,12 +1,12 @@
-// === Module 18633: SafetyFlowsUtils ===
+// === Module 18691: SafetyFlowsUtils ===
 
-// Module 18633 (SafetyFlowsUtils)
+// Module 18691 (SafetyFlowsUtils)
 import util from "util" /* 1126 */;
 import _modDef2862 from "module_2862" /* 2862 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import types from "types" /* 18627 */;
-import constants from "constants" /* 18628 */;
+import types from "types" /* 18685 */;
+import constants from "constants" /* 18686 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -129,7 +129,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -177,7 +177,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c4 = tmp;
@@ -223,7 +223,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -271,7 +271,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? 
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c4 = tmp;

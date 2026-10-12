@@ -1,6 +1,6 @@
-// === Module 8398: computeGlobalSpoilerDisplay ===
+// === Module 8399: computeGlobalSpoilerDisplay ===
 
-// Module 8398 (computeGlobalSpoilerDisplay)
+// Module 8399 (computeGlobalSpoilerDisplay)
 import PermissionStore from "PermissionStore" /* 4750 */;
 
 const require = globalThis.__r;

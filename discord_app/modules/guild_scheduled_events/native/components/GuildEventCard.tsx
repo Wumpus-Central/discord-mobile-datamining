@@ -1,10 +1,10 @@
-// === Module 8659: GuildEventCard ===
+// === Module 8660: GuildEventCard ===
 
-// Module 8659 (GuildEventCard)
+// Module 8660 (GuildEventCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ButtonGroup from "ButtonGroup" /* 5958 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 8530 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 8531 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 

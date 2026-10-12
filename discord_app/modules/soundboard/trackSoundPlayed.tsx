@@ -1,8 +1,8 @@
-// === Module 7083: trackSoundPlayed ===
+// === Module 7084: trackSoundPlayed ===
 
-// Module 7083 (trackSoundPlayed)
+// Module 7084 (trackSoundPlayed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import SoundboardTypes from "SoundboardTypes" /* 7048 */;
+import SoundboardTypes from "SoundboardTypes" /* 7049 */;
 import RunningGameStore from "RunningGameStore" /* 2019 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;

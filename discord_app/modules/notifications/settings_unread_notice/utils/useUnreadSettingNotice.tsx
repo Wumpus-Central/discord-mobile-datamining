@@ -1,7 +1,7 @@
-// === Module 10443: useUnreadSettingNotice ===
+// === Module 10444: useUnreadSettingNotice ===
 
-// Module 10443 (useUnreadSettingNotice)
-import UnreadSettingNoticeStore2Default from "UnreadSettingNoticeStore2" /* 10445 */;
+// Module 10444 (useUnreadSettingNotice)
+import UnreadSettingNoticeStore2Default from "UnreadSettingNoticeStore2" /* 10446 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

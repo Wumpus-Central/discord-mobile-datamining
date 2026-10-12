@@ -1,6 +1,6 @@
-// === Module 18052: GameConsoleManager ===
+// === Module 18110: GameConsoleManager ===
 
-// Module 18052 (GameConsoleManager)
+// Module 18110 (GameConsoleManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import Timers from "Timers" /* 2060 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
 import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11111 */;
 import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11115 */;
-import _modDef18053 from "module_18053" /* 18053 */;
+import _modDef18111 from "module_18111" /* 18111 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
@@ -17,7 +17,7 @@ import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 import SessionsStore from "SessionsStore" /* 5112 */;
 import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 import GameConsoleStore from "GameConsoleStore" /* 5111 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
 function syncLocalState() {
@@ -45,7 +45,7 @@ let closure_15 = async function _syncLocalState(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -84,7 +84,7 @@ let closure_15 = async function _syncLocalState(arg0) {
           const obj2 = closure_130_1(closure_130_2[11]);
         }
         c4 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } catch (tmp16) {
         c4 = tmp;
         throw tmp16;
@@ -92,7 +92,7 @@ let closure_15 = async function _syncLocalState(arg0) {
     }
   })();
 };
-const GameConsoleConstants = fn(9221);
+const GameConsoleConstants = fn(9222);
 ({ GAME_CONSOLE_SESSIONS: c10, USER_ACTION_REQUIRED_ERROR_CODES: closure_11 } = GameConsoleConstants);
 const MediaEngineContextTypes = fn(5117).MediaEngineContextTypes;
 let closure_13 = new LoggerDefault("GameConsoleManager");
@@ -259,7 +259,7 @@ const prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef18053(device, result, error);
+          const tmp8Result = _modDef18111(device, result, error);
           if (null != tmp8Result) {
             const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

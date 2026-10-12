@@ -1,10 +1,10 @@
-// === Module 17821: ActivityShelfItemBackground ===
+// === Module 17878: ActivityShelfItemBackground ===
 
-// Module 17821 (ActivityShelfItemBackground)
+// Module 17878 (ActivityShelfItemBackground)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import NativeViewDefault from "NativeView" /* 6161 */;
-import BrokenImageDefault from "BrokenImage" /* 11770 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import NativeViewDefault from "NativeView" /* 6162 */;
+import BrokenImageDefault from "BrokenImage" /* 11772 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

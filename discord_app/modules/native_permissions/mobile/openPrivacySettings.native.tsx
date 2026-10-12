@@ -1,7 +1,7 @@
-// === Module 7506: openPrivacySettings ===
+// === Module 7507: openPrivacySettings ===
 
-// Module 7506 (openPrivacySettings)
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6624 */;
+// Module 7507 (openPrivacySettings)
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6625 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");

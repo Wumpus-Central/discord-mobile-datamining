@@ -1,13 +1,13 @@
-// === Module 8581: RowButton ===
+// === Module 8582: RowButton ===
 
-// Module 8581 (RowButton)
+// Module 8582 (RowButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import TableRow from "TableRow" /* 6179 */;
-import Card from "Card" /* 6181 */;
-import TableRowIcon from "TableRowIcon" /* 6187 */;
-import BackgroundBlurView from "BackgroundBlurView" /* 8550 */;
+import TableRow from "TableRow" /* 6180 */;
+import Card from "Card" /* 6182 */;
+import TableRowIcon from "TableRowIcon" /* 6188 */;
+import BackgroundBlurView from "BackgroundBlurView" /* 8551 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,10 +17,7 @@ let closure_4 = ["experimental_withBlurBackground", "onPress", "disabled", "chil
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles(() => {
-  const obj = { card: null, cardWithBlur: null };
-  const obj2 = { padding: "y", borderTopStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
-  obj.card = obj2;
-  obj.cardWithBlur = { overflow: "hidden" };
+  const obj = { card: { padding: "y", borderTopStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS }, cardWithBlur: { overflow: "hidden" } };
   return obj;
 });
 let ReactCompilerGating = fn(558);
@@ -359,9 +356,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function RowButt
   }
   return jsx(Card.InternalCard, obj4);
 });
-tmp2.Icon = fn(6187).TableRowIcon;
+tmp2.Icon = fn(6188).TableRowIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
-export const RowButtonIconProps = fn(6187).TableRowIconProps;
+export const RowButtonIconProps = fn(6188).TableRowIconProps;
 export const RowButton = tmp2;

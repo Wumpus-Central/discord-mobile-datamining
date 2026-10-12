@@ -1,15 +1,15 @@
-// === Module 11778: RecommendationsBanner ===
+// === Module 11780: RecommendationsBanner ===
 
-// Module 11778 (RecommendationsBanner)
+// Module 11780 (RecommendationsBanner)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8268 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8310 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8372 */;
-import AppLauncherContext from "AppLauncherContext" /* 10621 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8269 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8311 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8373 */;
+import AppLauncherContext from "AppLauncherContext" /* 10622 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10962 */;
-import HeroMedia from "HeroMedia" /* 11769 */;
+import HeroMedia from "HeroMedia" /* 11771 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1404 */;
 
@@ -85,7 +85,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
           if (null != imageSource) {
-            tmp6 = tmp6(6156);
+            tmp6 = tmp6(6157);
             const obj = { style: imageStyle, source: imageSource, resizeMode: "cover" };
             let tmp19 = <tmp6 style={imageStyle} source={imageSource} resizeMode="cover" />;
           } else {
@@ -120,8 +120,8 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmpResult = HeroMedia;
 }) : (function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(10621);
-  heroMediaDimensions = heroMediaDimensions(11769).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(10622);
+  heroMediaDimensions = heroMediaDimensions(11771).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];

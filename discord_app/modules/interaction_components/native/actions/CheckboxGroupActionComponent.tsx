@@ -1,7 +1,7 @@
-// === Module 18081: CheckboxGroupActionComponent ===
+// === Module 18139: CheckboxGroupActionComponent ===
 
-// Module 18081 (CheckboxGroupActionComponent)
-import TableCheckboxRow from "TableCheckboxRow" /* 6176 */;
+// Module 18139 (CheckboxGroupActionComponent)
+import TableCheckboxRow from "TableCheckboxRow" /* 6177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

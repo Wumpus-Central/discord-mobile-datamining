@@ -1,6 +1,6 @@
-// === Module 12625: BugReporterModal ===
+// === Module 12627: BugReporterModal ===
 
-// Module 12625 (BugReporterModal)
+// Module 12627 (BugReporterModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1102 */;
@@ -9,18 +9,18 @@ import AvatarUtils from "AvatarUtils" /* 1415 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
-import TableRadioRow from "TableRadioRow" /* 6261 */;
-import Navigator from "Navigator" /* 6687 */;
-import HeaderActionButton from "HeaderActionButton" /* 7088 */;
-import UploadDefault from "Upload" /* 7757 */;
-import UploadPlatform from "UploadPlatform" /* 7758 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
+import TableRadioRow from "TableRadioRow" /* 6262 */;
+import Navigator from "Navigator" /* 6688 */;
+import HeaderActionButton from "HeaderActionButton" /* 7089 */;
+import UploadDefault from "Upload" /* 7758 */;
+import UploadPlatform from "UploadPlatform" /* 7759 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import BugReportStore from "BugReportStore" /* 12624 */;
+import BugReportStore from "BugReportStore" /* 12626 */;
 import n from "module_683" /* 683 */;
 
 require = fn;
@@ -66,7 +66,7 @@ class BugCreateScreen {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -86,7 +86,7 @@ class BugCreateScreen {
               closure_128_3 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(7769).launchImageLibraryAsync({ mediaType: "any", includeBase64: false, selectionLimit: 1 }), done: false };
+              const obj5 = { value: tmp5(7770).launchImageLibraryAsync({ mediaType: "any", includeBase64: false, selectionLimit: 1 }), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -105,10 +105,10 @@ class BugCreateScreen {
               const merged = Object.assign(closure_128_1);
               obj6.uri = closure_128_1.uri;
               obj6.originalUri = closure_128_1.uri;
-              obj6.platform = tmp2(7758).UploadPlatform.REACT_NATIVE;
+              obj6.platform = tmp2(7759).UploadPlatform.REACT_NATIVE;
               obj6.filename = closure_128_1.fileName;
               closure_128_2 = obj6;
-              const tmp34 = new tmp5(7757)(closure_128_2);
+              const tmp34 = new tmp5(7758)(closure_128_2);
               closure_128_3 = tmp34;
               closure_129_23.current = closure_129_7.length;
               closure_129_8((arg0) => {
@@ -118,7 +118,7 @@ class BugCreateScreen {
               });
             }
             c3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp8) {
           c3 = tmp;
@@ -259,7 +259,7 @@ class BugCreateScreen {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -291,7 +291,7 @@ class BugCreateScreen {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     } else {
                       try {
@@ -377,7 +377,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        const obj11 = { value: closure_2_0(12627).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        const obj11 = { value: closure_2_0(12629).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj11;
                       } catch (tmp46) {
                         c6 = tmp;
@@ -420,7 +420,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(12626).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(12628).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -555,7 +555,7 @@ class BugCreateScreen {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -588,7 +588,7 @@ class BugCreateScreen {
               closure_128_0 = value;
               closure_1_18(closure_128_0);
               c3 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp13) {
             c3 = tmp;
@@ -769,7 +769,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12637, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12639, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;
@@ -860,6 +860,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BugRepor
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(6687).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(6688).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 });
 export { BugCreateScreen };

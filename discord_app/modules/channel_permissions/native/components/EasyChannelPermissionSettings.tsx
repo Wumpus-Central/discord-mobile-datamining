@@ -1,17 +1,17 @@
-// === Module 17527: EasyChannelPermissionSettings ===
+// === Module 17584: EasyChannelPermissionSettings ===
 
-// Module 17527 (EasyChannelPermissionSettings)
+// Module 17584 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 587 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8602 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8603 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8620 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8603 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8604 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8621 */;
 import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 10766 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17528 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17585 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
@@ -29,7 +29,7 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(7489).SettingMode;
+const SettingMode = fn(7490).SettingMode;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_18, Permissions: closure_19, AnalyticEvents: closure_20, ChannelSettingsSections: closure_21, SettingsPaneTypes: closure_22 } = Constants);
 const jsxProd = fn(21);
@@ -83,7 +83,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (cResult[3] !== navigation) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
         return;
       }
     }
@@ -95,7 +95,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   } else {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
         return;
       }
     }
@@ -105,7 +105,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (null != guild) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
         return;
       }
     }
@@ -113,7 +113,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
         return;
       }
     }
@@ -121,7 +121,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   } else {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
         return;
       }
     }
@@ -129,7 +129,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (null != guild) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
         return;
       }
     }
@@ -162,7 +162,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -179,13 +179,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             closure_1 = tmp5;
             closure_128_0 = undefined;
             accessPermissions = accessPermissions.accessPermissions;
-            const result = v2(8602).isPrivateGuildChannel(accessPermissions);
-            const obj9 = v2(8602);
+            const result = v2(8603).isPrivateGuildChannel(accessPermissions);
+            const obj9 = v2(8603);
             const tmp21 = v2;
-            closure_128_0 = v2(8602).flipEveryonePermission(accessPermissions, accessPermissions, result);
+            closure_128_0 = v2(8603).flipEveryonePermission(accessPermissions, accessPermissions, result);
             currentUser = currentUser.getCurrentUser();
             let tmp7 = ChannelSettingsPermissionsStore;
-            const obj10 = v2(8602);
+            const obj10 = v2(8603);
             if (!ChannelSettingsPermissionsStore) {
               tmp7 = null == currentUser;
             }
@@ -195,7 +195,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             if (!tmp7) {
               v2 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp21(8602).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
+              const obj4 = { value: tmp21(8603).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
               return obj4;
             }
             canResult = PermissionStore.can(constants.ADMINISTRATOR, guild);
@@ -218,12 +218,12 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           return obj;
         } else {
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
         const items = [closure_128_0];
         v2 = 2;
         dependencyMap = 1;
-        const obj7 = { value: tmp2(8603).savePermissionUpdates(closure_129_0.id, items), done: false };
+        const obj7 = { value: tmp2(8604).savePermissionUpdates(closure_129_0.id, items), done: false };
         return obj7;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -242,7 +242,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -263,7 +263,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               if (!privateToggleState) {
                 c2 = 1;
                 dependencyMap = 1;
-                const obj6 = { value: tmp5(8604).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
+                const obj6 = { value: tmp5(8605).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
                 return obj6;
               }
             }
@@ -277,7 +277,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           return obj;
         } else if (!value) {
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
         const intl = tmp5(1126).intl;
         const string = intl.string;
@@ -343,7 +343,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   const items1 = [navigation];
   const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-    navigation.setOptions({ headerRight: "r" });
+    navigation.setOptions({ headerRight: "top" });
   }, items1);
   const items2 = [guild, sortedGuildRoles, channel];
   const memo = togglePrivateChannel.useMemo(() => {

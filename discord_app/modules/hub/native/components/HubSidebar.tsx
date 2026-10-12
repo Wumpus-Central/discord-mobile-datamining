@@ -1,13 +1,13 @@
-// === Module 16624: HubSidebar ===
+// === Module 16647: HubSidebar ===
 
-// Module 16624 (HubSidebar)
+// Module 16647 (HubSidebar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import transitionToChannel from "transitionToChannel" /* 5103 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8682 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12004 */;
-import BaseChannelItem from "BaseChannelItem" /* 12085 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8683 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12006 */;
+import BaseChannelItem from "BaseChannelItem" /* 12087 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
@@ -20,7 +20,7 @@ const InstantInviteSources = fn(1085).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5092);
-let obj2 = { container: { marginVertical: fn(11758).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, row: { flex: 1 } };
+let obj2 = { container: { marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, row: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubItem(active) {
@@ -102,8 +102,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubIte
   }
   const obj = { style: closure_9().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = closure_9();
-  obj.name = React5(tmp5(12085).BaseChannelName, { name: label, mode: DEFAULT });
-  obj.icon = React5(tmp5(12085).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj.name = React5(tmp5(12087).BaseChannelName, { name: label, mode: DEFAULT });
+  obj.icon = React5(tmp5(12087).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     const obj2 = { value: unreadCount };
@@ -113,7 +113,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubIte
   return React5(BaseChannelItemDefault, obj);
 });
 ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11758).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/native/components/HubSidebar.tsx");
 
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubSideb
     }
     return tmp2;
   });
-  guild(16625);
+  guild(16648);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -350,8 +350,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubSideb
     }
     const obj4 = { style: row, children: null };
     const obj5 = { guild };
-    const items4 = [closure_7(stateFromStores(16626), obj5), , , ];
-    const obj6 = { active: stateFromStores1, IconComponent: tmp(15876).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
+    const items4 = [closure_7(stateFromStores(16649), obj5), , , ];
+    const obj6 = { active: stateFromStores1, IconComponent: tmp(15899).CompassIcon, label: null, handleItemClick: null, unreadCount: null };
     const intl = tmp(1126).intl;
     obj6.label = intl.string(tmp(1126).t.K50GHd);
     obj6.handleItemClick = function handleItemClick() {
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubSideb
     };
     obj6.unreadCount = tmp7;
     items4[1] = closure_7(closure_10, obj6);
-    const obj7 = { IconComponent: tmp(10604).PlusMediumIcon, label: null, handleItemClick: null };
+    const obj7 = { IconComponent: tmp(10605).PlusMediumIcon, label: null, handleItemClick: null };
     const intl2 = tmp(1126).intl;
     obj7.label = intl2.string(tmp(1126).t.emRpdS);
     obj7.handleItemClick = function handleItemClick() {

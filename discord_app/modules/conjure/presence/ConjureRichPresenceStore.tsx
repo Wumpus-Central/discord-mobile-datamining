@@ -1,13 +1,13 @@
-// === Module 10650: ConjureRichPresenceStore ===
+// === Module 10651: ConjureRichPresenceStore ===
 
-// Module 10650 (ConjureRichPresenceStore)
+// Module 10651 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10246 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10247 */;
 import IdleStore from "IdleStore" /* 5888 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10651 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -198,7 +198,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_10);
                         details = closure_1_10.details;
                         let prop = closure_1_0(closure_1_1[6]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F105564 */ function() { ... });
+                        let found = prop.filter(/* F105783 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];

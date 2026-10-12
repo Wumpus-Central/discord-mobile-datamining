@@ -9,7 +9,7 @@ import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import useToken2 from "useToken" /* 4818 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5106 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8268 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8269 */;
 import transitionToActivityDefault from "transitionToActivity" /* 10824 */;
 import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 10834 */;
 import usePipDimensionsDefault from "usePipDimensions" /* 10837 */;
@@ -36,7 +36,7 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10353);
+const ChannelCallStore = fn(10354);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
 const ParticipantTypes = fn(5115).ParticipantTypes;
 const jsxProd = fn(21);

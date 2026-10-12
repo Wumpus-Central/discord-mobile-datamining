@@ -1,21 +1,21 @@
-// === Module 15174: FamilyCenterAcceptedLinks ===
+// === Module 15197: FamilyCenterAcceptedLinks ===
 
-// Module 15174 (FamilyCenterAcceptedLinks)
+// Module 15197 (FamilyCenterAcceptedLinks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import _modDef2568 from "module_2568" /* 2568 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import useUserLinks from "useUserLinks" /* 7738 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7739 */;
-import FamilyCenterEmptyDefault from "FamilyCenterEmpty" /* 15175 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 15176 */;
-import _modDef15181 from "module_15181" /* 15181 */;
+import useUserLinks from "useUserLinks" /* 7739 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7740 */;
+import FamilyCenterEmptyDefault from "FamilyCenterEmpty" /* 15198 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 15199 */;
+import _modDef15204 from "module_15204" /* 15204 */;
 import noop from "module_19" /* 19 */;
 
 const util = intl(1126);
 const Text_Text = intl(5088);
-const useAgeSpecificText2 = intl(11533);
+const useAgeSpecificText2 = intl(11535);
 require = fn;
 function FamilyCenterAcceptedLinkRow(otherUser) {
   let tmp4Result = null;
@@ -30,18 +30,18 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     const obj3 = { name: str1 };
     obj.accessibilityLabel = intl.formatToPlainString(_modDef2568.T7DUoU, obj3);
     obj.onPress = function handleDisconnect() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15179, dependencyMap.paths), { otherUser: str });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15202, dependencyMap.paths), { otherUser: str });
     };
     obj.style = tmp.actionButton;
-    const obj4 = { size: str(1200).Icon.Sizes.SMALL, disableColor: true, source: _modDef15181 };
+    const obj4 = { size: str(1200).Icon.Sizes.SMALL, disableColor: true, source: _modDef15204 };
     obj.children = closure_6(str(1200).Icon, obj4);
-    obj2.actions = closure_6(str(6184).PressableOpacity, obj);
+    obj2.actions = closure_6(str(6185).PressableOpacity, obj);
     tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj2);
   }
   return tmp4Result;
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7259);
+const FamilyCenterConstants = fn(7260);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_4, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: hasOwnProperty } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);

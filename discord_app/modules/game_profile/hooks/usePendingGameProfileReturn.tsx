@@ -1,11 +1,11 @@
-// === Module 12153: usePendingGameProfileReturn ===
+// === Module 12155: usePendingGameProfileReturn ===
 
-// Module 12153 (usePendingGameProfileReturn)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8878 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8884 */;
+// Module 12155 (usePendingGameProfileReturn)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8885 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2020 */;
-import GameProfileStore from "GameProfileStore" /* 8886 */;
+import GameProfileStore from "GameProfileStore" /* 8887 */;
 
 require = fn;
 const AVATAR_SIZE = fn(1085).AVATAR_SIZE;

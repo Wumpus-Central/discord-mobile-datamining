@@ -1,15 +1,15 @@
-// === Module 10053: PremiumGiftPlanSelect ===
+// === Module 10054: PremiumGiftPlanSelect ===
 
-// Module 10053 (PremiumGiftPlanSelect)
+// Module 10054 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import native from "native" /* 1200 */;
 import timing from "timing" /* 5093 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10106 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10107 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8316 */;
-import PromotionsStore from "PromotionsStore" /* 9121 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8317 */;
+import PromotionsStore from "PromotionsStore" /* 9122 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -914,7 +914,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         const tmp4Result8 = tmp4(tmp2[34]);
       }
     } else {
-      const obj44 = { style: tmp14.avatar, guildId: "r", size: "Set", user: null };
+      const obj44 = { style: tmp14.avatar, guildId: "r", size: false, user: false };
       const AvatarSizes = tmp(tmp2[30]).AvatarSizes;
       obj44.size = enabled ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj44.user = recipientUser;

@@ -1,6 +1,6 @@
-// === Module 16451: MessagesItemChannelWave ===
+// === Module 16474: MessagesItemChannelWave ===
 
-// Module 16451 (MessagesItemChannelWave)
+// Module 16474 (MessagesItemChannelWave)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;

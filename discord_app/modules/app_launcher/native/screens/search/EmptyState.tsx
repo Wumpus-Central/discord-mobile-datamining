@@ -1,6 +1,6 @@
-// === Module 11795: search/EmptyState ===
+// === Module 11797: search/EmptyState ===
 
-// Module 11795 (search/EmptyState)
+// Module 11797 (search/EmptyState)
 import util from "util" /* 1126 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
 import noop from "module_19" /* 19 */;
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySta
   showsGenericMessage = tmp4;
   const tmp5 = closure_5();
   const obj = showsGenericMessage(576);
-  const logAppLauncherEmptyStateView = showsGenericMessage(11727).useLogAppLauncherEmptyStateView(tmp(10622).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = showsGenericMessage(11729).useLogAppLauncherEmptyStateView(tmp(10623).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   if (cResult[0] !== tmp4) {
     const fn = function o() {
       const intl = util.intl;
@@ -97,14 +97,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySta
     cResult[7] = tmp15;
     tmp13 = tmp15;
   }
-  const tmpResult = showsGenericMessage(11727);
+  const tmpResult = showsGenericMessage(11729);
 }) : (function EmptyState(showsGenericMessage) {
   let flag = showsGenericMessage.showsGenericMessage;
   if (flag === undefined) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(11727).useLogAppLauncherEmptyStateView(flag(10622).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = flag(11729).useLogAppLauncherEmptyStateView(flag(10623).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = noop.useEffect(() => {
     const intl = util.intl;

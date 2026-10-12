@@ -1,6 +1,6 @@
-// === Module 7031: isAccessibleNonStaticChannelPath ===
+// === Module 7032: isAccessibleNonStaticChannelPath ===
 
-// Module 7031 (isAccessibleNonStaticChannelPath)
+// Module 7032 (isAccessibleNonStaticChannelPath)
 import LinkUtils from "LinkUtils" /* 5422 */;
 import GatedChannelStore from "GatedChannelStore" /* 2117 */;
 

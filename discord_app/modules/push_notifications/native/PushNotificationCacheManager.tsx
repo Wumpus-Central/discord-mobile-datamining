@@ -1,10 +1,10 @@
-// === Module 18174: PushNotificationCacheManager ===
+// === Module 18232: PushNotificationCacheManager ===
 
-// Module 18174 (PushNotificationCacheManager)
+// Module 18232 (PushNotificationCacheManager)
 import PushNotificationDefault from "PushNotification" /* 11031 */;
-import MultiAccountStore from "MultiAccountStore" /* 12125 */;
+import MultiAccountStore from "MultiAccountStore" /* 12127 */;
 import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 const prototype = function PushNotificationCacheManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

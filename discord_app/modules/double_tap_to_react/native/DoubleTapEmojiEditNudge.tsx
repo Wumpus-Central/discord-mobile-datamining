@@ -1,11 +1,11 @@
-// === Module 12830: DoubleTapEmojiEditNudge ===
+// === Module 12832: DoubleTapEmojiEditNudge ===
 
-// Module 12830 (DoubleTapEmojiEditNudge)
+// Module 12832 (DoubleTapEmojiEditNudge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7986 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
@@ -79,7 +79,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155220 */ function*() { ... })();
+                  return (/* F155536 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -105,7 +105,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155220 */ function*() { ... })();
+                  return (/* F155536 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -131,7 +131,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155220 */ function*() { ... })();
+                  return (/* F155536 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -160,7 +160,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155220 */ function*() { ... })();
+                  return (/* F155536 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -185,7 +185,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155220 */ function*() { ... })();
+                  return (/* F155536 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -210,7 +210,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155220 */ function*() { ... })();
+                  return (/* F155536 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -231,7 +231,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
           ({ doubleTapEmojiContainer: obj7.style, doubleTapCustomEmoji: obj7.fastImageStyle, doubleTapTextEmoji: obj7.textEmojiStyle } = tmp11);
           obj5.src = cResult[8];
           obj5.name = "";
-          const tmp23 = closure_11(appEntryKey(6819), obj5);
+          const tmp23 = closure_11(appEntryKey(6820), obj5);
           cResult[12] = cResult[8];
           cResult[13] = tmp11.doubleTapCustomEmoji;
           cResult[14] = tmp11.doubleTapEmojiContainer;
@@ -250,7 +250,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
         closure_0 = closure_1_3(async (_location) => {
           c3 = 0;
           c4 = 0;
-          return (/* F155220 */ function*() { ... })();
+          return (/* F155536 */ function*() { ... })();
         });
         obj1.onPressEmoji = function onPressEmoji() {
           const self = this;
@@ -275,7 +275,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
           closure_0 = closure_1_3(async (_location) => {
             c3 = 0;
             c4 = 0;
-            return (/* F155220 */ function*() { ... })();
+            return (/* F155536 */ function*() { ... })();
           });
           obj1.onPressEmoji = function onPressEmoji() {
             const self = this;
@@ -304,7 +304,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
         closure_0 = closure_1_3(async (_location) => {
           c3 = 0;
           c4 = 0;
-          return (/* F155220 */ function*() { ... })();
+          return (/* F155536 */ function*() { ... })();
         });
         obj1.onPressEmoji = function onPressEmoji() {
           const self = this;
@@ -369,7 +369,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -406,9 +406,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
               return obj16;
             } else {
               const obj17 = { emoji: closure_129_0 };
-              const result = _location(9439).showDoubleTapEmojiUpdatedToast(obj17);
+              const result = _location(9440).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp12) {
             c4 = tmp;
@@ -427,7 +427,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
       }
       return applyArgumentsResult;
     };
-    let result = _location(9426).openEmojiPickerActionSheet(obj2, "stack");
+    let result = _location(9427).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
   let obj4 = { color: "text-subtle", variant: "text-sm/normal", children: null };
   const intl = _location(1126).intl;
@@ -440,13 +440,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
     str = emoji.surrogates;
   }
   obj5.name = str;
-  items3[1] = closure_11(emoji(6819), obj5);
+  items3[1] = closure_11(emoji(6820), obj5);
   let obj6 = { accessibilityRole: "button", onPress: callback, hitSlop, style: tmp5.editButton, children: null };
   const obj7 = { color: "text-brand", variant: "text-sm/normal", children: null };
   const intl2 = tmp(1126).intl;
   obj7.children = intl2.string(_location(1126).t.bt75uw);
   obj6.children = closure_11(_location(5088).Text, obj7);
-  items3[2] = closure_11(_location(6184).PressableOpacity, obj6);
+  items3[2] = closure_11(_location(6185).PressableOpacity, obj6);
   obj3.children = items3;
   return closure_12(View, obj3);
 });

@@ -1,6 +1,6 @@
-// === Module 7488: StageChannelUtils ===
+// === Module 7489: StageChannelUtils ===
 
-// Module 7488 (StageChannelUtils)
+// Module 7489 (StageChannelUtils)
 import _mod12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
@@ -11,7 +11,7 @@ import StageInstanceStore from "StageInstanceStore" /* 2070 */;
 require = fn;
 const constants = fn(5892).RequestToSpeakPermissionStates;
 const Permissions = fn(1085).Permissions;
-const RowType = fn(7489).RowType;
+const RowType = fn(7490).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 

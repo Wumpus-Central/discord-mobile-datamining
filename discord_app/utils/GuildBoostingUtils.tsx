@@ -1,6 +1,6 @@
-// === Module 8024: GuildBoostingUtils ===
+// === Module 8025: GuildBoostingUtils ===
 
-// Module 8024 (GuildBoostingUtils)
+// Module 8025 (GuildBoostingUtils)
 import util from "util" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
@@ -9,13 +9,13 @@ import _modDef3280 from "module_3280" /* 3280 */;
 import _modDef4702 from "module_4702" /* 4702 */;
 import PremiumUtilsAll from "PremiumUtils" /* 4769 */;
 import FileSizeUtils from "FileSizeUtils" /* 5640 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8025 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8026 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8029 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8026 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8027 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8030 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7118 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7119 */;
 import SubscriptionStore from "SubscriptionStore" /* 4775 */;
 import apply from "module_12" /* 12 */;
 
@@ -758,7 +758,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj3;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8033).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8034).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

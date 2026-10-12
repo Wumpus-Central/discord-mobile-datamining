@@ -1,11 +1,11 @@
-// === Module 15109: BaseUpsellActionSheet ===
+// === Module 15132: BaseUpsellActionSheet ===
 
-// Module 15109 (BaseUpsellActionSheet)
+// Module 15132 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import GuildIconDefault from "GuildIcon" /* 6158 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15107 */;
+import GuildIconDefault from "GuildIcon" /* 6159 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15130 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -56,7 +56,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function StoreG
   const obj = guildId(576);
   const stateFromStores = guildId(504).useStateFromStores(first, tmp6);
   if (cResult[3] !== stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp(6158).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp(6159).GuildIconSizes.XSMALL };
     const tmp12 = closure_7(GuildIconDefault, obj2);
     cResult[3] = stateFromStores;
     cResult[4] = tmp12;
@@ -71,7 +71,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function StoreG
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = { guild: stateFromStores, size: null };
   const obj = guildId(504);
-  obj2.size = guildId(6158).GuildIconSizes.XSMALL;
+  obj2.size = guildId(6159).GuildIconSizes.XSMALL;
   return closure_7(GuildIconDefault, obj2);
 });
 ReactCompilerGating = fn(558);
@@ -80,11 +80,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   ({ guildIds, direction, onPress } = arg0);
   const tmp4 = closure_9();
   if (cResult[0] !== guildIds) {
-    const result = tmp(15107).sortGuildIdsByFrecency(guildIds);
+    const result = tmp(15130).sortGuildIdsByFrecency(guildIds);
     cResult[0] = guildIds;
     cResult[1] = result;
     arr = result;
-    const tmpResult = tmp(15107);
+    const tmpResult = tmp(15130);
   } else {
     arr = cResult[1];
   }
@@ -247,7 +247,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
       }
     }
     const statusRow = tmp4.statusRow;
-    if (direction === tmp(15107).ChangeDirection.RESTRICTING) {
+    if (direction === tmp(15130).ChangeDirection.RESTRICTING) {
       class B {
         constructor() {
           return closure_1.map(() => { ... });
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseUpse
                 const items = [tmp8, tmp11, tmp14, tmp24];
                 obj4.children = items;
                 obj3.children = closure_8(closure_5, obj4);
-                const tmp32 = closure_7(toastContent(6839).BottomSheet, obj3);
+                const tmp32 = closure_7(toastContent(6840).BottomSheet, obj3);
                 cResult[21] = tmp4.container;
                 cResult[22] = tmp8;
                 cResult[23] = tmp11;
@@ -525,5 +525,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseUpse
   items1[3] = closure_8(closure_5, obj5);
   obj2.children = items1;
   obj.children = closure_8(closure_5, obj2);
-  return closure_7(toastContent(6839).BottomSheet, obj);
+  return closure_7(toastContent(6840).BottomSheet, obj);
 });

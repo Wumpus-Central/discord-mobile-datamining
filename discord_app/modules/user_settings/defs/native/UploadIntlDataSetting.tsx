@@ -1,6 +1,6 @@
-// === Module 15816: UploadIntlDataSetting ===
+// === Module 15839: UploadIntlDataSetting ===
 
-// Module 15816 (UploadIntlDataSetting)
+// Module 15839 (UploadIntlDataSetting)
 import c from "c" /* 576 */;
 import AssetJsonUtils from "AssetJsonUtils" /* 1130 */;
 import _mod1164 from "module_1164" /* 1164 */;
@@ -19,7 +19,7 @@ let closure_11 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -132,7 +132,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -301,7 +301,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(15817).FileUpIcon,
+  IconComponent: fn(15840).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_12.apply;
@@ -312,7 +312,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(15098).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15121).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useUploadIntlDataTrailing() {
     const cResult = c.c(2);
     if (typeof useIsUploadingIntlData === "function") {

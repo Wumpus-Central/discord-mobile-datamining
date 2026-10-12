@@ -1,8 +1,8 @@
-// === Module 12057: AbstractSearchSessionAnalyticsManager ===
+// === Module 12059: AbstractSearchSessionAnalyticsManager ===
 
-// Module 12057 (AbstractSearchSessionAnalyticsManager)
+// Module 12059 (AbstractSearchSessionAnalyticsManager)
 import v1 from "v1" /* 1279 */;
-import SearchUtils from "SearchUtils" /* 12041 */;
+import SearchUtils from "SearchUtils" /* 12043 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");

@@ -2,7 +2,7 @@
 
 // Module 10974 (useStageChannelConnectAction)
 import c from "c" /* 576 */;
-import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 7485 */;
+import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 7486 */;
 import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 10973 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

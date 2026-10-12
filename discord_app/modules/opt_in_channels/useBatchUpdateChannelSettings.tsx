@@ -2,9 +2,9 @@
 
 // Module 10706 (useBatchUpdateChannelSettings)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 6802 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 6803 */;
 import noop from "module_19" /* 19 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 6806 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 6807 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
 
 const require = globalThis.__r;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBatch
             const tmp8Result3 = guildId(10704);
           }
         } else {
-          const tmp8Result4 = guildId(6802);
+          const tmp8Result4 = guildId(6803);
           const obj5 = { section: constants.CHANNEL_BROWSER };
           const result2 = tmp8Result4.updateOptInChannelsImmediate(guildId, channelId, !isChannelOptedInResult, obj5);
         }
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBatch
           const tmp8Result3 = guildId(10704);
         }
       } else {
-        const tmp8Result4 = guildId(6802);
+        const tmp8Result4 = guildId(6803);
         const obj5 = { section: constants.CHANNEL_BROWSER };
         const result2 = tmp8Result4.updateOptInChannelsImmediate(guildId, channelId, !isChannelOptedInResult, obj5);
       }

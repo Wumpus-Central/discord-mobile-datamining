@@ -6,7 +6,7 @@ import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import transitionToGuild from "transitionToGuild" /* 7052 */;
+import transitionToGuild from "transitionToGuild" /* 7053 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
   guild = guild.guild;
   const application = guild.application;
   const tmp4 = closure_15();
-  guild(8450);
+  guild(8451);
   if (null == application) {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -476,10 +476,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
             }
           }
           tmp52[0] = application(10866);
-          const tmp53 = closure_12(application(6156), tmp52);
+          const tmp53 = closure_12(application(6157), tmp52);
           cResult[26] = tmp53;
           const tmp49 = tmp53;
-          const tmp51 = application(6156);
+          const tmp51 = application(6157);
         } else {
           class M {
             constructor() {

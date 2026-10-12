@@ -1,23 +1,23 @@
-// === Module 9517: EmojiPickerPremiumSearchUpsell ===
+// === Module 9518: EmojiPickerPremiumSearchUpsell ===
 
-// Module 9517 (EmojiPickerPremiumSearchUpsell)
+// Module 9518 (EmojiPickerPremiumSearchUpsell)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import MobileEmojiPickerUpsellRestyleExperiment from "MobileEmojiPickerUpsellRestyleExperiment" /* 9281 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9393 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9394 */;
-import _modDef9519 from "module_9519" /* 9519 */;
-import PremiumExpressionPickerSearchUpsellDefault from "PremiumExpressionPickerSearchUpsell" /* 9520 */;
+import MobileEmojiPickerUpsellRestyleExperiment from "MobileEmojiPickerUpsellRestyleExperiment" /* 9282 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9394 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9395 */;
+import _modDef9520 from "module_9520" /* 9520 */;
+import PremiumExpressionPickerSearchUpsellDefault from "PremiumExpressionPickerSearchUpsell" /* 9521 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const util = NitroWheelIcon(1126);
 const native = NitroWheelIcon(1200);
 const PremiumUtils = NitroWheelIcon(4769);
-const NitroWheelIcon2 = NitroWheelIcon(9035);
+const NitroWheelIcon2 = NitroWheelIcon(9036);
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7 } = Constants);
@@ -270,8 +270,8 @@ export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompiler
       const obj5 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: nitroIcon.nitroIcon };
       let tmp15Result = <NitroWheelIcon size="sm" color={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} style={nitroIcon.nitroIcon} />;
     } else {
-      const obj6 = { style: nitroIcon.nitroIcon, source: _modDef9519, disableColor: true, size: native.Icon.Sizes.MEDIUM };
-      tmp15Result = jsx(native.Icon, { style: nitroIcon.nitroIcon, source: _modDef9519, disableColor: true, size: native.Icon.Sizes.MEDIUM });
+      const obj6 = { style: nitroIcon.nitroIcon, source: _modDef9520, disableColor: true, size: native.Icon.Sizes.MEDIUM };
+      tmp15Result = jsx(native.Icon, { style: nitroIcon.nitroIcon, source: _modDef9520, disableColor: true, size: native.Icon.Sizes.MEDIUM });
     }
     nitroIcon = nitroIcon.nitroIcon;
     cResult[4] = nitroIcon;
@@ -306,8 +306,8 @@ export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompiler
     const obj4 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon };
     let tmp7Result = jsx(NitroWheelIcon2.NitroWheelIcon, { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon });
   } else {
-    const obj5 = { style: tmp.nitroIcon, source: _modDef9519, disableColor: true, size: native.Icon.Sizes.MEDIUM };
-    tmp7Result = jsx(native.Icon, { style: tmp.nitroIcon, source: _modDef9519, disableColor: true, size: native.Icon.Sizes.MEDIUM });
+    const obj5 = { style: tmp.nitroIcon, source: _modDef9520, disableColor: true, size: native.Icon.Sizes.MEDIUM };
+    tmp7Result = jsx(native.Icon, { style: tmp.nitroIcon, source: _modDef9520, disableColor: true, size: native.Icon.Sizes.MEDIUM });
   }
   obj3.icon = tmp7Result;
   obj3.loading = loading;

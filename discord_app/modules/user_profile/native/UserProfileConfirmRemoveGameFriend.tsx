@@ -1,8 +1,8 @@
-// === Module 12364: UserProfileConfirmRemoveGameFriend ===
+// === Module 12366: UserProfileConfirmRemoveGameFriend ===
 
-// Module 12364 (UserProfileConfirmRemoveGameFriend)
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8315 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10229 */;
+// Module 12366 (UserProfileConfirmRemoveGameFriend)
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8316 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10230 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

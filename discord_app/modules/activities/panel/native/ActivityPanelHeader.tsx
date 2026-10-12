@@ -1,24 +1,24 @@
-// === Module 17711: ActivityPanelHeader ===
+// === Module 17768: ActivityPanelHeader ===
 
-// Module 17711 (ActivityPanelHeader)
+// Module 17768 (ActivityPanelHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6857 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17702 */;
-import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17712 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 17713 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17717 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 17718 */;
-import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17723 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6858 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17759 */;
+import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17769 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 17770 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17774 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 17775 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17780 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
 const native = GestureDetector(4827);
-const LegacyBaseButton = GestureDetector(6334);
+const LegacyBaseButton = GestureDetector(6335);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
@@ -126,7 +126,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
                 }
               }
             }
-            const obj4 = { mode: setMode(17708).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
+            const obj4 = { mode: setMode(17765).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
             cResult[15] = T;
             cResult[16] = pipState;
             cResult[17] = wrapperOffset;
@@ -211,8 +211,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
   const items2 = [setMode];
   const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
   const callback = noop.useCallback(fn, items2);
-  const obj3 = { mode: landscape(17708).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
-  obj2.gesture = setMode(17708)(obj3);
+  const obj3 = { mode: landscape(17765).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
+  obj2.gesture = setMode(17765)(obj3);
   obj2.headerWrapperStyles = memo;
   obj2.headerStyles = memo1;
   obj2.styles = tmp;

@@ -1,6 +1,6 @@
-// === Module 6776: MultipleChoiceField ===
+// === Module 6777: MultipleChoiceField ===
 
-// Module 6776 (MultipleChoiceField)
+// Module 6777 (MultipleChoiceField)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5906 */;
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Multiple
           }
         }
         const obj2 = { defaultValue: response, onChange: M, hasIcons, children: tmp14 };
-        const tmp20 = closure_4(onChange(6262).TableRadioGroup, obj2);
+        const tmp20 = closure_4(onChange(6263).TableRadioGroup, obj2);
         cResult[11] = hasIcons;
         cResult[12] = response;
         cResult[13] = M;

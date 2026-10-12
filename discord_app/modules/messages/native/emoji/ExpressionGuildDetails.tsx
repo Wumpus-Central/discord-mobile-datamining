@@ -1,20 +1,20 @@
-// === Module 9556: ExpressionGuildDetails ===
+// === Module 9557: ExpressionGuildDetails ===
 
-// Module 9556 (ExpressionGuildDetails)
+// Module 9557 (ExpressionGuildDetails)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import GuildIconDefault from "GuildIcon" /* 6158 */;
-import Pressables from "Pressables" /* 6184 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 9555 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import GuildIconDefault from "GuildIcon" /* 6159 */;
+import Pressables from "Pressables" /* 6185 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9556 */;
 import noop from "module_19" /* 19 */;
 
-const GuildBadgeDefault = tmp10(6162);
+const GuildBadgeDefault = tmp10(6163);
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(6159).ExpressionSourceGuildRecord;
+let closure_4 = fn(6160).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(5092);
@@ -328,7 +328,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
             const intl3 = tmp16(1126).intl;
             obj17.children = intl3.string(tmp16(1126).t.riu2R5);
             obj16.children = tmp9(tmp16(5088).Text, obj17);
-            let tmp9Result = tmp9(tmp16(6184).PressableOpacity, obj16);
+            let tmp9Result = tmp9(tmp16(6185).PressableOpacity, obj16);
           }
           const obj18 = { children: null };
           items4[2] = tmp9Result;
@@ -354,7 +354,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     obj5.children = items;
     return closure_7(View, obj5);
   }
-  const obj21 = { style: tmp.guildIcon, guild: fromGuildType, size: guild(6158).GuildIconSizes.XLARGE, animate: true };
+  const obj21 = { style: tmp.guildIcon, guild: fromGuildType, size: guild(6159).GuildIconSizes.XLARGE, animate: true };
   tmp7 = closure_5(GuildIconDefault, obj21);
   stringResult = dependencyMap;
   tmp9 = closure_5;

@@ -1,6 +1,6 @@
-// === Module 18303: GuildSettingsModalEmoji/EmojiRow ===
+// === Module 18361: GuildSettingsModalEmoji/EmojiRow ===
 
-// Module 18303 (GuildSettingsModalEmoji/EmojiRow)
+// Module 18361 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
@@ -9,11 +9,11 @@ import UserUtilsDefault from "UserUtils" /* 4962 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import Pressables from "Pressables" /* 6184 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9546 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 18304 */;
-import _modDef18306 from "module_18306" /* 18306 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import Pressables from "Pressables" /* 6185 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9547 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 18362 */;
+import _modDef18364 from "module_18364" /* 18364 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;

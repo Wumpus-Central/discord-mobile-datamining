@@ -1,6 +1,6 @@
-// === Module 14696: isPostMessageSocket ===
+// === Module 14719: isPostMessageSocket ===
 
-// Module 14696 (isPostMessageSocket)
+// Module 14719 (isPostMessageSocket)
 import Constants from "Constants" /* 5639 */;
 import size from "module_2" /* 2 */;
 

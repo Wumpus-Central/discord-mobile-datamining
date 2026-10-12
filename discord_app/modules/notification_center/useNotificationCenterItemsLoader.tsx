@@ -1,14 +1,14 @@
-// === Module 16849: useNotificationCenterItemsLoader ===
+// === Module 16873: useNotificationCenterItemsLoader ===
 
-// Module 16849 (useNotificationCenterItemsLoader)
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6799 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16850 */;
+// Module 16873 (useNotificationCenterItemsLoader)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6800 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 16874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 6078 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 6079 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6057 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 16848 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 16872 */;
 
 const require = globalThis.__r;
 
@@ -306,7 +306,7 @@ export const useNotificationCenterItemsLoader = ReactCompilerGating.isReactCompi
                               const obj3 = { value, done: true };
                               return obj3;
                             } else {
-                              return { value: "IconComponent", done: "+51" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -690,7 +690,7 @@ export const useNotificationCenterItemsLoader = ReactCompilerGating.isReactCompi
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 6729: useNavigationTheme ===
+// === Module 6730: useNavigationTheme ===
 
-// Module 6729 (useNavigationTheme)
+// Module 6730 (useNavigationTheme)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Link from "Link" /* 1504 */;

@@ -1,8 +1,8 @@
-// === Module 9464: CreatorRevenueButton ===
+// === Module 9465: CreatorRevenueButton ===
 
-// Module 9464 (CreatorRevenueButton)
+// Module 9465 (CreatorRevenueButton)
 import c from "c" /* 576 */;
-import ShinyButtonDefault from "ShinyButton" /* 9465 */;
+import ShinyButtonDefault from "ShinyButton" /* 9466 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

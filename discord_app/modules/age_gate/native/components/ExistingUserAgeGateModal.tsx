@@ -1,14 +1,14 @@
-// === Module 17982: ExistingUserAgeGateModal ===
+// === Module 18039: ExistingUserAgeGateModal ===
 
-// Module 17982 (ExistingUserAgeGateModal)
+// Module 18039 (ExistingUserAgeGateModal)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 5929 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
 import GuildNSFWDefault from "GuildNSFW" /* 11190 */;
-import ExistingUserAgeGateDefault from "ExistingUserAgeGate" /* 17984 */;
-import ExistingUserAgeGateConfirmDefault from "ExistingUserAgeGateConfirm" /* 17986 */;
-import AgeGateVerifyDefault from "AgeGateVerify" /* 17987 */;
+import ExistingUserAgeGateDefault from "ExistingUserAgeGate" /* 18041 */;
+import ExistingUserAgeGateConfirmDefault from "ExistingUserAgeGateConfirm" /* 18043 */;
+import AgeGateVerifyDefault from "AgeGateVerify" /* 18044 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
@@ -172,7 +172,7 @@ function getScreens(source, arg1, arg2) {
 }
 const AgeGateConstants = fn(1110);
 ({ AgeGateAnalyticAction: metroRequire, AgeGateSource: closure_7 } = AgeGateConstants);
-let closure_8 = fn(17983).ExistingUserAgeGateScreens;
+let closure_8 = fn(18040).ExistingUserAgeGateScreens;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Existing
     obj4.initialRouteName = closure_8.AgeGate;
     const intl = tmp(1126).intl;
     obj4.headerBackTitle = intl.string(tmp(1126).t["13/7kX"]);
-    return jsx(tmp(6687).Navigator, obj4);
+    return jsx(tmp(6688).Navigator, obj4);
   }
   const tmpResult = source(5909);
 });

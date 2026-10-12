@@ -1,6 +1,6 @@
-// === Module 14988: SettingsAgeGroupResetAlert ===
+// === Module 15011: SettingsAgeGroupResetAlert ===
 
-// Module 14988 (SettingsAgeGroupResetAlert)
+// Module 15011 (SettingsAgeGroupResetAlert)
 import _modDef3120 from "module_3120" /* 3120 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
             tmp3.goBack();
             c2 = 0;
             c3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp29) {
           if (tmp4 === c2) {
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
           closure_128_0.goBack();
           dependencyMap = 0;
           c3 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp29) {
         if (tmp4 === dependencyMap) {

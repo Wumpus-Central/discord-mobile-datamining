@@ -1,11 +1,11 @@
-// === Module 17681: FrameView ===
+// === Module 17738: FrameView ===
 
-// Module 17681 (FrameView)
+// Module 17738 (FrameView)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import leaveFrame from "leaveFrame" /* 10821 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 17682 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 17739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,9 +23,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   const layoutMode = presentation.layoutMode;
   ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = presentation);
   let obj = frame(576);
-  const data = frame(6852).useApplication(frame.applicationId).data;
+  const data = frame(6853).useApplication(frame.applicationId).data;
   const orientationLock = frame.data.orientationLock;
-  const obj2 = frame(6852);
+  const obj2 = frame(6853);
   const first = _slicedToArray(noop.useState(true), 2)[0];
   if (cResult[0] === frame.applicationId) {
     if (cResult[1] === frame.id) {
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   const layoutMode = presentation.layoutMode;
   let landscapeSafeAreasConfig = presentation.portraitSafeAreasConfig;
   ({ iframeId, onActivityCrash } = frame);
-  const data = frame(6852).useApplication(frame.applicationId).data;
+  const data = frame(6853).useApplication(frame.applicationId).data;
   const orientationLock = frame.data.orientationLock;
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   let first = tmp3[0];
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   if (!first) {
     first = null == data;
   }
-  let obj = frame(6852);
+  let obj = frame(6853);
   const baseActivityView = frame(10924).useBaseActivityView({ orientationLockState: orientationLock, showLoadingIndicator: first, setShowLoadingStateForLockingOrientation: tmp3[1], application: data, setOrientationLockState: callback1 });
   ({ isResetting, isLandscape } = baseActivityView);
   const obj2 = { showLoadingIndicator: first, isResetting, children: null };
@@ -153,10 +153,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   obj4.type = frame(10809).EmbeddedContextSourceType.FRAME;
   obj4.frameId = frame.id;
   obj3.contextSource = obj4;
-  const tmp10 = layoutMode(17686);
-  obj3.queryParams = layoutMode(17683)(frame, frame(10941).ActivityPlatform.MOBILE);
+  const tmp10 = layoutMode(17743);
+  obj3.queryParams = layoutMode(17740)(frame, frame(10941).ActivityPlatform.MOBILE);
   obj3.onLoadError = callback;
-  const tmp11 = layoutMode(17683);
+  const tmp11 = layoutMode(17740);
   obj3.allowPopups = frame(10960).allowPopups(data);
   obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
   if (isLandscape) {

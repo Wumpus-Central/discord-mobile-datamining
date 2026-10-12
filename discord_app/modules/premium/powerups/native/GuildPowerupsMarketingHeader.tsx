@@ -1,16 +1,16 @@
-// === Module 13845: GuildPowerupsMarketingHeader ===
+// === Module 13868: GuildPowerupsMarketingHeader ===
 
-// Module 13845 (GuildPowerupsMarketingHeader)
+// Module 13868 (GuildPowerupsMarketingHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1126 */;
 import _modDef2600 from "module_2600" /* 2600 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12224 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12247 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13846 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 13847 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12226 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12249 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 13869 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 13870 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5007 */;
 
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   const cResult = guild(576).c(13);
   guild = guild.guild;
   const tmp4 = closure_7();
-  arr = arr(13846)(guild.id);
+  arr = arr(13869)(guild.id);
   if (cResult[0] !== guild.id) {
     const fn = function s() {
       if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     tmp7 = cResult[2];
   }
   const effect = noop.useEffect(tmp6, tmp7);
-  if (arr(12247)(guild.id)) {
+  if (arr(12249)(guild.id)) {
     let num4;
     if (arr != null) {
       num4 = arr.length;

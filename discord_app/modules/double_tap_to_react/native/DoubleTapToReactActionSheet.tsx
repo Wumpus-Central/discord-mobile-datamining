@@ -1,6 +1,6 @@
-// === Module 12088: DoubleTapToReactActionSheet ===
+// === Module 12090: DoubleTapToReactActionSheet ===
 
-// Module 12088 (DoubleTapToReactActionSheet)
+// Module 12090 (DoubleTapToReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
@@ -9,7 +9,7 @@ import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
 import spring from "spring" /* 5378 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7986 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -723,7 +723,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
                               const obj3 = { value, done: true };
                               return obj3;
                             } else {
-                              return { value: "IconComponent", done: "+51" };
+                              return { value: "IconComponent", done: null };
                             }
                           } else {
                             try {
@@ -761,7 +761,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
                               const _setTimeout = setTimeout;
                               const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
                               c3 = 3;
-                              return { value: "IconComponent", done: "+51" };
+                              return { value: "IconComponent", done: null };
                             } catch (tmp23) {
                               c3 = tmp;
                               throw tmp23;
@@ -994,7 +994,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -1029,12 +1029,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
           const obj = { value, done: true };
           return obj;
         }
-        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(6878).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
+        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(6879).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
         tmp22(1265).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
         c3 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } catch (tmp24) {
         c3 = tmp;
         throw tmp24;

@@ -1,6 +1,6 @@
-// === Module 14062: RemoteAuthModal ===
+// === Module 14085: RemoteAuthModal ===
 
-// Module 14062 (RemoteAuthModal)
+// Module 14085 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,13 +12,13 @@ import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import ButtonGroup from "ButtonGroup" /* 5958 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6153 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6666 */;
-import _modDef14061 from "module_14061" /* 14061 */;
-import _modDef14063 from "module_14063" /* 14063 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 14064 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 14068 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6154 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6667 */;
+import _modDef14084 from "module_14084" /* 14084 */;
+import _modDef14086 from "module_14086" /* 14086 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 14087 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 14091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -157,10 +157,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
     HTTP.post(request).then((body) => {
       dependencyMap(body.body.handshake_token);
       closure_1_1(constants.LOADED);
-      const result = remoteAuthFingerprint(6666).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(6667).DeprecatedLayoutAnimation();
     }).catch(() => {
       closure_1_1(constants.NOT_FOUND);
-      const result = remoteAuthFingerprint(6666).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(6667).DeprecatedLayoutAnimation();
     });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -237,7 +237,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const obj4 = { scale };
-      const tmp18 = closure_7(tmp(14064).QrLoginSpotIllustration, obj4);
+      const tmp18 = closure_7(tmp(14087).QrLoginSpotIllustration, obj4);
       cResult[7] = tmp18;
       let tmp15 = tmp18;
     } else {
@@ -665,7 +665,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
   const tmp3 = closure_10();
   const top = useSafeAreaInsetsDefault().top;
   if (cResult[0] !== tmp3.imageStyle) {
-    const obj2 = { source: _modDef14063, style: tmp3.imageStyle };
+    const obj2 = { source: _modDef14086, style: tmp3.imageStyle };
     const tmp8 = React5(FastImageDefault, obj2);
     cResult[0] = tmp3.imageStyle;
     cResult[1] = tmp8;
@@ -742,7 +742,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
   const obj8 = { style: null, source: null };
   const items1 = [tmp3.logo, tmp9];
   obj8.style = items1;
-  obj8.source = _modDef14061;
+  obj8.source = _modDef14084;
   const tmp12 = React5(FastImageDefault, obj8);
   cResult[4] = tmp3.logo;
   cResult[5] = tmp9;
@@ -752,12 +752,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
 }) : (function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  const obj2 = { source: _modDef14063, style: tmp.imageStyle };
+  const obj2 = { source: _modDef14086, style: tmp.imageStyle };
   const items = [React5(FastImageDefault, obj2), , ];
   const obj3 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj3.style = items1;
-  obj3.source = _modDef14061;
+  obj3.source = _modDef14084;
   items[1] = React5(FastImageDefault, obj3);
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.mainCard, children: null };

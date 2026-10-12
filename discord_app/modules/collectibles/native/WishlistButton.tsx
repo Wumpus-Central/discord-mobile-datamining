@@ -1,6 +1,6 @@
-// === Module 9041: WishlistButton ===
+// === Module 9042: WishlistButton ===
 
-// Module 9041 (WishlistButton)
+// Module 9042 (WishlistButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,9 +9,9 @@ import native from "native" /* 4827 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;
 import springPresets from "springPresets" /* 5382 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8972 */;
-import useWishlistNUXActionSheetDefault from "useWishlistNUXActionSheet" /* 8973 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9044 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8973 */;
+import useWishlistNUXActionSheetDefault from "useWishlistNUXActionSheet" /* 8974 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9045 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -611,7 +611,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
             if (cResult[21] === tmp8) {
               let tmp28 = cResult[22];
             }
-            const wishlistButtonState = tmp(9032).useWishlistButtonState(tmp28);
+            const wishlistButtonState = tmp(9033).useWishlistButtonState(tmp28);
             class I {
               constructor() {
                 return closure_1_11.getId();
@@ -668,7 +668,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
                   obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -707,7 +707,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp12) {
                   c0 = tmp;
@@ -731,7 +731,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
             cResult[26] = tmp5;
             cResult[27] = t10;
             tmp31 = t10;
-            const tmpResult4 = tmp(9032);
+            const tmpResult4 = tmp(9033);
           }
         }
       }

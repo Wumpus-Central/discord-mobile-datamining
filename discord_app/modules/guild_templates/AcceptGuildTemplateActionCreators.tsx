@@ -2,7 +2,7 @@
 
 // Module 11349 (AcceptGuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import transitionToGuild from "transitionToGuild" /* 7052 */;
+import transitionToGuild from "transitionToGuild" /* 7053 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
 import GuildStore from "GuildStore" /* 2087 */;
 

@@ -1,13 +1,13 @@
-// === Module 7265: CollectiblesProductRecord ===
+// === Module 7266: CollectiblesProductRecord ===
 
-// Module 7265 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 6090 */;
+// Module 7266 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 6091 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7266 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7272 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7267 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7273 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7267);
+const CollectiblesItemRecord = fn(7268);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1087).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1085);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "bm", items: "Array", categorySkuId: "toCharArray$esjava$1", isCategoryReward: "now", prices: "split", previewAssets: "Array", googleSkuIds: "toCharArray$esjava$1", eligibleOffers: "np", variants: "split", bundledProducts: "Array", isFirstParty: "toCharArray$esjava$1" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "apply", items: 1375731983, categorySkuId: 7218239, isCategoryReward: "victory", prices: "cross", previewAssets: "crossed", googleSkuIds: "finger", eligibleOffers: "fingers", variants: "hand", bundledProducts: "luck", isFirstParty: "fingers" };
               let str;
               if (first != null) {
                 str = first.optionValue;

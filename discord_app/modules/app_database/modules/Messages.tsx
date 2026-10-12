@@ -1,17 +1,17 @@
-// === Module 7198: modules/Messages ===
+// === Module 7199: modules/Messages ===
 
-// Module 7198 (modules/Messages)
+// Module 7199 (modules/Messages)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2091 */;
 import _mod2092 from "module_2092" /* 2092 */;
 import requireSortedDescending from "requireSortedDescending" /* 5756 */;
-import isReadableChannel from "isReadableChannel" /* 7205 */;
-import KvMessage2 from "KvMessage" /* 7208 */;
+import isReadableChannel from "isReadableChannel" /* 7206 */;
+import KvMessage2 from "KvMessage" /* 7209 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import SaveableChannelsStore from "SaveableChannelsStore" /* 7199 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7200 */;
 
 require = fn;
 let closure_8 = new LoggerDefault("Messages");
@@ -140,7 +140,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -334,7 +334,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

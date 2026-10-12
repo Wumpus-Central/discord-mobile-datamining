@@ -1,12 +1,11 @@
-// === Module 7060: VoiceChannelEffectsUtils ===
+// === Module 7061: VoiceChannelEffectsUtils ===
 
-// Module 7060 (VoiceChannelEffectsUtils)
+// Module 7061 (VoiceChannelEffectsUtils)
 import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4768 */;
-import _modDef7061 from "module_7061" /* 7061 */;
 import _modDef7062 from "module_7062" /* 7062 */;
 import _modDef7063 from "module_7063" /* 7063 */;
 import _modDef7064 from "module_7064" /* 7064 */;
@@ -28,14 +27,15 @@ import _modDef7079 from "module_7079" /* 7079 */;
 import _modDef7080 from "module_7080" /* 7080 */;
 import _modDef7081 from "module_7081" /* 7081 */;
 import _modDef7082 from "module_7082" /* 7082 */;
+import _modDef7083 from "module_7083" /* 7083 */;
 import UserStore from "UserStore" /* 1390 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(7059);
+const VoiceChannelEffectsConstants = fn(7060);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef7061];
-const items1 = [_modDef7062, _modDef7063, _modDef7064, _modDef7065, _modDef7066, _modDef7067, _modDef7068, _modDef7069, _modDef7070, _modDef7071, _modDef7072, _modDef7073, _modDef7074, _modDef7075, _modDef7076, _modDef7077, _modDef7078, _modDef7079, _modDef7080, _modDef7081, _modDef7082];
+const items = [_modDef7062];
+const items1 = [_modDef7063, _modDef7064, _modDef7065, _modDef7066, _modDef7067, _modDef7068, _modDef7069, _modDef7070, _modDef7071, _modDef7072, _modDef7073, _modDef7074, _modDef7075, _modDef7076, _modDef7077, _modDef7078, _modDef7079, _modDef7080, _modDef7081, _modDef7082, _modDef7083];
 const AnimationTypeToAnimations = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");

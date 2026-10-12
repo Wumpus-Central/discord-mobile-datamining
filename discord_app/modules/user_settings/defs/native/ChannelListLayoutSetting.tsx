@@ -1,10 +1,10 @@
-// === Module 15810: ChannelListLayoutSetting ===
+// === Module 15833: ChannelListLayoutSetting ===
 
-// Module 15810 (ChannelListLayoutSetting)
+// Module 15833 (ChannelListLayoutSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import SettingsConstants from "SettingsConstants" /* 7992 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9313 */;
+import SettingsConstants from "SettingsConstants" /* 7993 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9314 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

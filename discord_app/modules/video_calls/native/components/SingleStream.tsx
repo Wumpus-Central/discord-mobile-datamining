@@ -6,7 +6,7 @@ import StreamTileDefault from "StreamTile" /* 10884 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ChannelCallStore = fn(10353);
+const ChannelCallStore = fn(10354);
 ({ toggleFocus: c3, resetFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

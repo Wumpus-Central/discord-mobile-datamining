@@ -1,13 +1,13 @@
-// === Module 14767: MobileVoiceOverlayLifecycleManager ===
+// === Module 14791: MobileVoiceOverlayLifecycleManager ===
 
-// Module 14767 (MobileVoiceOverlayLifecycleManager)
+// Module 14791 (MobileVoiceOverlayLifecycleManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
 import useChannelName from "useChannelName" /* 5421 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5970 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9702 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9703 */;
 import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 11086 */;
-import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14774 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14798 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
@@ -24,15 +24,15 @@ require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(4748).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(14768);
-fn(14769);
-fn(14770);
-fn(14771);
-fn(7728);
-fn(13580);
-fn(14772);
-fn(14773);
-const registerAsset = fn(13555);
+fn(14792);
+fn(14793);
+fn(14794);
+fn(14795);
+fn(7729);
+fn(13603);
+fn(14796);
+fn(14797);
+const registerAsset = fn(13578);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };
 let obj = { useSpeaker: null, mute: null, disconnectFromVoice: null, getInvite: null, switchChannels: null, openDiscord: null, inviteLinkCopied: null, channelSelect: null, closeWindow: null, searchChannels: null, noResults: null };

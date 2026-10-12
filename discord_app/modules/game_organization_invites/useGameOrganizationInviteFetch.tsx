@@ -1,12 +1,12 @@
-// === Module 18107: useGameOrganizationInviteFetch ===
+// === Module 18165: useGameOrganizationInviteFetch ===
 
-// Module 18107 (useGameOrganizationInviteFetch)
+// Module 18165 (useGameOrganizationInviteFetch)
 import DurationsDefault from "Durations" /* 1102 */;
-import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 18108 */;
+import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 18166 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10484 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10485 */;
 
-const constants = fn(10485).GameOrganizationInviteStates;
+const constants = fn(10486).GameOrganizationInviteStates;
 const initialize = fn(504);
 const obj2 = {
   getQueryId: fn(1085).QueryIds.GAME_ORGANIZATION_INVITE,
@@ -37,7 +37,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp8) {
       c1 = tmp;

@@ -1,25 +1,20 @@
-// === Module 17112: conjurePublishFailureMessage ===
+// === Module 17111: conjurePublishFailureMessage ===
 
-// Module 17112 (conjurePublishFailureMessage)
+// Module 17111 (conjurePublishFailureMessage)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishFailureMessage.tsx");
 
-export default function conjurePublishFailureMessage(detail) {
-  let trimmed;
-  if (detail.detail != null) {
-    trimmed = str.trim();
+export default function conjurePublishFailureMessage(code) {
+  if (20088 === code.code) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(_modDef3849.UXEDPw);
+  } else {
+    const intl = util.intl;
+    stringResult = intl.string(_modDef3849.gMWZeG);
   }
-  if (null != trimmed) {
-    if ("" !== trimmed) {
-      const intl2 = util.intl;
-      const obj = { reason: trimmed };
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3849["7ZsIF1"], obj);
-    }
-    return formatToPlainStringResult;
-  }
-  const intl = util.intl;
-  formatToPlainStringResult = intl.string(_modDef3849.gMWZeG);
+  return stringResult;
 };
+export const PREVIEW_BOT_NOT_INSTALLED_CODE = 20088;

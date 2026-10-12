@@ -1,6 +1,6 @@
-// === Module 8371: VisualEffectViewThemed ===
+// === Module 8372: VisualEffectViewThemed ===
 
-// Module 8371 (VisualEffectViewThemed)
+// Module 8372 (VisualEffectViewThemed)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4969 */;
 import useThemeDefault from "useTheme" /* 5031 */;

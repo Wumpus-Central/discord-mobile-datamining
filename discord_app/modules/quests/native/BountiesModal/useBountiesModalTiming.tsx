@@ -1,6 +1,6 @@
-// === Module 15276: useBountiesModalTiming ===
+// === Module 15299: useBountiesModalTiming ===
 
-// Module 15276 (useBountiesModalTiming)
+// Module 15299 (useBountiesModalTiming)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

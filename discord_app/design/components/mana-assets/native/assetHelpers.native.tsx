@@ -1,6 +1,6 @@
-// === Module 6272: assetHelpers ===
+// === Module 6273: assetHelpers ===
 
-// Module 6272 (assetHelpers)
+// Module 6273 (assetHelpers)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

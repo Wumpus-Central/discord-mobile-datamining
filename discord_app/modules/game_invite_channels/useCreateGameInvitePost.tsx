@@ -1,17 +1,17 @@
-// === Module 12538: useCreateGameInvitePost ===
+// === Module 12540: useCreateGameInvitePost ===
 
-// Module 12538 (useCreateGameInvitePost)
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6973 */;
+// Module 12540 (useCreateGameInvitePost)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6974 */;
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 10797 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 10647 */;
+import LocalActivityStore from "LocalActivityStore" /* 10648 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5759 */;
-import SlowmodeStore from "SlowmodeStore" /* 7374 */;
+import SlowmodeStore from "SlowmodeStore" /* 7375 */;
 
 require = fn;
-const SlowmodeType = fn(7374).SlowmodeType;
+const SlowmodeType = fn(7375).SlowmodeType;
 const ActivityActionTypes = fn(1085).ActivityActionTypes;
 const ChannelFlags = fn(2072).ChannelFlags;
 const ReactCompilerGating = fn(558);
@@ -466,7 +466,7 @@ export const useCreateGameInvitePost = ReactCompilerGating.isReactCompilerEnable
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

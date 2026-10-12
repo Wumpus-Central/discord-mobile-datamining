@@ -1,9 +1,9 @@
-// === Module 8595: CardSection ===
+// === Module 8596: CardSection ===
 
-// Module 8595 (CardSection)
+// Module 8596 (CardSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8596 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8597 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5906 */;
 

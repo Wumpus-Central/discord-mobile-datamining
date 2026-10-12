@@ -1,22 +1,22 @@
-// === Module 18000: background_sync/BackgroundSync ===
+// === Module 18057: background_sync/BackgroundSync ===
 
-// Module 18000 (background_sync/BackgroundSync)
+// Module 18057 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2091 */;
-import modules_Messages from "modules/Messages" /* 7198 */;
-import GuildVersionsDefault from "GuildVersions" /* 7341 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7342 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7344 */;
+import modules_Messages from "modules/Messages" /* 7199 */;
+import GuildVersionsDefault from "GuildVersions" /* 7342 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7343 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7345 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import "ChannelStore";
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
-import FileSystemStore from "FileSystemStore" /* 7200 */;
+import FileSystemStore from "FileSystemStore" /* 7201 */;
 
 require = fn;
 let closure_17 = async function _backgroundSync(arg0) {
@@ -35,7 +35,7 @@ let closure_17 = async function _backgroundSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -272,7 +272,7 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -394,7 +394,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -610,7 +610,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     while (true) {
@@ -904,7 +904,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     while (true) {
@@ -963,7 +963,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             }
           }
           c12 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {

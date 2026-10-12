@@ -1,16 +1,16 @@
-// === Module 11901: AppLauncherViewAllScreen ===
+// === Module 11903: AppLauncherViewAllScreen ===
 
-// Module 11901 (AppLauncherViewAllScreen)
+// Module 11903 (AppLauncherViewAllScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6184 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6204 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7246 */;
-import AppLauncherContext from "AppLauncherContext" /* 10621 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11727 */;
-import AppLauncherBackButton from "AppLauncherBackButton" /* 11817 */;
+import Pressables from "Pressables" /* 6185 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6205 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7247 */;
+import AppLauncherContext from "AppLauncherContext" /* 10622 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11729 */;
+import AppLauncherBackButton from "AppLauncherBackButton" /* 11819 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOA
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
-let size = { width: fn(11817).BACK_BUTTON_SIZE, height: fn(11817).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(11819).BACK_BUTTON_SIZE, height: fn(11819).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
 obj2.backButton = size;
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -1,9 +1,9 @@
-// === Module 14753: commands/activities ===
+// === Module 14777: commands/activities ===
 
-// Module 14753 (commands/activities)
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8682 */;
+// Module 14777 (commands/activities)
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8683 */;
 import RPCErrorDefault from "RPCError" /* 10936 */;
-import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14720 */;
+import validateOpenInviteDialog from "validateOpenInviteDialog" /* 14743 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -11,11 +11,11 @@ let Constants = fn(5639);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1085);
 ({ InstantInviteSources: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
-const NativePermissionTypes = fn(7482).NativePermissionTypes;
+const NativePermissionTypes = fn(7483).NativePermissionTypes;
 let obj = {};
 let obj2 = { scope: null, handler: null };
 let obj3 = {};
-const items = [fn(8457).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
+const items = [fn(8458).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
 obj3[RPC_SCOPE_CONFIG.ANY] = items;
 obj2.scope = obj3;
 obj2.handler = function handler(socket) {
@@ -34,10 +34,10 @@ obj2.handler = function handler(socket) {
   }
 };
 obj[RPCCommands.OPEN_INVITE_DIALOG] = obj2;
-const CONTEXT_MENU_ICON_NAMES = fn(14713);
+const CONTEXT_MENU_ICON_NAMES = fn(14736);
 let obj5 = { scope: null, handler: null };
 let obj6 = {};
-const items1 = [fn(8457).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
+const items1 = [fn(8458).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
 obj6[RPC_SCOPE_CONFIG.ANY] = items1;
 obj5.scope = obj6;
 obj5.handler = function handler(socket) {
@@ -53,7 +53,7 @@ obj5.handler = function handler(socket) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -79,7 +79,7 @@ obj5.handler = function handler(socket) {
               throw tmp66;
             } else {
               let tmp46;
-              if (tmp2(14696)(socket)) {
+              if (tmp2(14719)(socket)) {
                 tmp46 = tmp2(10810)(socket.context.surface);
               }
               closure_128_1 = tmp46;
@@ -88,7 +88,7 @@ obj5.handler = function handler(socket) {
                 const tmp58 = new tmp2(10936)(obj5, "Unable to find selected channel");
                 throw tmp58;
               } else {
-                const permission = tmp2(7499).requestPermission(constants2.PHOTOS);
+                const permission = tmp2(7500).requestPermission(constants2.PHOTOS);
                 dependencyMap = 1;
                 c3 = 1;
                 const obj6 = {
@@ -112,7 +112,7 @@ obj5.handler = function handler(socket) {
           } else if (value) {
             dependencyMap = 2;
             c3 = 1;
-            const obj8 = { value: tmp2(7769).launchImageLibraryAsync({ mediaType: "photo", includeBase64: false, selectionLimit: 1 }), done: false };
+            const obj8 = { value: tmp2(7770).launchImageLibraryAsync({ mediaType: "photo", includeBase64: false, selectionLimit: 1 }), done: false };
             return obj8;
           } else {
             const obj9 = { errorCode: constants.UNKNOWN_ERROR };

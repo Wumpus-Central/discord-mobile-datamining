@@ -1,6 +1,6 @@
-// === Module 8312: preloadUserBannerImage ===
+// === Module 8313: preloadUserBannerImage ===
 
-// Module 8312 (preloadUserBannerImage)
+// Module 8313 (preloadUserBannerImage)
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import size from "module_2" /* 2 */;

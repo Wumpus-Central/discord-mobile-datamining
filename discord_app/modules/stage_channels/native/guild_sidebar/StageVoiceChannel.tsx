@@ -1,21 +1,21 @@
-// === Module 16651: StageVoiceChannel ===
+// === Module 16675: StageVoiceChannel ===
 
-// Module 16651 (StageVoiceChannel)
+// Module 16675 (StageVoiceChannel)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
 import StageMediaHooks from "StageMediaHooks" /* 5895 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6144 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7481 */;
-import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 8187 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10282 */;
-import VoiceUsersDefault from "VoiceUsers" /* 16532 */;
-import ChannelItemDefault from "ChannelItem" /* 16542 */;
-import ChannelInfoDefault from "ChannelInfo" /* 16642 */;
-import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 16652 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6145 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7482 */;
+import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 8188 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10283 */;
+import VoiceUsersDefault from "VoiceUsers" /* 16555 */;
+import ChannelItemDefault from "ChannelItem" /* 16565 */;
+import ChannelInfoDefault from "ChannelInfo" /* 16666 */;
+import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 16676 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7249 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7250 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
@@ -51,10 +51,10 @@ const Constants = fn(1085);
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
-let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: { marginVertical: fn(11758).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: { marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_17 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11758).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx");
 
@@ -194,7 +194,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const tmp21 = useChannelNameDefault(channel, false);
   const tmpResult3 = channel(5956);
-  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     class N {
       constructor() {
@@ -243,7 +243,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }
-  const tmpResult4 = channel(10357);
+  const tmpResult4 = channel(10358);
   cResult[8] = channel;
   cResult[9] = tmp21;
   cResult[10] = sum;
@@ -287,12 +287,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp2Result = channel(5956);
   const tmp10 = useChannelNameDefault(channel, false);
   let topic;
-  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     topic = stageInstance.topic;
   }
   let obj2 = {};
-  const tmp2Result2 = channel(10357);
+  const tmp2Result2 = channel(10358);
   const merged = Object.assign(getStageChannelAccessibilityProps({ channel, channelName: tmp10, userCount: sum }));
   obj2.onPress = callback;
   obj2.onLongPress = callback1;

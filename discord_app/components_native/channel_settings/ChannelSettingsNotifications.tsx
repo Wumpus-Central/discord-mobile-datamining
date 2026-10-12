@@ -1,20 +1,20 @@
-// === Module 12594: ChannelSettingsNotifications ===
+// === Module 12596: ChannelSettingsNotifications ===
 
-// Module 12594 (ChannelSettingsNotifications)
+// Module 12596 (ChannelSettingsNotifications)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import TableRow from "TableRow" /* 6179 */;
-import TableRowGroup from "TableRowGroup" /* 6264 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6803 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6808 */;
-import TableSwitchRow from "TableSwitchRow" /* 6895 */;
-import Form from "Form" /* 8579 */;
-import MutedUntilText from "MutedUntilText" /* 10464 */;
-import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 12595 */;
+import TableRow from "TableRow" /* 6180 */;
+import TableRowGroup from "TableRowGroup" /* 6265 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6804 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6809 */;
+import TableSwitchRow from "TableSwitchRow" /* 6896 */;
+import Form from "Form" /* 8580 */;
+import MutedUntilText from "MutedUntilText" /* 10465 */;
+import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 12597 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5020 */;
@@ -188,11 +188,11 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     tmp5 = require;
     tmp7 = require;
   }
-  const TableRadioGroup = tmp7(6262).TableRadioGroup;
+  const TableRadioGroup = tmp7(6263).TableRadioGroup;
   const obj = { value: state.messageNotifications, onChange: self.handleTypeChange, groupRef: self.radioGroupRef, title: null, hasIcons: false, children: null };
   const intl3 = tmp7(1126).intl;
   obj.title = intl3.string(tmp7(1126).t.h850Ss);
-  const TableRadioRow = tmp7(6261).TableRadioRow;
+  const TableRadioRow = tmp7(6262).TableRadioRow;
   if (isGuildStageVoiceResult) {
     let tmp22 = muted;
     if (!muted) {
@@ -219,14 +219,14 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     const obj3 = { disabled: tmp25, value: constants2.ONLY_MENTIONS, label: null };
     const intl12 = tmp7(1126).intl;
     obj3.label = intl12.string(tmp7(1126).t["BENn/6"]);
-    items[1] = value3(tmp7(6261).TableRadioRow, obj3);
+    items[1] = value3(tmp7(6262).TableRadioRow, obj3);
     if (!muted) {
       muted = guildMuted;
     }
     const obj4 = { disabled: muted, value: constants2.NO_MESSAGES, label: null };
     const intl13 = tmp7(1126).intl;
     obj4.label = intl13.string(tmp7(1126).t.CtVGyQ);
-    items[2] = value3(tmp7(6261).TableRadioRow, obj4);
+    items[2] = value3(tmp7(6262).TableRadioRow, obj4);
     obj.children = items;
     let tmp11Result = collapsedCategories(TableRadioGroup, obj);
   } else {
@@ -267,7 +267,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj6.subLabel = stringResult3;
     obj6.value = constants2.ALL_MESSAGES;
-    items1[1] = value3(tmp7(6261).TableRadioRow, obj6);
+    items1[1] = value3(tmp7(6262).TableRadioRow, obj6);
     const obj7 = { label: null, disabled: null, value: null };
     const intl8 = tmp7(1126).intl;
     obj7.label = intl8.format(tmp7(1126).t.L2hmYy, {});
@@ -277,7 +277,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj7.disabled = tmp19;
     obj7.value = constants2.ONLY_MENTIONS;
-    items1[2] = value3(tmp7(6261).TableRadioRow, obj7);
+    items1[2] = value3(tmp7(6262).TableRadioRow, obj7);
     const obj8 = { label: null, disabled: null, value: null };
     const intl9 = tmp7(1126).intl;
     obj8.label = intl9.string(tmp7(1126).t.CtVGyQ);
@@ -287,7 +287,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     }
     obj8.disabled = tmp20;
     obj8.value = constants2.NO_MESSAGES;
-    items1[3] = value3(tmp7(6261).TableRadioRow, obj8);
+    items1[3] = value3(tmp7(6262).TableRadioRow, obj8);
     obj.children = items1;
     tmp11Result = collapsedCategories(TableRadioGroup, obj);
   }

@@ -1,6 +1,6 @@
-// === Module 10109: MarketingComponentHooks ===
+// === Module 10110: MarketingComponentHooks ===
 
-// Module 10109 (MarketingComponentHooks)
+// Module 10110 (MarketingComponentHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import themes from "themes" /* 4825 */;

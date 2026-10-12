@@ -1,12 +1,12 @@
-// === Module 18666: LocalPushNotificationActionCreators ===
+// === Module 18724: LocalPushNotificationActionCreators ===
 
-// Module 18666 (LocalPushNotificationActionCreators)
+// Module 18724 (LocalPushNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ChannelConstants from "ChannelConstants" /* 2072 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
-import Constants2 from "Constants" /* 11414 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
+import Constants2 from "Constants" /* 11422 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/local_push_notification/native/
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(7196).trackAppOpened("notification");
+    data(7197).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -53,7 +53,7 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         }
       }
     }
-    let obj2 = data(7196);
+    let obj2 = data(7197);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

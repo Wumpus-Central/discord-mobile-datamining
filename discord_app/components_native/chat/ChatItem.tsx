@@ -1,25 +1,25 @@
-// === Module 9373: ChatItem ===
+// === Module 9374: ChatItem ===
 
-// Module 9373 (ChatItem)
+// Module 9374 (ChatItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6079 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8263 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6080 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8264 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 const MessageTypes2 = _default(1101);
-const AutoModerationSystemMessageViewNativeComponent = _default(9374);
-const MessageViewNativeComponent = _default(9375);
-const SystemMessageViewNativeComponent = _default(9376);
+const AutoModerationSystemMessageViewNativeComponent = _default(9375);
+const MessageViewNativeComponent = _default(9376);
+const SystemMessageViewNativeComponent = _default(9377);
 require = fn;
 let closure_3 = ["message"];
 const View = fn(17).View;
 const MessageTypes = fn(1085).MessageTypes;
-const RowGeneratorConstants = fn(7747);
+const RowGeneratorConstants = fn(7748);
 ({ RowType: c10, Changeset: closure_11 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -255,6 +255,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = messageSizeCacheRef(noop.useState(0), 2);
 };
-export const DCDMessageView = fn(9375).default;
-export const DCDSystemMessageView = fn(9376).default;
-export const DCDAutoModerationSystemMessageView = fn(9374).default;
+export const DCDMessageView = fn(9376).default;
+export const DCDSystemMessageView = fn(9377).default;
+export const DCDAutoModerationSystemMessageView = fn(9375).default;

@@ -1,6 +1,6 @@
-// === Module 8028: GuildBoostSlotRecord ===
+// === Module 8029: GuildBoostSlotRecord ===
 
-// Module 8028 (GuildBoostSlotRecord)
+// Module 8029 (GuildBoostSlotRecord)
 import Record from "Record" /* 1405 */;
 
 let GuildBoostSlotRecord;

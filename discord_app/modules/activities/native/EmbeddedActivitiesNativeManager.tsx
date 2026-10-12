@@ -1,6 +1,6 @@
-// === Module 14775: EmbeddedActivitiesNativeManager ===
+// === Module 14799: EmbeddedActivitiesNativeManager ===
 
-// Module 14775 (EmbeddedActivitiesNativeManager)
+// Module 14799 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -10,11 +10,11 @@ import ThermalUtilsDefault from "ThermalUtils" /* 5296 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10853 */;
 import activityWebViewController from "activityWebViewController" /* 10928 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 14776 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 14800 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 14777 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 14801 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;

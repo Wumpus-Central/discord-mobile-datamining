@@ -1,12 +1,12 @@
-// === Module 17687: ExternalPipView ===
+// === Module 17744: ExternalPipView ===
 
-// Module 17687 (ExternalPipView)
+// Module 17744 (ExternalPipView)
 import c from "c" /* 576 */;
 import ExternalPipDefault from "ExternalPip" /* 5221 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17690 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17747 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 8416 */;
+import AppFreezeStore from "AppFreezeStore" /* 8417 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
   } else {
     first = cResult[0];
   }
-  externalPipEnabled = setExternalPipActive(17688)(first).externalPipEnabled;
+  externalPipEnabled = setExternalPipActive(17745)(first).externalPipEnabled;
   const obj = externalPipEnabled(576);
   ({ externalPipActive, setExternalPipActive } = closure_7());
   if (cResult[1] !== externalPipEnabled) {
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
   return tmp15;
 }) : (function ExternalPipView() {
   const obj = { disabled: null };
-  const tmp = setExternalPipActive(17688);
+  const tmp = setExternalPipActive(17745);
   obj.disabled = !setExternalPipActive(5221).isSupported();
   const externalPipEnabled = tmp(obj).externalPipEnabled;
   const tmp2 = closure_7();

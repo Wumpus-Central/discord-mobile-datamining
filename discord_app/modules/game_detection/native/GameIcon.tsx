@@ -1,13 +1,13 @@
-// === Module 6861: GameIcon ===
+// === Module 6862: GameIcon ===
 
-// Module 6861 (GameIcon)
+// Module 6862 (GameIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import _modDef6862 from "module_6862" /* 6862 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import _modDef6863 from "module_6863" /* 6863 */;
 import _modDef6864 from "module_6864" /* 6864 */;
 import _modDef6865 from "module_6865" /* 6865 */;
+import _modDef6866 from "module_6866" /* 6866 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -119,7 +119,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameIcon(a
             }
           }
           if (null == tmp17) {
-            tmp17 = _modDef6865;
+            tmp17 = _modDef6866;
             items1.push(tmp4.placeholder);
           }
           cResult[5] = game;
@@ -135,17 +135,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameIcon(a
           tmp8 = items1;
         } else {
           if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
-            let tmp11 = _modDef6862;
+            let tmp11 = _modDef6863;
             cResult[14] = skuId;
             cResult[15] = tmp11;
           } else if (PremiumSubscriptionSKUs.TIER_1 !== skuId) {
             if (PremiumSubscriptionSKUs.TIER_2 === skuId) {
-              tmp11 = _modDef6864;
+              tmp11 = _modDef6865;
             } else {
               tmp11 = null;
             }
           }
-          tmp11 = _modDef6863;
+          tmp11 = _modDef6864;
         }
       }
     }
@@ -177,7 +177,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameIcon(a
       }
     }
     if (null == tmp12) {
-      tmp12 = _modDef6865;
+      tmp12 = _modDef6866;
       items.push(tmp2.placeholder);
     }
     const obj3 = { style: null, children: null };

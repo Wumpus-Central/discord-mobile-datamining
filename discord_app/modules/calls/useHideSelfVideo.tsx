@@ -1,6 +1,6 @@
-// === Module 17890: useHideSelfVideo ===
+// === Module 17947: useHideSelfVideo ===
 
-// Module 17890 (useHideSelfVideo)
+// Module 17947 (useHideSelfVideo)
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;

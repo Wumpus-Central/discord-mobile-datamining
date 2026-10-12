@@ -1,8 +1,8 @@
-// === Module 13538: InAppReportsGuildScheduledEventPreview ===
+// === Module 13561: InAppReportsGuildScheduledEventPreview ===
 
-// Module 13538 (InAppReportsGuildScheduledEventPreview)
+// Module 13561 (InAppReportsGuildScheduledEventPreview)
 import nativeDefault from "native" /* 587 */;
-import GuildIconDefault from "GuildIcon" /* 6158 */;
+import GuildIconDefault from "GuildIcon" /* 6159 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSch
         let tmp17 = cResult[12];
       }
       if (cResult[13] !== stateFromStores) {
-        const obj4 = { guild: stateFromStores, size: tmp(6158).GuildIconSizes.XXSMALL, selected: false };
+        const obj4 = { guild: stateFromStores, size: tmp(6159).GuildIconSizes.XXSMALL, selected: false };
         const tmp22 = closure_5(GuildIconDefault, obj4);
         cResult[13] = stateFromStores;
         cResult[14] = tmp22;
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSch
     const obj6 = { style: tmp.guildInfo, children: null };
     const obj7 = { guild: stateFromStores, size: null, selected: false };
     const hexWithOpacityResult = tmp2(4967).hexWithOpacity(tmp.borderColor.color, 0.08);
-    obj7.size = tmp2(6158).GuildIconSizes.XXSMALL;
+    obj7.size = tmp2(6159).GuildIconSizes.XXSMALL;
     const items3 = [closure_5(GuildIconDefault, obj7), ];
     const obj8 = { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: stateFromStores.name };
     items3[1] = closure_5(tmp2(5088).Text, obj8);

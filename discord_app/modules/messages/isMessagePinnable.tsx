@@ -1,8 +1,8 @@
-// === Module 9685: isMessagePinnable ===
+// === Module 9686: isMessagePinnable ===
 
-// Module 9685 (isMessagePinnable)
-import isSystemMessageDefault from "isSystemMessage" /* 6079 */;
-import ThreadHooks from "ThreadHooks" /* 6971 */;
+// Module 9686 (isMessagePinnable)
+import isSystemMessageDefault from "isSystemMessage" /* 6080 */;
+import ThreadHooks from "ThreadHooks" /* 6972 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 
 require = fn;

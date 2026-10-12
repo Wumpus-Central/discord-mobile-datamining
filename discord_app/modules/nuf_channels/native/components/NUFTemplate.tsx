@@ -1,11 +1,11 @@
-// === Module 13570: NUFTemplate ===
+// === Module 13593: NUFTemplate ===
 
-// Module 13570 (NUFTemplate)
+// Module 13593 (NUFTemplate)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import FastImageDefault from "FastImage" /* 6156 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

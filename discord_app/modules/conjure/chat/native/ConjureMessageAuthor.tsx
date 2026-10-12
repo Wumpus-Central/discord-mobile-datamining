@@ -1,16 +1,16 @@
-// === Module 17134: ConjureMessageAuthor ===
+// === Module 17198: ConjureMessageAuthor ===
 
-// Module 17134 (ConjureMessageAuthor)
+// Module 17198 (ConjureMessageAuthor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6184 */;
-import AppsIcon from "AppsIcon" /* 8233 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 17135 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 17136 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 17137 */;
+import Pressables from "Pressables" /* 6185 */;
+import AppsIcon from "AppsIcon" /* 8234 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 17199 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 17200 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 17201 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(5092);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, conjureTile: null };
-let size = { width: fn(17131).MESSAGE_AVATAR_SIZE, height: fn(17131).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(17194).MESSAGE_AVATAR_SIZE, height: fn(17194).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
 obj2.conjureTile = size;
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -318,14 +318,14 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
       }
       if (cResult[6] === tmp4) {
       }
-      PressableOpacity = PressableOpacity(6184).PressableOpacity;
+      PressableOpacity = PressableOpacity(6185).PressableOpacity;
       const obj2 = { onPress: tmp4, onLongPress: tmp4, accessibilityRole: "button", accessibilityLabel: tmp6, children: tmp8 };
       tmp = closure_6(PressableOpacity, obj2);
       cResult[6] = tmp4;
       cResult[7] = tmp8;
       cResult[8] = tmp;
     }
-    const obj3 = { size, user: tmp3, guildId: "Array" };
+    const obj3 = { size, user: tmp3, guildId: "r" };
     const tmp10 = closure_6(PressableOpacity(1200).Avatar, obj3);
     cResult[3] = size;
     cResult[4] = tmp3;
@@ -351,7 +351,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     let obj = { onPress: callback, onLongPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = require("util").intl;
     obj.accessibilityLabel = intl.string(require("util").t.iXAna6);
-    const obj2 = { size: NORMAL, user: tmp3, guildId: "Array" };
+    const obj2 = { size: NORMAL, user: tmp3, guildId: "r" };
     obj.children = closure_6(require("native").Avatar, obj2);
     tmp5 = closure_6(require("Pressables").PressableOpacity, obj);
   }

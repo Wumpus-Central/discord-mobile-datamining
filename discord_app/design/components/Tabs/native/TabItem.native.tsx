@@ -1,6 +1,6 @@
-// === Module 12358: TabItem ===
+// === Module 12360: TabItem ===
 
-// Module 12358 (TabItem)
+// Module 12360 (TabItem)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;

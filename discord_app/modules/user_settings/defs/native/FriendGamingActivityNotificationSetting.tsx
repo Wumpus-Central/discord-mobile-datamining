@@ -1,10 +1,10 @@
-// === Module 15781: FriendGamingActivityNotificationSetting ===
+// === Module 15804: FriendGamingActivityNotificationSetting ===
 
-// Module 15781 (FriendGamingActivityNotificationSetting)
+// Module 15804 (FriendGamingActivityNotificationSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import SettingsConstants from "SettingsConstants" /* 7992 */;
-import FriendGamingActivityNotificationUtils from "FriendGamingActivityNotificationUtils" /* 15782 */;
+import SettingsConstants from "SettingsConstants" /* 7993 */;
+import FriendGamingActivityNotificationUtils from "FriendGamingActivityNotificationUtils" /* 15805 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 6761: ReanimatedNativeView ===
+// === Module 6762: ReanimatedNativeView ===
 
-// Module 6761 (ReanimatedNativeView)
+// Module 6762 (ReanimatedNativeView)
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4851 */;
 import size from "module_2" /* 2 */;
 

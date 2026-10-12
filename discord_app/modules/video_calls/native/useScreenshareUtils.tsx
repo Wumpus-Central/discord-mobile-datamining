@@ -6,10 +6,10 @@ import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
 import inject from "inject" /* 2014 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6851 */;
-import StreamActionCreators from "StreamActionCreators" /* 7443 */;
-import CallsUtils from "CallsUtils" /* 8785 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9702 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6852 */;
+import StreamActionCreators from "StreamActionCreators" /* 7444 */;
+import CallsUtils from "CallsUtils" /* 8786 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9703 */;
 import useHasVideoPermission from "useHasVideoPermission" /* 11047 */;
 import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11058 */;
 import noop from "module_19" /* 19 */;
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useScree
   }
   const tmp4Result = analyticsLocations(11058);
   const stateFromStores1 = require("initialize").useStateFromStores(tmp14, tmp15);
-  analyticsLocations = tmp4(6851)().analyticsLocations;
+  analyticsLocations = tmp4(6852)().analyticsLocations;
   let tmp18 = null != stateFromStores1;
   if (tmp18) {
     tmp18 = stateFromStores1.state === ApplicationStreamStates.ACTIVE;

@@ -1,9 +1,9 @@
-// === Module 11989: VocalChannelJoinButton ===
+// === Module 11991: VocalChannelJoinButton ===
 
-// Module 11989 (VocalChannelJoinButton)
+// Module 11991 (VocalChannelJoinButton)
 import nativeDefault from "native" /* 587 */;
-import StageIcon from "StageIcon" /* 8224 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8228 */;
+import StageIcon from "StageIcon" /* 8225 */;
+import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8229 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import VoiceStateStore from "VoiceStateStore" /* 5113 */;
@@ -225,12 +225,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     small = false;
   }
   let VJlc0S = dependencyMap;
-  const tmp = voiceStates(9307)();
+  const tmp = voiceStates(9308)();
   const tmp2 = voiceStates(5031)();
   let joinButtonText = closure_11(tmp, channel(4969).isThemeLight(tmp2));
   const obj = channel(4969);
-  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
-  const obj2 = channel(10357);
+  const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
+  const obj2 = channel(10358);
   const items = [PermissionStore];
   const stateFromStores = channel(573).useStateFromStores(items, () => !PermissionStore.can(constants.CONNECT, channel));
   const obj3 = channel(573);
@@ -255,9 +255,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = tmp8;
   }
   const tmp3Result = channel(573);
-  const connectedUserLimit = channel(11990).useConnectedUserLimit({ channel, video: tmp12 });
-  const tmp3Result3 = channel(11990);
-  let connectedUserLimitFormatted = channel(11990).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  const connectedUserLimit = channel(11992).useConnectedUserLimit({ channel, video: tmp12 });
+  const tmp3Result3 = channel(11992);
+  let connectedUserLimitFormatted = channel(11992).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;
@@ -297,9 +297,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const items3 = [joinButtonIconActive, { marginRight: 3, marginLeft: -1 }];
         if (isGuildStageVoiceResult) {
-          let VoiceNormalIcon = tmp3(8224).StageIcon;
+          let VoiceNormalIcon = tmp3(8225).StageIcon;
         } else {
-          VoiceNormalIcon = tmp3(8228).VoiceNormalIcon;
+          VoiceNormalIcon = tmp3(8229).VoiceNormalIcon;
         }
         const obj10 = { size: "xs", style: items3 };
         <VoiceNormalIcon size="xs" style={items3} />;
@@ -326,5 +326,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result4 = channel(11990);
+  const tmp3Result4 = channel(11992);
 }));

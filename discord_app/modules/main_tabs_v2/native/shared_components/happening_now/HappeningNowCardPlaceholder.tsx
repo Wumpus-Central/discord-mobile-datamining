@@ -1,18 +1,18 @@
-// === Module 16482: HappeningNowCardPlaceholder ===
+// === Module 16505: HappeningNowCardPlaceholder ===
 
-// Module 16482 (HappeningNowCardPlaceholder)
+// Module 16505 (HappeningNowCardPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
-import HappeningNowCardDefault from "HappeningNowCard" /* 15567 */;
+import HappeningNowCardDefault from "HappeningNowCard" /* 15590 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(15566).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(15589).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5092);

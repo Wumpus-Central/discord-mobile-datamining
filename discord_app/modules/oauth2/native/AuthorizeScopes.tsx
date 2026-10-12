@@ -1,12 +1,12 @@
-// === Module 12897: AuthorizeScopes ===
+// === Module 12899: AuthorizeScopes ===
 
-// Module 12897 (AuthorizeScopes)
+// Module 12899 (AuthorizeScopes)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import CircleXIcon from "CircleXIcon" /* 6295 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 6867 */;
+import CircleXIcon from "CircleXIcon" /* 6296 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 6868 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -152,10 +152,10 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Scope(a
   const obj2 = { style: tmp.iconWrapper, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
   if (isFake) {
     const obj3 = { style: tmp.fakeScopeIcon, color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    let tmp10Result = React4(tmp6(6295).CircleXIcon, obj3);
+    let tmp10Result = React4(tmp6(6296).CircleXIcon, obj3);
   } else {
     const obj4 = { color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    tmp10Result = React4(tmp6(6867).CircleCheckIcon, obj4);
+    tmp10Result = React4(tmp6(6868).CircleCheckIcon, obj4);
   }
   obj2.children = tmp10Result;
   const items = [React4(View, obj2), ];
@@ -189,14 +189,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Authoriz
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function p() {
       const random = Math.random();
-      return accountScopes(9226).FAKE_SCOPES[Math.floor(Math, random * accountScopes(undefined, 9226).FAKE_SCOPES.length)];
+      return accountScopes(9227).FAKE_SCOPES[Math.floor(Math, random * accountScopes(undefined, 9227).FAKE_SCOPES.length)];
     };
     cResult[0] = fn;
     let first = fn;
   } else {
     first = cResult[0];
   }
-  const tmp7 = errors(6169)(first);
+  const tmp7 = errors(6170)(first);
   if (0 === accountScopes.length) {
     return null;
   } else {
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Authoriz
         }
         const mapped = accountScopes.map((item) => {
           closure_0 = item;
-          const scopeNames = accountScopes(9226).getScopeNames(item, closure_0);
+          const scopeNames = accountScopes(9227).getScopeNames(item, closure_0);
           return scopeNames.map((text, index) => {
             const obj = { text, error: null };
             let tmp3;
@@ -324,9 +324,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Authoriz
       cResult[8] = formatResult;
       tmp14 = formatResult;
     }
-    let hasItem = integrationType === accountScopes(9234).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === accountScopes(9235).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
-      hasItem = requestedScopes.includes(accountScopes(8457).OAuth2Scopes.APPLICATIONS_COMMANDS);
+      hasItem = requestedScopes.includes(accountScopes(8458).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     cResult[3] = integrationType;
     cResult[4] = requestedScopes;
@@ -354,9 +354,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Authoriz
       PZpY9c = t["1Hz+Sl"];
       tmp5 = tmp15;
     }
-    let hasItem = integrationType === tmp5(9234).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp5(9235).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
-      hasItem = requestedScopes.includes(tmp5(8457).OAuth2Scopes.APPLICATIONS_COMMANDS);
+      hasItem = requestedScopes.includes(tmp5(8458).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     let obj = { style: tmp.scopesContainer, children: null };
     const obj2 = { variant: "heading-sm/normal", color: "text-default", children: null };
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Authoriz
     const obj4 = { style: tmp.scopes, children: null };
     const mapped = accountScopes.map((item) => {
       closure_0 = item;
-      const scopeNames = accountScopes(9226).getScopeNames(item, closure_0);
+      const scopeNames = accountScopes(9227).getScopeNames(item, closure_0);
       return scopeNames.map((text, index) => {
         const obj = { text, error: null };
         let tmp3;

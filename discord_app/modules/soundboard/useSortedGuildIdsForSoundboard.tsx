@@ -1,6 +1,6 @@
-// === Module 17766: useSortedGuildIdsForSoundboard ===
+// === Module 17823: useSortedGuildIdsForSoundboard ===
 
-// Module 17766 (useSortedGuildIdsForSoundboard)
+// Module 17823 (useSortedGuildIdsForSoundboard)
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import SortedGuildStore from "SortedGuildStore" /* 5963 */;

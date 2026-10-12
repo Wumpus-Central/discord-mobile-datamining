@@ -1,6 +1,6 @@
-// === Module 16474: ActiveChannelsActionCreators ===
+// === Module 16497: ActiveChannelsActionCreators ===
 
-// Module 16474 (ActiveChannelsActionCreators)
+// Module 16497 (ActiveChannelsActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _fetchActiveChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

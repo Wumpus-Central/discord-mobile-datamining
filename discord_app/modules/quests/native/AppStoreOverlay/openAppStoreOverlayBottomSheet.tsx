@@ -1,9 +1,9 @@
-// === Module 12945: openAppStoreOverlayBottomSheet ===
+// === Module 12947: openAppStoreOverlayBottomSheet ===
 
-// Module 12945 (openAppStoreOverlayBottomSheet)
+// Module 12947 (openAppStoreOverlayBottomSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import AnalyticsActions from "AnalyticsActions" /* 7406 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 12942 */;
+import AnalyticsActions from "AnalyticsActions" /* 7407 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 12944 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

@@ -2,8 +2,8 @@
 
 // Module 11344 (useGuildProfileCTA)
 import FlagUtils from "FlagUtils" /* 1403 */;
-import GuildTagUtils from "GuildTagUtils" /* 8289 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8510 */;
+import GuildTagUtils from "GuildTagUtils" /* 8290 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8511 */;
 import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 11345 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

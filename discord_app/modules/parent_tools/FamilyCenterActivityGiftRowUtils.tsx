@@ -1,10 +1,10 @@
-// === Module 15160: FamilyCenterActivityGiftRowUtils ===
+// === Module 15183: FamilyCenterActivityGiftRowUtils ===
 
-// Module 15160 (FamilyCenterActivityGiftRowUtils)
+// Module 15183 (FamilyCenterActivityGiftRowUtils)
 import util from "util" /* 1126 */;
 import _modDef2568 from "module_2568" /* 2568 */;
 import _mod4345 from "module_4345" /* 4345 */;
-import PriceUtils from "PriceUtils" /* 6939 */;
+import PriceUtils from "PriceUtils" /* 6940 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");

@@ -1,8 +1,8 @@
-// === Module 6948: useAppChannelApplication ===
+// === Module 6949: useAppChannelApplication ===
 
-// Module 6948 (useAppChannelApplication)
+// Module 6949 (useAppChannelApplication)
 import Constants from "Constants" /* 1085 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6852 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6853 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

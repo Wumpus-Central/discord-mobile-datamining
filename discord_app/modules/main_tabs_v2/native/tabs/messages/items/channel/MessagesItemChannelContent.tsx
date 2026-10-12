@@ -1,24 +1,24 @@
-// === Module 16447: MessagesItemChannelContent ===
+// === Module 16470: MessagesItemChannelContent ===
 
-// Module 16447 (MessagesItemChannelContent)
+// Module 16470 (MessagesItemChannelContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef4702 from "module_4702" /* 4702 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6084 */;
-import _modDef6650 from "module_6650" /* 6650 */;
-import _modDef8324 from "module_8324" /* 8324 */;
-import BotTagDefault from "BotTag" /* 8766 */;
-import GuildTagDefault from "GuildTag" /* 8858 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10234 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10262 */;
-import _modDef10333 from "module_10333" /* 10333 */;
-import _modDef10463 from "module_10463" /* 10463 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15589 */;
-import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16449 */;
-import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16451 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6085 */;
+import _modDef6651 from "module_6651" /* 6651 */;
+import _modDef8325 from "module_8325" /* 8325 */;
+import BotTagDefault from "BotTag" /* 8767 */;
+import GuildTagDefault from "GuildTag" /* 8859 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10235 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10263 */;
+import _modDef10334 from "module_10334" /* 10334 */;
+import _modDef10464 from "module_10464" /* 10464 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15612 */;
+import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16472 */;
+import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16474 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 
@@ -78,7 +78,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   if (blocked) {
     if (cResult[0] === channelMutedIcon2.channelIcon) {
     }
-    const obj2 = { source: _modDef8324, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj2 = { source: _modDef8325, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     items = [, ];
     ({ channelIcon: arr[0], channelMutedIcon } = channelMutedIcon2);
     items[1] = channelMutedIcon;
@@ -90,7 +90,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   } else if (ignored) {
     if (cResult[3] === channelMutedIcon2.channelIcon) {
     }
-    const obj3 = { source: _modDef6650, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj3 = { source: _modDef6651, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items1 = [, ];
     ({ channelIcon: arr4[0], channelIgnoredIcon: arr4[1] } = channelMutedIcon2);
     obj3.style = items1;
@@ -101,7 +101,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   } else if (muted) {
     if (cResult[6] === channelMutedIcon2.channelIcon) {
     }
-    const obj4 = { source: _modDef10463, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10464, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [, ];
     ({ channelIcon: arr3[0], channelMutedIcon: arr3[1] } = channelMutedIcon2);
     obj4.style = items2;
@@ -114,7 +114,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   } else {
     if (cResult[9] === channelMutedIcon2.channelFavoriteIcon) {
     }
-    const obj5 = { source: _modDef10333, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj5 = { source: _modDef10334, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items3 = [, ];
     ({ channelIcon: arr2[0], channelFavoriteIcon: arr2[1] } = channelMutedIcon2);
     obj5.style = items3;
@@ -127,19 +127,19 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   ({ muted, favorite, ignored, blocked } = selected);
   const tmp = closure_11(selected.selected);
   if (blocked) {
-    const obj2 = { source: _modDef8324, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj2 = { source: _modDef8325, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items = [, ];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
     obj2.style = items;
     let tmp2 = timestampProducer(native.Icon, obj2);
   } else if (ignored) {
-    const obj3 = { source: _modDef6650, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj3 = { source: _modDef6651, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items1 = [, ];
     ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
     obj3.style = items1;
     tmp2 = timestampProducer(native.Icon, obj3);
   } else if (muted) {
-    const obj4 = { source: _modDef10463, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10464, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [, ];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj4.style = items2;
@@ -147,7 +147,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Messag
   } else {
     tmp2 = null;
     if (favorite) {
-      const obj = { source: _modDef10333, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+      const obj = { source: _modDef10334, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
       const items3 = [, ];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj.style = items3;
@@ -294,7 +294,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
   const tmpResult = channel(504);
-  const tmpResult3 = channel(16448);
+  const tmpResult3 = channel(16471);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;
@@ -321,7 +321,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (null != channel.recipients) {
       if (channel.recipients.length > 0) {
         const obj8 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
-        const EffectDisplayType = tmp(10263).EffectDisplayType;
+        const EffectDisplayType = tmp(10264).EffectDisplayType;
         obj8.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
         obj4 = Object.assign(obj4);
         closure_6(UsernameWithEffectsDefault, obj8);
@@ -405,9 +405,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         str7 = str6;
       }
       obj19.color = str7;
-      obj19.layout = tmp(9313).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+      obj19.layout = tmp(9314).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj19.muted = muted;
-      let tmp20Result7 = closure_6(tmp(12586).ChannelRowPreview, obj19);
+      let tmp20Result7 = closure_6(tmp(12588).ChannelRowPreview, obj19);
     } else if (channel.isDM()) {
       const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;

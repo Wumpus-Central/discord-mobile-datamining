@@ -1,6 +1,6 @@
-// === Module 7056: useMuteStates ===
+// === Module 7057: useMuteStates ===
 
-// Module 7056 (useMuteStates)
+// Module 7057 (useMuteStates)
 import ImpersonateStore from "ImpersonateStore" /* 2118 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;

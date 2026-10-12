@@ -1,18 +1,18 @@
-// === Module 17836: VoicePanelGamesSection ===
+// === Module 17893: VoicePanelGamesSection ===
 
-// Module 17836 (VoicePanelGamesSection)
+// Module 17893 (VoicePanelGamesSection)
 import c from "c" /* 576 */;
-import useGame from "useGame" /* 7008 */;
-import FormComponents from "FormComponents" /* 8796 */;
-import VoiceChannelGamesExperimentDefault from "VoiceChannelGamesExperiment" /* 8854 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8879 */;
-import GameActivityIconDefault from "GameActivityIcon" /* 13020 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17837 */;
+import useGame from "useGame" /* 7009 */;
+import FormComponents from "FormComponents" /* 8797 */;
+import VoiceChannelGamesExperimentDefault from "VoiceChannelGamesExperiment" /* 8855 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8880 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 13025 */;
+import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17894 */;
 import noop from "module_19" /* 19 */;
 
 const util = v9sZWVp(1126);
-const TableRow = v9sZWVp(6179);
-const GameProfileAnalyticUtils = v9sZWVp(8878);
+const TableRow = v9sZWVp(6180);
+const GameProfileAnalyticUtils = v9sZWVp(8879);
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);

@@ -8,7 +8,7 @@ import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 11141 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ChannelCallStore = fn(10353);
+const ChannelCallStore = fn(10354);
 ({ resetFocus: c3, toggleFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);

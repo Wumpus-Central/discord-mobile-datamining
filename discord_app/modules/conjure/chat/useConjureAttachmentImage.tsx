@@ -1,17 +1,16 @@
-// === Module 17141: useConjureAttachmentImage ===
+// === Module 17276: useConjureAttachmentImage ===
 
-// Module 17141 (useConjureAttachmentImage)
+// Module 17276 (useConjureAttachmentImage)
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 17061 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const require = fn;
-const ConjureConnectionStore = fn(13213);
-({ getAttachmentUrl: closure_4, isAttachmentAvailable: hasOwnProperty } = ConjureConnectionStore);
+require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/chat/useConjureAttachmentImage.tsx");
+let result = size.fileFinishedImporting("modules/conjure/chat/useConjureAttachmentImage.tsx");
 
 export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAttachmentImage(arg0, arg1) {
   _require = arg0;
@@ -50,9 +49,10 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
           tmp12 = obj3;
         }
       }
-      const fn2 = function f() {
+      const fn2 = function o() {
         _slicedToArray(null);
-        hasOwnProperty(closure_0, closure_1).then((result) => {
+        const result = conjureAttachmentRequests.isAttachmentAvailable(closure_0, closure_1);
+        result.then((result) => {
           if (result) {
             if (0 === first) {
               closure_1_5(1);
@@ -68,9 +68,10 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
       tmp11 = fn2;
     }
   }
-  const fn = function o() {
+  const fn = function s() {
     c0 = false;
-    first(c0, closure_1).then((result) => {
+    const attachmentUrl = closure_0(closure_1[4]).getAttachmentUrl(c0, closure_1);
+    attachmentUrl.then((result) => {
       if (!c0) {
         _slicedToArray(result);
       }
@@ -107,7 +108,8 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
   const items = [arg0, arg1, first];
   const effect = noop.useEffect(() => {
     c0 = false;
-    first(c0, closure_1).then((result) => {
+    const attachmentUrl = closure_0(closure_1[4]).getAttachmentUrl(c0, closure_1);
+    attachmentUrl.then((result) => {
       if (!c0) {
         closure_2(result);
       }
@@ -128,7 +130,8 @@ export const useConjureAttachmentImage = ReactCompilerGating.isReactCompilerEnab
   const items1 = [arg0, arg1, first];
   obj.handleError = noop.useCallback(() => {
     closure_2(null);
-    hasOwnProperty(closure_0, closure_1).then((result) => {
+    const result = conjureAttachmentRequests.isAttachmentAvailable(closure_0, closure_1);
+    result.then((result) => {
       if (result) {
         if (0 === first) {
           closure_1_5(1);

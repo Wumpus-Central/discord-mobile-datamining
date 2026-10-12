@@ -1,6 +1,6 @@
-// === Module 11949: chat_input/ChatInputNativeComponent ===
+// === Module 11951: chat_input/ChatInputNativeComponent ===
 
-// Module 11949 (chat_input/ChatInputNativeComponent)
+// Module 11951 (chat_input/ChatInputNativeComponent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import PlatformUtils from "PlatformUtils" /* 1382 */;
 import ColorUtils from "ColorUtils" /* 4967 */;
 import shared from "shared" /* 4969 */;
 import useTheme from "useTheme" /* 5031 */;
-import ChatInputNativeComponent from "ChatInputNativeComponent" /* 11663 */;
+import ChatInputNativeComponent from "ChatInputNativeComponent" /* 11665 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4937 */;
 
@@ -79,7 +79,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputNat
     num6 = 1;
   }
   if (maxHeight == null) {
-    maxHeight = tmp10(11706)(onMaxHeightChanged);
+    maxHeight = tmp10(11708)(onMaxHeightChanged);
   }
   if (cResult[4] === tmp15) {
     if (cResult[5] === accessible) {

@@ -1,6 +1,6 @@
-// === Module 12500: HubEmailConnectionWaitlist ===
+// === Module 12502: HubEmailConnectionWaitlist ===
 
-// Module 12500 (HubEmailConnectionWaitlist)
+// Module 12502 (HubEmailConnectionWaitlist)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,12 +29,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
     }
     const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
     if (cResult[4] !== tmp4.header) {
-      const obj3 = { source: navigation(12501), style: tmp4.header };
-      const tmp14 = closure_5(navigation(6156), obj3);
+      const obj3 = { source: navigation(12503), style: tmp4.header };
+      const tmp14 = closure_5(navigation(6157), obj3);
       cResult[4] = tmp4.header;
       cResult[5] = tmp14;
       let tmp10 = tmp14;
-      const tmp13 = navigation(6156);
+      const tmp13 = navigation(6157);
     } else {
       tmp10 = cResult[5];
     }
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
         const intl = onClose(1126).intl;
         obj.text = intl.string(onClose(1126).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_5(onClose(7088).HeaderActionButton, obj);
+        return closure_2_5(onClose(7089).HeaderActionButton, obj);
       }
     });
   };
@@ -161,16 +161,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
         const intl = onClose(1126).intl;
         obj.text = intl.string(onClose(1126).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_5(onClose(7088).HeaderActionButton, obj);
+        return closure_2_5(onClose(7089).HeaderActionButton, obj);
       }
     });
   }, items);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
   let obj = onClose(1503);
-  obj3.source = navigation(12501);
+  obj3.source = navigation(12503);
   obj3.style = tmp.header;
-  const items1 = [closure_5(navigation(6156), obj3), , , ];
+  const items1 = [closure_5(navigation(6157), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1126).intl;
   obj4.children = intl.string(onClose(1126).t.OaloU5);

@@ -1,6 +1,6 @@
-// === Module 15757: AndroidNotificationSettingsStore ===
+// === Module 15780: AndroidNotificationSettingsStore ===
 
-// Module 15757 (AndroidNotificationSettingsStore)
+// Module 15780 (AndroidNotificationSettingsStore)
 import c from "c" /* 576 */;
 import _mod4733 from "module_4733" /* 4733 */;
 import PushNotificationDefault from "PushNotification" /* 11031 */;
@@ -20,7 +20,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

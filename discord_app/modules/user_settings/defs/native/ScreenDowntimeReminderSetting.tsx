@@ -1,11 +1,11 @@
-// === Module 15793: ScreenDowntimeReminderSetting ===
+// === Module 15816: ScreenDowntimeReminderSetting ===
 
-// Module 15793 (ScreenDowntimeReminderSetting)
+// Module 15816 (ScreenDowntimeReminderSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1126 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15167 */;
-import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15794 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 12564 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15190 */;
+import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15817 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 12566 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -32,7 +32,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(7992).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7993).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);

@@ -1,11 +1,11 @@
-// === Module 14714: definitions ===
+// === Module 14737: definitions ===
 
-// Module 14714 (definitions)
-import OAuth2Scopes from "OAuth2Scopes" /* 8457 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8610 */;
+// Module 14737 (definitions)
+import OAuth2Scopes from "OAuth2Scopes" /* 8458 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
 import ActivityPlatform from "ActivityPlatform" /* 10941 */;
-import helpers from "helpers" /* 14715 */;
-import contextMenuIcons from "contextMenuIcons" /* 14716 */;
+import helpers from "helpers" /* 14738 */;
+import contextMenuIcons from "contextMenuIcons" /* 14739 */;
 import size from "module_2" /* 2 */;
 
 function VoiceCapabilities(boolean) {
@@ -996,7 +996,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "y"
+    response: "IconComponent"
   },
   [helpers.RPCCommand.GET_CONTEXT]: obj29,
   [helpers.RPCCommand.GET_USER]: {

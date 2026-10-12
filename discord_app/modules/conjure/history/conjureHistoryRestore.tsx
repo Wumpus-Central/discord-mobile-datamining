@@ -1,13 +1,14 @@
-// === Module 17117: conjureHistoryRestore ===
+// === Module 17156: conjureHistoryRestore ===
 
-// Module 17117 (conjureHistoryRestore)
-import conjureDatabaseLock from "conjureDatabaseLock" /* 17118 */;
+// Module 17156 (conjureHistoryRestore)
+import conjureHistoryRequests from "conjureHistoryRequests" /* 17154 */;
+import conjureDatabaseLock from "conjureDatabaseLock" /* 17157 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 function runConjureDataRewind() {
   const self = this;
-  const apply = closure_7.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -15,17 +16,16 @@ function runConjureDataRewind() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = async function _runConjureDataRewind() {
+let closure_6 = async function _runConjureDataRewind() {
   closure_3 = tmp2;
   closure_0 = closure_1;
-  await conjureDatabaseLock.withConjureDatabaseLock(closure_0, () => closure_0().catch(() => closure_1_5));
+  await conjureDatabaseLock.withConjureDatabaseLock(closure_0, () => closure_0().catch(() => closure_1_4));
   if (value == null) {
-    value = closure_131_5;
+    value = closure_131_4;
   }
   return value;
 };
-const restoreDatabaseToPoint = fn(13213).restoreDatabaseToPoint;
-let closure_5 = { ok: false, code: "failed", message: "" };
+let closure_4 = { ok: false, code: "failed", message: "" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/conjureHistoryRestore.tsx");
 
@@ -33,7 +33,7 @@ export { runConjureDataRewind };
 export const rewindDataAfterVersionRestore = function rewindDataAfterVersionRestore(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return runConjureDataRewind(arg0, () => restoreDatabaseToPoint(closure_0, closure_1.id)).then((ok) => {
+  return runConjureDataRewind(arg0, () => conjureHistoryRequests.restoreDatabaseToPoint(closure_0, closure_1.id)).then((ok) => {
     if (ok.ok) {
       return null;
     } else {

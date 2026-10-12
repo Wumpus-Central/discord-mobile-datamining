@@ -1,26 +1,26 @@
-// === Module 10582: BadgeDetailsSheet ===
+// === Module 10583: BadgeDetailsSheet ===
 
-// Module 10582 (BadgeDetailsSheet)
+// Module 10583 (BadgeDetailsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5046 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8321 */;
-import BadgeUtils from "BadgeUtils" /* 10578 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10581 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 10597 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8322 */;
+import BadgeUtils from "BadgeUtils" /* 10579 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10582 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 10598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import UserStore from "UserStore" /* 1390 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8316 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8317 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const ActionSheetConstants = fn(6840);
+const ActionSheetConstants = fn(6841);
 ({ ACTION_SHEET_MAX_WIDTH: c10, ACTION_SHEET_MINIMUM_BOTTOM_PADDING: closure_11 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);

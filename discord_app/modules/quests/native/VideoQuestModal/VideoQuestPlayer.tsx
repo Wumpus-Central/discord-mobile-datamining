@@ -1,16 +1,16 @@
-// === Module 15389: VideoQuestPlayer ===
+// === Module 15412: VideoQuestPlayer ===
 
-// Module 15389 (VideoQuestPlayer)
+// Module 15412 (VideoQuestPlayer)
 import ClientInfoUtils from "ClientInfoUtils" /* 1381 */;
-import QuestActionCreators from "QuestActionCreators" /* 9171 */;
-import AssetUtils from "AssetUtils" /* 9184 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 12964 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15272 */;
-import SimpleMuxWrapper from "SimpleMuxWrapper" /* 15392 */;
-import VideoQuestCaptions from "VideoQuestCaptions" /* 15400 */;
+import QuestActionCreators from "QuestActionCreators" /* 9172 */;
+import AssetUtils from "AssetUtils" /* 9185 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 12966 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15295 */;
+import SimpleMuxWrapper from "SimpleMuxWrapper" /* 15415 */;
+import VideoQuestCaptions from "VideoQuestCaptions" /* 15423 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7392 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7393 */;
 
 require = fn;
 const QuestsExperimentLocations = fn(5972).QuestsExperimentLocations;
@@ -19,7 +19,7 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(15272).PlayerState;
+export const PlayerState = fn(15295).PlayerState;
 export const VideoQuestPlayer = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VideoQuestPlayer(onEnd) {
   const cResult = onLoad(onToggleFullscreen[6]).c(104);
   ({ style, onLoad } = onEnd);

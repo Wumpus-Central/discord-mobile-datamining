@@ -6,7 +6,7 @@ import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5106 */;
 import spring from "spring" /* 5378 */;
-import MessageManagerDefault from "MessageManager" /* 9316 */;
+import MessageManagerDefault from "MessageManager" /* 9317 */;
 import participantHasVideoDefault from "participantHasVideo" /* 10904 */;
 import StageActionBarButtons from "StageActionBarButtons" /* 10976 */;
 import JoinStageViewDefault from "JoinStageView" /* 11044 */;

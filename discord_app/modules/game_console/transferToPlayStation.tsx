@@ -19,7 +19,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_5 = async function _transferToPlayStation(arg0) {
       } else {
         closure_132_1(closure_132_2[4])(closure_131_2.id, closure_131_0);
         c6 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp29) {
       c6 = tmp;
@@ -134,7 +134,7 @@ let closure_6 = async function _sendConnectVoiceCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 8834: useSecureFramesPairwiseFingerprint ===
+// === Module 8835: useSecureFramesPairwiseFingerprint ===
 
-// Module 8834 (useSecureFramesPairwiseFingerprint)
+// Module 8835 (useSecureFramesPairwiseFingerprint)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -32,7 +32,7 @@ let closure_13 = async function _computeNativeDisplayPair(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -94,7 +94,7 @@ let closure_13 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(8829).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let closure_9 = fn(8830).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
 let Features = fn(5117).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const ReactCompilerGating = fn(558);
@@ -223,7 +223,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -388,7 +388,7 @@ export const useSecureFramesPairwiseFingerprint = ReactCompilerGating.isReactCom
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

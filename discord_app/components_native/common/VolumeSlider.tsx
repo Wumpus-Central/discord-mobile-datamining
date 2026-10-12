@@ -6,8 +6,8 @@ import util from "util" /* 1126 */;
 import PlatformUtils2 from "PlatformUtils" /* 1382 */;
 import useToken from "useToken" /* 4818 */;
 import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5251 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8228 */;
-import _modDef8404 from "module_8404" /* 8404 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8229 */;
+import _modDef8405 from "module_8405" /* 8405 */;
 import VoiceXIcon from "VoiceXIcon" /* 11082 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VolumeSl
       }
     }
     const obj3 = { style: tmp15.volumerSliderNative, value: tmp21, minimumValue: 0, maximumValue: tmp9, minimumTrackTintColor: minTrackColor, maximumTrackTintColor: PRIMARY_400, accessibilityLabel: tmp23, onValueChange: L, onResponderGrant: tmp26 };
-    const tmp31 = closure_7(_modDef8404, obj3);
+    const tmp31 = closure_7(_modDef8405, obj3);
     cResult[22] = PRIMARY_400;
     cResult[23] = tmp9;
     cResult[24] = minTrackColor;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VolumeSl
   const obj4 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
   obj = useToken;
   const obj3 = { style: tmp4.leftIcon };
-  const tmp7Result = _modDef8404;
+  const tmp7Result = _modDef8405;
   obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
   obj4.maximumValue = maxVolume;
   obj4.minimumTrackTintColor = minTrackColor;

@@ -1,9 +1,9 @@
-// === Module 17095: ConjureDesignFeedbackOverlay ===
+// === Module 17135: ConjureDesignFeedbackOverlay ===
 
-// Module 17095 (ConjureDesignFeedbackOverlay)
+// Module 17135 (ConjureDesignFeedbackOverlay)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
-import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 17096 */;
+import ConjureDesignRemarkSheet from "ConjureDesignRemarkSheet" /* 17136 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
       return () => {
         closure_1_9.current = false;
         if (ref.current) {
-          first(5056).hideActionSheet(projectId(17096).CONJURE_DESIGN_REMARK_SHEET_KEY);
+          first(5056).hideActionSheet(projectId(17136).CONJURE_DESIGN_REMARK_SHEET_KEY);
           const obj = first(5056);
         }
       };
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
   if (cResult[5] !== projectId) {
     const fn3 = function y() {
       return () => {
-        const result = projectId(11413).inspectConjurePreviewPoint(closure_1_0, projectId(11418).CONJURE_INSPECT_CLEAR_POINT);
+        const result = projectId(11421).inspectConjurePreviewPoint(closure_1_0, projectId(11426).CONJURE_INSPECT_CLEAR_POINT);
       };
     };
     const items2 = [projectId];
@@ -310,14 +310,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(5056).hideActionSheet(projectId(17096).CONJURE_DESIGN_REMARK_SHEET_KEY);
+        size(5056).hideActionSheet(projectId(17136).CONJURE_DESIGN_REMARK_SHEET_KEY);
         const obj = size(5056);
       }
     };
   }, []);
   const items1 = [projectId];
   const effect2 = noop.useEffect(() => () => {
-    const result = projectId(11413).inspectConjurePreviewPoint(closure_1_0, projectId(11418).CONJURE_INSPECT_CLEAR_POINT);
+    const result = projectId(11421).inspectConjurePreviewPoint(closure_1_0, projectId(11426).CONJURE_INSPECT_CLEAR_POINT);
   }, items1);
   const items2 = [first2];
   const effect3 = noop.useEffect(() => {
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(11413).inspectConjurePreviewPoint(point, point);
+        const result = projectId(11421).inspectConjurePreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -386,7 +386,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
             closure_8(true);
           }
         });
-        const obj2 = projectId(11413);
+        const obj2 = projectId(11421);
       }
     }
   }, items4);

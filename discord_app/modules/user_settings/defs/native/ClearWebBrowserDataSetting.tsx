@@ -1,6 +1,6 @@
-// === Module 15754: ClearWebBrowserDataSetting ===
+// === Module 15777: ClearWebBrowserDataSetting ===
 
-// Module 15754 (ClearWebBrowserDataSetting)
+// Module 15777 (ClearWebBrowserDataSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
@@ -14,7 +14,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t.HNqvOh);
   },
-  parent: fn(7992).MobileUserSettings.WEB_BROWSER,
+  parent: fn(7993).MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
     const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };
@@ -35,7 +35,7 @@ const pressable = SettingBuilders.createPressable({
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ const pressable = SettingBuilders.createPressable({
             obj7.text = intl.string(tmp4(1126).t["zaEQz+"]);
             v1(4809).open("web-browser-data-cleared", obj7);
             dependencyMap = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp7) {
           dependencyMap = tmp;

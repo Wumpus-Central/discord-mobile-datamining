@@ -1,16 +1,16 @@
-// === Module 6622: Login ===
+// === Module 6623: Login ===
 
-// Module 6622 (Login)
+// Module 6623 (Login)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
-import Pressables from "Pressables" /* 6184 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6624 */;
+import Pressables from "Pressables" /* 6185 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6625 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 6623 */;
+import PhoneStore from "PhoneStore" /* 6624 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -180,7 +180,7 @@ export default function Login(isMultiAccount) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -250,7 +250,7 @@ export default function Login(isMultiAccount) {
           c3 = 0;
           closure_129_4(false);
           v32 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp47) {
         if (tmp5 === c3) {
@@ -275,7 +275,7 @@ export default function Login(isMultiAccount) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -374,7 +374,7 @@ export default function Login(isMultiAccount) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

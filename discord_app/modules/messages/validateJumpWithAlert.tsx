@@ -1,9 +1,9 @@
-// === Module 12657: validateJumpWithAlert ===
+// === Module 12659: validateJumpWithAlert ===
 
-// Module 12657 (validateJumpWithAlert)
+// Module 12659 (validateJumpWithAlert)
 import util from "util" /* 1126 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
-import isSpam from "isSpam" /* 7228 */;
+import isSpam from "isSpam" /* 7229 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;

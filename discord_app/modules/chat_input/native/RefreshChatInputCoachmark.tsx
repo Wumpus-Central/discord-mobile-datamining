@@ -1,10 +1,10 @@
-// === Module 11659: RefreshChatInputCoachmark ===
+// === Module 11661: RefreshChatInputCoachmark ===
 
-// Module 11659 (RefreshChatInputCoachmark)
+// Module 11661 (RefreshChatInputCoachmark)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 4924 */;
-import useCoachmark from "useCoachmark" /* 9442 */;
+import useCoachmark from "useCoachmark" /* 9443 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRefresh
     cResult[0] = disabled;
     cResult[1] = items;
   } else {
-    const tmp6 = _slicedToArray(tmp(7099).useSelectedDismissibleContent(cResult[1]), 2);
+    const tmp6 = _slicedToArray(tmp(7100).useSelectedDismissibleContent(cResult[1]), 2);
     _require = tmp7;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -76,7 +76,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRefresh
     cResult[8] = tmp13;
     cResult[9] = obj3;
     tmp16 = obj3;
-    const tmpResult = tmp(7099);
+    const tmpResult = tmp(7100);
   }
   const obj = require("c");
 }) : (function useRefreshChatInputCoachmark(disabled) {

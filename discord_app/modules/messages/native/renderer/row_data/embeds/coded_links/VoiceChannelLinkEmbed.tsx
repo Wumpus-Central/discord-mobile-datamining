@@ -1,12 +1,12 @@
-// === Module 13504: VoiceChannelLinkEmbed ===
+// === Module 13527: VoiceChannelLinkEmbed ===
 
-// Module 13504 (VoiceChannelLinkEmbed)
+// Module 13527 (VoiceChannelLinkEmbed)
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7888 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8158 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7889 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8159 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -18,7 +18,7 @@ require = fn;
 const Image = fn(17).Image;
 const getGuildAcronym = fn(2083).getGuildAcronym;
 const Permissions = fn(1085).Permissions;
-const InviteTypes = fn(7423).InviteTypes;
+const InviteTypes = fn(7424).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");
 

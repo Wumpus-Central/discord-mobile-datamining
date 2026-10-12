@@ -1,15 +1,15 @@
-// === Module 11798: NoPermsState ===
+// === Module 11800: NoPermsState ===
 
-// Module 11798 (NoPermsState)
+// Module 11800 (NoPermsState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import shared from "shared" /* 4969 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10622 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11727 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10623 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11729 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyState() {
   const cResult = c.c(10);
   const tmp4 = closure_6();
-  const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11799 : 11800);
+  const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11801 : 11802);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   if (cResult[0] === tmp5Result) {
     if (cResult[1] === tmp4.image) {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySta
   const tmpResult = AppLauncherNativeUtils;
 }) : (function EmptyState() {
   const tmp = closure_6();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11799 : 11800);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11801 : 11802);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   const obj2 = { style: tmp.container, children: null };
   const items = [React4(FastImageDefault, { style: tmp.image, resizeMode: "contain", source: tmp4Result }), ];

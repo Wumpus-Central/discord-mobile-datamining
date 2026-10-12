@@ -1,6 +1,6 @@
-// === Module 9295: ScheduledMessagesModal ===
+// === Module 9296: ScheduledMessagesModal ===
 
-// Module 9295 (ScheduledMessagesModal)
+// Module 9296 (ScheduledMessagesModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
@@ -9,20 +9,20 @@ import PlatformUtils from "PlatformUtils" /* 1382 */;
 import PremiumUtils from "PremiumUtils" /* 4769 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;
-import _mod6209 from "module_6209" /* 6209 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6851 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9269 */;
-import HeaderShared from "HeaderShared" /* 9297 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9518 */;
-import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 12873 */;
-import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 12874 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12877 */;
+import _mod6210 from "module_6210" /* 6210 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6852 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9270 */;
+import HeaderShared from "HeaderShared" /* 9298 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9519 */;
+import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 12875 */;
+import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 12876 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ScheduledMessageStore from "ScheduledMessageStore" /* 9296 */;
+import ScheduledMessageStore from "ScheduledMessageStore" /* 9297 */;
 
-const NavigatorHeader = tmp4(6200);
+const NavigatorHeader = tmp4(6201);
 require = fn;
 function keyExtractor(scheduledMessageId) {
   return scheduledMessageId.scheduledMessageId;
@@ -30,7 +30,7 @@ function keyExtractor(scheduledMessageId) {
 const View = fn(17).View;
 const AnalyticsPages = fn(1085).AnalyticsPages;
 const PremiumTypes = fn(1392).PremiumTypes;
-const premiumMax = fn(9279).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(9280).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const ScheduledMessagesMobileModal = "ScheduledMessagesMobileModal";
@@ -198,7 +198,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedu
         return closure_1_6.getMessagesPendingRemoval();
       }
     }
-    const scheduledMessagesLimit = tmp(9293).useScheduledMessagesLimit(ScheduledMessagesMobileModal);
+    const scheduledMessagesLimit = tmp(9294).useScheduledMessagesLimit(ScheduledMessagesMobileModal);
     ({ limit, isUpgradable } = scheduledMessagesLimit);
     if (!tmp5[0]) {
       class H {
@@ -238,7 +238,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedu
       obj3.contentContainerStyle = tmp4.cardContainer;
       obj3.keyExtractor = keyExtractor;
       obj3.onScroll = handleScroll;
-      const tmp31 = closure_10(tmp(8624).FlashList, obj3);
+      const tmp31 = closure_10(tmp(8625).FlashList, obj3);
       cResult[17] = handleScroll;
       cResult[18] = tmp25;
       cResult[19] = arr5;
@@ -255,7 +255,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedu
           return valueOfResult - date1.valueOf();
         }
       }
-      tmp2 = closure_10(stateFromStores2(12876), {});
+      tmp2 = closure_10(stateFromStores2(12878), {});
       class O {
         constructor() {
           return closure_1_6.getMessagesPendingRemoval();
@@ -272,7 +272,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedu
         }
       }
     }
-    const tmpResult6 = tmp(9293);
+    const tmpResult6 = tmp(9294);
   }
   const tmpResult5 = require("initialize");
 }) : (function ScheduledMessagesPage(handleScroll) {
@@ -485,10 +485,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
   }
   const sum = tmp12 + tmp5(587).space.PX_8;
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const headerCloseButton = tmp(6200).getHeaderCloseButton(tmp5(5934).pop);
+    const headerCloseButton = tmp(6201).getHeaderCloseButton(tmp5(5934).pop);
     cResult[6] = headerCloseButton;
     let tmp14 = headerCloseButton;
-    const tmpResult6 = tmp(6200);
+    const tmpResult6 = tmp(6201);
   } else {
     tmp14 = cResult[6];
   }
@@ -541,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
       tmp18 = tmp20;
     }
   }
-  const tmp17 = closure_10(title(6209).Header, { title, headerTitle: tmp11, headerTitleAlign: "center", headerStatusBarHeight: sum, headerLeft: tmp14, headerLeftContainerStyle: tmp4.headerLeftContainer, headerRightContainerStyle: tmp4.headerRightContainer });
+  const tmp17 = closure_10(title(6210).Header, { title, headerTitle: tmp11, headerTitleAlign: "center", headerStatusBarHeight: sum, headerLeft: tmp14, headerLeftContainerStyle: tmp4.headerLeftContainer, headerRightContainerStyle: tmp4.headerRightContainer });
   cResult[7] = tmp4.headerLeftContainer;
   cResult[8] = tmp4.headerRightContainer;
   cResult[9] = sum;
@@ -590,7 +590,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
   obj5 = PlatformUtils;
   obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(5934).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items1 = [closure_10(_mod6209.Header, obj6), , ];
+  const items1 = [closure_10(_mod6210.Header, obj6), , ];
   const obj7 = { style: null };
   const items2 = [tmp.headerBorder, animatedStyle];
   obj7.style = items2;

@@ -1,10 +1,10 @@
-// === Module 10279: GroupDMAvatar ===
+// === Module 10280: GroupDMAvatar ===
 
-// Module 10279 (GroupDMAvatar)
+// Module 10280 (GroupDMAvatar)
 import c from "c" /* 576 */;
 import native from "native" /* 1200 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ClipView from "ClipView" /* 9016 */;
+import ClipView from "ClipView" /* 9017 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 

@@ -1,8 +1,8 @@
-// === Module 18360: GuildSettingsRoleItem ===
+// === Module 18418: GuildSettingsRoleItem ===
 
-// Module 18360 (GuildSettingsRoleItem)
+// Module 18418 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 587 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6097 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -942,7 +942,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -969,9 +969,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj = { value, done: true };
               return obj;
             }
-            onPress(6097).deleteRole(guildId, tmp2.id);
+            onPress(6098).deleteRole(guildId, tmp2.id);
             c2 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           } catch (tmp16) {
             c2 = tmp;
             throw tmp16;
@@ -1084,7 +1084,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -1113,7 +1113,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
                 GuildActionCreatorsDefault.deleteRole(guildId, tmp2.id);
                 c2 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               } catch (tmp16) {
                 c2 = tmp;
                 throw tmp16;
@@ -1224,7 +1224,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     let tmp24Result = null;
     if (null != prop) {
-      const obj23 = { size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_9466"), "aria-label": null, style: null };
+      const obj23 = { size: tmp5(onMoveUp[26]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_9467"), "aria-label": null, style: null };
       const intl6 = tmp5(onMoveUp[13]).intl;
       obj23["aria-label"] = intl6.string(tmp5(onMoveUp[13]).t.a2Ak8b);
       obj23.style = tmp4.sparkleIcon;

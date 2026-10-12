@@ -1,16 +1,16 @@
-// === Module 18192: StageBoostUpsellManager ===
+// === Module 18250: StageBoostUpsellManager ===
 
-// Module 18192 (StageBoostUpsellManager)
+// Module 18250 (StageBoostUpsellManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2073 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import StageMediaHooks from "StageMediaHooks" /* 5895 */;
-import useChannelVideoLimit from "useChannelVideoLimit" /* 8788 */;
+import useChannelVideoLimit from "useChannelVideoLimit" /* 8789 */;
 import ActionSheetStore from "ActionSheetStore" /* 4802 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
 const STAGE_BOOSTING_SHEET_KEY = fn(5892).STAGE_BOOSTING_SHEET_KEY;

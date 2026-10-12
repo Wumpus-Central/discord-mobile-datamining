@@ -3,7 +3,7 @@
 // Module 11103 (VoicePanelRiveMicButton)
 import c from "c" /* 576 */;
 import MicrophoneRive from "MicrophoneRive" /* 4920 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 8805 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 8806 */;
 import MicrophoneIcon2 from "MicrophoneIcon" /* 11104 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,15 +1,15 @@
-// === Module 9621: NsfwGateGuildAlert ===
+// === Module 9622: NsfwGateGuildAlert ===
 
-// Module 9621 (NsfwGateGuildAlert)
+// Module 9622 (NsfwGateGuildAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import useAlertStore from "useAlertStore" /* 5301 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6916 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6917 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-const NsfwGateSource = fn(6915).NsfwGateSource;
+const NsfwGateSource = fn(6916).NsfwGateSource;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;

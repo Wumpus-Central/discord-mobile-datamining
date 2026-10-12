@@ -1,6 +1,6 @@
-// === Module 11939: AppLauncherOnboardingChatInputButtonAnimation ===
+// === Module 11941: AppLauncherOnboardingChatInputButtonAnimation ===
 
-// Module 11939 (AppLauncherOnboardingChatInputButtonAnimation)
+// Module 11941 (AppLauncherOnboardingChatInputButtonAnimation)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,11 +8,11 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
 import timingPresets from "timingPresets" /* 5096 */;
 import ButtonConstants from "ButtonConstants" /* 5384 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 6105 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9306 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 11712 */;
-import _mod11738 from "module_11738" /* 11738 */;
-import _mod11940 from "module_11940" /* 11940 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 6106 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9307 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 11714 */;
+import _mod11740 from "module_11740" /* 11740 */;
+import _mod11942 from "module_11942" /* 11942 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
@@ -104,7 +104,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = ReactCompilerGating
     tmp13 = cResult[5];
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult5 = _mod11940;
+    const tmpResult5 = _mod11942;
     cResult[6] = tmpResult5;
     let tmp15 = tmpResult5;
   } else {
@@ -135,7 +135,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = ReactCompilerGating
             }
             const _Symbol = Symbol;
             if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmpResult6 = _mod11738;
+              const tmpResult6 = _mod11740;
               cResult[20] = tmpResult6;
               let tmp33 = tmpResult6;
             } else {
@@ -206,7 +206,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = ReactCompilerGating
   const items1 = [React4.absoluteFill, tmp.glowAnimation];
   obj4.style = items1;
   const obj5 = { collapsable: false, style: tmp.glowLottie, source: null, autoPlay: null };
-  obj5.source = _mod11940;
+  obj5.source = _mod11942;
   obj5.autoPlay = !stateFromStores;
   const items2 = [timestampProducer(LottieAnimationViewDefault, obj5), , ];
   const obj6 = { collapsable: false, style: null };
@@ -218,7 +218,7 @@ export const AppLauncherOnboardingChatInputButtonAnimation = ReactCompilerGating
   const items4 = [React5(ReanimatedRexportDefault.View, obj4), ];
   const obj8 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj7 = { collapsable: false, style: tmp.fakeButton };
-  obj8.source = _mod11738;
+  obj8.source = _mod11740;
   obj8.autoPlay = !stateFromStores;
   items4[1] = timestampProducer(LottieAnimationViewDefault, obj8);
   obj3.children = items4;

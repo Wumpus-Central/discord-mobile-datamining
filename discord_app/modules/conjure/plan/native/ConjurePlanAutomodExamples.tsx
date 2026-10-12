@@ -1,6 +1,6 @@
-// === Module 17161: ConjurePlanAutomodExamples ===
+// === Module 17294: ConjurePlanAutomodExamples ===
 
-// Module 17161 (ConjurePlanAutomodExamples)
+// Module 17294 (ConjurePlanAutomodExamples)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import AvatarUtils from "AvatarUtils" /* 1415 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 17162 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 17295 */;
 import noop from "module_19" /* 19 */;
 
 const Text_Text = Text(5088);
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { blocked: fn(10408).ShieldIcon, alert: fn(8772).BellIcon, allowed: fn(6867).CircleCheckIcon };
+let obj = { blocked: fn(10409).ShieldIcon, alert: fn(8773).BellIcon, allowed: fn(6868).CircleCheckIcon };
 let obj2 = { blurple: { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND }, red: null, green: null };
 let obj3 = { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND };
 obj2.red = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };

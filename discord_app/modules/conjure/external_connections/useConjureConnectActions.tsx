@@ -1,7 +1,7 @@
-// === Module 17126: useConjureConnectActions ===
+// === Module 17165: useConjureConnectActions ===
 
-// Module 17126 (useConjureConnectActions)
-import conjureExternalConnections from "conjureExternalConnections" /* 13226 */;
+// Module 17165 (useConjureConnectActions)
+import conjureExternalConnections from "conjureExternalConnections" /* 17153 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,6 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(13213).requestExternalAuthorizeUrl;
 const set = new Set();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -23,7 +22,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
   [tmp3, dependencyMap] = first(noop.useState(set), 2);
   noop.useRef(set);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function h(arg0) {
+    const fn = function s(arg0) {
       ref.current = conjureExternalConnections.endExternalAuthorization(ref.current, arg0);
       dependencyMap(ref.current);
     };
@@ -48,9 +47,9 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
     cResult[6] = obj2;
     tmp6 = obj2;
   }
-  const fn2 = function x(type) {
+  const fn2 = function v(type) {
     if (null != type) {
-      const result = type(13226).beginExternalAuthorization(ref.current, type.type);
+      const result = type(17153).beginExternalAuthorization(ref.current, type.type);
       if (null != result) {
         ref.current = result;
         dependencyMap(result);
@@ -65,7 +64,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -82,24 +81,24 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                   closure_128_0 = undefined;
                   c2 = 1;
                   c3 = 1;
-                  const obj5 = { value: closure_3_6(tmp2, tmp2.type), done: false };
-                  return obj5;
+                  const obj6 = { value: tmp2(17152).requestExternalAuthorizeUrl(tmp2, tmp2.type), done: false };
+                  return obj6;
                 }
               } else if (arg0 === 1) {
                 c3 = 3;
                 throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                const obj6 = { value, done: true };
-                return obj6;
+                const obj7 = { value, done: true };
+                return obj7;
               } else {
                 closure_128_0 = value;
                 first(tmp2.type);
                 if ("url" === closure_128_0.type) {
-                  const obj7 = { href: closure_128_0.url, trusted: false };
-                  tmp2(8490).handleClick(obj7);
+                  const obj8 = { href: closure_128_0.url, trusted: false };
+                  tmp2(8491).handleClick(obj8);
                   c3 = 3;
-                  const obj = tmp2(8490);
+                  const obj = tmp2(8491);
                 }
                 if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
                   const intl2 = tmp2(1126).intl;
@@ -109,11 +108,11 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                   stringResult = intl.string(tmp5(3849).POxkSh);
                 }
                 closure_2_1(stringResult);
-                obj3 = tmp2(13226);
+                obj3 = tmp2(17153);
               }
-            } catch (tmp33) {
+            } catch (tmp34) {
               c3 = tmp;
-              throw tmp33;
+              throw tmp34;
             }
           }
         });
@@ -138,7 +137,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
           return applyArgumentsResult;
         })();
       }
-      let obj = type(13226);
+      let obj = type(17153);
     }
   };
   cResult[1] = arg1;
@@ -170,7 +169,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -189,24 +188,24 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                 closure_128_0 = undefined;
                 c2 = 1;
                 c3 = 1;
-                const obj5 = { value: closure_2_6(closure_0, type.type), done: false };
-                return obj5;
+                const obj6 = { value: type(17152).requestExternalAuthorizeUrl(closure_0, type.type), done: false };
+                return obj6;
               }
             } else if (arg0 === 1) {
               c3 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              const obj7 = { value, done: true };
+              return obj7;
             } else {
               closure_128_0 = value;
               callback(closure_129_0.type);
               if ("url" === closure_128_0.type) {
-                const obj7 = { href: closure_128_0.url, trusted: false };
-                type(8490).handleClick(obj7);
+                const obj8 = { href: closure_128_0.url, trusted: false };
+                type(8491).handleClick(obj8);
                 c3 = 3;
-                const obj = type(8490);
+                const obj = type(8491);
               }
               if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
                 const intl2 = type(1126).intl;
@@ -216,16 +215,16 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                 stringResult = intl.string(closure_2_1(3849).POxkSh);
               }
               closure_1(stringResult);
-              obj3 = type(13226);
+              obj3 = type(17153);
             }
-          } catch (tmp33) {
+          } catch (tmp34) {
             c3 = tmp;
-            throw tmp33;
+            throw tmp34;
           }
         }
       };
       if (null != type) {
-        const result = type(13226).beginExternalAuthorization(ref.current, type.type);
+        const result = type(17153).beginExternalAuthorization(ref.current, type.type);
         if (null != result) {
           ref.current = result;
           dependencyMap(result);
@@ -250,7 +249,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
             return applyArgumentsResult;
           })();
         }
-        let obj = type(13226);
+        let obj = type(17153);
       }
     }, items)
   };

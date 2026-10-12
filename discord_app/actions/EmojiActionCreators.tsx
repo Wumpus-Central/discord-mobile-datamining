@@ -1,6 +1,6 @@
-// === Module 9546: EmojiActionCreators ===
+// === Module 9547: EmojiActionCreators ===
 
-// Module 9546 (EmojiActionCreators)
+// Module 9547 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import wrappers from "wrappers" /* 1240 */;
@@ -9,7 +9,7 @@ import GlobalUtils from "GlobalUtils" /* 1388 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
 import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5994 */;
-import InlineUploaderDefault from "InlineUploader" /* 6671 */;
+import InlineUploaderDefault from "InlineUploader" /* 6672 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmojiStore from "EmojiStore" /* 5987 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
@@ -29,7 +29,7 @@ let closure_10 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

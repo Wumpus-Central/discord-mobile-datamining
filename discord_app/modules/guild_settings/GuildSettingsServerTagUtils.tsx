@@ -1,8 +1,8 @@
-// === Module 8640: GuildSettingsServerTagUtils ===
+// === Module 8641: GuildSettingsServerTagUtils ===
 
-// Module 8640 (GuildSettingsServerTagUtils)
-import GuildTagUtils from "GuildTagUtils" /* 8289 */;
-import MobileServerTagExperimentDefault from "MobileServerTagExperiment" /* 8641 */;
+// Module 8641 (GuildSettingsServerTagUtils)
+import GuildTagUtils from "GuildTagUtils" /* 8290 */;
+import MobileServerTagExperimentDefault from "MobileServerTagExperiment" /* 8642 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 

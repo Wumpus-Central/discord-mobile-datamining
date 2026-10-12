@@ -1,8 +1,8 @@
-// === Module 17092: FramePoolManager ===
+// === Module 17132: FramePoolManager ===
 
-// Module 17092 (FramePoolManager)
+// Module 17132 (FramePoolManager)
 import leaveFrame from "leaveFrame" /* 10821 */;
-import AbstractFramePoolManager from "AbstractFramePoolManager" /* 17093 */;
+import AbstractFramePoolManager from "AbstractFramePoolManager" /* 17133 */;
 
 require = fn;
 class FramePoolManager extends tmp4 {

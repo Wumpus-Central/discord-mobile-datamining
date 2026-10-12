@@ -1,11 +1,11 @@
-// === Module 14109: ShareEmbed ===
+// === Module 14132: ShareEmbed ===
 
-// Module 14109 (ShareEmbed)
+// Module 14132 (ShareEmbed)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6153 */;
-import FastImageDefault from "FastImage" /* 6156 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6154 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShareEmb
       let tmp9Result = null != memo;
       if (tmp9Result) {
         let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-        tmp9Result = closure_5(isLoadingEmbed(6156), obj2);
+        tmp9Result = closure_5(isLoadingEmbed(6157), obj2);
       }
       let obj3 = { children: null };
       const items6 = [tmp9Result, ];

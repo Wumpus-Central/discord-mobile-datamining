@@ -1,9 +1,9 @@
-// === Module 14732: setActivity ===
+// === Module 14756: setActivity ===
 
-// Module 14732 (setActivity)
+// Module 14756 (setActivity)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10250 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10251 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10939 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
 
@@ -20,7 +20,7 @@ let items = [, , ];
 let obj = {};
 let obj2 = { scope: null, validation: null, handler: null };
 let obj3 = {};
-let items1 = [fn(8457).OAuth2Scopes.RPC, fn(8457).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
+let items1 = [fn(8458).OAuth2Scopes.RPC, fn(8458).OAuth2Scopes.RPC_ACTIVITIES_WRITE, RPC_LOCAL_SCOPE, RPC_EMBEDDED_APP_SCOPE];
 obj3[RPC_SCOPE_CONFIG.ANY] = items1;
 obj2.scope = obj3;
 obj2.validation = function validation(number) {

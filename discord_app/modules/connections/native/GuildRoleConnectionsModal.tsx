@@ -20,7 +20,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[3] !== tmp4) {
       const obj2 = { screens: tmp4, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN };
-      const tmp8 = jsx(guildId(6687).Navigator, { screens: tmp4, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
+      const tmp8 = jsx(guildId(6688).Navigator, { screens: tmp4, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
       cResult[3] = tmp4;
       cResult[4] = tmp8;
       let tmp5 = tmp8;
@@ -37,10 +37,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return null;
   };
   obj4.headerRight = function headerRight() {
-    const obj = { source: onClose(7728), onPress, accessibilityLabel: null };
+    const obj = { source: onClose(7729), onPress, accessibilityLabel: null };
     const intl = guildId(1126).intl;
     obj.accessibilityLabel = intl.string(guildId(1126).t.cpT0Cq);
-    return jsx(guildId(7088).HeaderActionButton, { source: onClose(7728), onPress, accessibilityLabel: null });
+    return jsx(guildId(7089).HeaderActionButton, { source: onClose(7729), onPress, accessibilityLabel: null });
   };
   obj4.render = function render() {
     return jsx(onClose(10721), { guildId, onCloseModal });
@@ -65,10 +65,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return null;
     };
     obj2.headerRight = function headerRight() {
-      const obj = { source: onClose(7728), onPress, accessibilityLabel: null };
+      const obj = { source: onClose(7729), onPress, accessibilityLabel: null };
       const intl = guildId(1126).intl;
       obj.accessibilityLabel = intl.string(guildId(1126).t.cpT0Cq);
-      return jsx(guildId(7088).HeaderActionButton, { source: onClose(7728), onPress, accessibilityLabel: null });
+      return jsx(guildId(7089).HeaderActionButton, { source: onClose(7729), onPress, accessibilityLabel: null });
     };
     obj2.render = function render() {
       return jsx(onClose(10721), { guildId, onCloseModal });
@@ -76,5 +76,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj2;
     return obj;
   }, items);
-  return jsx(guildId(6687).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
+  return jsx(guildId(6688).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
 }));

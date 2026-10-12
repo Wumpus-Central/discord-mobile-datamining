@@ -1,6 +1,6 @@
-// === Module 12250: powerupListing ===
+// === Module 12252: powerupListing ===
 
-// Module 12250 (powerupListing)
+// Module 12252 (powerupListing)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5007 */;

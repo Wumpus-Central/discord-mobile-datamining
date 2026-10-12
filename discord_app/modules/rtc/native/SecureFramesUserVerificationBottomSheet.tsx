@@ -1,15 +1,15 @@
-// === Module 8846: SecureFramesUserVerificationBottomSheet ===
+// === Module 8847: SecureFramesUserVerificationBottomSheet ===
 
-// Module 8846 (SecureFramesUserVerificationBottomSheet)
+// Module 8847 (SecureFramesUserVerificationBottomSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import UserActionCreators from "UserActionCreators" /* 8305 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 8828 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 8831 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8848 */;
-import XLargeBoldIcon from "XLargeBoldIcon" /* 8850 */;
+import UserActionCreators from "UserActionCreators" /* 8306 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 8829 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 8832 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8849 */;
+import XLargeBoldIcon from "XLargeBoldIcon" /* 8851 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
@@ -18,7 +18,7 @@ import UserStore from "UserStore" /* 1390 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(8829);
+const SecureFramesConstants = fn(8830);
 ({ AnalyticsSecureFramesUserVerification: closure_9, SECURE_FRAMES_PUBLIC_KEY_VERSION: c10, USER_VERIFIED_TOAST_KEY: closure_11 } = SecureFramesConstants);
 const AnalyticsLocations = fn(1085).AnalyticsLocations;
 const jsxProd = fn(21);

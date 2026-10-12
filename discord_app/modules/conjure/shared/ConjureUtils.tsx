@@ -1,9 +1,9 @@
-// === Module 6945: ConjureUtils ===
+// === Module 6946: ConjureUtils ===
 
-// Module 6945 (ConjureUtils)
+// Module 6946 (ConjureUtils)
 import c from "c" /* 576 */;
-import ConjureTypes from "ConjureTypes" /* 6946 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6947 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6948 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 4748 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -143,7 +143,7 @@ export const conjureSettingChannels = function conjureSettingChannels(stateFromS
   return mapped.filter((type) => !set.has(type.type));
 };
 export const getConjureProjectAccessSettings = function getConjureProjectAccessSettings(flags) {
-  return { isPublic: flags & ConjureTypes.ConjureProjectFlags.PUBLIC, isShared: flags & ConjureTypes.ConjureProjectFlags.SHAREABLE };
+  return { isPublic: flags & ConjureProjectTypes.ConjureProjectFlags.PUBLIC, isShared: flags & ConjureProjectTypes.ConjureProjectFlags.SHAREABLE };
 };
 export { conjureChannelAppId };
 export const isConjureProjectInGuild = function isConjureProjectInGuild(item10020, guildId) {
@@ -341,7 +341,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
     if (cResult[4] === guild_id2) {
       let tmp12 = cResult[5];
     }
-    const isConjureGuildEnabled = tmp(6947).useIsConjureGuildEnabled(tmp12);
+    const isConjureGuildEnabled = tmp(6948).useIsConjureGuildEnabled(tmp12);
     if (cResult[6] === appChannelApplication) {
       if (cResult[7] === guild_id) {
         if (cResult[8] === stateFromStores) {
@@ -381,7 +381,7 @@ export const useIsConjureChannelCandidate = ReactCompilerGating.isReactCompilerE
     cResult[9] = isConjureGuildEnabled;
     cResult[10] = tmp17;
     tmp14 = tmp17;
-    const tmpResult4 = tmp(6947);
+    const tmpResult4 = tmp(6948);
   }
   const obj2 = { guildId: guild_id2, location };
   cResult[3] = location;

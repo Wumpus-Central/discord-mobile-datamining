@@ -1,18 +1,18 @@
-// === Module 9756: StickerPicker ===
+// === Module 9757: StickerPicker ===
 
-// Module 9756 (StickerPicker)
+// Module 9757 (StickerPicker)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import StickersUtils from "StickersUtils" /* 5749 */;
-import StickerSendability from "StickerSendability" /* 7046 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9269 */;
-import MobileStickerPickerUpsellRestyleExperiment from "MobileStickerPickerUpsellRestyleExperiment" /* 9535 */;
-import StickersSearchUtils from "StickersSearchUtils" /* 9764 */;
-import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 9765 */;
-import showStickerDetailActionSheet from "showStickerDetailActionSheet" /* 9777 */;
+import StickerSendability from "StickerSendability" /* 7047 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9270 */;
+import MobileStickerPickerUpsellRestyleExperiment from "MobileStickerPickerUpsellRestyleExperiment" /* 9536 */;
+import StickersSearchUtils from "StickersSearchUtils" /* 9765 */;
+import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 9766 */;
+import showStickerDetailActionSheet from "showStickerDetailActionSheet" /* 9778 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -42,9 +42,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ stickerFormats, inPortalKeyboard } = arg0);
   closure_17();
   let obj = channel(576);
-  const fetchStickerPacks = channel(9757).useFetchStickerPacks();
-  let obj2 = channel(9757);
-  const stickerCategories = channel(9759).useStickerCategories(channel);
+  const fetchStickerPacks = channel(9758).useFetchStickerPacks();
+  let obj2 = channel(9758);
+  const stickerCategories = channel(9760).useStickerCategories(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [StickersStore];
     class U {
@@ -58,17 +58,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     [tmp7, tmp8] = cResult;
   }
-  let obj3 = channel(9759);
+  let obj3 = channel(9760);
   const stateFromStores = channel(504).useStateFromStores(tmp7, U);
   let tmpResult = channel(504);
   [r10050, tmp12] = analyticsLocations(noop.useState(0), 2);
   dependencyMap = tmp12;
   let tmp11 = analyticsLocations(noop.useState(0), 2);
-  analyticsLocations = onPressSticker(6851)(onPressSticker(6878).STICKER_PICKER).analyticsLocations;
-  const tmp14 = onPressSticker(6851);
+  analyticsLocations = onPressSticker(6852)(onPressSticker(6879).STICKER_PICKER).analyticsLocations;
+  const tmp14 = onPressSticker(6852);
   [r10064, noop] = analyticsLocations(noop.useState(null), 2);
   const tmp15 = analyticsLocations(noop.useState(null), 2);
-  let mobileStickerPickerUpsellRestyleEnabled = channel(9535).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
+  let mobileStickerPickerUpsellRestyleEnabled = channel(9536).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     let obj4 = { hasCategories: true };
     cResult[2] = obj4;
@@ -76,8 +76,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     tmp17 = cResult[2];
   }
-  const tmpResult2 = channel(9535);
-  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(9731)(tmp17));
+  const tmpResult2 = channel(9536);
+  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(9732)(tmp17));
   if (cResult[3] === channel) {
     if (cResult[6] === channel.guild_id) {
       if (cResult[7] === channel.id) {
@@ -186,7 +186,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[3] = channel;
   cResult[4] = mobileStickerPickerUpsellRestyleEnabled;
   cResult[5] = X;
-  const tmp18 = onPressSticker(9731)(tmp17);
+  const tmp18 = onPressSticker(9732)(tmp17);
 }) : (function StickerPicker(channel) {
   channel = channel.channel;
   const onPressSticker = channel.onPressSticker;
@@ -194,23 +194,23 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   noop = undefined;
   ({ bottomSheetRef, bottomSheetIndex, paddingTop, stickerFormats, inPortalKeyboard } = channel);
   let tmp = closure_17();
-  const fetchStickerPacks = channel(9757).useFetchStickerPacks();
-  let obj = channel(9757);
-  const stickerCategories = channel(9759).useStickerCategories(channel);
-  let obj2 = channel(9759);
+  const fetchStickerPacks = channel(9758).useFetchStickerPacks();
+  let obj = channel(9758);
+  const stickerCategories = channel(9760).useStickerCategories(channel);
+  let obj2 = channel(9760);
   let items = [StickersStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => StickersStore.hasLoadedStickerPacks);
   const tmp6 = analyticsLocations(noop.useState(0), 2);
   dependencyMap = tmp7;
   let obj3 = channel(504);
-  analyticsLocations = onPressSticker(6851)(onPressSticker(6878).STICKER_PICKER).analyticsLocations;
-  const tmp9 = onPressSticker(6851);
+  analyticsLocations = onPressSticker(6852)(onPressSticker(6879).STICKER_PICKER).analyticsLocations;
+  const tmp9 = onPressSticker(6852);
   [tmp11, c4] = analyticsLocations(noop.useState(null), 2);
   const tmp10 = analyticsLocations(noop.useState(null), 2);
-  let mobileStickerPickerUpsellRestyleEnabled = channel(9535).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
-  let obj4 = channel(9535);
+  let mobileStickerPickerUpsellRestyleEnabled = channel(9536).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
+  let obj4 = channel(9536);
   let items1 = [channel, mobileStickerPickerUpsellRestyleEnabled];
-  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(9731)({ hasCategories: true }));
+  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(9732)({ hasCategories: true }));
   const items2 = [, ];
   ({ id: arr4[0], guild_id: arr4[1] } = channel);
   const callback = noop.useCallback((arg0) => {
@@ -309,7 +309,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const callback2 = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(constants.CHAT_INPUT_COMPONENT_VIEWED, { type: constants6.STICKER_SEARCH, channel_id: channel.id, guild_id: channel.guild_id });
   }, items4);
-  const tmp13 = onPressSticker(9731)({ hasCategories: true });
+  const tmp13 = onPressSticker(9732)({ hasCategories: true });
   const items5 = [channel];
   const callback3 = noop.useCallback((renderableSticker) => {
     const result = showStickerDetailActionSheet.showStickerDetailActionSheet({ renderableSticker, channel });
@@ -324,14 +324,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj9.placeholder = intl.string(tmp2(1126).t.dt5h1C);
     obj9.onChange = callback;
     obj9.onFocus = callback2;
-    obj8.children = closure_15(tmp2(6738).SearchField, obj9);
+    obj8.children = closure_15(tmp2(6739).SearchField, obj9);
     tmp19Result = closure_15(tmp21, obj8);
   }
   const items6 = [tmp19Result, , ];
   if (stateFromStores) {
     if (0 === stickerCategories.length) {
       let obj10 = { style: tmp.emptyState, children: null };
-      tmp = closure_15(tmp8(9788), {});
+      tmp = closure_15(tmp8(9789), {});
       obj10.children = tmp;
       let tmp19Result2 = closure_15(tmp21, obj10);
     } else {
@@ -347,17 +347,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj11.stickerFormats = stickerFormats;
       obj11.searchResults = tmp11;
       obj11.inPortalKeyboard = inPortalKeyboard;
-      tmp19Result2 = closure_15(tmp8(9789), obj11);
-      let tmp8Result = tmp8(9789);
+      tmp19Result2 = closure_15(tmp8(9790), obj11);
+      let tmp8Result = tmp8(9790);
     }
   } else {
     const obj12 = { animating: true, size: "large", style: tmp.loadingIndicator };
     items6[1] = closure_15(closure_6, obj12);
     const obj13 = { categories: stickerCategories, categoryIndex: tmp6[0], style: safeAreaStyle };
-    items6[2] = closure_15(tmp8(9795), obj13);
+    items6[2] = closure_15(tmp8(9796), obj13);
     obj7.children = items6;
     obj6.children = closure_16(tmp21, obj7);
-    return closure_15(channel(6851).AnalyticsLocationProvider, obj6);
+    return closure_15(channel(6852).AnalyticsLocationProvider, obj6);
   }
-  obj5 = onPressSticker(6884);
+  obj5 = onPressSticker(6885);
 }));

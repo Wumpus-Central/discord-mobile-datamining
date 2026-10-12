@@ -4,7 +4,7 @@
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
-import _modDef6847 from "module_6847" /* 6847 */;
+import _modDef6848 from "module_6848" /* 6848 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
         let tmp8 = cResult[5];
       }
       if (cResult[6] !== tmp4.collapseIcon) {
-        const obj4 = { source: _modDef6847, style: tmp4.collapseIcon };
+        const obj4 = { source: _modDef6848, style: tmp4.collapseIcon };
         const tmp16 = closure_6(collapsed(1200).Icon, obj4);
         cResult[6] = tmp4.collapseIcon;
         cResult[7] = tmp16;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
   const obj7 = { style: tmp.collapseButton, children: null };
   const obj8 = { style: animatedStyle, children: null };
   let obj2 = { withTiming: collapsed(5093).withTiming, collapsed };
-  obj8.children = closure_6(tmp2(1200).Icon, { source: _modDef6847, style: tmp.collapseIcon });
+  obj8.children = closure_6(tmp2(1200).Icon, { source: _modDef6848, style: tmp.collapseIcon });
   obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
   items1[2] = closure_6(closure_4, obj7);
   obj4.children = items1;

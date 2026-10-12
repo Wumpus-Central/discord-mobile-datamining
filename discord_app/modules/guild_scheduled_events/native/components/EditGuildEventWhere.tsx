@@ -1,12 +1,12 @@
-// === Module 8573: EditGuildEventWhere ===
+// === Module 8574: EditGuildEventWhere ===
 
-// Module 8573 (EditGuildEventWhere)
+// Module 8574 (EditGuildEventWhere)
 import util from "util" /* 1126 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
 import _modDef4702 from "module_4702" /* 4702 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8519 */;
-import EntityUtils from "EntityUtils" /* 8523 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8637 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8520 */;
+import EntityUtils from "EntityUtils" /* 8524 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     }
     function handleChangeEventEntityType(entityType) {
       _slicedToArray(null);
-      const obj = { entityType, scheduledEndTime: "Array" };
+      const obj = { entityType, scheduledEndTime: "r" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef4702(guildEvent.scheduledStartTime);
         if (obj2 == null) {
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
       entityType: guildEvent.entityType,
       onChange: function handleChangeEventEntityType(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "Array" };
+        const obj = { entityType, scheduledEndTime: "r" };
         if (entityType === constants.EXTERNAL) {
           let obj2 = _modDef4702(guildEvent.scheduledStartTime);
           if (obj2 == null) {
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     entityType: guildEvent.entityType,
     onChange: function handleChangeEventEntityType(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "Array" };
+      const obj = { entityType, scheduledEndTime: "r" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef4702(guildEvent.scheduledStartTime);
         if (obj2 == null) {

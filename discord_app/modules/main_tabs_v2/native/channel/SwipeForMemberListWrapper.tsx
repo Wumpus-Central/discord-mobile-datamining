@@ -1,6 +1,6 @@
-// === Module 17308: SwipeForMemberListWrapper ===
+// === Module 17365: SwipeForMemberListWrapper ===
 
-// Module 17308 (SwipeForMemberListWrapper)
+// Module 17365 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,8 +12,8 @@ import useChatLayout from "useChatLayout" /* 4979 */;
 import ChatInputUtils from "ChatInputUtils" /* 4985 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
 import useMountEffect from "useMountEffect" /* 5396 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 16424 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16819 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 16447 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16843 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,9 +24,9 @@ require = fn;
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9310);
+const ChannelDetailsStore = fn(9311);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9298).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9299).ONYX_BORDER_WIDTH;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);

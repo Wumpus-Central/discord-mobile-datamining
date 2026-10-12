@@ -1,22 +1,22 @@
-// === Module 9246: AppLauncherUtils ===
+// === Module 9247: AppLauncherUtils ===
 
-// Module 9246 (AppLauncherUtils)
+// Module 9247 (AppLauncherUtils)
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import Server from "Server" /* 1998 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7242 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8610 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9232 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10622 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7243 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9233 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10623 */;
 import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10861 */;
-import getPlatformDefault from "getPlatform" /* 11716 */;
+import getPlatformDefault from "getPlatform" /* 11718 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9247 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9248 */;
 import ApplicationRecord from "ApplicationRecord" /* 2022 */;
-import AppLauncherStore from "AppLauncherStore" /* 11773 */;
+import AppLauncherStore from "AppLauncherStore" /* 11775 */;
 
 const require = globalThis.__r;
 
@@ -155,7 +155,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -223,7 +223,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;

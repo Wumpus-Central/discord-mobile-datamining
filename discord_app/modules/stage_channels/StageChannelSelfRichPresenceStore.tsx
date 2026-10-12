@@ -8,7 +8,7 @@ import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
 import useChannelName from "useChannelName" /* 5421 */;
 import StageMediaHooks from "StageMediaHooks" /* 5895 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5950 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10253 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10254 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;

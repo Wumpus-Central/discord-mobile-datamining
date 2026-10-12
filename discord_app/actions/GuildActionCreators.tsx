@@ -1,6 +1,6 @@
-// === Module 6097: GuildActionCreators ===
+// === Module 6098: GuildActionCreators ===
 
-// Module 6097 (GuildActionCreators)
+// Module 6098 (GuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
@@ -11,12 +11,12 @@ import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
 import AgeGateUtils from "AgeGateUtils" /* 5924 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
 import SpoilerChannelUtils from "SpoilerChannelUtils" /* 5944 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7027 */;
-import LurkerActionCreators from "LurkerActionCreators" /* 7038 */;
-import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 7039 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7028 */;
+import LurkerActionCreators from "LurkerActionCreators" /* 7039 */;
+import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 7040 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BulkBanStore from "BulkBanStore" /* 6098 */;
+import BulkBanStore from "BulkBanStore" /* 6099 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5964 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;
@@ -51,7 +51,7 @@ let closure_26 = async function _joinGuild(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -379,7 +379,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -454,7 +454,7 @@ export default {
             return obj;
           } else {
             c5 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp36) {
           c5 = tmp;
@@ -560,7 +560,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -604,7 +604,7 @@ export default {
             }
             dependencyMap = 0;
             c4 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp25) {
           closure_2 = tmp25;
@@ -642,7 +642,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -712,7 +712,7 @@ export default {
               obj6(584).dispatch(obj10);
               const obj = obj6(584);
             }
-            const result = obj6(7027).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(7028).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -751,7 +751,7 @@ export default {
       request.rejectWithError = tmp5(1295).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(7027).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(7028).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -777,7 +777,7 @@ export default {
       const request = { url: closure_1_16.GUILD_CHANNELS(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1295).rejectWithMigratedError() };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7027).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7028).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -790,7 +790,7 @@ export default {
       const request = { url: closure_1_16.GUILD_ROLES(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1295).rejectWithMigratedError() };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7027).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7028).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -944,7 +944,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -982,7 +982,7 @@ export default {
             const obj8 = { type: "GUILD_APPLICATIONS_FETCH_SUCCESS", guildId: closure_129_0, applications: body };
             tmp2(584).dispatch(obj8);
             dependencyMap = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp14) {
           dependencyMap = tmp;
@@ -1009,7 +1009,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1049,7 +1049,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -1073,7 +1073,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1124,7 +1124,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp11) {
           v3 = tmp;
@@ -1146,7 +1146,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1182,7 +1182,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -1216,7 +1216,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1246,7 +1246,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -1269,7 +1269,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -1299,7 +1299,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp5) {
           v3 = tmp;

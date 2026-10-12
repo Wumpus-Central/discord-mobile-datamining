@@ -1,6 +1,6 @@
-// === Module 8816: KeyFingerprint ===
+// === Module 8817: KeyFingerprint ===
 
-// Module 8816 (KeyFingerprint)
+// Module 8817 (KeyFingerprint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _generateKeyFingerprint(arg0) {
@@ -14,7 +14,7 @@ let closure_1 = async function _generateKeyFingerprint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

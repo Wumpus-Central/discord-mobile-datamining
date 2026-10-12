@@ -1,6 +1,6 @@
-// === Module 13654: ApplePurchasesStore ===
+// === Module 13677: ApplePurchasesStore ===
 
-// Module 13654 (ApplePurchasesStore)
+// Module 13677 (ApplePurchasesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

@@ -1,24 +1,24 @@
-// === Module 13063: MediaMessagePreview ===
+// === Module 13068: MediaMessagePreview ===
 
-// Module 13063 (MediaMessagePreview)
+// Module 13068 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
-import RowGeneratorDefault from "RowGenerator" /* 7746 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7899 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8263 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9382 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 9613 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 9676 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 13064 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
+import RowGeneratorDefault from "RowGenerator" /* 7747 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7900 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8264 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9383 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 9614 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 9677 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 13069 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6978 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6979 */;
 import SearchMessageStore from "SearchMessageStore" /* 6062 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import MessageStore from "MessageStore" /* 5432 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8480 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8481 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

@@ -1,12 +1,12 @@
-// === Module 9079: CollectiblesShopCardVariants ===
+// === Module 9080: CollectiblesShopCardVariants ===
 
-// Module 9079 (CollectiblesShopCardVariants)
+// Module 9080 (CollectiblesShopCardVariants)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6822 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9044 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9080 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9081 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6823 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9045 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9081 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 9082 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -235,8 +235,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let variants = product.product;
   const tmp2 = closure_6();
   const obj = defaultVariantIndex(576);
-  defaultVariantIndex = defaultVariantIndex(8968).useDefaultVariantIndex(variants);
-  const obj2 = defaultVariantIndex(8968);
+  defaultVariantIndex = defaultVariantIndex(8969).useDefaultVariantIndex(variants);
+  const obj2 = defaultVariantIndex(8969);
   if (obj3.getIsVariantProduct(variants)) {
     let num3 = 3;
     if (variants.variants.length <= 4) {
@@ -308,13 +308,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     return null;
   }
-  obj3 = defaultVariantIndex(7274);
+  obj3 = defaultVariantIndex(7275);
 }) : (function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
   const tmp = closure_6();
-  defaultVariantIndex = defaultVariantIndex(8968).useDefaultVariantIndex(product);
-  const obj = defaultVariantIndex(8968);
+  defaultVariantIndex = defaultVariantIndex(8969).useDefaultVariantIndex(product);
+  const obj = defaultVariantIndex(8969);
   if (obj2.getIsVariantProduct(product)) {
     let num3 = 3;
     if (product.variants.length <= 4) {
@@ -340,5 +340,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7274);
+  obj2 = defaultVariantIndex(7275);
 }));

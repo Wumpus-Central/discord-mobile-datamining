@@ -1,8 +1,8 @@
-// === Module 16456: AddFriendsScreenUtils ===
+// === Module 16479: AddFriendsScreenUtils ===
 
-// Module 16456 (AddFriendsScreenUtils)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7017 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10229 */;
+// Module 16479 (AddFriendsScreenUtils)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10230 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
@@ -18,7 +18,7 @@ let closure_7 = async function _sendWave(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

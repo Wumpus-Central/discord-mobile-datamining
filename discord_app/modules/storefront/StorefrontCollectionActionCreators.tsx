@@ -1,13 +1,13 @@
-// === Module 9091: StorefrontCollectionActionCreators ===
+// === Module 9092: StorefrontCollectionActionCreators ===
 
-// Module 9091 (StorefrontCollectionActionCreators)
+// Module 9092 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import StoreUtils from "StoreUtils" /* 5644 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8345 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8346 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9089 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7282 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9090 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7283 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
@@ -21,7 +21,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -182,7 +182,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -286,7 +286,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionPageFetchedAt <= closure_130_17) {
                         c7 = 3;
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     }
                   }
@@ -372,7 +372,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -424,7 +424,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionsAfterFetchedAt <= TWELVE_HOURS_MS) {
                         c6 = 3;
-                        return { value: "IconComponent", done: "+51" };
+                        return { value: "IconComponent", done: null };
                       }
                     }
                   }
@@ -493,7 +493,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -575,7 +575,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
                       }
                     }
                     c6 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 }
                 c4 = 1;

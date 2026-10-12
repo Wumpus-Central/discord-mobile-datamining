@@ -1,11 +1,11 @@
-// === Module 12075: SuggestedSearchActionCreators ===
+// === Module 12077: SuggestedSearchActionCreators ===
 
-// Module 12075 (SuggestedSearchActionCreators)
+// Module 12077 (SuggestedSearchActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SmartSearchExperiments from "SmartSearchExperiments" /* 12074 */;
+import SmartSearchExperiments from "SmartSearchExperiments" /* 12076 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 12035 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 12037 */;
 
 require = fn;
 function canFetchSuggestedSearches(guildId) {
@@ -41,7 +41,7 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -175,7 +175,7 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -205,14 +205,14 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     } catch (tmp10) {
       c2 = tmp;
       throw tmp10;
     }
   }
 };
-const SmartSearchConstants = fn(12036);
+const SmartSearchConstants = fn(12038);
 ({ SUGGESTED_SEARCHES_REQUEST_LIMIT: hasOwnProperty, SUGGESTED_SEARCHES_RETRY_MIN_MS, SUGGESTED_SEARCHES_RETRY_MAX_MS } = SmartSearchConstants);
 const Constants = fn(1085);
 ({ Endpoints: metroRequire, NOOP: closure_7 } = Constants);

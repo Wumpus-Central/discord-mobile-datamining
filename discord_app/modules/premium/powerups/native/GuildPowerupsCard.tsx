@@ -1,9 +1,9 @@
-// === Module 12303: GuildPowerupsCard ===
+// === Module 12305: GuildPowerupsCard ===
 
-// Module 12303 (GuildPowerupsCard)
+// Module 12305 (GuildPowerupsCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Card from "Card" /* 6181 */;
+import Card from "Card" /* 6182 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import n_mod from "module_683" /* 683 */;

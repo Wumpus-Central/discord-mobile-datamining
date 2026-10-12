@@ -2,8 +2,8 @@
 
 // Module 11040 (MicrophoneSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import assetHelpers from "assetHelpers" /* 6272 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import assetHelpers from "assetHelpers" /* 6273 */;
 import _modDef11041 from "module_11041" /* 11041 */;
 import _modDef11042 from "module_11042" /* 11042 */;
 import _modDef11043 from "module_11043" /* 11043 */;

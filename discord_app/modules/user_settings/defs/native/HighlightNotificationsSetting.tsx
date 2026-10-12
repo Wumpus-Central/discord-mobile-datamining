@@ -1,6 +1,6 @@
-// === Module 15798: HighlightNotificationsSetting ===
+// === Module 15821: HighlightNotificationsSetting ===
 
-// Module 15798 (HighlightNotificationsSetting)
+// Module 15821 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -33,7 +33,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(7992).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7993).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);

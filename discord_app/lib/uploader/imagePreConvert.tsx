@@ -1,9 +1,9 @@
-// === Module 9263: imagePreConvert ===
+// === Module 9264: imagePreConvert ===
 
-// Module 9263 (imagePreConvert)
+// Module 9264 (imagePreConvert)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import UploadPlatform from "UploadPlatform" /* 7758 */;
-import imageFilename from "imageFilename" /* 7787 */;
+import UploadPlatform from "UploadPlatform" /* 7759 */;
+import imageFilename from "imageFilename" /* 7788 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -46,7 +46,7 @@ let closure_5 = async function _maybePreConvertImageItem() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

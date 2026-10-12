@@ -1,10 +1,10 @@
-// === Module 8611: TableRowApplicationIcon ===
+// === Module 8612: TableRowApplicationIcon ===
 
-// Module 8611 (TableRowApplicationIcon)
+// Module 8612 (TableRowApplicationIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import FastImageDefault from "FastImage" /* 6156 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

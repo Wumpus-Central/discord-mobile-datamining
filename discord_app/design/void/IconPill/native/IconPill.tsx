@@ -1,10 +1,10 @@
-// === Module 14379: IconPill ===
+// === Module 14402: IconPill ===
 
-// Module 14379 (IconPill)
+// Module 14402 (IconPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import IconDefault from "Icon" /* 5381 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8596 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8597 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

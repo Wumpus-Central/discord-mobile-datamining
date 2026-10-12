@@ -1,6 +1,6 @@
-// === Module 9278: PremiumUpsellActionSheet ===
+// === Module 9279: PremiumUpsellActionSheet ===
 
-// Module 9278 (PremiumUpsellActionSheet)
+// Module 9279 (PremiumUpsellActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
@@ -12,20 +12,20 @@ import useToken from "useToken" /* 4818 */;
 import ChatInputUtils from "ChatInputUtils" /* 4985 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import FileUtils from "FileUtils" /* 7764 */;
-import UploadLimits from "UploadLimits" /* 7779 */;
-import APNGPlayer from "APNGPlayer" /* 9011 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9277 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9280 */;
-import MobileEmojiPickerUpsellRestyleExperiment from "MobileEmojiPickerUpsellRestyleExperiment" /* 9281 */;
-import ReactionsSpotIllustration from "ReactionsSpotIllustration" /* 9282 */;
-import StickersSpotIllustration from "StickersSpotIllustration" /* 9286 */;
-import _modDef9290 from "module_9290" /* 9290 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import FileUtils from "FileUtils" /* 7765 */;
+import UploadLimits from "UploadLimits" /* 7780 */;
+import APNGPlayer from "APNGPlayer" /* 9012 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9278 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9281 */;
+import MobileEmojiPickerUpsellRestyleExperiment from "MobileEmojiPickerUpsellRestyleExperiment" /* 9282 */;
+import ReactionsSpotIllustration from "ReactionsSpotIllustration" /* 9283 */;
+import StickersSpotIllustration from "StickersSpotIllustration" /* 9287 */;
 import _modDef9291 from "module_9291" /* 9291 */;
-import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9292 */;
-import NitroScheduleMessageSpotIllustration from "NitroScheduleMessageSpotIllustration" /* 12881 */;
-import _modDef12885 from "module_12885" /* 12885 */;
+import _modDef9292 from "module_9292" /* 9292 */;
+import ScheduledMessagesUtils from "ScheduledMessagesUtils" /* 9293 */;
+import NitroScheduleMessageSpotIllustration from "NitroScheduleMessageSpotIllustration" /* 12883 */;
+import _modDef12887 from "module_12887" /* 12887 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
@@ -40,7 +40,7 @@ const PremiumConstants = fn(1392);
 const Constants = fn(1085);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
 const ApplicationStreamFPS = fn(5212).ApplicationStreamFPS;
-const premiumMax = fn(9279).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(9280).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
 const createStyles = fn(5092);
@@ -96,7 +96,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePag
                   obj5.description = intl11.string(util.t.jBqF2k);
                   obj5.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
                   obj5.upsellType = constants.CLIENT_THEMES_UPSELL;
-                  obj5.image = _modDef9290;
+                  obj5.image = _modDef9291;
                   cResult[37] = obj5;
                   let tmp63 = obj5;
                 } else {
@@ -111,7 +111,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePag
                   obj6.description = intl13.string(util.t.HDt8ip);
                   obj6.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
                   obj6.upsellType = constants.APP_ICON_UPSELL;
-                  obj6.image = _modDef9291;
+                  obj6.image = _modDef9292;
                   cResult[38] = obj6;
                   let tmp66 = obj6;
                 } else {
@@ -220,7 +220,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePag
                   cResult[58] = obj12;
                   tmp89 = obj12;
                 }
-                const obj13 = { title: tmp81, description: tmp82, analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY, upsellType: constants.STREAM_QUALITY_UPSELL, image: _modDef12885, imageGradientBackground: null };
+                const obj13 = { title: tmp81, description: tmp82, analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY, upsellType: constants.STREAM_QUALITY_UPSELL, image: _modDef12887, imageGradientBackground: null };
                 const obj14 = { colors: null, start: null, end: null };
                 const items = [token, token1];
                 obj14.colors = items;
@@ -457,7 +457,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePag
   obj14.description = intl11.string(util.t.jBqF2k);
   obj14.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
   obj14.upsellType = constants.CLIENT_THEMES_UPSELL;
-  obj14.image = _modDef9290;
+  obj14.image = _modDef9291;
   obj3[EntitlementFeatureNames.EntitlementFeatureNames.CLIENT_THEMES] = obj14;
   const obj15 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
   const intl12 = util.intl;
@@ -466,7 +466,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePag
   obj15.description = intl13.string(util.t.HDt8ip);
   obj15.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
   obj15.upsellType = constants.APP_ICON_UPSELL;
-  obj15.image = _modDef9291;
+  obj15.image = _modDef9292;
   obj3[EntitlementFeatureNames.EntitlementFeatureNames.APP_ICONS] = obj15;
   const obj16 = { title: null, showBetaBadge: true, description: null, analyticsPage: null, upsellType: null, illustration: null };
   const intl14 = util.intl;
@@ -492,7 +492,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePag
   obj20.description = intl17.formatToPlainString(util.t["4nlpei"], { fps: ApplicationStreamFPS.FPS_60 });
   obj20.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
   obj20.upsellType = constants.STREAM_QUALITY_UPSELL;
-  obj20.image = _modDef12885;
+  obj20.image = _modDef12887;
   const obj22 = { colors: null, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END };
   const items = [token, token1];
   obj22.colors = items;

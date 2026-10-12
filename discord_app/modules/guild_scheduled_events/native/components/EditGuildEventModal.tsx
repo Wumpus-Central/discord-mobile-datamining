@@ -1,16 +1,16 @@
-// === Module 8569: EditGuildEventModal ===
+// === Module 8570: EditGuildEventModal ===
 
-// Module 8569 (EditGuildEventModal)
+// Module 8570 (EditGuildEventModal)
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8518 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8519 */;
-import EntityUtils from "EntityUtils" /* 8523 */;
-import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8537 */;
-import useGetEventChannelsByType from "useGetEventChannelsByType" /* 8570 */;
-import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 8573 */;
-import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 8646 */;
-import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 8647 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8519 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8520 */;
+import EntityUtils from "EntityUtils" /* 8524 */;
+import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8538 */;
+import useGetEventChannelsByType from "useGetEventChannelsByType" /* 8571 */;
+import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 8574 */;
+import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 8647 */;
+import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 8648 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -179,7 +179,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -207,7 +207,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return obj;
         } else if (null == value) {
           c2 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         } else {
           if (!closure_128_5) {
             const AccessibilityAnnouncer = tmp4(4828).AccessibilityAnnouncer;

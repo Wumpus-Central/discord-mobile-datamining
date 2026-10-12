@@ -1,6 +1,6 @@
-// === Module 15314: BountiesModalContent ===
+// === Module 15337: BountiesModalContent ===
 
-// Module 15314 (BountiesModalContent)
+// Module 15337 (BountiesModalContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
@@ -12,18 +12,18 @@ import timing from "timing" /* 5093 */;
 import timingPresets from "timingPresets" /* 5096 */;
 import QuestContent from "QuestContent" /* 5977 */;
 import AdCreativeType from "AdCreativeType" /* 5979 */;
-import QuestDataUtils from "QuestDataUtils" /* 7386 */;
-import AnalyticsActions from "AnalyticsActions" /* 7406 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7415 */;
-import AnimationUtils from "AnimationUtils" /* 12785 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 12942 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 12964 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 12981 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15260 */;
+import QuestDataUtils from "QuestDataUtils" /* 7387 */;
+import AnalyticsActions from "AnalyticsActions" /* 7407 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7416 */;
+import AnimationUtils from "AnimationUtils" /* 12787 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 12944 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 12966 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 12983 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7389 */;
+import BountyStore from "BountyStore" /* 7390 */;
 
 require = fn;
 function doRewardEarnedHapticFeedback() {
@@ -56,7 +56,7 @@ function doRewardEarnedHapticFeedback() {
 let View = fn(17).View;
 const QuestConstants = fn(5972);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(15264);
+const BountiesModalConstants = fn(15287);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -193,8 +193,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                           }
                           const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                           const tmpResult = tmp(504);
-                          const balance = tmp(9060).useFetchVirtualCurrencyBalance().balance;
-                          const tmpResult2 = tmp(9060);
+                          const balance = tmp(9061).useFetchVirtualCurrencyBalance().balance;
+                          const tmpResult2 = tmp(9061);
                           [tmp25, _slicedToArray] = noop.useState(null);
                           if (tmp25 == null) {
                             class F {
@@ -279,7 +279,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                                 const obj3 = { value, done: true };
                                 return obj3;
                               } else {
-                                return { value: "IconComponent", done: "+51" };
+                                return { value: "IconComponent", done: null };
                               }
                             } else {
                               try {
@@ -341,7 +341,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
                                     }
                                   }
                                   ref = 3;
-                                  return { value: "IconComponent", done: "+51" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } catch (tmp40) {
                                 if (tmp4 === c3) {
@@ -506,7 +506,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -567,7 +567,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
             }
           }
           c5 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp40) {
         if (tmp4 === c3) {

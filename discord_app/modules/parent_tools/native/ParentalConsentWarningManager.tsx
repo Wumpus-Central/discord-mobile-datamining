@@ -1,14 +1,14 @@
-// === Module 18159: ParentalConsentWarningManager ===
+// === Module 18217: ParentalConsentWarningManager ===
 
-// Module 18159 (ParentalConsentWarningManager)
+// Module 18217 (ParentalConsentWarningManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 15124 */;
-import ParentalConsentWarningActionCreators from "ParentalConsentWarningActionCreators" /* 18166 */;
+import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 15147 */;
+import ParentalConsentWarningActionCreators from "ParentalConsentWarningActionCreators" /* 18224 */;
 import ActionSheetStore from "ActionSheetStore" /* 4802 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7258 */;
-import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 15123 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7259 */;
+import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 15146 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
 function maybePresentModal(daysRemaining) {
@@ -46,10 +46,10 @@ function maybePresentModal(daysRemaining) {
   }
   if (tmp5) {
     const obj = { daysRemaining };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18160, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18218, dependencyMap.paths), "ParentalConsentWarningModal", obj);
   }
 }
-const FamilyCenterConstants = fn(7259);
+const FamilyCenterConstants = fn(7260);
 ({ UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const AppStates = fn(1085).AppStates;
 const prototype = function ParentalConsentWarningManager() {

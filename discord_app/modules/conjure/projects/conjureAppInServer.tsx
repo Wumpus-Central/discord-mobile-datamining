@@ -1,9 +1,9 @@
 // === Module 11409: conjureAppInServer ===
 
 // Module 11409 (conjureAppInServer)
-import ConjureUtils from "ConjureUtils" /* 6945 */;
+import ConjureUtils from "ConjureUtils" /* 6946 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
-import UserProfileStore from "UserProfileStore" /* 7320 */;
+import UserProfileStore from "UserProfileStore" /* 7321 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
@@ -135,7 +135,7 @@ export const readConjureAppServerPresence = function readConjureAppServerPresenc
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(6946);
+              obj2 = application_id(6947);
             }
             str2 = tmp7;
           }

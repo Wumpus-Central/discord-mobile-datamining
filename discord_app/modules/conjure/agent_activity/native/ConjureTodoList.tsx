@@ -1,15 +1,15 @@
-// === Module 17236: ConjureTodoList ===
+// === Module 17279: ConjureTodoList ===
 
-// Module 17236 (ConjureTodoList)
+// Module 17279 (ConjureTodoList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FormCheckbox from "FormCheckbox" /* 6177 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 17131 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 17216 */;
-import ConjureTodoState from "ConjureTodoState" /* 17237 */;
+import FormCheckbox from "FormCheckbox" /* 6178 */;
+import ConjureTodoState from "ConjureTodoState" /* 17175 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 17187 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 17194 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -356,7 +356,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoMa
     stringResult1 = intl6.string(_modDef3849.lRpwhD);
     tmp21 = require;
   }
-  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6177).FormCheckbox, { checked: "completed" === status }) };
+  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6178).FormCheckbox, { checked: "completed" === status }) };
 });
 ReactCompilerGating = fn(558);
 const obj10 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_INFO };
@@ -542,7 +542,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                                 obj2.showLabel = tmp31;
                                 obj2.hideLabel = tmp32;
                                 obj2.children = tmp49;
-                                const tmp56 = closure_6(textCompleted(17150), obj2);
+                                const tmp56 = closure_6(textCompleted(17280), obj2);
                                 cResult[40] = tmp6;
                                 cResult[41] = onToggleExpanded;
                                 cResult[42] = tmp5;
@@ -836,7 +836,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
           }
         }
         const obj5 = { accessibilityLiveRegion: str4, accessibilityLabel: tmp10, children: tmp9 };
-        const tmp29 = closure_6(tmp(17150).ConjureNativeCollapsibleMeta, obj5);
+        const tmp29 = closure_6(tmp(17280).ConjureNativeCollapsibleMeta, obj5);
         cResult[13] = tmp9;
         cResult[14] = tmp10;
         cResult[15] = str4;
@@ -860,11 +860,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     tmp14 = cResult[9];
   }
   if (cResult[10] !== tmp14) {
-    const groupAgentsByTodoResult = tmp(17216).groupAgentsByTodo(tmp14);
+    const groupAgentsByTodoResult = tmp(17187).groupAgentsByTodo(tmp14);
     cResult[10] = tmp14;
     cResult[11] = groupAgentsByTodoResult;
     let tmp16 = groupAgentsByTodoResult;
-    const tmpResult = tmp(17216);
+    const tmpResult = tmp(17187);
   } else {
     tmp16 = cResult[11];
   }
@@ -985,7 +985,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       str = "polite";
     }
   }
-  obj.meta = closure_6(agents(17150).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj.meta = closure_6(agents(17280).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj.showHeader = todos.length > 0;
   obj.superseded = flag3;
   obj.expanded = flag4;
@@ -1040,6 +1040,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   items1[1] = tmp10Result;
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(flag2(17150), obj);
+  return closure_6(flag2(17280), obj);
 });
 export { todoProgress };

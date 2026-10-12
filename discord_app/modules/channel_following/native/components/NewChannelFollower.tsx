@@ -1,12 +1,12 @@
-// === Module 12175: NewChannelFollower ===
+// === Module 12177: NewChannelFollower ===
 
-// Module 12175 (NewChannelFollower)
+// Module 12177 (NewChannelFollower)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import openChannelPickerDefault from "openChannelPicker" /* 12178 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 12181 */;
+import openChannelPickerDefault from "openChannelPicker" /* 12180 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 12183 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -89,9 +89,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("module_12176");
+    let tmp8Result = require("module_12178");
   } else {
-    tmp8Result = require("module_12177");
+    tmp8Result = require("module_12179");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { style: tmp.header, children: null };
@@ -174,8 +174,8 @@ export default function NewChannelFollower(targetChannelId) {
     obj2.onClose = function onClose() {
       closure_1_4(targetGuildId, targetChannelId);
     };
-    obj.openLazy(asyncRequireImpl(8553, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
-    const tmp = asyncRequireImpl(8553, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(8554, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
+    const tmp = asyncRequireImpl(8554, dependencyMap.paths);
   };
   obj15.children = closure_15(require("TableRow").TableRow, obj16);
   const items7 = [closure_15(require("TableRowGroup").TableRowGroup, obj15), ];

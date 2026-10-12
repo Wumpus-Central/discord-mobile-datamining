@@ -1,8 +1,8 @@
-// === Module 11688: ForumPostAppliedTags ===
+// === Module 11690: ForumPostAppliedTags ===
 
-// Module 11688 (ForumPostAppliedTags)
+// Module 11690 (ForumPostAppliedTags)
 import nativeDefault from "native" /* 587 */;
-import AppliedForumTag from "AppliedForumTag" /* 10014 */;
+import AppliedForumTag from "AppliedForumTag" /* 10015 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,7 +67,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostApp
             obj3.tag = obj4;
             obj3.containerStyle = tmp4.tag;
             obj3.hasUnreads = hasUnreads;
-            tmp11 = closure_3(hasUnreads(10014).AppliedForumTagPill, obj3);
+            tmp11 = closure_3(hasUnreads(10015).AppliedForumTagPill, obj3);
           }
           cResult[10] = num;
           cResult[11] = hasUnreads;
@@ -123,7 +123,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostApp
     obj2.tag = obj3;
     obj2.containerStyle = tmp.tag;
     obj2.hasUnreads = hasUnreads;
-    tmp4 = closure_3(hasUnreads(10014).AppliedForumTagPill, obj2);
+    tmp4 = closure_3(hasUnreads(10015).AppliedForumTagPill, obj2);
   }
   items1[1] = tmp4;
   obj.children = items1;

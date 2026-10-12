@@ -1,15 +1,15 @@
-// === Module 15271: BountiesScrollVideoItem ===
+// === Module 15294: BountiesScrollVideoItem ===
 
-// Module 15271 (BountiesScrollVideoItem)
+// Module 15294 (BountiesScrollVideoItem)
 import QuestContent from "QuestContent" /* 5977 */;
 import AdCreativeType from "AdCreativeType" /* 5979 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 12981 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15272 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 12983 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9062 */;
-import BountyStore from "BountyStore" /* 7389 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9063 */;
+import BountyStore from "BountyStore" /* 7390 */;
 
 require = fn;
 const View = fn(17).View;
@@ -292,7 +292,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -348,7 +348,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
               });
             }
             c5 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp27) {
           closure_2 = tmp27;
@@ -471,7 +471,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -526,7 +526,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
             });
           }
           c5 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp27) {
         if (tmp4 === c3) {
@@ -731,7 +731,7 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(12981).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(12983).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(5979).AdCreativeType.BOUNTY,
     questContent: bounty(5977).QuestContent.VIDEO_MODAL_MOBILE,

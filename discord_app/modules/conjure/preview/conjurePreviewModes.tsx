@@ -1,8 +1,8 @@
-// === Module 17079: conjurePreviewModes ===
+// === Module 17113: conjurePreviewModes ===
 
-// Module 17079 (conjurePreviewModes)
-import ConjureTypes from "ConjureTypes" /* 6946 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11416 */;
+// Module 17113 (conjurePreviewModes)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11424 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -31,13 +31,13 @@ export const previewCapabilitiesFromSurfaces = function previewCapabilitiesFromS
     if (0 !== previewSupportedSurfaces.length) {
       obj = { hasFrame: conjurePreviewFrameSurfaces.declaresPreviewFrame(previewSupportedSurfaces), hasProfileWidget: null, hasBotDm: null };
       if (widgetResolvable) {
-        widgetResolvable = previewSupportedSurfaces.includes(ConjureTypes.ConjureSupportedSurface.PROFILE_WIDGET);
+        widgetResolvable = previewSupportedSurfaces.includes(ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET);
       }
       obj.hasProfileWidget = widgetResolvable;
       if (botDmResolvable) {
-        let hasItem = previewSupportedSurfaces.includes(ConjureTypes.ConjureSupportedSurface.BOT);
+        let hasItem = previewSupportedSurfaces.includes(ConjureProjectTypes.ConjureSupportedSurface.BOT);
         if (!hasItem) {
-          hasItem = previewSupportedSurfaces.includes(ConjureTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
+          hasItem = previewSupportedSurfaces.includes(ConjureProjectTypes.ConjureSupportedSurface.APPLICATION_COMMANDS);
         }
         botDmResolvable = hasItem;
       }

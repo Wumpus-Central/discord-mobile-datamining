@@ -1,11 +1,11 @@
-// === Module 17562: ChannelSettingsChangeDefaultForumLayout ===
+// === Module 17619: ChannelSettingsChangeDefaultForumLayout ===
 
-// Module 17562 (ChannelSettingsChangeDefaultForumLayout)
+// Module 17619 (ChannelSettingsChangeDefaultForumLayout)
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9696 */;
-import _modDef17563 from "module_17563" /* 17563 */;
-import _modDef17564 from "module_17564" /* 17564 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9697 */;
+import _modDef17620 from "module_17620" /* 17620 */;
+import _modDef17621 from "module_17621" /* 17621 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -53,22 +53,22 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSet
     LIST = tmp(2075).ForumLayout.LIST;
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { icon: closure_7(tmp(17523).GridSquareIcon, {}), label: null, value: null };
+    let obj2 = { icon: closure_7(tmp(17580).GridSquareIcon, {}), label: null, value: null };
     const intl2 = tmp(1126).intl;
     obj2.label = intl2.string(tmp(1126).t["U+rQfW"]);
     obj2.value = tmp(2075).ForumLayout.GRID;
-    const tmp12 = closure_7(tmp(6261).TableRadioRow, obj2);
+    const tmp12 = closure_7(tmp(6262).TableRadioRow, obj2);
     cResult[3] = tmp12;
     let tmp10 = tmp12;
   } else {
     tmp10 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { icon: closure_7(tmp(6781).ListViewIcon, {}), label: null, value: null };
+    const obj3 = { icon: closure_7(tmp(6782).ListViewIcon, {}), label: null, value: null };
     const intl3 = tmp(1126).intl;
     obj3.label = intl3.string(tmp(1126).t.tuHPRX);
     obj3.value = tmp(2075).ForumLayout.LIST;
-    const tmp15 = closure_7(tmp(6261).TableRadioRow, obj3);
+    const tmp15 = closure_7(tmp(6262).TableRadioRow, obj3);
     cResult[4] = tmp15;
     let tmp13 = tmp15;
   } else {
@@ -101,18 +101,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSet
       const obj5 = { title: null };
       const intl5 = tmp(1126).intl;
       obj5.title = intl5.string(tmp(1126).t.e4oMl4);
-      const tmp25 = closure_7(tmp(6264).TableRowGroupTitle, obj5);
+      const tmp25 = closure_7(tmp(6265).TableRowGroupTitle, obj5);
       cResult[11] = tmp25;
       let tmp23 = tmp25;
     } else {
       tmp23 = cResult[11];
     }
     if (tmp6 === tmp(2075).ForumLayout.GRID) {
-      let tmp28 = _modDef17563;
+      let tmp28 = _modDef17620;
       let tmp27 = importDefault;
     } else {
       tmp27 = importDefault;
-      tmp28 = _modDef17564;
+      tmp28 = _modDef17621;
     }
     if (cResult[12] === tmp4.thumbnailImagePortrait) {
       if (cResult[13] === tmp28) {
@@ -140,7 +140,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSet
       tmp33 = tmp36;
     }
     const obj7 = { style: tmp4.thumbnailImagePortrait, source: tmp28 };
-    const tmp32 = closure_7(tmp27(6156), obj7);
+    const tmp32 = closure_7(tmp27(6157), obj7);
     cResult[12] = tmp4.thumbnailImagePortrait;
     cResult[13] = tmp28;
     cResult[14] = tmp32;
@@ -149,7 +149,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSet
   const obj8 = { title: tmp8, defaultValue: LIST, onChange: tmp7, hasIcons: true, children: null };
   const items1 = [tmp10, tmp13];
   obj8.children = items1;
-  const tmp17 = closure_8(channel(6262).TableRadioGroup, obj8);
+  const tmp17 = closure_8(channel(6263).TableRadioGroup, obj8);
   cResult[5] = tmp7;
   cResult[6] = LIST;
   cResult[7] = tmp17;
@@ -177,18 +177,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSet
   }
   obj2.defaultValue = LIST;
   obj2.onChange = callback;
-  const obj3 = { icon: closure_7(channel(17523).GridSquareIcon, {}), label: null, value: null };
+  const obj3 = { icon: closure_7(channel(17580).GridSquareIcon, {}), label: null, value: null };
   const intl2 = tmp7(1126).intl;
   obj3.label = intl2.string(channel(1126).t["U+rQfW"]);
   obj3.value = channel(2075).ForumLayout.GRID;
-  const items1 = [closure_7(channel(6261).TableRadioRow, obj3), ];
-  const obj4 = { icon: closure_7(channel(6781).ListViewIcon, {}), label: null, value: null };
+  const items1 = [closure_7(channel(6262).TableRadioRow, obj3), ];
+  const obj4 = { icon: closure_7(channel(6782).ListViewIcon, {}), label: null, value: null };
   const intl3 = tmp7(1126).intl;
   obj4.label = intl3.string(channel(1126).t.tuHPRX);
   obj4.value = channel(2075).ForumLayout.LIST;
-  items1[1] = closure_7(channel(6261).TableRadioRow, obj4);
+  items1[1] = closure_7(channel(6262).TableRadioRow, obj4);
   obj2.children = items1;
-  const items2 = [closure_8(channel(6262).TableRadioGroup, obj2), , , ];
+  const items2 = [closure_8(channel(6263).TableRadioGroup, obj2), , , ];
   const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp7(1126).intl;
   obj5.children = intl4.string(channel(1126).t.MbX5Hu);
@@ -196,13 +196,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSet
   const obj6 = { title: null };
   const intl5 = tmp7(1126).intl;
   obj6.title = intl5.string(channel(1126).t.e4oMl4);
-  items2[2] = closure_7(channel(6264).TableRowGroupTitle, obj6);
+  items2[2] = closure_7(channel(6265).TableRowGroupTitle, obj6);
   const obj7 = { style: tmp.thumbnailImagePortrait, source: null };
   const tmp2 = _slicedToArray(noop.useState(channel.defaultForumLayout), 2);
   if (tmp3 === channel(2075).ForumLayout.GRID) {
-    let tmp10Result = tmp10(17563);
+    let tmp10Result = tmp10(17620);
   } else {
-    tmp10Result = tmp10(17564);
+    tmp10Result = tmp10(17621);
   }
   obj7.source = tmp10Result;
   items2[3] = closure_7(FastImageDefault, obj7);

@@ -1,6 +1,6 @@
-// === Module 17269: ConjureFloatingActivity ===
+// === Module 17317: ConjureFloatingActivity ===
 
-// Module 17269 (ConjureFloatingActivity)
+// Module 17317 (ConjureFloatingActivity)
 import nativeDefault from "native" /* 587 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
     if (null != todos) {
       const obj4 = { style: tmp.panel, children: null };
       const obj5 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj4.children = closure_6(tmp11(17236), obj5);
+      obj4.children = closure_6(tmp11(17279), obj5);
       tmp12 = closure_6(View, obj4);
     }
   }
@@ -161,19 +161,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   obj7.accessibilityLabel = intl.formatToPlainString(_modDef3849.xuQfOT, { activity: line });
   obj7.onPress = onJumpToActivity;
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const items3 = [closure_6(sharedValue(12598).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
+  const items3 = [closure_6(sharedValue(12600).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
   const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
   items3[1] = closure_6(View, { style: tmp.label, children: closure_6(sharedValue(5088).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) });
   obj7.children = items3;
-  const items4 = [closure_7(sharedValue(6184).PressableOpacity, obj7), ];
+  const items4 = [closure_7(sharedValue(6185).PressableOpacity, obj7), ];
   let tmp16Result = null;
   if (null != todos) {
     const obj10 = { style: tmp.checklistButton, children: null };
-    const obj11 = { variant: "default", size: "sm", icon: tmp11(6114), pressed: tmp8, accessibilityLabel: null, onPress: null };
+    const obj11 = { variant: "default", size: "sm", icon: tmp11(6115), pressed: tmp8, accessibilityLabel: null, onPress: null };
     const intl2 = tmp2(1126).intl;
     obj11.accessibilityLabel = intl2.string(tmp11(3849).Qp2isI);
     obj11.onPress = callback;
-    obj10.children = closure_6(tmp2(14245).ToggleIconButton, obj11);
+    obj10.children = closure_6(tmp2(14268).ToggleIconButton, obj11);
     tmp16Result = closure_6(View, obj10);
   }
   items4[1] = tmp16Result;

@@ -1,6 +1,6 @@
-// === Module 7427: ClipAnalyticsUtils ===
+// === Module 7428: ClipAnalyticsUtils ===
 
-// Module 7427 (ClipAnalyticsUtils)
+// Module 7428 (ClipAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import _modDef5202 from "module_5202" /* 5202 */;
 import VideoQualityStats from "VideoQualityStats" /* 5292 */;
@@ -8,7 +8,7 @@ import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5271 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7428 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7429 */;
 import ClipsStore from "ClipsStore" /* 2018 */;
 
 require = fn;
@@ -139,7 +139,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(7762);
+const ClipsConstants = fn(7763);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 15218: ConnectionsEmptyStateUpsell ===
+// === Module 15241: ConnectionsEmptyStateUpsell ===
 
-// Module 15218 (ConnectionsEmptyStateUpsell)
+// Module 15241 (ConnectionsEmptyStateUpsell)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
@@ -9,10 +9,10 @@ import shared from "shared" /* 4969 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
-import Card from "Card" /* 6181 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7224 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9204 */;
-import ConnectionsTracking from "ConnectionsTracking" /* 15219 */;
+import Card from "Card" /* 6182 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7225 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9205 */;
+import ConnectionsTracking from "ConnectionsTracking" /* 15242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,11 +52,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySt
     tmp6 = cResult[1];
   }
   if (cResult[2] !== platform.type) {
-    const connectionBackgroundColor = tmp(15220).getConnectionBackgroundColor(platform.type);
+    const connectionBackgroundColor = tmp(15243).getConnectionBackgroundColor(platform.type);
     cResult[2] = platform.type;
     cResult[3] = connectionBackgroundColor;
     let tmp7 = connectionBackgroundColor;
-    const tmpResult = tmp(15220);
+    const tmpResult = tmp(15243);
   } else {
     tmp7 = cResult[3];
   }
@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySt
                         }
                       }
                       const obj2 = { onPress: tmp6, style: tmp4.card, border: "strong", children: tmp19 };
-                      const tmp25 = closure_6(tmp(6181).Card, obj2);
+                      const tmp25 = closure_6(tmp(6182).Card, obj2);
                       cResult[23] = tmp6;
                       cResult[24] = tmp4.card;
                       cResult[25] = tmp19;
@@ -334,14 +334,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
   cResult[8] = items2;
 }) : (function ConnectionsEmptyStateUpsell() {
   const tmp = closure_8();
-  emptyStatePlatforms = emptyStatePlatforms(7224).useEmptyStatePlatforms();
+  emptyStatePlatforms = emptyStatePlatforms(7225).useEmptyStatePlatforms();
   const items = [emptyStatePlatforms];
   const memo = noop.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
   const items1 = [emptyStatePlatforms];
   const memo1 = noop.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
   const obj2 = { style: null, children: null };
   const items2 = [tmp.container, ];
-  const obj = emptyStatePlatforms(7224);
+  const obj = emptyStatePlatforms(7225);
   items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj2.style = items2;
   const obj4 = { style: tmp.content, children: null };

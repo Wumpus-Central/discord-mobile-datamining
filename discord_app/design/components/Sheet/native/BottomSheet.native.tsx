@@ -1,6 +1,6 @@
-// === Module 6839: Sheet/BottomSheet ===
+// === Module 6840: Sheet/BottomSheet ===
 
-// Module 6839 (Sheet/BottomSheet)
+// Module 6840 (Sheet/BottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
@@ -9,12 +9,12 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import NavigatorConstants from "NavigatorConstants" /* 6258 */;
-import BottomSheetModal from "BottomSheetModal" /* 6306 */;
-import NavScrim from "NavScrim" /* 6727 */;
-import ActionSheetContextDefault from "ActionSheetContext" /* 6841 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 6843 */;
-import Sheet_BottomSheetBackdrop from "Sheet/BottomSheetBackdrop" /* 6844 */;
+import NavigatorConstants from "NavigatorConstants" /* 6259 */;
+import BottomSheetModal from "BottomSheetModal" /* 6307 */;
+import NavScrim from "NavScrim" /* 6728 */;
+import ActionSheetContextDefault from "ActionSheetContext" /* 6842 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 6844 */;
+import Sheet_BottomSheetBackdrop from "Sheet/BottomSheetBackdrop" /* 6845 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ let closure_4 = ["startHeight", "contentHeight", "maxHeight", "hasEverExpanded",
 let closure_5 = ["scrollable", "startHeight", "maxHeight", "containerHeight", "startExpanded", "backdropOpacity", "backdropChildren", "header", "handleComponent", "handleDisabled", "dismissAccessibilityLabel", "footer", "onExpand", "onDismiss", "keyboardShouldPersistTaps", "children", "backgroundStyles", "contentStyles", "bodyStyles", "borderGradient", "showGradient", "extraContent", "contentHeight", "ref"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_9, View: c10, Platform } = get_ActivityIndicator);
-const ActionSheetConstants = fn(6840);
+const ActionSheetConstants = fn(6841);
 ({ ACTION_SHEET_START_HEIGHT_RATIO: closure_11, ACTION_SHEET_MAX_WIDTH: closure_12, ACTION_SHEET_SPRING_CONFIG: map1, ACTION_SHEET_SPRING_CONFIG_REDUCED_MOTION: closure_14, ACTION_SHEET_GRADIENT_BORDER_WIDTH: closure_15, ACTION_SHEET_GRADIENT_BORDER_RADIUS: closure_16, ACTION_SHEET_BORDER_RADIUS: closure_17, ACTION_SHEET_INNER_BORDER_RADIUS: closure_18, ACTION_SHEET_MINIMUM_BOTTOM_PADDING: closure_19 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
@@ -853,7 +853,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp43 = cResult[29];
     }
     const layoutEffect = obj2.useLayoutEffect(tmp42, tmp43);
-    const bottomSheetImperativeHandle = tmp(6842).useBottomSheetImperativeHandle(tmp12, ref1);
+    const bottomSheetImperativeHandle = tmp(6843).useBottomSheetImperativeHandle(tmp12, ref1);
     if (cResult[30] === close) {
       if (cResult[31] === transitionState) {
         let tmp46 = cResult[32];
@@ -1244,7 +1244,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
                         let items = [tmp75, tmp79];
                         obj7.children = items;
                         obj6.children = closure_21(ref1, obj7);
-                        const tmp87 = closure_20(tmp(6845).LayerScope, obj6);
+                        const tmp87 = closure_20(tmp(6846).LayerScope, obj6);
                         cResult[67] = tmp74;
                         cResult[68] = tmp75;
                         class Be {
@@ -1383,7 +1383,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[33] = items5;
     tmp47 = items5;
     tmp46 = re;
-    let tmpResult = tmp(6842);
+    let tmpResult = tmp(6843);
   }
   function te() {
     registerDismissHandler(closure_4);

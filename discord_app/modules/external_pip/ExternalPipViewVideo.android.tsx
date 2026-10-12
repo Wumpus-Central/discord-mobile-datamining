@@ -1,6 +1,6 @@
-// === Module 17690: ExternalPipViewVideo ===
+// === Module 17747: ExternalPipViewVideo ===
 
-// Module 17690 (ExternalPipViewVideo)
+// Module 17747 (ExternalPipViewVideo)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,8 +9,8 @@ import Text_Text from "Text/Text" /* 5088 */;
 import ExternalPipDefault from "ExternalPip" /* 5221 */;
 import StreamEnded from "StreamEnded" /* 10888 */;
 import DCDVideoRendererDefault from "DCDVideoRenderer" /* 10899 */;
-import VideoActionCreators from "VideoActionCreators" /* 17691 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 17692 */;
+import VideoActionCreators from "VideoActionCreators" /* 17748 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 17749 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

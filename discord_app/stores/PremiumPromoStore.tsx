@@ -1,6 +1,6 @@
-// === Module 14019: PremiumPromoStore ===
+// === Module 14042: PremiumPromoStore ===
 
-// Module 14019 (PremiumPromoStore)
+// Module 14042 (PremiumPromoStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

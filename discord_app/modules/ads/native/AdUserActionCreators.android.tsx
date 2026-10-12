@@ -1,11 +1,11 @@
-// === Module 7419: AdUserActionCreators ===
+// === Module 7420: AdUserActionCreators ===
 
-// Module 7419 (AdUserActionCreators)
+// Module 7420 (AdUserActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import NativeAdsModuleDefault from "NativeAdsModule" /* 7420 */;
+import NativeAdsModuleDefault from "NativeAdsModule" /* 7421 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdUserStore from "AdUserStore" /* 7417 */;
+import AdUserStore from "AdUserStore" /* 7418 */;
 
 let closure_6 = async function _fetchAdUser(arg0) {
   if (c6 === 2) {
@@ -18,7 +18,7 @@ let closure_6 = async function _fetchAdUser(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

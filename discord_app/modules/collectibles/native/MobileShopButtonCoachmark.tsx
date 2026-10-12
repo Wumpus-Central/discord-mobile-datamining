@@ -1,9 +1,9 @@
-// === Module 13005: MobileShopButtonCoachmark ===
+// === Module 13010: MobileShopButtonCoachmark ===
 
-// Module 13005 (MobileShopButtonCoachmark)
+// Module 13010 (MobileShopButtonCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 6156 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

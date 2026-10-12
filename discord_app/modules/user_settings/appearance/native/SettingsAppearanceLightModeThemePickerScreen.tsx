@@ -1,9 +1,9 @@
-// === Module 15577: SettingsAppearanceLightModeThemePickerScreen ===
+// === Module 15600: SettingsAppearanceLightModeThemePickerScreen ===
 
-// Module 15577 (SettingsAppearanceLightModeThemePickerScreen)
+// Module 15600 (SettingsAppearanceLightModeThemePickerScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 15538 */;
+import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 15561 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -2,7 +2,7 @@
 
 // Module 10789 (getCanJoin)
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import hasFlagDefault from "hasFlag" /* 7012 */;
+import hasFlagDefault from "hasFlag" /* 7013 */;
 import isInviteActiveDefault from "isInviteActive" /* 10790 */;
 import getPartySize from "getPartySize" /* 10791 */;
 import isPartyFull from "isPartyFull" /* 10793 */;

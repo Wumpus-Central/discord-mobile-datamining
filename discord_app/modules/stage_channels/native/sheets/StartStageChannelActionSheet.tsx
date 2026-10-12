@@ -1,6 +1,6 @@
-// === Module 7486: StartStageChannelActionSheet ===
+// === Module 7487: StartStageChannelActionSheet ===
 
-// Module 7486 (StartStageChannelActionSheet)
+// Module 7487 (StartStageChannelActionSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -227,13 +227,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StartSta
                         cResult[37] = tmp52;
                       }
                       let obj6 = { onConfirmPress: Z, style: tmp4.ageVerificationNotice, channelId: channel.id };
-                      const tmp50 = closure_13(tmp17(7496), obj6);
+                      const tmp50 = closure_13(tmp17(7497), obj6);
                       cResult[32] = channel.id;
                       cResult[33] = tmp4.ageVerificationNotice;
                       cResult[34] = tmp50;
                     }
                     let obj7 = { label: tmp39, maxLength, value: first1, placeholder: tmp41, onChange: tmp9[1], autoFocus: true, returnKeyType: "done", clearable: true, onSubmitEditing: tmp19 };
-                    const tmp46 = closure_13(tmp(6285).TextInput, obj7);
+                    const tmp46 = closure_13(tmp(6286).TextInput, obj7);
                     cResult[28] = tmp19;
                     cResult[29] = first1;
                     cResult[30] = tmp46;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StartSta
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -302,10 +302,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StartSta
                 if (null != closure_1) {
                   v2 = 3;
                   c5 = 1;
-                  const obj6 = { value: first1(7487).editStage(closure_0, tmp45, constants.GUILD_ONLY), done: false };
+                  const obj6 = { value: first1(7488).editStage(closure_0, tmp45, constants.GUILD_ONLY), done: false };
                   return obj6;
                 } else {
-                  const tmp33Result2 = first1(7487);
+                  const tmp33Result2 = first1(7488);
                   v2 = 2;
                   c5 = 1;
                   const obj7 = { value: tmp33Result2.startStage(closure_0, tmp45, constants.GUILD_ONLY, false), done: false };
@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StartSta
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -439,10 +439,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StartSta
               if (null != stateFromStores) {
                 c4 = 3;
                 c5 = 1;
-                const obj6 = { value: tmp45(7487).editStage(channel, importAll, constants.GUILD_ONLY), done: false };
+                const obj6 = { value: tmp45(7488).editStage(channel, importAll, constants.GUILD_ONLY), done: false };
                 return obj6;
               } else {
-                const tmp33Result2 = tmp45(7487);
+                const tmp33Result2 = tmp45(7488);
                 c4 = 2;
                 c5 = 1;
                 const obj7 = { value: tmp33Result2.startStage(channel, importAll, constants.GUILD_ONLY, false), done: false };
@@ -567,8 +567,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StartSta
   const intl7 = tmp2(1126).intl;
   obj8.placeholder = intl7.string(channel(1126).t.ZwWruY);
   obj8.onSubmitEditing = handleSave;
-  items2[1] = closure_13(channel(6285).TextInput, obj8);
-  items2[2] = closure_13(tmp11(7496), {
+  items2[1] = closure_13(channel(6286).TextInput, obj8);
+  items2[2] = closure_13(tmp11(7497), {
     onConfirmPress() {
       return stateFromStores(_undefined[19]).hideActionSheet(closure_1_10);
     },
@@ -609,5 +609,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StartSta
   const tmp13Result = closure_14(View, obj4);
   items2[5] = tmp15Result2;
   obj7.children = items2;
-  return closure_13(channel(6839).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(6813).SafeAreaPaddingView, obj7) });
+  return closure_13(channel(6840).BottomSheet, { keyboardShouldPersistTaps: "always", children: closure_14(channel(6814).SafeAreaPaddingView, obj7) });
 });

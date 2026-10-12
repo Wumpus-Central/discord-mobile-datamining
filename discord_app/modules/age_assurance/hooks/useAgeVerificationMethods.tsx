@@ -1,12 +1,12 @@
-// === Module 7709: useAgeVerificationMethods ===
+// === Module 7710: useAgeVerificationMethods ===
 
-// Module 7709 (useAgeVerificationMethods)
+// Module 7710 (useAgeVerificationMethods)
 import util from "util" /* 1126 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5729 */;
 import MetricEvents from "MetricEvents" /* 5734 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7510 */;
-import GoogleWalletExperiment from "GoogleWalletExperiment" /* 7710 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7511 */;
+import GoogleWalletExperiment from "GoogleWalletExperiment" /* 7711 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeVe
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeVe
                   return obj;
                 } else {
                   c1 = 3;
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp5) {
                 c1 = tmp;
@@ -599,7 +599,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeVe
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "+51" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -629,7 +629,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAgeVe
                     return obj;
                   } else {
                     c1 = 3;
-                    return { value: "IconComponent", done: "+51" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp5) {
                   c1 = tmp;

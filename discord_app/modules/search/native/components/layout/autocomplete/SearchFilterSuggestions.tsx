@@ -1,6 +1,6 @@
-// === Module 17316: SearchFilterSuggestions ===
+// === Module 17373: SearchFilterSuggestions ===
 
-// Module 17316 (SearchFilterSuggestions)
+// Module 17373 (SearchFilterSuggestions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4827 */;
@@ -8,9 +8,9 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import spring from "spring" /* 5378 */;
 import springPresets from "springPresets" /* 5382 */;
-import TableRow from "TableRow" /* 6179 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12034 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 17317 */;
+import TableRow from "TableRow" /* 6180 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12036 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 17374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ function getSuggestionsKey(arr) {
 }
 let closure_3 = ["text", "searchTokenType", "onPress"];
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9311).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9312).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj = { card: null };
@@ -509,12 +509,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const containerStyle = searchContext.containerStyle;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(17311).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(17368).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(17311);
-  const validFilterTokens = searchContext(17320).useValidFilterTokens(searchContext);
+  let obj = searchContext(17368);
+  const validFilterTokens = searchContext(17377).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -552,7 +552,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     constants(closure_1_18);
   }), items);
-  let obj2 = searchContext(17320);
+  let obj2 = searchContext(17377);
   const fn = function _() {
     return dismissed.get();
   };

@@ -1,11 +1,11 @@
-// === Module 11667: ApplicationCommandOptionValueParser ===
+// === Module 11669: ApplicationCommandOptionValueParser ===
 
-// Module 11667 (ApplicationCommandOptionValueParser)
+// Module 11669 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import Server from "Server" /* 1998 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import MessageParser from "MessageParser" /* 7369 */;
+import MessageParser from "MessageParser" /* 7370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6034 */;

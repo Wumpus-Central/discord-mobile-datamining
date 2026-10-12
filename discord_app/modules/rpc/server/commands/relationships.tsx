@@ -1,6 +1,6 @@
-// === Module 14731: relationships ===
+// === Module 14755: relationships ===
 
-// Module 14731 (relationships)
+// Module 14755 (relationships)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import RPCErrorDefault from "RPCError" /* 10936 */;
 import RPCHelpers from "RPCHelpers" /* 10945 */;
@@ -12,10 +12,10 @@ require = fn;
 const Constants = fn(1085);
 ({ ApplicationFlags: closure_7, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14713);
+const CONTEXT_MENU_ICON_NAMES = fn(14736);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
-let items = [fn(8457).OAuth2Scopes.RELATIONSHIPS_READ];
+let items = [fn(8458).OAuth2Scopes.RELATIONSHIPS_READ];
 obj4[fn(5639).RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.handler = function handler(socket) {

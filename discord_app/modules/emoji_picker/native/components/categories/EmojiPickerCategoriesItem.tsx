@@ -1,6 +1,6 @@
-// === Module 9562: EmojiPickerCategoriesItem ===
+// === Module 9563: EmojiPickerCategoriesItem ===
 
-// Module 9562 (EmojiPickerCategoriesItem)
+// Module 9563 (EmojiPickerCategoriesItem)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;

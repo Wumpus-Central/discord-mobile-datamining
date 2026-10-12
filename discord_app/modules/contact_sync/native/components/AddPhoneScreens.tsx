@@ -1,11 +1,11 @@
-// === Module 12426: AddPhoneScreens ===
+// === Module 12428: AddPhoneScreens ===
 
-// Module 12426 (AddPhoneScreens)
+// Module 12428 (AddPhoneScreens)
 import nativeDefault from "native" /* 587 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6725 */;
-import AddPhoneDefault from "AddPhone" /* 6732 */;
-import PhoneActionCreators from "PhoneActionCreators" /* 6733 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12398 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6726 */;
+import AddPhoneDefault from "AddPhone" /* 6733 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 6734 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12400 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,19 +16,19 @@ const PhoneActionCreatorsDefault = PhoneActionCreators;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12399).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12401).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5092);
-let obj2 = { container: { paddingTop: fn(6258).NAV_BAR_HEIGHT + 32 }, redesignContainer: null, header: null, title: null, subtitle: null };
-let obj3 = { paddingTop: fn(6258).NAV_BAR_HEIGHT + 32 };
-obj2.redesignContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(6258).NAV_BAR_HEIGHT + 32 };
+let obj2 = { container: { paddingTop: fn(6259).NAV_BAR_HEIGHT + 32 }, redesignContainer: null, header: null, title: null, subtitle: null };
+let obj3 = { paddingTop: fn(6259).NAV_BAR_HEIGHT + 32 };
+obj2.redesignContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(6259).NAV_BAR_HEIGHT + 32 };
 obj2.header = { alignItems: "center" };
 obj2.title = { textAlign: "center" };
 obj2.subtitle = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 let closure_11 = createStyles.createStyles(obj2);
 fn(558);
-let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(6258).NAV_BAR_HEIGHT + 32 };
+let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(6259).NAV_BAR_HEIGHT + 32 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPhoneScreen() {
   const cResult = navigation(576).c(16);
@@ -100,7 +100,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPhoneScre
           }
         }
       }
-      const obj5 = { style: tmp5.container, reason: tmp(6733).ChangePhoneReason.CONTACT_SYNC, header: tmp16, onComplete: P };
+      const obj5 = { style: tmp5.container, reason: tmp(6734).ChangePhoneReason.CONTACT_SYNC, header: tmp16, onComplete: P };
       const tmp23 = closure_9(AddPhoneDefault, obj5);
       cResult[12] = tmp16;
       cResult[13] = tmp5.container;

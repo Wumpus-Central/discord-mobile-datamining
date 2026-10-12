@@ -1,6 +1,6 @@
-// === Module 12701: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 12703: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 12701 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 12703 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -10,22 +10,22 @@ import UserUtilsDefault from "UserUtils" /* 4962 */;
 import HapticUtils from "HapticUtils" /* 5057 */;
 import timing from "timing" /* 5093 */;
 import spring from "spring" /* 5378 */;
-import XSmallIcon from "XSmallIcon" /* 6207 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6930 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10155 */;
+import XSmallIcon from "XSmallIcon" /* 6208 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6931 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10156 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
-import SKUStore from "SKUStore" /* 6087 */;
+import SKUStore from "SKUStore" /* 6088 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(6933).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(6934).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);

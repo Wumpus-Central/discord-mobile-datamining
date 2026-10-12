@@ -1,6 +1,6 @@
-// === Module 10266: useDisplayNameStylesEffectDefaultColors ===
+// === Module 10267: useDisplayNameStylesEffectDefaultColors ===
 
-// Module 10266 (useDisplayNameStylesEffectDefaultColors)
+// Module 10267 (useDisplayNameStylesEffectDefaultColors)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;

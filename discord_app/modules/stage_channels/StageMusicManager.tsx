@@ -9,7 +9,7 @@ import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5896 */;
 import StageInstanceStore from "StageInstanceStore" /* 2070 */;
 import StageMusicStore from "StageMusicStore" /* 10977 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 const require = globalThis.__r;
 

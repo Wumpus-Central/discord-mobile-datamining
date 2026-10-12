@@ -1,18 +1,18 @@
-// === Module 8346: ProfileFrame ===
+// === Module 8347: ProfileFrame ===
 
-// Module 8346 (ProfileFrame)
+// Module 8347 (ProfileFrame)
 import c from "c" /* 576 */;
 import timing from "timing" /* 5093 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import useProfileFrameLayerAsset from "useProfileFrameLayerAsset" /* 8348 */;
-import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8351 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import useProfileFrameLayerAsset from "useProfileFrameLayerAsset" /* 8349 */;
+import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8352 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(8329).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8347);
+let closure_5 = fn(8330).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8348);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: metroRequire, PROFILE_FRAME_Z_INDEX: closure_7 } = ProfileFrameConstants);
 let jsx = fn(21).jsx;
 let source = { duration: 150, easing: null };
@@ -788,7 +788,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
   c9 = undefined;
   c10 = undefined;
   const tmp = c10();
-  const settled = frame(8348).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
+  const settled = frame(8349).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
   const items = [frame.layers, frameOrder, profileThemeType, filterLayer];
   const memo = profileThemeType.useMemo(() => {
     const layers = frame.layers;
@@ -801,7 +801,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
       return result;
     });
   }, items);
-  let obj = frame(8348);
+  let obj = frame(8349);
   let num = 0;
   if (settled) {
     num = 1;
@@ -819,7 +819,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
   if (0 !== memo.length) {
     if (0 !== containerWidth) {
       if (settled) {
-        ({ overflowTop: c8, overflowBottom: c9, overflowHorizontal: c10 } = containerWidth(8350)(frame, containerWidth));
+        ({ overflowTop: c8, overflowBottom: c9, overflowHorizontal: c10 } = containerWidth(8351)(frame, containerWidth));
         const obj4 = { style: null, children: null };
         const items2 = [tmp.container, ];
         const obj5 = { opacity: sharedValue };

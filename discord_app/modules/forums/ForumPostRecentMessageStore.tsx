@@ -1,6 +1,6 @@
-// === Module 7007: ForumPostRecentMessageStore ===
+// === Module 7008: ForumPostRecentMessageStore ===
 
-// Module 7007 (ForumPostRecentMessageStore)
+// Module 7008 (ForumPostRecentMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

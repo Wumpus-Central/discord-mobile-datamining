@@ -2,7 +2,7 @@
 
 // Module 10738 (handleMessagesLongPressChannel)
 import ChannelUtils from "ChannelUtils" /* 5414 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 9673 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 9674 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");

@@ -1,6 +1,6 @@
-// === Module 11579: ForwardPreview ===
+// === Module 11581: ForwardPreview ===
 
-// Module 11579 (ForwardPreview)
+// Module 11581 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,16 +9,16 @@ import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1496 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5459 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import ImageIcon from "ImageIcon" /* 8214 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8263 */;
-import CirclePlayIcon2 from "CirclePlayIcon" /* 8929 */;
-import ClipView from "ClipView" /* 9016 */;
-import ChatItemDefault from "ChatItem" /* 9373 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10027 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11580 */;
-import ImagesIcon2 from "ImagesIcon" /* 11583 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 11585 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import ImageIcon from "ImageIcon" /* 8215 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8264 */;
+import CirclePlayIcon2 from "CirclePlayIcon" /* 8930 */;
+import ClipView from "ClipView" /* 9017 */;
+import ChatItemDefault from "ChatItem" /* 9374 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10028 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11582 */;
+import ImagesIcon2 from "ImagesIcon" /* 11585 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 11587 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -67,7 +67,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = new tmp4(7746)();
+        const obj3 = new tmp4(7747)();
         obj3.setOptions({ renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: true, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false });
         cResult[6] = obj3;
         let tmp10 = obj3;
@@ -85,7 +85,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
           return tmp17;
         }
         const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: tmp8, message: tmp15, rowGenerator: tmp10 };
-        const tmp19 = closure_5(tmp4(9373), obj2);
+        const tmp19 = closure_5(tmp4(9374), obj2);
         cResult[10] = tmp8;
         cResult[11] = tmp15;
         cResult[12] = tmp19;

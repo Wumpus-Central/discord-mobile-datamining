@@ -1,15 +1,15 @@
-// === Module 8253: InteractionUtils ===
+// === Module 8254: InteractionUtils ===
 
-// Module 8253 (InteractionUtils)
+// Module 8254 (InteractionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Server from "Server" /* 1998 */;
 import InteractionTypes from "InteractionTypes" /* 5442 */;
-import InteractionActionCreators from "InteractionActionCreators" /* 8254 */;
-import SkemaUtils from "SkemaUtils" /* 8255 */;
+import InteractionActionCreators from "InteractionActionCreators" /* 8255 */;
+import SkemaUtils from "SkemaUtils" /* 8256 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import InteractionStore from "InteractionStore" /* 7883 */;
+import InteractionStore from "InteractionStore" /* 7884 */;
 
 require = fn;
 let closure_10 = async function _executeMessageComponentInteraction(arg0) {
@@ -34,7 +34,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   } else if (2 === tmp7) {
     c3 = 0;
     c5 = 3;
-    return { value: "IconComponent", done: "+51" };
+    return { value: "IconComponent", done: null };
   } else if (3 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;

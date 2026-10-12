@@ -1,14 +1,14 @@
-// === Module 8128: ChangelogInlineImage ===
+// === Module 8129: ChangelogInlineImage ===
 
-// Module 8128 (ChangelogInlineImage)
+// Module 8129 (ChangelogInlineImage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import ChangelogImageUtils from "ChangelogImageUtils" /* 8126 */;
-import GifTagDefault from "GifTag" /* 8129 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import ChangelogImageUtils from "ChangelogImageUtils" /* 8127 */;
+import GifTagDefault from "GifTag" /* 8130 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

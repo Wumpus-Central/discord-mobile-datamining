@@ -1,13 +1,13 @@
-// === Module 18008: ChannelCallManager ===
+// === Module 18065: ChannelCallManager ===
 
-// Module 18008 (ChannelCallManager)
+// Module 18065 (ChannelCallManager)
 import SoundpackStore from "SoundpackStore" /* 10981 */;
 import CallStore from "CallStore" /* 5758 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 12564 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 12566 */;
 import StreamerModeStore from "StreamerModeStore" /* 4963 */;
 import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5116 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 let require = fn;
 const SoundUtils = fn(10980);

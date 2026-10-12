@@ -1,6 +1,6 @@
-// === Module 17716: ActivityInviteSheetRow ===
+// === Module 17773: ActivityInviteSheetRow ===
 
-// Module 17716 (ActivityInviteSheetRow)
+// Module 17773 (ActivityInviteSheetRow)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7423).InviteSendStates;
+const InviteSendStates = fn(7424).InviteSendStates;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj = { acronym: null };

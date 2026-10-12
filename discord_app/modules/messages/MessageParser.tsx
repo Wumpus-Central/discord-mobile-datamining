@@ -1,6 +1,6 @@
-// === Module 7369: MessageParser ===
+// === Module 7370: MessageParser ===
 
-// Module 7369 (MessageParser)
+// Module 7370 (MessageParser)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
@@ -11,9 +11,9 @@ import MarkupRulesDefault from "MarkupRules" /* 5402 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
 import MarkupTextRule2 from "MarkupTextRule" /* 5411 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 7370 */;
-import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7371 */;
-import IsolateString from "IsolateString" /* 7372 */;
+import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 7371 */;
+import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7372 */;
+import IsolateString from "IsolateString" /* 7373 */;
 import EmojiStore from "EmojiStore" /* 5987 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6034 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

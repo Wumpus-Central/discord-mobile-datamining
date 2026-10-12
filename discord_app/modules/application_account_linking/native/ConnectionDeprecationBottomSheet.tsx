@@ -1,15 +1,15 @@
-// === Module 17653: ConnectionDeprecationBottomSheet ===
+// === Module 17710: ConnectionDeprecationBottomSheet ===
 
-// Module 17653 (ConnectionDeprecationBottomSheet)
+// Module 17710 (ConnectionDeprecationBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import themes from "themes" /* 4825 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Icon from "Icon" /* 5381 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 6854 */;
-import GameIcon from "GameIcon" /* 6861 */;
-import AccountLinkManager from "AccountLinkManager" /* 17654 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 6855 */;
+import GameIcon from "GameIcon" /* 6862 */;
+import AccountLinkManager from "AccountLinkManager" /* 17711 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
@@ -287,7 +287,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(6857).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(6858).useGetOrFetchApplication(replacedBy);
   const tmp10 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp10);
   if (!fetchingConnections) {
@@ -333,7 +333,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(6857).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(6858).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

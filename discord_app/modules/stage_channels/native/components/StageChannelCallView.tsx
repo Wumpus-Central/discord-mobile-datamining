@@ -4,7 +4,7 @@
 import c from "c" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
-import StatusBarDefault from "StatusBar" /* 10360 */;
+import StatusBarDefault from "StatusBar" /* 10361 */;
 import FocusedControls from "FocusedControls" /* 11021 */;
 import StageChannelAnimationUtils from "StageChannelAnimationUtils" /* 11155 */;
 import StageChannelBackgroundDefault from "StageChannelBackground" /* 11156 */;

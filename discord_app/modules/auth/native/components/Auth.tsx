@@ -1,26 +1,26 @@
-// === Module 16345: Auth ===
+// === Module 16368: Auth ===
 
-// Module 16345 (Auth)
+// Module 16368 (Auth)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6625 */;
-import BackgroundImageDefault from "BackgroundImage" /* 6656 */;
-import StackNavigator from "StackNavigator" /* 6689 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 16346 */;
-import RegistrationUtils from "RegistrationUtils" /* 16356 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 16399 */;
-import AuthManagerDefault from "AuthManager" /* 16401 */;
-import useOrientationLockDefault from "useOrientationLock" /* 16408 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6626 */;
+import BackgroundImageDefault from "BackgroundImage" /* 6657 */;
+import StackNavigator from "StackNavigator" /* 6690 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 16369 */;
+import RegistrationUtils from "RegistrationUtils" /* 16379 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 16422 */;
+import AuthManagerDefault from "AuthManager" /* 16424 */;
+import useOrientationLockDefault from "useOrientationLock" /* 16431 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 12125 */;
+import MultiAccountStore from "MultiAccountStore" /* 12127 */;
 
 const util = PX_24(1126);
 const utils_PlatformUtils = PX_24(1383);
 const KeyboardChatScrollView = PX_24(1645);
-const WideAuthScrollContext = PX_24(6654);
-const Navigator = PX_24(6687);
-const _mod16400 = PX_24(16400);
+const WideAuthScrollContext = PX_24(6655);
+const Navigator = PX_24(6688);
+const _mod16423 = PX_24(16423);
 require = fn;
 function getInitialAuthRouteStack() {
   if (!obj.hasRegistrationHandoff()) {
@@ -40,7 +40,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1085).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(16347);
+let RegistrationStepsUtils = fn(16370);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {
@@ -93,7 +93,7 @@ const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {
   return items;
 }));
 let num = 540;
-if (fn(6632).hasWebAuthn) {
+if (fn(6633).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
@@ -165,11 +165,11 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
     obj13 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { backgroundImageSource: _mod16400, backgroundImageCover: true };
-    const tmp19 = closure_9(tmp3(6656), obj4);
+    const obj4 = { backgroundImageSource: _mod16423, backgroundImageCover: true };
+    const tmp19 = closure_9(tmp3(6657), obj4);
     cResult[4] = tmp19;
     let tmp16 = tmp19;
-    const tmp3Result = tmp3(6656);
+    const tmp3Result = tmp3(6657);
   } else {
     tmp16 = cResult[4];
   }
@@ -309,7 +309,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod16400;
+  obj3.backgroundImageSource = _mod16423;
   const children = [closure_9(BackgroundImageDefault, obj3), ];
   if (tmp5) {
     const obj5 = { value: tmp11, children: null };
@@ -386,7 +386,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[25]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7196).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7197).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, { value: noop.useCallback(() => RegistrationUtils.getTrackRegTransition(closure_0), [])(), children: closure_9(closure_17, {}) });

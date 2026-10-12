@@ -1,18 +1,18 @@
-// === Module 17277: ConjurePerfTraceModal ===
+// === Module 17326: ConjurePerfTraceModal ===
 
-// Module 17277 (ConjurePerfTraceModal)
+// Module 17326 (ConjurePerfTraceModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import NavigatorHeader from "NavigatorHeader" /* 6200 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6905 */;
-import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 17278 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 17279 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 17281 */;
-import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 17282 */;
+import NavigatorHeader from "NavigatorHeader" /* 6201 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6906 */;
+import ConjurePerfTraceStatsHeaderDefault from "ConjurePerfTraceStatsHeader" /* 17327 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 17328 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 17330 */;
+import useConjurePerfTraceTreeDefault from "useConjurePerfTraceTree" /* 17331 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 13214 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 13219 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -466,11 +466,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   ({ onSelect: dependencyMap, onToggle: noop, onExpandSubtree: closure_4 } = node);
   const tmp = closure_11();
   const detail = tmp;
-  const perfCategoryColors = node(17278).usePerfCategoryColors();
+  const perfCategoryColors = node(17327).usePerfCategoryColors();
   if (collapsed) {
-    let ChevronSmallDownIcon = tmp2(6905).ChevronSmallRightIcon;
+    let ChevronSmallDownIcon = tmp2(6906).ChevronSmallRightIcon;
   } else {
-    ChevronSmallDownIcon = tmp2(10532).ChevronSmallDownIcon;
+    ChevronSmallDownIcon = tmp2(10533).ChevronSmallDownIcon;
   }
   if (node.failed) {
     let running = tmp.failed;
@@ -510,7 +510,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   obj2.accessibilityState = obj3;
   const obj4 = { style: null, children: null };
   const items1 = [tmp.rowTop, ];
-  let obj = node(17278);
+  let obj = node(17327);
   items1[1] = { paddingLeft: node.depth * selected(587).space.PX_12 };
   obj4.style = items1;
   if (node.children.length > 0) {
@@ -563,14 +563,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   let tmp13Result5 = null;
   if (node.failed) {
     const obj15 = { size: "xs", color: selected(587).colors.STATUS_DANGER };
-    tmp13Result5 = tmp13(tmp2(7571).WarningIcon, obj15);
+    tmp13Result5 = tmp13(tmp2(7572).WarningIcon, obj15);
   }
   items2[6] = tmp13Result5;
   const obj16 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const obj11 = { variant: "text-xs/semibold", color: "text-strong", children: node.service };
   const obj12 = { variant: "text-xs/normal", color: "text-default", style: tmp.operation, lineClamp: 1, children: node.operation };
   const obj5 = { paddingLeft: node.depth * selected(587).space.PX_12 };
-  obj16.children = node(17279).perfNodeDuration(node);
+  obj16.children = node(17328).perfNodeDuration(node);
   items2[7] = tmp13(node(5088).Text, obj16);
   obj4.children = items2;
   const items4 = [closure_9(closure_6, obj4), , ];
@@ -587,8 +587,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
     const obj21 = { paddingLeft: node.depth * selected(587).space.PX_12 };
     items6[1] = obj21;
     obj20.style = items6;
-    const tmp2Result2 = tmp2(17279);
-    obj20.children = tmp2(17279).perfNodeSections(node).map((item) => {
+    const tmp2Result2 = tmp2(17328);
+    obj20.children = tmp2(17328).perfNodeSections(node).map((item) => {
       ({ title, rows } = item);
       let obj = { style: detail.detail, children: null };
       let tmp3 = null;
@@ -620,7 +620,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       return options(timestampProducer, obj, title);
     });
     tmp13Result6 = tmp13(closure_6, obj20);
-    const perfNodeSectionsResult = tmp2(17279).perfNodeSections(node);
+    const perfNodeSectionsResult = tmp2(17328).perfNodeSections(node);
   }
   items4[2] = tmp13Result6;
   obj2.children = items4;
@@ -899,13 +899,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   const cResult = toggle(576).c(64);
   trace = trace.trace;
   const tmp4 = closure_11();
-  toggle = selectedKey(17282)(trace);
+  toggle = selectedKey(17331)(trace);
   if (cResult[0] !== trace) {
-    const perfTraceExtentResult = tmp(13224).perfTraceExtent(trace);
+    const perfTraceExtentResult = tmp(13235).perfTraceExtent(trace);
     cResult[0] = trace;
     cResult[1] = perfTraceExtentResult;
     selectedKey = perfTraceExtentResult;
-    const tmpResult = tmp(13224);
+    const tmpResult = tmp(13235);
   } else {
     selectedKey = cResult[1];
   }
@@ -923,11 +923,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       let tmp9 = cResult[6];
     }
     if (cResult[7] !== trace) {
-      const perfTraceDurationResult = tmp(17279).perfTraceDuration(trace);
+      const perfTraceDurationResult = tmp(17328).perfTraceDuration(trace);
       cResult[7] = trace;
       cResult[8] = perfTraceDurationResult;
       let tmp10 = perfTraceDurationResult;
-      const tmpResult4 = tmp(17279);
+      const tmpResult4 = tmp(17328);
     } else {
       tmp10 = cResult[8];
     }
@@ -941,11 +941,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       tmp12 = cResult[10];
     }
     if (cResult[11] !== trace) {
-      const perfTraceSummaryResult = tmp(17279).perfTraceSummary(trace);
+      const perfTraceSummaryResult = tmp(17328).perfTraceSummary(trace);
       cResult[11] = trace;
       cResult[12] = perfTraceSummaryResult;
       let tmp15 = perfTraceSummaryResult;
-      const tmpResult5 = tmp(17279);
+      const tmpResult5 = tmp(17328);
     } else {
       tmp15 = cResult[12];
     }
@@ -977,9 +977,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
       if (0 !== trace.dropped) {
         const obj6 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
         const _HermesInternal2 = HermesInternal;
-        obj6.children = "" + tmp(17279).formatSpanCount(trace.dropped) + " not recorded";
+        obj6.children = "" + tmp(17328).formatSpanCount(trace.dropped) + " not recorded";
         tmp25 = closure_8(tmp(5088).Text, obj6);
-        const tmpResult6 = tmp(17279);
+        const tmpResult6 = tmp(17328);
       }
       cResult[17] = trace.dropped;
       cResult[18] = tmp25;
@@ -1313,9 +1313,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Waterf
   if (0 !== trace.dropped) {
     const obj10 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
     const _HermesInternal2 = HermesInternal;
-    obj10.children = "" + tmp4(17279).formatSpanCount(trace.dropped) + " not recorded";
+    obj10.children = "" + tmp4(17328).formatSpanCount(trace.dropped) + " not recorded";
     tmp8Result2 = closure_8(tmp4(5088).Text, obj10);
-    const tmp4Result = tmp4(17279);
+    const tmp4Result = tmp4(17328);
   }
   items1[3] = tmp8Result2;
   obj4.children = items1;
@@ -1435,10 +1435,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     const stateFromStores = tmp(504).useStateFromStores(first, tmp6, tmp7);
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const headerCloseButton = tmp(6200).getHeaderCloseButton(() => traceId(dependencyMap[21]).pop());
+      const headerCloseButton = tmp(6201).getHeaderCloseButton(() => traceId(dependencyMap[21]).pop());
       cResult[5] = headerCloseButton;
       let tmp9 = headerCloseButton;
-      const tmpResult2 = tmp(6200);
+      const tmpResult2 = tmp(6201);
     } else {
       tmp9 = cResult[5];
     }
@@ -1452,7 +1452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         }
         if (cResult[12] !== tmp12) {
           const obj2 = { initialRouteName: perf_trace, screens: tmp12 };
-          const tmp17 = closure_8(tmp(10602).Modal, obj2);
+          const tmp17 = closure_8(tmp(10603).Modal, obj2);
           cResult[12] = tmp12;
           cResult[13] = tmp17;
           let tmp14 = tmp17;

@@ -1,13 +1,13 @@
-// === Module 16233: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 16256: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 16233 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 16256 (CollectiblesShopViewAllCategoryItemsHeader)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import useNavigation from "useNavigation" /* 1503 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import HeaderShared from "HeaderShared" /* 9297 */;
-import _modDef9300 from "module_9300" /* 9300 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13728 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import HeaderShared from "HeaderShared" /* 9298 */;
+import _modDef9301 from "module_9301" /* 9301 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -128,7 +128,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
         cResult[10] = tmp27;
         cResult[11] = tmp34;
       }
-      const obj6 = { source: _modDef9300, color: buttonColor2, accessibilityLabel: tmp24, onPress: S };
+      const obj6 = { source: _modDef9301, color: buttonColor2, accessibilityLabel: tmp24, onPress: S };
       const tmp30 = React4(HeaderShared.HeaderIconButton, obj6);
       cResult[6] = buttonColor2;
       cResult[7] = S;
@@ -157,7 +157,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
     obj9.paddingTop = youBarSettingsCustomHeaderPaddingTop1;
     obj8.style = obj9;
     const obj10 = { style: tmp4.backButton, children: null };
-    const obj14 = { source: _modDef9300, color: buttonColor, accessibilityLabel: null, onPress: null };
+    const obj14 = { source: _modDef9301, color: buttonColor, accessibilityLabel: null, onPress: null };
     const intl = util.intl;
     obj14.accessibilityLabel = intl.string(util.t["13/7kX"]);
     obj14.onPress = function onPress() {

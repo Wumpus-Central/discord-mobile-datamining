@@ -1,6 +1,6 @@
-// === Module 17950: NativeAppStartup ===
+// === Module 18007: NativeAppStartup ===
 
-// Module 17950 (NativeAppStartup)
+// Module 18007 (NativeAppStartup)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import Storage4 from "Storage" /* 510 */;
@@ -8,8 +8,8 @@ import TokenManagerAll from "TokenManager" /* 1111 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2108 */;
-import timeRequireDefault from "timeRequire" /* 7213 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 14424 */;
+import timeRequireDefault from "timeRequire" /* 7214 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 14447 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
@@ -250,7 +250,7 @@ let closure_27 = async function _trackFirstLaunched() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -399,7 +399,7 @@ let closure_38 = async function _init(_payload) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -613,11 +613,11 @@ let closure_38 = async function _init(_payload) {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[42])(paths[52], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[53]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(14671).updateSaturation(closure_0(5081).default.saturation);
-            obj = closure_0(14671);
-            closure_0(17677).updateVisualRefresh(true);
-            const obj2 = closure_0(17677);
-            closure_0(17678).updateTheme(closure_0(1205).default.theme);
+            closure_0(14694).updateSaturation(closure_0(5081).default.saturation);
+            obj = closure_0(14694);
+            closure_0(17734).updateVisualRefresh(true);
+            const obj2 = closure_0(17734);
+            closure_0(17735).updateTheme(closure_0(1205).default.theme);
             closure_1_0();
           }));
         });
@@ -665,7 +665,7 @@ let closure_39 = async function _initHeadlessTask() {
       obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -763,14 +763,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(constants), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_17951 = fn(17951);
-const superagentPatch = fn(17953);
+const module_18008 = fn(18008);
+const superagentPatch = fn(18010);
 get_ActivityIndicator = fn(17);
 ({ AppState: metroRequire, NativeEventEmitter: closure_7, Linking: closure_8, LogBox: closure_9, NativeModules: c10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(17976);
+const logThirdPartyImportsDone = fn(18033);
 let closure_11 = fn(2130).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(7182);
-const ManagerRegistry = fn(17977);
+const AnalyticsTrackingStore = fn(7183);
+const ManagerRegistry = fn(18034);
 const Constants = fn(1085);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -778,7 +778,7 @@ loadImports.recordEnd();
 let closure_20 = new LoggerDefault("index.native.tsx");
 let c21 = false;
 let c25 = null;
-const future = new fn(9250).Future();
+const future = new fn(9251).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

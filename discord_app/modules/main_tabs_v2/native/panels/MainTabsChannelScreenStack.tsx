@@ -1,6 +1,6 @@
-// === Module 16965: MainTabsChannelScreenStack ===
+// === Module 16989: MainTabsChannelScreenStack ===
 
-// Module 16965 (MainTabsChannelScreenStack)
+// Module 16989 (MainTabsChannelScreenStack)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Link from "Link" /* 1504 */;
@@ -12,14 +12,14 @@ import ChatInputUtils from "ChatInputUtils" /* 4985 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import Suspender from "Suspender" /* 5330 */;
 import useMountEffect from "useMountEffect" /* 5396 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16412 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 16413 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16819 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 16966 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 16968 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 16969 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16970 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16435 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 16436 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16843 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 16990 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 16992 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 16993 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16994 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(9298).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9299).ONYX_BORDER_WIDTH;
 const Constants = fn(1085);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10 } = Constants);
 let ThemeTypes = fn(1096).ThemeTypes;

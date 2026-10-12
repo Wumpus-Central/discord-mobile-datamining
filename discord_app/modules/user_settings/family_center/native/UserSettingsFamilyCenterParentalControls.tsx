@@ -1,10 +1,10 @@
-// === Module 15187: UserSettingsFamilyCenterParentalControls ===
+// === Module 15210: UserSettingsFamilyCenterParentalControls ===
 
-// Module 15187 (UserSettingsFamilyCenterParentalControls)
+// Module 15210 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7260 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7261 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const FamilyCenterSubPages = fn(7259).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7260).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5092);
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                   }
                   return;
                 }
-                setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
+                setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                 return;
               }
             }
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
                   return;
                 }
               }
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
             }
             return;
           }
-          setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
+          setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
           return;
         }
       }
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "Set" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[16]).intl;

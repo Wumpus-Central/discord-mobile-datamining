@@ -1,21 +1,21 @@
-// === Module 9174: captureAdUserAction ===
+// === Module 9175: captureAdUserAction ===
 
-// Module 9174 (captureAdUserAction)
+// Module 9175 (captureAdUserAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import v1 from "v1" /* 1279 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import AdCreativeType from "AdCreativeType" /* 5979 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7364 */;
-import QuestDataUtils from "QuestDataUtils" /* 7386 */;
-import getQuestLogger from "getQuestLogger" /* 7397 */;
-import AnalyticsActions from "AnalyticsActions" /* 7406 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7415 */;
-import AdDataUtils from "AdDataUtils" /* 7416 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7421 */;
-import BrandSafetyContext from "BrandSafetyContext" /* 9175 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9177 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7365 */;
+import QuestDataUtils from "QuestDataUtils" /* 7387 */;
+import getQuestLogger from "getQuestLogger" /* 7398 */;
+import AnalyticsActions from "AnalyticsActions" /* 7407 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7416 */;
+import AdDataUtils from "AdDataUtils" /* 7417 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7422 */;
+import BrandSafetyContext from "BrandSafetyContext" /* 9176 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9178 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import QuestStore from "QuestStore" /* 7390 */;
+import QuestStore from "QuestStore" /* 7391 */;
 
 require = fn;
 function emitClickEventWithCreative() {
@@ -39,7 +39,7 @@ let closure_7 = async function _emitClickEventWithCreative(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -164,7 +164,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -212,7 +212,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -231,7 +231,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -259,7 +259,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp7) {
       c1 = tmp;
@@ -352,7 +352,7 @@ let closure_11 = async function _handleViewInternalSurfaceImpressionAction(arg0)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

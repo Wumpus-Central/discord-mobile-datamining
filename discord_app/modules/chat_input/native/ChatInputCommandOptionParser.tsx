@@ -1,12 +1,12 @@
-// === Module 11665: ChatInputCommandOptionParser ===
+// === Module 11667: ChatInputCommandOptionParser ===
 
-// Module 11665 (ChatInputCommandOptionParser)
+// Module 11667 (ChatInputCommandOptionParser)
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2030 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4768 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import _modDef7689 from "module_7689" /* 7689 */;
-import ChatInputParser from "ChatInputParser" /* 11666 */;
-import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 11667 */;
+import _modDef7690 from "module_7690" /* 7690 */;
+import ChatInputParser from "ChatInputParser" /* 11668 */;
+import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 11669 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import EmojiStore from "EmojiStore" /* 5987 */;
@@ -64,7 +64,7 @@ function buildGameMentionResult(id) {
   let uri = getGameMediaRefURLDefault(id.id, id.icon, { size: 32 });
   const obj = { location: 0, length: map1(id.name).length, icon: null, iconSize: 16, iconCornerRadius: 4, iconSpacing: 4 };
   if (obj2.isNullOrEmpty(uri)) {
-    uri = Image.resolveAssetSource(_modDef7689).uri;
+    uri = Image.resolveAssetSource(_modDef7690).uri;
   }
   obj.icon = uri;
   return obj;

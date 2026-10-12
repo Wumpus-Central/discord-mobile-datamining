@@ -1,12 +1,12 @@
-// === Module 17441: ChannelDetailsLinkedLobby ===
+// === Module 17498: ChannelDetailsLinkedLobby ===
 
-// Module 17441 (ChannelDetailsLinkedLobby)
+// Module 17498 (ChannelDetailsLinkedLobby)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6857 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6858 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 8515: GuildScheduledEventDetailsActionSheet ===
+// === Module 8516: GuildScheduledEventDetailsActionSheet ===
 
-// Module 8515 (GuildScheduledEventDetailsActionSheet)
+// Module 8516 (GuildScheduledEventDetailsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8517 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;

@@ -1,12 +1,12 @@
-// === Module 14921: UserSettingsEditGuildProfile ===
+// === Module 14944: UserSettingsEditGuildProfile ===
 
-// Module 14921 (UserSettingsEditGuildProfile)
+// Module 14944 (UserSettingsEditGuildProfile)
 import nativeDefault from "native" /* 587 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8311 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9633 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10642 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8312 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9634 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10643 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8284 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;

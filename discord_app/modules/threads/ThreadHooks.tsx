@@ -1,15 +1,15 @@
-// === Module 6971: ThreadHooks ===
+// === Module 6972: ThreadHooks ===
 
-// Module 6971 (ThreadHooks)
+// Module 6972 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 5908 */;
 import AgeGateUtils from "AgeGateUtils" /* 5924 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6079 */;
-import useIsRemoteDefault from "useIsRemote" /* 6972 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6973 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6080 */;
+import useIsRemoteDefault from "useIsRemote" /* 6973 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6974 */;
 import _slicedToArray from "module_32" /* 32 */;
 import createExperiment from "createExperiment" /* 5015 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

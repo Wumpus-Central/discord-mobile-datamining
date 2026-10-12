@@ -1,6 +1,6 @@
-// === Module 12483: InviteError ===
+// === Module 12485: InviteError ===
 
-// Module 12483 (InviteError)
+// Module 12485 (InviteError)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -11,10 +11,10 @@ import shared from "shared" /* 4969 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import GuildIcon from "GuildIcon" /* 6158 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 12486 */;
-import _modDef12487 from "module_12487" /* 12487 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import GuildIcon from "GuildIcon" /* 6159 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 12488 */;
+import _modDef12489 from "module_12489" /* 12489 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
@@ -51,17 +51,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
   }
   importDefault = tmp5;
   let obj = onPressClose(576);
-  const tmp6Result = importDefault(onPressClose(4969).isThemeDark(useThemeDefault()) ? 12484 : 12485);
+  const tmp6Result = importDefault(onPressClose(4969).isThemeDark(useThemeDefault()) ? 12486 : 12487);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
   }
   if (cResult[2] !== code) {
-    const descriptiveInviteError = onPressClose(12486).getDescriptiveInviteError(code);
+    const descriptiveInviteError = onPressClose(12488).getDescriptiveInviteError(code);
     cResult[2] = code;
     cResult[3] = descriptiveInviteError;
     let tmp9 = descriptiveInviteError;
-    const tmpResult2 = onPressClose(12486);
+    const tmpResult2 = onPressClose(12488);
   } else {
     tmp9 = cResult[3];
   }
@@ -166,7 +166,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
       tmp23 = tmp25;
     }
     const obj5 = { style: tmp4.expiredImage, source: tmp6Result };
-    const tmp18 = closure_7(tmp6(6156), obj5);
+    const tmp18 = closure_7(tmp6(6157), obj5);
     cResult[9] = tmp6Result;
     cResult[10] = tmp4.expiredImage;
     cResult[11] = tmp18;
@@ -197,7 +197,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
 }) : (function InviteErrorBase(invite) {
   ({ onPressClose: require, inviteError } = invite);
   const tmp = closure_10();
-  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 12484 : 12485);
+  const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 12486 : 12487);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -280,7 +280,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
         tmp9 = cResult[6];
       }
       if (cResult[7] !== tmp4.disabledPauseIcon) {
-        const obj4 = { style: tmp4.disabledPauseIcon, source: _modDef12487 };
+        const obj4 = { style: tmp4.disabledPauseIcon, source: _modDef12489 };
         const tmp13 = closure_7(tmp(1200).Icon, obj4);
         cResult[7] = tmp4.disabledPauseIcon;
         cResult[8] = tmp13;
@@ -376,7 +376,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
         cResult[15] = tmp22;
         tmp19 = tmp22;
       }
-      const obj11 = { style: tmp4.guildIcon, icon: tmp6, size: tmp(6158).GuildIconSizes.XLARGE };
+      const obj11 = { style: tmp4.guildIcon, icon: tmp6, size: tmp(6159).GuildIconSizes.XLARGE };
       const tmp18 = closure_7(GuildIconDefault, obj11);
       cResult[9] = tmp6;
       cResult[10] = tmp4.guildIcon;
@@ -406,7 +406,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Invite
     const obj4 = { children: null };
     const obj5 = { style: tmp.disabledView, children: null };
     const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64, canAnimate: false });
-    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef12487 };
+    const obj6 = { style: tmp.disabledPauseIcon, source: _modDef12489 };
     const items = [React5(native.Icon, obj6), ];
     const obj7 = { style: tmp.guildIcon, icon: guildIconURL, size: null };
     const obj3 = { id: null, icon: null, size: 64, canAnimate: false };

@@ -1,14 +1,14 @@
-// === Module 12123: NotificationPermissionUtil ===
+// === Module 12125: NotificationPermissionUtil ===
 
-// Module 12123 (NotificationPermissionUtil)
+// Module 12125 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7505 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 12131 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7506 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 12133 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12121 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12123 */;
 
 require = fn;
 let closure_11 = async function _requestPushNotificationPermission(arg0) {
@@ -22,7 +22,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -91,7 +91,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -140,7 +140,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
           });
         }
         c3 = 3;
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -149,9 +149,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(12122).EventActionType;
+const EventActionType = fn(12124).EventActionType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_10 = fn(7482).NotificationAuthorizationStatus;
+let closure_10 = fn(7483).NotificationAuthorizationStatus;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSeePushNotificationNudge() {
@@ -266,7 +266,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowReact
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -297,7 +297,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowReact
                 tmp4(true);
               }
               c2 = 3;
-              return { value: "IconComponent", done: "+51" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp12) {
             c2 = tmp;
@@ -340,7 +340,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowReact
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -371,7 +371,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowReact
               tmp4(true);
             }
             c2 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp12) {
           c2 = tmp;

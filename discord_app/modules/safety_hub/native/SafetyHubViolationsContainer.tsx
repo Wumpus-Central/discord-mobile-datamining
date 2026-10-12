@@ -1,24 +1,24 @@
-// === Module 15002: SafetyHubViolationsContainer ===
+// === Module 15025: SafetyHubViolationsContainer ===
 
-// Module 15002 (SafetyHubViolationsContainer)
+// Module 15025 (SafetyHubViolationsContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7511 */;
-import SafetyHubModels from "SafetyHubModels" /* 7513 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8673 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11471 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7512 */;
+import SafetyHubModels from "SafetyHubModels" /* 7514 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8674 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11473 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7536 */;
+import SafetyHubStore from "SafetyHubStore" /* 7537 */;
 
 const util = chevron(1126);
 const Text_Text = chevron(5088);
-const WarningIcon = chevron(7571);
-const ChevronSmallDownIcon2 = chevron(10532);
-const ChevronSmallUpIcon = chevron(13842);
+const WarningIcon = chevron(7572);
+const ChevronSmallDownIcon2 = chevron(10533);
+const ChevronSmallUpIcon = chevron(13865);
 require = fn;
 function ClassificationDetail(classification) {
   classification = classification.classification;
@@ -81,7 +81,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11469, dependencyMap.paths), { classificationId: id, source: closure_2_8.StandingTab });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11471, dependencyMap.paths), { classificationId: id, source: closure_2_8.StandingTab });
     },
     children: null
   };
@@ -101,7 +101,7 @@ function ClassificationDetail(classification) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(7512);
+const SafetyHubConstants = fn(7513);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
@@ -217,7 +217,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Safety
                   const obj5 = { onPress: onClick, style: tmp3.header, children: null };
                   const items = [tmp10, tmp24, cResult[20]];
                   obj5.children = items;
-                  const tmp34 = __initData(tmp6(8673), obj5);
+                  const tmp34 = __initData(tmp6(8674), obj5);
                   cResult[21] = onClick;
                   cResult[22] = tmp3.header;
                   cResult[23] = tmp10;
@@ -505,7 +505,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
   const tmp = opened;
   [tmp8, dependencyMap] = safetyHubAccountStanding(stateFromStores.useState(3), 2);
   const tmp7 = safetyHubAccountStanding(stateFromStores.useState(3), 2);
-  safetyHubAccountStanding = opened(11473).useSafetyHubAccountStanding();
+  safetyHubAccountStanding = opened(11475).useSafetyHubAccountStanding();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SafetyHubStore];
     const fn = function y() {
@@ -518,7 +518,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
   } else {
     [tmp10, tmp11] = cResult;
   }
-  const obj3 = opened(11473);
+  const obj3 = opened(11475);
   stateFromStores = tmp(504).useStateFromStores(tmp10, tmp11);
   if (cResult[2] === classifications) {
     if (cResult[3] === tmp8) {
@@ -661,8 +661,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyHubVio
   const tmp4 = first1(is_dsa_eligible.useState(3), 2);
   first1 = tmp4[0];
   is_dsa_eligible = tmp4[1];
-  const safetyHubAccountStanding = classifications(11473).useSafetyHubAccountStanding();
-  let obj = classifications(11473);
+  const safetyHubAccountStanding = classifications(11475).useSafetyHubAccountStanding();
+  let obj = classifications(11475);
   const items = [memo];
   const stateFromStores = classifications(504).useStateFromStores(items, () => memo.getIsDsaEligible());
   const items1 = [classifications, first1];

@@ -1,18 +1,18 @@
-// === Module 14167: GameOrganizationInviteActionSheet ===
+// === Module 14190: GameOrganizationInviteActionSheet ===
 
-// Module 14167 (GameOrganizationInviteActionSheet)
+// Module 14190 (GameOrganizationInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 8684 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8692 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8715 */;
-import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 14168 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 8685 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8693 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8716 */;
+import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 14191 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8697 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8698 */;
 
 require = fn;
 function isInvitableUserRow(type) {
@@ -32,7 +32,7 @@ function showTooManyInvitesToast() {
   ToastActionCreatorsDefault.open("GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES", obj2);
 }
 const View = fn(17).View;
-let closure_6 = fn(8763).useInstantInviteSendStates;
+let closure_6 = fn(8764).useInstantInviteSendStates;
 const NOOP_NULL = fn(1096).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
       }
     }
     const stringResult = intl.string(combined(2438).nVMqjA);
-    const ActionSheet = formatToPlainString(6898).ActionSheet;
+    const ActionSheet = formatToPlainString(6899).ActionSheet;
     const _Symbol = Symbol;
     if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
       class N {
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
     cResult[27] = true;
     cResult[28] = true;
     cResult[29] = tmp21;
-    const SearchField = formatToPlainString(6738).SearchField;
+    const SearchField = formatToPlainString(6739).SearchField;
   }
   class U {
     constructor(arg0) {
@@ -495,15 +495,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
   const obj8 = { size: "md", round: true, onChange: callback, placeholder: null };
   const intl5 = guildId(1126).intl;
   obj8.placeholder = intl5.formatToPlainString(combined(2438).cRK6SQ, { noun: stringResult });
-  items5[1] = closure_10(guildId(6738).SearchField, obj8);
+  items5[1] = closure_10(guildId(6739).SearchField, obj8);
   obj4.children = items5;
   obj3.header = closure_11(guildId(5377).Stack, obj4);
   if (tmp7[0]) {
     let tmp14Result = closure_10(closure_15, {});
   } else {
     const obj9 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-    tmp14Result = closure_10(combined(14171), obj9);
+    tmp14Result = closure_10(combined(14194), obj9);
   }
   obj3.children = tmp14Result;
-  return closure_10(guildId(6898).ActionSheet, obj3);
+  return closure_10(guildId(6899).ActionSheet, obj3);
 });

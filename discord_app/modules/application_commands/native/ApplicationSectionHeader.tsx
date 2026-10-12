@@ -1,6 +1,6 @@
-// === Module 12108: ApplicationSectionHeader ===
+// === Module 12110: ApplicationSectionHeader ===
 
-// Module 12108 (ApplicationSectionHeader)
+// Module 12110 (ApplicationSectionHeader)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       let tmp16 = null != tmp9;
       if (tmp16) {
         const obj5 = { style: tmp4.applicationIcon, source: tmp9 };
-        tmp16 = closure_5(guildId(6156), obj5);
+        tmp16 = closure_5(guildId(6157), obj5);
       }
       cResult[9] = tmp9;
       cResult[10] = tmp4.applicationIcon;
@@ -104,12 +104,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       tmp15 = tmp16;
     }
     const tmpResult = tmp(504);
-    const applicationCommandsIconSource = tmp(11927).getApplicationCommandsIconSource(section, stateFromStores);
+    const applicationCommandsIconSource = tmp(11929).getApplicationCommandsIconSource(section, stateFromStores);
     cResult[4] = stateFromStores;
     cResult[5] = section;
     cResult[6] = applicationCommandsIconSource;
     tmp9 = applicationCommandsIconSource;
-    const tmpResult2 = tmp(11927);
+    const tmpResult2 = tmp(11929);
   }
   const fn = function u() {
     if (null != guildId) {
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(11927).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(11929).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(6156), obj4);
+    tmp9 = closure_5(guildId(6157), obj4);
   }
   const items1 = [tmp9, closure_5(section(5088).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
   obj3.children = items1;

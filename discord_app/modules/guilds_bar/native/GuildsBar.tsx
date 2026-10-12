@@ -1,14 +1,14 @@
-// === Module 16716: GuildsBar ===
+// === Module 16740: GuildsBar ===
 
-// Module 16716 (GuildsBar)
-import NativeViewDefault from "NativeView" /* 6161 */;
-import FastListDefault from "FastList" /* 6760 */;
-import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 10326 */;
-import StartupProfilerDefault from "StartupProfiler" /* 11629 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16593 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 16717 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 16725 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 16794 */;
+// Module 16740 (GuildsBar)
+import NativeViewDefault from "NativeView" /* 6162 */;
+import FastListDefault from "FastList" /* 6761 */;
+import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 10327 */;
+import StartupProfilerDefault from "StartupProfiler" /* 11631 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16616 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 16741 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 16749 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 16818 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -206,9 +206,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       }
                       return tmp28;
                     }
-                    const obj3 = { profile: fastListRef(11629).Profiles.Guilds, children: null };
+                    const obj3 = { profile: fastListRef(11631).Profiles.Guilds, children: null };
                     const obj4 = { gesture, children: tmp25 };
-                    obj3.children = closure_4(fastListRef(6334).GestureDetector, obj4);
+                    obj3.children = closure_4(fastListRef(6335).GestureDetector, obj4);
                     const tmp31 = closure_4(StartupProfilerDefault, obj3);
                     cResult[20] = gesture;
                     cResult[21] = tmp25;
@@ -278,7 +278,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   closure_7(listProps, fastListRef);
   const obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(11629).Profiles.Guilds;
+  obj.profile = fastListRef(11631).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp9 = StartupProfilerDefault;
@@ -305,6 +305,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items1 = [closure_4(FastListDefault, obj4), closure_4(GuildsBarDragPreviewDefault, {}), closure_4(FavoritesGuildIntroPopoverDefault, {})];
   obj3.children = items1;
   obj2.children = closure_5(tmp11, obj3);
-  obj.children = closure_4(fastListRef(6334).GestureDetector, obj2);
+  obj.children = closure_4(fastListRef(6335).GestureDetector, obj2);
   return closure_4(tmp9, obj);
 }));

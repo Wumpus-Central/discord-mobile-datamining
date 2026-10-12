@@ -1,6 +1,6 @@
-// === Module 16760: UnreadSubtitle ===
+// === Module 16784: UnreadSubtitle ===
 
-// Module 16760 (UnreadSubtitle)
+// Module 16784 (UnreadSubtitle)
 import Text_Text from "Text/Text" /* 5088 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
   const cResult = subtitleStyles(576).c(16);
   ({ guild, channel, channelName, count } = arg0);
   const obj = subtitleStyles(576);
-  subtitleStyles = subtitleStyles(16758).useSubtitleStyles();
+  subtitleStyles = subtitleStyles(16782).useSubtitleStyles();
   if (cResult[0] === channel) {
     if (cResult[1] === guild) {
       let tmp5 = cResult[2];
@@ -88,17 +88,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
   }
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(8158).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(8158);
+    channelIconComponentWithGuild = tmp(8159).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(8159);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(8207).TextIcon;
+    channelIconComponentWithGuild = tmp(8208).TextIcon;
   }
   cResult[0] = channel;
   cResult[1] = guild;
   cResult[2] = channelIconComponentWithGuild;
   tmp5 = channelIconComponentWithGuild;
-  const obj2 = subtitleStyles(16758);
+  const obj2 = subtitleStyles(16782);
 }) : (function UnreadSubtitle(arg0) {
   ({ channel, channelName } = arg0);
   let subtitleStyles;

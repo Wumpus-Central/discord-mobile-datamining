@@ -1,18 +1,18 @@
-// === Module 15836: CopyClientInfoSetting ===
+// === Module 15859: CopyClientInfoSetting ===
 
-// Module 15836 (CopyClientInfoSetting)
+// Module 15859 (CopyClientInfoSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
 import CopyIcon from "CopyIcon" /* 5042 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import DeviceUtils from "DeviceUtils" /* 5068 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6838 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
-import ActionSheetRow from "ActionSheetRow" /* 6894 */;
-import ActionSheet from "ActionSheet" /* 6898 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import ActionSheetRow from "ActionSheetRow" /* 6895 */;
+import ActionSheet from "ActionSheet" /* 6899 */;
 import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11341 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10483 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10484 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1381 */;
 
 require = fn;
@@ -335,7 +335,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6113).ClipboardListIcon,
+  IconComponent: fn(6114).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_8 }), "ClientClientInfoActionSheet");
   },

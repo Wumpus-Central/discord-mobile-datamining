@@ -1,6 +1,6 @@
-// === Module 12413: ? ===
+// === Module 12415: ? ===
 
-// Module 12413
+// Module 12415
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FindFriendsSpotIllustration-2x.png.js");

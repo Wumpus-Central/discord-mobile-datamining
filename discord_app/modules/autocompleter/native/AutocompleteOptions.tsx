@@ -1,13 +1,13 @@
-// === Module 9799: AutocompleteOptions ===
+// === Module 9800: AutocompleteOptions ===
 
-// Module 9799 (AutocompleteOptions)
+// Module 9800 (AutocompleteOptions)
 import util from "util" /* 1126 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5970 */;
-import StickersActionCreators from "StickersActionCreators" /* 9758 */;
-import executeCommandDefault from "executeCommand" /* 9801 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7920 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7921 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8235 */;
+import StickersActionCreators from "StickersActionCreators" /* 9759 */;
+import executeCommandDefault from "executeCommand" /* 9802 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7921 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7922 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8236 */;
 import StickersStore from "StickersStore" /* 6030 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
@@ -19,7 +19,7 @@ const Constants = fn(1085);
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
 const ChannelAutocompleteConstants = fn(5404);
 ({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(9800).AutocompleteTypes;
+const AutocompleteTypes = fn(9801).AutocompleteTypes;
 const EmojiConstants = fn(1393);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
@@ -277,7 +277,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const stickerPacks = StickersActionCreators.fetchStickerPacks();
               }
               const items2 = [query];
-              const items3 = [channel, (arg0, arg1) => arg1 === channel(7046).StickerSendability.SENDABLE];
+              const items3 = [channel, (arg0, arg1) => arg1 === channel(7047).StickerSendability.SENDABLE];
               items1 = AutocompleteUtilsDefault.queryStickers(items2, true, items3);
               const tmp2Result = AutocompleteUtilsDefault;
             }

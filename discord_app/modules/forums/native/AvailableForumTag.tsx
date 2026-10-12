@@ -1,11 +1,11 @@
-// === Module 10461: AvailableForumTag ===
+// === Module 10462: AvailableForumTag ===
 
-// Module 10461 (AvailableForumTag)
+// Module 10462 (AvailableForumTag)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import EmojiDefault from "Emoji" /* 6819 */;
-import native from "native" /* 8541 */;
+import EmojiDefault from "Emoji" /* 6820 */;
+import native from "native" /* 8542 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5987 */;

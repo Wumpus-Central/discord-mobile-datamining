@@ -1,12 +1,12 @@
-// === Module 16959: useNotificationPermissionPrompt ===
+// === Module 16983: useNotificationPermissionPrompt ===
 
-// Module 16959 (useNotificationPermissionPrompt)
-import NotificationUtilsDefault from "NotificationUtils" /* 12130 */;
+// Module 16983 (useNotificationPermissionPrompt)
+import NotificationUtilsDefault from "NotificationUtils" /* 12132 */;
 import noop from "module_19" /* 19 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2058 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2059 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12121 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12123 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
@@ -52,14 +52,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNotif
       let tmp14 = cResult[7];
     }
     const effect = noop.useEffect(tmp13, tmp14);
-    const guildOpenNudge = tmp(16960).useGuildOpenNudge();
+    const guildOpenNudge = tmp(16984).useGuildOpenNudge();
     class S {
       constructor() {
         return closure_1(closure_1_2[8])(closure_1_4, closure_1_6);
       }
     }
     const postCallDisconnectNudge = obj5.usePostCallDisconnectNudge();
-    const tmpResult4 = tmp(16960);
+    const tmpResult4 = tmp(16984);
   }
   class P {
     constructor() {
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNotif
     }
   }, items2);
   const obj2 = stateFromStores(504);
-  const guildOpenNudge = stateFromStores(16960).useGuildOpenNudge();
-  const obj3 = stateFromStores(16960);
-  const postCallDisconnectNudge = stateFromStores(16962).usePostCallDisconnectNudge();
+  const guildOpenNudge = stateFromStores(16984).useGuildOpenNudge();
+  const obj3 = stateFromStores(16984);
+  const postCallDisconnectNudge = stateFromStores(16986).usePostCallDisconnectNudge();
 });

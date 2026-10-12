@@ -1,13 +1,13 @@
-// === Module 17636: AppIconsCoachmark ===
+// === Module 17693: AppIconsCoachmark ===
 
-// Module 17636 (AppIconsCoachmark)
+// Module 17693 (AppIconsCoachmark)
 import nativeDefault from "native" /* 587 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import _modDef9537 from "module_9537" /* 9537 */;
-import AppIconUtils from "AppIconUtils" /* 13724 */;
-import _modDef17637 from "module_17637" /* 17637 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import _modDef9538 from "module_9538" /* 9538 */;
+import AppIconUtils from "AppIconUtils" /* 13747 */;
+import _modDef17694 from "module_17694" /* 17694 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
         return;
       }
     }
-    let obj2 = { source: _modDef17637, style: tmp4.image };
+    let obj2 = { source: _modDef17694, style: tmp4.image };
     const tmp19 = closure_7(FastImageDefault, obj2);
     cResult[10] = tmp4.image;
     cResult[11] = tmp19;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
         return;
       }
     }
-    const obj4 = { source: _modDef9537, size: tmp(1200).IconSizes.MEDIUM, style: tmp4.nitroWheel, disableColor: true };
+    const obj4 = { source: _modDef9538, size: tmp(1200).IconSizes.MEDIUM, style: tmp4.nitroWheel, disableColor: true };
     const tmp22 = closure_7(tmp(1200).Icon, obj4);
     cResult[12] = tmp4.nitroWheel;
     cResult[13] = tmp22;
@@ -343,11 +343,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
   const obj4 = { style: tmp.info, children: null };
   const obj5 = { source: null, style: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  obj5.source = _modDef17637;
+  obj5.source = _modDef17694;
   obj5.style = tmp.image;
   const items2 = [closure_7(FastImageDefault, obj5), , ];
   const obj6 = { style: tmp.titleContainer, children: null };
-  const items3 = [closure_7(markAsDismissed(1200).Icon, { source: _modDef9537, size: markAsDismissed(1200).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
+  const items3 = [closure_7(markAsDismissed(1200).Icon, { source: _modDef9538, size: markAsDismissed(1200).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
   const obj8 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1126).intl;
   obj8.children = intl.string(markAsDismissed(1126).t.EfA4Cq);
@@ -387,5 +387,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
   obj10.children = items5;
   items4[1] = closure_8(View, obj10);
   obj3.children = items4;
-  return closure_8(markAsDismissed(6839).BottomSheet, obj3);
+  return closure_8(markAsDismissed(6840).BottomSheet, obj3);
 });

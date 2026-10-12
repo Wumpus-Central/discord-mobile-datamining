@@ -1,17 +1,17 @@
-// === Module 6879: GuildOnboardingCompleted ===
+// === Module 6880: GuildOnboardingCompleted ===
 
-// Module 6879 (GuildOnboardingCompleted)
+// Module 6880 (GuildOnboardingCompleted)
 import nativeDefault from "native" /* 587 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
-import UserProfileRolesCard from "UserProfileRolesCard" /* 6881 */;
+import UserProfileRolesCard from "UserProfileRolesCard" /* 6882 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6788 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6789 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

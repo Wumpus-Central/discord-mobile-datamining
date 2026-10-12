@@ -1,6 +1,6 @@
-// === Module 18615: AVErrorAnalytics ===
+// === Module 18673: AVErrorAnalytics ===
 
-// Module 18615 (AVErrorAnalytics)
+// Module 18673 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1376 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5086 */;
@@ -14,7 +14,7 @@ import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 import RTCRegionStore from "RTCRegionStore" /* 5211 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7428 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7429 */;
 
 const require = globalThis.__r;
 
@@ -72,7 +72,7 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(7430).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(7431).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const Constants = fn(5117);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);

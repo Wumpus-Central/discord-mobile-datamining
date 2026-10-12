@@ -1,6 +1,6 @@
-// === Module 9222: TwoWayLinkDiscordConsent ===
+// === Module 9223: TwoWayLinkDiscordConsent ===
 
-// Module 9222 (TwoWayLinkDiscordConsent)
+// Module 9223 (TwoWayLinkDiscordConsent)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -121,7 +121,7 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -236,7 +236,7 @@ export const TwoWayLinkDiscordConsent = ReactCompilerGating.isReactCompilerEnabl
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {

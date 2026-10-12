@@ -1,13 +1,13 @@
-// === Module 16657: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 16681: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 16657 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 16681 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6839 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8637 */;
-import _modDef16658 from "module_16658" /* 16658 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
+import _modDef16682 from "module_16682" /* 16682 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,11 +43,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: markAsDismissed(16658) };
-      const tmp12 = closure_6(markAsDismissed(6156), obj2);
+      const obj2 = { source: markAsDismissed(16682) };
+      const tmp12 = closure_6(markAsDismissed(6157), obj2);
       cResult[5] = tmp12;
       let tmp8 = tmp12;
-      const tmp11 = markAsDismissed(6156);
+      const tmp11 = markAsDismissed(6157);
     } else {
       tmp8 = cResult[5];
     }
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
       const obj8 = { startExpanded: true, onDismiss: tmp6, children: null };
       const items = [tmp8, tmp15, tmp20, tmp25, tmp33];
       obj8.children = items;
-      const tmp39 = closure_7(tmp(6839).BottomSheet, obj8);
+      const tmp39 = closure_7(tmp(6840).BottomSheet, obj8);
       cResult[23] = tmp25;
       cResult[24] = tmp33;
       cResult[25] = tmp6;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     },
     children: null
   };
-  const obj2 = { source: _modDef16658 };
+  const obj2 = { source: _modDef16682 };
   const items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

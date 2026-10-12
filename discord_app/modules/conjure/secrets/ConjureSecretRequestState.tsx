@@ -1,9 +1,10 @@
-// === Module 17251: ConjureSecretRequestState ===
+// === Module 17177: ConjureSecretRequestState ===
 
-// Module 17251 (ConjureSecretRequestState)
+// Module 17177 (ConjureSecretRequestState)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
+import conjureChatTurns from "conjureChatTurns" /* 12999 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +19,6 @@ function isSecretsSavedMessage(content) {
   }
   return tmp5;
 }
-const turnSettled = fn(12996).turnSettled;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
@@ -54,7 +54,8 @@ export const secretRequestStatuses = function secretRequestStatuses(memo, stateF
           tmp10 = render_id;
           tmp11 = flag2;
           if (0 !== fields.length) {
-            let set = turnSettled(tmp7);
+            let obj2 = conjureChatTurns;
+            let set = obj2.turnSettled(tmp7);
             tmp10 = render_id;
             tmp11 = flag2;
             if (set) {

@@ -1,11 +1,11 @@
-// === Module 14958: AccountUsernameSetting ===
+// === Module 14981: AccountUsernameSetting ===
 
-// Module 14958 (AccountUsernameSetting)
+// Module 14981 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11457 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11459 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -76,7 +76,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(7992).MobileUserSettings.ACCOUNT,
+  parent: fn(7993).MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
     let Text = require;

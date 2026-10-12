@@ -1,14 +1,14 @@
-// === Module 18221: NewTermsModal ===
+// === Module 18279: NewTermsModal ===
 
-// Module 18221 (NewTermsModal)
+// Module 18279 (NewTermsModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5930 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 6890 */;
-import _modDef8664 from "module_8664" /* 8664 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8673 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8971 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 6891 */;
+import _modDef8665 from "module_8665" /* 8665 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8674 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8972 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
             closure_128_0 = value;
             tmp5(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: "+51" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
                     cResult[47] = tmp78;
                     tmp75 = tmp78;
                   }
-                  const obj20 = { style: tmp67, source: _modDef8664, color: tmp4.navbarRight.tintColor, onPress: handleMoreActions, accessibilityRole: "button", accessibilityLabel: tmp68 };
+                  const obj20 = { style: tmp67, source: _modDef8665, color: tmp4.navbarRight.tintColor, onPress: handleMoreActions, accessibilityRole: "button", accessibilityLabel: tmp68 };
                   const tmp74 = closure_12(TouchableHitBoxDefault, obj20);
                   cResult[40] = tmp4.navbarRight.tintColor;
                   cResult[41] = tmp67;
@@ -406,7 +406,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
   const memo = noop.useMemo(() => action.getAction(), []);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
-  memo(6206).useNavigatorBackPressHandler(memo(5372).BackPressHandler.minimize);
+  memo(6207).useNavigatorBackPressHandler(memo(5372).BackPressHandler.minimize);
   dependencyMap = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -418,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -450,7 +450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           closure_128_0 = value;
           closure_129_1(closure_128_0);
           c3 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp15) {
         c3 = tmp;
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     }
   }), []);
   const obj2 = { type: null, name: null, properties: null };
-  let obj = memo(6206);
+  let obj = memo(6207);
   obj2.type = memo(1273).ImpressionTypes.VIEW;
   obj2.name = memo(1273).ImpressionNames.USER_AGREEMENTS;
   obj2.properties = { required_action: memo };
@@ -528,15 +528,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     const obj41 = { top };
     items3[1] = obj41;
     obj21.style = items3;
-    obj21.source = tmp2(8664);
+    obj21.source = tmp2(8665);
     obj21.color = tmp.navbarRight.tintColor;
     obj21.onPress = handleMoreActions;
     const intl9 = tmp6(1126).intl;
     obj21.accessibilityLabel = intl9.string(tmp6(1126).t["UKOtz+"]);
-    items2[2] = closure_12(tmp2(8673), obj21);
+    items2[2] = closure_12(tmp2(8674), obj21);
     obj3.children = items2;
     tmp10 = closure_13(closure_6, obj3);
-    const tmp2Result = tmp2(8673);
+    const tmp2Result = tmp2(8674);
   }
   return tmp10;
 });

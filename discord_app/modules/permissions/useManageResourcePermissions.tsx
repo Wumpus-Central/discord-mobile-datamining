@@ -1,6 +1,6 @@
-// === Module 8572: useManageResourcePermissions ===
+// === Module 8573: useManageResourcePermissions ===
 
-// Module 8572 (useManageResourcePermissions)
+// Module 8573 (useManageResourcePermissions)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -60,7 +60,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(8571);
+const PermissionsConstants = fn(8572);
 ({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
 const Permissions = fn(1096).Permissions;
 let closure_11 = {

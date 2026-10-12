@@ -63,7 +63,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBut
       if (cResult[4] === onPressIn) {
       }
     }
-    const obj3 = { animatedScaleStyles: "Array", buttonAnimationProps: false };
+    const obj3 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
     const obj4 = { onLayout, onPressIn, onPressOut };
     obj3.buttonAnimationProps = obj4;
     cResult[3] = onLayout;
@@ -86,7 +86,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBut
 }) : (function useButtonPressAnimationPropsIfPressed(arg0, arg1, onLayout, onPressIn, onPressOut) {
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(arg0, arg1, onLayout, onPressIn, onPressOut);
   if (null == arg0) {
-    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: false };
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
     const obj3 = { onLayout, onPressIn, onPressOut };
     obj2.buttonAnimationProps = obj3;
     let obj4 = obj2;

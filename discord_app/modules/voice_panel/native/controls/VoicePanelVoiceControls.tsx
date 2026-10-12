@@ -1,20 +1,20 @@
-// === Module 17886: VoicePanelVoiceControls ===
+// === Module 17943: VoicePanelVoiceControls ===
 
-// Module 17886 (VoicePanelVoiceControls)
+// Module 17943 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import TableRowGroup from "TableRowGroup" /* 6264 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
+import TableRowGroup from "TableRowGroup" /* 6265 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
 import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 10876 */;
 import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 11075 */;
 import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 11087 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11969 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13586 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17724 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17749 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17887 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11971 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13609 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17781 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17806 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17944 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
@@ -25,7 +25,7 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11968).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11970).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
 const createStyles = fn(5092);

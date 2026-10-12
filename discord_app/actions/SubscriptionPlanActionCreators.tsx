@@ -1,6 +1,6 @@
-// === Module 6959: SubscriptionPlanActionCreators ===
+// === Module 6960: SubscriptionPlanActionCreators ===
 
-// Module 6959 (SubscriptionPlanActionCreators)
+// Module 6960 (SubscriptionPlanActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5724 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -32,7 +32,7 @@ let closure_9 = async function _fetchSubscriptionPlansForSKU() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {

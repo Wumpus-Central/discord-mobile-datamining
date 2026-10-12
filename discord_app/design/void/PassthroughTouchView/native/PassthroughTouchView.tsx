@@ -1,8 +1,8 @@
-// === Module 14198: PassthroughTouchView ===
+// === Module 14221: PassthroughTouchView ===
 
-// Module 14198 (PassthroughTouchView)
+// Module 14221 (PassthroughTouchView)
 import c from "c" /* 576 */;
-import PassthroughTouchNativeComponentDefault from "PassthroughTouchNativeComponent" /* 14199 */;
+import PassthroughTouchNativeComponentDefault from "PassthroughTouchNativeComponent" /* 14222 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -10,9 +10,9 @@ import DurationsDefault from "Durations" /* 1102 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import Timers from "Timers" /* 2060 */;
 import useIsSpeaking from "useIsSpeaking" /* 6039 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8274 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8275 */;
 import SpotifyActionCreators from "SpotifyActionCreators" /* 10787 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 13904 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 13927 */;
 import RunningGameStore from "RunningGameStore" /* 2019 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
@@ -484,7 +484,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8458);
+const SpotifyConstants = fn(8459);
 ({ getSpotifyResourceType: map1, isSpotifyParty: closure_14, SPOTIFY_PARTY_PREFIX: closure_15, SpotifyEndpoints: closure_16, SpotifyResourceTypes: closure_17 } = SpotifyConstants);
 const Constants = fn(1085);
 const PlatformTypes = Constants.PlatformTypes;

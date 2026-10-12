@@ -1,9 +1,9 @@
-// === Module 8609: useGuildEmbeddedApplications ===
+// === Module 8610: useGuildEmbeddedApplications ===
 
-// Module 8609 (useGuildEmbeddedApplications)
+// Module 8610 (useGuildEmbeddedApplications)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6852 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6853 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
@@ -43,7 +43,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         return obj;
       }
       c3 = 3;
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     } catch (tmp11) {
       c3 = tmp;
       throw tmp11;

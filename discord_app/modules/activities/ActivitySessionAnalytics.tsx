@@ -1,28 +1,28 @@
-// === Module 14704: ActivitySessionAnalytics ===
+// === Module 14727: ActivitySessionAnalytics ===
 
-// Module 14704 (ActivitySessionAnalytics)
+// Module 14727 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import v1 from "v1" /* 1279 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import ThermalUtilsDefault from "ThermalUtils" /* 5296 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5729 */;
 import MetricEvents from "MetricEvents" /* 5734 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9232 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9252 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9233 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9253 */;
 import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10814 */;
 import pendingFrameLaunch from "pendingFrameLaunch" /* 10856 */;
 import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 10857 */;
 import getShelfItemDataDefault from "getShelfItemData" /* 10869 */;
-import getPlatformDefault from "getPlatform" /* 11716 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 12967 */;
+import getPlatformDefault from "getPlatform" /* 11718 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 12969 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
-import QuestStore from "QuestStore" /* 7390 */;
+import QuestStore from "QuestStore" /* 7391 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 import UserStore from "UserStore" /* 1390 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 14705 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 14728 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
 require = fn;
@@ -106,7 +106,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

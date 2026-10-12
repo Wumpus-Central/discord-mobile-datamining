@@ -1,6 +1,6 @@
-// === Module 13361: UserProfileRecentActivityCard ===
+// === Module 13384: UserProfileRecentActivityCard ===
 
-// Module 13361 (UserProfileRecentActivityCard)
+// Module 13384 (UserProfileRecentActivityCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,20 +9,20 @@ import StringUtils from "StringUtils" /* 2031 */;
 import native from "native" /* 4827 */;
 import shared from "shared" /* 4969 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import Pressables from "Pressables" /* 6184 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6851 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 7688 */;
-import utils from "utils" /* 8271 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8459 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8878 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8879 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 13113 */;
-import BadgesAll from "Badges" /* 13128 */;
-import TrendingType from "TrendingType" /* 13133 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 13140 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 13141 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import Pressables from "Pressables" /* 6185 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6852 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 7689 */;
+import utils from "utils" /* 8272 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8460 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8880 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 13118 */;
+import BadgesAll from "Badges" /* 13133 */;
+import TrendingType from "TrendingType" /* 13138 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 13145 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 13146 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -62,7 +62,7 @@ function getEntryText(entry) {
           const obj5 = { title: entry.extra.activity_name };
           let obj6 = obj5;
         } else {
-          obj6 = { title: "r" };
+          obj6 = { title: "top" };
         }
         return obj6;
       }
@@ -94,8 +94,8 @@ let obj = {
     return true;
   }
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8271).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8271).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8272).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8272).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -257,7 +257,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Gaming
   cResult[4] = "user-profile";
   cResult[5] = str.badges;
   cResult[6] = tmp10;
-  tmpResult = badgeCell(8459);
+  tmpResult = badgeCell(8460);
 }) : (function GamingEntryBadges(entry) {
   entry = entry.entry;
   const tmp = closure_9();
@@ -637,13 +637,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       if (cResult[4] === user) {
         let tmp8 = cResult[5];
       }
-      const tmp9 = tmp6(13140)(tmp8);
+      const tmp9 = tmp6(13145)(tmp8);
       _require = tmp9;
       if (cResult[6] === tmp9) {
         if (cResult[7] === user.id) {
           let tmp10 = cResult[8];
         }
-        tmp6(13141)(tmp10);
+        tmp6(13146)(tmp10);
         let application_id;
         if ("application_id" in entry.extra) {
           application_id = entry.extra.application_id;
@@ -652,7 +652,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           if (cResult[10] === user.id) {
             let tmp14 = cResult[11];
           }
-          const tmp15 = tmp6(8879)(tmp14);
+          const tmp15 = tmp6(8880)(tmp14);
           importDefault = tmp15;
           if (cResult[12] === tmp9) {
             if (cResult[13] === tmp15) {

@@ -1,6 +1,6 @@
-// === Module 12947: AppStoreOverlayBody ===
+// === Module 12949: AppStoreOverlayBody ===
 
-// Module 12947 (AppStoreOverlayBody)
+// Module 12949 (AppStoreOverlayBody)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
@@ -9,17 +9,17 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import useToken from "useToken" /* 4818 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import AnalyticsActions from "AnalyticsActions" /* 7406 */;
-import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 12948 */;
-import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 12951 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 12956 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import AnalyticsActions from "AnalyticsActions" /* 7407 */;
+import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 12950 */;
+import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 12953 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 12958 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1085).VerticalGradient;
-let closure_6 = fn(6840).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_6 = fn(6841).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5092);

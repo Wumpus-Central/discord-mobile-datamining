@@ -1,8 +1,8 @@
-// === Module 14032: getSoundFromMessage ===
+// === Module 14055: getSoundFromMessage ===
 
-// Module 14032 (getSoundFromMessage)
+// Module 14055 (getSoundFromMessage)
 import MessageReferenceTypes from "MessageReferenceTypes" /* 1108 */;
-import SoundboardTypes from "SoundboardTypes" /* 7048 */;
+import SoundboardTypes from "SoundboardTypes" /* 7049 */;
 import MessageStore from "MessageStore" /* 5432 */;
 
 require = fn;

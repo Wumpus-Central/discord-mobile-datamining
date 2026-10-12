@@ -1,6 +1,6 @@
-// === Module 7331: NUFStore ===
+// === Module 7332: NUFStore ===
 
-// Module 7331 (NUFStore)
+// Module 7332 (NUFStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildStore from "GuildStore" /* 2087 */;

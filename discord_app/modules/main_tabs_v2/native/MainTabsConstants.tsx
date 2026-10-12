@@ -1,6 +1,6 @@
-// === Module 10636: MainTabsConstants ===
+// === Module 10637: MainTabsConstants ===
 
-// Module 10636 (MainTabsConstants)
+// Module 10637 (MainTabsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/MainTabsConstants.tsx");

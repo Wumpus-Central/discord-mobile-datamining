@@ -1,9 +1,9 @@
-// === Module 18379: GuildConfigGates ===
+// === Module 18437: GuildConfigGates ===
 
-// Module 18379 (GuildConfigGates)
+// Module 18437 (GuildConfigGates)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildConfigGatesStore from "GuildConfigGatesStore" /* 18380 */;
+import GuildConfigGatesStore from "GuildConfigGatesStore" /* 18438 */;
 
 require = fn;
 const Endpoints = fn(1085).Endpoints;
@@ -40,7 +40,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

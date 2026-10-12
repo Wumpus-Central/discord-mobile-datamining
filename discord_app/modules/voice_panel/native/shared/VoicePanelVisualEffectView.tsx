@@ -1,13 +1,13 @@
-// === Module 17857: VoicePanelVisualEffectView ===
+// === Module 17914: VoicePanelVisualEffectView ===
 
-// Module 17857 (VoicePanelVisualEffectView)
+// Module 17914 (VoicePanelVisualEffectView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useToken from "useToken" /* 4818 */;
 import shared from "shared" /* 4969 */;
-import native from "native" /* 8541 */;
+import native from "native" /* 8542 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 

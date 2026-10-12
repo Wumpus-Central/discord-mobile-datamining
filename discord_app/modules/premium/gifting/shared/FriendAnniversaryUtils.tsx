@@ -1,6 +1,6 @@
-// === Module 8107: FriendAnniversaryUtils ===
+// === Module 8108: FriendAnniversaryUtils ===
 
-// Module 8107 (FriendAnniversaryUtils)
+// Module 8108 (FriendAnniversaryUtils)
 import _mod4345 from "module_4345" /* 4345 */;
 import size from "module_2" /* 2 */;
 

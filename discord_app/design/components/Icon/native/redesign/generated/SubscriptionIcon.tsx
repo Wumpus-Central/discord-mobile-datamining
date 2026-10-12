@@ -1,10 +1,10 @@
-// === Module 15247: SubscriptionIcon ===
+// === Module 15270: SubscriptionIcon ===
 
-// Module 15247 (SubscriptionIcon)
+// Module 15270 (SubscriptionIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import BaseIconImage from "BaseIconImage" /* 4817 */;
-import _mod15248 from "module_15248" /* 15248 */;
+import _mod15271 from "module_15271" /* 15271 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const SubscriptionIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     ICON_STRONG = nativeDefault.colors.ICON_STRONG;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15248;
+    const tmpResult = _mod15271;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const SubscriptionIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15248, color: ICON_STRONG, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15271, color: ICON_STRONG, style: color.style });
 });

@@ -3,7 +3,7 @@
 // Module 10670 (ChannelInfoActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
-import ChannelStatusStore from "ChannelStatusStore" /* 7251 */;
+import ChannelStatusStore from "ChannelStatusStore" /* 7252 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/ChannelInfoActionCreators.tsx");

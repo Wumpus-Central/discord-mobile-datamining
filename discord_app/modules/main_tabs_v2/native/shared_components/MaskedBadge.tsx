@@ -1,10 +1,10 @@
-// === Module 9301: MaskedBadge ===
+// === Module 9302: MaskedBadge ===
 
-// Module 9301 (MaskedBadge)
+// Module 9302 (MaskedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import BadgeDefault from "Badge" /* 9302 */;
+import BadgeDefault from "Badge" /* 9303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

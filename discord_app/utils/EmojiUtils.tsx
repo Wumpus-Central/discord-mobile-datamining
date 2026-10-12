@@ -7,7 +7,7 @@ import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestriction
 import EmojiTypes from "EmojiTypes" /* 4767 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
 import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5992 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7924 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7925 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import UserStore from "UserStore" /* 1390 */;

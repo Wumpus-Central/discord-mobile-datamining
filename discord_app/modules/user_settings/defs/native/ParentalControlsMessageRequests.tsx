@@ -1,15 +1,15 @@
-// === Module 16283: ParentalControlsMessageRequests ===
+// === Module 16306: ParentalControlsMessageRequests ===
 
-// Module 16283 (ParentalControlsMessageRequests)
+// Module 16306 (ParentalControlsMessageRequests)
 import util from "util" /* 1126 */;
 import _modDef2568 from "module_2568" /* 2568 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
-import useSelectedTeen from "useSelectedTeen" /* 7740 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15073 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15074 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16269 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7258 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7498 */;
+import useSelectedTeen from "useSelectedTeen" /* 7741 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15096 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15097 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16292 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7259 */;
 
 require = fn;
 fn(558);
@@ -55,7 +55,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(_modDef2568["7aYkh1"]);
   },
-  parent: fn(7992).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7993).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
     if (typeof useIsDisabled === "function") {
       const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();

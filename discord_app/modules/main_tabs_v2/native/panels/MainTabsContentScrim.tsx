@@ -1,6 +1,6 @@
-// === Module 16963: MainTabsContentScrim ===
+// === Module 16987: MainTabsContentScrim ===
 
-// Module 16963 (MainTabsContentScrim)
+// Module 16987 (MainTabsContentScrim)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 587 */;

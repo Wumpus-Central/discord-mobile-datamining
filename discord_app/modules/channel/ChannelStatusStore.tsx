@@ -1,6 +1,6 @@
-// === Module 7251: ChannelStatusStore ===
+// === Module 7252: ChannelStatusStore ===
 
-// Module 7251 (ChannelStatusStore)
+// Module 7252 (ChannelStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;

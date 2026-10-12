@@ -8,7 +8,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
-const useChannelVideoLimitDefault = tmp2(8788);
+const useChannelVideoLimitDefault = tmp2(8789);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -32,7 +32,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp5 = stateFromStores1(10849)(channel.id);
   const obj = channel(576);
   const tmp4 = stateFromStores1;
-  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[0] = items;
@@ -54,7 +54,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const obj2 = channel(10357);
+  const obj2 = channel(10358);
   const stateFromStores = DeafenButton(504).useStateFromStores(first, tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ApplicationStreamingStore];
@@ -103,7 +103,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const DeafenButtonResult2 = DeafenButton(504);
   const stageHasMedia = DeafenButton(5895).useStageHasMedia(channel.id);
-  const reachedLimit = tmp4(8788)(channel).reachedLimit;
+  const reachedLimit = tmp4(8789)(channel).reachedLimit;
   if (cResult[10] === channel) {
     if (cResult[11] === stateFromStores1) {
       if (cResult[12] === stageHasMedia) {
@@ -226,8 +226,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   importDefault = undefined;
   const tmp = closure_8();
   const tmp4 = useCanSpeakInChannelDefault(channel.id);
-  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(10357);
+  const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(10358);
   const items = [GuildStore];
   const items1 = [channel.guild_id];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);

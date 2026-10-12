@@ -4,19 +4,19 @@
 import util from "util" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _modDef3719 from "module_3719" /* 3719 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6857 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6930 */;
-import StorefrontUtils from "StorefrontUtils" /* 6935 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7888 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6858 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6931 */;
+import StorefrontUtils from "StorefrontUtils" /* 6936 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7889 */;
 import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 10684 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
-import SKUStore from "SKUStore" /* 6087 */;
+import SKUStore from "SKUStore" /* 6088 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7423).InviteTypes;
+const InviteTypes = fn(7424).InviteTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
@@ -201,5 +201,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
     const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items;
   }, items2);
-  memo(6857)(stateFromStoresArray);
+  memo(6858)(stateFromStoresArray);
 });

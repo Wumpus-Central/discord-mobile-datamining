@@ -1,8 +1,8 @@
 // === Module 10861: ApplicationInstallUtils ===
 
 // Module 10861 (ApplicationInstallUtils)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9234 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9247 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9235 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9248 */;
 
 require = fn;
 const BuiltInSectionId = fn(5403).BuiltInSectionId;

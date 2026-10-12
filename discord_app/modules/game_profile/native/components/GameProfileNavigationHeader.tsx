@@ -1,6 +1,6 @@
-// === Module 9117: GameProfileNavigationHeader ===
+// === Module 9118: GameProfileNavigationHeader ===
 
-// Module 9117 (GameProfileNavigationHeader)
+// Module 9118 (GameProfileNavigationHeader)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import timing from "timing" /* 5093 */;
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       } else {
         if (cResult[7] !== token) {
           const obj6 = { android_fallbackColor: token };
-          const tmp26 = closure_6(tmp(8541).BackgroundBlurFill, obj6);
+          const tmp26 = closure_6(tmp(8542).BackgroundBlurFill, obj6);
           cResult[7] = token;
           cResult[8] = tmp26;
           let tmp24 = tmp26;
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           if (tmp35) {
             const obj12 = { style: headerContainer.rankPillContainer, children: null };
             const obj13 = { rank: game.l30Rank, compact: true };
-            const items4 = [closure_6(tmp4(8924), obj13), ];
+            const items4 = [closure_6(tmp4(8925), obj13), ];
             const obj14 = { style: null, children: null };
             const items5 = [StyleSheet.absoluteFill, animatedStyle1];
             class T {
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               }
             }
             const obj15 = { rank: game.l30Rank };
-            obj14.children = closure_6(tmp4(8924), obj15);
+            obj14.children = closure_6(tmp4(8925), obj15);
             items4[1] = closure_6(tmp4(4850).View, obj14);
             obj12.children = items4;
             tmp35 = closure_7(closure_4, obj12);
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           const obj17 = { uri: tmp16 };
           obj16.source = obj17;
           obj16.style = headerContainer.icon;
-          tmp28 = closure_6(tmp4(6156), obj16);
+          tmp28 = closure_6(tmp4(6157), obj16);
         }
         cResult[9] = tmp16;
         cResult[10] = headerContainer.icon;
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   if (null != name) {
     const obj3 = { style: tmp.headerContainer, children: null };
     const obj4 = { android_fallbackColor: token };
-    const items2 = [closure_6(tmp2(8541).BackgroundBlurFill, obj4), ];
+    const items2 = [closure_6(tmp2(8542).BackgroundBlurFill, obj4), ];
     const obj5 = { style: tmp.headerRow, children: null };
     let tmp17Result = null != memo;
     if (tmp17Result) {
@@ -383,7 +383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       const obj7 = { uri: memo };
       obj6.source = obj7;
       obj6.style = tmp.icon;
-      tmp17Result = closure_6(tmp4(6156), obj6);
+      tmp17Result = closure_6(tmp4(6157), obj6);
     }
     const items3 = [tmp17Result, , ];
     const obj8 = { style: tmp.titleContainer, children: null };
@@ -397,12 +397,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     if (tmp15Result) {
       const obj10 = { style: tmp.rankPillContainer, children: null };
       const obj11 = { rank: game.l30Rank, compact: true };
-      const items5 = [closure_6(tmp4(8924), obj11), ];
+      const items5 = [closure_6(tmp4(8925), obj11), ];
       const obj12 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj12.style = items6;
       const obj13 = { rank: game.l30Rank };
-      obj12.children = closure_6(tmp4(8924), obj13);
+      obj12.children = closure_6(tmp4(8925), obj13);
       items5[1] = closure_6(tmp4(4850).View, obj12);
       obj10.children = items5;
       tmp15Result = closure_7(closure_4, obj10);

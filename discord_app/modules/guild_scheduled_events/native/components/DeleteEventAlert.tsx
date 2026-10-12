@@ -1,6 +1,6 @@
-// === Module 8678: DeleteEventAlert ===
+// === Module 8679: DeleteEventAlert ===
 
-// Module 8678 (DeleteEventAlert)
+// Module 8679 (DeleteEventAlert)
 import util from "util" /* 1126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
           }
           guildId(recurrenceId[9]).hideActionSheet();
           c2 = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp17) {
         c2 = tmp;
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(8518);
+            const obj8 = v1(8519);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
           }
           v1(5056).hideActionSheet();
           dependencyMap = 3;
-          return { value: "IconComponent", done: "+51" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp16) {
         dependencyMap = tmp;

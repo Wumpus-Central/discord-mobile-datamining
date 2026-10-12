@@ -1,12 +1,12 @@
-// === Module 10614: BioMarkupUtils ===
+// === Module 10615: BioMarkupUtils ===
 
-// Module 10614 (BioMarkupUtils)
+// Module 10615 (BioMarkupUtils)
 import privDefault from "priv" /* 1457 */;
 import _modDef1949 from "module_1949" /* 1949 */;
 import MarkupReactRulesDefault from "MarkupReactRules" /* 5080 */;
 import MarkupRulesDefault from "MarkupRules" /* 5402 */;
 import combineMarkupRules_mod from "combineMarkupRules" /* 5401 */;
-import MarkupParser_mod from "MarkupParser" /* 8004 */;
+import MarkupParser_mod from "MarkupParser" /* 8005 */;
 import MarkupUtils from "MarkupUtils" /* 5079 */;
 import apply from "module_12" /* 12 */;
 

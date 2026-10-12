@@ -1,16 +1,16 @@
-// === Module 15131: FamilyCenterActivityBanner ===
+// === Module 15154: FamilyCenterActivityBanner ===
 
-// Module 15131 (FamilyCenterActivityBanner)
+// Module 15154 (FamilyCenterActivityBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2568 from "module_2568" /* 2568 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6156 */;
-import useUserLinks from "useUserLinks" /* 7738 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7739 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11533 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 15132 */;
+import FastImageDefault from "FastImage" /* 6157 */;
+import useUserLinks from "useUserLinks" /* 7739 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7740 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11535 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 15155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   }
   const tmpResult = useAgeSpecificText;
   const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp13, tmp14);
-  const tmp4Result = importDefault(tmp5 ? 15139 : 15140);
+  const tmp4Result = importDefault(tmp5 ? 15162 : 15163);
   if (cResult[4] === tmp6.art) {
     if (cResult[5] === tmp4Result) {
       let tmp19 = cResult[6];
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2568.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2568.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
   const obj5 = { source: null, style: null };
   const formatResult = intl3.format(_modDef2568.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
-  obj5.source = importDefault(tmp3 ? 15139 : 15140);
+  obj5.source = importDefault(tmp3 ? 15162 : 15163);
   obj5.style = tmp4.art;
   const items = [React4(FastImageDefault, obj5), React4(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), React4(Text_Text.Text, { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;

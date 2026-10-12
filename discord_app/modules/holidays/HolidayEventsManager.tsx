@@ -1,14 +1,14 @@
-// === Module 18062: HolidayEventsManager ===
+// === Module 18120: HolidayEventsManager ===
 
-// Module 18062 (HolidayEventsManager)
+// Module 18120 (HolidayEventsManager)
 import getSoundsForPackDefault from "getSoundsForPack" /* 10983 */;
-import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 18063 */;
-import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 18067 */;
-import SoundpackActions from "SoundpackActions" /* 18068 */;
-import setIncomingRingtone from "setIncomingRingtone" /* 18069 */;
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 18121 */;
+import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 18125 */;
+import SoundpackActions from "SoundpackActions" /* 18126 */;
+import setIncomingRingtone from "setIncomingRingtone" /* 18127 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
 import SoundpackStore from "SoundpackStore" /* 10981 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
 const Soundpacks = fn(10982).Soundpacks;

@@ -1,13 +1,13 @@
-// === Module 9030: useTrackShopCardClick ===
+// === Module 9031: useTrackShopCardClick ===
 
-// Module 9030 (useTrackShopCardClick)
+// Module 9031 (useTrackShopCardClick)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7274 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7275 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7275 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7276 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useSelectedVariantIndex = fn(9031).useSelectedVariantIndex;
+const useSelectedVariantIndex = fn(9032).useSelectedVariantIndex;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 9767: StickerPackInformationPopout ===
+// === Module 9768: StickerPackInformationPopout ===
 
-// Module 9767 (StickerPackInformationPopout)
+// Module 9768 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerP
           }
           if (cResult[16] !== onClose) {
             const obj5 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: tmp15, children: tmp17 };
-            const tmp22 = closure_4(tmp(6184).PressableOpacity, obj5);
+            const tmp22 = closure_4(tmp(6185).PressableOpacity, obj5);
             cResult[16] = onClose;
             cResult[17] = tmp22;
             let tmp20 = tmp22;

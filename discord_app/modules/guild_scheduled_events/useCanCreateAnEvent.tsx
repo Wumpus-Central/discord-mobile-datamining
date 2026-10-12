@@ -1,7 +1,7 @@
-// === Module 8653: useCanCreateAnEvent ===
+// === Module 8654: useCanCreateAnEvent ===
 
-// Module 8653 (useCanCreateAnEvent)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8572 */;
+// Module 8654 (useCanCreateAnEvent)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;
 import GuildStore from "GuildStore" /* 2087 */;

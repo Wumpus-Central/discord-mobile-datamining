@@ -1,15 +1,15 @@
-// === Module 12738: PremiumGiftDuration ===
+// === Module 12740: PremiumGiftDuration ===
 
-// Module 12738 (PremiumGiftDuration)
+// Module 12740 (PremiumGiftDuration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import TableRow from "TableRow" /* 6179 */;
-import RowButton2 from "RowButton" /* 8581 */;
-import NativeGiftContext from "NativeGiftContext" /* 10054 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10107 */;
+import TableRow from "TableRow" /* 6180 */;
+import RowButton2 from "RowButton" /* 8582 */;
+import NativeGiftContext from "NativeGiftContext" /* 10055 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10108 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   const cResult = planInterval(576).c(9);
   const tmp4 = closure_11();
   const obj = planInterval(576);
-  planInterval = planInterval(10054).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10055).useNativeGiftContext().planInterval;
   ({ durationContainer, durationTitle } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
@@ -334,10 +334,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   cResult[7] = tmp10;
   cResult[8] = tmp14;
   tmp13 = tmp14;
-  const obj2 = planInterval(10054);
+  const obj2 = planInterval(10055);
 }) : (function PremiumGiftDuration() {
   const tmp = closure_11();
-  planInterval = planInterval(10054).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10055).useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: null };
   const obj3 = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1126).intl;

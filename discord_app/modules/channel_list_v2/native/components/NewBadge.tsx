@@ -1,6 +1,6 @@
-// === Module 11992: NewBadge ===
+// === Module 11994: NewBadge ===
 
-// Module 11992 (NewBadge)
+// Module 11994 (NewBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import PlatformUtils from "PlatformUtils" /* 1382 */;
 import shared from "shared" /* 4969 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9307 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9308 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 9779: StickerOptionsActionSheet ===
+// === Module 9780: StickerOptionsActionSheet ===
 
-// Module 9779 (StickerOptionsActionSheet)
+// Module 9780 (StickerOptionsActionSheet)
 import ToastUtils from "ToastUtils" /* 4808 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import ClipboardUtils from "ClipboardUtils" /* 6885 */;
+import ClipboardUtils from "ClipboardUtils" /* 6886 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,9 +43,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerO
     let obj2 = { children: null };
     const obj3 = { hasIcons: true, children: null };
     const obj4 = { icon: tmp5, label: tmp6, onPress: tmp4 };
-    obj3.children = jsx(tmp(6179).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
-    obj2.children = jsx(tmp(6264).TableRowGroup, { hasIcons: true, children: null });
-    const tmp12 = jsx(tmp(6898).ActionSheet, { children: null });
+    obj3.children = jsx(tmp(6180).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
+    obj2.children = jsx(tmp(6265).TableRowGroup, { hasIcons: true, children: null });
+    const tmp12 = jsx(tmp(6899).ActionSheet, { children: null });
     cResult[4] = tmp4;
     cResult[5] = tmp12;
     let tmp10 = tmp12;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StickerO
   const intl = stickerUrl(1126).intl;
   obj3.label = intl.string(stickerUrl(1126).t.B1ubHx);
   obj3.onPress = callback;
-  obj2.children = jsx(stickerUrl(6179).TableRow, { icon: jsx(stickerUrl(5038).LinkIcon, {}), label: null, onPress: null });
-  obj.children = jsx(stickerUrl(6264).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(stickerUrl(6898).ActionSheet, { children: null });
+  obj2.children = jsx(stickerUrl(6180).TableRow, { icon: jsx(stickerUrl(5038).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(stickerUrl(6265).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(stickerUrl(6899).ActionSheet, { children: null });
 });

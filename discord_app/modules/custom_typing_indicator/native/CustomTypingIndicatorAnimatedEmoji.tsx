@@ -1,6 +1,6 @@
-// === Module 11655: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 11657: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 11655 (CustomTypingIndicatorAnimatedEmoji)
+// Module 11657 (CustomTypingIndicatorAnimatedEmoji)
 import user from "user" /* 1398 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;

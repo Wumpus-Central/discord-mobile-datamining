@@ -1,6 +1,6 @@
-// === Module 16753: HomeDrawerGuildVoiceState ===
+// === Module 16777: HomeDrawerGuildVoiceState ===
 
-// Module 16753 (HomeDrawerGuildVoiceState)
+// Module 16777 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,10 +8,10 @@ import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import FastImageDefault from "FastImage" /* 6156 */;
+import FastImageDefault from "FastImage" /* 6157 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11174 */;
-import AvatarPile from "AvatarPile" /* 13147 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13981 */;
+import AvatarPile from "AvatarPile" /* 13152 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 14004 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
@@ -90,7 +90,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceU
           }
           const obj3 = { style: tmp5, children: null };
           const obj4 = { size: guildId(1200).AvatarSizes.XSMALL, names: tmp6, totalCount: tmp10, children: cResult[8] };
-          obj3.children = closure_11(guildId(13147).AvatarPile, obj4);
+          obj3.children = closure_11(guildId(13152).AvatarPile, obj4);
           const tmp18 = closure_11(View, obj3);
           cResult[11] = tmp6;
           cResult[12] = cResult[8];

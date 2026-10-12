@@ -1,6 +1,6 @@
-// === Module 17132: ConjureShimmer ===
+// === Module 17195: ConjureShimmer ===
 
-// Module 17132 (ConjureShimmer)
+// Module 17195 (ConjureShimmer)
 import _modDef683 from "module_683" /* 683 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
@@ -392,9 +392,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
     obj8.children = closure_8(width(5391), obj10);
     obj6.children = closure_8(width(4850).View, obj8);
-    obj5.children = closure_8(width(6242), obj6);
+    obj5.children = closure_8(width(6243), obj6);
     tmp14 = closure_8(closure_6, obj5);
-    const tmp18 = width(6242);
+    const tmp18 = width(6243);
   }
   items3[1] = tmp14;
   obj4.children = items3;

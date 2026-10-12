@@ -1,9 +1,9 @@
-// === Module 18573: InappropriateConversationsManager ===
+// === Module 18631: InappropriateConversationsManager ===
 
-// Module 18573 (InappropriateConversationsManager)
+// Module 18631 (InappropriateConversationsManager)
 import _modDef5207 from "module_5207" /* 5207 */;
 import SoundUtils from "SoundUtils" /* 10980 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 import size from "module_2" /* 2 */;
 
 function fadeIn() {
