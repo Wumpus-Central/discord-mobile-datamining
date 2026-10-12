@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/guild_onboarding_home/images",
+  width: 223,
+  height: 145.5,
   scales: [2, 3],
-  hash: "ccc400a106e8185c58835ca1201624f3",
-  name: "ExperimentalDirectSelectIcon",
+  hash: "fa8d8980f41bbcb7aeb9d5dc519482cb",
+  name: "mobile-empty-state",
   type: "png",
 });

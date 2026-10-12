@@ -1,22 +1,29 @@
 // _runtime/metro/06569__.js
-import _mod6570 from "06570__.js";
+import _mod6567 from "06567__.js";
 
-export default function _inherits(value, fn) {
-  if (typeof fn !== "function") {
-    if (null !== fn) {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Super expression must either be null or a function");
-      throw typeError;
+export default function _superPropBase(arg0, key10009) {
+  hasOwnProperty = {}.hasOwnProperty;
+  const call = hasOwnProperty.call;
+  let tmp = arg0;
+  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
+    let tmp4 = _mod6567(arg0);
+    tmp = tmp4;
+    if (null !== tmp4) {
+      while (true) {
+        let hasOwnProperty2 = {}.hasOwnProperty;
+        let call2 = hasOwnProperty2.call;
+        tmp = tmp4;
+        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
+          break;
+        } else {
+          tmp4 = _mod6567(tmp4);
+          tmp = tmp4;
+          if (null === tmp4) {
+            break;
+          }
+        }
+      }
     }
   }
-  let prototype = fn;
-  if (fn) {
-    prototype = fn.prototype;
-  }
-  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
-  Object.defineProperty(value, "prototype", { writable: false });
-  if (fn) {
-    _mod6570(value, fn);
-  }
-  const obj = { constructor: { value, writable: true, configurable: true } };
+  return tmp;
 }

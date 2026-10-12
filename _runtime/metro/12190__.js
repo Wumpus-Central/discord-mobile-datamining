@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/community",
-  width: 56,
-  height: 65,
-  scales: [1, 2, 3],
-  hash: "260617da8a2932d3af6bc2abf2ba2716",
-  name: "rejected-alert",
+  httpServerLocation: "/assets/images/channel_following/dark",
+  width: 280,
+  height: 120,
+  scales: [2, 3],
+  hash: "902d26debf9cf5ba93edffb3d1cb9422",
+  name: "channel_following_success_3",
   type: "png",
 });

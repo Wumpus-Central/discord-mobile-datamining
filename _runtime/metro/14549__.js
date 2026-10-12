@@ -1,11 +1,7 @@
 // _runtime/metro/14549__.js
-import _mod14528 from "14528__.js";
+import _mod14615 from "14615__.js";
+import 14550__ from "14550__.js";
 
-const tmp = _mod14528.navigator && _mod14528.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
-
-export default str;
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod14615;
+module_14550(obj, { assign: _mod14615 });

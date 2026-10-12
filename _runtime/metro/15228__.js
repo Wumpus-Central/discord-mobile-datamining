@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/consoles",
-  width: 85,
-  height: 70,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "f2b2ae790fb60abfa40be44fab4eb6fc",
-  name: "ps_relink_upsell",
+  hash: "c8ba289430cf44af74e8a6dfe840935f",
+  name: "LaptopPhoneIcon",
   type: "png",
 });

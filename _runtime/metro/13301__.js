@@ -1,5 +1,5 @@
 // _runtime/metro/13301__.js
-import _mod13258 from "13258__.js";
+import _mod13281 from "13281__.js";
 
 const self = this;
 let self2 = this;
@@ -56,14 +56,14 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "znakov", verb: "imeti" },
-          file: { unit: "bajtov", verb: "imeti" },
-          array: { unit: "elementov", verb: "imeti" },
-          set: { unit: "elementov", verb: "imeti" },
+          string: { unit: "caract\u00E8res", verb: "avoir" },
+          file: { unit: "octets", verb: "avoir" },
+          array: { unit: "\u00E9l\u00E9ments", verb: "avoir" },
+          set: { unit: "\u00E9l\u00E9ments", verb: "avoir" },
         };
         closure_1 = {
-          regex: "vnos",
-          email: "e-po\u0161tni naslov",
+          regex: "entr\u00E9e",
+          email: "adresse e-mail",
           url: "URL",
           emoji: "emoji",
           uuid: "UUID",
@@ -76,22 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "ISO datum in \u010Das",
-          date: "ISO datum",
-          time: "ISO \u010Das",
-          duration: "ISO trajanje",
-          ipv4: "IPv4 naslov",
-          ipv6: "IPv6 naslov",
-          cidrv4: "obseg IPv4",
-          cidrv6: "obseg IPv6",
-          base64: "base64 kodiran niz",
-          base64url: "base64url kodiran niz",
-          json_string: "JSON niz",
-          e164: "E.164 \u0161tevilka",
+          datetime: "date et heure ISO",
+          date: "date ISO",
+          time: "heure ISO",
+          duration: "dur\u00E9e ISO",
+          ipv4: "adresse IPv4",
+          ipv6: "adresse IPv6",
+          cidrv4: "plage IPv4",
+          cidrv6: "plage IPv6",
+          base64: "cha\u00EEne encod\u00E9e en base64",
+          base64url: "cha\u00EEne encod\u00E9e en base64url",
+          json_string: "cha\u00EEne JSON",
+          e164: "num\u00E9ro E.164",
           jwt: "JWT",
-          template_literal: "vnos",
+          template_literal: "entr\u00E9e",
         };
-        closure_2 = { nan: "NaN", number: "\u0161tevilo", array: "tabela" };
+        closure_2 = { nan: "NaN", number: "nombre", array: "tableau" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -100,120 +100,133 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp48 = closure_2[parsedTypeResult];
-              if (tmp48 == null) {
-                tmp48 = parsedTypeResult;
+              let tmp49 = closure_2[parsedTypeResult];
+              if (tmp49 == null) {
+                tmp49 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Neveljaven vnos: pri\u010Dakovano instanceof " + code.expected + ", prejeto " + tmp48;
+                let combined =
+                  "Entr\u00E9e invalide : instanceof " + code.expected + " attendu, " + tmp49 + " re\u00E7u";
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Neveljaven vnos: pri\u010Dakovano " + expected + ", prejeto " + tmp48;
+                combined = "Entr\u00E9e invalide : " + expected + " attendu, " + tmp49 + " re\u00E7u";
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Neveljaven vnos: pri\u010Dakovano " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Entr\u00E9e invalide : " + closure_2.stringifyPrimitive(code.values[0]) + " attendu";
               } else {
                 const _HermesInternal14 = HermesInternal;
                 combined1 =
-                  "Neveljavna mo\u017Enost: pri\u010Dakovano eno izmed " + closure_2.joinValues(code.values, "|");
+                  "Option invalide : une valeur parmi " + closure_2.joinValues(code.values, "|") + " attendue";
               }
               return combined1;
             case "too_big":
-              let str24 = "<";
+              let str31 = "<";
               if (code.inclusive) {
-                str24 = "<=";
+                str31 = "<=";
               }
               let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
-              let str25 = code.origin;
+              let str32 = code.origin;
               if (tmp27) {
-                if (str25 == null) {
-                  str25 = "vrednost";
+                if (str32 == null) {
+                  str32 = "valeur";
                 }
+                const verb = tmp27.verb;
                 const str1 = code.maximum.toString();
-                let str31 = tmp27.unit;
-                if (str31 == null) {
-                  str31 = "elementov";
+                let str38 = tmp27.unit;
+                if (str38 == null) {
+                  str38 = "\u00E9l\u00E9ment(s)";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Preveliko: pri\u010Dakovano, da bo " + str25 + " imelo " + str24 + str1 + " " + str31;
+                let combined2 = "Trop grand : " + str32 + " doit " + verb + " " + str31 + str1 + " " + str38;
               } else {
-                let str26 = str25;
-                if (str25 == null) {
-                  str26 = "vrednost";
+                let str33 = str32;
+                if (str32 == null) {
+                  str33 = "valeur";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Preveliko: pri\u010Dakovano, da bo " + str26 + " " + str24 + code.maximum.toString();
+                combined2 = "Trop grand : " + str33 + " doit \u00EAtre " + str31 + code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str18 = ">";
+              let str21 = ">";
               if (code.inclusive) {
-                str18 = ">=";
+                str21 = ">=";
               }
-              let tmp15 = obj2[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
+              let tmp17 = obj2[code.origin];
+              if (tmp17 == null) {
+                tmp17 = null;
               }
-              ({ origin, minimum } = code);
-              const str45 = minimum.toString();
-              if (tmp15) {
+              const origin = code.origin;
+              if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "Premajhno: pri\u010Dakovano, da bo " + origin + " imelo " + str18 + str45 + " " + tmp15.unit;
+                  "Trop petit : " +
+                  origin +
+                  " doit " +
+                  tmp17.verb +
+                  " " +
+                  str21 +
+                  code.minimum.toString() +
+                  " " +
+                  tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Premajhno: pri\u010Dakovano, da bo " + origin + " " + str18 + str45;
+                combined3 = "Trop petit : " + origin + " doit \u00EAtre " + str21 + code.minimum.toString();
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = 'Neveljaven niz: mora se za\u010Deti z "' + code.prefix + '"';
+                let combined4 = 'Cha\u00EEne invalide : doit commencer par "' + code.prefix + '"';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = 'Neveljaven niz: mora se kon\u010Dati z "' + code.suffix + '"';
+                combined4 = 'Cha\u00EEne invalide : doit se terminer par "' + code.suffix + '"';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = 'Neveljaven niz: mora vsebovati "' + code.includes + '"';
+                combined4 = 'Cha\u00EEne invalide : doit inclure "' + code.includes + '"';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Neveljaven niz: mora ustrezati vzorcu " + code.pattern;
+                combined4 = "Cha\u00EEne invalide : doit correspondre au mod\u00E8le " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Neveljaven " + format;
+                combined4 = "" + format + " invalide";
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Neveljavno \u0161tevilo: mora biti ve\u010Dkratnik " + code.divisor;
+              return "Nombre invalide : doit \u00EAtre un multiple de " + code.divisor;
             case "unrecognized_keys":
-              let str3 = " klju\u010D";
+              let str3 = "";
+              let str4 = "";
               if (code.keys.length > 1) {
-                str3 = "i klju\u010Di";
+                str4 = "s";
+              }
+              if (code.keys.length > 1) {
+                str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Neprepoznan" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "Cl\u00E9" + str4 + " non reconnue" + str3 + " : " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Neveljaven klju\u010D v " + code.origin;
+              return "Cl\u00E9 invalide dans " + code.origin;
             case "invalid_union":
-              return "Neveljaven vnos";
+              return "Entr\u00E9e invalide";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Neveljavna vrednost v " + code.origin;
+              return "Valeur invalide dans " + code.origin;
             default:
-              return "Neveljaven vnos";
+              return "Entr\u00E9e invalide";
           }
         };
         return obj;
@@ -221,7 +234,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod13258);
+    let closure_2 = fn(_mod13281);
     function error() {}
     module.exports = exports.default;
   } else {

@@ -1,12 +1,23 @@
 // _runtime/metro/14536__.js
-import _mod14532 from "14532__.js";
 
-export default !_mod14532(() => {
-  const fn = () => {};
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
-  }
-  return hasOwnPropertyResult;
-});
+export const collations = [
+  "big5han",
+  "compat",
+  "dict",
+  "direct",
+  "ducet",
+  "emoji",
+  "eor",
+  "gb2312",
+  "phonebk",
+  "phonetic",
+  "pinyin",
+  "reformed",
+  "search",
+  "searchjl",
+  "standard",
+  "stroke",
+  "trad",
+  "unihan",
+  "zhuyin",
+];

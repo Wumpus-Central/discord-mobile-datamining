@@ -1,8 +1,11 @@
 // _runtime/metro/06440__.js
-import _mod6441 from "06441__.js";
-import _mod6443 from "06443__.js";
-import _mod6444 from "06444__.js";
+const require = globalThis.__r;
 
-export const useCompetingGestures = _mod6441.useCompetingGestures;
-export const useExclusiveGestures = _mod6443.useExclusiveGestures;
-export const useSimultaneousGestures = _mod6444.useSimultaneousGestures;
+for (const key10013 in require("06441__.js")) {
+  arg5[key10013] = require("06441__.js")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

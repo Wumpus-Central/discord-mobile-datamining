@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 20,
   height: 20,
   scales: [1, 2, 3],
-  hash: "e955954d3b070442dffa061da0dc1d1a",
-  name: "ic_clock",
+  hash: "3db3f02153afc41647b2d1efd43e1f34",
+  name: "ic_event_calendar",
   type: "png",
 });

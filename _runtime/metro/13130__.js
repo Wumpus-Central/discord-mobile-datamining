@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "5caaadc4fb41849c36d80e2425141f40",
-  name: "NewUserIcon",
+  hash: "245a1c93543c3efa179c5c568a81ab81",
+  name: "HourglassIcon",
   type: "png",
 });

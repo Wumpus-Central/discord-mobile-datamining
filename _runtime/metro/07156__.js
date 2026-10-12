@@ -4,10 +4,10 @@ import registerAsset from "01132__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 87,
-  height: 100,
+  width: 88,
+  height: 106,
   scales: [2, 3],
-  hash: "fea63c35d752daa1f371f2069e1b5793",
-  name: "img_wumpus_lightro",
+  hash: "acbb98adccf298ebfe7faeca9c938eda",
+  name: "img_tier_0_mobile",
   type: "png",
 });

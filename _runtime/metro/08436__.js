@@ -1,89 +1,40 @@
 // _runtime/metro/08436__.js
-import _mod8434 from "08434__.js";
-import _mod8439 from "08439__.js";
-import _mod8443 from "08443__.js";
-import flattenStyle from "08437__.js";
+import _mod8437 from "08437__.js";
+import _mod8445 from "08445__.js";
+import flattenStyle from "08438__.js";
+import "module_4947";
 import emptyFunction_mod from "04947__.js";
 
-const obj = {
-  accessible: null,
-  accessibilityLabel: null,
-  accessibilityHint: null,
-  accessibilityActions: null,
-  accessibilityIgnoresInvertColors: null,
-  accessibilityRole: null,
-  accessibilityState: null,
-  accessibilityValue: null,
-  accessibilityLiveRegion: null,
-  importantForAccessibility: null,
-  accessibilityViewIsModal: null,
-  accessibilityElementsHidden: null,
-  onAccessibilityAction: null,
-  onAccessibilityTap: null,
-  onMagicTap: null,
-  testID: null,
-  nativeID: null,
-  onResponderGrant: null,
-  onResponderMove: null,
-  onResponderReject: null,
-  onResponderRelease: null,
-  onResponderTerminate: null,
-  onResponderTerminationRequest: null,
-  onStartShouldSetResponder: null,
-  onStartShouldSetResponderCapture: null,
-  onMoveShouldSetResponder: null,
-  onMoveShouldSetResponderCapture: null,
-  hitSlop: null,
-  onLayout: null,
-  pointerEvents: null,
-  style: null,
-  removeClippedSubviews: null,
-  renderToHardwareTextureAndroid: null,
-  shouldRasterizeIOS: null,
-  collapsable: null,
-  needsOffscreenAlphaCompositing: null,
-};
-const module_8439 = flattenStyle(_mod8439);
-obj.accessible = emptyFunction.bool;
-obj.accessibilityLabel = emptyFunction.node;
-obj.accessibilityHint = emptyFunction.string;
+const obj = {};
+const module_8437 = Object.assign(_mod8437);
+obj.style = flattenStyle(_mod8445);
 let emptyFunction = emptyFunction_mod;
-obj.accessibilityActions = emptyFunction.arrayOf(emptyFunction.string);
-obj.accessibilityIgnoresInvertColors = emptyFunction.bool;
+const obj2 = { uri: emptyFunction.string, headers: null };
 let emptyFunction = emptyFunction_mod;
-obj.accessibilityRole = emptyFunction.oneOf(_mod8443.DeprecatedAccessibilityRoles);
-obj.accessibilityState = emptyFunction.object;
-obj.accessibilityValue = emptyFunction.object;
+obj2.headers = emptyFunction.objectOf(emptyFunction.string);
+const items = [emptyFunction.shape(obj2), emptyFunction.number];
 let emptyFunction = emptyFunction_mod;
-obj.accessibilityLiveRegion = emptyFunction.oneOf(["none", "polite", "assertive"]);
+const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
 let emptyFunction = emptyFunction_mod;
-obj.importantForAccessibility = emptyFunction.oneOf(["auto", "yes", "no", "no-hide-descendants"]);
-obj.accessibilityViewIsModal = emptyFunction.bool;
-obj.accessibilityElementsHidden = emptyFunction.bool;
-obj.onAccessibilityAction = emptyFunction.func;
-obj.onAccessibilityTap = emptyFunction.func;
-obj.onMagicTap = emptyFunction.func;
+size.headers = emptyFunction.objectOf(emptyFunction.string);
+items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
+obj.source = emptyFunction.oneOfType(items);
+obj.blurRadius = emptyFunction.number;
+obj.defaultSource = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
+obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
+obj.progressiveRenderingEnabled = emptyFunction.bool;
+obj.fadeDuration = emptyFunction.number;
+obj.internal_analyticTag = emptyFunction.string;
+obj.onLoadStart = emptyFunction.func;
+obj.onError = emptyFunction.func;
+obj.onLoad = emptyFunction.func;
+obj.onLoadEnd = emptyFunction.func;
 obj.testID = emptyFunction.string;
-obj.nativeID = emptyFunction.string;
-obj.onResponderGrant = emptyFunction.func;
-obj.onResponderMove = emptyFunction.func;
-obj.onResponderReject = emptyFunction.func;
-obj.onResponderRelease = emptyFunction.func;
-obj.onResponderTerminate = emptyFunction.func;
-obj.onResponderTerminationRequest = emptyFunction.func;
-obj.onStartShouldSetResponder = emptyFunction.func;
-obj.onStartShouldSetResponderCapture = emptyFunction.func;
-obj.onMoveShouldSetResponder = emptyFunction.func;
-obj.onMoveShouldSetResponderCapture = emptyFunction.func;
-obj.hitSlop = _mod8434;
-obj.onLayout = emptyFunction.func;
 let emptyFunction = emptyFunction_mod;
-obj.pointerEvents = emptyFunction.oneOf(["box-none", "none", "box-only", "auto"]);
-obj.style = module_8439;
-obj.removeClippedSubviews = emptyFunction.bool;
-obj.renderToHardwareTextureAndroid = emptyFunction.bool;
-obj.shouldRasterizeIOS = emptyFunction.bool;
-obj.collapsable = emptyFunction.bool;
-obj.needsOffscreenAlphaCompositing = emptyFunction.bool;
+obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
 
 export default obj;

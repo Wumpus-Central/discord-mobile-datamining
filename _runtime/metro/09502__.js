@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 240,
   height: 152,
   scales: [2, 3],
-  hash: "1c56c6a8d7541177ea8c3d88699db89c",
-  name: "img_guild_cap_upsell_light",
+  hash: "99a0c83db7ec93ecc4f9138bd68cba05",
+  name: "img_guild_cap_upsell_dark",
   type: "png",
 });

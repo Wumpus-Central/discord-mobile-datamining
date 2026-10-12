@@ -175,7 +175,7 @@ export const mobileReplayIntegration = () => {
                 const obj = { value, done: true };
                 return obj;
               } else {
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {

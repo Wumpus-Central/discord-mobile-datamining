@@ -1,9 +1,9 @@
 // _runtime/metro/04790__.js
 let fn = () => {
-  let handler = function r(arg0, _exports2, firstResult) {
+  let handler = function r(arg0, _exports22, firstResult) {
     let fn;
     let _exports = arg0;
-    dependencyMap = _exports2;
+    dependencyMap = _exports22;
     closure_2 = firstResult;
     let tmp = typeof fn === "function";
     if (typeof fn === "function") {
@@ -13,11 +13,11 @@ let fn = () => {
     let num = 0;
     if (0 < firstResult.length) {
       _exports = firstResult[num];
-      _exports2 = _exports2[_exports];
+      let _exports2 = _exports22[_exports];
       while (!_exports2) {
         if (arg0[_exports]) {
           let obj = { exports: {} };
-          _exports2[_exports] = obj;
+          _exports22[_exports] = obj;
           let first = arg0[_exports][0];
           let call = first.call;
           let _exports3 = obj.exports;
@@ -133,10 +133,10 @@ let fn = () => {
           _exports2 = obj.exports;
           firstResult = _exports;
           if (typeof call === "unknown") {
-            firstResult = first(fn, obj, _exports2, firstResult, arg0, _exports2, firstResult);
+            firstResult = first(fn, obj, _exports2, firstResult, arg0, _exports22, firstResult);
             break;
           } else {
-            let callResult = call(_exports3, fn, obj, _exports2, firstResult, arg0, _exports2, firstResult);
+            let callResult = call(_exports3, fn, obj, _exports2, firstResult, arg0, _exports22, firstResult);
             break;
           }
           break;
@@ -163,7 +163,7 @@ let fn = () => {
           }
           num = num + 1;
         }
-        _exports = _exports2[_exports].exports;
+        _exports = _exports22[_exports].exports;
       }
     }
     return function o(arg0, arg1) {
@@ -905,7 +905,7 @@ let fn = () => {
             self._onReject = obj1.onReject || obj.defaultOnReject;
             if (obj.shouldCatchExceptions(obj1)) {
               _promise = self._promise;
-              catchPromise = _promise.catch(/* F156798 */ function() { ... });
+              catchPromise = _promise.catch(/* F157119 */ function() { ... });
             }
             _resetStateResult = self._resetState();
           } else {
@@ -1440,14 +1440,14 @@ let fn = () => {
         arg0.constants = obj2;
         arg0.loadAxo = function loadAxo(arg0) {
           const self = this;
-          const f156815 = () => {
+          const f157136 = () => {
             let minified = () => { ... };
             closure_5 = { label: 0, sent() { ... }, trys: [], ops: [] };
             let obj = { next: () => { ... }, throw: () => { ... }, return: () => { ... } };
             let btSdkVersion = 2;
             if (typeof Symbol === "function") {
               let _Symbol = Symbol;
-              obj[Symbol.iterator] = /* F156809 */ function() { ... };
+              obj[Symbol.iterator] = /* F157130 */ function() { ... };
             }
             return obj;
           };
@@ -2073,7 +2073,7 @@ let fn = () => {
           if (this.limitBroadcastToFramesArray) {
             targetFrames = this.targetFrames;
             mapped = targetFrames.map(() => { ... });
-            found = mapped.filter(/* F156822 */ function() { ... });
+            found = mapped.filter(/* F157143 */ function() { ... });
           } else {
             found = [];
           }
@@ -2086,7 +2086,7 @@ let fn = () => {
             result = self.targetFramesAsWindows();
             tmp = globalThis;
             _Boolean = Boolean;
-            return Boolean(result.find(/* F156823 */ function() { ... }));
+            return Boolean(result.find(/* F157144 */ function() { ... }));
           } else {
             flag = true;
             return true;
@@ -2922,7 +2922,7 @@ let fn = () => {
           tmp = applePayWeb.merchantCapabilities || ["supports3DS"];
           obj.merchantCapabilities = tmp;
           supportedNetworks = applePayWeb.supportedNetworks;
-          obj.supportedNetworks = supportedNetworks.map(/* F152969 */ function() { ... });
+          obj.supportedNetworks = supportedNetworks.map(/* F153284 */ function() { ... });
           return Object.assign({}, obj, global);
         }
         performValidation(arg0) {
@@ -6328,7 +6328,7 @@ let fn = () => {
         }
       }
     },
-    { crypto: "r" }
+    { crypto: "top" }
   ];
   obj[116] = items115;
   const items116 = [
@@ -10765,7 +10765,7 @@ let fn = () => {
           self._clientPromise = obj5.then(fn.bind(self));
           if (global.client) {
             _clientPromise = self._clientPromise;
-            fn2 = /* F153108 */ function() { ... };
+            fn2 = /* F153423 */ function() { ... };
             nextPromise = _clientPromise.then(fn2.bind(self));
           } else {
             tmp4 = globalThis;
@@ -11095,7 +11095,7 @@ let fn = () => {
             }
             fn2 = () => { ... };
             nextPromise = resolved.then(fn2.bind(self));
-            fn3 = /* F153132 */ function() { ... };
+            fn3 = /* F153447 */ function() { ... };
             return promise.then(fn3.bind(self));
           } else {
             if (dataAttributes["client-metadata-id"]) {
@@ -11359,7 +11359,7 @@ let fn = () => {
             removeChildResult = parentNode.removeChild(self._paypalScript);
           }
           _frameServicePromise = self._frameServicePromise;
-          catchPromise = _frameServicePromise.catch(/* F153134 */ function() { ... });
+          catchPromise = _frameServicePromise.catch(/* F153449 */ function() { ... });
           return catchPromise.then(() => { ... });
         }
       }
@@ -12698,7 +12698,7 @@ let fn = () => {
         }
         _addV1IframeToPage() {
           obj = { element: this._v1Modal };
-          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, /* F153180 */ function() { ... });
+          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, /* F153495 */ function() { ... });
           return;
         }
         _setupFrameworkSpecificListeners() {
@@ -12903,7 +12903,7 @@ let fn = () => {
           dfReferenceId = this.getDfReferenceId();
           nextPromise = dfReferenceId.then(() => { ... });
           nextPromise1 = nextPromise.then(() => { ... });
-          catchPromise = nextPromise1.catch(/* F153194 */ function() { ... });
+          catchPromise = nextPromise1.catch(/* F153509 */ function() { ... });
           nextPromise2 = catchPromise.then(() => { ... });
           return nextPromise2.then(() => { ... });
         }
@@ -14599,11 +14599,11 @@ let fn = () => {
           if (this.venmoContextId) {
             tmp = fn;
             obj1 = { input: null };
-            tmp2 = f153244;
+            tmp2 = f153559;
             obj4 = { id: null, status: null };
             obj4.id = self.venmoContextId;
             obj4.status = fn;
-            obj1.input = f153244(obj4, obj);
+            obj1.input = f153559(obj4, obj);
             tmp3 = closure_5;
             apiRequestResult = self.apiRequest(self.shouldUseLegacyQRCodeMutation ? tmp3.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : tmp3.UPDATE_PAYMENT_CONTEXT_QUERY, obj1);
             return apiRequestResult.then(() => {

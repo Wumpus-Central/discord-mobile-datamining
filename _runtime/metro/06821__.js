@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 30,
   height: 30,
   scales: [2, 3],
-  hash: "b845947570ae5a0cc8ded11809e80b37",
-  name: "ic_loading_emoji_light",
+  hash: "3fda792f0f90666acb261765593ba984",
+  name: "ic_loading_emoji_dark",
   type: "png",
 });

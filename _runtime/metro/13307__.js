@@ -1,5 +1,5 @@
 // _runtime/metro/13307__.js
-import _mod13258 from "13258__.js";
+import _mod13281 from "13281__.js";
 
 const self = this;
 let self2 = this;
@@ -56,26 +56,16 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: {
-            unit: "\u0441\u0438\u043C\u0432\u043E\u043B\u0456\u0432",
-            verb: "\u043C\u0430\u0442\u0438\u043C\u0435",
-          },
-          file: { unit: "\u0431\u0430\u0439\u0442\u0456\u0432", verb: "\u043C\u0430\u0442\u0438\u043C\u0435" },
-          array: {
-            unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0456\u0432",
-            verb: "\u043C\u0430\u0442\u0438\u043C\u0435",
-          },
-          set: {
-            unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0456\u0432",
-            verb: "\u043C\u0430\u0442\u0438\u043C\u0435",
-          },
+          string: { unit: "stafi", verb: "a\u00F0 hafa" },
+          file: { unit: "b\u00E6ti", verb: "a\u00F0 hafa" },
+          array: { unit: "hluti", verb: "a\u00F0 hafa" },
+          set: { unit: "hluti", verb: "a\u00F0 hafa" },
         };
         closure_1 = {
-          regex: "\u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456",
-          email:
-            "\u0430\u0434\u0440\u0435\u0441\u0430 \u0435\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u043E\u0457 \u043F\u043E\u0448\u0442\u0438",
-          url: "URL",
-          emoji: "\u0435\u043C\u043E\u0434\u0437\u0456",
+          regex: "gildi",
+          email: "netfang",
+          url: "vefsl\u00F3\u00F0",
+          emoji: "emoji",
           uuid: "UUID",
           uuidv4: "UUIDv4",
           uuidv6: "UUIDv6",
@@ -86,23 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "\u0434\u0430\u0442\u0430 \u0442\u0430 \u0447\u0430\u0441 ISO",
-          date: "\u0434\u0430\u0442\u0430 ISO",
-          time: "\u0447\u0430\u0441 ISO",
-          duration: "\u0442\u0440\u0438\u0432\u0430\u043B\u0456\u0441\u0442\u044C ISO",
-          ipv4: "\u0430\u0434\u0440\u0435\u0441\u0430 IPv4",
-          ipv6: "\u0430\u0434\u0440\u0435\u0441\u0430 IPv6",
-          cidrv4: "\u0434\u0456\u0430\u043F\u0430\u0437\u043E\u043D IPv4",
-          cidrv6: "\u0434\u0456\u0430\u043F\u0430\u0437\u043E\u043D IPv6",
-          base64: "\u0440\u044F\u0434\u043E\u043A \u0443 \u043A\u043E\u0434\u0443\u0432\u0430\u043D\u043D\u0456 base64",
-          base64url:
-            "\u0440\u044F\u0434\u043E\u043A \u0443 \u043A\u043E\u0434\u0443\u0432\u0430\u043D\u043D\u0456 base64url",
-          json_string: "\u0440\u044F\u0434\u043E\u043A JSON",
-          e164: "\u043D\u043E\u043C\u0435\u0440 E.164",
+          datetime: "ISO dagsetning og t\u00EDmi",
+          date: "ISO dagsetning",
+          time: "ISO t\u00EDmi",
+          duration: "ISO t\u00EDmalengd",
+          ipv4: "IPv4 address",
+          ipv6: "IPv6 address",
+          cidrv4: "IPv4 range",
+          cidrv6: "IPv6 range",
+          base64: "base64-encoded strengur",
+          base64url: "base64url-encoded strengur",
+          json_string: "JSON strengur",
+          e164: "E.164 t\u00F6lugildi",
           jwt: "JWT",
-          template_literal: "\u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456",
+          template_literal: "gildi",
         };
-        closure_2 = { nan: "NaN", number: "\u0447\u0438\u0441\u043B\u043E", array: "\u043C\u0430\u0441\u0438\u0432" };
+        closure_2 = { nan: "NaN", number: "n\u00FAmer", array: "fylki" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -111,81 +100,66 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp47 = closure_2[parsedTypeResult];
-              if (tmp47 == null) {
-                tmp47 = parsedTypeResult;
+              let tmp48 = closure_2[parsedTypeResult];
+              if (tmp48 == null) {
+                tmp48 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
-                  "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F instanceof " +
-                  code.expected +
-                  ", \u043E\u0442\u0440\u0438\u043C\u0430\u043D\u043E " +
-                  tmp47;
+                  "Rangt gildi: \u00DE\u00FA sl\u00F3st inn " +
+                  tmp48 +
+                  " \u00FEar sem \u00E1 a\u00F0 vera instanceof " +
+                  code.expected;
               } else {
                 const _HermesInternal16 = HermesInternal;
                 combined =
-                  "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F " +
-                  expected +
-                  ", \u043E\u0442\u0440\u0438\u043C\u0430\u043D\u043E " +
-                  tmp47;
+                  "Rangt gildi: \u00DE\u00FA sl\u00F3st inn " + tmp48 + " \u00FEar sem \u00E1 a\u00F0 vera " + expected;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 =
-                  "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F " +
-                  closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Rangt gildi: gert r\u00E1\u00F0 fyrir " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
                 combined1 =
-                  "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0430 \u043E\u043F\u0446\u0456\u044F: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F \u043E\u0434\u043D\u0435 \u0437 " +
-                  closure_2.joinValues(code.values, "|");
+                  "\u00D3gilt val: m\u00E1 vera eitt af eftirfarandi " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str28 = "<";
+              let str24 = "<";
               if (code.inclusive) {
-                str28 = "<=";
+                str24 = "<=";
               }
-              let tmp25 = obj2[code.origin];
-              if (tmp25 == null) {
-                tmp25 = null;
+              let tmp27 = obj2[code.origin];
+              if (tmp27 == null) {
+                tmp27 = null;
               }
-              let str29 = code.origin;
-              if (tmp25) {
-                if (str29 == null) {
-                  str29 = "\u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F";
+              let str25 = code.origin;
+              if (tmp27) {
+                if (str25 == null) {
+                  str25 = "gildi";
                 }
-                const verb = tmp25.verb;
                 const str1 = code.maximum.toString();
-                let str35 = tmp25.unit;
-                if (str35 == null) {
-                  str35 = "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0456\u0432";
+                let str31 = tmp27.unit;
+                if (str31 == null) {
+                  str31 = "hluti";
                 }
                 const _HermesInternal13 = HermesInternal;
                 let combined2 =
-                  "\u0417\u0430\u043D\u0430\u0434\u0442\u043E \u0432\u0435\u043B\u0438\u043A\u0435: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F, \u0449\u043E " +
-                  str29 +
-                  " " +
-                  verb +
-                  " " +
-                  str28 +
-                  str1 +
-                  " " +
-                  str35;
+                  "Of st\u00F3rt: gert er r\u00E1\u00F0 fyrir a\u00F0 " + str25 + " hafi " + str24 + str1 + " " + str31;
               } else {
-                let str30 = str29;
-                if (str29 == null) {
-                  str30 = "\u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F";
+                let str26 = str25;
+                if (str25 == null) {
+                  str26 = "gildi";
                 }
                 const _HermesInternal12 = HermesInternal;
                 combined2 =
-                  "\u0417\u0430\u043D\u0430\u0434\u0442\u043E \u0432\u0435\u043B\u0438\u043A\u0435: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F, \u0449\u043E " +
-                  str30 +
-                  " \u0431\u0443\u0434\u0435 " +
-                  str28 +
+                  "Of st\u00F3rt: gert er r\u00E1\u00F0 fyrir a\u00F0 " +
+                  str26 +
+                  " s\u00E9 " +
+                  str24 +
                   code.maximum.toString();
               }
               return combined2;
@@ -198,96 +172,66 @@ if (self2) {
               if (tmp15 == null) {
                 tmp15 = null;
               }
-              const origin = code.origin;
+              ({ origin, minimum } = code);
+              const str45 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "\u0417\u0430\u043D\u0430\u0434\u0442\u043E \u043C\u0430\u043B\u0435: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F, \u0449\u043E " +
+                  "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " +
                   origin +
-                  " " +
-                  tmp15.verb +
-                  " " +
+                  " hafi " +
                   str18 +
-                  code.minimum.toString() +
+                  str45 +
                   " " +
                   tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
                 combined3 =
-                  "\u0417\u0430\u043D\u0430\u0434\u0442\u043E \u043C\u0430\u043B\u0435: \u043E\u0447\u0456\u043A\u0443\u0454\u0442\u044C\u0441\u044F, \u0449\u043E " +
-                  origin +
-                  " \u0431\u0443\u0434\u0435 " +
-                  str18 +
-                  code.minimum.toString();
+                  "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " + origin + " s\u00E9 " + str18 + str45;
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 =
-                  '\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u0440\u044F\u0434\u043E\u043A: \u043F\u043E\u0432\u0438\u043D\u0435\u043D \u043F\u043E\u0447\u0438\u043D\u0430\u0442\u0438\u0441\u044F \u0437 "' +
-                  code.prefix +
-                  '"';
+                let combined4 = '\u00D3gildur strengur: ver\u00F0ur a\u00F0 byrja \u00E1 "' + code.prefix + '"';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 =
-                  '\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u0440\u044F\u0434\u043E\u043A: \u043F\u043E\u0432\u0438\u043D\u0435\u043D \u0437\u0430\u043A\u0456\u043D\u0447\u0443\u0432\u0430\u0442\u0438\u0441\u044F \u043D\u0430 "' +
-                  code.suffix +
-                  '"';
+                combined4 = '\u00D3gildur strengur: ver\u00F0ur a\u00F0 enda \u00E1 "' + code.suffix + '"';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 =
-                  '\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u0440\u044F\u0434\u043E\u043A: \u043F\u043E\u0432\u0438\u043D\u0435\u043D \u043C\u0456\u0441\u0442\u0438\u0442\u0438 "' +
-                  code.includes +
-                  '"';
+                combined4 = '\u00D3gildur strengur: ver\u00F0ur a\u00F0 innihalda "' + code.includes + '"';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 =
-                  "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u0440\u044F\u0434\u043E\u043A: \u043F\u043E\u0432\u0438\u043D\u0435\u043D \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u0430\u0442\u0438 \u0448\u0430\u0431\u043B\u043E\u043D\u0443 " +
-                  code.pattern;
+                combined4 = "\u00D3gildur strengur: ver\u00F0ur a\u00F0 fylgja mynstri " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 " + format;
+                combined4 = "Rangt " + format;
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return (
-                "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0435 \u0447\u0438\u0441\u043B\u043E: \u043F\u043E\u0432\u0438\u043D\u043D\u043E \u0431\u0443\u0442\u0438 \u043A\u0440\u0430\u0442\u043D\u0438\u043C " +
-                code.divisor
-              );
+              return "R\u00F6ng tala: ver\u00F0ur a\u00F0 vera margfeldi af " + code.divisor;
             case "unrecognized_keys":
-              let str3 = "";
+              let str3 = "ur lykill";
               if (code.keys.length > 1) {
-                str3 = "\u0456";
+                str3 = "ir lyklar";
               }
               const _HermesInternal3 = HermesInternal;
-              return (
-                "\u041D\u0435\u0440\u043E\u0437\u043F\u0456\u0437\u043D\u0430\u043D\u0438\u0439 \u043A\u043B\u044E\u0447" +
-                str3 +
-                ": " +
-                closure_2.joinValues(code.keys, ", ")
-              );
+              return "\u00D3\u00FEekkt " + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return (
-                "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0438\u0439 \u043A\u043B\u044E\u0447 \u0443 " +
-                code.origin
-              );
+              return "Rangur lykill \u00ED " + code.origin;
             case "invalid_union":
-              return "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456";
+              return "Rangt gildi";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return (
-                "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F \u0443 " +
-                code.origin
-              );
+              return "Rangt gildi \u00ED " + code.origin;
             default:
-              return "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0456 \u0432\u0445\u0456\u0434\u043D\u0456 \u0434\u0430\u043D\u0456";
+              return "Rangt gildi";
           }
         };
         return obj;
@@ -295,7 +239,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod13258);
+    let closure_2 = fn(_mod13281);
     function error() {}
     module.exports = exports.default;
   } else {

@@ -16,7 +16,7 @@ let closure_0 = async function _fromURL(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let asyncGeneratorStep = function _fromFileURL() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -150,7 +150,7 @@ const Image = async function _fromResource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -211,7 +211,7 @@ let closure_3 = async function _fromBytes(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -272,7 +272,7 @@ let closure_4 = async function _fromSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "+51" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

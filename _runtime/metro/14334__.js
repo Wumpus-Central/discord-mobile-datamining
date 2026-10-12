@@ -1,11 +1,20 @@
 // _runtime/metro/14334__.js
-import _mod14332 from "14332__.js";
+import _mod14326 from "14326__.js";
 
-export default (arg0, arg1, arg2) => {
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
+  }
   try {
-    const tmp7 = new _mod14332(arg1, arg2);
-    return tmp7.test(arg0);
+    if (version instanceof _mod14326) {
+      version = version.version;
+    }
+    const tmp72 = new _mod14326(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
   } catch (err) {
-    return false;
+    return null;
   }
 };

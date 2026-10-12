@@ -1,16 +1,77 @@
 // _runtime/metro/14550__.js
-import _mod14535 from "14535__.js";
+import _mod14551 from "14551__.js";
+import _mod14552 from "14552__.js";
+import _mod14553 from "14553__.js";
+import _mod14590 from "14590__.js";
+import _mod14591 from "14591__.js";
+import _mod14607 from "14607__.js";
+import _mod14608 from "14608__.js";
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod14535(1.toString);
-
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
+export default (dontCallGetSet, obj) => {
+  ({ target, global: _global, stat } = dontCallGetSet);
+  const tmp3 = _mod14551;
+  if (_global) {
+    let prototype = tmp3;
+  } else {
+    let tmp4 = tmp3[target];
+    if (stat) {
+      if (!tmp4) {
+        tmp4 = _mod14552(target, {});
+      }
+      prototype = tmp4;
+    } else {
+      prototype = tmp4;
+      if (tmp4) {
+        prototype = _mod14551[target].prototype;
+      }
+    }
   }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
+  if (prototype) {
+    for (const key10024 in arg1) {
+      let tmp21 = arg1[key10024];
+      if (arg0.dontCallGetSet) {
+        obj = _mod14553;
+        let iter = obj.f(prototype, key10024);
+        value = iter;
+        if (iter) {
+          value = iter.value;
+        }
+        let tmp7 = value;
+      } else {
+        tmp7 = prototype[key10024];
+      }
+      let sum = key10024;
+      let tmp12 = _mod14590;
+      if (!_global) {
+        let str4 = "#";
+        if (stat) {
+          str4 = ".";
+        }
+        sum = target + str4 + key10024;
+      }
+      if (!tmp12(sum, arg0.forced)) {
+        if (undefined !== tmp7) {
+          if (typeof tmp21 === typeof tmp7) {
+            continue;
+          } else {
+            let tmp22 = _mod14591(tmp21, tmp7);
+          }
+        }
+        continue;
+      }
+      let sham = arg0.sham;
+      if (!sham) {
+        let sham2 = tmp7;
+        if (tmp7) {
+          sham2 = tmp7.sham;
+        }
+        sham = sham2;
+      }
+      if (sham) {
+        let tmp14 = _mod14607(tmp21, "sham", true);
+      }
+      let tmp19 = _mod14608(prototype, key10024, tmp21, arg0);
+      continue;
+    }
+  }
 };

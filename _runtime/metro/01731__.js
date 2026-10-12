@@ -92,7 +92,7 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
+      startTimestamp: "CONJURE_PROJECT_DELETE_SUCCESS",
       reduceMotion: null,
     };
     let num = obj.velocity;

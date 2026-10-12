@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/application_streaming",
+  width: 272,
+  height: 93,
   scales: [2, 3],
-  hash: "9b5a14aaf9d24f5535f3266845d28080",
-  name: "ConnectionBadIcon",
+  hash: "c73d40dd66a153a872cf68d5a6b8779e",
+  name: "img_stream_full",
   type: "png",
 });

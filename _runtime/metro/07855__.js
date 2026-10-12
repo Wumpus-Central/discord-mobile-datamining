@@ -1,13 +1,19 @@
 // _runtime/metro/07855__.js
-import _mod7852 from "07852__.js";
+import _mod7853 from "07853__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };
-obj[45056] = {
-  name: "MPFVersion",
+const obj = {
+  1: "InteroperabilityIndex",
+  2: null,
+  4096: "RelatedImageFileFormat",
+  4097: "RelatedImageWidth",
+  4098: "RelatedImageHeight",
+};
+obj[2] = {
+  name: "InteroperabilityVersion",
   description(value) {
-    return _mod7852.getStringValue(value);
+    return _mod7853.getStringValue(value);
   },
 };
 

@@ -3,9 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/intl/messages",
-  scales: [1],
-  hash: "b076f35cb059256a96b9ed5a60c93c6b",
-  name: "international.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "89ef758cad16b0f89bf10bf57ab078db",
+  name: "StatusDND",
+  type: "png",
 });

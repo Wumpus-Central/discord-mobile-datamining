@@ -235,7 +235,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -265,8 +265,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 responseModel: "",
                 promptTokens: "r",
                 completionTokens: "k",
-                cacheCreationInputTokens: "c",
-                cacheReadInputTokens: "getCurrentUser",
+                cacheCreationInputTokens: "ti",
+                cacheReadInputTokens: "mode",
                 toolCalls: [],
                 activeToolBlocks: {},
               };
@@ -481,7 +481,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 }
                 closure_136_0.end();
                 c12 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             }
             break;
@@ -1174,8 +1174,8 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     responseModel: "",
     promptTokens: "r",
     completionTokens: "k",
-    cacheCreationInputTokens: "c",
-    cacheReadInputTokens: "getCurrentUser",
+    cacheCreationInputTokens: "ti",
+    cacheReadInputTokens: "mode",
     toolCalls: [],
     activeToolBlocks: {},
   };

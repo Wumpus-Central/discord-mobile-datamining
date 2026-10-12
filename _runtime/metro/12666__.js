@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ce5302624e28acc38af07d238a4e16fe",
-  name: "BellZIcon",
+  hash: "bc64844a7a5a9a10abdcb24c54b2c7ef",
+  name: "ChatArrowRightIcon",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c5aa55bc0a42077cb2682a6e299457fd",
-  name: "ShopIcon",
+  hash: "fb5649f1f88852917c191effae556b38",
+  name: "BillIcon",
   type: "png",
 });
