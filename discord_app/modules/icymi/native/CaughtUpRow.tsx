@@ -1,6 +1,6 @@
-// === Module 16975: CaughtUpRow ===
+// === Module 17278: CaughtUpRow ===
 
-// Module 16975 (CaughtUpRow)
+// Module 17278 (CaughtUpRow)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5088).Text);
-const createICYMIStyles = fn(16914);
+const createICYMIStyles = fn(17217);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
                 const obj6 = sharedValue(8472);
                 c1 = 1;
                 v3 = 1;
-                const obj7 = { value: tmp4(16933).maybeFetchGuildDiscoveryCategories(), done: false };
+                const obj7 = { value: tmp4(17236).maybeFetchGuildDiscoveryCategories(), done: false };
                 return obj7;
               }
             } else if (arg0 === 1) {
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
           }
         }
         let obj6 = { size: "custom", style: tmp4.icon, color: "background-brand" };
-        const tmp28 = closure_7(tmp(13136).FlashIcon, obj6);
+        const tmp28 = closure_7(tmp(13618).FlashIcon, obj6);
         cResult[9] = tmp4.icon;
         cResult[10] = tmp28;
       } else {
@@ -707,7 +707,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
             const obj6 = v1(8472);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(16933).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(17236).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -865,7 +865,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
   const obj9 = { children: null };
   const obj10 = { style: tmp.container, children: null };
   const obj11 = { style: tmp.textContainer, children: null };
-  const obj12 = { style: null, children: closure_7(visible(13136).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
+  const obj12 = { style: null, children: closure_7(visible(13618).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
   const items1 = [tmp.iconWrapper, animatedStyle];
   obj12.style = items1;
   const items2 = [closure_7(sharedValue(4850).View, obj12), , ];
@@ -897,7 +897,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExploreS
   obj16.children = items6;
   items5[1] = closure_8(View, obj16);
   obj10.children = items5;
-  const items7 = [closure_8(View, obj10), closure_7(visible(16953).Separator, {}), ];
+  const items7 = [closure_8(View, obj10), closure_7(visible(17256).Separator, {}), ];
   const obj19 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
   const obj13 = { size: "custom", style: tmp.icon, color: "background-brand" };
   const obj8 = visible(4818);

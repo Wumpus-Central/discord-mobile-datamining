@@ -1,10 +1,10 @@
-// === Module 15769: InlineEmojiSuggestionsSetting ===
+// === Module 16084: InlineEmojiSuggestionsSetting ===
 
-// Module 15769 (InlineEmojiSuggestionsSetting)
+// Module 16084 (InlineEmojiSuggestionsSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 11637 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12383 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

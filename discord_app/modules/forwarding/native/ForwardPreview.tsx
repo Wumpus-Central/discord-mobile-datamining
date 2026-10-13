@@ -1,6 +1,6 @@
-// === Module 11581: ForwardPreview ===
+// === Module 12333: ForwardPreview ===
 
-// Module 11581 (ForwardPreview)
+// Module 12333 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -16,9 +16,9 @@ import CirclePlayIcon2 from "CirclePlayIcon" /* 8930 */;
 import ClipView from "ClipView" /* 9017 */;
 import ChatItemDefault from "ChatItem" /* 9374 */;
 import AttachmentIcon2 from "AttachmentIcon" /* 10028 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11582 */;
-import ImagesIcon2 from "ImagesIcon" /* 11585 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 11587 */;
+import ImagesIcon2 from "ImagesIcon" /* 11954 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 12334 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 12337 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

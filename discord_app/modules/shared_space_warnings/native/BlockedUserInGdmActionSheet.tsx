@@ -1,6 +1,6 @@
-// === Module 18248: BlockedUserInGdmActionSheet ===
+// === Module 18252: BlockedUserInGdmActionSheet ===
 
-// Module 18248 (BlockedUserInGdmActionSheet)
+// Module 18252 (BlockedUserInGdmActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -12,7 +12,7 @@ import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
 import TableRow from "TableRow" /* 6180 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 6868 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 18249 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 18253 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -136,7 +136,7 @@ function getBlockedUserInGDMTableRows(arg0) {
   tmp3 = ignoredUserIds.length > 0;
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(14028);
+const SharedSpaceWarningConstants = fn(14365);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
@@ -207,7 +207,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
       obj2.size = REFRESH_MEDIUM_32;
       let tmp17 = closure_10(tmp(1200).Avatar, obj2);
     } else {
-      tmp17 = closure_10(tmp(11380).UserIcon, {});
+      tmp17 = closure_10(tmp(11337).UserIcon, {});
     }
     cResult[8] = guildId;
     cResult[9] = tmp12;
@@ -243,7 +243,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
       obj3.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_10(tmp(1200).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(11380).UserIcon, {});
+      tmp6 = closure_10(tmp(11337).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32 };

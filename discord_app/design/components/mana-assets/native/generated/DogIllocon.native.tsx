@@ -1,23 +1,23 @@
-// === Module 17256: DogIllocon ===
+// === Module 11874: DogIllocon ===
 
-// Module 17256 (DogIllocon)
+// Module 11874 (DogIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef17257 from "module_17257" /* 17257 */;
-import _modDef17258 from "module_17258" /* 17258 */;
-import _modDef17259 from "module_17259" /* 17259 */;
+import _modDef11875 from "module_11875" /* 11875 */;
+import _modDef11876 from "module_11876" /* 11876 */;
+import _modDef11877 from "module_11877" /* 11877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17257 }, 3: null };
-const obj2 = { uri: _modDef17257 };
-obj[2] = { uri: _modDef17258 };
-const obj3 = { uri: _modDef17258 };
-obj[3] = { uri: _modDef17259 };
+let obj = { 1: null, 2: { uri: _modDef11875 }, 3: null };
+const obj2 = { uri: _modDef11875 };
+obj[2] = { uri: _modDef11876 };
+const obj3 = { uri: _modDef11876 };
+obj[3] = { uri: _modDef11877 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17259 };
+const obj4 = { uri: _modDef11877 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DogIllocon.native.tsx");
 

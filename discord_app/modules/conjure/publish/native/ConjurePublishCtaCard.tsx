@@ -1,9 +1,9 @@
-// === Module 17313: ConjurePublishCtaCard ===
+// === Module 11934: ConjurePublishCtaCard ===
 
-// Module 17313 (ConjurePublishCtaCard)
+// Module 11934 (ConjurePublishCtaCard)
 import c from "c" /* 576 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 17109 */;
-import conjurePublishCard from "conjurePublishCard" /* 17173 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 11355 */;
+import conjurePublishCard from "conjurePublishCard" /* 11789 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -66,11 +66,11 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
             items1[1] = closure_4(guildId(6159), obj4);
             const obj5 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
             const tmp16 = guildId(6159);
-            obj5.children = tmp(17173).publishCardServerName(stateFromStores.name);
+            obj5.children = tmp(11789).publishCardServerName(stateFromStores.name);
             items1[2] = closure_4(tmp(5088).Text, obj5);
             obj2.children = items1;
             tmp12 = closure_5(tmp(5377).Stack, obj2);
-            const tmpResult2 = tmp(17173);
+            const tmpResult2 = tmp(11789);
           }
           cResult[10] = stateFromStores;
           cResult[11] = tmp12;
@@ -139,11 +139,11 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
     items2[1] = closure_4(guildId(6159), obj5);
     const obj6 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: null };
     const tmp8 = guildId(6159);
-    obj6.children = tmp(17173).publishCardServerName(stateFromStores.name);
+    obj6.children = tmp(11789).publishCardServerName(stateFromStores.name);
     items2[2] = closure_4(tmp(5088).Text, obj6);
     obj3.children = items2;
     tmp4Result = closure_5(tmp(5377).Stack, obj3);
-    const tmpResult = tmp(17173);
+    const tmpResult = tmp(11789);
   }
   children[1] = tmp4Result;
   return closure_5(publish(5377).Stack, { direction: "horizontal", spacing: 8, align: "center", children });

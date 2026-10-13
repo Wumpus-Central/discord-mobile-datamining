@@ -1,6 +1,6 @@
-// === Module 15437: QuestBottomSheetProgressCard ===
+// === Module 15752: QuestBottomSheetProgressCard ===
 
-// Module 15437 (QuestBottomSheetProgressCard)
+// Module 15752 (QuestBottomSheetProgressCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -15,10 +15,10 @@ import common_Video from "common/Video" /* 8426 */;
 import QuestUtils from "QuestUtils" /* 9168 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9171 */;
 import AssetUtils from "AssetUtils" /* 9185 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15396 */;
-import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 15402 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15410 */;
-import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 15438 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15711 */;
+import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 15717 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15725 */;
+import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBackground" /* 15753 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -290,7 +290,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBottomS
     tmp7 = isQuestProgressing;
   }
   obj5.loading = !tmp7;
-  const items2 = [defaultRewardName(isQuestProgressing(15410), obj5), ];
+  const items2 = [defaultRewardName(isQuestProgressing(15725), obj5), ];
   let tmp18Result = null != memo;
   if (tmp18Result) {
     let obj6 = { style: tmp.instructionsText, variant: "text-sm/semibold", color: "text-subtle", children: memo };
@@ -584,7 +584,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBottomS
   const memo2 = noop.useMemo(() => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.QUEST_BAR_HERO_IMAGE), items2);
   const obj = quest(9171);
   let isHeroVideoSupportedResult = null != memo;
-  const obj2 = quest(15402);
+  const obj2 = quest(15717);
   const obj3 = { questId: quest.id, sourceQuestContent: quest.sourceQuestContent };
   if (isHeroVideoSupportedResult) {
     isHeroVideoSupportedResult = tmp2(9168).isHeroVideoSupported(memo.mimetype);
@@ -600,7 +600,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestBottomS
   } else {
     YsCuyF = tmp2(1126).t["74KqrR"];
   }
-  const watchTaskPressHandler = quest(15402).useWatchTaskPressHandler({ questId: quest.id, sourceQuestContent: quest.sourceQuestContent });
+  const watchTaskPressHandler = quest(15717).useWatchTaskPressHandler({ questId: quest.id, sourceQuestContent: quest.sourceQuestContent });
   let tmp12 = watchTaskPressHandler;
   if (tmp2Result2.useIsQuestAccessSuspended()) {
     tmp12 = openQuestAccessSuspendedBottomSheetDefault;

@@ -1,6 +1,6 @@
-// === Module 16676: useStageChannelSpeakerVoiceStates ===
+// === Module 16980: useStageChannelSpeakerVoiceStates ===
 
-// Module 16676 (useStageChannelSpeakerVoiceStates)
+// Module 16980 (useStageChannelSpeakerVoiceStates)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 16949: useICYMIReloadHandler ===
+// === Module 17252: useICYMIReloadHandler ===
 
-// Module 16949 (useICYMIReloadHandler)
+// Module 17252 (useICYMIReloadHandler)
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8472 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -41,7 +41,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              const ICYMIAnalytics = tmp2(14655).ICYMIAnalytics;
+              const ICYMIAnalytics = tmp2(14976).ICYMIAnalytics;
               let str = "NoDotShown";
               if (tmp2) {
                 str = "DotShown";
@@ -144,7 +144,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const ICYMIAnalytics = tmp2(14655).ICYMIAnalytics;
+            const ICYMIAnalytics = tmp2(14976).ICYMIAnalytics;
             let str = "NoDotShown";
             if (tmp2) {
               str = "DotShown";

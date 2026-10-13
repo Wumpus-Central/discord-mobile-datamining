@@ -1,6 +1,6 @@
-// === Module 13429: useCollectibleProfileOverrides ===
+// === Module 13766: useCollectibleProfileOverrides ===
 
-// Module 13429 (useCollectibleProfileOverrides)
+// Module 13766 (useCollectibleProfileOverrides)
 import c from "c" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
 import useShopProductItems from "useShopProductItems" /* 8296 */;

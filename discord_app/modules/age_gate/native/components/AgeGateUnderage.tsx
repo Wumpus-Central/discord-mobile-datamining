@@ -1,6 +1,6 @@
-// === Module 16413: AgeGateUnderage ===
+// === Module 16718: AgeGateUnderage ===
 
-// Module 16413 (AgeGateUnderage)
+// Module 16718 (AgeGateUnderage)
 import nativeDefault from "native" /* 587 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6626 */;

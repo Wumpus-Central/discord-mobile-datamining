@@ -1,6 +1,6 @@
-// === Module 12290: GuildPowerupsSectionHeader ===
+// === Module 12803: GuildPowerupsSectionHeader ===
 
-// Module 12290 (GuildPowerupsSectionHeader)
+// Module 12803 (GuildPowerupsSectionHeader)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

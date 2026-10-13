@@ -1,8 +1,8 @@
-// === Module 18215: ParentalConsentManager ===
+// === Module 18219: ParentalConsentManager ===
 
-// Module 18215 (ParentalConsentManager)
+// Module 18219 (ParentalConsentManager)
 import Constants from "Constants" /* 1085 */;
-import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 18216 */;
+import AppStoreAgeSignalReport from "AppStoreAgeSignalReport" /* 18220 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 import size from "module_2" /* 2 */;
 

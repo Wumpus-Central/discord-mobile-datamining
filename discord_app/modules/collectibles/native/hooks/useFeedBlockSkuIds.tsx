@@ -1,9 +1,9 @@
-// === Module 16204: useFeedBlockSkuIds ===
+// === Module 16511: useFeedBlockSkuIds ===
 
-// Module 16204 (useFeedBlockSkuIds)
+// Module 16511 (useFeedBlockSkuIds)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ShopHomeSortType from "ShopHomeSortType" /* 16205 */;
+import ShopHomeSortType from "ShopHomeSortType" /* 16512 */;
 import noop from "module_19" /* 19 */;
 import ConsentStore from "ConsentStore" /* 5932 */;
 

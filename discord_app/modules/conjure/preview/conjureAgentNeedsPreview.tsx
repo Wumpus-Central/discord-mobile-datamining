@@ -1,8 +1,8 @@
-// === Module 17122: conjureAgentNeedsPreview ===
+// === Module 11374: conjureAgentNeedsPreview ===
 
-// Module 17122 (conjureAgentNeedsPreview)
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 11427 */;
-import ConjureChatStore from "ConjureChatStore" /* 12998 */;
+// Module 11374 (conjureAgentNeedsPreview)
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 11248 */;
+import ConjureChatStore from "ConjureChatStore" /* 11216 */;
 
 const require = globalThis.__r;
 
@@ -11,10 +11,10 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/conjureAgentNeedsPreview.tsx");
 
-export const conjureAgentNeedsPreview = function conjureAgentNeedsPreview(openResult) {
-  let isThinkingResult = ConjureChatStore.isThinking(openResult);
+export const conjureAgentNeedsPreview = function conjureAgentNeedsPreview(projectId) {
+  let isThinkingResult = ConjureChatStore.isThinking(projectId);
   if (!isThinkingResult) {
-    isThinkingResult = conjurePreviewControlLease.isConjureControlActive(openResult);
+    isThinkingResult = conjurePreviewControlLease.isConjureControlActive(projectId);
   }
   return isThinkingResult;
 };

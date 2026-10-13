@@ -1,6 +1,6 @@
-// === Module 11462: MediaChannelActionCreators ===
+// === Module 12228: MediaChannelActionCreators ===
 
-// Module 11462 (MediaChannelActionCreators)
+// Module 12228 (MediaChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

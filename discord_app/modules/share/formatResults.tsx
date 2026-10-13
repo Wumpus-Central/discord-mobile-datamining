@@ -1,6 +1,6 @@
-// === Module 11558: formatResults ===
+// === Module 12311: formatResults ===
 
-// Module 11558 (formatResults)
+// Module 12311 (formatResults)
 import _mod12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
@@ -154,7 +154,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-const isAllowedType = fn(11559).isAllowedType;
+const isAllowedType = fn(12312).isAllowedType;
 const Constants = fn(1085);
 ({ Permissions: closure_9, ChannelTypes: c10 } = Constants);
 const size = fn(2);

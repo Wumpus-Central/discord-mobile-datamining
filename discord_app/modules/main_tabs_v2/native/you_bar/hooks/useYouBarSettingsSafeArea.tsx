@@ -1,6 +1,6 @@
-// === Module 13751: useYouBarSettingsSafeArea ===
+// === Module 14088: useYouBarSettingsSafeArea ===
 
-// Module 13751 (useYouBarSettingsSafeArea)
+// Module 14088 (useYouBarSettingsSafeArea)
 import c from "c" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;

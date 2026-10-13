@@ -1,8 +1,8 @@
-// === Module 11423: conjurePreviewSurface ===
+// === Module 11244: conjurePreviewSurface ===
 
-// Module 11423 (conjurePreviewSurface)
+// Module 11244 (conjurePreviewSurface)
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11424 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 11245 */;
 import FramesStore from "FramesStore" /* 10807 */;
 
 const require = globalThis.__r;

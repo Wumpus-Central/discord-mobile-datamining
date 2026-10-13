@@ -1,9 +1,9 @@
-// === Module 18437: GuildConfigGates ===
+// === Module 18441: GuildConfigGates ===
 
-// Module 18437 (GuildConfigGates)
+// Module 18441 (GuildConfigGates)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildConfigGatesStore from "GuildConfigGatesStore" /* 18438 */;
+import GuildConfigGatesStore from "GuildConfigGatesStore" /* 18442 */;
 
 require = fn;
 const Endpoints = fn(1085).Endpoints;

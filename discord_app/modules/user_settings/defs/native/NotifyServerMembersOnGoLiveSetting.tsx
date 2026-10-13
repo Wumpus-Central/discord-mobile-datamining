@@ -1,11 +1,11 @@
-// === Module 16325: NotifyServerMembersOnGoLiveSetting ===
+// === Module 16632: NotifyServerMembersOnGoLiveSetting ===
 
-// Module 16325 (NotifyServerMembersOnGoLiveSetting)
+// Module 16632 (NotifyServerMembersOnGoLiveSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import _modDef2734 from "module_2734" /* 2734 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;
-import go_live_GoLiveNotificationUtils from "go_live/GoLiveNotificationUtils" /* 16326 */;
+import go_live_GoLiveNotificationUtils from "go_live/GoLiveNotificationUtils" /* 16633 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// === Module 16432: MainTabs ===
+// === Module 16737: MainTabs ===
 
-// Module 16432 (MainTabs)
+// Module 16737 (MainTabs)
 import c from "c" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import native from "native" /* 4827 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4972 */;
 import useActiveTheme from "useActiveTheme" /* 9309 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10226 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 16433 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 16738 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 14404: RadioGroup ===
+// === Module 14725: RadioGroup ===
 
-// Module 14404 (RadioGroup)
+// Module 14725 (RadioGroup)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;

@@ -1,6 +1,6 @@
-// === Module 17588: ChannelSettingsPermissionsOverview ===
+// === Module 17592: ChannelSettingsPermissionsOverview ===
 
-// Module 17588 (ChannelSettingsPermissionsOverview)
+// Module 17592 (ChannelSettingsPermissionsOverview)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -12,8 +12,8 @@ import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6667 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
 import RoleLabel from "RoleLabel" /* 9725 */;
 import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10300 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15607 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 17589 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15922 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 17593 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -51,7 +51,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         if (cResult[5] === tableRowGroupContainer.tableRowGroupContainer) {
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp22 = closure_16(tmp(15252).RefreshIcon, {});
+            const tmp22 = closure_16(tmp(11301).RefreshIcon, {});
             let intl2 = tmp(1126).intl;
             const stringResult = intl2.string(tmp(1126).t.NVwuHq);
             cResult[10] = tmp22;
@@ -323,7 +323,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(15252).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(11301).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1126).intl;
   obj6.label = intl2.string(channel(1126).t.NVwuHq);
   obj6.onPress = callback;

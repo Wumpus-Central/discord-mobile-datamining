@@ -1,6 +1,6 @@
-// === Module 18126: SoundpackActions ===
+// === Module 18130: SoundpackActions ===
 
-// Module 18126 (SoundpackActions)
+// Module 18130 (SoundpackActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import SoundpackStore from "SoundpackStore" /* 10981 */;

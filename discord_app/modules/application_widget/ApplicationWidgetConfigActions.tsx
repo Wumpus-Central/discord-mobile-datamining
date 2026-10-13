@@ -1,10 +1,10 @@
-// === Module 11418: ApplicationWidgetConfigActions ===
+// === Module 11255: ApplicationWidgetConfigActions ===
 
-// Module 11418 (ApplicationWidgetConfigActions)
+// Module 11255 (ApplicationWidgetConfigActions)
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11419 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11256 */;
 import Backoff from "Backoff" /* 569 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 
@@ -271,7 +271,7 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
     }
   })();
 };
-const FetchState = fn(11419).FetchState;
+const FetchState = fn(11256).FetchState;
 const Endpoints = fn(1085).Endpoints;
 const promiseDeduper = new fn(10682).PromiseDeduper();
 const importDefaultResult2 = new Backoff(DurationsDefault.Millis.SECOND, DurationsDefault.Millis.MINUTE, true);

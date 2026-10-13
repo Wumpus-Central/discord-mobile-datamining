@@ -1,7 +1,7 @@
-// === Module 14787: voiceSettingsEventHandlers ===
+// === Module 15108: voiceSettingsEventHandlers ===
 
-// Module 14787 (voiceSettingsEventHandlers)
-import VoiceSettingsEventsFactory from "VoiceSettingsEventsFactory" /* 14788 */;
+// Module 15108 (voiceSettingsEventHandlers)
+import VoiceSettingsEventsFactory from "VoiceSettingsEventsFactory" /* 15109 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/native/events/voiceSettingsEventHandlers.tsx");

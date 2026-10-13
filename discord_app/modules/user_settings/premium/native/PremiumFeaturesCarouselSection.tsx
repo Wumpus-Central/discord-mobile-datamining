@@ -1,6 +1,6 @@
-// === Module 13761: PremiumFeaturesCarouselSection ===
+// === Module 14098: PremiumFeaturesCarouselSection ===
 
-// Module 13761 (PremiumFeaturesCarouselSection)
+// Module 14098 (PremiumFeaturesCarouselSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
@@ -13,10 +13,10 @@ import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import PaginationDefault from "Pagination" /* 10116 */;
-import _modDef13762 from "module_13762" /* 13762 */;
-import _modDef13763 from "module_13763" /* 13763 */;
-import _modDef13764 from "module_13764" /* 13764 */;
-import _modDef13765 from "module_13765" /* 13765 */;
+import _modDef14099 from "module_14099" /* 14099 */;
+import _modDef14100 from "module_14100" /* 14100 */;
+import _modDef14101 from "module_14101" /* 14101 */;
+import _modDef14102 from "module_14102" /* 14102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -184,7 +184,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     tmp7 = cResult[1];
   }
   if (cResult[2] !== tmp4.emojiImage) {
-    const obj2 = { title: first, imageSrc: _modDef13762, imageStyle: tmp4.emojiImage, premiumTypes: tmp7 };
+    const obj2 = { title: first, imageSrc: _modDef14099, imageStyle: tmp4.emojiImage, premiumTypes: tmp7 };
     cResult[2] = tmp4.emojiImage;
     cResult[3] = obj2;
     let tmp14 = obj2;
@@ -200,7 +200,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     tmp16 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { title: tmp16, imageSrc: _modDef13763, premiumTypes: null };
+    const obj3 = { title: tmp16, imageSrc: _modDef14100, premiumTypes: null };
     const _Set2 = Set;
     const items1 = [, ];
     ({ TIER_0: arr2[0], TIER_2: arr2[1] } = PremiumTypes);
@@ -217,7 +217,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     tmp19 = cResult[6];
   }
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { title: tmp19, imageSrc: _modDef13764, premiumTypes: null };
+    const obj4 = { title: tmp19, imageSrc: _modDef14101, premiumTypes: null };
     const _Set3 = Set;
     const items2 = [PremiumTypes.TIER_2];
     const set2 = new Set(items2);
@@ -233,7 +233,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     tmp29 = cResult[8];
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { title: tmp29, imageSrc: _modDef13765, premiumTypes: null };
+    const obj5 = { title: tmp29, imageSrc: _modDef14102, premiumTypes: null };
     const _Set4 = Set;
     const items3 = [PremiumTypes.TIER_2];
     const set3 = new Set(items3);
@@ -276,7 +276,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef13762;
+    obj.imageSrc = _modDef14099;
     obj.imageStyle = emojiImage.emojiImage;
     const items = [, ];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -285,7 +285,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef13763;
+    obj2.imageSrc = _modDef14100;
     const items2 = [, ];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
@@ -294,7 +294,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef13764;
+    obj3.imageSrc = _modDef14101;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -302,7 +302,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef13765;
+    obj4.imageSrc = _modDef14102;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);

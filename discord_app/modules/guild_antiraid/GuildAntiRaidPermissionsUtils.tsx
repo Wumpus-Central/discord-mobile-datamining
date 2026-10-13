@@ -1,6 +1,6 @@
-// === Module 12581: GuildAntiRaidPermissionsUtils ===
+// === Module 13091: GuildAntiRaidPermissionsUtils ===
 
-// Module 12581 (GuildAntiRaidPermissionsUtils)
+// Module 13091 (GuildAntiRaidPermissionsUtils)
 import PermissionStore from "PermissionStore" /* 4750 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 10694 */;
 

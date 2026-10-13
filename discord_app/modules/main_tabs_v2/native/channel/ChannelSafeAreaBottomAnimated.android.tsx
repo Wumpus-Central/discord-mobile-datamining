@@ -1,6 +1,6 @@
-// === Module 12387: ChannelSafeAreaBottomAnimated ===
+// === Module 12897: ChannelSafeAreaBottomAnimated ===
 
-// Module 12387 (ChannelSafeAreaBottomAnimated)
+// Module 12897 (ChannelSafeAreaBottomAnimated)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 10370 */;

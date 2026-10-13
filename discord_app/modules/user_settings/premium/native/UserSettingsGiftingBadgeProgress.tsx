@@ -1,6 +1,6 @@
-// === Module 13864: UserSettingsGiftingBadgeProgress ===
+// === Module 14201: UserSettingsGiftingBadgeProgress ===
 
-// Module 13864 (UserSettingsGiftingBadgeProgress)
+// Module 14201 (UserSettingsGiftingBadgeProgress)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2664 from "module_2664" /* 2664 */;
@@ -284,7 +284,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Giftin
     items1[1] = closure_9(closure_6, obj6);
     const obj7 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj8 = { size: "sm", color: tmp4(587).unsafe_rawColors.WHITE };
-    obj7.icon = closure_9(tmp2(11538).GiftIcon, obj8);
+    obj7.icon = closure_9(tmp2(12291).GiftIcon, obj8);
     const intl2 = tmp2(1126).intl;
     obj7.text = intl2.string(tmp4(2664).DZnomS);
     obj7.onPress = function onPress() {
@@ -391,7 +391,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                                                   const _Symbol = Symbol;
                                                   if (cResult[87] === Symbol.for("react.memo_cache_sentinel")) {
                                                     let obj3 = { size: "sm", color: tmp7(587).unsafe_rawColors.WHITE };
-                                                    const tmp49 = closure_9(tmp(11538).GiftIcon, obj3);
+                                                    const tmp49 = closure_9(tmp(12291).GiftIcon, obj3);
                                                     let intl = tmp(1126).intl;
                                                     const stringResult = intl.string(tmp7(2664).DZnomS);
                                                     cResult[87] = tmp49;
@@ -795,7 +795,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const items5 = [closure_10(closure_6, obj7), , , , ];
     const obj19 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj20 = { size: "sm", color: tmp4(587).unsafe_rawColors.WHITE };
-    obj19.icon = closure_9(tmp7(11538).GiftIcon, obj20);
+    obj19.icon = closure_9(tmp7(12291).GiftIcon, obj20);
     const intl4 = tmp7(1126).intl;
     obj19.text = intl4.string(tmp4(2664).DZnomS);
     obj19.onPress = function onPress() {
@@ -816,7 +816,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj23.children = intl5.string(tmp4(2664).WZ4cXA);
     const items6 = [closure_9(tmp7(5088).Text, obj23), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(13865).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(14202).ChevronSmallUpIcon;
     } else {
       ChevronSmallDownIcon = tmp7(10533).ChevronSmallDownIcon;
     }

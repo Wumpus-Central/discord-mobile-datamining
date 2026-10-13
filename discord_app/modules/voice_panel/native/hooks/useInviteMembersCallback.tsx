@@ -1,6 +1,6 @@
-// === Module 17808: useInviteMembersCallback ===
+// === Module 17812: useInviteMembersCallback ===
 
-// Module 17808 (useInviteMembersCallback)
+// Module 17812 (useInviteMembersCallback)
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8683 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 10748 */;
 import noop from "module_19" /* 19 */;

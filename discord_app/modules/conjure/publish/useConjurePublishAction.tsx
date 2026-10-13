@@ -1,6 +1,6 @@
-// === Module 17109: useConjurePublishAction ===
+// === Module 11355: useConjurePublishAction ===
 
-// Module 17109 (useConjurePublishAction)
+// Module 11355 (useConjurePublishAction)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
@@ -8,10 +8,10 @@ import ApplicationActionCreators from "ApplicationActionCreators" /* 6853 */;
 import ConjureUtils from "ConjureUtils" /* 6946 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
 import UserActionCreators from "UserActionCreators" /* 8306 */;
-import conjureAppInServer from "conjureAppInServer" /* 11409 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11413 */;
-import conjurePublishFailureMessage from "conjurePublishFailureMessage" /* 17111 */;
-import conjurePublishAction2 from "conjurePublishAction" /* 17112 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11207 */;
+import conjureAppInServer from "conjureAppInServer" /* 11212 */;
+import conjurePublishFailureMessage from "conjurePublishFailureMessage" /* 11357 */;
+import conjurePublishAction2 from "conjurePublishAction" /* 11358 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
@@ -20,9 +20,9 @@ import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
-import ConjureChatStore from "ConjureChatStore" /* 12998 */;
+import ConjureChatStore from "ConjureChatStore" /* 11216 */;
 import ConjureProjectStore_mod from "ConjureProjectStore" /* 10652 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 13229 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11230 */;
 
 const require = globalThis.__r;
 const conjurePublishFailureMessageDefault = conjurePublishFailureMessage;
@@ -770,7 +770,7 @@ let closure_28 = async function _runConjurePublishAction(arg0) {
                     obj4.action = busy.action;
                     const result = require("ConjureAnalytics").trackConjurePublishActionClicked(closure_0, obj4);
                     if (null != busy.disabledReason) {
-                      platform.showPublishBlocked(num2(17107).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER, busy.disabledReason);
+                      platform.showPublishBlocked(num2(11353).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER, busy.disabledReason);
                     }
                     const obj6 = require("ConjureAnalytics");
                   }
@@ -779,7 +779,7 @@ let closure_28 = async function _runConjurePublishAction(arg0) {
                     const obj7 = { value: continuePublish(closure_0, busy, tmp23), done: false };
                     return obj7;
                   } else {
-                    num2 = num2(17107).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
+                    num2 = num2(11353).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
                     flag = busy.confirmReason;
                     platform.showPublishBlocked(num2, flag, () => {
                       closure_2_29(closure_0, busy, closure_1).catch(() => {
@@ -1006,13 +1006,13 @@ let closure_30 = async function _continuePublish() {
           closure_139_26.add(closure_138_0);
           c12 = 2;
           const requestConsent = closure_138_4.requestConsent;
-          f156337 = requestConsent;
+          f155315 = requestConsent;
           if (requestConsent == null) {
-            f156337 = (arg0) => closure_2_19(arg0, closure_1_3);
+            f155315 = (arg0) => closure_2_19(arg0, closure_1_3);
           }
           c14 = 5;
           c15 = 1;
-          const obj11 = { value: f156337(closure_138_0), done: false };
+          const obj11 = { value: f155315(closure_138_0), done: false };
           return obj11;
         }
       } catch (tmp105) {

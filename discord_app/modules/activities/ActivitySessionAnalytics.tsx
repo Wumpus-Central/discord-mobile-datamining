@@ -1,6 +1,6 @@
-// === Module 14727: ActivitySessionAnalytics ===
+// === Module 15048: ActivitySessionAnalytics ===
 
-// Module 14727 (ActivitySessionAnalytics)
+// Module 15048 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import v1 from "v1" /* 1279 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
@@ -13,8 +13,8 @@ import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 10814 */;
 import pendingFrameLaunch from "pendingFrameLaunch" /* 10856 */;
 import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 10857 */;
 import getShelfItemDataDefault from "getShelfItemData" /* 10869 */;
-import getPlatformDefault from "getPlatform" /* 11718 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 12969 */;
+import getPlatformDefault from "getPlatform" /* 11518 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 13461 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
@@ -22,7 +22,7 @@ import QuestStore from "QuestStore" /* 7391 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 import UserStore from "UserStore" /* 1390 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 14728 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 15049 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
 require = fn;

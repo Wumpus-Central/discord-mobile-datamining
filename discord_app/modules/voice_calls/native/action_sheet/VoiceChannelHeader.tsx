@@ -1,6 +1,6 @@
-// === Module 13610: VoiceChannelHeader ===
+// === Module 13947: VoiceChannelHeader ===
 
-// Module 13610 (VoiceChannelHeader)
+// Module 13947 (VoiceChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -13,9 +13,9 @@ import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils
 import _modDef10332 from "module_10332" /* 10332 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 10748 */;
 import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11016 */;
-import CallStateHooks from "CallStateHooks" /* 13611 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13612 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 13613 */;
+import CallStateHooks from "CallStateHooks" /* 13948 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13949 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13950 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -414,7 +414,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { size: channel(1200).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
   if (isRoleRequiredDefault(channel)) {
-    let tmp5Result = tmp5(13615);
+    let tmp5Result = tmp5(13952);
   } else {
     tmp5Result = tmp5(11127);
   }

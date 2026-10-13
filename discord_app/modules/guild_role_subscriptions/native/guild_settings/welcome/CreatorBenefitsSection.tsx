@@ -1,6 +1,6 @@
-// === Module 18522: CreatorBenefitsSection ===
+// === Module 18526: CreatorBenefitsSection ===
 
-// Module 18522 (CreatorBenefitsSection)
+// Module 18526 (CreatorBenefitsSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,19 +8,19 @@ import shared from "shared" /* 4969 */;
 import useThemeDefault from "useTheme" /* 5031 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import FastImageDefault from "FastImage" /* 6157 */;
-import _modDef18523 from "module_18523" /* 18523 */;
-import _modDef18524 from "module_18524" /* 18524 */;
-import _modDef18525 from "module_18525" /* 18525 */;
-import _modDef18526 from "module_18526" /* 18526 */;
 import _modDef18527 from "module_18527" /* 18527 */;
 import _modDef18528 from "module_18528" /* 18528 */;
 import _modDef18529 from "module_18529" /* 18529 */;
 import _modDef18530 from "module_18530" /* 18530 */;
+import _modDef18531 from "module_18531" /* 18531 */;
+import _modDef18532 from "module_18532" /* 18532 */;
+import _modDef18533 from "module_18533" /* 18533 */;
+import _modDef18534 from "module_18534" /* 18534 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(15498).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(15813).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5092);
@@ -107,7 +107,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Earning
                       tmp23 = cResult[20];
                     }
                     if (cResult[21] !== tmp6.earningMetricsAvatar) {
-                      const obj5 = { style: tmp6.earningMetricsAvatar, source: _modDef18523 };
+                      const obj5 = { style: tmp6.earningMetricsAvatar, source: _modDef18527 };
                       const tmp31 = hasOwnProperty(FastImageDefault, obj5);
                       cResult[21] = tmp6.earningMetricsAvatar;
                       cResult[22] = tmp31;
@@ -209,7 +209,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Earning
   const items3 = [timestampProducer(View, obj5), ];
   const obj7 = { style: tmp4.earningMetricsAvatar, source: null };
   const tmp7Result2 = shared;
-  obj7.source = _modDef18523;
+  obj7.source = _modDef18527;
   items3[1] = hasOwnProperty(FastImageDefault, obj7);
   obj3.children = items3;
   obj2.children = timestampProducer(View, obj3);
@@ -249,9 +249,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Consist
       let tmp16 = cResult[6];
     }
     if (tmpResult.isThemeDark(tmp5)) {
-      let tmp4Result = _modDef18524;
+      let tmp4Result = _modDef18528;
     } else {
-      tmp4Result = _modDef18525;
+      tmp4Result = _modDef18529;
     }
     if (cResult[7] !== tmp4Result) {
       const obj3 = { avatarSource: tmp4Result };
@@ -264,9 +264,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Consist
     }
     const _Symbol = Symbol;
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj4 = { avatarSource: _modDef18526 };
+      const obj4 = { avatarSource: _modDef18530 };
       const tmp26 = hasOwnProperty(closure_12, obj4);
-      const obj5 = { avatarSource: _modDef18527 };
+      const obj5 = { avatarSource: _modDef18531 };
       const tmp27 = hasOwnProperty(closure_12, obj5);
       cResult[9] = tmp26;
       cResult[10] = tmp27;
@@ -328,15 +328,15 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Consist
   obj3.style = items1;
   const tmp3 = useThemeDefault();
   if (obj4.isThemeDark(tmp3)) {
-    let tmpResult = _modDef18524;
+    let tmpResult = _modDef18528;
   } else {
-    tmpResult = _modDef18525;
+    tmpResult = _modDef18529;
   }
   const items2 = [hasOwnProperty(closure_12, { avatarSource: tmpResult }), , ];
   obj4 = shared;
-  items2[1] = hasOwnProperty(closure_12, { avatarSource: _modDef18526 });
-  const obj5 = { avatarSource: _modDef18526 };
-  items2[2] = hasOwnProperty(closure_12, { avatarSource: _modDef18527 });
+  items2[1] = hasOwnProperty(closure_12, { avatarSource: _modDef18530 });
+  const obj5 = { avatarSource: _modDef18530 };
+  items2[2] = hasOwnProperty(closure_12, { avatarSource: _modDef18531 });
   obj3.children = items2;
   items[2] = timestampProducer(View, obj3);
   obj.children = items;
@@ -365,7 +365,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Follow
     tmp7 = cResult[2];
   }
   if (cResult[3] !== tmp4.socialIllo) {
-    const obj3 = { style: tmp4.socialIllo, source: _modDef18528 };
+    const obj3 = { style: tmp4.socialIllo, source: _modDef18532 };
     const tmp14 = hasOwnProperty(FastImageDefault, obj3);
     cResult[3] = tmp4.socialIllo;
     cResult[4] = tmp14;
@@ -374,7 +374,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Follow
     tmp10 = cResult[4];
   }
   if (cResult[5] !== tmp4.lanyardIllo) {
-    const obj4 = { style: tmp4.lanyardIllo, source: _modDef18529 };
+    const obj4 = { style: tmp4.lanyardIllo, source: _modDef18533 };
     const tmp19 = hasOwnProperty(FastImageDefault, obj4);
     cResult[5] = tmp4.lanyardIllo;
     cResult[6] = tmp19;
@@ -409,10 +409,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Follow
   const intl = util.intl;
   obj2.children = intl.string(util.t.qsKRUQ);
   const items = [hasOwnProperty(Text_Text.Text, obj2), , ];
-  const obj3 = { style: tmp.socialIllo, source: _modDef18528 };
+  const obj3 = { style: tmp.socialIllo, source: _modDef18532 };
   items[1] = hasOwnProperty(FastImageDefault, obj3);
   const obj4 = { style: tmp.lanyardIllo, source: null };
-  obj4.source = _modDef18529;
+  obj4.source = _modDef18533;
   items[2] = hasOwnProperty(FastImageDefault, obj4);
   obj.children = items;
   return timestampProducer(View, obj);
@@ -451,7 +451,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Revenu
             tmp19 = cResult[11];
           }
           if (cResult[12] !== tmp6.revenueShareIllo) {
-            const obj3 = { style: tmp6.revenueShareIllo, source: _modDef18530 };
+            const obj3 = { style: tmp6.revenueShareIllo, source: _modDef18534 };
             const tmp25 = hasOwnProperty(FastImageDefault, obj3);
             cResult[12] = tmp6.revenueShareIllo;
             cResult[13] = tmp25;
@@ -522,7 +522,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Revenu
   obj4.children = intl.string(util.t.AewsXD);
   items2[1] = hasOwnProperty(Text_Text.Text, obj4);
   const obj5 = { style: tmp4.revenueShareIllo, source: null };
-  obj5.source = _modDef18530;
+  obj5.source = _modDef18534;
   items2[2] = hasOwnProperty(FastImageDefault, obj5);
   obj.children = items2;
   return timestampProducer(View, obj);

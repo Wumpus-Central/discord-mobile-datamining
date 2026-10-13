@@ -1,6 +1,6 @@
-// === Module 12927: PlayStationLinkSuccess ===
+// === Module 13419: PlayStationLinkSuccess ===
 
-// Module 12927 (PlayStationLinkSuccess)
+// Module 13419 (PlayStationLinkSuccess)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
@@ -8,7 +8,7 @@ import components_Button_Button from "components/Button/Button" /* 5379 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9215 */;
-import _modDef12912 from "module_12912" /* 12912 */;
+import _modDef13404 from "module_13404" /* 13404 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
   const tmp4 = closure_7();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { uri: _modDef12912 };
+    const obj3 = { uri: _modDef13404 };
     cResult[0] = obj3;
     let first = obj3;
   } else {
@@ -159,7 +159,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const memo = noop.useMemo(() => ({ uri: _modDef12912 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef13404 }), []);
   const items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 12810: useSetMediaPostThumbnail ===
+// === Module 13304: useSetMediaPostThumbnail ===
 
-// Module 12810 (useSetMediaPostThumbnail)
+// Module 13304 (useSetMediaPostThumbnail)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9263 */;
 import noop from "module_19" /* 19 */;

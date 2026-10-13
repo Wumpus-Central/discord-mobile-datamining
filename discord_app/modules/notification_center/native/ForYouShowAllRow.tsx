@@ -1,6 +1,6 @@
-// === Module 16903: ForYouShowAllRow ===
+// === Module 17206: ForYouShowAllRow ===
 
-// Module 16903 (ForYouShowAllRow)
+// Module 17206 (ForYouShowAllRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -11,16 +11,16 @@ import Text_Text from "Text/Text" /* 5088 */;
 import useFontScale from "useFontScale" /* 5386 */;
 import Pressables from "Pressables" /* 6185 */;
 import _modDef6833 from "module_6833" /* 6833 */;
-import ChannelListLayout from "ChannelListLayout" /* 11761 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14292 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16898 */;
-import ChannelWrapper from "ChannelWrapper" /* 16899 */;
+import ChannelListLayout from "ChannelListLayout" /* 11563 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14613 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 17201 */;
+import ChannelWrapper from "ChannelWrapper" /* 17202 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Sections = fn(12424).Sections;
+const Sections = fn(12934).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5092);
@@ -296,7 +296,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
     }
     if (cResult[6] !== messagesTabLayout) {
       const fn2 = function y(user) {
-        const obj = { user: user.user, guildId: "Array", size: 1392509446 };
+        const obj = { user: user.user, guildId: "Array", size: null };
         const AvatarSizes = native.AvatarSizes;
         obj.size = ChannelListLayout.isLayoutCompact(messagesTabLayout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
         return React5(native.Avatar, obj, user.user.id);
@@ -343,7 +343,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: 1392509446 };
+        const obj = { user: user.user, guildId: "Array", size: null };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[13]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;

@@ -1,6 +1,6 @@
-// === Module 17561: YouExpiringTrialOfferCard ===
+// === Module 17565: YouExpiringTrialOfferCard ===
 
-// Module 17561 (YouExpiringTrialOfferCard)
+// Module 17565 (YouExpiringTrialOfferCard)
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
@@ -8,9 +8,9 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import _modDef4702 from "module_4702" /* 4702 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
 import useCountdownDefault from "useCountdown" /* 7162 */;
-import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 17562 */;
+import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 17566 */;
 import noop from "module_19" /* 19 */;
-import NoticeStore from "NoticeStore" /* 14015 */;
+import NoticeStore from "NoticeStore" /* 14352 */;
 
 require = fn;
 function getNoticeCopy(days, trialPeriod, termsUrl) {
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
   }
   const tmp16 = untilAtLeast(7162)(tmp13, closure_15);
   const tmpResult4 = navigateToPremium(7170);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(17560).useShouldShowExpiringTrialOfferCard();
+  shouldShowExpiringTrialOfferCard = navigateToPremium(17564).useShouldShowExpiringTrialOfferCard();
   if (cResult[5] === stateFromStores) {
     if (cResult[6] === shouldShowExpiringTrialOfferCard) {
       if (cResult[7] === premiumTrialOffer) {
@@ -612,7 +612,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
   cResult[9] = items1;
   tmp19 = items1;
   tmp18 = O;
-  const tmpResult5 = navigateToPremium(17560);
+  const tmpResult5 = navigateToPremium(17564);
 }) : (function YouExpiringTrialOfferCard(navigateToPremium) {
   navigateToPremium = navigateToPremium.navigateToPremium;
   let shouldShowExpiringTrialOfferCard;
@@ -634,7 +634,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
     }
   }
   const tmp7Result = useCountdownDefault(num, closure_15);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(17560).useShouldShowExpiringTrialOfferCard();
+  shouldShowExpiringTrialOfferCard = navigateToPremium(17564).useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
     let tmp = shouldShowExpiringTrialOfferCard;
@@ -732,5 +732,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
   } else {
     return null;
   }
-  const tmp4Result = navigateToPremium(17560);
+  const tmp4Result = navigateToPremium(17564);
 });

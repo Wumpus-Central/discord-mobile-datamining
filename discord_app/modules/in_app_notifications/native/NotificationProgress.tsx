@@ -1,6 +1,6 @@
-// === Module 12619: NotificationProgress ===
+// === Module 13127: NotificationProgress ===
 
-// Module 12619 (NotificationProgress)
+// Module 13127 (NotificationProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;

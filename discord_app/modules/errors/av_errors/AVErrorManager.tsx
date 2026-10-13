@@ -1,11 +1,11 @@
-// === Module 18652: AVErrorManager ===
+// === Module 18656: AVErrorManager ===
 
-// Module 18652 (AVErrorManager)
+// Module 18656 (AVErrorManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AVError from "AVError" /* 5289 */;
-import ErrorDefinitions from "ErrorDefinitions" /* 18653 */;
-import AVErrorAnalytics from "AVErrorAnalytics" /* 18673 */;
+import ErrorDefinitions from "ErrorDefinitions" /* 18657 */;
+import AVErrorAnalytics from "AVErrorAnalytics" /* 18677 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;

@@ -1,6 +1,6 @@
-// === Module 15424: useVideoQuestCaptions ===
+// === Module 15739: useVideoQuestCaptions ===
 
-// Module 15424 (useVideoQuestCaptions)
+// Module 15739 (useVideoQuestCaptions)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,9 +31,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
         value = HTTP.get(obj);
         value.then((text) => {
           try {
-            closure_1_2(url(15425).parseVtt(text.text).cues);
+            closure_1_2(url(15740).parseVtt(text.text).cues);
             dependencyMap(constants.SUCCESS);
-            const obj = url(15425);
+            const obj = url(15740);
           } catch (err) {
             dependencyMap(constants.ERROR);
           }
@@ -42,9 +42,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
         });
         const nextPromise = value.then((text) => {
           try {
-            closure_1_2(url(15425).parseVtt(text.text).cues);
+            closure_1_2(url(15740).parseVtt(text.text).cues);
             dependencyMap(constants.SUCCESS);
-            const obj = url(15425);
+            const obj = url(15740);
           } catch (err) {
             dependencyMap(constants.ERROR);
           }
@@ -94,9 +94,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
       value = HTTP.get(obj);
       value.then((text) => {
         try {
-          closure_1_2(url(15425).parseVtt(text.text).cues);
+          closure_1_2(url(15740).parseVtt(text.text).cues);
           dependencyMap(constants.SUCCESS);
-          const obj = url(15425);
+          const obj = url(15740);
         } catch (err) {
           dependencyMap(constants.ERROR);
         }
@@ -105,9 +105,9 @@ export const useVideoQuestCaptions = ReactCompilerGating.isReactCompilerEnabled(
       });
       const nextPromise = value.then((text) => {
         try {
-          closure_1_2(url(15425).parseVtt(text.text).cues);
+          closure_1_2(url(15740).parseVtt(text.text).cues);
           dependencyMap(constants.SUCCESS);
-          const obj = url(15425);
+          const obj = url(15740);
         } catch (err) {
           dependencyMap(constants.ERROR);
         }

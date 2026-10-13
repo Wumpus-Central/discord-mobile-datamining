@@ -25,8 +25,8 @@ import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 83
 import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 9674 */;
 import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 10619 */;
 import openStaticChannelRouteDefault from "openStaticChannelRoute" /* 10697 */;
-import SpoilerDefault from "Spoiler" /* 11767 */;
-import TimestampDefault from "Timestamp" /* 11769 */;
+import SpoilerDefault from "Spoiler" /* 11569 */;
+import TimestampDefault from "Timestamp" /* 11571 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
@@ -1162,7 +1162,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function Markup
   const output = state.output;
   ({ styles, variants } = state);
   const tmp4 = closure_19();
-  let SignPostIcon = state(14062).SignPostIcon;
+  let SignPostIcon = state(14399).SignPostIcon;
   const channelId = node.channelId;
   if (StaticChannelId.GUILD_HOME !== channelId) {
     if (StaticChannelId.SERVER_GUIDE !== channelId) {
@@ -1173,7 +1173,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function Markup
           }
         }
       }
-      SignPostIcon = tmp(14064).ChannelListMagnifyingGlassIcon;
+      SignPostIcon = tmp(14401).ChannelListMagnifyingGlassIcon;
     }
     let str = "button";
     if (state.noStyleAndInteraction) {
@@ -1370,13 +1370,13 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function Markup
     tmp17 = smartOutputResult;
     const tmpResult = tmp(8128);
   }
-  SignPostIcon = tmp(14062).SignPostIcon;
+  SignPostIcon = tmp(14399).SignPostIcon;
 }) : (function MarkupStaticRouteLink(state) {
   state = state.state;
   const node = state.node;
   ({ output, styles, variants } = state);
   let tmp = closure_19();
-  let SignPostIcon = state(14062).SignPostIcon;
+  let SignPostIcon = state(14399).SignPostIcon;
   const channelId = node.channelId;
   if (StaticChannelId.GUILD_HOME !== channelId) {
     if (StaticChannelId.SERVER_GUIDE !== channelId) {
@@ -1387,7 +1387,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function Markup
           }
         }
       }
-      SignPostIcon = tmp2(14064).ChannelListMagnifyingGlassIcon;
+      SignPostIcon = tmp2(14401).ChannelListMagnifyingGlassIcon;
     }
     let str = "button";
     if (state.noStyleAndInteraction) {
@@ -1457,7 +1457,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function Markup
     }
     const tmp2Result = tmp2(8128);
   }
-  SignPostIcon = tmp2(14062).SignPostIcon;
+  SignPostIcon = tmp2(14399).SignPostIcon;
 });
 ReactCompilerGating = fn(558);
 let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupAttachmentLink(state) {
@@ -1476,7 +1476,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Markup
     str2 = "text-xs/medium";
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(14066), size: null };
+    let obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(14403), size: null };
     const fontScale = closure_6.getFontScale();
     if (fontScale < 1) {
       let SMALL = tmp(1200).Icon.Sizes.EXTRA_SMALL_10;
@@ -1614,7 +1614,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Markup
     str2 = "text-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(14066), size: null };
+  const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(14403), size: null };
   const fontScale = closure_6.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1200).Icon.Sizes.EXTRA_SMALL_10;
@@ -2036,7 +2036,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[49]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
-        return closure_1_14(obj2(14067), { node, state }, state.key);
+        return closure_1_14(obj2(14404), { node, state }, state.key);
       }
     },
     [closure_0(closure_2[49]).AST_KEY.TIMESTAMP]: {
@@ -2247,4 +2247,4 @@ export const plainSpoilerRenderer = function plainSpoilerRenderer(content) {
   }
   return str;
 };
-export const createFetchingGameMentionRule = fn(14067).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(14404).createFetchingGameMentionRule;

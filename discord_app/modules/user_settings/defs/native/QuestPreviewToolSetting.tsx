@@ -1,10 +1,10 @@
-// === Module 15447: QuestPreviewToolSetting ===
+// === Module 15762: QuestPreviewToolSetting ===
 
-// Module 15447 (QuestPreviewToolSetting)
+// Module 15762 (QuestPreviewToolSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9171 */;
-import QuestsIcon from "QuestsIcon" /* 13007 */;
+import QuestsIcon from "QuestsIcon" /* 13491 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

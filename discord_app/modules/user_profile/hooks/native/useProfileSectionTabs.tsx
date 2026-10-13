@@ -1,6 +1,6 @@
-// === Module 13390: useProfileSectionTabs ===
+// === Module 13727: useProfileSectionTabs ===
 
-// Module 13390 (useProfileSectionTabs)
+// Module 13727 (useProfileSectionTabs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

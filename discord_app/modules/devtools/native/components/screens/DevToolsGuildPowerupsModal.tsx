@@ -1,9 +1,9 @@
-// === Module 16074: DevToolsGuildPowerupsModal ===
+// === Module 16387: DevToolsGuildPowerupsModal ===
 
-// Module 16074 (DevToolsGuildPowerupsModal)
+// Module 16387 (DevToolsGuildPowerupsModal)
 import HeaderShared from "HeaderShared" /* 9298 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9637 */;
-import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 16075 */;
+import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 16388 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

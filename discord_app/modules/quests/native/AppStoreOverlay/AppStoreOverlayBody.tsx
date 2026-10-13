@@ -1,6 +1,6 @@
-// === Module 12949: AppStoreOverlayBody ===
+// === Module 13441: AppStoreOverlayBody ===
 
-// Module 12949 (AppStoreOverlayBody)
+// Module 13441 (AppStoreOverlayBody)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
@@ -11,9 +11,9 @@ import components_Button_Button from "components/Button/Button" /* 5379 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import AnalyticsActions from "AnalyticsActions" /* 7407 */;
-import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 12950 */;
-import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 12953 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 12958 */;
+import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 13442 */;
+import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 13445 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 13450 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

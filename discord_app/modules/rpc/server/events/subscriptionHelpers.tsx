@@ -1,13 +1,13 @@
-// === Module 14766: subscriptionHelpers ===
+// === Module 15087: subscriptionHelpers ===
 
-// Module 14766 (subscriptionHelpers)
+// Module 15087 (subscriptionHelpers)
 import QuestTaskUtils from "QuestTaskUtils" /* 7413 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 8327 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 14719 */;
-import useThermalState from "useThermalState" /* 14721 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14722 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 15040 */;
+import useThermalState from "useThermalState" /* 15042 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15043 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 14718 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15039 */;
 import FramesStore from "FramesStore" /* 10807 */;
 import QuestStore from "QuestStore" /* 7391 */;
 

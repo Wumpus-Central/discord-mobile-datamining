@@ -1,6 +1,6 @@
-// === Module 12603: NotificationSettingsMessageNotification ===
+// === Module 13111: NotificationSettingsMessageNotification ===
 
-// Module 12603 (NotificationSettingsMessageNotification)
+// Module 13111 (NotificationSettingsMessageNotification)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,8 +8,8 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Pressables from "Pressables" /* 6185 */;
-import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 12604 */;
-import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 12605 */;
+import notificationSettingsPresetOptionUtils from "notificationSettingsPresetOptionUtils" /* 13112 */;
+import NotificationSettingsMockMessageDefault from "NotificationSettingsMockMessage" /* 13113 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -250,7 +250,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     style: style.style,
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12607, dependencyMap.paths), "MessageNotificationGuildActionSheet", { guildId: style.guildId });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13115, dependencyMap.paths), "MessageNotificationGuildActionSheet", { guildId: style.guildId });
     }
   };
   return closure_4(closure_7, obj);
@@ -262,7 +262,7 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
     style: style.style,
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).notification,
     onCustomize() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12609, dependencyMap.paths), "MessageNotificationChannelActionSheet", { channel: style.channel });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13117, dependencyMap.paths), "MessageNotificationChannelActionSheet", { channel: style.channel });
     }
   };
   return closure_4(closure_7, obj);

@@ -1,6 +1,6 @@
-// === Module 16366: NavigationConstants ===
+// === Module 16671: NavigationConstants ===
 
-// Module 16366 (NavigationConstants)
+// Module 16671 (NavigationConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/NavigationConstants.tsx");

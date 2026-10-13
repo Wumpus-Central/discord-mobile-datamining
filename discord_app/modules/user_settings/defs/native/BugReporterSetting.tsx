@@ -1,12 +1,12 @@
-// === Module 16115: BugReporterSetting ===
+// === Module 16428: BugReporterSetting ===
 
-// Module 16115 (BugReporterSetting)
+// Module 16428 (BugReporterSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import BugReporterExperimentDefault from "BugReporterExperiment" /* 12641 */;
-import BugReportStore from "BugReportStore" /* 12626 */;
+import BugReporterExperimentDefault from "BugReporterExperiment" /* 13147 */;
+import BugReportStore from "BugReportStore" /* 13132 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -30,11 +30,11 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(16116).BugIcon,
+  IconComponent: fn(11780).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12627, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13133, dependencyMap.paths));
     }
   },
   withArrow: true,

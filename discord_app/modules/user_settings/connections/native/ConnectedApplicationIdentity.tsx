@@ -1,6 +1,6 @@
-// === Module 15244: ConnectedApplicationIdentity ===
+// === Module 15565: ConnectedApplicationIdentity ===
 
-// Module 15244 (ConnectedApplicationIdentity)
+// Module 15565 (ConnectedApplicationIdentity)
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;

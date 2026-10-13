@@ -1,14 +1,14 @@
-// === Module 16740: GuildsBar ===
+// === Module 17044: GuildsBar ===
 
-// Module 16740 (GuildsBar)
+// Module 17044 (GuildsBar)
 import NativeViewDefault from "NativeView" /* 6162 */;
 import FastListDefault from "FastList" /* 6761 */;
 import FavoritesGuildIntroPopoverDefault from "FavoritesGuildIntroPopover" /* 10327 */;
-import StartupProfilerDefault from "StartupProfiler" /* 11631 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16616 */;
-import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 16741 */;
-import useGuildsBarPropsDefault from "useGuildsBarProps" /* 16749 */;
-import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 16818 */;
+import StartupProfilerDefault from "StartupProfiler" /* 12378 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16921 */;
+import useGuildsBarGestureDefault from "useGuildsBarGesture" /* 17045 */;
+import useGuildsBarPropsDefault from "useGuildsBarProps" /* 17053 */;
+import GuildsBarDragPreviewDefault from "GuildsBarDragPreview" /* 17122 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -206,7 +206,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       }
                       return tmp28;
                     }
-                    const obj3 = { profile: fastListRef(11631).Profiles.Guilds, children: null };
+                    const obj3 = { profile: fastListRef(12378).Profiles.Guilds, children: null };
                     const obj4 = { gesture, children: tmp25 };
                     obj3.children = closure_4(fastListRef(6335).GestureDetector, obj4);
                     const tmp31 = closure_4(StartupProfilerDefault, obj3);
@@ -278,7 +278,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   closure_7(listProps, fastListRef);
   const obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(11631).Profiles.Guilds;
+  obj.profile = fastListRef(12378).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp9 = StartupProfilerDefault;

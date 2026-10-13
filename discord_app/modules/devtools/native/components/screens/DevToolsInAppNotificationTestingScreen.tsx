@@ -1,6 +1,6 @@
-// === Module 16104: DevToolsInAppNotificationTestingScreen ===
+// === Module 16417: DevToolsInAppNotificationTestingScreen ===
 
-// Module 16104 (DevToolsInAppNotificationTestingScreen)
+// Module 16417 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
@@ -8,8 +8,8 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import StickersTypes from "StickersTypes" /* 5750 */;
 import TableRowGroup from "TableRowGroup" /* 6265 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12577 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12579 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13087 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13089 */;
 import noop from "module_19" /* 19 */;
 import StickersStore from "StickersStore" /* 6030 */;
 import MessageRecord from "MessageRecord" /* 4761 */;
@@ -589,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
           return closure_1_14(first(6180).TableRow, {
             label: label.label,
             subLabel: label.subLabel,
-            icon: closure_1_14(first(15889).BeakerIcon, {}),
+            icon: closure_1_14(first(16202).BeakerIcon, {}),
             onPress() {
               return first(closure_0);
             },
@@ -618,7 +618,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
               return closure_1_14(first(6180).TableRow, {
                 label: label.label,
                 subLabel: label.subLabel,
-                icon: closure_1_14(first(15889).BeakerIcon, {}),
+                icon: closure_1_14(first(16202).BeakerIcon, {}),
                 onPress() {
                   return first(closure_0);
                 },
@@ -676,7 +676,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         return closure_1_14(closure_1_0(6180).TableRow, {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(closure_1_0(15889).BeakerIcon, {}),
+          icon: closure_1_14(closure_1_0(16202).BeakerIcon, {}),
           onPress() {
             return closure_2_0(closure_0);
           },
@@ -696,7 +696,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     children: items3.map((label) => closure_1_14(label(6180).TableRow, {
       label: label.label,
       subLabel: label.subLabel,
-      icon: closure_1_14(label(15889).BeakerIcon, {}),
+      icon: closure_1_14(label(16202).BeakerIcon, {}),
       onPress() {
         return label(label);
       },

@@ -1,7 +1,7 @@
-// === Module 18710: UserApplicationIdentityManager ===
+// === Module 18714: UserApplicationIdentityManager ===
 
-// Module 18710 (UserApplicationIdentityManager)
-import UserApplicationIdentityActionCreators from "UserApplicationIdentityActionCreators" /* 13366 */;
+// Module 18714 (UserApplicationIdentityManager)
+import UserApplicationIdentityActionCreators from "UserApplicationIdentityActionCreators" /* 11371 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;

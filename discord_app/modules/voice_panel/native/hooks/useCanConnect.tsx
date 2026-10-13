@@ -1,6 +1,6 @@
-// === Module 17856: useCanConnect ===
+// === Module 17860: useCanConnect ===
 
-// Module 17856 (useCanConnect)
+// Module 17860 (useCanConnect)
 import ChannelUtils from "ChannelUtils" /* 5414 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;

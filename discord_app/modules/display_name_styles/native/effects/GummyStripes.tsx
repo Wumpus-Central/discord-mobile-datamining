@@ -1,6 +1,6 @@
-// === Module 14873: GummyStripes ===
+// === Module 15194: GummyStripes ===
 
-// Module 14873 (GummyStripes)
+// Module 15194 (GummyStripes)
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 16311: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting ===
+// === Module 16618: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting ===
 
-// Module 16311 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
+// Module 16618 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15096 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15100 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15417 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15421 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7259 */;
 
 const ExplicitMediaRedactionUtils = obj(8243);
@@ -44,7 +44,7 @@ function onObscuredContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
     const intl = selectedTeenId(1126).intl;
-    const obj = selectedTeenId(15100);
+    const obj = selectedTeenId(15421);
     const stringResult = intl.string(selectedTeenId(1126).t.GYpoAq);
     const obj3 = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
     const intl2 = selectedTeenId(1126).intl;
@@ -55,8 +55,8 @@ function onObscuredContentNonFriendsDmOnPress() {
       const result = FamilyCenterControlledSettingsUtils.updateExplicitContentSetting(selectedTeenId, { explicitContentNonFriendDm });
     };
     obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(15105).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(15105);
+    let result = selectedTeenId(15426).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(15426);
   }
 }
 function getTitle() {

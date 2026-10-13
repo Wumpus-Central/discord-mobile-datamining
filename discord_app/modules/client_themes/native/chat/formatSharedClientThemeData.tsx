@@ -1,6 +1,6 @@
-// === Module 13485: formatSharedClientThemeData ===
+// === Module 13822: formatSharedClientThemeData ===
 
-// Module 13485 (formatSharedClientThemeData)
+// Module 13822 (formatSharedClientThemeData)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1126 */;
 import _modDef2798 from "module_2798" /* 2798 */;

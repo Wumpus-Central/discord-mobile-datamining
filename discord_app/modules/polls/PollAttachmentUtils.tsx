@@ -1,6 +1,6 @@
-// === Module 11915: PollAttachmentUtils ===
+// === Module 11737: PollAttachmentUtils ===
 
-// Module 11915 (PollAttachmentUtils)
+// Module 11737 (PollAttachmentUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_2 = async function _downloadPollGif() {

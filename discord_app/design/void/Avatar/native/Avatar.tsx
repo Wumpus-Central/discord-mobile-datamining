@@ -1,6 +1,6 @@
-// === Module 14423: Avatar ===
+// === Module 14744: Avatar ===
 
-// Module 14423 (Avatar)
+// Module 14744 (Avatar)
 import nativeDefault from "native" /* 587 */;
 import IconDefault from "Icon" /* 5381 */;
 import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8282 */;
@@ -8,11 +8,11 @@ import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 90
 import ClipView from "ClipView" /* 9017 */;
 import _modDef10912 from "module_10912" /* 10912 */;
 import _modDef10913 from "module_10913" /* 10913 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13153 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 14412 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14413 */;
-import Status from "Status" /* 14414 */;
-import SpeakerPulseDefault from "SpeakerPulse" /* 14424 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13635 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 14733 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14734 */;
+import Status from "Status" /* 14735 */;
+import SpeakerPulseDefault from "SpeakerPulse" /* 14745 */;
 import noop from "module_19" /* 19 */;
 
 const CutoutableAvatarImageDefault = CutoutableAvatarImage;
@@ -741,5 +741,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
 }));
-export const AvatarSizes = fn(13153).AvatarSizes;
+export const AvatarSizes = fn(13635).AvatarSizes;
 export { getStatusSize };

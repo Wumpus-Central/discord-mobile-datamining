@@ -1,23 +1,23 @@
-// === Module 12465: ChairIllocon ===
+// === Module 12975: ChairIllocon ===
 
-// Module 12465 (ChairIllocon)
+// Module 12975 (ChairIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef12466 from "module_12466" /* 12466 */;
-import _modDef12467 from "module_12467" /* 12467 */;
-import _modDef12468 from "module_12468" /* 12468 */;
+import _modDef12976 from "module_12976" /* 12976 */;
+import _modDef12977 from "module_12977" /* 12977 */;
+import _modDef12978 from "module_12978" /* 12978 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12466 }, 3: null };
-const obj2 = { uri: _modDef12466 };
-obj[2] = { uri: _modDef12467 };
-const obj3 = { uri: _modDef12467 };
-obj[3] = { uri: _modDef12468 };
+let obj = { 1: null, 2: { uri: _modDef12976 }, 3: null };
+const obj2 = { uri: _modDef12976 };
+obj[2] = { uri: _modDef12977 };
+const obj3 = { uri: _modDef12977 };
+obj[3] = { uri: _modDef12978 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12468 };
+const obj4 = { uri: _modDef12978 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ChairIllocon.native.tsx");
 

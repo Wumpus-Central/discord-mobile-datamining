@@ -1,6 +1,6 @@
-// === Module 12388: VoiceMessageOverlay ===
+// === Module 12898: VoiceMessageOverlay ===
 
-// Module 12388 (VoiceMessageOverlay)
+// Module 12898 (VoiceMessageOverlay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
@@ -23,10 +23,10 @@ const ReanimatedRexport_mod = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(11634).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(11635).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(12381).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(12382).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1085).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(11636).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11960).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const VoiceMessageOverlay = "VoiceMessageOverlay";

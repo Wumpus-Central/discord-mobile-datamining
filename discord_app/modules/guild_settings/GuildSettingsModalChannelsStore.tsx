@@ -1,6 +1,6 @@
-// === Module 16580: GuildSettingsModalChannelsStore ===
+// === Module 16885: GuildSettingsModalChannelsStore ===
 
-// Module 16580 (GuildSettingsModalChannelsStore)
+// Module 16885 (GuildSettingsModalChannelsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import getFlattedChannelListDefault from "getFlattedChannelList" /* 6802 */;

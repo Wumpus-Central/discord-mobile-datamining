@@ -1,6 +1,6 @@
-// === Module 16565: ChannelItem ===
+// === Module 16870: ChannelItem ===
 
-// Module 16565 (ChannelItem)
+// Module 16870 (ChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
@@ -8,8 +8,8 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8159 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 8203 */;
-import BaseChannelItem from "BaseChannelItem" /* 12087 */;
-import _modDef16566 from "module_16566" /* 16566 */;
+import BaseChannelItem from "BaseChannelItem" /* 12603 */;
+import _modDef16871 from "module_16871" /* 16871 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 5108 */;
@@ -124,7 +124,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
     if (tmp5) {
-      let tmp11 = _modDef16566;
+      let tmp11 = _modDef16871;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
     } else {
       if (cResult[10] === channel) {
@@ -211,7 +211,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef16566;
+      let tmp12 = _modDef16871;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -235,7 +235,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return closure_1_14(tmp9(12087).BaseChannelIcon, obj10);
+    return closure_1_14(tmp9(12603).BaseChannelIcon, obj10);
   }
 });
 ReactCompilerGating = fn(558);
@@ -341,7 +341,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function DMChan
   const items3 = [userId];
   const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1200).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: "scalar" };
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1200).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: 1 };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;

@@ -1,12 +1,12 @@
-// === Module 14714: ConjureVoiceSessionCoordinator ===
+// === Module 15035: ConjureVoiceSessionCoordinator ===
 
-// Module 14714 (ConjureVoiceSessionCoordinator)
+// Module 15035 (ConjureVoiceSessionCoordinator)
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
 import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5246 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10810 */;
 import RPCErrorDefault from "RPCError" /* 10936 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14717 */;
-import FrameVisibilityStore from "FrameVisibilityStore" /* 14715 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15038 */;
+import FrameVisibilityStore from "FrameVisibilityStore" /* 15036 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
@@ -135,15 +135,15 @@ prototype["start"] = function start(id) {
               const tmp15 = new RPCErrorDefault(obj, "This app can only start a voice session in a voice channel in the server it is installed in");
               throw tmp15;
             }
-            tmp38Result2 = tmp38(14716);
+            tmp38Result2 = tmp38(15037);
           }
-          tmp38Result = tmp38(14716);
+          tmp38Result = tmp38(15037);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj11 = obj2(14716);
+        obj11 = obj2(15037);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -312,7 +312,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(14720).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15041).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

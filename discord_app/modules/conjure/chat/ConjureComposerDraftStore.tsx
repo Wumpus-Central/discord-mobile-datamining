@@ -1,6 +1,6 @@
-// === Module 17182: ConjureComposerDraftStore ===
+// === Module 11798: ConjureComposerDraftStore ===
 
-// Module 17182 (ConjureComposerDraftStore)
+// Module 11798 (ConjureComposerDraftStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

@@ -1,11 +1,11 @@
-// === Module 16539: ScreenAlignedThemedGradient ===
+// === Module 16844: ScreenAlignedThemedGradient ===
 
-// Module 16539 (ScreenAlignedThemedGradient)
+// Module 16844 (ScreenAlignedThemedGradient)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import useActiveTheme from "useActiveTheme" /* 9309 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10226 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11577 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11573 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import createStyles from "createStyles" /* 5092 */;
 import "ReactCompilerGating";

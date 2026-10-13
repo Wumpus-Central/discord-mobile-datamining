@@ -1,6 +1,6 @@
-// === Module 12031: CreateGuildContainer ===
+// === Module 12547: CreateGuildContainer ===
 
-// Module 12031 (CreateGuildContainer)
+// Module 12547 (CreateGuildContainer)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

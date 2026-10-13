@@ -1,6 +1,6 @@
-// === Module 12864: GroupDMNitroCapCoachmark ===
+// === Module 13356: GroupDMNitroCapCoachmark ===
 
-// Module 12864 (GroupDMNitroCapCoachmark)
+// Module 13356 (GroupDMNitroCapCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9036 */;

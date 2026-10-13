@@ -1,10 +1,10 @@
-// === Module 12195: ChatInputGuardRequiredLobbyApplicationAuthorization ===
+// === Module 12708: ChatInputGuardRequiredLobbyApplicationAuthorization ===
 
-// Module 12195 (ChatInputGuardRequiredLobbyApplicationAuthorization)
+// Module 12708 (ChatInputGuardRequiredLobbyApplicationAuthorization)
 import nativeDefault from "native" /* 587 */;
 import LinkingDefault from "Linking" /* 4806 */;
 import FastImageDefault from "FastImage" /* 6157 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12168 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12683 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

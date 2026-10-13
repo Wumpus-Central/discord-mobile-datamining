@@ -1,6 +1,6 @@
-// === Module 13064: MediaModalOverlayAltText ===
+// === Module 13548: MediaModalOverlayAltText ===
 
-// Module 13064 (MediaModalOverlayAltText)
+// Module 13548 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 10687 */;

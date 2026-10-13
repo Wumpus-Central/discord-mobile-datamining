@@ -1,12 +1,12 @@
-// === Module 13231: conjureChatConnection ===
+// === Module 11233: conjureChatConnection ===
 
-// Module 13231 (conjureChatConnection)
+// Module 11233 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11412 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11413 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 13232 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11207 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 11234 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11235 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -245,7 +245,7 @@ let obj2 = {
     if (fields.length > 0) {
       const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: projectId.projectId, turnId: fields.turn_id, patch: null };
       obj3 = { secretRequest: null };
-      const obj7 = { fields, note: null, copy_values: null };
+      const obj7 = { request_id: fields.request_id, fields, note: null, copy_values: null };
       ({ note: obj4.note, copy_values: obj4.copy_values } = fields);
       obj3.secretRequest = obj7;
       obj2.patch = obj3;

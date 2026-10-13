@@ -1,12 +1,12 @@
-// === Module 16930: ICYMIInfoModal ===
+// === Module 17233: ICYMIInfoModal ===
 
-// Module 16930 (ICYMIInfoModal)
+// Module 17233 (ICYMIInfoModal)
 import c from "c" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import Modal from "Modal" /* 10603 */;
-import StepModal from "StepModal" /* 14289 */;
-import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 16931 */;
+import StepModal from "StepModal" /* 14610 */;
+import ICYMIInfoModalTypes from "ICYMIInfoModalTypes" /* 17234 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
     const obj2 = {
       headerLeft: NavigatorHeader.getHeaderCloseButton(),
       render() {
-        return jsx(skipIntro(16932), { extendedOnboarding });
+        return jsx(skipIntro(17235), { extendedOnboarding });
       },
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_OVERVIEW,
       impressionProperties: { extended_onboarding: extendedOnboarding }
@@ -36,7 +36,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
     obj[ICYMIInfoModalTypes.ICYMIInfoScreens.DEFAULT] = obj2;
     const obj5 = NavigatorHeader;
     if (skipIntro) {
-      let headerCloseButton = obj5.getHeaderCloseButton(() => skipIntro(5934).popWithKey(extendedOnboarding(16931).ICYMI_INFO_MODAL_KEY));
+      let headerCloseButton = obj5.getHeaderCloseButton(() => skipIntro(5934).popWithKey(extendedOnboarding(17234).ICYMI_INFO_MODAL_KEY));
     } else {
       headerCloseButton = obj5.getHeaderBackButton();
     }
@@ -50,7 +50,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
           const intl = extendedOnboarding(1126).intl;
           obj.text = intl.string(extendedOnboarding(1126).t["5Wxrcd"]);
           obj.onPress = function onPress() {
-            const ICYMIAnalytics = extendedOnboarding(14655).ICYMIAnalytics;
+            const ICYMIAnalytics = extendedOnboarding(14976).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             closure_1_1(5934).pop();
           };
@@ -59,7 +59,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
         return tmp;
       },
       render() {
-        return closure_1_4(skipIntro(16940), {});
+        return closure_1_4(skipIntro(17243), {});
       },
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
@@ -73,7 +73,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
           const intl = extendedOnboarding(1126).intl;
           obj.text = intl.string(extendedOnboarding(1126).t["5Wxrcd"]);
           obj.onPress = function onPress() {
-            const ICYMIAnalytics = extendedOnboarding(14655).ICYMIAnalytics;
+            const ICYMIAnalytics = extendedOnboarding(14976).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             closure_1_1(5934).pop();
           };
@@ -82,7 +82,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
         return tmp;
       },
       render() {
-        return closure_1_4(skipIntro(16940), {});
+        return closure_1_4(skipIntro(17243), {});
       },
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
@@ -92,14 +92,14 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
       const intl = extendedOnboarding(1126).intl;
       obj.text = intl.string(extendedOnboarding(1126).t["5Wxrcd"]);
       obj.onPress = function onPress() {
-        const ICYMIAnalytics = extendedOnboarding(14655).ICYMIAnalytics;
+        const ICYMIAnalytics = extendedOnboarding(14976).ICYMIAnalytics;
         const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "guilds" });
         closure_1_1(5934).pop();
       };
       return closure_1_4(extendedOnboarding(7089).HeaderActionButton, obj);
     };
     obj7.render = function render() {
-      return closure_1_4(skipIntro(16946), {});
+      return closure_1_4(skipIntro(17249), {});
     };
     obj7.impressionName = discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_SELECT_GUILDS;
     obj[ICYMIInfoModalTypes.ICYMIInfoScreens.JOIN_GUILDS] = obj7;
@@ -123,7 +123,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
     const obj2 = {
       headerLeft: NavigatorHeader.getHeaderCloseButton(),
       render() {
-        return jsx(skipIntro(16932), { extendedOnboarding });
+        return jsx(skipIntro(17235), { extendedOnboarding });
       },
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_OVERVIEW,
       impressionProperties: { extended_onboarding: extendedOnboarding }
@@ -131,7 +131,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
     obj[ICYMIInfoModalTypes.ICYMIInfoScreens.DEFAULT] = obj2;
     const obj5 = NavigatorHeader;
     if (skipIntro) {
-      let headerCloseButton = obj5.getHeaderCloseButton(() => skipIntro(5934).popWithKey(extendedOnboarding(16931).ICYMI_INFO_MODAL_KEY));
+      let headerCloseButton = obj5.getHeaderCloseButton(() => skipIntro(5934).popWithKey(extendedOnboarding(17234).ICYMI_INFO_MODAL_KEY));
     } else {
       headerCloseButton = obj5.getHeaderBackButton();
     }
@@ -145,7 +145,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
           const intl = extendedOnboarding(1126).intl;
           obj.text = intl.string(extendedOnboarding(1126).t["5Wxrcd"]);
           obj.onPress = function onPress() {
-            const ICYMIAnalytics = extendedOnboarding(14655).ICYMIAnalytics;
+            const ICYMIAnalytics = extendedOnboarding(14976).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             closure_1_1(5934).pop();
           };
@@ -154,7 +154,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
         return tmp;
       },
       render() {
-        return closure_1_4(skipIntro(16940), {});
+        return closure_1_4(skipIntro(17243), {});
       },
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
@@ -168,7 +168,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
           const intl = extendedOnboarding(1126).intl;
           obj.text = intl.string(extendedOnboarding(1126).t["5Wxrcd"]);
           obj.onPress = function onPress() {
-            const ICYMIAnalytics = extendedOnboarding(14655).ICYMIAnalytics;
+            const ICYMIAnalytics = extendedOnboarding(14976).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             closure_1_1(5934).pop();
           };
@@ -177,7 +177,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
         return tmp;
       },
       render() {
-        return closure_1_4(skipIntro(16940), {});
+        return closure_1_4(skipIntro(17243), {});
       },
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
@@ -187,14 +187,14 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScre
       const intl = extendedOnboarding(1126).intl;
       obj.text = intl.string(extendedOnboarding(1126).t["5Wxrcd"]);
       obj.onPress = function onPress() {
-        const ICYMIAnalytics = extendedOnboarding(14655).ICYMIAnalytics;
+        const ICYMIAnalytics = extendedOnboarding(14976).ICYMIAnalytics;
         const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "guilds" });
         closure_1_1(5934).pop();
       };
       return closure_1_4(extendedOnboarding(7089).HeaderActionButton, obj);
     };
     obj7.render = function render() {
-      return closure_1_4(skipIntro(16946), {});
+      return closure_1_4(skipIntro(17249), {});
     };
     obj7.impressionName = discord_common_AnalyticsUtils.ImpressionNames.ICYMI_ONBOARDING_SELECT_GUILDS;
     obj[ICYMIInfoModalTypes.ICYMIInfoScreens.JOIN_GUILDS] = obj7;
@@ -275,11 +275,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIInf
   let items = [extendedOnboarding, skipIntro];
   if (extendedOnboarding) {
     const obj2 = { screens: tmp, steps: tmp2, initialRouteName: null };
-    let ICYMIInfoScreens = tmp4(16931).ICYMIInfoScreens;
+    let ICYMIInfoScreens = tmp4(17234).ICYMIInfoScreens;
     obj2.initialRouteName = skipIntro ? ICYMIInfoScreens.TOPICS_CLOUD : ICYMIInfoScreens.DEFAULT;
-    jsx(tmp4(14289).StepModal, { screens: tmp, steps: tmp2, initialRouteName: null });
+    jsx(tmp4(14610).StepModal, { screens: tmp, steps: tmp2, initialRouteName: null });
   } else {
-    const obj = { screens: tmp, initialRouteName: tmp4(16931).ICYMIInfoScreens.DEFAULT };
-    return jsx(tmp4(10603).Modal, { screens: tmp, initialRouteName: tmp4(16931).ICYMIInfoScreens.DEFAULT });
+    const obj = { screens: tmp, initialRouteName: tmp4(17234).ICYMIInfoScreens.DEFAULT };
+    return jsx(tmp4(10603).Modal, { screens: tmp, initialRouteName: tmp4(17234).ICYMIInfoScreens.DEFAULT });
   }
 });

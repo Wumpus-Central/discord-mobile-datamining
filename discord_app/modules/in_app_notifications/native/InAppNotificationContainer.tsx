@@ -1,28 +1,28 @@
-// === Module 12584: InAppNotificationContainer ===
+// === Module 13094: InAppNotificationContainer ===
 
-// Module 12584 (InAppNotificationContainer)
+// Module 13094 (InAppNotificationContainer)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
 import spring from "spring" /* 5378 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12577 */;
-import MessageNotificationDefault from "MessageNotification" /* 12585 */;
-import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 12621 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 12624 */;
-import BugReporterNotification from "BugReporterNotification" /* 12625 */;
-import AlertNotificationDefault from "AlertNotification" /* 12642 */;
-import ReactionNotificationDefault from "ReactionNotification" /* 12643 */;
-import ReminderNotificationDefault from "ReminderNotification" /* 12644 */;
-import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 12683 */;
-import MessageRequestNotificationDefault from "MessageRequestNotification" /* 12686 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13087 */;
+import MessageNotificationDefault from "MessageNotification" /* 13095 */;
+import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 13129 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 13130 */;
+import BugReporterNotification from "BugReporterNotification" /* 13131 */;
+import AlertNotificationDefault from "AlertNotification" /* 13148 */;
+import ReactionNotificationDefault from "ReactionNotification" /* 13149 */;
+import ReminderNotificationDefault from "ReminderNotification" /* 13150 */;
+import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 13189 */;
+import MessageRequestNotificationDefault from "MessageRequestNotification" /* 13192 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import NativeMenuStore from "NativeMenuStore" /* 9694 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(12578);
+const InAppNotificationConstants = fn(13088);
 ({ DEFAULT_ANIMATION_TIMING: closure_7, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: closure_9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: closure_11, NOTIFICATION_CONTAINER_MARGIN } = InAppNotificationConstants);
 const Constants = fn(1085);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);

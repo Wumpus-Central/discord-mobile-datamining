@@ -1,6 +1,6 @@
-// === Module 14934: UserProfileDisplayNameStyleTileButton ===
+// === Module 15255: UserProfileDisplayNameStyleTileButton ===
 
-// Module 14934 (UserProfileDisplayNameStyleTileButton)
+// Module 15255 (UserProfileDisplayNameStyleTileButton)
 import nativeDefault from "native" /* 587 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8291 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10263 */;
@@ -66,11 +66,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       tmp14 = cResult[6];
     }
     if (cResult[7] !== displayNameStyles) {
-      const displayNameStyleAccessibleValue = tmp(14935).getDisplayNameStyleAccessibleValue(displayNameStyles);
+      const displayNameStyleAccessibleValue = tmp(15256).getDisplayNameStyleAccessibleValue(displayNameStyles);
       cResult[7] = displayNameStyles;
       cResult[8] = displayNameStyleAccessibleValue;
       let tmp16 = displayNameStyleAccessibleValue;
-      const tmpResult4 = tmp(14935);
+      const tmpResult4 = tmp(15256);
     } else {
       tmp16 = cResult[8];
     }
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   obj3.accessibilityLabel = intl.string(user(1126).t.lsjENp);
   const obj4 = { text: null };
   const obj2 = user(504);
-  obj4.text = user(14935).getDisplayNameStyleAccessibleValue(displayNameStyles);
+  obj4.text = user(15256).getDisplayNameStyleAccessibleValue(displayNameStyles);
   obj3.accessibilityValue = obj4;
   const intl2 = user(1126).intl;
   obj3.accessibilityHint = intl2.string(user(1126).t["4lAcxv"]);
@@ -210,5 +210,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     return closure_7(user(6185).PressableHighlight, obj3);
   }
   STATIC = tmp2(10264).EffectDisplayType.STATIC;
-  const obj5 = user(14935);
+  const obj5 = user(15256);
 });

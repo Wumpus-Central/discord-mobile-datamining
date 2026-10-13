@@ -1,15 +1,15 @@
-// === Module 11502: AppealIngestionConfirmSubmission ===
+// === Module 12268: AppealIngestionConfirmSubmission ===
 
-// Module 11502 (AppealIngestionConfirmSubmission)
+// Module 12268 (AppealIngestionConfirmSubmission)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import SafetyHubUtils from "SafetyHubUtils" /* 7512 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11473 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 11479 */;
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11482 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11498 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11503 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 12239 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 12245 */;
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 12248 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 12264 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 12269 */;
 import noop from "module_19" /* 19 */;
 import SafetyHubStore from "SafetyHubStore" /* 7537 */;
 

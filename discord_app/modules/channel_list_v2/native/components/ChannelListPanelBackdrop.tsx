@@ -1,11 +1,11 @@
-// === Module 16538: ChannelListPanelBackdrop ===
+// === Module 16843: ChannelListPanelBackdrop ===
 
-// Module 16538 (ChannelListPanelBackdrop)
+// Module 16843 (ChannelListPanelBackdrop)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import QuestHooks from "QuestHooks" /* 15366 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16457 */;
+import QuestHooks from "QuestHooks" /* 15683 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16762 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
                 tmp19 = tmp22;
               }
             }
-            let tmp12Result = 16539;
+            let tmp12Result = 16844;
             if (isHomeDrawerEnabled) {
               let ScreenAlignedThemedGradientSliding = tmp(tmp12Result).ScreenAlignedThemedGradientSliding;
             } else {

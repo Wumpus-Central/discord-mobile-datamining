@@ -1,8 +1,8 @@
-// === Module 13586: NUFChannelsActionSheet ===
+// === Module 13923: NUFChannelsActionSheet ===
 
-// Module 13586 (NUFChannelsActionSheet)
+// Module 13923 (NUFChannelsActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import NUFTemplateV2Default from "NUFTemplateV2" /* 13591 */;
+import NUFTemplateV2Default from "NUFTemplateV2" /* 13928 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFChann
     tmp5 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp11 = jsx(tmp(13587).ServerChannelsAbstractUI, {});
+    const tmp11 = jsx(tmp(13924).ServerChannelsAbstractUI, {});
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.Ay9424);
     const intl2 = tmp(1126).intl;
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFChann
     startExpanded: true,
     children: null
   };
-  const obj2 = { illustration: jsx(markAsDismissed(13587).ServerChannelsAbstractUI, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
+  const obj2 = { illustration: jsx(markAsDismissed(13924).ServerChannelsAbstractUI, {}), title: null, description: null, CTALabel: null, onCTAPress: null };
   const intl = markAsDismissed(1126).intl;
   obj2.title = intl.string(markAsDismissed(1126).t.Ay9424);
   const intl2 = markAsDismissed(1126).intl;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFChann
   const intl3 = markAsDismissed(1126).intl;
   obj2.CTALabel = intl3.string(markAsDismissed(1126).t.BddRzS);
   obj2.onCTAPress = callback;
-  obj.children = jsx(NUFTemplateV2Default, { illustration: jsx(markAsDismissed(13587).ServerChannelsAbstractUI, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
+  obj.children = jsx(NUFTemplateV2Default, { illustration: jsx(markAsDismissed(13924).ServerChannelsAbstractUI, {}), title: null, description: null, CTALabel: null, onCTAPress: null });
   return jsx(markAsDismissed(6840).BottomSheet, {
     onDismiss() {
       let tmpResult;

@@ -1,15 +1,15 @@
-// === Module 15504: useActiveGuildSubscriptions ===
+// === Module 15819: useActiveGuildSubscriptions ===
 
-// Module 15504 (useActiveGuildSubscriptions)
+// Module 15819 (useActiveGuildSubscriptions)
 import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 5724 */;
-import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15499 */;
+import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15814 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4775 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const constants = fn(15498).UserGuildRoleSubscriptionRelationship;
+const constants = fn(15813).UserGuildRoleSubscriptionRelationship;
 let closure_7 = [];
 const ReactCompilerGating = fn(558);
 const size = fn(2);

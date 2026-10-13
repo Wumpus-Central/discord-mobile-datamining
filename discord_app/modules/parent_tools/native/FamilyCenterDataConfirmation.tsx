@@ -1,6 +1,6 @@
-// === Module 11534: FamilyCenterDataConfirmation ===
+// === Module 12287: FamilyCenterDataConfirmation ===
 
-// Module 11534 (FamilyCenterDataConfirmation)
+// Module 12287 (FamilyCenterDataConfirmation)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef2568 from "module_2568" /* 2568 */;
@@ -16,10 +16,10 @@ import CreditCardIcon from "CreditCardIcon" /* 7558 */;
 import ForumIcon from "ForumIcon" /* 8216 */;
 import ServerIcon from "ServerIcon" /* 9244 */;
 import FlagIcon from "FlagIcon" /* 9575 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11535 */;
-import PhoneIcon from "PhoneIcon" /* 11536 */;
-import GiftIcon from "GiftIcon" /* 11538 */;
-import PiggyBankIcon from "PiggyBankIcon" /* 11539 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12288 */;
+import PhoneIcon from "PhoneIcon" /* 12289 */;
+import GiftIcon from "GiftIcon" /* 12291 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 12292 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

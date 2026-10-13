@@ -1,6 +1,6 @@
-// === Module 15312: BountiesModalProgress ===
+// === Module 15629: BountiesModalProgress ===
 
-// Module 15312 (BountiesModalProgress)
+// Module 15629 (BountiesModalProgress)
 import nativeDefault from "native" /* 587 */;
 import timing from "timing" /* 5093 */;
 import timingPresets from "timingPresets" /* 5096 */;

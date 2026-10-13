@@ -1,23 +1,23 @@
-// === Module 12452: BookIllocon ===
+// === Module 12962: BookIllocon ===
 
-// Module 12452 (BookIllocon)
+// Module 12962 (BookIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef12453 from "module_12453" /* 12453 */;
-import _modDef12454 from "module_12454" /* 12454 */;
-import _modDef12455 from "module_12455" /* 12455 */;
+import _modDef12963 from "module_12963" /* 12963 */;
+import _modDef12964 from "module_12964" /* 12964 */;
+import _modDef12965 from "module_12965" /* 12965 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12453 }, 3: null };
-const obj2 = { uri: _modDef12453 };
-obj[2] = { uri: _modDef12454 };
-const obj3 = { uri: _modDef12454 };
-obj[3] = { uri: _modDef12455 };
+let obj = { 1: null, 2: { uri: _modDef12963 }, 3: null };
+const obj2 = { uri: _modDef12963 };
+obj[2] = { uri: _modDef12964 };
+const obj3 = { uri: _modDef12964 };
+obj[3] = { uri: _modDef12965 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12455 };
+const obj4 = { uri: _modDef12965 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BookIllocon.native.tsx");
 

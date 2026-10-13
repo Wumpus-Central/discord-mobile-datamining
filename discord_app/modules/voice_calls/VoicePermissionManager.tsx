@@ -1,6 +1,6 @@
-// === Module 18053: VoicePermissionManager ===
+// === Module 18057: VoicePermissionManager ===
 
-// Module 18053 (VoicePermissionManager)
+// Module 18057 (VoicePermissionManager)
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5416 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7500 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 5948 */;

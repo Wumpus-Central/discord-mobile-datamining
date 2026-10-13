@@ -1,6 +1,6 @@
-// === Module 16188: DesignSystemAIShimmerSetting ===
+// === Module 16495: DesignSystemAIShimmerSetting ===
 
-// Module 16188 (DesignSystemAIShimmerSetting)
+// Module 16495 (DesignSystemAIShimmerSetting)
 import Constants from "Constants" /* 1085 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;

@@ -1,6 +1,6 @@
-// === Module 17492: AutocompleteScreenUtils ===
+// === Module 17496: AutocompleteScreenUtils ===
 
-// Module 17492 (AutocompleteScreenUtils)
+// Module 17496 (AutocompleteScreenUtils)
 import util from "util" /* 1126 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
 import LinkIcon from "LinkIcon" /* 5038 */;
@@ -8,18 +8,18 @@ import ImageIcon from "ImageIcon" /* 8215 */;
 import PollsIcon from "PollsIcon" /* 10026 */;
 import AttachmentIcon from "AttachmentIcon" /* 10028 */;
 import VideoIcon from "VideoIcon" /* 10770 */;
-import UserIcon from "UserIcon" /* 11380 */;
-import RobotIcon from "RobotIcon" /* 11435 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11565 */;
-import SearchUtils from "SearchUtils" /* 12043 */;
-import SoundboardIcon from "SoundboardIcon" /* 12264 */;
-import StickerIcon from "StickerIcon" /* 12269 */;
-import EmbedIcon from "EmbedIcon" /* 12905 */;
-import WebhookIcon from "WebhookIcon" /* 17493 */;
+import RobotIcon from "RobotIcon" /* 11314 */;
+import UserIcon from "UserIcon" /* 11337 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 12318 */;
+import SearchUtils from "SearchUtils" /* 12559 */;
+import SoundboardIcon from "SoundboardIcon" /* 12777 */;
+import StickerIcon from "StickerIcon" /* 12782 */;
+import EmbedIcon from "EmbedIcon" /* 13397 */;
+import WebhookIcon from "WebhookIcon" /* 17497 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
-import SearchQueryStore from "SearchQueryStore" /* 12050 */;
+import SearchQueryStore from "SearchQueryStore" /* 12566 */;
 
 require = fn;
 const SearchListItemTypes = fn(9313).SearchListItemTypes;

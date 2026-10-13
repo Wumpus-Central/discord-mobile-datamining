@@ -1,16 +1,16 @@
-// === Module 16042: TraitPickerControls ===
+// === Module 16355: TraitPickerControls ===
 
-// Module 16042 (TraitPickerControls)
+// Module 16355 (TraitPickerControls)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import CheckpointTrait from "CheckpointTrait" /* 5461 */;
 import CheckpointCharacterOutfit from "CheckpointCharacterOutfit" /* 5494 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 16009 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 16010 */;
-import TraitPickerDefault from "TraitPicker" /* 16043 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 16322 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 16323 */;
+import TraitPickerDefault from "TraitPicker" /* 16356 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 16000 */;
+import CheckpointStore from "CheckpointStore" /* 16313 */;
 
 require = fn;
 let closure_3 = ["activeCustomizationOption", "onSelectOption"];
@@ -158,8 +158,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Outfit
   const tmp5 = tmp2.selectedCharacterTraits[onSelectOption(undefined, 5461).CheckpointTrait.OUTFIT];
   let outfitDefaultOptionId;
   if (null != tmp5) {
-    outfitDefaultOptionId = tmp3(16010).getOutfitDefaultOptionId(tmp5);
-    const tmp3Result = tmp3(16010);
+    outfitDefaultOptionId = tmp3(16323).getOutfitDefaultOptionId(tmp5);
+    const tmp3Result = tmp3(16323);
   }
   let NONE;
   if (savedSelection != null) {
@@ -168,23 +168,23 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Outfit
   if (NONE == null) {
     NONE = tmp3(5494).CheckpointCharacterOutfit.NONE;
   }
-  const outfitDefaultOptionId1 = onSelectOption(16010).getOutfitDefaultOptionId(NONE);
+  const outfitDefaultOptionId1 = onSelectOption(16323).getOutfitDefaultOptionId(NONE);
   const items = [onSelectOption, outfitDefaultOptionId];
-  const memo = noop.useMemo(() => onSelectOption(16009).getTraitOptions(onSelectOption(16009).CheckpointCustomizationOption.OUTFIT, onSelectOption(16010).OUTFIT_DEFAULT_OPTION_IDS), []);
+  const memo = noop.useMemo(() => onSelectOption(16322).getTraitOptions(onSelectOption(16322).CheckpointCustomizationOption.OUTFIT, onSelectOption(16323).OUTFIT_DEFAULT_OPTION_IDS), []);
   const callback = noop.useCallback((arg0, arg1) => {
     if (arg1 !== outfitDefaultOptionId) {
       onSelectOption(arg0, arg1);
     }
   }, items);
   const obj = {};
-  const tmp3Result2 = onSelectOption(16010);
+  const tmp3Result2 = onSelectOption(16323);
   const merged1 = Object.assign(merged);
   obj.customizationOption = onSelectOption.activeCustomizationOption;
   obj.options = memo;
   obj.savedOptionId = outfitDefaultOptionId1;
   obj.selectedOptionId = outfitDefaultOptionId;
   obj.onSelectOption = callback;
-  return jsx(outfitDefaultOptionId(16043), {});
+  return jsx(outfitDefaultOptionId(16356), {});
 });
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function OutfitColorControls(activeCustomizationOption) {
@@ -271,7 +271,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Outfit
   if (tmp5 == null) {
     NONE = tmp3(5494).CheckpointCharacterOutfit.NONE;
   }
-  NONE2 = NONE2(16010).getOutfitDefaultOptionId(NONE);
+  NONE2 = NONE2(16323).getOutfitDefaultOptionId(NONE);
   if (NONE2 == null) {
     NONE2 = tmp3(5494).CheckpointCharacterOutfit.NONE;
   }
@@ -281,7 +281,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Outfit
     return obj.getTraitOptions(CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT_COLOR, CheckpointCharacterTraits.getOutfitColorOptionIds(NONE2));
   }, items);
   const obj2 = {};
-  let obj = NONE2(16010);
+  let obj = NONE2(16323);
   const merged1 = Object.assign(merged);
   obj2.customizationOption = activeCustomizationOption.activeCustomizationOption;
   obj2.options = memo;
@@ -356,7 +356,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function TraitC
   const merged = Object.assign(activeCustomizationOption, Object.assign({ activeCustomizationOption: 0 }));
   const tmp2 = closure_10();
   const savedSelection = tmp2.savedSelection;
-  const tmp3 = activeCustomizationOption(16009).CUSTOMIZATION_OPTION_TRAITS[activeCustomizationOption];
+  const tmp3 = activeCustomizationOption(16322).CUSTOMIZATION_OPTION_TRAITS[activeCustomizationOption];
   const items = [activeCustomizationOption];
   const memo = noop.useMemo(() => CheckpointCustomizationUtils.getTraitOptions(activeCustomizationOption), items);
   const obj = {};

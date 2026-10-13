@@ -1,6 +1,6 @@
-// === Module 11431: restartConjureAppFrames ===
+// === Module 11252: restartConjureAppFrames ===
 
-// Module 11431 (restartConjureAppFrames)
+// Module 11252 (restartConjureAppFrames)
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
 import leaveFrame from "leaveFrame" /* 10821 */;
 import FramesStore from "FramesStore" /* 10807 */;

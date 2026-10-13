@@ -1,6 +1,6 @@
-// === Module 11674: AddMediaToOriginalForumPostActionSheet ===
+// === Module 12417: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 11674 (AddMediaToOriginalForumPostActionSheet)
+// Module 12417 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;

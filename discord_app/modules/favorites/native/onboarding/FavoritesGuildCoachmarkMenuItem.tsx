@@ -1,6 +1,6 @@
-// === Module 16671: FavoritesGuildCoachmarkMenuItem ===
+// === Module 16975: FavoritesGuildCoachmarkMenuItem ===
 
-// Module 16671 (FavoritesGuildCoachmarkMenuItem)
+// Module 16975 (FavoritesGuildCoachmarkMenuItem)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3442 from "module_3442" /* 3442 */;

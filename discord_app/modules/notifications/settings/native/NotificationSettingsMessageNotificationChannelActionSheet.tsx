@@ -1,6 +1,6 @@
-// === Module 12609: NotificationSettingsMessageNotificationChannelActionSheet ===
+// === Module 13117: NotificationSettingsMessageNotificationChannelActionSheet ===
 
-// Module 12609 (NotificationSettingsMessageNotificationChannelActionSheet)
+// Module 13117 (NotificationSettingsMessageNotificationChannelActionSheet)
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6804 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6809 */;
 import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10448 */;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
           }
         }
         let obj3 = { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
-        const tmp12 = jsx(unread(12608), { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 });
+        const tmp12 = jsx(unread(13116), { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 });
         cResult[7] = notification;
         cResult[8] = tmp5;
         cResult[9] = tmp8;
@@ -112,5 +112,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     obj4.label = NotificationLabel.notifications(message_notifications);
     const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj4);
   };
-  return jsx(unread(12608), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(13116), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 });

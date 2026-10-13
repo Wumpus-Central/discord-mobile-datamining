@@ -1,6 +1,6 @@
-// === Module 13599: VoiceMemberList ===
+// === Module 13936: VoiceMemberList ===
 
-// Module 13599 (VoiceMemberList)
+// Module 13936 (VoiceMemberList)
 import c from "c" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
@@ -10,8 +10,8 @@ import Form from "Form" /* 8580 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8683 */;
 import _modDef10332 from "module_10332" /* 10332 */;
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 10748 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13595 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 13602 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13932 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 13939 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -120,8 +120,8 @@ let closure_28 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         const intl = FormRow(1126).intl;
         obj2.accessibilityLabel = intl.string(FormRow(1126).t["6Qgrev"]);
         obj2.source = _modDef10332;
-        obj2.size = FormRow(13600).CircularIconButton.Sizes.MEDIUM_32;
-        const tmp19 = closure_23(FormRow(13600).CircularIconButton, obj2);
+        obj2.size = FormRow(13937).CircularIconButton.Sizes.MEDIUM_32;
+        const tmp19 = closure_23(FormRow(13937).CircularIconButton, obj2);
         const intl2 = FormRow(1126).intl;
         const stringResult = intl2.string(FormRow(1126).t["6Qgrev"]);
         cResult[5] = tmp19;
@@ -173,8 +173,8 @@ let closure_28 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const intl = tmp4(1126).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1126).t["6Qgrev"]);
       obj3.source = _modDef10332;
-      obj3.size = tmp4(13600).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_23(tmp4(13600).CircularIconButton, obj3);
+      obj3.size = tmp4(13937).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_23(tmp4(13937).CircularIconButton, obj3);
       const intl2 = tmp4(1126).intl;
       obj2.label = intl2.string(tmp4(1126).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -276,7 +276,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
           }
         }
         let obj3 = { embeddedActivity: item, channelId, onItemPress: tmp13, isActionSheet };
-        const tmp17 = closure_23(tmp4(13601), obj3);
+        const tmp17 = closure_23(tmp4(13938), obj3);
         cResult[4] = channelId;
         cResult[5] = isActionSheet;
         cResult[6] = tmp13;
@@ -385,13 +385,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
     const merged = Object.assign(item);
     obj4.onPress = onPressUser;
     obj4.isActionSheet = isActionSheet;
-    const tmp12 = closure_23(tmp4(13602), obj4);
+    const tmp12 = closure_23(tmp4(13939), obj4);
     cResult[9] = isActionSheet;
     cResult[10] = onPressUser;
     cResult[11] = item;
     cResult[12] = tmp12;
     tmp6 = tmp12;
-    const tmp4Result = tmp4(13602);
+    const tmp4Result = tmp4(13939);
   }
   let obj2 = require("analytics");
   tmp5 = undefined !== item.url && undefined !== item.applicationId;
@@ -481,13 +481,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
         },
       isActionSheet
     };
-    return closure_23(tmp2(13601), obj2);
+    return closure_23(tmp2(13938), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_23(tmp2(13602), obj3);
+    return closure_23(tmp2(13939), obj3);
   }
   let obj = isActionSheet(9539);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
@@ -863,7 +863,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMem
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13601);
+                tmp4 = tmp4(13938);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

@@ -1,6 +1,6 @@
-// === Module 11991: VocalChannelJoinButton ===
+// === Module 12507: VocalChannelJoinButton ===
 
-// Module 11991 (VocalChannelJoinButton)
+// Module 12507 (VocalChannelJoinButton)
 import nativeDefault from "native" /* 587 */;
 import StageIcon from "StageIcon" /* 8225 */;
 import VoiceNormalIcon2 from "VoiceNormalIcon" /* 8229 */;
@@ -255,9 +255,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = tmp8;
   }
   const tmp3Result = channel(573);
-  const connectedUserLimit = channel(11992).useConnectedUserLimit({ channel, video: tmp12 });
-  const tmp3Result3 = channel(11992);
-  let connectedUserLimitFormatted = channel(11992).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  const connectedUserLimit = channel(12508).useConnectedUserLimit({ channel, video: tmp12 });
+  const tmp3Result3 = channel(12508);
+  let connectedUserLimitFormatted = channel(12508).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;
@@ -326,5 +326,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result4 = channel(11992);
+  const tmp3Result4 = channel(12508);
 }));

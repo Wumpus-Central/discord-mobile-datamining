@@ -1,6 +1,6 @@
-// === Module 16862: notifications/Notifications ===
+// === Module 17165: notifications/Notifications ===
 
-// Module 16862 (notifications/Notifications)
+// Module 17165 (notifications/Notifications)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
@@ -13,13 +13,13 @@ import LayerScope from "LayerScope" /* 6846 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 6852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
 import ThemedGradientDefault from "ThemedGradient" /* 10226 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11494 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16450 */;
-import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 16863 */;
-import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 16865 */;
-import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 16866 */;
-import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 16870 */;
-import NotificationCenterForYou from "NotificationCenterForYou" /* 16871 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12260 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16755 */;
+import useForLaterCoachmarkDefault from "useForLaterCoachmark" /* 17166 */;
+import ForLaterOpenActionButtonDefault from "ForLaterOpenActionButton" /* 17168 */;
+import NotificationCenterActionButtonDefault from "NotificationCenterActionButton" /* 17169 */;
+import NotificationCenterPermissionNudgeDefault from "NotificationCenterPermissionNudge" /* 17173 */;
+import NotificationCenterForYou from "NotificationCenterForYou" /* 17174 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -129,7 +129,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const intl = tmp(1126).intl;
     obj6.accessibilityLabel = intl.string(tmp(1126).t["13/7kX"]);
     obj6.onPress = goBack;
-    obj6.children = closure_7(tmp(16864).LeftBackIconWithBadge, {});
+    obj6.children = closure_7(tmp(17167).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp(6185).PressableOpacity, obj6), , ];
     const obj7 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp4.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp(1126).intl;
@@ -179,7 +179,7 @@ let closure_11 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const intl = tmp11(1126).intl;
     obj3.accessibilityLabel = intl.string(tmp11(1126).t["13/7kX"]);
     obj3.onPress = goBack;
-    obj3.children = closure_7(tmp11(16864).LeftBackIconWithBadge, {});
+    obj3.children = closure_7(tmp11(17167).LeftBackIconWithBadge, {});
     const items1 = [closure_7(tmp11(6185).PressableOpacity, obj3), , ];
     const obj4 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.headerText, maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl2 = tmp11(1126).intl;

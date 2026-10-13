@@ -1,10 +1,10 @@
-// === Module 17474: ThreadsScreen ===
+// === Module 17478: ThreadsScreen ===
 
-// Module 17474 (ThreadsScreen)
+// Module 17478 (ThreadsScreen)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 12159 */;
-import ThreadListDefault from "ThreadList" /* 17475 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 12674 */;
+import ThreadListDefault from "ThreadList" /* 17479 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 

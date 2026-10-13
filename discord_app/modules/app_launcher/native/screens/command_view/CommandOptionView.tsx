@@ -1,10 +1,10 @@
-// === Module 11848: CommandOptionView ===
+// === Module 11653: CommandOptionView ===
 
-// Module 11848 (CommandOptionView)
+// Module 11653 (CommandOptionView)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
 import _modDef9791 from "module_9791" /* 9791 */;
-import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 11850 */;
+import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 11655 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
   const ReduceMotion = option(4850).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
   const obj = option(504);
-  const optionEnteringAnimation = option(11849).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(11654).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -147,8 +147,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
     const obj5 = {
       collapsable: false,
       entering: optionEnteringAnimation.EnteringAnimation,
-      exiting: tmp2(11849).ExitingAnimation,
-      layout: tmp2(11849).LayoutAnimation,
+      exiting: tmp2(11654).ExitingAnimation,
+      layout: tmp2(11654).LayoutAnimation,
       onLayout(arg0) {
           importDefault(arg0, option);
         },
@@ -198,10 +198,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
     obj6.children = items2;
     obj5.children = closure_6(View, obj6);
     obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-    obj3.children = closure_5(tmp2(11857).AwaitAnimationContext, obj4);
+    obj3.children = closure_5(tmp2(11662).AwaitAnimationContext, obj4);
     return closure_5(tmp2(4850).LayoutAnimationConfig, obj3);
   } else {
     return null;
   }
-  const tmp2Result = option(11849);
+  const tmp2Result = option(11654);
 });

@@ -1,6 +1,6 @@
-// === Module 17955: VoicePanelController ===
+// === Module 17959: VoicePanelController ===
 
-// Module 17955 (VoicePanelController)
+// Module 17959 (VoicePanelController)
 import DurationsDefault from "Durations" /* 1102 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import util from "util" /* 1126 */;
@@ -19,14 +19,14 @@ import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 8806 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9580 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10373 */;
 import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10853 */;
-import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11974 */;
-import VideoSlashIcon from "VideoSlashIcon" /* 13171 */;
-import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 17753 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17798 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17813 */;
-import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 17890 */;
-import useTransitionToConnectedActivityInVoiceDefault from "useTransitionToConnectedActivityInVoice" /* 17956 */;
-import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 17957 */;
+import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 12490 */;
+import VideoSlashIcon from "VideoSlashIcon" /* 13653 */;
+import applyActivityOrientationLockDefault from "applyActivityOrientationLock" /* 17757 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17802 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17817 */;
+import useIsVoicePanelParticipantFocusable from "useIsVoicePanelParticipantFocusable" /* 17894 */;
+import useTransitionToConnectedActivityInVoiceDefault from "useTransitionToConnectedActivityInVoice" /* 17960 */;
+import trackActivityThermalStateNoticeShown from "trackActivityThermalStateNoticeShown" /* 17961 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
@@ -398,16 +398,16 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
   tmp6 = CONTROLS_HEIGHT;
 }
 let AppState = fn(17).AppState;
-const VoicePanelConstants = fn(11972);
+const VoicePanelConstants = fn(12488);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(11970);
+const VoicePanelControlsConstants = fn(12486);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
 const OrientationLockState = fn(2024).OrientationLockState;
 const ActivityPanelModes = fn(6067).ActivityPanelModes;
 const isActivityParticipant = fn(5115).isActivityParticipant;
-const MorphablePanelModes = fn(11973).MorphablePanelModes;
+const MorphablePanelModes = fn(12489).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityConnected(setControlsMode) {

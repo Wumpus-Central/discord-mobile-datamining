@@ -1,6 +1,6 @@
-// === Module 17708: GiftingBadgesCoachmarkActionSheet ===
+// === Module 17712: GiftingBadgesCoachmarkActionSheet ===
 
-// Module 17708 (GiftingBadgesCoachmarkActionSheet)
+// Module 17712 (GiftingBadgesCoachmarkActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,7 +11,7 @@ import FastImageDefault from "FastImage" /* 6157 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
 import utils_openGiftModal from "utils/openGiftModal" /* 10051 */;
 import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10106 */;
-import _modDef17709 from "module_17709" /* 17709 */;
+import _modDef17713 from "module_17713" /* 17713 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8317 */;
 
@@ -442,7 +442,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewBad
         return;
       }
     }
-    tmp8[0] = _modDef17709;
+    tmp8[0] = _modDef17713;
     cResult[4] = tmp8;
   } else {
     class C {
@@ -598,7 +598,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewBad
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
   const obj4 = { source: null, style: null };
-  const obj5 = { uri: _modDef17709 };
+  const obj5 = { uri: _modDef17713 };
   obj4.source = obj5;
   obj4.style = tmp.newBadgeImage;
   obj3.children = closure_7(FastImageDefault, obj4);
@@ -618,7 +618,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function NewBad
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1126).intl;
   obj10.text = intl3.string(_modDef2664.DZnomS);
-  obj10.icon = closure_7(markAsDismissed(11538).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj10.icon = closure_7(markAsDismissed(12291).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj10.onPress = callback;
   obj9.children = closure_7(markAsDismissed(5379).Button, obj10);
   items2[2] = closure_7(View, obj9);

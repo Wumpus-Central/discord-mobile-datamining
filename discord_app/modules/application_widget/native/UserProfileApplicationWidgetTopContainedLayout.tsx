@@ -1,12 +1,12 @@
-// === Module 13359: UserProfileApplicationWidgetTopContainedLayout ===
+// === Module 11491: UserProfileApplicationWidgetTopContainedLayout ===
 
-// Module 13359 (UserProfileApplicationWidgetTopContainedLayout)
+// Module 11491 (UserProfileApplicationWidgetTopContainedLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import FastImageDefault from "FastImage" /* 6157 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 13268 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 13355 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 13356 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11401 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11487 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11488 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

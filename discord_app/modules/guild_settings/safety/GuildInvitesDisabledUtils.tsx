@@ -1,6 +1,6 @@
-// === Module 12079: GuildInvitesDisabledUtils ===
+// === Module 12595: GuildInvitesDisabledUtils ===
 
-// Module 12079 (GuildInvitesDisabledUtils)
+// Module 12595 (GuildInvitesDisabledUtils)
 import GuildIncidentsStore from "GuildIncidentsStore" /* 10694 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 

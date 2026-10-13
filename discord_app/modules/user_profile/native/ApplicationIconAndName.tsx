@@ -1,6 +1,6 @@
-// === Module 12371: ApplicationIconAndName ===
+// === Module 12881: ApplicationIconAndName ===
 
-// Module 12371 (ApplicationIconAndName)
+// Module 12881 (ApplicationIconAndName)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;

@@ -1,6 +1,6 @@
-// === Module 14943: MobileNitroPreviewDirectCheckoutExperiment ===
+// === Module 15264: MobileNitroPreviewDirectCheckoutExperiment ===
 
-// Module 14943 (MobileNitroPreviewDirectCheckoutExperiment)
+// Module 15264 (MobileNitroPreviewDirectCheckoutExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

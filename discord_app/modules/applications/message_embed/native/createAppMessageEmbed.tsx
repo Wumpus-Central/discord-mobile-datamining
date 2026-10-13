@@ -1,6 +1,6 @@
-// === Module 11608: createAppMessageEmbed ===
+// === Module 12358: createAppMessageEmbed ===
 
-// Module 11608 (createAppMessageEmbed)
+// Module 12358 (createAppMessageEmbed)
 import util from "util" /* 1126 */;
 import URLUtilsDefault from "URLUtils" /* 1384 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
@@ -18,12 +18,12 @@ import AppLauncherUtils from "AppLauncherUtils" /* 9247 */;
 import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10803 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
 import ApplicationUtils from "ApplicationUtils" /* 10862 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11609 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 11610 */;
-import getPlayInContext from "getPlayInContext" /* 11611 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 11612 */;
-import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 11613 */;
-import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 11614 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12359 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12360 */;
+import getPlayInContext from "getPlayInContext" /* 12361 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12362 */;
+import joinOrStartActivityInChannel from "joinOrStartActivityInChannel" /* 12363 */;
+import AppLauncherPlayUtils from "AppLauncherPlayUtils" /* 12364 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1390 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8276 */;

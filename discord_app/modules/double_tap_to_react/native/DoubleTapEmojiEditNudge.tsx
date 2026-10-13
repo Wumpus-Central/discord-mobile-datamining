@@ -1,6 +1,6 @@
-// === Module 12832: DoubleTapEmojiEditNudge ===
+// === Module 13326: DoubleTapEmojiEditNudge ===
 
-// Module 12832 (DoubleTapEmojiEditNudge)
+// Module 13326 (DoubleTapEmojiEditNudge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
@@ -79,7 +79,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155536 */ function*() { ... })();
+                  return (/* F155783 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -105,7 +105,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155536 */ function*() { ... })();
+                  return (/* F155783 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -131,7 +131,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155536 */ function*() { ... })();
+                  return (/* F155783 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -160,7 +160,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155536 */ function*() { ... })();
+                  return (/* F155783 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -185,7 +185,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155536 */ function*() { ... })();
+                  return (/* F155783 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -210,7 +210,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 closure_0 = closure_1_3(async (_location) => {
                   c3 = 0;
                   c4 = 0;
-                  return (/* F155536 */ function*() { ... })();
+                  return (/* F155783 */ function*() { ... })();
                 });
                 obj1.onPressEmoji = function onPressEmoji() {
                   const self = this;
@@ -250,7 +250,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
         closure_0 = closure_1_3(async (_location) => {
           c3 = 0;
           c4 = 0;
-          return (/* F155536 */ function*() { ... })();
+          return (/* F155783 */ function*() { ... })();
         });
         obj1.onPressEmoji = function onPressEmoji() {
           const self = this;
@@ -275,7 +275,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
           closure_0 = closure_1_3(async (_location) => {
             c3 = 0;
             c4 = 0;
-            return (/* F155536 */ function*() { ... })();
+            return (/* F155783 */ function*() { ... })();
           });
           obj1.onPressEmoji = function onPressEmoji() {
             const self = this;
@@ -304,7 +304,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
         closure_0 = closure_1_3(async (_location) => {
           c3 = 0;
           c4 = 0;
-          return (/* F155536 */ function*() { ... })();
+          return (/* F155783 */ function*() { ... })();
         });
         obj1.onPressEmoji = function onPressEmoji() {
           const self = this;

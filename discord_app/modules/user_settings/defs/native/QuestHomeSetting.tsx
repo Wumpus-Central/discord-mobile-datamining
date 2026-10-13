@@ -1,12 +1,12 @@
-// === Module 15276: defs/QuestHomeSetting ===
+// === Module 15595: defs/QuestHomeSetting ===
 
-// Module 15276 (defs/QuestHomeSetting)
+// Module 15595 (defs/QuestHomeSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import QuestContent from "QuestContent" /* 5977 */;
 import utils_QuestUtils from "utils/QuestUtils" /* 7411 */;
 import QuestsEligibility from "QuestsEligibility" /* 9166 */;
-import QuestsIcon from "QuestsIcon" /* 13007 */;
+import QuestsIcon from "QuestsIcon" /* 13491 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

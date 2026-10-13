@@ -1,6 +1,6 @@
-// === Module 15222: UserSettingsAuthedApp ===
+// === Module 15543: UserSettingsAuthedApp ===
 
-// Module 15222 (UserSettingsAuthedApp)
+// Module 15543 (UserSettingsAuthedApp)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -16,7 +16,7 @@ import NotificationSettingsModalActionCreatorsDefault from "NotificationSettings
 import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6860 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8491 */;
 import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10812 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12338 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12850 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6797 */;

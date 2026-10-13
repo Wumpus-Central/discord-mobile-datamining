@@ -1,6 +1,6 @@
-// === Module 11933: ChatInputActions ===
+// === Module 12454: ChatInputActions ===
 
-// Module 11933 (ChatInputActions)
+// Module 12454 (ChatInputActions)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -11,10 +11,10 @@ import AppsIcon from "AppsIcon" /* 8234 */;
 import PollsIcon from "PollsIcon" /* 10026 */;
 import AttachmentIcon from "AttachmentIcon" /* 10028 */;
 import CameraIcon from "CameraIcon" /* 10043 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 11919 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 11935 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11937 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 11938 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 11741 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11956 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 12455 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 12457 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -314,7 +314,7 @@ class ChatInputActions {
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(11636);
+const ChatInputConstants = fn(11960);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);

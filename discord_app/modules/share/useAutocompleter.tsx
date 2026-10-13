@@ -1,6 +1,6 @@
-// === Module 11576: useAutocompleter ===
+// === Module 12329: useAutocompleter ===
 
-// Module 11576 (useAutocompleter)
+// Module 12329 (useAutocompleter)
 import useInitialValueDefault from "useInitialValue" /* 6170 */;
 import sortByMatchScoreDefault from "sortByMatchScore" /* 8700 */;
 import _slicedToArray from "module_32" /* 32 */;

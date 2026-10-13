@@ -1,10 +1,10 @@
-// === Module 16721: OneColumnGuildUpsellList ===
+// === Module 17025: OneColumnGuildUpsellList ===
 
-// Module 16721 (OneColumnGuildUpsellList)
-import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16722 */;
+// Module 17025 (OneColumnGuildUpsellList)
+import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 17026 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15926 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 16239 */;
 
 const require = fn;
 const jsx = fn(21).jsx;

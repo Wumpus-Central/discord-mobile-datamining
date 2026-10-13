@@ -1,9 +1,9 @@
-// === Module 14273: TagGraphic ===
+// === Module 11771: TagGraphic ===
 
-// Module 14273 (TagGraphic)
+// Module 11771 (TagGraphic)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import TagGroupTypes from "TagGroupTypes" /* 14270 */;
+import TagGroupTypes from "TagGroupTypes" /* 11768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

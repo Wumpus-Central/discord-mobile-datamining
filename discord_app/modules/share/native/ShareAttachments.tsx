@@ -1,12 +1,12 @@
-// === Module 14131: ShareAttachments ===
+// === Module 14468: ShareAttachments ===
 
-// Module 14131 (ShareAttachments)
+// Module 14468 (ShareAttachments)
 import nativeDefault from "native" /* 587 */;
 import ColorUtils from "ColorUtils" /* 4967 */;
 import timing from "timing" /* 5093 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 7769 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11867 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11672 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 

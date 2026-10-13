@@ -1,6 +1,6 @@
-// === Module 16350: ErrorBoundary ===
+// === Module 16657: ErrorBoundary ===
 
-// Module 16350 (ErrorBoundary)
+// Module 16657 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
@@ -31,7 +31,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeC
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
-        const tmp4 = overrides[closure_0(undefined, 11341).DEVICE_FIELD];
+        const tmp4 = overrides[closure_0(undefined, 12139).DEVICE_FIELD];
         if (tmp4 != null) {
           id = tmp4.id;
         }
@@ -53,7 +53,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeC
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       _require = asyncGeneratorStep(async () => {
         tmp3(true);
-        await tmp3(11341).clearBuildOverride();
+        await tmp3(12139).clearBuildOverride();
         if (1 === tmp7) {
           c3 = 0;
           tmp3(false);

@@ -1,11 +1,11 @@
-// === Module 14102: ActivateDevice ===
+// === Module 14439: ActivateDevice ===
 
-// Module 14102 (ActivateDevice)
+// Module 14439 (ActivateDevice)
 import nativeDefault from "native" /* 587 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1899 */;
-import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 12340 */;
-import _modDef14106 from "module_14106" /* 14106 */;
-import _modDef14107 from "module_14107" /* 14107 */;
+import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 12852 */;
+import _modDef14443 from "module_14443" /* 14443 */;
+import _modDef14444 from "module_14444" /* 14444 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -452,7 +452,7 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((o
           return;
         }
       }
-      const source = obj9.makeSource(require("module_14114"));
+      const source = obj9.makeSource(require("module_14451"));
       cResult[22] = source;
       const tmp36 = source;
     } else {
@@ -575,11 +575,11 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((o
       const userCodeData = first.userCodeData;
       const items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef14106);
+        closure_3(_modDef14443);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[13]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef14107);
+          closure_3(_modDef14444);
         }
       }
     }
@@ -615,7 +615,7 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((o
   const obj7 = { source: null, style: null };
   let obj2 = first(first1[9]);
   const tmp23 = require("FastImage");
-  obj7.source = first(first1[19]).makeSource(require("module_14114"));
+  obj7.source = first(first1[19]).makeSource(require("module_14451"));
   obj7.style = tmp.imageStyle;
   const items6 = [closure_8(tmp23, obj7), ];
   const rect = { bottom: true, top: true, style: tmp.safeArea, children: null };

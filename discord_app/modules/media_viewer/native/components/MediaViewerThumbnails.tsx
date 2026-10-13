@@ -1,13 +1,13 @@
-// === Module 13058: MediaViewerThumbnails ===
+// === Module 13542: MediaViewerThumbnails ===
 
-// Module 13058 (MediaViewerThumbnails)
+// Module 13542 (MediaViewerThumbnails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useToken from "useToken" /* 4818 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4851 */;
 import FastImageDefault from "FastImage" /* 6157 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13059 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13543 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

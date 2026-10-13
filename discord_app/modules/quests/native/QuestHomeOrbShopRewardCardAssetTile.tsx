@@ -1,6 +1,6 @@
-// === Module 15362: QuestHomeOrbShopRewardCardAssetTile ===
+// === Module 15679: QuestHomeOrbShopRewardCardAssetTile ===
 
-// Module 15362 (QuestHomeOrbShopRewardCardAssetTile)
+// Module 15679 (QuestHomeOrbShopRewardCardAssetTile)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

@@ -1,6 +1,6 @@
-// === Module 15788: ReactionNotificationsSettings ===
+// === Module 16103: ReactionNotificationsSettings ===
 
-// Module 15788 (ReactionNotificationsSettings)
+// Module 16103 (ReactionNotificationsSettings)
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
 import UserSettings from "UserSettings" /* 2041 */;

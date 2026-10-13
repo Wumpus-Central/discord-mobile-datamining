@@ -12,7 +12,7 @@ import ChannelCallConstants from "ChannelCallConstants" /* 10355 */;
 import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 10481 */;
 import ChannelCallModalDefault from "ChannelCallModal" /* 10825 */;
 import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10853 */;
-import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 11338 */;
+import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 12136 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import size from "module_2" /* 2 */;
 

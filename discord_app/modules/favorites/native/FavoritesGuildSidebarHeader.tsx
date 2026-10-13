@@ -1,6 +1,6 @@
-// === Module 16735: FavoritesGuildSidebarHeader ===
+// === Module 17039: FavoritesGuildSidebarHeader ===
 
-// Module 16735 (FavoritesGuildSidebarHeader)
+// Module 17039 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -14,7 +14,7 @@ import TextIcon from "TextIcon" /* 8208 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 8229 */;
 import FavoritesHooks from "FavoritesHooks" /* 10313 */;
 import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10316 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 12692 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13198 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function EmptyBody() {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16638).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16943).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";

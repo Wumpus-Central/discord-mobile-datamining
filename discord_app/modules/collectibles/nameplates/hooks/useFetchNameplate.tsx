@@ -1,6 +1,6 @@
-// === Module 14895: useFetchNameplate ===
+// === Module 15216: useFetchNameplate ===
 
-// Module 14895 (useFetchNameplate)
+// Module 15216 (useFetchNameplate)
 import c from "c" /* 576 */;
 import utils from "utils" /* 1990 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;

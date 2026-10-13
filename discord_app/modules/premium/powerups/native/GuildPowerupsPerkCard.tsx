@@ -1,6 +1,6 @@
-// === Module 12309: GuildPowerupsPerkCard ===
+// === Module 12822: GuildPowerupsPerkCard ===
 
-// Module 12309 (GuildPowerupsPerkCard)
+// Module 12822 (GuildPowerupsPerkCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,9 +10,9 @@ import useThemeDefault from "useTheme" /* 5031 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6664 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12259 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12260 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12305 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12772 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12773 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12818 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

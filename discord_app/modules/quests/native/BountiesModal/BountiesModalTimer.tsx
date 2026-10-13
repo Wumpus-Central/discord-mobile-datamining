@@ -1,6 +1,6 @@
-// === Module 15328: BountiesModalTimer ===
+// === Module 15645: BountiesModalTimer ===
 
-// Module 15328 (BountiesModalTimer)
+// Module 15645 (BountiesModalTimer)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;

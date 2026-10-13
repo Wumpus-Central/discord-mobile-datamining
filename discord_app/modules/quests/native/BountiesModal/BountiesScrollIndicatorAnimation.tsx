@@ -1,6 +1,6 @@
-// === Module 15326: BountiesScrollIndicatorAnimation ===
+// === Module 15643: BountiesScrollIndicatorAnimation ===
 
-// Module 15326 (BountiesScrollIndicatorAnimation)
+// Module 15643 (BountiesScrollIndicatorAnimation)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4818 */;

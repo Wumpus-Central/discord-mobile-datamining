@@ -1,6 +1,6 @@
-// === Module 15076: AccountBlockedUsersSetting ===
+// === Module 15397: AccountBlockedUsersSetting ===
 
-// Module 15076 (AccountBlockedUsersSetting)
+// Module 15397 (AccountBlockedUsersSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

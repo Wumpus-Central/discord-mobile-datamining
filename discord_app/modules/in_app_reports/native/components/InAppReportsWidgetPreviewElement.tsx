@@ -1,6 +1,6 @@
-// === Module 13558: InAppReportsWidgetPreviewElement ===
+// === Module 13895: InAppReportsWidgetPreviewElement ===
 
-// Module 13558 (InAppReportsWidgetPreviewElement)
+// Module 13895 (InAppReportsWidgetPreviewElement)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,10 +9,10 @@ import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7323 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7327 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8368 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 13250 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 13700 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfilePersonalWidgetCardDefault = tmp5(13373);
+const UserProfilePersonalWidgetCardDefault = tmp5(13710);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

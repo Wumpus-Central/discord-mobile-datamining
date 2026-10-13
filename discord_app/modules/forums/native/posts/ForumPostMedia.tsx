@@ -1,6 +1,6 @@
-// === Module 11686: ForumPostMedia ===
+// === Module 12429: ForumPostMedia ===
 
-// Module 11686 (ForumPostMedia)
+// Module 12429 (ForumPostMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1496 */;
@@ -9,8 +9,8 @@ import shared from "shared" /* 4969 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5365 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10454 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 11687 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 11689 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 12430 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12432 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
@@ -243,10 +243,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
     if (cResult[0] !== isMediaPost) {
       const obj2 = {};
       const merged = Object.assign(isMediaPost);
-      const tmp29 = closure_9(ref(11688), obj2);
+      const tmp29 = closure_9(ref(12431), obj2);
       cResult[0] = isMediaPost;
       cResult[1] = tmp29;
-      const tmp25 = ref(11688);
+      const tmp25 = ref(12431);
     }
   } else {
     if (tmpResult.isAndroid()) {
@@ -385,9 +385,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(11688), obj2);
+    let tmp6Result = closure_9(ref(12431), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(11688);
+    const tmp19 = ref(12431);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};

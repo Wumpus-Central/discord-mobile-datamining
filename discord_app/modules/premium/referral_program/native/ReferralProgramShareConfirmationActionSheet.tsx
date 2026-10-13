@@ -1,6 +1,6 @@
-// === Module 13734: ReferralProgramShareConfirmationActionSheet ===
+// === Module 14071: ReferralProgramShareConfirmationActionSheet ===
 
-// Module 13734 (ReferralProgramShareConfirmationActionSheet)
+// Module 14071 (ReferralProgramShareConfirmationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Referral
     }
     const _Symbol5 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_5(tmp(13735).FistBumpSpotIllustration, {});
+      const tmp19 = closure_5(tmp(14072).FistBumpSpotIllustration, {});
       cResult[4] = tmp19;
       let tmp17 = tmp19;
     } else {
@@ -352,9 +352,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Referral
   const obj3 = { startExpanded: true, contentStyles: tmp.content, header: closure_5(tmp5(6839).BottomSheetTitleHeader, { title: null }), children: null };
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1126).t.AwGSWl, obj);
-  const items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(13735).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5088).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5088).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
+  const items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(14072).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5088).Text, { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5088).Text, { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(13735).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(14072).FistBumpSpotIllustration, {}) };
   const obj6 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };
   const obj7 = { variant: "text-md/medium", color: "text-default", style: tmp.subheader, children: formatResult };
   obj8.children = Array.from(trialCreationResult.trialCreationResult.trialCreationResult.selectedUsers).map((user) => hasOwnProperty(closure_9, { user, trialCreationResult: trialCreationResult.get(user.id) }, user.id));

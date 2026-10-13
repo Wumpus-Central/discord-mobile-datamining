@@ -1,6 +1,6 @@
-// === Module 12875: ScheduledMessageActionCreators ===
+// === Module 13367: ScheduledMessageActionCreators ===
 
-// Module 12875 (ScheduledMessageActionCreators)
+// Module 13367 (ScheduledMessageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import _slicedToArray from "module_32" /* 32 */;

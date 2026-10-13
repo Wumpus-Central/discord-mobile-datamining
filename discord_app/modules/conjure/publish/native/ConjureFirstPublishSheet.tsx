@@ -1,6 +1,6 @@
-// === Module 17108: ConjureFirstPublishSheet ===
+// === Module 11354: ConjureFirstPublishSheet ===
 
-// Module 17108 (ConjureFirstPublishSheet)
+// Module 11354 (ConjureFirstPublishSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -230,7 +230,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                 const obj6 = { name, description };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp5(17109).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
+                const obj7 = { value: tmp5(11355).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
                 return obj7;
               }
             }

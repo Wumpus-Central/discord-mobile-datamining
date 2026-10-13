@@ -1,6 +1,6 @@
-// === Module 16587: useFavoritesGuildHeaderAction ===
+// === Module 16892: useFavoritesGuildHeaderAction ===
 
-// Module 16587 (useFavoritesGuildHeaderAction)
+// Module 16892 (useFavoritesGuildHeaderAction)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;

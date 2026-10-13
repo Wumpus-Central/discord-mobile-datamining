@@ -1,6 +1,6 @@
-// === Module 12596: ChannelSettingsNotifications ===
+// === Module 13106: ChannelSettingsNotifications ===
 
-// Module 12596 (ChannelSettingsNotifications)
+// Module 13106 (ChannelSettingsNotifications)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
@@ -14,7 +14,7 @@ import NotificationSettingsModalActionCreatorsDefault from "NotificationSettings
 import TableSwitchRow from "TableSwitchRow" /* 6896 */;
 import Form from "Form" /* 8580 */;
 import MutedUntilText from "MutedUntilText" /* 10465 */;
-import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 12597 */;
+import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 13107 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5020 */;

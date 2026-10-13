@@ -1,6 +1,6 @@
-// === Module 17912: VoicePanelConsoleStatus ===
+// === Module 17916: VoicePanelConsoleStatus ===
 
-// Module 17912 (VoicePanelConsoleStatus)
+// Module 17916 (VoicePanelConsoleStatus)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4827 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
@@ -8,8 +8,8 @@ import spring from "spring" /* 5378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EDGE_GUTTER = fn(11975).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(11970).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(12491).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(12486).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 36;
@@ -19,7 +19,7 @@ let obj3 = { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BOR
 obj2.blockingControlCover = { position: "absolute", bottom: 0, borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, flex: 1, height: CONTROLS_HEIGHT, overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj2);
 let obj5 = {};
-let merged = Object.assign(fn(11972).MODE_CHANGE_PHYSICS);
+let merged = Object.assign(fn(12488).MODE_CHANGE_PHYSICS);
 obj5.overshootClamping = true;
 const __initData = { code: "function VoicePanelConsoleStatusTsx1(){const{color,windowDimensions,EDGE_GUTTER,CONTROLS_HEIGHT,CONSOLE_STATUS_HEIGHT,withSpring,shouldShow,FADE_IN_MODE_PHYSICS,runOnJS,cleanUp}=this.__closure;return{backgroundColor:color,width:windowDimensions.get().width-EDGE_GUTTER*2,height:CONTROLS_HEIGHT+CONSOLE_STATUS_HEIGHT,borderRadius:32,transform:[{translateY:withSpring(shouldShow.get()?0:100,FADE_IN_MODE_PHYSICS,\"respect-motion-settings\",function(finished){if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}})}]};}" };
 const __initData2 = { code: "function VoicePanelConsoleStatusTsx2(finished){const{shouldShow,runOnJS,cleanUp}=this.__closure;if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}}" };

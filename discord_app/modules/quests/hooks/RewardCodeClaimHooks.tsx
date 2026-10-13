@@ -1,6 +1,6 @@
-// === Module 12978: RewardCodeClaimHooks ===
+// === Module 13470: RewardCodeClaimHooks ===
 
-// Module 12978 (RewardCodeClaimHooks)
+// Module 13470 (RewardCodeClaimHooks)
 import openURLDefault from "openURL" /* 4800 */;
 import QuestTypes from "QuestTypes" /* 5975 */;
 import AdCreativeType from "AdCreativeType" /* 5979 */;

@@ -1,9 +1,9 @@
-// === Module 11407: KickConfirm ===
+// === Module 12201: KickConfirm ===
 
-// Module 11407 (KickConfirm)
+// Module 12201 (KickConfirm)
 import nativeDefault from "native" /* 587 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
-import removeConjureServerAppDefault from "removeConjureServerApp" /* 11410 */;
+import removeConjureServerAppDefault from "removeConjureServerApp" /* 12203 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;

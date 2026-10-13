@@ -1,6 +1,6 @@
-// === Module 16626: GameClaimCoachmark ===
+// === Module 16931: GameClaimCoachmark ===
 
-// Module 16626 (GameClaimCoachmark)
+// Module 16931 (GameClaimCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
@@ -11,9 +11,9 @@ import Pressables from "Pressables" /* 6185 */;
 import XSmallIcon from "XSmallIcon" /* 6208 */;
 import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 7706 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10515 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 13256 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 16627 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16628 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 13705 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16932 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16933 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ guild, markAsDismissed } = arg0);
   const tmp4 = closure_13();
   let obj = markAsDismissed(576);
-  let first = markAsDismissed(16628).useUnclaimedGameIdsForGuild(guild.id)[0];
+  let first = markAsDismissed(16933).useUnclaimedGameIdsForGuild(guild.id)[0];
   if (first == null) {
     first = null;
   }
@@ -62,7 +62,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     first1 = cResult[0];
   }
-  const obj2 = markAsDismissed(16628);
+  const obj2 = markAsDismissed(16933);
   ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(first, first1));
   if (null == coverImageUrl) {
     return null;

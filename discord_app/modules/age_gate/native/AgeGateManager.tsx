@@ -1,6 +1,6 @@
-// === Module 18038: AgeGateManager ===
+// === Module 18042: AgeGateManager ===
 
-// Module 18038 (AgeGateManager)
+// Module 18042 (AgeGateManager)
 import AgeGateUtils from "AgeGateUtils" /* 5924 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

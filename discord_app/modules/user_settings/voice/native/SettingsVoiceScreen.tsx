@@ -1,6 +1,6 @@
-// === Module 15540: SettingsVoiceScreen ===
+// === Module 15855: SettingsVoiceScreen ===
 
-// Module 15540 (SettingsVoiceScreen)
+// Module 15855 (SettingsVoiceScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import shared from "shared" /* 4969 */;
@@ -13,7 +13,7 @@ import NoiseCancellationUtils from "NoiseCancellationUtils" /* 11089 */;
 import KrispLogo from "KrispLogo" /* 11092 */;
 import _modDef11093 from "module_11093" /* 11093 */;
 import _modDef11094 from "module_11094" /* 11094 */;
-import SettingLayoutDefault from "SettingLayout" /* 14965 */;
+import SettingLayoutDefault from "SettingLayout" /* 15286 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2128 */;

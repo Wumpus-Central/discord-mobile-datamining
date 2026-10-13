@@ -1,6 +1,6 @@
-// === Module 17584: EasyChannelPermissionSettings ===
+// === Module 17588: EasyChannelPermissionSettings ===
 
-// Module 17584 (EasyChannelPermissionSettings)
+// Module 17588 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 587 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
@@ -11,7 +11,7 @@ import channel_permissions_ChannelPermissionsUtils from "channel_permissions/Cha
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17585 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17589 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
@@ -83,7 +83,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (cResult[3] !== navigation) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
         return;
       }
     }
@@ -95,7 +95,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   } else {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
         return;
       }
     }
@@ -105,7 +105,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (null != guild) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
         return;
       }
     }
@@ -113,7 +113,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
         return;
       }
     }
@@ -121,7 +121,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   } else {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
         return;
       }
     }
@@ -129,7 +129,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (null != guild) {
     class N {
       constructor() {
-        setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+        setOptionsResult = closure_3.setOptions({ headerRight: "r" });
         return;
       }
     }
@@ -343,7 +343,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   const items1 = [navigation];
   const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-    navigation.setOptions({ headerRight: "top" });
+    navigation.setOptions({ headerRight: "r" });
   }, items1);
   const items2 = [guild, sortedGuildRoles, channel];
   const memo = togglePrivateChannel.useMemo(() => {

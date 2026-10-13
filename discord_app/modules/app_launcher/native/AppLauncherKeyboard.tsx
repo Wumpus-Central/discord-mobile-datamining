@@ -1,6 +1,6 @@
-// === Module 11712: AppLauncherKeyboard ===
+// === Module 11512: AppLauncherKeyboard ===
 
-// Module 11712 (AppLauncherKeyboard)
+// Module 11512 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1501 */;
@@ -11,15 +11,15 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5371 */;
 import BottomSheetModal from "BottomSheetModal" /* 6307 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 11724 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 11725 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 11524 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 11525 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(11713).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(11513).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5092);

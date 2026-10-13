@@ -1,6 +1,6 @@
-// === Module 16559: VoiceGuildTag ===
+// === Module 16864: VoiceGuildTag ===
 
-// Module 16559 (VoiceGuildTag)
+// Module 16864 (VoiceGuildTag)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;

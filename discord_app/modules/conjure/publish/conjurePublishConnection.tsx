@@ -1,11 +1,11 @@
-// === Module 13244: conjurePublishConnection ===
+// === Module 11263: conjurePublishConnection ===
 
-// Module 13244 (conjurePublishConnection)
+// Module 11263 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11411 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 13232 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 11235 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11254 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 13229 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11230 */;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {

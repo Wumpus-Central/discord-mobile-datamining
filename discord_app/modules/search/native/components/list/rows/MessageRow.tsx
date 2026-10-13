@@ -1,6 +1,6 @@
-// === Module 17422: MessageRow ===
+// === Module 17426: MessageRow ===
 
-// Module 17422 (MessageRow)
+// Module 17426 (MessageRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -15,11 +15,11 @@ import BotTagDefault from "BotTag" /* 8767 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9314 */;
 import _modDef9763 from "module_9763" /* 9763 */;
 import _modDef10464 from "module_10464" /* 10464 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 12588 */;
-import BellZIcon from "BellZIcon" /* 12667 */;
-import SearchListRow from "SearchListRow" /* 17386 */;
-import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 17423 */;
-import PollBadgeDefault from "PollBadge" /* 17424 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 13098 */;
+import BellZIcon from "BellZIcon" /* 13173 */;
+import SearchListRow from "SearchListRow" /* 17390 */;
+import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 17427 */;
+import PollBadgeDefault from "PollBadge" /* 17428 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
@@ -263,7 +263,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
   }
   const effect = noop.useEffect(tmp8, tmp9);
   const obj = channel(576);
-  const searchMessageTimestamp = channel(17423).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = channel(17427).useSearchMessageTimestamp(message, channel);
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
   if (cResult[5] !== tmp5) {
     const obj3 = { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: tmp5 };
@@ -346,7 +346,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
               let tmp33 = null;
               if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
                 const obj7 = { size: "xs", style: tmp4.suppressNotificationsIcon };
-                tmp33 = closure_14(channel(12667).BellZIcon, obj7);
+                tmp33 = closure_14(channel(13173).BellZIcon, obj7);
               }
               cResult[21] = message;
               cResult[22] = tmp4.suppressNotificationsIcon;
@@ -384,7 +384,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
   cResult[8] = tmp4.channelStatus;
   cResult[9] = tmp16;
   tmp15 = tmp16;
-  const tmpResult = channel(17423);
+  const tmpResult = channel(17427);
 }) : (function PrivateChannelMessageRowLabel(message) {
   message = message.message;
   const channel = message.channel;
@@ -400,7 +400,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
     }
     tmp = channel.isDM() || channel.isGroupDM();
   }, items1);
-  const searchMessageTimestamp = message(17423).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = message(17427).useSearchMessageTimestamp(message, channel);
   const obj2 = { style: tmp.labelContainer, children: null };
   const obj3 = { style: tmp.authorRow, children: null };
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
@@ -422,13 +422,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
   let tmp9Result = null;
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj7 = { size: "xs", style: tmp.suppressNotificationsIcon };
-    tmp9Result = closure_14(tmp4(12667).BellZIcon, obj7);
+    tmp9Result = closure_14(tmp4(13173).BellZIcon, obj7);
   }
   items3[2] = tmp9Result;
   let tmp9Result2 = null;
   if (message.isPoll()) {
     const obj8 = { style: tmp.pollBadge };
-    tmp9Result2 = closure_14(channel(17424), obj8);
+    tmp9Result2 = closure_14(channel(17428), obj8);
   }
   items3[3] = tmp9Result2;
   obj2.children = items3;

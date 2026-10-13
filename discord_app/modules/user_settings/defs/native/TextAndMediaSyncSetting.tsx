@@ -1,6 +1,6 @@
-// === Module 15770: TextAndMediaSyncSetting ===
+// === Module 16085: TextAndMediaSyncSetting ===
 
-// Module 15770 (TextAndMediaSyncSetting)
+// Module 16085 (TextAndMediaSyncSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

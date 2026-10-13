@@ -1,6 +1,6 @@
-// === Module 15548: NoiseSuppressionKrispSetting ===
+// === Module 15863: NoiseSuppressionKrispSetting ===
 
-// Module 15548 (NoiseSuppressionKrispSetting)
+// Module 15863 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

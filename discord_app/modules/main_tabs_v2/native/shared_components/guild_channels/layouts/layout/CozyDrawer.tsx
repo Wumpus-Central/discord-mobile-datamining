@@ -1,9 +1,9 @@
-// === Module 11762: CozyDrawer ===
+// === Module 11564: CozyDrawer ===
 
-// Module 11762 (CozyDrawer)
+// Module 11564 (CozyDrawer)
 import nativeDefault from "native" /* 587 */;
 import "deepmerge";
-import deepmerge from "deepmerge" /* 11763 */;
+import deepmerge from "deepmerge" /* 11565 */;
 
 const obj = { container: { borderRadius: nativeDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 6, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } }, channelName: { height: 20, text: { variant: "text-md/semibold" } }, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
 const obj2 = { borderRadius: nativeDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 6, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } };
@@ -27,11 +27,11 @@ obj.separator = { margin: { marginVertical: 20 } };
 const obj6 = { size: fn(1200).IconSizes.REFRESH_SMALL_16, gameSize: fn(6862).GameIconSizes.SMALL };
 const obj8 = { position: { top: 12, left: 12 }, positionThread: { top: 3, left: -17 }, typingIndicator: { position: { top: 25, left: 11 } } };
 const obj9 = { container: { paddingPanels: { paddingVertical: 8 } }, icon: null };
-const importDefaultResultResult = deepmerge(fn(11764).CHANNEL_LIST_STYLES_COMPACT, obj);
+const importDefaultResultResult = deepmerge(fn(11566).CHANNEL_LIST_STYLES_COMPACT, obj);
 obj9.icon = { avatarSize: fn(1200).AvatarSizes.REFRESH_MEDIUM_32 };
 const obj10 = { avatarSize: fn(1200).AvatarSizes.REFRESH_MEDIUM_32 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/CozyDrawer.tsx");
 
 export const CHANNEL_LIST_STYLES_COZY_DRAWER = importDefaultResultResult;
-export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(11764).CHANNEL_LIST_STYLES_COMPACT, obj9);
+export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(11566).CHANNEL_LIST_STYLES_COMPACT, obj9);

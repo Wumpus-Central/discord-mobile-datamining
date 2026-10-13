@@ -1,6 +1,6 @@
-// === Module 18445: InviteEmpty ===
+// === Module 18449: InviteEmpty ===
 
-// Module 18445 (InviteEmpty)
+// Module 18449 (InviteEmpty)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4969 */;
 import _mod8360 from "module_8360" /* 8360 */;
@@ -19,7 +19,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteEmp
           return require("module_10308");
         },
       darker() {
-          return require("module_18446");
+          return require("module_18450");
         },
       light() {
           return require("module_10307");
@@ -41,7 +41,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteEmp
       return require("module_10308");
     },
     darker() {
-      return require("module_18446");
+      return require("module_18450");
     },
     light() {
       return require("module_10307");
@@ -56,7 +56,7 @@ function getInviteEmptySource(theme) {
       return require("module_10308");
     },
     darker() {
-      return require("module_18446");
+      return require("module_18450");
     },
     light() {
       return require("module_10307");

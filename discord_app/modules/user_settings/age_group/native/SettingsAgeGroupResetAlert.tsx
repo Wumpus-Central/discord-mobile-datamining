@@ -1,6 +1,6 @@
-// === Module 15011: SettingsAgeGroupResetAlert ===
+// === Module 15332: SettingsAgeGroupResetAlert ===
 
-// Module 15011 (SettingsAgeGroupResetAlert)
+// Module 15332 (SettingsAgeGroupResetAlert)
 import _modDef3120 from "module_3120" /* 3120 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

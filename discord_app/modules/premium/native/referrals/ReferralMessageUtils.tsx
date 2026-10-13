@@ -1,6 +1,6 @@
-// === Module 11368: ReferralMessageUtils ===
+// === Module 12166: ReferralMessageUtils ===
 
-// Module 11368 (ReferralMessageUtils)
+// Module 12166 (ReferralMessageUtils)
 import SubscriptionStore from "SubscriptionStore" /* 4775 */;
 import UserOfferStore from "UserOfferStore" /* 7173 */;
 

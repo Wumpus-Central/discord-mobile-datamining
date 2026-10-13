@@ -1,6 +1,6 @@
-// === Module 17668: SettingRendererTypes ===
+// === Module 17672: SettingRendererTypes ===
 
-// Module 17668 (SettingRendererTypes)
+// Module 17672 (SettingRendererTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRendererTypes.tsx");

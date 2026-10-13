@@ -1,10 +1,10 @@
-// === Module 16452: HomeDrawerStore ===
+// === Module 16757: HomeDrawerStore ===
 
-// Module 16452 (HomeDrawerStore)
+// Module 16757 (HomeDrawerStore)
 import Constants from "Constants" /* 1085 */;
 import _mod4733 from "module_4733" /* 4733 */;
 import timing from "timing" /* 5093 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16453 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16758 */;
 import identity from "module_1267" /* 1267 */;
 import size from "module_2" /* 2 */;
 

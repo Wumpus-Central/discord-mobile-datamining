@@ -1,6 +1,6 @@
-// === Module 17483: useSearchSegmentedControlState ===
+// === Module 17487: useSearchSegmentedControlState ===
 
-// Module 17483 (useSearchSegmentedControlState)
+// Module 17487 (useSearchSegmentedControlState)
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import noop from "module_19" /* 19 */;
 

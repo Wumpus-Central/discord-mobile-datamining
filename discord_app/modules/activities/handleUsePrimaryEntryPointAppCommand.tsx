@@ -1,6 +1,6 @@
-// === Module 11615: handleUsePrimaryEntryPointAppCommand ===
+// === Module 11538: handleUsePrimaryEntryPointAppCommand ===
 
-// Module 11615 (handleUsePrimaryEntryPointAppCommand)
+// Module 11538 (handleUsePrimaryEntryPointAppCommand)
 import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 10868 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

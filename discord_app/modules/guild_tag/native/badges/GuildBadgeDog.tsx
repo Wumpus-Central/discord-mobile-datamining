@@ -1,9 +1,9 @@
-// === Module 14168: GuildBadgeDog ===
+// === Module 14505: GuildBadgeDog ===
 
-// Module 14168 (GuildBadgeDog)
+// Module 14505 (GuildBadgeDog)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7577 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14145 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14482 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

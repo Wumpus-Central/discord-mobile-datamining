@@ -1,6 +1,6 @@
-// === Module 12711: useMobileCollectiblesPurchaseSKU ===
+// === Module 13217: useMobileCollectiblesPurchaseSKU ===
 
-// Module 12711 (useMobileCollectiblesPurchaseSKU)
+// Module 13217 (useMobileCollectiblesPurchaseSKU)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9059 */;

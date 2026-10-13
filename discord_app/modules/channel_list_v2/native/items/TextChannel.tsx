@@ -1,6 +1,6 @@
-// === Module 16664: TextChannel ===
+// === Module 16968: TextChannel ===
 
-// Module 16664 (TextChannel)
+// Module 16968 (TextChannel)
 import nativeDefault from "native" /* 587 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1124 */;
 import transitionToChannel from "transitionToChannel" /* 5103 */;
@@ -17,7 +17,7 @@ import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11760);
+const RedesignChannelListConstants = fn(11562);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

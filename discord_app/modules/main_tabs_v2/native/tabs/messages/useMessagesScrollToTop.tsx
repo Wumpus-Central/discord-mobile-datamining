@@ -1,6 +1,6 @@
-// === Module 16483: useMessagesScrollToTop ===
+// === Module 16788: useMessagesScrollToTop ===
 
-// Module 16483 (useMessagesScrollToTop)
+// Module 16788 (useMessagesScrollToTop)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 

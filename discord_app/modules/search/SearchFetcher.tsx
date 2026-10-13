@@ -1,6 +1,6 @@
-// === Module 12073: SearchFetcher ===
+// === Module 12589: SearchFetcher ===
 
-// Module 12073 (SearchFetcher)
+// Module 12589 (SearchFetcher)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import _modDef1491 from "module_1491" /* 1491 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

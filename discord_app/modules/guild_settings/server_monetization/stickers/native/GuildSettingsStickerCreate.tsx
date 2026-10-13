@@ -1,6 +1,6 @@
-// === Module 18376: GuildSettingsStickerCreate ===
+// === Module 18380: GuildSettingsStickerCreate ===
 
-// Module 18376 (GuildSettingsStickerCreate)
+// Module 18380 (GuildSettingsStickerCreate)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
@@ -474,7 +474,7 @@ export default function GuildSettingsStickerCreate(stickerId) {
     obj18.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj18);
   } else {
-    tmp32Result = tmp32(tmp31(18378).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(18382).StickerPlusIcon, { size: "lg" });
   }
   obj16.children = tmp32Result;
   items4[1] = onPressEmoji(stickerId(6185).PressableHighlight, obj16);

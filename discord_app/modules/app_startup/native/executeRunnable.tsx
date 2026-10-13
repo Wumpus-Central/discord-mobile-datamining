@@ -1,13 +1,13 @@
-// === Module 18006: executeRunnable ===
+// === Module 18010: executeRunnable ===
 
-// Module 18006 (executeRunnable)
+// Module 18010 (executeRunnable)
 import LoggerDefault from "Logger" /* 3 */;
 import RequestGatewaySocketAll from "RequestGatewaySocket" /* 9704 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13963 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 14300 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-const NativeAppStartup = fn(18007);
+const NativeAppStartup = fn(18011);
 ({ init: hasOwnProperty, applicationReady: metroRequire } = NativeAppStartup);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_startup/native/executeRunnable.tsx");

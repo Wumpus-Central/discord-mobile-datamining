@@ -1,20 +1,20 @@
-// === Module 17760: ActivityPanelUI ===
+// === Module 17764: ActivityPanelUI ===
 
-// Module 17760 (ActivityPanelUI)
+// Module 17764 (ActivityPanelUI)
 import c from "c" /* 576 */;
 import native from "native" /* 4827 */;
 import LayerScope from "LayerScope" /* 6846 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17759 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17781 */;
-import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 17782 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17763 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17785 */;
+import ActivityPanelSystemUIManagerDefault from "ActivityPanelSystemUIManager" /* 17786 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17761;
+    let tmp4 = 17765;
   } else {
-    tmp4 = 17767;
+    tmp4 = 17771;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

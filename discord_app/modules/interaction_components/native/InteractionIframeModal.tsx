@@ -1,6 +1,6 @@
-// === Module 18143: InteractionIframeModal ===
+// === Module 18147: InteractionIframeModal ===
 
-// Module 18143 (InteractionIframeModal)
+// Module 18147 (InteractionIframeModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
@@ -8,7 +8,7 @@ import useBackPressHandlerDefault from "useBackPressHandler" /* 5372 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
 import BotTagDefault from "BotTag" /* 8767 */;
 import makeIframeIdDefault from "makeIframeId" /* 10929 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 18144 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 18148 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,9 +34,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
   ({ application, title, id } = arg0);
   id2 = application.id;
   const obj = id2(576);
-  const iframeModalState = id2(18131).useIframeModalState(arg0);
+  const iframeModalState = id2(18135).useIframeModalState(arg0);
   ({ queryParams, iframeUrl } = iframeModalState);
-  let obj2 = id2(18131);
+  let obj2 = id2(18135);
   [r10030, importDefault] = noop.useState(makeIframeIdDefault);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { includeKeyboardHeight: true };

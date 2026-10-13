@@ -1,6 +1,6 @@
-// === Module 11525: AgeVerificationSystemNotificationUtils ===
+// === Module 12278: AgeVerificationSystemNotificationUtils ===
 
-// Module 11525 (AgeVerificationSystemNotificationUtils)
+// Module 12278 (AgeVerificationSystemNotificationUtils)
 import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7543 */;
 import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 10488 */;
 import MessageStore from "MessageStore" /* 5432 */;

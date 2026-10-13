@@ -1,6 +1,6 @@
-// === Module 12737: GiftingSKUCardsGrid ===
+// === Module 13243: GiftingSKUCardsGrid ===
 
-// Module 12737 (GiftingSKUCardsGrid)
+// Module 13243 (GiftingSKUCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

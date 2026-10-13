@@ -1,6 +1,6 @@
-// === Module 16069: BalanceWidgetMenu ===
+// === Module 16382: BalanceWidgetMenu ===
 
-// Module 16069 (BalanceWidgetMenu)
+// Module 16382 (BalanceWidgetMenu)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -14,7 +14,7 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
 import _mod9061 from "module_9061" /* 9061 */;
 import QuestUtils from "QuestUtils" /* 9168 */;
 import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10013 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 12788 */;
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 13294 */;
 import noop from "module_19" /* 19 */;
 
 const ButtonEllipsis = Ellipsis(5395);
@@ -162,7 +162,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsOnboar
               const obj2 = QuestUtils;
               obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
             };
-            obj.trailing = closure_9(closure_1(16070), {});
+            obj.trailing = closure_9(closure_1(16383), {});
             return closure_9(closure_10, obj);
           } else {
             return null;
@@ -184,7 +184,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsOnboar
               const obj2 = QuestUtils;
               obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
             };
-            obj.trailing = closure_9(closure_1(16070), {});
+            obj.trailing = closure_9(closure_1(16383), {});
             return closure_9(closure_10, obj);
           } else {
             return null;
@@ -214,7 +214,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsOnboar
         const obj2 = QuestUtils;
         obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: QuestTypes.QuestContent.MOBILE_ORBS_ONBOARDING_DC });
       };
-      obj.trailing = closure_9(closure_1(16070), {});
+      obj.trailing = closure_9(closure_1(16383), {});
       return closure_9(closure_10, obj);
     } else {
       return null;

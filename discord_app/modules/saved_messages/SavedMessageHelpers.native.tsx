@@ -1,6 +1,6 @@
-// === Module 12654: SavedMessageHelpers ===
+// === Module 13160: SavedMessageHelpers ===
 
-// Module 12654 (SavedMessageHelpers)
+// Module 13160 (SavedMessageHelpers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -33,7 +33,7 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
         obj3.cancelText = intl5.string(closure_0(1126).t.ZGbTcy);
         obj3.onCancel = function onCancel() {
           const SavedMessageSortTypes = displayToast(9682).SavedMessageSortTypes;
-          return displayToast(12645).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
+          return displayToast(13151).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
         };
         closure_1(5299).show(obj3);
         return null;
@@ -129,7 +129,7 @@ let closure_8 = async function _removeSavedMessage() {
   return "Set";
 };
 const AbortCodes = fn(1085).AbortCodes;
-const SavedMessagesConstants = fn(12655);
+const SavedMessagesConstants = fn(13161);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

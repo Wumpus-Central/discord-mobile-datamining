@@ -1,12 +1,12 @@
-// === Module 13263: UserProfileWidgetReportButton ===
+// === Module 13708: UserProfileWidgetReportButton ===
 
-// Module 13263 (UserProfileWidgetReportButton)
+// Module 13708 (UserProfileWidgetReportButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9242 */;
 import ContextMenu from "ContextMenu" /* 9363 */;
 import FlagIcon from "FlagIcon" /* 9575 */;
-import showReportModalForUserWidget from "showReportModalForUserWidget" /* 13264 */;
+import showReportModalForUserWidget from "showReportModalForUserWidget" /* 13709 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

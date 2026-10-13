@@ -1,6 +1,6 @@
-// === Module 14708: VoiceNotificationManager ===
+// === Module 15029: VoiceNotificationManager ===
 
-// Module 14708 (VoiceNotificationManager)
+// Module 15029 (VoiceNotificationManager)
 import nativeDefault from "native" /* 587 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9703 */;
 import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11153 */;
@@ -25,7 +25,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "T", connectionState: "data", selfMute: false, deafened: "validate", isPushToTalk: null, embeddedActivity: "\u{1F9BD}", isStreaming: 12 };
+    obj.state = { channelId: "T", connectionState: "data", selfMute: false, deafened: "<", isPushToTalk: ">", embeddedActivity: "\"", isStreaming: "`" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       const state = RTCConnectionStore.getState();
@@ -216,7 +216,7 @@ prototype["terminate"] = function terminate() {
 };
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
-obj2.state = { channelId: "T", connectionState: "data", selfMute: false, deafened: "validate", isPushToTalk: null, embeddedActivity: "\u{1F9BD}", isStreaming: 12 };
+obj2.state = { channelId: "T", connectionState: "data", selfMute: false, deafened: "<", isPushToTalk: ">", embeddedActivity: "\"", isStreaming: "`" };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   const state = RTCConnectionStore.getState();

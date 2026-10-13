@@ -1,6 +1,6 @@
-// === Module 12089: TouchableBackground ===
+// === Module 12605: TouchableBackground ===
 
-// Module 12089 (TouchableBackground)
+// Module 12605 (TouchableBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;

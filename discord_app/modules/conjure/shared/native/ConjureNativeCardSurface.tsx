@@ -1,6 +1,6 @@
-// === Module 17278: ConjureNativeCardSurface ===
+// === Module 11896: ConjureNativeCardSurface ===
 
-// Module 17278 (ConjureNativeCardSurface)
+// Module 11896 (ConjureNativeCardSurface)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Card from "Card" /* 6182 */;

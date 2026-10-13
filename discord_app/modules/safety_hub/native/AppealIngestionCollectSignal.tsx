@@ -1,6 +1,6 @@
-// === Module 11500: AppealIngestionCollectSignal ===
+// === Module 12266: AppealIngestionCollectSignal ===
 
-// Module 11500 (AppealIngestionCollectSignal)
+// Module 12266 (AppealIngestionCollectSignal)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
@@ -149,20 +149,20 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
             return formRow(5056).hideActionSheet("AppealIngestionFreeTextAppealReasonActionSheet");
           }
       };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11501, dependencyMap.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12267, dependencyMap.paths), "AppealIngestionFreeTextAppealReasonActionSheet", obj3);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     let obj2 = { type: "SAFETY_HUB_APPEAL_SIGNAL_SELECT", signal };
   }
   const tmp = closure_8();
   const formRow = tmp;
-  dependencyMap = isDsaEligible(11473).useSafetyHubAppealSignal();
+  dependencyMap = isDsaEligible(12239).useSafetyHubAppealSignal();
   const intl = isDsaEligible(1126).intl;
-  let obj = isDsaEligible(11473);
+  let obj = isDsaEligible(12239);
   const intl2 = isDsaEligible(1126).intl;
   const stringResult = intl.string(isDsaEligible(1126).t["C5q+pW"]);
   let obj2 = { children: null };
-  const items = [closure_6(isDsaEligible(11479).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1126).t.VEcRhw) }), ];
+  const items = [closure_6(isDsaEligible(12245).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(isDsaEligible(1126).t.VEcRhw) }), ];
   let obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.form, children: null };
   const stringResult1 = intl2.string(isDsaEligible(1126).t.VEcRhw);
@@ -177,5 +177,5 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj3.children = closure_7(isDsaEligible(8580).Form, obj4);
   items[1] = closure_6(handleAppealSignalSelect, obj3);
   obj2.children = items;
-  return closure_7(isDsaEligible(11479).AppealIngestionModalScreen, obj2);
+  return closure_7(isDsaEligible(12245).AppealIngestionModalScreen, obj2);
 };

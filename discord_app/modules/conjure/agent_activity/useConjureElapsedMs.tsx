@@ -1,6 +1,6 @@
-// === Module 17321: useConjureElapsedMs ===
+// === Module 11949: useConjureElapsedMs ===
 
-// Module 17321 (useConjureElapsedMs)
+// Module 11949 (useConjureElapsedMs)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 11803: AppLauncherGlobalSearchOnboardingBanner ===
+// === Module 11608: AppLauncherGlobalSearchOnboardingBanner ===
 
-// Module 11803 (AppLauncherGlobalSearchOnboardingBanner)
+// Module 11608 (AppLauncherGlobalSearchOnboardingBanner)
 import nativeDefault from "native" /* 587 */;
 import AppsIcon from "AppsIcon" /* 8234 */;
 import noop from "module_19" /* 19 */;

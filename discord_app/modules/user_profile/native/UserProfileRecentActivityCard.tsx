@@ -1,6 +1,6 @@
-// === Module 13384: UserProfileRecentActivityCard ===
+// === Module 13721: UserProfileRecentActivityCard ===
 
-// Module 13384 (UserProfileRecentActivityCard)
+// Module 13721 (UserProfileRecentActivityCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -18,11 +18,11 @@ import utils from "utils" /* 8272 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8460 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8880 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 13118 */;
-import BadgesAll from "Badges" /* 13133 */;
-import TrendingType from "TrendingType" /* 13138 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 13145 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 13146 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 13602 */;
+import BadgesAll from "Badges" /* 13615 */;
+import TrendingType from "TrendingType" /* 13620 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 13627 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 13628 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -62,7 +62,7 @@ function getEntryText(entry) {
           const obj5 = { title: entry.extra.activity_name };
           let obj6 = obj5;
         } else {
-          obj6 = { title: "top" };
+          obj6 = { title: "r" };
         }
         return obj6;
       }
@@ -637,13 +637,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       if (cResult[4] === user) {
         let tmp8 = cResult[5];
       }
-      const tmp9 = tmp6(13145)(tmp8);
+      const tmp9 = tmp6(13627)(tmp8);
       _require = tmp9;
       if (cResult[6] === tmp9) {
         if (cResult[7] === user.id) {
           let tmp10 = cResult[8];
         }
-        tmp6(13146)(tmp10);
+        tmp6(13628)(tmp10);
         let application_id;
         if ("application_id" in entry.extra) {
           application_id = entry.extra.application_id;

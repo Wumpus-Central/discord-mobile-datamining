@@ -1,6 +1,6 @@
-// === Module 12072: AbstractSearchFetchManager ===
+// === Module 12588: AbstractSearchFetchManager ===
 
-// Module 12072 (AbstractSearchFetchManager)
+// Module 12588 (AbstractSearchFetchManager)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/search/managers/AbstractSearchFetchManager.tsx");

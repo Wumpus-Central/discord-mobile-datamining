@@ -1,6 +1,6 @@
-// === Module 15869: UserSettingsStartupTimings ===
+// === Module 16182: UserSettingsStartupTimings ===
 
-// Module 15869 (UserSettingsStartupTimings)
+// Module 16182 (UserSettingsStartupTimings)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
@@ -8,8 +8,8 @@ import Stack_Stack from "Stack/Stack" /* 5377 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 6177 */;
 import TableRow from "TableRow" /* 6180 */;
 import TableRowGroup from "TableRowGroup" /* 6265 */;
-import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 12635 */;
-import ShareIcon from "ShareIcon" /* 13052 */;
+import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 13141 */;
+import ShareIcon from "ShareIcon" /* 13536 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 return obj6;
               } else {
                 closure_128_0 = value;
-                closure_128_1 = tmp5(12635)(closure_128_0);
+                closure_128_1 = tmp5(13141)(closure_128_0);
                 const obj7 = { message: closure_128_1 };
                 tmp2(8482).showShareActionSheet(obj7, "Startup Timing");
                 c3 = 3;
@@ -430,7 +430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
   }
   let obj = require("c");
-  const parts = checked(12635)(useResult, !checked, first1).split("\n");
+  const parts = checked(13141)(useResult, !checked, first1).split("\n");
   cResult[0] = useResult;
   cResult[1] = checked;
   cResult[2] = first1;
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(12635)(closure_128_0);
+          closure_128_1 = tmp5(13141)(closure_128_0);
           const obj7 = { message: closure_128_1 };
           tmp2(8482).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;

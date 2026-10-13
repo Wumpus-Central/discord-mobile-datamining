@@ -1,6 +1,6 @@
-// === Module 17875: ActivityAccessibilityLayer ===
+// === Module 17879: ActivityAccessibilityLayer ===
 
-// Module 17875 (ActivityAccessibilityLayer)
+// Module 17879 (ActivityAccessibilityLayer)
 import c from "c" /* 576 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5371 */;
@@ -12,7 +12,7 @@ require = fn;
 let closure_2 = ["isActivityFocused"];
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, StyleSheet: closure_7, View: closure_8 } = get_ActivityIndicator);
-const IS_IOS = fn(11972).IS_IOS;
+const IS_IOS = fn(12488).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5092);

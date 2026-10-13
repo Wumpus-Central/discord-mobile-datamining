@@ -1,9 +1,9 @@
-// === Module 17327: ConjurePerfTraceStatsHeader ===
+// === Module 11970: ConjurePerfTraceStatsHeader ===
 
-// Module 17327 (ConjurePerfTraceStatsHeader)
+// Module 11970 (ConjurePerfTraceStatsHeader)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 17328 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 11971 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,11 +51,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const cResult = stats(576).c(25);
   stats = stats.stats;
   if (cResult[0] !== stats) {
-    const perfModelSummaryResult = tmp(17328).perfModelSummary(stats);
+    const perfModelSummaryResult = tmp(11971).perfModelSummary(stats);
     cResult[0] = stats;
     cResult[1] = perfModelSummaryResult;
     let tmp4 = perfModelSummaryResult;
-    const tmpResult = tmp(17328);
+    const tmpResult = tmp(11971);
   } else {
     tmp4 = cResult[1];
   }
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
             }
           }
         }
-        const PERF_CATEGORIES = tmp(13235).PERF_CATEGORIES;
+        const PERF_CATEGORIES = tmp(11238).PERF_CATEGORIES;
         const mapped = PERF_CATEGORIES.map((item) => {
           const perfCategoryTotalResult = ConjurePerfTraceFormat.perfCategoryTotal(stats, item);
           const obj2 = { style: closure_1.legendItem, children: null };
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   let obj = stats(576);
 }) : (function ConjurePerfTraceStatsHeader(stats) {
   stats = stats.stats;
-  const perfModelSummaryResult = stats(17328).perfModelSummary(stats);
+  const perfModelSummaryResult = stats(11971).perfModelSummary(stats);
   const tmp4 = closure_6();
   dependencyMap = styles();
   let obj2 = { style: tmp4.header, children: null };
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   });
   let items = [closure_3(dependencyMap, obj3), , ];
   const obj4 = { style: tmp4.legend, children: null };
-  const PERF_CATEGORIES = stats(13235).PERF_CATEGORIES;
+  const PERF_CATEGORIES = stats(11238).PERF_CATEGORIES;
   obj4.children = PERF_CATEGORIES.map((item) => {
     const perfCategoryTotalResult = ConjurePerfTraceFormat.perfCategoryTotal(stats, item);
     const obj2 = { style: closure_1.legendItem, children: null };

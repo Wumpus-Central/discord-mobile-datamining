@@ -1,25 +1,25 @@
-// === Module 18001: LaunchPadSearchResultUser ===
+// === Module 18005: LaunchPadSearchResultUser ===
 
-// Module 18001 (LaunchPadSearchResultUser)
+// Module 18005 (LaunchPadSearchResultUser)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
 import isStreamingDefault from "isStreaming" /* 8385 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16802 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17411 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 17412 */;
-import renderChannelContentDefault from "renderChannelContent" /* 17414 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 17990 */;
-import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17991 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17992 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 17106 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17415 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 17416 */;
+import renderChannelContentDefault from "renderChannelContent" /* 17418 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17994 */;
+import shared_renderChannelBadgeDefault from "shared/renderChannelBadge" /* 17995 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17996 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import PresenceStore from "PresenceStore" /* 5108 */;
-import TypingStore from "TypingStore" /* 11639 */;
+import TypingStore from "TypingStore" /* 12385 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
 
 require = fn;
@@ -493,7 +493,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRe
   if (null != lastMessage) {
     if (null != channel) {
       const obj9 = { channel, message: lastMessage, color: str, muted: flag, layout: tmp6(9314).ChannelListLayoutTypes.COMPACT };
-      tmp14Result = closure_12(tmp6(12588).ChannelRowPreview, obj9);
+      tmp14Result = closure_12(tmp6(13098).ChannelRowPreview, obj9);
     }
   }
   const obj10 = { children: null };
@@ -534,7 +534,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRe
   const obj = user(576);
   const stateFromStores = user(504).useStateFromStores(first, tmp6);
   const tmpResult = user(504);
-  const baseChannelUnreadBadgeState = user(16802).useBaseChannelUnreadBadgeState(channel, stateFromStores);
+  const baseChannelUnreadBadgeState = user(17106).useBaseChannelUnreadBadgeState(channel, stateFromStores);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [TypingStore];
@@ -556,7 +556,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRe
     } else {
       tmp13 = cResult[8];
     }
-    const tmp15 = channel(15612)(channel, tmp13);
+    const tmp15 = channel(15927)(channel, tmp13);
     if (cResult[9] === channel) {
       if (cResult[10] === stateFromStores1) {
         if (cResult[11] === tmp15) {
@@ -600,7 +600,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRe
   cResult[5] = user.id;
   cResult[6] = fn2;
   tmp11 = fn2;
-  const tmpResult3 = user(16802);
+  const tmpResult3 = user(17106);
 }) : (function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
   const items = [UserGuildSettingsStore];
@@ -612,7 +612,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRe
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(15612)(channel, { unread });
+  obj4.lastMessage = channel(15927)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

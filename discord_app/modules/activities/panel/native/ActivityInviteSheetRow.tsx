@@ -1,6 +1,6 @@
-// === Module 17773: ActivityInviteSheetRow ===
+// === Module 17777: ActivityInviteSheetRow ===
 
-// Module 17773 (ActivityInviteSheetRow)
+// Module 17777 (ActivityInviteSheetRow)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

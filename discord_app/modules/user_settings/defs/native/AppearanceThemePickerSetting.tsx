@@ -1,6 +1,6 @@
-// === Module 15560: AppearanceThemePickerSetting ===
+// === Module 15875: AppearanceThemePickerSetting ===
 
-// Module 15560 (AppearanceThemePickerSetting)
+// Module 15875 (AppearanceThemePickerSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -53,7 +53,7 @@ const route = SettingBuilders.createRoute({
     const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   }),
-  useTrailing: fn(15554).useAppearanceSettingTrailing,
+  useTrailing: fn(15869).useAppearanceSettingTrailing,
   screen: {
     route: fn(1085).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

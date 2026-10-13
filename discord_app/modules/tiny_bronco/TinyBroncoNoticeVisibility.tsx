@@ -1,6 +1,6 @@
-// === Module 14994: TinyBroncoNoticeVisibility ===
+// === Module 15315: TinyBroncoNoticeVisibility ===
 
-// Module 14994 (TinyBroncoNoticeVisibility)
+// Module 15315 (TinyBroncoNoticeVisibility)
 import c from "c" /* 576 */;
 import Server from "Server" /* 1998 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 5920 */;

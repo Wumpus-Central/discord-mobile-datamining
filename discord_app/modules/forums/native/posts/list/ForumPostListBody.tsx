@@ -1,14 +1,14 @@
-// === Module 11699: ForumPostListBody ===
+// === Module 12442: ForumPostListBody ===
 
-// Module 11699 (ForumPostListBody)
+// Module 12442 (ForumPostListBody)
 import c from "c" /* 576 */;
 import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6974 */;
-import ForumPostUsername from "ForumPostUsername" /* 11681 */;
-import ForumPostMedia from "ForumPostMedia" /* 11686 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 11691 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 11692 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 11693 */;
-import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 11700 */;
+import ForumPostUsername from "ForumPostUsername" /* 12424 */;
+import ForumPostMedia from "ForumPostMedia" /* 12429 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12434 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 12435 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 12436 */;
+import ForumPostMessageContentDefault from "ForumPostMessageContent" /* 12443 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

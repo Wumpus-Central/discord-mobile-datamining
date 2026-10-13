@@ -1,6 +1,6 @@
-// === Module 18628: NativeNotificationsManager ===
+// === Module 18632: NativeNotificationsManager ===
 
-// Module 18628 (NativeNotificationsManager)
+// Module 18632 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import PushNotificationDefault from "PushNotification" /* 11031 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,11 +1,11 @@
-// === Module 12248: useGuildPowerupRollbackModalConfig ===
+// === Module 12761: useGuildPowerupRollbackModalConfig ===
 
-// Module 12248 (useGuildPowerupRollbackModalConfig)
+// Module 12761 (useGuildPowerupRollbackModalConfig)
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
 import _modDef2600 from "module_2600" /* 2600 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12236 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12249 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12749 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12762 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5007 */;

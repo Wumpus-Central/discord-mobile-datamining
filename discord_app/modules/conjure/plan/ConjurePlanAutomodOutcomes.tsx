@@ -1,6 +1,6 @@
-// === Module 17295: ConjurePlanAutomodOutcomes ===
+// === Module 11908: ConjurePlanAutomodOutcomes ===
 
-// Module 17295 (ConjurePlanAutomodOutcomes)
+// Module 11908 (ConjurePlanAutomodOutcomes)
 import util from "util" /* 1126 */;
 import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 2127 */;
 import _modDef3849 from "module_3849" /* 3849 */;

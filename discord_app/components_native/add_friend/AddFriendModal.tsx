@@ -1,6 +1,6 @@
-// === Module 14075: AddFriendModal ===
+// === Module 14412: AddFriendModal ===
 
-// Module 14075 (AddFriendModal)
+// Module 14412 (AddFriendModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import Navigator from "Navigator" /* 6688 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12404 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12914 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, Fonts } = Constants);
-const ContactPermissions = fn(12402).ContactPermissions;
+const ContactPermissions = fn(12912).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5092);

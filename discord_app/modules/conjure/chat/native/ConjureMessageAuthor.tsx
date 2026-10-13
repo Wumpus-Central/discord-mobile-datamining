@@ -1,6 +1,6 @@
-// === Module 17198: ConjureMessageAuthor ===
+// === Module 11816: ConjureMessageAuthor ===
 
-// Module 17198 (ConjureMessageAuthor)
+// Module 11816 (ConjureMessageAuthor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,9 +8,9 @@ import _modDef3849 from "module_3849" /* 3849 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Pressables from "Pressables" /* 6185 */;
 import AppsIcon from "AppsIcon" /* 8234 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 17199 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 17200 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 17201 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 11817 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 11818 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 11819 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(5092);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, conjureTile: null };
-let size = { width: fn(17194).MESSAGE_AVATAR_SIZE, height: fn(17194).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(11810).MESSAGE_AVATAR_SIZE, height: fn(11810).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
 obj2.conjureTile = size;
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

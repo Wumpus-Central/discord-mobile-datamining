@@ -1,6 +1,6 @@
-// === Module 13087: UserProfileOverflowMenu ===
+// === Module 13571: UserProfileOverflowMenu ===
 
-// Module 13087 (UserProfileOverflowMenu)
+// Module 13571 (UserProfileOverflowMenu)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
@@ -15,13 +15,13 @@ import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 70
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7026 */;
 import ReportModals from "ReportModals" /* 7722 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 11820 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12363 */;
-import GuildInviteUtils from "GuildInviteUtils" /* 13088 */;
-import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 13098 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 13102 */;
-import BotReportChooser from "BotReportChooser" /* 13105 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 13106 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 11625 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12873 */;
+import GuildInviteUtils from "GuildInviteUtils" /* 13572 */;
+import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 13582 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 13586 */;
+import BotReportChooser from "BotReportChooser" /* 13589 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 13590 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
@@ -312,7 +312,7 @@ export default function UserProfileOverflowMenu(user) {
                           trackUserProfileAction({ action: "REPORT", analyticsLocations });
                           if (user.bot) {
                             const obj4 = ActionSheetActionCreatorsDefault;
-                            const tmp18 = asyncRequireImpl(13105, dependencyMap.paths);
+                            const tmp18 = asyncRequireImpl(13589, dependencyMap.paths);
                             const BOT_REPORT_CHOOSER_KEY = BotReportChooser.BOT_REPORT_CHOOSER_KEY;
                             const obj5 = { user, entrypoint: "UserProfileOverflowMenu", contextualGuildId: guildId1, contextualChannelId: null };
                             id = undefined;
@@ -399,7 +399,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
               trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13104, dependencyMap.paths), { userId: id, showUserProfile });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13588, dependencyMap.paths), { userId: id, showUserProfile });
               const obj = { action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations };
               const obj3 = { userId: id, showUserProfile };
               ActionSheetActionCreatorsDefault.hideActionSheet();

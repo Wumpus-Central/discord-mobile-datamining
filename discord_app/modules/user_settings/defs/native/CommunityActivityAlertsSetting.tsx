@@ -1,6 +1,6 @@
-// === Module 15819: CommunityActivityAlertsSetting ===
+// === Module 16134: CommunityActivityAlertsSetting ===
 
-// Module 15819 (CommunityActivityAlertsSetting)
+// Module 16134 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

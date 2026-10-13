@@ -1,6 +1,6 @@
-// === Module 16968: ContentInventoryEntryContainer ===
+// === Module 17271: ContentInventoryEntryContainer ===
 
-// Module 16968 (ContentInventoryEntryContainer)
+// Module 17271 (ContentInventoryEntryContainer)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createICYMIStyles = fn(16914);
+const createICYMIStyles = fn(17217);
 const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom, arg1) => {
   let num = 0;
   if (!arg1) {

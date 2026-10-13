@@ -1,6 +1,6 @@
-// === Module 15321: SkipForwardIcon ===
+// === Module 15638: SkipForwardIcon ===
 
-// Module 15321 (SkipForwardIcon)
+// Module 15638 (SkipForwardIcon)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7577 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

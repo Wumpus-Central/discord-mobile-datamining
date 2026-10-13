@@ -1,6 +1,6 @@
-// === Module 11828: ActivityDetailContent ===
+// === Module 11633: ActivityDetailContent ===
 
-// Module 11828 (ActivityDetailContent)
+// Module 11633 (ActivityDetailContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -10,9 +10,9 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9247 */;
 import AppLauncherContext from "AppLauncherContext" /* 10622 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 10623 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11577 */;
-import DeveloperActivityShelfActionCreatorsAll from "DeveloperActivityShelfActionCreators" /* 11616 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 11735 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 11535 */;
+import DeveloperActivityShelfActionCreatorsAll from "DeveloperActivityShelfActionCreators" /* 11539 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -379,7 +379,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TryItO
       } else {
         closure_128_0 = value;
         c5 = 1;
-        return { value: applicationId(11615)({ targetApplicationId: tmp3, channelId: closure_128_0, analyticsLocations }), done: false };
+        return { value: applicationId(11538)({ targetApplicationId: tmp3, channelId: closure_128_0, analyticsLocations }), done: false };
       }
     } else if (arg0 === 1) {
       c5 = 3;
@@ -440,7 +440,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TryItO
         closure_128_0 = value;
         c4 = 3;
         c5 = 1;
-        return { value: tmp3(11615)({ targetApplicationId: closure_129_1, channelId: closure_128_0, analyticsLocations: closure_129_2 }), done: false };
+        return { value: tmp3(11538)({ targetApplicationId: closure_129_1, channelId: closure_128_0, analyticsLocations: closure_129_2 }), done: false };
       }
     } else if (arg0 === 1) {
       c5 = 3;
@@ -671,15 +671,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     }
     const tmp2Result8 = tmp2(6858);
     const obj9 = { context, applicationId: application.id };
-    const activityAction = tmp2(11735).useActivityAction(obj9);
-    const tmp2Result9 = tmp2(11735);
-    const delayedSwapToActivityActionLeave = tmp2(11830).useDelayedSwapToActivityActionLeave(activityAction);
+    const activityAction = tmp2(11535).useActivityAction(obj9);
+    const tmp2Result9 = tmp2(11535);
+    const delayedSwapToActivityActionLeave = tmp2(11635).useDelayedSwapToActivityActionLeave(activityAction);
     const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-    const tmp2Result10 = tmp2(11830);
-    ({ reason, disabled } = tmp5(11831)(obj10));
+    const tmp2Result10 = tmp2(11635);
+    ({ reason, disabled } = tmp5(11636)(obj10));
     const obj11 = { context, application, botUserId: null };
     let id;
-    tmp5(11832);
+    tmp5(11637);
     if (bot != null) {
       id = bot.id;
     }
@@ -746,13 +746,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
     const obj25 = { applicationId: application.id, width: null, contentWidth: null };
     let result = width;
-    const tmp29 = tmp5(11831)(obj10);
+    const tmp29 = tmp5(11636)(obj10);
     if (detailsContainerLandscape) {
       result = 65 * width / 100;
     }
     obj25.width = result;
     obj25.contentWidth = tmp8;
-    obj24.children = closure_11(tmp5(11771), obj25);
+    obj24.children = closure_11(tmp5(11574), obj25);
     const items4 = [closure_11(View, obj24), ];
     const items5 = [tmp.details, ];
     if (detailsContainerLandscape) {
@@ -767,17 +767,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     const obj29 = { icon: null, tagName: null, accessibilityLabel: null };
     const obj30 = { style: tmp.tagIcon, size: "xs" };
     obj29.icon = closure_11(tmp2(8217).GroupIcon, obj30);
-    const tmp5Result3 = tmp5(11771);
+    const tmp5Result3 = tmp5(11574);
     let num5 = num;
     if (num == null) {
       num5 = 0;
     }
-    obj29.tagName = tmp2(11834).getItemSubtitleForMaxPlayersShort(num5);
-    const tmp2Result12 = tmp2(11834);
+    obj29.tagName = tmp2(11639).getItemSubtitleForMaxPlayersShort(num5);
+    const tmp2Result12 = tmp2(11639);
     if (num == null) {
       num = 0;
     }
-    obj29.accessibilityLabel = tmp5(11834)(num);
+    obj29.accessibilityLabel = tmp5(11639)(num);
     const items7 = [closure_11(closure_16, obj29, "participants"), ];
     const tags = application.tags;
     let mapped;

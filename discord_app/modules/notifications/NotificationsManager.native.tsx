@@ -1,18 +1,18 @@
-// === Module 18212: NotificationsManager ===
+// === Module 18216: NotificationsManager ===
 
-// Module 18212 (NotificationsManager)
+// Module 18216 (NotificationsManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import _modDef4702 from "module_4702" /* 4702 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7506 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12126 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12642 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12123 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12639 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
@@ -89,7 +89,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(18213, dependencyMap.paths), closure_2_14, obj3);
+    obj2.openLazy(asyncRequireImpl(18217, dependencyMap.paths), closure_2_14, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -164,11 +164,11 @@ let closure_25 = async function _logNotificationPermissionStatus2() {
     }
   }
 };
-const PermissionPromptType = fn(12123).PermissionPromptType;
+const PermissionPromptType = fn(12639).PermissionPromptType;
 const Constants = fn(1085);
 ({ RelationshipTypes: c10, GuildFeatures: closure_11, AnalyticEvents: closure_12 } = Constants);
 let closure_13 = fn(7483).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(12124);
+const NotificationPermissionConstants = fn(12640);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_14, EventActionLocation: closure_15 } = NotificationPermissionConstants);
 const items = [, ];
 ({ FRIEND_REQUEST_SENT: arr[0], INVITE_ACCEPTED: arr[1] } = PermissionPromptType);
@@ -690,7 +690,7 @@ class NotificationsManager extends tmp4 {
             return obj6;
           } else {
             closure_128_0 = value;
-            const result = tmp2(12126).updateNotificationAuthorizationStatus(closure_128_0);
+            const result = tmp2(12642).updateNotificationAuthorizationStatus(closure_128_0);
             c3 = 3;
             return { value: "IconComponent", done: null };
           }

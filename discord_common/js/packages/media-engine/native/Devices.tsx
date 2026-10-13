@@ -1,7 +1,7 @@
 // === Module 5209: Devices ===
 
 // Module 5209 (Devices)
-import formatDefault from "format" /* 1364 */;
+import formatDefault from "format" /* 1365 */;
 import Constants from "Constants" /* 5139 */;
 import size from "module_2" /* 2 */;
 

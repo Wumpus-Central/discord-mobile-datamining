@@ -1,6 +1,6 @@
-// === Module 13852: OutboundPromotionClaimAlert ===
+// === Module 14189: OutboundPromotionClaimAlert ===
 
-// Module 13852 (OutboundPromotionClaimAlert)
+// Module 14189 (OutboundPromotionClaimAlert)
 import nativeDefault from "native" /* 587 */;
 import LinkingDefault from "Linking" /* 4806 */;
 import ClipboardUtils from "ClipboardUtils" /* 6886 */;

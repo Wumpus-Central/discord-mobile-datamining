@@ -1,6 +1,6 @@
-// === Module 18184: AddAvatarModal ===
+// === Module 18188: AddAvatarModal ===
 
-// Module 18184 (AddAvatarModal)
+// Module 18188 (AddAvatarModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,9 +13,9 @@ import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import Navigator from "Navigator" /* 6688 */;
 import RecentAvatarUtils from "RecentAvatarUtils" /* 8294 */;
 import VideoBackground from "VideoBackground" /* 8375 */;
-import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 14843 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18182 */;
-import PresetAvatarSelect from "PresetAvatarSelect" /* 18185 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 15164 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18186 */;
+import PresetAvatarSelect from "PresetAvatarSelect" /* 18189 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -59,8 +59,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAva
   if (cResult[2] !== selectedAvatar) {
     let pendingImage;
     if (null != selectedAvatar) {
-      let obj2 = { imageUri: tmp(18185).DEFAULT_AVATARS[selectedAvatar], description: null };
-      const tmpResult4 = tmp(14843);
+      let obj2 = { imageUri: tmp(18189).DEFAULT_AVATARS[selectedAvatar], description: null };
+      const tmpResult4 = tmp(15164);
       obj2.description = tmp(8294).generateAvatarDescription();
       pendingImage = tmpResult4.createPendingImage(obj2);
       const tmpResult5 = tmp(8294);
@@ -137,7 +137,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAva
               let pendingImage;
               if (null != base64) {
                 const obj11 = { imageUri: base64, description: null };
-                const obj = tmp2(14843);
+                const obj = tmp2(15164);
                 obj11.description = tmp2(8294).generateAvatarDescription();
                 pendingImage = obj.createPendingImage(obj11);
                 const obj3 = tmp2(8294);
@@ -267,7 +267,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAva
                   }
                   if (cResult[37] !== selectedAvatar) {
                     let obj6 = { onAvatarSelect: tmp9, selectedAvatar };
-                    const tmp58 = closure_9(tmp10(18185), obj6);
+                    const tmp58 = closure_9(tmp10(18189), obj6);
                     cResult[37] = selectedAvatar;
                     cResult[38] = tmp58;
                     let tmp56 = tmp58;
@@ -366,7 +366,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAva
         tmp45 = tmp47;
       }
       const obj13 = { avatarSource: tmp19, showPendingAvatar: null != tmp15, onSelectAvatar: tmp21 };
-      const tmp42 = closure_9(tmp10(18194), obj13);
+      const tmp42 = closure_9(tmp10(18198), obj13);
       cResult[21] = tmp19;
       cResult[22] = null != tmp15;
       cResult[23] = tmp42;
@@ -436,7 +436,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAva
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14843);
+              const obj = tmp2(15164);
               obj11.description = tmp2(8294).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(8294);
@@ -507,7 +507,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAva
   obj5.children = items2;
   const items3 = [closure_10(View, obj5), , ];
   const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
-  items3[1] = closure_9(selectedAvatar(18194), {
+  items3[1] = closure_9(selectedAvatar(18198), {
     avatarSource: VideoBackground.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -531,7 +531,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddAva
   obj9.children = closure_9(native.LegacyText, obj10);
   items3[2] = closure_9(View, obj9);
   obj4.children = items3;
-  const items4 = [closure_10(View, obj4), closure_9(selectedAvatar(18185), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
+  const items4 = [closure_10(View, obj4), closure_9(selectedAvatar(18189), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
   let obj11 = { style: tmp.buttonContainer, children: null };
   let obj12 = { text: null, grow: true, onPress: null, disabled: null };
   const intl4 = util.intl;

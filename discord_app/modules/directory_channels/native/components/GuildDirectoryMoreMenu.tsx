@@ -1,14 +1,14 @@
-// === Module 12011: GuildDirectoryMoreMenu ===
+// === Module 12527: GuildDirectoryMoreMenu ===
 
-// Module 12011 (GuildDirectoryMoreMenu)
+// Module 12527 (GuildDirectoryMoreMenu)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import ReportModals from "ReportModals" /* 7722 */;
-import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12005 */;
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12012 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12014 */;
+import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12521 */;
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12528 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12530 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

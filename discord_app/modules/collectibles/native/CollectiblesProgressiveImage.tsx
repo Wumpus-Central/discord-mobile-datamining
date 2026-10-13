@@ -1,6 +1,6 @@
-// === Module 16255: CollectiblesProgressiveImage ===
+// === Module 16562: CollectiblesProgressiveImage ===
 
-// Module 16255 (CollectiblesProgressiveImage)
+// Module 16562 (CollectiblesProgressiveImage)
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
 import FastImageDefault from "FastImage" /* 6157 */;

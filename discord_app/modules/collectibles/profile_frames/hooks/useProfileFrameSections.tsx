@@ -1,9 +1,9 @@
-// === Module 14892: useProfileFrameSections ===
+// === Module 15213: useProfileFrameSections ===
 
-// Module 14892 (useProfileFrameSections)
+// Module 15213 (useProfileFrameSections)
 import util from "util" /* 1126 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7276 */;
-import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 13469 */;
+import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 13806 */;
 import _slicedToArray from "module_32" /* 32 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7264 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7280 */;
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(13469)(useMemo(() => {
+  return first(13806)(useMemo(() => {
     let obj = CollectiblesUtils;
     const profileFrames = obj.getProfileFrames(stateFromStores, first);
     const reduced = profileFrames.reduce((premium_purchase, skuId) => {

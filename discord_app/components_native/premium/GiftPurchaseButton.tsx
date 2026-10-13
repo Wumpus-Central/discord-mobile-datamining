@@ -1,6 +1,6 @@
-// === Module 13861: GiftPurchaseButton ===
+// === Module 14198: GiftPurchaseButton ===
 
-// Module 13861 (GiftPurchaseButton)
+// Module 14198 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4775 */;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftPurc
             }
             const BaseTextButton = tmp(5380).BaseTextButton;
             const obj4 = { style: obj3, basePlanId: planId, isCurrentPlan: tmp23, isGift: true, product: stateFromStores2 };
-            const tmp28 = recipientUserId(13862)(obj4);
+            const tmp28 = recipientUserId(14199)(obj4);
             if (cResult[19] === BaseTextButton) {
               if (cResult[20] === tmp26) {
                 if (cResult[21] === stateFromStores1) {

@@ -1,11 +1,11 @@
-// === Module 18120: HolidayEventsManager ===
+// === Module 18124: HolidayEventsManager ===
 
-// Module 18120 (HolidayEventsManager)
+// Module 18124 (HolidayEventsManager)
 import getSoundsForPackDefault from "getSoundsForPack" /* 10983 */;
-import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 18121 */;
-import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 18125 */;
-import SoundpackActions from "SoundpackActions" /* 18126 */;
-import setIncomingRingtone from "setIncomingRingtone" /* 18127 */;
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 18125 */;
+import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 18129 */;
+import SoundpackActions from "SoundpackActions" /* 18130 */;
+import setIncomingRingtone from "setIncomingRingtone" /* 18131 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
 import SoundpackStore from "SoundpackStore" /* 10981 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;

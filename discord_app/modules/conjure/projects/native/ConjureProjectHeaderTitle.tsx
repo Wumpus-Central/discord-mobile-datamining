@@ -1,13 +1,13 @@
-// === Module 17167: ConjureProjectHeaderTitle ===
+// === Module 11782: ConjureProjectHeaderTitle ===
 
-// Module 17167 (ConjureProjectHeaderTitle)
+// Module 11782 (ConjureProjectHeaderTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Pressables from "Pressables" /* 6185 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 13002 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 11345 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

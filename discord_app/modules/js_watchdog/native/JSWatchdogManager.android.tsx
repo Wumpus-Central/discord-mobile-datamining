@@ -1,6 +1,6 @@
-// === Module 18154: JSWatchdogManager ===
+// === Module 18158: JSWatchdogManager ===
 
-// Module 18154 (JSWatchdogManager)
+// Module 18158 (JSWatchdogManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -224,7 +224,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (null == self._timeoutId) {
-              if (null != tmp2(18155)) {
+              if (null != tmp2(18159)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj4 = { value: self.getCurrentSessionId(), done: false };
@@ -244,7 +244,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_129_0._enabled = true;
               if (closure_129_0._pingCompleted) {
                 let checkForStallReportResult;
-                const obj = tmp2(18155);
+                const obj = tmp2(18159);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }

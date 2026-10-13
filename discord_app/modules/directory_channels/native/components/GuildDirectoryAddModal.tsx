@@ -1,16 +1,16 @@
-// === Module 12007: GuildDirectoryAddModal ===
+// === Module 12523: GuildDirectoryAddModal ===
 
-// Module 12007 (GuildDirectoryAddModal)
+// Module 12523 (GuildDirectoryAddModal)
 import c from "c" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import useInitialValueDefault from "useInitialValue" /* 6170 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12006 */;
-import GuildDirectoryCreateOrAddDefault from "GuildDirectoryCreateOrAdd" /* 12009 */;
-import GuildDirectoryCreateOrAddDescriptionDefault from "GuildDirectoryCreateOrAddDescription" /* 12017 */;
-import GuildDirectoryTemplatesDefault from "GuildDirectoryTemplates" /* 12021 */;
-import CreateGuildContainerDefault from "CreateGuildContainer" /* 12031 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12522 */;
+import GuildDirectoryCreateOrAddDefault from "GuildDirectoryCreateOrAdd" /* 12525 */;
+import GuildDirectoryCreateOrAddDescriptionDefault from "GuildDirectoryCreateOrAddDescription" /* 12533 */;
+import GuildDirectoryTemplatesDefault from "GuildDirectoryTemplates" /* 12537 */;
+import CreateGuildContainerDefault from "CreateGuildContainer" /* 12547 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -88,7 +88,7 @@ function getScreens() {
   };
   return obj;
 }
-const GuildDirectoryCreate = fn(12008).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12524).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj2 = { safeArea: { marginTop: fn(6259).NAV_BAR_HEIGHT, flex: 1 } };

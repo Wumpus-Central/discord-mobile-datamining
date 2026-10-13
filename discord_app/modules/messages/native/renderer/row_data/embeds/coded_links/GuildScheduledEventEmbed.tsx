@@ -1,6 +1,6 @@
-// === Module 13517: GuildScheduledEventEmbed ===
+// === Module 13854: GuildScheduledEventEmbed ===
 
-// Module 13517 (GuildScheduledEventEmbed)
+// Module 13854 (GuildScheduledEventEmbed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
@@ -18,8 +18,8 @@ import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 8532 */;
 import GuildEventUtils from "GuildEventUtils" /* 8649 */;
 import icons_ShareDefault from "icons/Share" /* 8726 */;
 import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 8776 */;
-import _modDef13518 from "module_13518" /* 13518 */;
-import _modDef13519 from "module_13519" /* 13519 */;
+import _modDef13855 from "module_13855" /* 13855 */;
+import _modDef13856 from "module_13856" /* 13856 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6054 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -78,7 +78,7 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13518);
+      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13855);
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;
@@ -152,7 +152,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13519);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13856);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);

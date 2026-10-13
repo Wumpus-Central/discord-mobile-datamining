@@ -1,6 +1,6 @@
-// === Module 13454: OrbCheckoutModal ===
+// === Module 13791: OrbCheckoutModal ===
 
-// Module 13454 (OrbCheckoutModal)
+// Module 13791 (OrbCheckoutModal)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
@@ -8,8 +8,8 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 9179 */;
 import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10164 */;
 import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10507 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13455 */;
-import OrbCheckoutModalComponents from "OrbCheckoutModalComponents" /* 13456 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13792 */;
+import OrbCheckoutModalComponents from "OrbCheckoutModalComponents" /* 13793 */;
 import "module_19";
 
 const require = globalThis.__r;

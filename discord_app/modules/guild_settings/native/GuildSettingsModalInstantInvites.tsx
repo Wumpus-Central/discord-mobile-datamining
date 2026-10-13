@@ -1,6 +1,6 @@
-// === Module 18444: GuildSettingsModalInstantInvites ===
+// === Module 18448: GuildSettingsModalInstantInvites ===
 
-// Module 18444 (GuildSettingsModalInstantInvites)
+// Module 18448 (GuildSettingsModalInstantInvites)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -13,7 +13,7 @@ import TableRowIcon from "TableRowIcon" /* 6188 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8044 */;
 import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8046 */;
 import InstantInvite from "InstantInvite" /* 10289 */;
-import _modDef13901 from "module_13901" /* 13901 */;
+import _modDef14238 from "module_14238" /* 14238 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildIncidentsStore from "GuildIncidentsStore" /* 10694 */;
@@ -119,7 +119,7 @@ function GuildSettingsModalInstantInvites(invites) {
       try {
         const obj = { source: GuildAntiRaidTypes.GuildIncidentActionSources.MESSAGE, alertType: GuildAntiRaidUtils.getIncidentAlertType(stateFromStores) };
         const obj4 = { guild, analyticsData: obj };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11384, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12178, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
         closure_7(false);
       } catch (tmp17) {
         tmp2(false);
@@ -196,7 +196,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function InvitesDis
     if (cResult[5] !== invitesDisabled) {
       let tmp15 = null;
       if (invitesDisabled) {
-        const obj5 = { source: _modDef13901 };
+        const obj5 = { source: _modDef14238 };
         tmp15 = __initData(TableRowIcon.TableRowIcon, obj5);
       }
       cResult[5] = invitesDisabled;
@@ -237,7 +237,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function InvitesDis
   const obj3 = { label: intl.string(util.t.Uwsjn6), subLabel: __initData(Text_Text.Text, { variant: "text-xs/medium", children: stringResult1 }), icon: null, checked: null, onPress: null, start: true, end: true };
   let tmp7Result = null;
   if (invitesDisabled) {
-    const obj4 = { source: _modDef13901 };
+    const obj4 = { source: _modDef14238 };
     tmp7Result = __initData(TableRowIcon.TableRowIcon, obj4);
   }
   obj3.icon = tmp7Result;

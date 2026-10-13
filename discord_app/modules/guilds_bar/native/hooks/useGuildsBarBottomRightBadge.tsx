@@ -1,10 +1,10 @@
-// === Module 16754: useGuildsBarBottomRightBadge ===
+// === Module 17058: useGuildsBarBottomRightBadge ===
 
-// Module 16754 (useGuildsBarBottomRightBadge)
+// Module 17058 (useGuildsBarBottomRightBadge)
 import native from "native" /* 1200 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16755 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 16756 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 16760 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17059 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17060 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17064 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         cResult[16] = tmp27;
       }
       const obj4 = { position: "bottom-right", containerSize: token, width: diff1 };
-      const tmp23 = tmp8(16755)(obj4);
+      const tmp23 = tmp8(17059)(obj4);
       cResult[7] = token;
       cResult[8] = diff1;
       cResult[9] = tmp23;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const tmp20 = obj5;
         }
         const obj6 = { style: tmp13, joinRequestState };
-        const tmp17 = jsx(tmp8(16756), { style: tmp13, joinRequestState });
+        const tmp17 = jsx(tmp8(17060), { style: tmp13, joinRequestState });
         cResult[25] = tmp13;
         cResult[26] = joinRequestState;
         cResult[27] = tmp17;
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       obj8.cutouts = items2;
       return obj8;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "ddd" };
+      return { badge: null, cutout: "Array", cutouts: "code" };
     }
   }, items1);
 });

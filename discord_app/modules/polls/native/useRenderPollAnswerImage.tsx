@@ -1,6 +1,6 @@
-// === Module 11924: useRenderPollAnswerImage ===
+// === Module 11746: useRenderPollAnswerImage ===
 
-// Module 11924 (useRenderPollAnswerImage)
+// Module 11746 (useRenderPollAnswerImage)
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import EmojiTypes from "EmojiTypes" /* 4767 */;
 import FastImageDefault from "FastImage" /* 6157 */;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRende
         status = mediaAttachmentState.status;
       }
     }
-    if (status === tmp(11916).PollMediaUploadAttachmentStatus.PREPARING) {
+    if (status === tmp(11738).PollMediaUploadAttachmentStatus.PREPARING) {
       const _Symbol = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp38 = <ActivityIndicator />;

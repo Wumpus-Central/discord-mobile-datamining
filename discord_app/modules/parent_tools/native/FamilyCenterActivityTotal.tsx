@@ -1,11 +1,11 @@
-// === Module 15174: FamilyCenterActivityTotal ===
+// === Module 15495: FamilyCenterActivityTotal ===
 
-// Module 15174 (FamilyCenterActivityTotal)
+// Module 15495 (FamilyCenterActivityTotal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7742 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 15173 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 15494 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

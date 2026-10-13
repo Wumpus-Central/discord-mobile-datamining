@@ -1,6 +1,6 @@
-// === Module 13391: useSegmentedPagesHeight ===
+// === Module 13728: useSegmentedPagesHeight ===
 
-// Module 13391 (useSegmentedPagesHeight)
+// Module 13728 (useSegmentedPagesHeight)
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;

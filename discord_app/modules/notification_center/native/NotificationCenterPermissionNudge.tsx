@@ -1,9 +1,9 @@
-// === Module 16870: NotificationCenterPermissionNudge ===
+// === Module 17173: NotificationCenterPermissionNudge ===
 
-// Module 16870 (NotificationCenterPermissionNudge)
+// Module 17173 (NotificationCenterPermissionNudge)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15781 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 16096 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12124);
+const NotificationPermissionConstants = fn(12640);
 ({ EventActionType: c10, EventActionLocation: closure_11, NotificationNudgeAnalyticsAction: closure_12, NotificationNudgeSurface: map1 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -47,8 +47,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notifi
   closure_5(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     function handlePress() {
-      const pushNotificationPermission = onDismiss(12125).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
-      const obj = onDismiss(12125);
+      const pushNotificationPermission = onDismiss(12641).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
+      const obj = onDismiss(12641);
       AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
     }
     cResult[2] = handlePress;
@@ -207,8 +207,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notifi
   const intl3 = onDismiss(1126).intl;
   obj9.text = intl3.string(onDismiss(1126).t.a4bgO0);
   obj9.onPress = function handlePress() {
-    const pushNotificationPermission = onDismiss(12125).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
-    const obj = onDismiss(12125);
+    const pushNotificationPermission = onDismiss(12641).requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
+    const obj = onDismiss(12641);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER });
   };
   obj8.children = closure_14(onDismiss(5379).Button, obj9);

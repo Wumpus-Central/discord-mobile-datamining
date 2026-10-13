@@ -1,6 +1,6 @@
-// === Module 14430: NitroWheel ===
+// === Module 14751: NitroWheel ===
 
-// Module 14430 (NitroWheel)
+// Module 14751 (NitroWheel)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import _modDef9505 from "module_9505" /* 9505 */;

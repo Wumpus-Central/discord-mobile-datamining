@@ -1,6 +1,6 @@
-// === Module 17813: VoicePanelFloatingCTAUtils ===
+// === Module 17817: VoicePanelFloatingCTAUtils ===
 
-// Module 17813 (VoicePanelFloatingCTAUtils)
+// Module 17817 (VoicePanelFloatingCTAUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
@@ -10,16 +10,16 @@ import XSmallIcon from "XSmallIcon" /* 6208 */;
 import getDeviceSpecificString from "getDeviceSpecificString" /* 7966 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8395 */;
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8535 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11971 */;
-import SoundboardIcon from "SoundboardIcon" /* 12264 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17781 */;
-import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 17815 */;
-import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 17816 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17817 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12487 */;
+import SoundboardIcon from "SoundboardIcon" /* 12777 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17785 */;
+import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 17819 */;
+import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 17820 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17821 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
-import EventBannerStore from "EventBannerStore" /* 17814 */;
+import EventBannerStore from "EventBannerStore" /* 17818 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 const require = globalThis.__r;
@@ -93,7 +93,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGui
   stateFromStores(5031)();
   let obj = imminentUpcomingGuildEvents(576);
   const tmp4 = stateFromStores;
-  const tmp6 = stateFromStores(17781)(noop.useContext(stateFromStores(11971)).channelId);
+  const tmp6 = stateFromStores(17785)(noop.useContext(stateFromStores(12487)).channelId);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -431,7 +431,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOve
   }
 }) : (function useOverrideFloatingCTAProps(arg0) {
   closure_0 = arg0;
-  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(11971)).setShowFloatingCTA;
+  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(12487)).setShowFloatingCTA;
   const items = [setShowFloatingCTA, arg0];
   return noop.useMemo(() => {
     let tmp = null;

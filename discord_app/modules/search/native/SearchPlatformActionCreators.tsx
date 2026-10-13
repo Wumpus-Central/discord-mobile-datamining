@@ -1,11 +1,11 @@
-// === Module 12061: SearchPlatformActionCreators ===
+// === Module 12577: SearchPlatformActionCreators ===
 
-// Module 12061 (SearchPlatformActionCreators)
+// Module 12577 (SearchPlatformActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import SearchUtils from "SearchUtils" /* 12043 */;
-import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12062 */;
-import SearchQueryStore from "SearchQueryStore" /* 12050 */;
+import SearchUtils from "SearchUtils" /* 12559 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12578 */;
+import SearchQueryStore from "SearchQueryStore" /* 12566 */;
 import size from "module_2" /* 2 */;
 
 const SearchTypes = Constants.SearchTypes;

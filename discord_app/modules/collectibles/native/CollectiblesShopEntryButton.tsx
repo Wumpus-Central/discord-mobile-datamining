@@ -1,8 +1,8 @@
-// === Module 13009: CollectiblesShopEntryButton ===
+// === Module 13493: CollectiblesShopEntryButton ===
 
-// Module 13009 (CollectiblesShopEntryButton)
-import YouScreenNavIconDefault from "YouScreenNavIcon" /* 13004 */;
-import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 13010 */;
+// Module 13493 (CollectiblesShopEntryButton)
+import YouScreenNavIconDefault from "YouScreenNavIcon" /* 13488 */;
+import MobileShopButtonCoachmarkDefault from "MobileShopButtonCoachmark" /* 13494 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7279 */;
@@ -75,7 +75,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
           tmp15 = tmp18;
         }
       }
-      const obj5 = { ref: shopButtonRef, IconComponent: navigateToShop(11826).ShopIcon, accessibilityLabel: first, onPress: tmp9, showRedDot: tmp6 };
+      const obj5 = { ref: shopButtonRef, IconComponent: navigateToShop(11631).ShopIcon, accessibilityLabel: first, onPress: tmp9, showRedDot: tmp6 };
       const tmp14 = closure_6(YouScreenNavIconDefault, obj5);
       cResult[5] = tmp6;
       cResult[6] = shopButtonRef;
@@ -106,7 +106,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const obj2 = { children: null };
   const obj3 = { ref: shopButtonRef, IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
   const obj = navigateToShop(7100);
-  obj3.IconComponent = navigateToShop(11826).ShopIcon;
+  obj3.IconComponent = navigateToShop(11631).ShopIcon;
   const intl = navigateToShop(1126).intl;
   obj3.accessibilityLabel = intl.string(navigateToShop(1126).t.pWG4ze);
   obj3.onPress = function onPress() {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [CollectiblesMarketingsStore];
     const fn = function c() {
-      return marketingBySurface.getMarketingBySurface(navigateToShop(13011).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON);
+      return marketingBySurface.getMarketingBySurface(navigateToShop(13495).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON);
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
     function content(visibleContent) {
       visibleContent = visibleContent.visibleContent;
       const markAsDismissed = visibleContent.markAsDismissed;
-      const obj = { ref: markAsDismissed, IconComponent: navigateToShop(11826).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+      const obj = { ref: markAsDismissed, IconComponent: navigateToShop(11631).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
       const intl = navigateToShop(1126).intl;
       obj.accessibilityLabel = intl.string(navigateToShop(1126).t.pWG4ze);
       obj.onPress = function onPress() {
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
         }
       };
       obj.showRedDot = null != visibleContent;
-      return closure_1_6(shopButtonRef(13004), obj);
+      return closure_1_6(shopButtonRef(13488), obj);
     }
     cResult[6] = navigateToShop;
     cResult[7] = shopButtonRef;
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
   navigateToShop = navigateToShop.navigateToShop;
   const shopButtonRef = navigateToShop.shopButtonRef;
   const items = [CollectiblesMarketingsStore];
-  const stateFromStores = navigateToShop(573).useStateFromStores(items, () => marketingBySurface.getMarketingBySurface(navigateToShop(13011).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON));
+  const stateFromStores = navigateToShop(573).useStateFromStores(items, () => marketingBySurface.getMarketingBySurface(navigateToShop(13495).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON));
   let tmp4 = null != stateFromStores;
   if (tmp4) {
     tmp4 = "dismissibleContent" in stateFromStores;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
     function content(visibleContent) {
       visibleContent = visibleContent.visibleContent;
       const markAsDismissed = visibleContent.markAsDismissed;
-      const obj = { ref: markAsDismissed, IconComponent: navigateToShop(11826).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+      const obj = { ref: markAsDismissed, IconComponent: navigateToShop(11631).ShopIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
       const intl = navigateToShop(1126).intl;
       obj.accessibilityLabel = intl.string(navigateToShop(1126).t.pWG4ze);
       obj.onPress = function onPress() {
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
         }
       };
       obj.showRedDot = null != visibleContent;
-      return closure_1_6(shopButtonRef(13004), obj);
+      return closure_1_6(shopButtonRef(13488), obj);
     }
     if (tmp4) {
       let type1;

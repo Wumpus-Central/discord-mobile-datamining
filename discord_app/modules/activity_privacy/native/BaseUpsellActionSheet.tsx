@@ -1,11 +1,11 @@
-// === Module 15132: BaseUpsellActionSheet ===
+// === Module 15453: BaseUpsellActionSheet ===
 
-// Module 15132 (BaseUpsellActionSheet)
+// Module 15453 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import GuildIconDefault from "GuildIcon" /* 6159 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15130 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15451 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -80,11 +80,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   ({ guildIds, direction, onPress } = arg0);
   const tmp4 = closure_9();
   if (cResult[0] !== guildIds) {
-    const result = tmp(15130).sortGuildIdsByFrecency(guildIds);
+    const result = tmp(15451).sortGuildIdsByFrecency(guildIds);
     cResult[0] = guildIds;
     cResult[1] = result;
     arr = result;
-    const tmpResult = tmp(15130);
+    const tmpResult = tmp(15451);
   } else {
     arr = cResult[1];
   }
@@ -247,7 +247,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
       }
     }
     const statusRow = tmp4.statusRow;
-    if (direction === tmp(15130).ChangeDirection.RESTRICTING) {
+    if (direction === tmp(15451).ChangeDirection.RESTRICTING) {
       class B {
         constructor() {
           return closure_1.map(() => { ... });

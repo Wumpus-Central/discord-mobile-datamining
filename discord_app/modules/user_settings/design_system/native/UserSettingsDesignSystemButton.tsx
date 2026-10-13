@@ -1,6 +1,6 @@
-// === Module 16134: UserSettingsDesignSystemButton ===
+// === Module 16441: UserSettingsDesignSystemButton ===
 
-// Module 16134 (UserSettingsDesignSystemButton)
+// Module 16441 (UserSettingsDesignSystemButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
@@ -17,11 +17,11 @@ import _modDef8758 from "module_8758" /* 8758 */;
 import _modDef8807 from "module_8807" /* 8807 */;
 import _modDef10042 from "module_10042" /* 10042 */;
 import _modDef10347 from "module_10347" /* 10347 */;
-import ToggleButton from "ToggleButton" /* 14266 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 14267 */;
-import ToggleIconButton from "ToggleIconButton" /* 14268 */;
-import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 16135 */;
-import _modDef16136 from "module_16136" /* 16136 */;
+import ToggleIconButton from "ToggleIconButton" /* 11939 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 11940 */;
+import ToggleButton from "ToggleButton" /* 14594 */;
+import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 16442 */;
+import _modDef16443 from "module_16443" /* 16443 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -203,7 +203,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef16136;
+    tmpResult = _modDef16443;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;

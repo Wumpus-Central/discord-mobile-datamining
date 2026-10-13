@@ -1,13 +1,13 @@
-// === Module 17116: ConjurePublishNotesSheet ===
+// === Module 11362: ConjurePublishNotesSheet ===
 
-// Module 17116 (ConjurePublishNotesSheet)
+// Module 11362 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
 import ConjureUtils from "ConjureUtils" /* 6946 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12181 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 17117 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11333 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 11363 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -285,10 +285,10 @@ export default function ConjurePublishNotesSheet(guildId) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = guildId(17117).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
+              const result = guildId(11363).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
               closure_129_21();
               dependencyMap = 0;
-              const obj = guildId(17117);
+              const obj = guildId(11363);
             }
           }
           const _Error = Error;

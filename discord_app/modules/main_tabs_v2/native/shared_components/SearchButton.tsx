@@ -1,6 +1,6 @@
-// === Module 12078: SearchButton ===
+// === Module 12594: SearchButton ===
 
-// Module 12078 (SearchButton)
+// Module 12594 (SearchButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

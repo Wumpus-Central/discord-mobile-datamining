@@ -1,12 +1,12 @@
-// === Module 15449: QuestCardPreview ===
+// === Module 15764: QuestCardPreview ===
 
-// Module 15449 (QuestCardPreview)
+// Module 15764 (QuestCardPreview)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import QuestTypes from "QuestTypes" /* 5975 */;
-import QuestCard from "QuestCard" /* 15365 */;
-import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 15450 */;
+import QuestCard from "QuestCard" /* 15682 */;
+import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 15765 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -37,7 +37,7 @@ export const QuestCardPreview = ReactCompilerGating.isReactCompilerEnabled() ? (
     return tmp5;
   }
   let obj = quest(576);
-  const tmp6 = jsx(quest(12983).QuestContentImpressionTrackerNative, { questOrQuests: quest, questContent: quest(5975).QuestContent.INTERNAL_PREVIEW_TOOL, sourceQuestContent: quest(5975).QuestContent.INTERNAL_PREVIEW_TOOL, trackGuildAndChannelMetadata: false, children: tmp4 });
+  const tmp6 = jsx(quest(13475).QuestContentImpressionTrackerNative, { questOrQuests: quest, questContent: quest(5975).QuestContent.INTERNAL_PREVIEW_TOOL, sourceQuestContent: quest(5975).QuestContent.INTERNAL_PREVIEW_TOOL, trackGuildAndChannelMetadata: false, children: tmp4 });
   cResult[2] = quest;
   cResult[3] = tmp4;
   cResult[4] = tmp6;
@@ -45,7 +45,7 @@ export const QuestCardPreview = ReactCompilerGating.isReactCompilerEnabled() ? (
   const obj2 = { questOrQuests: quest, questContent: quest(5975).QuestContent.INTERNAL_PREVIEW_TOOL, sourceQuestContent: quest(5975).QuestContent.INTERNAL_PREVIEW_TOOL, trackGuildAndChannelMetadata: false, children: tmp4 };
 }) : (function QuestCardPreview(quest) {
   quest = quest.quest;
-  return jsx(quest(12983).QuestContentImpressionTrackerNative, {
+  return jsx(quest(13475).QuestContentImpressionTrackerNative, {
     questOrQuests: quest,
     questContent: quest(5975).QuestContent.INTERNAL_PREVIEW_TOOL,
     sourceQuestContent: quest(5975).QuestContent.INTERNAL_PREVIEW_TOOL,

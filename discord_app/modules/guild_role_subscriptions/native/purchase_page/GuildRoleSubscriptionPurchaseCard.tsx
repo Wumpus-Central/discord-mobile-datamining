@@ -1,6 +1,6 @@
-// === Module 17013: GuildRoleSubscriptionPurchaseCard ===
+// === Module 17316: GuildRoleSubscriptionPurchaseCard ===
 
-// Module 17013 (GuildRoleSubscriptionPurchaseCard)
+// Module 17316 (GuildRoleSubscriptionPurchaseCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,10 +10,10 @@ import Text_Text from "Text/Text" /* 5088 */;
 import BottomSheetModal from "BottomSheetModal" /* 6307 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6663 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15520 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15530 */;
-import Elements from "Elements" /* 17008 */;
-import SubscribeButtonDefault from "SubscribeButton" /* 17014 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15835 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15845 */;
+import Elements from "Elements" /* 17311 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 17317 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

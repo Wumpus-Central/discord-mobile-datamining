@@ -1,6 +1,6 @@
-// === Module 12915: TwoWayLinkError ===
+// === Module 13407: TwoWayLinkError ===
 
-// Module 12915 (TwoWayLinkError)
+// Module 13407 (TwoWayLinkError)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
@@ -9,7 +9,7 @@ import components_Button_Button from "components/Button/Button" /* 5379 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9215 */;
-import _modDef12916 from "module_12916" /* 12916 */;
+import _modDef13408 from "module_13408" /* 13408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
   const tmp4 = closure_6();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   if (cResult[0] !== tmp4.image) {
-    const obj3 = { source: _modDef12916, style: tmp4.image };
+    const obj3 = { source: _modDef13408, style: tmp4.image };
     const tmp10 = React4(FastImageDefault, obj3);
     cResult[0] = tmp4.image;
     cResult[1] = tmp10;
@@ -165,7 +165,7 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
   const obj4 = { source: null, style: null };
-  obj4.source = _modDef12916;
+  obj4.source = _modDef13408;
   obj4.style = tmp.image;
   const items = [React4(FastImageDefault, obj4), React4(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), React4(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
   obj3.children = items;

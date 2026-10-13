@@ -1,11 +1,11 @@
-// === Module 17001: UnavailableNotice ===
+// === Module 17304: UnavailableNotice ===
 
-// Module 17001 (UnavailableNotice)
+// Module 17304 (UnavailableNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import FastImageDefault from "FastImage" /* 6157 */;
-import _modDef16682 from "module_16682" /* 16682 */;
+import _modDef16986 from "module_16986" /* 16986 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Unavaila
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: _modDef16682 };
+      const obj2 = { source: _modDef16986 };
       const tmp11 = React4(FastImageDefault, obj2);
       cResult[3] = tmp11;
       let tmp7 = tmp11;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Unavaila
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.unavailableInfo, children: null };
-  const obj3 = { source: _modDef16682 };
+  const obj3 = { source: _modDef16986 };
   const items1 = [React4(FastImageDefault, obj3), , ];
   const items2 = [tmp.joinCtaTitle, ];
   if (brightTitle) {

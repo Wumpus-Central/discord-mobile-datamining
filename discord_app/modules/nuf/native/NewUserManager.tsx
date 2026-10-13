@@ -1,9 +1,9 @@
-// === Module 18181: NewUserManager ===
+// === Module 18185: NewUserManager ===
 
-// Module 18181 (NewUserManager)
+// Module 18185 (NewUserManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import NUFActionCreators from "NUFActionCreators" /* 12429 */;
+import NUFActionCreators from "NUFActionCreators" /* 12939 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PhoneStore from "PhoneStore" /* 6624 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
@@ -12,9 +12,9 @@ import NewUserStore from "NewUserStore" /* 6134 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 require = fn;
-const NewUserTypes = fn(12430).NewUserTypes;
+const NewUserTypes = fn(12940).NewUserTypes;
 const PlatformTypes = fn(1085).PlatformTypes;
-let closure_10 = fn(12482).HUBS_IN_ONBOARDING_COUNTRIES;
+let closure_10 = fn(12992).HUBS_IN_ONBOARDING_COUNTRIES;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
 let obj2 = {
   key: obj.ADD_AVATAR,
@@ -26,7 +26,7 @@ let obj2 = {
     }
     return null == avatar;
   },
-  transitionToStep: fn(18182).openAddAvatarModal
+  transitionToStep: fn(18186).openAddAvatarModal
 };
 const items = [obj2, , , , , ];
 let obj3 = {
@@ -48,14 +48,14 @@ let obj3 = {
     }
     return tmp3;
   },
-  transitionToStep: fn(12400).openContactSyncModalOnboarding
+  transitionToStep: fn(12910).openContactSyncModalOnboarding
 };
 items[1] = {
   key: obj.DISCOVERABILITY,
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(12429).openDiscoverabilityModal
+  transitionToStep: fn(12939).openDiscoverabilityModal
 };
 items[2] = obj3;
 items[3] = {
@@ -90,7 +90,7 @@ let obj4 = {
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(12429).openDiscoverabilityModal
+  transitionToStep: fn(12939).openDiscoverabilityModal
 };
 items[5] = {
   key: obj.ACCEPT_INVITE,

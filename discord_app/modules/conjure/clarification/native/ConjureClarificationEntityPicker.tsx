@@ -1,13 +1,13 @@
-// === Module 17307: ConjureClarificationEntityPicker ===
+// === Module 11928: ConjureClarificationEntityPicker ===
 
-// Module 17307 (ConjureClarificationEntityPicker)
+// Module 11928 (ConjureClarificationEntityPicker)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
 import ConjureUtils from "ConjureUtils" /* 6946 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12181 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 17098 */;
-import ConjureClarification from "ConjureClarification" /* 17303 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11333 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 11335 */;
+import ConjureClarification from "ConjureClarification" /* 11923 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 4748 */;
 import GuildStore from "GuildStore" /* 2087 */;

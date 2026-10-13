@@ -1,6 +1,6 @@
-// === Module 14836: ProfileCustomizationSettingScreen ===
+// === Module 15157: ProfileCustomizationSettingScreen ===
 
-// Module 14836 (ProfileCustomizationSettingScreen)
+// Module 15157 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ChatInputUtils from "ChatInputUtils" /* 4985 */;
@@ -8,11 +8,11 @@ import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
 import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6671 */;
 import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9634 */;
 import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10643 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 14837 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 14857 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 14944 */;
-import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 14945 */;
-import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 14954 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15158 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15178 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15265 */;
+import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15266 */;
+import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15275 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;

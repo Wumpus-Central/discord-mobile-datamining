@@ -19,11 +19,11 @@ import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8389 */
 import MediaSourceUtil from "MediaSourceUtil" /* 8393 */;
 import showShareActionSheet from "showShareActionSheet" /* 8482 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8491 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11553 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11565 */;
-import ChatArrowRightIcon from "ChatArrowRightIcon" /* 12665 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 12871 */;
-import ShareIcon from "ShareIcon" /* 13052 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 12306 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 12318 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 13171 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13363 */;
+import ShareIcon from "ShareIcon" /* 13536 */;
 import noop from "module_19" /* 19 */;
 import ICYMIStore from "ICYMIStore" /* 8454 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -125,7 +125,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = source.attachmentId;
         if (null != attachmentId) {
-          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE" };
+          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: true };
           const obj4 = { onlyAttachmentIds: null };
           const items = [attachmentId];
           obj4.onlyAttachmentIds = items;
@@ -133,7 +133,7 @@ function useMediaShareActions(source) {
           ForwardModalUtils.openForwardModal(obj3);
         }
       } else {
-        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE" };
+        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: true };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
         obj7.onlyEmbedIndices = items1;
@@ -163,7 +163,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11465, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12231, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;

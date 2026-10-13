@@ -1,6 +1,6 @@
-// === Module 16964: ICYMIShareModal ===
+// === Module 17267: ICYMIShareModal ===
 
-// Module 16964 (ICYMIShareModal)
+// Module 17267 (ICYMIShareModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -12,9 +12,9 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
 import ShareEventUtils from "ShareEventUtils" /* 8534 */;
 import HeaderShared from "HeaderShared" /* 9298 */;
-import SearchableDestinationListDefault from "SearchableDestinationList" /* 11569 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11580 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11591 */;
+import SearchableDestinationListDefault from "SearchableDestinationList" /* 12322 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 12332 */;
+import ShareChatInputDefault from "ShareChatInput" /* 12341 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -709,7 +709,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
               const obj5 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
               c5 = 2;
               c6 = 1;
-              const obj6 = { value: entry(16965).sendMessageWithEmbed(obj5), done: false };
+              const obj6 = { value: entry(17268).sendMessageWithEmbed(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp7) {
@@ -809,7 +809,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(16965).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(17268).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

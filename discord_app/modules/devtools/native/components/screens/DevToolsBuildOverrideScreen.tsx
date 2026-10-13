@@ -1,11 +1,11 @@
-// === Module 15886: DevToolsBuildOverrideScreen ===
+// === Module 16199: DevToolsBuildOverrideScreen ===
 
-// Module 15886 (DevToolsBuildOverrideScreen)
+// Module 16199 (DevToolsBuildOverrideScreen)
 import nativeDefault from "native" /* 587 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import ToastUtils from "ToastUtils" /* 4808 */;
 import ClipboardUtils from "ClipboardUtils" /* 6886 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11341 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12139 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BuildOverrideStore from "BuildOverrideStore" /* 10484 */;
@@ -23,9 +23,9 @@ let closure_9 = createStyles.createStyles(obj);
 let obj4 = { padding: nativeDefault.space.PX_16 };
 let items = [{ label: "Branch Name", value: "branch", icon: jsx(fn(9076).TagIcon, {}) }, ];
 let obj5 = { label: "Branch Name", value: "branch", icon: jsx(fn(9076).TagIcon, {}) };
-items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(15887).HashmarkIcon, {}) };
+items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(16200).HashmarkIcon, {}) };
 const ReactCompilerGating = fn(558);
-let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(15887).HashmarkIcon, {}) };
+let obj6 = { label: "Commit SHA", value: "id", icon: jsx(fn(16200).HashmarkIcon, {}) };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx");
 
@@ -148,10 +148,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ,
 
         ];
-        const obj6 = { icon: jsx(tmp(15252).RefreshIcon, {}), label: "Refresh Override", onPress: tmp(11341).refreshBuildOverride, arrow: true };
-        items1[1] = jsx(tmp(6180).TableRow, { icon: jsx(tmp(15252).RefreshIcon, {}), label: "Refresh Override", onPress: tmp(11341).refreshBuildOverride, arrow: true });
-        const obj7 = { icon: jsx(tmp(5049).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp(11341).clearBuildOverride, arrow: true };
-        items1[2] = jsx(tmp(6180).TableRow, { icon: jsx(tmp(5049).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp(11341).clearBuildOverride, arrow: true });
+        const obj6 = { icon: jsx(tmp(11301).RefreshIcon, {}), label: "Refresh Override", onPress: tmp(12139).refreshBuildOverride, arrow: true };
+        items1[1] = jsx(tmp(6180).TableRow, { icon: jsx(tmp(11301).RefreshIcon, {}), label: "Refresh Override", onPress: tmp(12139).refreshBuildOverride, arrow: true });
+        const obj7 = { icon: jsx(tmp(5049).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp(12139).clearBuildOverride, arrow: true };
+        items1[2] = jsx(tmp(6180).TableRow, { icon: jsx(tmp(5049).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp(12139).clearBuildOverride, arrow: true });
         obj4.children = items1;
         tmp18 = <tmp20 title="Current Override" hasIcons>{null}</tmp20>;
       }
@@ -563,7 +563,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let tmp;
     if (overrides != null) {
-      tmp = overrides[first(undefined, 11341).DEVICE_FIELD];
+      tmp = overrides[first(undefined, 12139).DEVICE_FIELD];
     }
     return tmp;
   });
@@ -591,10 +591,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const result = ToastUtils.presentCopiedToClipboard();
     };
     const items1 = [jsx(tmp3(6180).TableRow, { icon: jsx(tmp3(5042).CopyIcon, {}), label: null, subLabel: null, onPress: null }), , ];
-    const obj6 = { icon: jsx(tmp3(15252).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11341).refreshBuildOverride, arrow: true };
-    items1[1] = jsx(tmp3(6180).TableRow, { icon: jsx(tmp3(15252).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11341).refreshBuildOverride, arrow: true });
-    const obj7 = { icon: jsx(tmp3(5049).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11341).clearBuildOverride, arrow: true };
-    items1[2] = jsx(tmp3(6180).TableRow, { icon: jsx(tmp3(5049).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11341).clearBuildOverride, arrow: true });
+    const obj6 = { icon: jsx(tmp3(11301).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(12139).refreshBuildOverride, arrow: true };
+    items1[1] = jsx(tmp3(6180).TableRow, { icon: jsx(tmp3(11301).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(12139).refreshBuildOverride, arrow: true });
+    const obj7 = { icon: jsx(tmp3(5049).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(12139).clearBuildOverride, arrow: true };
+    items1[2] = jsx(tmp3(6180).TableRow, { icon: jsx(tmp3(5049).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(12139).clearBuildOverride, arrow: true });
     obj5.children = items1;
     tmp10Result = jsxs(tmp3(6265).TableRowGroup, { title: "Current Override", hasIcons: true, children: null });
   }

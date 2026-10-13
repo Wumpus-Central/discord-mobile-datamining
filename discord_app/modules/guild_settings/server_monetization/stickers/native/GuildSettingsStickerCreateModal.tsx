@@ -1,8 +1,8 @@
-// === Module 18375: GuildSettingsStickerCreateModal ===
+// === Module 18379: GuildSettingsStickerCreateModal ===
 
-// Module 18375 (GuildSettingsStickerCreateModal)
+// Module 18379 (GuildSettingsStickerCreateModal)
 import util from "util" /* 1126 */;
-import GuildSettingsStickerCreateDefault from "GuildSettingsStickerCreate" /* 18376 */;
+import GuildSettingsStickerCreateDefault from "GuildSettingsStickerCreate" /* 18380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

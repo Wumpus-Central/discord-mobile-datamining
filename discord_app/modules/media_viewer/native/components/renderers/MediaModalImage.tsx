@@ -1,13 +1,13 @@
-// === Module 13077: MediaModalImage ===
+// === Module 13561: MediaModalImage ===
 
-// Module 13077 (MediaModalImage)
+// Module 13561 (MediaModalImage)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import FastImageDefault from "FastImage" /* 6157 */;
-import useMediaLoadingDefault from "useMediaLoading" /* 13074 */;
-import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 13075 */;
-import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 13076 */;
-import AndroidMediaViewerFullResolutionExperiment from "AndroidMediaViewerFullResolutionExperiment" /* 13078 */;
+import useMediaLoadingDefault from "useMediaLoading" /* 13558 */;
+import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 13559 */;
+import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 13560 */;
+import AndroidMediaViewerFullResolutionExperiment from "AndroidMediaViewerFullResolutionExperiment" /* 13562 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

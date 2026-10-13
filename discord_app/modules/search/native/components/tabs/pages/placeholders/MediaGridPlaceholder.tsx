@@ -1,15 +1,15 @@
-// === Module 17396: MediaGridPlaceholder ===
+// === Module 17400: MediaGridPlaceholder ===
 
-// Module 17396 (MediaGridPlaceholder)
+// Module 17400 (MediaGridPlaceholder)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12036 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 17395 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 17397 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12552 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 17399 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 17401 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -101,7 +101,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
     arr = cResult[3];
   }
   const obj = size(576);
-  const placeholderAnimatedStyle = size(17395).usePlaceholderAnimatedStyle(visible);
+  const placeholderAnimatedStyle = size(17399).usePlaceholderAnimatedStyle(visible);
   if (cResult[4] === placeholderAnimatedStyle) {
     if (cResult[5] === row.container) {
       if (cResult[6] === row.recentsContainer) {
@@ -293,7 +293,7 @@ export const RecentsMediaGridPlaceholder = ReactCompilerGating.isReactCompilerEn
   cResult[6] = row.recentsContainer;
   cResult[7] = items2;
   tmp10 = items2;
-  const tmpResult4 = size(17395);
+  const tmpResult4 = size(17399);
 }) : (function RecentsMediaGridPlaceholder(visible) {
   ({ size: require, numRows } = visible);
   let memo;

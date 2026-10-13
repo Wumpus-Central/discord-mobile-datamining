@@ -1,6 +1,6 @@
-// === Module 15119: AndroidViewNsfwDmCommandsSetting ===
+// === Module 15440: AndroidViewNsfwDmCommandsSetting ===
 
-// Module 15119 (AndroidViewNsfwDmCommandsSetting)
+// Module 15440 (AndroidViewNsfwDmCommandsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;

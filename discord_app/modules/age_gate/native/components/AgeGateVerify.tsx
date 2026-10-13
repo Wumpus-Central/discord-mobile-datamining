@@ -1,6 +1,6 @@
-// === Module 18044: AgeGateVerify ===
+// === Module 18048: AgeGateVerify ===
 
-// Module 18044 (AgeGateVerify)
+// Module 18048 (AgeGateVerify)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;

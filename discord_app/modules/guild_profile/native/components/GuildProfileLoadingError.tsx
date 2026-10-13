@@ -1,6 +1,6 @@
-// === Module 13020: GuildProfileLoadingError ===
+// === Module 13504: GuildProfileLoadingError ===
 
-// Module 13020 (GuildProfileLoadingError)
+// Module 13504 (GuildProfileLoadingError)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

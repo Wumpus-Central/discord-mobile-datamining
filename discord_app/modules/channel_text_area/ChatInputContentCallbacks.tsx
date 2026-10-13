@@ -1,6 +1,6 @@
-// === Module 11671: ChatInputContentCallbacks ===
+// === Module 12414: ChatInputContentCallbacks ===
 
-// Module 11671 (ChatInputContentCallbacks)
+// Module 12414 (ChatInputContentCallbacks)
 import _modDef12 from "module_12" /* 12 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6984 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7012 */;

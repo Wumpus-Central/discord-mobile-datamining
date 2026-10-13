@@ -1,11 +1,11 @@
-// === Module 11560: ForwardDestinationUtils ===
+// === Module 12313: ForwardDestinationUtils ===
 
-// Module 11560 (ForwardDestinationUtils)
+// Module 12313 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1106 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import StickersUtils from "StickersUtils" /* 5749 */;
 import SlowmodeUtils from "SlowmodeUtils" /* 7376 */;
-import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 11561 */;
+import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 12314 */;
 import noop from "module_19" /* 19 */;
 import StickersStore from "StickersStore" /* 6030 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -25,7 +25,7 @@ let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedDestinationChannel(arr) {
   const cResult = require("c").c(8);
   if (cResult[0] !== arr) {
-    const mapped = arr.map(tmp(11558).getChannelIdFromDestinationId);
+    const mapped = arr.map(tmp(12311).getChannelIdFromDestinationId);
     const found = mapped.find(tmp(1388).isNotNullish);
     cResult[0] = arr;
     cResult[1] = found;
@@ -71,7 +71,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedD
   }
   return tmp11;
 }) : (function useSelectedDestinationChannel(arr) {
-  const mapped = arr.map(found(11558).getChannelIdFromDestinationId);
+  const mapped = arr.map(found(12311).getChannelIdFromDestinationId);
   found = mapped.find(found(1388).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];

@@ -1,12 +1,12 @@
-// === Module 12953: AppStoreOverlayMediaCarousel ===
+// === Module 13445: AppStoreOverlayMediaCarousel ===
 
-// Module 12953 (AppStoreOverlayMediaCarousel)
+// Module 13445 (AppStoreOverlayMediaCarousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsActions from "AnalyticsActions" /* 7407 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7416 */;
-import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 12954 */;
-import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 12955 */;
+import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 13446 */;
+import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 13447 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;

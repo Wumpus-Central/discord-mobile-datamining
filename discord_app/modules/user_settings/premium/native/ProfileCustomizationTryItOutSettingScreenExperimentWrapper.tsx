@@ -1,10 +1,10 @@
-// === Module 16191: ProfileCustomizationTryItOutSettingScreenExperimentWrapper ===
+// === Module 16498: ProfileCustomizationTryItOutSettingScreenExperimentWrapper ===
 
-// Module 16191 (ProfileCustomizationTryItOutSettingScreenExperimentWrapper)
+// Module 16498 (ProfileCustomizationTryItOutSettingScreenExperimentWrapper)
 import c from "c" /* 576 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 14860 */;
-import ProfileCustomizationTryItOutV2SettingScreenDefault from "ProfileCustomizationTryItOutV2SettingScreen" /* 16192 */;
-import ProfileCustomizationTryItOutSettingScreenDefault from "ProfileCustomizationTryItOutSettingScreen" /* 16195 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15181 */;
+import ProfileCustomizationTryItOutV2SettingScreenDefault from "ProfileCustomizationTryItOutV2SettingScreen" /* 16499 */;
+import ProfileCustomizationTryItOutSettingScreenDefault from "ProfileCustomizationTryItOutSettingScreen" /* 16502 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,5 +38,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProfileC
   }
   obj2 = UserProfilePremiumTryItOutMobileRefreshExperiment;
 }) : (function ProfileCustomizationTryItOutSettingScreenExperimentWrapper() {
-  return jsx(importDefault(UserProfilePremiumTryItOutMobileRefreshExperiment.useTryItOutMobileRefreshConfig("ProfileCustomizationTryItOutSettingScreenExperimentWrapper").enabled ? 16192 : 16195), {});
+  return jsx(importDefault(UserProfilePremiumTryItOutMobileRefreshExperiment.useTryItOutMobileRefreshConfig("ProfileCustomizationTryItOutSettingScreenExperimentWrapper").enabled ? 16499 : 16502), {});
 });

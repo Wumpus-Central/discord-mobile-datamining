@@ -1,6 +1,6 @@
-// === Module 16635: GuildMFAWarning ===
+// === Module 16940: GuildMFAWarning ===
 
-// Module 16635 (GuildMFAWarning)
+// Module 16940 (GuildMFAWarning)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 5088 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import Pressables from "Pressables" /* 6185 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10515 */;
-import _modDef16636 from "module_16636" /* 16636 */;
+import _modDef16941 from "module_16941" /* 16941 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildMFA
   const cResult = c.c(10);
   const tmp4 = closure_7();
   if (cResult[0] !== tmp4.MFAWarningIcon) {
-    const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef16636 };
+    const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef16941 };
     const tmp9 = hasOwnProperty(FastImageDefault, obj2);
     cResult[0] = tmp4.MFAWarningIcon;
     cResult[1] = tmp9;
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildMFA
 }) : (function GuildMFAWarning() {
   const tmp = closure_7();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef16636 };
+  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef16941 };
   const items = [hasOwnProperty(FastImageDefault, obj2), ];
   const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = util.intl;

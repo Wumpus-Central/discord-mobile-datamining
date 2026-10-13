@@ -1,19 +1,19 @@
-// === Module 17490: AutocompleteScreen ===
+// === Module 17494: AutocompleteScreen ===
 
-// Module 17490 (AutocompleteScreen)
+// Module 17494 (AutocompleteScreen)
 import UserUtilsDefault from "UserUtils" /* 4962 */;
 import useChannelName from "useChannelName" /* 5421 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12036 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12057 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12061 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 17492 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12552 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12573 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12577 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 17496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 17491 */;
-import SearchQueryStore from "SearchQueryStore" /* 12050 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 17495 */;
+import SearchQueryStore from "SearchQueryStore" /* 12566 */;
 
 const require = globalThis.__r;
 
@@ -88,7 +88,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp16 = cResult[8];
   }
   const tmpResult5 = searchContext(504);
-  const fullscreenPlaceholderCount = searchContext(17395).useFullscreenPlaceholderCount(tmp16);
+  const fullscreenPlaceholderCount = searchContext(17399).useFullscreenPlaceholderCount(tmp16);
   if (cResult[9] !== searchContext) {
     class P {
       constructor() {
@@ -671,10 +671,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return;
             }
           }
-          const tmpResult7 = tmp(17492);
+          const tmpResult7 = tmp(17496);
           const _Set = Set;
-          const set = new Set(tmp(17492).getSearchQueryUserIds(searchContext));
-          set1 = new Set(tmp(17492).getSearchQueryChannelIds(searchContext));
+          const set = new Set(tmp(17496).getSearchQueryUserIds(searchContext));
+          set1 = new Set(tmp(17496).getSearchQueryChannelIds(searchContext));
           maybeAddUserItem = function maybeAddUserItem(arg0, arg1) {
 
           };
@@ -879,7 +879,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          const tmpResult8 = tmp(17492);
+          const tmpResult8 = tmp(17496);
         }
         cResult[26] = stateFromStores;
         cResult[27] = tmp23;
@@ -986,7 +986,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[11] = searchContext;
   cResult[12] = P;
   cResult[13] = Q;
-  const tmpResult6 = searchContext(17395);
+  const tmpResult6 = searchContext(17399);
 }) : (function AutocompleteScreen(searchContext) {
   searchContext = searchContext.searchContext;
   first = undefined;

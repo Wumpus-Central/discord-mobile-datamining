@@ -1,18 +1,18 @@
-// === Module 11744: AppLauncherSearchUtils ===
+// === Module 11546: AppLauncherSearchUtils ===
 
-// Module 11744 (AppLauncherSearchUtils)
+// Module 11546 (AppLauncherSearchUtils)
 import Server from "Server" /* 1998 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9235 */;
 import AppLauncherUtils from "AppLauncherUtils" /* 9247 */;
 import CommandPermissionContext from "CommandPermissionContext" /* 9253 */;
-import SearchAppsRequestSource from "SearchAppsRequestSource" /* 11746 */;
-import ArraySearch from "ArraySearch" /* 11747 */;
-import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 11748 */;
+import SearchAppsRequestSource from "SearchAppsRequestSource" /* 11548 */;
+import ArraySearch from "ArraySearch" /* 11549 */;
+import ApplicationDirectoryActionCreatorsAll from "ApplicationDirectoryActionCreators" /* 11550 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9250 */;
 import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9249 */;
-import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 11745 */;
+import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 11547 */;
 
 require = fn;
 function sortApplicationFreceny(id, id2) {
@@ -28,7 +28,7 @@ function sortCommandsAlpha(displayName, displayName2) {
 }
 const ApplicationCommandIndexStore = fn(9248);
 ({ appLauncherOnlyCompareNames: closure_7, getSection: closure_8, useContextIndexState: closure_9, useUserIndexState: c10 } = ApplicationCommandIndexStore);
-const FetchState = fn(11745).FetchState;
+const FetchState = fn(11547).FetchState;
 const BuiltInSectionId = fn(5403).BuiltInSectionId;
 const COMMAND_SENTINEL = fn(5404).COMMAND_SENTINEL;
 let ReactCompilerGating = fn(558);

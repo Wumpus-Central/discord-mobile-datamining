@@ -1,13 +1,13 @@
-// === Module 15238: ConnectionsSettingScreen ===
+// === Module 15559: ConnectionsSettingScreen ===
 
-// Module 15238 (ConnectionsSettingScreen)
+// Module 15559 (ConnectionsSettingScreen)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15239, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15560, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -51,7 +51,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
   if (cResult[3] !== selectedPlatformType) {
     const obj4 = { selectedPlatformType };
-    const tmp11 = jsx(tmp(15240).UserSettingsConnections, { selectedPlatformType });
+    const tmp11 = jsx(tmp(15561).UserSettingsConnections, { selectedPlatformType });
     cResult[3] = selectedPlatformType;
     cResult[4] = tmp11;
     let tmp9 = tmp11;
@@ -81,5 +81,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     });
   }, items);
-  return jsx(tmp(15240).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(15561).UserSettingsConnections, { selectedPlatformType });
 }));

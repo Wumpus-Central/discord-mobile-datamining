@@ -1,6 +1,6 @@
-// === Module 11703: GameInviteVoiceCount ===
+// === Module 12446: GameInviteVoiceCount ===
 
-// Module 11703 (GameInviteVoiceCount)
+// Module 12446 (GameInviteVoiceCount)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5116 */;

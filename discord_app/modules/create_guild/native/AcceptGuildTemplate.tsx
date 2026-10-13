@@ -1,6 +1,6 @@
-// === Module 11350: AcceptGuildTemplate ===
+// === Module 12148: AcceptGuildTemplate ===
 
-// Module 11350 (AcceptGuildTemplate)
+// Module 12148 (AcceptGuildTemplate)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
@@ -13,10 +13,10 @@ import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndic
 import _modDef8557 from "module_8557" /* 8557 */;
 import FormDividerDefault from "FormDivider" /* 8584 */;
 import RolePillDefault from "RolePill" /* 10305 */;
-import InvalidLink from "InvalidLink" /* 11351 */;
-import GuildIconUploaderDefault from "GuildIconUploader" /* 11353 */;
-import _modDef11358 from "module_11358" /* 11358 */;
-import _modDef11359 from "module_11359" /* 11359 */;
+import InvalidLink from "InvalidLink" /* 12149 */;
+import GuildIconUploaderDefault from "GuildIconUploader" /* 12151 */;
+import _modDef12156 from "module_12156" /* 12156 */;
+import _modDef12157 from "module_12157" /* 12157 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 5906 */;
 
@@ -655,9 +655,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     if (isGuildVocalChannelType(type)) {
       let tmp10Result = _modDef8557;
     } else if (type === constants2.GUILD_CATEGORY) {
-      tmp10Result = _modDef11358;
+      tmp10Result = _modDef12156;
     } else {
-      tmp10Result = _modDef11359;
+      tmp10Result = _modDef12157;
     }
     obj2.source = tmp10Result;
     const items1 = [closure_2_11(native.Icon, obj2), ];
@@ -717,9 +717,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       if (isGuildVocalChannelType(type)) {
         let tmp10Result = _modDef8557;
       } else if (type === constants2.GUILD_CATEGORY) {
-        tmp10Result = _modDef11358;
+        tmp10Result = _modDef12156;
       } else {
-        tmp10Result = _modDef11359;
+        tmp10Result = _modDef12157;
       }
       obj2.source = tmp10Result;
       const items1 = [closure_2_11(native.Icon, obj2), ];

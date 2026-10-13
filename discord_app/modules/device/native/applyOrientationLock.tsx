@@ -1,6 +1,6 @@
-// === Module 12989: applyOrientationLock ===
+// === Module 13481: applyOrientationLock ===
 
-// Module 12989 (applyOrientationLock)
+// Module 13481 (applyOrientationLock)
 import DeviceOrientation from "DeviceOrientation" /* 8451 */;
 import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 10359 */;
 import size from "module_2" /* 2 */;

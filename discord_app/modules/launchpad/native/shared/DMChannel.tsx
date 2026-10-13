@@ -1,6 +1,6 @@
-// === Module 17998: shared/DMChannel ===
+// === Module 18002: shared/DMChannel ===
 
-// Module 17998 (shared/DMChannel)
+// Module 18002 (shared/DMChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,13 +10,13 @@ import useChannelNameDefault from "useChannelName" /* 5421 */;
 import Pressables from "Pressables" /* 6185 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9314 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10283 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 12588 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15612 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16802 */;
-import renderChannelItemDefault from "renderChannelItem" /* 17410 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17411 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 17990 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17992 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 13098 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15927 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 17106 */;
+import renderChannelItemDefault from "renderChannelItem" /* 17414 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17415 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17994 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17996 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

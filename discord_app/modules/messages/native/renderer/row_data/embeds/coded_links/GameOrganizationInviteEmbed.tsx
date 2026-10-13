@@ -1,6 +1,6 @@
-// === Module 13531: GameOrganizationInviteEmbed ===
+// === Module 13868: GameOrganizationInviteEmbed ===
 
-// Module 13531 (GameOrganizationInviteEmbed)
+// Module 13868 (GameOrganizationInviteEmbed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2438 from "module_2438" /* 2438 */;

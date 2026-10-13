@@ -1,6 +1,6 @@
-// === Module 17356: ConjureChannelChatToasts ===
+// === Module 17360: ConjureChannelChatToasts ===
 
-// Module 17356 (ConjureChannelChatToasts)
+// Module 17360 (ConjureChannelChatToasts)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import native from "native" /* 1200 */;
 import UserUtils from "UserUtils" /* 4962 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Card from "Card" /* 6182 */;
-import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 17357 */;
+import useConjureChatToastMessagesDefault from "useConjureChatToastMessages" /* 17361 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

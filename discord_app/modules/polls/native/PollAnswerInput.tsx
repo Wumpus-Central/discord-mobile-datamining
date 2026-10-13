@@ -1,6 +1,6 @@
-// === Module 11923: PollAnswerInput ===
+// === Module 11745: PollAnswerInput ===
 
-// Module 11923 (PollAnswerInput)
+// Module 11745 (PollAnswerInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -11,7 +11,7 @@ import Pressables from "Pressables" /* 6185 */;
 import PollsUtils from "PollsUtils" /* 7898 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9263 */;
 import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9427 */;
-import useRenderPollAnswerImageDefault from "useRenderPollAnswerImage" /* 11924 */;
+import useRenderPollAnswerImageDefault from "useRenderPollAnswerImage" /* 11746 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
@@ -285,7 +285,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11925, dependencyMap.paths), collapsed, { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker });
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11747, dependencyMap.paths), collapsed, { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker });
       },
       iconSrc: index(channelId[21]),
       containerStyle: tmp.defaultImageContainer,

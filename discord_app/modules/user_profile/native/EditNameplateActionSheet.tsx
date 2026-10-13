@@ -1,6 +1,6 @@
-// === Module 14896: EditNameplateActionSheet ===
+// === Module 15217: EditNameplateActionSheet ===
 
-// Module 14896 (EditNameplateActionSheet)
+// Module 15217 (EditNameplateActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,7 +10,7 @@ import useShopProductItems from "useShopProductItems" /* 8296 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8298 */;
 import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9021 */;
 import NameplatePreview from "NameplatePreview" /* 10628 */;
-import EditNameplateSection from "EditNameplateSection" /* 14898 */;
+import EditNameplateSection from "EditNameplateSection" /* 15219 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7280 */;

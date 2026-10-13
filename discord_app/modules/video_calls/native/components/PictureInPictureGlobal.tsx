@@ -1,6 +1,6 @@
-// === Module 17674: PictureInPictureGlobal ===
+// === Module 17678: PictureInPictureGlobal ===
 
-// Module 17674 (PictureInPictureGlobal)
+// Module 17678 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1200 */;
@@ -12,7 +12,7 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7482 */;
 import transitionToActivityDefault from "transitionToActivity" /* 10824 */;
 import PictureInPictureDefault from "PictureInPicture" /* 10833 */;
 import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 10835 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17675 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17679 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;

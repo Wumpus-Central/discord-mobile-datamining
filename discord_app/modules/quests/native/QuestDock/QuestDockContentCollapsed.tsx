@@ -1,6 +1,6 @@
-// === Module 15462: QuestDockContentCollapsed ===
+// === Module 15777: QuestDockContentCollapsed ===
 
-// Module 15462 (QuestDockContentCollapsed)
+// Module 15777 (QuestDockContentCollapsed)
 import spring from "spring" /* 5378 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const QuestDockMode = fn(5972).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15370).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15687).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj = { questDockContentCollapsed: null };
@@ -31,7 +31,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ children, hideOnExpand } = arg0);
   _require = tmp4;
   const tmp5 = closure_7();
-  const activeQuestDockMode = noop.useContext(tmp(15371).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(tmp(15688).QuestDockGestureContext).activeQuestDockMode;
   let obj = require("c");
   class C {
     constructor() {
@@ -101,7 +101,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(15371).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(hideOnExpand(15688).QuestDockGestureContext).activeQuestDockMode;
   const tmp2 = closure_7();
   class D {
     constructor() {

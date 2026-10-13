@@ -1,6 +1,6 @@
-// === Module 17084: useIsPreviewlessProject ===
+// === Module 11319: useIsPreviewlessProject ===
 
-// Module 17084 (useIsPreviewlessProject)
+// Module 11319 (useIsPreviewlessProject)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
 

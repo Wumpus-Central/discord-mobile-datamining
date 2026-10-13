@@ -1,6 +1,6 @@
-// === Module 12868: ChannelMemberCountStore ===
+// === Module 13360: ChannelMemberCountStore ===
 
-// Module 12868 (ChannelMemberCountStore)
+// Module 13360 (ChannelMemberCountStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

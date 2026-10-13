@@ -1,6 +1,6 @@
-// === Module 14016: GuildFriendshipStore ===
+// === Module 14353: GuildFriendshipStore ===
 
-// Module 14016 (GuildFriendshipStore)
+// Module 14353 (GuildFriendshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;

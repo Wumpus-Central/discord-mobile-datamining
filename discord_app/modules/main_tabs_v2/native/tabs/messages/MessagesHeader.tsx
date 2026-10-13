@@ -1,6 +1,6 @@
-// === Module 16462: MessagesHeader ===
+// === Module 16767: MessagesHeader ===
 
-// Module 16462 (MessagesHeader)
+// Module 16767 (MessagesHeader)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
 import _modDef5033 from "module_5033" /* 5033 */;
@@ -9,9 +9,9 @@ import ButtonConstants from "ButtonConstants" /* 5384 */;
 import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6202 */;
 import _modDef6741 from "module_6741" /* 6741 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10515 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11895 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12036 */;
-import MessageRequestsButtonDefault from "MessageRequestsButton" /* 16463 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11700 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12552 */;
+import MessageRequestsButtonDefault from "MessageRequestsButton" /* 16768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -72,7 +72,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     fn.__initData = __initData;
     const animatedStyle = scrollPosition(4850).useAnimatedStyle(fn);
     const tmpResult = scrollPosition(4850);
-    const isHomeDrawerEnabled = scrollPosition(16457).useIsHomeDrawerEnabled();
+    const isHomeDrawerEnabled = scrollPosition(16762).useIsHomeDrawerEnabled();
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const fn2 = function f() {
@@ -593,7 +593,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[16] = tmp24;
       cResult[17] = tmp30;
     }
-    const tmpResult2 = scrollPosition(16457);
+    const tmpResult2 = scrollPosition(16762);
   }
   const items3 = [tmp4.headerPanel, tmp5];
   cResult[2] = tmp4.headerPanel;
@@ -624,7 +624,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj2 = { withSpring: height(5378).withSpring, scrollPosition };
-  const isHomeDrawerEnabled = height(16457).useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = height(16762).useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(headerPanel[14]).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -657,7 +657,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }, []);
-  let obj3 = height(16457);
+  let obj3 = height(16762);
   const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
   const tmp12 = scrollPosition(6202)("bespoke");
   obj4.icon = closure_6(height(10309).PlusLargeIcon, { size: "sm", color: scrollPosition(587).colors.WHITE });
@@ -683,7 +683,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj10 = { onPress: callback2, variant: "secondary", size: "sm", icon: scrollPosition(6741), accessibilityLabel: null };
   const intl3 = tmp3(1126).intl;
   obj10.accessibilityLabel = intl3.string(height(1126).t["5h0QOP"]);
-  const items2 = [closure_6(height(7574).IconButton, obj10), closure_6(scrollPosition(16463), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
+  const items2 = [closure_6(height(7574).IconButton, obj10), closure_6(scrollPosition(16768), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
   const obj11 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: scrollPosition(5033), onPress: callback1, maxFontSizeMultiplier: 1, text: null };
   const intl4 = tmp3(1126).intl;
   obj11.text = intl4.string(height(1126).t.zIJnA6);

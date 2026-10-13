@@ -1,6 +1,6 @@
-// === Module 18216: AppStoreAgeSignalReport ===
+// === Module 18220: AppStoreAgeSignalReport ===
 
-// Module 18216 (AppStoreAgeSignalReport)
+// Module 18220 (AppStoreAgeSignalReport)
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5921 */;
 import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7546 */;

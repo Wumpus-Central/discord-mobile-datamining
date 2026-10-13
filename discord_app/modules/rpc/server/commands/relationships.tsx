@@ -1,6 +1,6 @@
-// === Module 14755: relationships ===
+// === Module 15076: relationships ===
 
-// Module 14755 (relationships)
+// Module 15076 (relationships)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import RPCErrorDefault from "RPCError" /* 10936 */;
 import RPCHelpers from "RPCHelpers" /* 10945 */;
@@ -12,7 +12,7 @@ require = fn;
 const Constants = fn(1085);
 ({ ApplicationFlags: closure_7, RelationshipTypes: closure_8, RPCCommands, RPCErrors: closure_9 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14736);
+const CONTEXT_MENU_ICON_NAMES = fn(15057);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 let items = [fn(8458).OAuth2Scopes.RELATIONSHIPS_READ];

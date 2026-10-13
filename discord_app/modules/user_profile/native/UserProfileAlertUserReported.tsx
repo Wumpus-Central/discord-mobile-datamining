@@ -1,6 +1,6 @@
-// === Module 12368: UserProfileAlertUserReported ===
+// === Module 12878: UserProfileAlertUserReported ===
 
-// Module 12368 (UserProfileAlertUserReported)
+// Module 12878 (UserProfileAlertUserReported)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AlertModal from "AlertModal" /* 5305 */;

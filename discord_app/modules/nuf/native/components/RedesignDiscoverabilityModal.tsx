@@ -1,18 +1,18 @@
-// === Module 18204: RedesignDiscoverabilityModal ===
+// === Module 18208: RedesignDiscoverabilityModal ===
 
-// Module 18204 (RedesignDiscoverabilityModal)
+// Module 18208 (RedesignDiscoverabilityModal)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12408 */;
-import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12421 */;
-import NUFActionCreators from "NUFActionCreators" /* 12429 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12918 */;
+import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12931 */;
+import NUFActionCreators from "NUFActionCreators" /* 12939 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12401).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12911).useContactSyncModalStore;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj2 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: null };
@@ -202,7 +202,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Discov
       tmp15 = tmp18;
     }
     const obj3 = { onNext: tmp9, loading: false, initialName: name };
-    const tmp14 = jsx(allowPhone(12422), { onNext: tmp9, loading: false, initialName: name });
+    const tmp14 = jsx(allowPhone(12932), { onNext: tmp9, loading: false, initialName: name });
     cResult[6] = tmp9;
     cResult[7] = name;
     cResult[8] = tmp14;
@@ -244,7 +244,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Discov
     name = "";
   }
   obj2.initialName = name;
-  obj.children = jsx(allowPhone(12422), { onNext: callback, loading: false, initialName: null });
+  obj.children = jsx(allowPhone(12932), { onNext: callback, loading: false, initialName: null });
   return <View style={tmp.container}>{null}</View>;
 });
 ReactCompilerGating = fn(558);

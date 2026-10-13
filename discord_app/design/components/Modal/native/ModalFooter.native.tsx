@@ -1,6 +1,6 @@
-// === Module 11541: ModalFooter ===
+// === Module 12294: ModalFooter ===
 
-// Module 11541 (ModalFooter)
+// Module 12294 (ModalFooter)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

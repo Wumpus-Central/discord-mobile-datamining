@@ -1,6 +1,6 @@
-// === Module 17898: VoicePanelPIPContent ===
+// === Module 17902: VoicePanelPIPContent ===
 
-// Module 17898 (VoicePanelPIPContent)
+// Module 17902 (VoicePanelPIPContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
@@ -13,12 +13,12 @@ import NativeViewDefault from "NativeView" /* 6162 */;
 import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6762 */;
 import useProfileTileGradientDefault from "useProfileTileGradient" /* 8378 */;
 import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 10900 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11971 */;
-import VoicePanelCardLayoutManager from "VoicePanelCardLayoutManager" /* 11974 */;
-import VideoActionCreators from "VideoActionCreators" /* 17748 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17796 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17798 */;
-import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 17864 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12487 */;
+import VoicePanelCardLayoutManager from "VoicePanelCardLayoutManager" /* 12490 */;
+import VideoActionCreators from "VideoActionCreators" /* 17752 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17800 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17802 */;
+import VoicePanelStreamOutputSinkStack from "VoicePanelStreamOutputSinkStack" /* 17868 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
@@ -67,8 +67,8 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelModes = fn(11972).VoicePanelModes;
-const VoicePanelPIPModes = fn(17797).VoicePanelPIPModes;
+const VoicePanelModes = fn(12488).VoicePanelModes;
+const VoicePanelPIPModes = fn(17801).VoicePanelPIPModes;
 let Constants = fn(1085);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 Constants = fn(2024);
@@ -1723,11 +1723,11 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
   let callback2;
   ({ transitionState, transitionCleanUp, layoutTransition } = participantId);
   const tmp = closure_24();
-  const mode = participantId(17798).usePIPState().mode;
+  const mode = participantId(17802).usePIPState().mode;
   let tmp4 = closure_28(tmp, transitionState, transitionCleanUp);
-  const context = video.useContext(mode(11971));
+  const context = video.useContext(mode(12487));
   ({ channelId: c2, layoutManager } = context);
-  let obj = participantId(17798);
+  let obj = participantId(17802);
   let tmp2 = participantId;
   const items = [callback2];
   const stateFromStoresObject = participantId(573).useStateFromStoresObject(items, () => {

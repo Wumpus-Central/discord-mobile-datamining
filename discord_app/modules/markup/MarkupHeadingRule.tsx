@@ -1,6 +1,6 @@
-// === Module 14057: MarkupHeadingRule ===
+// === Module 14394: MarkupHeadingRule ===
 
-// Module 14057 (MarkupHeadingRule)
+// Module 14394 (MarkupHeadingRule)
 import _mod1949 from "module_1949" /* 1949 */;
 
 const _modDef1949 = _mod1949;

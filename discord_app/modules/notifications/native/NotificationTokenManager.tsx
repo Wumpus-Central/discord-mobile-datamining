@@ -1,6 +1,6 @@
-// === Module 14698: NotificationTokenManager ===
+// === Module 15019: NotificationTokenManager ===
 
-// Module 14698 (NotificationTokenManager)
+// Module 15019 (NotificationTokenManager)
 import _mod17 from "module_17" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
@@ -10,14 +10,14 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import _modDef2894 from "module_2894" /* 2894 */;
 import PushNotificationDefault from "PushNotification" /* 11031 */;
-import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12126 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14699 */;
-import NotifSettingsExperiments from "NotifSettingsExperiments" /* 14702 */;
-import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 14703 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14704 */;
+import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12642 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15020 */;
+import NotifSettingsExperiments from "NotifSettingsExperiments" /* 15023 */;
+import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 15024 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15025 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
-import MultiAccountStore from "MultiAccountStore" /* 12127 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13929 */;
+import MultiAccountStore from "MultiAccountStore" /* 12643 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 14266 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;
 import size from "module_2" /* 2 */;

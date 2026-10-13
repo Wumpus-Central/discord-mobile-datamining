@@ -1,6 +1,6 @@
-// === Module 13595: GuildEventVoiceBanner ===
+// === Module 13932: GuildEventVoiceBanner ===
 
-// Module 13595 (GuildEventVoiceBanner)
+// Module 13932 (GuildEventVoiceBanner)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8514 */;

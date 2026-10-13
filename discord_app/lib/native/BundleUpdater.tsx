@@ -1,6 +1,6 @@
-// === Module 11343: BundleUpdater ===
+// === Module 12141: BundleUpdater ===
 
-// Module 11343 (BundleUpdater)
+// Module 12141 (BundleUpdater)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;

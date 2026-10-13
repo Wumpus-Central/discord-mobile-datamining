@@ -1,6 +1,6 @@
-// === Module 15082: BlockedUserRowV2 ===
+// === Module 15403: BlockedUserRowV2 ===
 
-// Module 15082 (BlockedUserRowV2)
+// Module 15403 (BlockedUserRowV2)
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
 import noop from "module_19" /* 19 */;
@@ -109,7 +109,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
           }
         }
         const obj7 = { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 };
-        const tmp16 = jsx(tmp(15083).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
+        const tmp16 = jsx(tmp(15404).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
         cResult[14] = tmp7;
         cResult[15] = tmp13;
         cResult[16] = userRecord;
@@ -161,9 +161,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
     showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
   }
   const formatToPlainStringResult = intl.formatToPlainString(userRecord(1126).t.izBDZN, { name: username });
-  let obj = { accessible: false, icon: null, label: null, onPress: null, trailing: null };
-  let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32 };
-  obj.icon = jsx(userRecord(1200).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32 });
+  let obj = { accessible: false, icon: jsx(userRecord(1200).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null };
   const obj3 = {
     userRecord,
     accessibilityActions: null,
@@ -179,7 +177,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
   };
   const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(15083).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(15404).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -192,7 +190,6 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
       }
     }
   });
-  obj.onPress = handleOpenProfile;
   const obj4 = { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
   const intl2 = tmp2(1126).intl;
   obj4.text = intl2.string(userRecord(1126).t["PR/xUz"]);
@@ -201,7 +198,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocked
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
   obj.trailing = jsx(userRecord(5379).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(6180).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
+  return jsx(userRecord(6180).TableRow, { accessible: false, icon: jsx(userRecord(1200).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32 }), label: null, onPress: handleOpenProfile, trailing: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

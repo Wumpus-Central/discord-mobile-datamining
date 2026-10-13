@@ -1,6 +1,6 @@
-// === Module 15892: DevToolsLocalMessageCache ===
+// === Module 16205: DevToolsLocalMessageCache ===
 
-// Module 15892 (DevToolsLocalMessageCache)
+// Module 16205 (DevToolsLocalMessageCache)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

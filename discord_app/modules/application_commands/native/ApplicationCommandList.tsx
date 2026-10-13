@@ -1,6 +1,6 @@
-// === Module 12115: ApplicationCommandList ===
+// === Module 12631: ApplicationCommandList ===
 
-// Module 12115 (ApplicationCommandList)
+// Module 12631 (ApplicationCommandList)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

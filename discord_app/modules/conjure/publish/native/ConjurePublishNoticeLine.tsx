@@ -1,14 +1,14 @@
-// === Module 17208: ConjurePublishNoticeLine ===
+// === Module 11826: ConjurePublishNoticeLine ===
 
-// Module 17208 (ConjurePublishNoticeLine)
+// Module 11826 (ConjurePublishNoticeLine)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 17109 */;
-import conjurePublishCard from "conjurePublishCard" /* 17173 */;
-import conjureReminderSlot from "conjureReminderSlot" /* 17183 */;
-import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 17209 */;
-import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 17210 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 11355 */;
+import conjurePublishCard from "conjurePublishCard" /* 11789 */;
+import conjureReminderSlot from "conjureReminderSlot" /* 11799 */;
+import useConjurePublishedAppNameDefault from "useConjurePublishedAppName" /* 11827 */;
+import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 11828 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

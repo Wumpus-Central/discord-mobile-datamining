@@ -1,6 +1,6 @@
-// === Module 15077: BlockedUsersListV2 ===
+// === Module 15398: BlockedUsersListV2 ===
 
-// Module 15077 (BlockedUsersListV2)
+// Module 15398 (BlockedUsersListV2)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,8 +11,8 @@ import TableRowGroup from "TableRowGroup" /* 6265 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 6852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
-import Blocked from "Blocked" /* 15078 */;
-import BlockedUserRowV2Default from "BlockedUserRowV2" /* 15082 */;
+import Blocked from "Blocked" /* 15399 */;
+import BlockedUserRowV2Default from "BlockedUserRowV2" /* 15403 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 

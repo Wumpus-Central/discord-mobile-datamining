@@ -1,6 +1,6 @@
-// === Module 11639: TypingStore ===
+// === Module 12385: TypingStore ===
 
-// Module 11639 (TypingStore)
+// Module 12385 (TypingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;

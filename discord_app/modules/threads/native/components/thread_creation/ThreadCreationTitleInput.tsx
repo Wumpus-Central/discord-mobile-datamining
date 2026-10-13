@@ -1,6 +1,6 @@
-// === Module 17362: ThreadCreationTitleInput ===
+// === Module 17366: ThreadCreationTitleInput ===
 
-// Module 17362 (ThreadCreationTitleInput)
+// Module 17366 (ThreadCreationTitleInput)
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6976 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7919 */;
 import noop from "module_19" /* 19 */;

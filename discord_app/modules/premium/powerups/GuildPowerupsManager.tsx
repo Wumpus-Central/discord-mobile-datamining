@@ -1,6 +1,6 @@
-// === Module 18115: GuildPowerupsManager ===
+// === Module 18119: GuildPowerupsManager ===
 
-// Module 18115 (GuildPowerupsManager)
+// Module 18119 (GuildPowerupsManager)
 import FavoritesUtils from "FavoritesUtils" /* 2090 */;
 import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5012 */;
 import ServerThemeExperiment2 from "ServerThemeExperiment" /* 5013 */;
@@ -8,9 +8,9 @@ import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /
 import GameServerExperiment2 from "GameServerExperiment" /* 5026 */;
 import shared_PlatformUtils from "shared/PlatformUtils" /* 5294 */;
 import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8027 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12226 */;
-import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 12249 */;
-import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 16602 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12739 */;
+import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 12762 */;
+import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 16907 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;

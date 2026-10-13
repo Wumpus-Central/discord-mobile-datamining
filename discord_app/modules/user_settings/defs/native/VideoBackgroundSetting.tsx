@@ -1,6 +1,6 @@
-// === Module 16327: VideoBackgroundSetting ===
+// === Module 16634: VideoBackgroundSetting ===
 
-// Module 16327 (VideoBackgroundSetting)
+// Module 16634 (VideoBackgroundSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import applyBackgroundOption from "applyBackgroundOption" /* 5253 */;

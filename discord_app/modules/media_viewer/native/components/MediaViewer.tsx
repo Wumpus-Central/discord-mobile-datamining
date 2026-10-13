@@ -1,12 +1,12 @@
-// === Module 13079: MediaViewer ===
+// === Module 13563: MediaViewer ===
 
-// Module 13079 (MediaViewer)
+// Module 13563 (MediaViewer)
 import c from "c" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
 import useVideoControls from "useVideoControls" /* 8390 */;
 import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8420 */;
-import MediaViewerItem from "MediaViewerItem" /* 13081 */;
+import MediaViewerItem from "MediaViewerItem" /* 13565 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ function MediaViewer(arg0) {
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(13085)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(13569)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);

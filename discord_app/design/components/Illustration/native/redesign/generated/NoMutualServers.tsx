@@ -1,6 +1,6 @@
-// === Module 12348: NoMutualServers ===
+// === Module 12860: NoMutualServers ===
 
-// Module 12348 (NoMutualServers)
+// Module 12860 (NoMutualServers)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4969 */;
 import _mod8360 from "module_8360" /* 8360 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoMutualS
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_12349");
+          return require("module_12861");
         },
       darker() {
-          return require("module_12350");
+          return require("module_12862");
         },
       light() {
-          return require("module_12351");
+          return require("module_12863");
         }
     };
     const illustrationSource = _mod8360.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useNoMutualS
   const obj = shared;
   return _mod8360.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_12349");
+      return require("module_12861");
     },
     darker() {
-      return require("module_12350");
+      return require("module_12862");
     },
     light() {
-      return require("module_12351");
+      return require("module_12863");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getNoMutualServersSource(theme) {
   return _mod8360.getIllustrationSource(theme, {
     dark() {
-      return require("module_12349");
+      return require("module_12861");
     },
     darker() {
-      return require("module_12350");
+      return require("module_12862");
     },
     light() {
-      return require("module_12351");
+      return require("module_12863");
     }
   });
 }

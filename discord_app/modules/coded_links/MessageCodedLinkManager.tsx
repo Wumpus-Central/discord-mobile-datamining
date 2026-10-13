@@ -1,8 +1,8 @@
-// === Module 18157: MessageCodedLinkManager ===
+// === Module 18161: MessageCodedLinkManager ===
 
-// Module 18157 (MessageCodedLinkManager)
+// Module 18161 (MessageCodedLinkManager)
 import findCodedLinksDefault from "findCodedLinks" /* 5072 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18171 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18175 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7180 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -25,7 +25,7 @@ function resolveMessageCodedLinks(content) {
     let item = arr.forEach((item) => {
       ({ type, code } = item);
       if (code(5077).CodedLinkType.INVITE === type) {
-        const result = code(18158).queueMessageLinkFetch(closure_3(function*() {
+        const result = code(18162).queueMessageLinkFetch(closure_3(function*() {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -71,9 +71,9 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
-        const tmpResult = code(18158);
+        const tmpResult = code(18162);
       } else if (code(5077).CodedLinkType.TEMPLATE === type) {
-        const result1 = code(18158).queueMessageLinkFetch(closure_3(function*() {
+        const result1 = code(18162).queueMessageLinkFetch(closure_3(function*() {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -119,7 +119,7 @@ function resolveMessageCodedLinks(content) {
             }
           }
         }));
-        const tmpResult5 = code(18158);
+        const tmpResult5 = code(18162);
       } else if (code(5077).CodedLinkType.BUILD_OVERRIDE !== type) {
         if (code(5077).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
           if (code(5077).CodedLinkType.EVENT !== type) {
@@ -139,20 +139,20 @@ function resolveMessageCodedLinks(content) {
                                       if (code(5077).CodedLinkType.USER_PROFILE !== type) {
                                         if (code(5077).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                                           if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
-                                            const result2 = code(18158).queueMessageLinkFetch(() => {
-                                              const useGameOrganizationInviteFetch = content(18165).useGameOrganizationInviteFetch;
+                                            const result2 = code(18162).queueMessageLinkFetch(() => {
+                                              const useGameOrganizationInviteFetch = content(18169).useGameOrganizationInviteFetch;
                                               const items = [code];
                                               return useGameOrganizationInviteFetch.fetchMany(items);
                                             });
-                                            const tmpResult7 = code(18158);
+                                            const tmpResult7 = code(18162);
                                           }
-                                          tmpResult6 = code(13530);
+                                          tmpResult6 = code(13867);
                                         } else {
                                           if (code(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
                                             if (code(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
                                               if (code(5077).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                const embedApplication = code(11748).getEmbedApplication(code);
-                                                const tmpResult8 = code(11748);
+                                                const embedApplication = code(11550).getEmbedApplication(code);
+                                                const tmpResult8 = code(11550);
                                               } else {
                                                 const _Error = Error;
                                                 const _HermesInternal = HermesInternal;
@@ -160,7 +160,7 @@ function resolveMessageCodedLinks(content) {
                                               }
                                             }
                                           }
-                                          closure_1(18168)(type, code);
+                                          closure_1(18172)(type, code);
                                         }
                                       }
                                     }
@@ -193,7 +193,7 @@ function resolveMessageCodedLinks(content) {
         const item = arr.forEach((item) => {
           ({ type, code } = item);
           if (code(5077).CodedLinkType.INVITE === type) {
-            const result = code(18158).queueMessageLinkFetch(closure_3(function*() {
+            const result = code(18162).queueMessageLinkFetch(closure_3(function*() {
               if (c0 === 2) {
                 c0 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -239,9 +239,9 @@ function resolveMessageCodedLinks(content) {
                 }
               }
             }));
-            const tmpResult = code(18158);
+            const tmpResult = code(18162);
           } else if (code(5077).CodedLinkType.TEMPLATE === type) {
-            const result1 = code(18158).queueMessageLinkFetch(closure_3(function*() {
+            const result1 = code(18162).queueMessageLinkFetch(closure_3(function*() {
               if (c0 === 2) {
                 c0 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -287,7 +287,7 @@ function resolveMessageCodedLinks(content) {
                 }
               }
             }));
-            const tmpResult5 = code(18158);
+            const tmpResult5 = code(18162);
           } else if (code(5077).CodedLinkType.BUILD_OVERRIDE !== type) {
             if (code(5077).CodedLinkType.MANUAL_BUILD_OVERRIDE !== type) {
               if (code(5077).CodedLinkType.EVENT !== type) {
@@ -307,20 +307,20 @@ function resolveMessageCodedLinks(content) {
                                           if (code(5077).CodedLinkType.USER_PROFILE !== type) {
                                             if (code(5077).CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                                               if (tmpResult6.getLinkedGameOrgInvitesEnabled("MessageCodedLinkManager")) {
-                                                const result2 = code(18158).queueMessageLinkFetch(() => {
-                                                  const useGameOrganizationInviteFetch = content(18165).useGameOrganizationInviteFetch;
+                                                const result2 = code(18162).queueMessageLinkFetch(() => {
+                                                  const useGameOrganizationInviteFetch = content(18169).useGameOrganizationInviteFetch;
                                                   const items = [code];
                                                   return useGameOrganizationInviteFetch.fetchMany(items);
                                                 });
-                                                const tmpResult7 = code(18158);
+                                                const tmpResult7 = code(18162);
                                               }
-                                              tmpResult6 = code(13530);
+                                              tmpResult6 = code(13867);
                                             } else {
                                               if (code(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
                                                 if (code(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
                                                   if (code(5077).CodedLinkType.APP_DIRECTORY_PROFILE === type) {
-                                                    const embedApplication = code(11748).getEmbedApplication(code);
-                                                    const tmpResult8 = code(11748);
+                                                    const embedApplication = code(11550).getEmbedApplication(code);
+                                                    const tmpResult8 = code(11550);
                                                   } else {
                                                     const _Error = Error;
                                                     const _HermesInternal = HermesInternal;
@@ -328,7 +328,7 @@ function resolveMessageCodedLinks(content) {
                                                   }
                                                 }
                                               }
-                                              closure_1(18168)(type, code);
+                                              closure_1(18172)(type, code);
                                             }
                                           }
                                         }

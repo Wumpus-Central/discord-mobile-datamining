@@ -1,6 +1,6 @@
-// === Module 17643: MessageRequestMutualServers ===
+// === Module 17647: MessageRequestMutualServers ===
 
-// Module 17643 (MessageRequestMutualServers)
+// Module 17647 (MessageRequestMutualServers)
 import GuildIconDefault from "GuildIcon" /* 6159 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
   }
   const tmp3 = closure_6();
   const obj = iconSize(576);
-  const mutualGuildsForMessageRequests = PressableOpacity(17644).useMutualGuildsForMessageRequests(userId);
+  const mutualGuildsForMessageRequests = PressableOpacity(17648).useMutualGuildsForMessageRequests(userId);
   if (cResult[0] === mutualGuildsForMessageRequests.length) {
     if (cResult[1] === iconSize) {
       if (cResult[2] === mutualGuildsForMessageRequests) {
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
       let tmp13 = length > 0;
       if (tmp13) {
         const obj6 = { size: iconSize, names: substr.map((name) => name.name), children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)) };
-        tmp13 = closure_4(PressableOpacity(12361).GuildIconPile, obj6);
+        tmp13 = closure_4(PressableOpacity(12871).GuildIconPile, obj6);
       }
       cResult[0] = length;
       cResult[1] = iconSize;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
     cResult[13] = items1;
     tmp12 = items1;
   }
-  const PressableOpacityResult = PressableOpacity(17644);
+  const PressableOpacityResult = PressableOpacity(17648);
 }) : (function MessageRequestMutualServers(textVariant) {
   ({ onPress, iconSize } = textVariant);
   ({ userId, style } = textVariant);
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
   }
   const suffix = textVariant.suffix;
   const tmp3 = closure_6();
-  const mutualGuildsForMessageRequests = iconSize(17644).useMutualGuildsForMessageRequests(userId);
+  const mutualGuildsForMessageRequests = iconSize(17648).useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
     const intl2 = tmp4(1126).intl;
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
   let tmp9 = length > 0;
   if (tmp9) {
     const obj4 = { size: iconSize, names: substr.map((name) => name.name), children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)) };
-    tmp9 = closure_4(tmp4(12361).GuildIconPile, obj4);
+    tmp9 = closure_4(tmp4(12871).GuildIconPile, obj4);
   }
   const items1 = [tmp9, ];
   const obj5 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };

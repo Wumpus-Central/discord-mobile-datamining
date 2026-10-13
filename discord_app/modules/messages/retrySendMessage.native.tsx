@@ -1,6 +1,6 @@
-// === Module 12824: retrySendMessage ===
+// === Module 13318: retrySendMessage ===
 
-// Module 12824 (retrySendMessage)
+// Module 13318 (retrySendMessage)
 import MessageConstants from "MessageConstants" /* 5085 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7179 */;
 import handleUploadAttachmentErrors from "handleUploadAttachmentErrors" /* 9265 */;

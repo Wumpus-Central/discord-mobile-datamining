@@ -1,6 +1,6 @@
-// === Module 15977: SelectScreen ===
+// === Module 16290: SelectScreen ===
 
-// Module 15977 (SelectScreen)
+// Module 16290 (SelectScreen)
 import NavigatorConstants from "NavigatorConstants" /* 6259 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 6626 */;
 import RowButton from "RowButton" /* 8582 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SELECT_NAMES = fn(15974).SELECT_NAMES;
+const SELECT_NAMES = fn(16287).SELECT_NAMES;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5092);

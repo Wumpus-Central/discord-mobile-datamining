@@ -1,6 +1,6 @@
-// === Module 15197: FamilyCenterAcceptedLinks ===
+// === Module 15518: FamilyCenterAcceptedLinks ===
 
-// Module 15197 (FamilyCenterAcceptedLinks)
+// Module 15518 (FamilyCenterAcceptedLinks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
@@ -8,14 +8,14 @@ import _modDef2568 from "module_2568" /* 2568 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import useUserLinks from "useUserLinks" /* 7739 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7740 */;
-import FamilyCenterEmptyDefault from "FamilyCenterEmpty" /* 15198 */;
-import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 15199 */;
-import _modDef15204 from "module_15204" /* 15204 */;
+import FamilyCenterEmptyDefault from "FamilyCenterEmpty" /* 15519 */;
+import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow" /* 15520 */;
+import _modDef15525 from "module_15525" /* 15525 */;
 import noop from "module_19" /* 19 */;
 
 const util = intl(1126);
 const Text_Text = intl(5088);
-const useAgeSpecificText2 = intl(11535);
+const useAgeSpecificText2 = intl(12288);
 require = fn;
 function FamilyCenterAcceptedLinkRow(otherUser) {
   let tmp4Result = null;
@@ -30,10 +30,10 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     const obj3 = { name: str1 };
     obj.accessibilityLabel = intl.formatToPlainString(_modDef2568.T7DUoU, obj3);
     obj.onPress = function handleDisconnect() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15202, dependencyMap.paths), { otherUser: str });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15523, dependencyMap.paths), { otherUser: str });
     };
     obj.style = tmp.actionButton;
-    const obj4 = { size: str(1200).Icon.Sizes.SMALL, disableColor: true, source: _modDef15204 };
+    const obj4 = { size: str(1200).Icon.Sizes.SMALL, disableColor: true, source: _modDef15525 };
     obj.children = closure_6(str(1200).Icon, obj4);
     obj2.actions = closure_6(str(6185).PressableOpacity, obj);
     tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj2);

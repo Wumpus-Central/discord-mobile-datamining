@@ -1,6 +1,6 @@
-// === Module 13180: UserProfileEditNoteModal ===
+// === Module 13662: UserProfileEditNoteModal ===
 
-// Module 13180 (UserProfileEditNoteModal)
+// Module 13662 (UserProfileEditNoteModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
@@ -8,7 +8,7 @@ import useNavigation from "useNavigation" /* 1503 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import Navigator from "Navigator" /* 6688 */;
-import UserProfileEditNote from "UserProfileEditNote" /* 13181 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 13663 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

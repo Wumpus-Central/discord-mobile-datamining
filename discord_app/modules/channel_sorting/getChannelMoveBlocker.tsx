@@ -1,9 +1,9 @@
-// === Module 12699: getChannelMoveBlocker ===
+// === Module 13205: getChannelMoveBlocker ===
 
-// Module 12699 (getChannelMoveBlocker)
+// Module 13205 (getChannelMoveBlocker)
 import FavoritesUtils from "FavoritesUtils" /* 2090 */;
 import isOptInEnabled from "isOptInEnabled" /* 6077 */;
-import canManageChannelList from "canManageChannelList" /* 12700 */;
+import canManageChannelList from "canManageChannelList" /* 13206 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
 

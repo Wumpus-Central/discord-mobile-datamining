@@ -1,6 +1,6 @@
-// === Module 11337: useModalPanGesture ===
+// === Module 12135: useModalPanGesture ===
 
-// Module 11337 (useModalPanGesture)
+// Module 12135 (useModalPanGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;

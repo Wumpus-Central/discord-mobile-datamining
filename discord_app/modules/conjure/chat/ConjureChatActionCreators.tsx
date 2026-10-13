@@ -1,6 +1,6 @@
-// === Module 17323: ConjureChatActionCreators ===
+// === Module 11951: ConjureChatActionCreators ===
 
-// Module 17323 (ConjureChatActionCreators)
+// Module 11951 (ConjureChatActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

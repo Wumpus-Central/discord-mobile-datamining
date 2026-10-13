@@ -1,11 +1,11 @@
-// === Module 18046: AppAnalyticsManager ===
+// === Module 18050: AppAnalyticsManager ===
 
-// Module 18046 (AppAnalyticsManager)
+// Module 18050 (AppAnalyticsManager)
 import DurationsDefault from "Durations" /* 1102 */;
 import Timers from "Timers" /* 2060 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
 import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7436 */;
-import getGamePlatformDefault from "getGamePlatform" /* 17509 */;
+import getGamePlatformDefault from "getGamePlatform" /* 17513 */;
 import RunningGameStore from "RunningGameStore" /* 2019 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;

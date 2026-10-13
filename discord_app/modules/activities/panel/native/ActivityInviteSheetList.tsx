@@ -1,6 +1,6 @@
-// === Module 17772: ActivityInviteSheetList ===
+// === Module 17776: ActivityInviteSheetList ===
 
-// Module 17772 (ActivityInviteSheetList)
+// Module 17776 (ActivityInviteSheetList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,13 +9,16 @@ import RootNavigationRef from "RootNavigationRef" /* 4977 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Pressables from "Pressables" /* 6185 */;
-import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 17773 */;
+import ActivityInviteSheetRowDefault from "ActivityInviteSheetRow" /* 17777 */;
 import noop from "module_19" /* 19 */;
 import TextStyles_mod from "TextStyles" /* 5906 */;
 
 require = fn;
 function keyExtractor(item) {
   return item.item.id;
+}
+function getItemType(type) {
+  return type.type;
 }
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
@@ -165,7 +168,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheetList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityInviteSheetList(data) {
-  const cResult = data(getSendState[7]).c(14);
+  const cResult = data(getSendState[7]).c(15);
   data = data.data;
   const error = data.error;
   getSendState = data.getSendState;
@@ -188,31 +191,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
             } else {
               tmp6 = cResult[7];
             }
-            const sum = error(tmp2[15])(tmp6).insets.bottom + error(tmp2[5]).space.PX_16;
-            if (cResult[8] !== sum) {
-              const obj3 = { paddingBottom: sum, paddingHorizontal: tmp7(tmp2[5]).space.PX_12 };
-              cResult[8] = sum;
-              cResult[9] = obj3;
-              let tmp9 = obj3;
+            const _Symbol2 = Symbol;
+            if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+              const obj3 = { disabled: true };
+              cResult[8] = obj3;
+              let tmp8 = obj3;
             } else {
-              tmp9 = cResult[9];
+              tmp8 = cResult[8];
             }
-            if (cResult[10] === data) {
-              if (cResult[11] === tmp4) {
-                if (cResult[12] === tmp9) {
-                  let tmp10 = cResult[13];
+            const sum = error(tmp2[15])(tmp6).insets.bottom + tmp7(tmp2[5]).space.PX_16;
+            if (cResult[9] !== sum) {
+              const obj4 = { paddingBottom: sum, paddingHorizontal: tmp7(tmp2[5]).space.PX_12 };
+              cResult[9] = sum;
+              cResult[10] = obj4;
+              let tmp10 = obj4;
+            } else {
+              tmp10 = cResult[10];
+            }
+            if (cResult[11] === data) {
+              if (cResult[12] === tmp4) {
+                if (cResult[13] === tmp10) {
+                  let tmp11 = cResult[14];
                 }
-                return tmp10;
+                return tmp11;
               }
             }
-            const obj4 = { contentContainerStyle: tmp9, bounces: false, renderItem: tmp4, data, keyExtractor, keyboardShouldPersistTaps: "always", ListEmptyComponent };
-            const tmp14 = onInviteSent(tmp(tmp2[16]).BottomSheetFlatList, obj4);
-            cResult[10] = data;
-            cResult[11] = tmp4;
-            cResult[12] = tmp9;
-            cResult[13] = tmp14;
-            tmp10 = tmp14;
-            tmp7 = error;
+            const obj5 = { maintainVisibleContentPosition: tmp8, contentContainerStyle: tmp10, bounces: false, renderItem: tmp4, data, keyExtractor, getItemType, keyboardShouldPersistTaps: "always", ListEmptyComponent };
+            const tmp16 = onInviteSent(tmp(tmp2[16]).BottomSheetFlashList, obj5);
+            cResult[11] = data;
+            cResult[12] = tmp4;
+            cResult[13] = tmp10;
+            cResult[14] = tmp16;
+            tmp11 = tmp16;
           }
         }
       }
@@ -246,6 +256,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     const obj = { start: 0 === index, end: index === data.length - 1, row: item, onPressAvatar, onInviteSent, isSubmitting, error, sendState: getSendState(item) };
     return React4(ActivityInviteSheetRowDefault, obj);
   }, items);
-  let obj = { contentContainerStyle: { paddingBottom: error(getSendState[15])({ isKeyboardAwareOnAndroid: false }).insets.bottom + error(getSendState[5]).space.PX_16, paddingHorizontal: error(getSendState[5]).space.PX_12 }, bounces: false, renderItem: callback, data, keyExtractor, keyboardShouldPersistTaps: "always", ListEmptyComponent };
-  return onInviteSent(data(getSendState[16]).BottomSheetFlatList, obj);
+  let obj = { maintainVisibleContentPosition: { disabled: true }, contentContainerStyle: { paddingBottom: error(getSendState[15])({ isKeyboardAwareOnAndroid: false }).insets.bottom + error(getSendState[5]).space.PX_16, paddingHorizontal: error(getSendState[5]).space.PX_12 }, bounces: false, renderItem: callback, data, keyExtractor, getItemType, keyboardShouldPersistTaps: "always", ListEmptyComponent };
+  return onInviteSent(data(getSendState[16]).BottomSheetFlashList, obj);
 });

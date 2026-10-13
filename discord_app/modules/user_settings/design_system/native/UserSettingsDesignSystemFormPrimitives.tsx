@@ -1,6 +1,6 @@
-// === Module 16183: UserSettingsDesignSystemFormPrimitives ===
+// === Module 16490: UserSettingsDesignSystemFormPrimitives ===
 
-// Module 16183 (UserSettingsDesignSystemFormPrimitives)
+// Module 16490 (UserSettingsDesignSystemFormPrimitives)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
@@ -12,8 +12,8 @@ import TableRowGroup from "TableRowGroup" /* 6265 */;
 import TableSwitchRow from "TableSwitchRow" /* 6896 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 8229 */;
 import VoiceXIcon from "VoiceXIcon" /* 11082 */;
-import Checkbox from "Checkbox" /* 12903 */;
-import Slider from "Slider" /* 14293 */;
+import Checkbox from "Checkbox" /* 13395 */;
+import Slider from "Slider" /* 14614 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

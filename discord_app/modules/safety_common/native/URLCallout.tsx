@@ -1,10 +1,10 @@
-// === Module 13046: URLCallout ===
+// === Module 13530: URLCallout ===
 
-// Module 13046 (URLCallout)
+// Module 13530 (URLCallout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import SharedStateUtils from "SharedStateUtils" /* 13047 */;
+import SharedStateUtils from "SharedStateUtils" /* 13531 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

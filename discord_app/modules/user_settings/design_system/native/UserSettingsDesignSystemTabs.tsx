@@ -1,6 +1,6 @@
-// === Module 16155: UserSettingsDesignSystemTabs ===
+// === Module 16462: UserSettingsDesignSystemTabs ===
 
-// Module 16155 (UserSettingsDesignSystemTabs)
+// Module 16462 (UserSettingsDesignSystemTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4818 */;
@@ -11,8 +11,8 @@ import components_Button_Button from "components/Button/Button" /* 5379 */;
 import TableSwitchRow from "TableSwitchRow" /* 6896 */;
 import SegmentedControlState from "SegmentedControlState" /* 8530 */;
 import SegmentedControlPages from "SegmentedControlPages" /* 10601 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 12359 */;
-import TabsGradientDefault from "TabsGradient" /* 12524 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 11341 */;
+import TabsGradientDefault from "TabsGradient" /* 13034 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

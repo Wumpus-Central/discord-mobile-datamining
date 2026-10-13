@@ -1,6 +1,6 @@
-// === Module 15288: BountiesScrollPromptFooter ===
+// === Module 15605: BountiesScrollPromptFooter ===
 
-// Module 15288 (BountiesScrollPromptFooter)
+// Module 15605 (BountiesScrollPromptFooter)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,8 +10,8 @@ import BountiesScrollGradientRive from "BountiesScrollGradientRive" /* 4900 */;
 import timing from "timing" /* 5093 */;
 import timingPresets from "timingPresets" /* 5096 */;
 import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9449 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15289 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 15290 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15606 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 15607 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;

@@ -1,14 +1,14 @@
-// === Module 11702: ForumPostListFooter ===
+// === Module 12445: ForumPostListFooter ===
 
-// Module 11702 (ForumPostListFooter)
+// Module 12445 (ForumPostListFooter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6974 */;
 import ForumPostReactions from "ForumPostReactions" /* 10450 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 11640 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 11695 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11696 */;
-import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 11703 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 12386 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 12438 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 12439 */;
+import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 12446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

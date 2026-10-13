@@ -1,6 +1,6 @@
-// === Module 17125: ConjureNativePreview ===
+// === Module 11377: ConjureNativePreview ===
 
-// Module 17125 (ConjureNativePreview)
+// Module 11377 (ConjureNativePreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3849 from "module_3849" /* 3849 */;
@@ -11,10 +11,10 @@ import ReadStateActionCreators from "ReadStateActionCreators" /* 6800 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
 import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
 import leaveFrame from "leaveFrame" /* 10821 */;
-import ConjurePlatformUtils from "ConjurePlatformUtils" /* 11421 */;
-import conjurePreviewSurface2 from "conjurePreviewSurface" /* 11423 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 13265 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 17127 */;
+import ConjurePlatformUtils from "ConjurePlatformUtils" /* 11242 */;
+import conjurePreviewSurface2 from "conjurePreviewSurface" /* 11244 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 11379 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 10807 */;
@@ -30,7 +30,7 @@ const UserProfileApplicationWidgetTypes = intl(7326);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(17104);
+const conjureDesignFeedbackStore = fn(11350);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);
@@ -1053,7 +1053,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function Previe
     const items8 = [closure_22(stateFromStores(10363), obj7, stateFromStores.id), ];
     let tmp29Result = null;
     if (tmp2Result6.isAndroid()) {
-      tmp29Result = closure_22(tmp2(17141).PortalKeyboardRenderer, { portal: true });
+      tmp29Result = closure_22(tmp2(11510).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp29Result;
     obj6.children = items8;

@@ -1,23 +1,23 @@
-// === Module 12444: HeartIllocon ===
+// === Module 12954: HeartIllocon ===
 
-// Module 12444 (HeartIllocon)
+// Module 12954 (HeartIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef12445 from "module_12445" /* 12445 */;
-import _modDef12446 from "module_12446" /* 12446 */;
-import _modDef12447 from "module_12447" /* 12447 */;
+import _modDef12955 from "module_12955" /* 12955 */;
+import _modDef12956 from "module_12956" /* 12956 */;
+import _modDef12957 from "module_12957" /* 12957 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12445 }, 3: null };
-const obj2 = { uri: _modDef12445 };
-obj[2] = { uri: _modDef12446 };
-const obj3 = { uri: _modDef12446 };
-obj[3] = { uri: _modDef12447 };
+let obj = { 1: null, 2: { uri: _modDef12955 }, 3: null };
+const obj2 = { uri: _modDef12955 };
+obj[2] = { uri: _modDef12956 };
+const obj3 = { uri: _modDef12956 };
+obj[3] = { uri: _modDef12957 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12447 };
+const obj4 = { uri: _modDef12957 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");
 

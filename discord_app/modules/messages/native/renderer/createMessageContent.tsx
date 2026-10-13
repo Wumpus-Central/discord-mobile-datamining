@@ -1116,7 +1116,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result72 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "Symbol", hasSpoilerEmbeds: "onGestureHandlerStateChange", hasBailedAst: "kissing_closed_eyes" };
+    parseMessageMarkupResult = { content: "Symbol", hasSpoilerEmbeds: "tammi", hasBailedAst: "helmi" };
     const tmp13Result66 = tmp13(tmp3[42]);
   }
   const obj4 = message(tmp3[37]);

@@ -146,9 +146,9 @@ export default function StageBoostingActionSheet(channel) {
     }
     const obj8 = { title: string3Result1, description: stringResult, illustration: null, actions: null };
     if (tmp9) {
-      let tmp24Result2 = tmp24(tmp(13921).HoldingGemSpotIllustration, { accessible: false });
+      let tmp24Result2 = tmp24(tmp(14258).HoldingGemSpotIllustration, { accessible: false });
     } else {
-      const obj9 = { source: tmp22(13925) };
+      const obj9 = { source: tmp22(14262) };
       tmp24Result2 = tmp24(tmp22(6157), obj9);
       const tmp22Result = tmp22(6157);
     }

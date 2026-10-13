@@ -1,6 +1,6 @@
-// === Module 16795: usePreloadedGuildAsset ===
+// === Module 17099: usePreloadedGuildAsset ===
 
-// Module 16795 (usePreloadedGuildAsset)
+// Module 17099 (usePreloadedGuildAsset)
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1899 */;
 import useRefValueDefault from "useRefValue" /* 6161 */;
 import _slicedToArray from "module_32" /* 32 */;

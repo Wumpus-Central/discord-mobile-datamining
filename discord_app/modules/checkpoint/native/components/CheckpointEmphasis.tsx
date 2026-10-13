@@ -1,6 +1,6 @@
-// === Module 16026: CheckpointEmphasis ===
+// === Module 16339: CheckpointEmphasis ===
 
-// Module 16026 (CheckpointEmphasis)
+// Module 16339 (CheckpointEmphasis)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
@@ -18,7 +18,7 @@ const CHECKPOINT_PRIMARY = fn(5437).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PlatformUtils = fn(1383);
-const CheckpointCustomizationUtils = fn(16009);
+const CheckpointCustomizationUtils = fn(16322);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
 const createStyles = fn(5092);
 let obj4 = { container: { paddingHorizontal: nativeDefault.space.PX_6 }, emphasis: { flexDirection: "row", alignItems: "center" }, text: null };

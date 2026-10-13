@@ -1,11 +1,11 @@
-// === Module 16120: ExperimentOverrideActiveSetting ===
+// === Module 16431: ExperimentOverrideActiveSetting ===
 
-// Module 16120 (ExperimentOverrideActiveSetting)
+// Module 16431 (ExperimentOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14831 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15121 */;
-import DevToolsContent from "DevToolsContent" /* 16121 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15152 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15442 */;
+import DevToolsContent from "DevToolsContent" /* 16432 */;
 import ExperimentStore from "ExperimentStore" /* 5016 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
 
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(15889).BeakerIcon,
+  IconComponent: fn(16202).BeakerIcon,
   useDescription: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useHasExperimentOverrideActive() {
     const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();

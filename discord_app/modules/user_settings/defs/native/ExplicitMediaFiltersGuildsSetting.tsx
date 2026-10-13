@@ -1,6 +1,6 @@
-// === Module 15109: ExplicitMediaFiltersGuildsSetting ===
+// === Module 15430: ExplicitMediaFiltersGuildsSetting ===
 
-// Module 15109 (ExplicitMediaFiltersGuildsSetting)
+// Module 15430 (ExplicitMediaFiltersGuildsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
@@ -8,8 +8,8 @@ import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicit
 import useUserIsTeen from "useUserIsTeen" /* 7738 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8243 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 15104 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 15105 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 15425 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 15426 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;

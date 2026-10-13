@@ -1,13 +1,13 @@
-// === Module 17145: useMediaKeyboardConfig ===
+// === Module 11715: useMediaKeyboardConfig ===
 
-// Module 17145 (useMediaKeyboardConfig)
+// Module 11715 (useMediaKeyboardConfig)
 import c from "c" /* 576 */;
 import Server from "Server" /* 1998 */;
 import ThreadHooks from "ThreadHooks" /* 6972 */;
 import PollsUtils from "PollsUtils" /* 7898 */;
 import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 8513 */;
 import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10023 */;
-import useUploadDisabledDefault from "useUploadDisabled" /* 11934 */;
+import useUploadDisabledDefault from "useUploadDisabled" /* 11716 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

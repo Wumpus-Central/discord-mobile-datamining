@@ -1,6 +1,6 @@
-// === Module 16379: RegistrationUtils ===
+// === Module 16684: RegistrationUtils ===
 
-// Module 16379 (RegistrationUtils)
+// Module 16684 (RegistrationUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import noop from "module_19" /* 19 */;
 import InviteStore from "InviteStore" /* 5073 */;
@@ -81,9 +81,9 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.to_step = toStep;
   AnalyticsUtilsDefault.track(AnalyticEvents.REGISTER_TRANSITION, obj2);
 }
-const RegistrationUIStore = fn(16371);
+const RegistrationUIStore = fn(16676);
 ({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: closure_7 } = RegistrationUIStore);
-const RegistrationConstants = fn(16372);
+const RegistrationConstants = fn(16677);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;

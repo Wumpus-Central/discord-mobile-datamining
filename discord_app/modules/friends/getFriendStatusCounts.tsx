@@ -1,6 +1,6 @@
-// === Module 17515: getFriendStatusCounts ===
+// === Module 17519: getFriendStatusCounts ===
 
-// Module 17515 (getFriendStatusCounts)
+// Module 17519 (getFriendStatusCounts)
 import PresenceStore from "PresenceStore" /* 5108 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 

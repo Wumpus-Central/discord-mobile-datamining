@@ -1,6 +1,6 @@
-// === Module 13264: showReportModalForUserWidget ===
+// === Module 13709: showReportModalForUserWidget ===
 
-// Module 13264 (showReportModalForUserWidget)
+// Module 13709 (showReportModalForUserWidget)
 import ReportModals from "ReportModals" /* 7722 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
 

@@ -1,6 +1,6 @@
-// === Module 17664: getRestrictedHiddenMediaCount ===
+// === Module 17668: getRestrictedHiddenMediaCount ===
 
-// Module 17664 (getRestrictedHiddenMediaCount)
+// Module 17668 (getRestrictedHiddenMediaCount)
 import StickersUtils from "StickersUtils" /* 5749 */;
 import formatMessageForwards from "formatMessageForwards" /* 7973 */;
 import size from "module_2" /* 2 */;

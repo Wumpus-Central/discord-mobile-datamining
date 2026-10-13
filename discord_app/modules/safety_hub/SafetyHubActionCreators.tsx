@@ -1,6 +1,6 @@
-// === Module 11474: SafetyHubActionCreators ===
+// === Module 12240: SafetyHubActionCreators ===
 
-// Module 11474 (SafetyHubActionCreators)
+// Module 12240 (SafetyHubActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

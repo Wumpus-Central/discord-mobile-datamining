@@ -1,23 +1,23 @@
-// === Module 12460: LeafIllocon ===
+// === Module 12970: LeafIllocon ===
 
-// Module 12460 (LeafIllocon)
+// Module 12970 (LeafIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef12461 from "module_12461" /* 12461 */;
-import _modDef12462 from "module_12462" /* 12462 */;
-import _modDef12463 from "module_12463" /* 12463 */;
+import _modDef12971 from "module_12971" /* 12971 */;
+import _modDef12972 from "module_12972" /* 12972 */;
+import _modDef12973 from "module_12973" /* 12973 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12461 }, 3: null };
-const obj2 = { uri: _modDef12461 };
-obj[2] = { uri: _modDef12462 };
-const obj3 = { uri: _modDef12462 };
-obj[3] = { uri: _modDef12463 };
+let obj = { 1: null, 2: { uri: _modDef12971 }, 3: null };
+const obj2 = { uri: _modDef12971 };
+obj[2] = { uri: _modDef12972 };
+const obj3 = { uri: _modDef12972 };
+obj[3] = { uri: _modDef12973 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12463 };
+const obj4 = { uri: _modDef12973 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/LeafIllocon.native.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 16300: InGameDMsSetting ===
+// === Module 16607: InGameDMsSetting ===
 
-// Module 16300 (InGameDMsSetting)
+// Module 16607 (InGameDMsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;

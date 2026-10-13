@@ -1,138 +1,139 @@
-// === Module 17073: ConjureRemix ===
+// === Module 11299: ConjureRemix ===
 
-// Module 17073 (ConjureRemix)
-import ConjureActionCreators from "ConjureActionCreators" /* 11413 */;
+// Module 11299 (ConjureRemix)
+import util from "util" /* 1126 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11207 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 let closure_7 = async function _remixConjureProjectInto(arg0) {
   closure_0 = arg0;
-  c6 = 0;
-  c7 = 0;
   c5 = 0;
+  c6 = 0;
+  c4 = 0;
   return (async (arg0, value) => {
-    if (c7 === 2) {
-      c7 = 3;
+    if (c6 === 2) {
+      c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
       try {
-        c7 = 2;
-        if (0 === c6) {
+        c6 = 2;
+        if (0 === c5) {
           if (arg0 === 1) {
-            c7 = 3;
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             closure_3 = tmp3;
-            closure_2 = tmp7;
+            closure_2 = tmp23;
             closure_130_0 = closure_0;
-            let Cn8H0Y;
-            closure_130_1 = null;
-            c5 = 1;
-            const obj5 = { name: null, guild_id: null, install_scope: null };
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            const obj6 = { ok: false, message: null };
+            const intl2 = util.intl;
+            obj6.message = intl2.string(_modDef3849.Cn8H0Y);
+            closure_130_2 = obj6;
+            c4 = 1;
+            const obj7 = { name: null, guild_id: null, install_scope: null };
             const name = closure_0.name;
             const _HermesInternal = HermesInternal;
-            obj5.name = "" + name.slice(0, 120) + closure_2_6;
-            obj5.guild_id = guild_id;
-            obj5.install_scope = closure_0.install_scope;
-            c6 = 2;
-            c7 = 1;
-            const obj6 = { value: ConjureActionCreators.createProject(obj5), done: false };
-            return obj6;
+            obj7.name = "" + name.slice(0, 120) + closure_2_6;
+            obj7.guild_id = guild_id;
+            obj7.install_scope = closure_0.install_scope;
+            c5 = 3;
+            c6 = 1;
+            const obj8 = { value: ConjureActionCreators.createProject(obj7), done: false };
+            return obj8;
           }
-        } else {
-          if (1 === tmp7) {
-            c5 = 0;
-            closure_130_3 = closure_4;
-            if (null != closure_130_1) {
-              const obj8 = closure_131_0(closure_131_2[2]);
-              c6 = 4;
-              c7 = 1;
-              const obj7 = {
-                value: closure_131_0(closure_131_2[2]).deleteProject(closure_130_1).catch(() => {
-
-                          }),
-                done: false
-              };
-              return obj7;
-            }
-          } else if (2 === tmp7) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c7 = 3;
-              const obj9 = { value, done: true };
-              return obj9;
-            } else {
-              closure_130_1 = value;
-              c6 = 3;
-              c7 = 1;
-              const obj10 = { value: closure_131_0(closure_131_2[3]).remixProjectWorkspace(closure_130_0.id, closure_130_1), done: false };
-              return obj10;
-            }
-          } else if (3 === tmp7) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 0;
-              c7 = 3;
-              const obj11 = { value, done: true };
-              return obj11;
-            } else {
-              c5 = 0;
-              closure_131_4(closure_130_1);
-              const intl2 = closure_131_0(closure_131_2[5]).intl;
-              closure_131_5(closure_130_1, intl2.string(closure_131_1(closure_131_2[4]).jviD6Y), undefined, { remix: true });
-              const obj12 = { ok: true, projectId: closure_130_1 };
-              c7 = 3;
-              const obj13 = { value: obj12, done: true };
-              return obj13;
-            }
-          } else if (arg0 === 1) {
-            c7 = 3;
+        } else if (1 === tmp7) {
+          c4 = 0;
+          c6 = 3;
+          const obj9 = { value: closure_130_2, done: true };
+          return obj9;
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c7 = 3;
-            const obj = { value, done: true };
-            return obj;
+            c6 = 3;
+            const obj10 = { value, done: true };
+            return obj10;
+          } else {
+            closure_130_3 = value;
+            if ("accepted" !== closure_130_3) {
+              if ("rejected" === closure_130_3) {
+                const obj5 = closure_131_0(closure_131_2[4]);
+                c5 = 4;
+                c6 = 1;
+                const obj11 = {
+                  value: closure_131_0(closure_131_2[4]).deleteProject(closure_130_1).catch(() => {
+
+                              }),
+                  done: false
+                };
+                return obj11;
+              }
+            } else {
+              closure_131_4(closure_130_1);
+              const intl = closure_131_0(closure_131_2[2]).intl;
+              closure_131_5(closure_130_1, intl.string(closure_131_1(closure_131_2[3]).jviD6Y), undefined, { remix: true });
+              { ok: true, projectId: null }[1] = closure_130_1;
+            }
+            c6 = 3;
           }
-          if (!(closure_130_3 instanceof closure_131_0(closure_131_2[3]).ConjureRemixError)) {
-            Cn8H0Y = closure_131_1(closure_131_2[4]).Cn8H0Y;
-            const intl = closure_131_0(closure_131_2[5]).intl;
-            { ok: false, message: null }.message = intl.string(Cn8H0Y);
-            c7 = 3;
-            const obj15 = { ok: false, message: null };
+        } else if (3 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            const obj12 = { value, done: true };
+            return obj12;
+          } else {
+            closure_130_1 = value;
+            c4 = 0;
+            const obj2 = closure_131_0(closure_131_2[5]);
+            c5 = 2;
+            c6 = 1;
+            const obj14 = { value: closure_131_0(closure_131_2[5]).acceptRemix(closure_130_0.id, closure_130_1).catch(() => "rejected"), done: false };
+            return obj14;
           }
-          const kQerlZ = closure_131_1(closure_131_2[4]).kQerlZ;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
         }
-      } catch (tmp41) {
-        closure_4 = tmp41;
-        if (tmp4 === c5) {
-          c7 = tmp2;
-          throw tmp41;
+      } catch (tmp22) {
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp22;
         } else {
-          c6 = tmp;
+          c5 = tmp;
         }
+        tmp23 = c4;
       }
     }
   })();
 };
-const ConjureConnectionStore = fn(13218);
+const ConjureConnectionStore = fn(11215);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 let c6 = " (Remix)";
 const size = fn(2);

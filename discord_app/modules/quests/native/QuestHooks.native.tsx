@@ -1,6 +1,6 @@
-// === Module 15366: QuestHooks ===
+// === Module 15683: QuestHooks ===
 
-// Module 15366 (QuestHooks)
+// Module 15683 (QuestHooks)
 import c from "c" /* 576 */;
 import QuestTypes from "QuestTypes" /* 5975 */;
 import AdCreativeType from "AdCreativeType" /* 5979 */;
@@ -8,7 +8,7 @@ import useIsWindowLargeDefault from "useIsWindowLarge" /* 6627 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6853 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7413 */;
 import AssetUtils from "AssetUtils" /* 9185 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 15395 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 15710 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4802 */;
@@ -95,11 +95,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMobileQ
     const tmpResult9 = tmp(9166);
   }
   if (cResult[4] !== bounty) {
-    const questDockAdCreativeId = tmp(15377).getQuestDockAdCreativeId(bounty);
+    const questDockAdCreativeId = tmp(15694).getQuestDockAdCreativeId(bounty);
     cResult[4] = bounty;
     cResult[5] = questDockAdCreativeId;
     let tmp16 = questDockAdCreativeId;
-    const tmpResult10 = tmp(15377);
+    const tmpResult10 = tmp(15694);
   } else {
     tmp16 = cResult[5];
   }
@@ -846,7 +846,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                   const obj9 = { appId: stateFromStores.id, botId: stateFromStores.bot.id, analyticsLocations: [] };
                   v2 = 2;
                   v3 = 1;
-                  const obj10 = { value: v3(11614).launchActivityInBotDM(obj9), done: false };
+                  const obj10 = { value: v3(12364).launchActivityInBotDM(obj9), done: false };
                   return obj10;
                 }
               }

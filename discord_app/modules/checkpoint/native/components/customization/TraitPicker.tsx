@@ -1,6 +1,6 @@
-// === Module 16043: TraitPicker ===
+// === Module 16356: TraitPicker ===
 
-// Module 16043 (TraitPicker)
+// Module 16356 (TraitPicker)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,14 +9,14 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import timing from "timing" /* 5093 */;
 import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5438 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 16009 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 16010 */;
-import CheckpointTextDefault from "CheckpointText" /* 16019 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 16322 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 16323 */;
+import CheckpointTextDefault from "CheckpointText" /* 16332 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import UserStore from "UserStore" /* 1390 */;
-import CheckpointStore from "CheckpointStore" /* 16000 */;
+import CheckpointStore from "CheckpointStore" /* 16313 */;
 
 require = fn;
 const View = fn(17).View;
@@ -26,11 +26,11 @@ const jsxProd = fn(21);
 let c12 = 600;
 const PX_12 = nativeDefault.space.PX_12;
 const createStyles = fn(5092);
-let obj2 = { container: { gap: fn(16044).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
-let obj3 = { gap: fn(16044).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(16044).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(16044).CONTENT_INSET };
-obj2.details = { paddingHorizontal: fn(16044).CONTENT_INSET };
+let obj2 = { container: { gap: fn(16357).TRAIT_OPTION_SPACING }, earnedRow: null, details: null };
+let obj3 = { gap: fn(16357).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(16357).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(16357).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(16357).CONTENT_INSET };
 let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function EarnedCountHeader(arg0) {
@@ -141,7 +141,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Earned
 const __initData = { code: "function TraitPickerTsx1(){const{INTRO_DETAILS_DURATION_MS,Easing,withTiming,isDetailsVisible,INTRO_DETAILS_OFFSET_Y}=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isDetailsVisible?1:0,timing),transform:[{translateY:withTiming(isDetailsVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};}" };
 const __initData2 = { code: "function TraitPickerTsx2(){const{INTRO_DETAILS_DURATION_MS,Easing,withTiming,isDetailsVisible,INTRO_DETAILS_OFFSET_Y}=this.__closure;const timing={duration:INTRO_DETAILS_DURATION_MS,easing:Easing.out(Easing.cubic)};return{opacity:withTiming(isDetailsVisible?1:0,timing),transform:[{translateY:withTiming(isDetailsVisible?0:INTRO_DETAILS_OFFSET_Y,timing)}]};}" };
 ReactCompilerGating = fn(558);
-let obj5 = { paddingHorizontal: fn(16044).CONTENT_INSET };
+let obj5 = { paddingHorizontal: fn(16357).CONTENT_INSET };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitPicker.tsx");
 
@@ -676,7 +676,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitPic
     }
   }
   const tmp2Result7 = selectedOptionId(504);
-  const visibleTraitRarities = selectedOptionId(16010).getVisibleTraitRarities(selectedOptionId(16009).CUSTOMIZATION_OPTION_TRAITS[customizationOption], stateFromStores1);
+  const visibleTraitRarities = selectedOptionId(16323).getVisibleTraitRarities(selectedOptionId(16322).CUSTOMIZATION_OPTION_TRAITS[customizationOption], stateFromStores1);
   const items6 = [];
   let num7 = 0;
   let num8 = 0;
@@ -861,7 +861,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitPic
   num8 = 11;
   cResult[11] = { visibleTraitOptions: items6, totalCount: num7, earnedCount: num8 };
   const obj6 = { visibleTraitOptions: items6, totalCount: num7, earnedCount: num8 };
-  const tmp2Result8 = selectedOptionId(16010);
+  const tmp2Result8 = selectedOptionId(16323);
 }) : (function TraitPicker(customizationOption) {
   customizationOption = customizationOption.customizationOption;
   let flag = customizationOption.disabled;

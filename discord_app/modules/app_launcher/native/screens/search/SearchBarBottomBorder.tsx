@@ -1,6 +1,6 @@
-// === Module 11785: SearchBarBottomBorder ===
+// === Module 11588: SearchBarBottomBorder ===
 
-// Module 11785 (SearchBarBottomBorder)
+// Module 11588 (SearchBarBottomBorder)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5378 */;
 import springPresets from "springPresets" /* 5382 */;

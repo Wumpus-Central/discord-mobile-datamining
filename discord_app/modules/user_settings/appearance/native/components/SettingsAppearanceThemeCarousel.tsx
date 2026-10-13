@@ -1,6 +1,6 @@
-// === Module 15566: SettingsAppearanceThemeCarousel ===
+// === Module 15881: SettingsAppearanceThemeCarousel ===
 
-// Module 15566 (SettingsAppearanceThemeCarousel)
+// Module 15881 (SettingsAppearanceThemeCarousel)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,7 +9,7 @@ import HapticUtils from "HapticUtils" /* 5057 */;
 import timing from "timing" /* 5093 */;
 import timingPresets from "timingPresets" /* 5096 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15567 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15882 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15714: AutoplayGifSetting ===
+// === Module 16029: AutoplayGifSetting ===
 
-// Module 15714 (AutoplayGifSetting)
+// Module 16029 (AutoplayGifSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;

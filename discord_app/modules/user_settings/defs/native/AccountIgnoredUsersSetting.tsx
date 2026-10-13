@@ -1,6 +1,6 @@
-// === Module 15084: AccountIgnoredUsersSetting ===
+// === Module 15405: AccountIgnoredUsersSetting ===
 
-// Module 15084 (AccountIgnoredUsersSetting)
+// Module 15405 (AccountIgnoredUsersSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

@@ -1,9 +1,9 @@
-// === Module 15301: bountyError ===
+// === Module 15618: bountyError ===
 
-// Module 15301 (bountyError)
+// Module 15618 (bountyError)
 import util from "util" /* 1126 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import BountiesModalConstants from "BountiesModalConstants" /* 15287 */;
+import BountiesModalConstants from "BountiesModalConstants" /* 15604 */;
 import size from "module_2" /* 2 */;
 
 const duration = BountiesModalConstants.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;

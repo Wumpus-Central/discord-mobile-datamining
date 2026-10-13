@@ -1,13 +1,13 @@
-// === Module 17999: VoiceOrStageChannel ===
+// === Module 18003: VoiceOrStageChannel ===
 
-// Module 17999 (VoiceOrStageChannel)
+// Module 18003 (VoiceOrStageChannel)
 import util from "util" /* 1126 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5950 */;
 import transitionToGuild from "transitionToGuild" /* 7053 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10283 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11758 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 12689 */;
-import useStageChannelSpeakerVoiceStates from "useStageChannelSpeakerVoiceStates" /* 16676 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11560 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 13195 */;
+import useStageChannelSpeakerVoiceStates from "useStageChannelSpeakerVoiceStates" /* 16980 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5896 */;
@@ -353,13 +353,13 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   closure_20(subtitle(9308)(), tmp7);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp11 = tmp4(17411)();
+    const tmp11 = tmp4(17415)();
     cResult[2] = tmp11;
   }
   const tmp6 = subtitle(9308)();
   const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
   const tmpResult6 = channel(10358);
-  const baseChannelUnreadBadgeState = channel(16802).useBaseChannelUnreadBadgeState(channel, !isConnectedToVoiceChannel);
+  const baseChannelUnreadBadgeState = channel(17106).useBaseChannelUnreadBadgeState(channel, !isConnectedToVoiceChannel);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserGuildSettingsStore];
@@ -383,12 +383,12 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
   }
-  const tmpResult7 = channel(16802);
+  const tmpResult7 = channel(17106);
   const stateFromStores = channel(504).useStateFromStores(tmp14, G);
   const tmpResult8 = channel(504);
   const stageParticipantsCount = channel(5956).useStageParticipantsCount(channel.id, tmp(5950).StageChannelParticipantNamedIndex.AUDIENCE);
   closure_19(channel);
-  const arr2 = subtitle(11737)(channel);
+  const arr2 = subtitle(11537)(channel);
   if (cResult[6] === channel) {
     class G {
       constructor() {
@@ -397,7 +397,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     }
   }
   const tmpResult9 = channel(5956);
-  const channelAccessibilityProps = channel(17410).getChannelAccessibilityProps({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr2.length });
+  const channelAccessibilityProps = channel(17414).getChannelAccessibilityProps({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr2.length });
   cResult[6] = channel;
   cResult[7] = arr2.length;
   cResult[8] = mentionCount;
@@ -405,7 +405,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[10] = voiceStates;
   cResult[11] = channelAccessibilityProps;
   const obj2 = { channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr2.length };
-  const tmpResult10 = channel(17410);
+  const tmpResult10 = channel(17414);
 }) : (function UnmemoedVoiceOrStageChannelBase(channel) {
   channel = channel.channel;
   const subtitle = channel.subtitle;
@@ -421,23 +421,23 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmp3 = subtitle(5031)();
   const tmp4 = subtitle(9308)();
   const tmp6 = closure_20(tmp4, channel(4969).isThemeLight(tmp3));
-  const tmp7 = subtitle(17411)();
+  const tmp7 = subtitle(17415)();
   const obj = channel(4969);
   const isConnectedToVoiceChannel = channel(10358).useIsConnectedToVoiceChannel(channel);
   const obj2 = channel(10358);
-  const baseChannelUnreadBadgeState = channel(16802).useBaseChannelUnreadBadgeState(channel, !isConnectedToVoiceChannel);
+  const baseChannelUnreadBadgeState = channel(17106).useBaseChannelUnreadBadgeState(channel, !isConnectedToVoiceChannel);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const obj3 = channel(16802);
+  const obj3 = channel(17106);
   const items = [UserGuildSettingsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserGuildSettingsStore.resolveUnreadSetting(channel));
   const obj4 = channel(504);
   const stageParticipantsCount = channel(5956).useStageParticipantsCount(channel.id, channel(5950).StageChannelParticipantNamedIndex.AUDIENCE);
   const sum = stageParticipantsCount + voiceStates.length;
   const obj5 = channel(5956);
-  const arr3 = subtitle(11737)(channel);
+  const arr3 = subtitle(11537)(channel);
   const tmp13 = closure_19(channel);
-  let channelAccessibilityProps = channel(17410).getChannelAccessibilityProps({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr3.length });
-  const obj6 = channel(17410);
+  let channelAccessibilityProps = channel(17414).getChannelAccessibilityProps({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr3.length });
+  const obj6 = channel(17414);
   const obj7 = { channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr3.length };
   const items1 = [StageInstanceStore];
   const items2 = [channel.id];
@@ -452,7 +452,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     arr6 = speakerVoiceStates;
   }
   const mapped = arr6.map((user) => user.user);
-  const tmp19 = subtitle(17994)();
+  const tmp19 = subtitle(17998)();
   const tmp17 = subtitle(5421)(channel, false);
   const fontScale = channel(5386).useFontScale();
   const tmp5Result = channel(5386);
@@ -486,28 +486,28 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const merged1 = Object.assign(channelAccessibilityProps);
   const obj11 = { channel, subtitle: null, unread: null, resolvedUnreadSetting: null, mentionCount: null, mentionBadge: null, live: null, end: null, connected: null, fontScale: null, isSubscriptionGated: null, needSubscriptionToAccess: null, showGuildBadgeIcon: true };
-  const tmpResult = subtitle(17992);
-  const tmpResult2 = subtitle(17410);
+  const tmpResult = subtitle(17996);
+  const tmpResult2 = subtitle(17414);
   if (topic == null) {
     topic = subtitle;
   }
-  obj11.subtitle = channel(17996).renderChannelSubtitle({ subtitle: topic, channelId: id, guildId: guild_id, connected: isConnectedToVoiceChannel });
+  obj11.subtitle = channel(18000).renderChannelSubtitle({ subtitle: topic, channelId: id, guildId: guild_id, connected: isConnectedToVoiceChannel });
   if (!unread) {
     unread = mentionCount > 0;
   }
   obj11.unread = unread;
   obj11.resolvedUnreadSetting = stateFromStores;
   obj11.mentionCount = mentionCount;
-  obj11.mentionBadge = subtitle(17991)({ mentionCount, locale: stateFromStores2 });
+  obj11.mentionBadge = subtitle(17995)({ mentionCount, locale: stateFromStores2 });
   obj11.live = null != stateFromStores1;
   if (arr3.length > 0) {
     const obj12 = { embeddedApps: arr3, size: tmp7.joinVoiceButton.icon.gameSize };
-    let tmp31 = closure_14(tmp(16669), obj12);
+    let tmp31 = closure_14(tmp(16973), obj12);
     let tmp30 = closure_14;
   } else {
     tmp30 = closure_14;
     const obj13 = { channel, voiceStates };
-    tmp31 = closure_14(tmp5(11989).VocalChannelJoinButton, obj13);
+    tmp31 = closure_14(tmp5(12505).VocalChannelJoinButton, obj13);
   }
   obj11.end = tmp31;
   obj11.connected = isConnectedToVoiceChannel;
@@ -521,7 +521,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const items7 = [tmp6.voiceUsers, tmp7.voiceUsers.margin];
     obj14.style = items7;
     const obj15 = { users: mapped, max: 5, guildId: channel.guild_id, audienceCount: stageParticipantsCount };
-    obj14.children = tmp30(tmp(18000), obj15);
+    obj14.children = tmp30(tmp(18004), obj15);
     tmp30Result = tmp30(View, obj14);
   }
   items6[1] = tmp30Result;

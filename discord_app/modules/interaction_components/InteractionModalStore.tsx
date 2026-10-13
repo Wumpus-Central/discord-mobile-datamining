@@ -1,6 +1,6 @@
-// === Module 14652: InteractionModalStore ===
+// === Module 14973: InteractionModalStore ===
 
-// Module 14652 (InteractionModalStore)
+// Module 14973 (InteractionModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7179 */;

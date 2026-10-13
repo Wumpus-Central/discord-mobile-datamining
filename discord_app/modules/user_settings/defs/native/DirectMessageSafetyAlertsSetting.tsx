@@ -1,14 +1,14 @@
-// === Module 15113: DirectMessageSafetyAlertsSetting ===
+// === Module 15434: DirectMessageSafetyAlertsSetting ===
 
-// Module 15113 (DirectMessageSafetyAlertsSetting)
+// Module 15434 (DirectMessageSafetyAlertsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;
 import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10389 */;
 import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10390 */;
 import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 10391 */;
-import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 11464 */;
-import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 15114 */;
+import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 12230 */;
+import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 15435 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;

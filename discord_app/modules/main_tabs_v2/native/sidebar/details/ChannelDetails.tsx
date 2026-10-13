@@ -1,16 +1,16 @@
-// === Module 17367: ChannelDetails ===
+// === Module 17371: ChannelDetails ===
 
-// Module 17367 (ChannelDetails)
+// Module 17371 (ChannelDetails)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import timing from "timing" /* 5093 */;
 import timingPresets from "timingPresets" /* 5096 */;
 import spring from "spring" /* 5378 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12036 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12061 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12070 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12552 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12577 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12586 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12050 */;
+import SearchQueryStore from "SearchQueryStore" /* 12566 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;

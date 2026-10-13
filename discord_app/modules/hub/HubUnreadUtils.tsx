@@ -1,9 +1,9 @@
-// === Module 16648: HubUnreadUtils ===
+// === Module 16953: HubUnreadUtils ===
 
-// Module 16648 (HubUnreadUtils)
+// Module 16953 (HubUnreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12002 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12010 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12518 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12526 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 
 const require = globalThis.__r;

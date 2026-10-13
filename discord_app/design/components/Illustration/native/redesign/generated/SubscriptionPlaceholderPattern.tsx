@@ -1,6 +1,6 @@
-// === Module 13793: SubscriptionPlaceholderPattern ===
+// === Module 14130: SubscriptionPlaceholderPattern ===
 
-// Module 13793 (SubscriptionPlaceholderPattern)
+// Module 14130 (SubscriptionPlaceholderPattern)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4969 */;
 import _mod8360 from "module_8360" /* 8360 */;
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscript
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_13794");
+          return require("module_14131");
         },
       darker() {
-          return require("module_13795");
+          return require("module_14132");
         },
       light() {
-          return require("module_13796");
+          return require("module_14133");
         }
     };
     const illustrationSource = _mod8360.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscript
   const obj = shared;
   return _mod8360.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_13794");
+      return require("module_14131");
     },
     darker() {
-      return require("module_13795");
+      return require("module_14132");
     },
     light() {
-      return require("module_13796");
+      return require("module_14133");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getSubscriptionPlaceholderPatternSource(theme) {
   return _mod8360.getIllustrationSource(theme, {
     dark() {
-      return require("module_13794");
+      return require("module_14131");
     },
     darker() {
-      return require("module_13795");
+      return require("module_14132");
     },
     light() {
-      return require("module_13796");
+      return require("module_14133");
     }
   });
 }

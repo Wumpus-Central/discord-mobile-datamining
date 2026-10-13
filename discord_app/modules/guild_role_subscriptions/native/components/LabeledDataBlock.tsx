@@ -1,6 +1,6 @@
-// === Module 15513: LabeledDataBlock ===
+// === Module 15828: LabeledDataBlock ===
 
-// Module 15513 (LabeledDataBlock)
+// Module 15828 (LabeledDataBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;

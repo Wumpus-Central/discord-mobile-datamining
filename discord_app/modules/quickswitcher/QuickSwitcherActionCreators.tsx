@@ -1,6 +1,6 @@
-// === Module 11571: QuickSwitcherActionCreators ===
+// === Module 12324: QuickSwitcherActionCreators ===
 
-// Module 11571 (QuickSwitcherActionCreators)
+// Module 12324 (QuickSwitcherActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import transitionToChannel from "transitionToChannel" /* 5103 */;
@@ -17,7 +17,7 @@ import sortByMatchScore from "sortByMatchScore" /* 8700 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8885 */;
 import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10677 */;
-import PlaygroundAccessExperiment from "PlaygroundAccessExperiment" /* 11572 */;
+import PlaygroundAccessExperiment from "PlaygroundAccessExperiment" /* 12325 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -452,7 +452,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(11573).openChannelTabActive(closure_128_0, null);
+                    tmp5(12326).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
                     return { value: "IconComponent", done: null };
                   }
@@ -507,7 +507,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(11573).openChannelTabActive(closure_128_0, null);
+                    tmp5(12326).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
                     return { value: "IconComponent", done: null };
                   }
@@ -536,7 +536,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
     trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, type);
     let obj4 = { type: "QUICKSWITCHER_SWITCH_TO", result: type };
     DispatcherDefault.dispatch(obj4);
-    tmp(11573).openChannelTabActive(channel.id, guildId);
-    const tmpResult = tmp(11573);
+    tmp(12326).openChannelTabActive(channel.id, guildId);
+    const tmpResult = tmp(12326);
   }
 };

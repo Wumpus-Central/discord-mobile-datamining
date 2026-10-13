@@ -1,6 +1,6 @@
-// === Module 15398: QuestBottomSheet ===
+// === Module 15713: QuestBottomSheet ===
 
-// Module 15398 (QuestBottomSheet)
+// Module 15713 (QuestBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -14,18 +14,18 @@ import WarningIcon from "WarningIcon" /* 7572 */;
 import hooks_QuestHooks from "hooks/QuestHooks" /* 9171 */;
 import QuestActionCreators from "QuestActionCreators" /* 9172 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 9204 */;
-import QuestHooks from "QuestHooks" /* 15366 */;
-import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 15399 */;
-import QuestBottomSheetFooterDefault from "QuestBottomSheetFooter" /* 15401 */;
-import QuestBottomSheetTaskSelectDefault from "QuestBottomSheetTaskSelect" /* 15439 */;
-import QuestBottomSheetConsoleConnectDefault from "QuestBottomSheetConsoleConnect" /* 15440 */;
+import QuestHooks from "QuestHooks" /* 15683 */;
+import QuestBottomSheetHeaderDefault from "QuestBottomSheetHeader" /* 15714 */;
+import QuestBottomSheetFooterDefault from "QuestBottomSheetFooter" /* 15716 */;
+import QuestBottomSheetTaskSelectDefault from "QuestBottomSheetTaskSelect" /* 15754 */;
+import QuestBottomSheetConsoleConnectDefault from "QuestBottomSheetConsoleConnect" /* 15755 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7391 */;
 
 const require = globalThis.__r;
 
-const QuestBottomSheetProgressCard = QuestBottomSheetProgressCardWatchTask(15437);
+const QuestBottomSheetProgressCard = QuestBottomSheetProgressCardWatchTask(15752);
 require = fn;
 const useState = fn(19).useState;
 const View = fn(17).View;
@@ -907,8 +907,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnrolledQ
   const sourceQuestContent = quest.sourceQuestContent;
   quest = undefined;
   ({ initialStep, location: _location } = quest);
-  dependencyMap = quest(12979).useTrackQuestContentClickedWithImpression();
-  let obj = quest(12979);
+  dependencyMap = quest(13471).useTrackQuestContentClickedWithImpression();
+  let obj = quest(13471);
   const tmp = quest;
   quest = quest(9202).useGetQuestImpressionId();
   let obj2 = quest(9202);
@@ -919,8 +919,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEnrolledQ
   const tmp5 = quest(quest(9171).useTaskPlatformScreen(quest, questTaskDetails), 3);
   closure_4 = tmp5[2];
   const obj5 = quest(9171);
-  const hasWatchVideoOnMobileTasks = quest(15366).useHasWatchVideoOnMobileTasks(quest.config);
-  const obj6 = quest(15366);
+  const hasWatchVideoOnMobileTasks = quest(15683).useHasWatchVideoOnMobileTasks(quest.config);
+  const obj6 = quest(15683);
   [tmp8, tmp9] = quest(closure_16({ quest, initialStep, location: _location }), 2);
   const userStatus = quest.userStatus;
   let completedAt;

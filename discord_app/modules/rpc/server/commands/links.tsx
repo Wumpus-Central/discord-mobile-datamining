@@ -1,6 +1,6 @@
-// === Module 14744: links ===
+// === Module 15065: links ===
 
-// Module 14744 (links)
+// Module 15065 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
@@ -10,11 +10,11 @@ import openUserSettings from "openUserSettings" /* 7094 */;
 import RPCErrorDefault from "RPCError" /* 10936 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10939 */;
 import RPCHelpers from "RPCHelpers" /* 10945 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14717 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 14745 */;
-import internalDeepLinks from "internalDeepLinks" /* 14746 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14747 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14749 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15038 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15066 */;
+import internalDeepLinks from "internalDeepLinks" /* 15067 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15068 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15070 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import ApplicationStore from "ApplicationStore" /* 5440 */;
@@ -338,7 +338,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14736);
+const CONTEXT_MENU_ICON_NAMES = fn(15057);
 let obj5 = {
   scope: null,
   handler(arg0) {

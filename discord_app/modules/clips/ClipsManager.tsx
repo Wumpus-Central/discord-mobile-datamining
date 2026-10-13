@@ -1,6 +1,6 @@
-// === Module 18626: clips/ClipsManager ===
+// === Module 18630: clips/ClipsManager ===
 
-// Module 18626 (clips/ClipsManager)
+// Module 18630 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
@@ -8,8 +8,8 @@ import UserSettings from "UserSettings" /* 2041 */;
 import DiscordNativeDefault from "DiscordNative" /* 4731 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 5137 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
-import isClipsEnabled from "isClipsEnabled" /* 13617 */;
-import ClipsExperiment from "ClipsExperiment" /* 13618 */;
+import isClipsEnabled from "isClipsEnabled" /* 13954 */;
+import ClipsExperiment from "ClipsExperiment" /* 13955 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

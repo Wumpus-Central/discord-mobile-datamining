@@ -1,14 +1,14 @@
-// === Module 13894: GuildBoostingMarketingTopPerksCards ===
+// === Module 14231: GuildBoostingMarketingTopPerksCards ===
 
-// Module 13894 (GuildBoostingMarketingTopPerksCards)
+// Module 14231 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import LottieAnimationViewDefault from "LottieAnimationView" /* 6106 */;
 import FastImageDefault from "FastImage" /* 6157 */;
-import _modDef13895 from "module_13895" /* 13895 */;
-import _mod13896 from "module_13896" /* 13896 */;
-import _modDef13897 from "module_13897" /* 13897 */;
+import _modDef14232 from "module_14232" /* 14232 */;
+import _mod14233 from "module_14233" /* 14233 */;
+import _modDef14234 from "module_14234" /* 14234 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
@@ -37,7 +37,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef13895 };
+      const obj = { style, source: _modDef14232 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   },
@@ -51,7 +51,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13896, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod14233, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     }
   },
@@ -65,7 +65,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef13897 };
+      const obj = { style, source: _modDef14234 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   }
@@ -82,7 +82,7 @@ let obj4 = {
     return intl.string(util.t.HTvLGu);
   },
   getGraphic(style) {
-    const obj = { style, source: _modDef13895 };
+    const obj = { style, source: _modDef14232 };
     return hasOwnProperty(FastImageDefault, obj);
   }
 };
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
             tmp17 = tmp20;
           }
           const obj4 = { itemCount: items.length, cardWidth: 324, cardMarginRight: 16, contentContainerStyle: tmp10, children: tmp11 };
-          const tmp16 = closure_5(tmp(12306).MarketingCardsScroller, obj4);
+          const tmp16 = closure_5(tmp(12819).MarketingCardsScroller, obj4);
           cResult[9] = tmp4.scrollerContent;
           cResult[10] = tmp11;
           cResult[11] = tmp16;

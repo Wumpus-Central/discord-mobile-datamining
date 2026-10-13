@@ -1,12 +1,12 @@
-// === Module 14743: validateOpenInviteDialog ===
+// === Module 15064: validateOpenInviteDialog ===
 
-// Module 14743 (validateOpenInviteDialog)
+// Module 15064 (validateOpenInviteDialog)
 import canViewInviteModal from "canViewInviteModal" /* 8533 */;
 import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10809 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10810 */;
 import RPCErrorDefault from "RPCError" /* 10936 */;
 import getGuildIdForEmbeddedSurfaceDefault from "getGuildIdForEmbeddedSurface" /* 10943 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 14719 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 15040 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;

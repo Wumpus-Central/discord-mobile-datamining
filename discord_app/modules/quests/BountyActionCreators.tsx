@@ -1,6 +1,6 @@
-// === Module 12973: BountyActionCreators ===
+// === Module 13465: BountyActionCreators ===
 
-// Module 12973 (BountyActionCreators)
+// Module 13465 (BountyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
@@ -8,7 +8,7 @@ import QuestTypes from "QuestTypes" /* 5975 */;
 import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7184 */;
 import QuestDataUtils from "QuestDataUtils" /* 7387 */;
 import SessionAdGenerator from "SessionAdGenerator" /* 7410 */;
-import BountiesDesktopQuestBarExperiment2 from "BountiesDesktopQuestBarExperiment" /* 12974 */;
+import BountiesDesktopQuestBarExperiment2 from "BountiesDesktopQuestBarExperiment" /* 13466 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AdDeliveryStore from "AdDeliveryStore" /* 7388 */;
 import NetworkStore from "NetworkStore" /* 5282 */;

@@ -1,23 +1,23 @@
-// === Module 15055: PasskeysSpotIllustration ===
+// === Module 15376: PasskeysSpotIllustration ===
 
-// Module 15055 (PasskeysSpotIllustration)
+// Module 15376 (PasskeysSpotIllustration)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef15056 from "module_15056" /* 15056 */;
-import _modDef15057 from "module_15057" /* 15057 */;
-import _modDef15058 from "module_15058" /* 15058 */;
+import _modDef15377 from "module_15377" /* 15377 */;
+import _modDef15378 from "module_15378" /* 15378 */;
+import _modDef15379 from "module_15379" /* 15379 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15056 }, 3: null };
-let obj2 = { uri: _modDef15056 };
-obj[2] = { uri: _modDef15057 };
-const obj3 = { uri: _modDef15057 };
-obj[3] = { uri: _modDef15058 };
+let obj = { 1: null, 2: { uri: _modDef15377 }, 3: null };
+let obj2 = { uri: _modDef15377 };
+obj[2] = { uri: _modDef15378 };
+const obj3 = { uri: _modDef15378 };
+obj[3] = { uri: _modDef15379 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef15058 };
+const obj4 = { uri: _modDef15379 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PasskeysSpotIllustration.native.tsx");
 

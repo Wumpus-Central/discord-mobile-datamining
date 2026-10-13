@@ -1,6 +1,6 @@
-// === Module 12359: Tabs/Tabs ===
+// === Module 11341: Tabs/Tabs ===
 
-// Module 12359 (Tabs/Tabs)
+// Module 11341 (Tabs/Tabs)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;
@@ -740,7 +740,7 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? (function Tab
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(12360).TabItem, obj, id);
+      return variant(state(11342).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

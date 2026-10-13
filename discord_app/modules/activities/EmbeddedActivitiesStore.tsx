@@ -9,7 +9,7 @@ import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClass
 import ContentClassificationReference from "ContentClassificationReference" /* 6041 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7247 */;
 import getURLForApplicationDefault from "getURLForApplication" /* 10808 */;
-import getPlatformDefault from "getPlatform" /* 11718 */;
+import getPlatformDefault from "getPlatform" /* 11518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

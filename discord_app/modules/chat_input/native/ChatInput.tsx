@@ -1,6 +1,6 @@
-// === Module 11632: ChatInput ===
+// === Module 12379: ChatInput ===
 
-// Module 11632 (ChatInput)
+// Module 12379 (ChatInput)
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6924 */;
@@ -9,7 +9,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 7922 */;
-import DiceRollStore from "DiceRollStore" /* 11633 */;
+import DiceRollStore from "DiceRollStore" /* 12380 */;
 import NativeMenuStore from "NativeMenuStore" /* 9694 */;
 import PendingReplyStore from "PendingReplyStore" /* 7368 */;
 import DraftStore from "DraftStore" /* 7244 */;
@@ -448,10 +448,10 @@ class ChatInput {
           closure_1_16.state.current.textFieldContentSize = height;
           if (!obj.getIsChatInputHeightWorkletEnabled()) {
             const textFieldHeight = closure_1_16.state.current.textFieldHeight;
-            const result = textFieldHeight.set(channel(11708).getChatInputHeightAnimationTiming(height, sharedValue.get()));
-            const tmp2Result = channel(11708);
+            const result = textFieldHeight.set(channel(11963).getChatInputHeightAnimationTiming(height, sharedValue.get()));
+            const tmp2Result = channel(11963);
           }
-          obj = channel(11707);
+          obj = channel(12449);
         },
         handleLayoutOfInputContainer(arg0) {
           const current = closure_1_16.chatInputAutocomplete.current;
@@ -474,11 +474,11 @@ class ChatInput {
             const textFieldContentSize = closure_1_16.state.current.textFieldContentSize;
             if (0 !== textFieldContentSize) {
               const textFieldHeight = closure_1_16.state.current.textFieldHeight;
-              const result = textFieldHeight.set(channel(11708).getChatInputHeightAnimationTiming(textFieldContentSize, sharedValue.get()));
-              const tmpResult = channel(11708);
+              const result = textFieldHeight.set(channel(11963).getChatInputHeightAnimationTiming(textFieldContentSize, sharedValue.get()));
+              const tmpResult = channel(11963);
             }
           }
-          obj = channel(11707);
+          obj = channel(12449);
         },
         handleChangeAutoCompleteVisibility(arg0) {
           unregisterViewTag(closure_1_16.props.current.screenIndex, arg0);
@@ -638,11 +638,11 @@ class ChatInput {
             if (tmp35 == null) {
               tmp35 = null;
             }
-            const result3 = channel(11712).setAppLauncherA11yFocusReturnRef(tmp35);
+            const result3 = channel(11512).setAppLauncherA11yFocusReturnRef(tmp35);
             const obj18 = { type: channel(1629).KeyboardTypes.APP_LAUNCHER, context: null };
             const obj19 = { initialRouteName: constants5.HOME, initialSearchQuery: null };
-            const obj17 = channel(11712);
-            const appDMApplication = channel(11907).getAppDMApplication(closure_1_16.props.current.channel);
+            const obj17 = channel(11512);
+            const appDMApplication = channel(11714).getAppDMApplication(closure_1_16.props.current.channel);
             let name;
             if (appDMApplication != null) {
               name = appDMApplication.name;
@@ -650,7 +650,7 @@ class ChatInput {
             obj19.initialSearchQuery = name;
             obj18.context = obj19;
             memo1.handleToggleKeyboard(obj18);
-            const tmp23Result = channel(11907);
+            const tmp23Result = channel(11714);
           } else if (constants.ALL_PHOTOS === arg1) {
             const result4 = channel(5057).triggerHapticFeedback(channel(5057).HapticFeedbackTypes.IMPACT_LIGHT);
             const obj9 = channel(5057);
@@ -716,7 +716,7 @@ class ChatInput {
         const obj3 = { type: constants3.POLLS, channel_id: closure_1_16.props.current.channel.id, guild_id: closure_1_16.props.current.channel.guild_id };
         channel(4985).dismissKeyboard();
         const obj4 = channel(4985);
-        channel(11908).openCreatePollModal({
+        channel(11717).openCreatePollModal({
           channel: closure_1_16.props.current.channel,
           onCancel() {
             return closure_1_17.handleToggleKeyboard({ type: closure_0(1629).KeyboardTypes.SYSTEM });
@@ -807,7 +807,7 @@ class ChatInput {
         if ("tapAttachment" === tapAction.action) {
           let current = closure_1_16.chatInput.current;
           current.blur();
-          const obj = channel(11929);
+          const obj = channel(12450);
           const current2 = closure_1_16.chatInput.current;
           const applicationCommandManager = current2.getApplicationCommandManager();
           ({ channelId, optionName } = tapAction);
@@ -1280,11 +1280,11 @@ class ChatInput {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, findNodeHandle: closure_8 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(11634).useVoiceMessagesUIStore;
+const useVoiceMessagesUIStore = fn(12381).useVoiceMessagesUIStore;
 const DraftType = fn(7244).DraftType;
 const useChatBottomManagerUIStore = fn(9384);
 ({ updateShowingAutoComplete: closure_19, updateSmallSuggestionBarHeight: closure_20, useChatIsAtBottom: closure_21, useChatShowingAutoComplete: closure_22 } = useChatBottomManagerUIStore);
-const ChatInputConstants = fn(11636);
+const ChatInputConstants = fn(11960);
 ({ CHAT_INPUT_HORIZONTAL_PADDING: closure_23, CHAT_INPUT_HORIZONTAL_PADDING_PARENT: closure_24, ChatInputActionType: closure_25 } = ChatInputConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_26, ChannelTypesSets: closure_27, ChatInputComponentViewedTypes: closure_28, ComponentActions: closure_29, MAX_UPLOAD_COUNT: closure_30, Permissions: items } = Constants);

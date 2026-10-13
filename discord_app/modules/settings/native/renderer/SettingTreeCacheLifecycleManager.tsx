@@ -1,6 +1,6 @@
-// === Module 18245: SettingTreeCacheLifecycleManager ===
+// === Module 18249: SettingTreeCacheLifecycleManager ===
 
-// Module 18245 (SettingTreeCacheLifecycleManager)
+// Module 18249 (SettingTreeCacheLifecycleManager)
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 const prototype = function SettingTreeManagerLifecycleManager() {

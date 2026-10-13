@@ -1,9 +1,9 @@
-// === Module 16129: DesignSystemsSetting ===
+// === Module 16436: DesignSystemsSetting ===
 
-// Module 16129 (DesignSystemsSetting)
+// Module 16436 (DesignSystemsSetting)
 import Constants from "Constants" /* 1085 */;
-import PaintPaletteIcon from "PaintPaletteIcon" /* 15555 */;
-import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 16130 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 15870 */;
+import useDesignSystemsSettingPredicate from "useDesignSystemsSettingPredicate" /* 16437 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

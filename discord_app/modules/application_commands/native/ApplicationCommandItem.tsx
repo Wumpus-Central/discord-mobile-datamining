@@ -1,8 +1,8 @@
-// === Module 12113: ApplicationCommandItem ===
+// === Module 12629: ApplicationCommandItem ===
 
-// Module 12113 (ApplicationCommandItem)
+// Module 12629 (ApplicationCommandItem)
 import nativeDefault from "native" /* 587 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11929 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12450 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 
@@ -192,12 +192,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       tmp14 = formatToPlainStringResult;
     }
     const tmpResult3 = section(504);
-    const applicationCommandsIconSource = section(11929).getApplicationCommandsIconSource(section, stateFromStores);
+    const applicationCommandsIconSource = section(12450).getApplicationCommandsIconSource(section, stateFromStores);
     cResult[4] = stateFromStores;
     cResult[5] = section;
     cResult[6] = applicationCommandsIconSource;
     tmp10 = applicationCommandsIconSource;
-    const tmpResult4 = section(11929);
+    const tmpResult4 = section(12450);
   }
   const fn = function c() {
     if (null != guildId) {

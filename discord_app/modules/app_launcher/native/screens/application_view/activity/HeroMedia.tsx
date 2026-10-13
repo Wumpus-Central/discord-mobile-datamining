@@ -1,6 +1,6 @@
-// === Module 11771: HeroMedia ===
+// === Module 11574: HeroMedia ===
 
-// Module 11771 (HeroMedia)
+// Module 11574 (HeroMedia)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6858 */;
 import common_VideoDefault from "common/Video" /* 8426 */;
 import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10624 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10962 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11736 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11536 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 

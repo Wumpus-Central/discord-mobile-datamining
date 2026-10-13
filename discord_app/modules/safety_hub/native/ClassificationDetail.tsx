@@ -1,6 +1,6 @@
-// === Module 11472: ClassificationDetail ===
+// === Module 12238: ClassificationDetail ===
 
-// Module 11472 (ClassificationDetail)
+// Module 12238 (ClassificationDetail)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -14,8 +14,8 @@ import MetricEvents from "MetricEvents" /* 5734 */;
 import TableRow from "TableRow" /* 6180 */;
 import SafetyHubModels from "SafetyHubModels" /* 7514 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 8674 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11476 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11478 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12242 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 12244 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 import SafetyHubStore from "SafetyHubStore" /* 7537 */;

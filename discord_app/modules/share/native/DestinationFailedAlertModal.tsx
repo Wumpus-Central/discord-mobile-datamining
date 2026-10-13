@@ -1,6 +1,6 @@
-// === Module 11596: DestinationFailedAlertModal ===
+// === Module 12346: DestinationFailedAlertModal ===
 
-// Module 11596 (DestinationFailedAlertModal)
+// Module 12346 (DestinationFailedAlertModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -296,12 +296,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
     tmp14 = tmp16;
   }
   const tmpResult = channel(504);
-  const tmp13 = closure_10(channel(11597).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11597).GuildIconWithChannelTypeSizes.SMALL_32 });
+  const tmp13 = closure_10(channel(12347).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12347).GuildIconWithChannelTypeSizes.SMALL_32 });
   cResult[3] = channel;
   cResult[4] = stateFromStores;
   cResult[5] = tmp13;
   tmp12 = tmp13;
-  const obj4 = { "aria-label": "", guild: stateFromStores, channel, size: channel(11597).GuildIconWithChannelTypeSizes.SMALL_32 };
+  const obj4 = { "aria-label": "", guild: stateFromStores, channel, size: channel(12347).GuildIconWithChannelTypeSizes.SMALL_32 };
 }) : (function FailedChannelRow(channel) {
   channel = channel.channel;
   const tmp = closure_13();
@@ -316,7 +316,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Failed
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(11597).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11597).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5088).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(12347).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(12347).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5088).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 });

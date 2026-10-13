@@ -1,6 +1,6 @@
-// === Module 13787: PremiumManagePlan ===
+// === Module 14124: PremiumManagePlan ===
 
-// Module 13787 (PremiumManagePlan)
+// Module 14124 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -24,11 +24,11 @@ import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7109 *
 import PremiumManagementUtils from "PremiumManagementUtils" /* 7121 */;
 import _modDef8081 from "module_8081" /* 8081 */;
 import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9396 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13642 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13685 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13713 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 13753 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13766 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13979 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 14022 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 14050 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 14090 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 14103 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -1028,8 +1028,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   let obj = navigation(576);
   ({ top, bottom } = useSafeAreaInsetsDefault());
   const tmp6 = useSafeAreaInsetsDefault();
-  const youBarSettingsOutsideSafeAreaTop = navigation(13751).useYouBarSettingsOutsideSafeAreaTop();
-  let obj2 = navigation(13751);
+  const youBarSettingsOutsideSafeAreaTop = navigation(14088).useYouBarSettingsOutsideSafeAreaTop();
+  let obj2 = navigation(14088);
   navigation = navigation(1503).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function t() {
@@ -1172,7 +1172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   const tmpResult7 = navigation(504);
   const isInReverseTrial = navigation(8095).useIsInReverseTrial();
   const tmpResult8 = navigation(8095);
-  useFPDurationLeftDefault(tmp26.endsAt, navigation(13753).CountDownMessageTypes.SHORT_TIME);
+  useFPDurationLeftDefault(tmp26.endsAt, navigation(14090).CountDownMessageTypes.SHORT_TIME);
   if (cResult[11] !== tmp26) {
     class X {
       constructor() {
@@ -1586,8 +1586,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   const tmp = closure_31();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(13751).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(13751);
+  const youBarSettingsOutsideSafeAreaTop = navigation(14088).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(14088);
   navigation = navigation(1503).useNavigation();
   let items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -1628,7 +1628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   const obj6 = navigation(504);
   let isInReverseTrial = navigation(8095).useIsInReverseTrial();
   const obj8 = navigation(8095);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13753).CountDownMessageTypes.SHORT_TIME);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(14090).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString = navigation(4769).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
@@ -1739,9 +1739,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
         },
       subscription: tmp10
     };
-    const items10 = [closure_28(tmp2(13642), obj17), ];
+    const items10 = [closure_28(tmp2(13979), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_28(tmp2(13683), obj18);
+    items10[1] = closure_28(tmp2(14020), obj18);
     obj16.children = items10;
     tmp27Result = closure_29(closure_7, obj16);
   }

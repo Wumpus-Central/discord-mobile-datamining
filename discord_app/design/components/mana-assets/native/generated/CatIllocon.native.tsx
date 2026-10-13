@@ -1,23 +1,23 @@
-// === Module 17244: CatIllocon ===
+// === Module 11862: CatIllocon ===
 
-// Module 17244 (CatIllocon)
+// Module 11862 (CatIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef17245 from "module_17245" /* 17245 */;
-import _modDef17246 from "module_17246" /* 17246 */;
-import _modDef17247 from "module_17247" /* 17247 */;
+import _modDef11863 from "module_11863" /* 11863 */;
+import _modDef11864 from "module_11864" /* 11864 */;
+import _modDef11865 from "module_11865" /* 11865 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17245 }, 3: null };
-const obj2 = { uri: _modDef17245 };
-obj[2] = { uri: _modDef17246 };
-const obj3 = { uri: _modDef17246 };
-obj[3] = { uri: _modDef17247 };
+let obj = { 1: null, 2: { uri: _modDef11863 }, 3: null };
+const obj2 = { uri: _modDef11863 };
+obj[2] = { uri: _modDef11864 };
+const obj3 = { uri: _modDef11864 };
+obj[3] = { uri: _modDef11865 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17247 };
+const obj4 = { uri: _modDef11865 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CatIllocon.native.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 12032: CreateGuild ===
+// === Module 12548: CreateGuild ===
 
-// Module 12032 (CreateGuild)
+// Module 12548 (CreateGuild)
 import nativeDefault from "native" /* 587 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 5371 */;
 import noop from "module_19" /* 19 */;
@@ -332,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
         }
       }
       let obj2 = { iconBackgroundColor: tmp4.contentContainer.backgroundColor, style: tmp4.iconUploader, onPress: onIconPress, icon: guild.icon };
-      const tmp27 = closure_7(ref(11353), obj2);
+      const tmp27 = closure_7(ref(12151), obj2);
       cResult[15] = guild.icon;
       cResult[16] = onIconPress;
       cResult[17] = tmp4.contentContainer.backgroundColor;
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
   }
   obj4.children = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(5088).Text, obj4);
-  items1[2] = closure_7(ref(11353), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
+  items1[2] = closure_7(ref(12151), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
   const obj6 = { clearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
   const intl3 = tmp4(1126).intl;
   obj6.label = intl3.string(isScreenReaderEnabled(1126).t.dBih7e);

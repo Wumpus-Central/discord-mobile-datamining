@@ -1,6 +1,6 @@
-// === Module 18609: GuildRoleSubscriptionTierTemplateUtils ===
+// === Module 18613: GuildRoleSubscriptionTierTemplateUtils ===
 
-// Module 18609 (GuildRoleSubscriptionTierTemplateUtils)
+// Module 18613 (GuildRoleSubscriptionTierTemplateUtils)
 import ChannelTypes from "ChannelTypes" /* 1106 */;
 import TextLockIcon from "TextLockIcon" /* 8206 */;
 import ImageLockIcon from "ImageLockIcon" /* 8213 */;

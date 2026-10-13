@@ -1,11 +1,11 @@
-// === Module 15611: DmsMessagePreviewsSetting ===
+// === Module 15926: DmsMessagePreviewsSetting ===
 
-// Module 15611 (DmsMessagePreviewsSetting)
+// Module 15926 (DmsMessagePreviewsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9314 */;
-import useMessagePreviews from "useMessagePreviews" /* 15612 */;
+import useMessagePreviews from "useMessagePreviews" /* 15927 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

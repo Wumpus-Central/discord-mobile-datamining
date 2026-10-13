@@ -75,7 +75,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     self.handleClose(false, 0, "The connection timed out after " + TimeUtils.now() - self.connectionStartTime + " ms - did not receive OP_HELLO in time.");
   }, closure_13);
   let obj = self(5121);
-  obj2 = self(14388);
+  obj2 = self(14709);
   const webSocket = new WebSocket("" + self.url + "?v=" + obj2.getVoiceGatewayProtocolVersion({ location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) }));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";

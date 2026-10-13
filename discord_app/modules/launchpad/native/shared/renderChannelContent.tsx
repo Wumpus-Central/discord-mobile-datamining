@@ -1,19 +1,19 @@
-// === Module 17414: renderChannelContent ===
+// === Module 17418: renderChannelContent ===
 
-// Module 17414 (renderChannelContent)
+// Module 17418 (renderChannelContent)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 6796 */;
 import WarningIcon from "WarningIcon" /* 7572 */;
 import LockIcon from "LockIcon" /* 8223 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16567 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17411 */;
-import ChannelTitleDefault from "ChannelTitle" /* 17415 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16872 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17415 */;
+import ChannelTitleDefault from "ChannelTitle" /* 17419 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(11760).SUBTITLE_OPACITY_NORMAL;
+const SUBTITLE_OPACITY_NORMAL = fn(11562).SUBTITLE_OPACITY_NORMAL;
 const UnreadSetting = fn(5967).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

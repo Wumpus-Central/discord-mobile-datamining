@@ -1,9 +1,9 @@
-// === Module 16007: useCheckpointMusic ===
+// === Module 16320: useCheckpointMusic ===
 
-// Module 16007 (useCheckpointMusic)
+// Module 16320 (useCheckpointMusic)
 import _mod17 from "module_17" /* 17 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 16000 */;
+import CheckpointStore from "CheckpointStore" /* 16313 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCheck
       if (CheckpointStore.isMuted) {
         num = 0;
       }
-      const sound = obj.createSound(ref(16008), "vibing_wumpus", num);
+      const sound = obj.createSound(ref(16321), "vibing_wumpus", num);
       ref.current = sound;
       sound.loop();
       ref = AppState.addEventListener("change", (event) => {
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCheck
     if (CheckpointStore.isMuted) {
       num = 0;
     }
-    const sound = obj.createSound(ref(16008), "vibing_wumpus", num);
+    const sound = obj.createSound(ref(16321), "vibing_wumpus", num);
     ref.current = sound;
     sound.loop();
     ref = AppState.addEventListener("change", (event) => {

@@ -1,6 +1,6 @@
-// === Module 13074: useMediaLoading ===
+// === Module 13558: useMediaLoading ===
 
-// Module 13074 (useMediaLoading)
+// Module 13558 (useMediaLoading)
 import c from "c" /* 576 */;
 import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 6647 */;
 import _slicedToArray from "module_32" /* 32 */;

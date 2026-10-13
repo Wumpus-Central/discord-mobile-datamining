@@ -1,6 +1,6 @@
-// === Module 12796: PremiumGiftAnalytics ===
+// === Module 13302: PremiumGiftAnalytics ===
 
-// Module 12796 (PremiumGiftAnalytics)
+// Module 13302 (PremiumGiftAnalytics)
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;

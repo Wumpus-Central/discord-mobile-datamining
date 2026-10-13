@@ -1,16 +1,16 @@
-// === Module 17023: ResourcesRow ===
+// === Module 17326: ResourcesRow ===
 
-// Module 17023 (ResourcesRow)
+// Module 17326 (ResourcesRow)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9320 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 17025 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 17328 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(17024).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(17327).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(5092);
@@ -45,7 +45,7 @@ export default function ResourcesRow(guildId) {
     const obj2 = {
       style: tmp.channelItem,
       onPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17026, dependencyMap.paths), closure_4, { guildId });
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17329, dependencyMap.paths), closure_4, { guildId });
         },
       children: null
     };

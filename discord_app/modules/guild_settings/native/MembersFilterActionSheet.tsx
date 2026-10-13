@@ -1,6 +1,6 @@
-// === Module 17041: MembersFilterActionSheet ===
+// === Module 17344: MembersFilterActionSheet ===
 
-// Module 17041 (MembersFilterActionSheet)
+// Module 17344 (MembersFilterActionSheet)
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
@@ -71,15 +71,13 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
   const intl = require("util").intl;
   obj3.title = intl.string(require("util").t.pEasFX);
   obj2.header = jsx(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: null });
-  obj2.children = jsx(require("BottomSheetModal").BottomSheetFlatList, {
+  obj2.children = jsx(require("module_8625").BottomSheetFlashList, {
     data: mapped,
     keyExtractor(id) {
       return id.id;
     },
     renderItem: callback1,
-    contentContainerStyle: tmp2.listView,
-    initialNumToRender: 10,
-    removeClippedSubviews: false
+    contentContainerStyle: tmp2.listView
   });
   return jsx(require("ActionSheet").ActionSheet, { scrollable: true, header: null, children: null });
 };

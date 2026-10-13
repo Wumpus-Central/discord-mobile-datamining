@@ -1,6 +1,6 @@
-// === Module 14433: Badge/Badge ===
+// === Module 14754: Badge/Badge ===
 
-// Module 14433 (Badge/Badge)
+// Module 14754 (Badge/Badge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

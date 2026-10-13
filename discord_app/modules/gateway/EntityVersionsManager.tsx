@@ -1,6 +1,6 @@
-// === Module 18084: EntityVersionsManager ===
+// === Module 18088: EntityVersionsManager ===
 
-// Module 18084 (EntityVersionsManager)
+// Module 18088 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;

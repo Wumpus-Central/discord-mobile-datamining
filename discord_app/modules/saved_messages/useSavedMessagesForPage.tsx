@@ -1,10 +1,10 @@
-// === Module 12649: useSavedMessagesForPage ===
+// === Module 13155: useSavedMessagesForPage ===
 
-// Module 12649 (useSavedMessagesForPage)
+// Module 13155 (useSavedMessagesForPage)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 9682 */;
-import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 12650 */;
-import useBookmarksPaginationDefault from "useBookmarksPagination" /* 12652 */;
+import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13156 */;
+import useBookmarksPaginationDefault from "useBookmarksPagination" /* 13158 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SavedMessagesStore from "SavedMessagesStore" /* 9681 */;
@@ -116,9 +116,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSaved
     tmp11 = cResult[5];
   }
   const effect = noop.useEffect(tmp10, tmp11);
-  first(12650)();
+  first(13156)();
   const obj = ALL(576);
-  const tmp14Result = first(12652)(ALL !== ALL(9682).SavedMessageSortTypes.REMINDER);
+  const tmp14Result = first(13158)(ALL !== ALL(9682).SavedMessageSortTypes.REMINDER);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [SavedMessagesStore];
     cResult[6] = items1;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSaved
       }
     }
   }
-  const tmp14 = first(12652);
+  const tmp14 = first(13158);
   const stateFromStoresArray = ALL(504).useStateFromStoresArray(tmp16, L);
   if (cResult[9] === tmp14Result) {
     class L {

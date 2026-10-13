@@ -1,6 +1,6 @@
-// === Module 13059: useMediaItemSpoilerState ===
+// === Module 13543: useMediaItemSpoilerState ===
 
-// Module 13059 (useMediaItemSpoilerState)
+// Module 13543 (useMediaItemSpoilerState)
 import native from "native" /* 1200 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;

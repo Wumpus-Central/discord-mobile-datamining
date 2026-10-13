@@ -1,6 +1,6 @@
-// === Module 11620: sharedClientThemeViewed ===
+// === Module 12368: sharedClientThemeViewed ===
 
-// Module 11620 (sharedClientThemeViewed)
+// Module 12368 (sharedClientThemeViewed)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import useTrackImpression from "useTrackImpression" /* 8972 */;
 import size from "module_2" /* 2 */;

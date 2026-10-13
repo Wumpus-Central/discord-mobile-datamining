@@ -1,8 +1,8 @@
-// === Module 18203: RedesignAddAvatarModal ===
+// === Module 18207: RedesignAddAvatarModal ===
 
-// Module 18203 (RedesignAddAvatarModal)
+// Module 18207 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 587 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18182 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18186 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -550,7 +550,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14843);
+              const obj = tmp2(15164);
               obj11.description = tmp2(8294).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(8294);

@@ -1,6 +1,6 @@
-// === Module 15805: FriendGamingActivityNotificationUtils ===
+// === Module 16120: FriendGamingActivityNotificationUtils ===
 
-// Module 15805 (FriendGamingActivityNotificationUtils)
+// Module 16120 (FriendGamingActivityNotificationUtils)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import UserSettings from "UserSettings" /* 2041 */;

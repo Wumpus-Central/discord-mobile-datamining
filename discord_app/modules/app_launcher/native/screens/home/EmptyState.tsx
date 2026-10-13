@@ -1,12 +1,12 @@
-// === Module 11799: home/EmptyState ===
+// === Module 11604: home/EmptyState ===
 
-// Module 11799 (home/EmptyState)
+// Module 11604 (home/EmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import AppLauncherTypes from "AppLauncherTypes" /* 10623 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11729 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11529 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

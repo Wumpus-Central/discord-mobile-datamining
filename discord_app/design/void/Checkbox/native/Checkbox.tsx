@@ -1,9 +1,9 @@
-// === Module 14396: Checkbox/Checkbox ===
+// === Module 14717: Checkbox/Checkbox ===
 
-// Module 14396 (Checkbox/Checkbox)
+// Module 14717 (Checkbox/Checkbox)
 import c from "c" /* 576 */;
-import _modDef14397 from "module_14397" /* 14397 */;
-import _modDef14398 from "module_14398" /* 14398 */;
+import _modDef14718 from "module_14718" /* 14718 */;
+import _modDef14719 from "module_14719" /* 14719 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkbox
   if (style.selected) {
     if (cResult[0] !== style) {
       const obj2 = { style, source: null };
-      tmp = _modDef14397;
+      tmp = _modDef14718;
       obj2.source = tmp;
       const tmp12 = <Image style={style} source={null} />;
       cResult[0] = style;
@@ -28,8 +28,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkbox
     }
   } else {
     if (cResult[2] !== style) {
-      const obj3 = { style, source: _modDef14398 };
-      const tmp7 = <Image style={style} source={_modDef14398} />;
+      const obj3 = { style, source: _modDef14719 };
+      const tmp7 = <Image style={style} source={_modDef14719} />;
       cResult[2] = style;
       cResult[3] = tmp7;
       let tmp3 = tmp7;
@@ -41,10 +41,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkbox
 }) : (function Checkbox(style) {
   const obj = { style: style.style, source: null };
   if (style.selected) {
-    obj.source = _modDef14397;
+    obj.source = _modDef14718;
     let tmp5 = obj;
   } else {
-    obj.source = _modDef14398;
+    obj.source = _modDef14719;
     tmp5 = obj;
   }
   return <Image {...tmp5} />;

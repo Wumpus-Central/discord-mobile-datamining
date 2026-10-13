@@ -1,6 +1,6 @@
-// === Module 16591: LurkerServerPreviewJoinButton ===
+// === Module 16896: LurkerServerPreviewJoinButton ===
 
-// Module 16591 (LurkerServerPreviewJoinButton)
+// Module 16896 (LurkerServerPreviewJoinButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

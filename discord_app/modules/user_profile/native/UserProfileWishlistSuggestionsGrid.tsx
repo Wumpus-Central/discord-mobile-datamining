@@ -1,6 +1,6 @@
-// === Module 13407: UserProfileWishlistSuggestionsGrid ===
+// === Module 13744: UserProfileWishlistSuggestionsGrid ===
 
-// Module 13407 (UserProfileWishlistSuggestionsGrid)
+// Module 13744 (UserProfileWishlistSuggestionsGrid)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,10 +10,10 @@ import useInitialValueDefault from "useInitialValue" /* 6170 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7263 */;
-import useCardGridLayoutDefault from "useCardGridLayout" /* 13103 */;
-import MobileWishlistSuggestionsExperiment from "MobileWishlistSuggestionsExperiment" /* 13403 */;
-import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 13408 */;
-import AddToWishlistGridDefault from "AddToWishlistGrid" /* 13410 */;
+import useCardGridLayoutDefault from "useCardGridLayout" /* 13587 */;
+import MobileWishlistSuggestionsExperiment from "MobileWishlistSuggestionsExperiment" /* 13740 */;
+import useWishlistSuggestionsDismissibleContentDefault from "useWishlistSuggestionsDismissibleContent" /* 13745 */;
+import AddToWishlistGridDefault from "AddToWishlistGrid" /* 13747 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import WishlistStore from "WishlistStore" /* 8981 */;
@@ -272,7 +272,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wishli
               return;
             }
           }
-          const tmp16 = closure_12(tmp(11826).ShopIcon, { size: "sm" });
+          const tmp16 = closure_12(tmp(11631).ShopIcon, { size: "sm" });
           const intl = tmp(1126).intl;
           const stringResult = intl.string(tmp(1126).t.RSyoZu);
           cResult[9] = tmp16;
@@ -406,7 +406,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wishli
         cResult[19] = wishlistId;
         cResult[20] = obj5;
       }
-      tmpResult = tmp(13409);
+      tmpResult = tmp(13746);
     }
     const obj6 = { userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: tmp(8987).WishlistFetchSource.USER_PROFILE };
     cResult[4] = userId;
@@ -431,7 +431,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wishli
   let obj2 = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap };
   const tmp4 = closure_18();
   const tmp6 = useInitialValueDefault(() => trackUserProfileWishlistAction(dependencyMap[19]).v4());
-  const obj3 = trackUserProfileWishlistAction(13409);
+  const obj3 = trackUserProfileWishlistAction(13746);
   let items = obj3.useAddToWishlistGridItems({ userId, wishlist, numWishlistItemsToRecommend: 15, maxWishlistItemsToShow: 9, source: trackUserProfileWishlistAction(8987).WishlistFetchSource.USER_PROFILE }).items;
   let items1 = [trackUserProfileWishlistAction];
   const callback = noop.useCallback(() => {
@@ -449,7 +449,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wishli
   }, items1);
   if (0 === items.length) {
     const obj5 = { style: tmp3.shopButtonContainer, children: null };
-    const obj6 = { size: "md", variant: "secondary", icon: closure_12(tmp(11826).ShopIcon, { size: "sm" }), text: null, onPress: null };
+    const obj6 = { size: "md", variant: "secondary", icon: closure_12(tmp(11631).ShopIcon, { size: "sm" }), text: null, onPress: null };
     const intl3 = tmp(1126).intl;
     obj6.text = intl3.string(tmp(1126).t.RSyoZu);
     obj6.onPress = callback;
@@ -498,7 +498,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wishli
     const obj16 = { items, wishlist, analyticsLocations, cardSize: useCardGridLayoutDefault(obj2).cardWidth };
     items4[1] = closure_12(AddToWishlistGridDefault, obj16);
     const obj17 = { style: tmp3.shopButtonContainer, children: null };
-    const obj32 = { size: "md", variant: "secondary", icon: closure_12(tmp(11826).ShopIcon, { size: "sm" }), text: null, onPress: null };
+    const obj32 = { size: "md", variant: "secondary", icon: closure_12(tmp(11631).ShopIcon, { size: "sm" }), text: null, onPress: null };
     const intl2 = tmp(1126).intl;
     obj32.text = intl2.string(tmp(1126).t.RSyoZu);
     obj32.onPress = callback;
@@ -506,7 +506,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wishli
     items4[2] = closure_12(View, obj17);
     obj9.children = items4;
     obj7.children = closure_13(ReanimatedRexportDefault.View, obj9);
-    tmp11Result = closure_12(tmp(13411).WishlistAnalyticsProvider, obj7);
+    tmp11Result = closure_12(tmp(13748).WishlistAnalyticsProvider, obj7);
   }
   return tmp11Result;
 });

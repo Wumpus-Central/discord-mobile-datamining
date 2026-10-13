@@ -1,6 +1,6 @@
-// === Module 12588: ChannelRowPreview ===
+// === Module 13098: ChannelRowPreview ===
 
-// Module 12588 (ChannelRowPreview)
+// Module 13098 (ChannelRowPreview)
 import c from "c" /* 576 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import useToken from "useToken" /* 4818 */;
@@ -18,10 +18,10 @@ import AttachmentIcon from "AttachmentIcon" /* 10028 */;
 import MusicIcon from "MusicIcon" /* 10248 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10515 */;
 import VideoIcon from "VideoIcon" /* 10770 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11758 */;
-import ChannelListLayout from "ChannelListLayout" /* 11761 */;
-import StickerIcon from "StickerIcon" /* 12269 */;
-import useFormattedMessagePreview from "useFormattedMessagePreview" /* 12576 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11560 */;
+import ChannelListLayout from "ChannelListLayout" /* 11563 */;
+import StickerIcon from "StickerIcon" /* 12782 */;
+import useFormattedMessagePreview from "useFormattedMessagePreview" /* 13086 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;

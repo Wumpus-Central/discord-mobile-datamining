@@ -1,16 +1,16 @@
-// === Module 11954: ChatInputSendButton ===
+// === Module 12470: ChatInputSendButton ===
 
-// Module 11954 (ChatInputSendButton)
+// Module 12470 (ChatInputSendButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useToken from "useToken" /* 4818 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
 import SendMessageIcon from "SendMessageIcon" /* 5040 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11937 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11945 */;
-import VoiceMessageButtonDefault from "VoiceMessageButton" /* 11955 */;
-import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 11959 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11956 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11959 */;
+import VoiceMessageButtonDefault from "VoiceMessageButton" /* 12471 */;
+import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 12475 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
@@ -27,7 +27,7 @@ function getChatInputSendButtonItemKey(sendVoiceMessageEnabled) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(11636).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(11960).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = { BUTTON_SEND: "send-button", BUTTON_SEND_DISABLED: "send-button-disabled", BUTTON_SEND_VOICE_MESSAGE: "voice-message-button", BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled" };
 const createStyles = fn(5092);
@@ -381,7 +381,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputS
     obj7.style = size;
     if (canSendVoiceMessage) {
       const obj8 = { disabled: stateFromStores1, channelId: channel.id };
-      let tmp15Result = jsx(onSendMessage(11955), { disabled: stateFromStores1, channelId: channel.id });
+      let tmp15Result = jsx(onSendMessage(12471), { disabled: stateFromStores1, channelId: channel.id });
     } else {
       const obj9 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
       ({ button: obj11.style, buttonActive: obj11.activeStyle, iconActive: obj11.activeIconStyle } = tmp7);
@@ -390,8 +390,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputS
       obj9.accessibilityLabel = intl.string(tmp(1126).t.TXNS7S);
       obj9.onPress = onSendMessage;
       obj9.disabled = !tmp12;
-      tmp15Result = jsx(onSendMessage(11937), { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null });
-      const tmp3Result = onSendMessage(11937);
+      tmp15Result = jsx(onSendMessage(11956), { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null });
+      const tmp3Result = onSendMessage(11956);
     }
     obj7.children = tmp15Result;
     return <canSendVoiceMessage style={null}>{null}</canSendVoiceMessage>;

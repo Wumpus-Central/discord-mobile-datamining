@@ -1,6 +1,6 @@
-// === Module 13214: UserProfileWidgetsBoardEditNotice ===
+// === Module 13696: UserProfileWidgetsBoardEditNotice ===
 
-// Module 13214 (UserProfileWidgetsBoardEditNotice)
+// Module 13696 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2049 */;

@@ -1,6 +1,6 @@
-// === Module 16301: DoubleTapEmojiSetting ===
+// === Module 16608: DoubleTapEmojiSetting ===
 
-// Module 16301 (DoubleTapEmojiSetting)
+// Module 16608 (DoubleTapEmojiSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

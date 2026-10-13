@@ -1,6 +1,6 @@
-// === Module 18119: MessageSessionMetadataManager ===
+// === Module 18123: MessageSessionMetadataManager ===
 
-// Module 18119 (MessageSessionMetadataManager)
+// Module 18123 (MessageSessionMetadataManager)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;

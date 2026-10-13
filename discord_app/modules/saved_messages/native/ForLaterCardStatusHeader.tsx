@@ -1,6 +1,6 @@
-// === Module 12670: ForLaterCardStatusHeader ===
+// === Module 13176: ForLaterCardStatusHeader ===
 
-// Module 12670 (ForLaterCardStatusHeader)
+// Module 13176 (ForLaterCardStatusHeader)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

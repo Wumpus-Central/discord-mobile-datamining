@@ -1,6 +1,6 @@
-// === Module 11992: useShowConnectedUserLimit ===
+// === Module 12508: useShowConnectedUserLimit ===
 
-// Module 11992 (useShowConnectedUserLimit)
+// Module 12508 (useShowConnectedUserLimit)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 8789 */;

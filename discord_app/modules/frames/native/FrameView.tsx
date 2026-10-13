@@ -1,11 +1,11 @@
-// === Module 17738: FrameView ===
+// === Module 17742: FrameView ===
 
-// Module 17738 (FrameView)
+// Module 17742 (FrameView)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import leaveFrame from "leaveFrame" /* 10821 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 17739 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 17743 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -153,10 +153,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   obj4.type = frame(10809).EmbeddedContextSourceType.FRAME;
   obj4.frameId = frame.id;
   obj3.contextSource = obj4;
-  const tmp10 = layoutMode(17743);
-  obj3.queryParams = layoutMode(17740)(frame, frame(10941).ActivityPlatform.MOBILE);
+  const tmp10 = layoutMode(17747);
+  obj3.queryParams = layoutMode(17744)(frame, frame(10941).ActivityPlatform.MOBILE);
   obj3.onLoadError = callback;
-  const tmp11 = layoutMode(17740);
+  const tmp11 = layoutMode(17744);
   obj3.allowPopups = frame(10960).allowPopups(data);
   obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
   if (isLandscape) {

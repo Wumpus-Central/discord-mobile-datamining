@@ -1,6 +1,6 @@
-// === Module 16278: ContentAndSocialScreen ===
+// === Module 16585: ContentAndSocialScreen ===
 
-// Module 16278 (ContentAndSocialScreen)
+// Module 16585 (ContentAndSocialScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,13 +8,13 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7000 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12404 */;
-import SettingLayoutDefault from "SettingLayout" /* 14965 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 15092 */;
-import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 15094 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 16279 */;
-import useUserSafetySettingsSelectedGuildId from "useUserSafetySettingsSelectedGuildId" /* 16284 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 16285 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12914 */;
+import SettingLayoutDefault from "SettingLayout" /* 15286 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 15413 */;
+import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 15415 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 16586 */;
+import useUserSafetySettingsSelectedGuildId from "useUserSafetySettingsSelectedGuildId" /* 16591 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 16592 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

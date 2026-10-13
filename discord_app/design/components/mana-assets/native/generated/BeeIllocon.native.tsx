@@ -1,23 +1,23 @@
-// === Module 17264: BeeIllocon ===
+// === Module 11882: BeeIllocon ===
 
-// Module 17264 (BeeIllocon)
+// Module 11882 (BeeIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef17265 from "module_17265" /* 17265 */;
-import _modDef17266 from "module_17266" /* 17266 */;
-import _modDef17267 from "module_17267" /* 17267 */;
+import _modDef11883 from "module_11883" /* 11883 */;
+import _modDef11884 from "module_11884" /* 11884 */;
+import _modDef11885 from "module_11885" /* 11885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17265 }, 3: null };
-const obj2 = { uri: _modDef17265 };
-obj[2] = { uri: _modDef17266 };
-const obj3 = { uri: _modDef17266 };
-obj[3] = { uri: _modDef17267 };
+let obj = { 1: null, 2: { uri: _modDef11883 }, 3: null };
+const obj2 = { uri: _modDef11883 };
+obj[2] = { uri: _modDef11884 };
+const obj3 = { uri: _modDef11884 };
+obj[3] = { uri: _modDef11885 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17267 };
+const obj4 = { uri: _modDef11885 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
 

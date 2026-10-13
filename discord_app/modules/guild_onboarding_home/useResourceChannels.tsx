@@ -1,6 +1,6 @@
-// === Module 17025: useResourceChannels ===
+// === Module 17328: useResourceChannels ===
 
-// Module 17025 (useResourceChannels)
+// Module 17328 (useResourceChannels)
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6926 */;
 

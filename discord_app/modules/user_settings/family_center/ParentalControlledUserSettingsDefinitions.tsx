@@ -1,6 +1,6 @@
-// === Module 15098: ParentalControlledUserSettingsDefinitions ===
+// === Module 15419: ParentalControlledUserSettingsDefinitions ===
 
-// Module 15098 (ParentalControlledUserSettingsDefinitions)
+// Module 15419 (ParentalControlledUserSettingsDefinitions)
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7262 */;
 
 const require = globalThis.__r;

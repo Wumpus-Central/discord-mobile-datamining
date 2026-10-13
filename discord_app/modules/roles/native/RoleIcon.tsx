@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
     cResult[7] = obj5;
     roleIcon = obj5;
   }
-  const obj6 = { fontFamily: "System", fontSize: result, lineHeight: "code", textAlign: "<string:4268818748>", width: num, marginBottom: "SUBSCRIPTION_PLANS_RESET" };
+  const obj6 = { fontFamily: "System", fontSize: result, lineHeight: "code", textAlign: "<string:4294865153>", width: num, marginBottom: "<string:1238647098>" };
   cResult[2] = num;
   cResult[3] = result;
   cResult[4] = obj6;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
     size = 20;
   }
   const size1 = { height: size, width: size };
-  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "code", textAlign: "<string:4268818748>", width: size, marginBottom: "SUBSCRIPTION_PLANS_RESET" };
+  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "code", textAlign: "<string:4294865153>", width: size, marginBottom: "<string:1238647098>" };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
     const obj3 = { uri: src };

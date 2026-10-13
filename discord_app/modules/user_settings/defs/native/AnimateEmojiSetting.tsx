@@ -1,6 +1,6 @@
-// === Module 15715: AnimateEmojiSetting ===
+// === Module 16030: AnimateEmojiSetting ===
 
-// Module 15715 (AnimateEmojiSetting)
+// Module 16030 (AnimateEmojiSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;

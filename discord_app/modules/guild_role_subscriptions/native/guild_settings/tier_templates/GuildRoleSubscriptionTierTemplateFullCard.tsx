@@ -1,14 +1,14 @@
-// === Module 18606: GuildRoleSubscriptionTierTemplateFullCard ===
+// === Module 18610: GuildRoleSubscriptionTierTemplateFullCard ===
 
-// Module 18606 (GuildRoleSubscriptionTierTemplateFullCard)
+// Module 18610 (GuildRoleSubscriptionTierTemplateFullCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import Text_Text from "Text/Text" /* 5088 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15530 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16567 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 18609 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15845 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16872 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 18613 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
             }
           }
           const obj16 = { roleColor: role_color, roleImage: image, roleName: name, guildId };
-          const tmp44 = closure_4(tmp(18608).GuildRoleSubscriptionRolePreview, obj16);
+          const tmp44 = closure_4(tmp(18612).GuildRoleSubscriptionRolePreview, obj16);
           cResult[26] = guildId;
           cResult[27] = image;
           cResult[28] = name;

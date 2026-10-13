@@ -1,6 +1,6 @@
-// === Module 13185: UserProfileContent ===
+// === Module 13667: UserProfileContent ===
 
-// Module 13185 (UserProfileContent)
+// Module 13667 (UserProfileContent)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
@@ -13,27 +13,27 @@ import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8322 
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8368 */;
 import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 10613 */;
 import closeVoicePanelsDefault from "closeVoicePanels" /* 10805 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12363 */;
-import ProvisionalAccountExplainer from "ProvisionalAccountExplainer" /* 12370 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 13117 */;
-import UserProfileModeratorActionsDefault from "UserProfileModeratorActions" /* 13173 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 13176 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13214 */;
-import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 13215 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 13250 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13379 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13387 */;
-import WishlistUtils from "WishlistUtils" /* 13388 */;
-import UserProfilePrivateInfoBannerDefault from "UserProfilePrivateInfoBanner" /* 13393 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 13394 */;
-import UserProfileGameFriendsCardDefault from "UserProfileGameFriendsCard" /* 13396 */;
-import UserProfileConnections from "UserProfileConnections" /* 13397 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13402 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13407 */;
-import UserProfileMutualsDefault from "UserProfileMutuals" /* 13413 */;
-import UserProfileIncomingFriendRequestDefault from "UserProfileIncomingFriendRequest" /* 13414 */;
-import UserProfileRemediatedNoticeDefault from "UserProfileRemediatedNotice" /* 13419 */;
-import UserProfileContactButtonsDefault from "UserProfileContactButtons" /* 13420 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12873 */;
+import ProvisionalAccountExplainer from "ProvisionalAccountExplainer" /* 12880 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 13601 */;
+import UserProfileModeratorActionsDefault from "UserProfileModeratorActions" /* 13655 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 13658 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13696 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 13697 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 13700 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13716 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13724 */;
+import WishlistUtils from "WishlistUtils" /* 13725 */;
+import UserProfilePrivateInfoBannerDefault from "UserProfilePrivateInfoBanner" /* 13730 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 13731 */;
+import UserProfileGameFriendsCardDefault from "UserProfileGameFriendsCard" /* 13733 */;
+import UserProfileConnections from "UserProfileConnections" /* 13734 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13739 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13744 */;
+import UserProfileMutualsDefault from "UserProfileMutuals" /* 13750 */;
+import UserProfileIncomingFriendRequestDefault from "UserProfileIncomingFriendRequest" /* 13751 */;
+import UserProfileRemediatedNoticeDefault from "UserProfileRemediatedNotice" /* 13756 */;
+import UserProfileContactButtonsDefault from "UserProfileContactButtons" /* 13757 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8317 */;
@@ -109,7 +109,7 @@ function RemoveGameFriendIconButton(user) {
   const channelId = user.channelId;
   const items = [channelId, guildId, user];
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13187, dependencyMap.paths), "UserProfileGameFriendActionSheet", { user, guildId, channelId }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13669, dependencyMap.paths), "UserProfileGameFriendActionSheet", { user, guildId, channelId }, "stack");
   }, items);
   const obj = { size: "sm", variant: "secondary-overlay", icon: closure_20(user(channelId[34]).UserPlatformIcon, { size: "sm", color: "white" }), accessibilityLabel: null, onPress: null };
   const intl = user(channelId[30]).intl;
@@ -232,7 +232,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
     if (cResult[1] === user.id) {
       let tmp9 = cResult[2];
     }
-    const variantProps = tmp(13189).useBadgeDirectoryNuxCoachmarkVariant(tmp9).variantProps;
+    const variantProps = tmp(13671).useBadgeDirectoryNuxCoachmarkVariant(tmp9).variantProps;
     if (cResult[3] !== variantProps) {
       if (null != variantProps) {
         const items = [tmp(2049).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER];
@@ -247,9 +247,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
       [tmp14, tmp15] = tmp(7100).useSelectedDismissibleContent(cResult[4]);
       const tmp16 = tmp14 === tmp(2049).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER;
       const tmp13 = _slicedToArray(tmp(7100).useSelectedDismissibleContent(cResult[4]), 2);
-      const badgeDirectoryNuxEntryPoint = tmp(13192).useBadgeDirectoryNuxEntryPoint(tmp16, tmp15);
+      const badgeDirectoryNuxEntryPoint = tmp(13674).useBadgeDirectoryNuxEntryPoint(tmp16, tmp15);
       ({ entryPointRef, onOpenBadgeDirectory } = badgeDirectoryNuxEntryPoint);
-      const tmpResult5 = tmp(13192);
+      const tmpResult5 = tmp(13674);
       const name = tmp5(5409).useName(guildId, channelId.channelId, user);
       if (cResult[5] === name) {
         if (cResult[6] === displayNameOverride) {
@@ -392,7 +392,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
                                         }
                                       }
                                       obj4.markAsDismissed = tmp15;
-                                      tmp37 = closure_20(tmp5(13193), obj4);
+                                      tmp37 = closure_20(tmp5(13675), obj4);
                                     }
                                     class V {
                                       constructor() {
@@ -471,7 +471,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
       tmp19 = tmp21;
       const tmp5Result = tmp5(5409);
     }
-    const tmpResult = tmp(13189);
+    const tmpResult = tmp(13671);
   }
   const obj6 = { userId: user.id, enabled: tmp4, fetchCatalog: false, location: "UserProfileContent" };
   cResult[0] = tmp4;
@@ -501,8 +501,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
     showBadgeDirectoryNuxCoachmark = flag;
   }
   obj3.enabled = showBadgeDirectoryNuxCoachmark;
-  const variantProps = userTag(13189).useBadgeDirectoryNuxCoachmarkVariant(obj3).variantProps;
-  const obj2 = userTag(13189);
+  const variantProps = userTag(13671).useBadgeDirectoryNuxCoachmarkVariant(obj3).variantProps;
+  const obj2 = userTag(13671);
   if (null != variantProps) {
     const items = [tmp5(2049).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER];
     let items1 = items;
@@ -513,9 +513,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
   [tmp8, tmp9] = userTag(7100).useSelectedDismissibleContent(items1);
   const tmp10 = tmp8 === userTag(2049).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER;
   const tmp7 = _slicedToArray(userTag(7100).useSelectedDismissibleContent(items1), 2);
-  const badgeDirectoryNuxEntryPoint = userTag(13192).useBadgeDirectoryNuxEntryPoint(tmp10, tmp9);
+  const badgeDirectoryNuxEntryPoint = userTag(13674).useBadgeDirectoryNuxEntryPoint(tmp10, tmp9);
   ({ entryPointRef, onOpenBadgeDirectory } = badgeDirectoryNuxEntryPoint);
-  const tmp5Result3 = userTag(13192);
+  const tmp5Result3 = userTag(13674);
   const name = trackUserProfileAction(5409).useName(guildId, channelId, user);
   let tmp13 = name;
   if (null != displayNameOverride) {
@@ -576,7 +576,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
   let tmp17Result = null != variantProps;
   if (tmp17Result) {
     const obj5 = { targetRef: entryPointRef, userId: user.id, variantProps, visible: tmp10, markAsDismissed: tmp9 };
-    tmp17Result = closure_20(tmp(13193), obj5);
+    tmp17Result = closure_20(tmp(13675), obj5);
   }
   children[1] = tmp17Result;
   return closure_22(closure_21, { children });
@@ -665,7 +665,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
               }
             }
             const obj5 = { style: tmp5.primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: tmp22, secondaryButton: tmp25 };
-            const tmp32 = closure_20(tmp4(13115), obj5);
+            const tmp32 = closure_20(tmp4(13599), obj5);
             cResult[20] = tmp5.primaryButtons;
             cResult[21] = tmp22;
             cResult[22] = tmp25;
@@ -731,7 +731,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
   const obj3 = { style: tmp3.primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
   const obj2 = guildId(504);
   const obj4 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-  const tmp7 = trackUserProfileAction(13115);
+  const tmp7 = trackUserProfileAction(13599);
   obj4.icon = closure_20(guildId(9724).PencilIcon, { size: "sm", color: trackUserProfileAction(587).colors.WHITE });
   if (null != stateFromStores) {
     const intl2 = tmp4(1126).intl;

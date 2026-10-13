@@ -1,8 +1,8 @@
-// === Module 17866: calculateContentCenterOffset ===
+// === Module 17870: calculateContentCenterOffset ===
 
-// Module 17866 (calculateContentCenterOffset)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11577 */;
-import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11975 */;
+// Module 17870 (calculateContentCenterOffset)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11573 */;
+import VoicePanelCardConstants from "VoicePanelCardConstants" /* 12491 */;
 import size from "module_2" /* 2 */;
 
 const EDGE_GUTTER = VoicePanelCardConstants.EDGE_GUTTER;

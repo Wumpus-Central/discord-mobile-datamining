@@ -1,6 +1,6 @@
-// === Module 17805: VoicePanelHeader ===
+// === Module 17809: VoicePanelHeader ===
 
-// Module 17805 (VoicePanelHeader)
+// Module 17809 (VoicePanelHeader)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
@@ -9,9 +9,9 @@ import spring from "spring" /* 5378 */;
 import useChannelName from "useChannelName" /* 5421 */;
 import StageMusicActionCreators from "StageMusicActionCreators" /* 10989 */;
 import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11148 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11976 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17779 */;
-import useStableParticipant from "useStableParticipant" /* 17810 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12492 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17783 */;
+import useStableParticipant from "useStableParticipant" /* 17814 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
@@ -27,11 +27,11 @@ import UserStore from "UserStore" /* 1390 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11972);
+const VoicePanelConstants = fn(12488);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(11975).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(11970).VoicePanelControlsModes;
+const EDGE_GUTTER = fn(12491).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12486).VoicePanelControlsModes;
 const ParticipantTypes = fn(5115).ParticipantTypes;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);

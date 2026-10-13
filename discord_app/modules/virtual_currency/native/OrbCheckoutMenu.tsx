@@ -1,6 +1,6 @@
-// === Module 16071: OrbCheckoutMenu ===
+// === Module 16384: OrbCheckoutMenu ===
 
-// Module 16071 (OrbCheckoutMenu)
+// Module 16384 (OrbCheckoutMenu)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -27,7 +27,7 @@ export default function OrbCheckoutMenu() {
             closure_1_1(closure_1_2[7]).open("ORB_CHECKOUT_SUCCESS", { text: "Successfully redeemed item with Orbs" });
           }
       };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13454, dependencyMap.paths), obj2);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13791, dependencyMap.paths), obj2);
     }
   }, items);
   let obj = { children: null };

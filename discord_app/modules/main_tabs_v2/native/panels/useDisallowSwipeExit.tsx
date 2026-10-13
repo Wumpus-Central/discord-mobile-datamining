@@ -1,8 +1,8 @@
-// === Module 17128: useDisallowSwipeExit ===
+// === Module 11380: useDisallowSwipeExit ===
 
-// Module 17128 (useDisallowSwipeExit)
+// Module 11380 (useDisallowSwipeExit)
 import c from "c" /* 576 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16843 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11381 */;
 import noop from "module_19" /* 19 */;
 
 const MainTabsNavigatorPanelContextDefault = MainTabsNavigatorPanelContext;

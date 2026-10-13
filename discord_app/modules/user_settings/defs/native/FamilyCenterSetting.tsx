@@ -1,11 +1,11 @@
-// === Module 15143: FamilyCenterSetting ===
+// === Module 15464: FamilyCenterSetting ===
 
-// Module 15143 (FamilyCenterSetting)
+// Module 15464 (FamilyCenterSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 15144 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 15145 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 15465 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 15466 */;
 import noop from "module_19" /* 19 */;
 
 const util = intl(1126);

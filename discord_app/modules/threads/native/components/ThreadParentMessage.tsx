@@ -1,6 +1,6 @@
-// === Module 17364: ThreadParentMessage ===
+// === Module 17368: ThreadParentMessage ===
 
-// Module 17364 (ThreadParentMessage)
+// Module 17368 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
 import router_utils from "router_utils" /* 1112 */;
 import Pressables from "Pressables" /* 6185 */;

@@ -1,6 +1,6 @@
-// === Module 11376: SelectComponentActionSheet ===
+// === Module 11339: SelectComponentActionSheet ===
 
-// Module 11376 (SelectComponentActionSheet)
+// Module 11339 (SelectComponentActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
@@ -610,7 +610,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/components/SelectComponentActionSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectComponentActionSheet(selectionActionComponent) {
-  const cResult = selectionActionComponent(selectedCount[9]).c(51);
+  const cResult = selectionActionComponent(selectedCount[9]).c(52);
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
   ({ labelComponent, onPressOptionItem } = selectionActionComponent);
   ({ selectedOptions, selectedCount } = selectionActionComponent);
@@ -907,9 +907,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectCo
     obj3.renderIcon = renderHeaderIcon;
     obj2.header = tmp12(tmp14, obj3);
     const obj4 = {
-      keyExtractor(arg0, arg1) {
-          return "" + arg1;
+      keyExtractor(value) {
+          return value.value;
         },
+      maintainVisibleContentPosition: { disabled: true },
       data: options,
       renderItem: callback,
       contentContainerStyle: null,
@@ -923,7 +924,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectCo
       str = "none";
     }
     obj4.accessibilityRole = str;
-    obj2.children = tmp12(tmp5(tmp2[25]).BottomSheetFlatList, obj4);
+    obj2.children = tmp12(tmp5(tmp2[25]).BottomSheetFlashList, obj4);
     return tmp12(tmp13, obj2);
   } else if (0 === selectedCount) {
     let tmp16 = !allowEmpty;

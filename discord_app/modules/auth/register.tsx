@@ -1,6 +1,6 @@
-// === Module 16382: auth/register ===
+// === Module 16687: auth/register ===
 
-// Module 16382 (auth/register)
+// Module 16687 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
@@ -8,9 +8,9 @@ import _modDef4702 from "module_4702" /* 4702 */;
 import APIErrorDefault from "APIError" /* 5636 */;
 import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5727 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 16384 */;
-import formatDateForAPIDefault from "formatDateForAPI" /* 16385 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 16386 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 16689 */;
+import formatDateForAPIDefault from "formatDateForAPI" /* 16690 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 16691 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -263,6 +263,7 @@ function registerFull(giftCodeSKUId) {
     DispatcherDefault.dispatch({ type: "GUARDIAN_CONNECT_REQUIRED", shouldShowGuardianConnect: true === body.body.show_guardian_connect });
     const obj4 = { type: "GUARDIAN_CONNECT_REQUIRED", shouldShowGuardianConnect: true === body.body.show_guardian_connect };
     AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, { source: constants3.REGISTER, action: constants2.AGE_GATE_SUCCESS });
+    return body.body;
   }, (arg0) => {
     if (arg0 instanceof SharedCaptchaUtils.CaptchaCancelError) {
       throw arg0;
@@ -277,7 +278,7 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(16383);
+const ParentalConsentStore = fn(16688);
 const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1110);

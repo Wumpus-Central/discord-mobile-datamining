@@ -1,6 +1,6 @@
-// === Module 16989: MainTabsChannelScreenStack ===
+// === Module 17292: MainTabsChannelScreenStack ===
 
-// Module 16989 (MainTabsChannelScreenStack)
+// Module 17292 (MainTabsChannelScreenStack)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Link from "Link" /* 1504 */;
@@ -13,13 +13,13 @@ import useThemeDefault from "useTheme" /* 5031 */;
 import Suspender from "Suspender" /* 5330 */;
 import useMountEffect from "useMountEffect" /* 5396 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16435 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 16436 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16843 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 16990 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 16992 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 16993 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16994 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11381 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16740 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 16741 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 17293 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 17295 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 17296 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 17297 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 11373: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 12171: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 11373 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 12171 (ConnectionsRoleMessageBadgeActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -28,7 +28,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 11374 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 12172 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

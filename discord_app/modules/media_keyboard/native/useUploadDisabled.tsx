@@ -1,6 +1,6 @@
-// === Module 11934: useUploadDisabled ===
+// === Module 11716: useUploadDisabled ===
 
-// Module 11934 (useUploadDisabled)
+// Module 11716 (useUploadDisabled)
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6924 */;
 import DraftStore from "DraftStore" /* 7244 */;
 import PermissionStore from "PermissionStore" /* 4750 */;

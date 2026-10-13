@@ -1,23 +1,23 @@
-// === Module 17228: SnailIllocon ===
+// === Module 11846: SnailIllocon ===
 
-// Module 17228 (SnailIllocon)
+// Module 11846 (SnailIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef17229 from "module_17229" /* 17229 */;
-import _modDef17230 from "module_17230" /* 17230 */;
-import _modDef17231 from "module_17231" /* 17231 */;
+import _modDef11847 from "module_11847" /* 11847 */;
+import _modDef11848 from "module_11848" /* 11848 */;
+import _modDef11849 from "module_11849" /* 11849 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17229 }, 3: null };
-const obj2 = { uri: _modDef17229 };
-obj[2] = { uri: _modDef17230 };
-const obj3 = { uri: _modDef17230 };
-obj[3] = { uri: _modDef17231 };
+let obj = { 1: null, 2: { uri: _modDef11847 }, 3: null };
+const obj2 = { uri: _modDef11847 };
+obj[2] = { uri: _modDef11848 };
+const obj3 = { uri: _modDef11848 };
+obj[3] = { uri: _modDef11849 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17231 };
+const obj4 = { uri: _modDef11849 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SnailIllocon.native.tsx");
 

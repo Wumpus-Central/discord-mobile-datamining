@@ -1,12 +1,12 @@
-// === Module 17211: ConjureIdeasOffer ===
+// === Module 11829: ConjureIdeasOffer ===
 
-// Module 17211 (ConjureIdeasOffer)
+// Module 11829 (ConjureIdeasOffer)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
-import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 17212 */;
+import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 11830 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

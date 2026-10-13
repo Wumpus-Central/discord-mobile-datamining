@@ -40,7 +40,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   if (cResult[1] !== channelId) {
     class T {
       constructor() {
-        closure_0 = closure_3(/* F154699 */ function() { ... });
+        closure_0 = closure_3(/* F154767 */ function() { ... });
         promise = (function fetchInvites() { ... })();
         catchPromise = promise.catch(() => { ... });
         return;
@@ -51,7 +51,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   } else {
     class T {
       constructor() {
-        closure_0 = closure_3(/* F154699 */ function() { ... });
+        closure_0 = closure_3(/* F154767 */ function() { ... });
         promise = (function fetchInvites() { ... })();
         catchPromise = promise.catch(() => { ... });
         return;
@@ -64,7 +64,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   if (cResult[3] !== first1) {
     class T {
       constructor() {
-        closure_0 = closure_3(/* F154699 */ function() { ... });
+        closure_0 = closure_3(/* F154767 */ function() { ... });
         promise = (function fetchInvites() { ... })();
         catchPromise = promise.catch(() => { ... });
         return;

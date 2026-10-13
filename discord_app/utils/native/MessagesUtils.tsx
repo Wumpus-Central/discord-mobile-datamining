@@ -1,6 +1,6 @@
-// === Module 11629: MessagesUtils ===
+// === Module 12376: MessagesUtils ===
 
-// Module 11629 (MessagesUtils)
+// Module 12376 (MessagesUtils)
 import CodedLink from "CodedLink" /* 5077 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 5417 */;
 import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7031 */;

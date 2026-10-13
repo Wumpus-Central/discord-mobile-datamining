@@ -1,6 +1,6 @@
-// === Module 16470: MessagesItemChannelContent ===
+// === Module 16775: MessagesItemChannelContent ===
 
-// Module 16470 (MessagesItemChannelContent)
+// Module 16775 (MessagesItemChannelContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -16,9 +16,9 @@ import ActivityStatusDefault from "ActivityStatus" /* 10235 */;
 import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10263 */;
 import _modDef10334 from "module_10334" /* 10334 */;
 import _modDef10464 from "module_10464" /* 10464 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15612 */;
-import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16472 */;
-import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16474 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15927 */;
+import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16777 */;
+import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16779 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 
@@ -294,7 +294,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
   const tmpResult = channel(504);
-  const tmpResult3 = channel(16471);
+  const tmpResult3 = channel(16776);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;
@@ -407,7 +407,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj19.color = str7;
       obj19.layout = tmp(9314).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj19.muted = muted;
-      let tmp20Result7 = closure_6(tmp(12588).ChannelRowPreview, obj19);
+      let tmp20Result7 = closure_6(tmp(13098).ChannelRowPreview, obj19);
     } else if (channel.isDM()) {
       const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;

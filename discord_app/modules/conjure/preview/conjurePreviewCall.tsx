@@ -1,6 +1,6 @@
-// === Module 11425: conjurePreviewCall ===
+// === Module 11246: conjurePreviewCall ===
 
-// Module 11425 (conjurePreviewCall)
+// Module 11246 (conjurePreviewCall)
 import size from "module_2" /* 2 */;
 
 const prototype = function PreviewFrameCallTimeout(c0, timeoutMs) {
@@ -49,7 +49,7 @@ export const controlAnswerTimeoutMs = function controlAnswerTimeoutMs(timeoutMs)
 export const PREVIEW_FRAME_WAIT_MS = 6000;
 export const CONTROL_RETRY_MS = 400;
 export const CONTROL_END_TIMEOUT_MS = 2000;
-export const CAPTURE_NOW_ACCEPT_TIMEOUT_MS = 8000;
+export const CAPTURE_NOW_TIMEOUT_MS = 15000;
 export const NATIVE_CAPTURE_WAIT_MS = 3000;
 export const CAPTURE_NOW_RETRY_MS = 400;
 export const INSPECT_TIMEOUT_MS = 1500;

@@ -1,6 +1,6 @@
-// === Module 15553: AdvancedVoiceActivitySetting ===
+// === Module 15868: AdvancedVoiceActivitySetting ===
 
-// Module 15553 (AdvancedVoiceActivitySetting)
+// Module 15868 (AdvancedVoiceActivitySetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

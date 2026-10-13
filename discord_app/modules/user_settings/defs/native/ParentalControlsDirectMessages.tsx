@@ -1,9 +1,9 @@
-// === Module 16305: ParentalControlsDirectMessages ===
+// === Module 16612: ParentalControlsDirectMessages ===
 
-// Module 16305 (ParentalControlsDirectMessages)
+// Module 16612 (ParentalControlsDirectMessages)
 import util from "util" /* 1126 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15096 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15097 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15417 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15418 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7259 */;
 
 require = fn;

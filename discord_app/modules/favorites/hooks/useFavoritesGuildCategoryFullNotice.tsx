@@ -1,6 +1,6 @@
-// === Module 16544: useFavoritesGuildCategoryFullNotice ===
+// === Module 16849: useFavoritesGuildCategoryFullNotice ===
 
-// Module 16544 (useFavoritesGuildCategoryFullNotice)
+// Module 16849 (useFavoritesGuildCategoryFullNotice)
 import c from "c" /* 576 */;
 import _modDef3442 from "module_3442" /* 3442 */;
 import FavoriteStore from "FavoriteStore" /* 2068 */;

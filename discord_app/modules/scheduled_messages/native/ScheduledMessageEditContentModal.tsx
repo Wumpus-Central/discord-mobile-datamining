@@ -1,6 +1,6 @@
-// === Module 12880: ScheduledMessageEditContentModal ===
+// === Module 13372: ScheduledMessageEditContentModal ===
 
-// Module 12880 (ScheduledMessageEditContentModal)
+// Module 13372 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;

@@ -1,10 +1,10 @@
-// === Module 16574: FavoritesGuildActionSheet ===
+// === Module 16879: FavoritesGuildActionSheet ===
 
-// Module 16574 (FavoritesGuildActionSheet)
-import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 16575 */;
-import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 16576 */;
-import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 16577 */;
-import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 16578 */;
+// Module 16879 (FavoritesGuildActionSheet)
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 16880 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 16881 */;
+import useFavoritesGuildAutoAddedThreadsActionDefault from "useFavoritesGuildAutoAddedThreadsAction" /* 16882 */;
+import openFavoritesGuildChannelSortModalDefault from "openFavoritesGuildChannelSortModal" /* 16883 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 2068 */;
 
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
                 }
               }
               obj14.label = tmp21(tmp(1126).t["0dOFq+"]);
-              const obj15 = { IconComponent: tmp(11839).ArrowsUpDownIcon };
+              const obj15 = { IconComponent: tmp(11644).ArrowsUpDownIcon };
               obj14.icon = closure_4(tmp(6895).ActionSheetRow.Icon, obj15);
               obj14.onPress = function onPress() {
                 onClose();
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
       const obj10 = { label: null, icon: null, onPress: null };
       const intl2 = tmp5(1126).intl;
       obj10.label = intl2.string(tmp5(1126).t["0dOFq+"]);
-      const obj11 = { IconComponent: tmp5(11839).ArrowsUpDownIcon };
+      const obj11 = { IconComponent: tmp5(11644).ArrowsUpDownIcon };
       obj10.icon = closure_4(tmp5(6895).ActionSheetRow.Icon, obj11);
       obj10.onPress = function onPress() {
         onClose();

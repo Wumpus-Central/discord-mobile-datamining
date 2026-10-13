@@ -1,6 +1,6 @@
-// === Module 11701: useNativeForumPostContent ===
+// === Module 12444: useNativeForumPostContent ===
 
-// Module 11701 (useNativeForumPostContent)
+// Module 12444 (useNativeForumPostContent)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;

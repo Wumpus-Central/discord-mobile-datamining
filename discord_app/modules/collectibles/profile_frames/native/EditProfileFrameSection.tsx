@@ -1,13 +1,13 @@
-// === Module 14893: EditProfileFrameSection ===
+// === Module 15214: EditProfileFrameSection ===
 
-// Module 14893 (EditProfileFrameSection)
+// Module 15214 (EditProfileFrameSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
 import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9026 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13474 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13475 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 14892 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13811 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13812 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 15213 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,9 +18,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const createStyles = fn(5092);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13474).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13474).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(13474).GUTTER_SIZE };
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13811).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13811).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(13811).GUTTER_SIZE };
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

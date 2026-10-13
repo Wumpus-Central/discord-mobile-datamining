@@ -17,7 +17,10 @@ let closure_4 = ["experimental_withBlurBackground", "onPress", "disabled", "chil
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles(() => {
-  const obj = { card: { padding: "y", borderTopStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS }, cardWithBlur: { overflow: "hidden" } };
+  const obj = { card: null, cardWithBlur: null };
+  const obj2 = { padding: "y", borderTopStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
+  obj.card = obj2;
+  obj.cardWithBlur = { overflow: "hidden" };
   return obj;
 });
 let ReactCompilerGating = fn(558);

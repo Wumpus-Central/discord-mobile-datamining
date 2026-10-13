@@ -1,17 +1,17 @@
-// === Module 18200: NewUserUtils ===
+// === Module 18204: NewUserUtils ===
 
-// Module 18200 (NewUserUtils)
+// Module 18204 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import Link from "Link" /* 1504 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7506 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12407 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12514 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 18199 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12917 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13024 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 18203 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 16383 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 16688 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -224,7 +224,7 @@ let closure_17 = async function _getNextOnboardingStep() {
 };
 const Constants = fn(1085);
 ({ PlatformTypes: closure_7, Routes: closure_8 } = Constants);
-const ContactPermissions = fn(12402).ContactPermissions;
+const ContactPermissions = fn(12912).ContactPermissions;
 let closure_10 = fn(7483).NotificationAuthorizationStatus;
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_12 = asyncGeneratorStep(async () => {

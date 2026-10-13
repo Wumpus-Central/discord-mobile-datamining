@@ -1,7 +1,7 @@
-// === Module 17763: MorphablePanelUtils ===
+// === Module 17767: MorphablePanelUtils ===
 
-// Module 17763 (MorphablePanelUtils)
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11973 */;
+// Module 17767 (MorphablePanelUtils)
+import MorphablePanelConstants from "MorphablePanelConstants" /* 12489 */;
 import size from "module_2" /* 2 */;
 
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;

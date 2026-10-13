@@ -1,13 +1,13 @@
-// === Module 12393: ChannelSpoiler ===
+// === Module 12903: ChannelSpoiler ===
 
-// Module 12393 (ChannelSpoiler)
+// Module 12903 (ChannelSpoiler)
 import nativeDefault from "native" /* 587 */;
 import RootNavigationRef from "RootNavigationRef" /* 4977 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5106 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
 import GatedContentDefault from "GatedContent" /* 11191 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11971 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12487 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(11970).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(12486).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5092);
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = noop.useContext(tmp6(11971)).setControlsMode;
+  setControlsMode = noop.useContext(tmp6(12487)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;

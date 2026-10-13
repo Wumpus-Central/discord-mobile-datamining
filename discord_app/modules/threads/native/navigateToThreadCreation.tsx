@@ -1,6 +1,6 @@
-// === Module 12159: navigateToThreadCreation ===
+// === Module 12674: navigateToThreadCreation ===
 
-// Module 12159 (navigateToThreadCreation)
+// Module 12674 (navigateToThreadCreation)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
 import transitionToChannel from "transitionToChannel" /* 5103 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7902 */;

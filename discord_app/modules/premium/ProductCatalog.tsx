@@ -1,14 +1,14 @@
-// === Module 14294: ProductCatalog ===
+// === Module 14615: ProductCatalog ===
 
-// Module 14294 (ProductCatalog)
+// Module 14615 (ProductCatalog)
 import LoggerDefault from "Logger" /* 3 */;
 import user from "user" /* 1398 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9281 */;
 import PremiumFeatureUtils from "PremiumFeatureUtils" /* 9504 */;
-import SKUListingDefault from "SKUListing" /* 14296 */;
-import DenormalizedPerksReadExperimentDefault from "DenormalizedPerksReadExperiment" /* 14297 */;
+import SKUListingDefault from "SKUListing" /* 14617 */;
+import DenormalizedPerksReadExperimentDefault from "DenormalizedPerksReadExperiment" /* 14618 */;
 import PremiumConstants from "PremiumConstants" /* 1392 */;
-import PremiumSKUFeature_mod from "PremiumSKUFeature" /* 14295 */;
+import PremiumSKUFeature_mod from "PremiumSKUFeature" /* 14616 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = require;
@@ -1105,14 +1105,14 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
     }
     if (null != perks) {
       const config = DenormalizedPerksReadExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
-      if (config !== closure_0(14297).DenormalizedPerksReadConfig.CONTROL) {
+      if (config !== closure_0(14618).DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
         if (isPremiumWithFractionalPremiumOnly != null) {
           perks1 = isPremiumWithFractionalPremiumOnly.perks;
         }
         const tmp9Result = closure_0(1396);
-        if (config === closure_0(14297).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+        if (config === closure_0(14618).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
           featureValue = hasPerkResult;
         }
         return featureValue;

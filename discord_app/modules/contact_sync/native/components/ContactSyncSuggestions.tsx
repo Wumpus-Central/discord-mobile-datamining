@@ -1,6 +1,6 @@
-// === Module 12423: ContactSyncSuggestions ===
+// === Module 12933: ContactSyncSuggestions ===
 
-// Module 12423 (ContactSyncSuggestions)
+// Module 12933 (ContactSyncSuggestions)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -18,7 +18,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const SuggestedFriendSource = fn(12424).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12934).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5092);

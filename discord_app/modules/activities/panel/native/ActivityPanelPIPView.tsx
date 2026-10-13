@@ -1,6 +1,6 @@
-// === Module 17761: ActivityPanelPIPView ===
+// === Module 17765: ActivityPanelPIPView ===
 
-// Module 17761 (ActivityPanelPIPView)
+// Module 17765 (ActivityPanelPIPView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -11,8 +11,8 @@ import timing from "timing" /* 5093 */;
 import spring from "spring" /* 5378 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10373 */;
 import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10924 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17759 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17763 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17763 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17767 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10969 */;
@@ -25,9 +25,9 @@ const ActivityLayoutMode = fn(2024).ActivityLayoutMode;
 const ActivityPanelConstants = fn(6067);
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: closure_11, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_12, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14 } = ActivityPanelConstants);
-const portraitSafeAreasConfig = fn(17762).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(17766).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1085).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11973).PIP_WINDOW_OFFSET;
+const PIP_WINDOW_OFFSET = fn(12489).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 const native = fn(1200);
@@ -724,8 +724,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    const obj2 = { transitionState, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: tmp16, context: applicationId(17759), children: tmp17 };
-    const tmp23 = <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={tmp16} context={applicationId(17759)}>{tmp17}</closure_28>;
+    const obj2 = { transitionState, transitionCleanUp, pipOrientationLockState: stateFromStores, hasActivity: tmp16, context: applicationId(17763), children: tmp17 };
+    const tmp23 = <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={tmp16} context={applicationId(17763)}>{tmp17}</closure_28>;
     cResult[11] = stateFromStores;
     cResult[12] = tmp16;
     cResult[13] = tmp17;

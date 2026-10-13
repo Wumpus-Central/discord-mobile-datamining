@@ -1,6 +1,6 @@
-// === Module 16362: RootThemeContextProvider ===
+// === Module 16667: RootThemeContextProvider ===
 
-// Module 16362 (RootThemeContextProvider)
+// Module 16667 (RootThemeContextProvider)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import native from "native" /* 4827 */;
@@ -8,7 +8,7 @@ import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4972 */;
 import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5097 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6664 */;
 import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11189 */;
-import PlainTextExperiment from "PlainTextExperiment" /* 16363 */;
+import PlainTextExperiment from "PlainTextExperiment" /* 16668 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
@@ -162,7 +162,7 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
   manaTypeConsolidationExperiment = manaTypeConsolidationExperiment(6664).useManaTypeConsolidationExperiment("RootThemeContextProvider");
   const obj2 = manaTypeConsolidationExperiment(6664);
   [][0] = manaTypeConsolidationExperiment;
-  const plainTextExperiment = manaTypeConsolidationExperiment(16363).usePlainTextExperiment("RootThemeContextProvider");
+  const plainTextExperiment = manaTypeConsolidationExperiment(16668).usePlainTextExperiment("RootThemeContextProvider");
   if (null == tmp4) {
     let num2 = 0;
     if (1 !== saturation) {
@@ -190,5 +190,5 @@ export const RootThemeContextProvider = ReactCompilerGating.isReactCompilerEnabl
     setThemeFlagResult1 = tmp(4827).setThemeFlag(0, tmp(4827).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
     const tmpResult6 = tmp(4827);
   }
-  const obj3 = manaTypeConsolidationExperiment(16363);
+  const obj3 = manaTypeConsolidationExperiment(16668);
 });

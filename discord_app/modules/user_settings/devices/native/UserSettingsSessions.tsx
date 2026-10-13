@@ -1,6 +1,6 @@
-// === Module 15229: UserSettingsSessions ===
+// === Module 15550: UserSettingsSessions ===
 
-// Module 15229 (UserSettingsSessions)
+// Module 15550 (UserSettingsSessions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,10 +9,10 @@ import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreat
 import _modDef7729 from "module_7729" /* 7729 */;
 import ScreenIcon from "ScreenIcon" /* 9097 */;
 import _modDef11176 from "module_11176" /* 11176 */;
-import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 15230 */;
-import _modDef15231 from "module_15231" /* 15231 */;
-import _modDef15232 from "module_15232" /* 15232 */;
-import VrHeadsetIcon from "VrHeadsetIcon" /* 15233 */;
+import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 15551 */;
+import _modDef15552 from "module_15552" /* 15552 */;
+import _modDef15553 from "module_15553" /* 15553 */;
+import VrHeadsetIcon from "VrHeadsetIcon" /* 15554 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -34,7 +34,7 @@ function getOsDetails(text) {
               const obj2 = { text, iconSource: _modDef11176, IconComponent: VrHeadsetIcon.VrHeadsetIcon };
               return obj2;
             } else {
-              const obj = { text, iconSource: _modDef15232, IconComponent: ScreenIcon.ScreenIcon };
+              const obj = { text, iconSource: _modDef15553, IconComponent: ScreenIcon.ScreenIcon };
               return obj;
             }
           }
@@ -47,7 +47,7 @@ function getOsDetails(text) {
   const obj4 = { text: null, iconSource: null, IconComponent: null };
   const intl = util.intl;
   obj4.text = intl.string(util.t.cDHCNY);
-  obj4.iconSource = _modDef15232;
+  obj4.iconSource = _modDef15553;
   obj4.IconComponent = ScreenIcon.ScreenIcon;
   return obj4;
 }
@@ -76,7 +76,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   const cResult = otherSessions(576).c(31);
   const tmp4 = closure_13();
   const obj = otherSessions(576);
-  let authSessions = otherSessions(15060).useAuthSessions();
+  let authSessions = otherSessions(15381).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -90,7 +90,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const obj2 = otherSessions(15060);
+  const obj2 = otherSessions(15381);
   const stateFromStores = otherSessions(504).useStateFromStores(tmp6, tmp7);
   const tmp10 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp10[1];
@@ -278,9 +278,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   const tmpResult = otherSessions(504);
 }) : (function UserSettingsSessions() {
   const tmp = closure_13();
-  let authSessions = otherSessions(15060).useAuthSessions();
+  let authSessions = otherSessions(15381).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
-  const obj = otherSessions(15060);
+  const obj = otherSessions(15381);
   const items = [UserStore];
   const stateFromStores = otherSessions(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = otherSessions(504);
@@ -590,8 +590,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
   }
   let formatDateResult = null;
   if (!current) {
-    formatDateResult = tmp(15060).formatDate(session.approx_last_used_time);
-    const tmpResult = tmp(15060);
+    formatDateResult = tmp(15381).formatDate(session.approx_last_used_time);
+    const tmpResult = tmp(15381);
   }
   cResult[8] = current;
   cResult[9] = session.approx_last_used_time;
@@ -628,8 +628,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
   let formatDateResult = null;
   ({ text, iconSource, IconComponent } = getOsDetails(os));
   if (!current) {
-    formatDateResult = session(15060).formatDate(session.approx_last_used_time);
-    const obj = session(15060);
+    formatDateResult = session(15381).formatDate(session.approx_last_used_time);
+    const obj = session(15381);
   }
   const items = [text, platform];
   const found = items.filter(session(1388).isNotNullish);
@@ -691,7 +691,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unknow
   const obj = navigation(576);
   navigation = navigation(1503).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { variant: "translucent", source: _modDef15231 };
+    const obj3 = { variant: "translucent", source: _modDef15552 };
     const tmp9 = closure_10(tmp(6180).TableRow.Icon, obj3);
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.iUa0sn);
@@ -731,7 +731,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unknow
   _require = require("useNavigation").useNavigation();
   const obj2 = { icon: null, label: null, subLabel: null };
   const obj = require("useNavigation");
-  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef15231 });
+  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef15552 });
   const intl = require("util").intl;
   obj2.label = intl.string(require("util").t.iUa0sn);
   const intl2 = require("util").intl;

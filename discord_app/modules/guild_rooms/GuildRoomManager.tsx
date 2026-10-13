@@ -1,6 +1,6 @@
-// === Module 18116: GuildRoomManager ===
+// === Module 18120: GuildRoomManager ===
 
-// Module 18116 (GuildRoomManager)
+// Module 18120 (GuildRoomManager)
 import GuildRoomActionCreators from "GuildRoomActionCreators" /* 7447 */;
 import GuildRoomsExperiment from "GuildRoomsExperiment" /* 7480 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

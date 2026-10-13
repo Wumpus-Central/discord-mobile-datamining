@@ -1,6 +1,6 @@
-// === Module 12157: useChangelogRenderedAnalytics ===
+// === Module 12672: useChangelogRenderedAnalytics ===
 
-// Module 12157 (useChangelogRenderedAnalytics)
+// Module 12672 (useChangelogRenderedAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8124 */;
 import noop from "module_19" /* 19 */;

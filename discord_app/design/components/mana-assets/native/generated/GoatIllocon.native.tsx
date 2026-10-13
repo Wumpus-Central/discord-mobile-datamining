@@ -1,23 +1,23 @@
-// === Module 17232: GoatIllocon ===
+// === Module 11850: GoatIllocon ===
 
-// Module 17232 (GoatIllocon)
+// Module 11850 (GoatIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef17233 from "module_17233" /* 17233 */;
-import _modDef17234 from "module_17234" /* 17234 */;
-import _modDef17235 from "module_17235" /* 17235 */;
+import _modDef11851 from "module_11851" /* 11851 */;
+import _modDef11852 from "module_11852" /* 11852 */;
+import _modDef11853 from "module_11853" /* 11853 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17233 }, 3: null };
-const obj2 = { uri: _modDef17233 };
-obj[2] = { uri: _modDef17234 };
-const obj3 = { uri: _modDef17234 };
-obj[3] = { uri: _modDef17235 };
+let obj = { 1: null, 2: { uri: _modDef11851 }, 3: null };
+const obj2 = { uri: _modDef11851 };
+obj[2] = { uri: _modDef11852 };
+const obj3 = { uri: _modDef11852 };
+obj[3] = { uri: _modDef11853 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17235 };
+const obj4 = { uri: _modDef11853 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GoatIllocon.native.tsx");
 

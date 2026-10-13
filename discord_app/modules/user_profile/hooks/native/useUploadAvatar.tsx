@@ -1,6 +1,6 @@
-// === Module 14864: useUploadAvatar ===
+// === Module 15185: useUploadAvatar ===
 
-// Module 14864 (useUploadAvatar)
+// Module 15185 (useUploadAvatar)
 import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             }
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
-          const obj2 = guildId(14843);
+          const obj2 = guildId(15164);
           obj10.description = guildId(8294).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUploa
             }
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
-          const obj2 = v0(14843);
+          const obj2 = v0(15164);
           obj10.description = v0(8294).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);

@@ -1,9 +1,9 @@
-// === Module 18758: ToggleSelfMute ===
+// === Module 18762: ToggleSelfMute ===
 
-// Module 18758 (ToggleSelfMute)
+// Module 18762 (ToggleSelfMute)
 import useMuteStates from "useMuteStates" /* 7057 */;
 import VoiceActionUtils from "VoiceActionUtils" /* 11102 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 18754 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 18758 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;

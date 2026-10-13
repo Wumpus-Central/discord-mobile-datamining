@@ -36,10 +36,10 @@ import QuestCopyUtils from "QuestCopyUtils" /* 9193 */;
 import RenewableEndDateSortExperimentDefault from "RenewableEndDateSortExperiment" /* 9201 */;
 import QuestPlatformUtils from "QuestPlatformUtils" /* 9204 */;
 import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10507 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 12966 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 12969 */;
-import QuestConsoleStartError from "QuestConsoleStartError" /* 12970 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 12971 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 13458 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 13461 */;
+import QuestConsoleStartError from "QuestConsoleStartError" /* 13462 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 13463 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -1645,11 +1645,11 @@ let tmp17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsQuestP
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   if (cResult[3] !== id) {
-    const result = tmp(12966).isVideoQuestProgressing(id);
+    const result = tmp(13458).isVideoQuestProgressing(id);
     cResult[3] = id;
     cResult[4] = result;
     let tmp8 = result;
-    const tmpResult2 = tmp(12966);
+    const tmpResult2 = tmp(13458);
   } else {
     tmp8 = cResult[4];
   }
@@ -4470,13 +4470,13 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
                 if (arr.length > 0) {
                   c1 = 3;
                   c4 = 1;
-                  const obj6 = { value: previewAdCreativeIds(12973).fetchBountyPreview(arr, previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+                  const obj6 = { value: previewAdCreativeIds(13465).fetchBountyPreview(arr, previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
                   return obj6;
                 }
               }
               c1 = 2;
               c4 = 1;
-              const obj7 = { value: previewAdCreativeIds(12973).fetchQuestHomeBounties(previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+              const obj7 = { value: previewAdCreativeIds(13465).fetchQuestHomeBounties(previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {

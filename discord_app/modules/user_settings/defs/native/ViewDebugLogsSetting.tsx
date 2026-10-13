@@ -1,6 +1,6 @@
-// === Module 15863: ViewDebugLogsSetting ===
+// === Module 16176: ViewDebugLogsSetting ===
 
-// Module 15863 (ViewDebugLogsSetting)
+// Module 16176 (ViewDebugLogsSetting)
 import _mod17 from "module_17" /* 17 */;
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
@@ -15,11 +15,11 @@ import ActionSheetRow from "ActionSheetRow" /* 6895 */;
 import ActionSheet from "ActionSheet" /* 6899 */;
 import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9636 */;
 import ChannelNotificationIcon from "ChannelNotificationIcon" /* 10348 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 14064 */;
-import WrenchIcon from "WrenchIcon" /* 15864 */;
-import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15866 */;
-import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15869 */;
-import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15870 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 14401 */;
+import WrenchIcon from "WrenchIcon" /* 16177 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 16179 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 16182 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 16183 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;

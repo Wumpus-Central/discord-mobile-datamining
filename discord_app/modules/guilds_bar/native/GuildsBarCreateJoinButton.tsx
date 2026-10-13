@@ -1,10 +1,10 @@
-// === Module 16810: GuildsBarCreateJoinButton ===
+// === Module 17114: GuildsBarCreateJoinButton ===
 
-// Module 16810 (GuildsBarCreateJoinButton)
+// Module 17114 (GuildsBarCreateJoinButton)
 import nativeDefault from "native" /* 587 */;
 import GuildCapUpsellHooks from "GuildCapUpsellHooks" /* 6908 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16751 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16766 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 17055 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17070 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
@@ -116,7 +116,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = enabled(576).c(17);
   const tmp4 = closure_13();
   let obj = enabled(576);
-  const guildsBarAnimatedWrapperStyles = enabled(16751).useGuildsBarAnimatedWrapperStyles();
+  const guildsBarAnimatedWrapperStyles = enabled(17055).useGuildsBarAnimatedWrapperStyles();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { location: "GuildsBarCreateJoinButton" };
     cResult[0] = obj3;
@@ -124,7 +124,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     first = cResult[0];
   }
-  const GameCommunityAddServerEntryExperiment = tmp(14009).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = tmp(14346).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig(first).enabled;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedGuildStore];
@@ -139,7 +139,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp7 = cResult[1];
     tmp8 = cResult[2];
   }
-  const obj2 = enabled(16751);
+  const obj2 = enabled(17055);
   let stateFromStores = enabled;
   if (enabled) {
     stateFromStores = tmpResult.useStateFromStores(tmp7, tmp8);
@@ -165,7 +165,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.l5WIbf);
-    const tmp16 = jsx(tmp(16811).HomeDrawerAddServerRowExpandedChildren, {});
+    const tmp16 = jsx(tmp(17115).HomeDrawerAddServerRowExpandedChildren, {});
     cResult[5] = stringResult;
     cResult[6] = tmp16;
     let tmp13 = tmp16;
@@ -213,7 +213,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   const obj7 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: tmp11, label: tmp12, expandedChildren: tmp13, children: tmp19 };
-  const tmp23 = jsx(tmp18(16751), { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: tmp11, label: tmp12, expandedChildren: tmp13, children: tmp19 });
+  const tmp23 = jsx(tmp18(17055), { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: tmp11, label: tmp12, expandedChildren: tmp13, children: tmp19 });
   cResult[9] = tmp11;
   cResult[10] = stateFromStores;
   cResult[11] = tmp19;
@@ -223,10 +223,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   tmpResult = enabled(504);
 }) : (function GuildsBarCreateJoinButton() {
   const tmp = closure_13();
-  let obj = enabled(16751);
-  const GameCommunityAddServerEntryExperiment = enabled(14009).GameCommunityAddServerEntryExperiment;
+  let obj = enabled(17055);
+  const GameCommunityAddServerEntryExperiment = enabled(14346).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
-  const guildsBarAnimatedWrapperStyles = enabled(16751).useGuildsBarAnimatedWrapperStyles();
+  const guildsBarAnimatedWrapperStyles = enabled(17055).useGuildsBarAnimatedWrapperStyles();
   const items = [SelectedGuildStore];
   let stateFromStores = enabled;
   if (enabled) {
@@ -245,13 +245,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       handleCreateJoinGuildPress();
     }
   }), items1);
-  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: null, expandedChildren: null, children: null };
+  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "escalada", expandedChildren: "escalando", children: "escalar" };
   obj2 = enabled(504);
   const intl = tmp2(1126).intl;
   obj4.label = intl.string(enabled(1126).t.l5WIbf);
-  obj4.expandedChildren = jsx(enabled(16811).HomeDrawerAddServerRowExpandedChildren, {});
+  obj4.expandedChildren = jsx(enabled(17115).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = nativeDefault.colors;
   obj4.children = jsx(enabled(10610).CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: null, expandedChildren: null, children: null });
+  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "escalada", expandedChildren: "escalando", children: "escalar" });
   return <View style={tmp.stretch}>{null}</View>;
 }));

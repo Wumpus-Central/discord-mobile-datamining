@@ -1,23 +1,23 @@
-// === Module 13194: GameTimeTier9LargeBadge ===
+// === Module 13676: GameTimeTier9LargeBadge ===
 
-// Module 13194 (GameTimeTier9LargeBadge)
+// Module 13676 (GameTimeTier9LargeBadge)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef13195 from "module_13195" /* 13195 */;
-import _modDef13196 from "module_13196" /* 13196 */;
-import _modDef13197 from "module_13197" /* 13197 */;
+import _modDef13677 from "module_13677" /* 13677 */;
+import _modDef13678 from "module_13678" /* 13678 */;
+import _modDef13679 from "module_13679" /* 13679 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13195 }, 3: null };
-let obj2 = { uri: _modDef13195 };
-obj[2] = { uri: _modDef13196 };
-const obj3 = { uri: _modDef13196 };
-obj[3] = { uri: _modDef13197 };
+let obj = { 1: null, 2: { uri: _modDef13677 }, 3: null };
+let obj2 = { uri: _modDef13677 };
+obj[2] = { uri: _modDef13678 };
+const obj3 = { uri: _modDef13678 };
+obj[3] = { uri: _modDef13679 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13197 };
+const obj4 = { uri: _modDef13679 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameTimeTier9LargeBadge.native.tsx");
 

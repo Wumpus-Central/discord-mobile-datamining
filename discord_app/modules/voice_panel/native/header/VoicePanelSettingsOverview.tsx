@@ -1,6 +1,6 @@
-// === Module 17842: VoicePanelSettingsOverview ===
+// === Module 17846: VoicePanelSettingsOverview ===
 
-// Module 17842 (VoicePanelSettingsOverview)
+// Module 17846 (VoicePanelSettingsOverview)
 import LogAggregator from "LogAggregator" /* 7 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
@@ -24,11 +24,11 @@ import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 8833
 import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 8848 */;
 import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9697 */;
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 11071 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 13023 */;
-import _modDef13580 from "module_13580" /* 13580 */;
-import WrenchIcon from "WrenchIcon" /* 15864 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17840 */;
-import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 17843 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 13507 */;
+import _modDef13917 from "module_13917" /* 13917 */;
+import WrenchIcon from "WrenchIcon" /* 16177 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 17844 */;
+import getChannelInfoSubtitleDefault from "getChannelInfoSubtitle" /* 17847 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
@@ -195,7 +195,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelSe
         const obj9 = { style: tmp4.secureFramesIcon, size: "xs", accessibilityLabel: null };
         const intl = tmp(1126).intl;
         obj9.accessibilityLabel = intl.string(tmp(1126).t.mR9cf3);
-        tmp24 = closure_18(tmp(13023).ShieldLockIcon, obj9);
+        tmp24 = closure_18(tmp(13507).ShieldLockIcon, obj9);
       }
       cResult[15] = isCallSecureFramesVerified;
       cResult[16] = tmp4.secureFramesIcon;
@@ -293,7 +293,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShareA
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { onPress: first, icon: null, label: null, trailing: null };
-    let obj3 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef13580 };
+    let obj3 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef13917 };
     obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj3);
     let intl = util.intl;
     obj2.label = intl.string(util.t.iQzQs3);
@@ -322,7 +322,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShareA
       const tmpResult2 = showShareActionSheet;
     }
   }, []);
-  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef13580 }), label: null, trailing: null };
+  let obj = { onPress: callback, icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef13917 }), label: null, trailing: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
   obj.trailing = collapsedCategories(TableRowArrow.TableRowArrow, {});
@@ -354,7 +354,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
     tmp8 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef13580 };
+    const obj2 = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef13917 };
     const tmp13 = collapsedCategories(TableRowIcon.TableRowIcon, obj2);
     const intl = util.intl;
     const stringResult = intl.string(util.t["qv5/SP"]);
@@ -391,7 +391,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
   }, []);
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef13580 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef13917 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
   obj2.value = stateFromStores;
@@ -484,7 +484,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17844, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17848, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

@@ -1,6 +1,6 @@
-// === Module 11459: AutomodQuarantineUtils ===
+// === Module 12225: AutomodQuarantineUtils ===
 
-// Module 11459 (AutomodQuarantineUtils)
+// Module 12225 (AutomodQuarantineUtils)
 import util from "util" /* 1126 */;
 import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4756 */;
 import openUserSettings2 from "openUserSettings" /* 7094 */;
@@ -81,7 +81,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "Array", bio: "Set" };
+      const obj = { nick: "kind", bio: "apply" };
       guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -141,7 +141,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "Array", bio: "Set" };
+    const obj = { nick: "kind", bio: "apply" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

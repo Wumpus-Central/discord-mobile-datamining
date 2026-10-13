@@ -1,23 +1,23 @@
-// === Module 17252: ButterflyIllocon ===
+// === Module 11870: ButterflyIllocon ===
 
-// Module 17252 (ButterflyIllocon)
+// Module 11870 (ButterflyIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef17253 from "module_17253" /* 17253 */;
-import _modDef17254 from "module_17254" /* 17254 */;
-import _modDef17255 from "module_17255" /* 17255 */;
+import _modDef11871 from "module_11871" /* 11871 */;
+import _modDef11872 from "module_11872" /* 11872 */;
+import _modDef11873 from "module_11873" /* 11873 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17253 }, 3: null };
-const obj2 = { uri: _modDef17253 };
-obj[2] = { uri: _modDef17254 };
-const obj3 = { uri: _modDef17254 };
-obj[3] = { uri: _modDef17255 };
+let obj = { 1: null, 2: { uri: _modDef11871 }, 3: null };
+const obj2 = { uri: _modDef11871 };
+obj[2] = { uri: _modDef11872 };
+const obj3 = { uri: _modDef11872 };
+obj[3] = { uri: _modDef11873 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17255 };
+const obj4 = { uri: _modDef11873 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx");
 

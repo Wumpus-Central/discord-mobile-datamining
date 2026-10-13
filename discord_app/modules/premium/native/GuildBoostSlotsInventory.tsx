@@ -1,6 +1,6 @@
-// === Module 13791: GuildBoostSlotsInventory ===
+// === Module 14128: GuildBoostSlotsInventory ===
 
-// Module 13791 (GuildBoostSlotsInventory)
+// Module 14128 (GuildBoostSlotsInventory)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
@@ -13,8 +13,8 @@ import BoostingActionCreators from "BoostingActionCreators" /* 5959 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import GuildIcon from "GuildIcon" /* 6159 */;
 import useCountdownDefault from "useCountdown" /* 7162 */;
-import _modDef13792 from "module_13792" /* 13792 */;
-import SubscriptionPlaceholderPattern from "SubscriptionPlaceholderPattern" /* 13793 */;
+import _modDef14129 from "module_14129" /* 14129 */;
+import SubscriptionPlaceholderPattern from "SubscriptionPlaceholderPattern" /* 14130 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -579,7 +579,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Booste
           let tmp14 = cResult[7];
         }
         if (cResult[8] !== tmp4.guildInfoRowIcon) {
-          const obj3 = { source: _modDef13792, style: tmp4.guildInfoRowIcon };
+          const obj3 = { source: _modDef14129, style: tmp4.guildInfoRowIcon };
           const tmp21 = collapsed(FastImageDefault, obj3);
           cResult[8] = tmp4.guildInfoRowIcon;
           cResult[9] = tmp21;
@@ -684,7 +684,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Booste
     const items1 = [collapsed(Text_Text.Text, obj5), ];
     const obj6 = { style: tmp.guildInfoRowBottom, children: null };
     const obj7 = { source: null, style: null };
-    obj7.source = _modDef13792;
+    obj7.source = _modDef14129;
     obj7.style = tmp.guildInfoRowIcon;
     const items2 = [collapsed(FastImageDefault, obj7), ];
     const obj8 = { style: tmp.guildInfoSubscriptionCount, variant: "text-xs/semibold", color: "interactive-text-active", children: null };
@@ -757,7 +757,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Booste
     tmp13 = cResult[6];
   }
   const tmpResult3 = guildId(504);
-  let subscriptionPlaceholderPatternSource = guildId(13793).useSubscriptionPlaceholderPatternSource();
+  let subscriptionPlaceholderPatternSource = guildId(14130).useSubscriptionPlaceholderPatternSource();
   if (null != tmp13) {
     subscriptionPlaceholderPatternSource = tmp13;
   }
@@ -895,7 +895,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Booste
           tmp28 = tmp30;
         }
         const obj8 = { guild: stateFromStores, theme: stateFromStores1 };
-        const tmp27 = closure_10(guildBoostSlots(13797), obj8);
+        const tmp27 = closure_10(guildBoostSlots(14134), obj8);
         cResult[16] = stateFromStores;
         cResult[17] = stateFromStores1;
         cResult[18] = tmp27;
@@ -918,7 +918,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Booste
   cResult[8] = prop;
   cResult[9] = items5;
   tmp19 = items5;
-  const tmpResult4 = guildId(13793);
+  const tmpResult4 = guildId(14130);
 }) : (function BoostedGuild(arg0) {
   ({ guildId: require, guildBoostSlots } = arg0);
   const tmp = closure_14();
@@ -957,7 +957,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Booste
     tmp11Result = closure_10(View, obj8);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_10(guildBoostSlots(13797), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_10(guildBoostSlots(14134), { guild: stateFromStores, theme: stateFromStores1 });
   obj6.children = items3;
   const items4 = [closure_11(View, obj6), closure_10(closure_19, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length })];
   obj5.children = items4;

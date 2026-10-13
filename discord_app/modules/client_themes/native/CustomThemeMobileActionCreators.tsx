@@ -1,6 +1,6 @@
-// === Module 11619: CustomThemeMobileActionCreators ===
+// === Module 12367: CustomThemeMobileActionCreators ===
 
-// Module 11619 (CustomThemeMobileActionCreators)
+// Module 12367 (CustomThemeMobileActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

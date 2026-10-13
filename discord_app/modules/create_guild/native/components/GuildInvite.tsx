@@ -1,6 +1,6 @@
-// === Module 12473: GuildInvite ===
+// === Module 12983: GuildInvite ===
 
-// Module 12473 (GuildInvite)
+// Module 12983 (GuildInvite)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -12,7 +12,7 @@ import GroupIcon from "GroupIcon" /* 8217 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8683 */;
 import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8716 */;
 import InstantInviteRowDefault from "InstantInviteRow" /* 8763 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12433 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

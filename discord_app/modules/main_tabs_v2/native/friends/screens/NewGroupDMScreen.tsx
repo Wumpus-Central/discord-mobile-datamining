@@ -1,6 +1,6 @@
-// === Module 17520: NewGroupDMScreen ===
+// === Module 17524: NewGroupDMScreen ===
 
-// Module 17520 (NewGroupDMScreen)
+// Module 17524 (NewGroupDMScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -8,12 +8,12 @@ import ToastUtils from "ToastUtils" /* 4808 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
 import HeaderShared from "HeaderShared" /* 9298 */;
 import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 10753 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 17519 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 17523 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 14044 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 14381 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -189,7 +189,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(11338)(closure_128_3);
+                            v3(12136)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }

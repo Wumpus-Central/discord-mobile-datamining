@@ -1,6 +1,6 @@
-// === Module 16105: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 16418: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 16105 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 16418 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

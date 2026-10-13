@@ -1,6 +1,6 @@
-// === Module 12907: oauth2/Header ===
+// === Module 13399: oauth2/Header ===
 
-// Module 12907 (oauth2/Header)
+// Module 13399 (oauth2/Header)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

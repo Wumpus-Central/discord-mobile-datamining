@@ -1,6 +1,6 @@
-// === Module 12877: ScheduledMessageCardActionButtons ===
+// === Module 13369: ScheduledMessageCardActionButtons ===
 
-// Module 12877 (ScheduledMessageCardActionButtons)
+// Module 13369 (ScheduledMessageCardActionButtons)
 import util from "util" /* 1126 */;
 import SendMessageIcon from "SendMessageIcon" /* 5040 */;
 import ClockIcon from "ClockIcon" /* 5051 */;

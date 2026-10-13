@@ -1,18 +1,18 @@
-// === Module 15052: AccountSmsBackupSetting ===
+// === Module 15373: AccountSmsBackupSetting ===
 
-// Module 15052 (AccountSmsBackupSetting)
+// Module 15373 (AccountSmsBackupSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import PhoneActionCreators from "PhoneActionCreators" /* 6734 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 15042 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 15049 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 15363 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 15370 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const initialize = obj(504);
-const account_MFAUtils = obj(15047);
+const account_MFAUtils = obj(15368);
 require = fn;
 const UserFlags = fn(1085).UserFlags;
 let closure_5 = fn(6732).PHONE_VERIFICATION_MODAL_KEY;
@@ -197,7 +197,7 @@ const toggle = SettingBuilders.createToggle({
     }
   },
   useDescription: tmp2,
-  usePredicate: fn(14960).useIsTOTPEnabled
+  usePredicate: fn(15281).useIsTOTPEnabled
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

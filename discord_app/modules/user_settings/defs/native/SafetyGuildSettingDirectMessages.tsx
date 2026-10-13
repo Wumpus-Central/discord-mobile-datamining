@@ -1,18 +1,18 @@
-// === Module 16288: SafetyGuildSettingDirectMessages ===
+// === Module 16595: SafetyGuildSettingDirectMessages ===
 
-// Module 16288 (SafetyGuildSettingDirectMessages)
+// Module 16595 (SafetyGuildSettingDirectMessages)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
 import common_AlertDefault from "common/Alert" /* 5398 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15096 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16283 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 16289 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15417 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16590 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 16596 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16280);
+const UserSettingsSafetySelectedGuildStore = fn(16587);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
 let closure_6 = fn(10664).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
 fn(558);

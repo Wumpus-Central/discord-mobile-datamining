@@ -1,9 +1,9 @@
-// === Module 17189: ConjureStatusLabels ===
+// === Module 11805: ConjureStatusLabels ===
 
-// Module 17189 (ConjureStatusLabels)
+// Module 11805 (ConjureStatusLabels)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import ConjureUsageTypes from "ConjureUsageTypes" /* 13221 */;
+import ConjureUsageTypes from "ConjureUsageTypes" /* 11222 */;
 
 require = fn;
 function thinkingLabel(saving) {
@@ -19,29 +19,41 @@ function thinkingLabel(saving) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let flag3 = saving.recalling;
+  let flag3 = saving.remixing;
   if (flag3 === undefined) {
     flag3 = false;
   }
-  let flag4 = saving.controlling;
+  let flag4 = saving.recalling;
   if (flag4 === undefined) {
     flag4 = false;
   }
-  let flag5 = saving.publishPending;
+  let flag5 = saving.controlling;
   if (flag5 === undefined) {
     flag5 = false;
+  }
+  let flag6 = saving.publishPending;
+  if (flag6 === undefined) {
+    flag6 = false;
+  }
+  let flag7 = saving.publishing;
+  if (flag7 === undefined) {
+    flag7 = false;
   }
   let tmp = null != activity;
   if (tmp) {
     tmp = "end" !== activity.phase;
   }
-  if (flag4) {
+  if (flag5) {
     let xnCAaP = _modDef3849["1jqaAc"];
-  } else if (flag5) {
+  } else if (flag6) {
     xnCAaP = _modDef3849.xCdlEF;
+  } else if (flag7) {
+    xnCAaP = _modDef3849.Rhx0rn;
   } else if (flag2) {
     xnCAaP = _modDef3849.M4KI5F;
   } else if (flag3) {
+    xnCAaP = _modDef3849.j8tmjK;
+  } else if (flag4) {
     xnCAaP = items[0];
   } else {
     const tmp4 = _modDef3849;
@@ -64,8 +76,18 @@ export const INDICATOR_PASS_STAGGER_MS = 1800;
 export const RECALLING_LINES = items;
 export const isPublishLineSwitch = function isPublishLineSwitch(line, text) {
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3849.xCdlEF);
-  return line === stringResult !== (text === stringResult);
+  let tmp4 = line === intl.string(_modDef3849.xCdlEF);
+  if (!tmp4) {
+    const intl2 = util.intl;
+    tmp4 = line === intl2.string(_modDef3849.Rhx0rn);
+  }
+  const intl3 = util.intl;
+  let tmp5 = text === intl3.string(_modDef3849.xCdlEF);
+  if (!tmp5) {
+    const intl4 = util.intl;
+    tmp5 = text === intl4.string(_modDef3849.Rhx0rn);
+  }
+  return tmp4 !== tmp5;
 };
 export const recallingLine = function recallingLine(current) {
   const intl = util.intl;

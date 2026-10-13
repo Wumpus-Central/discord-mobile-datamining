@@ -1,6 +1,6 @@
-// === Module 17286: ApplicationAssetVisibility ===
+// === Module 11904: ApplicationAssetVisibility ===
 
-// Module 17286 (ApplicationAssetVisibility)
+// Module 11904 (ApplicationAssetVisibility)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationAssetVisibility.tsx");

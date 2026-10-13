@@ -2,7 +2,7 @@
 
 // Module 1628 (MetaQuestUtils)
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1381 */;
-import NativeMetaQuestModule_mod from "NativeMetaQuestModule" /* 1365 */;
+import NativeMetaQuestModule_mod from "NativeMetaQuestModule" /* 1366 */;
 
 let NativeMetaQuestModule = NativeMetaQuestModule_mod;
 NativeMetaQuestModule = NativeMetaQuestModule.isMetaQuest();

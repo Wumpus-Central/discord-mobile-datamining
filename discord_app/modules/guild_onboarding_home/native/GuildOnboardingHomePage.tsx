@@ -1,6 +1,6 @@
-// === Module 17017: GuildOnboardingHomePage ===
+// === Module 17320: GuildOnboardingHomePage ===
 
-// Module 17017 (GuildOnboardingHomePage)
+// Module 17320 (GuildOnboardingHomePage)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
@@ -208,14 +208,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildO
   } else {
     let obj3 = { guildId, scrollValue: sharedValue, children: null };
     const obj4 = { guildId, hideDescription: tmp5 };
-    const items3 = [closure_9(tmp4(17018), obj4), ];
+    const items3 = [closure_9(tmp4(17321), obj4), ];
     if (tmp5) {
       let obj5 = { children: null };
       const obj6 = { guildId };
-      const items4 = [closure_9(tmp4(17023), obj6), , ];
+      const items4 = [closure_9(tmp4(17326), obj6), , ];
       const obj7 = { guildId };
-      items4[1] = closure_9(tmp4(17027), obj7);
-      tmp4 = tmp4(17028);
+      items4[1] = closure_9(tmp4(17330), obj7);
+      tmp4 = tmp4(17331);
       const obj8 = { guildId };
       tmp = closure_9(tmp4, obj8);
       items4[2] = tmp;
@@ -223,12 +223,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildO
       let tmp12Result = closure_11(closure_10, obj5);
     } else {
       const obj9 = { guildId };
-      tmp12Result = closure_9(tmp4(17031), obj9);
+      tmp12Result = closure_9(tmp4(17334), obj9);
     }
     items3[1] = tmp12Result;
     obj3.children = items3;
-    closure_11(tmp4(17034), obj3);
-    const tmp4Result = tmp4(17034);
+    closure_11(tmp4(17337), obj3);
+    const tmp4Result = tmp4(17337);
   }
   let obj2 = guildId(504);
 });

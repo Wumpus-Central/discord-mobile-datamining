@@ -1,6 +1,6 @@
-// === Module 14905: GuildTagCreateGuildListBottomSheet ===
+// === Module 15226: GuildTagCreateGuildListBottomSheet ===
 
-// Module 14905 (GuildTagCreateGuildListBottomSheet)
+// Module 15226 (GuildTagCreateGuildListBottomSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Powerups from "Powerups" /* 5011 */;
@@ -10,7 +10,7 @@ import TableRowGroup from "TableRowGroup" /* 6265 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
 import ActionSheet from "ActionSheet" /* 6899 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12217 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12730 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5020 */;
 

@@ -1,6 +1,6 @@
-// === Module 13623: PoggermodeUtils ===
+// === Module 13960: PoggermodeUtils ===
 
-// Module 13623 (PoggermodeUtils)
+// Module 13960 (PoggermodeUtils)
 import shims from "shims" /* 586 */;
 import PoggermodeConstants from "PoggermodeConstants" /* 7367 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 17661: RestrictedMessagePreviewActions ===
+// === Module 17665: RestrictedMessagePreviewActions ===
 
-// Module 17661 (RestrictedMessagePreviewActions)
+// Module 17665 (RestrictedMessagePreviewActions)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import UserUtilsDefault from "UserUtils" /* 4962 */;
@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
 import ReportModals from "ReportModals" /* 7722 */;
 import PeopleUtilsDefault from "PeopleUtils" /* 10230 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12363 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12873 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 

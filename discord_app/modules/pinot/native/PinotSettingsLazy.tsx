@@ -1,6 +1,6 @@
-// === Module 16269: PinotSettingsLazy ===
+// === Module 16576: PinotSettingsLazy ===
 
-// Module 16269 (PinotSettingsLazy)
+// Module 16576 (PinotSettingsLazy)
 import SettingsConstants from "SettingsConstants" /* 7993 */;
 import SettingBuilders_mod from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;

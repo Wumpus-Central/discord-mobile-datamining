@@ -1,18 +1,18 @@
-// === Module 12098: GamePlatformBadgeRow ===
+// === Module 12614: GamePlatformBadgeRow ===
 
-// Module 12098 (GamePlatformBadgeRow)
+// Module 12614 (GamePlatformBadgeRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
-import GamePlatformBadges from "GamePlatformBadges" /* 12100 */;
+import GamePlatformBadges from "GamePlatformBadges" /* 12616 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(12099).GamePlatformAvailability.DESKTOP] = fn(9097).ScreenIcon;
-obj[fn(12099).GamePlatformAvailability.MOBILE] = fn(6642).MobilePhoneIcon;
-obj[fn(12099).GamePlatformAvailability.CONSOLE] = fn(9212).GameControllerIcon;
+obj[fn(12615).GamePlatformAvailability.DESKTOP] = fn(9097).ScreenIcon;
+obj[fn(12615).GamePlatformAvailability.MOBILE] = fn(6642).MobilePhoneIcon;
+obj[fn(12615).GamePlatformAvailability.CONSOLE] = fn(9212).GameControllerIcon;
 const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const ReactCompilerGating = fn(558);

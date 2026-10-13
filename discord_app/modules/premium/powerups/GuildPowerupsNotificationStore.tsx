@@ -1,9 +1,9 @@
-// === Module 12230: GuildPowerupsNotificationStore ===
+// === Module 12743: GuildPowerupsNotificationStore ===
 
-// Module 12230 (GuildPowerupsNotificationStore)
+// Module 12743 (GuildPowerupsNotificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12231 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12744 */;
 import GameServerStore from "GameServerStore" /* 8031 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 5007 */;

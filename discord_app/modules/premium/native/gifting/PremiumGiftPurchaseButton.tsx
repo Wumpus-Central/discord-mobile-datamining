@@ -1,6 +1,6 @@
-// === Module 12741: PremiumGiftPurchaseButton ===
+// === Module 13247: PremiumGiftPurchaseButton ===
 
-// Module 12741 (PremiumGiftPurchaseButton)
+// Module 13247 (PremiumGiftPurchaseButton)
 import nativeDefault from "native" /* 587 */;
 import ChatInputUtils from "ChatInputUtils" /* 4985 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
@@ -271,8 +271,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   const setSelectedGiftingPromotionReward = nativeGiftContext.setSelectedGiftingPromotionReward;
   ({ setCurrentAnalyticsStep: c7, productId } = nativeGiftContext);
   let obj2 = defaultSelection(10055);
-  const canPurchaseIAP = defaultSelection(12742).useCanPurchaseIAP(productId);
-  const obj3 = defaultSelection(12742);
+  const canPurchaseIAP = defaultSelection(13248).useCanPurchaseIAP(productId);
+  const obj3 = defaultSelection(13248);
   let items = [c7];
   const stateFromStores = defaultSelection(504).useStateFromStores(items, () => {
     const marketingComponentByType = _undefined2.getMarketingComponentByType(defaultSelection(_undefined[14]).MarketingComponentType.GIFT_CUSTOMIZATION_BANNER);

@@ -1,6 +1,6 @@
-// === Module 11722: AppLauncherOnboardingPersistedStore ===
+// === Module 11522: AppLauncherOnboardingPersistedStore ===
 
-// Module 11722 (AppLauncherOnboardingPersistedStore)
+// Module 11522 (AppLauncherOnboardingPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

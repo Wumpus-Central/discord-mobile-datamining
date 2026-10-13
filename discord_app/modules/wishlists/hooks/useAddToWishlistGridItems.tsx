@@ -1,9 +1,9 @@
-// === Module 13409: useAddToWishlistGridItems ===
+// === Module 13746: useAddToWishlistGridItems ===
 
-// Module 13409 (useAddToWishlistGridItems)
+// Module 13746 (useAddToWishlistGridItems)
 import c from "c" /* 576 */;
 import useWishlistRecommendations from "useWishlistRecommendations" /* 10151 */;
-import WishlistUtils from "WishlistUtils" /* 13388 */;
+import WishlistUtils from "WishlistUtils" /* 13725 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

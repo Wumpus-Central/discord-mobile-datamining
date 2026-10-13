@@ -1,6 +1,6 @@
-// === Module 17028: GuildOnboardingNewMemberActions ===
+// === Module 17331: GuildOnboardingNewMemberActions ===
 
-// Module 17028 (GuildOnboardingNewMemberActions)
+// Module 17331 (GuildOnboardingNewMemberActions)
 import nativeDefault from "native" /* 587 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9320 */;

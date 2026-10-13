@@ -1,6 +1,6 @@
-// === Module 13133: Badges ===
+// === Module 13615: Badges ===
 
-// Module 13133 (Badges)
+// Module 13615 (Badges)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -11,12 +11,12 @@ import utils from "utils" /* 8272 */;
 import TrophyIcon from "TrophyIcon" /* 8926 */;
 import GameControllerIcon from "GameControllerIcon" /* 9212 */;
 import TimerIcon2 from "TimerIcon" /* 10763 */;
-import RetryIcon2 from "RetryIcon" /* 12622 */;
-import FireIcon2 from "FireIcon" /* 13015 */;
-import useTimestampTickedNow from "useTimestampTickedNow" /* 13131 */;
-import NewUserIcon from "NewUserIcon" /* 13134 */;
-import FlashIcon2 from "FlashIcon" /* 13136 */;
-import TrendingType from "TrendingType" /* 13138 */;
+import RetryIcon2 from "RetryIcon" /* 11303 */;
+import FireIcon2 from "FireIcon" /* 13499 */;
+import useTimestampTickedNow from "useTimestampTickedNow" /* 13613 */;
+import NewUserIcon from "NewUserIcon" /* 13616 */;
+import FlashIcon2 from "FlashIcon" /* 13618 */;
+import TrendingType from "TrendingType" /* 13620 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 
@@ -82,7 +82,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActiveTimest
   const tmpResult = utils;
 }) : (function ActiveTimestamp(style) {
   const entry = style.entry;
-  const now = entry(13131).useTimestampTickedNow().now;
+  const now = entry(13613).useTimestampTickedNow().now;
   const items = [entry, now];
   const children = noop.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
   return closure_6(entry(5088).Text, { style: style.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children });

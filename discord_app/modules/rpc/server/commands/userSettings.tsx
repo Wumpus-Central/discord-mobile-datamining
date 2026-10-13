@@ -1,6 +1,6 @@
-// === Module 14768: userSettings ===
+// === Module 15089: userSettings ===
 
-// Module 14768 (userSettings)
+// Module 15089 (userSettings)
 import LocaleStore from "LocaleStore" /* 2129 */;
 
 const obj = {};

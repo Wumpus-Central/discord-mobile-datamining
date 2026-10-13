@@ -1,14 +1,14 @@
-// === Module 12878: ScheduledMessagesIntro ===
+// === Module 13370: ScheduledMessagesIntro ===
 
-// Module 12878 (ScheduledMessagesIntro)
+// Module 13370 (ScheduledMessagesIntro)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import AttachmentIcon from "AttachmentIcon" /* 10028 */;
 import PlusLargeIcon from "PlusLargeIcon" /* 10309 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 11919 */;
-import ScheduleMessageSpotIllustration from "ScheduleMessageSpotIllustration" /* 12149 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 11741 */;
+import ScheduleMessageSpotIllustration from "ScheduleMessageSpotIllustration" /* 12664 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5092 */;

@@ -1,6 +1,6 @@
-// === Module 12996: ConjureProjectsSheet ===
+// === Module 13486: ConjureProjectsSheet ===
 
-// Module 12996 (ConjureProjectsSheet)
+// Module 13486 (ConjureProjectsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -13,7 +13,7 @@ import TableRowGroup from "TableRowGroup" /* 6265 */;
 import BottomSheetModal from "BottomSheetModal" /* 6307 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
 import ActionSheet from "ActionSheet" /* 6899 */;
-import openConjureProject from "openConjureProject" /* 12343 */;
+import openConjureProject from "openConjureProject" /* 12855 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
@@ -42,18 +42,18 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     fallbackGuildId = entry.fallbackGuildId;
   }
   if (cResult[0] !== entry) {
-    const result = tmp(12997).describeConjureProjectRow(entry);
+    const result = tmp(13487).describeConjureProjectRow(entry);
     cResult[0] = entry;
     cResult[1] = result;
     let tmp4 = result;
-    const tmpResult = tmp(12997);
+    const tmpResult = tmp(13487);
   } else {
     tmp4 = cResult[1];
   }
   ({ serverName, label } = tmp4);
   if (cResult[2] !== entry.project) {
     let obj2 = { project: entry.project, size: "list" };
-    const tmp9 = closure_6(fallbackGuildId(13002), obj2);
+    const tmp9 = closure_6(fallbackGuildId(11345), obj2);
     cResult[2] = entry.project;
     cResult[3] = tmp9;
     let tmp6 = tmp9;
@@ -142,9 +142,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
   if (fallbackGuildId == null) {
     fallbackGuildId = entry.fallbackGuildId;
   }
-  const result = entry(12997).describeConjureProjectRow(entry);
+  const result = entry(13487).describeConjureProjectRow(entry);
   ({ serverName, label } = result);
-  let obj2 = { label: entry.name, subLabel: serverName, accessibilityLabel: label, icon: closure_6(fallbackGuildId(13002), { project: entry.project, size: "list" }), trailing: null, disabled: null, onPress: null };
+  let obj2 = { label: entry.name, subLabel: serverName, accessibilityLabel: label, icon: closure_6(fallbackGuildId(11345), { project: entry.project, size: "list" }), trailing: null, disabled: null, onPress: null };
   let tmp2Result;
   if ("building" === entry.activity) {
     tmp2Result = closure_6(ActivityIndicator, {});
@@ -353,9 +353,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
   const cResult = stateFromStores1(576).c(46);
   let state = closure_9(0);
   const obj = stateFromStores1(576);
-  const conjureProjects = stateFromStores1(12997).useConjureProjects(VibegrationsProjectsSheet);
-  const obj2 = stateFromStores1(12997);
-  const conjureEligibleGuilds = stateFromStores1(12997).useConjureEligibleGuilds(VibegrationsProjectsSheet);
+  const conjureProjects = stateFromStores1(13487).useConjureProjects(VibegrationsProjectsSheet);
+  const obj2 = stateFromStores1(13487);
+  const conjureEligibleGuilds = stateFromStores1(13487).useConjureEligibleGuilds(VibegrationsProjectsSheet);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjureProjectStore];
     const fn = function h() {
@@ -368,7 +368,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function SheetB
   } else {
     [tmp2, tmp3] = cResult;
   }
-  const obj3 = stateFromStores1(12997);
+  const obj3 = stateFromStores1(13487);
   const stateFromStores = Stack(504).useStateFromStores(tmp2, tmp3);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [SelectedGuildStore];

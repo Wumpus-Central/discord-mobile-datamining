@@ -1,6 +1,6 @@
-// === Module 17962: useExternalPipAspectRatioUpdater ===
+// === Module 17966: useExternalPipAspectRatioUpdater ===
 
-// Module 17962 (useExternalPipAspectRatioUpdater)
+// Module 17966 (useExternalPipAspectRatioUpdater)
 import ExternalPipDefault from "ExternalPip" /* 5221 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 12431: NUFGuildTemplates ===
+// === Module 12941: NUFGuildTemplates ===
 
-// Module 12431 (NUFGuildTemplates)
+// Module 12941 (NUFGuildTemplates)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
@@ -8,13 +8,13 @@ import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 127
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import Navigator from "Navigator" /* 6688 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12407 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12433 */;
-import GuildTemplatesDefault from "GuildTemplates" /* 12435 */;
-import CreationIntentDefault from "CreationIntent" /* 12464 */;
-import components_JoinServerDefault from "components/JoinServer" /* 12478 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12479 */;
-import HubEmailConnectionModalDefault from "HubEmailConnectionModal" /* 12491 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12917 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12943 */;
+import GuildTemplatesDefault from "GuildTemplates" /* 12945 */;
+import CreationIntentDefault from "CreationIntent" /* 12974 */;
+import components_JoinServerDefault from "components/JoinServer" /* 12988 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12989 */;
+import HubEmailConnectionModalDefault from "HubEmailConnectionModal" /* 13001 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import DefaultRouteStore from "DefaultRouteStore" /* 4943 */;
@@ -211,7 +211,7 @@ function getScreens() {
       };
       const intl = guildTemplate(1126).intl;
       obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12031), obj);
+      return closure_14(closure_1(12547), obj);
     }
   };
   const obj5 = {
@@ -240,7 +240,7 @@ function getScreens() {
       };
       const intl = guildTemplate(1126).intl;
       obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12031), obj);
+      return closure_14(closure_1(12547), obj);
     }
   };
   impressionProperties[constants.JOIN_SERVER] = {
@@ -318,7 +318,7 @@ function getScreens() {
       };
       const intl = guildId(1126).intl;
       obj.buttonText = intl.string(guildId(1126).t["uHXB+F"]);
-      return closure_14(closure_1(12513), obj);
+      return closure_14(closure_1(13023), obj);
     }
   };
   const obj9 = {
@@ -342,7 +342,7 @@ function getScreens() {
 const Keyboard = fn(17).Keyboard;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, NOOP: closure_9 } = Constants);
-const GuildTemplateId = fn(12432).GuildTemplateId;
+const GuildTemplateId = fn(12942).GuildTemplateId;
 const CreateGuildConstants = fn(6662);
 ({ CreateGuildModalStates: closure_11, GuildTemplateTriggers: closure_12, NUXGuildTemplatesAnalytics: map1 } = CreateGuildConstants);
 const jsx = fn(21).jsx;

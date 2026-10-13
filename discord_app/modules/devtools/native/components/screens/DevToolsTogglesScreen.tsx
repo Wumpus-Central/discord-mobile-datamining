@@ -1,6 +1,6 @@
-// === Module 16081: DevToolsTogglesScreen ===
+// === Module 16394: DevToolsTogglesScreen ===
 
-// Module 16081 (DevToolsTogglesScreen)
+// Module 16394 (DevToolsTogglesScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   const tmp7 = _slicedToArray(noop.useState(""), 2);
   first1 = tmp7[0];
   let obj = first1(576);
-  const manaTextMigrationHighlightRestartNotice = first1(14277).useManaTextMigrationHighlightRestartNotice();
+  const manaTextMigrationHighlightRestartNotice = first1(14598).useManaTextMigrationHighlightRestartNotice();
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [DesignTogglesStore];
     cResult[1] = items;
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     }
     tmp13 = cResult[4];
   }
-  const tmpResult = first1(14277);
+  const tmpResult = first1(14598);
   const stateFromStores = first1(504).useStateFromStores(tmp10, C, tmp13, tmp(504).statesWillNeverBeEqual);
   const sum = nativeDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault(first).insets.bottom;
   if (cResult[5] !== sum) {
@@ -395,9 +395,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         label: "Clear All",
         variant: "danger",
         onPress() {
-              first1(16082).clearAll();
-              const obj = first1(16082);
-              first1(16064).clearAll();
+              first1(16395).clearAll();
+              const obj = first1(16395);
+              first1(16377).clearAll();
             },
         arrow: true
       };
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
                     description: tmp[2],
                     value: tmp[1],
                     onValueChange(arg0) {
-                      return first1(16082).toggle(first, arg0);
+                      return first1(16395).toggle(first, arg0);
                     }
                   }, toggleName);
                 })
@@ -723,8 +723,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   let tmp = closure_12();
   const tmp3 = _slicedToArray(noop.useState(""), 2);
   const query = tmp3[0];
-  const manaTextMigrationHighlightRestartNotice = query(14277).useManaTextMigrationHighlightRestartNotice();
-  let obj = query(14277);
+  const manaTextMigrationHighlightRestartNotice = query(14598).useManaTextMigrationHighlightRestartNotice();
+  let obj = query(14598);
   const tmp5 = query;
   const items = [DesignTogglesStore];
   const items1 = [query];
@@ -754,9 +754,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(16082).clearAll();
-        const obj = first(16082);
-        first(16064).clearAll();
+        first(16395).clearAll();
+        const obj = first(16395);
+        first(16377).clearAll();
       },
       arrow: true
     }),
@@ -767,9 +767,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     label: "Clear All",
     variant: "danger",
     onPress() {
-      first(16082).clearAll();
-      const obj = first(16082);
-      first(16064).clearAll();
+      first(16395).clearAll();
+      const obj = first(16395);
+      first(16377).clearAll();
     },
     arrow: true
   };
@@ -788,7 +788,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
             description: tmp3,
             value: tmp2,
             onValueChange(arg0) {
-              return first(16082).toggle(query, arg0);
+              return first(16395).toggle(query, arg0);
             }
           }, tmp);
         })

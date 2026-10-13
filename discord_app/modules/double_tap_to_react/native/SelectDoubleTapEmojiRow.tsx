@@ -1,6 +1,6 @@
-// === Module 12091: SelectDoubleTapEmojiRow ===
+// === Module 12607: SelectDoubleTapEmojiRow ===
 
-// Module 12091 (SelectDoubleTapEmojiRow)
+// Module 12607 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import EmojiDefault from "Emoji" /* 6820 */;
@@ -423,10 +423,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj = selectedEmoji(substr[15]);
   const items = [onPressEmoji];
   const stateFromStores = selectedEmoji(substr[11]).useStateFromStores(items, () => onPressEmoji.useReducedMotion);
-  const found = frequentlyUsedReactionEmojis.filter((emoji) => {
-    const obj2 = { emoji, channel: "Array", intention: constants.DEFAULT_REACT_EMOJI };
-    return !onPressEmoji(substr[17]).isEmojiFilteredOrLocked(obj2);
-  });
+  const found = frequentlyUsedReactionEmojis.filter((emoji) => !onPressEmoji(substr[17]).isEmojiFilteredOrLocked({ emoji, channel: "Array", intention: constants.DEFAULT_REACT_EMOJI }));
   substr = found.slice(0, rounded - 1);
   const items1 = [substr, selectedEmoji];
   memo = memo.useMemo(() => substr.findIndex((item) => selectedEmoji(substr[18]).areEmojisEqual(closure_1_0, item)), items1);

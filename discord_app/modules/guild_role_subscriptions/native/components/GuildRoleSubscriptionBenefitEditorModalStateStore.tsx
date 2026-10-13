@@ -1,6 +1,6 @@
-// === Module 18574: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 18578: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 18574 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 18578 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
 import _mod4733 from "module_4733" /* 4733 */;
@@ -9,7 +9,7 @@ import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "code", emojiName: "analyticsLocations", description: "defineProperty", refId: "Array" });
+let closure_2 = Object.freeze({ name: "", emojiId: "code", emojiName: "ao", description: "transform", refId: "code" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};

@@ -1,10 +1,10 @@
-// === Module 15013: AccountStandingSetting ===
+// === Module 15334: AccountStandingSetting ===
 
-// Module 15013 (AccountStandingSetting)
+// Module 15334 (AccountStandingSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;
-import useAccountStandingStatusLabel from "useAccountStandingStatusLabel" /* 15014 */;
+import useAccountStandingStatusLabel from "useAccountStandingStatusLabel" /* 15335 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

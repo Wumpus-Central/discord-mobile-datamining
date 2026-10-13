@@ -29,8 +29,8 @@ import handleMessagesTapChannel from "handleMessagesTapChannel" /* 10696 */;
 import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 10738 */;
 import contentHandlers2 from "contentHandlers" /* 10739 */;
 import GuildNSFWDefault from "GuildNSFW" /* 11190 */;
-import ChatDefault from "Chat" /* 11487 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 12393 */;
+import ChatDefault from "Chat" /* 12253 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 12903 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import ActionSheetStore from "ActionSheetStore" /* 4802 */;
@@ -222,7 +222,7 @@ class ChatPreviewBase extends PureComponent {
         const chatManager4 = applyArgumentsResult.chatManager;
         const jumpTargetId = tmp3.jumpTargetId;
         const previousRows = chatManager4.getPreviousRows();
-        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "Symbol", shouldInitialScroll: "Array", animated: -17.06, scrollPosition: -31.573, focusTargetId: -1.624 };
+        let obj3 = { rows: previousRows, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "Symbol", shouldInitialScroll: "Array", animated: "ACTIVITY_LAYOUT_MODE_UPDATE", scrollPosition: null, focusTargetId: null };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
           if (applyArgumentsResult.didPositionInitialScroll) {
@@ -291,9 +291,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: true,
-        selectedChannelId: "switch",
-        tapLinkData: null
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "https://support.discord.com/hc/articles/14155043715735"
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

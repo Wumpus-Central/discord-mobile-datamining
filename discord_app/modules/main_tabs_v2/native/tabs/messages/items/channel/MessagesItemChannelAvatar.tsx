@@ -1,17 +1,17 @@
-// === Module 16469: MessagesItemChannelAvatar ===
+// === Module 16774: MessagesItemChannelAvatar ===
 
-// Module 16469 (MessagesItemChannelAvatar)
+// Module 16774 (MessagesItemChannelAvatar)
 import nativeDefault from "native" /* 587 */;
 import GroupDMAvatarDefault from "GroupDMAvatar" /* 10280 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import PresenceStore from "PresenceStore" /* 5108 */;
-import TypingStore from "TypingStore" /* 11639 */;
+import TypingStore from "TypingStore" /* 12385 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11760).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11562).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles((arg0) => {

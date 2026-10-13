@@ -1,6 +1,6 @@
-// === Module 18268: VoiceProcessingErrorManager ===
+// === Module 18272: VoiceProcessingErrorManager ===
 
-// Module 18268 (VoiceProcessingErrorManager)
+// Module 18272 (VoiceProcessingErrorManager)
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 
 let require = fn;

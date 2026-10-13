@@ -1,6 +1,6 @@
-// === Module 11568: SearchableDestinationListHeader ===
+// === Module 12321: SearchableDestinationListHeader ===
 
-// Module 11568 (SearchableDestinationListHeader)
+// Module 12321 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;

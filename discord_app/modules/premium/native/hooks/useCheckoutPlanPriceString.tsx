@@ -1,6 +1,6 @@
-// === Module 13628: useCheckoutPlanPriceString ===
+// === Module 13965: useCheckoutPlanPriceString ===
 
-// Module 13628 (useCheckoutPlanPriceString)
+// Module 13965 (useCheckoutPlanPriceString)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 14184: GuildBadgeCaterpillar ===
+// === Module 14521: GuildBadgeCaterpillar ===
 
-// Module 14184 (GuildBadgeCaterpillar)
+// Module 14521 (GuildBadgeCaterpillar)
 import c from "c" /* 576 */;
 import inlineStyles from "inlineStyles" /* 7577 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14145 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14482 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

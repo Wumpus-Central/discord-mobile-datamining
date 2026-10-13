@@ -1,23 +1,23 @@
-// === Module 15404: VideoQuestModal ===
+// === Module 15719: VideoQuestModal ===
 
-// Module 15404 (VideoQuestModal)
+// Module 15719 (VideoQuestModal)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;
 import QuestTypes from "QuestTypes" /* 5975 */;
 import AnalyticsActions from "AnalyticsActions" /* 7407 */;
 import QuestUtils from "QuestUtils" /* 9168 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 12983 */;
-import applyOrientationLock2 from "applyOrientationLock" /* 12989 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 15371 */;
-import VideoQuestModalContextDefault from "VideoQuestModalContext" /* 15405 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13475 */;
+import applyOrientationLock2 from "applyOrientationLock" /* 13481 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 15688 */;
+import VideoQuestModalContextDefault from "VideoQuestModalContext" /* 15720 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(15370).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+let closure_6 = fn(15687).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

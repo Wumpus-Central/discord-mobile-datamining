@@ -1,6 +1,6 @@
-// === Module 11986: MemberActionUtils ===
+// === Module 12502: MemberActionUtils ===
 
-// Module 11986 (MemberActionUtils)
+// Module 12502 (MemberActionUtils)
 import useIsNewMemberDefault from "useIsNewMember" /* 6927 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6926 */;

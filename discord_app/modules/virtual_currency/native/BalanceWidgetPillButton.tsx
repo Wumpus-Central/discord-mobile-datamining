@@ -1,6 +1,6 @@
-// === Module 12788: BalanceWidgetPillButton ===
+// === Module 13294: BalanceWidgetPillButton ===
 
-// Module 12788 (BalanceWidgetPillButton)
+// Module 13294 (BalanceWidgetPillButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;

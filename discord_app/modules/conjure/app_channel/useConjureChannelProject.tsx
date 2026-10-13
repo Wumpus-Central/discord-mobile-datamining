@@ -1,7 +1,7 @@
-// === Module 12702: useConjureChannelProject ===
+// === Module 13208: useConjureChannelProject ===
 
-// Module 12702 (useConjureChannelProject)
-import ConjureActionCreators from "ConjureActionCreators" /* 11413 */;
+// Module 13208 (useConjureChannelProject)
+import ConjureActionCreators from "ConjureActionCreators" /* 11207 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;

@@ -1,6 +1,6 @@
-// === Module 12640: BugReportManager ===
+// === Module 13146: BugReportManager ===
 
-// Module 12640 (BugReportManager)
+// Module 13146 (BugReportManager)
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7506 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1370 */;
@@ -128,10 +128,10 @@ function showNotification(uri) {
             }
             closure_128_0 = tmp7;
             BUG_REPORTER = constants.BUG_REPORTER;
-            notificationDuration = tmp2(12577).getNotificationDuration(BUG_REPORTER);
-            const obj5 = tmp2(12577);
+            notificationDuration = tmp2(13087).getNotificationDuration(BUG_REPORTER);
+            const obj5 = tmp2(13087);
             const obj11 = { type: BUG_REPORTER, duration: notificationDuration, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
-            const obj6 = tmp3(12579);
+            const obj6 = tmp3(13089);
             obj11.key = tmp2(1279).v4();
             obj11.image = closure_128_0;
             uri = undefined;

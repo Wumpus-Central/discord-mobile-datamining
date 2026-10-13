@@ -1,10 +1,10 @@
-// === Module 14941: UserProfilePremiumTryItOutUpsell ===
+// === Module 15262: UserProfilePremiumTryItOutUpsell ===
 
-// Module 14941 (UserProfilePremiumTryItOutUpsell)
+// Module 15262 (UserProfilePremiumTryItOutUpsell)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
 import spring from "spring" /* 5378 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 14940 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 15261 */;
 import noop from "module_19" /* 19 */;
 
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;

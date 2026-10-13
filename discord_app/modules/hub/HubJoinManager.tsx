@@ -1,6 +1,6 @@
-// === Module 12507: HubJoinManager ===
+// === Module 13017: HubJoinManager ===
 
-// Module 12507 (HubJoinManager)
+// Module 13017 (HubJoinManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import transitionToGuild from "transitionToGuild" /* 7053 */;
 import GuildStore from "GuildStore" /* 2087 */;

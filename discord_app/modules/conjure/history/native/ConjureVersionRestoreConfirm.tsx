@@ -1,6 +1,6 @@
-// === Module 17159: ConjureVersionRestoreConfirm ===
+// === Module 11772: ConjureVersionRestoreConfirm ===
 
-// Module 17159 (ConjureVersionRestoreConfirm)
+// Module 11772 (ConjureVersionRestoreConfirm)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;

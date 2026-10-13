@@ -21,9 +21,9 @@ import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers
 import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 9677 */;
 import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 10687 */;
 import MessagesHandlers from "MessagesHandlers" /* 10693 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 11490 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 11628 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 11629 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 12256 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 12375 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 12376 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

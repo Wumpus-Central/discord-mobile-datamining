@@ -1,6 +1,6 @@
-// === Module 15202: FamilyCenterModalDisconnect ===
+// === Module 15523: FamilyCenterModalDisconnect ===
 
-// Module 15202 (FamilyCenterModalDisconnect)
+// Module 15523 (FamilyCenterModalDisconnect)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2568 from "module_2568" /* 2568 */;
@@ -9,7 +9,7 @@ import UserUtilsDefault from "UserUtils" /* 4962 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import _modDef7729 from "module_7729" /* 7729 */;
-import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 15203 */;
+import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 15524 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -69,7 +69,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
     tmp12 = cResult[2];
   }
   const tmp10 = disconnectLinkRequest(isDisconnectLoading.useState(false), 2);
-  const familyCenterActions = otherUser(11532).useFamilyCenterActions(tmp12);
+  const familyCenterActions = otherUser(12285).useFamilyCenterActions(tmp12);
   disconnectLinkRequest = familyCenterActions.disconnectLinkRequest;
   isDisconnectLoading = familyCenterActions.isDisconnectLoading;
   if (cResult[3] !== name) {
@@ -90,8 +90,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
   } else {
     tmp16 = cResult[5];
   }
-  const tmpResult7 = otherUser(11532);
-  const ageSpecificText = otherUser(11535).useAgeSpecificText(tmp14, tmp16);
+  const tmpResult7 = otherUser(12285);
+  const ageSpecificText = otherUser(12288).useAgeSpecificText(tmp14, tmp16);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const intl3 = tmp(1126).intl;
     const stringResult1 = intl3.string(_modDef2568.hOEHFn);
@@ -110,8 +110,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
   } else {
     tmp21 = cResult[8];
   }
-  const tmpResult8 = otherUser(11535);
-  const ageSpecificText1 = otherUser(11535).useAgeSpecificText(tmp19, tmp21);
+  const tmpResult8 = otherUser(12288);
+  const ageSpecificText1 = otherUser(12288).useAgeSpecificText(tmp19, tmp21);
   if (cResult[9] !== name) {
     const intl5 = tmp(1126).intl;
     const obj6 = { username: name };
@@ -132,8 +132,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
   } else {
     tmp26 = cResult[12];
   }
-  const tmpResult9 = otherUser(11535);
-  const ageSpecificText2 = otherUser(11535).useAgeSpecificText(tmp24, tmp26);
+  const tmpResult9 = otherUser(12288);
+  const ageSpecificText2 = otherUser(12288).useAgeSpecificText(tmp24, tmp26);
   if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
     const intl7 = tmp(1126).intl;
     const stringResult2 = intl7.string(_modDef2568.eiABQz);
@@ -147,8 +147,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
     tmp29 = cResult[13];
     tmp30 = cResult[14];
   }
-  const tmpResult10 = otherUser(11535);
-  const ageSpecificText3 = otherUser(11535).useAgeSpecificText(tmp29, tmp30);
+  const tmpResult10 = otherUser(12288);
+  const ageSpecificText3 = otherUser(12288).useAgeSpecificText(tmp29, tmp30);
   if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
     const intl9 = tmp(1126).intl;
     const stringResult4 = intl9.string(_modDef2568.sCbKs4);
@@ -162,8 +162,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
     tmp34 = cResult[15];
     tmp35 = cResult[16];
   }
-  const tmpResult11 = otherUser(11535);
-  const ageSpecificText4 = otherUser(11535).useAgeSpecificText(tmp34, tmp35);
+  const tmpResult11 = otherUser(12288);
+  const ageSpecificText4 = otherUser(12288).useAgeSpecificText(tmp34, tmp35);
   if (cResult[17] === disconnectLinkRequest) {
     if (cResult[20] !== isDisconnectLoading) {
       class V {
@@ -335,7 +335,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
   cResult[17] = disconnectLinkRequest;
   cResult[18] = otherUser.id;
   cResult[19] = J;
-  const tmpResult12 = otherUser(11535);
+  const tmpResult12 = otherUser(12288);
 }) : (function FamilyCenterModalDisconnectScreen(otherUser) {
   otherUser = otherUser.otherUser;
   importDefault = undefined;
@@ -359,32 +359,32 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
     _undefined2(false);
   }, []);
   const tmp10 = disconnectLinkRequest(isDisconnectLoading.useState(false), 2);
-  const familyCenterActions = otherUser(11532).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
+  const familyCenterActions = otherUser(12285).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
   disconnectLinkRequest = familyCenterActions.disconnectLinkRequest;
   isDisconnectLoading = familyCenterActions.isDisconnectLoading;
-  const obj3 = otherUser(11532);
+  const obj3 = otherUser(12285);
   let intl = otherUser(1126).intl;
-  const obj4 = otherUser(11535);
+  const obj4 = otherUser(12288);
   const intl2 = otherUser(1126).intl;
   const ageSpecificText = obj4.useAgeSpecificText(intl.format(_modDef2568.F2lccv, { username: name }), intl2.string(_modDef2568["WH+Gba"]));
   const formatResult = intl.format(_modDef2568.F2lccv, { username: name });
   const intl3 = otherUser(1126).intl;
-  const obj5 = otherUser(11535);
+  const obj5 = otherUser(12288);
   const intl4 = otherUser(1126).intl;
   const ageSpecificText1 = obj5.useAgeSpecificText(intl3.string(_modDef2568.hOEHFn), intl4.format(_modDef2568.Or6hgl, { username: name }));
   const stringResult = intl3.string(_modDef2568.hOEHFn);
   const intl5 = otherUser(1126).intl;
-  const obj6 = otherUser(11535);
+  const obj6 = otherUser(12288);
   const intl6 = otherUser(1126).intl;
   const ageSpecificText2 = obj6.useAgeSpecificText(intl5.format(_modDef2568.XyRW4c, { username: name }), intl6.format(_modDef2568.PlrZal, { username: name }));
   const formatResult1 = intl5.format(_modDef2568.XyRW4c, { username: name });
   const intl7 = otherUser(1126).intl;
-  const obj7 = otherUser(11535);
+  const obj7 = otherUser(12288);
   const intl8 = otherUser(1126).intl;
   const ageSpecificText3 = obj7.useAgeSpecificText(intl7.string(_modDef2568.eiABQz), intl8.string(_modDef2568.PGQBnk));
   const stringResult1 = intl7.string(_modDef2568.eiABQz);
   const intl9 = otherUser(1126).intl;
-  const obj8 = otherUser(11535);
+  const obj8 = otherUser(12288);
   const intl10 = otherUser(1126).intl;
   const items = [disconnectLinkRequest, otherUser.id];
   const ageSpecificText4 = obj8.useAgeSpecificText(intl9.string(_modDef2568.sCbKs4), intl10.string(_modDef2568["0ki7+P"]));
@@ -418,13 +418,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
   let tmp28Result = requiresParentalConsent;
   if (requiresParentalConsent) {
     const obj13 = { style: tmp.warning, text: ageSpecificText1 };
-    tmp28Result = closure_6(tmp3(15153), obj13);
+    tmp28Result = closure_6(tmp3(15474), obj13);
   }
   const obj14 = { children: null };
   items4[1] = tmp28Result;
   items4[2] = closure_6(otherUser(5088).Text, { style: tmp.body, variant: "text-md/normal", color: "text-default", children: ageSpecificText2 });
   const obj16 = { spacing: nativeDefault.space.PX_12, children: null };
-  const items5 = [closure_6(otherUser(12903).Checkbox, { label: ageSpecificText3, checked: tmp9, onToggle: callback3 }), closure_6(otherUser(12903).Checkbox, { label: ageSpecificText4, checked: tmp11, onToggle: callback4 })];
+  const items5 = [closure_6(otherUser(13395).Checkbox, { label: ageSpecificText3, checked: tmp9, onToggle: callback3 }), closure_6(otherUser(13395).Checkbox, { label: ageSpecificText4, checked: tmp11, onToggle: callback4 })];
   obj16.children = items5;
   items4[3] = closure_7(otherUser(5377).Stack, obj16);
   obj14.children = items4;
@@ -451,7 +451,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyC
   items7[1] = closure_6(otherUser(5379).Button, obj21);
   obj19.children = items7;
   obj18.children = closure_7(otherUser(5958).ButtonGroup, obj19);
-  items6[1] = closure_6(otherUser(11541).ModalFooter, obj18);
+  items6[1] = closure_6(otherUser(12294).ModalFooter, obj18);
   obj17.children = items6;
   return closure_7(otherUser(7515).ModalScreen, obj17);
 });

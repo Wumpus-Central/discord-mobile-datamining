@@ -1,6 +1,6 @@
-// === Module 17591: ChannelSettingsPermissionsList ===
+// === Module 17595: ChannelSettingsPermissionsList ===
 
-// Module 17591 (ChannelSettingsPermissionsList)
+// Module 17595 (ChannelSettingsPermissionsList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;

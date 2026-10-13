@@ -1,6 +1,6 @@
-// === Module 17280: ConjureNativeCollapsibleSection ===
+// === Module 11898: ConjureNativeCollapsibleSection ===
 
-// Module 17280 (ConjureNativeCollapsibleSection)
+// Module 11898 (ConjureNativeCollapsibleSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;

@@ -1,6 +1,6 @@
-// === Module 16521: HappeningNowCardEmbeddedActivity ===
+// === Module 16826: HappeningNowCardEmbeddedActivity ===
 
-// Module 16521 (HappeningNowCardEmbeddedActivity)
+// Module 16826 (HappeningNowCardEmbeddedActivity)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15589);
+const HappeningNowConstants = fn(15904);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7 } = HappeningNowConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
@@ -100,12 +100,12 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const items1 = [userId];
     obj2.highlighted_user_ids = items1;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    asyncRequireImpl(11338, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(12136, dependencyMap.paths).then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);
       }
     });
-    const promise = asyncRequireImpl(11338, dependencyMap.paths);
+    const promise = asyncRequireImpl(12136, dependencyMap.paths);
   }, items3);
   context = obj4.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   cardKey.useRef(cardKey);

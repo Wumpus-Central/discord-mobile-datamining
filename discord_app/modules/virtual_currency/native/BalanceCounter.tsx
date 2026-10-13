@@ -1,6 +1,6 @@
-// === Module 12786: BalanceCounter ===
+// === Module 13292: BalanceCounter ===
 
-// Module 12786 (BalanceCounter)
+// Module 13292 (BalanceCounter)
 import c from "c" /* 576 */;
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4834 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;

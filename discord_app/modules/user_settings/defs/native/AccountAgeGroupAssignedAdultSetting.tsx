@@ -1,11 +1,11 @@
-// === Module 15006: AccountAgeGroupAssignedAdultSetting ===
+// === Module 15327: AccountAgeGroupAssignedAdultSetting ===
 
-// Module 15006 (AccountAgeGroupAssignedAdultSetting)
+// Module 15327 (AccountAgeGroupAssignedAdultSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import _modDef3120 from "module_3120" /* 3120 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 15007 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 15328 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

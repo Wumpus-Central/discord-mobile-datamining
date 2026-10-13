@@ -1,7 +1,7 @@
-// === Module 17468: SearchHistoricalIndexingHeader ===
+// === Module 17472: SearchHistoricalIndexingHeader ===
 
-// Module 17468 (SearchHistoricalIndexingHeader)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12057 */;
+// Module 17472 (SearchHistoricalIndexingHeader)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12573 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 

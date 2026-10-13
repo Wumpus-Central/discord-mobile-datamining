@@ -1,6 +1,6 @@
-// === Module 15507: subscriptionUtils ===
+// === Module 15822: subscriptionUtils ===
 
-// Module 15507 (subscriptionUtils)
+// Module 15822 (subscriptionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
 

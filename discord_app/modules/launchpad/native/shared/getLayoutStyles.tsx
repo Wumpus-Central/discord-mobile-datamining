@@ -1,6 +1,6 @@
-// === Module 17411: getLayoutStyles ===
+// === Module 17415: getLayoutStyles ===
 
-// Module 17411 (getLayoutStyles)
+// Module 17415 (getLayoutStyles)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import GuildIcon from "GuildIcon" /* 6159 */;

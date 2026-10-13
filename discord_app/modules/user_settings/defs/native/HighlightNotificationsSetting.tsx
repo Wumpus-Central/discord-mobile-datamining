@@ -1,6 +1,6 @@
-// === Module 15821: HighlightNotificationsSetting ===
+// === Module 16136: HighlightNotificationsSetting ===
 
-// Module 15821 (HighlightNotificationsSetting)
+// Module 16136 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

@@ -1,6 +1,6 @@
-// === Module 13440: OrbBadgePreview ===
+// === Module 13777: OrbBadgePreview ===
 
-// Module 13440 (OrbBadgePreview)
+// Module 13777 (OrbBadgePreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import useCurrentUser from "useCurrentUser" /* 8303 */;

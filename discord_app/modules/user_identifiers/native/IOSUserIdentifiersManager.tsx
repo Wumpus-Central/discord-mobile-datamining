@@ -1,6 +1,6 @@
-// === Module 18145: IOSUserIdentifiersManager ===
+// === Module 18149: IOSUserIdentifiersManager ===
 
-// Module 18145 (IOSUserIdentifiersManager)
+// Module 18149 (IOSUserIdentifiersManager)
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,6 +1,6 @@
-// === Module 12412: NewUserPermissionsOnboarding ===
+// === Module 12922: NewUserPermissionsOnboarding ===
 
-// Module 12412 (NewUserPermissionsOnboarding)
+// Module 12922 (NewUserPermissionsOnboarding)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

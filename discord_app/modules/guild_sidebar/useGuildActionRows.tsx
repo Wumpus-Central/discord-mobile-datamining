@@ -1,11 +1,11 @@
-// === Module 16699: useGuildActionRows ===
+// === Module 17003: useGuildActionRows ===
 
-// Module 16699 (useGuildActionRows)
+// Module 17003 (useGuildActionRows)
 import useIsNewMemberDefault from "useIsNewMember" /* 6927 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12080 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12249 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16662 */;
-import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 16700 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12596 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12762 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16966 */;
+import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 17004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6926 */;
 

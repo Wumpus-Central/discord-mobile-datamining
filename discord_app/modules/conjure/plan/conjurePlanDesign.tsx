@@ -1,8 +1,8 @@
-// === Module 17296: conjurePlanDesign ===
+// === Module 11909: conjurePlanDesign ===
 
-// Module 17296 (conjurePlanDesign)
+// Module 11909 (conjurePlanDesign)
 import _modDef3849 from "module_3849" /* 3849 */;
-import conjurePlanTags from "conjurePlanTags" /* 17283 */;
+import conjurePlanTags from "conjurePlanTags" /* 11901 */;
 
 require = fn;
 const CONJURE_PLAN_DESIGN_ALTS = {};
@@ -19,9 +19,20 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanDesign.tsx");
 
 export { CONJURE_PLAN_DESIGN_ALTS };
+export const conjurePlanDesignSurface = function conjurePlanDesignSurface(arg0) {
+  closure_0 = arg0;
+  let found = items.find((item) => conjurePlanTags.planDeclaresSurface(closure_0, item));
+  if (found == null) {
+    found = null;
+  }
+  return found;
+};
 export const conjurePlanDesignAlt = function conjurePlanDesignAlt(proposal) {
   closure_0 = proposal;
-  const found = items.find((item) => conjurePlanTags.planDeclaresSurface(closure_0, item));
+  let found = items.find((item) => conjurePlanTags.planDeclaresSurface(closure_0, item));
+  if (found == null) {
+    found = null;
+  }
   if (null == found) {
     let prop = _modDef3849["3/aHX6"];
   } else {

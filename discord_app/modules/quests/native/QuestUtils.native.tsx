@@ -18,9 +18,9 @@ import utils_QuestUtils from "utils/QuestUtils" /* 7411 */;
 import QuestActionCreators from "QuestActionCreators" /* 9172 */;
 import QuestRewardUtils from "QuestRewardUtils" /* 9190 */;
 import GameControllerIcon from "GameControllerIcon" /* 9212 */;
-import QuestOrbsRewardModal from "QuestOrbsRewardModal" /* 12985 */;
-import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal" /* 12993 */;
-import CloudIcon from "CloudIcon" /* 12994 */;
+import CloudIcon from "CloudIcon" /* 11988 */;
+import QuestOrbsRewardModal from "QuestOrbsRewardModal" /* 13477 */;
+import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal" /* 13485 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9169 */;
@@ -28,14 +28,14 @@ import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9169 */;
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12977, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13469, dependencyMap.paths), timestampProducer, { questId, questContent, questContentPosition, sourceQuestContent });
 }
 function viewReward(quest) {
   quest = quest.quest;
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12977, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13469, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };

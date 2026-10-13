@@ -1,6 +1,6 @@
-// === Module 11448: GuildRaidResolveActionSheet ===
+// === Module 12214: GuildRaidResolveActionSheet ===
 
-// Module 11448 (GuildRaidResolveActionSheet)
+// Module 12214 (GuildRaidResolveActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
@@ -11,7 +11,7 @@ import KeyboardAwareViewDefault from "KeyboardAwareView" /* 6729 */;
 import ActionSheet2 from "ActionSheet" /* 6899 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7026 */;
 import AutomodFeedback from "AutomodFeedback" /* 7240 */;
-import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 11386 */;
+import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 12180 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

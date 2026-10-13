@@ -1,10 +1,10 @@
-// === Module 12826: AppInteractionInfoActionSheet ===
+// === Module 13320: AppInteractionInfoActionSheet ===
 
-// Module 12826 (AppInteractionInfoActionSheet)
+// Module 13320 (AppInteractionInfoActionSheet)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
 import UserActionCreators from "UserActionCreators" /* 8306 */;
-import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 12827 */;
+import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 13321 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppInter
   const bottom = useSafeAreaInsetsDefault().bottom;
   if (cResult[0] !== onBack) {
     const obj2 = { onBack };
-    const tmp8 = closure_8(tmp5(12827), obj2);
+    const tmp8 = closure_8(tmp5(13321), obj2);
     cResult[0] = onBack;
     cResult[1] = tmp8;
   }

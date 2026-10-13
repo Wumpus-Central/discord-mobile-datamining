@@ -1,6 +1,6 @@
-// === Module 13392: useWishlistViewerCoachmark ===
+// === Module 13729: useWishlistViewerCoachmark ===
 
-// Module 13392 (useWishlistViewerCoachmark)
+// Module 13729 (useWishlistViewerCoachmark)
 import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
 import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7100 */;

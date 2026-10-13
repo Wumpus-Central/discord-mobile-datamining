@@ -1,9 +1,9 @@
-// === Module 18065: ChannelCallManager ===
+// === Module 18069: ChannelCallManager ===
 
-// Module 18065 (ChannelCallManager)
+// Module 18069 (ChannelCallManager)
 import SoundpackStore from "SoundpackStore" /* 10981 */;
 import CallStore from "CallStore" /* 5758 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 12566 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 13076 */;
 import StreamerModeStore from "StreamerModeStore" /* 4963 */;
 import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5116 */;

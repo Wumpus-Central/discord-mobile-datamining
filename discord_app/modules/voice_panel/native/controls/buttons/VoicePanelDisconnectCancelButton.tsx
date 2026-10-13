@@ -1,6 +1,6 @@
-// === Module 17927: VoicePanelDisconnectCancelButton ===
+// === Module 17931: VoicePanelDisconnectCancelButton ===
 
-// Module 17927 (VoicePanelDisconnectCancelButton)
+// Module 17931 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5106 */;
@@ -17,7 +17,7 @@ import VoicePanelStore from "VoicePanelStore" /* 6074 */;
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11972).VoicePanelModes;
+const VoicePanelModes = fn(12488).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
 const createStyles = fn(5092);

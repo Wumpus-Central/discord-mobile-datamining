@@ -1,6 +1,6 @@
-// === Module 12422: ContactSyncNameInput ===
+// === Module 12932: ContactSyncNameInput ===
 
-// Module 12422 (ContactSyncNameInput)
+// Module 12932 (ContactSyncNameInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import native from "native" /* 1200 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 12419 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12929 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

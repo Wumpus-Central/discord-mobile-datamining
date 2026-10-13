@@ -1,6 +1,6 @@
-// === Module 11929: application_commands/ApplicationCommandUtils ===
+// === Module 12450: application_commands/ApplicationCommandUtils ===
 
-// Module 11929 (application_commands/ApplicationCommandUtils)
+// Module 12450 (application_commands/ApplicationCommandUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import _modDef1988 from "module_1988" /* 1988 */;
 import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5403 */;
@@ -8,8 +8,8 @@ import DraftStore from "DraftStore" /* 7244 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7247 */;
 import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9263 */;
 import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10021 */;
-import _modDef11930 from "module_11930" /* 11930 */;
-import _modDef11931 from "module_11931" /* 11931 */;
+import _modDef12451 from "module_12451" /* 12451 */;
+import _modDef12452 from "module_12452" /* 12452 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 7908 */;
 import size from "module_2" /* 2 */;
 
@@ -23,9 +23,9 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef11930);
+      return AvatarUtilsDefault.makeSource(_modDef12451);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef11931);
+      return AvatarUtilsDefault.makeSource(_modDef12452);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };

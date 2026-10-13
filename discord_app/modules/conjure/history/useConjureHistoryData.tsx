@@ -1,10 +1,10 @@
-// === Module 17160: useConjureHistoryData ===
+// === Module 11773: useConjureHistoryData ===
 
-// Module 17160 (useConjureHistoryData)
+// Module 11773 (useConjureHistoryData)
 import c from "c" /* 576 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 17115 */;
-import conjureHistoryRequests from "conjureHistoryRequests" /* 17154 */;
-import ConjureRestorePanelOp from "ConjureRestorePanelOp" /* 17161 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11361 */;
+import conjureHistoryRequests from "conjureHistoryRequests" /* 11762 */;
+import ConjureRestorePanelOp from "ConjureRestorePanelOp" /* 11774 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

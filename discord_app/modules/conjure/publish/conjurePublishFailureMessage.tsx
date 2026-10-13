@@ -1,6 +1,6 @@
-// === Module 17111: conjurePublishFailureMessage ===
+// === Module 11357: conjurePublishFailureMessage ===
 
-// Module 17111 (conjurePublishFailureMessage)
+// Module 11357 (conjurePublishFailureMessage)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 13165: useUserProfileActivity ===
+// === Module 13647: useUserProfileActivity ===
 
-// Module 13165 (useUserProfileActivity)
+// Module 13647 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 5117 */;
 import utils from "utils" /* 8272 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8460 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 13166 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 13648 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8997 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import PresenceStore from "PresenceStore" /* 5108 */;

@@ -1,11 +1,11 @@
-// === Module 16639: SearchableDestinationListRow ===
+// === Module 16944: SearchableDestinationListRow ===
 
-// Module 16639 (SearchableDestinationListRow)
+// Module 16944 (SearchableDestinationListRow)
 import sortByMatchScore from "sortByMatchScore" /* 8700 */;
 import UserRowDefault from "UserRow" /* 10228 */;
 import GroupDMRowDefault from "GroupDMRow" /* 10279 */;
 import ChannelRowDefault from "ChannelRow" /* 10282 */;
-import formatResults from "formatResults" /* 11558 */;
+import formatResults from "formatResults" /* 12311 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

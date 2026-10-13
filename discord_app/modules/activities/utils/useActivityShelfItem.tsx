@@ -1,6 +1,6 @@
-// === Module 11735: useActivityShelfItem ===
+// === Module 11535: useActivityShelfItem ===
 
-// Module 11735 (useActivityShelfItem)
+// Module 11535 (useActivityShelfItem)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import Server from "Server" /* 1998 */;
@@ -12,9 +12,9 @@ import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10812 */;
 import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10918 */;
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10919 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10962 */;
-import getPlatformDefault from "getPlatform" /* 11718 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11736 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11737 */;
+import getPlatformDefault from "getPlatform" /* 11518 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11536 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11537 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 

@@ -1,6 +1,6 @@
-// === Module 15585: SettingsAppearanceChannelRowItem ===
+// === Module 15900: SettingsAppearanceChannelRowItem ===
 
-// Module 15585 (SettingsAppearanceChannelRowItem)
+// Module 15900 (SettingsAppearanceChannelRowItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1200 */;

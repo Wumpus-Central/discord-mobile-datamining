@@ -1,6 +1,6 @@
-// === Module 15099: SpendingLimitUtils ===
+// === Module 15420: SpendingLimitUtils ===
 
-// Module 15099 (SpendingLimitUtils)
+// Module 15420 (SpendingLimitUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");

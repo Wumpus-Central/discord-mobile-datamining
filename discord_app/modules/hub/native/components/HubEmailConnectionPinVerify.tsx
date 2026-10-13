@@ -1,9 +1,9 @@
-// === Module 12506: HubEmailConnectionPinVerify ===
+// === Module 13016: HubEmailConnectionPinVerify ===
 
-// Module 12506 (HubEmailConnectionPinVerify)
+// Module 13016 (HubEmailConnectionPinVerify)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import EnvelopeIcon from "EnvelopeIcon" /* 6770 */;
-import HubJoinManagerDefault from "HubJoinManager" /* 12507 */;
+import HubJoinManagerDefault from "HubJoinManager" /* 13017 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
         guildId(onClose[12])();
       });
       return () => {
-        guildId(12507).terminate();
+        guildId(13017).terminate();
       };
     };
     const items = [onClose];
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(12507).terminate();
+      closure_1_1(13017).terminate();
     };
   }, items);
   const obj = require("module_12");
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
   const obj4 = { source: null };
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   const tmp7 = email;
-  obj4.source = require("module_12508");
+  obj4.source = require("module_13018");
   const items1 = [closure_8(require("FastImage"), obj4), , , , , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = email(onClose[14]).intl;

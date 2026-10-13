@@ -1,6 +1,6 @@
-// === Module 17044: PruneGuildModalActionCreators ===
+// === Module 17347: PruneGuildModalActionCreators ===
 
-// Module 17044 (PruneGuildModalActionCreators)
+// Module 17347 (PruneGuildModalActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

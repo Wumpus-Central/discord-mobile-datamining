@@ -1,6 +1,6 @@
-// === Module 16711: MobileGameCommunitiesConstants ===
+// === Module 17015: MobileGameCommunitiesConstants ===
 
-// Module 16711 (MobileGameCommunitiesConstants)
+// Module 17015 (MobileGameCommunitiesConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesConstants.tsx");

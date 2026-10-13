@@ -1,6 +1,6 @@
-// === Module 11366: DevToolsExperimentsScreen ===
+// === Module 12164: DevToolsExperimentsScreen ===
 
-// Module 11366 (DevToolsExperimentsScreen)
+// Module 12164 (DevToolsExperimentsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -13,7 +13,7 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
 import ClipboardUtils from "ClipboardUtils" /* 6886 */;
 import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8144 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 11364 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 12162 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ExperimentStore from "ExperimentStore" /* 5016 */;
@@ -1712,15 +1712,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tmp25 = A;
         }
       }
-      const tmpResult = tmp(11367);
-      const tmpResult3 = tmp(11367);
-      const bestMatches = tmpResult.getBestMatches(tmpResult3.sortEntries(tmp(11367).getEntries(tmp10), tmp13), tmp6);
+      const tmpResult = tmp(12165);
+      const tmpResult3 = tmp(12165);
+      const bestMatches = tmpResult.getBestMatches(tmpResult3.sortEntries(tmp(12165).getEntries(tmp10), tmp13), tmp6);
       cResult[7] = tmp10;
       cResult[8] = tmp13;
       cResult[9] = tmp6;
       cResult[10] = bestMatches;
       arr = bestMatches;
-      const tmpResult4 = tmp(11367);
+      const tmpResult4 = tmp(12165);
     }
     const obj9 = {};
     const merged = Object.assign(overridesInfo);

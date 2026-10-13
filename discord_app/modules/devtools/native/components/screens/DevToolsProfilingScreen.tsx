@@ -1,13 +1,13 @@
-// === Module 15966: DevToolsProfilingScreen ===
+// === Module 16279: DevToolsProfilingScreen ===
 
-// Module 15966 (DevToolsProfilingScreen)
+// Module 16279 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
 import TableRow from "TableRow" /* 6180 */;
 import TableRowGroup from "TableRowGroup" /* 6265 */;
-import ComponentProfiler from "ComponentProfiler" /* 12636 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15967 */;
+import ComponentProfiler from "ComponentProfiler" /* 13142 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 16280 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,10 +47,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   const tmp5 = closure_8();
   dependencyMap = tmp5;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const componentRenderStats = tmp(12636).getComponentRenderStats();
+    const componentRenderStats = tmp(13142).getComponentRenderStats();
     cResult[1] = componentRenderStats;
     let tmp6 = componentRenderStats;
-    const tmpResult = tmp(12636);
+    const tmpResult = tmp(13142);
   } else {
     tmp6 = cResult[1];
   }
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   } else {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_5(tmp(15967).DevToolsProfilingUseStateFromStores, {});
+      const tmp19 = closure_5(tmp(16280).DevToolsProfilingUseStateFromStores, {});
       cResult[5] = tmp19;
       let tmp17 = tmp19;
     } else {

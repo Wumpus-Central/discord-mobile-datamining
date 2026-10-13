@@ -1,6 +1,6 @@
-// === Module 17199: conjureMessageAuthors ===
+// === Module 11817: conjureMessageAuthors ===
 
-// Module 17199 (conjureMessageAuthors)
+// Module 11817 (conjureMessageAuthors)
 import UserActionCreatorsAll from "UserActionCreators" /* 8306 */;
 import UserStore from "UserStore" /* 1390 */;
 

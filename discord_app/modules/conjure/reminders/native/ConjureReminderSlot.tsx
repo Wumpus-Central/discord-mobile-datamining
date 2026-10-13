@@ -1,9 +1,9 @@
-// === Module 17217: ConjureReminderSlot ===
+// === Module 11835: ConjureReminderSlot ===
 
-// Module 17217 (ConjureReminderSlot)
+// Module 11835 (ConjureReminderSlot)
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import timing from "timing" /* 5093 */;
-import conjureReminderSlot from "conjureReminderSlot" /* 17183 */;
+import conjureReminderSlot from "conjureReminderSlot" /* 11799 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
@@ -11,10 +11,10 @@ import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-let obj = { duration: fn(17183).CONJURE_REMINDER_ENTER_MS, easing: null };
+let obj = { duration: fn(11799).CONJURE_REMINDER_ENTER_MS, easing: null };
 const Easing = fn(4850).Easing;
 obj.easing = Easing.out(fn(4850).Easing.ease);
-let obj2 = { duration: fn(17183).CONJURE_REMINDER_EXIT_MS, easing: null };
+let obj2 = { duration: fn(11799).CONJURE_REMINDER_EXIT_MS, easing: null };
 const Easing2 = fn(4850).Easing;
 obj2.easing = Easing2.in(fn(4850).Easing.ease);
 const styles = StyleSheet.create({ slot: { overflow: "hidden" }, layer: { position: "absolute", top: 0, left: 0, right: 0 } });
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   obj = renderReminder(576);
   const stateFromStores = renderReminder(504).useStateFromStores(tmp4, tmp5);
   const tmpResult = renderReminder(504);
-  const conjureReminderLayers = renderReminder(17183).useConjureReminderLayers(reminder.reminder);
+  const conjureReminderLayers = renderReminder(11799).useConjureReminderLayers(reminder.reminder);
   const found = conjureReminderLayers.find((leaving) => !leaving.leaving);
   let key;
   if (found != null) {
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
     key = null;
   }
   const obj4 = sharedValue;
-  const tmpResult4 = renderReminder(17183);
+  const tmpResult4 = renderReminder(11799);
   [tmp11, dependencyMap] = num3(sharedValue.useState(null), 2);
   num3 = 0;
   if (null != key) {
@@ -405,7 +405,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   const items = [onMeasure];
   const stateFromStores = renderReminder(504).useStateFromStores(items, () => onMeasure.useReducedMotion);
   obj = renderReminder(504);
-  const conjureReminderLayers = renderReminder(17183).useConjureReminderLayers(reminder);
+  const conjureReminderLayers = renderReminder(11799).useConjureReminderLayers(reminder);
   const found = conjureReminderLayers.find((leaving) => !leaving.leaving);
   let key;
   if (found != null) {
@@ -414,7 +414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   if (key == null) {
     key = null;
   }
-  obj2 = renderReminder(17183);
+  obj2 = renderReminder(11799);
   [tmp7, c2] = num(sharedValue.useState(null), 2);
   num = 0;
   if (null != key) {

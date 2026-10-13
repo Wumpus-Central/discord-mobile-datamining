@@ -1,6 +1,6 @@
-// === Module 13714: MarketingPageBannerTile ===
+// === Module 14051: MarketingPageBannerTile ===
 
-// Module 13714 (MarketingPageBannerTile)
+// Module 14051 (MarketingPageBannerTile)
 import nativeDefault from "native" /* 587 */;
 import LinkingDefault from "Linking" /* 4806 */;
 import FastImageDefault from "FastImage" /* 6157 */;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Marketin
                 let tmp10 = cResult[9];
               }
               useTrackImpressionDefault(tmp10);
-              const formatStringWithCommonPremiumParams = tmp(13718).useFormatStringWithCommonPremiumParams(bannerFields.body);
+              const formatStringWithCommonPremiumParams = tmp(14055).useFormatStringWithCommonPremiumParams(bannerFields.body);
               if (cResult[10] === bannerFields.helpArticle) {
                 if (cResult[11] === bannerFields.helpArticleId) {
                   let tmp13 = cResult[12];
@@ -201,13 +201,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Marketin
                 cResult[15] = items3;
                 tmp15 = items3;
               }
-              const tmpResult = tmp(13718);
-              const helpArticleLinkProps = tmp(13718).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
+              const tmpResult = tmp(14055);
+              const helpArticleLinkProps = tmp(14055).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
               cResult[10] = bannerFields.helpArticle;
               cResult[11] = bannerFields.helpArticleId;
               cResult[12] = helpArticleLinkProps;
               tmp13 = helpArticleLinkProps;
-              const tmpResult3 = tmp(13718);
+              const tmpResult3 = tmp(14055);
             }
             const obj11 = { type: tmp(1273).ImpressionTypes.VIEW, name: tmp(1273).ImpressionNames.PREMIUM_MARKETING_COMPONENT, properties: null };
             const obj12 = { component_type: tmp(10095).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
@@ -255,18 +255,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Marketin
   obj2.analyticsPage = analyticsPage;
   obj2.onPaymentSuccess = onPaymentSuccess;
   obj2.onPaymentDismiss = onPaymentDismiss;
-  const obj = helpArticleLinkProps(13715);
+  const obj = helpArticleLinkProps(14052);
   const obj3 = { type: null, name: null, properties: null };
-  const buttonActionHandler = helpArticleLinkProps(13715).getButtonActionHandler(obj2);
+  const buttonActionHandler = helpArticleLinkProps(14052).getButtonActionHandler(obj2);
   obj3.type = helpArticleLinkProps(1273).ImpressionTypes.VIEW;
   obj3.name = helpArticleLinkProps(1273).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = useTrackImpressionDefault;
   obj3.properties = { component_type: helpArticleLinkProps(10095).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
   tmp2Result(obj3);
   const obj4 = { component_type: helpArticleLinkProps(10095).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
-  const formatStringWithCommonPremiumParams = helpArticleLinkProps(13718).useFormatStringWithCommonPremiumParams(bannerFields.body);
-  const tmp4Result = helpArticleLinkProps(13718);
-  helpArticleLinkProps = helpArticleLinkProps(13718).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
+  const formatStringWithCommonPremiumParams = helpArticleLinkProps(14055).useFormatStringWithCommonPremiumParams(bannerFields.body);
+  const tmp4Result = helpArticleLinkProps(14055);
+  helpArticleLinkProps = helpArticleLinkProps(14055).getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj5 = { style: null, children: null };
   const items = [tmp.container, style];
   obj5.style = items;

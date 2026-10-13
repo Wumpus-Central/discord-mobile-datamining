@@ -1,11 +1,11 @@
-// === Module 14885: UserProfileAvatarDecorationEditButton ===
+// === Module 15206: UserProfileAvatarDecorationEditButton ===
 
-// Module 14885 (UserProfileAvatarDecorationEditButton)
+// Module 15206 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8282 */;
 import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9016 */;
-import _modDef13476 from "module_13476" /* 13476 */;
+import _modDef13813 from "module_13813" /* 13813 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 
@@ -250,8 +250,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                         obj2.children = jsx(CutoutableAvatarDecorationDefault, { avatarDecoration, size: COLLECTIBLES_PREVIEW_SIZE - 2 * nativeDefault.space.PX_4, animate: false });
                         let tmp7 = <hasOwnProperty style={closure_3.previewContainer}>{null}</hasOwnProperty>;
                       } else {
-                        const obj = { source: _modDef13476, style: closure_3.noneIcon };
-                        tmp7 = jsx(native.Icon, { source: _modDef13476, style: closure_3.noneIcon });
+                        const obj = { source: _modDef13813, style: closure_3.noneIcon };
+                        tmp7 = jsx(native.Icon, { source: _modDef13813, style: closure_3.noneIcon });
                       }
                       return tmp7;
                     }

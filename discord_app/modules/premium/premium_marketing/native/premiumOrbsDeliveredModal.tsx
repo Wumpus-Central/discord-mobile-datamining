@@ -1,7 +1,7 @@
-// === Module 13630: premiumOrbsDeliveredModal ===
+// === Module 13967: premiumOrbsDeliveredModal ===
 
-// Module 13630 (premiumOrbsDeliveredModal)
-import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 13634 */;
+// Module 13967 (premiumOrbsDeliveredModal)
+import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 13971 */;
 import noop from "module_19" /* 19 */;
 import EntitlementStore from "EntitlementStore" /* 7110 */;
 
@@ -10,7 +10,7 @@ function getCoinEntitlements() {
 }
 const EntitlementTypes = fn(1085).EntitlementTypes;
 const jsx = fn(21).jsx;
-const SINGLE_ORB_SKU_ID = fn(13631).SINGLE_ORB_SKU_ID;
+const SINGLE_ORB_SKU_ID = fn(13968).SINGLE_ORB_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_marketing/native/premiumOrbsDeliveredModal.tsx");
 
@@ -58,7 +58,7 @@ export const openOrbsModalIfDelivered = function openOrbsModalIfDelivered() {
         importDefault = tmp4;
         const obj2 = {
           importer() {
-                  return Promise.resolve((onClose) => jsx(orbsAmount(13632), { orbsAmount, onClose: onClose.onClose }));
+                  return Promise.resolve((onClose) => jsx(orbsAmount(13969), { orbsAmount, onClose: onClose.onClose }));
                 },
           isDismissable: false
         };

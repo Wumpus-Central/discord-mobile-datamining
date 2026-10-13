@@ -1,6 +1,6 @@
-// === Module 15552: AutomaticGainControlSetting ===
+// === Module 15867: AutomaticGainControlSetting ===
 
-// Module 15552 (AutomaticGainControlSetting)
+// Module 15867 (AutomaticGainControlSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

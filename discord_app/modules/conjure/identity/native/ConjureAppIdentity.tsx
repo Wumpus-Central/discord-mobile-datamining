@@ -1,6 +1,6 @@
-// === Module 17091: ConjureAppIdentity ===
+// === Module 11326: ConjureAppIdentity ===
 
-// Module 17091 (ConjureAppIdentity)
+// Module 11326 (ConjureAppIdentity)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -387,7 +387,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         let tmp14 = closure_9(FastImageDefault, obj13);
       } else {
         const obj15 = { size: "md", color: nativeDefault.colors.ICON_MUTED };
-        tmp14 = closure_9(onChange(17092).ImagePlusIcon, obj15);
+        tmp14 = closure_9(onChange(11327).ImagePlusIcon, obj15);
       }
       cResult[6] = iconURL;
       cResult[7] = tmp5.tileImage;
@@ -484,7 +484,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     let tmp9Result = closure_9(tmp8(6157), obj3);
   } else {
     const obj5 = { size: "md", color: tmp8(587).colors.ICON_MUTED };
-    tmp9Result = closure_9(tmp6(17092).ImagePlusIcon, obj5);
+    tmp9Result = closure_9(tmp6(11327).ImagePlusIcon, obj5);
   }
   obj2.children = tmp9Result;
   const items2 = [closure_9(disabled(6182).Card, obj2), ];

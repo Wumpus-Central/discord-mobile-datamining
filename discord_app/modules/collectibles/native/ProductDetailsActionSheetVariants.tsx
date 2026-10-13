@@ -1,6 +1,6 @@
-// === Module 13452: ProductDetailsActionSheetVariants ===
+// === Module 13789: ProductDetailsActionSheetVariants ===
 
-// Module 13452 (ProductDetailsActionSheetVariants)
+// Module 13789 (ProductDetailsActionSheetVariants)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

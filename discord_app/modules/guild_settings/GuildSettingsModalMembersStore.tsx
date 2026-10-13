@@ -1,6 +1,6 @@
-// === Module 11394: GuildSettingsModalMembersStore ===
+// === Module 12188: GuildSettingsModalMembersStore ===
 
-// Module 11394 (GuildSettingsModalMembersStore)
+// Module 12188 (GuildSettingsModalMembersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;

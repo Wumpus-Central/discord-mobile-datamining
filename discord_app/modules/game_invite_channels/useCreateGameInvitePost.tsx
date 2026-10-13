@@ -1,6 +1,6 @@
-// === Module 12540: useCreateGameInvitePost ===
+// === Module 13050: useCreateGameInvitePost ===
 
-// Module 12540 (useCreateGameInvitePost)
+// Module 13050 (useCreateGameInvitePost)
 import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6974 */;
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 10797 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

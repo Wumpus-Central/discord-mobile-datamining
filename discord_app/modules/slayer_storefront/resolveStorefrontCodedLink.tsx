@@ -1,6 +1,6 @@
-// === Module 18168: resolveStorefrontCodedLink ===
+// === Module 18172: resolveStorefrontCodedLink ===
 
-// Module 18168 (resolveStorefrontCodedLink)
+// Module 18172 (resolveStorefrontCodedLink)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SKUStore from "SKUStore" /* 6088 */;
@@ -96,7 +96,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         });
         if (!set.has(storefrontCodedLink)) {
           set.add(storefrontCodedLink);
-          const result1 = tmp(18158).queueMessageLinkFetch(asyncGeneratorStep(async () => {
+          const result1 = tmp(18162).queueMessageLinkFetch(asyncGeneratorStep(async () => {
             if (c4 === 2) {
               c4 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -158,7 +158,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               }
             }
           }));
-          const tmpResult2 = tmp(18158);
+          const tmpResult2 = tmp(18162);
         }
         const tmpResult = tmp(10685);
       }

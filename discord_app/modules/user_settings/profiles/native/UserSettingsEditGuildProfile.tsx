@@ -1,6 +1,6 @@
-// === Module 14944: UserSettingsEditGuildProfile ===
+// === Module 15265: UserSettingsEditGuildProfile ===
 
-// Module 14944 (UserSettingsEditGuildProfile)
+// Module 15265 (UserSettingsEditGuildProfile)
 import nativeDefault from "native" /* 587 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8312 */;
 import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9634 */;

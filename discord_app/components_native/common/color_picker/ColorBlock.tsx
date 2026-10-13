@@ -1,6 +1,6 @@
-// === Module 14847: ColorBlock ===
+// === Module 15168: ColorBlock ===
 
-// Module 14847 (ColorBlock)
+// Module 15168 (ColorBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;

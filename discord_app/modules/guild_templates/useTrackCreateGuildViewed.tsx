@@ -1,6 +1,6 @@
-// === Module 11348: useTrackCreateGuildViewed ===
+// === Module 12146: useTrackCreateGuildViewed ===
 
-// Module 11348 (useTrackCreateGuildViewed)
+// Module 12146 (useTrackCreateGuildViewed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import noop from "module_19" /* 19 */;
 

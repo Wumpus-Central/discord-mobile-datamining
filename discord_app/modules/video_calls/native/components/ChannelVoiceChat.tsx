@@ -201,7 +201,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                       const obj6 = { guildId: guild_id, channelId: id, children: null };
                                       const items1 = [tmp26, tmp32, tmp37, tmp41, tmp61];
                                       obj6.children = items1;
-                                      const tmp67 = closure_7(tmp(12563).ChannelContainer, obj6);
+                                      const tmp67 = closure_7(tmp(13073).ChannelContainer, obj6);
                                       cResult[52] = id;
                                       cResult[53] = guild_id;
                                       cResult[54] = tmp26;
@@ -231,7 +231,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                 tmp57 = tmp60;
                               }
                               const obj9 = { guildId: guild_id, channelId: id };
-                              const tmp56 = closure_6(tmp(12556).ChannelTitle, obj9);
+                              const tmp56 = closure_6(tmp(13066).ChannelTitle, obj9);
                               cResult[42] = id;
                               cResult[43] = guild_id;
                               cResult[44] = tmp56;
@@ -433,11 +433,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj10.children = closure_6(id(1200).Icon, { source: guild_id(10734), size: id(1200).Icon.Sizes.MEDIUM });
   const items7 = [closure_6(id(6185).PressableOpacity, obj10), ];
   const obj11 = { source: guild_id(10734), size: id(1200).Icon.Sizes.MEDIUM };
-  items7[1] = closure_6(View, { style: tmp.chatHeaderTitleContainer, children: closure_6(id(12556).ChannelTitle, { guildId: guild_id, channelId: id }) });
+  items7[1] = closure_6(View, { style: tmp.chatHeaderTitleContainer, children: closure_6(id(13066).ChannelTitle, { guildId: guild_id, channelId: id }) });
   obj9.children = items7;
   items3[4] = closure_7(View, obj9);
   obj5.children = items3;
-  items2[1] = closure_7(id(12563).ChannelContainer, obj5);
+  items2[1] = closure_7(id(13073).ChannelContainer, obj5);
   obj3.children = items2;
   return closure_7(View, obj3);
 }));

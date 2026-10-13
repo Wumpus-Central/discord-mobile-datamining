@@ -1,6 +1,6 @@
-// === Module 11559: ShareConstants ===
+// === Module 12312: ShareConstants ===
 
-// Module 11559 (ShareConstants)
+// Module 12312 (ShareConstants)
 import sortByMatchScore from "sortByMatchScore" /* 8700 */;
 import size from "module_2" /* 2 */;
 

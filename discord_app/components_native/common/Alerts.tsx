@@ -1,6 +1,6 @@
-// === Module 17680: Alerts ===
+// === Module 17684: Alerts ===
 
-// Module 17680 (Alerts)
+// Module 17684 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 4827 */;
@@ -10,11 +10,11 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import OverlayViewDefault from "OverlayView" /* 5306 */;
 import spring from "spring" /* 5378 */;
 import springPresets from "springPresets" /* 5382 */;
-import ModalRegistryDefault from "ModalRegistry" /* 17681 */;
+import ModalRegistryDefault from "ModalRegistry" /* 17685 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 14041 */;
-import PermissionVADStore from "PermissionVADStore" /* 14651 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 14378 */;
+import PermissionVADStore from "PermissionVADStore" /* 14972 */;
 import SurveyStore from "SurveyStore" /* 7472 */;
 import AlertStore from "AlertStore" /* 9628 */;
 
@@ -730,7 +730,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function AlertW
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return __initData(closure_22, { item, transitionState, cleanUp }, arg0);
 }
-let closure_26 = Object.freeze({ renderAlert: "toCharArray$esjava$1", renderKey: "T", props: "code" });
+let closure_26 = Object.freeze({ renderAlert: "Array", renderKey: "code", props: "isReactCompilerEnabled" });
 ReactCompilerGating = fn(558);
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
@@ -766,7 +766,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return <openModal.component />;
           };
         } else {
-          return { renderAlert: "toCharArray$esjava$1", renderKey: "T", props: "code" };
+          return { renderAlert: "Array", renderKey: "code", props: "isReactCompilerEnabled" };
         }
       }
     };
@@ -876,7 +876,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "toCharArray$esjava$1", renderKey: "T", props: "code" };
+        return { renderAlert: "Array", renderKey: "code", props: "isReactCompilerEnabled" };
       }
     }
   });

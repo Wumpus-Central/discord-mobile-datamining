@@ -1,6 +1,6 @@
-// === Module 13457: useVirtualCurrencyBalance ===
+// === Module 13794: useVirtualCurrencyBalance ===
 
-// Module 13457 (useVirtualCurrencyBalance)
+// Module 13794 (useVirtualCurrencyBalance)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9063 */;

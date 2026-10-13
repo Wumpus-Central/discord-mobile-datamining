@@ -1,6 +1,6 @@
-// === Module 13042: GuildProductLinkActionCreators ===
+// === Module 13526: GuildProductLinkActionCreators ===
 
-// Module 13042 (GuildProductLinkActionCreators)
+// Module 13526 (GuildProductLinkActionCreators)
 import util from "util" /* 1126 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import size from "module_2" /* 2 */;

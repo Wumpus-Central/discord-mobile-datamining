@@ -1,10 +1,10 @@
-// === Module 16321: FriendRequestsNotesSetting ===
+// === Module 16628: FriendRequestsNotesSetting ===
 
-// Module 16321 (FriendRequestsNotesSetting)
+// Module 16628 (FriendRequestsNotesSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;
-import HideFriendRequestNotesUtils from "HideFriendRequestNotesUtils" /* 13417 */;
+import HideFriendRequestNotesUtils from "HideFriendRequestNotesUtils" /* 13754 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

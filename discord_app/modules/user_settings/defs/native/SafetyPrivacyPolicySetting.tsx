@@ -1,6 +1,6 @@
-// === Module 16287: SafetyPrivacyPolicySetting ===
+// === Module 16594: SafetyPrivacyPolicySetting ===
 
-// Module 16287 (SafetyPrivacyPolicySetting)
+// Module 16594 (SafetyPrivacyPolicySetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import LinkingDefault from "Linking" /* 4806 */;

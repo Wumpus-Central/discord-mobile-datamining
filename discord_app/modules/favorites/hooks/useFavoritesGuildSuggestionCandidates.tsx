@@ -1,12 +1,12 @@
-// === Module 16731: useFavoritesGuildSuggestionCandidates ===
+// === Module 17035: useFavoritesGuildSuggestionCandidates ===
 
-// Module 16731 (useFavoritesGuildSuggestionCandidates)
+// Module 17035 (useFavoritesGuildSuggestionCandidates)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import sortByMatchScore from "sortByMatchScore" /* 8700 */;
 import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 8713 */;
 import noop from "module_19" /* 19 */;
-import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 16732 */;
+import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 17036 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7348 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
@@ -19,8 +19,8 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(16638).NO_SUGGESTIONS;
-const isAllowedType = fn(11559).isAllowedType;
+const NO_SUGGESTIONS = fn(16943).NO_SUGGESTIONS;
+const isAllowedType = fn(12312).isAllowedType;
 const ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelAffinities() {
   const cResult = c.c(7);

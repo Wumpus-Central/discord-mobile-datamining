@@ -1,6 +1,6 @@
-// === Module 12940: DomainVerifyModal ===
+// === Module 13432: DomainVerifyModal ===
 
-// Module 12940 (DomainVerifyModal)
+// Module 13432 (DomainVerifyModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 5088 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
-import DomainVerifyUtils from "DomainVerifyUtils" /* 12941 */;
+import DomainVerifyUtils from "DomainVerifyUtils" /* 13433 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

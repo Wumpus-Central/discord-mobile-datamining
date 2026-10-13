@@ -1,6 +1,6 @@
-// === Module 15213: FamilyCenterParentalControlsScreenTime ===
+// === Module 15534: FamilyCenterParentalControlsScreenTime ===
 
-// Module 15213 (FamilyCenterParentalControlsScreenTime)
+// Module 15534 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
@@ -119,10 +119,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedul
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(12568).getScheduleRuleDateRange(rule);
-  let obj = rule(12568);
-  const obj2 = rule(12568);
-  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(12568).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const scheduleRuleDateRange = rule(13078).getScheduleRuleDateRange(rule);
+  let obj = rule(13078);
+  const obj2 = rule(13078);
+  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(13078).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1126).intl;
   const string = intl.string;
   const tmp4 = _modDef2568;

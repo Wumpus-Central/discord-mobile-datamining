@@ -1,6 +1,6 @@
-// === Module 13096: useSheetDismissPointerEvents ===
+// === Module 13580: useSheetDismissPointerEvents ===
 
-// Module 13096 (useSheetDismissPointerEvents)
+// Module 13580 (useSheetDismissPointerEvents)
 import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

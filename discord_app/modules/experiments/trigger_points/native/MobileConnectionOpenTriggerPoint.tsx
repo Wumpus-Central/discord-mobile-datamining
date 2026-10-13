@@ -1,6 +1,6 @@
-// === Module 13988: MobileConnectionOpenTriggerPoint ===
+// === Module 14325: MobileConnectionOpenTriggerPoint ===
 
-// Module 13988 (MobileConnectionOpenTriggerPoint)
+// Module 14325 (MobileConnectionOpenTriggerPoint)
 import ExperimentConstants from "ExperimentConstants" /* 5017 */;
 import Helpers from "Helpers" /* 10165 */;
 import size from "module_2" /* 2 */;

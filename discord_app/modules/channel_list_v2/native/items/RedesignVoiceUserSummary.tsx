@@ -1,8 +1,8 @@
-// === Module 16568: RedesignVoiceUserSummary ===
+// === Module 16873: RedesignVoiceUserSummary ===
 
-// Module 16568 (RedesignVoiceUserSummary)
+// Module 16873 (RedesignVoiceUserSummary)
 import ChannelUtils from "ChannelUtils" /* 5414 */;
-import VoiceUserSummaryDefault from "VoiceUserSummary" /* 16564 */;
+import VoiceUserSummaryDefault from "VoiceUserSummary" /* 16869 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5116 */;
@@ -138,8 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
   const items3 = [channels, stateFromStores1, stateFromStores];
   const stageIcon = stateFromStores1.useMemo(() => ChannelUtils.isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores), items3);
   const obj2 = channels(stateFromStores[6]);
-  const obj4 = { channels, selectedChannelId: "r", selectedVoiceChannelId: stateFromStores1, voiceStates: stateFromStores };
-  const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers(obj4);
+  const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers({ channels, selectedChannelId: "r", selectedVoiceChannelId: stateFromStores1, voiceStates: stateFromStores });
   const users = summarizedVoiceUsers.filter((item) => null != item);
   return jsx(guildId(stateFromStores[8]), { users, max: 8, renderIcon: true, guildId, stageIcon });
 });

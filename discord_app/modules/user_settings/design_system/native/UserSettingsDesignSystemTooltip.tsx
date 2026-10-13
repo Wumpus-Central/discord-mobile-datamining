@@ -1,6 +1,6 @@
-// === Module 16165: UserSettingsDesignSystemTooltip ===
+// === Module 16472: UserSettingsDesignSystemTooltip ===
 
-// Module 16165 (UserSettingsDesignSystemTooltip)
+// Module 16472 (UserSettingsDesignSystemTooltip)
 import c from "c" /* 576 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;

@@ -1,6 +1,6 @@
-// === Module 13602: VoiceMemberUser ===
+// === Module 13939: VoiceMemberUser ===
 
-// Module 13602 (VoiceMemberUser)
+// Module 13939 (VoiceMemberUser)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
@@ -13,12 +13,12 @@ import CallActionCreatorsDefault from "CallActionCreators" /* 7017 */;
 import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7426 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7482 */;
 import _modDef10910 from "module_10910" /* 10910 */;
-import _modDef13603 from "module_13603" /* 13603 */;
-import _modDef13604 from "module_13604" /* 13604 */;
-import _modDef13605 from "module_13605" /* 13605 */;
-import _modDef13606 from "module_13606" /* 13606 */;
-import _modDef13607 from "module_13607" /* 13607 */;
-import _modDef13608 from "module_13608" /* 13608 */;
+import _modDef13940 from "module_13940" /* 13940 */;
+import _modDef13941 from "module_13941" /* 13941 */;
+import _modDef13942 from "module_13942" /* 13942 */;
+import _modDef13943 from "module_13943" /* 13943 */;
+import _modDef13944 from "module_13944" /* 13944 */;
+import _modDef13945 from "module_13945" /* 13945 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
@@ -760,7 +760,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const obj7 = { style: tmp2.row, children: null };
       let tmp22Result = null;
       if (user.isSpectating) {
-        const obj8 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13608), style: tmp21 };
+        const obj8 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13945), style: tmp21 };
         tmp22Result = closure_13(tmp8(1200).Icon, obj8);
       }
       const items3 = [tmp22Result, , , , ];
@@ -768,7 +768,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         items3[1] = null;
         let tmp22Result5 = null;
         if (tmp16) {
-          const obj9 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13605), style: tmp21 };
+          const obj9 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13942), style: tmp21 };
           tmp22Result5 = closure_13(tmp8(1200).Icon, obj9);
         }
         items3[2] = tmp22Result5;
@@ -784,18 +784,18 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           tmp25Result = closure_14(closure_5, obj7);
         } else {
           if (localVideoDisabled) {
-            const obj11 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13606), style: tmp2.voiceStatusIconMargin, disableColor: true };
+            const obj11 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13943), style: tmp2.voiceStatusIconMargin, disableColor: true };
             let obj12 = obj11;
           } else {
-            obj12 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13607), style: tmp21 };
+            obj12 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13944), style: tmp21 };
           }
           closure_13(tmp8(1200).Icon, obj12);
         }
       } else {
         if (tmp8Result6.isThemeDark(stateFromStores)) {
-          let tmp5Result = channel(13603);
+          let tmp5Result = channel(13940);
         } else {
-          tmp5Result = channel(13604);
+          tmp5Result = channel(13941);
         }
         const obj13 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: tmp5Result, style: tmp2.voiceStatusIconMargin, color: tmp21.tintColor, disableColor: localMute };
         closure_13(tmp8(1200).Icon, obj13);

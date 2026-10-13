@@ -1,6 +1,6 @@
-// === Module 16775: isHomeDrawerChannelMuted ===
+// === Module 17079: isHomeDrawerChannelMuted ===
 
-// Module 16775 (isHomeDrawerChannelMuted)
+// Module 17079 (isHomeDrawerChannelMuted)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;

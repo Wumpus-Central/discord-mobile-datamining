@@ -1,6 +1,6 @@
-// === Module 13021: GuildProfileCTA ===
+// === Module 13505: GuildProfileCTA ===
 
-// Module 13021 (GuildProfileCTA)
+// Module 13505 (GuildProfileCTA)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4942 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6103 */;

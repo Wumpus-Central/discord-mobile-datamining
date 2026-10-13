@@ -1,6 +1,6 @@
-// === Module 16630: AccountLinkBanner ===
+// === Module 16935: AccountLinkBanner ===
 
-// Module 16630 (AccountLinkBanner)
+// Module 16935 (AccountLinkBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ButtonConstants from "ButtonConstants" /* 5384 */;

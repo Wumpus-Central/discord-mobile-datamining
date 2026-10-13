@@ -1,6 +1,6 @@
-// === Module 13711: usePromotionMarketingComponent ===
+// === Module 14048: usePromotionMarketingComponent ===
 
-// Module 13711 (usePromotionMarketingComponent)
+// Module 14048 (usePromotionMarketingComponent)
 import constants from "constants" /* 9155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,9 +1,9 @@
-// === Module 12334: useIsOwnedConjureApplication ===
+// === Module 11498: useIsOwnedConjureApplication ===
 
-// Module 12334 (useIsOwnedConjureApplication)
+// Module 11498 (useIsOwnedConjureApplication)
 import BackoffDefault from "Backoff" /* 569 */;
 import ConjureUtils from "ConjureUtils" /* 6946 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11413 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11207 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;

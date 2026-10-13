@@ -1,14 +1,14 @@
-// === Module 16463: MessageRequestsButton ===
+// === Module 16768: MessageRequestsButton ===
 
-// Module 16463 (MessageRequestsButton)
+// Module 16768 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import components_Button_Button from "components/Button/Button" /* 5379 */;
 import IconButton from "IconButton" /* 7574 */;
 import _modDef8753 from "module_8753" /* 8753 */;
-import IconActionButton from "IconActionButton" /* 12846 */;
-import _mod16464 from "module_16464" /* 16464 */;
+import IconActionButton from "IconActionButton" /* 13338 */;
+import _mod16769 from "module_16769" /* 16769 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import MessageRequestStore from "MessageRequestStore" /* 6055 */;
@@ -103,7 +103,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function M
   const effect = noop.useEffect(tmp5, tmp6);
   if (cResult[3] !== color) {
     const obj3 = { ref, color, size: "sm", autoPlay: true };
-    const tmp10 = options(_mod16464.MessageRequestLottie, obj3);
+    const tmp10 = options(_mod16769.MessageRequestLottie, obj3);
     cResult[3] = color;
     cResult[4] = tmp10;
     let tmp8 = tmp10;
@@ -125,7 +125,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function M
       }
     }
   }, items);
-  return options(_mod16464.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return options(_mod16769.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
       const merged2 = Object.assign(merged);
       tmp24 = options(IconButton.IconButton, obj4);
     }
-    const items = [tmp24, str > 0 && tmp27(tmp26(12846).ButtonBadge, { badgePosition: "right" })];
+    const items = [tmp24, str > 0 && tmp27(tmp26(13338).ButtonBadge, { badgePosition: "right" })];
     obj2.children = items;
     return collapsed(View, obj2);
   } else {

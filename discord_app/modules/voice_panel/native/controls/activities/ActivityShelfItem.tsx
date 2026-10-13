@@ -1,6 +1,6 @@
-// === Module 17881: ActivityShelfItem ===
+// === Module 17885: ActivityShelfItem ===
 
-// Module 17881 (ActivityShelfItem)
+// Module 17885 (ActivityShelfItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
@@ -12,21 +12,21 @@ import Pressables from "Pressables" /* 6185 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7247 */;
 import TestModeUtils from "TestModeUtils" /* 9065 */;
 import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10962 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 11735 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11773 */;
-import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11829 */;
-import _modDef12560 from "module_12560" /* 12560 */;
-import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 17878 */;
-import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 17879 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17880 */;
-import _modDef17882 from "module_17882" /* 17882 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 11535 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11576 */;
+import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11634 */;
+import _modDef13070 from "module_13070" /* 13070 */;
+import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 17882 */;
+import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 17883 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17884 */;
+import _modDef17886 from "module_17886" /* 17886 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityShelfItemDefault = useActivityShelfItem;
 
 const util = getItemSubtitleForMaxPlayersShort(1126);
 const Text_Text = getItemSubtitleForMaxPlayersShort(5088);
-const getItemSubtitleForMaxPlayers = getItemSubtitleForMaxPlayersShort(11834);
+const getItemSubtitleForMaxPlayers = getItemSubtitleForMaxPlayersShort(11639);
 require = fn;
 const ThemeTypes = fn(1085).ThemeTypes;
 const ANDROID_FOREGROUND_RIPPLE = fn(1204).ANDROID_FOREGROUND_RIPPLE;
@@ -226,7 +226,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
     }
     const _Symbol = Symbol;
     if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj4 = { source: _modDef12560, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" };
+      const obj4 = { source: _modDef13070, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" };
       const tmp19 = timestampProducer(native.Icon, obj4);
       cResult[20] = tmp19;
       let tmp17 = tmp19;
@@ -294,7 +294,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
   obj2.style = items;
   const tmp2Result = NativeViewDefault;
-  const items1 = [timestampProducer(native.Icon, { source: _modDef12560, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
+  const items1 = [timestampProducer(native.Icon, { source: _modDef13070, size: native.Icon.Sizes.EXTRA_SMALL, color: "white" }), ];
   const obj4 = { lineClamp: 1, style: tmp.participantsText, variant: "text-xxs/medium", color: "text-overlay-light", children: null };
   if (action === useActivityShelfItem.ActivityAction.START) {
     let num2 = activityItem.application.maxParticipants;
@@ -478,7 +478,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
                                       let tmp36 = null;
                                       if (isTestModeForApplication) {
                                         const obj5 = { style: tmp5.developerIconContainer, children: null };
-                                        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef17882, color: tmp5.developerIconColor.color };
+                                        const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef17886, color: tmp5.developerIconColor.color };
                                         obj5.children = timestampProducer(native.Icon, obj6);
                                         tmp36 = timestampProducer(NativeViewDefault, obj5);
                                         const tmp7Result = NativeViewDefault;
@@ -626,7 +626,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     tmp15Result3 = null;
     if (isTestModeForApplication) {
       const obj9 = { style: tmp.developerIconContainer, children: null };
-      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef17882, color: tmp.developerIconColor.color };
+      const obj10 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef17886, color: tmp.developerIconColor.color };
       obj9.children = timestampProducer(native.Icon, obj10);
       tmp15Result3 = timestampProducer(NativeViewDefault, obj9);
       const tmp3Result4 = NativeViewDefault;

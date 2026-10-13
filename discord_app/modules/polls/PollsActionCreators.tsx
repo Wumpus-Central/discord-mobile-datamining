@@ -1,11 +1,11 @@
-// === Module 11510: PollsActionCreators ===
+// === Module 11723: PollsActionCreators ===
 
-// Module 11510 (PollsActionCreators)
+// Module 11723 (PollsActionCreators)
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
 import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6920 */;
-import PollInteractionUtilsAll from "PollInteractionUtils" /* 11511 */;
+import PollInteractionUtilsAll from "PollInteractionUtils" /* 11724 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LurkingStore from "LurkingStore" /* 4751 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7313 */;
@@ -707,7 +707,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(11516).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(11729).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();

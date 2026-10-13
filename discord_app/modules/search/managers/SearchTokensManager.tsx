@@ -1,8 +1,8 @@
-// === Module 18242: SearchTokensManager ===
+// === Module 18246: SearchTokensManager ===
 
-// Module 18242 (SearchTokensManager)
+// Module 18246 (SearchTokensManager)
 import IntlLoaderStore from "IntlLoaderStore" /* 2130 */;
-import SearchUtils from "SearchUtils" /* 12043 */;
+import SearchUtils from "SearchUtils" /* 12559 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
 import size from "module_2" /* 2 */;
 

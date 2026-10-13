@@ -1,9 +1,9 @@
-// === Module 13380: useUserProfileActivityTabContent ===
+// === Module 13717: useUserProfileActivityTabContent ===
 
-// Module 13380 (useUserProfileActivityTabContent)
+// Module 13717 (useUserProfileActivityTabContent)
 import LoggerDefault from "Logger" /* 3 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8460 */;
-import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 13381 */;
+import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 13718 */;
 import noop from "module_19" /* 19 */;
 import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8997 */;
 import PresenceStore from "PresenceStore" /* 5108 */;

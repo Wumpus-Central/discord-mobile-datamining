@@ -1,11 +1,11 @@
-// === Module 16196: CollectiblesShopSetting ===
+// === Module 16503: CollectiblesShopSetting ===
 
-// Module 16196 (CollectiblesShopSetting)
+// Module 16503 (CollectiblesShopSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7263 */;
-import ShopIcon from "ShopIcon" /* 11826 */;
+import ShopIcon from "ShopIcon" /* 11631 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

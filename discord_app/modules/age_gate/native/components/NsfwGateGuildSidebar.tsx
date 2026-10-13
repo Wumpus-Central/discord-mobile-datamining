@@ -1,6 +1,6 @@
-// === Module 16736: NsfwGateGuildSidebar ===
+// === Module 17040: NsfwGateGuildSidebar ===
 
-// Module 16736 (NsfwGateGuildSidebar)
+// Module 17040 (NsfwGateGuildSidebar)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6917 */;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
         }
         if (cResult[11] !== stateFromStores) {
           let obj2 = { guild: stateFromStores, showExtraButtons: false };
-          const tmp21 = closure_12(stateFromStores(16572), obj2);
+          const tmp21 = closure_12(stateFromStores(16877), obj2);
           cResult[11] = stateFromStores;
           cResult[12] = tmp21;
           let tmp18 = tmp21;

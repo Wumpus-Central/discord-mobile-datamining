@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
             }
           }
           const obj4 = { contentContainerStyle: tmp9, bounces: false, renderItem: tmp4, data, keyExtractor, keyboardShouldPersistTaps: "always", ListEmptyComponent };
-          const tmp14 = source(tmp(tmp2[16]).BottomSheetFlatList, obj4);
+          const tmp14 = source(tmp(tmp2[16]).BottomSheetFlashList, obj4);
           cResult[9] = data;
           cResult[10] = tmp4;
           cResult[11] = tmp9;
@@ -240,5 +240,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
     return React4(InstantInviteRowDefault, { start: 0 === index, end: index === data.length - 1, row: row.item, onPressAvatar, onInviteSent, code, source });
   }, items);
   const obj = { contentContainerStyle: { paddingBottom: onPressAvatar(onInviteSent[5]).space.PX_16 + onPressAvatar(onInviteSent[15])({ isKeyboardAwareOnAndroid: false }).insets.bottom, paddingHorizontal: onPressAvatar(onInviteSent[5]).space.PX_12 }, bounces: false, renderItem: callback, data, keyExtractor, keyboardShouldPersistTaps: "always", ListEmptyComponent };
-  return source(code(onInviteSent[16]).BottomSheetFlatList, obj);
+  return source(code(onInviteSent[16]).BottomSheetFlashList, obj);
 });

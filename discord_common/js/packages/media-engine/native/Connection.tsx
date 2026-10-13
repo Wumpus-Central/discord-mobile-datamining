@@ -1615,7 +1615,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "top" };
+        return { v: "r" };
       } else {
         const items = [];
         if (!_modDef5202(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {

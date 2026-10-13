@@ -1,6 +1,6 @@
-// === Module 16675: StageVoiceChannel ===
+// === Module 16979: StageVoiceChannel ===
 
-// Module 16675 (StageVoiceChannel)
+// Module 16979 (StageVoiceChannel)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
@@ -10,10 +10,10 @@ import MemberVerificationModalActionCreators from "MemberVerificationModalAction
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7482 */;
 import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 8188 */;
 import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10283 */;
-import VoiceUsersDefault from "VoiceUsers" /* 16555 */;
-import ChannelItemDefault from "ChannelItem" /* 16565 */;
-import ChannelInfoDefault from "ChannelInfo" /* 16666 */;
-import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 16676 */;
+import VoiceUsersDefault from "VoiceUsers" /* 16860 */;
+import ChannelItemDefault from "ChannelItem" /* 16870 */;
+import ChannelInfoDefault from "ChannelInfo" /* 16970 */;
+import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 16980 */;
 import noop from "module_19" /* 19 */;
 import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7250 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
@@ -51,10 +51,10 @@ const Constants = fn(1085);
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
-let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: { marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: { marginVertical: fn(11562).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_17 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11562).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx");
 

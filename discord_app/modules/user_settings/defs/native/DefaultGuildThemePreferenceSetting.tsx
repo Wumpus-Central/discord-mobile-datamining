@@ -1,6 +1,6 @@
-// === Module 15605: DefaultGuildThemePreferenceSetting ===
+// === Module 15920: DefaultGuildThemePreferenceSetting ===
 
-// Module 15605 (DefaultGuildThemePreferenceSetting)
+// Module 15920 (DefaultGuildThemePreferenceSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;

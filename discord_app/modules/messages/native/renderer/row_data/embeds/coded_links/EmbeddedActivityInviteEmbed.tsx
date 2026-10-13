@@ -1,13 +1,13 @@
-// === Module 13520: EmbeddedActivityInviteEmbed ===
+// === Module 13857: EmbeddedActivityInviteEmbed ===
 
-// Module 13520 (EmbeddedActivityInviteEmbed)
+// Module 13857 (EmbeddedActivityInviteEmbed)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import useChannelName from "useChannelName" /* 5421 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7889 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8159 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8275 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13521 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13858 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8276 */;

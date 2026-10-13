@@ -1,6 +1,6 @@
-// === Module 15429: QuestGameLogotype ===
+// === Module 15744: QuestGameLogotype ===
 
-// Module 15429 (QuestGameLogotype)
+// Module 15744 (QuestGameLogotype)
 import nativeDefault from "native" /* 587 */;
 import spring from "spring" /* 5378 */;
 import FastImageDefault from "FastImage" /* 6157 */;

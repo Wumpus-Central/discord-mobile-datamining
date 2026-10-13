@@ -1,6 +1,6 @@
-// === Module 15274: PremiumGuildBoostingSetting ===
+// === Module 15593: PremiumGuildBoostingSetting ===
 
-// Module 15274 (PremiumGuildBoostingSetting)
+// Module 15593 (PremiumGuildBoostingSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import BoostGemIcon from "BoostGemIcon" /* 9410 */;

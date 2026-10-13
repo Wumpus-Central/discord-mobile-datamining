@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056
 import NativeViewDefault from "NativeView" /* 6162 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
-import useOnConnectToConsole from "useOnConnectToConsole" /* 13026 */;
+import useOnConnectToConsole from "useOnConnectToConsole" /* 13510 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 5111 */;
 import AudioManagerStore from "AudioManagerStore" /* 8787 */;

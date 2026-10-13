@@ -1,12 +1,12 @@
-// === Module 11971: VoicePanelStateContext ===
+// === Module 12487: VoicePanelStateContext ===
 
-// Module 11971 (VoicePanelStateContext)
-import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 11974 */;
-import VoicePanelPIPHandoffDefault from "VoicePanelPIPHandoff" /* 11978 */;
+// Module 12487 (VoicePanelStateContext)
+import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 12490 */;
+import VoicePanelPIPHandoffDefault from "VoicePanelPIPHandoff" /* 12494 */;
 import noop from "module_19" /* 19 */;
 
-const VoicePanelModes = fn(11972).VoicePanelModes;
-const VoicePanelControlsConstants = fn(11970);
+const VoicePanelModes = fn(12488).VoicePanelModes;
+const VoicePanelControlsConstants = fn(12486);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
 const obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, refreshIdleTimeout: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "CHANNEL_SETTINGS_UPDATE", showControls: null, showFloatingCTA: null, streamOutputSinkStack: null, windowDimensions: null, wrapperDimensions: null, useReducedMotion: null, wrapperOffset: null, pipHandoff: null };
 let ReanimatedHelperTypes = fn(6763);
@@ -19,7 +19,7 @@ obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-obj.dismissToPIPGestureRef = { current: "top" };
+obj.dismissToPIPGestureRef = { current: "r" };
 ReanimatedHelperTypes = fn(6763);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(6763);
@@ -38,7 +38,7 @@ obj.layoutManager = new VoicePanelCardLayoutManagerDefault("invalid");
 ReanimatedHelperTypes = fn(6763);
 obj.mode = ReanimatedHelperTypes.createFakeSharedValue(VoicePanelModes.PANEL);
 ReanimatedHelperTypes = fn(6763);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11973).MorphablePanelModes.PANEL);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(12489).MorphablePanelModes.PANEL);
 const obj2 = { mode: VoicePanelControlsModes.FLOATING_DEFAULT, locked: false, height: CONTROLS_HEIGHT, pushToTalk: false };
 const tmp3 = new VoicePanelCardLayoutManagerDefault("invalid");
 obj.mountedCards = new Set();

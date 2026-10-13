@@ -11,10 +11,10 @@ import XboxLinkLandingDefault from "XboxLinkLanding" /* 9209 */;
 import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9215 */;
 import XboxLinkPreConnectDefault from "XboxLinkPreConnect" /* 9217 */;
 import XboxLinkDiscordConsentDefault from "XboxLinkDiscordConsent" /* 9221 */;
-import XboxLinkSuccessDefault from "XboxLinkSuccess" /* 12908 */;
-import XboxLinkEducationDefault from "XboxLinkEducation" /* 12911 */;
-import XboxLinkErrorDefault from "XboxLinkError" /* 12913 */;
-import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 12917 */;
+import XboxLinkSuccessDefault from "XboxLinkSuccess" /* 13400 */;
+import XboxLinkEducationDefault from "XboxLinkEducation" /* 13403 */;
+import XboxLinkErrorDefault from "XboxLinkError" /* 13405 */;
+import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 13409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => getScreens(twoWayLinkStyles), items);
   const obj = twoWayLinkStyles(9215);
-  const accountLinkStepTracking = twoWayLinkStyles(12917).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
+  const accountLinkStepTracking = twoWayLinkStyles(13409).useAccountLinkStepTracking(PlatformTypes.XBOX, locationStack.locationStack);
   const obj3 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: XboxLinkModalScenes.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1126).intl;
   obj3.headerBackTitle = intl.string(twoWayLinkStyles(1126).t["13/7kX"]);

@@ -1,6 +1,6 @@
-// === Module 15002: SettingsAgeGroupScreen ===
+// === Module 15323: SettingsAgeGroupScreen ===
 
-// Module 15002 (SettingsAgeGroupScreen)
+// Module 15323 (SettingsAgeGroupScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -9,9 +9,9 @@ import _modDef3120 from "module_3120" /* 3120 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7498 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14961 */;
-import SettingLayoutDefault from "SettingLayout" /* 14965 */;
-import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 15003 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 15282 */;
+import SettingLayoutDefault from "SettingLayout" /* 15286 */;
+import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 15324 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     return tmp9;
   }
 }) : (function SettingsAgeGroupScreen() {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(14961).useIsTinyBroncoSettingsEnabled();
+  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(15282).useIsTinyBroncoSettingsEnabled();
   let items = [isTinyBroncoSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };

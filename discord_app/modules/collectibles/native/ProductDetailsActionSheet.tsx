@@ -16,7 +16,7 @@ import generated_NoResults from "generated/NoResults" /* 8359 */;
 import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8971 */;
 import useCollectiblesShopProducts from "useCollectiblesShopProducts" /* 9089 */;
 import useFetchCollectiblesCategoriesAndPurchases from "useFetchCollectiblesCategoriesAndPurchases" /* 10090 */;
-import ProductDetailsActionSheetSkeletonDefault from "ProductDetailsActionSheetSkeleton" /* 13467 */;
+import ProductDetailsActionSheetSkeletonDefault from "ProductDetailsActionSheetSkeleton" /* 13804 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
@@ -1367,7 +1367,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Manage
     obj5.children = closure_15(tmp(5379).Button, obj6);
     closure_15(tmp(1200).EmptyState, obj5);
   } else {
-    closure_15(initialVariantIndex(13467), {});
+    closure_15(initialVariantIndex(13804), {});
   }
   ref = noop.useRef(null);
 });

@@ -1,12 +1,12 @@
-// === Module 12177: NewChannelFollower ===
+// === Module 12692: NewChannelFollower ===
 
-// Module 12177 (NewChannelFollower)
+// Module 12692 (NewChannelFollower)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import openChannelPickerDefault from "openChannelPicker" /* 12180 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 12183 */;
+import openChannelPickerDefault from "openChannelPicker" /* 12695 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 12696 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -89,9 +89,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("module_12178");
+    let tmp8Result = require("module_12693");
   } else {
-    tmp8Result = require("module_12179");
+    tmp8Result = require("module_12694");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { style: tmp.header, children: null };

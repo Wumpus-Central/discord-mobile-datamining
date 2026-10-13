@@ -1,6 +1,6 @@
-// === Module 17447: Search ===
+// === Module 17451: Search ===
 
-// Module 17447 (Search)
+// Module 17451 (Search)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/Search.tsx");

@@ -1,6 +1,6 @@
-// === Module 12243: useCanPurchaseBoosts ===
+// === Module 12756: useCanPurchaseBoosts ===
 
-// Module 12243 (useCanPurchaseBoosts)
+// Module 12756 (useCanPurchaseBoosts)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7109 */;

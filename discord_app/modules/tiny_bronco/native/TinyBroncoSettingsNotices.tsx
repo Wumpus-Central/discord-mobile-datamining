@@ -1,6 +1,6 @@
-// === Module 15095: TinyBroncoSettingsNotices ===
+// === Module 15416: TinyBroncoSettingsNotices ===
 
-// Module 15095 (TinyBroncoSettingsNotices)
+// Module 15416 (TinyBroncoSettingsNotices)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3152 from "module_3152" /* 3152 */;
@@ -11,9 +11,9 @@ import TinyBroncoExperiment from "TinyBroncoExperiment" /* 5928 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7498 */;
 import useUserIsTeen from "useUserIsTeen" /* 7738 */;
 import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9625 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 14964 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 15004 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15096 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 15285 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 15325 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15417 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 

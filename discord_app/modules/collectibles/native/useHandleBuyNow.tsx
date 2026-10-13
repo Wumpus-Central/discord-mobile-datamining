@@ -1,6 +1,6 @@
-// === Module 13466: useHandleBuyNow ===
+// === Module 13803: useHandleBuyNow ===
 
-// Module 13466 (useHandleBuyNow)
+// Module 13803 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -57,7 +57,7 @@ function useHandleBuyNow(product) {
           v1(5056).hideAllActionSheets();
           const obj = v1(5056);
           const obj8 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_2 };
-          v1(12772).open(obj8);
+          v1(13278).open(obj8);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
@@ -69,7 +69,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(12711)({
+  const tmp3 = onBuySettled(13217)({
     product,
     analyticsLocations,
     onPurchaseComplete() {

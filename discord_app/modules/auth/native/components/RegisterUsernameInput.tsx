@@ -1,14 +1,14 @@
-// === Module 16397: RegisterUsernameInput ===
+// === Module 16702: RegisterUsernameInput ===
 
-// Module 16397 (RegisterUsernameInput)
+// Module 16702 (RegisterUsernameInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import Stack_Stack from "Stack/Stack" /* 5377 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6290 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 14288 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14983 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 14609 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 15304 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 let closure_3 = ["username"];
 let closure_4 = ["username"];
-const RegistrationUIStore = fn(16371);
+const RegistrationUIStore = fn(16676);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -321,7 +321,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
         }
       }
     }
-    if (undefined === setUsername(14983).NameValidationState.ERROR) {
+    if (undefined === setUsername(15304).NameValidationState.ERROR) {
       class H {
         constructor() {
           tmp = closure_1(true);
@@ -450,7 +450,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14983).NameValidationState.ERROR) {
+  if (type === tmp14(15304).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };

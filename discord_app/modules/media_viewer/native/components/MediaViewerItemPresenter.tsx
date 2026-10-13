@@ -1,6 +1,6 @@
-// === Module 13084: MediaViewerItemPresenter ===
+// === Module 13568: MediaViewerItemPresenter ===
 
-// Module 13084 (MediaViewerItemPresenter)
+// Module 13568 (MediaViewerItemPresenter)
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 15191: FamilyCenterRequestsPage ===
+// === Module 15512: FamilyCenterRequestsPage ===
 
-// Module 15191 (FamilyCenterRequestsPage)
+// Module 15512 (FamilyCenterRequestsPage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,11 +10,11 @@ import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
 import useUserLinks from "useUserLinks" /* 7739 */;
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7740 */;
 import useHelpLineVisibility from "useHelpLineVisibility" /* 10426 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11535 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 15152 */;
-import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 15192 */;
-import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 15197 */;
-import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 15205 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12288 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 15473 */;
+import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 15513 */;
+import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 15518 */;
+import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 15526 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,7 +1,9 @@
-// === Module 17178: conjurePendingPlan ===
+// === Module 11794: conjurePendingPlan ===
 
-// Module 17178 (conjurePendingPlan)
-import conjureChatTurns from "conjureChatTurns" /* 12999 */;
+// Module 11794 (conjurePendingPlan)
+import util from "util" /* 1126 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import conjureChatTurns from "conjureChatTurns" /* 11217 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/plan/conjurePendingPlan.tsx");
@@ -35,6 +37,36 @@ export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
     }
     return null;
   }
+};
+export const conjurePlanApproved = function conjurePlanApproved(arg0) {
+  const intl = util.intl;
+  const items = [intl.string(_modDef3849.EMgIuY), ];
+  const intl2 = util.intl;
+  items[1] = intl2.string(_modDef3849.Zc7gML);
+  let flag = false;
+  const iter = arg0[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    if ("plan_implemented" === nextResult.kind) {
+      iter.return();
+      return true;
+    } else {
+      if ("assistant" === tmp2.role) {
+        if (null != tmp2.proposal) {
+          flag = true;
+        }
+      } else if (flag) {
+        let str = tmp2.content;
+        if (set.has(str.trim())) {
+          iter.return();
+          return true;
+        }
+      }
+      continue;
+    }
+  }
+  return false;
 };
 export const planVersions = function planVersions(memo) {
   const map = new Map();

@@ -1,6 +1,6 @@
-// === Module 12206: ChannelAccessInfo ===
+// === Module 12719: ChannelAccessInfo ===
 
-// Module 12206 (ChannelAccessInfo)
+// Module 12719 (ChannelAccessInfo)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(12205);
+    channel(12718);
     const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(8217).GroupIcon), ];
     const ROLES = constants.ROLES;
     channel(8624);

@@ -1,6 +1,6 @@
-// === Module 17967: MediaPlaybackPanelUI ===
+// === Module 17971: MediaPlaybackPanelUI ===
 
-// Module 17967 (MediaPlaybackPanelUI)
+// Module 17971 (MediaPlaybackPanelUI)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
@@ -13,10 +13,10 @@ import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
 import LayerScope from "LayerScope" /* 6846 */;
 import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9580 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10373 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17763 */;
-import useMorphablePanelGesture from "useMorphablePanelGesture" /* 17765 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17966 */;
-import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 17968 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17767 */;
+import useMorphablePanelGesture from "useMorphablePanelGesture" /* 17769 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17970 */;
+import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 17972 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10969 */;
@@ -26,10 +26,10 @@ const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(14806);
+const MediaPlaybackPanelConstants = fn(15127);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(11973).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(11972).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(12489).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(12488).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj2 = { wrapperAnimationPresets: { opacity: 0 }, wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 }, mask: null, maskElevation: null, maskEmptyElevation: null, content: null };

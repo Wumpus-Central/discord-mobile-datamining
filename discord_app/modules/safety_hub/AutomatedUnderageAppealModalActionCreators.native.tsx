@@ -1,6 +1,6 @@
-// === Module 11476: AutomatedUnderageAppealModalActionCreators ===
+// === Module 12242: AutomatedUnderageAppealModalActionCreators ===
 
-// Module 11476 (AutomatedUnderageAppealModalActionCreators)
+// Module 12242 (AutomatedUnderageAppealModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 let obj = {
   open(classificationId, onClose) {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11477, dependencyMap.paths), React4, { classificationId, onClose });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12243, dependencyMap.paths), React4, { classificationId, onClose });
   },
   openV2(classificationId, onClose) {
     _require = classificationId;
@@ -85,8 +85,8 @@ let obj = {
                       },
                       onComplete() {
                         closure_0 = dependencyMap;
-                        closure_2_0(11474).resetAgeCheckStatus();
-                        obj = closure_2_0(11474);
+                        closure_2_0(12240).resetAgeCheckStatus();
+                        obj = closure_2_0(12240);
                         closure_2_1(584).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
                         const obj2 = closure_2_1(584);
                         closure_2_1(584).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });

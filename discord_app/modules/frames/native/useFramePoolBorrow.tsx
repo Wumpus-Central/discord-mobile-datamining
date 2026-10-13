@@ -1,7 +1,7 @@
-// === Module 17131: useFramePoolBorrow ===
+// === Module 11384: useFramePoolBorrow ===
 
-// Module 17131 (useFramePoolBorrow)
-import FramePoolManagerDefault from "FramePoolManager" /* 17132 */;
+// Module 11384 (useFramePoolBorrow)
+import FramePoolManagerDefault from "FramePoolManager" /* 11385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

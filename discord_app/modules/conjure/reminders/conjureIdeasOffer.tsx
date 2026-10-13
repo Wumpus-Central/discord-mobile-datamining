@@ -1,7 +1,7 @@
-// === Module 17184: conjureIdeasOffer ===
+// === Module 11800: conjureIdeasOffer ===
 
-// Module 17184 (conjureIdeasOffer)
-import conjureChatTurns from "conjureChatTurns" /* 12999 */;
+// Module 11800 (conjureIdeasOffer)
+import conjureChatTurns from "conjureChatTurns" /* 11217 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/reminders/conjureIdeasOffer.tsx");

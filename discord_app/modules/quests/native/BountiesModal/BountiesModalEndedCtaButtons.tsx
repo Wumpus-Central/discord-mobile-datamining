@@ -1,6 +1,6 @@
-// === Module 15310: BountiesModalEndedCtaButtons ===
+// === Module 15627: BountiesModalEndedCtaButtons ===
 
-// Module 15310 (BountiesModalEndedCtaButtons)
+// Module 15627 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 587 */;
 import timing from "timing" /* 5093 */;
 import timingPresets from "timingPresets" /* 5096 */;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Bounties
   fn.__workletHash = 5587342121093;
   fn.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  bounty(15309);
+  bounty(15626);
   if (visible) {
     const obj4 = { style: null, children: null };
     const items = [tmp.container, animatedStyle];

@@ -1,10 +1,10 @@
-// === Module 17177: ConjureSecretRequestState ===
+// === Module 11793: ConjureSecretRequestState ===
 
-// Module 17177 (ConjureSecretRequestState)
+// Module 11793 (ConjureSecretRequestState)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import conjureChatTurns from "conjureChatTurns" /* 12999 */;
+import conjureChatTurns from "conjureChatTurns" /* 11217 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,11 +23,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
 
-export const secretRequestStatuses = function secretRequestStatuses(memo, stateFromStores12) {
+export const secretRequestStatuses = function secretRequestStatuses(memo, stateFromStores11) {
   let set1 = null;
-  if (null != stateFromStores12) {
+  if (null != stateFromStores11) {
     const _Set = Set;
-    const found = stateFromStores12.filter((set) => set.set);
+    const found = stateFromStores11.filter((set) => set.set);
     set1 = new Set(found.map((name) => name.name));
   }
   const map = new Map();

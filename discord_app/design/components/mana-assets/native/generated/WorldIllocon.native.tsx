@@ -1,23 +1,23 @@
-// === Module 12469: WorldIllocon ===
+// === Module 12979: WorldIllocon ===
 
-// Module 12469 (WorldIllocon)
+// Module 12979 (WorldIllocon)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef12470 from "module_12470" /* 12470 */;
-import _modDef12471 from "module_12471" /* 12471 */;
-import _modDef12472 from "module_12472" /* 12472 */;
+import _modDef12980 from "module_12980" /* 12980 */;
+import _modDef12981 from "module_12981" /* 12981 */;
+import _modDef12982 from "module_12982" /* 12982 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12470 }, 3: null };
-const obj2 = { uri: _modDef12470 };
-obj[2] = { uri: _modDef12471 };
-const obj3 = { uri: _modDef12471 };
-obj[3] = { uri: _modDef12472 };
+let obj = { 1: null, 2: { uri: _modDef12980 }, 3: null };
+const obj2 = { uri: _modDef12980 };
+obj[2] = { uri: _modDef12981 };
+const obj3 = { uri: _modDef12981 };
+obj[3] = { uri: _modDef12982 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12472 };
+const obj4 = { uri: _modDef12982 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WorldIllocon.native.tsx");
 

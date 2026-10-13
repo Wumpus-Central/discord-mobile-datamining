@@ -1,6 +1,6 @@
-// === Module 17956: useTransitionToConnectedActivityInVoice ===
+// === Module 17960: useTransitionToConnectedActivityInVoice ===
 
-// Module 17956 (useTransitionToConnectedActivityInVoice)
+// Module 17960 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

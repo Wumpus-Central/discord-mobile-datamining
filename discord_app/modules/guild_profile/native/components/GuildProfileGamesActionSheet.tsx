@@ -1,13 +1,13 @@
-// === Module 13018: GuildProfileGamesActionSheet ===
+// === Module 13502: GuildProfileGamesActionSheet ===
 
-// Module 13018 (GuildProfileGamesActionSheet)
+// Module 13502 (GuildProfileGamesActionSheet)
 import c from "c" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import TableRow from "TableRow" /* 6180 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8880 */;
-import components_GameIconDefault from "components/GameIcon" /* 13013 */;
+import components_GameIconDefault from "components/GameIcon" /* 13497 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -91,8 +91,8 @@ export default function GuildProfileGamesActionSheet(profile) {
   const id = profile.id;
   const gameActivity = profile.gameActivity;
   const tmp = closure_7();
-  const allGuildProfileGames = id(13017).useAllGuildProfileGames(profile);
-  let obj = id(13017);
+  const allGuildProfileGames = id(13501).useAllGuildProfileGames(profile);
+  let obj = id(13501);
   const intl = id(1126).intl;
   const obj2 = id(8295);
   const items = [id];

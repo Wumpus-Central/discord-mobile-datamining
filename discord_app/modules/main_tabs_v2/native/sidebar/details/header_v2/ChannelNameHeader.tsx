@@ -1,6 +1,6 @@
-// === Module 17497: ChannelNameHeader ===
+// === Module 17501: ChannelNameHeader ===
 
-// Module 17497 (ChannelNameHeader)
+// Module 17501 (ChannelNameHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;

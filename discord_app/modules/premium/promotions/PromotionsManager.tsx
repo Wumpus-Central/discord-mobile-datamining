@@ -1,6 +1,6 @@
-// === Module 18229: PromotionsManager ===
+// === Module 18233: PromotionsManager ===
 
-// Module 18229 (PromotionsManager)
+// Module 18233 (PromotionsManager)
 import PromotionsActionCreators from "PromotionsActionCreators" /* 9158 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 import SubscriptionStore from "SubscriptionStore" /* 4775 */;

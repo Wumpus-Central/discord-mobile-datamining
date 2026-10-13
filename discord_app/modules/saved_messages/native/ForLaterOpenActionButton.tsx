@@ -1,6 +1,6 @@
-// === Module 16865: ForLaterOpenActionButton ===
+// === Module 17168: ForLaterOpenActionButton ===
 
-// Module 16865 (ForLaterOpenActionButton)
+// Module 17168 (ForLaterOpenActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useToken from "useToken" /* 4818 */;
@@ -8,8 +8,8 @@ import useThemeDefault from "useTheme" /* 5031 */;
 import ClockIcon from "ClockIcon" /* 5051 */;
 import ButtonHooks from "ButtonHooks" /* 5385 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 9682 */;
-import showForLaterModal from "showForLaterModal" /* 12645 */;
-import BookmarkIcon2 from "BookmarkIcon" /* 12656 */;
+import showForLaterModal from "showForLaterModal" /* 13151 */;
+import BookmarkIcon2 from "BookmarkIcon" /* 13162 */;
 import noop from "module_19" /* 19 */;
 import SavedMessagesStore from "SavedMessagesStore" /* 9681 */;
 
@@ -18,10 +18,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const point = { shape: fn(9017).CutoutShape.Circle, x: fn(13005).ICON_SIZE.sm - 7, y: fn(13005).ICON_SIZE.sm - 8, size: 10 };
+const point = { shape: fn(9017).CutoutShape.Circle, x: fn(13489).ICON_SIZE.sm - 7, y: fn(13489).ICON_SIZE.sm - 8, size: 10 };
 const createStyles = fn(5092);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(13005).ICON_SIZE.sm, height: fn(13005).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(13489).ICON_SIZE.sm, height: fn(13489).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;

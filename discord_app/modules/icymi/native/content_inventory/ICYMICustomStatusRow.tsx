@@ -1,6 +1,6 @@
-// === Module 16971: ICYMICustomStatusRow ===
+// === Module 17274: ICYMICustomStatusRow ===
 
-// Module 16971 (ICYMICustomStatusRow)
+// Module 17274 (ICYMICustomStatusRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 5088 */;
 import Pressables from "Pressables" /* 6185 */;
 import ReactionIcon from "ReactionIcon" /* 8961 */;
 import PencilIcon from "PencilIcon" /* 9724 */;
-import _modDef11685 from "module_11685" /* 11685 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12833 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11912 */;
+import _modDef12428 from "module_12428" /* 12428 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -28,7 +28,7 @@ let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(16914);
+const createICYMIStyles = fn(17217);
 let closure_14 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {
@@ -65,7 +65,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Upload
   const cResult = c.c(4);
   const tmp4 = closure_14(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef11685, size: native.IconSizes.SMALL };
+    const obj2 = { source: _modDef12428, size: native.IconSizes.SMALL };
     const tmp8 = closure_1_8(native.Icon, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -96,7 +96,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Upload
   return tmp12;
 }) : (function UploadPlaceholder() {
   const obj = { style: closure_14(false).uploadContainer, children: null };
-  const items = [closure_1_8(native.Icon, { source: _modDef11685, size: native.IconSizes.SMALL }), ];
+  const items = [closure_1_8(native.Icon, { source: _modDef12428, size: native.IconSizes.SMALL }), ];
   const obj3 = { variant: "text-md/normal", color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3UB9ad"]);

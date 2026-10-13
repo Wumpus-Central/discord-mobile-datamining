@@ -1,10 +1,10 @@
-// === Module 12040: SmartSearchResultsStore ===
+// === Module 12556: SmartSearchResultsStore ===
 
-// Module 12040 (SmartSearchResultsStore)
+// Module 12556 (SmartSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import privDefault from "priv" /* 1457 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 12041 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 12557 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -12,7 +12,7 @@ require = fn;
 function handleReset() {
   closure_6.reset();
 }
-const SmartSearchConstants = fn(12038);
+const SmartSearchConstants = fn(12554);
 ({ MAX_CACHED_ANSWERS_PER_GUILD: hasOwnProperty, MAX_CACHED_ANSWER_GUILDS } = SmartSearchConstants);
 let closure_6 = new privDefault({ max: MAX_CACHED_ANSWER_GUILDS });
 const Store = initializeDefault.Store;

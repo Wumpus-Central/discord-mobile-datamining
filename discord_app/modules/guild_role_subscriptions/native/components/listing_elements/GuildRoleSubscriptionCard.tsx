@@ -1,13 +1,13 @@
-// === Module 15530: GuildRoleSubscriptionCard ===
+// === Module 15845: GuildRoleSubscriptionCard ===
 
-// Module 15530 (GuildRoleSubscriptionCard)
+// Module 15845 (GuildRoleSubscriptionCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6663 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15520 */;
-import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 15532 */;
-import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 15535 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15835 */;
+import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 15847 */;
+import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 15850 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -221,7 +221,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled() ? (function 
     tmp15 = tmp16;
   }
   const obj20 = { children: null };
-  const items5 = [tmp7, tmp8, closure_6(guildId(15531).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+  const items5 = [tmp7, tmp8, closure_6(guildId(15846).GuildRoleSubscriptionMemberPreview, { guildId, role })];
   obj20.children = items5;
   const tmp14 = closure_8(closure_7, obj20);
   cResult[3] = guildId;
@@ -244,7 +244,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled() ? (function 
   const obj7 = { children: null };
   const intl = guildId(1126).intl;
   obj7.children = intl.string(guildId(1126).t["DJ+bGu"]);
-  const items = [closure_6(closure_10, obj7), closure_6(guildId(1200).Spacer, { size: 8 }), closure_6(guildId(15531).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+  const items = [closure_6(closure_10, obj7), closure_6(guildId(1200).Spacer, { size: 8 }), closure_6(guildId(15846).GuildRoleSubscriptionMemberPreview, { guildId, role })];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , , ];
   let tmp4Result = null;

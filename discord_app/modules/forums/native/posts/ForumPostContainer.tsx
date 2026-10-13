@@ -1,6 +1,6 @@
-// === Module 11697: ForumPostContainer ===
+// === Module 12440: ForumPostContainer ===
 
-// Module 11697 (ForumPostContainer)
+// Module 12440 (ForumPostContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;

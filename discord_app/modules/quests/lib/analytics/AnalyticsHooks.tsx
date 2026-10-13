@@ -1,6 +1,6 @@
-// === Module 12979: AnalyticsHooks ===
+// === Module 13471: AnalyticsHooks ===
 
-// Module 12979 (AnalyticsHooks)
+// Module 13471 (AnalyticsHooks)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import v1 from "v1" /* 1279 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;

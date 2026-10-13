@@ -1,6 +1,6 @@
-// === Module 13718: PromotionStringUtils ===
+// === Module 14055: PromotionStringUtils ===
 
-// Module 13718 (PromotionStringUtils)
+// Module 14055 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

@@ -1,6 +1,6 @@
-// === Module 13128: UserProfileActivityBadges ===
+// === Module 13612: UserProfileActivityBadges ===
 
-// Module 13128 (UserProfileActivityBadges)
+// Module 13612 (UserProfileActivityBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
@@ -13,9 +13,9 @@ import TvIcon from "TvIcon" /* 10242 */;
 import conjurePresenceActivity from "conjurePresenceActivity" /* 10247 */;
 import MusicIcon from "MusicIcon" /* 10248 */;
 import TopicsIcon from "TopicsIcon" /* 10777 */;
-import HourglassIcon from "HourglassIcon" /* 13129 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 13132 */;
-import Badges from "Badges" /* 13133 */;
+import HourglassIcon from "HourglassIcon" /* 11508 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 13614 */;
+import Badges from "Badges" /* 13615 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

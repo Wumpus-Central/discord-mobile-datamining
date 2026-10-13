@@ -1,12 +1,12 @@
-// === Module 17976: useLaunchPadGesture ===
+// === Module 17980: useLaunchPadGesture ===
 
-// Module 17976 (useLaunchPadGesture)
+// Module 17980 (useLaunchPadGesture)
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import HapticUtils from "HapticUtils" /* 5057 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
 import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10373 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 11710 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 11965 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

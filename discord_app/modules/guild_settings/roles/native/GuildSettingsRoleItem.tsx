@@ -1,6 +1,6 @@
-// === Module 18418: GuildSettingsRoleItem ===
+// === Module 18422: GuildSettingsRoleItem ===
 
-// Module 18418 (GuildSettingsRoleItem)
+// Module 18422 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 587 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

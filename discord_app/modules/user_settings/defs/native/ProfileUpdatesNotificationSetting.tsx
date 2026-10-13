@@ -1,10 +1,10 @@
-// === Module 15806: ProfileUpdatesNotificationSetting ===
+// === Module 16121: ProfileUpdatesNotificationSetting ===
 
-// Module 15806 (ProfileUpdatesNotificationSetting)
+// Module 16121 (ProfileUpdatesNotificationSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import SettingsConstants from "SettingsConstants" /* 7993 */;
-import ProfileUpdatesNotificationUtils from "ProfileUpdatesNotificationUtils" /* 15807 */;
+import ProfileUpdatesNotificationUtils from "ProfileUpdatesNotificationUtils" /* 16122 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

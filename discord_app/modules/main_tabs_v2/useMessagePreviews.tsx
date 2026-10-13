@@ -1,9 +1,9 @@
-// === Module 15612: useMessagePreviews ===
+// === Module 15927: useMessagePreviews ===
 
-// Module 15612 (useMessagePreviews)
+// Module 15927 (useMessagePreviews)
 import UserSettings from "UserSettings" /* 2041 */;
 import useIsNsfwGatedDefault from "useIsNsfwGated" /* 9326 */;
-import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 15613 */;
+import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 15928 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
 

@@ -1,6 +1,6 @@
-// === Module 11513: formatPollMessageChatData ===
+// === Module 11726: formatPollMessageChatData ===
 
-// Module 11513 (formatPollMessageChatData)
+// Module 11726 (formatPollMessageChatData)
 import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4737 */;
@@ -9,7 +9,7 @@ import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4768 */;
 import _mod5745 from "module_5745" /* 5745 */;
 import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8958 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11516 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11729 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import EmojiStore from "EmojiStore" /* 5987 */;
 import ChannelStore from "ChannelStore" /* 2065 */;

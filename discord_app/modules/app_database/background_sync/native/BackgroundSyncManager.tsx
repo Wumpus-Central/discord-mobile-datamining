@@ -1,7 +1,7 @@
-// === Module 18056: BackgroundSyncManager ===
+// === Module 18060: BackgroundSyncManager ===
 
-// Module 18056 (BackgroundSyncManager)
-import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 18057 */;
+// Module 18060 (BackgroundSyncManager)
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 18061 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1390 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;

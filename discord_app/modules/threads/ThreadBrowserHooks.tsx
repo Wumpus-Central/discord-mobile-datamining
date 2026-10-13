@@ -1,6 +1,6 @@
-// === Module 12530: ThreadBrowserHooks ===
+// === Module 13040: ThreadBrowserHooks ===
 
-// Module 12530 (ThreadBrowserHooks)
+// Module 13040 (ThreadBrowserHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
@@ -19,7 +19,7 @@ import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(12531).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(13041).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1096).Permissions;
 fn(558);
 let ReactCompilerGating = fn(558);

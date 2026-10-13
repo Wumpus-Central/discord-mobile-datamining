@@ -15,12 +15,12 @@ import PhoneHangUpIcon from "PhoneHangUpIcon" /* 9324 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 9329 */;
 import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10350 */;
 import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 10661 */;
-import useSearchContext from "useSearchContext" /* 11997 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 11998 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12057 */;
-import ConversationCoachmark from "ConversationCoachmark" /* 12845 */;
-import IconActionButtonDefault from "IconActionButton" /* 12846 */;
-import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 12849 */;
+import useSearchContext from "useSearchContext" /* 12513 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12514 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12573 */;
+import ConversationCoachmark from "ConversationCoachmark" /* 13337 */;
+import IconActionButtonDefault from "IconActionButton" /* 13338 */;
+import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 13341 */;
 import noop from "module_19" /* 19 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 6060 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -892,7 +892,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
     }
   }
   if (hasForumSearchQuery) {
-    ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(12847).ForumChannelCloseSearchButton;
+    ForumChannelCloseSearchButton = ForumChannelCloseSearchButton(13339).ForumChannelCloseSearchButton;
     const obj = { channelId };
     let tmp10 = <ForumChannelCloseSearchButton channelId={channelId} />;
   } else {
@@ -945,7 +945,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = jsx(tmp(12847).ForumChannelCloseSearchButton, { channelId });
+    let tmp4Result = jsx(tmp(13339).ForumChannelCloseSearchButton, { channelId });
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

@@ -1,6 +1,6 @@
-// === Module 15339: QuestHomeEmptyState ===
+// === Module 15656: QuestHomeEmptyState ===
 
-// Module 15339 (QuestHomeEmptyState)
+// Module 15656 (QuestHomeEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -11,7 +11,7 @@ import Text_Text from "Text/Text" /* 5088 */;
 import LinearGradientDefault from "LinearGradient" /* 5391 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
-import _modDef15340 from "module_15340" /* 15340 */;
+import _modDef15657 from "module_15657" /* 15657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
               if (!isChatLockedOpen) {
                 const obj5 = { children: null };
                 const obj6 = { style: tmp8.emptyImage, children: null };
-                const obj7 = { style: tmp8.backgroundImage, source: _modDef15340, resizeMode: "cover" };
+                const obj7 = { style: tmp8.backgroundImage, source: _modDef15657, resizeMode: "cover" };
                 obj6.children = hasOwnProperty(FastImageDefault, obj7);
                 const items1 = [hasOwnProperty(React3, obj6), ];
                 const obj8 = { style: tmp8.gradient, end: null, start: null, colors: null };
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
     const obj11 = { style: tmp5.emptyImage, children: null };
-    const obj12 = { style: tmp5.backgroundImage, source: _modDef15340, resizeMode: "cover" };
+    const obj12 = { style: tmp5.backgroundImage, source: _modDef15657, resizeMode: "cover" };
     obj11.children = hasOwnProperty(FastImageDefault, obj12);
     const items2 = [hasOwnProperty(React3, obj11), ];
     const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

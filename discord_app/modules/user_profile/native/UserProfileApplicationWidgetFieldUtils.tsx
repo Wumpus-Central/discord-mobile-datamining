@@ -1,13 +1,13 @@
-// === Module 13355: UserProfileApplicationWidgetFieldUtils ===
+// === Module 11487: UserProfileApplicationWidgetFieldUtils ===
 
-// Module 13355 (UserProfileApplicationWidgetFieldUtils)
+// Module 11487 (UserProfileApplicationWidgetFieldUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import FastImageDefault from "FastImage" /* 6157 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 13356 */;
-import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 13357 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11488 */;
+import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 11489 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15186: ChangeSpendingLimitModal ===
+// === Module 15507: ChangeSpendingLimitModal ===
 
-// Module 15186 (ChangeSpendingLimitModal)
+// Module 15507 (ChangeSpendingLimitModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2568 from "module_2568" /* 2568 */;
@@ -148,7 +148,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
                                               const items = [tmp67, tmp74];
                                               obj5.children = items;
                                               obj4.children = closure_7(tmp(5958).ButtonGroup, obj5);
-                                              const tmp81 = closure_6(tmp(11541).ModalFooter, obj4);
+                                              const tmp81 = closure_6(tmp(12294).ModalFooter, obj4);
                                               cResult[56] = tmp67;
                                               cResult[57] = tmp81;
                                               let tmp78 = tmp81;

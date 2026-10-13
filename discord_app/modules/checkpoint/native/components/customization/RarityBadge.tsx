@@ -1,6 +1,6 @@
-// === Module 16047: RarityBadge ===
+// === Module 16360: RarityBadge ===
 
-// Module 16047 (RarityBadge)
+// Module 16360 (RarityBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 5088 */;
 import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5438 */;
 import inlineStyles from "inlineStyles" /* 7577 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 9036 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 16009 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 16322 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 13105: BotReportChooser ===
+// === Module 13589: BotReportChooser ===
 
-// Module 13105 (BotReportChooser)
+// Module 13589 (BotReportChooser)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;

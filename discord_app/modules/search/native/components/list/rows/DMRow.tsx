@@ -1,6 +1,6 @@
-// === Module 17400: DMRow ===
+// === Module 17404: DMRow ===
 
-// Module 17400 (DMRow)
+// Module 17404 (DMRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
@@ -8,7 +8,7 @@ import UserUtilsDefault from "UserUtils" /* 4962 */;
 import _modDef8623 from "module_8623" /* 8623 */;
 import BotTagDefault from "BotTag" /* 8767 */;
 import ActivityStatusDefault from "ActivityStatus" /* 10235 */;
-import _modDef13792 from "module_13792" /* 13792 */;
+import _modDef14129 from "module_14129" /* 14129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -220,7 +220,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13792, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14129, disableColor: true };
         obj6.children = map1(native.Icon, obj7);
         tmp4Result3 = map1(timestampProducer, obj6);
       }

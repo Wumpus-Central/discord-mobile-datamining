@@ -1,10 +1,10 @@
-// === Module 12865: ForumChannelHeader ===
+// === Module 13357: ForumChannelHeader ===
 
-// Module 12865 (ForumChannelHeader)
+// Module 13357 (ForumChannelHeader)
 import c from "c" /* 576 */;
-import ForumChannelSearch from "ForumChannelSearch" /* 12847 */;
-import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 12866 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 12867 */;
+import ForumChannelSearch from "ForumChannelSearch" /* 13339 */;
+import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13358 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13359 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

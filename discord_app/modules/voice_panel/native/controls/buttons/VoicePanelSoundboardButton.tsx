@@ -1,15 +1,15 @@
-// === Module 17931: VoicePanelSoundboardButton ===
+// === Module 17935: VoicePanelSoundboardButton ===
 
-// Module 17931 (VoicePanelSoundboardButton)
+// Module 17935 (VoicePanelSoundboardButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import NativeViewDefault from "NativeView" /* 6162 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11971 */;
-import SoundboardIcon from "SoundboardIcon" /* 12264 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17917 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17918 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 17932 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12487 */;
+import SoundboardIcon from "SoundboardIcon" /* 12777 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17921 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17922 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 17936 */;
 import noop from "module_19" /* 19 */;
 
 const useSoundboardConfigDefault = useSoundboardConfig;

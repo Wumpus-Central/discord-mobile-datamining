@@ -1,12 +1,12 @@
-// === Module 15823: AppIconsSetting ===
+// === Module 16138: AppIconsSetting ===
 
-// Module 15823 (AppIconsSetting)
+// Module 16138 (AppIconsSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import AppIconUtils from "AppIconUtils" /* 13747 */;
-import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 15824 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 15001 */;
+import AppIconUtils from "AppIconUtils" /* 14084 */;
+import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 16139 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 15322 */;
 import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 

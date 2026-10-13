@@ -1,6 +1,6 @@
-// === Module 17090: conjureProjectNameError ===
+// === Module 11325: conjureProjectNameError ===
 
-// Module 17090 (conjureProjectNameError)
+// Module 11325 (conjureProjectNameError)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;

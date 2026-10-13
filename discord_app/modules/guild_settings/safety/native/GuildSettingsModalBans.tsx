@@ -1,6 +1,6 @@
-// === Module 18451: GuildSettingsModalBans ===
+// === Module 18455: GuildSettingsModalBans ===
 
-// Module 18451 (GuildSettingsModalBans)
+// Module 18455 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import fuzzysearchDefault from "fuzzysearch" /* 6095 */;

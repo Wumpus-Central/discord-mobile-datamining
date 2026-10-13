@@ -1,6 +1,6 @@
-// === Module 17150: ConjureConnectToolSheet ===
+// === Module 11756: ConjureConnectToolSheet ===
 
-// Module 17150 (ConjureConnectToolSheet)
+// Module 11756 (ConjureConnectToolSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   const cResult = connection(576).c(24);
   const tmp4 = closure_7();
   let obj = connection(576);
-  const mcpConnectionPanel = connection(17151).useMcpConnectionPanel(projectId.projectId);
+  const mcpConnectionPanel = connection(11757).useMcpConnectionPanel(projectId.projectId);
   connection = mcpConnectionPanel.connection;
   ({ loading, failed, mint } = mcpConnectionPanel);
   if (cResult[0] !== connection) {
@@ -239,12 +239,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     items[2] = closure_6(View, obj9);
     const obj14 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl7 = tmp(1126).intl;
-    const obj15 = { time: tmp(17152).formatMcpConnectionExpiry(connection) };
+    const obj15 = { time: tmp(11758).formatMcpConnectionExpiry(connection) };
     obj14.children = intl7.format(mint(3849).EQ8k1i, obj15);
     items[3] = closure_5(tmp(5088).Text, obj14);
     obj5.children = items;
     let tmp13 = closure_6(View, obj5);
-    const tmpResult = tmp(17152);
+    const tmpResult = tmp(11758);
   } else {
     class C {
       constructor() {
@@ -295,12 +295,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   ({ actions: tmp3[11], section } = tmp4);
   cResult[12] = section;
   cResult[13] = tmp13;
-  let obj2 = connection(17151);
+  let obj2 = connection(11757);
 }) : (function ConjureConnectToolSheet(projectId) {
   let connection;
   mint = undefined;
   const tmp = closure_7();
-  const mcpConnectionPanel = connection(17151).useMcpConnectionPanel(projectId.projectId);
+  const mcpConnectionPanel = connection(11757).useMcpConnectionPanel(projectId.projectId);
   connection = mcpConnectionPanel.connection;
   ({ loading, mint } = mcpConnectionPanel);
   const items = [connection];
@@ -364,12 +364,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     items3[2] = closure_6(View, obj10);
     const obj15 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl7 = tmp2(1126).intl;
-    const obj16 = { time: tmp2(17152).formatMcpConnectionExpiry(connection) };
+    const obj16 = { time: tmp2(11758).formatMcpConnectionExpiry(connection) };
     obj15.children = intl7.format(tmp8(3849).EQ8k1i, obj16);
     items3[3] = closure_5(tmp2(5088).Text, obj15);
     obj6.children = items3;
     let tmp7Result = closure_6(View, obj6);
-    const tmp2Result = tmp2(17152);
+    const tmp2Result = tmp2(11758);
   } else {
     tmp7Result = null;
     if (loading) {

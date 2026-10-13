@@ -1,6 +1,6 @@
-// === Module 13420: UserProfileContactButtons ===
+// === Module 13757: UserProfileContactButtons ===
 
-// Module 13420 (UserProfileContactButtons)
+// Module 13757 (UserProfileContactButtons)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
@@ -9,8 +9,8 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
 import navigateToLastChannelDefault from "navigateToLastChannel" /* 10625 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12363 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 12852 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12873 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 13344 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
@@ -125,7 +125,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   }
   dependencyMap = tmp5;
   let obj2 = user(8315);
-  const gameFriendsForUser = user(13188).useGameFriendsForUser(user.id);
+  const gameFriendsForUser = user(13670).useGameFriendsForUser(user.id);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RelationshipStore];
     cResult[2] = items;
@@ -143,7 +143,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   } else {
     tmp8 = cResult[4];
   }
-  const tmpResult = user(13188);
+  const tmpResult = user(13670);
   const stateFromStores = user(504).useStateFromStores(tmp6, tmp8);
   const tmpResult2 = user(504);
   const name = tmp4(4962).useName(user);
@@ -155,7 +155,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp(13421).UserClockIcon;
+          let UserPlusIcon = tmp(13758).UserClockIcon;
         } else {
           UserPlusIcon = tmp(5032).UserPlusIcon;
         }
@@ -264,8 +264,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
   dependencyMap = { location: newestAnalyticsLocation };
   let obj = user(8315);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(13188).useGameFriendsForUser(user.id);
-  const tmp3Result = user(13188);
+  const gameFriendsForUser = user(13670).useGameFriendsForUser(user.id);
+  const tmp3Result = user(13670);
   const items = [RelationshipStore];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
@@ -278,7 +278,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Friend
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13421).UserClockIcon;
+          let UserPlusIcon = tmp3(13758).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(5032).UserPlusIcon;
         }
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const obj2 = user(8315);
   const stateFromStores = user(504).useStateFromStores(first, tmp7);
   const tmpResult = user(504);
-  const gameFriendsForUser = user(13188).useGameFriendsForUser(user.id);
+  const gameFriendsForUser = user(13670).useGameFriendsForUser(user.id);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     function closeUserProfile() {
       trackUserProfileAction(10625)();
@@ -396,7 +396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         }
       }
     }
-    const tmp14 = trackUserProfileAction(13423)(user.id, false, O);
+    const tmp14 = trackUserProfileAction(13760)(user.id, false, O);
     const handlePress = tmp14.handlePress;
     ({ text, inCall, accessibilityHint } = tmp14);
     if (hasCustomProfileTheme) {
@@ -593,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   cResult[5] = user.id;
   cResult[6] = handleMessage;
   tmp11 = handleMessage;
-  const tmpResult2 = user(13188);
+  const tmpResult2 = user(13670);
 }) : (function UserProfileContactButtons(user) {
   user = user.user;
   ({ disableMessage, disableCalls, hasCustomProfileTheme, style } = user);

@@ -1,6 +1,6 @@
-// === Module 12298: GuildPowerupsWarning ===
+// === Module 12811: GuildPowerupsWarning ===
 
-// Module 12298 (GuildPowerupsWarning)
+// Module 12811 (GuildPowerupsWarning)
 import nativeDefault from "native" /* 587 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import noop from "module_19" /* 19 */;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   _require = tmp4;
   let obj = require("c");
   const manaTypeConsolidationExperiment = require("ManaTypeConsolidationExperiment").useManaTypeConsolidationExperiment("GuildPowerupsWarning");
-  const tmp7 = manaTypeConsolidationExperiment(12299)(guildId, powerupNames);
+  const tmp7 = manaTypeConsolidationExperiment(12812)(guildId, powerupNames);
   ({ title, description } = tmp7);
   if (tmp7.shouldShow) {
     const _Symbol = Symbol;

@@ -1,6 +1,6 @@
-// === Module 14713: RPCServerManager ===
+// === Module 15034: RPCServerManager ===
 
-// Module 14713 (RPCServerManager)
+// Module 15034 (RPCServerManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
@@ -8,10 +8,10 @@ import GlobalUtils from "GlobalUtils" /* 1388 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7413 */;
 import RPCHelpers from "RPCHelpers" /* 10945 */;
 import transformUserDefault from "transformUser" /* 10946 */;
-import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 14714 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 14719 */;
-import useThermalState from "useThermalState" /* 14721 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14722 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15035 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 15040 */;
+import useThermalState from "useThermalState" /* 15042 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15043 */;
 import _slicedToArray from "module_32" /* 32 */;
 import FramesStore from "FramesStore" /* 10807 */;
 import QuestStore from "QuestStore" /* 7391 */;

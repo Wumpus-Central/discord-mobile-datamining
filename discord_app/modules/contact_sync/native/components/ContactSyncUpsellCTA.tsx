@@ -1,14 +1,14 @@
-// === Module 14079: ContactSyncUpsellCTA ===
+// === Module 14416: ContactSyncUpsellCTA ===
 
-// Module 14079 (ContactSyncUpsellCTA)
+// Module 14416 (ContactSyncUpsellCTA)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12400 */;
-import _modDef14080 from "module_14080" /* 14080 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12910 */;
+import _modDef14417 from "module_14417" /* 14417 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const dismissUpsellCTA = fn(12403).dismissUpsellCTA;
+const dismissUpsellCTA = fn(12913).dismissUpsellCTA;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
@@ -87,8 +87,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       return tmp12;
     }
-    let obj2 = { onPress: tmp5, onLongPress: tmp6, style: tmp7, iconSource: _modDef14080, title: tmp8, subtitle: tmp9 };
-    const tmp15 = jsx(_location(8580).FormCTA, { onPress: tmp5, onLongPress: tmp6, style: tmp7, iconSource: _modDef14080, title: tmp8, subtitle: tmp9 });
+    let obj2 = { onPress: tmp5, onLongPress: tmp6, style: tmp7, iconSource: _modDef14417, title: tmp8, subtitle: tmp9 };
+    const tmp15 = jsx(_location(8580).FormCTA, { onPress: tmp5, onLongPress: tmp6, style: tmp7, iconSource: _modDef14417, title: tmp8, subtitle: tmp9 });
     cResult[8] = tmp5;
     cResult[9] = tmp7;
     cResult[10] = tmp15;
@@ -130,7 +130,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const result = location(6891).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef14080,
+    iconSource: _modDef14417,
     title: null,
     subtitle: null
   };
@@ -168,7 +168,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const result = location(6891).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef14080,
+    iconSource: _modDef14417,
     title: null,
     subtitle: null
   });

@@ -1,6 +1,6 @@
-// === Module 13373: UserProfilePersonalWidgetCard ===
+// === Module 13710: UserProfilePersonalWidgetCard ===
 
-// Module 13373 (UserProfilePersonalWidgetCard)
+// Module 13710 (UserProfilePersonalWidgetCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -10,10 +10,10 @@ import LinearGradientDefault from "LinearGradient" /* 5391 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import UserProfileCardDefault from "UserProfileCard" /* 6904 */;
 import GifTagDefault from "GifTag" /* 8130 */;
-import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 13263 */;
-import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 13374 */;
-import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 13375 */;
-import WidgetAssetUtils from "WidgetAssetUtils" /* 13376 */;
+import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 13708 */;
+import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 13711 */;
+import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 13712 */;
+import WidgetAssetUtils from "WidgetAssetUtils" /* 13713 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -901,7 +901,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
   }
   if (tmp4Result) {
     const obj3 = { userId, widget };
-    tmp4Result = closure_10(tmp5(13263), obj3);
+    tmp4Result = closure_10(tmp5(13708), obj3);
   }
   obj2.trailingAction = tmp4Result;
   const obj4 = { style: tmp.sectionsContainer, children: null };

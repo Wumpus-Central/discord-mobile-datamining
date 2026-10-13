@@ -1,6 +1,6 @@
-// === Module 11424: conjurePreviewFrameSurfaces ===
+// === Module 11245: conjurePreviewFrameSurfaces ===
 
-// Module 11424 (conjurePreviewFrameSurfaces)
+// Module 11245 (conjurePreviewFrameSurfaces)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 12763: StorekitIAPQueue ===
+// === Module 13269: StorekitIAPQueue ===
 
-// Module 12763 (StorekitIAPQueue)
+// Module 13269 (StorekitIAPQueue)
 import utils_PriceUtils from "utils/PriceUtils" /* 6941 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

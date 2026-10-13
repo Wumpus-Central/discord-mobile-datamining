@@ -1,23 +1,23 @@
-// === Module 13202: GameDiversityTier8LargeBadge ===
+// === Module 13684: GameDiversityTier8LargeBadge ===
 
-// Module 13202 (GameDiversityTier8LargeBadge)
+// Module 13684 (GameDiversityTier8LargeBadge)
 import c from "c" /* 576 */;
 import FastImageDefault from "FastImage" /* 6157 */;
 import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef13203 from "module_13203" /* 13203 */;
-import _modDef13204 from "module_13204" /* 13204 */;
-import _modDef13205 from "module_13205" /* 13205 */;
+import _modDef13685 from "module_13685" /* 13685 */;
+import _modDef13686 from "module_13686" /* 13686 */;
+import _modDef13687 from "module_13687" /* 13687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13203 }, 3: null };
-let obj2 = { uri: _modDef13203 };
-obj[2] = { uri: _modDef13204 };
-const obj3 = { uri: _modDef13204 };
-obj[3] = { uri: _modDef13205 };
+let obj = { 1: null, 2: { uri: _modDef13685 }, 3: null };
+let obj2 = { uri: _modDef13685 };
+obj[2] = { uri: _modDef13686 };
+const obj3 = { uri: _modDef13686 };
+obj[3] = { uri: _modDef13687 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13205 };
+const obj4 = { uri: _modDef13687 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier8LargeBadge.native.tsx");
 

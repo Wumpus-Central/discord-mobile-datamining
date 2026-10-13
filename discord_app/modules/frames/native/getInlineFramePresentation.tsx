@@ -1,6 +1,6 @@
-// === Module 17127: getInlineFramePresentation ===
+// === Module 11379: getInlineFramePresentation ===
 
-// Module 17127 (getInlineFramePresentation)
+// Module 11379 (getInlineFramePresentation)
 import FramesConstants from "FramesConstants" /* 10802 */;
 import size from "module_2" /* 2 */;
 

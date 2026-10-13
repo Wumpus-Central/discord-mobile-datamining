@@ -1,19 +1,19 @@
-// === Module 16365: MainNavigator ===
+// === Module 16670: MainNavigator ===
 
-// Module 16365 (MainNavigator)
+// Module 16670 (MainNavigator)
 import c from "c" /* 576 */;
 import PlatformUtils2 from "PlatformUtils" /* 1382 */;
 import DeviceUtils from "DeviceUtils" /* 5068 */;
 import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9637 */;
 import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 11028 */;
-import StartupProfiler from "StartupProfiler" /* 11631 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 14287 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 16367 */;
-import AutoAnalytics from "AutoAnalytics" /* 17503 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 17550 */;
-import AppComponents from "AppComponents" /* 17736 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 17973 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18004 */;
+import StartupProfiler from "StartupProfiler" /* 12378 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 14608 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 16672 */;
+import AutoAnalytics from "AutoAnalytics" /* 17507 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 17554 */;
+import AppComponents from "AppComponents" /* 17740 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 17977 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 18008 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -62,7 +62,7 @@ function getAccountStanding() {
   return require("SuspendedUserPage").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(16366).StackNavigationAnimationSettings;
+let closure_7 = fn(16671).StackNavigationAnimationSettings;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);

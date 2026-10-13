@@ -1,6 +1,6 @@
-// === Module 12380: PortalKeyboardInlineComponent ===
+// === Module 12890: PortalKeyboardInlineComponent ===
 
-// Module 12380 (PortalKeyboardInlineComponent)
+// Module 12890 (PortalKeyboardInlineComponent)
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 

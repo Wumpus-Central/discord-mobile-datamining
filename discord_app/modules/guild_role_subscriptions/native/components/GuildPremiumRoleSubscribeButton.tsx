@@ -1,6 +1,6 @@
-// === Module 18588: GuildPremiumRoleSubscribeButton ===
+// === Module 18592: GuildPremiumRoleSubscribeButton ===
 
-// Module 18588 (GuildPremiumRoleSubscribeButton)
+// Module 18592 (GuildPremiumRoleSubscribeButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import CreatorRevenueButton from "CreatorRevenueButton" /* 9465 */;

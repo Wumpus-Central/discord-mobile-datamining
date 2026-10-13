@@ -1,10 +1,10 @@
-// === Module 18660: AVErrorStreamSendHighPacketLoss ===
+// === Module 18664: AVErrorStreamSendHighPacketLoss ===
 
-// Module 18660 (AVErrorStreamSendHighPacketLoss)
+// Module 18664 (AVErrorStreamSendHighPacketLoss)
 import AVError from "AVError" /* 5289 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
-import AVErrorContext from "AVErrorContext" /* 18655 */;
-import AVErrorUtils from "AVErrorUtils" /* 18658 */;
+import AVErrorContext from "AVErrorContext" /* 18659 */;
+import AVErrorUtils from "AVErrorUtils" /* 18662 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7429 */;
 

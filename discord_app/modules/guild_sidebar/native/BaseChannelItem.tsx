@@ -1,12 +1,12 @@
-// === Module 12087: BaseChannelItem ===
+// === Module 12603: BaseChannelItem ===
 
-// Module 12087 (BaseChannelItem)
+// Module 12603 (BaseChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import native2 from "native" /* 8542 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12088 */;
-import TouchableBackgroundDefault from "TouchableBackground" /* 12089 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12604 */;
+import TouchableBackgroundDefault from "TouchableBackground" /* 12605 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const Text_Text = Text(5088);
 require = fn;
 let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11760);
+const RedesignChannelListConstants = fn(11562);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
 const UnreadSetting = fn(5967).UnreadSetting;
 const jsxProd = fn(21);
@@ -575,7 +575,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12089);
+      let AnimatedPressableHighlight = hideIcon(12605);
     } else {
       AnimatedPressableHighlight = mode(8542).AnimatedPressableHighlight;
     }
@@ -592,8 +592,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_10(hideIcon(12088), obj3);
-    const tmp9 = hideIcon(12088);
+    closure_10(hideIcon(12604), obj3);
+    const tmp9 = hideIcon(12604);
   }
 });
 export const ChannelModes = obj2;

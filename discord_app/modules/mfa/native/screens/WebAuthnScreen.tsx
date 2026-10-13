@@ -1,17 +1,17 @@
-// === Module 15978: WebAuthnScreen ===
+// === Module 16291: WebAuthnScreen ===
 
-// Module 15978 (WebAuthnScreen)
+// Module 16291 (WebAuthnScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 5942 */;
 import NativeCeremoniesDefault from "NativeCeremonies" /* 6631 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 15980 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 16293 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const buttonDefault = tmp15(15979);
+const buttonDefault = tmp15(16292);
 require = fn;
 let jsx = fn(21).jsx;
 const createStyles = fn(5092);
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
               return;
             }
           }
-          const tmp27 = jsx(finish(15065).KeyImage, {});
+          const tmp27 = jsx(finish(15386).KeyImage, {});
           cResult[7] = stringResult;
           cResult[8] = stringResult1;
           cResult[9] = tmp27;
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   obj3.headerText = intl.string(finish(1126).t.saHocI);
   const intl2 = finish(1126).intl;
   obj3.subtitle = intl2.string(finish(1126).t.YpMrqM);
-  obj3.headerImage = challenge(finish(15065).KeyImage, {});
+  obj3.headerImage = challenge(finish(15386).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj4 = { authenticatorSelection, setAuthenticator: tmpResult[1], inProgress: null };

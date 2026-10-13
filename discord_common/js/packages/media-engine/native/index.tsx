@@ -1,7 +1,7 @@
 // === Module 5138: destroy ===
 
 // Module 5138 (destroy)
-import formatDefault from "format" /* 1364 */;
+import formatDefault from "format" /* 1365 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
 import inject from "inject" /* 2014 */;
 import VideoDefault from "Video" /* 5141 */;

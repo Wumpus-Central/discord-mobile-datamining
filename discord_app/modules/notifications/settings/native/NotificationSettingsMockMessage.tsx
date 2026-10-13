@@ -1,6 +1,6 @@
-// === Module 12605: NotificationSettingsMockMessage ===
+// === Module 13113: NotificationSettingsMockMessage ===
 
-// Module 12605 (NotificationSettingsMockMessage)
+// Module 13113 (NotificationSettingsMockMessage)
 import nativeDefault from "native" /* 587 */;
 import timing from "timing" /* 5093 */;
 import timingPresets from "timingPresets" /* 5096 */;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
             return;
           }
         }
-        obj9.source = sharedValue(12606);
+        obj9.source = sharedValue(13114);
         obj9.size = tmp(1200).AvatarSizes.LARGE_48;
         obj8.children = closure_7(tmp(1200).Avatar, obj9);
         const tmp39 = closure_7(View, obj8);
@@ -361,7 +361,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   const obj9 = { style: tmp.cardContent, children: null };
   const obj10 = { children: null };
   const obj3 = { withTiming: require("timing").withTiming, opacity: sharedValue, timingStandard: require("timingPresets").timingStandard };
-  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(12606), size: require("native").AvatarSizes.LARGE_48 });
+  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(13114), size: require("native").AvatarSizes.LARGE_48 });
   const items4 = [tmp12(View, obj10), ];
   const obj12 = { style: tmp.cardMessage, children: null };
   const obj13 = { variant: "text-sm/semibold", children: null };

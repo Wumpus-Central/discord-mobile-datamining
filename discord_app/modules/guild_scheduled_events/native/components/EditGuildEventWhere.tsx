@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     }
     function handleChangeEventEntityType(entityType) {
       _slicedToArray(null);
-      const obj = { entityType, scheduledEndTime: "r" };
+      const obj = { entityType, scheduledEndTime: "a" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef4702(guildEvent.scheduledStartTime);
         if (obj2 == null) {
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
       entityType: guildEvent.entityType,
       onChange: function handleChangeEventEntityType(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "r" };
+        const obj = { entityType, scheduledEndTime: "a" };
         if (entityType === constants.EXTERNAL) {
           let obj2 = _modDef4702(guildEvent.scheduledStartTime);
           if (obj2 == null) {
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     entityType: guildEvent.entityType,
     onChange: function handleChangeEventEntityType(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "r" };
+      const obj = { entityType, scheduledEndTime: "a" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef4702(guildEvent.scheduledStartTime);
         if (obj2 == null) {

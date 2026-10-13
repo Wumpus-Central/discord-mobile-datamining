@@ -4,11 +4,11 @@
 import Storage5 from "Storage" /* 510 */;
 import encodeProperties from "encodeProperties" /* 1358 */;
 import getSystemLocale2 from "getSystemLocale" /* 1361 */;
-import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1362 */;
-import clientLaunchId from "clientLaunchId" /* 1363 */;
-import formatDefault from "format" /* 1364 */;
-import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1365 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1366 */;
+import NativeDeviceModule from "NativeDeviceModule" /* 1362 */;
+import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1363 */;
+import clientLaunchId from "clientLaunchId" /* 1364 */;
+import formatDefault from "format" /* 1365 */;
+import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1366 */;
 import SessionStorage3 from "SessionStorage" /* 1369 */;
 import size from "module_2" /* 2 */;
 
@@ -38,7 +38,40 @@ function getBrowser() {
   return str;
 }
 function getDevice() {
-  return NativeDeviceModule.default.getConstants().device;
+  if (null == constants) {
+    constants = NativeDeviceModule.default.getConstants();
+    const _default = NativeDeviceModule.default;
+  }
+  if (null != constants) {
+    let str5 = constants.device;
+  } else {
+    str5 = "BlackBerry";
+    if (!obj5.test(userAgent)) {
+      let str = "Windows Phone";
+      if (!obj.test(userAgent)) {
+        let str2 = "Android";
+        if (!obj2.test(userAgent)) {
+          let str3 = "iPhone";
+          if (!obj3.test(userAgent)) {
+            let str4 = "";
+            if (obj4.test(userAgent)) {
+              str4 = "iPad";
+            }
+            str3 = str4;
+            obj4 = /iPad/;
+          }
+          str2 = str3;
+          obj3 = /iPhone/;
+        }
+        str = str2;
+        obj2 = /Android/;
+      }
+      str5 = str;
+      obj = /Windows Phone/i;
+    }
+    obj5 = /(BlackBerry|PlayBook|BB10)/i;
+  }
+  return str5;
 }
 const getSystemLocale = getSystemLocale2.getSystemLocale;
 const deviceProperties = "deviceProperties";
@@ -104,7 +137,7 @@ if (null != DiscordNative) {
     obj.os_sdk_version = tmp7;
   }
 }
-let closure_12 = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+let closure_13 = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
 if (null == obj) {
   try {
     obj = (function getCachedSuperProperties() {
@@ -118,7 +151,7 @@ if (null == obj) {
           obj.browser = getBrowser();
           obj.device = getDevice();
           obj.system_locale = getSystemLocale();
-          obj2 = obj2(dependencyMap[1]);
+          obj2 = obj2(dependencyMap[2]);
           obj.has_client_mods = obj2.usesClientMods();
           try {
             constants = tmp2(dependencyMap[6]).default.getConstants();
@@ -162,16 +195,37 @@ if (null == obj) {
         value4 = obj3;
         let obj2 = {};
       }
-      const obj4 = {};
       const merged = Object.assign(value);
-      obj4.browser_user_agent = window.navigator.userAgent || "";
-      obj4.browser_version = formatDefault.version || "";
-      const tmp15 = formatDefault.version || "";
-      const _default = NativeDeviceModule.default;
-      obj4.os_version = NativeDeviceModule.default.getConstants().systemVersion || "";
-      const merged1 = Object.assign(value3);
-      const merged2 = Object.assign(value4);
-      return obj4;
+      const obj5 = { browser_user_agent: window.navigator.userAgent || "", browser_version: formatDefault.version || "" };
+      if (null == constants) {
+        constants = NativeDeviceModule.default.getConstants();
+        const _default = NativeDeviceModule.default;
+      }
+      if (null != constants) {
+        const obj6 = {};
+        const merged1 = Object.assign(obj5);
+        obj6.os_version = tmp18.systemVersion || "";
+        let obj7 = obj6;
+      } else {
+        obj7 = {};
+        const merged2 = Object.assign(obj5);
+        const tmp16Result = formatDefault;
+        let str;
+        if (tmp16Result != null) {
+          const os = tmp16Result.os;
+          if (os != null) {
+            str = os.version;
+          }
+        }
+        if (str == null) {
+          str = "";
+        }
+        obj7.os_version = str;
+      }
+      const merged3 = Object.assign(obj7);
+      const merged4 = Object.assign(value3);
+      const merged5 = Object.assign(value4);
+      return {};
     })();
   } catch (err) {
     obj = {};
@@ -181,10 +235,10 @@ function extendSuperProperties(arg0) {
   obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
-  closure_4 = encodeProperties.encodeProperties(obj);
+  closure_5 = encodeProperties.encodeProperties(obj);
 }
 let result = extendSuperProperties((function getContextualSuperProperties() {
-  obj = { client_build_number: parseInt("35120000000000", 10) };
+  obj = { client_build_number: parseInt("35120100000000", 10) };
   let buildNumber;
   if (DiscordNative != null) {
     const app = DiscordNative.app;
@@ -201,6 +255,17 @@ let result = extendSuperProperties((function getContextualSuperProperties() {
   obj.client_event_source = null;
   obj.has_client_mods = ClientModDetectionUtils.usesClientMods();
   obj.client_launch_id = clientLaunchId.clientLaunchId;
+  if (null == constants) {
+    constants = NativeDeviceModule.default.getConstants();
+    const _default = NativeDeviceModule.default;
+  }
+  let installSource;
+  if (constants != null) {
+    installSource = constants.installSource;
+  }
+  if (null != installSource) {
+    obj.install_source = installSource;
+  }
   return obj;
 })());
 let result1 = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/getSuperProperties.tsx");
@@ -211,7 +276,7 @@ export { getDevice };
 export const getCampaignParams = function getCampaignParams(arg0) {
   closure_0 = arg0;
   obj = {};
-  const item = closure_12.forEach((item) => {
+  const item = closure_13.forEach((item) => {
     let str = "";
     if (null != closure_0) {
       const _RegExp = RegExp;
@@ -242,5 +307,5 @@ export function getSuperProperties() {
   return obj;
 }
 export function getSuperPropertiesBase64() {
-  return closure_4;
+  return closure_5;
 }

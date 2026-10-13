@@ -1,6 +1,6 @@
-// === Module 11351: InvalidLink ===
+// === Module 12149: InvalidLink ===
 
-// Module 11351 (InvalidLink)
+// Module 12149 (InvalidLink)
 import c from "c" /* 576 */;
 import shared from "shared" /* 4969 */;
 import _mod8360 from "module_8360" /* 8360 */;
@@ -19,7 +19,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInvalidLi
           return require("module_10645");
         },
       darker() {
-          return require("module_11352");
+          return require("module_12150");
         },
       light() {
           return require("module_10646");
@@ -41,7 +41,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInvalidLi
       return require("module_10645");
     },
     darker() {
-      return require("module_11352");
+      return require("module_12150");
     },
     light() {
       return require("module_10646");
@@ -56,7 +56,7 @@ function getInvalidLinkSource(theme) {
       return require("module_10645");
     },
     darker() {
-      return require("module_11352");
+      return require("module_12150");
     },
     light() {
       return require("module_10646");

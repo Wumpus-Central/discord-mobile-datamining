@@ -1,6 +1,6 @@
-// === Module 13564: InAppReportsRemediationsElement ===
+// === Module 13901: InAppReportsRemediationsElement ===
 
-// Module 13564 (InAppReportsRemediationsElement)
+// Module 13901 (InAppReportsRemediationsElement)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;

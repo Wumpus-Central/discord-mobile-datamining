@@ -1,12 +1,12 @@
-// === Module 15535: GuildRoleSubscriptionBenefitRow ===
+// === Module 15850: GuildRoleSubscriptionBenefitRow ===
 
-// Module 15535 (GuildRoleSubscriptionBenefitRow)
+// Module 15850 (GuildRoleSubscriptionBenefitRow)
 import c from "c" /* 576 */;
 import native from "native" /* 1200 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
 import Text_Text from "Text/Text" /* 5088 */;
 import useChannelNameDefault from "useChannelName" /* 5421 */;
-import EmojiIconDefault from "EmojiIcon" /* 15533 */;
+import EmojiIconDefault from "EmojiIcon" /* 15848 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 

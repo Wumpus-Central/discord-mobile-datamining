@@ -1,10 +1,10 @@
-// === Module 16313: ParentalControlsGoreMediaFiltersNonFriendsDMsSetting ===
+// === Module 16620: ParentalControlsGoreMediaFiltersNonFriendsDMsSetting ===
 
-// Module 16313 (ParentalControlsGoreMediaFiltersNonFriendsDMsSetting)
+// Module 16620 (ParentalControlsGoreMediaFiltersNonFriendsDMsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15096 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15100 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15417 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15421 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7259 */;
 
 const ExplicitMediaRedactionUtils = obj(8243);
@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGoreCon
 function onGoreContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    const obj = selectedTeenId(15100);
+    const obj = selectedTeenId(15421);
     const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1126).intl;
     obj3.title = intl.string(selectedTeenId(1126).t["16/3Bi"]);
@@ -55,8 +55,8 @@ function onGoreContentNonFriendsDmOnPress() {
     obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     const items = [selectedTeenId(1209).ExplicitContentRedaction.SHOW];
     obj3.excluded = items;
-    const result = selectedTeenId(15105).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(15105);
+    const result = selectedTeenId(15426).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(15426);
   }
 }
 function getTitle() {

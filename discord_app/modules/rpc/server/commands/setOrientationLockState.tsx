@@ -1,10 +1,10 @@
-// === Module 14757: setOrientationLockState ===
+// === Module 15078: setOrientationLockState ===
 
-// Module 14757 (setOrientationLockState)
+// Module 15078 (setOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import RPCErrorDefault from "RPCError" /* 10936 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10939 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 14719 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 15040 */;
 import FramesStore from "FramesStore" /* 10807 */;
 
 const OrientationLockState = fn(2024).OrientationLockState;

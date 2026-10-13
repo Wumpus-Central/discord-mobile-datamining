@@ -1,8 +1,8 @@
-// === Module 18201: NewUserModal ===
+// === Module 18205: NewUserModal ===
 
-// Module 18201 (NewUserModal)
+// Module 18205 (NewUserModal)
 import nativeDefault from "native" /* 587 */;
-import NewUserUtils from "NewUserUtils" /* 18200 */;
+import NewUserUtils from "NewUserUtils" /* 18204 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       const obj3 = {
         name: "enable-notification",
         getComponent() {
-              return closure_0(16426).RedesignNotificationScreen;
+              return closure_0(16731).RedesignNotificationScreen;
             },
         initialParams: null
       };
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       const obj5 = {
         name: "choose-avatar",
         getComponent() {
-              return closure_0(18203).default;
+              return closure_0(18207).default;
             },
         options() {
               return {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
                       }
                     }));
                   };
-                  return closure_2_5(closure_1(12421), obj);
+                  return closure_2_5(closure_1(12931), obj);
                 }
               };
             },
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
         name: "contact-sync",
         options: { headerShown: false },
         getComponent() {
-              return closure_0(12409).ContactSyncOnboardingModal;
+              return closure_0(12919).ContactSyncOnboardingModal;
             },
         initialParams: null
       };
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
         name: "discoverability",
         options: { headerShown: false },
         getComponent() {
-              return closure_0(18204).default;
+              return closure_0(18208).default;
             },
         initialParams: null
       };
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       const obj11 = {
         name: "connect-guardian",
         getComponent() {
-              return closure_0(18210).default;
+              return closure_0(18214).default;
             },
         initialParams: null
       };
@@ -303,14 +303,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
     closure_5(closure_7.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(16426).RedesignNotificationScreen;
+        return closure_0(16731).RedesignNotificationScreen;
       },
       initialParams: { onComplete }
     }),
     closure_5(closure_7.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(18203).default;
+        return closure_0(18207).default;
       },
       options() {
         return {
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
                 }
               }));
             };
-            return closure_2_5(closure_1(12421), obj);
+            return closure_2_5(closure_1(12931), obj);
           }
         };
       },
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       name: "contact-sync",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(12409).ContactSyncOnboardingModal;
+        return closure_0(12919).ContactSyncOnboardingModal;
       },
       initialParams: { onComplete }
     }),
@@ -344,14 +344,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewUserM
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(18204).default;
+        return closure_0(18208).default;
       },
       initialParams: { onComplete }
     }),
     closure_5(closure_7.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(18210).default;
+        return closure_0(18214).default;
       },
       initialParams: { onComplete }
     })

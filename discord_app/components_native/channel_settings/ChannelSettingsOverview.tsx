@@ -1,6 +1,6 @@
-// === Module 17566: ChannelSettingsOverview ===
+// === Module 17570: ChannelSettingsOverview ===
 
-// Module 17566 (ChannelSettingsOverview)
+// Module 17570 (ChannelSettingsOverview)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -47,14 +47,14 @@ import GroupPlusIcon from "GroupPlusIcon" /* 10331 */;
 import ChannelActionSheetUtils from "ChannelActionSheetUtils" /* 10335 */;
 import AvailableForumTagDefault from "AvailableForumTag" /* 10462 */;
 import threadActionSheets from "threadActionSheets" /* 10466 */;
-import Slider from "Slider" /* 14293 */;
-import RegionActionCreatorsDefault from "RegionActionCreators" /* 17569 */;
-import SecondsSliderUtils from "SecondsSliderUtils" /* 17570 */;
-import openConjureDeleteAppChannelAlertDefault from "openConjureDeleteAppChannelAlert" /* 17571 */;
-import ChannelSettingsUtils from "ChannelSettingsUtils" /* 17572 */;
-import ThreadAutoArchiveBottomSheet from "ThreadAutoArchiveBottomSheet" /* 17573 */;
-import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 17574 */;
-import VoiceChannelAppSettingDefault from "VoiceChannelAppSetting" /* 17575 */;
+import Slider from "Slider" /* 14614 */;
+import RegionActionCreatorsDefault from "RegionActionCreators" /* 17573 */;
+import SecondsSliderUtils from "SecondsSliderUtils" /* 17574 */;
+import openConjureDeleteAppChannelAlertDefault from "openConjureDeleteAppChannelAlert" /* 17575 */;
+import ChannelSettingsUtils from "ChannelSettingsUtils" /* 17576 */;
+import ThreadAutoArchiveBottomSheet from "ThreadAutoArchiveBottomSheet" /* 17577 */;
+import getCannotSwapApplicationTextDefault from "getCannotSwapApplicationText" /* 17578 */;
+import VoiceChannelAppSettingDefault from "VoiceChannelAppSetting" /* 17579 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
@@ -64,7 +64,7 @@ import GuildChannelStore from "GuildChannelStore" /* 4748 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import PermissionStore from "PermissionStore" /* 4750 */;
 import ReadStateStore from "ReadStateStore" /* 6035 */;
-import RegionStore from "RegionStore" /* 17567 */;
+import RegionStore from "RegionStore" /* 17571 */;
 import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -75,7 +75,7 @@ const View = fn(17).View;
 const ChannelRecord = fn(2069);
 ({ EDITABLE_VOICE_SETTINGS_TYPES: closure_7, isGuildTextChannelType: closure_8, THREADED_CHANNEL_TYPES: closure_9, THREAD_CHANNEL_TYPES: c10, SLOWMODE_CHANNEL_TYPES: closure_11, NSFW_CHANNEL_TYPES: closure_12, TOGGLE_ANNOUNCEMENT_CHANNEL_TYPES: map1, GUILD_WEBHOOK_CHANNEL_TYPES: closure_14 } = ChannelRecord);
 const isGuildNSFW = fn(2083).isGuildNSFW;
-let closure_25 = fn(17568).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(17572).ChannelSettingsAutoFocusElement;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_26, BITRATE_DEFAULT: closure_27, BITRATE_MIN: closure_28, ChannelSettingsSections: closure_29, ChannelTypes: closure_30, ChannelTypesSets: items, GuildFeatures: closure_32, GuildSettingsSections: closure_33, HelpdeskArticles: closure_34, MAX_CHANNEL_NAME_LENGTH: closure_35, MAX_VOICE_USER_LIMIT: closure_36, MAX_STAGE_VOICE_USER_LIMIT: closure_37, Permissions: closure_38, SettingsPaneTypes: closure_39, SLOWMODE_VALUES: closure_40, VideoQualityMode: closure_41 } = Constants);
 const ChannelConstants = fn(2072);
@@ -449,7 +449,7 @@ class ChannelSettingsOverview extends PureComponent {
       closure_128_6 = tmp2(6946).conjureChannelAppId(closure_128_1);
       if (tmp106 != guild2) {
         if (tmp106 != closure_128_6) {
-          const conjureServerApp = tmp2(11408).loadConjureServerApp(guild2.id, closure_128_6);
+          const conjureServerApp = tmp2(12202).loadConjureServerApp(guild2.id, closure_128_6);
           tmp106 = closure_128_5;
           conjureServerApp.then((app) => {
             if (null == app) {
@@ -461,7 +461,7 @@ class ChannelSettingsOverview extends PureComponent {
             }
             return tmp6;
           }, closure_128_5);
-          tmp2(11408);
+          tmp2(12202);
         }
       }
       closure_128_5();
@@ -797,7 +797,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(17573).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(17577).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1099,7 +1099,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj7.value = Math.min(channel.userLimit, tmp10);
       obj7.maximumValue = tmp10;
       obj7.onValueChange = this.handleUserLimitChange;
-      items2[1] = closure_1_47(tmp7(14293).Slider, obj7);
+      items2[1] = closure_1_47(tmp7(14614).Slider, obj7);
       obj3.children = items2;
       obj2.children = __V(tmp7(6182).Card, obj3);
       items.push(closure_1_47(tmp7(6265).TableRowGroup, obj2, "channel-user-limit"));
@@ -1284,7 +1284,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(6180).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(2075).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(17580).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(17584).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1628,7 +1628,7 @@ prototype["renderCategory"] = function renderCategory() {
         tmp7 = self;
         const obj = self(5421);
       }
-      const obj2 = { icon: closure_47(tmp7(16590).FolderPlusIcon, {}), label: null, trailing: null, arrow: null, onPress: null };
+      const obj2 = { icon: closure_47(tmp7(16895).FolderPlusIcon, {}), label: null, trailing: null, arrow: null, onPress: null };
       const intl2 = tmp7(1126).intl;
       obj2.label = intl2.string(tmp7(1126).t.vHCZwr);
       const obj3 = { text: stringResult };

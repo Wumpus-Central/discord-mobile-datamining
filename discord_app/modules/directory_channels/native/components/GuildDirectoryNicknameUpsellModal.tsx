@@ -1,6 +1,6 @@
-// === Module 12555: GuildDirectoryNicknameUpsellModal ===
+// === Module 13065: GuildDirectoryNicknameUpsellModal ===
 
-// Module 12555 (GuildDirectoryNicknameUpsellModal)
+// Module 13065 (GuildDirectoryNicknameUpsellModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -12,8 +12,8 @@ import useInitialValueDefault from "useInitialValue" /* 6170 */;
 import NavigatorHeader from "NavigatorHeader" /* 6201 */;
 import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6285 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12547 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 12554 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 13057 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 13064 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(12546).GuildPrompts;
+const GuildPrompts = fn(13056).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5092);
