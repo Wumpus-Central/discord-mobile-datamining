@@ -18,14 +18,14 @@ function useOnLoad(arg0, arg1) {
     }
     if (isFirstLayoutComplete) {
       ref.current = true;
-      f94135();
+      f94171();
     }
   });
 }
 
 export const useOnListLoad = (recyclerViewManager, onLoad) => {
   let isFirstLayoutComplete = recyclerViewManager;
-  let f94135 = onLoad;
+  let f94171 = onLoad;
   hasOwnProperty(Date.now());
   [tmp3, closure_3] = timestampProducer(false);
   const dataLength = recyclerViewManager.getDataLength();
@@ -37,11 +37,11 @@ export const useOnListLoad = (recyclerViewManager, onLoad) => {
   }, items);
   if (typeof useOnLoad === "function") {
     isFirstLayoutComplete = recyclerViewManager;
-    f94135 = () => {
+    f94171 = () => {
       const elapsedTimeInMs = Date.now() - ref.current;
       requestAnimationFrame(() => {
         elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f94135 != null) {
+        if (f94171 != null) {
           const obj = { elapsedTimeInMs };
           tmp(obj);
         }
@@ -56,7 +56,7 @@ export const useOnListLoad = (recyclerViewManager, onLoad) => {
       }
       if (isFirstLayoutComplete) {
         ref.current = true;
-        f94135();
+        f94171();
       }
     });
     const obj2 = { isLoaded: tmp3 };

@@ -1,52 +1,95 @@
 // === Module 14684: ? ===
 
 // Module 14684
-import noop from "module_19" /* 19 */;
-import module_14666_mod from "module_14666" /* 14666 */;
-import _isNativeReflectConstruct_mod from "module_14685" /* 14685 */;
-import jsxProd from "jsxProd" /* 21 */;
+const require = globalThis.__r;
 
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-let module_14666 = module_14666_mod;
-if (!module_14666) {
-  let obj = { default: module_14666 };
-  let tmp4 = obj;
-} else {
-  tmp4 = module_14666;
-}
-module_14666 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  const obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-_isNativeReflectConstruct = tmp6;
 
-export default () => () => {
-  closure_0 = closure_0.default();
-  return {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
-      }
-    },
-    features: {
-      storybookSwitcher(arg0) {
-        closure_0 = arg0;
-        return (arg0) => {
-          closure_0 = arg0;
-          return function StorybookSwitcherContainer(arg0) {
-            const obj = { storybookUi: emitter, emitter, children: null };
-            const merged = Object.assign(arg0);
-            obj.children = <emitter />;
-            return <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>{null}</_isNativeReflectConstruct.default>;
-          };
-        };
-      }
+export default (arg0, arg1, arg2, arg3) => {
+  let obj;
+  _require = arg3;
+  let tmp3 = new require("module_14647")(arg0, arg3);
+  const tmp4 = new require("module_14676")(arg1, arg3);
+  if (">" === arg2) {
+    dependencyMap = tmp(14667);
+    let tmpResult = tmp(14672);
+    const tmpResult3 = tmp(14668);
+    closure_2 = tmpResult3;
+    let str3 = ">=";
+    let str = ">";
+    let tmpResult4 = tmpResult3;
+  } else {
+    str = "<";
+    if ("<" === arg2) {
+      dependencyMap = tmp(14668);
+      tmpResult = tmp(14671);
+      tmpResult4 = tmp(14667);
+      closure_2 = tmpResult4;
+      str3 = "<=";
+    } else {
+      const _TypeError = TypeError;
+      const typeError = new TypeError("Must provide a hilo val of \"<\" or \">\"");
+      throw typeError;
     }
-  };
+  }
+  if (require("module_14678")(tmp3, tmp4, arg3)) {
+    return false;
+  } else {
+    let num = 0;
+    let num3 = 0;
+    if (0 < tmp4.set.length) {
+      while (true) {
+        let arr = tmp4.set[num3];
+        _require = null;
+        dependencyMap = null;
+        let item = arr.forEach((semver) => {
+          let tmp = semver;
+          if (semver.semver === closure_0(semver[7]).ANY) {
+            tmp = new tmp2(tmp3[7])(">=0.0.0");
+          }
+          let tmp6 = closure_0;
+          if (!closure_0) {
+            tmp6 = tmp;
+          }
+          closure_0 = tmp6;
+          let tmp7 = semver;
+          if (!semver) {
+            tmp7 = tmp;
+          }
+          semver = tmp7;
+          if (dependencyMap(tmp.semver, closure_0.semver, require)) {
+            closure_0 = tmp;
+          } else if (React2(tmp.semver, semver.semver, require)) {
+            semver = tmp;
+          }
+          tmp2 = closure_0;
+          tmp3 = semver;
+        });
+        if (_require.operator !== str) {
+          if (_require.operator !== str3) {
+            if (!dependencyMap.operator) {
+              if (tmpResult(tmp3, dependencyMap.semver)) {
+                obj = { v: false };
+              }
+            }
+            let obj2;
+            if (dependencyMap.operator === str3) {
+              if (tmpResult4(tmp3, dependencyMap.semver)) {
+                obj2 = { v: false };
+              }
+            }
+            obj = obj2;
+          }
+          if (obj) {
+            break;
+          } else {
+            num3 = num + 1;
+            num = num3;
+          }
+        }
+        obj = { v: false };
+      }
+      return obj.v;
+    }
+    return true;
+  }
 };

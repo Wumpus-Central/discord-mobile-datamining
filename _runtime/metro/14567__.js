@@ -1,24 +1,7 @@
 // === Module 14567: ? ===
 
 // Module 14567
-import _mod14551 from "module_14551" /* 14551 */;
-import _mod14552 from "module_14552" /* 14552 */;
-import _mod14568 from "module_14568" /* 14568 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-let prop = _mod14551["__core-js_shared__"];
-if (!prop) {
-  prop = _mod14552("__core-js_shared__", {});
-}
-let versions = prop.versions;
-if (!versions) {
-  const items = [];
-  prop.versions = items;
-  versions = items;
-}
-let str2 = "global";
-if (_mod14568) {
-  str2 = "pure";
-}
-versions.push({ version: "3.41.0", mode: str2, copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE", source: "https://github.com/zloirock/core-js" });
 
-export default prop;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "e6321d3eee6babc8e6acf553c6eec250", name: "ServerTab", type: "lottie" });

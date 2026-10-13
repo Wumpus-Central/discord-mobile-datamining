@@ -59,7 +59,7 @@ class StackView {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    obj1 = { routes: [], previousState: "y", openingRouteKeys: "notification_clicked", closingRouteKeys: null, replacingRouteKeys: "heading-lg/bold", descriptors: 1 };
+    obj1 = { routes: [], previousState: "y", openingRouteKeys: "settings_updated", closingRouteKeys: null, replacingRouteKeys: "SEPA_INVALID_MANDATE_TYPE", descriptors: "SEPA mandate type is invalid" };
     obj1.openingRouteKeys = [];
     obj1.closingRouteKeys = [];
     obj1.replacingRouteKeys = [];

@@ -1,7 +1,10 @@
 // === Module 17694: ? ===
 
 // Module 17694
-import registerAsset from "module_1132" /* 1132 */;
+import _mod518 from "module_518" /* 518 */;
+import _mod535 from "module_535" /* 535 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/app_icons/images", width: 259, height: 93, scales: [2, 3], hash: "b6b1b6176f7b7fe50aec94892b5609a1", name: "app_icon_marketing", type: "png" });
+export default function isArrayLikeObject(arg0) {
+  return _mod535(arg0) && _mod518(arg0);
+};
