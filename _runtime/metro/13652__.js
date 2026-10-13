@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "24a795d24a7018dbf13e204b38f24588",
-  name: "img_classic_resubscribe_mobile",
+  hash: "7f6039bf3e89b748bf345decabdfb1bd",
+  name: "SoundboardSlashIcon",
   type: "png",
 });

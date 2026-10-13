@@ -1,13 +1,21 @@
 // _runtime/metro/12025__.js
-import registerAsset from "01132__.js";
+import _mod12024 from "12024__.js";
+import _mod12026 from "12026__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/create_guild/native/images",
-  width: 48,
-  height: 48,
-  scales: [2, 3],
-  hash: "893aae6cf122fe5e14fe174c0b878442",
-  name: "img_friends",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod12024.getSentryCarrier(mainCarrier);
+  if (sentryCarrier.acs) {
+    let acs = sentryCarrier.acs;
+  } else {
+    acs = _mod12026.getStackAsyncContextStrategy();
+    const tmpResult = _mod12026;
+  }
+  return acs;
+};
+export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
+  const mainCarrier = _mod12024.getMainCarrier();
+  _mod12024.getSentryCarrier(mainCarrier).acs = acs;
+};

@@ -75,7 +75,7 @@ export const VirtualDetector = function VirtualDetector(children) {
             viewRef: "a",
             userSelect: true,
             touchAction: true,
-            enableContextMenu: true,
+            enableContextMenu: false,
           };
           ({
             userSelect: obj.userSelect,

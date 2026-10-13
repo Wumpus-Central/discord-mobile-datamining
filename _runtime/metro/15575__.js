@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 160,
-  scales: [1],
-  hash: "539778d237b9fff9f8baff59e260a9fa",
-  name: "breaddog_1",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e5597814a0893b2321f6b666c9cfcb40",
+  name: "ClipsIcon",
   type: "png",
 });

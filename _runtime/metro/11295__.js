@@ -1,15 +1,13 @@
 // _runtime/metro/11295__.js
+import registerAsset from "01132__.js";
 
-export const severityLevelFromString = function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    const items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
-    }
-    str = str2;
-  }
-  return str;
-};
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "9efbede8b87c94f401364acf34876922",
+  name: "HammerIcon",
+  type: "png",
+});

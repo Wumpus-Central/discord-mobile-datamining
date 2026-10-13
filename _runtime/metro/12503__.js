@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 88,
-  height: 80,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "d719145f0510a722efd9724a4e3cf026",
-  name: "verify-email",
+  hash: "6b37e553071b3a1f760426253196e13f",
+  name: "ic_radio_circle_checked_green",
   type: "png",
 });

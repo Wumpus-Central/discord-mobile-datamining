@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "e75d6cb3291053e29f69fac93519aa0b",
-  name: "spectator",
+  httpServerLocation: "/assets/modules/conjure/presence/native/images",
+  width: 80,
+  height: 80,
+  scales: [1, 2, 3],
+  hash: "147a8fcf8f2b95ff7d26fea87214d381",
+  name: "conjure_activity_dark",
   type: "png",
 });

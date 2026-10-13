@@ -1,21 +1,11 @@
 // _runtime/metro/14591__.js
-import _mod14574 from "14574__.js";
-import _mod14592 from "14592__.js";
+import registerAsset from "01132__.js";
 
-export default (arg0, arg1, arg2) => {
-  const arr = _mod14592(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod14574(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod14574(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "2c315f321285573a3e0f3421e17e59ea",
+  name: "NitroGem24",
+  type: "lottie",
+});

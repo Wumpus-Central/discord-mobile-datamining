@@ -4,10 +4,10 @@ import registerAsset from "01132__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
-  width: 20,
-  height: 20,
-  scales: [2, 3],
-  hash: "abac82ff1ac426da4eac76f9342c367b",
-  name: "ic_person_waving",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "348772a7de5e24d039b06ea4ccb58be2",
+  name: "ic_category_16px",
   type: "png",
 });

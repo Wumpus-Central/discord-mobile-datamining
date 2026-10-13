@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/contact_sync/native/images",
-  width: 40,
-  height: 40,
-  scales: [2, 3],
-  hash: "1d68443a64aaff8d1d20c2355b47322a",
-  name: "cta",
+  httpServerLocation: "/assets/modules/premium/referral_program/native/images",
+  width: 180,
+  height: 180,
+  scales: [1],
+  hash: "7d7d766e7ebb30cec66584e69b89634d",
+  name: "Glow",
   type: "png",
 });

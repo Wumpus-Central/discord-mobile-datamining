@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/plan_selection",
-  width: 80,
-  height: 80,
+  httpServerLocation: "/assets/images/native/gifting/seasonal",
+  width: 144,
+  height: 150,
   scales: [1],
-  hash: "e2676a24ea3247f11452fad9b442341d",
-  name: "img_wumpus_nitro",
+  hash: "9326b8f858addb08d8cfb2f4710ba77a",
+  name: "coffee_idle",
   type: "png",
 });

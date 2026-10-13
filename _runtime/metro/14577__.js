@@ -1,19 +1,11 @@
 // _runtime/metro/14577__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
-  }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+import registerAsset from "01132__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "bc4f103d29d98767eb7ae693f67ae198",
+  name: "NitroGem2",
+  type: "lottie",
+});

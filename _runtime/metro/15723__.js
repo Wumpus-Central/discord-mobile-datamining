@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "44a7840b2161275358742595c9257e76",
-  name: "cs",
+  httpServerLocation: "/assets/modules/quests/native/images",
+  width: 345,
+  height: 82,
+  scales: [1, 2, 3],
+  hash: "91248bc802fa2159ae23ab96ddaf91db",
+  name: "clouds_light_background",
   type: "png",
 });

@@ -33,7 +33,7 @@ let noop = fn(19);
 } = noop);
 let noop = noop_mod;
 const jsx = fn(21).jsx;
-let closure_14 = { mount: false, data: "a" };
+let closure_14 = { mount: false, data: "Array" };
 const memoResult = memo(
   forwardRef(function BottomSheetModalComponent(name, arg1) {
     _require = arg1;

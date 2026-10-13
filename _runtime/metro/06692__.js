@@ -57,10 +57,10 @@ class StackView {
     obj1 = {
       routes: [],
       previousState: "y",
-      openingRouteKeys: "notification_clicked",
+      openingRouteKeys: "settings_updated",
       closingRouteKeys: null,
-      replacingRouteKeys: "heading-lg/bold",
-      descriptors: 1,
+      replacingRouteKeys: "SEPA_INVALID_MANDATE_TYPE",
+      descriptors: "SEPA mandate type is invalid",
     };
     obj1.openingRouteKeys = [];
     obj1.closingRouteKeys = [];

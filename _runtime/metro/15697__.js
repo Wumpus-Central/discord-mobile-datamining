@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/quests/native/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "d54bf56841039bee9b0ab658257be5d8",
-  name: "EmojiZanyFaceIcon",
+  scales: [1, 2, 3],
+  hash: "d34103fd5e89ba1cd4ca70f2429c1570",
+  name: "ic_wreath",
   type: "png",
 });

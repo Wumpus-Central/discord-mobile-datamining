@@ -1,16 +1,13 @@
 // _runtime/metro/17689__.js
-import baseFlatten from "../05193_baseFlatten.js";
-import baseRest from "../08504_baseRest.js";
-import _mod17690 from "17690__.js";
-import baseDifference from "../17691_baseDifference.js";
+import registerAsset from "01132__.js";
 
-export default baseRest((arg0, arg1) => {
-  if (_mod17690(arg0)) {
-    const tmpResult = baseDifference;
-    let tmpResultResult = tmpResult(arg0, baseFlatten(arg1, 1, _mod17690, true));
-    const tmpResult2 = baseFlatten;
-  } else {
-    tmpResultResult = [];
-  }
-  return tmpResultResult;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 60,
+  height: 60,
+  scales: [2, 3],
+  hash: "063292ce4c9cf6ef0db464edc768d34e",
+  name: "icon-server-muted",
+  type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/plan_selection",
-  width: 80,
-  height: 80,
+  httpServerLocation: "/assets/images/native/gifting/seasonal",
+  width: 144,
+  height: 150,
   scales: [1],
-  hash: "efc48aacb0f78e1462efe2b15e5ef702",
-  name: "img_boost",
+  hash: "ccdfa582cc7b9c2866cdcd81d25dbd3c",
+  name: "box_idle",
   type: "png",
 });

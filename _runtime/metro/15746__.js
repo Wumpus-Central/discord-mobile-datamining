@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "2ac1239c26c4ae1d27817a9d7b85dc53",
-  name: "sv-SE",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "313d0291c31affa2231c3200ee7f2822",
+  name: "CircleQuestionIcon",
   type: "png",
 });

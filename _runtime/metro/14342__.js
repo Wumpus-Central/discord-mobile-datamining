@@ -1,4 +1,0 @@
-// _runtime/metro/14342__.js
-import _mod14340 from "14340__.js";
-
-export default (arg0, arg1) => _mod14340(arg0, arg1, true);

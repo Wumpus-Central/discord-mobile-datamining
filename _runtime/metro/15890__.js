@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "3ef7b97baaf789cd87cf8f96f96361db",
-  name: "BeakerIcon",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 160,
+  scales: [1],
+  hash: "539778d237b9fff9f8baff59e260a9fa",
+  name: "breaddog_1",
   type: "png",
 });

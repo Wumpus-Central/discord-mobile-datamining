@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "7e68c2960201e89a20761843ca26d40b",
-  name: "super_reaction",
+  hash: "3707ecbdc52255079d75d7398451480d",
+  name: "RibbonIcon",
   type: "png",
 });

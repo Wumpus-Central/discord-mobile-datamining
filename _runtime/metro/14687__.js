@@ -1,31 +1,7 @@
 // _runtime/metro/14687__.js
-import emptyPromise from "../14670_emptyPromise.js";
+import _mod14676 from "14676__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
-  return {
-    onConnect() {
-      log = console.log;
-      console.log = () => {
-        const items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        const items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        const items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
-    },
-  };
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod14676(arg0, arg2);
+  return obj.intersects(new _mod14676(arg1, arg2), arg2);
 };

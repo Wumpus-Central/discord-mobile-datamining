@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "3e998a340948f95ab4885c3644b255dc",
-  name: "AchievementsIcon",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 161,
+  scales: [1],
+  hash: "1b6a1fd726ebdfc69d47b037085b4f19",
+  name: "graggle_2",
   type: "png",
 });

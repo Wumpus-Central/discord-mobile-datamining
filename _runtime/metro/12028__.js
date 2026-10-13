@@ -1,13 +1,17 @@
 // _runtime/metro/12028__.js
-import registerAsset from "01132__.js";
+import _mod12012 from "12012__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/create_guild/native/images",
-  width: 48,
-  height: 48,
-  scales: [2, 3],
-  hash: "cae160e8dcd3fb84e6eda225bda4b4a6",
-  name: "img_clubs",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+const _sentrySpan = "_sentrySpan";
+
+export const _getSpanForScope = function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
+};
+export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod12012.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
+  } else {
+    delete tmp2[tmp];
+  }
+};

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6adfcc7a553215ee3085ec15a5a3e3a4",
-  name: "ClockXIcon",
+  hash: "de8b19411fa51d311a8da8e41361a538",
+  name: "BoostGemSlashIcon",
   type: "png",
 });

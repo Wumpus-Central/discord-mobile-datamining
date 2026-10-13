@@ -3,11 +3,9 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/collectibles/native/images",
-  width: 375,
-  height: 162,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
   scales: [1],
-  hash: "8c6551e987e65957d7c90c18eddac8f1",
-  name: "featured_page_footer_dark",
-  type: "png",
+  hash: "1a2ed221615ffab4e022949f6b12481c",
+  name: "bg.messages.1a2ed221615ffab4e022949f6b12481c.compiled.messages",
+  type: "jsona",
 });

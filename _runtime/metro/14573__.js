@@ -1,16 +1,11 @@
 // _runtime/metro/14573__.js
-import _mod14558 from "14558__.js";
+import registerAsset from "01132__.js";
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod14558(1.toString);
-
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
-  }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "e2ea348445c8a662d796c112d980d074",
+  name: "Microphone",
+  type: "lottie",
+});
