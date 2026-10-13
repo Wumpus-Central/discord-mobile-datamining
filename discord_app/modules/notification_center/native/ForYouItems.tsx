@@ -34,7 +34,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import NotificationCenterStore from "../NotificationCenterStore.tsx";
 
-const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16877);
+const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(17180);
 require = fn;
 function getMessageContentPreviewV2(item) {
   item = item.item;
@@ -604,7 +604,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj8 = { style: tmp3.messagePreviewIconV2Container, children: null };
             if (constants4.ATTACHMENT === iconType) {
-              let tmp35 = guild_id(11685);
+              let tmp35 = guild_id(12428);
               const obj9 = { source: tmp35, size: tmp(1200).IconSizes.SMALL, style: null };
               messagePreviewIconV2 = tmp3.messagePreviewIconV2;
               obj9.style = messagePreviewIconV2;
@@ -757,7 +757,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const obj9 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
         if (constants4.ATTACHMENT === iconType) {
-          let tmp15 = guild_id(11685);
+          let tmp15 = guild_id(12428);
           const obj10 = { source: tmp15, size: null, style: null };
           SMALL = tmp3(1200).IconSizes.SMALL;
           obj10.size = SMALL;
@@ -970,7 +970,7 @@ let closure_39 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[44]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[45]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16874).deleteNotificationCenterItem(tmp3);
+        yield tmp3(17177).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };

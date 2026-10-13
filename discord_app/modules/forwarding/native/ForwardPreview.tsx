@@ -14,8 +14,8 @@ import CirclePlayIcon2 from "../../../design/components/Icon/native/redesign/gen
 import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
 import ChatItemDefault from "../../../components_native/chat/ChatItem.tsx";
 import AttachmentIcon2 from "../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import ForwardPreviewUtils from "../ForwardPreviewUtils.tsx";
 import ImagesIcon2 from "../../../design/components/Icon/native/redesign/generated/ImagesIcon.tsx";
+import ForwardPreviewUtils from "../ForwardPreviewUtils.tsx";
 import CheckpointForwardPreviewDefault from "../../checkpoint/native/components/CheckpointForwardPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 

@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 
 export default {
   open(merged) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12013, dependencyMap.paths), merged, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12529, dependencyMap.paths), merged, c3);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(c3);

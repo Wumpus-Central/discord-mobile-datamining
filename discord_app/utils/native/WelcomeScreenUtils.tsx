@@ -10,8 +10,8 @@ import GuildStore from "../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const NO_WELCOME_SCREEN = fn(12549).NO_WELCOME_SCREEN;
-let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "a" };
+const NO_WELCOME_SCREEN = fn(13059).NO_WELCOME_SCREEN;
+let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "Array" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
@@ -158,7 +158,7 @@ export const useShowWelcomeModal = ReactCompilerGating.isReactCompilerEnabled()
 export const openWelcomeActionSheet = function openWelcomeActionSheet(onHide) {
   const guildId = onHide.guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(12552, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, {
+  obj.openLazy(asyncRequireImpl(13062, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, {
     guildId,
     onHide: onHide.onHide,
   });

@@ -162,7 +162,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(15121).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15442).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIsFindYourFriendsDeletionTrailing() {
         const cResult = c.c(2);

@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef12445 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-1x.png.js";
-import _modDef12446 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-2x.png.js";
-import _modDef12447 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-3x.png.js";
+import _modDef12955 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-1x.png.js";
+import _modDef12956 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-2x.png.js";
+import _modDef12957 from "../../../../../../discord_assets/assets/mana/asset-library/generated/HeartIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12445 }, 3: null };
-const obj2 = { uri: _modDef12445 };
-obj[2] = { uri: _modDef12446 };
-const obj3 = { uri: _modDef12446 };
-obj[3] = { uri: _modDef12447 };
+let obj = { 1: null, 2: { uri: _modDef12955 }, 3: null };
+const obj2 = { uri: _modDef12955 };
+obj[2] = { uri: _modDef12956 };
+const obj3 = { uri: _modDef12956 };
+obj[3] = { uri: _modDef12957 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12447 };
+const obj4 = { uri: _modDef12957 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");
 

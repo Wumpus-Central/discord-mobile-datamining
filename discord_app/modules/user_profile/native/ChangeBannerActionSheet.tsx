@@ -187,7 +187,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp30 = cResult[19];
             }
             if (cResult[20] !== tmp4.rowArrow) {
-              const obj4 = { style: tmp4.rowArrow, size: tmp(1200).Icon.Sizes.CUSTOM, source: tmp10(14852) };
+              const obj4 = { style: tmp4.rowArrow, size: tmp(1200).Icon.Sizes.CUSTOM, source: tmp10(15173) };
               const tmp35 = closure_9(tmp(1200).Icon, obj4);
               cResult[20] = tmp4.rowArrow;
               cResult[21] = tmp35;
@@ -243,7 +243,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           tmp30 = tmp32;
         }
         const obj8 = { style: tmp4.bannerColor, color: pendingAccentColor };
-        const tmp27 = closure_9(tmp10(14847), obj8);
+        const tmp27 = closure_9(tmp10(15168), obj8);
         cResult[12] = pendingAccentColor;
         cResult[13] = tmp4.bannerColor;
         cResult[14] = tmp27;
@@ -314,7 +314,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.text = intl.string(require("util").t.xzNfPz);
       obj4.label = closure_9(require("Form").FormLabel, obj5);
       const obj6 = { style: tmp.selectedColor, children: null };
-      const items2 = [closure_9(pendingAccentColor(14847), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
+      const items2 = [closure_9(pendingAccentColor(15168), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
       const obj8 = {
         style: tmp.selectedColorHex,
         variant: "text-md/medium",
@@ -329,7 +329,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       items2[2] = closure_9(require("native").Icon, {
         style: tmp.rowArrow,
         size: require("native").Icon.Sizes.CUSTOM,
-        source: pendingAccentColor(14852),
+        source: pendingAccentColor(15173),
       });
       obj6.children = items2;
       obj4.trailing = closure_10(View, obj6);
@@ -412,8 +412,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       originalAsset: "Array",
                       originalMd5,
                     };
-                    tmp2(tmp2(14843).createPendingImage(obj8));
-                    const obj = tmp2(14843);
+                    tmp2(tmp2(15164).createPendingImage(obj8));
+                    const obj = tmp2(15164);
                   }
                   c3 = 3;
                   return { value: "IconComponent", done: null };
@@ -799,8 +799,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   originalAsset: "Array",
                   originalMd5,
                 };
-                closure_129_0(tmp2(14843).createPendingImage(obj8));
-                const obj = tmp2(14843);
+                closure_129_0(tmp2(15164).createPendingImage(obj8));
+                const obj = tmp2(15164);
               }
               c3 = 3;
               return { value: "IconComponent", done: null };
@@ -869,7 +869,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!flag) {
         const obj9 = { style: tmp.upsellButton, children: null };
         const obj10 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-        obj9.children = closure_9(tmp2(14844), obj10);
+        obj9.children = closure_9(tmp2(15165), obj10);
         tmp4Result6 = closure_9(View, obj9);
       }
       items3[1] = tmp4Result6;

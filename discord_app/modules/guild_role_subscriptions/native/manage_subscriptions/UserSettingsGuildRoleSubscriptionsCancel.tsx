@@ -12,7 +12,7 @@ import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef15528 from "../../../../../_runtime/metro/15528__.js";
+import _modDef15843 from "../../../../../_runtime/metro/15843__.js";
 import FastAssetImageDefault from "../components/FastAssetImage.tsx";
 import GuildRoleSubscriptionCardAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -368,7 +368,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp51 = cResult[27];
                 }
                 if (cResult[28] !== tmp4.cactus) {
-                  const obj15 = { source: _modDef15528, style: tmp4.cactus };
+                  const obj15 = { source: _modDef15843, style: tmp4.cactus };
                   const tmp58 = collapsed(FastImageDefault, obj15);
                   cResult[28] = tmp4.cactus;
                   cResult[29] = tmp58;
@@ -506,7 +506,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length,
       });
       const obj10 = { variant: "text-sm/medium", color: "interactive-text-default", children: guild.name };
-      obj13.source = _modDef15528;
+      obj13.source = _modDef15843;
       obj13.style = tmp.cactus;
       items2[6] = collapsed(FastImageDefault, obj13);
       obj7.children = items2;

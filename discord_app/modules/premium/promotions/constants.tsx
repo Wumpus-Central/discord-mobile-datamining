@@ -1,7 +1,7 @@
 // discord_app/modules/premium/promotions/constants.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-const items = ["logitech", "call_of_duty", "youtube", "best_buy"];
+const items = ["logitech", "youtube", "best_buy"];
 const items1 = ["logitech", "steelseries"];
 const result = size.fileFinishedImporting("modules/premium/promotions/constants.tsx");
 
@@ -30,7 +30,6 @@ export const RECURRING_PARTNERS = {
 };
 export const STEELSERIES_PARTNER_ID = "steelseries";
 export const LOGITECH_PARTNER_ID = "logitech";
-export const CALL_OF_DUTY_PARTNER_ID = "call_of_duty";
 export const XBOX_PARTNER_ID = "xbox";
 export const YOUTUBE_PARTNER_ID = "youtube";
 export const RIOT_PARTNER_ID = "riot";

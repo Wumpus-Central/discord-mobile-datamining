@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str2 == null) {
         str2 = "";
       }
-      const text = projectId(17214).useConjureRevealedText(str2, tmp12).text;
+      const text = projectId(11832).useConjureRevealedText(str2, tmp12).text;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { size: "xs", color: ref(587).colors.TEXT_BRAND };
         const tmp16 = closure_7(tmp(9565).LightbulbIcon, obj3);
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
           children: null,
         };
-        ref = ref(17212);
+        ref = ref(11830);
         const obj11 = { source: text };
         obj10.children = closure_7(ref, obj11);
         let tmp28 = closure_7(closure_4, obj10);
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = tmp4.panel;
       cResult[11] = text;
       cResult[12] = tmp28;
-      const tmpResult2 = projectId(17214);
+      const tmpResult2 = projectId(11832);
     }
   : function ConjureThinkingOverlay(projectId) {
       projectId = projectId.projectId;
@@ -212,12 +212,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp6) {
         tmp6 = "end" !== stateFromStores.phase;
       }
-      const text = projectId(17214).useConjureRevealedText(str, { streaming: tmp6 }).text;
+      const text = projectId(11832).useConjureRevealedText(str, { streaming: tmp6 }).text;
       const obj3 = { style: tmp.root, children: null };
       const obj4 = { style: tmp.opaque, children: null };
       const obj5 = { style: tmp.body, children: null };
       const obj6 = { style: tmp.header, children: null };
-      const obj2 = projectId(17214);
+      const obj2 = projectId(11832);
       const items2 = [closure_7(projectId(9565).LightbulbIcon, { size: "xs", color: ref(587).colors.TEXT_BRAND })];
       const obj8 = { variant: "text-sm/semibold", color: "text-strong", children: null };
       const intl = tmp3(1126).intl;
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: null,
         };
         const obj10 = { source: text };
-        obj9.children = closure_7(tmp10(17212), obj10);
+        obj9.children = closure_7(tmp10(11830), obj10);
         let tmp7Result = closure_7(closure_4, obj9);
       } else {
         const obj11 = { variant: "text-sm/normal", color: "text-muted", children: null };

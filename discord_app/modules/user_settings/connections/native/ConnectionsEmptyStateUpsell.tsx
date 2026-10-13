@@ -83,11 +83,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[1];
       }
       if (cResult[2] !== platform.type) {
-        const connectionBackgroundColor = tmp(15243).getConnectionBackgroundColor(platform.type);
+        const connectionBackgroundColor = tmp(15564).getConnectionBackgroundColor(platform.type);
         cResult[2] = platform.type;
         cResult[3] = connectionBackgroundColor;
         let tmp7 = connectionBackgroundColor;
-        const tmpResult = tmp(15243);
+        const tmpResult = tmp(15564);
       } else {
         tmp7 = cResult[3];
       }

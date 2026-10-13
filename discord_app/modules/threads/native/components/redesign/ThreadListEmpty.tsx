@@ -5,7 +5,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef11936 from "../../../../../../_runtime/metro/11936__.js";
+import _modDef12456 from "../../../../../../_runtime/metro/12456__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -40,7 +40,7 @@ export default noop.memo(
         onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
         const tmp4 = closure_6();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef11936, size: native.Icon.Sizes.MEDIUM };
+          const obj2 = { source: _modDef12456, size: native.Icon.Sizes.MEDIUM };
           const tmp8 = React4(native.Icon, obj2);
           cResult[0] = tmp8;
           let first = tmp8;
@@ -147,7 +147,7 @@ export default noop.memo(
         const obj = { style: tmp.container, children: null };
         const obj2 = {
           style: tmp.iconWrapper,
-          children: React4(native.Icon, { source: _modDef11936, size: native.Icon.Sizes.MEDIUM }),
+          children: React4(native.Icon, { source: _modDef12456, size: native.Icon.Sizes.MEDIUM }),
         };
         const items = [React4(View, obj2), , ,];
         const obj4 = {

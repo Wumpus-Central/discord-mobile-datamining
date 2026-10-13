@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
-import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
+import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -299,7 +299,7 @@ let obj2 = {
         patch: null,
       };
       obj3 = { secretRequest: null };
-      const obj7 = { fields, note: null, copy_values: null };
+      const obj7 = { request_id: fields.request_id, fields, note: null, copy_values: null };
       ({ note: obj4.note, copy_values: obj4.copy_values } = fields);
       obj3.secretRequest = obj7;
       obj2.patch = obj3;

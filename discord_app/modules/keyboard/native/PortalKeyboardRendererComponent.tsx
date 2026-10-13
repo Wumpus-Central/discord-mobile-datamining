@@ -216,7 +216,7 @@ export default noop.memo(
                 transitionState: state,
                 entrypoint: tmp(10623).AppLauncherEntrypoint.TEXT,
               };
-              return jsx(chatInputRef(11712), {
+              return jsx(chatInputRef(11512), {
                 context: memo1,
                 chatInputRef,
                 onClose: cleanUp,
@@ -225,7 +225,7 @@ export default noop.memo(
               });
             } else if (tmp(1629).KeyboardTypes.MEDIA === type) {
               const obj3 = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-              return jsx(chatInputRef(17143), {
+              return jsx(chatInputRef(11712), {
                 channel: memo,
                 chatInputRef,
                 onClose: cleanUp,
@@ -233,7 +233,7 @@ export default noop.memo(
               });
             } else if (tmp(1629).KeyboardTypes.EXPRESSION === type) {
               let obj = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-              return jsx(chatInputRef(17149), {
+              return jsx(chatInputRef(11754), {
                 channel: memo,
                 chatInputRef,
                 onClose: cleanUp,

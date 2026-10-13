@@ -54,11 +54,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       const application = onAppSelected.appItem.application;
       if (cResult[0] !== application) {
-        const appLauncherIconSource = tmp(11729).getAppLauncherIconSource(application);
+        const appLauncherIconSource = tmp(11529).getAppLauncherIconSource(application);
         cResult[0] = application;
         cResult[1] = appLauncherIconSource;
         let tmp5 = appLauncherIconSource;
-        const tmpResult = tmp(11729);
+        const tmpResult = tmp(11529);
       } else {
         tmp5 = cResult[1];
       }
@@ -140,7 +140,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp9 = null;
         if (null != tmp5) {
           const obj4 = { iconSource: tmp5, wrapperStyle: tmp4.iconContainer, iconSize: 36 };
-          tmp9 = closure_5(application(11734), obj4);
+          tmp9 = closure_5(application(11534), obj4);
         }
         cResult[5] = tmp5;
         cResult[6] = tmp4.iconContainer;
@@ -177,7 +177,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       onAppSelected = onAppSelected.onAppSelected;
       const tmp = closure_7();
       const application = onAppSelected.appItem.application;
-      const appLauncherIconSource = onAppSelected(11729).getAppLauncherIconSource(application);
+      const appLauncherIconSource = onAppSelected(11529).getAppLauncherIconSource(application);
       const obj2 = {
         accessible: true,
         accessibilityLabel: application.name,
@@ -198,7 +198,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp6 = null;
       if (null != appLauncherIconSource) {
         const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-        tmp6 = closure_5(application(11734), obj3);
+        tmp6 = closure_5(application(11534), obj3);
       }
       const items = [
         tmp6,

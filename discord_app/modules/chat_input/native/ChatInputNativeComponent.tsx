@@ -100,7 +100,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         num6 = 1;
       }
       if (maxHeight == null) {
-        maxHeight = tmp10(11708)(onMaxHeightChanged);
+        maxHeight = tmp10(11963)(onMaxHeightChanged);
       }
       if (cResult[4] === tmp15) {
         if (cResult[5] === accessible) {

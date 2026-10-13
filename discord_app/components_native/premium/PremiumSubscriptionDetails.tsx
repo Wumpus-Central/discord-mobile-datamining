@@ -4,6 +4,7 @@ import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import util from "../../intl/index.native.tsx";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../common/FastImage.tsx";
 import useAnalyticsLocationsDefault from "../../modules/app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
 import PremiumBundledPlansUtils from "../../modules/premium/native/PremiumBundledPlansUtils.tsx";
@@ -17,29 +18,29 @@ import _modDef10070 from "../../../_runtime/metro/10070__.js";
 import _modDef10071 from "../../../_runtime/metro/10071__.js";
 import _modDef10072 from "../../../_runtime/metro/10072__.js";
 import _modDef10075 from "../../../_runtime/metro/10075__.js";
-import _modDef13643 from "../../../_runtime/metro/13643__.js";
-import _modDef13644 from "../../../_runtime/metro/13644__.js";
-import _modDef13645 from "../../../_runtime/metro/13645__.js";
-import _modDef13646 from "../../../_runtime/metro/13646__.js";
-import _modDef13647 from "../../../_runtime/metro/13647__.js";
-import _modDef13648 from "../../../_runtime/metro/13648__.js";
-import _modDef13649 from "../../../_runtime/metro/13649__.js";
-import _modDef13650 from "../../../_runtime/metro/13650__.js";
-import _modDef13651 from "../../../_runtime/metro/13651__.js";
-import _modDef13652 from "../../../_runtime/metro/13652__.js";
-import _modDef13653 from "../../../_runtime/metro/13653__.js";
-import _modDef13654 from "../../../_runtime/metro/13654__.js";
-import _modDef13655 from "../../../_runtime/metro/13655__.js";
-import _modDef13656 from "../../../_runtime/metro/13656__.js";
-import _modDef13657 from "../../../_runtime/metro/13657__.js";
-import _modDef13658 from "../../../_runtime/metro/13658__.js";
-import _modDef13659 from "../../../_runtime/metro/13659__.js";
-import _modDef13660 from "../../../_runtime/metro/13660__.js";
-import _modDef13661 from "../../../_runtime/metro/13661__.js";
-import _modDef13662 from "../../../_runtime/metro/13662__.js";
-import _modDef13663 from "../../../_runtime/metro/13663__.js";
-import _modDef13664 from "../../../_runtime/metro/13664__.js";
-import _modDef13665 from "../../../_runtime/metro/13665__.js";
+import _modDef13980 from "../../../_runtime/metro/13980__.js";
+import _modDef13981 from "../../../_runtime/metro/13981__.js";
+import _modDef13982 from "../../../_runtime/metro/13982__.js";
+import _modDef13983 from "../../../_runtime/metro/13983__.js";
+import _modDef13984 from "../../../_runtime/metro/13984__.js";
+import _modDef13985 from "../../../_runtime/metro/13985__.js";
+import _modDef13986 from "../../../_runtime/metro/13986__.js";
+import _modDef13987 from "../../../_runtime/metro/13987__.js";
+import _modDef13988 from "../../../_runtime/metro/13988__.js";
+import _modDef13989 from "../../../_runtime/metro/13989__.js";
+import _modDef13990 from "../../../_runtime/metro/13990__.js";
+import _modDef13991 from "../../../_runtime/metro/13991__.js";
+import _modDef13992 from "../../../_runtime/metro/13992__.js";
+import _modDef13993 from "../../../_runtime/metro/13993__.js";
+import _modDef13994 from "../../../_runtime/metro/13994__.js";
+import _modDef13995 from "../../../_runtime/metro/13995__.js";
+import _modDef13996 from "../../../_runtime/metro/13996__.js";
+import _modDef13997 from "../../../_runtime/metro/13997__.js";
+import _modDef13998 from "../../../_runtime/metro/13998__.js";
+import _modDef13999 from "../../../_runtime/metro/13999__.js";
+import _modDef14000 from "../../../_runtime/metro/14000__.js";
+import _modDef14001 from "../../../_runtime/metro/14001__.js";
+import _modDef14002 from "../../../_runtime/metro/14002__.js";
 import PremiumPlanWhatYouLoseActionSheet from "../../modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumSubscriptionInvoice from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 import SubscriptionRenewalMutationsNoticeDefault from "../../modules/premium/native/SubscriptionRenewalMutationsNotice.tsx";
@@ -50,11 +51,11 @@ import noop from "../../../_runtime/metro/00019__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import IAPStore from "../../stores/native/IAPStore.android.tsx";
 
-const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(13666);
+const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(14003);
 require = fn;
 function handleCancelSubscription() {
   const self = this;
-  const apply = closure_28.apply;
+  const apply = closure_27.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -62,7 +63,7 @@ function handleCancelSubscription() {
   }
   return applyArgumentsResult;
 }
-let closure_28 = async function _handleCancelSubscription() {
+let closure_27 = async function _handleCancelSubscription() {
   c4 = 0;
   c3 = 0;
   return (async (arg0, value, arg2) => {
@@ -115,7 +116,7 @@ let closure_28 = async function _handleCancelSubscription() {
                 isPurchasedViaGoogle = subscription.isPurchasedViaGoogle;
               }
               if (isPurchasedViaGoogle) {
-                closure_2_7.openURL(
+                closure_2_6.openURL(
                   require("PremiumUtils").getExternalSubscriptionMethodUrl(
                     subscription.paymentGateway,
                     "SUBSCRIPTION_MANAGEMENT",
@@ -146,7 +147,7 @@ let closure_28 = async function _handleCancelSubscription() {
 function handleManageSubscription(subscription, navigation, analyticsLocations) {
   _require = subscription;
   if (subscription.status === constants4.ACCOUNT_HOLD) {
-    closure_7.openURL(
+    closure_6.openURL(
       require("PremiumUtils").getExternalSubscriptionMethodUrl(
         subscription.paymentGateway,
         "PAYMENT_SOURCE_MANAGEMENT",
@@ -229,7 +230,7 @@ function handleManageSubscription(subscription, navigation, analyticsLocations) 
 }
 function onResubscribeClick() {
   const self = this;
-  const apply = closure_31.apply;
+  const apply = closure_30.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -237,7 +238,7 @@ function onResubscribeClick() {
   }
   return applyArgumentsResult;
 }
-let closure_31 = async function _onResubscribeClick(arg0) {
+let closure_30 = async function _onResubscribeClick(arg0) {
   let isACOM = arg0;
   c2 = 0;
   c3 = 0;
@@ -282,7 +283,7 @@ let closure_31 = async function _onResubscribeClick(arg0) {
               const obj10 = { value: require("IAPUtils").manageSubscription(), done: false };
               return obj10;
             } else if (isACOM.isPurchasedViaGoogle) {
-              closure_2_7.openURL(
+              closure_2_6.openURL(
                 require("PremiumUtils").getExternalSubscriptionMethodUrl(
                   isACOM.paymentGateway,
                   "SUBSCRIPTION_MANAGEMENT",
@@ -338,14 +339,14 @@ class PremiumSubscriptionHeader {
     closure_1 = undefined;
     closure_2 = undefined;
     analyticsLocations = undefined;
-    tmp = closure_19();
+    tmp = closure_18();
     tmp2 = subscription;
     tmp3 = closure_2;
     obj = subscription(closure_2[54]);
     closure_1 = obj.useNavigation();
     obj2 = subscription(closure_2[55]);
     items = [];
-    items[0] = closure_9;
+    items[0] = closure_8;
     stateFromStores = obj2.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       closure_1(_undefined[56])(null != currentUser, "PremiumSubscriptionHeader: currentUser cannot be undefined");
@@ -353,7 +354,7 @@ class PremiumSubscriptionHeader {
     });
     obj3 = subscription(closure_2[55]);
     items1 = [];
-    items1[0] = closure_10;
+    items1[0] = closure_9;
     stateFromStores1 = obj3.useStateFromStores(items1, () => {
       if (subscription.isOnPlatformMatchingExternalPaymentGateway) {
         if (subscription.isACOM) {
@@ -422,10 +423,10 @@ class PremiumSubscriptionHeader {
     tmp18 = SubscriptionStatusTypes;
     tmp19 = tmp14 === SubscriptionStatusTypes.CANCELED;
     if (tmp14 === SubscriptionStatusTypes.ACTIVE) {
-      tmp21 = closure_20;
-      ACTIVE = closure_20.ACTIVE;
+      tmp21 = closure_19;
+      ACTIVE = closure_19.ACTIVE;
     } else {
-      tmp20 = closure_20;
+      tmp20 = closure_19;
       ACTIVE = tmp19 ? tmp20.RESUB : tmp20.ERROR;
     }
     isOnPlatformMatchingExternalPaymentGateway = !isMismatchResult;
@@ -451,23 +452,23 @@ class PremiumSubscriptionHeader {
     obj35.style = items2;
     obj36 = { style: tmp.header, children: null };
     tmp25 = jsx;
-    obj37 = { source: closure_21[premiumBranding][ACTIVE], style: tmp.headerBackground };
+    obj37 = { source: closure_20[premiumBranding][ACTIVE], style: tmp.headerBackground };
     items3 = [, , ,];
-    items3[0] = jsx(Image, obj37);
+    items3[0] = jsx(tmp6(tmp3[60]), obj37);
     obj38 = { style: tmp.logoContainer, children: null };
-    obj39 = { source: closure_22[premiumBranding][ACTIVE], style: null };
+    obj39 = { source: closure_21[premiumBranding][ACTIVE], style: null };
     items4 = [,];
-    items4[0] = closure_23[premiumBranding][ACTIVE];
+    items4[0] = closure_22[premiumBranding][ACTIVE];
     items4[1] = tmp.wumpusImg;
     obj39.style = items4;
     items5 = [,];
-    items5[0] = jsx(Image, obj39);
-    obj40 = { source: closure_24[premiumBranding][ACTIVE], style: closure_25[premiumBranding] };
-    items5[1] = jsx(Image, obj40);
+    items5[0] = jsx(tmp6(tmp3[60]), obj39);
+    obj40 = { source: closure_23[premiumBranding][ACTIVE], style: closure_24[premiumBranding] };
+    items5[1] = jsx(tmp6(tmp3[60]), obj40);
     obj38.children = items5;
     items3[1] = jsxs(View, obj38);
-    obj41 = { style: closure_26[ACTIVE], children: premiumGuildHeaderDescription };
-    items3[2] = jsx(tmp2(tmp3[60]).LegacyText, obj41);
+    obj41 = { style: closure_25[ACTIVE], children: premiumGuildHeaderDescription };
+    items3[2] = jsx(tmp2(tmp3[61]).LegacyText, obj41);
     obj42 = { style: tmp.buttonContainer, children: null };
     tmp25Result = null;
     if (tmp19) {
@@ -544,11 +545,11 @@ class PremiumSubscriptionHeader {
             }
           }
         });
-        intl = tmp2(tmp3[62]).intl;
-        obj44.text = intl.string(tmp2(tmp3[62]).t.lTCb0c);
+        intl = tmp2(tmp3[63]).intl;
+        obj44.text = intl.string(tmp2(tmp3[63]).t.lTCb0c);
         obj44.disabled = tmp9;
         obj44.loading = tmp9;
-        obj43.children = tmp25(tmp2(tmp3[61]).Button, obj44);
+        obj43.children = tmp25(tmp2(tmp3[62]).Button, obj44);
         tmp25Result = tmp25(tmp24, obj43);
       }
     }
@@ -565,9 +566,9 @@ class PremiumSubscriptionHeader {
           obj45.style = tmp.buttonWrapper;
           obj46 = { onPress: null, variant: "primary-overlay", text: null, size: "sm" };
           obj46.onPress = onClickManagePremiumGuild;
-          intl4 = tmp2(tmp3[62]).intl;
-          obj46.text = intl4.string(tmp2(tmp3[62]).t.gIVkjm);
-          obj45.children = tmp25(tmp2(tmp3[61]).Button, obj46);
+          intl4 = tmp2(tmp3[63]).intl;
+          obj46.text = intl4.string(tmp2(tmp3[63]).t.gIVkjm);
+          obj45.children = tmp25(tmp2(tmp3[62]).Button, obj46);
           tmp25Result1 = tmp25(tmp24, obj45);
         }
       }
@@ -605,9 +606,9 @@ class PremiumSubscriptionHeader {
           }
           return tmp6ResultResult;
         };
-        intl5 = tmp2(tmp3[62]).intl;
-        obj47.children = intl5.string(tmp2(tmp3[62]).t["ETE/oC"]);
-        tmp25Result2 = tmp25(tmp2(tmp3[63]).Text, obj47);
+        intl5 = tmp2(tmp3[63]).intl;
+        obj47.children = intl5.string(tmp2(tmp3[63]).t["ETE/oC"]);
+        tmp25Result2 = tmp25(tmp2(tmp3[64]).Text, obj47);
       }
       items6[3] = tmp25Result2;
       obj42.children = items6;
@@ -622,12 +623,12 @@ class PremiumSubscriptionHeader {
         obj49 = { size: "sm", color: null };
         obj49.color = tmp6(tmp3[9]).colors.ICON_FEEDBACK_WARNING;
         items8 = [,];
-        items8[0] = tmp25(tmp2(tmp3[64]).WarningIcon, obj49);
+        items8[0] = tmp25(tmp2(tmp3[65]).WarningIcon, obj49);
         obj50 = { variant: "text-sm/medium", color: "text-strong", style: null, children: null };
         obj50.style = tmp.appleAccountMismatchNoticeText;
-        intl6 = tmp2(tmp3[62]).intl;
-        obj50.children = intl6.string(tmp2(tmp3[62]).t.meauFg);
-        items8[1] = tmp25(tmp2(tmp3[63]).Text, obj50);
+        intl6 = tmp2(tmp3[63]).intl;
+        obj50.children = intl6.string(tmp2(tmp3[63]).t.meauFg);
+        items8[1] = tmp25(tmp2(tmp3[64]).Text, obj50);
         obj48.children = items8;
         tmp23Result = tmp23(tmp24, obj48);
       }
@@ -642,14 +643,14 @@ class PremiumSubscriptionHeader {
         handleManageSubscription(subscription, closure_1, analyticsLocations);
       };
       if (subscription.status === tmp18.ACCOUNT_HOLD) {
-        intl3 = tmp2(tmp3[62]).intl;
-        stringResult = intl3.string(tmp2(tmp3[62]).t.SgX7Ra);
+        intl3 = tmp2(tmp3[63]).intl;
+        stringResult = intl3.string(tmp2(tmp3[63]).t.SgX7Ra);
       } else {
-        intl2 = tmp2(tmp3[62]).intl;
-        stringResult = intl2.string(tmp2(tmp3[62]).t.gmVtgF);
+        intl2 = tmp2(tmp3[63]).intl;
+        stringResult = intl2.string(tmp2(tmp3[63]).t.gmVtgF);
       }
       obj52.text = stringResult;
-      obj52 = tmp25(tmp2(tmp3[61]).Button, obj52);
+      obj52 = tmp25(tmp2(tmp3[62]).Button, obj52);
       obj51.children = obj52;
       tmp25Result3 = tmp25(tmp24, obj51);
     }
@@ -657,19 +658,19 @@ class PremiumSubscriptionHeader {
   }
 }
 get_ActivityIndicator = fn(17);
-({ Image: metroRequire, Linking: closure_7, View: closure_8, StyleSheet } = get_ActivityIndicator);
+({ Linking: metroRequire, View: closure_7, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({
-  AnalyticsPages: closure_11,
-  AnalyticsSections: closure_12,
-  PaymentGateways: map1,
-  SubscriptionStatusTypes: closure_14,
+  AnalyticsPages: c10,
+  AnalyticsSections: closure_11,
+  PaymentGateways: closure_12,
+  SubscriptionStatusTypes: map1,
   USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING,
 } = Constants);
 const PremiumConstants = fn(1392);
-({ SubscriptionIntervalTypes: closure_15, SubscriptionPlanInfo: closure_16 } = PremiumConstants);
+({ SubscriptionIntervalTypes: closure_14, SubscriptionPlanInfo: closure_15 } = PremiumConstants);
 const jsxProd = fn(21);
-({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
+({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let size = { height: 35, width: 49 };
 const size1 = { height: 36, width: 51 };
 const size2 = { width: 51, height: 36 };
@@ -715,61 +716,61 @@ obj3.appleAccountMismatchNotice = {
 };
 obj3.appleAccountMismatchNoticeText = { flex: 1 };
 obj3.desktopSubtext = { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
-let closure_19 = createStyles.createStyles(obj3);
+const collapsedCategories = createStyles.createStyles(obj3);
 let obj8 = { ACTIVE: "active", RESUB: "resub", ERROR: "error" };
 let obj9 = {};
 let obj10 = {};
 obj10[obj8.ACTIVE] = _modDef10070;
-obj10[obj8.ERROR] = _modDef13643;
-obj10[obj8.RESUB] = _modDef13644;
+obj10[obj8.ERROR] = _modDef13980;
+obj10[obj8.RESUB] = _modDef13981;
 obj9[fn(4769).Branding.BUNDLE] = obj10;
 let obj11 = {};
 obj11[obj8.ACTIVE] = _modDef10067;
-obj11[obj8.ERROR] = _modDef13643;
-obj11[obj8.RESUB] = _modDef13644;
+obj11[obj8.ERROR] = _modDef13980;
+obj11[obj8.RESUB] = _modDef13981;
 obj9[fn(4769).Branding.TIER_0] = obj11;
 let obj12 = {};
 obj12[obj8.ACTIVE] = _modDef10068;
-obj12[obj8.ERROR] = _modDef13643;
-obj12[obj8.RESUB] = _modDef13644;
+obj12[obj8.ERROR] = _modDef13980;
+obj12[obj8.RESUB] = _modDef13981;
 obj9[fn(4769).Branding.TIER_1] = obj12;
 let obj13 = {};
 obj13[obj8.ACTIVE] = _modDef10069;
-obj13[obj8.ERROR] = _modDef13643;
-obj13[obj8.RESUB] = _modDef13644;
+obj13[obj8.ERROR] = _modDef13980;
+obj13[obj8.RESUB] = _modDef13981;
 obj9[fn(4769).Branding.TIER_2] = obj13;
 let obj14 = {};
 obj14[obj8.ACTIVE] = _modDef10071;
-obj14[obj8.ERROR] = _modDef13645;
-obj14[obj8.RESUB] = _modDef13646;
+obj14[obj8.ERROR] = _modDef13982;
+obj14[obj8.RESUB] = _modDef13983;
 obj9[fn(4769).Branding.PREMIUM_GUILD] = obj14;
 let obj15 = {};
 let obj16 = {};
-obj16[obj8.ACTIVE] = _modDef13647;
-obj16[obj8.ERROR] = _modDef13647;
-obj16[obj8.RESUB] = _modDef13647;
+obj16[obj8.ACTIVE] = _modDef13984;
+obj16[obj8.ERROR] = _modDef13984;
+obj16[obj8.RESUB] = _modDef13984;
 obj15[fn(4769).Branding.BUNDLE] = obj16;
 let obj17 = {};
 obj17[obj8.ACTIVE] = _modDef7156;
-obj17[obj8.ERROR] = _modDef13648;
-obj17[obj8.RESUB] = _modDef13649;
+obj17[obj8.ERROR] = _modDef13985;
+obj17[obj8.RESUB] = _modDef13986;
 obj15[fn(4769).Branding.TIER_0] = obj17;
 let obj18 = {};
-obj18[obj8.ACTIVE] = _modDef13650;
-obj18[obj8.ERROR] = _modDef13651;
-obj18[obj8.RESUB] = _modDef13652;
+obj18[obj8.ACTIVE] = _modDef13987;
+obj18[obj8.ERROR] = _modDef13988;
+obj18[obj8.RESUB] = _modDef13989;
 obj15[fn(4769).Branding.TIER_1] = obj18;
 let obj19 = {};
 obj19[obj8.ACTIVE] = _modDef10072;
-obj19[obj8.ERROR] = _modDef13653;
-obj19[obj8.RESUB] = _modDef13654;
+obj19[obj8.ERROR] = _modDef13990;
+obj19[obj8.RESUB] = _modDef13991;
 obj15[fn(4769).Branding.TIER_2] = obj19;
 let obj20 = {};
-obj20[obj8.ACTIVE] = _modDef13655;
-obj20[obj8.ERROR] = _modDef13656;
-obj20[obj8.RESUB] = _modDef13657;
+obj20[obj8.ACTIVE] = _modDef13992;
+obj20[obj8.ERROR] = _modDef13993;
+obj20[obj8.RESUB] = _modDef13994;
 obj15[fn(4769).Branding.PREMIUM_GUILD] = obj20;
-let closure_23 = {
+let closure_22 = {
   [fn(4769).Branding.BUNDLE]: { [obj8.ACTIVE]: size, [obj8.ERROR]: size, [obj8.RESUB]: size },
   [fn(4769).Branding.TIER_0]: { [obj8.ACTIVE]: { height: 35, width: 29 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
   [fn(4769).Branding.TIER_1]: { [obj8.ACTIVE]: { height: 35, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 },
@@ -782,29 +783,29 @@ let closure_23 = {
 };
 let obj21 = {};
 let obj22 = {};
-obj22[obj8.ACTIVE] = _modDef13658;
-obj22[obj8.ERROR] = _modDef13658;
-obj22[obj8.RESUB] = _modDef13659;
+obj22[obj8.ACTIVE] = _modDef13995;
+obj22[obj8.ERROR] = _modDef13995;
+obj22[obj8.RESUB] = _modDef13996;
 obj21[fn(4769).Branding.BUNDLE] = obj22;
 let obj23 = {};
 obj23[obj8.ACTIVE] = _modDef10075;
 obj23[obj8.ERROR] = _modDef10075;
-obj23[obj8.RESUB] = _modDef13660;
+obj23[obj8.RESUB] = _modDef13997;
 obj21[fn(4769).Branding.TIER_0] = obj23;
 let obj24 = {};
-obj24[obj8.ACTIVE] = _modDef13661;
-obj24[obj8.ERROR] = _modDef13661;
-obj24[obj8.RESUB] = _modDef13662;
+obj24[obj8.ACTIVE] = _modDef13998;
+obj24[obj8.ERROR] = _modDef13998;
+obj24[obj8.RESUB] = _modDef13999;
 obj21[fn(4769).Branding.TIER_1] = obj24;
 let obj25 = {};
 obj25[obj8.ACTIVE] = _modDef8097;
 obj25[obj8.ERROR] = _modDef8097;
-obj25[obj8.RESUB] = _modDef13663;
+obj25[obj8.RESUB] = _modDef14000;
 obj21[fn(4769).Branding.TIER_2] = obj25;
 let obj26 = {};
-obj26[obj8.ACTIVE] = _modDef13664;
-obj26[obj8.ERROR] = _modDef13664;
-obj26[obj8.RESUB] = _modDef13665;
+obj26[obj8.ACTIVE] = _modDef14001;
+obj26[obj8.ERROR] = _modDef14001;
+obj26[obj8.RESUB] = _modDef14002;
 obj21[fn(4769).Branding.PREMIUM_GUILD] = obj26;
 let dependencyMap = {
   [fn(4769).Branding.BUNDLE]: { height: 33, width: 205 },
@@ -813,7 +814,7 @@ let dependencyMap = {
   [fn(4769).Branding.TIER_2]: { height: 32, width: 78 },
   [fn(4769).Branding.PREMIUM_GUILD]: { height: 17, width: 184 },
 };
-let closure_26 = { [obj8.ACTIVE]: obj, [obj8.ERROR]: obj, [obj8.RESUB]: obj2 };
+let closure_25 = { [obj8.ACTIVE]: obj, [obj8.ERROR]: obj, [obj8.RESUB]: obj2 };
 const ReactCompilerGating = fn(558);
 let obj7 = {
   alignSelf: "stretch",
@@ -840,7 +841,7 @@ function onCancelClick(subscription, analyticsLocations) {
   } else {
     const obj3 = {
       subscription,
-      mode: tmp(13667).WhatYouLoseMode.CANCEL,
+      mode: tmp(14004).WhatYouLoseMode.CANCEL,
       onContinue(arg0) {
         return handleCancelSubscription(closure_0, closure_1, arg0);
       },
@@ -857,7 +858,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function PremiumSubscriptionDetails(arg0) {
       const cResult = c.c(24);
       ({ style, onClickManagePremiumGuild, subscription } = arg0);
-      const tmp4 = closure_19();
+      const tmp4 = closure_18();
       const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
         if (cResult[1] === subscription.id) {
@@ -884,7 +885,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               children: tmp10,
             };
-            const tmp14 = constants(Text_Text.Text, obj2);
+            const tmp14 = value3(Text_Text.Text, obj2);
             cResult[4] = tmp4.title;
             cResult[5] = tmp14;
             let tmp12 = tmp14;
@@ -898,7 +899,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (tmp16) {
               const obj3 = { subscription, renewalMutations: subscription.renewalMutations };
-              tmp16 = constants(SubscriptionRenewalMutationsNoticeDefault, obj3);
+              tmp16 = value3(SubscriptionRenewalMutationsNoticeDefault, obj3);
             }
             cResult[6] = subscription;
             cResult[7] = tmp16;
@@ -910,7 +911,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp21 = subscription.status === constants4.ACCOUNT_HOLD;
             if (tmp21) {
               const obj4 = { subscription };
-              tmp21 = constants(SubscriptionAccountHoldNoticeDefault, obj4);
+              tmp21 = value3(SubscriptionAccountHoldNoticeDefault, obj4);
             }
             cResult[8] = subscription;
             cResult[9] = tmp21;
@@ -934,7 +935,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[15] !== tmp4.desktopSubtext) {
                 const obj5 = { style: tmp4.desktopSubtext, variant: "text-sm/medium", children: tmp27 };
-                const tmp31 = constants(Text_Text.Text, obj5);
+                const tmp31 = value3(Text_Text.Text, obj5);
                 cResult[15] = tmp4.desktopSubtext;
                 cResult[16] = tmp31;
                 let tmp29 = tmp31;
@@ -958,7 +959,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { style, children: null };
               const items = [tmp12, tmp15, tmp19, tmp23, tmp29];
               obj6.children = items;
-              const tmp35 = collapsedCategories(closure_1_8, obj6);
+              const tmp35 = constants(React5, obj6);
               cResult[17] = style;
               cResult[18] = tmp29;
               cResult[19] = tmp12;
@@ -970,7 +971,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj7 = { subscription, renewalInvoicePreview: first, onClickManagePremiumGuild };
-          const tmp26 = constants(PremiumSubscriptionHeader, obj7);
+          const tmp26 = value3(PremiumSubscriptionHeader, obj7);
           cResult[10] = onClickManagePremiumGuild;
           cResult[11] = first;
           cResult[12] = subscription;
@@ -993,7 +994,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function PremiumSubscriptionDetails(subscription) {
       subscription = subscription.subscription;
       ({ style, onClickManagePremiumGuild } = subscription);
-      const tmp = closure_19();
+      const tmp = closure_18();
       const obj = PremiumSubscriptionInvoice;
       const first = _slicedToArray(
         obj.useFetchSubscriptionInvoicePreview({
@@ -1016,30 +1017,30 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl = util.intl;
         obj4.children = intl.string(util.t.ITurwY);
-        const items = [constants(Text_Text.Text, obj4), , , ,];
+        const items = [value3(Text_Text.Text, obj4), , , ,];
         let tmp9Result = null != subscription.renewalMutations;
         if (tmp9Result) {
           tmp9Result = subscription.status !== constants4.CANCELED;
         }
         if (tmp9Result) {
           const obj5 = { subscription, renewalMutations: subscription.renewalMutations };
-          tmp9Result = constants(SubscriptionRenewalMutationsNoticeDefault, obj5);
+          tmp9Result = value3(SubscriptionRenewalMutationsNoticeDefault, obj5);
         }
         items[1] = tmp9Result;
         let tmp9Result2 = subscription.status === constants4.ACCOUNT_HOLD;
         if (tmp9Result2) {
           const obj6 = { subscription };
-          tmp9Result2 = constants(SubscriptionAccountHoldNoticeDefault, obj6);
+          tmp9Result2 = value3(SubscriptionAccountHoldNoticeDefault, obj6);
         }
         items[2] = tmp9Result2;
         const obj7 = { subscription, renewalInvoicePreview: first, onClickManagePremiumGuild };
-        items[3] = constants(PremiumSubscriptionHeader, obj7);
+        items[3] = value3(PremiumSubscriptionHeader, obj7);
         obj8 = { style: tmp.desktopSubtext, variant: "text-sm/medium", children: null };
         const intl2 = util.intl;
         obj8.children = intl2.string(util.t["MTG+3O"]);
-        items[4] = constants(Text_Text.Text, obj8);
+        items[4] = value3(Text_Text.Text, obj8);
         obj3.children = items;
-        tmp7Result = collapsedCategories(closure_1_8, obj3);
+        tmp7Result = constants(React5, obj3);
       }
       return tmp7Result;
     };

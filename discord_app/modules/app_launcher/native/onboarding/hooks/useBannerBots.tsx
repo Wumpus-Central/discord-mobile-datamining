@@ -307,14 +307,14 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled()
       context = context.context;
       let first1;
       const obj = closure_6({ context });
-      const apps = first1(11744).useApplicationsInContext({
+      const apps = first1(11546).useApplicationsInContext({
         context,
         onlyWithCommands: true,
         includeBuiltIn: false,
         includeEmbeddedApps: false,
         includeNonEmbeddedApps: true,
       }).apps;
-      const obj2 = first1(11744);
+      const obj2 = first1(11546);
       const tmp2 = first1;
       const obj3 = closure_7({ context });
       const tmp4 = closure_5({ context });
@@ -323,8 +323,8 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      const activityApplications = first1(11715).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-      const obj4 = first1(11715);
+      const activityApplications = first1(11515).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+      const obj4 = first1(11515);
       const items = [AppLauncherOnboardingStore];
       const stateFromStores = tmp2(504).useStateFromStores(items, () =>
         recentApplicationCommandMetadata.getRecentApplicationCommandMetadata(),

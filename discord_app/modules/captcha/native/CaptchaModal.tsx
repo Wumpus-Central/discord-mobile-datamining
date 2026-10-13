@@ -14,8 +14,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(16371).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(16372);
+let closure_6 = fn(16676).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(16677);
 ({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return str;
       }, items);
-      closure_9 = onReject(18019)({ onReject, analyticsType: memo });
+      closure_9 = onReject(18023)({ onReject, analyticsType: memo });
       const effect = noop.useEffect(() => {
         closure_1_4.dismiss();
       }, []);

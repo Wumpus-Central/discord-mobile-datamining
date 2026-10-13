@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(14199);
+const GuildReportRaidModalConstants = fn(14536);
 ({
   getReportRaidHelpArticleURL: closure_7,
   getReportRaidTypeLabel: closure_8,
@@ -504,9 +504,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap = 3;
                 } else {
                   tmp21.current = true;
-                  const result = tmp2(11386).trackReportRaidViewed(guildId, first);
-                  const obj2 = tmp2(11386);
-                  tmp2(11386).handleReportRaid(guildId);
+                  const result = tmp2(12180).trackReportRaidViewed(guildId, first);
+                  const obj2 = tmp2(12180);
+                  tmp2(12180).handleReportRaid(guildId);
                   const intl = tmp2(1126).intl;
                   c1 = 1;
                   dependencyMap = 1;

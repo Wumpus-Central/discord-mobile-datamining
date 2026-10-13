@@ -105,7 +105,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       stateFromStores(5031)();
       let obj = imminentUpcomingGuildEvents(576);
       const tmp4 = stateFromStores;
-      const tmp6 = stateFromStores(17781)(noop.useContext(stateFromStores(11971)).channelId);
+      const tmp6 = stateFromStores(17785)(noop.useContext(stateFromStores(12487)).channelId);
       id = undefined;
       if (id != null) {
         id = id.id;
@@ -489,7 +489,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useOverrideFloatingCTAProps(arg0) {
       closure_0 = arg0;
-      setShowFloatingCTA = noop.useContext(setShowFloatingCTA(11971)).setShowFloatingCTA;
+      setShowFloatingCTA = noop.useContext(setShowFloatingCTA(12487)).setShowFloatingCTA;
       const items = [setShowFloatingCTA, arg0];
       return noop.useMemo(() => {
         let tmp = null;

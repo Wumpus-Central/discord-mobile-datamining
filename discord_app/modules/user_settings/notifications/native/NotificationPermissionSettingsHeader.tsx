@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, NOOP: metroRequire } = Constants);
-const NotificationPermissionConstants = fn(12124);
+const NotificationPermissionConstants = fn(12640);
 ({
   EventActionLocation: closure_7,
   EventActionType: closure_8,
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = canSeePushNotificationNudge(576).c(20);
       const tmp4 = closure_13();
       let obj = canSeePushNotificationNudge(576);
-      canSeePushNotificationNudge = canSeePushNotificationNudge(12125).useCanSeePushNotificationNudge();
+      canSeePushNotificationNudge = canSeePushNotificationNudge(12641).useCanSeePushNotificationNudge();
       if (cResult[0] !== canSeePushNotificationNudge) {
         const fn = function o() {
           if (canSeePushNotificationNudge) {
@@ -413,11 +413,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return null;
       }
-      let obj2 = canSeePushNotificationNudge(12125);
+      let obj2 = canSeePushNotificationNudge(12641);
     }
   : function NotificationPermissionSettingsHeader() {
       const tmp = closure_13();
-      canSeePushNotificationNudge = canSeePushNotificationNudge(12125).useCanSeePushNotificationNudge();
+      canSeePushNotificationNudge = canSeePushNotificationNudge(12641).useCanSeePushNotificationNudge();
       const items = [canSeePushNotificationNudge];
       const effect = noop.useEffect(() => {
         if (canSeePushNotificationNudge) {

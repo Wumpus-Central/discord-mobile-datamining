@@ -124,7 +124,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(15622).AccessibilityIcon,
+  IconComponent: fn(15937).AccessibilityIcon,
   useTrailing: tmp2,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled()
     ? function usePreNavigationAction() {

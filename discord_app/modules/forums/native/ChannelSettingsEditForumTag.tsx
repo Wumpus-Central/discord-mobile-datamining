@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           setOptions(obj);
         } else {
-          setOptions({ headerRight: "top" });
+          setOptions({ headerRight: "r" });
         }
       }, items5);
       const obj5 = { style: tmp.container, children: null };

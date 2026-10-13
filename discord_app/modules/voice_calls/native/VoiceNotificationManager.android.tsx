@@ -27,10 +27,10 @@ class VoiceNotificationManager {
       channelId: "T",
       connectionState: "data",
       selfMute: false,
-      deafened: "validate",
-      isPushToTalk: null,
-      embeddedActivity: "\u{1F9BD}",
-      isStreaming: 12,
+      deafened: "<",
+      isPushToTalk: ">",
+      embeddedActivity: '"',
+      isStreaming: "`",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
@@ -239,10 +239,10 @@ obj2.state = {
   channelId: "T",
   connectionState: "data",
   selfMute: false,
-  deafened: "validate",
-  isPushToTalk: null,
-  embeddedActivity: "\u{1F9BD}",
-  isStreaming: 12,
+  deafened: "<",
+  isPushToTalk: ">",
+  embeddedActivity: '"',
+  isStreaming: "`",
 };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();

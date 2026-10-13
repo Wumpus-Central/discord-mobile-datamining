@@ -311,7 +311,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
   CONJURE_CHAT_HISTORY_SET: function handleChatHistorySet(arg0) {
     ({ projectId, entries, cursor, degraded } = arg0);
     set = undefined;
-    let mapped;
+    c1 = undefined;
     let num;
     value = map5.get(projectId);
     if (map5.has(projectId)) {
@@ -350,17 +350,18 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       }
       return tmp;
     });
-    mapped = found.map(conjureChatHistory.newMessageFromHistory);
+    const messagesFromHistoryResult = conjureChatHistory.messagesFromHistory(found);
+    c1 = messagesFromHistoryResult;
     num = -1;
     if (null != cursor) {
       num = -1;
       if (true !== degraded) {
-        num = mapped.findIndex((id) => null != id.id);
+        num = messagesFromHistoryResult.findIndex((id) => null != id.id);
       }
     }
     let num2 = -1;
     if (-1 !== num) {
-      num2 = items.findIndex((id) => id.id === mapped[num].id);
+      num2 = items.findIndex((id) => id.id === _undefined[num].id);
     }
     if (-1 !== num2) {
       if (value == null) {
@@ -368,16 +369,19 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       }
       const result1 = map5.set(projectId, value);
     }
-    let tmp18 = mapped;
+    let tmp19 = messagesFromHistoryResult;
     if (-1 !== num2) {
       const items1 = [];
-      HermesBuiltin.arraySpread(mapped.slice(num), HermesBuiltin.arraySpread(items.slice(0, num2), 0));
-      tmp18 = items1;
+      HermesBuiltin.arraySpread(
+        messagesFromHistoryResult.slice(num),
+        HermesBuiltin.arraySpread(items.slice(0, num2), 0),
+      );
+      tmp19 = items1;
       const arraySpreadResult = HermesBuiltin.arraySpread(items.slice(0, num2), 0);
     }
-    const result2 = map.set(projectId, conjureChatHistory.foldDividers(tmp18));
+    const result2 = map.set(projectId, conjureChatHistory.foldDividers(tmp19));
     recordThinkingTransition(projectId);
-    const tmp14Result = conjureChatHistory;
+    const tmp15Result = conjureChatHistory;
   },
   CONJURE_CHAT_HISTORY_PREPEND: function handleChatHistoryPrepend(cursor) {
     ({ projectId, entries } = cursor);
@@ -388,7 +392,6 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       if (items1 == null) {
         items1 = [];
       }
-      const mapped = entries.map(conjureChatHistory.newMessageFromHistory);
       const _Set = Set;
       set = new Set(
         items1.flatMap((id) => {
@@ -400,13 +403,14 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
           return items;
         }),
       );
-      const found = mapped.filter((id) => {
+      const found = conjureChatHistory.messagesFromHistory(entries).filter((id) => {
         let tmp = null == id.id;
         if (!tmp) {
           tmp = !set.has(id.id);
         }
         return tmp;
       });
+      const messagesFromHistoryResult = conjureChatHistory.messagesFromHistory(entries);
       let items = [];
       HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(found, 0));
       const result1 = map.set(projectId, conjureChatHistory.foldDividers(items));
@@ -621,7 +625,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(13001).newMessage("assistant", content, obj3);
+      const newMessageResult = id(11219).newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
       newMessageResult.finished = true;
@@ -639,7 +643,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!tmpResult.turnSettled(value[findLastIndexResult])) {
           turn_id = value[findLastIndexResult];
         }
-        tmpResult = id(12999);
+        tmpResult = id(11217);
       }
       if (null != turn_id) {
         if (0 !== turn_id.steps.length) {
@@ -669,9 +673,9 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             obj6 = {};
           }
           arraySpreadResult4 = arraySpreadResult4 + 1;
-          items[arraySpreadResult4] = id(13001).newMessage("assistant", "", obj6);
+          items[arraySpreadResult4] = id(11219).newMessage("assistant", "", obj6);
           items = map.set(projectId, items);
-          const tmpResult2 = id(13001);
+          const tmpResult2 = id(11219);
         } else {
           const items1 = [,];
           const arraySpreadResult6 = HermesBuiltin.arraySpread(
@@ -688,7 +692,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items2);
       }
-      const obj2 = id(13001);
+      const obj2 = id(11219);
     }
   },
   CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
@@ -784,7 +788,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!obj.hasOpenTurn(map.get(projectId))) {
           return false;
         }
-        obj = step(12999);
+        obj = step(11217);
       }
     }
     value = map.get(projectId);

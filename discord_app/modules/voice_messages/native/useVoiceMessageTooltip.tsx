@@ -7,7 +7,7 @@ import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboar
 const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(11634);
+const VoiceMessagesUIStore = fn(12381);
 ({
   hideVoiceMessagesTooltip: closure_4,
   showVoiceMessagesTooltip: hasOwnProperty,

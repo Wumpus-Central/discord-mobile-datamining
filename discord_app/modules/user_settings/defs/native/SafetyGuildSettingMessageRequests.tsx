@@ -52,7 +52,7 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(16280);
+const UserSettingsSafetySelectedGuildStore = fn(16587);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
 let closure_6 = fn(10664).GUILD_SELECT_ALL_SERVERS_OPTION_ID;

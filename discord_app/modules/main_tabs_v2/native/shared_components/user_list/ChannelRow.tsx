@@ -238,8 +238,8 @@ export default noop.memo(
               }
               obj2.guild = stateFromStores;
               obj2.channel = tmp4;
-              obj2.size = tmp(11597).GuildIconWithChannelTypeSizes.SMALL_32;
-              const tmp34 = closure_14(tmp(11597).GuildIconWithChannelType, obj2);
+              obj2.size = tmp(12347).GuildIconWithChannelTypeSizes.SMALL_32;
+              const tmp34 = closure_14(tmp(12347).GuildIconWithChannelType, obj2);
             }
             cResult[26] = tmp4;
             cResult[27] = stateFromStores;

@@ -581,7 +581,7 @@ export default function EventDetailRsvpSheet(arg0) {
     obj.renderItem = callback;
     obj.ItemSeparatorComponent = guildId(8580).FormDivider;
     obj.keyExtractor = keyExtractor;
-    tmp8 = closure_7(guildId(6307).BottomSheetFlatList, obj);
+    tmp8 = closure_7(guildId(8625).BottomSheetFlashList, obj);
   }
 }
 export const UserRow = memoResult;

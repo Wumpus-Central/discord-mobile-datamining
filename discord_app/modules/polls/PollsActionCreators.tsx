@@ -754,7 +754,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(11516).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(11729).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();

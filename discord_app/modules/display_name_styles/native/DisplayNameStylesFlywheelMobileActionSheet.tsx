@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
               return;
             }
           }
-          const tmp23 = closure_9(tmp(17703).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+          const tmp23 = closure_9(tmp(17707).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
         }
         class O {
           constructor() {
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp15Result = enabled;
   if (enabled) {
-    tmp15Result = closure_9(tmp2(17703).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp15Result = closure_9(tmp2(17707).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp15Result, ];
   if (enabled) {
@@ -384,14 +384,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(17707) };
+      const obj17 = { uri: tmp4(17711) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
       let tmp15Result2 = closure_9(tmp4(6157), obj16);
       const tmp4Result = tmp4(6157);
     } else {
-      const obj18 = { url: tmp4(17707), style: tmp6.image, autoplay: true };
+      const obj18 = { url: tmp4(17711), style: tmp6.image, autoplay: true };
       tmp15Result2 = closure_9(tmp2(9012).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1382);

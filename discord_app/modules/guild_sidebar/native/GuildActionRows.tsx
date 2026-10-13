@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj2 = {
   container: {
-    marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11562).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -51,9 +51,9 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   const callback = noop.useCallback(() => {
     ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10698, dependencyMap.paths), { guildId: id }, closure_7);
   }, items2);
-  let SELECTED = guild(12087).ChannelModes.DEFAULT;
+  let SELECTED = guild(12603).ChannelModes.DEFAULT;
   if (selected) {
-    SELECTED = tmp5(12087).ChannelModes.SELECTED;
+    SELECTED = tmp5(12603).ChannelModes.SELECTED;
   }
   let tmp10 = !result;
   if (result) {
@@ -64,8 +64,8 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   }
   let tmp11 = null;
   if (tmp10) {
-    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(11989).NewBadge, {}) };
-    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(11989).NewBadge, {})}</View>;
+    const obj4 = { style: tmp.channelInfoContainer, children: jsx(tmp5(12505).NewBadge, {}) };
+    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(12505).NewBadge, {})}</View>;
   }
   const obj5 = {
     onPress: callback,
@@ -98,11 +98,11 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   } else {
     string2Result = string2(t2.et6wav);
   }
-  obj5.name = jsx(guild(12087).BaseChannelName, { name: string2Result, mode: SELECTED });
-  const tmp2Result = tmp2(12087);
-  obj5.icon = jsx(guild(12087).BaseChannelIcon, {
+  obj5.name = jsx(guild(12603).BaseChannelName, { name: string2Result, mode: SELECTED });
+  const tmp2Result = tmp2(12603);
+  obj5.icon = jsx(guild(12603).BaseChannelIcon, {
     mode: SELECTED,
-    IconComponent: guild(14064).ChannelListMagnifyingGlassIcon,
+    IconComponent: guild(14401).ChannelListMagnifyingGlassIcon,
   });
   obj5.channelInfo = tmp11;
   return (

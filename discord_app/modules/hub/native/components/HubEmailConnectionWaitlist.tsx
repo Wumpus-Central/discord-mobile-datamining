@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
         if (cResult[4] !== tmp4.header) {
-          const obj3 = { source: navigation(12503), style: tmp4.header };
+          const obj3 = { source: navigation(13013), style: tmp4.header };
           const tmp14 = closure_5(navigation(6157), obj3);
           cResult[4] = tmp4.header;
           cResult[5] = tmp14;
@@ -186,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.container, children: null };
       const obj3 = { source: null, style: null };
       let obj = onClose(1503);
-      obj3.source = navigation(12503);
+      obj3.source = navigation(13013);
       obj3.style = tmp.header;
       const items1 = [closure_5(navigation(6157), obj3), , ,];
       const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };

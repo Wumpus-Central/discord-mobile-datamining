@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const VoicePanelControlsConstants = fn(11970);
+const VoicePanelControlsConstants = fn(12486);
 ({ CONTROLS_BUTTON_SIZE_LARGE: hasOwnProperty, CONTROLS_BUTTON_SIZE_NORMAL: metroRequire } =
   VoicePanelControlsConstants);
 const InputModes = fn(1085).InputModes;
@@ -66,13 +66,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
-  const context = treatment.useContext(safeArea(11971));
+  const context = treatment.useContext(safeArea(12487));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(17781)(context.channelId);
+  const tmp2 = safeArea(17785)(context.channelId);
   dependencyMap = tmp2;
-  treatment = safeArea(17806).useConfig({ location: "VoicePanelControlButtons" }).treatment;
-  let obj = safeArea(17806);
+  treatment = safeArea(17810).useConfig({ location: "VoicePanelControlButtons" }).treatment;
+  let obj = safeArea(17810);
   let items = [stateFromStores];
   stateFromStores = windowDimensions(504).useStateFromStores(
     items,
@@ -88,7 +88,7 @@ export default function useControlsButtons() {
   };
   let obj3 = windowDimensions(4850);
   fn.__closure = {
-    getControlsDefaultWidth: windowDimensions(11979).getControlsDefaultWidth,
+    getControlsDefaultWidth: windowDimensions(12495).getControlsDefaultWidth,
     windowDimensions,
     safeArea,
   };
@@ -111,7 +111,7 @@ export default function useControlsButtons() {
           const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (treatment === _true(17806).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (treatment === _true(17810).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
@@ -122,7 +122,7 @@ export default function useControlsButtons() {
           const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj6);
         }
-        if (treatment === _true(17806).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === _true(17810).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj7);
         } else {

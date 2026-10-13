@@ -16,8 +16,8 @@ import useCanInviteForGuildEvent from "../../../../../../guild_scheduled_events/
 import GuildEventUtils from "../../../../../../guild_scheduled_events/native/components/GuildEventUtils.tsx";
 import icons_ShareDefault from "../../../../../../icons/native/Share.tsx";
 import GuildScheduledEventHeaderUtils from "../../../../../../guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx";
-import _modDef13518 from "../../../../../../../../_runtime/metro/13518__.js";
-import _modDef13519 from "../../../../../../../../_runtime/metro/13519__.js";
+import _modDef13855 from "../../../../../../../../_runtime/metro/13855__.js";
+import _modDef13856 from "../../../../../../../../_runtime/metro/13856__.js";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__.js";
 import GuildScheduledEventStore_mod from "../../../../../../guild_scheduled_events/GuildScheduledEventStore.tsx";
 import ChannelStore from "../../../../../../../stores/ChannelStore.tsx";
@@ -87,7 +87,7 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13518);
+      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13855);
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;
@@ -163,7 +163,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13519);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef13856);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);

@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef17530 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-1x.png.js";
-import _modDef17531 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-2x.png.js";
-import _modDef17532 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-3x.png.js";
+import _modDef17534 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-1x.png.js";
+import _modDef17535 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-2x.png.js";
+import _modDef17536 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17530 }, 3: null };
-let obj2 = { uri: _modDef17530 };
-obj[2] = { uri: _modDef17531 };
-const obj3 = { uri: _modDef17531 };
-obj[3] = { uri: _modDef17532 };
+let obj = { 1: null, 2: { uri: _modDef17534 }, 3: null };
+let obj2 = { uri: _modDef17534 };
+obj[2] = { uri: _modDef17535 };
+const obj3 = { uri: _modDef17535 };
+obj[3] = { uri: _modDef17536 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17532 };
+const obj4 = { uri: _modDef17536 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/CompassSpotIllustration.native.tsx",

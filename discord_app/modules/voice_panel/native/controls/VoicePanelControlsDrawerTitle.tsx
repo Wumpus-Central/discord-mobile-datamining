@@ -22,7 +22,7 @@ let obj = {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    height: fn(11970).CONTROLS_DRAWER_HEADER_SIZE,
+    height: fn(12486).CONTROLS_DRAWER_HEADER_SIZE,
   },
   titlePill: { borderRadius: nativeDefault.radii.round, paddingHorizontal: 12, paddingTop: 1, paddingBottom: 2 },
   titlePillBG: null,

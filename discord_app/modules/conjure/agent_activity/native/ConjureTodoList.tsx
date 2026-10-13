@@ -540,7 +540,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                                 obj2.showLabel = tmp31;
                                 obj2.hideLabel = tmp32;
                                 obj2.children = tmp49;
-                                const tmp56 = closure_6(textCompleted(17280), obj2);
+                                const tmp56 = closure_6(textCompleted(11898), obj2);
                                 cResult[40] = tmp6;
                                 cResult[41] = onToggleExpanded;
                                 cResult[42] = tmp5;
@@ -834,7 +834,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
           }
         }
         const obj5 = { accessibilityLiveRegion: str4, accessibilityLabel: tmp10, children: tmp9 };
-        const tmp29 = closure_6(tmp(17280).ConjureNativeCollapsibleMeta, obj5);
+        const tmp29 = closure_6(tmp(11898).ConjureNativeCollapsibleMeta, obj5);
         cResult[13] = tmp9;
         cResult[14] = tmp10;
         cResult[15] = str4;
@@ -858,11 +858,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     tmp14 = cResult[9];
   }
   if (cResult[10] !== tmp14) {
-    const groupAgentsByTodoResult = tmp(17187).groupAgentsByTodo(tmp14);
+    const groupAgentsByTodoResult = tmp(11803).groupAgentsByTodo(tmp14);
     cResult[10] = tmp14;
     cResult[11] = groupAgentsByTodoResult;
     let tmp16 = groupAgentsByTodoResult;
-    const tmpResult = tmp(17187);
+    const tmpResult = tmp(11803);
   } else {
     tmp16 = cResult[11];
   }
@@ -983,7 +983,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       str = "polite";
     }
   }
-  obj.meta = closure_6(agents(17280).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj.meta = closure_6(agents(11898).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj.showHeader = todos.length > 0;
   obj.superseded = flag3;
   obj.expanded = flag4;
@@ -1038,6 +1038,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   items1[1] = tmp10Result;
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(flag2(17280), obj);
+  return closure_6(flag2(11898), obj);
 });
 export { todoProgress };

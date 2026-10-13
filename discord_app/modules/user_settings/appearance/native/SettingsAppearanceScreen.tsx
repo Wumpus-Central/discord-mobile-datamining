@@ -75,7 +75,7 @@ function getAppearanceSettings() {
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(15558);
+const FontScaleStore = fn(15873);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(7993).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
@@ -122,7 +122,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (obj.isAndroid()) {
           if (closure_0.persistedFontScale === closure_0.fontScale) {
             if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-              nativeStackNavigation.setOptions({ headerRight: "top" });
+              nativeStackNavigation.setOptions({ headerRight: "r" });
             }
           }
           const obj2 = { headerRight: null };
@@ -171,7 +171,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (obj.isAndroid()) {
           if (closure_0.persistedFontScale === closure_0.fontScale) {
             if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-              nativeStackNavigation.setOptions({ headerRight: "top" });
+              nativeStackNavigation.setOptions({ headerRight: "r" });
             }
           }
           const obj2 = { headerRight: null };

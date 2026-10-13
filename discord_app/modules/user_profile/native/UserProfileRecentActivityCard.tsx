@@ -60,7 +60,7 @@ function getEntryText(entry) {
           const obj5 = { title: entry.extra.activity_name };
           let obj6 = obj5;
         } else {
-          obj6 = { title: "top" };
+          obj6 = { title: "r" };
         }
         return obj6;
       }
@@ -686,13 +686,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === user) {
             let tmp8 = cResult[5];
           }
-          const tmp9 = tmp6(13145)(tmp8);
+          const tmp9 = tmp6(13627)(tmp8);
           _require = tmp9;
           if (cResult[6] === tmp9) {
             if (cResult[7] === user.id) {
               let tmp10 = cResult[8];
             }
-            tmp6(13146)(tmp10);
+            tmp6(13628)(tmp10);
             let application_id;
             if ("application_id" in entry.extra) {
               application_id = entry.extra.application_id;

@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           dependencyMap(constants.USER_DISMISS);
         };
         obj.renderImgComponent = function renderImgComponent() {
-          return closure_1_5(first(12678).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
+          return closure_1_5(first(13184).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
         };
         return obj;
       }, items1);

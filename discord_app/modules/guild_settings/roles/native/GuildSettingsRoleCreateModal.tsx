@@ -95,13 +95,13 @@ function RoleCreateScene() {
               if (null != guild) {
                 closure_0(4808).roleCreatedToast();
                 const obj5 = closure_0(4808);
-                closure_0(18402).setRoleJustCreated(true);
+                closure_0(18406).setRoleJustCreated(true);
                 let STEP_MEMBERS = constants4.STEP_PERMISSIONS;
                 const guild2 = closure_2_12.getProps().guild;
                 closure_1(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
                 currentUser = currentUser.getCurrentUser();
                 const tmp23 = closure_2_9(guild2, currentUser);
-                const obj6 = closure_0(18402);
+                const obj6 = closure_0(18406);
                 const obj2 = { permission: constants3.ADMINISTRATOR, user: currentUser, context: guild2 };
                 let tmp4 = !tmp23;
                 if (!tmp23) {
@@ -136,7 +136,7 @@ function RoleCreateScene() {
   let obj2 = { title: null, subtitle: null, children: null };
   const callback2 = onSelect.useCallback(() => {
     closure_2_8.dismiss();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16748, dependencyMap.paths), "RoleColorPicker", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17052, dependencyMap.paths), "RoleColorPicker", {
       color,
       onSelect,
     });
@@ -206,7 +206,7 @@ function RoleCreateScene() {
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Keyboard: closure_8 } = get_ActivityIndicator);
 const isGuildOwner = fn(2083).isGuildOwner;
-const GuildSettingsRoleConstants = fn(18405);
+const GuildSettingsRoleConstants = fn(18409);
 ({
   PermissionTemplates: map1,
   DEFAULT_TEMPLATE_TYPE: closure_14,
@@ -567,7 +567,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[20] = tmp30;
             }
             const obj8 = { onSelect: tmp11, location: constants2.GUILD_ROLE_CREATION_MODAL, guildId: guild.id };
-            const tmp22 = closure_21(role(18409), obj8);
+            const tmp22 = closure_21(role(18413), obj8);
             cResult[12] = guild.id;
             cResult[13] = tmp11;
             cResult[14] = tmp22;
@@ -605,7 +605,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
             const merged = Object.assign(navigation(5107).collectGuildAnalyticsMetadata(id.id));
             obj.track(constants.USER_FLOW_TRANSITION, obj2);
             const obj3 = navigation(5107);
-            role(18403).close();
+            role(18407).close();
           }),
           headerTitle() {
             return closure_1_21(closure_1_27, { step: constants.STEP_PERMISSIONS });

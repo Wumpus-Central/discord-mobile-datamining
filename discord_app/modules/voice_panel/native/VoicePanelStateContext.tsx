@@ -3,8 +3,8 @@ import VoicePanelCardLayoutManagerDefault from "card/VoicePanelCardLayoutManager
 import VoicePanelPIPHandoffDefault from "pip/VoicePanelPIPHandoff.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const VoicePanelModes = fn(11972).VoicePanelModes;
-const VoicePanelControlsConstants = fn(11970);
+const VoicePanelModes = fn(12488).VoicePanelModes;
+const VoicePanelControlsConstants = fn(12486);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
 const obj = {
   channelId: "context-not-initialized",
@@ -59,7 +59,7 @@ obj.dismissPanel = function dismissPanel() {
   const error = new Error("VoicePanelContextType.Provider.dismissDrawer: not called within a context provider");
   throw error;
 };
-obj.dismissToPIPGestureRef = { current: "top" };
+obj.dismissToPIPGestureRef = { current: "r" };
 ReanimatedHelperTypes = fn(6763);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(6763);
@@ -78,7 +78,7 @@ obj.layoutManager = new VoicePanelCardLayoutManagerDefault("invalid");
 ReanimatedHelperTypes = fn(6763);
 obj.mode = ReanimatedHelperTypes.createFakeSharedValue(VoicePanelModes.PANEL);
 ReanimatedHelperTypes = fn(6763);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11973).MorphablePanelModes.PANEL);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(12489).MorphablePanelModes.PANEL);
 const obj2 = {
   mode: VoicePanelControlsModes.FLOATING_DEFAULT,
   locked: false,

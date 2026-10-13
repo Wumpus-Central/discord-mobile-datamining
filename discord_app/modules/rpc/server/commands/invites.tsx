@@ -8,7 +8,7 @@ const InstantInviteSources = fn(1085).InstantInviteSources;
 const Constants = fn(1096);
 ({ RPCCommands, RPCErrors: metroRequire } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14736);
+const CONTEXT_MENU_ICON_NAMES = fn(15057);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 const items = [fn(8458).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(8458).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
@@ -94,8 +94,8 @@ obj3.handler = function handler(arg0) {
                   const obj13 = { value: tmp3(10853).sendEmbeddedActivityInviteUser(obj11), done: false };
                   return obj13;
                 }
-                channel = tmp3(14743).validateOpenInviteDialog(tmp68).channel;
-                const obj5 = tmp3(14743);
+                channel = tmp3(15064).validateOpenInviteDialog(tmp68).channel;
+                const obj5 = tmp3(15064);
               }
             }
           }

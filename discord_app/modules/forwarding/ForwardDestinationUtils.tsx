@@ -28,7 +28,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSelectedDestinationChannel(arr) {
       const cResult = require("c").c(8);
       if (cResult[0] !== arr) {
-        const mapped = arr.map(tmp(11558).getChannelIdFromDestinationId);
+        const mapped = arr.map(tmp(12311).getChannelIdFromDestinationId);
         const found = mapped.find(tmp(1388).isNotNullish);
         cResult[0] = arr;
         cResult[1] = found;
@@ -75,7 +75,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp11;
     }
   : function useSelectedDestinationChannel(arr) {
-      const mapped = arr.map(found(11558).getChannelIdFromDestinationId);
+      const mapped = arr.map(found(12311).getChannelIdFromDestinationId);
       found = mapped.find(found(1388).isNotNullish);
       const items = [ChannelStore];
       const items1 = [found];

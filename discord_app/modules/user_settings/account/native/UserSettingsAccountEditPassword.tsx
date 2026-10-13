@@ -13,7 +13,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef15030 from "../../../../../_runtime/metro/15030__.js";
+import _modDef15351 from "../../../../../_runtime/metro/15351__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -158,7 +158,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef15030, style: tmp.image };
+    const obj4 = { source: _modDef15351, style: tmp.image };
     const items1 = [closure_1_11(FastImageDefault, obj4), ,];
     const obj5 = {
       style: tmp.requiredActionsTitle,

@@ -20,10 +20,10 @@ import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserAction
 import QuestCopyUtils from "../../utils/QuestCopyUtils.tsx";
 import ContentImpressionTrackerHooks from "../../lib/analytics/ContentImpressionTrackerHooks.tsx";
 import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
+import RefreshIcon from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
 import MobileQuestVideoWatchCtaCopy from "../../utils/MobileQuestVideoWatchCtaCopy.tsx";
 import AnalyticsHooks from "../../lib/analytics/AnalyticsHooks.tsx";
 import QuestCopyHooks from "../../hooks/QuestCopyHooks.tsx";
-import RefreshIcon from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
 import QuestHooks from "../QuestHooks.native.tsx";
 import openQuestAccessSuspendedBottomSheetDefault from "../openQuestAccessSuspendedBottomSheet.tsx";
 import QuestBottomSheet from "QuestBottomSheet.tsx";
@@ -1212,16 +1212,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items,
       );
       const obj4 = quest(9171);
-      const hasWatchVideoOnMobileTasks = quest(15366).useHasWatchVideoOnMobileTasks(quest.config);
-      const obj5 = quest(15366);
-      const mobileActivityQuest = quest(15366).useMobileActivityQuest(quest);
+      const hasWatchVideoOnMobileTasks = quest(15683).useHasWatchVideoOnMobileTasks(quest.config);
+      const obj5 = quest(15683);
+      const mobileActivityQuest = quest(15683).useMobileActivityQuest(quest);
       ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-      const obj6 = quest(15366);
-      const primaryCtaCopy = quest(12980).usePrimaryCtaCopy({ quest, application: questApplication });
-      const obj7 = quest(12980);
+      const obj6 = quest(15683);
+      const primaryCtaCopy = quest(13472).usePrimaryCtaCopy({ quest, application: questApplication });
+      const obj7 = quest(13472);
       const userStatus = quest.userStatus;
       let completedAt;
-      const obj8 = quest(15402);
+      const obj8 = quest(15717);
       const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
       if (userStatus != null) {
         completedAt = userStatus.completedAt;
@@ -1231,23 +1231,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (userStatus2 != null) {
         claimedAt = userStatus2.claimedAt;
       }
-      const mobileActivityPressHandler = quest(15402).useMobileActivityPressHandler({
+      const mobileActivityPressHandler = quest(15717).useMobileActivityPressHandler({
         questId: quest.id,
         sourceQuestContent,
         launchMobileActivity,
       });
       const tmp11 = null != completedAt;
       const isQuestAccessSuspended = quest(9171).useIsQuestAccessSuspended();
-      const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(15396) };
+      const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(15711) };
       let tmp40Result6 = null;
-      if (step !== quest(15398).QuestBottomSheetStep.TASK_SELECT) {
+      if (step !== quest(15713).QuestBottomSheetStep.TASK_SELECT) {
         const obj11 = { onLayout: quest.onLayout, ctaButton: null, backButton: null, style: null, withSafeArea: null };
-        if (tmp2(15398).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+        if (tmp2(15713).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
           const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
           let tmp40Result = closure_10(closure_16, obj12);
         } else {
           tmp40Result = null;
-          if (tmp2(15398).QuestBottomSheetStep.TASK_STATUS === step) {
+          if (tmp2(15713).QuestBottomSheetStep.TASK_STATUS === step) {
             if (tmp11) {
               const obj13 = {
                 questId: quest.id,

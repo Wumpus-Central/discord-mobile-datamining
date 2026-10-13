@@ -20,10 +20,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDismissSheetOrCollapseDock() {
       const cResult = setRestingQuestDockMode(576).c(3);
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(15374).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(15691).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(15398).QuestBottomSheetContext,
+        setRestingQuestDockMode(15713).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       if (cResult[0] === isInQuestBottomSheet) {
         if (cResult[1] === setRestingQuestDockMode) {
@@ -45,10 +45,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useDismissSheetOrCollapseDock() {
       setRestingQuestDockMode = noop.useContext(
-        setRestingQuestDockMode(15374).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(15691).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = noop.useContext(
-        setRestingQuestDockMode(15398).QuestBottomSheetContext,
+        setRestingQuestDockMode(15713).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       const items = [isInQuestBottomSheet, setRestingQuestDockMode];
       return noop.useCallback(() => {

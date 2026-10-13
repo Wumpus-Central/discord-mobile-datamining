@@ -97,11 +97,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult9 = tmp(9166);
       }
       if (cResult[4] !== bounty) {
-        const questDockAdCreativeId = tmp(15377).getQuestDockAdCreativeId(bounty);
+        const questDockAdCreativeId = tmp(15694).getQuestDockAdCreativeId(bounty);
         cResult[4] = bounty;
         cResult[5] = questDockAdCreativeId;
         let tmp16 = questDockAdCreativeId;
-        const tmpResult10 = tmp(15377);
+        const tmpResult10 = tmp(15694);
       } else {
         tmp16 = cResult[5];
       }
@@ -899,7 +899,7 @@ export const useMobileActivityQuest = ReactCompilerGating.isReactCompilerEnabled
                         };
                         v2 = 2;
                         v3 = 1;
-                        const obj10 = { value: v3(11614).launchActivityInBotDM(obj9), done: false };
+                        const obj10 = { value: v3(12364).launchActivityInBotDM(obj9), done: false };
                         return obj10;
                       }
                     }

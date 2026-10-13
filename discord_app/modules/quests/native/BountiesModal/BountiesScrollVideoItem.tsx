@@ -898,7 +898,7 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
       if (flag4 === undefined) {
         flag4 = false;
       }
-      return flag3(bounty(12983).BillableAdPlacementImpressionTrackerNative, {
+      return flag3(bounty(13475).BillableAdPlacementImpressionTrackerNative, {
         adContentId: bounty.id,
         adCreativeType: bounty(5979).AdCreativeType.BOUNTY,
         questContent: bounty(5977).QuestContent.VIDEO_MODAL_MOBILE,

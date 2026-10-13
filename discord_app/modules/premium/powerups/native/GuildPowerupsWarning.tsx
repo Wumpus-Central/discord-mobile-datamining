@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const manaTypeConsolidationExperiment =
         require("ManaTypeConsolidationExperiment").useManaTypeConsolidationExperiment("GuildPowerupsWarning");
-      const tmp7 = manaTypeConsolidationExperiment(12299)(guildId, powerupNames);
+      const tmp7 = manaTypeConsolidationExperiment(12812)(guildId, powerupNames);
       ({ title, description } = tmp7);
       if (tmp7.shouldShow) {
         const _Symbol = Symbol;

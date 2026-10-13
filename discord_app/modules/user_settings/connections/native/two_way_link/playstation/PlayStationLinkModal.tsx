@@ -17,7 +17,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 function getScreens(platformType, headerStyle) {
   function onClose() {
-    return onClose(12918).hideModal();
+    return onClose(13410).hideModal();
   }
   function blank() {
     return null;
@@ -79,7 +79,7 @@ function getScreens(platformType, headerStyle) {
     },
   };
 }
-const constants = fn(12920).PlayStationLinkModalScenes;
+const constants = fn(13412).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const headerRight = ReactCompilerGating.isReactCompilerEnabled()
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [platformType, twoWayLinkStyles];
       const memo = noop.useMemo(() => getScreens(platformType, twoWayLinkStyles), items);
       const obj = platformType(9215);
-      const accountLinkStepTracking = platformType(12917).useAccountLinkStepTracking(
+      const accountLinkStepTracking = platformType(13409).useAccountLinkStepTracking(
         platformType,
         platformType.locationStack,
       );

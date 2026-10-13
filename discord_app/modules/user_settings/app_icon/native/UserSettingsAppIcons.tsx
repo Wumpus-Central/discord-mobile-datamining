@@ -79,7 +79,7 @@ export default noop.memo(
               const obj3 = { children: null };
               let obj4 = { accessibilityRole: "radiogroup", children: null };
               let obj5 = { onSelect: tmp17 };
-              obj4.children = closure_9(tmp12(15827), obj5);
+              obj4.children = closure_9(tmp12(16142), obj5);
               obj3.children = closure_9(analyticsLocation, obj4);
               const tmp22 = closure_9(tmp(8580).Form, obj3);
               cResult[9] = tmp17;
@@ -179,7 +179,7 @@ export default noop.memo(
                         }
                         c2 = 1;
                         c1 = 1;
-                        const obj8 = { value: closure_0(13747).setAppIcon(id, premiumType), done: false };
+                        const obj8 = { value: closure_0(14084).setAppIcon(id, premiumType), done: false };
                         return obj8;
                       }
                     } else {
@@ -190,7 +190,7 @@ export default noop.memo(
                       c2 = 2;
                       c1 = 1;
                       const obj9 = {
-                        value: closure_0(13747).setAppIcon(closure_0(9470).FreemiumAppIconIds.DEFAULT, premiumType1),
+                        value: closure_0(14084).setAppIcon(closure_0(9470).FreemiumAppIconIds.DEFAULT, premiumType1),
                         done: false,
                       };
                       return obj9;
@@ -287,7 +287,7 @@ export default noop.memo(
                         }
                         dependencyMap = 1;
                         v3 = 1;
-                        const obj8 = { value: stateFromStores(13747).setAppIcon(id, premiumType), done: false };
+                        const obj8 = { value: stateFromStores(14084).setAppIcon(id, premiumType), done: false };
                         return obj8;
                       }
                     } else {
@@ -298,7 +298,7 @@ export default noop.memo(
                       dependencyMap = 2;
                       v3 = 1;
                       const obj9 = {
-                        value: stateFromStores(13747).setAppIcon(
+                        value: stateFromStores(14084).setAppIcon(
                           stateFromStores(9470).FreemiumAppIconIds.DEFAULT,
                           premiumType1,
                         ),
@@ -337,8 +337,8 @@ export default noop.memo(
         const items = [currentUser];
         stateFromStores = stateFromStores(504).useStateFromStores(items, () => currentUser.getCurrentUser());
         let obj = stateFromStores(504);
-        importDefault = stateFromStores(13747).useCurrentAppIcon();
-        let obj2 = stateFromStores(13747);
+        importDefault = stateFromStores(14084).useCurrentAppIcon();
+        let obj2 = stateFromStores(14084);
         const isPremiumResult = stateFromStores(1989).isPremium(stateFromStores);
         dependencyMap = isPremiumResult;
         const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;

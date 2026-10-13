@@ -27,7 +27,7 @@ function MediaViewer(arg0) {
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(13085)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(13569)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);

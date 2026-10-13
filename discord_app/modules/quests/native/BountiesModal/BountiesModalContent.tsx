@@ -60,7 +60,7 @@ function doRewardEarnedHapticFeedback() {
 let View = fn(17).View;
 const QuestConstants = fn(5972);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(15287);
+const BountiesModalConstants = fn(15604);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);

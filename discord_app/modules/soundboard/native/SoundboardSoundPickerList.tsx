@@ -15,7 +15,7 @@ import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/vie
 import chunkDefault from "../../../../_runtime/09559_chunk.js";
 import _modDef9763 from "../../../../_runtime/metro/09763__.js";
 import SoundButton from "SoundButton.tsx";
-import _modDef17835 from "../../../../_runtime/metro/17835__.js";
+import _modDef17839 from "../../../../_runtime/metro/17839__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -67,7 +67,7 @@ function getFastListSectionsFromCategories(categories, fastListSectionsFromCateg
   return items;
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(17820);
+const SoundboardStyleConstants = fn(17824);
 ({
   SOUND_ROW_HORIZONTAL_PADDING,
   SOUNDS_PER_ROW: metroRequire,
@@ -433,7 +433,7 @@ export const SoundboardSoundPickerList = noop.memo(
                       };
                       return React5(GuildIconDefault, obj2);
                     } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-                      const obj3 = { source: _modDef17835, style: currentUser.sectionIcon };
+                      const obj3 = { source: _modDef17839, style: currentUser.sectionIcon };
                       return React5(native.Icon, obj3);
                     } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
                       const obj4 = { source: _modDef9763, style: currentUser.sectionIcon };
@@ -970,7 +970,7 @@ export const SoundboardSoundPickerList = noop.memo(
               };
               let tmp8Result = React5(GuildIconDefault, obj3);
             } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-              const obj4 = { source: _modDef17835, style: currentUser.sectionIcon };
+              const obj4 = { source: _modDef17839, style: currentUser.sectionIcon };
               tmp8Result = React5(native.Icon, obj4);
             } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
               const obj5 = { source: _modDef9763, style: currentUser.sectionIcon };

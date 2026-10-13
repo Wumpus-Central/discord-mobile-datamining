@@ -382,7 +382,8 @@ export default noop.memo(
         let tmp6Result = null;
         if (!hideControls) {
           const obj4 = { event, onCloseAction, isConnected: stateFromStores };
-          tmp6Result = closure_7(closure_10, obj4);
+          const _HermesInternal = HermesInternal;
+          tmp6Result = closure_7(closure_10, obj4, "controls-" + event.id);
         }
         items2[4] = tmp6Result;
         let tmp6Result2 = null != result;
@@ -399,7 +400,9 @@ export default noop.memo(
               return tmpResult;
             },
           };
-          tmp6Result2 = closure_7(require("GuildEventRecurrences"), obj5);
+          const _HermesInternal2 = HermesInternal;
+          tmp6Result2 = closure_7(require("GuildEventRecurrences"), obj5, "recurrences-" + event.id);
+          const tmp17 = require("GuildEventRecurrences");
         }
         items2[5] = tmp6Result2;
         obj2.children = closure_8(View, { children: items2 });

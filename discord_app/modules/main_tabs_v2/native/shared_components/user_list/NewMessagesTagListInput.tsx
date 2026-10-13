@@ -217,7 +217,7 @@ export default noop.memo(
               children: null,
             };
             if (forceSearchResults) {
-              let CirclePlusIcon = onSelectUser(12068).ChevronLargeRightIcon;
+              let CirclePlusIcon = onSelectUser(12584).ChevronLargeRightIcon;
             } else {
               CirclePlusIcon = onSelectUser(10610).CirclePlusIcon;
             }

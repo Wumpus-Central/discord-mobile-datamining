@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmp = closure_6();
       const tmp5 = item;
-      const applicationCommandsIconSource = item(11929).getApplicationCommandsIconSource(section);
+      const applicationCommandsIconSource = item(12450).getApplicationCommandsIconSource(section);
       const obj2 = {
         accessibilityLabel: memo,
         onPress,

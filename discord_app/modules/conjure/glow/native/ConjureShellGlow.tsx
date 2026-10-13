@@ -1190,7 +1190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                           }
                                         }
                                         const size = { width, height: v500, thinking, fill: tmp88, fillOpacity: 0.16 };
-                                        const tmp92 = sharedValue4(stateFromStores(17191), size);
+                                        const tmp92 = sharedValue4(stateFromStores(11807), size);
                                         cResult[56] = tmp88;
                                         cResult[57] = 0.16;
                                         class Se {

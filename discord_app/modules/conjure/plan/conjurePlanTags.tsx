@@ -14,11 +14,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanTags.tsx");
 
 export const CONJURE_PLAN_SURFACE_LABELS = obj;
-export const planDeclaresSurface = function planDeclaresSurface(proposal, AUTOMOD) {
+export const planDeclaresSurface = function planDeclaresSurface(proposal, BOT) {
   const supported_surfaces = proposal.supported_surfaces;
   let hasItem;
   if (supported_surfaces != null) {
-    hasItem = supported_surfaces.includes(AUTOMOD);
+    hasItem = supported_surfaces.includes(BOT);
   }
   return true === hasItem;
 };

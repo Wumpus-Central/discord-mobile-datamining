@@ -4,8 +4,8 @@ import AtIcon from "../../../../../../design/components/Icon/native/redesign/gen
 import CalendarIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
 import TrackingConstants from "../../../tracking/TrackingConstants.tsx";
 import AttachmentIcon from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import CalendarPlusIcon from "../../../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
 import SearchPlatformUtils from "../../../SearchPlatformUtils.tsx";
 import SearchTokens from "../../../../tokens/SearchTokens.tsx";
@@ -215,7 +215,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(se
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(12044));
+  const keys = Object.keys(items(12560));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

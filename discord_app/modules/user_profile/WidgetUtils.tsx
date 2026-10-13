@@ -9,8 +9,8 @@ import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes.tsx";
 import GameWidgetLimits from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
 import UserProfilePersonalWidget from "UserProfilePersonalWidget.tsx";
 import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes.tsx";
-import WidgetGameTag from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
 import WidgetActionCreatorsDefault from "WidgetActionCreators.tsx";
+import WidgetGameTag from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import UserProfileStore from "UserProfileStore.tsx";
@@ -85,7 +85,7 @@ function replaceWidgetInList(clipsGalleryWidget) {
 }
 const WIDGET_TITLES_BY_TYPE = fn(7324).WIDGET_TITLES_BY_TYPE;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
-let closure_9 = fn(13261).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_9 = fn(11505).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

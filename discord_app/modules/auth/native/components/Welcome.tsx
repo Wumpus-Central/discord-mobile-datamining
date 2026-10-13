@@ -14,8 +14,8 @@ import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import _modDef13524 from "../../../../../_runtime/metro/13524__.js";
-import _mod14084 from "../../../../../_runtime/metro/14084__.js";
+import _modDef13861 from "../../../../../_runtime/metro/13861__.js";
+import _mod14421 from "../../../../../_runtime/metro/14421__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -118,7 +118,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             tmp24 = cResult[4];
           }
           if (cResult[5] !== tmp24) {
-            const obj4 = { user: tmp24, guildId: "r" };
+            const obj4 = { user: tmp24, guildId: "a" };
             const tmp33 = constants2(native.Avatar, obj4);
             cResult[5] = tmp24;
             cResult[6] = tmp33;
@@ -159,7 +159,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             tmp6 = cResult[11];
           }
           if (cResult[12] !== tmp6) {
-            const obj5 = { user: tmp6, guildId: "r" };
+            const obj5 = { user: tmp6, guildId: "a" };
             const tmp15 = constants2(native.Avatar, obj5);
             cResult[12] = tmp6;
             cResult[13] = tmp15;
@@ -265,7 +265,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18 = constants2;
         } else if (null != tmp2) {
           _modDef38(null != inviter, "Null inviter");
-          const obj = { user: null, guildId: "r" };
+          const obj = { user: null, guildId: "a" };
           const tmp12 = new UserRecord(inviter);
           obj.user = tmp12;
           tmp14 = constants2(native.Avatar, obj);
@@ -277,7 +277,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (null == inviter) {
           return null;
         } else {
-          const obj4 = { user: null, guildId: "r" };
+          const obj4 = { user: null, guildId: "a" };
           const tmp33 = new UserRecord(inviter);
           obj4.user = tmp33;
           const intl3 = util.intl;
@@ -315,7 +315,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef13524 };
+          const obj2 = { source: _modDef13861 };
           const tmp11 = constants2(FastImageDefault, obj2);
           cResult[3] = tmp11;
           let tmp7 = tmp11;
@@ -386,7 +386,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: null, children: null };
       const items = [tmp.container, style];
       obj.style = items;
-      const obj2 = { source: _modDef13524 };
+      const obj2 = { source: _modDef13861 };
       const items1 = [constants2(FastImageDefault, obj2)];
       const obj3 = { style: tmp.text, children: null };
       const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
@@ -415,7 +415,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       const typeConsolidationTextTransform =
         useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("Welcome");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod14084;
+        const tmpResult = _mod14421;
         cResult[0] = tmpResult;
         let first = tmpResult;
       } else {
@@ -610,7 +610,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj2 = { style: tmp4.centerpieceContainer, children: null };
       const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-      const items = [constants2(FastImageDefault, { style: tmp4.logo, source: _mod14084 }), ,];
+      const items = [constants2(FastImageDefault, { style: tmp4.logo, source: _mod14421 }), ,];
       const obj5 = {
         style: null,
         lineClamp: null,

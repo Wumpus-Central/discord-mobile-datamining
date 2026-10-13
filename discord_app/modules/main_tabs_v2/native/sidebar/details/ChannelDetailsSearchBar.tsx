@@ -10,7 +10,7 @@ const createStyles = fn(5092);
 let obj = {
   back: {
     justifyContent: "center",
-    height: fn(12078).SEARCH_BAR_HEIGHT,
+    height: fn(12594).SEARCH_BAR_HEIGHT,
     paddingStart: fn(9630).CHANNEL_DETAILS_MARGIN,
     paddingEnd: 8,
   },
@@ -19,7 +19,7 @@ let closure_7 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
   justifyContent: "center",
-  height: fn(12078).SEARCH_BAR_HEIGHT,
+  height: fn(12594).SEARCH_BAR_HEIGHT,
   paddingStart: fn(9630).CHANNEL_DETAILS_MARGIN,
   paddingEnd: 8,
 };

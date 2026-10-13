@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef12606 from "../../../../../_runtime/metro/12606__.js";
-import _modDef14187 from "../../../../../_runtime/metro/14187__.js";
-import _modDef15573 from "../../../../../_runtime/metro/15573__.js";
-import _modDef15574 from "../../../../../_runtime/metro/15574__.js";
-import _modDef15575 from "../../../../../_runtime/metro/15575__.js";
-import _modDef15576 from "../../../../../_runtime/metro/15576__.js";
-import _modDef15577 from "../../../../../_runtime/metro/15577__.js";
-import _modDef15578 from "../../../../../_runtime/metro/15578__.js";
-import _modDef15579 from "../../../../../_runtime/metro/15579__.js";
-import _modDef15580 from "../../../../../_runtime/metro/15580__.js";
-import _modDef15581 from "../../../../../_runtime/metro/15581__.js";
-import _modDef15582 from "../../../../../_runtime/metro/15582__.js";
-import _modDef15583 from "../../../../../_runtime/metro/15583__.js";
+import _modDef13114 from "../../../../../_runtime/metro/13114__.js";
+import _modDef14524 from "../../../../../_runtime/metro/14524__.js";
+import _modDef15888 from "../../../../../_runtime/metro/15888__.js";
+import _modDef15889 from "../../../../../_runtime/metro/15889__.js";
+import _modDef15890 from "../../../../../_runtime/metro/15890__.js";
+import _modDef15891 from "../../../../../_runtime/metro/15891__.js";
+import _modDef15892 from "../../../../../_runtime/metro/15892__.js";
+import _modDef15893 from "../../../../../_runtime/metro/15893__.js";
+import _modDef15894 from "../../../../../_runtime/metro/15894__.js";
+import _modDef15895 from "../../../../../_runtime/metro/15895__.js";
+import _modDef15896 from "../../../../../_runtime/metro/15896__.js";
+import _modDef15897 from "../../../../../_runtime/metro/15897__.js";
+import _modDef15898 from "../../../../../_runtime/metro/15898__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const StatusTypes = Constants.StatusTypes;
@@ -27,8 +27,8 @@ export default function _default() {
   obj2.title = intl.string(util.t.B6GPzA);
   const intl2 = util.intl;
   obj2.subtitle = intl2.string(util.t["Tnrh/k"]);
-  obj2.image = _modDef15573;
-  const items1 = [_modDef15574, _modDef15575, _modDef15576, _modDef15577, _modDef15578];
+  obj2.image = _modDef15888;
+  const items1 = [_modDef15889, _modDef15890, _modDef15891, _modDef15892, _modDef15893];
   obj2.avatars = items1;
   const items2 = [obj2];
   const obj3 = { title: null, subtitle: null, kind: "voice-chat", image: null };
@@ -36,7 +36,7 @@ export default function _default() {
   obj3.title = intl3.string(util.t.YAgqmE);
   const intl4 = util.intl;
   obj3.subtitle = intl4.string(util.t["9YJgal"]);
-  obj3.image = _modDef15579;
+  obj3.image = _modDef15894;
   items2[1] = obj3;
   obj.cards = items2;
   items[1] = obj;
@@ -55,7 +55,7 @@ export default function _default() {
   obj4.title = intl6.string(util.t["mK5Zd+"]);
   const intl7 = util.intl;
   obj4.preview = intl7.string(util.t.cvvVUV);
-  obj4.avatar1 = _modDef15580;
+  obj4.avatar1 = _modDef15895;
   items[2] = obj4;
   const obj5 = {
     id: "4",
@@ -73,8 +73,8 @@ export default function _default() {
   obj5.title = intl9.string(util.t.FpJH9k);
   const intl10 = util.intl;
   obj5.preview = intl10.string(util.t.F1WIrQ);
-  obj5.avatar1 = _modDef15581;
-  obj5.avatar2 = _modDef15582;
+  obj5.avatar1 = _modDef15896;
+  obj5.avatar2 = _modDef15897;
   items[3] = obj5;
   const obj6 = {
     id: "5",
@@ -91,7 +91,7 @@ export default function _default() {
   obj6.title = intl12.string(util.t.PHbyD7);
   const intl13 = util.intl;
   obj6.preview = intl13.string(util.t.GSuP1s);
-  obj6.avatar1 = _modDef14187;
+  obj6.avatar1 = _modDef14524;
   obj6.status = StatusTypes.IDLE;
   items[4] = obj6;
   const obj7 = {
@@ -109,8 +109,8 @@ export default function _default() {
   obj7.title = intl15.string(util.t["0HGnUV"]);
   const intl16 = util.intl;
   obj7.preview = intl16.string(util.t["VYL+vm"]);
-  obj7.avatar1 = _modDef12606;
-  obj7.avatar2 = _modDef15576;
+  obj7.avatar1 = _modDef13114;
+  obj7.avatar2 = _modDef15891;
   items[5] = obj7;
   const obj8 = { id: "10", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
   const intl17 = util.intl;
@@ -119,7 +119,7 @@ export default function _default() {
   obj8.title = intl18.string(util.t["z+f+zN"]);
   const intl19 = util.intl;
   obj8.preview = intl19.string(util.t.Wy2xnv);
-  obj8.avatar1 = _modDef15582;
+  obj8.avatar1 = _modDef15897;
   items[6] = obj8;
   const obj9 = {
     id: "11",
@@ -136,8 +136,8 @@ export default function _default() {
   obj9.title = intl21.string(util.t["AYOqO/"]);
   const intl22 = util.intl;
   obj9.preview = intl22.string(util.t.OrbvPP);
-  obj9.avatar1 = _modDef15577;
-  obj9.avatar2 = _modDef12606;
+  obj9.avatar1 = _modDef15892;
+  obj9.avatar2 = _modDef13114;
   items[7] = obj9;
   const obj10 = {
     id: "12",
@@ -154,7 +154,7 @@ export default function _default() {
   obj10.title = intl24.string(util.t["86rWJp"]);
   const intl25 = util.intl;
   obj10.preview = intl25.string(util.t.dFT4dX);
-  obj10.avatar1 = _modDef15583;
+  obj10.avatar1 = _modDef15898;
   obj10.status = StatusTypes.DND;
   items[8] = obj10;
   const obj11 = { id: "13", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
@@ -164,7 +164,7 @@ export default function _default() {
   obj11.title = intl27.string(util.t["z3+vGV"]);
   const intl28 = util.intl;
   obj11.preview = intl28.string(util.t.Zj8Sl1);
-  obj11.avatar1 = _modDef15577;
+  obj11.avatar1 = _modDef15892;
   items[9] = obj11;
   const obj12 = {
     id: "15",
@@ -181,7 +181,7 @@ export default function _default() {
   obj12.title = intl30.string(util.t["8SENG2"]);
   const intl31 = util.intl;
   obj12.preview = intl31.string(util.t["2ziAWp"]);
-  obj12.avatar1 = _modDef15575;
+  obj12.avatar1 = _modDef15890;
   obj12.status = StatusTypes.DND;
   items[10] = obj12;
   return items;

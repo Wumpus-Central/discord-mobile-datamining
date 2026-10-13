@@ -88,14 +88,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           option = option.option;
           const obj = {
             value: option,
-            label: onSelectOption(16009).getCustomizationOptionName(option),
+            label: onSelectOption(16322).getCustomizationOptionName(option),
             subLabel: null,
           };
           const intl = onSelectOption(1126).intl;
           obj.subLabel = intl.string(option.subtitle);
           return jsx(
             onSelectOption(6262).TableRadioRow,
-            { value: option, label: onSelectOption(16009).getCustomizationOptionName(option), subLabel: null },
+            { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null },
             option,
           );
         });
@@ -155,12 +155,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj3.children = items.map((option) => {
         option = option.option;
-        const obj = { value: option, label: onSelectOption(16009).getCustomizationOptionName(option), subLabel: null };
+        const obj = { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null };
         const intl = onSelectOption(1126).intl;
         obj.subLabel = intl.string(option.subtitle);
         return jsx(
           onSelectOption(6262).TableRadioRow,
-          { value: option, label: onSelectOption(16009).getCustomizationOptionName(option), subLabel: null },
+          { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null },
           option,
         );
       });

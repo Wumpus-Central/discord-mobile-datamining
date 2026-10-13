@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const ReanimatedRexportDefault = tmp4(4850);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15373);
+const YouBarConstants = fn(15690);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);

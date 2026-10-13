@@ -1,4 +1,6 @@
 // discord_app/modules/conjure/plan/conjurePendingPlan.tsx
+import util from "../../../intl/index.native.tsx";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
 import conjureChatTurns from "../chat/conjureChatTurns.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -33,6 +35,36 @@ export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
     }
     return null;
   }
+};
+export const conjurePlanApproved = function conjurePlanApproved(arg0) {
+  const intl = util.intl;
+  const items = [intl.string(_modDef3849.EMgIuY)];
+  const intl2 = util.intl;
+  items[1] = intl2.string(_modDef3849.Zc7gML);
+  let flag = false;
+  const iter = arg0[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    if ("plan_implemented" === nextResult.kind) {
+      iter.return();
+      return true;
+    } else {
+      if ("assistant" === tmp2.role) {
+        if (null != tmp2.proposal) {
+          flag = true;
+        }
+      } else if (flag) {
+        let str = tmp2.content;
+        if (set.has(str.trim())) {
+          iter.return();
+          return true;
+        }
+      }
+      continue;
+    }
+  }
+  return false;
 };
 export const planVersions = function planVersions(memo) {
   const map = new Map();

@@ -121,7 +121,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
             rootNavigationRef = obj.getRootNavigationRef();
             if (null != rootNavigationRef) {
               if (rootNavigationRef.isReady()) {
-                setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "top" });
+                setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
                 return;
               }
             }
@@ -141,7 +141,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
             rootNavigationRef = obj.getRootNavigationRef();
             if (null != rootNavigationRef) {
               if (rootNavigationRef.isReady()) {
-                setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "top" });
+                setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
                 return;
               }
             }
@@ -157,7 +157,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
             rootNavigationRef = obj.getRootNavigationRef();
             if (null != rootNavigationRef) {
               if (rootNavigationRef.isReady()) {
-                setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "top" });
+                setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
                 return;
               }
             }
@@ -171,7 +171,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
               rootNavigationRef = obj.getRootNavigationRef();
               if (null != rootNavigationRef) {
                 if (rootNavigationRef.isReady()) {
-                  setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "top" });
+                  setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
                   return;
                 }
               }
@@ -188,7 +188,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
               rootNavigationRef = obj.getRootNavigationRef();
               if (null != rootNavigationRef) {
                 if (rootNavigationRef.isReady()) {
-                  setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "top" });
+                  setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
                   return;
                 }
               }

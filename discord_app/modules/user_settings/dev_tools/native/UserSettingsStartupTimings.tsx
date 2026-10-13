@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 return obj6;
               } else {
                 closure_128_0 = value;
-                closure_128_1 = tmp5(12635)(closure_128_0);
+                closure_128_1 = tmp5(13141)(closure_128_0);
                 const obj7 = { message: closure_128_1 };
                 tmp2(8482).showShareActionSheet(obj7, "Startup Timing");
                 c3 = 3;
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
   }
   let obj = require("c");
-  const parts = checked(12635)(useResult, !checked, first1).split("\n");
+  const parts = checked(13141)(useResult, !checked, first1).split("\n");
   cResult[0] = useResult;
   cResult[1] = checked;
   cResult[2] = first1;
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(12635)(closure_128_0);
+          closure_128_1 = tmp5(13141)(closure_128_0);
           const obj7 = { message: closure_128_1 };
           tmp2(8482).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;

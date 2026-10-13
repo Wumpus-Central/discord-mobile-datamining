@@ -139,24 +139,24 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let items = [
-  fn(11380).UserIcon,
+  fn(11337).UserIcon,
   fn(10409).ShieldIcon,
-  fn(11538).GiftIcon,
-  fn(15895).AchievementsIcon,
-  fn(11539).PiggyBankIcon,
-  fn(15897).TreehouseIcon,
+  fn(12291).GiftIcon,
+  fn(16208).AchievementsIcon,
+  fn(12292).PiggyBankIcon,
+  fn(16210).TreehouseIcon,
   fn(11059).SpeedometerIcon,
-  fn(15899).CompassIcon,
-  fn(14062).SignPostIcon,
-  fn(15901).CarIcon,
-  fn(15903).TrainIcon,
-  fn(15905).TeacupIcon,
-  fn(15907).InventoryIcon,
+  fn(16212).CompassIcon,
+  fn(14399).SignPostIcon,
+  fn(16214).CarIcon,
+  fn(16216).TrainIcon,
+  fn(16218).TeacupIcon,
+  fn(16220).InventoryIcon,
   fn(9569).FoodIcon,
-  fn(15909).BurgerIcon,
-  fn(15911).MagicDoorIcon,
-  fn(15913).PawPrintIcon,
-  fn(15915).RecordPlayerIcon,
+  fn(16222).BurgerIcon,
+  fn(16224).MagicDoorIcon,
+  fn(16226).PawPrintIcon,
+  fn(16228).RecordPlayerIcon,
   fn(7092).SettingsIcon,
 ];
 let closure_13 = [
@@ -227,7 +227,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           map = usersForPool.map;
           const mapped = map((id, arg1) => {
             const obj = {
-              icon: closure_1_10(str(11380).UserIcon, { size: "md" }),
+              icon: closure_1_10(str(11337).UserIcon, { size: "md" }),
               label: null,
               subLabel: null,
               onPress() {
@@ -340,7 +340,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         hasIcons: true,
         children: usersForPool.map((id, index) => {
           const obj = {
-            icon: closure_1_10(pool(11380).UserIcon, { size: "md" }),
+            icon: closure_1_10(pool(11337).UserIcon, { size: "md" }),
             label: null,
             subLabel: null,
             onPress() {

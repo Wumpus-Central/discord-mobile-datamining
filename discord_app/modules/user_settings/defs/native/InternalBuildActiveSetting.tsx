@@ -23,7 +23,7 @@ const obj3 = {
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(15861).MobilePhoneSettingsIcon,
+  IconComponent: fn(16174).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },
@@ -49,7 +49,7 @@ export default SettingBuilders.createStatic({
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(15861).MobilePhoneSettingsIcon,
+  IconComponent: fn(16174).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },

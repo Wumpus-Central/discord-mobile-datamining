@@ -71,15 +71,13 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
   const intl = require("util").intl;
   obj3.title = intl.string(require("util").t.pEasFX);
   obj2.header = jsx(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: null });
-  obj2.children = jsx(require("BottomSheetModal").BottomSheetFlatList, {
+  obj2.children = jsx(require("../../../../discord_common/js/packages/flash-list/index.js").BottomSheetFlashList, {
     data: mapped,
     keyExtractor(id) {
       return id.id;
     },
     renderItem: callback1,
     contentContainerStyle: tmp2.listView,
-    initialNumToRender: 10,
-    removeClippedSubviews: false,
   });
   return jsx(require("ActionSheet").ActionSheet, { scrollable: true, header: null, children: null });
 }

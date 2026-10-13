@@ -178,7 +178,7 @@ export default noop.memo(
                 if (cResult[9] !== displayNameStylesFont) {
                   let tmp18;
                   if (null != displayNameStylesFont) {
-                    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
+                    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "a" };
                     tmp18 = obj3;
                   }
                   cResult[9] = displayNameStylesFont;
@@ -792,7 +792,7 @@ export default noop.memo(
         });
         let tmp10;
         if (null != displayNameStylesFont) {
-          const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
+          const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "a" };
           tmp10 = obj3;
         }
         let num = merged.lineClamp;

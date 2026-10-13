@@ -51,7 +51,7 @@ function getScreens(analyticsLocation) {
   const intl2 = analyticsLocation(1126).intl;
   obj4.title = intl2.string(analyticsLocation(1126).t["8jmdON"]);
   obj4.render = function render() {
-    return planId(onClose(13787), {});
+    return planId(onClose(14124), {});
   };
   obj[UserSettingsSections.PREMIUM_MANAGE_PLAN] = obj4;
   const obj5 = { title: null, headerLeft: null, render: null };
@@ -60,7 +60,7 @@ function getScreens(analyticsLocation) {
   const obj3 = analyticsLocation(6201);
   obj5.headerLeft = analyticsLocation(6201).getHeaderCloseButton(onClose);
   obj5.render = function render() {
-    return planId(onClose(13790), {});
+    return planId(onClose(14127), {});
   };
   obj[UserSettingsSections.GUILD_BOOSTING] = obj5;
   const obj7 = { title: null, headerLeft: null, initialParams: null, render: null };

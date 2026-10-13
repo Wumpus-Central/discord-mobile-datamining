@@ -132,7 +132,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj7 = { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 };
-            const tmp16 = jsx(tmp(15083).RestrictedUserRowLabel, {
+            const tmp16 = jsx(tmp(15404).RestrictedUserRowLabel, {
               userRecord,
               accessibilityActions: tmp13,
               onAccessibilityAction: tmp7,
@@ -191,13 +191,17 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         showUserProfileActionSheetDefault({ userId: userRecord.id, sourceAnalyticsLocations: analyticsLocations });
       }
       const formatToPlainStringResult = intl.formatToPlainString(userRecord(1126).t.izBDZN, { name: username });
-      let obj = { accessible: false, icon: null, label: null, onPress: null, trailing: null };
-      let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32 };
-      obj.icon = jsx(userRecord(1200).Avatar, {
-        user: userRecord,
-        guildId: "Array",
-        size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32,
-      });
+      let obj = {
+        accessible: false,
+        icon: jsx(userRecord(1200).Avatar, {
+          user: userRecord,
+          guildId: "Array",
+          size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32,
+        }),
+        label: null,
+        onPress: handleOpenProfile,
+        trailing: null,
+      };
       const obj3 = {
         userRecord,
         accessibilityActions: null,
@@ -213,7 +217,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
       obj3.accessibilityActions = items;
-      obj.label = jsx(userRecord(15083).RestrictedUserRowLabel, {
+      obj.label = jsx(userRecord(15404).RestrictedUserRowLabel, {
         userRecord,
         accessibilityActions: null,
         onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -226,7 +230,6 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         },
       });
-      obj.onPress = handleOpenProfile;
       const obj4 = { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
       const intl2 = tmp2(1126).intl;
       obj4.text = intl2.string(userRecord(1126).t["PR/xUz"]);
@@ -243,9 +246,13 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       });
       return jsx(userRecord(6180).TableRow, {
         accessible: false,
-        icon: null,
+        icon: jsx(userRecord(1200).Avatar, {
+          user: userRecord,
+          guildId: "Array",
+          size: userRecord(1200).AvatarSizes.REFRESH_MEDIUM_32,
+        }),
         label: null,
-        onPress: null,
+        onPress: handleOpenProfile,
         trailing: null,
       });
     };

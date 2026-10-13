@@ -330,7 +330,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const tmp16 = closure_12(tmp(11826).ShopIcon, { size: "sm" });
+              const tmp16 = closure_12(tmp(11631).ShopIcon, { size: "sm" });
               const intl = tmp(1126).intl;
               const stringResult = intl.string(tmp(1126).t.RSyoZu);
               cResult[9] = tmp16;
@@ -490,7 +490,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[19] = wishlistId;
             cResult[20] = obj5;
           }
-          tmpResult = tmp(13409);
+          tmpResult = tmp(13746);
         }
         const obj6 = {
           userId,
@@ -537,7 +537,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp4 = closure_18();
       const tmp6 = useInitialValueDefault(() => trackUserProfileWishlistAction(dependencyMap[19]).v4());
-      const obj3 = trackUserProfileWishlistAction(13409);
+      const obj3 = trackUserProfileWishlistAction(13746);
       let items = obj3.useAddToWishlistGridItems({
         userId,
         wishlist,
@@ -568,7 +568,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = {
           size: "md",
           variant: "secondary",
-          icon: closure_12(tmp(11826).ShopIcon, { size: "sm" }),
+          icon: closure_12(tmp(11631).ShopIcon, { size: "sm" }),
           text: null,
           onPress: null,
         };
@@ -641,7 +641,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         const obj32 = {
           size: "md",
           variant: "secondary",
-          icon: closure_12(tmp(11826).ShopIcon, { size: "sm" }),
+          icon: closure_12(tmp(11631).ShopIcon, { size: "sm" }),
           text: null,
           onPress: null,
         };
@@ -652,7 +652,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         items4[2] = closure_12(View, obj17);
         obj9.children = items4;
         obj7.children = closure_13(ReanimatedRexportDefault.View, obj9);
-        tmp11Result = closure_12(tmp(13411).WishlistAnalyticsProvider, obj7);
+        tmp11Result = closure_12(tmp(13748).WishlistAnalyticsProvider, obj7);
       }
       return tmp11Result;
     };

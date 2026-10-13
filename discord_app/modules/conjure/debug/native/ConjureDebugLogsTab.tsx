@@ -13,8 +13,8 @@ const Card = Text(6182);
 const Pressables = Text(6185);
 const ChevronSmallRightIcon2 = Text(6906);
 const ChevronSmallDownIcon = Text(10533);
-const ConjureDebugJson = Text(17336);
-const ConjureDebugFormat = Text(17337);
+const ConjureDebugJson = Text(11979);
+const ConjureDebugFormat = Text(11980);
 require = fn;
 function keyOf(key) {
   return String(key.key);
@@ -328,7 +328,7 @@ let closure_11 = noop.memo(
         const obj3 = {
           variant: "text-xs/normal",
           color: "text-subtle",
-          children: tmp6(17337).formatClockTime(entry.ts),
+          children: tmp6(11980).formatClockTime(entry.ts),
         };
         const items1 = [closure_7(tmp6(5088).Text, obj3), , ,];
         const level = entry.level;
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_6.getHistoryState(projectId, "logs");
           }
         }
-        const DEBUG_LOG_FILTERS = tmp(17338).DEBUG_LOG_FILTERS;
+        const DEBUG_LOG_FILTERS = tmp(11981).DEBUG_LOG_FILTERS;
         tmp18[1] = DEBUG_LOG_FILTERS.map((id) => {
           const obj = { id, label: projectId(dependencyMap[20]).debugLogFilterLabel(id), page: null };
           return obj;

@@ -15,7 +15,7 @@ function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
 const GuildsNodeType = fn(5963).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16739).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(17043).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({
@@ -189,9 +189,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Set",
               name: "Array",
-              color: "apply",
-              expanded: -894742272,
-              children: 36770881,
+              color: "backgroundColor",
+              expanded: true,
+              children: true,
             };
             const items = [overNode];
             element.children = items;
@@ -379,9 +379,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Set",
               name: "Array",
-              color: "apply",
-              expanded: -894742272,
-              children: 36770881,
+              color: "backgroundColor",
+              expanded: true,
+              children: true,
             };
             const items = [tmp2];
             element.children = items;
@@ -891,11 +891,11 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: "GUILD_MEMBER_UPDATE",
-                    scrollPosition: "never",
-                    dragRegion: "always",
-                    windowSize: "heading-xxl/extrabold",
-                    dropComplete: "mobile-text-heading-primary",
+                    gestureState: 72,
+                    scrollPosition: 4,
+                    dragRegion: null,
+                    windowSize: null,
+                    dropComplete: null,
                     listInsets: null,
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
@@ -991,11 +991,11 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: "GUILD_MEMBER_UPDATE",
-                  scrollPosition: "never",
-                  dragRegion: "always",
-                  windowSize: "heading-xxl/extrabold",
-                  dropComplete: "mobile-text-heading-primary",
+                  gestureState: 72,
+                  scrollPosition: 4,
+                  dragRegion: null,
+                  windowSize: null,
+                  dropComplete: null,
                   listInsets: null,
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);

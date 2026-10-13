@@ -681,7 +681,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp10 = closure_9(closure_5, obj5);
         let tmp9 = closure_9;
       } else if (0 === mutualFriends.length) {
-        const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12353).NoMutualFriends, {}) };
+        const obj6 = { style: tmp.emptyState, children: closure_9(tmp6(12865).NoMutualFriends, {}) };
         tmp10 = closure_9(closure_5, obj6);
         tmp9 = closure_9;
       } else {
@@ -718,7 +718,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
         let tmp9Result = tmp9(closure_5, obj9);
       } else if (0 === mutualGuilds.length) {
-        const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12348).NoMutualServers, {}) };
+        const obj10 = { style: tmp.emptyState, children: tmp9(tmp6(12860).NoMutualServers, {}) };
         tmp9Result = tmp9(closure_5, obj10);
       } else {
         const obj11 = {
@@ -755,7 +755,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj13 = { style: tmp.container, onLayout: callback, children: null };
       const tmp3Result4 = UserProfileStackedActionSheetDefault;
       const items1 = [
-        tmp9(closure_5, { children: tmp9(user(12359).Tabs, { state: segmentedControlState }) }),
+        tmp9(closure_5, { children: tmp9(user(11341).Tabs, { state: segmentedControlState }) }),
         tmp9(user(10601).SegmentedControlPages, { state: segmentedControlState }),
       ];
       obj13.children = items1;

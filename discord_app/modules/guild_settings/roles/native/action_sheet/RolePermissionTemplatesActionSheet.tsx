@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp18 = tmp21;
         }
         const obj5 = { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId };
-        const tmp17 = jsx(onPermissionsChanged(18409), {
+        const tmp17 = jsx(onPermissionsChanged(18413), {
           onSelect: tmp10,
           location: constants2.GUILD_ROLE_TEMPLATE_POPOUT,
           guildId,

@@ -161,9 +161,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (closure_2_9.includes(c0)) {
                     const obj = _var(1494);
-                    if (dataUriFileSizeResult <= _var(18424).ROLE_ICON_MAX_FILE_SIZE) {
-                      _var(18420).updateRoleIcon(closure_1, base64, null);
-                      const obj2 = _var(18420);
+                    if (dataUriFileSizeResult <= _var(18428).ROLE_ICON_MAX_FILE_SIZE) {
+                      _var(18424).updateRoleIcon(closure_1, base64, null);
+                      const obj2 = _var(18424);
                     }
                     dataUriFileSizeResult = _var(1494).dataUriFileSize(base64);
                   }
@@ -656,18 +656,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       surrogates = closure_0.surrogates;
                     }
                     if (null != surrogates) {
-                      closure_0(18420).updateRoleIcon(surrogates, null, tmp26);
-                      const obj5 = closure_0(18420);
+                      closure_0(18424).updateRoleIcon(surrogates, null, tmp26);
+                      const obj5 = closure_0(18424);
                     }
                   } else {
                     c6 = 1;
-                    const tmp22 = closure_0(18420);
+                    const tmp22 = closure_0(18424);
                     closure_4 = tmp22;
                     const updateRoleIcon = tmp22.updateRoleIcon;
                     closure_2 = surrogates;
                     c7 = 2;
                     c8 = 1;
-                    const obj7 = { value: closure_0(18424).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                    const obj7 = { value: closure_0(18428).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                     return obj7;
                   }
                 }
@@ -876,18 +876,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       surrogates = closure_0.surrogates;
                     }
                     if (null != surrogates) {
-                      closure_0(18420).updateRoleIcon(surrogates, null, tmp26);
-                      const obj5 = closure_0(18420);
+                      closure_0(18424).updateRoleIcon(surrogates, null, tmp26);
+                      const obj5 = closure_0(18424);
                     }
                   } else {
                     c6 = 1;
-                    const tmp22 = closure_0(18420);
+                    const tmp22 = closure_0(18424);
                     closure_4 = tmp22;
                     const updateRoleIcon = tmp22.updateRoleIcon;
                     closure_2 = surrogates;
                     c7 = 2;
                     c8 = 1;
-                    const obj7 = { value: closure_0(18424).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                    const obj7 = { value: closure_0(18428).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                     return obj7;
                   }
                 }

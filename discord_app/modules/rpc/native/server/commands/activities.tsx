@@ -32,7 +32,7 @@ obj2.handler = function handler(socket) {
   }
 };
 obj[RPCCommands.OPEN_INVITE_DIALOG] = obj2;
-const CONTEXT_MENU_ICON_NAMES = fn(14736);
+const CONTEXT_MENU_ICON_NAMES = fn(15057);
 let obj5 = { scope: null, handler: null };
 let obj6 = {};
 const items1 = [fn(8458).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
@@ -77,7 +77,7 @@ obj5.handler = function handler(socket) {
               throw tmp66;
             } else {
               let tmp46;
-              if (tmp2(14719)(socket)) {
+              if (tmp2(15040)(socket)) {
                 tmp46 = tmp2(10810)(socket.context.surface);
               }
               closure_128_1 = tmp46;

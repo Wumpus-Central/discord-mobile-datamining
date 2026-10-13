@@ -16,7 +16,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const isThread = fn(2069).isThread;
-const TextAreaCta = fn(11636).TextAreaCta;
+const TextAreaCta = fn(11960).TextAreaCta;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
 let closure_14 = fn(6732).PHONE_VERIFICATION_MODAL_KEY;

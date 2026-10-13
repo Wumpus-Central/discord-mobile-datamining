@@ -30,7 +30,7 @@ const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let ConjureConnectionStore = fn(13218);
+let ConjureConnectionStore = fn(11215);
 ({
   ensureConnection: closure_7,
   interruptTurn: closure_8,
@@ -60,14 +60,14 @@ let obj2 = {
   transcriptArea: { flex: 1, position: "relative" },
   transcriptContent: null,
   bottomStack: null,
-  incompleteNotice: null,
+  notice: null,
   placeholder: null,
 };
 const alphaResult = _modDef683(BLACK).alpha(0.2);
 obj2.transcriptContent = { paddingTop: nativeDefault.space.PX_8 };
 obj2.bottomStack = { position: "absolute", left: 0, right: 0, bottom: 0 };
 let obj4 = { paddingTop: nativeDefault.space.PX_8 };
-obj2.incompleteNotice = {
+obj2.notice = {
   paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
   paddingBottom: nativeDefault.space.PX_8,
 };
@@ -204,9 +204,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const hidden = projectId.hidden;
       closure_24();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        items = [stateFromStores10];
+        items = [stateFromStores9];
         const fn = function w() {
-          return "active" === stateFromStores10.getState();
+          return "active" === stateFromStores9.getState();
         };
         const items1 = [];
         cResult[0] = items;
@@ -221,21 +221,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = projectId(stateFromStores[13]);
       stateFromStores = projectId(stateFromStores[14]).useStateFromStores(tmp8, tmp9, tmp10);
       onRestoreVersion(stateFromStores[15])(projectId);
-      const bottom = onRestoreVersion(tmp4[16])().bottom;
+      onRestoreVersion(stateFromStores[16])(projectId);
+      const tmp2Result = projectId(stateFromStores[14]);
+      const conjureRemixStartedAt = projectId(stateFromStores[16]).useConjureRemixStartedAt(projectId);
+      const bottom = onRestoreVersion(tmp4[17])().bottom;
       if (cResult[3] === stateFromStores) {
         if (cResult[4] === projectId) {
-          let tmp14 = cResult[5];
-          let tmp15 = cResult[6];
+          let tmp16 = cResult[5];
+          let tmp17 = cResult[6];
         }
-        const effect = stateFromStores3.useEffect(tmp14, tmp15);
-        const ackConjureProjectWhileViewing = tmp2(tmp4[17]).useAckConjureProjectWhileViewing(projectId);
+        const effect = stateFromStores3.useEffect(tmp16, tmp17);
+        const ackConjureProjectWhileViewing = tmp2(tmp4[18]).useAckConjureProjectWhileViewing(projectId);
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [ConjureChatStore];
           cResult[7] = items2;
-          let tmp20 = items2;
+          let tmp22 = items2;
         } else {
-          tmp20 = cResult[7];
+          tmp22 = cResult[7];
         }
         if (cResult[8] !== projectId) {
           class U {
@@ -247,19 +250,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = projectId;
           cResult[9] = items3;
           cResult[10] = U;
-          let tmp23 = U;
-          const tmp22 = items3;
+          let tmp25 = U;
+          const tmp24 = items3;
         } else {
           class U {
             constructor() {
               return closure_14.getMessages(projectId);
             }
           }
-          tmp23 = cResult[10];
+          tmp25 = cResult[10];
         }
-        let obj3 = stateFromStores3;
-        const tmp2Result15 = tmp2(tmp4[17]);
-        const stateFromStores1 = tmp2(tmp4[14]).useStateFromStores(tmp20, tmp23, tmp22);
+        const obj4 = stateFromStores3;
+        const tmp2Result16 = tmp2(tmp4[18]);
+        const stateFromStores1 = tmp2(tmp4[14]).useStateFromStores(tmp22, tmp25, tmp24);
         const _Symbol2 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           class U {
@@ -269,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const items4 = [ConjurePublishStatusStore];
           cResult[11] = items4;
-          const tmp27 = items4;
+          const tmp29 = items4;
         } else {
           class U {
             constructor() {
@@ -285,26 +288,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const items5 = [projectId];
           cResult[12] = projectId;
-          cResult[13] = tmp30;
+          cResult[13] = tmp32;
           cResult[14] = items5;
-          let tmp29 = items5;
+          let tmp31 = items5;
         } else {
           class U {
             constructor() {
               return closure_14.getMessages(projectId);
             }
           }
-          tmp29 = cResult[14];
+          tmp31 = cResult[14];
         }
-        const tmp2Result16 = tmp2(tmp4[14]);
-        const stateFromStores2 = tmp2(tmp4[14]).useStateFromStores(tmp27, tmp30, tmp29);
+        const tmp2Result17 = tmp2(tmp4[14]);
+        const stateFromStores2 = tmp2(tmp4[14]).useStateFromStores(tmp29, tmp32, tmp31);
         if (cResult[15] === stateFromStores1) {
           class U {
             constructor() {
               return closure_14.getMessages(projectId);
             }
           }
-          _slicedToArray = tmp34;
+          _slicedToArray = tmp36;
           const _Symbol3 = Symbol;
           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
             class U {
@@ -314,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const items6 = [ConjureChatStore];
             cResult[18] = items6;
-            const tmp38 = items6;
+            const tmp40 = items6;
           } else {
             class U {
               constructor() {
@@ -323,140 +326,175 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[19] !== projectId) {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
             const items7 = [projectId];
             cResult[19] = projectId;
-            cResult[20] = Z;
+            cResult[20] = tmp43;
             cResult[21] = items7;
-            let tmp40 = items7;
+            let tmp42 = items7;
           } else {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
-            tmp40 = cResult[21];
+            tmp42 = cResult[21];
           }
-          stateFromStores3 = tmp2(tmp4[14]).useStateFromStores(tmp38, Z, tmp40);
+          stateFromStores3 = tmp2(tmp4[14]).useStateFromStores(tmp40, tmp43, tmp42);
           const _Symbol4 = Symbol;
           if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
             const items8 = [ConjureChatStore];
             cResult[22] = items8;
-            const tmp44 = items8;
+            const tmp47 = items8;
           } else {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
           }
           if (cResult[23] !== projectId) {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
             const items9 = [projectId];
             cResult[23] = projectId;
-            cResult[24] = tmp47;
+            cResult[24] = tmp50;
             cResult[25] = items9;
-            let tmp46 = items9;
+            let tmp49 = items9;
           } else {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
-            tmp46 = cResult[25];
+            tmp49 = cResult[25];
           }
-          const tmp2Result18 = tmp2(tmp4[14]);
-          const stateFromStores4 = tmp2(tmp4[14]).useStateFromStores(tmp44, tmp47, tmp46);
+          const tmp2Result19 = tmp2(tmp4[14]);
+          const stateFromStores4 = tmp2(tmp4[14]).useStateFromStores(tmp47, tmp50, tmp49);
           const _Symbol5 = Symbol;
           if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
             const items10 = [ConjureChatStore];
             cResult[26] = items10;
-            const tmp51 = items10;
+            const tmp54 = items10;
           } else {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
           }
           if (cResult[27] !== projectId) {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
             const items11 = [projectId];
             cResult[27] = projectId;
-            cResult[28] = tmp54;
+            cResult[28] = tmp57;
             cResult[29] = items11;
-            let tmp53 = items11;
+            let tmp56 = items11;
           } else {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
-            tmp53 = cResult[29];
+            tmp56 = cResult[29];
           }
-          const tmp2Result19 = tmp2(tmp4[14]);
-          const stateFromStores5 = tmp2(tmp4[14]).useStateFromStores(tmp51, tmp54, tmp53);
+          const tmp2Result20 = tmp2(tmp4[14]);
+          const stateFromStores5 = tmp2(tmp4[14]).useStateFromStores(tmp54, tmp57, tmp56);
           const _Symbol6 = Symbol;
           if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
             const items12 = [ConjureChatStore];
             cResult[30] = items12;
-            const tmp58 = items12;
+            const tmp61 = items12;
           } else {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
           }
           if (cResult[31] !== projectId) {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
             const items13 = [projectId];
             cResult[31] = projectId;
-            cResult[32] = tmp61;
+            cResult[32] = tmp64;
             cResult[33] = items13;
-            let tmp60 = items13;
+            let tmp63 = items13;
           } else {
-            class Z {
+            class U {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getMessages(projectId);
               }
             }
-            tmp60 = cResult[33];
+            tmp63 = cResult[33];
           }
-          const tmp2Result20 = tmp2(tmp4[14]);
-          const stateFromStores6 = tmp2(tmp4[14]).useStateFromStores(tmp58, tmp61, tmp60);
+          const tmp2Result21 = tmp2(tmp4[14]);
+          const stateFromStores6 = tmp2(tmp4[14]).useStateFromStores(tmp61, tmp64, tmp63);
           const _Symbol7 = Symbol;
+          if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
+            class U {
+              constructor() {
+                return closure_14.getMessages(projectId);
+              }
+            }
+            const items14 = [ConjureChatStore];
+            cResult[34] = items14;
+            const tmp68 = items14;
+          } else {
+            class U {
+              constructor() {
+                return closure_14.getMessages(projectId);
+              }
+            }
+          }
+          if (cResult[35] !== projectId) {
+            class Se {
+              constructor() {
+                return closure_14.getProjectUsage(projectId);
+              }
+            }
+            const items15 = [projectId];
+            cResult[35] = projectId;
+            cResult[36] = Se;
+            cResult[37] = items15;
+            let tmp70 = items15;
+          } else {
+            class Se {
+              constructor() {
+                return closure_14.getProjectUsage(projectId);
+              }
+            }
+            tmp70 = cResult[37];
+          }
           class O {
             constructor() {
               if (closure_2) {
@@ -467,229 +505,172 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          if (cResult[35] !== projectId) {
-            class Z {
-              constructor() {
-                return closure_14.isThinking(projectId);
-              }
-            }
-            const items14 = [projectId];
-            cResult[35] = projectId;
-            cResult[36] = tmp69;
-            cResult[37] = items14;
-            let tmp68 = items14;
-          } else {
-            class Z {
-              constructor() {
-                return closure_14.isThinking(projectId);
-              }
-            }
-            tmp68 = cResult[37];
-          }
-          const tmp2Result21 = tmp2(tmp4[14]);
-          const stateFromStores7 = tmp2(tmp4[14]).useStateFromStores(tmp66, tmp69, tmp68);
           const tmp2Result22 = tmp2(tmp4[14]);
-          [tmp76, tmp77] = obj3.useState(null);
+          const stateFromStores7 = tmp2(tmp4[14]).useStateFromStores(tmp68, Se, tmp70);
+          const tmp2Result23 = tmp2(tmp4[14]);
+          [tmp76, tmp77] = obj4.useState(null);
           View = tmp77;
           let tmp78 = null == tmp76;
           if (!tmp78) {
-            class Z {
+            class Se {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
             if (stateFromStores3) {
-              class Z {
+              class Se {
                 constructor() {
-                  return closure_14.isThinking(projectId);
+                  return closure_14.getProjectUsage(projectId);
                 }
               }
             }
             tmp78 = tmp79;
           }
           if (!tmp78) {
-            class Z {
+            class Se {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
           }
           if (cResult[38] !== projectId) {
-            class Z {
+            class Se {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
             cResult[38] = projectId;
             cResult[39] = tmp81;
           } else {
-            class Z {
+            class Se {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
           }
           if (stateFromStores3) {
-            class Z {
+            class Se {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
           }
           const _Symbol8 = Symbol;
           if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
-            class Z {
+            class Se {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
-            const items15 = [ConjureConnectionStore];
-            cResult[40] = items15;
-            const tmp83 = items15;
+            const items16 = [ConjureConnectionStore];
+            cResult[40] = items16;
+            const tmp83 = items16;
           } else {
-            class Z {
+            class Se {
               constructor() {
-                return closure_14.isThinking(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
           }
           if (cResult[41] !== projectId) {
-            class Te {
+            class Se {
               constructor() {
-                return closure_11.getConnState(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
-            const items16 = [projectId];
+            const items17 = [projectId];
             cResult[41] = projectId;
-            cResult[42] = Te;
-            cResult[43] = items16;
-            let tmp85 = items16;
+            cResult[42] = tmp86;
+            cResult[43] = items17;
+            let tmp85 = items17;
           } else {
-            class Te {
+            class Se {
               constructor() {
-                return closure_11.getConnState(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
             tmp85 = cResult[43];
           }
-          const tmp75 = _slicedToArray(obj3.useState(null), 2);
-          const stateFromStores8 = tmp2(tmp4[14]).useStateFromStores(tmp83, Te, tmp85);
+          const tmp75 = _slicedToArray(obj4.useState(null), 2);
+          const stateFromStores8 = tmp2(tmp4[14]).useStateFromStores(tmp83, tmp86, tmp85);
           const _Symbol9 = Symbol;
           if (cResult[44] === Symbol.for("react.memo_cache_sentinel")) {
-            class Te {
+            class Se {
               constructor() {
-                return closure_11.getConnState(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
-            const items17 = [ConjureConnectionStore];
-            cResult[44] = items17;
-            const tmp89 = items17;
+            const items18 = [ConjureChatStore];
+            cResult[44] = items18;
+            const tmp90 = items18;
           } else {
-            class Te {
+            class Se {
               constructor() {
-                return closure_11.getConnState(projectId);
+                return closure_14.getProjectUsage(projectId);
               }
             }
           }
           if (cResult[45] !== projectId) {
-            class Fe {
+            class Pe {
               constructor() {
-                return closure_11.isChatStopped(projectId);
+                return closure_14.hasLoadedHistory(projectId);
               }
             }
-            const items18 = [projectId];
+            const items19 = [projectId];
             cResult[45] = projectId;
-            cResult[46] = Fe;
-            cResult[47] = items18;
-            let tmp91 = items18;
+            cResult[46] = Pe;
+            cResult[47] = items19;
+            let tmp92 = items19;
           } else {
-            class Fe {
+            class Pe {
               constructor() {
-                return closure_11.isChatStopped(projectId);
+                return closure_14.hasLoadedHistory(projectId);
               }
             }
-            tmp91 = cResult[47];
+            tmp92 = cResult[47];
           }
-          const tmp2Result23 = tmp2(tmp4[14]);
-          const stateFromStores9 = tmp2(tmp4[14]).useStateFromStores(tmp89, Fe, tmp91);
+          const tmp2Result24 = tmp2(tmp4[14]);
+          stateFromStores9 = tmp2(tmp4[14]).useStateFromStores(tmp90, Pe, tmp92);
           const _Symbol10 = Symbol;
           if (cResult[48] === Symbol.for("react.memo_cache_sentinel")) {
-            class Fe {
+            class Pe {
               constructor() {
-                return closure_11.isChatStopped(projectId);
+                return closure_14.hasLoadedHistory(projectId);
               }
             }
-            const items19 = [ConjureChatStore];
-            cResult[48] = items19;
-            const tmp95 = items19;
+            const items20 = [ConjureChatStore];
+            cResult[48] = items20;
+            const tmp96 = items20;
           } else {
-            class Fe {
+            class Pe {
               constructor() {
-                return closure_11.isChatStopped(projectId);
+                return closure_14.hasLoadedHistory(projectId);
               }
             }
           }
           if (cResult[49] !== projectId) {
-            class Fe {
+            class He {
               constructor() {
-                return closure_11.isChatStopped(projectId);
+                return closure_14.isHistoryUnavailable(projectId);
               }
             }
-            const items20 = [projectId];
+            const items21 = [projectId];
             cResult[49] = projectId;
-            cResult[50] = tmp98;
-            cResult[51] = items20;
-            let tmp97 = items20;
+            cResult[50] = He;
+            cResult[51] = items21;
+            let tmp98 = items21;
           } else {
-            class Fe {
-              constructor() {
-                return closure_11.isChatStopped(projectId);
-              }
-            }
-            tmp97 = cResult[51];
-          }
-          const tmp2Result24 = tmp2(tmp4[14]);
-          stateFromStores10 = tmp2(tmp4[14]).useStateFromStores(tmp95, tmp98, tmp97);
-          const _Symbol11 = Symbol;
-          if (cResult[52] === Symbol.for("react.memo_cache_sentinel")) {
-            class Fe {
-              constructor() {
-                return closure_11.isChatStopped(projectId);
-              }
-            }
-            const items21 = [ConjureChatStore];
-            cResult[52] = items21;
-            const tmp102 = items21;
-          } else {
-            class Fe {
-              constructor() {
-                return closure_11.isChatStopped(projectId);
-              }
-            }
-          }
-          if (cResult[53] !== projectId) {
-            class Oe {
+            class He {
               constructor() {
                 return closure_14.isHistoryUnavailable(projectId);
               }
             }
-            const items22 = [projectId];
-            cResult[53] = projectId;
-            cResult[54] = Oe;
-            cResult[55] = items22;
-            let tmp104 = items22;
-          } else {
-            class Oe {
-              constructor() {
-                return closure_14.isHistoryUnavailable(projectId);
-              }
-            }
-            tmp104 = cResult[55];
+            tmp98 = cResult[51];
           }
           const tmp2Result25 = tmp2(tmp4[14]);
-          const stateFromStores11 = tmp2(tmp4[14]).useStateFromStores(tmp102, Oe, tmp104);
-          if (cResult[56] === stateFromStores8) {
-            class Oe {
+          const stateFromStores10 = tmp2(tmp4[14]).useStateFromStores(tmp96, He, tmp98);
+          if (cResult[52] === stateFromStores8) {
+            class He {
               constructor() {
                 return closure_14.isHistoryUnavailable(projectId);
               }
@@ -697,24 +678,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmp2Result26 = tmp2(tmp4[14]);
           let obj2 = {
-            historyLoaded: stateFromStores10,
-            historyUnavailable: stateFromStores11,
+            historyLoaded: stateFromStores9,
+            historyUnavailable: stateFromStores10,
             connState: stateFromStores8,
           };
-          const chatEmptyStateResult = tmp2(tmp4[19]).chatEmptyState(obj2);
-          cResult[56] = stateFromStores8;
-          cResult[57] = stateFromStores10;
-          cResult[58] = stateFromStores11;
-          cResult[59] = chatEmptyStateResult;
-          const tmp2Result27 = tmp2(tmp4[19]);
+          const chatEmptyStateResult = tmp2(tmp4[20]).chatEmptyState(obj2);
+          cResult[52] = stateFromStores8;
+          cResult[53] = stateFromStores9;
+          cResult[54] = stateFromStores10;
+          cResult[55] = chatEmptyStateResult;
+          const tmp2Result27 = tmp2(tmp4[20]);
         }
-        const tmp2Result17 = tmp2(tmp4[14]);
-        const withLivePublishCardResult = tmp2(tmp4[18]).withLivePublishCard(stateFromStores1, stateFromStores2);
+        const tmp2Result18 = tmp2(tmp4[14]);
+        const withLivePublishCardResult = tmp2(tmp4[19]).withLivePublishCard(stateFromStores1, stateFromStores2);
         cResult[15] = stateFromStores1;
         cResult[16] = stateFromStores2;
         cResult[17] = withLivePublishCardResult;
-        const tmp2Result28 = tmp2(tmp4[18]);
-        tmp34 = withLivePublishCardResult;
+        const tmp2Result28 = tmp2(tmp4[19]);
+        tmp36 = withLivePublishCardResult;
       }
       class O {
         constructor() {
@@ -726,14 +707,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return;
         }
       }
-      const items23 = [stateFromStores, projectId];
+      const items22 = [stateFromStores, projectId];
       cResult[3] = stateFromStores;
       cResult[4] = projectId;
       cResult[5] = O;
-      cResult[6] = items23;
-      tmp15 = items23;
-      tmp14 = O;
-      const tmp2Result = projectId(stateFromStores[14]);
+      cResult[6] = items22;
+      tmp17 = items22;
+      tmp16 = O;
+      const tmp2Result15 = projectId(stateFromStores[16]);
     }
   : function ConjureNativeChat(projectId) {
       projectId = projectId.projectId;
@@ -748,11 +729,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores;
       let stateFromStores2;
       let stateFromStores3;
-      let stateFromStores10;
+      let stateFromStores9;
       let render_id;
       let render_id1;
       let set;
-      let stateFromStores12;
+      let stateFromStores11;
       let memo1;
       c14 = undefined;
       c15 = undefined;
@@ -792,16 +773,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [],
       );
       const tmp6 = require("useConjureIncompleteAppNotice")(projectId);
-      let obj2 = stateFromStores2;
+      const tmp7 = require("useConjureRemixNotice")(projectId);
+      let obj = projectId(stateFromStores[14]);
+      const conjureRemixStartedAt = projectId(stateFromStores[16]).useConjureRemixStartedAt(projectId);
+      let obj3 = stateFromStores2;
       const items1 = [stateFromStores, projectId];
       const effect = stateFromStores2.useEffect(() => {
         if (stateFromStores) {
           React5(projectId);
         }
       }, items1);
-      let obj = projectId(stateFromStores[14]);
-      const ackConjureProjectWhileViewing = projectId(stateFromStores[17]).useAckConjureProjectWhileViewing(projectId);
-      let obj3 = projectId(stateFromStores[17]);
+      let obj2 = projectId(stateFromStores[16]);
+      const ackConjureProjectWhileViewing = projectId(stateFromStores[18]).useAckConjureProjectWhileViewing(projectId);
+      const obj4 = projectId(stateFromStores[18]);
       const items2 = [c14];
       const items3 = [projectId];
       const stateFromStores1 = projectId(stateFromStores[14]).useStateFromStores(
@@ -809,8 +793,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => ConjureChatStore.getMessages(projectId),
         items3,
       );
-      const obj4 = projectId(stateFromStores[14]);
-      const items4 = [stateFromStores12];
+      const obj5 = projectId(stateFromStores[14]);
+      const items4 = [stateFromStores11];
       const items5 = [projectId];
       stateFromStores2 = projectId(stateFromStores[14]).useStateFromStores(
         items4,
@@ -832,7 +816,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => conjurePublishCard.withLivePublishCard(stateFromStores1, stateFromStores2),
         items6,
       );
-      const obj5 = projectId(stateFromStores[14]);
+      const obj6 = projectId(stateFromStores[14]);
       const items7 = [c14];
       const items8 = [projectId];
       stateFromStores3 = projectId(stateFromStores[14]).useStateFromStores(
@@ -840,7 +824,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => ConjureChatStore.isThinking(projectId),
         items8,
       );
-      const obj6 = projectId(stateFromStores[14]);
+      const obj7 = projectId(stateFromStores[14]);
       const items9 = [c14];
       const items10 = [projectId];
       const stateFromStores4 = projectId(stateFromStores[14]).useStateFromStores(
@@ -848,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => ConjureChatStore.isCompacting(projectId),
         items10,
       );
-      const obj7 = projectId(stateFromStores[14]);
+      const obj8 = projectId(stateFromStores[14]);
       const items11 = [c14];
       const items12 = [projectId];
       const stateFromStores5 = projectId(stateFromStores[14]).useStateFromStores(
@@ -856,7 +840,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => ConjureChatStore.isSaving(projectId),
         items12,
       );
-      const obj8 = projectId(stateFromStores[14]);
+      const obj9 = projectId(stateFromStores[14]);
       const items13 = [c14];
       const items14 = [projectId];
       const stateFromStores6 = projectId(stateFromStores[14]).useStateFromStores(
@@ -864,7 +848,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => ConjureChatStore.getThinkingActivity(projectId),
         items14,
       );
-      const obj9 = projectId(stateFromStores[14]);
+      const obj10 = projectId(stateFromStores[14]);
       const items15 = [c14];
       const items16 = [projectId];
       const stateFromStores7 = projectId(stateFromStores[14]).useStateFromStores(
@@ -872,23 +856,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => ConjureChatStore.getProjectUsage(projectId),
         items16,
       );
-      const obj10 = projectId(stateFromStores[14]);
-      [tmp19, tmp20] = stateFromStores1(stateFromStores2.useState(null), 2);
-      c7 = tmp20;
-      let tmp21 = null == tmp19;
-      if (!tmp21) {
-        let tmp22 = stateFromStores3;
+      const obj11 = projectId(stateFromStores[14]);
+      [tmp21, tmp22] = stateFromStores1(stateFromStores2.useState(null), 2);
+      c7 = tmp22;
+      let tmp23 = null == tmp21;
+      if (!tmp23) {
+        let tmp24 = stateFromStores3;
         if (stateFromStores3) {
-          tmp22 = tmp19 === projectId;
+          tmp24 = tmp21 === projectId;
         }
-        tmp21 = tmp22;
+        tmp23 = tmp24;
       }
-      if (!tmp21) {
-        tmp20(null);
+      if (!tmp23) {
+        tmp22(null);
       }
       const items17 = [projectId];
-      let tmp25 = stateFromStores3;
-      const callback = obj2.useCallback(
+      let tmp27 = stateFromStores3;
+      const callback = obj3.useCallback(
         () =>
           _undefined((arg0) => {
             let tmp = null;
@@ -900,9 +884,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items17,
       );
       if (stateFromStores3) {
-        tmp25 = tmp19 === projectId;
+        tmp27 = tmp21 === projectId;
       }
-      let tmp18 = stateFromStores1(stateFromStores2.useState(null), 2);
+      let tmp20 = stateFromStores1(stateFromStores2.useState(null), 2);
       const items18 = [set];
       const items19 = [projectId];
       const stateFromStores8 = projectId(stateFromStores[14]).useStateFromStores(
@@ -911,33 +895,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items19,
       );
       const tmp2Result = projectId(stateFromStores[14]);
-      const items20 = [set];
+      const items20 = [c14];
       const items21 = [projectId];
-      const stateFromStores9 = projectId(stateFromStores[14]).useStateFromStores(
+      stateFromStores9 = projectId(stateFromStores[14]).useStateFromStores(
         items20,
-        () => ConjureConnectionStore.isChatStopped(projectId),
+        () => ConjureChatStore.hasLoadedHistory(projectId),
         items21,
       );
-      const tmp2Result16 = projectId(stateFromStores[14]);
+      const tmp2Result15 = projectId(stateFromStores[14]);
       const items22 = [c14];
       const items23 = [projectId];
-      stateFromStores10 = projectId(stateFromStores[14]).useStateFromStores(
+      const stateFromStores10 = projectId(stateFromStores[14]).useStateFromStores(
         items22,
-        () => ConjureChatStore.hasLoadedHistory(projectId),
+        () => ConjureChatStore.isHistoryUnavailable(projectId),
         items23,
       );
-      const tmp2Result17 = projectId(stateFromStores[14]);
-      const items24 = [c14];
-      const items25 = [projectId];
-      const stateFromStores11 = projectId(stateFromStores[14]).useStateFromStores(
-        items24,
-        () => ConjureChatStore.isHistoryUnavailable(projectId),
-        items25,
-      );
-      const tmp2Result18 = projectId(stateFromStores[14]);
-      const chatEmptyStateResult = projectId(stateFromStores[19]).chatEmptyState({
-        historyLoaded: stateFromStores10,
-        historyUnavailable: stateFromStores11,
+      const tmp2Result16 = projectId(stateFromStores[14]);
+      const chatEmptyStateResult = projectId(stateFromStores[20]).chatEmptyState({
+        historyLoaded: stateFromStores9,
+        historyUnavailable: stateFromStores10,
         connState: stateFromStores8,
       });
       render_id = null;
@@ -947,8 +923,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const findLastResult = memo.findLast((role) => {
         let turnSettledResult = "assistant" === role.role;
         if (turnSettledResult) {
-          turnSettledResult = projectId(stateFromStores[20]).turnSettled(role);
-          const obj = projectId(stateFromStores[20]);
+          turnSettledResult = projectId(stateFromStores[21]).turnSettled(role);
+          const obj = projectId(stateFromStores[21]);
         }
         return turnSettledResult;
       });
@@ -959,13 +935,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (render_id1 == null) {
         render_id1 = null;
       }
-      const items26 = [memo];
-      set = obj2.useMemo(() => ConjureTodoState.supersededChecklists(memo), items26);
-      const tmp2Result19 = projectId(stateFromStores[19]);
-      const items27 = [memo1];
-      const items28 = [projectId];
-      stateFromStores12 = projectId(stateFromStores[14]).useStateFromStores(
-        items27,
+      const items24 = [memo];
+      set = obj3.useMemo(() => ConjureTodoState.supersededChecklists(memo), items24);
+      const tmp2Result17 = projectId(stateFromStores[20]);
+      const items25 = [memo1];
+      const items26 = [projectId];
+      stateFromStores11 = projectId(stateFromStores[14]).useStateFromStores(
+        items25,
         () => {
           const settings = ConjureSettingsStore.getSettings(projectId);
           let secrets;
@@ -974,37 +950,37 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return secrets;
         },
-        items28,
+        items26,
       );
-      const items29 = [memo, stateFromStores12];
-      memo1 = obj2.useMemo(() => ConjureSecretRequestState.secretRequestStatuses(memo, stateFromStores12), items29);
-      const tmp2Result20 = projectId(stateFromStores[14]);
+      const items27 = [memo, stateFromStores11];
+      memo1 = obj3.useMemo(() => ConjureSecretRequestState.secretRequestStatuses(memo, stateFromStores11), items27);
+      const tmp2Result18 = projectId(stateFromStores[14]);
       [c14, c15] = stateFromStores1(
-        obj2.useState(() => new Map()),
+        obj3.useState(() => new Map()),
         2,
       );
-      onToggleChecklist = obj2.useCallback((arg0, arg1) => {
+      onToggleChecklist = obj3.useCallback((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
-        _undefined2((get) => projectId(stateFromStores[21]).toggleChecklist(get, closure_0, closure_1));
+        _undefined2((get) => projectId(stateFromStores[22]).toggleChecklist(get, closure_0, closure_1));
       }, []);
-      const items30 = [memo];
-      autoscrollToBottomThreshold = obj2.useMemo(() => conjurePendingPlan.planVersions(memo), items30);
-      const tmp17Result = stateFromStores1(
-        obj2.useState(() => new Map()),
+      const items28 = [memo];
+      autoscrollToBottomThreshold = obj3.useMemo(() => conjurePendingPlan.planVersions(memo), items28);
+      const tmp19Result = stateFromStores1(
+        obj3.useState(() => new Map()),
         2,
       );
       [c18, c19] = stateFromStores1(
-        obj2.useState(() => new Map()),
+        obj3.useState(() => new Map()),
         2,
       );
-      onTogglePlan = obj2.useCallback((arg0, arg1) => {
+      onTogglePlan = obj3.useCallback((arg0, arg1) => {
         closure_0 = arg0;
         closure_1 = arg1;
-        _undefined3((get) => projectId(stateFromStores[23]).togglePlanCard(get, closure_0, closure_1));
+        _undefined3((get) => projectId(stateFromStores[24]).togglePlanCard(get, closure_0, closure_1));
       }, []);
-      const items31 = [memo];
-      closure_21 = obj2.useMemo(
+      const items29 = [memo];
+      closure_21 = obj3.useMemo(
         () =>
           ConjureChatGrouping.groupChatRows(
             memo.map((key) => {
@@ -1043,60 +1019,57 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             }),
           ),
-        items31,
+        items29,
       );
-      const items32 = [projectId];
-      closure_22 = obj2.useCallback(() => {
+      const items30 = [projectId];
+      closure_22 = obj3.useCallback(() => {
         const intl = util.intl;
         conjureAttachmentDrafts.sendConjureCardReply(projectId, intl.string(_modDef3849.EMgIuY));
-      }, items32);
-      const items33 = [projectId];
-      onPickIdea = obj2.useCallback((implementation_prompt) => {
+      }, items30);
+      const items31 = [projectId];
+      onPickIdea = obj3.useCallback((implementation_prompt) => {
         conjureAttachmentDrafts.sendConjureCardReply(projectId, implementation_prompt.implementation_prompt);
-      }, items33);
-      const tmp17Result7 = stateFromStores1(
-        obj2.useState(() => new Map()),
+      }, items31);
+      const tmp19Result7 = stateFromStores1(
+        obj3.useState(() => new Map()),
         2,
       );
-      [tmp39, tmp40] = stateFromStores1(require("useConjureDraftHasText")(projectId), 2);
-      const tmp17Result8 = stateFromStores1(require("useConjureDraftHasText")(projectId), 2);
-      conjureReminder = projectId(stateFromStores[29]).useConjureReminder(projectId, memo, tmp39);
-      const items34 = [projectId];
-      closure_25 = obj2.useCallback(() => {
+      [tmp40, tmp41] = stateFromStores1(require("useConjureDraftHasText")(projectId), 2);
+      const tmp19Result8 = stateFromStores1(require("useConjureDraftHasText")(projectId), 2);
+      conjureReminder = projectId(stateFromStores[30]).useConjureReminder(projectId, memo, tmp40);
+      const items32 = [projectId];
+      closure_25 = obj3.useCallback(() => {
         const intl = util.intl;
         collapsed(projectId, intl.string(_modDef3849["t5CN3+"]));
-      }, items34);
-      const items35 = [projectId];
-      closure_26 = obj2.useCallback((implementation_prompt, clarificationAnswers, attachments) => {
+      }, items32);
+      const items33 = [projectId];
+      closure_26 = obj3.useCallback((implementation_prompt, clarificationAnswers, attachments) => {
         conjureAttachmentDrafts.sendConjureCardReply(projectId, implementation_prompt, {
           clarificationAnswers,
           attachments,
         });
-      }, items35);
-      const tmp2Result21 = projectId(stateFromStores[29]);
-      [c27, c28] = stateFromStores1(obj2.useState(null), 2);
-      let tmp44 = tmp43;
+      }, items33);
+      const tmp2Result19 = projectId(stateFromStores[30]);
+      [c27, c28] = stateFromStores1(obj3.useState(null), 2);
+      let tmp45 = tmp44;
       if ("open" !== stateFromStores8) {
-        tmp44 = "connecting" === stateFromStores8;
+        tmp45 = "connecting" === stateFromStores8;
       }
-      if (tmp44) {
-        tmp44 = !stateFromStores9;
-      }
-      canSend = tmp44;
-      const items36 = [memo];
-      memo2 = obj2.useMemo(() => conjurePendingPlan.pendingPlanRenderId(memo), items36);
-      const tmp17Result9 = stateFromStores1(obj2.useState(null), 2);
+      canSend = tmp45;
+      const items34 = [memo];
+      memo2 = obj3.useMemo(() => conjurePendingPlan.pendingPlanRenderId(memo), items34);
+      const tmp19Result9 = stateFromStores1(obj3.useState(null), 2);
       joined = Array.from(memo1, (arg0) => {
         [tmp, tmp2] = arg0;
         return "" + tmp + ":" + tmp2;
       }).join(",");
-      const items37 = [conjureReminder, tmp44, memo2, joined];
-      const items38 = [memo];
-      const memo3 = obj2.useMemo(
+      const items35 = [conjureReminder, tmp45, memo2, joined];
+      const items36 = [memo];
+      const memo3 = obj3.useMemo(
         () => ({ reminder: conjureReminder, canSend, pendingPlanId: memo2, secretStatusesKey: joined }),
-        items37,
+        items35,
       );
-      memo4 = obj2.useMemo(() => {
+      memo4 = obj3.useMemo(() => {
         let diff = memo.length - 1;
         if (0 <= diff) {
           while (true) {
@@ -1112,9 +1085,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return diff;
         }
         return null;
-      }, items38);
-      const items39 = [memo, memo4];
-      memo5 = obj2.useMemo(() => {
+      }, items36);
+      const items37 = [memo, memo4];
+      memo5 = obj3.useMemo(() => {
         let tmp2;
         if (null != memo4) {
           tmp2 = memo[tmp];
@@ -1124,14 +1097,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           timelineTree = ConjureTimelineTree.buildTimelineTree(tmp2.steps, { turnActive: true });
         }
         return timelineTree;
-      }, items39);
-      let tmp50 = null != memo5;
-      if (tmp50) {
-        tmp50 = memo5.steps.length > 0 || memo5.tasks.length > 0;
-        const tmp51 = memo5.steps.length > 0 || memo5.tasks.length > 0;
+      }, items37);
+      let tmp51 = null != memo5;
+      if (tmp51) {
+        tmp51 = memo5.steps.length > 0 || memo5.tasks.length > 0;
+        const tmp52 = memo5.steps.length > 0 || memo5.tasks.length > 0;
       }
-      const items40 = [memo5];
-      let memo6 = obj2.useMemo(() => {
+      const items38 = [memo5];
+      let memo6 = obj3.useMemo(() => {
         let currentStepResult;
         if (null != memo5) {
           currentStepResult = ConjureTimelineTree.currentStep(tmp.steps);
@@ -1141,15 +1114,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           describeNodeResult = ConjureTimelineTree.describeNode(currentStepResult);
         }
         return describeNodeResult;
-      }, items40);
+      }, items38);
       const arr = Array.from(memo1, (arg0) => {
         [tmp, tmp2] = arg0;
         return "" + tmp + ":" + tmp2;
       });
-      [obj19, c34] = stateFromStores1(obj2.useState(null), 2);
-      const tmp17Result10 = stateFromStores1(obj2.useState(null), 2);
-      [tmp55, c35] = stateFromStores1(obj2.useState(64), 2);
-      const callback1 = obj2.useCallback((nativeEvent) => {
+      [obj19, c34] = stateFromStores1(obj3.useState(null), 2);
+      const tmp19Result10 = stateFromStores1(obj3.useState(null), 2);
+      [tmp56, c35] = stateFromStores1(obj3.useState(64), 2);
+      const callback1 = obj3.useCallback((nativeEvent) => {
         closure_0 = Math.round(nativeEvent.nativeEvent.layout.height);
         _undefined5((arg0) => {
           let tmp = closure_0;
@@ -1159,19 +1132,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp;
         });
       }, []);
-      const tmp17Result11 = stateFromStores1(obj2.useState(64), 2);
-      bound = tmp55;
-      if (!tmp2Result22.isIOS()) {
+      const tmp19Result11 = stateFromStores1(obj3.useState(64), 2);
+      bound = tmp56;
+      if (!tmp2Result20.isIOS()) {
         let _Math = Math;
-        bound = Math.min(tmp55, fadingEdgeLength);
+        bound = Math.min(tmp56, fadingEdgeLength);
       }
-      obj2.useRef(null);
-      ref = obj2.useRef(null);
-      obj2.useRef(false);
-      obj2.useRef(true);
-      obj2.useRef(0);
-      obj2.useRef(0);
-      callback2 = obj2.useCallback(() => {
+      obj3.useRef(null);
+      ref = obj3.useRef(null);
+      obj3.useRef(false);
+      obj3.useRef(true);
+      obj3.useRef(0);
+      obj3.useRef(0);
+      callback2 = obj3.useCallback(() => {
         const animationFrame = requestAnimationFrame(() => {
           if (ref2.current) {
             const current = ref.current;
@@ -1181,34 +1154,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         });
       }, []);
-      callback3 = obj2.useCallback(() => {
+      callback3 = obj3.useCallback(() => {
         const timestamp = Date.now();
         closure_41.current = timestamp + c18;
         closure_42.current = timestamp + 2000;
       }, []);
-      const items41 = [projectId, callback3];
-      const effect1 = obj2.useEffect(() => {
+      const items39 = [projectId, callback3];
+      const effect1 = obj3.useEffect(() => {
         closure_40.current = true;
         callback3();
-      }, items41);
-      const items42 = [stateFromStores10, callback3];
-      const effect2 = obj2.useEffect(() => {
-        if (stateFromStores10) {
+      }, items39);
+      const items40 = [stateFromStores9, callback3];
+      const effect2 = obj3.useEffect(() => {
+        if (stateFromStores9) {
           callback3();
         }
-      }, items42);
-      const items43 = [projectId];
-      const callback4 = obj2.useCallback(() => {
+      }, items40);
+      const items41 = [projectId];
+      const callback4 = obj3.useCallback(() => {
         options(projectId);
-      }, items43);
-      const callback5 = obj2.useCallback(() => {
+      }, items41);
+      const callback5 = obj3.useCallback(() => {
         closure_40.current = false;
       }, []);
-      tmp2Result22 = projectId(stateFromStores[31]);
-      [tmp67, c45] = stateFromStores1(obj2.useState(false), 2);
-      obj2.useRef(null);
-      obj2.useRef(0);
-      callback6 = obj2.useCallback(() => {
+      tmp2Result20 = projectId(stateFromStores[32]);
+      [tmp68, c45] = stateFromStores1(obj3.useState(false), 2);
+      obj3.useRef(null);
+      obj3.useRef(0);
+      callback6 = obj3.useCallback(() => {
         const current = ref6.current;
         const current2 = ref.current;
         if (null != current) {
@@ -1227,9 +1200,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         _undefined(tmp5);
       }, []);
-      const items44 = [callback6];
-      const items45 = [callback2, callback6];
-      const callback7 = obj2.useCallback((nativeEvent) => {
+      const items42 = [callback6];
+      const items43 = [callback2, callback6];
+      const callback7 = obj3.useCallback((nativeEvent) => {
         nativeEvent = nativeEvent.nativeEvent;
         closure_38.current = {
           offsetY: nativeEvent.contentOffset.y,
@@ -1237,8 +1210,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           contentHeight: nativeEvent.contentSize.height,
         };
         callback6();
-      }, items44);
-      const callback8 = obj2.useCallback((arg0, contentHeight) => {
+      }, items42);
+      const callback8 = obj3.useCallback((arg0, contentHeight) => {
         const timestamp = Date.now();
         let current = ref3.current;
         if (current) {
@@ -1273,13 +1246,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           callback6();
         }
-      }, items45);
-      const items46 = [callback6];
-      const memo7 = obj2.useMemo(
-        () => ({ itemVisiblePercentThreshold: projectId(stateFromStores[32]).MIN_VISIBLE_PERCENT }),
+      }, items43);
+      const items44 = [callback6];
+      const memo7 = obj3.useMemo(
+        () => ({ itemVisiblePercentThreshold: projectId(stateFromStores[33]).MIN_VISIBLE_PERCENT }),
         [],
       );
-      const callback9 = obj2.useCallback((arg0) => {
+      const callback9 = obj3.useCallback((arg0) => {
         set = new Set();
         const iter = arg0.viewableItems[Symbol.iterator]();
         const nextResult = iter.next();
@@ -1291,20 +1264,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         _undefined4(set);
         callback6();
-      }, items46);
+      }, items44);
       if (stateFromStores5) {
-        const intl3 = tmp2(tmp3[26]).intl;
+        const intl3 = tmp2(tmp3[27]).intl;
         memo6 = intl3.string(require("../../intl/ConjureUntranslated.messages.js").mKK6wB);
       } else if (stateFromStores4) {
-        const intl2 = tmp2(tmp3[26]).intl;
+        const intl2 = tmp2(tmp3[27]).intl;
         memo6 = intl2.string(require("../../intl/ConjureUntranslated.messages.js").xnCAaP);
       } else if (memo6 == null) {
-        let intl = tmp2(tmp3[26]).intl;
+        let intl = tmp2(tmp3[27]).intl;
         memo6 = intl.string(require("../../intl/ConjureUntranslated.messages.js").L9EDub);
       }
-      const items47 = [memo, memo4];
-      let tmp74;
-      const memo8 = obj2.useMemo(() => {
+      const items45 = [memo, memo4];
+      let tmp75;
+      const memo8 = obj3.useMemo(() => {
         if (null == memo4) {
           return null;
         } else if (null == memo[tmp]) {
@@ -1323,60 +1296,60 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return latestTodosResult;
         }
-      }, items47);
+      }, items45);
       if (null != memo4) {
-        tmp74 = memo[memo4];
+        tmp75 = memo[memo4];
       }
-      let checklistLiveResult = null == tmp74;
+      let checklistLiveResult = null == tmp75;
       if (!checklistLiveResult) {
-        checklistLiveResult = tmp2(tmp3[21]).checklistLive(tmp74);
-        const tmp2Result23 = tmp2(tmp3[21]);
+        checklistLiveResult = tmp2(tmp3[22]).checklistLive(tmp75);
+        const tmp2Result21 = tmp2(tmp3[22]);
       }
-      if (null != tmp74) {
-        const tmp2Result24 = tmp2(tmp3[33]);
-        const conjureTurnStartedAtResult = tmp2(tmp3[33]).conjureTurnStartedAt(tmp74);
+      if (null != tmp75) {
+        const tmp2Result22 = tmp2(tmp3[34]);
+        const conjureTurnStartedAtResult = tmp2(tmp3[34]).conjureTurnStartedAt(tmp75);
       }
-      const items48 = [memo5];
-      let tmp78;
-      const memo9 = obj2.useMemo(() => {
+      const items46 = [memo5];
+      let tmp79;
+      const memo9 = obj3.useMemo(() => {
         if (null != memo5) {
           let runningTodoAgentsResult = ConjureTodoAgents.runningTodoAgents(tmp.tasks);
         } else {
           runningTodoAgentsResult = [];
         }
         return runningTodoAgentsResult;
-      }, items48);
+      }, items46);
       if (null != memo4) {
         let render_id2;
         if (memo[memo4] != null) {
-          render_id2 = tmp79.render_id;
+          render_id2 = tmp80.render_id;
         }
-        tmp78 = render_id2;
+        tmp79 = render_id2;
       }
-      let tmp81 = null != tmp78;
-      if (tmp81) {
-        tmp81 = (null != obj19 && !obj19.has(tmp78)) || tmp67;
-        const tmp82 = (null != obj19 && !obj19.has(tmp78)) || tmp67;
+      let tmp82 = null != tmp79;
+      if (tmp82) {
+        tmp82 = (null != obj19 && !obj19.has(tmp79)) || tmp68;
+        const tmp83 = (null != obj19 && !obj19.has(tmp79)) || tmp68;
       }
-      let tmp83 = null;
+      let tmp84 = null;
       if (stateFromStores3) {
-        tmp83 = null;
-        if (tmp50) {
-          tmp83 = null;
-          if (tmp81) {
-            tmp83 = memo6;
+        tmp84 = null;
+        if (tmp51) {
+          tmp84 = null;
+          if (tmp82) {
+            tmp84 = memo6;
           }
         }
       }
-      const items49 = [bound, memo4, callback6];
-      const effect3 = obj2.useEffect(() => {
+      const items47 = [bound, memo4, callback6];
+      const effect3 = obj3.useEffect(() => {
         closure_46.current = memo4;
         closure_47.current = bound;
         closure_0 = requestAnimationFrame(callback6);
         return () => cancelAnimationFrame(closure_0);
-      }, items49);
-      const items50 = [memo];
-      closure_49 = obj2.useMemo(() => {
+      }, items47);
+      const items48 = [memo];
+      closure_49 = obj3.useMemo(() => {
         const map = new Map();
         const iter = memo[Symbol.iterator]();
         const nextResult = iter.next();
@@ -1394,9 +1367,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           continue;
         }
         return map;
-      }, items50);
-      const items51 = [memo];
-      onJumpToReplied = obj2.useCallback((arg0) => {
+      }, items48);
+      const items49 = [memo];
+      onJumpToReplied = obj3.useCallback((arg0) => {
         closure_0 = arg0;
         const findIndexResult = memo.findIndex((id) => id.id === closure_0);
         if (findIndexResult >= 0) {
@@ -1407,10 +1380,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             current.scrollToIndex(obj);
           }
         }
-      }, items51);
-      const items52 = [bound, memo4];
-      const items53 = [projectId];
-      const callback10 = obj2.useCallback(() => {
+      }, items49);
+      const items50 = [bound, memo4];
+      const items51 = [projectId];
+      const callback10 = obj3.useCallback(() => {
         if (null != memo4) {
           closure_40.current = false;
           const current = ref.current;
@@ -1419,33 +1392,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             current.scrollToIndex(obj);
           }
         }
-      }, items52);
-      const items54 = [projectId];
-      const callback11 = obj2.useCallback((arg0, arg1) => {
+      }, items50);
+      const items52 = [projectId];
+      const callback11 = obj3.useCallback((arg0, arg1) => {
         closure_39.current = true;
         collapsed(projectId, arg0, arg1);
-      }, items53);
+      }, items51);
       let connectionLabelResult = null;
-      const callback12 = obj2.useCallback(() => {
+      const callback12 = obj3.useCallback(() => {
         closure_2_8(projectId);
-      }, items54);
+      }, items52);
       if ("open" !== stateFromStores8) {
-        connectionLabelResult = tmp2(tmp3[36]).connectionLabel(stateFromStores8);
-        const tmp2Result25 = tmp2(tmp3[36]);
+        connectionLabelResult = tmp2(tmp3[37]).connectionLabel(stateFromStores8);
+        const tmp2Result23 = tmp2(tmp3[37]);
       }
-      const tmp17Result12 = stateFromStores1(obj2.useState(false), 2);
-      const obj11 = { style: tmp.container, children: null };
-      const conjureControlActive = projectId(stateFromStores[37]).useConjureControlActive(projectId);
-      const items55 = [
+      const tmp19Result12 = stateFromStores1(obj3.useState(false), 2);
+      const obj12 = { style: tmp.container, children: null };
+      const conjureControlActive = projectId(stateFromStores[38]).useConjureControlActive(projectId);
+      const items53 = [
         c15(require("ConjureShellGlow"), {
           thinking: stateFromStores3,
           bleedBottom: require("useSafeAreaInsets")().bottom,
         }),
         ,
       ];
-      const obj12 = { style: tmp.transcriptArea, children: null };
-      const obj13 = { clearance: tmp55, children: null };
-      const obj14 = {
+      const obj13 = { style: tmp.transcriptArea, children: null };
+      const obj14 = { clearance: tmp56, children: null };
+      const obj15 = {
         ref,
         fadingEdgeLength,
         removeClippedSubviews: null,
@@ -1467,59 +1440,59 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ListEmptyComponent: null,
         renderItem: null,
       };
-      const tmp2Result26 = projectId(stateFromStores[37]);
-      const tmp93 = closure_25;
-      const tmp2Result27 = projectId(stateFromStores[31]);
-      obj14.removeClippedSubviews = projectId(stateFromStores[31]).isIOS() && undefined;
-      obj14.viewabilityConfig = memo7;
-      obj14.onViewableItemsChanged = callback9;
-      obj14.onScroll = callback7;
-      obj14.onScrollBeginDrag = callback5;
-      obj14.onContentSizeChange = callback8;
-      obj14.onStartReached = callback4;
-      const tmp94 = projectId(stateFromStores[31]).isIOS() && undefined;
-      let tmp95;
-      if (tmp2Result28.isIOS()) {
-        const obj15 = { top: num };
-        tmp95 = obj15;
+      const tmp2Result24 = projectId(stateFromStores[38]);
+      const tmp94 = closure_25;
+      const tmp2Result25 = projectId(stateFromStores[32]);
+      obj15.removeClippedSubviews = projectId(stateFromStores[32]).isIOS() && undefined;
+      obj15.viewabilityConfig = memo7;
+      obj15.onViewableItemsChanged = callback9;
+      obj15.onScroll = callback7;
+      obj15.onScrollBeginDrag = callback5;
+      obj15.onContentSizeChange = callback8;
+      obj15.onStartReached = callback4;
+      const tmp95 = projectId(stateFromStores[32]).isIOS() && undefined;
+      let tmp96;
+      if (tmp2Result26.isIOS()) {
+        const obj16 = { top: num };
+        tmp96 = obj16;
       }
-      obj14.contentInset = tmp95;
-      tmp2Result28 = projectId(stateFromStores[31]);
-      let tmp92Result = null;
-      if (!tmp2Result29.isIOS()) {
-        tmp92Result = null;
+      obj15.contentInset = tmp96;
+      tmp2Result26 = projectId(stateFromStores[32]);
+      let tmp93Result = null;
+      if (!tmp2Result27.isIOS()) {
+        tmp93Result = null;
         if (num > 0) {
-          const obj16 = { style: null };
-          const obj17 = { height: num };
-          obj16.style = obj17;
-          tmp92Result = tmp92(tmp91, obj16);
+          const obj17 = { style: null };
+          const obj18 = { height: num };
+          obj17.style = obj18;
+          tmp93Result = tmp93(tmp92, obj17);
         }
       }
-      obj14.ListHeaderComponent = tmp92Result;
-      const items56 = [tmp.transcript];
-      tmp2Result29 = projectId(stateFromStores[31]);
-      const isIOSResult = projectId(stateFromStores[31]).isIOS();
-      let tmp98 = !isIOSResult;
+      obj15.ListHeaderComponent = tmp93Result;
+      const items54 = [tmp.transcript];
+      tmp2Result27 = projectId(stateFromStores[32]);
+      const isIOSResult = projectId(stateFromStores[32]).isIOS();
+      let tmp99 = !isIOSResult;
       if (!isIOSResult) {
-        const obj18 = { marginBottom: tmp55 - bound };
-        tmp98 = obj18;
+        const obj20 = { marginBottom: tmp56 - bound };
+        tmp99 = obj20;
       }
-      items56[1] = tmp98;
-      obj14.style = items56;
-      const items57 = [tmp.transcriptContent];
-      const tmp2Result30 = projectId(stateFromStores[31]);
-      items57[1] = { paddingBottom: bound + require("native").space.PX_8 };
-      obj14.contentContainerStyle = items57;
-      obj14.data = memo;
-      obj14.extraData = memo3;
-      obj14.maintainVisibleContentPosition = { startRenderingFromBottom: true, autoscrollToBottomThreshold };
-      obj14.keyExtractor = function keyExtractor(render_id) {
+      items54[1] = tmp99;
+      obj15.style = items54;
+      const items55 = [tmp.transcriptContent];
+      const tmp2Result28 = projectId(stateFromStores[32]);
+      items55[1] = { paddingBottom: bound + require("native").space.PX_8 };
+      obj15.contentContainerStyle = items55;
+      obj15.data = memo;
+      obj15.extraData = memo3;
+      obj15.maintainVisibleContentPosition = { startRenderingFromBottom: true, autoscrollToBottomThreshold };
+      obj15.keyExtractor = function keyExtractor(render_id) {
         return render_id.render_id;
       };
-      let tmp99 = "loading" === chatEmptyStateResult;
-      if (tmp99) {
-        obj14.ListEmptyComponent = null;
-        obj14.renderItem = function renderItem(arg0) {
+      let tmp100 = "loading" === chatEmptyStateResult;
+      if (tmp100) {
+        obj15.ListEmptyComponent = null;
+        obj15.renderItem = function renderItem(arg0) {
           ({ item, index } = arg0);
           const obj = {
             projectId,
@@ -1621,35 +1594,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj.onRestoreVersion = tmp20;
           return value2(tmp3, obj);
         };
-        obj13.children = tmp92(tmp2(tmp3[41]).FlashList, obj14);
-        const items58 = [tmp92(tmp93, obj13), ,];
-        let tmp92Result5 = null;
-        if (tmp25) {
-          const obj22 = { projectId };
-          tmp92Result5 = tmp92(require("ConjureThinkingOverlay"), obj22);
+        obj14.children = tmp93(tmp2(tmp3[42]).FlashList, obj15);
+        const items56 = [tmp93(tmp94, obj14), ,];
+        let tmp93Result6 = null;
+        if (tmp27) {
+          const obj23 = { projectId };
+          tmp93Result6 = tmp93(require("ConjureThinkingOverlay"), obj23);
         }
-        items58[1] = tmp92Result5;
-        let tmp92Result6 = null;
-        if (null != tmp83) {
-          const obj23 = {
-            line: tmp83,
+        items56[1] = tmp93Result6;
+        let tmp93Result7 = null;
+        if (null != tmp84) {
+          const obj24 = {
+            line: tmp84,
             onJumpToActivity: callback10,
-            bottom: require("native").space.PX_12 + tmp55,
+            bottom: require("native").space.PX_12 + tmp56,
             todos: memo8,
             todosLive: checklistLiveResult,
             agents: memo9,
           };
-          tmp92Result6 = tmp92(require("ConjureFloatingActivity"), obj23);
+          tmp93Result7 = tmp93(require("ConjureFloatingActivity"), obj24);
           const tmp5Result = require("ConjureFloatingActivity");
         }
-        items58[2] = tmp92Result6;
-        obj12.children = items58;
-        items55[1] = tmp90(tmp91, obj12);
-        const obj24 = { style: tmp.bottomStack, onLayout: callback1, children: null };
-        const obj25 = {
+        items56[2] = tmp93Result7;
+        obj13.children = items56;
+        items53[1] = tmp91(tmp92, obj13);
+        const obj25 = { style: tmp.bottomStack, onLayout: callback1, children: null };
+        const obj26 = {
           projectId,
           thinking: stateFromStores3,
           turnStartedAt: conjureTurnStartedAtResult,
+          remixStartedAt: conjureRemixStartedAt,
           compacting: stateFromStores4,
           saving: stateFromStores5,
           recalling: null,
@@ -1661,67 +1635,80 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           thinkingOpen: null,
           onToggleThinking: null,
         };
-        if (tmp99) {
-          tmp99 = 0 === memo.length;
+        if (tmp100) {
+          tmp100 = 0 === memo.length;
         }
-        obj25.recalling = tmp99;
-        obj25.activity = stateFromStores6;
-        obj25.projectUsage = stateFromStores7;
-        obj25.connLabel = connectionLabelResult;
-        obj25.controlling = conjureControlActive;
-        obj25.connFailed = "failed" === stateFromStores8;
-        obj25.thinkingOpen = tmp25;
-        obj25.onToggleThinking = callback;
-        const items59 = [tmp92(require("ConjureNativeStatusStrip"), obj25), ,];
-        let tmp92Result7 = null;
+        obj26.recalling = tmp100;
+        obj26.activity = stateFromStores6;
+        obj26.projectUsage = stateFromStores7;
+        obj26.connLabel = connectionLabelResult;
+        obj26.controlling = conjureControlActive;
+        obj26.connFailed = "failed" === stateFromStores8;
+        obj26.thinkingOpen = tmp27;
+        obj26.onToggleThinking = callback;
+        const items57 = [tmp93(require("ConjureNativeStatusStrip"), obj26), , ,];
+        let tmp93Result8 = null;
+        if (null != tmp7) {
+          const obj27 = { style: tmp.notice, children: null };
+          ({ message: obj46.message, retry: obj46.action } = tmp7);
+          obj27.children = tmp93(tmp2(tmp3[46]).NewInlineNotice, {
+            type: "critical",
+            role: "alert",
+            message: null,
+            action: null,
+          });
+          tmp93Result8 = tmp93(tmp92, obj27);
+          const obj28 = { type: "critical", role: "alert", message: null, action: null };
+        }
+        items57[1] = tmp93Result8;
+        let tmp93Result9 = null;
         if (null != tmp6) {
-          const obj26 = { style: tmp.incompleteNotice, children: null };
-          ({ message: obj46.message, onDismiss: obj46.onDismiss } = tmp6);
-          obj26.children = tmp92(tmp2(tmp3[45]).NewInlineNotice, {
+          const obj29 = { style: tmp.notice, children: null };
+          ({ message: obj48.message, onDismiss: obj48.onDismiss } = tmp6);
+          obj29.children = tmp93(tmp2(tmp3[46]).NewInlineNotice, {
             type: "warning",
             role: "status",
             message: null,
             onDismiss: null,
           });
-          tmp92Result7 = tmp92(tmp91, obj26);
-          const obj27 = { type: "warning", role: "status", message: null, onDismiss: null };
+          tmp93Result9 = tmp93(tmp92, obj29);
+          const obj30 = { type: "warning", role: "status", message: null, onDismiss: null };
         }
-        items59[1] = tmp92Result7;
-        const obj28 = {
+        items57[2] = tmp93Result9;
+        const obj31 = {
           projectId,
-          canSend: tmp44,
+          canSend: tmp45,
           running: stateFromStores3,
-          stopped: stateFromStores9,
           onSend: callback11,
           onInterrupt: null,
           onDraftHasTextChange: null,
           hidden: null,
         };
-        let tmp107;
+        let tmp109;
         const tmp5Result3 = require("ConjureNativeStatusStrip");
         if (stateFromStores3) {
-          tmp107 = callback12;
+          tmp109 = callback12;
         }
-        obj28.onInterrupt = tmp107;
-        obj28.onDraftHasTextChange = tmp40;
-        obj28.hidden = hidden;
-        items59[2] = tmp92(require("ConjureNativeComposer"), obj28);
-        obj24.children = items59;
-        items55[2] = tmp90(tmp91, obj24);
-        obj11.children = items55;
-        return tmp90(tmp91, obj11);
+        obj31.onInterrupt = tmp109;
+        obj31.onDraftHasTextChange = tmp41;
+        obj31.hidden = hidden;
+        items57[3] = tmp93(require("ConjureNativeComposer"), obj31);
+        obj25.children = items57;
+        items53[2] = tmp91(tmp92, obj25);
+        obj12.children = items53;
+        return tmp91(tmp92, obj12);
       } else {
-        const obj29 = { style: tmp.placeholder, children: null };
-        const intl4 = tmp2(tmp3[26]).intl;
+        const obj32 = { style: tmp.placeholder, children: null };
+        const intl4 = tmp2(tmp3[27]).intl;
         if ("unavailable" === chatEmptyStateResult) {
           let AyiQEp = require("../../intl/ConjureUntranslated.messages.js").Td4Sf4;
         } else {
           AyiQEp = require("../../intl/ConjureUntranslated.messages.js").AyiQEp;
         }
-        const obj30 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(AyiQEp) };
-        obj29.children = tmp92(tmp2(tmp3[39]).Text, obj30);
-        tmp92(tmp91, obj29);
+        const obj33 = { variant: "text-sm/normal", color: "text-muted", children: intl4.string(AyiQEp) };
+        obj32.children = tmp93(tmp2(tmp3[40]).Text, obj33);
+        tmp93(tmp92, obj32);
       }
-      const obj20 = { paddingBottom: bound + require("native").space.PX_8 };
-      const obj21 = { startRenderingFromBottom: true, autoscrollToBottomThreshold };
+      const obj21 = { paddingBottom: bound + require("native").space.PX_8 };
+      const obj22 = { startRenderingFromBottom: true, autoscrollToBottomThreshold };
     };

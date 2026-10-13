@@ -90,7 +90,7 @@ let closure_9 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1126).intl;
-          await tmp3(17059).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3849).Owerd3));
+          await tmp3(11271).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3849).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1126).intl;
@@ -124,7 +124,7 @@ let closure_9 = async function _importIntoProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(13218);
+const ConjureConnectionStore = fn(11215);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 const ConjureProjectStore = fn(10652);
 ({ canRemixProject: metroRequire, isProjectOwner: closure_7 } = ConjureProjectStore);

@@ -3,8 +3,8 @@ import useStateFromStores from "../../../../discord_common/js/packages/flux/useS
 import c from "../../../../_runtime/00576_c.js";
 import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import NewBadgeDefault from "../../channel_list_v2/native/components/NewBadge.tsx";
 import MentionsBadgeDefault from "MentionsBadge.tsx";
+import NewBadgeDefault from "../../channel_list_v2/native/components/NewBadge.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 

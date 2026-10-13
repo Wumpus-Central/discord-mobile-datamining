@@ -300,6 +300,7 @@ function registerFull(giftCodeSKUId) {
         source: constants3.REGISTER,
         action: constants2.AGE_GATE_SUCCESS,
       });
+      return body.body;
     },
     (arg0) => {
       if (arg0 instanceof SharedCaptchaUtils.CaptchaCancelError) {
@@ -331,7 +332,7 @@ function registerFull(giftCodeSKUId) {
     },
   );
 }
-const ParentalConsentStore = fn(16383);
+const ParentalConsentStore = fn(16688);
 const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1110);

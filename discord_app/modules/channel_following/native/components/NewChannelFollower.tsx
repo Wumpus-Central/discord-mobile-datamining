@@ -120,9 +120,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("../../../../../_runtime/metro/12178__.js");
+    let tmp8Result = require("../../../../../_runtime/metro/12693__.js");
   } else {
-    tmp8Result = require("../../../../../_runtime/metro/12179__.js");
+    tmp8Result = require("../../../../../_runtime/metro/12694__.js");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { style: tmp.header, children: null };

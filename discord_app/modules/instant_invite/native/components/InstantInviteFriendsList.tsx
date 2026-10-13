@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 keyboardShouldPersistTaps: "always",
                 ListEmptyComponent,
               };
-              const tmp14 = source(tmp(tmp2[16]).BottomSheetFlatList, obj4);
+              const tmp14 = source(tmp(tmp2[16]).BottomSheetFlashList, obj4);
               cResult[9] = data;
               cResult[10] = tmp4;
               cResult[11] = tmp9;
@@ -290,5 +290,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         keyboardShouldPersistTaps: "always",
         ListEmptyComponent,
       };
-      return source(code(onInviteSent[16]).BottomSheetFlatList, obj);
+      return source(code(onInviteSent[16]).BottomSheetFlashList, obj);
     };

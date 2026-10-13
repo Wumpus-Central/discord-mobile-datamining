@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj3 = { context: "channel", value: notification, allMessagesSubLabel: tmp5, onChange: tmp8 };
-            const tmp12 = jsx(unread(12608), {
+            const tmp12 = jsx(unread(13116), {
               context: "channel",
               value: notification,
               allMessagesSubLabel: tmp5,
@@ -129,5 +129,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.label = NotificationLabel.notifications(message_notifications);
         const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(obj4);
       };
-      return jsx(unread(12608), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+      return jsx(unread(13116), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
     };

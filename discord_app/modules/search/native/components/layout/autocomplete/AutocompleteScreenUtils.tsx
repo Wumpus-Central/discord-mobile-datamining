@@ -6,8 +6,8 @@ import ImageIcon from "../../../../../../design/components/Icon/native/redesign/
 import PollsIcon from "../../../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
 import AttachmentIcon from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import VideoIcon from "../../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
-import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import ForwardingIconDefault from "../../../../../forwarding/native/ForwardingIcon.tsx";
 import SearchUtils from "../../../../SearchUtils.tsx";
 import SoundboardIcon from "../../../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";

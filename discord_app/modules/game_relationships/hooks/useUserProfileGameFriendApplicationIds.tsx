@@ -44,7 +44,7 @@ export const useUserProfileGameFriendApplicationIds = ReactCompilerGating.isReac
       const obj = userId(576);
       const stateFromStores = userId(504).useStateFromStores(first, tmp7);
       const tmpResult = userId(504);
-      const gameFriendsForUser = userId(13188).useGameFriendsForUser(userId);
+      const gameFriendsForUser = userId(13670).useGameFriendsForUser(userId);
       if (stateFromStores) {
         let tmp9 = closure_5;
       } else if (cResult[3] !== gameFriendsForUser) {

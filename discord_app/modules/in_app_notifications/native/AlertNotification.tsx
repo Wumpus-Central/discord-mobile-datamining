@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       guild = notification.guild;
       const tmp4 = closure_9();
       const obj = channel(576);
-      const incidentData = channel(12580).useGuildIncidentsState(notification.key).incidentData;
+      const incidentData = channel(13090).useGuildIncidentsState(notification.key).incidentData;
       let raidDetectedAt;
       if (incidentData != null) {
         raidDetectedAt = incidentData.raidDetectedAt;
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj7 = { text: tmp6 };
-            const tmp30 = closure_5(tmp(12586).SystemMessageText, obj7);
+            const tmp30 = closure_5(tmp(13096).SystemMessageText, obj7);
             cResult[18] = tmp6;
             cResult[19] = tmp30;
           } else {
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj8 = { icon: tmp25, header: tmp13, children: tmp29, onPress: C, notification };
-          const tmp33 = closure_5(tmp(12616).NotificationPressable, obj8);
+          const tmp33 = closure_5(tmp(13124).NotificationPressable, obj8);
           cResult[20] = tmp13;
           cResult[21] = notification;
           cResult[22] = C;
@@ -241,14 +241,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = tmp20;
       cResult[14] = tmp24;
       const obj10 = { style: tmp4.warningBadge, children: tmp20 };
-      const obj2 = channel(12580);
+      const obj2 = channel(13090);
     }
   : function AlertNotification(notification) {
       notification = notification.notification;
       const channel = notification.channel;
       guild = notification.guild;
       const tmp = closure_9();
-      const incidentData = channel(12580).useGuildIncidentsState(notification.key).incidentData;
+      const incidentData = channel(13090).useGuildIncidentsState(notification.key).incidentData;
       let raidDetectedAt;
       if (incidentData != null) {
         raidDetectedAt = incidentData.raidDetectedAt;
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { cutouts: null, children: null };
       const items2 = [size];
       obj4.cutouts = items2;
-      let obj = channel(12580);
+      let obj = channel(13090);
       obj4.children = closure_5(guild(6159), { guild, selected: false });
       const items3 = [closure_5(guild(9017), obj4)];
       const obj5 = { style: tmp.warningBadge, children: null };
@@ -294,8 +294,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = items3;
       obj2.icon = closure_7(closure_6, obj3);
       obj2.header = memo;
-      obj2.children = closure_5(channel(12586).SystemMessageText, { text: stringResult });
+      obj2.children = closure_5(channel(13096).SystemMessageText, { text: stringResult });
       obj2.onPress = callback;
       obj2.notification = notification;
-      return closure_5(channel(12616).NotificationPressable, obj2);
+      return closure_5(channel(13124).NotificationPressable, obj2);
     };

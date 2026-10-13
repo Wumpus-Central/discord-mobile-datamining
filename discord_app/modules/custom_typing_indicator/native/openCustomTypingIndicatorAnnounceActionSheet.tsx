@@ -12,7 +12,7 @@ export const openCustomTypingIndicatorAnnounceActionSheet = function openCustomT
   analyticsLocations,
 ) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(11646, dependencyMap.paths),
+    asyncRequireImpl(12392, dependencyMap.paths),
     CustomTypingIndicatorAnnounceActionSheet,
     {
       analyticsLocations,

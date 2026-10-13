@@ -30,11 +30,11 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(16116).BugIcon,
+  IconComponent: fn(11780).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12627, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13133, dependencyMap.paths));
     }
   },
   withArrow: true,

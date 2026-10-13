@@ -387,7 +387,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           if (memo) {
             const obj4 = { style: wishlistButton.cardWrapper, children: null };
             const obj5 = { sku: stateFromStores, size, onPress: callback1 };
-            const items7 = [closure_9(onPress(12729), obj5)];
+            const items7 = [closure_9(onPress(13235), obj5)];
             let tmp17Result = null != memo1;
             if (tmp17Result) {
               callback1 = { selectedProduct: memo1, style: null };
@@ -405,8 +405,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               overlay: tmp(8977).WishlistItemCardOverlay.LOCKED,
               onPress: tmp10,
             };
-            tmp15Result = closure_9(onPress(12729), obj6);
-            const tmp13 = onPress(12729);
+            tmp15Result = closure_9(onPress(13235), obj6);
+            const tmp13 = onPress(13235);
           }
         }
       }
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp8 = analyticsLocations(13103)(first);
+      const tmp8 = analyticsLocations(13587)(first);
       cardWidth = tmp8.cardWidth;
       ({ rowWidth, gap } = tmp8);
       let obj2 = cardWidth(8342);
@@ -715,8 +715,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         require("useMaybeFetchEquippedCollectibleProducts").useEquippedCollectibleSkuIds(userId, guildId);
       let obj = require("useMaybeFetchEquippedCollectibleProducts");
       let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-      ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(13103)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
-      const tmp2 = analyticsLocations(13103)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+      ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(13587)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+      const tmp2 = analyticsLocations(13587)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
       analyticsLocations = analyticsLocations(6852)(
         analyticsLocations(6879).USER_PROFILE_OVERFLOW_MENU,
       ).analyticsLocations;

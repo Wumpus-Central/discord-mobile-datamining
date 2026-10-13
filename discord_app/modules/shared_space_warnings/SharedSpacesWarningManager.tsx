@@ -66,7 +66,7 @@ function handleAppStateChanged(state) {
     }
   }
 }
-const SharedSpacesWarningStore = fn(14026);
+const SharedSpacesWarningStore = fn(14363);
 ({
   isBlockedWarningQueued: hasOwnProperty,
   dequeueBlockWarning: metroRequire,

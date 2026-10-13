@@ -10,7 +10,7 @@ import showUserSettingsInputAlertDefault from "../../account/native/showUserSett
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const initialize = obj(504);
-const account_MFAUtils = obj(15047);
+const account_MFAUtils = obj(15368);
 require = fn;
 const UserFlags = fn(1085).UserFlags;
 let closure_5 = fn(6732).PHONE_VERIFICATION_MODAL_KEY;
@@ -201,7 +201,7 @@ const toggle = SettingBuilders.createToggle({
     }
   },
   useDescription: tmp2,
-  usePredicate: fn(14960).useIsTOTPEnabled,
+  usePredicate: fn(15281).useIsTOTPEnabled,
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

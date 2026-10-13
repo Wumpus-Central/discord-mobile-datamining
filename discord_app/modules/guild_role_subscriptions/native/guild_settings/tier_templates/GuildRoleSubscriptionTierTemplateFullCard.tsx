@@ -577,7 +577,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj16 = { roleColor: role_color, roleImage: image, roleName: name, guildId };
-              const tmp44 = closure_4(tmp(18608).GuildRoleSubscriptionRolePreview, obj16);
+              const tmp44 = closure_4(tmp(18612).GuildRoleSubscriptionRolePreview, obj16);
               cResult[26] = guildId;
               cResult[27] = image;
               cResult[28] = name;

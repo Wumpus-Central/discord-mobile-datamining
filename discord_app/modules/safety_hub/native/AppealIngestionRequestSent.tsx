@@ -1,7 +1,7 @@
 // discord_app/modules/safety_hub/native/AppealIngestionRequestSent.tsx
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink.tsx";
-import _modDef11505 from "../../../../_runtime/metro/11505__.js";
+import _modDef12271 from "../../../../_runtime/metro/12271__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function AppealIngestionRequestSent() {
       const cResult = emitAppealIngestionEvent(576).c(20);
       const obj = emitAppealIngestionEvent(576);
-      emitAppealIngestionEvent = emitAppealIngestionEvent(11481).useEmitAppealIngestionEvent();
+      emitAppealIngestionEvent = emitAppealIngestionEvent(12247).useEmitAppealIngestionEvent();
       const tmp5 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[1];
       }
       if (cResult[2] !== tmp5.checkboxPng) {
-        const obj3 = { source: _modDef11505, style: tmp5.checkboxPng };
+        const obj3 = { source: _modDef12271, style: tmp5.checkboxPng };
         const tmp14 = closure_6(FastImageDefault, obj3);
         cResult[2] = tmp5.checkboxPng;
         cResult[3] = tmp14;
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { headerText: first, subHeaderText: tmp8 };
-        const tmp17 = closure_6(tmp(11479).AppealIngestionModalHeader, obj4);
+        const tmp17 = closure_6(tmp(12245).AppealIngestionModalHeader, obj4);
         cResult[4] = tmp17;
         let tmp15 = tmp17;
       } else {
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp10, tmp15, tmp20, tmp25, tmp32];
       obj9.children = items;
       obj8.children = closure_7(View, obj9);
-      const tmp38 = closure_6(emitAppealIngestionEvent(11479).AppealIngestionModalScreen, obj8);
+      const tmp38 = closure_6(emitAppealIngestionEvent(12245).AppealIngestionModalScreen, obj8);
       cResult[14] = tmp5.container;
       cResult[15] = tmp32;
       cResult[16] = tmp10;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[18] = tmp25;
       cResult[19] = tmp38;
       tmp37 = tmp38;
-      const obj2 = emitAppealIngestionEvent(11481);
+      const obj2 = emitAppealIngestionEvent(12247);
     }
   : function AppealIngestionRequestSent() {
       _require = require("useEmitAppealIngestionEvent").useEmitAppealIngestionEvent();
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.container, children: null };
       const obj4 = { source: null, style: null };
       const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-      obj4.source = _modDef11505;
+      obj4.source = _modDef12271;
       obj4.style = tmp.checkboxPng;
       const items = [
         closure_6(FastImageDefault, obj4),

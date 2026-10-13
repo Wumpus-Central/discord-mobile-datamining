@@ -138,7 +138,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj7 = { userRecord, accessibilityActions: tmp15, onAccessibilityAction: tmp7 };
-            const tmp18 = jsx(tmp(15083).RestrictedUserRowLabel, {
+            const tmp18 = jsx(tmp(15404).RestrictedUserRowLabel, {
               userRecord,
               accessibilityActions: tmp15,
               onAccessibilityAction: tmp7,
@@ -226,7 +226,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [{ name: "activate" }, { name: "unignore", label: formatToPlainStringResult }];
       obj3.accessibilityActions = items;
-      obj.label = jsx(userRecord(15083).RestrictedUserRowLabel, {
+      obj.label = jsx(userRecord(15404).RestrictedUserRowLabel, {
         userRecord,
         accessibilityActions: null,
         onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {

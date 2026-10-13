@@ -11,7 +11,7 @@ import ConjurePublishStatusStore from "../../publish/ConjurePublishStatusStore.t
 
 require = fn;
 const View = fn(17).View;
-const AI_LOADER_CYCLE_MS = fn(14227).AI_LOADER_CYCLE_MS;
+const AI_LOADER_CYCLE_MS = fn(11393).AI_LOADER_CYCLE_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5092);
@@ -381,11 +381,11 @@ const result = size.fileFinishedImporting("modules/conjure/agent_activity/native
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjureNativeStatusStrip(projectId) {
-      const cResult = projectId(576).c(47);
+      const cResult = projectId(576).c(49);
       projectId = projectId.projectId;
       ({
         thinking,
-        turnStartedAt,
+        remixStartedAt,
         compacting,
         saving,
         recalling,
@@ -397,6 +397,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         thinkingOpen,
         onToggleThinking,
       } = projectId);
+      let tmp4 = undefined !== saving;
+      if (tmp4) {
+        tmp4 = saving;
+      }
       closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjurePublishStatusStore];
@@ -426,230 +430,268 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = projectId(576);
       const stateFromStores = projectId(504).useStateFromStores(first, tmp9, tmp10);
+      if (remixStartedAt == null) {
+        let turnStartedAt;
+        if (thinking) {
+          turnStartedAt = projectId.turnStartedAt;
+        }
+        remixStartedAt = turnStartedAt;
+      }
+      let tmp14 = thinking;
+      if (!thinking) {
+        tmp14 = tmp12;
+      }
+      if (!tmp14) {
+        tmp14 = tmp4;
+      }
       if (cResult[4] === activity) {
-        if (cResult[5] === compacting) {
-          if (cResult[6] === controlling) {
-            if (cResult[7] === stateFromStores) {
-              if (cResult[8] === tmp5) {
-                if (cResult[9] === tmp4) {
-                  let tmp12 = cResult[10];
-                  let tmp13 = cResult[11];
-                }
-                if (cResult[12] !== projectUsage) {
-                  let runesUsedLabelsResult = null;
-                  if (null != projectUsage) {
-                    runesUsedLabelsResult = tmp(17189).runesUsedLabels(projectUsage);
-                    const tmpResult3 = tmp(17189);
-                  }
-                  cResult[12] = projectUsage;
-                  cResult[13] = runesUsedLabelsResult;
-                }
-                let tmp19 = null != activity;
-                if (tmp19) {
-                  tmp19 = "" !== activity.text;
-                }
-                let tmp20 = thinking;
-                if (thinking) {
-                  if (!tmp19) {
-                    tmp19 = thinkingOpen;
-                  }
-                  tmp20 = tmp19;
-                }
-                if (cResult[14] !== projectId) {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
+        if (cResult[5] === tmp14) {
+          if (cResult[6] === compacting) {
+            if (cResult[7] === controlling) {
+              if (cResult[8] === stateFromStores) {
+                if (cResult[9] === tmp5) {
+                  if (cResult[10] === tmp12) {
+                    if (cResult[11] === tmp4) {
+                      let tmp15 = cResult[12];
+                      let tmp16 = cResult[13];
                     }
-                  }
-                  cResult[14] = projectId;
-                  cResult[15] = G;
-                } else {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
+                    if (cResult[14] !== projectUsage) {
+                      let runesUsedLabelsResult = null;
+                      if (null != projectUsage) {
+                        runesUsedLabelsResult = tmp(11805).runesUsedLabels(projectUsage);
+                        const tmpResult3 = tmp(11805);
+                      }
+                      cResult[14] = projectUsage;
+                      cResult[15] = runesUsedLabelsResult;
                     }
+                    let tmp21 = null != activity;
+                    if (tmp21) {
+                      tmp21 = "" !== activity.text;
+                    }
+                    if (thinking) {
+                      if (!tmp21) {
+                        tmp21 = thinkingOpen;
+                      }
+                      thinking = tmp21;
+                    }
+                    if (cResult[16] !== projectId) {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                      cResult[16] = projectId;
+                      cResult[17] = K;
+                    } else {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                    }
+                    const tmp23 = tmp15 === tmp(11805).RECALLING_LINES[0];
+                    if (cResult[18] === tmp14) {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                    }
+                    if (!tmp14) {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                      cResult[18] = tmp14;
+                      cResult[19] = thinking;
+                      cResult[20] = tmp16;
+                      cResult[21] = onToggleThinking;
+                      cResult[22] = stateFromStores;
+                      cResult[23] = tmp5;
+                      cResult[24] = tmp23;
+                      cResult[25] = tmp4;
+                      cResult[26] = thinkingOpen;
+                      cResult[27] = tmp26Result;
+                    }
+                    if (!thinking) {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                    }
+                    let obj2 = {
+                      accessible: thinking,
+                      accessibilityRole: null,
+                      accessibilityState: null,
+                      accessibilityLabel: null,
+                      accessibilityHint: null,
+                      hitSlop: 8,
+                      disabled: null,
+                      onPress: null,
+                      children: null,
+                    };
+                    if (thinking) {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                    }
+                    obj2.accessibilityRole = undefined;
+                    let tmp29;
+                    if (thinking) {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                      tmp30[0] = thinkingOpen;
+                      tmp29 = tmp30;
+                    }
+                    obj2.accessibilityState = tmp29;
+                    if (thinking) {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                    } else {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                    }
+                    obj2.accessibilityLabel = tmp31;
+                    let stringResult;
+                    if (thinking) {
+                      class K {
+                        constructor() {
+                          obj = closure_0(closure_2[15]);
+                          obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+                          obj4 = { projectId };
+                          obj1.content = jsx(closure_1(closure_2[16]), obj4);
+                          showActionSheetResult = obj.showActionSheet(obj1);
+                          return;
+                        }
+                      }
+                      stringResult = obj7.string(_modDef3849["0Kemnh"]);
+                    }
+                    obj2.accessibilityHint = stringResult;
+                    obj2.disabled = !thinking;
+                    obj2.onPress = onToggleThinking;
+                    const obj3 = { line: tmp16, rotating: tmp23, immediate: tmp4 };
+                    obj2.children = closure_8(closure_11, obj3);
+                    tmp26Result = closure_8(tmp(6185).PressableOpacity, obj2);
                   }
                 }
-                const tmp22 = tmp12 === tmp(17189).RECALLING_LINES[0];
-                if (cResult[16] === tmp20) {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
-                    }
-                  }
-                }
-                if (!thinking) {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
-                    }
-                  }
-                  cResult[16] = tmp20;
-                  cResult[17] = tmp13;
-                  cResult[18] = onToggleThinking;
-                  cResult[19] = tmp5;
-                  cResult[20] = tmp22;
-                  cResult[21] = tmp4;
-                  cResult[22] = thinking;
-                  cResult[23] = thinkingOpen;
-                  cResult[24] = tmp25Result;
-                }
-                if (!tmp20) {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
-                    }
-                  }
-                }
-                let obj2 = {
-                  accessible: tmp20,
-                  accessibilityRole: null,
-                  accessibilityState: null,
-                  accessibilityLabel: null,
-                  accessibilityHint: null,
-                  hitSlop: 8,
-                  disabled: null,
-                  onPress: null,
-                  children: null,
-                };
-                if (tmp20) {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
-                    }
-                  }
-                }
-                obj2.accessibilityRole = undefined;
-                let tmp28;
-                if (tmp20) {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
-                    }
-                  }
-                  tmp29[0] = thinkingOpen;
-                  tmp28 = tmp29;
-                }
-                obj2.accessibilityState = tmp28;
-                if (tmp20) {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
-                    }
-                  }
-                } else {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
-                    }
-                  }
-                }
-                obj2.accessibilityLabel = tmp30;
-                let stringResult;
-                if (tmp20) {
-                  class G {
-                    constructor() {
-                      obj = closure_0(closure_2[15]);
-                      obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
-                      obj4 = { projectId };
-                      obj1.content = jsx(closure_1(closure_2[16]), obj4);
-                      showActionSheetResult = obj.showActionSheet(obj1);
-                      return;
-                    }
-                  }
-                  stringResult = obj6.string(_modDef3849["0Kemnh"]);
-                }
-                obj2.accessibilityHint = stringResult;
-                obj2.disabled = !tmp20;
-                obj2.onPress = onToggleThinking;
-                const obj3 = { line: tmp13, rotating: tmp22, immediate: tmp4 };
-                obj2.children = closure_8(closure_11, obj3);
-                tmp25Result = closure_8(tmp(6185).PressableOpacity, obj2);
               }
             }
           }
         }
       }
       const tmpResult = projectId(504);
-      const thinkingLabelResult = projectId(17189).thinkingLabel({
+      const obj4 = {
         activity,
         compacting,
-        saving: undefined !== saving && saving,
+        saving: tmp4,
+        remixing: null != remixStartedAt,
         recalling: undefined !== recalling && recalling,
         controlling,
-        publishPending: stateFromStores,
-      });
+        publishPending: null,
+        publishing: null,
+      };
+      if (stateFromStores) {
+        class K {
+          constructor() {
+            obj = closure_0(closure_2[15]);
+            obj1 = { content: null, key: closure_0(closure_2[16]).CONJURE_USAGE_SHEET_KEY };
+            obj4 = { projectId };
+            obj1.content = jsx(closure_1(closure_2[16]), obj4);
+            showActionSheetResult = obj.showActionSheet(obj1);
+            return;
+          }
+        }
+      }
+      obj4.publishPending = stateFromStores;
+      obj4.publishing = stateFromStores;
+      const thinkingLabelResult = projectId(11805).thinkingLabel(obj4);
       const intl = tmp(1126).intl;
       const stringResult1 = intl.string(thinkingLabelResult);
       cResult[4] = activity;
-      cResult[5] = compacting;
-      cResult[6] = controlling;
-      cResult[7] = stateFromStores;
-      cResult[8] = undefined !== recalling && recalling;
-      cResult[9] = undefined !== saving && saving;
-      cResult[10] = thinkingLabelResult;
-      cResult[11] = stringResult1;
-      tmp13 = stringResult1;
-      tmp12 = thinkingLabelResult;
-      const tmpResult4 = projectId(17189);
+      cResult[5] = tmp14;
+      cResult[6] = compacting;
+      cResult[7] = controlling;
+      cResult[8] = stateFromStores;
+      cResult[9] = undefined !== recalling && recalling;
+      cResult[10] = null != remixStartedAt;
+      cResult[11] = tmp4;
+      cResult[12] = thinkingLabelResult;
+      cResult[13] = stringResult1;
+      tmp16 = stringResult1;
+      tmp15 = thinkingLabelResult;
+      const tmpResult4 = projectId(11805);
     }
-  : function ConjureNativeStatusStrip(compacting) {
-      const projectId = compacting.projectId;
-      ({ thinking, turnStartedAt, saving } = compacting);
+  : function ConjureNativeStatusStrip(projectId) {
+      projectId = projectId.projectId;
+      ({ thinking, remixStartedAt, saving } = projectId);
+      ({ turnStartedAt, compacting } = projectId);
       if (saving === undefined) {
         saving = false;
       }
-      let flag = compacting.recalling;
+      let flag = projectId.recalling;
       if (flag === undefined) {
         flag = false;
       }
-      ({ activity, projectUsage, connLabel, thinkingOpen } = compacting);
-      ({ connFailed, controlling, onToggleThinking } = compacting);
+      ({ activity, projectUsage, connLabel, thinkingOpen } = projectId);
+      ({ connFailed, controlling, onToggleThinking } = projectId);
       const tmp = closure_10();
       const items = [ConjurePublishStatusStore];
       const items1 = [projectId];
@@ -665,72 +707,91 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         items1,
       );
+      if (remixStartedAt == null) {
+        let tmp6;
+        if (thinking) {
+          tmp6 = turnStartedAt;
+        }
+        remixStartedAt = tmp6;
+      }
+      let tmp7 = thinking;
+      if (!thinking) {
+        tmp7 = tmp5;
+      }
+      if (!tmp7) {
+        tmp7 = saving;
+      }
       const obj = projectId(504);
-      const thinkingLabelResult = projectId(17189).thinkingLabel({
+      let obj2 = {
         activity,
-        compacting: compacting.compacting,
+        compacting,
         saving,
+        remixing: null != remixStartedAt,
         recalling: flag,
         controlling,
-        publishPending: stateFromStores,
-      });
-      const intl = projectId(1126).intl;
+        publishPending: null,
+        publishing: null,
+      };
+      let tmp8 = stateFromStores;
+      if (stateFromStores) {
+        tmp8 = tmp7;
+      }
+      obj2.publishPending = tmp8;
+      obj2.publishing = stateFromStores;
+      const thinkingLabelResult = projectId(11805).thinkingLabel(obj2);
+      const intl = tmp2(1126).intl;
       const stringResult = intl.string(thinkingLabelResult);
       let runesUsedLabelsResult = null;
       if (null != projectUsage) {
-        runesUsedLabelsResult = tmp2(17189).runesUsedLabels(projectUsage);
-        const tmp2Result = tmp2(17189);
+        runesUsedLabelsResult = tmp2(11805).runesUsedLabels(projectUsage);
+        const tmp2Result2 = tmp2(11805);
       }
-      let tmp8 = null != activity;
-      if (tmp8) {
-        tmp8 = "" !== activity.text;
+      let tmp12 = null != activity;
+      if (tmp12) {
+        tmp12 = "" !== activity.text;
       }
-      let tmp9 = thinking;
       if (thinking) {
-        if (!tmp8) {
-          tmp8 = thinkingOpen;
+        if (!tmp12) {
+          tmp12 = thinkingOpen;
         }
-        tmp9 = tmp8;
+        thinking = tmp12;
       }
       [][0] = projectId;
       const obj3 = { style: tmp.row, children: null };
       const obj4 = { style: tmp.activity, children: null };
       const obj5 = { style: tmp.live, accessibilityRole: "none", accessibilityLiveRegion: "polite", children: null };
-      if (!thinking) {
+      if (!tmp7) {
         if (!flag) {
-          let tmp13Result4 = null;
+          let tmp16Result4 = null;
         }
-        obj5.children = tmp13Result4;
+        obj5.children = tmp16Result4;
         const items2 = [closure_8(View, obj5)];
-        let tmp13Result = null;
-        if (thinking) {
-          tmp13Result = null;
-          if (null != turnStartedAt) {
-            const obj6 = { startedAt: turnStartedAt, variant: "text-xs/medium" };
-            tmp13Result = closure_8(ConjureNativeTurnTimerDefault, obj6);
-          }
+        let tmp16Result = null;
+        if (null != remixStartedAt) {
+          const obj6 = { startedAt: remixStartedAt, variant: "text-xs/medium" };
+          tmp16Result = closure_8(ConjureNativeTurnTimerDefault, obj6);
         }
-        items2[1] = tmp13Result;
+        items2[1] = tmp16Result;
         obj4.children = items2;
         const items3 = [closure_9(View, obj4), ,];
-        let tmp13Result3 = null;
+        let tmp16Result3 = null;
         if (null != connLabel) {
           let str3 = "text-muted";
           if (connFailed) {
             str3 = "text-feedback-critical";
           }
           const obj7 = { variant: "text-xs/medium", color: str3, children: connLabel };
-          tmp13Result3 = closure_8(tmp2(5088).Text, obj7);
+          tmp16Result3 = closure_8(tmp2(5088).Text, obj7);
         }
-        items3[1] = tmp13Result3;
-        let tmp11Result = null;
+        items3[1] = tmp16Result3;
+        let tmp14Result = null;
         if (null != runesUsedLabelsResult) {
           const obj8 = {
             accessibilityRole: "button",
             accessibilityLabel: runesUsedLabelsResult.aria,
             hitSlop: 8,
             style: tmp.runes,
-            onPress: tmp10,
+            onPress: tmp13,
             children: null,
           };
           const obj9 = { variant: "text-xs/medium", color: "text-muted", children: runesUsedLabelsResult.text };
@@ -738,19 +799,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj10 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
           items4[1] = closure_8(tmp2(5046).CircleInformationIcon, obj10);
           obj8.children = items4;
-          tmp11Result = closure_9(tmp2(6185).PressableOpacity, obj8);
+          tmp14Result = closure_9(tmp2(6185).PressableOpacity, obj8);
         }
-        items3[2] = tmp11Result;
+        items3[2] = tmp14Result;
         obj3.children = items3;
         return closure_9(View, obj3);
       }
-      const tmp15 = thinkingLabelResult === projectId(17189).RECALLING_LINES[0];
-      let tmp16 = tmp9;
-      if (!tmp9) {
-        tmp16 = tmp15;
+      const tmp18 = thinkingLabelResult === projectId(11805).RECALLING_LINES[0];
+      let tmp19 = thinking;
+      if (!thinking) {
+        tmp19 = tmp18;
       }
       const obj11 = {
-        accessible: tmp16,
+        accessible: tmp19,
         accessibilityRole: null,
         accessibilityState: null,
         accessibilityLabel: null,
@@ -761,29 +822,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       let str2;
-      if (tmp9) {
+      if (thinking) {
         str2 = "button";
       }
       obj11.accessibilityRole = str2;
-      let tmp17;
-      if (tmp9) {
+      let tmp20;
+      if (thinking) {
         const obj12 = { expanded: thinkingOpen };
-        tmp17 = obj12;
+        tmp20 = obj12;
       }
-      obj11.accessibilityState = tmp17;
-      if (tmp9) {
-        const tmp18 = stringResult;
+      obj11.accessibilityState = tmp20;
+      if (thinking) {
+        const tmp21 = stringResult;
       }
-      obj11.accessibilityLabel = tmp18;
+      obj11.accessibilityLabel = tmp21;
       let stringResult1;
-      if (tmp9) {
+      if (thinking) {
         const intl2 = tmp2(1126).intl;
         stringResult1 = intl2.string(_modDef3849["0Kemnh"]);
       }
       obj11.accessibilityHint = stringResult1;
-      obj11.disabled = !tmp9;
+      obj11.disabled = !thinking;
       obj11.onPress = onToggleThinking;
-      obj11.children = closure_8(closure_11, { line: stringResult, rotating: tmp15, immediate: saving });
-      tmp13Result4 = closure_8(tmp2(6185).PressableOpacity, obj11);
-      let obj2 = projectId(17189);
+      obj11.children = closure_8(closure_11, { line: stringResult, rotating: tmp18, immediate: saving });
+      tmp16Result4 = closure_8(tmp2(6185).PressableOpacity, obj11);
+      const tmp2Result = projectId(11805);
     };

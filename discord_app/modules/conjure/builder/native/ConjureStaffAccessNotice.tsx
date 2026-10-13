@@ -17,7 +17,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp = dependencyMap;
       const cResult = conjureStaffAccessTarget(576).c(6);
       let obj = conjureStaffAccessTarget(576);
-      conjureStaffAccessTarget = conjureStaffAccessTarget(17102).useConjureStaffAccessTarget();
+      conjureStaffAccessTarget = conjureStaffAccessTarget(11344).useConjureStaffAccessTarget();
       if (cResult[0] !== conjureStaffAccessTarget) {
         const fn = function n() {
           if (null != conjureStaffAccessTarget) {
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[2] !== tmp4) {
           const intl = NewInlineNotice(1126).intl;
-          const obj3 = { channel: NewInlineNotice(17102).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
+          const obj3 = { channel: NewInlineNotice(11344).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
           const formatResult = intl.format(_modDef3849["6anmu1"], obj3);
           cResult[2] = tmp4;
           cResult[3] = formatResult;
@@ -57,16 +57,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[5] = tmp;
         }
       }
-      let obj2 = conjureStaffAccessTarget(17102);
+      let obj2 = conjureStaffAccessTarget(11344);
     }
   : function ConjureStaffAccessNotice() {
-      conjureStaffAccessTarget = conjureStaffAccessTarget(17102).useConjureStaffAccessTarget();
+      conjureStaffAccessTarget = conjureStaffAccessTarget(11344).useConjureStaffAccessTarget();
       [][0] = conjureStaffAccessTarget;
       let tmp5 = null;
       if (null != conjureStaffAccessTarget) {
         let obj2 = { type: "info", role: "static", message: null };
         const intl = tmp(1126).intl;
-        const obj3 = { channel: tmp(17102).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
+        const obj3 = { channel: tmp(11344).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
         obj2.message = intl.format(_modDef3849["6anmu1"], obj3);
         tmp5 = jsx(tmp(7571).NewInlineNotice, { type: "info", role: "static", message: null });
       }

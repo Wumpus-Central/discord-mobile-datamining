@@ -49,7 +49,7 @@ export default noop.memo(
             const fn2 = function y() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(17771, dependencyMap.paths),
+                asyncRequireImpl(17775, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
@@ -123,7 +123,7 @@ export default noop.memo(
             onPress() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(17771, dependencyMap.paths),
+                asyncRequireImpl(17775, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
@@ -144,7 +144,7 @@ export default noop.memo(
             onPress() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(17771, dependencyMap.paths),
+                asyncRequireImpl(17775, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );

@@ -162,13 +162,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items3,
       );
       const obj2 = channels(stateFromStores[6]);
-      const obj4 = {
+      const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers({
         channels,
         selectedChannelId: "r",
         selectedVoiceChannelId: stateFromStores1,
         voiceStates: stateFromStores,
-      };
-      const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers(obj4);
+      });
       const users = summarizedVoiceUsers.filter((item) => null != item);
       return jsx(guildId(stateFromStores[8]), { users, max: 8, renderIcon: true, guildId, stageIcon });
     };

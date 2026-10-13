@@ -205,9 +205,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         noop.useState(obj4.isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE),
         2,
       );
-      const announceError = navigation(15064).useAnnounceError(tmp10);
+      const announceError = navigation(15385).useAnnounceError(tmp10);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp22 = closure_7(tmp(15065).KeyImage, {});
+        const tmp22 = closure_7(tmp(15386).KeyImage, {});
         cResult[4] = tmp22;
         let tmp20 = tmp22;
       } else {
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp27;
         tmp26 = tmp27;
       }
-      const tmpResult = navigation(15064);
+      const tmpResult = navigation(15385);
     }
   : function WebAuthnRegisterStep() {
       navigation = navigation(1503).useNavigation();
@@ -396,10 +396,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [onRegisterSuccess, tmp11, tmp8];
       closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
       const obj3 = navigation(1382);
-      const announceError = navigation(15064).useAnnounceError(tmp10);
+      const announceError = navigation(15385).useAnnounceError(tmp10);
       const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
       obj4 = { style: tmp4.centerFlex, children: null };
-      const items3 = [closure_7(navigation(15065).KeyImage, {}), ,];
+      const items3 = [closure_7(navigation(15386).KeyImage, {}), ,];
       obj5 = { style: tmp4.margin, variant: "text-md/normal", children: null };
       const intl = tmp(1126).intl;
       const string = intl.string;

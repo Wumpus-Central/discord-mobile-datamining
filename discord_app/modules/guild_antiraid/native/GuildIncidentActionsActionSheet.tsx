@@ -10,7 +10,7 @@ import GuildIncidentsStore from "../GuildIncidentsStore.tsx";
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
 require = fn;
-const GuildIncidentsActionSheetStore = fn(11385);
+const GuildIncidentsActionSheetStore = fn(12179);
 ({
   resetGuildIncidentsActionSheetStore: hasOwnProperty,
   setInitialTime: metroRequire,

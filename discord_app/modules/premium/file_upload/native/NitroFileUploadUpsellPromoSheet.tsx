@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp16 = jsx(tmp(17722).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        const tmp16 = jsx(tmp(17726).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
         cResult[10] = tmp16;
         const tmp15 = tmp16;
       } else {

@@ -924,5 +924,5 @@ export default noop.memo(
         }
       },
 );
-export const AvatarSizes = fn(13153).AvatarSizes;
+export const AvatarSizes = fn(13635).AvatarSizes;
 export { getStatusSize };

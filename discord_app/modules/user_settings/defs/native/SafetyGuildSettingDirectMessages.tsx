@@ -10,7 +10,7 @@ import useAllowFriendsFromMutualGuildsOnly from "../../content_and_social/useAll
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16280);
+const UserSettingsSafetySelectedGuildStore = fn(16587);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
 let closure_6 = fn(10664).GUILD_SELECT_ALL_SERVERS_OPTION_ID;

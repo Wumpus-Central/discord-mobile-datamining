@@ -396,16 +396,16 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
   tmp6 = CONTROLS_HEIGHT;
 }
 let AppState = fn(17).AppState;
-const VoicePanelConstants = fn(11972);
+const VoicePanelConstants = fn(12488);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(11970);
+const VoicePanelControlsConstants = fn(12486);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
 const OrientationLockState = fn(2024).OrientationLockState;
 const ActivityPanelModes = fn(6067).ActivityPanelModes;
 const isActivityParticipant = fn(5115).isActivityParticipant;
-const MorphablePanelModes = fn(11973).MorphablePanelModes;
+const MorphablePanelModes = fn(12489).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityConnected(setControlsMode) {

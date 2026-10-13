@@ -12,7 +12,7 @@ import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolid
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef12862 from "../../../../../../_runtime/metro/12862__.js";
+import _modDef13354 from "../../../../../../_runtime/metro/13354__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -246,7 +246,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp13 = !tmp4;
                   if (!tmp4) {
                     const obj6 = {
-                      source: _modDef12862,
+                      source: _modDef13354,
                       size: native.Icon.Sizes.REFRESH_SMALL_16,
                       style: tmp5.arrowIcon,
                     };
@@ -349,7 +349,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = tmp8;
       let tmp5Result = !disableArrow;
       if (!disableArrow) {
-        const obj6 = { source: _modDef12862, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+        const obj6 = { source: _modDef13354, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
         tmp5Result = tmp5(native.Icon, obj6);
       }
       items[2] = tmp5Result;

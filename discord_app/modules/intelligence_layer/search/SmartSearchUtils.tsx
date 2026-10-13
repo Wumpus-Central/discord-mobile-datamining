@@ -13,7 +13,7 @@ function isUnsupportedFilterToken(type) {
   return tmp;
 }
 SmartSearchResultsStoreDefault;
-const SmartSearchConstants = fn(12038);
+const SmartSearchConstants = fn(12554);
 ({ MAX_PRESENTED_CITATIONS: c3, SUGGESTED_SEARCH_CHANNEL_KEY_DELIMITER: closure_4 } = SmartSearchConstants);
 const Constants = fn(1085);
 ({ SearchTokenTypes, SearchTypes: hasOwnProperty } = Constants);

@@ -416,6 +416,69 @@ obj2.setFocused = function setFocused(arg0) {
   const discordUtils = this.getDiscordUtils();
   discordUtils.inputSetFocused(arg0);
 };
+obj2.isWaylandGlobalShortcutsAvailable = function isWaylandGlobalShortcutsAvailable() {
+  let isPlatformEmbedded = require("PlatformUtils").isPlatformEmbedded;
+  if (isPlatformEmbedded) {
+    const self = this;
+    const discordUtils = this.getDiscordUtils();
+    const isWaylandGlobalShortcutsAvailable = discordUtils.isWaylandGlobalShortcutsAvailable;
+    let flag;
+    if (isWaylandGlobalShortcutsAvailable != null) {
+      flag = isWaylandGlobalShortcutsAvailable();
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    isPlatformEmbedded = flag;
+  }
+  return isPlatformEmbedded;
+};
+obj2.setWaylandPortalShortcutsCallback = function setWaylandPortalShortcutsCallback(arg0) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
+    const self = this;
+    const discordUtils = this.getDiscordUtils();
+    if (discordUtils.setWaylandPortalShortcutsCallback != null) {
+      const result = setWaylandPortalShortcutsCallback(arg0);
+    }
+  }
+};
+obj2.reofferWaylandPortalShortcut = function reofferWaylandPortalShortcut(arg0) {
+  if (require("PlatformUtils").isPlatformEmbedded) {
+    const self = this;
+    const discordUtils = this.getDiscordUtils();
+    const reofferWaylandPortalShortcut = discordUtils.reofferWaylandPortalShortcut;
+    if (reofferWaylandPortalShortcut != null) {
+      const result = reofferWaylandPortalShortcut(arg0);
+    }
+  }
+};
+obj2.canOpenWaylandPortalShortcutSettings = function canOpenWaylandPortalShortcutSettings() {
+  let isPlatformEmbedded = require("PlatformUtils").isPlatformEmbedded;
+  if (isPlatformEmbedded) {
+    const self = this;
+    const discordUtils = this.getDiscordUtils();
+    const canOpenWaylandPortalShortcutSettings = discordUtils.canOpenWaylandPortalShortcutSettings;
+    let flag;
+    if (canOpenWaylandPortalShortcutSettings != null) {
+      flag = canOpenWaylandPortalShortcutSettings();
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    isPlatformEmbedded = flag;
+  }
+  return isPlatformEmbedded;
+};
+obj2.openWaylandPortalShortcutSettings = function openWaylandPortalShortcutSettings() {
+  if (require("PlatformUtils").isPlatformEmbedded) {
+    const self = this;
+    const discordUtils = this.getDiscordUtils();
+    const openWaylandPortalShortcutSettings = discordUtils.openWaylandPortalShortcutSettings;
+    if (openWaylandPortalShortcutSettings != null) {
+      const result = openWaylandPortalShortcutSettings();
+    }
+  }
+};
 obj2.setObservedGamesCallback = function setObservedGamesCallback(mapped, normalizeCallback, arg2, arg3) {
   closure_0 = arg2;
   try {

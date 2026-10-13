@@ -119,7 +119,7 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(15520);
+  let obj = changeToListingId(15835);
   const obj3 = { children: null };
   const obj2 = activeListingId(4702)(activeSubscription.currentPeriodEnd);
   const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
@@ -139,13 +139,13 @@ function SwitchTiersButton(activeSubscription) {
   obj6.text = intl2.string(activeSubscription(1126).t.SACegK);
   obj6.onPress = function handleSwitchTiers() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(17015, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, {
+    obj.openLazy(asyncRequireImpl(17318, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, {
       activeSubscription,
       activeListingId,
       changeToListingId,
     });
   };
-  items[2] = closure_12(activeSubscription(17008).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(17311).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }

@@ -85,6 +85,7 @@ let items = [
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanBot.tsx");
 
+export { isAppCommand };
 export const getConjurePlanBotInteraction = function getConjurePlanBotInteraction(proposal) {
   bot = proposal;
   const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(

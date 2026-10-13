@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = jsx(tmp(13587).ServerChannelsAbstractUI, {});
+        const tmp11 = jsx(tmp(13924).ServerChannelsAbstractUI, {});
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t.Ay9424);
         const intl2 = tmp(1126).intl;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const obj2 = {
-        illustration: jsx(markAsDismissed(13587).ServerChannelsAbstractUI, {}),
+        illustration: jsx(markAsDismissed(13924).ServerChannelsAbstractUI, {}),
         title: null,
         description: null,
         CTALabel: null,
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.CTALabel = intl3.string(markAsDismissed(1126).t.BddRzS);
       obj2.onCTAPress = callback;
       obj.children = jsx(NUFTemplateV2Default, {
-        illustration: jsx(markAsDismissed(13587).ServerChannelsAbstractUI, {}),
+        illustration: jsx(markAsDismissed(13924).ServerChannelsAbstractUI, {}),
         title: null,
         description: null,
         CTALabel: null,

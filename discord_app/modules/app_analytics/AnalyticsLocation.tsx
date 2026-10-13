@@ -497,7 +497,6 @@ export default {
   VALENTINES_GIFTING_COACHMARK: "valentines gifting coachmark",
   SEASONAL_GIFTING_REMINDER_COACHMARK: "seasonal gifting reminder coachmark",
   SEASONAL_GIFTING_REMINDER_NAGBAR: "seasonal gifting reminder nagbar",
-  CALL_OF_DUTY_3PP_NAGBAR: "call of duty 3pp nagbar",
   GIFTING_PROMOTION_COACHMARK: "gifting promotion coachmark",
   GIFTING_BADGE_POST_PURCHASE: "gifting badge post purchase",
   GIFTING_BADGE_COACHMARK: "gifting badge coachmark",

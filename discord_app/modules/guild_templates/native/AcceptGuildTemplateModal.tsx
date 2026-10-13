@@ -50,7 +50,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       [first2, _slicedToArray] = noop.useState(null);
       const tmpResult = require("initialize");
       [tmp17, noop] = noop.useState(null);
-      stateFromStores(11348)(stateFromStores);
+      stateFromStores(12146)(stateFromStores);
       if (cResult[4] === stateFromStores) {
         if (cResult[5] === first2) {
           if (cResult[6] === first1) {
@@ -169,7 +169,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             chooseIcon: tmp22,
             createServer: tmp20,
           };
-          const tmp25 = jsx(tmp18(11350), {
+          const tmp25 = jsx(tmp18(12148), {
             code,
             guildTemplate: stateFromStores,
             name: first1,
@@ -224,7 +224,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       [first1, _slicedToArray] = noop.useState(null);
       const tmp7 = _slicedToArray(noop.useState(null), 2);
       noop = tmp7[1];
-      stateFromStores(11348)(stateFromStores);
+      stateFromStores(12146)(stateFromStores);
       let obj3 = { top: true, style: tmp.container, children: null };
       let obj4 = {
         code,
@@ -306,7 +306,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           );
         }
       };
-      obj3.children = jsx(stateFromStores(11350), {
+      obj3.children = jsx(stateFromStores(12148), {
         code,
         guildTemplate: stateFromStores,
         name,

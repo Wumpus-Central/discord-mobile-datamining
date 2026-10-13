@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import avatar_decorations_AvatarDecorationUtils from "../../collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
 import CutoutableAvatarDecorationDefault from "../../collectibles/native/components/CutoutableAvatarDecoration.tsx";
-import _modDef13476 from "../../../../_runtime/metro/13476__.js";
+import _modDef13813 from "../../../../_runtime/metro/13813__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
@@ -331,8 +331,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             });
                             let tmp7 = <hasOwnProperty style={closure_3.previewContainer}>{null}</hasOwnProperty>;
                           } else {
-                            const obj = { source: _modDef13476, style: closure_3.noneIcon };
-                            tmp7 = jsx(native.Icon, { source: _modDef13476, style: closure_3.noneIcon });
+                            const obj = { source: _modDef13813, style: closure_3.noneIcon };
+                            tmp7 = jsx(native.Icon, { source: _modDef13813, style: closure_3.noneIcon });
                           }
                           return tmp7;
                         }

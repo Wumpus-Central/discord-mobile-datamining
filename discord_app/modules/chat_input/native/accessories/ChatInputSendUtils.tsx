@@ -77,7 +77,7 @@ function chatInputSendMessage(params) {
     current2.showSideActions();
   }
   let obj3 = chatInputRef(7919);
-  const handleLegacyCommandsResult = channel(11672).handleLegacyCommands(text, { channel, isEdit: false });
+  const handleLegacyCommandsResult = channel(12415).handleLegacyCommands(text, { channel, isEdit: false });
   let tmp14 = tts;
   parsed = parsedMessage;
   let tmp16 = text;
@@ -108,8 +108,8 @@ function chatInputSendMessage(params) {
   if (null != mentionTimestamps) {
     result = tmp16;
     if (mentionTimestamps.size > 0) {
-      result = tmp12(11667).serializeComposerTimestampMentions(tmp16, mentionTimestamps);
-      const tmp12Result = tmp12(11667);
+      result = tmp12(12411).serializeComposerTimestampMentions(tmp16, mentionTimestamps);
+      const tmp12Result = tmp12(12411);
     }
   }
   if (parsed == null) {
@@ -118,7 +118,7 @@ function chatInputSendMessage(params) {
   }
   parsed.tts = tmp14;
   const obj5 = {};
-  const obj4 = channel(11672);
+  const obj4 = channel(12415);
   const merged = Object.assign(chatInputRef(7179).getSendMessageOptionsForReply(params.pendingReply));
   obj5.location = MessageSendLocation.CHAT_INPUT;
   const id = channel.id;
@@ -356,7 +356,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = util.intl;
             obj3.confirmText = intl2.string(util.t.KJnHq3);
             obj3.onConfirm = function onConfirm() {
-              const obj = { text, parsedMessage, tts: "apply", source: "<string:1359020033>", params };
+              const obj = { text, parsedMessage, tts: "apply", source: true, params };
               chatInputSendMessage(obj);
             };
             let intl3 = util.intl;
@@ -375,14 +375,14 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
                 chatInputSendMessage({ text, parsedMessage, tts: "apply", source: null, params });
               },
             };
-            params(5056).openLazy(tmp19(2000)(11674, tmp20.paths), "add-media-to-original-forum-post", obj5);
+            params(5056).openLazy(tmp19(2000)(12417, tmp20.paths), "add-media-to-original-forum-post", obj5);
             const obj6 = params(5056);
           }
           obj4 = ForumPostMediaUtils;
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        const obj7 = { text, parsedMessage: tmp2, tts: "apply", source: false, params };
+        const obj7 = { text, parsedMessage: tmp2, tts: "apply", source: "state", params };
         chatInputSendMessage(obj7);
       }
     }

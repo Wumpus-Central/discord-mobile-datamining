@@ -21,11 +21,11 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/secrets/ConjureSecretRequestState.tsx");
 
-export const secretRequestStatuses = function secretRequestStatuses(memo, stateFromStores12) {
+export const secretRequestStatuses = function secretRequestStatuses(memo, stateFromStores11) {
   let set1 = null;
-  if (null != stateFromStores12) {
+  if (null != stateFromStores11) {
     const _Set = Set;
-    const found = stateFromStores12.filter((set) => set.set);
+    const found = stateFromStores11.filter((set) => set.set);
     set1 = new Set(found.map((name) => name.name));
   }
   const map = new Map();

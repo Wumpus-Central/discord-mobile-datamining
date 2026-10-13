@@ -31,7 +31,7 @@ const ApplicationCommandIndexStore = fn(9248);
   useContextIndexState: closure_9,
   useUserIndexState: c10,
 } = ApplicationCommandIndexStore);
-const FetchState = fn(11745).FetchState;
+const FetchState = fn(11547).FetchState;
 const BuiltInSectionId = fn(5403).BuiltInSectionId;
 const COMMAND_SENTINEL = fn(5404).COMMAND_SENTINEL;
 let ReactCompilerGating = fn(558);

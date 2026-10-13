@@ -9,7 +9,7 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import utils_openGiftModal from "../../../native/utils/openGiftModal.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
-import _modDef17709 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import _modDef17713 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../../badges/BadgeDirectoryStore.tsx";
 
@@ -466,7 +466,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp8[0] = _modDef17709;
+        tmp8[0] = _modDef17713;
         cResult[4] = tmp8;
       } else {
         class C {
@@ -623,7 +623,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.container, children: null };
       let obj3 = { style: tmp.graphicContainer, children: null };
       const obj4 = { source: null, style: null };
-      const obj5 = { uri: _modDef17709 };
+      const obj5 = { uri: _modDef17713 };
       obj4.source = obj5;
       obj4.style = tmp.newBadgeImage;
       obj3.children = closure_7(FastImageDefault, obj4);
@@ -648,7 +648,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { grow: true, text: null, icon: null, onPress: null };
       const intl3 = markAsDismissed(1126).intl;
       obj10.text = intl3.string(_modDef2664.DZnomS);
-      obj10.icon = closure_7(markAsDismissed(11538).GiftIcon, {
+      obj10.icon = closure_7(markAsDismissed(12291).GiftIcon, {
         size: "sm",
         color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
       });

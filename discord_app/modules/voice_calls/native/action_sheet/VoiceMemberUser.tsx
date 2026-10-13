@@ -11,12 +11,12 @@ import CallActionCreatorsDefault from "../../../../actions/CallActionCreators.ts
 import StreamerApplicationSelectors from "../../../go_live/utils/StreamerApplicationSelectors.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import _modDef10910 from "../../../../../_runtime/metro/10910__.js";
-import _modDef13603 from "../../../../../_runtime/metro/13603__.js";
-import _modDef13604 from "../../../../../_runtime/metro/13604__.js";
-import _modDef13605 from "../../../../../_runtime/metro/13605__.js";
-import _modDef13606 from "../../../../../_runtime/metro/13606__.js";
-import _modDef13607 from "../../../../../_runtime/metro/13607__.js";
-import _modDef13608 from "../../../../../_runtime/metro/13608__.js";
+import _modDef13940 from "../../../../../_runtime/metro/13940__.js";
+import _modDef13941 from "../../../../../_runtime/metro/13941__.js";
+import _modDef13942 from "../../../../../_runtime/metro/13942__.js";
+import _modDef13943 from "../../../../../_runtime/metro/13943__.js";
+import _modDef13944 from "../../../../../_runtime/metro/13944__.js";
+import _modDef13945 from "../../../../../_runtime/metro/13945__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -930,7 +930,7 @@ let closure_18 = noop.memo(
             const obj7 = { style: tmp2.row, children: null };
             let tmp22Result = null;
             if (user.isSpectating) {
-              const obj8 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13608), style: tmp21 };
+              const obj8 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13945), style: tmp21 };
               tmp22Result = closure_13(tmp8(1200).Icon, obj8);
             }
             const items3 = [tmp22Result, , , ,];
@@ -938,7 +938,7 @@ let closure_18 = noop.memo(
               items3[1] = null;
               let tmp22Result5 = null;
               if (tmp16) {
-                const obj9 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13605), style: tmp21 };
+                const obj9 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13942), style: tmp21 };
                 tmp22Result5 = closure_13(tmp8(1200).Icon, obj9);
               }
               items3[2] = tmp22Result5;
@@ -956,21 +956,21 @@ let closure_18 = noop.memo(
                 if (localVideoDisabled) {
                   const obj11 = {
                     size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16,
-                    source: channel(13606),
+                    source: channel(13943),
                     style: tmp2.voiceStatusIconMargin,
                     disableColor: true,
                   };
                   let obj12 = obj11;
                 } else {
-                  obj12 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13607), style: tmp21 };
+                  obj12 = { size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16, source: channel(13944), style: tmp21 };
                 }
                 closure_13(tmp8(1200).Icon, obj12);
               }
             } else {
               if (tmp8Result6.isThemeDark(stateFromStores)) {
-                let tmp5Result = channel(13603);
+                let tmp5Result = channel(13940);
               } else {
-                tmp5Result = channel(13604);
+                tmp5Result = channel(13941);
               }
               const obj13 = {
                 size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16,

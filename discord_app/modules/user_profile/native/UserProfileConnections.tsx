@@ -1319,7 +1319,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileA
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(13398)(userId));
+  ({ connections, appIdentities } = theme(13735)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {

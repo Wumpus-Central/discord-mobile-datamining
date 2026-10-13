@@ -57,7 +57,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const obj = otherUser(576);
-      const familyCenterActions = otherUser(11532).useFamilyCenterActions(tmp7);
+      const familyCenterActions = otherUser(12285).useFamilyCenterActions(tmp7);
       const acceptLinkRequest = familyCenterActions.acceptLinkRequest;
       const isAcceptLoading = familyCenterActions.isAcceptLoading;
       if (cResult[3] === acceptLinkRequest) {
@@ -88,7 +88,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[12] !== otherUser) {
             const obj4 = { user: otherUser };
-            const tmp25 = closure_5(acceptLinkRequest(15171), obj4);
+            const tmp25 = closure_5(acceptLinkRequest(15492), obj4);
             cResult[12] = otherUser;
             cResult[13] = tmp25;
             let tmp22 = tmp25;
@@ -103,7 +103,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const _Symbol2 = Symbol;
                 if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp33 = closure_5(acceptLinkRequest(11534), {});
+                  const tmp33 = closure_5(acceptLinkRequest(12287), {});
                   cResult[19] = tmp33;
                   let tmp30 = tmp33;
                 } else {
@@ -158,7 +158,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                         const items = [tmp46, tmp49];
                         obj8.children = items;
                         obj7.children = closure_6(tmp(5958).ButtonGroup, obj8);
-                        const tmp56 = closure_5(tmp(11541).ModalFooter, obj7);
+                        const tmp56 = closure_5(tmp(12294).ModalFooter, obj7);
                         cResult[33] = tmp46;
                         cResult[34] = tmp56;
                         let tmp53 = tmp56;
@@ -228,12 +228,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           tmp26 = tmp29;
         }
         const obj14 = { otherUser, iconSrc: acceptLinkRequest(5039), iconStyles: tmp4.icon };
-        const tmp15 = closure_5(acceptLinkRequest(15203), obj14);
+        const tmp15 = closure_5(acceptLinkRequest(15524), obj14);
         cResult[6] = otherUser;
         cResult[7] = tmp4.icon;
         cResult[8] = tmp15;
         tmp11 = tmp15;
-        const tmp14 = acceptLinkRequest(15203);
+        const tmp14 = acceptLinkRequest(15524);
       }
       const fn3 = function f() {
         acceptLinkRequest(otherUser.id);
@@ -242,7 +242,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = otherUser.id;
       cResult[5] = fn3;
       tmp9 = fn3;
-      const tmpResult = otherUser(11532);
+      const tmpResult = otherUser(12285);
     }
   : function FamilyCenterModalAcceptScreen(otherUser) {
       otherUser = otherUser.otherUser;
@@ -254,7 +254,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = otherUser(1126).intl;
         otherUser(4808).presentFailedToast(intl.string(otherUser(1126).t.R0RpRX));
       }, []);
-      const familyCenterActions = otherUser(11532).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
+      const familyCenterActions = otherUser(12285).useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
       const acceptLinkRequest = familyCenterActions.acceptLinkRequest;
       const isAcceptLoading = familyCenterActions.isAcceptLoading;
       const items = [acceptLinkRequest, otherUser.id];
@@ -265,17 +265,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { children: null };
       const obj4 = { style: tmp.header, children: null };
       const obj5 = { otherUser, iconSrc: null, iconStyles: null };
-      const obj = otherUser(11532);
+      const obj = otherUser(12285);
       obj5.iconSrc = acceptLinkRequest(5039);
       obj5.iconStyles = tmp.icon;
-      const items1 = [closure_5(acceptLinkRequest(15203), obj5), ,];
+      const items1 = [closure_5(acceptLinkRequest(15524), obj5), ,];
       const obj6 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
       let intl = otherUser(1126).intl;
       obj6.children = intl.string(acceptLinkRequest(2568).rlNJwZ);
       items1[1] = closure_5(otherUser(5088).Text, obj6);
-      items1[2] = closure_5(acceptLinkRequest(15171), { user: otherUser });
+      items1[2] = closure_5(acceptLinkRequest(15492), { user: otherUser });
       obj4.children = items1;
-      const items2 = [closure_6(View, obj4), closure_5(acceptLinkRequest(11534), {})];
+      const items2 = [closure_6(View, obj4), closure_5(acceptLinkRequest(12287), {})];
       const obj7 = { style: tmp.disclaimer, variant: "text-xs/normal", color: "text-default", children: null };
       const intl2 = otherUser(1126).intl;
       obj7.children = intl2.format(acceptLinkRequest(2568).snlFqR, { username: otherUser.username });
@@ -302,7 +302,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       items4[1] = closure_5(otherUser(5379).Button, obj12);
       obj10.children = items4;
       obj9.children = closure_6(otherUser(5958).ButtonGroup, obj10);
-      items3[1] = closure_5(otherUser(11541).ModalFooter, obj9);
+      items3[1] = closure_5(otherUser(12294).ModalFooter, obj9);
       obj2.children = items3;
       return closure_6(otherUser(7515).ModalScreen, obj2);
     };

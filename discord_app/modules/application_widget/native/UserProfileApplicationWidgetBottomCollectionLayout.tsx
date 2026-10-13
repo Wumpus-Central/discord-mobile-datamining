@@ -5,8 +5,8 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const Text_Text = Text(5088);
-const resolvedValuesFromUserApplicationIdentityProfile = Text(13268);
-const UserProfileApplicationWidgetSkeletons = Text(13356);
+const resolvedValuesFromUserApplicationIdentityProfile = Text(11401);
+const UserProfileApplicationWidgetSkeletons = Text(11488);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);

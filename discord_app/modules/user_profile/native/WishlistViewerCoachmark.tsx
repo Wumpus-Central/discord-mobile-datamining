@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef13426 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
+import _modDef13763 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,7 +20,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       const tmp3 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef13426 };
+        const obj2 = { uri: _modDef13763 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -52,7 +52,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_7();
       const obj = { style: tmp.imageContainer, children: null };
       const obj2 = { source: null, style: null };
-      const obj3 = { uri: _modDef13426 };
+      const obj3 = { uri: _modDef13763 };
       obj2.source = obj3;
       obj2.style = tmp.image;
       obj.children = jsx(FastImageDefault, { source: null, style: null });

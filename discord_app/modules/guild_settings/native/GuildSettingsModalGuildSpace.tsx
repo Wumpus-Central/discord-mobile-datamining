@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-          settingType: tmp2(18294).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18298).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-          settingType: tmp2(18294).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(18298).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
           label: null,
           disabled: null,
         };

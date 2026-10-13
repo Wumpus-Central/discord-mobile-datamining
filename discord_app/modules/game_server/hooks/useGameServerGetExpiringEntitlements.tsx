@@ -47,8 +47,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const values = Object.values(entitlements1);
         if (0 !== values.length) {
-          let expiringGuildEntitlements = tmp(12231).getExpiringGuildEntitlements(values);
-          const tmpResult2 = tmp(12231);
+          let expiringGuildEntitlements = tmp(12744).getExpiringGuildEntitlements(values);
+          const tmpResult2 = tmp(12744);
         } else {
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {

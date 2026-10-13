@@ -92,7 +92,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== navigation) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -104,7 +104,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -114,7 +114,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -122,7 +122,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -130,7 +130,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -138,7 +138,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "top" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "r" });
             return;
           }
         }
@@ -371,7 +371,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
       const items1 = [navigation];
       const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-        navigation.setOptions({ headerRight: "top" });
+        navigation.setOptions({ headerRight: "r" });
       }, items1);
       const items2 = [guild, sortedGuildRoles, channel];
       const memo = togglePrivateChannel.useMemo(() => {

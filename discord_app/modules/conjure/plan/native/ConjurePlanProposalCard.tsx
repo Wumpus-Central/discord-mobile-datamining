@@ -1,30 +1,17 @@
 // discord_app/modules/conjure/plan/native/ConjurePlanProposalCard.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
 import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
-import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import ConjureProjectTypes from "../../projects/ConjureProjectTypes.tsx";
-import ConjureNativeMarkdown from "../../chat/native/ConjureNativeMarkdown.tsx";
 import useConjureAttachmentImage from "../../chat/useConjureAttachmentImage.tsx";
 import ConjureNativeCardSurfaceDefault from "../../shared/native/ConjureNativeCardSurface.tsx";
-import ConjureNativeCollapsibleSection from "../../shared/native/ConjureNativeCollapsibleSection.tsx";
-import conjurePlanFormat from "../conjurePlanFormat.tsx";
-import conjurePlanTags from "../conjurePlanTags.tsx";
-import conjurePlanWidget2 from "../conjurePlanWidget.tsx";
-import useConjurePlanBotPreviewItems from "../useConjurePlanBotPreviewItems.tsx";
-import ConjurePlanTypeTagsDefault from "ConjurePlanTypeTags.tsx";
+import ConjureNativeCollapsibleSectionDefault from "../../shared/native/ConjureNativeCollapsibleSection.tsx";
 import ConjurePlanAutomodExamplesDefault from "ConjurePlanAutomodExamples.tsx";
-import conjurePlanDesign from "../conjurePlanDesign.tsx";
 import ConjurePlanBotPreviewDefault from "ConjurePlanBotPreview.tsx";
 import ConjurePlanWidgetDefault from "ConjurePlanWidget.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-
-const ConjureNativeCollapsibleSectionDefault = ConjureNativeCollapsibleSection;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -84,9 +71,7 @@ let obj5 = {
 const ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function PlanDesign(alt) {
-      let Stack = require;
-      let tmp = dependencyMap;
-      const cResult = c.c(10);
+      const cResult = c.c(6);
       alt = alt.alt;
       ({ projectId, design } = alt);
       let designPlaceholder = closure_7();
@@ -95,100 +80,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (conjureAttachmentImage.gone) {
         return null;
       } else {
-        const _Symbol = Symbol;
-        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-          const intl = util.intl;
-          obj3.children = intl.string(_modDef3849.X15LLY);
-          const tmp8 = hasOwnProperty(Text_Text.Text, obj3);
-          cResult[0] = tmp8;
-          let first = tmp8;
-        } else {
-          first = cResult[0];
-        }
-        if (cResult[1] === alt) {
-          if (cResult[2] === handleError) {
-            if (cResult[3] === src) {
-              if (cResult[4] === designPlaceholder.designImage) {
-                if (cResult[5] === designPlaceholder.designPlaceholder) {
-                  const _Symbol2 = Symbol;
-                  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-                    const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
-                    const intl2 = util.intl;
-                    obj4.children = intl2.string(_modDef3849.nR4B8P);
-                    const tmp20 = hasOwnProperty(Text_Text.Text, obj4);
-                    cResult[7] = tmp20;
-                    let tmp17 = tmp20;
-                  } else {
-                    tmp17 = cResult[7];
-                  }
-                  if (cResult[8] !== cResult[6]) {
-                    Stack = Stack_Stack.Stack;
-                    const obj5 = { direction: "vertical", spacing: 4, children: null };
-                    const items = [first, tmp9, tmp17];
-                    obj5.children = items;
-                    tmp = timestampProducer(Stack, obj5);
-                    cResult[8] = tmp9;
-                    cResult[9] = tmp;
-                  }
-                }
-              }
-            }
-          }
-        }
         if (null == src) {
-          const obj6 = { style: designPlaceholder.designPlaceholder, children: null };
-          const obj7 = { size: "small", accessibilityLabel: alt };
-          obj6.children = hasOwnProperty(React3, obj7);
-          let tmp12 = hasOwnProperty(React4, obj6);
-        } else {
-          const obj8 = {
-            source: null,
-            style: null,
-            resizeMode: "cover",
-            onError: null,
-            accessible: true,
-            accessibilityRole: "image",
-            accessibilityLabel: null,
-          };
-          const obj9 = { uri: src };
-          obj8.source = obj9;
-          obj8.style = designPlaceholder.designImage;
-          obj8.onError = handleError;
-          obj8.accessibilityLabel = alt;
-          tmp12 = hasOwnProperty(FastImageDefault, obj8);
-        }
-        cResult[1] = alt;
-        cResult[2] = handleError;
-        cResult[3] = src;
-        src = designPlaceholder.designImage;
-        cResult[4] = src;
-        designPlaceholder = designPlaceholder.designPlaceholder;
-        cResult[5] = designPlaceholder;
-        cResult[6] = tmp12;
-      }
-    }
-  : function PlanDesign(alt) {
-      alt = alt.alt;
-      ({ projectId, design } = alt);
-      let tmp = closure_7();
-      let intl = require;
-      let stringResult = dependencyMap;
-      const conjureAttachmentImage = useConjureAttachmentImage.useConjureAttachmentImage(projectId, design.id);
-      const src = conjureAttachmentImage.src;
-      if (conjureAttachmentImage.gone) {
-        return null;
-      } else {
-        const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-        const intl2 = util.intl;
-        obj2.children = intl2.string(_modDef3849.X15LLY);
-        const items = [hasOwnProperty(Text_Text.Text, obj2), ,];
-        if (null == src) {
-          const obj3 = { style: tmp.designPlaceholder, children: null };
-          tmp = React3;
+          const obj3 = { style: designPlaceholder.designPlaceholder, children: null };
           const obj4 = { size: "small", accessibilityLabel: alt };
           obj3.children = hasOwnProperty(React3, obj4);
-          let tmp6Result = hasOwnProperty(React4, obj3);
+          let tmp5Result = hasOwnProperty(React4, obj3);
         } else {
           const obj5 = {
             source: null,
@@ -201,28 +97,66 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const obj6 = { uri: src };
           obj5.source = obj6;
-          obj5.style = tmp.designImage;
-          obj5.onError = tmp4;
+          obj5.style = designPlaceholder.designImage;
+          obj5.onError = handleError;
           obj5.accessibilityLabel = alt;
-          tmp6Result = hasOwnProperty(FastImageDefault, obj5);
+          tmp5Result = hasOwnProperty(FastImageDefault, obj5);
         }
-        const obj7 = { direction: "vertical", spacing: 4, children: null };
-        items[1] = tmp6Result;
-        const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
-        intl = util.intl;
-        stringResult = intl.string(_modDef3849.nR4B8P);
-        obj8.children = stringResult;
-        items[2] = hasOwnProperty(Text_Text.Text, obj8);
-        obj7.children = items;
-        timestampProducer(Stack_Stack.Stack, obj7);
+        const obj7 = { direction: "vertical", spacing: 4, children: tmp5Result };
+        const tmp5Result2 = hasOwnProperty(Stack_Stack.Stack, obj7);
+        cResult[0] = alt;
+        cResult[1] = handleError;
+        cResult[2] = src;
+        src = designPlaceholder.designImage;
+        cResult[3] = src;
+        designPlaceholder = designPlaceholder.designPlaceholder;
+        cResult[4] = designPlaceholder;
+        cResult[5] = tmp5Result2;
+      }
+    }
+  : function PlanDesign(alt) {
+      alt = alt.alt;
+      ({ projectId, design } = alt);
+      let tmp = closure_7();
+      const conjureAttachmentImage = useConjureAttachmentImage.useConjureAttachmentImage(projectId, design.id);
+      const src = conjureAttachmentImage.src;
+      if (conjureAttachmentImage.gone) {
+        return null;
+      } else {
+        if (null == src) {
+          const obj2 = { style: tmp.designPlaceholder, children: null };
+          tmp = React3;
+          const obj3 = { size: "small", accessibilityLabel: alt };
+          obj2.children = hasOwnProperty(React3, obj3);
+          let tmp6Result = hasOwnProperty(React4, obj2);
+        } else {
+          const obj4 = {
+            source: null,
+            style: null,
+            resizeMode: "cover",
+            onError: null,
+            accessible: true,
+            accessibilityRole: "image",
+            accessibilityLabel: null,
+          };
+          const obj5 = { uri: src };
+          obj4.source = obj5;
+          obj4.style = tmp.designImage;
+          obj4.onError = tmp5;
+          obj4.accessibilityLabel = alt;
+          tmp6Result = hasOwnProperty(FastImageDefault, obj4);
+        }
+        const obj6 = { direction: "vertical", spacing: 4, children: tmp6Result };
+        hasOwnProperty(Stack_Stack.Stack, obj6);
       }
     };
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanProposalCard.tsx");
+let result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanProposalCard.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjurePlanProposalCard(arg0) {
-      const cResult = c.c(64);
+      const tmp = obj28;
+      const cResult = obj28(576).c(83);
       ({ projectId, proposal, version, superseded, expanded, onToggleExpanded, onApprove } = arg0);
       const tmp6 = closure_7();
       const trimmed = proposal.summary.trim();
@@ -244,426 +178,549 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (bot_permissions == null) {
         bot_permissions = [];
       }
-      const mapped = bot_permissions.map(conjurePlanFormat.formatConjurePlanRequirementName);
+      const mapped = bot_permissions.map(tmp(11900).formatConjurePlanRequirementName);
       let privileged_intents = proposal.privileged_intents;
       if (privileged_intents == null) {
         privileged_intents = [];
       }
-      const mapped1 = privileged_intents.map(conjurePlanFormat.formatConjurePlanRequirementName);
+      const mapped1 = privileged_intents.map(tmp(11900).formatConjurePlanRequirementName);
+      let obj = obj28(576);
       let automod = null;
-      if (tmpResult.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD)) {
+      if (tmpResult.planDeclaresSurface(proposal, tmp(6947).ConjureSupportedSurface.AUTOMOD)) {
         automod = proposal.automod;
       }
-      tmpResult = conjurePlanTags;
-      const conjurePlanWidget = conjurePlanWidget2.useConjurePlanWidget(projectId, proposal);
+      tmpResult = tmp(11901);
+      const conjurePlanWidget = tmp(11902).useConjurePlanWidget(projectId, proposal);
       if (cResult[2] === proposal) {
         if (cResult[3] === conjurePlanWidget) {
           let tmp12 = cResult[4];
         }
-        const botExchanges = useConjurePlanBotPreviewItems.useConjurePlanBotExchanges(proposal).botExchanges;
-        const tmp15 = ConjureNativeCardSurfaceDefault;
-        const tmp16 = ConjureNativeCollapsibleSectionDefault;
-        if (cResult[5] === tmp4) {
-          if (cResult[6] === version) {
-            if (cResult[8] !== tmp4) {
-              let tmp21 = null;
-              if (tmp4) {
-                const obj2 = { children: null };
-                const intl3 = util.intl;
-                obj2.children = intl3.string(_modDef3849.hF2c41);
-                tmp21 = hasOwnProperty(ConjureNativeCollapsibleSection.ConjureNativeCollapsibleMeta, obj2);
-              }
-              cResult[8] = tmp4;
-              cResult[9] = tmp21;
-              let tmp20 = tmp21;
-            } else {
-              tmp20 = cResult[9];
-            }
-            const _Symbol = Symbol;
-            if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl4 = util.intl;
-              const stringResult = intl4.string(_modDef3849.yD8EJS);
-              const intl5 = util.intl;
-              const stringResult1 = intl5.string(_modDef3849.nSPGNb);
-              cResult[10] = stringResult;
-              cResult[11] = stringResult1;
-              let tmp25 = stringResult1;
-              let tmp24 = stringResult;
-            } else {
-              tmp24 = cResult[10];
-              tmp25 = cResult[11];
-            }
-            const Stack = Stack_Stack.Stack;
-            if (cResult[12] === proposal.supported_surfaces) {
-              if (cResult[13] === tmp4) {
-                let tmp28 = cResult[14];
-              }
-              if (cResult[15] !== tmp8) {
-                let tmp33 = null;
-                if ("" !== tmp8) {
-                  let obj3 = { direction: "vertical", spacing: 4, children: null };
-                  const obj4 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-                  const intl14 = util.intl;
-                  obj4.children = intl14.string(_modDef3849.iNS4dl);
-                  const items = [hasOwnProperty(Text_Text.Text, obj4)];
-                  const obj5 = { variant: "text-md/normal", color: "text-default", children: tmp8 };
-                  items[1] = hasOwnProperty(Text_Text.Text, obj5);
-                  obj3.children = items;
-                  tmp33 = timestampProducer(Stack_Stack.Stack, obj3);
+        const botExchanges = tmp(11905).useConjurePlanBotExchanges(proposal).botExchanges;
+        if (cResult[5] === automod) {
+          if (cResult[6] === botExchanges) {
+            if (cResult[7] === projectId) {
+              if (cResult[8] === proposal) {
+                if (cResult[9] === tmp12) {
+                  obj28 = cResult[10];
                 }
-                cResult[15] = tmp8;
-                cResult[16] = tmp33;
-                let tmp32 = tmp33;
-              } else {
-                tmp32 = cResult[16];
-              }
-              if ("" === trimmed) {
-                const intl6 = util.intl;
-                let stringResult2 = intl6.string(_modDef3849["0+RUWx"]);
-              } else {
-                stringResult2 = MarkupUtilsDefault.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
-                const tmp14Result = MarkupUtilsDefault;
-              }
-              if (cResult[17] !== stringResult2) {
-                const obj6 = { variant: "text-md/normal", color: "text-default", children: stringResult2 };
-                const tmp37 = hasOwnProperty(Text_Text.Text, obj6);
-                cResult[17] = stringResult2;
-                cResult[18] = tmp37;
-                let tmp35 = tmp37;
-              } else {
-                tmp35 = cResult[18];
-              }
-              if (cResult[19] !== automod) {
-                let tmp39 = null;
-                if (null != automod) {
-                  tmp39 = null;
-                  if (automod.examples.length > 0) {
-                    const obj7 = { automod };
-                    tmp39 = hasOwnProperty(ConjurePlanAutomodExamplesDefault, obj7);
+                if (cResult[28] === tmp14) {
+                  if (cResult[29] === proposal) {
+                    importDefault = cResult[30];
+                    let arr7 = cResult[31];
                   }
-                }
-                cResult[19] = automod;
-                cResult[20] = tmp39;
-                let tmp38 = tmp39;
-              } else {
-                tmp38 = cResult[20];
-              }
-              if (cResult[21] === projectId) {
-                if (cResult[22] === proposal) {
-                  let tmp41 = cResult[23];
-                }
-                if (cResult[24] === botExchanges) {
-                  if (cResult[25] === projectId) {
-                    let tmp45 = cResult[26];
-                  }
-                  if (cResult[27] !== tmp12) {
-                    let tmp49 = null;
-                    if (null != tmp12) {
-                      const obj8 = {};
-                      const merged = Object.assign(tmp12);
-                      tmp49 = hasOwnProperty(ConjurePlanWidgetDefault, obj8);
-                      const tmp14Result3 = ConjurePlanWidgetDefault;
-                    }
-                    cResult[27] = tmp12;
-                    cResult[28] = tmp49;
-                    let tmp48 = tmp49;
-                  } else {
-                    tmp48 = cResult[28];
-                  }
-                  if (cResult[29] !== proposal.changes) {
-                    let tmp56 = null;
-                    if (proposal.changes.length > 0) {
-                      const obj9 = { direction: "vertical", spacing: 4, children: null };
-                      const obj10 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-                      const intl8 = util.intl;
-                      obj10.children = intl8.string(_modDef3849["5+mG1z"]);
-                      const items1 = [hasOwnProperty(Text_Text.Text, obj10)];
-                      const changes = proposal.changes;
-                      items1[1] = changes.map((item, index) =>
-                        closure_1_5(
-                          Text_Text.Text,
-                          { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item },
-                          index,
-                        ),
-                      );
-                      obj9.children = items1;
-                      tmp56 = timestampProducer(Stack_Stack.Stack, obj9);
-                    }
-                    cResult[29] = proposal.changes;
-                    cResult[30] = tmp56;
-                    let tmp55 = tmp56;
-                  } else {
-                    tmp55 = cResult[30];
-                  }
-                  if (cResult[31] !== proposal.commands) {
-                    let tmp60 = null;
-                    if (proposal.commands.length > 0) {
-                      const obj11 = { direction: "vertical", spacing: 4, children: null };
-                      const obj12 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-                      const intl9 = util.intl;
-                      obj12.children = intl9.string(util.t["0hKkS+"]);
-                      const items2 = [hasOwnProperty(Text_Text.Text, obj12)];
-                      const commands = proposal.commands;
-                      items2[1] = commands.map((name, index) => {
-                        const obj = {
-                          variant: "text-sm/medium",
-                          color: "text-default",
-                          children: "" + conjurePlanFormat.conjurePlanCommandPrefix(name) + name.name,
-                        };
-                        const children = [closure_1_5(Text_Text.Text, obj)];
-                        let tmp3Result = null;
-                        if (null != name.description) {
-                          tmp3Result = null;
-                          if ("" !== name.description) {
-                            const obj3 = { variant: "text-sm/normal", color: "text-muted", children: name.description };
-                            tmp3Result = closure_1_5(Text_Text.Text, obj3);
-                          }
+                  const tmp48 = ConjureNativeCardSurfaceDefault;
+                  const tmp49 = ConjureNativeCollapsibleSectionDefault;
+                  if (cResult[32] === tmp4) {
+                    if (cResult[33] === version) {
+                      if (cResult[35] !== tmp4) {
+                        let tmp54 = null;
+                        if (tmp4) {
+                          let obj2 = { children: null };
+                          const intl8 = tmp(1126).intl;
+                          obj2.children = intl8.string(tmp47(3849).hF2c41);
+                          tmp54 = closure_5(tmp(11898).ConjureNativeCollapsibleMeta, obj2);
                         }
-                        children[1] = tmp3Result;
-                        return closure_1_6(closure_1_4, { children }, index);
-                      });
-                      obj11.children = items2;
-                      tmp60 = timestampProducer(Stack_Stack.Stack, obj11);
-                    }
-                    cResult[31] = proposal.commands;
-                    cResult[32] = tmp60;
-                    let tmp59 = tmp60;
-                  } else {
-                    tmp59 = cResult[32];
-                  }
-                  let tmp63 = null;
-                  if (mapped.length > 0) {
-                    const obj13 = { direction: "vertical", spacing: 4, children: null };
-                    const obj14 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-                    const intl10 = util.intl;
-                    obj14.children = intl10.string(_modDef3849["2UbW6r"]);
-                    const items3 = [hasOwnProperty(Text_Text.Text, obj14)];
-                    const obj15 = { variant: "text-sm/normal", color: "text-default", children: mapped.join(", ") };
-                    items3[1] = hasOwnProperty(Text_Text.Text, obj15);
-                    obj13.children = items3;
-                    tmp63 = timestampProducer(Stack_Stack.Stack, obj13);
-                  }
-                  let tmp66 = null;
-                  if (mapped1.length > 0) {
-                    const obj16 = { direction: "vertical", spacing: 4, children: null };
-                    const obj17 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-                    const intl11 = util.intl;
-                    obj17.children = intl11.string(_modDef3849["7TKfpj"]);
-                    const items4 = [hasOwnProperty(Text_Text.Text, obj17)];
-                    const obj18 = { variant: "text-sm/normal", color: "text-default", children: mapped1.join(", ") };
-                    items4[1] = hasOwnProperty(Text_Text.Text, obj18);
-                    obj16.children = items4;
-                    tmp66 = timestampProducer(Stack_Stack.Stack, obj16);
-                  }
-                  if (cResult[33] === onApprove) {
-                    if (cResult[34] === tmp6) {
-                      if (cResult[35] === tmp4) {
-                        let tmp69 = cResult[36];
+                        cResult[35] = tmp4;
+                        cResult[36] = tmp54;
+                        let tmp53 = tmp54;
+                      } else {
+                        tmp53 = cResult[36];
                       }
-                      if (cResult[37] === Stack) {
-                        if (cResult[38] === tmp28) {
-                          if (cResult[39] === tmp32) {
-                            if (cResult[40] === tmp35) {
-                              if (cResult[41] === tmp38) {
-                                if (cResult[42] === tmp41) {
-                                  if (cResult[43] === tmp45) {
-                                    if (cResult[44] === tmp48) {
-                                      if (cResult[45] === tmp55) {
-                                        if (cResult[46] === tmp59) {
-                                          if (cResult[47] === tmp63) {
-                                            if (cResult[48] === tmp66) {
-                                              if (cResult[49] === tmp69) {
-                                                let tmp74 = cResult[50];
-                                              }
-                                              if (cResult[51] === tmp16) {
-                                                if (cResult[52] === tmp5) {
-                                                  if (cResult[53] === onToggleExpanded) {
-                                                    if (cResult[54] === tmp4) {
-                                                      if (cResult[55] === tmp74) {
-                                                        if (cResult[56] === tmp17) {
-                                                          if (cResult[57] === tmp20) {
-                                                            if (cResult[58] === tmp24) {
-                                                              if (cResult[59] === tmp25) {
-                                                                let tmp77 = cResult[60];
-                                                              }
-                                                              if (cResult[61] === tmp15) {
-                                                                if (cResult[62] === tmp77) {
-                                                                  let tmp80 = cResult[63];
+                      const _Symbol = Symbol;
+                      if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
+                        const intl9 = tmp(1126).intl;
+                        const stringResult = intl9.string(tmp47(3849).yD8EJS);
+                        const intl10 = tmp(1126).intl;
+                        const stringResult1 = intl10.string(tmp47(3849).nSPGNb);
+                        cResult[37] = stringResult;
+                        cResult[38] = stringResult1;
+                        let tmp58 = stringResult1;
+                        let tmp57 = stringResult;
+                      } else {
+                        tmp57 = cResult[37];
+                        tmp58 = cResult[38];
+                      }
+                      const Stack = tmp(5377).Stack;
+                      if (cResult[39] !== tmp8) {
+                        let tmp62 = null;
+                        if ("" !== tmp8) {
+                          let obj3 = { direction: "vertical", spacing: 4, children: null };
+                          const obj4 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+                          const intl19 = tmp(1126).intl;
+                          obj4.children = intl19.string(tmp47(3849).iNS4dl);
+                          let items = [closure_5(tmp(5088).Text, obj4)];
+                          const obj5 = { variant: "text-md/normal", color: "text-default", children: tmp8 };
+                          items[1] = closure_5(tmp(5088).Text, obj5);
+                          obj3.children = items;
+                          tmp62 = closure_6(tmp(5377).Stack, obj3);
+                        }
+                        cResult[39] = tmp8;
+                        cResult[40] = tmp62;
+                        let tmp61 = tmp62;
+                      } else {
+                        tmp61 = cResult[40];
+                      }
+                      if ("" === trimmed) {
+                        const intl11 = tmp(1126).intl;
+                        let stringResult2 = intl11.string(tmp47(3849)["0+RUWx"]);
+                      } else {
+                        stringResult2 = tmp47(5079).parse(trimmed, true, tmp(11830).CONJURE_MARKUP_OPTIONS);
+                        const tmp47Result = tmp47(5079);
+                      }
+                      if (cResult[41] !== stringResult2) {
+                        const obj6 = { variant: "text-md/normal", color: "text-default", children: stringResult2 };
+                        const tmp66 = closure_5(tmp(5088).Text, obj6);
+                        cResult[41] = stringResult2;
+                        cResult[42] = tmp66;
+                        let tmp64 = tmp66;
+                      } else {
+                        tmp64 = cResult[42];
+                      }
+                      if (cResult[43] === tmp5) {
+                        if (cResult[44] === tmp14) {
+                          if (cResult[45] === arr6) {
+                            if (cResult[46] === tmp4) {
+                              let tmp67 = cResult[47];
+                            }
+                            if (cResult[48] === tmp14) {
+                              if (cResult[49] === arr7) {
+                                let tmp74 = cResult[50];
+                              }
+                              if (cResult[51] !== proposal.changes) {
+                                let tmp77 = null;
+                                if (proposal.changes.length > 0) {
+                                  const obj7 = { direction: "vertical", spacing: 4, children: null };
+                                  const obj8 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+                                  const intl13 = tmp(1126).intl;
+                                  obj8.children = intl13.string(tmp47(3849)["5+mG1z"]);
+                                  const items1 = [closure_5(tmp(5088).Text, obj8)];
+                                  const changes = proposal.changes;
+                                  items1[1] = changes.map((item, index) =>
+                                    closure_1_5(
+                                      obj28(5088).Text,
+                                      { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item },
+                                      index,
+                                    ),
+                                  );
+                                  obj7.children = items1;
+                                  tmp77 = closure_6(tmp(5377).Stack, obj7);
+                                }
+                                cResult[51] = proposal.changes;
+                                cResult[52] = tmp77;
+                                let tmp76 = tmp77;
+                              } else {
+                                tmp76 = cResult[52];
+                              }
+                              if (cResult[53] !== proposal.commands) {
+                                let tmp81 = null;
+                                if (proposal.commands.length > 0) {
+                                  const obj9 = { direction: "vertical", spacing: 4, children: null };
+                                  const obj10 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+                                  const intl14 = tmp(1126).intl;
+                                  obj10.children = intl14.string(tmp(1126).t["0hKkS+"]);
+                                  const items2 = [closure_5(tmp(5088).Text, obj10)];
+                                  const commands = proposal.commands;
+                                  items2[1] = commands.map((name, index) => {
+                                    const obj = {
+                                      variant: "text-sm/medium",
+                                      color: "text-default",
+                                      children: "" + obj28(11900).conjurePlanCommandPrefix(name) + name.name,
+                                    };
+                                    const children = [closure_1_5(obj28(5088).Text, obj)];
+                                    let tmp3Result = null;
+                                    if (null != name.description) {
+                                      tmp3Result = null;
+                                      if ("" !== name.description) {
+                                        const obj3 = {
+                                          variant: "text-sm/normal",
+                                          color: "text-muted",
+                                          children: name.description,
+                                        };
+                                        tmp3Result = closure_1_5(obj28(5088).Text, obj3);
+                                      }
+                                    }
+                                    children[1] = tmp3Result;
+                                    return closure_1_6(closure_1_4, { children }, index);
+                                  });
+                                  obj9.children = items2;
+                                  tmp81 = closure_6(tmp(5377).Stack, obj9);
+                                }
+                                cResult[53] = proposal.commands;
+                                cResult[54] = tmp81;
+                                let tmp80 = tmp81;
+                              } else {
+                                tmp80 = cResult[54];
+                              }
+                              let tmp84 = null;
+                              if (mapped.length > 0) {
+                                const obj11 = { direction: "vertical", spacing: 4, children: null };
+                                const obj12 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+                                const intl15 = tmp(1126).intl;
+                                obj12.children = intl15.string(tmp47(3849)["2UbW6r"]);
+                                const items3 = [closure_5(tmp(5088).Text, obj12)];
+                                const obj13 = {
+                                  variant: "text-sm/normal",
+                                  color: "text-default",
+                                  children: mapped.join(", "),
+                                };
+                                items3[1] = closure_5(tmp(5088).Text, obj13);
+                                obj11.children = items3;
+                                tmp84 = closure_6(tmp(5377).Stack, obj11);
+                              }
+                              let tmp87 = null;
+                              if (mapped1.length > 0) {
+                                const obj14 = { direction: "vertical", spacing: 4, children: null };
+                                const obj15 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+                                const intl16 = tmp(1126).intl;
+                                obj15.children = intl16.string(tmp47(3849)["7TKfpj"]);
+                                const items4 = [closure_5(tmp(5088).Text, obj15)];
+                                const obj16 = {
+                                  variant: "text-sm/normal",
+                                  color: "text-default",
+                                  children: mapped1.join(", "),
+                                };
+                                items4[1] = closure_5(tmp(5088).Text, obj16);
+                                obj14.children = items4;
+                                tmp87 = closure_6(tmp(5377).Stack, obj14);
+                              }
+                              if (cResult[55] === onApprove) {
+                                if (cResult[56] === tmp6) {
+                                  if (cResult[57] === tmp4) {
+                                    let tmp90 = cResult[58];
+                                  }
+                                  if (cResult[59] === Stack) {
+                                    if (cResult[60] === tmp61) {
+                                      if (cResult[61] === tmp64) {
+                                        if (cResult[62] === tmp67) {
+                                          if (cResult[63] === tmp74) {
+                                            if (cResult[64] === tmp76) {
+                                              if (cResult[65] === tmp80) {
+                                                if (cResult[66] === tmp84) {
+                                                  if (cResult[67] === tmp87) {
+                                                    if (cResult[68] === tmp90) {
+                                                      let tmp95 = cResult[69];
+                                                    }
+                                                    if (cResult[70] === tmp49) {
+                                                      if (cResult[71] === tmp5) {
+                                                        if (cResult[72] === onToggleExpanded) {
+                                                          if (cResult[73] === tmp4) {
+                                                            if (cResult[74] === tmp95) {
+                                                              if (cResult[75] === tmp50) {
+                                                                if (cResult[76] === tmp53) {
+                                                                  if (cResult[77] === tmp57) {
+                                                                    if (cResult[78] === tmp58) {
+                                                                      let tmp98 = cResult[79];
+                                                                    }
+                                                                    if (cResult[80] === tmp48) {
+                                                                      if (cResult[81] === tmp98) {
+                                                                        let tmp101 = cResult[82];
+                                                                      }
+                                                                      return tmp101;
+                                                                    }
+                                                                    const obj17 = { children: tmp98 };
+                                                                    const tmp103 = closure_5(tmp48, obj17);
+                                                                    cResult[80] = tmp48;
+                                                                    cResult[81] = tmp98;
+                                                                    cResult[82] = tmp103;
+                                                                    tmp101 = tmp103;
+                                                                  }
                                                                 }
-                                                                return tmp80;
                                                               }
-                                                              const obj19 = { children: tmp77 };
-                                                              const tmp82 = hasOwnProperty(tmp15, obj19);
-                                                              cResult[61] = tmp15;
-                                                              cResult[62] = tmp77;
-                                                              cResult[63] = tmp82;
-                                                              tmp80 = tmp82;
                                                             }
                                                           }
                                                         }
                                                       }
                                                     }
+                                                    const obj18 = {
+                                                      title: tmp50,
+                                                      meta: tmp53,
+                                                      superseded: tmp4,
+                                                      expanded: tmp5,
+                                                      onToggleExpanded,
+                                                      showLabel: tmp57,
+                                                      hideLabel: tmp58,
+                                                      children: tmp95,
+                                                    };
+                                                    const tmp100 = closure_5(tmp49, obj18);
+                                                    cResult[70] = tmp49;
+                                                    cResult[71] = tmp5;
+                                                    cResult[72] = onToggleExpanded;
+                                                    cResult[73] = tmp4;
+                                                    cResult[74] = tmp95;
+                                                    cResult[75] = tmp50;
+                                                    cResult[76] = tmp53;
+                                                    cResult[77] = tmp57;
+                                                    cResult[78] = tmp58;
+                                                    cResult[79] = tmp100;
+                                                    tmp98 = tmp100;
                                                   }
                                                 }
                                               }
-                                              const obj20 = {
-                                                title: tmp17,
-                                                meta: tmp20,
-                                                superseded: tmp4,
-                                                expanded: tmp5,
-                                                onToggleExpanded,
-                                                showLabel: tmp24,
-                                                hideLabel: tmp25,
-                                                children: tmp74,
-                                              };
-                                              const tmp79 = hasOwnProperty(tmp16, obj20);
-                                              cResult[51] = tmp16;
-                                              cResult[52] = tmp5;
-                                              cResult[53] = onToggleExpanded;
-                                              cResult[54] = tmp4;
-                                              cResult[55] = tmp74;
-                                              cResult[56] = tmp17;
-                                              cResult[57] = tmp20;
-                                              cResult[58] = tmp24;
-                                              cResult[59] = tmp25;
-                                              cResult[60] = tmp79;
-                                              tmp77 = tmp79;
                                             }
                                           }
                                         }
                                       }
                                     }
                                   }
+                                  const obj19 = { direction: "vertical", spacing: 8, children: null };
+                                  const items5 = [tmp61, tmp64, tmp67, tmp74, tmp76, tmp80, tmp84, tmp87, tmp90];
+                                  obj19.children = items5;
+                                  const tmp97 = closure_6(Stack, obj19);
+                                  cResult[59] = Stack;
+                                  cResult[60] = tmp61;
+                                  cResult[61] = tmp64;
+                                  cResult[62] = tmp67;
+                                  cResult[63] = tmp74;
+                                  cResult[64] = tmp76;
+                                  cResult[65] = tmp80;
+                                  cResult[66] = tmp84;
+                                  cResult[67] = tmp87;
+                                  cResult[68] = tmp90;
+                                  cResult[69] = tmp97;
+                                  tmp95 = tmp97;
                                 }
                               }
+                              let tmp91 = null;
+                              if (null != onApprove) {
+                                tmp91 = null;
+                                if (!tmp4) {
+                                  const obj20 = { style: tmp6.planActions, children: null };
+                                  const obj21 = { text: null, variant: "primary", onPress: null };
+                                  const intl17 = tmp(1126).intl;
+                                  obj21.text = intl17.string(tmp47(3849)["6S+wRM"]);
+                                  obj21.onPress = onApprove;
+                                  const items6 = [closure_5(tmp(5379).Button, obj21)];
+                                  const obj22 = {
+                                    variant: "text-sm/normal",
+                                    color: "text-muted",
+                                    style: tmp6.planReplyHint,
+                                    children: null,
+                                  };
+                                  const intl18 = tmp(1126).intl;
+                                  obj22.children = intl18.string(tmp47(3849).IZoqbR);
+                                  items6[1] = closure_5(tmp(5088).Text, obj22);
+                                  obj20.children = items6;
+                                  tmp91 = closure_6(closure_4, obj20);
+                                }
+                              }
+                              cResult[55] = onApprove;
+                              cResult[56] = tmp6;
+                              cResult[57] = tmp4;
+                              cResult[58] = tmp91;
+                              tmp90 = tmp91;
                             }
+                            const mapped2 = arr7.map((item) => {
+                              let tmp2 = null;
+                              if (null != obj28[item]) {
+                                const obj = { direction: "vertical", spacing: 4, children: null };
+                                const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: tmp.label };
+                                const items = [hasOwnProperty(Text_Text.Text, obj2), tmp.content];
+                                obj.children = items;
+                                tmp2 = timestampProducer(Stack_Stack.Stack, obj, item);
+                              }
+                              return tmp2;
+                            });
+                            cResult[48] = tmp14;
+                            cResult[49] = arr7;
+                            cResult[50] = mapped2;
+                            tmp74 = mapped2;
                           }
                         }
                       }
-                      const obj21 = { direction: "vertical", spacing: 8, children: null };
-                      const items5 = [
-                        tmp28,
-                        tmp32,
-                        tmp35,
-                        tmp38,
-                        tmp41,
-                        tmp45,
-                        tmp48,
-                        tmp55,
-                        tmp59,
-                        tmp63,
-                        tmp66,
-                        tmp69,
-                      ];
-                      obj21.children = items5;
-                      const tmp76 = timestampProducer(Stack, obj21);
-                      cResult[37] = Stack;
-                      cResult[38] = tmp28;
-                      cResult[39] = tmp32;
-                      cResult[40] = tmp35;
-                      cResult[41] = tmp38;
-                      cResult[42] = tmp41;
-                      cResult[43] = tmp45;
-                      cResult[44] = tmp48;
-                      cResult[45] = tmp55;
-                      cResult[46] = tmp59;
-                      cResult[47] = tmp63;
-                      cResult[48] = tmp66;
-                      cResult[49] = tmp69;
-                      cResult[50] = tmp76;
-                      tmp74 = tmp76;
+                      if (arr6.length <= 0) {
+                        cResult[43] = tmp5;
+                        cResult[44] = tmp14;
+                        cResult[45] = arr6;
+                        cResult[46] = tmp4;
+                        cResult[47] = null;
+                        tmp67 = null;
+                      } else {
+                        const obj23 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+                        const intl12 = tmp(1126).intl;
+                        obj23.children = intl12.string(tmp47(3849).mrMYrN);
+                        const items7 = [closure_5(tmp(5088).Text, obj23)];
+                        if (1 === arr6.length) {
+                          const obj24 = { row: arr6[0], previews: tmp14 };
+                          let tmp70Result = closure_5(tmp(11916).ConjurePlanSingleSurface, obj24);
+                        } else {
+                          const obj25 = { rows: arr6, previews: tmp14, cycling: null };
+                          let tmp71 = !tmp4;
+                          if (!tmp4) {
+                            tmp71 = tmp5;
+                          }
+                          obj25.cycling = tmp71;
+                          tmp70Result = closure_5(tmp(11916).ConjurePlanSurfaceNav, obj25);
+                        }
+                        const obj26 = { direction: "vertical", spacing: 12, children: null };
+                        items7[1] = tmp70Result;
+                        obj26.children = items7;
+                        closure_6(tmp(5377).Stack, obj26);
+                      }
                     }
                   }
-                  let tmp70 = null;
-                  if (null != onApprove) {
-                    tmp70 = null;
-                    if (!tmp4) {
-                      const obj22 = { style: tmp6.planActions, children: null };
-                      const obj23 = { text: null, variant: "primary", onPress: null };
-                      const intl12 = util.intl;
-                      obj23.text = intl12.string(_modDef3849["6S+wRM"]);
-                      obj23.onPress = onApprove;
-                      const items6 = [hasOwnProperty(components_Button_Button.Button, obj23)];
-                      const obj24 = {
-                        variant: "text-sm/normal",
-                        color: "text-muted",
-                        style: tmp6.planReplyHint,
-                        children: null,
-                      };
-                      const intl13 = util.intl;
-                      obj24.children = intl13.string(_modDef3849.IZoqbR);
-                      items6[1] = hasOwnProperty(Text_Text.Text, obj24);
-                      obj22.children = items6;
-                      tmp70 = timestampProducer(React4, obj22);
-                    }
+                  if (!tmp4) {
+                    const intl6 = tmp(1126).intl;
+                    let stringResult3 = intl6.string(tmp47(3849)["3b6e7o"]);
+                    cResult[32] = tmp4;
+                    cResult[33] = version;
+                    cResult[34] = stringResult3;
                   }
-                  cResult[33] = onApprove;
-                  cResult[34] = tmp6;
-                  cResult[35] = tmp4;
-                  cResult[36] = tmp70;
-                  tmp69 = tmp70;
+                  const intl7 = tmp(1126).intl;
+                  const obj27 = { version };
+                  stringResult3 = intl7.formatToPlainString(tmp47(3849).YZ3qJs, obj27);
                 }
-                let tmp46 = null;
-                if (botExchanges.length > 0) {
-                  const obj25 = { projectId, exchanges: botExchanges };
-                  tmp46 = hasOwnProperty(ConjurePlanBotPreviewDefault, obj25);
-                }
-                cResult[24] = botExchanges;
-                cResult[25] = projectId;
-                cResult[26] = tmp46;
-                tmp45 = tmp46;
+                const _Object = Object;
+                const keys = Object.keys(tmp14);
+                const result = tmp(11915).conjurePlanSurfaceRows(proposal, keys);
+                importDefault = result;
+                const found = keys.filter((item) => {
+                  closure_0 = item;
+                  return !result.some((preview) => preview.preview === closure_0);
+                });
+                cResult[28] = tmp14;
+                cResult[29] = proposal;
+                cResult[30] = result;
+                cResult[31] = found;
+                arr7 = found;
+                const tmpResult8 = tmp(11915);
               }
-              let tmp42 = null;
-              if (null != proposal.design_image) {
-                const obj26 = { projectId, design: proposal.design_image, alt: null };
-                const intl7 = util.intl;
-                obj26.alt = intl7.string(conjurePlanDesign.conjurePlanDesignAlt(proposal));
-                tmp42 = hasOwnProperty(closure_8, obj26);
-                const tmpResult7 = conjurePlanDesign;
-              }
-              cResult[21] = projectId;
-              cResult[22] = proposal;
-              cResult[23] = tmp42;
-              tmp41 = tmp42;
             }
-            let tmp30Result = null;
-            if (!tmp4) {
-              let supported_surfaces = proposal.supported_surfaces;
-              if (supported_surfaces == null) {
-                supported_surfaces = [];
-              }
-              const obj27 = { tags: supported_surfaces };
-              tmp30Result = hasOwnProperty(ConjurePlanTypeTagsDefault, obj27);
-              const tmp14Result4 = ConjurePlanTypeTagsDefault;
-            }
-            cResult[12] = proposal.supported_surfaces;
-            cResult[13] = tmp4;
-            cResult[14] = tmp30Result;
-            tmp28 = tmp30Result;
           }
         }
-        if (!tmp4) {
-          const intl = util.intl;
-          let stringResult3 = intl.string(_modDef3849["3b6e7o"]);
-          cResult[5] = tmp4;
-          cResult[6] = version;
-          cResult[7] = stringResult3;
+        obj28 = {};
+        if (null != automod) {
+          if (automod.examples.length > 0) {
+            const _Symbol2 = Symbol;
+            if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl = tmp(1126).intl;
+              const stringResult4 = intl.string(_modDef3849.z4ZKYG);
+              cResult[11] = stringResult4;
+              let tmp15 = stringResult4;
+            } else {
+              tmp15 = cResult[11];
+            }
+            if (cResult[12] !== automod) {
+              const obj29 = { label: tmp15, content: null };
+              const obj30 = { automod };
+              tmp15 = closure_5(ConjurePlanAutomodExamplesDefault, obj30);
+              obj29.content = tmp15;
+              cResult[12] = automod;
+              cResult[13] = obj29;
+              let tmp18 = obj29;
+            } else {
+              tmp18 = cResult[13];
+            }
+            obj28.automod = tmp18;
+          }
         }
-        const intl2 = util.intl;
-        const obj28 = { version };
-        stringResult3 = intl2.formatToPlainString(_modDef3849.YZ3qJs, obj28);
-        const tmpResult6 = useConjurePlanBotPreviewItems;
+        if (null == proposal.design_image) {
+          if (botExchanges.length <= 0) {
+            if (null == tmp12) {
+              cResult[5] = automod;
+              cResult[6] = botExchanges;
+              cResult[7] = projectId;
+              cResult[8] = proposal;
+              cResult[9] = tmp12;
+              cResult[10] = obj28;
+            } else {
+              const _Symbol5 = Symbol;
+              if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl5 = tmp(1126).intl;
+                const stringResult5 = intl5.string(_modDef3849.ove4zH);
+                cResult[25] = stringResult5;
+                let tmp34 = stringResult5;
+              } else {
+                tmp34 = cResult[25];
+              }
+              if (cResult[26] !== tmp12) {
+                const obj31 = { label: tmp34, content: null };
+                const obj32 = {};
+                const merged = Object.assign(tmp12);
+                tmp34 = closure_5(ConjurePlanWidgetDefault, obj32);
+                obj31.content = tmp34;
+                cResult[26] = tmp12;
+                cResult[27] = obj31;
+                let tmp37 = obj31;
+              } else {
+                tmp37 = cResult[27];
+              }
+              obj28.widget = tmp37;
+            }
+          } else {
+            const _Symbol4 = Symbol;
+            if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl4 = tmp(1126).intl;
+              const stringResult6 = intl4.string(_modDef3849.sA1lTv);
+              cResult[21] = stringResult6;
+              let tmp28 = stringResult6;
+            } else {
+              tmp28 = cResult[21];
+            }
+            if (cResult[22] === botExchanges) {
+              if (cResult[23] === projectId) {
+                let tmp31 = cResult[24];
+              }
+              obj28.bot = tmp31;
+            }
+            const obj33 = { label: tmp28, content: null };
+            const obj34 = { projectId, exchanges: botExchanges };
+            tmp28 = closure_5(ConjurePlanBotPreviewDefault, obj34);
+            obj33.content = tmp28;
+            cResult[22] = botExchanges;
+            cResult[23] = projectId;
+            cResult[24] = obj33;
+            tmp31 = obj33;
+          }
+        } else {
+          const _Symbol3 = Symbol;
+          if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl2 = tmp(1126).intl;
+            const stringResult7 = intl2.string(_modDef3849.X15LLY);
+            cResult[14] = stringResult7;
+            let design_image = stringResult7;
+          } else {
+            design_image = cResult[14];
+          }
+          if (cResult[15] !== proposal) {
+            const intl3 = tmp(1126).intl;
+            const stringResult8 = intl3.string(tmp(11909).conjurePlanDesignAlt(proposal));
+            cResult[15] = proposal;
+            cResult[16] = stringResult8;
+            let tmp23 = stringResult8;
+            const tmpResult9 = tmp(11909);
+          } else {
+            tmp23 = cResult[16];
+          }
+          if (cResult[17] === projectId) {
+            if (cResult[18] === proposal.design_image) {
+              if (cResult[19] === tmp23) {
+                let tmp25 = cResult[20];
+              }
+              obj28.design = tmp25;
+            }
+          }
+          const obj35 = { label: design_image, content: null };
+          const obj36 = { projectId, design: proposal.design_image, alt: tmp23 };
+          obj35.content = closure_5(closure_8, obj36);
+          cResult[17] = projectId;
+          design_image = proposal.design_image;
+          cResult[18] = design_image;
+          cResult[19] = tmp23;
+          cResult[20] = obj35;
+          tmp25 = obj35;
+        }
+        const tmpResult7 = tmp(11905);
       }
-      const tmpResult5 = conjurePlanWidget2;
+      const tmpResult6 = tmp(11902);
       let tmp13 = null;
-      if (tmpResult8.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET)) {
+      if (tmpResult10.planDeclaresSurface(proposal, tmp(6947).ConjureSupportedSurface.PROFILE_WIDGET)) {
         tmp13 = conjurePlanWidget;
       }
       cResult[2] = proposal;
       cResult[3] = conjurePlanWidget;
       cResult[4] = tmp13;
       tmp12 = tmp13;
-      tmpResult8 = conjurePlanTags;
+      tmpResult10 = tmp(11901);
     }
   : function ConjurePlanProposalCard(expanded) {
       ({ projectId, proposal, version, superseded } = expanded);
@@ -675,6 +732,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = true;
       }
       const onApprove = expanded.onApprove;
+      let previews;
+      importDefault = undefined;
       const tmp = closure_7();
       const trimmed = proposal.summary.trim();
       let str3;
@@ -688,33 +747,83 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (bot_permissions == null) {
         bot_permissions = [];
       }
-      const mapped = bot_permissions.map(conjurePlanFormat.formatConjurePlanRequirementName);
+      const tmp3 = previews;
+      const mapped = bot_permissions.map(previews(11900).formatConjurePlanRequirementName);
       let privileged_intents = proposal.privileged_intents;
       if (privileged_intents == null) {
         privileged_intents = [];
       }
-      const mapped1 = privileged_intents.map(conjurePlanFormat.formatConjurePlanRequirementName);
+      const mapped1 = privileged_intents.map(tmp3(11900).formatConjurePlanRequirementName);
       let automod = null;
-      if (tmp3Result.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.AUTOMOD)) {
+      if (tmp3Result.planDeclaresSurface(proposal, tmp3(6947).ConjureSupportedSurface.AUTOMOD)) {
         automod = proposal.automod;
       }
-      tmp3Result = conjurePlanTags;
-      const conjurePlanWidget = conjurePlanWidget2.useConjurePlanWidget(projectId, proposal);
-      const tmp3Result5 = conjurePlanWidget2;
+      tmp3Result = tmp3(11901);
+      const conjurePlanWidget = tmp3(11902).useConjurePlanWidget(projectId, proposal);
+      const tmp3Result6 = tmp3(11902);
       let tmp7 = null;
-      if (tmp3Result6.planDeclaresSurface(proposal, ConjureProjectTypes.ConjureSupportedSurface.PROFILE_WIDGET)) {
+      if (tmp3Result7.planDeclaresSurface(proposal, tmp3(6947).ConjureSupportedSurface.PROFILE_WIDGET)) {
         tmp7 = conjurePlanWidget;
       }
-      tmp3Result6 = conjurePlanTags;
-      const botExchanges = useConjurePlanBotPreviewItems.useConjurePlanBotExchanges(proposal).botExchanges;
-      const tmp3Result7 = useConjurePlanBotPreviewItems;
+      tmp3Result7 = tmp3(11901);
+      const botExchanges = tmp3(11905).useConjurePlanBotExchanges(proposal).botExchanges;
+      previews = {};
+      let tmp8 = null != automod;
+      if (tmp8) {
+        tmp8 = automod.examples.length > 0;
+      }
+      if (tmp8) {
+        let obj2 = { label: null, content: null };
+        const intl = tmp3(1126).intl;
+        obj2.label = intl.string(_modDef3849.z4ZKYG);
+        let obj3 = { automod };
+        obj2.content = closure_5(ConjurePlanAutomodExamplesDefault, obj3);
+        previews.automod = obj2;
+      }
+      if (null != proposal.design_image) {
+        const obj4 = { label: null, content: null };
+        const intl17 = tmp3(1126).intl;
+        obj4.label = intl17.string(_modDef3849.X15LLY);
+        const obj5 = { projectId, design: proposal.design_image, alt: null };
+        const intl18 = tmp3(1126).intl;
+        obj5.alt = intl18.string(tmp3(11909).conjurePlanDesignAlt(proposal));
+        obj4.content = closure_5(closure_8, obj5);
+        previews.design = obj4;
+        const tmp3Result9 = tmp3(11909);
+      }
+      if (botExchanges.length > 0) {
+        const obj6 = { label: null, content: null };
+        const intl2 = tmp3(1126).intl;
+        obj6.label = intl2.string(_modDef3849.sA1lTv);
+        const obj7 = { projectId, exchanges: botExchanges };
+        obj6.content = closure_5(ConjurePlanBotPreviewDefault, obj7);
+        previews.bot = obj6;
+      }
+      if (null != tmp7) {
+        const obj8 = { label: null, content: null };
+        const intl3 = tmp3(1126).intl;
+        obj8.label = intl3.string(_modDef3849.ove4zH);
+        const obj9 = {};
+        const merged = Object.assign(tmp7);
+        obj8.content = closure_5(ConjurePlanWidgetDefault, obj9);
+        previews.widget = obj8;
+      }
+      const keys = Object.keys(previews);
+      const tmp3Result8 = tmp3(11905);
+      let result = tmp3(11915).conjurePlanSurfaceRows(proposal, keys);
+      importDefault = result;
+      const found = keys.filter((item) => {
+        closure_0 = item;
+        return !_undefined.some((preview) => preview.preview === closure_0);
+      });
+      const tmp3Result10 = tmp3(11915);
       if (superseded) {
         if (null != version) {
-          const intl2 = util.intl;
-          let obj = { version };
-          let formatToPlainStringResult = intl2.formatToPlainString(_modDef3849.YZ3qJs, obj);
+          const intl5 = tmp3(1126).intl;
+          const obj10 = { version };
+          let formatToPlainStringResult = intl5.formatToPlainString(tmp20(3849).YZ3qJs, obj10);
         }
-        const obj2 = {
+        const obj11 = {
           title: formatToPlainStringResult,
           meta: null,
           superseded: null,
@@ -724,188 +833,185 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           hideLabel: null,
           children: null,
         };
-        let tmp8Result = null;
+        let tmp19Result = null;
         if (superseded) {
-          let obj3 = { children: null };
-          const intl3 = util.intl;
-          obj3.children = intl3.string(_modDef3849.hF2c41);
-          tmp8Result = hasOwnProperty(ConjureNativeCollapsibleSection.ConjureNativeCollapsibleMeta, obj3);
+          const obj12 = { children: null };
+          const intl6 = tmp3(1126).intl;
+          obj12.children = intl6.string(tmp20(3849).hF2c41);
+          tmp19Result = closure_5(tmp3(11898).ConjureNativeCollapsibleMeta, obj12);
         }
-        obj2.meta = tmp8Result;
-        obj2.superseded = superseded;
-        obj2.expanded = flag;
-        obj2.onToggleExpanded = expanded.onToggleExpanded;
-        const intl4 = util.intl;
-        obj2.showLabel = intl4.string(_modDef3849.yD8EJS);
-        const intl5 = util.intl;
-        obj2.hideLabel = intl5.string(_modDef3849.nSPGNb);
-        let tmp8Result6 = null;
-        if (!superseded) {
-          let supported_surfaces = proposal.supported_surfaces;
-          if (supported_surfaces == null) {
-            supported_surfaces = [];
-          }
-          const obj4 = { tags: supported_surfaces };
-          tmp8Result6 = hasOwnProperty(ConjurePlanTypeTagsDefault, obj4);
-          const tmp9Result = ConjurePlanTypeTagsDefault;
-        }
-        const items = [tmp8Result6, , , , , , , , , , ,];
-        let tmp14Result = null;
+        obj11.meta = tmp19Result;
+        obj11.superseded = superseded;
+        obj11.expanded = flag;
+        obj11.onToggleExpanded = expanded.onToggleExpanded;
+        const intl7 = tmp3(1126).intl;
+        obj11.showLabel = intl7.string(tmp20(3849).yD8EJS);
+        const intl8 = tmp3(1126).intl;
+        obj11.hideLabel = intl8.string(tmp20(3849).nSPGNb);
+        let tmp25Result = null;
         if ("" !== str3) {
-          const obj5 = { direction: "vertical", spacing: 4, children: null };
-          const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-          const intl14 = util.intl;
-          obj6.children = intl14.string(_modDef3849.iNS4dl);
-          const items1 = [hasOwnProperty(Text_Text.Text, obj6)];
-          const obj7 = { variant: "text-md/normal", color: "text-default", children: str3 };
-          items1[1] = hasOwnProperty(Text_Text.Text, obj7);
-          obj5.children = items1;
-          tmp14Result = timestampProducer(Stack_Stack.Stack, obj5);
-        }
-        items[1] = tmp14Result;
-        if ("" === trimmed) {
-          const intl6 = util.intl;
-          let stringResult = intl6.string(_modDef3849["0+RUWx"]);
-        } else {
-          stringResult = MarkupUtilsDefault.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
-          const tmp9Result3 = MarkupUtilsDefault;
-        }
-        const obj8 = { variant: "text-md/normal", color: "text-default", children: stringResult };
-        items[2] = hasOwnProperty(Text_Text.Text, obj8);
-        let tmp8Result7 = null;
-        if (null != automod) {
-          tmp8Result7 = null;
-          if (automod.examples.length > 0) {
-            const obj9 = { automod };
-            tmp8Result7 = hasOwnProperty(ConjurePlanAutomodExamplesDefault, obj9);
-          }
-        }
-        items[3] = tmp8Result7;
-        let tmp8Result8 = null;
-        if (null != proposal.design_image) {
-          const obj10 = { projectId, design: proposal.design_image, alt: null };
-          const intl7 = util.intl;
-          obj10.alt = intl7.string(conjurePlanDesign.conjurePlanDesignAlt(proposal));
-          tmp8Result8 = hasOwnProperty(closure_8, obj10);
-          const tmp3Result8 = conjurePlanDesign;
-        }
-        items[4] = tmp8Result8;
-        let tmp8Result9 = null;
-        if (botExchanges.length > 0) {
-          const obj11 = { projectId, exchanges: botExchanges };
-          tmp8Result9 = hasOwnProperty(ConjurePlanBotPreviewDefault, obj11);
-        }
-        items[5] = tmp8Result9;
-        let tmp8Result10 = null;
-        if (null != tmp7) {
-          const obj12 = {};
-          const merged = Object.assign(tmp7);
-          tmp8Result10 = hasOwnProperty(ConjurePlanWidgetDefault, obj12);
-          const tmp9Result4 = ConjurePlanWidgetDefault;
-        }
-        items[6] = tmp8Result10;
-        let tmp14Result6 = null;
-        if (proposal.changes.length > 0) {
           const obj13 = { direction: "vertical", spacing: 4, children: null };
           const obj14 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-          const intl8 = util.intl;
-          obj14.children = intl8.string(_modDef3849["5+mG1z"]);
-          const items2 = [hasOwnProperty(Text_Text.Text, obj14)];
-          const changes = proposal.changes;
-          items2[1] = changes.map((item, index) =>
-            closure_1_5(
-              Text_Text.Text,
-              { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item },
-              index,
-            ),
-          );
-          obj13.children = items2;
-          tmp14Result6 = timestampProducer(Stack_Stack.Stack, obj13);
+          const intl19 = tmp3(1126).intl;
+          obj14.children = intl19.string(tmp20(3849).iNS4dl);
+          let items = [closure_5(tmp3(5088).Text, obj14)];
+          const obj15 = { variant: "text-md/normal", color: "text-default", children: str3 };
+          items[1] = closure_5(tmp3(5088).Text, obj15);
+          obj13.children = items;
+          tmp25Result = closure_6(tmp3(5377).Stack, obj13);
         }
-        items[7] = tmp14Result6;
-        let tmp14Result7 = null;
-        if (proposal.commands.length > 0) {
-          const obj15 = { direction: "vertical", spacing: 4, children: null };
-          const obj16 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-          const intl9 = util.intl;
-          obj16.children = intl9.string(util.t["0hKkS+"]);
-          const items3 = [hasOwnProperty(Text_Text.Text, obj16)];
-          const commands = proposal.commands;
-          items3[1] = commands.map((name, index) => {
-            const obj = {
-              variant: "text-sm/medium",
-              color: "text-default",
-              children: "" + conjurePlanFormat.conjurePlanCommandPrefix(name) + name.name,
-            };
-            const children = [closure_1_5(Text_Text.Text, obj)];
-            let tmp3Result = null;
-            if (null != name.description) {
-              tmp3Result = null;
-              if ("" !== name.description) {
-                const obj3 = { variant: "text-sm/normal", color: "text-muted", children: name.description };
-                tmp3Result = closure_1_5(Text_Text.Text, obj3);
-              }
+        const items1 = [tmp25Result, , , , , , , ,];
+        if ("" === trimmed) {
+          const intl9 = tmp3(1126).intl;
+          let stringResult = intl9.string(tmp20(3849)["0+RUWx"]);
+        } else {
+          stringResult = tmp20(5079).parse(trimmed, true, tmp3(11830).CONJURE_MARKUP_OPTIONS);
+          const tmp20Result = tmp20(5079);
+        }
+        const obj16 = { variant: "text-md/normal", color: "text-default", children: stringResult };
+        items1[1] = closure_5(tmp3(5088).Text, obj16);
+        if (result.length <= 0) {
+          items1[2] = null;
+          items1[3] = found.map((item) => {
+            let tmp2 = null;
+            if (null != obj[item]) {
+              obj = { direction: "vertical", spacing: 4, children: null };
+              const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: tmp.label };
+              const items = [hasOwnProperty(Text_Text.Text, obj2), tmp.content];
+              obj.children = items;
+              tmp2 = timestampProducer(Stack_Stack.Stack, obj, item);
             }
-            children[1] = tmp3Result;
-            return closure_1_6(closure_1_4, { children }, index);
+            return tmp2;
           });
-          obj15.children = items3;
-          tmp14Result7 = timestampProducer(Stack_Stack.Stack, obj15);
-        }
-        items[8] = tmp14Result7;
-        let tmp14Result8 = null;
-        if (mapped.length > 0) {
-          const obj17 = { direction: "vertical", spacing: 4, children: null };
-          const obj18 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-          const intl10 = util.intl;
-          obj18.children = intl10.string(_modDef3849["2UbW6r"]);
-          const items4 = [hasOwnProperty(Text_Text.Text, obj18)];
-          const obj19 = { variant: "text-sm/normal", color: "text-default", children: mapped.join(", ") };
-          items4[1] = hasOwnProperty(Text_Text.Text, obj19);
-          obj17.children = items4;
-          tmp14Result8 = timestampProducer(Stack_Stack.Stack, obj17);
-        }
-        items[9] = tmp14Result8;
-        let tmp14Result9 = null;
-        if (mapped1.length > 0) {
-          const obj20 = { direction: "vertical", spacing: 4, children: null };
-          const obj21 = { variant: "text-sm/semibold", color: "text-muted", children: null };
-          const intl11 = util.intl;
-          obj21.children = intl11.string(_modDef3849["7TKfpj"]);
-          const items5 = [hasOwnProperty(Text_Text.Text, obj21)];
-          const obj22 = { variant: "text-sm/normal", color: "text-default", children: mapped1.join(", ") };
-          items5[1] = hasOwnProperty(Text_Text.Text, obj22);
-          obj20.children = items5;
-          tmp14Result9 = timestampProducer(Stack_Stack.Stack, obj20);
-        }
-        items[10] = tmp14Result9;
-        let tmp14Result10 = null;
-        if (null != onApprove) {
-          tmp14Result10 = null;
-          if (!superseded) {
-            const obj23 = { style: tmp.planActions, children: null };
-            const obj24 = { text: null, variant: "primary", onPress: null };
-            const intl12 = util.intl;
-            obj24.text = intl12.string(_modDef3849["6S+wRM"]);
-            obj24.onPress = onApprove;
-            const items6 = [hasOwnProperty(components_Button_Button.Button, obj24)];
-            const obj25 = { variant: "text-sm/normal", color: "text-muted", style: tmp.planReplyHint, children: null };
-            const intl13 = util.intl;
-            obj25.children = intl13.string(_modDef3849.IZoqbR);
-            items6[1] = hasOwnProperty(Text_Text.Text, obj25);
-            obj23.children = items6;
-            tmp14Result10 = timestampProducer(React4, obj23);
+          let tmp25Result7 = null;
+          if (proposal.changes.length > 0) {
+            const obj17 = { direction: "vertical", spacing: 4, children: null };
+            const obj18 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+            const intl11 = tmp3(1126).intl;
+            obj18.children = intl11.string(tmp20(3849)["5+mG1z"]);
+            const items2 = [closure_5(tmp3(5088).Text, obj18)];
+            const changes = proposal.changes;
+            items2[1] = changes.map((item, index) => {
+              const obj = { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item };
+              return closure_1_5(obj(5088).Text, obj, index);
+            });
+            obj17.children = items2;
+            tmp25Result7 = closure_6(tmp3(5377).Stack, obj17);
           }
+          items1[4] = tmp25Result7;
+          let tmp25Result8 = null;
+          if (proposal.commands.length > 0) {
+            const obj19 = { direction: "vertical", spacing: 4, children: null };
+            const obj20 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+            const intl12 = tmp3(1126).intl;
+            obj20.children = intl12.string(tmp3(1126).t["0hKkS+"]);
+            const items3 = [closure_5(tmp3(5088).Text, obj20)];
+            const commands = proposal.commands;
+            items3[1] = commands.map((name, index) => {
+              obj = {
+                variant: "text-sm/medium",
+                color: "text-default",
+                children: "" + obj(11900).conjurePlanCommandPrefix(name) + name.name,
+              };
+              const children = [closure_1_5(obj(5088).Text, obj)];
+              let tmp3Result = null;
+              if (null != name.description) {
+                tmp3Result = null;
+                if ("" !== name.description) {
+                  const obj3 = { variant: "text-sm/normal", color: "text-muted", children: name.description };
+                  tmp3Result = closure_1_5(obj(5088).Text, obj3);
+                }
+              }
+              children[1] = tmp3Result;
+              return closure_1_6(closure_1_4, { children }, index);
+            });
+            obj19.children = items3;
+            tmp25Result8 = closure_6(tmp3(5377).Stack, obj19);
+          }
+          items1[5] = tmp25Result8;
+          let tmp25Result9 = null;
+          if (mapped.length > 0) {
+            const obj21 = { direction: "vertical", spacing: 4, children: null };
+            const obj22 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+            const intl13 = tmp3(1126).intl;
+            obj22.children = intl13.string(tmp20(3849)["2UbW6r"]);
+            const items4 = [closure_5(tmp3(5088).Text, obj22)];
+            const obj23 = { variant: "text-sm/normal", color: "text-default", children: mapped.join(", ") };
+            items4[1] = closure_5(tmp3(5088).Text, obj23);
+            obj21.children = items4;
+            tmp25Result9 = closure_6(tmp3(5377).Stack, obj21);
+          }
+          items1[6] = tmp25Result9;
+          let tmp25Result10 = null;
+          if (mapped1.length > 0) {
+            const obj24 = { direction: "vertical", spacing: 4, children: null };
+            const obj25 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+            const intl14 = tmp3(1126).intl;
+            obj25.children = intl14.string(tmp20(3849)["7TKfpj"]);
+            const items5 = [closure_5(tmp3(5088).Text, obj25)];
+            const obj26 = { variant: "text-sm/normal", color: "text-default", children: mapped1.join(", ") };
+            items5[1] = closure_5(tmp3(5088).Text, obj26);
+            obj24.children = items5;
+            tmp25Result10 = closure_6(tmp3(5377).Stack, obj24);
+          }
+          items1[7] = tmp25Result10;
+          let tmp25Result11 = null;
+          if (null != onApprove) {
+            tmp25Result11 = null;
+            if (!superseded) {
+              const obj27 = { style: tmp.planActions, children: null };
+              const obj28 = { text: null, variant: "primary", onPress: null };
+              const intl15 = tmp3(1126).intl;
+              obj28.text = intl15.string(tmp20(3849)["6S+wRM"]);
+              obj28.onPress = onApprove;
+              const items6 = [closure_5(tmp3(5379).Button, obj28)];
+              const obj29 = {
+                variant: "text-sm/normal",
+                color: "text-muted",
+                style: tmp.planReplyHint,
+                children: null,
+              };
+              const intl16 = tmp3(1126).intl;
+              obj29.children = intl16.string(tmp20(3849).IZoqbR);
+              items6[1] = closure_5(tmp3(5088).Text, obj29);
+              obj27.children = items6;
+              tmp25Result11 = closure_6(closure_4, obj27);
+            }
+          }
+          const obj30 = { children: null };
+          const obj31 = { direction: "vertical", spacing: 8, children: null };
+          items1[8] = tmp25Result11;
+          obj31.children = items1;
+          obj11.children = closure_6(tmp3(5377).Stack, obj31);
+          obj30.children = closure_5(tmp22, obj11);
+          return closure_5(tmp21, obj30);
+        } else {
+          const obj32 = { variant: "text-sm/semibold", color: "text-muted", children: null };
+          const intl10 = tmp3(1126).intl;
+          obj32.children = intl10.string(tmp20(3849).mrMYrN);
+          const items7 = [closure_5(tmp3(5088).Text, obj32)];
+          if (1 === result.length) {
+            const obj33 = { row: null, previews: null };
+            result = result[0];
+            obj33.row = result;
+            obj33.previews = previews;
+            let tmp19Result2 = closure_5(tmp3(11916).ConjurePlanSingleSurface, obj33);
+          } else {
+            const obj34 = { rows: result, previews, cycling: null };
+            let tmp29 = !superseded;
+            if (!superseded) {
+              tmp29 = flag;
+            }
+            obj34.cycling = tmp29;
+            tmp19Result2 = closure_5(tmp3(11916).ConjurePlanSurfaceNav, obj34);
+          }
+          const obj35 = { direction: "vertical", spacing: 12, children: null };
+          items7[1] = tmp19Result2;
+          obj35.children = items7;
+          closure_6(tmp3(5377).Stack, obj35);
         }
-        const obj26 = { children: null };
-        const obj27 = { direction: "vertical", spacing: 8, children: null };
-        items[11] = tmp14Result10;
-        obj27.children = items;
-        obj2.children = timestampProducer(Stack_Stack.Stack, obj27);
-        obj26.children = hasOwnProperty(tmp11, obj2);
-        return hasOwnProperty(tmp10, obj26);
       }
-      const intl = util.intl;
-      formatToPlainStringResult = intl.string(_modDef3849["3b6e7o"]);
-      tmp10 = ConjureNativeCardSurfaceDefault;
+      const intl4 = tmp3(1126).intl;
+      formatToPlainStringResult = intl4.string(tmp20(3849)["3b6e7o"]);
+      tmp21 = ConjureNativeCardSurfaceDefault;
     };

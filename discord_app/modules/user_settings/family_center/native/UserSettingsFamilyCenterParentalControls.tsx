@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                   }
                   return;
                 }
-                setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                setOptionsResult1 = closure_0.setOptions({ title: "kind", headerRight: "apply" });
                 return;
               }
             }
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "kind", headerRight: "apply" });
                   return;
                 }
               }
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "kind", headerRight: "apply" });
                   return;
                 }
               }
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "kind", headerRight: "apply" });
                   return;
                 }
               }
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "kind", headerRight: "apply" });
                   return;
                 }
               }
@@ -346,7 +346,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "kind", headerRight: "apply" });
                   return;
                 }
               }
@@ -390,7 +390,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
             }
             return;
           }
-          setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+          setOptionsResult1 = closure_0.setOptions({ title: "kind", headerRight: "apply" });
           return;
         }
       }
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "Array", headerRight: "Set" });
+    stackNavigation.setOptions({ title: "kind", headerRight: "apply" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[16]).intl;

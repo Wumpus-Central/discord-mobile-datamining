@@ -505,11 +505,11 @@ class EmbeddedActivitiesManager extends tmp3 {
     applyArgumentsResult.handleActivityLaunchSuccess = function handleActivityLaunchSuccess(arg0) {
       ({ applicationId: closure_0, nonce: closure_1 } = arg0);
       const timerId = setTimeout(() => {
-        const tmp6 = applyArgumentsResult(14727).awaitingAnalyticsContext[closure_0];
+        const tmp6 = applyArgumentsResult(15048).awaitingAnalyticsContext[closure_0];
         let tmp7;
         if (null != tmp6) {
           if (tmp6.nonce === nonce) {
-            const awaitingAnalyticsContext = applyArgumentsResult(14727).awaitingAnalyticsContext;
+            const awaitingAnalyticsContext = applyArgumentsResult(15048).awaitingAnalyticsContext;
             delete tmp[tmp2];
             tmp7 = tmp6;
           }
@@ -597,10 +597,10 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleActivityLaunchCancel = function handleActivityLaunchCancel(arg0) {
       ({ nonce, applicationId } = arg0);
-      const tmp5 = applyArgumentsResult(14727).awaitingAnalyticsContext[applicationId];
+      const tmp5 = applyArgumentsResult(15048).awaitingAnalyticsContext[applicationId];
       if (null != tmp5) {
         if (tmp5.nonce === nonce) {
-          const awaitingAnalyticsContext = applyArgumentsResult(14727).awaitingAnalyticsContext;
+          const awaitingAnalyticsContext = applyArgumentsResult(15048).awaitingAnalyticsContext;
           delete tmp[tmp2];
         }
       }
@@ -858,7 +858,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 };
                 set = 5;
                 c6 = 1;
-                const obj22 = { value: getChannel(11615)(obj21), done: false };
+                const obj22 = { value: getChannel(11538)(obj21), done: false };
                 return obj22;
               }
             }
@@ -928,7 +928,7 @@ class EmbeddedActivitiesManager extends tmp3 {
     };
     applyArgumentsResult.handleInteractionQueue = function handleInteractionQueue(arg0) {
       ({ nonce, data } = arg0);
-      if (null == applyArgumentsResult(14727).awaitingAnalyticsContext[data.applicationId]) {
+      if (null == applyArgumentsResult(15048).awaitingAnalyticsContext[data.applicationId]) {
         if (data.interactionType === applyArgumentsResult(5442).InteractionTypes.APPLICATION_COMMAND) {
           const items = [AnalyticsLocationDefault.INTERACTION_APPLICATION_COMMAND];
           let tmp3 = items;
@@ -948,7 +948,7 @@ class EmbeddedActivitiesManager extends tmp3 {
         }
         if (flag) {
           const obj2 = { nonce: nonce2, locations, source };
-          applyArgumentsResult(14727).awaitingAnalyticsContext[applicationId] = obj2;
+          applyArgumentsResult(15048).awaitingAnalyticsContext[applicationId] = obj2;
           flag = true;
         }
         if (flag) {
@@ -960,7 +960,7 @@ class EmbeddedActivitiesManager extends tmp3 {
       nonce = nonce.nonce;
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
-          const tmp6 = applyArgumentsResult(14727).awaitingAnalyticsContext[tmp3];
+          const tmp6 = applyArgumentsResult(15048).awaitingAnalyticsContext[tmp3];
           if (null != tmp6) {
             tmp6.interactionId = tmp;
           }
@@ -975,11 +975,11 @@ class EmbeddedActivitiesManager extends tmp3 {
           closure_0 = tmp4;
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            const tmp6 = applyArgumentsResult(14727).awaitingAnalyticsContext[closure_0];
+            const tmp6 = applyArgumentsResult(15048).awaitingAnalyticsContext[closure_0];
             let tmp7;
             if (null != tmp6) {
               if (tmp6.nonce === nonce) {
-                const awaitingAnalyticsContext = applyArgumentsResult(14727).awaitingAnalyticsContext;
+                const awaitingAnalyticsContext = applyArgumentsResult(15048).awaitingAnalyticsContext;
                 delete tmp[tmp2];
                 tmp7 = tmp6;
               }
@@ -994,10 +994,10 @@ class EmbeddedActivitiesManager extends tmp3 {
       if (null != nonce) {
         if (null != dependencyMap2[nonce]) {
           delete tmp3[tmp4];
-          const tmp9 = applyArgumentsResult(14727).awaitingAnalyticsContext[tmp6];
+          const tmp9 = applyArgumentsResult(15048).awaitingAnalyticsContext[tmp6];
           if (null != tmp9) {
             if (tmp9.nonce === nonce) {
-              const awaitingAnalyticsContext = applyArgumentsResult(14727).awaitingAnalyticsContext;
+              const awaitingAnalyticsContext = applyArgumentsResult(15048).awaitingAnalyticsContext;
               delete tmp[tmp2];
             }
           }

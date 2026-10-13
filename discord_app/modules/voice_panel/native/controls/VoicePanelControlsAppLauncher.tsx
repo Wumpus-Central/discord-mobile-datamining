@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const VoicePanelControlsConstants = fn(11970);
+const VoicePanelControlsConstants = fn(12486);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1085).ComponentActions;
 const jsxProd = fn(21);
@@ -205,7 +205,7 @@ export default noop.memo(
         let derivedValue1;
         const tmp = closure_10();
         const gradientTop = gestureSpecs(9307).useGradientTop();
-        const context = noop.useContext(setControlsMode(11971));
+        const context = noop.useContext(setControlsMode(12487));
         setControlsMode = context.setControlsMode;
         ({ channelId: c2, safeArea, windowDimensions } = context);
         const tmp4 = setControlsMode(8395)(windowDimensions);
@@ -217,7 +217,7 @@ export default noop.memo(
         setControlsMode(38)(null != stateFromStores, "channel should not be null");
         const obj2 = gestureSpecs(504);
         const items1 = [setControlsMode];
-        const controlsDrawerOpenWidth = gestureSpecs(11979).getControlsDrawerOpenWidth(
+        const controlsDrawerOpenWidth = gestureSpecs(12495).getControlsDrawerOpenWidth(
           tmp4.width,
           rect.left,
           rect.right,
@@ -227,7 +227,7 @@ export default noop.memo(
           ComponentDispatch.dispatch(ComponentActions.SELECT_ACTIVITY);
           setControlsMode({ mode: hasOwnProperty.HIDDEN });
         }, items1);
-        const obj3 = gestureSpecs(11979);
+        const obj3 = gestureSpecs(12495);
         const appLauncherChatInputRefDummy = gestureSpecs(10622).useAppLauncherChatInputRefDummy({ noop: true });
         const obj4 = gestureSpecs(10622);
         const ref = noop.useRef(gestureSpecs(10622).AppLauncherKeyboardCloseReason.DISMISSED);
@@ -282,7 +282,7 @@ export default noop.memo(
         obj11.style = items2;
         const obj9 = gestureSpecs(4850);
         const items3 = [
-          closure_7(setControlsMode(11756), {
+          closure_7(setControlsMode(11558), {
             bottomSheetIndex: sharedValue1,
             bottomSheetPosition: sharedValue,
             bottomSheetExpandReasonRef: ref1,
@@ -308,7 +308,7 @@ export default noop.memo(
         };
         const intl = gestureSpecs(1126).intl;
         obj13.title = intl.string(gestureSpecs(1126).t.shUONg);
-        items3[1] = closure_7(setControlsMode(11980), obj13);
+        items3[1] = closure_7(setControlsMode(12496), obj13);
         obj11.children = items3;
         obj10.children = closure_8(setControlsMode(4850).View, obj11);
         return closure_7(closure_9, obj10);

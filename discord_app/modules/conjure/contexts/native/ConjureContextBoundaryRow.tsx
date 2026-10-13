@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ projectId, contextSwitch } = arg0);
       const tmp4 = closure_7();
       const obj = action(576);
-      const conjureContextSwitchRow = action(17088).useConjureContextSwitchRow(projectId, contextSwitch);
+      const conjureContextSwitchRow = action(11323).useConjureContextSwitchRow(projectId, contextSwitch);
       if (null == conjureContextSwitchRow) {
         return null;
       } else {
@@ -271,13 +271,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp21;
         tmp18 = tmp21;
       }
-      const obj2 = action(17088);
+      const obj2 = action(11323);
     }
   : function ConjureContextBoundaryRow(arg0) {
       let action;
       ({ projectId, contextSwitch } = arg0);
       const tmp = closure_7();
-      const conjureContextSwitchRow = action(17088).useConjureContextSwitchRow(projectId, contextSwitch);
+      const conjureContextSwitchRow = action(11323).useConjureContextSwitchRow(projectId, contextSwitch);
       if (null == conjureContextSwitchRow) {
         return null;
       } else {
@@ -352,5 +352,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.children = items2;
         return closure_5(View, obj2);
       }
-      const obj = action(17088);
+      const obj = action(11323);
     };

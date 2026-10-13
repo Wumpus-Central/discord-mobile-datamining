@@ -6,8 +6,8 @@ let size = {
   mode: "toCharArray$esjava$1",
   width: false,
   height: null,
-  containerHeight: "box-none",
-  showSecondaryPIP: null,
+  containerHeight: 0,
+  showSecondaryPIP: false,
   scale: null,
 };
 const ReanimatedHelperTypes = fn(6763);

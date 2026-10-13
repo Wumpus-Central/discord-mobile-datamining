@@ -13,8 +13,8 @@ import scopes from "../scopes.tsx";
 import disclosures from "../../applications/disclosures.tsx";
 import Utils from "../Utils.tsx";
 import ShieldIcon from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
-import RobotIcon from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import HammerIcon from "../../../design/components/Icon/native/redesign/generated/HammerIcon.tsx";
+import RobotIcon from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import EmbedIcon from "../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 

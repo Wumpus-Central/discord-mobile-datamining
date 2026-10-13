@@ -75,7 +75,7 @@ function getScreens(headerStyle) {
     },
   };
 }
-const constants = fn(12931).CrunchyrollLinkModalScenes;
+const constants = fn(13423).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1085).PlatformTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [twoWayLinkStyles];
       const memo = noop.useMemo(() => getScreens(twoWayLinkStyles), items);
       const obj = twoWayLinkStyles(9215);
-      const accountLinkStepTracking = twoWayLinkStyles(12917).useAccountLinkStepTracking(
+      const accountLinkStepTracking = twoWayLinkStyles(13409).useAccountLinkStepTracking(
         PlatformTypes.CRUNCHYROLL,
         locationStack.locationStack,
       );

@@ -24,12 +24,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "b\u00E5t",
-    scrollPosition: "fremkomstmiddel",
-    windowSize: "passasjer",
-    setStateShallow: "passasjerskip",
-    dropStart: "skip",
-    dropComplete: null,
+    listInsets: 50,
+    scrollPosition: 100,
+    windowSize: 100,
+    setStateShallow: 50,
+    dropStart: 100,
+    dropComplete: true,
   };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
@@ -71,7 +71,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1272).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "ddd" }));
+      dropSpecs(1272).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "code" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -96,7 +96,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "top" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {

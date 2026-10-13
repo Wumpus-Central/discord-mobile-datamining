@@ -109,8 +109,8 @@ export default function GuildProfileGamesActionSheet(profile) {
   const id = profile.id;
   const gameActivity = profile.gameActivity;
   const tmp = closure_7();
-  const allGuildProfileGames = id(13017).useAllGuildProfileGames(profile);
-  let obj = id(13017);
+  const allGuildProfileGames = id(13501).useAllGuildProfileGames(profile);
+  let obj = id(13501);
   const intl = id(1126).intl;
   const obj2 = id(8295);
   const items = [id];

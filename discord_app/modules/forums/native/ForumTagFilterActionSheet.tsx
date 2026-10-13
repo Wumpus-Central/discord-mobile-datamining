@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 
 require = fn;
-const ForumChannelStore = fn(11677);
+const ForumChannelStore = fn(12420);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);

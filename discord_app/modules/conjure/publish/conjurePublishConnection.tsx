@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/conjurePublishConnection.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import ConjurePublishActionCreators from "ConjurePublishActionCreators.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
+import ConjurePublishActionCreators from "ConjurePublishActionCreators.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 

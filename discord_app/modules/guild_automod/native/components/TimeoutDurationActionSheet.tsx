@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodActionType = fn(11450).AutomodActionType;
+const AutomodActionType = fn(12216).AutomodActionType;
 let closure_4 = fn(2127).getDisableCommunicationDurationOptions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -252,7 +252,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         arr = closure_4();
       }
       let obj = onSelectDuration(576);
-      const actionInfo = onSelectDuration(18310).getActionInfo(
+      const actionInfo = onSelectDuration(18314).getActionInfo(
         AutomodActionType.USER_COMMUNICATION_DISABLED,
         action,
         triggerType,
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = triggerType;
       cResult[2] = actionInfo;
       tmp4 = actionInfo;
-      const tmpResult = onSelectDuration(18310);
+      const tmpResult = onSelectDuration(18314);
     }
   : function TimeoutDurationActionSheet(triggerType) {
       ({ action, onSelectDuration: require, onRemove: importDefault } = triggerType);

@@ -38,7 +38,7 @@ let obj5 = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEE
 obj7.heading = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 let obj8 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj7.examples = { gap: nativeDefault.space.PX_12 };
-let obj9 = { gap: nativeDefault.space.PX_12 };
+const obj9 = { gap: nativeDefault.space.PX_12 };
 obj7.section = { gap: nativeDefault.space.PX_8 };
 const obj10 = { gap: nativeDefault.space.PX_8 };
 obj7.sectionHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -327,15 +327,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[13] !== examples.examples) {
                   const _Symbol = Symbol;
                   if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                    class L {
+                    class O {
                       constructor(arg0, arg1) {
                         obj = { example: group };
                         return closure_1_4(closure_1_10, obj, arg1);
                       }
                     }
-                    cResult[15] = L;
+                    cResult[15] = O;
                   } else {
-                    class L {
+                    class O {
                       constructor(arg0, arg1) {
                         obj = { example: group };
                         return closure_1_4(closure_1_10, obj, arg1);
@@ -343,26 +343,26 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const examples1 = examples.examples;
-                  const mapped = examples1.map(L);
+                  const mapped = examples1.map(O);
                   examples = examples.examples;
                   cResult[13] = examples;
                   cResult[14] = mapped;
                 } else {
-                  class L {
+                  class O {
                     constructor(arg0, arg1) {
                       obj = { example: group };
                       return closure_1_4(closure_1_10, obj, arg1);
                     }
                   }
                   if (cResult[16] === tmp4.rows) {
-                    class L {
+                    class O {
                       constructor(arg0, arg1) {
                         obj = { example: group };
                         return closure_1_4(closure_1_10, obj, arg1);
                       }
                     }
                     if (cResult[19] === tmp4.section) {
-                      class L {
+                      class O {
                         constructor(arg0, arg1) {
                           obj = { example: group };
                           return closure_1_4(closure_1_10, obj, arg1);
@@ -443,7 +443,7 @@ let result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlan
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjurePlanAutomodExamples(automod) {
-      const cResult = c.c(15);
+      const cResult = c.c(14);
       let examples = automod.automod;
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -524,48 +524,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_4(closure_1_11, obj, automod.section);
             }
           }
-          const _Symbol2 = Symbol;
-          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+          if (cResult[11] === tmp14) {
             class S {
               constructor(arg0) {
                 obj = { group: automod };
                 return closure_1_4(closure_1_11, obj, automod.section);
               }
             }
-            const obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
-            const intl3 = util.intl;
-            obj5.children = intl3.string(_modDef3849.bo4MOx);
-            const tmp29 = React4(Text_Text.Text, obj5);
-            cResult[11] = tmp29;
-            const tmp27 = tmp29;
-          } else {
-            class S {
-              constructor(arg0) {
-                obj = { group: automod };
-                return closure_1_4(closure_1_11, obj, automod.section);
-              }
-            }
+            return tmp27;
           }
-          if (cResult[12] === tmp14) {
-            class S {
-              constructor(arg0) {
-                obj = { group: automod };
-                return closure_1_4(closure_1_11, obj, automod.section);
-              }
-            }
-            return tmp30;
-          }
-          const obj6 = { direction: "vertical", spacing: 4, children: null };
-          const items1 = [tmp14, tmp23, tmp27];
-          obj6.children = items1;
-          const tmp32 = hasOwnProperty(Stack_Stack.Stack, obj6);
-          cResult[12] = tmp14;
-          cResult[13] = tmp23;
-          cResult[14] = tmp32;
-          tmp30 = tmp32;
+          const obj5 = { direction: "vertical", spacing: 4, children: null };
+          const items1 = [tmp14, tmp23];
+          obj5.children = items1;
+          const tmp29 = hasOwnProperty(Stack_Stack.Stack, obj5);
+          cResult[11] = tmp14;
+          cResult[12] = tmp23;
+          cResult[13] = tmp29;
+          tmp27 = tmp29;
         }
-        const obj7 = { style: tmp18, children: tmp19 };
-        const tmp26 = React4(View, obj7);
+        const obj6 = { style: tmp18, children: tmp19 };
+        const tmp26 = React4(View, obj6);
         cResult[8] = tmp4.examples;
         cResult[9] = tmp19;
         cResult[10] = tmp26;
@@ -587,15 +565,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.children = intl2.string(_modDef3849.z4ZKYG);
       items[1] = React4(Text_Text.Text, obj6);
       obj2.children = items;
-      const items1 = [hasOwnProperty(View, obj2), ,];
+      const items1 = [hasOwnProperty(View, obj2)];
       const obj7 = { style: tmp.examples, children: null };
       const result = ConjurePlanAutomodOutcomes.groupPlanAutomodExamples(automod.automod.examples);
       obj7.children = result.map((group) => closure_1_4(closure_1_11, { group }, group.section));
       items1[1] = React4(View, obj7);
-      const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
-      const intl3 = util.intl;
-      obj9.children = intl3.string(_modDef3849.bo4MOx);
-      items1[2] = React4(Text_Text.Text, obj9);
       obj.children = items1;
       return hasOwnProperty(Stack_Stack.Stack, obj);
     };

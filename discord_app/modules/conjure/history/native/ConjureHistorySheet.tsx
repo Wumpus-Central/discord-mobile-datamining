@@ -222,20 +222,20 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
     tmp5 = cResult[6];
   }
   let obj = renderItem(576);
-  const tmpResult = renderItem(17115);
-  const mapped = renderItem(17115).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
+  const tmpResult = renderItem(11361);
+  const mapped = renderItem(11361).groupHistoryByDay(items, getMs, nowMs).map(tmp5);
   cResult[0] = getMs;
   cResult[1] = items;
   cResult[2] = nowMs;
   cResult[3] = renderItem;
   cResult[4] = mapped;
-  const groupHistoryByDayResult = renderItem(17115).groupHistoryByDay(items, getMs, nowMs);
+  const groupHistoryByDayResult = renderItem(11361).groupHistoryByDay(items, getMs, nowMs);
 }) : (function HistoryDayGroups(renderItem) {
   renderItem = renderItem.renderItem;
   ({ items, getMs, nowMs } = renderItem);
   let obj = { spacing: 16, children: null };
-  const obj2 = renderItem(17115);
-  obj.children = renderItem(17115).groupHistoryByDay(items, getMs, nowMs).map((label) => {
+  const obj2 = renderItem(11361);
+  obj.children = renderItem(11361).groupHistoryByDay(items, getMs, nowMs).map((label) => {
     label = label.label;
     const obj = { title: label, hasIcons: false, children: null };
     const items = label.items;
@@ -1473,7 +1473,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Histor
   });
   let intl = onChange(1126).intl;
   obj3.accessibilityLabel = intl.string(_modDef3849["/2GnYy"]);
-  obj3.children = closure_7(onChange(12359).Tabs, { state: segmentedControlState });
+  obj3.children = closure_7(onChange(11341).Tabs, { state: segmentedControlState });
   return closure_7(View, obj3);
 });
 const size = fn(2);
@@ -1492,14 +1492,14 @@ export default function ConjureHistorySheet(projectId) {
   const tmp = onRestoreVersion;
   const tmp3 = onSaveBackup(onRestoreVersion(1631)().bottom + onRestoreVersion(587).space.PX_16);
   [tmp5, tmp6] = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
-  const tmp7 = onRestoreVersion(17160)(projectId, projectId.installScope);
+  const tmp7 = onRestoreVersion(11773)(projectId, projectId.installScope);
   ({ sharedDatabase: c2, versions, databases, refreshAllBackups } = tmp7);
   versionTitles = tmp7.versionTitles;
   ({ previewBackups, previewBackupsLoading } = tmp7);
   const tmp4 = versionTitles(conjureDatabaseBusy.useState("versions"), 2);
   conjureDatabaseBusy = require("conjureDatabaseLock").useConjureDatabaseBusy(projectId);
   let obj = require("conjureDatabaseLock");
-  const tmp10 = onRestoreVersion(17084)(projectId);
+  const tmp10 = onRestoreVersion(11319)(projectId);
   [tmp12, c6] = versionTitles(conjureDatabaseBusy.useState(false), 2);
   const refresh = versions.refresh;
   _require = refreshAllBackups(function*(arg0, arg1) {
@@ -1620,7 +1620,7 @@ export default function ConjureHistorySheet(projectId) {
               closure_128_0 = undefined;
               c2 = 1;
               v3 = 1;
-              const obj6 = { value: tmp2(17156).runConjureDataRewind(tmp2, tmp2), done: false };
+              const obj6 = { value: tmp2(11764).runConjureDataRewind(tmp2, tmp2), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -1716,7 +1716,7 @@ export default function ConjureHistorySheet(projectId) {
   const items4 = [projectId, refreshAllBackups];
   onSaveBackup = conjureDatabaseBusy.useCallback((environment) => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(17162, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
+    return obj.openLazy(asyncRequireImpl(11775, dependencyMap.paths), ConjureSaveBackupSheet.CONJURE_SAVE_BACKUP_SHEET_KEY, { projectId, environment, onSaved: refreshAllBackups }, "stack");
   }, items4);
   let obj2 = { scrollable: true, startExpanded: true, header: null, children: null };
   let obj3 = { children: null };
@@ -1744,7 +1744,7 @@ export default function ConjureHistorySheet(projectId) {
     let obj7 = { children: null };
     let obj8 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = tmp8(1126).intl;
-    const obj9 = { days: tmp8(17161).RESTORE_WINDOW_DAYS };
+    const obj9 = { days: tmp8(11774).RESTORE_WINDOW_DAYS };
     obj8.children = intl2.formatToPlainString(tmp(3849).ptsHZu, obj9);
     const items6 = [tmp15(tmp8(5088).Text, obj8), databases.map((database) => React5(closure_16, { database, sharedDatabase, versionTitles, busy: conjureDatabaseBusy, onRestoreBackup, onRewindToTime, onSaveBackup }, database.environment))];
     obj7.children = items6;

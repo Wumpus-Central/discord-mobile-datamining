@@ -167,7 +167,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === questTaskDetails) {
           let tmp16 = cResult[9];
         }
-        const questsInstructionsToWinReward = tmp(12980).useQuestsInstructionsToWinReward(tmp16);
+        const questsInstructionsToWinReward = tmp(13472).useQuestsInstructionsToWinReward(tmp16);
         const userStatus = quest.userStatus;
         let completedAt;
         if (userStatus != null) {
@@ -182,7 +182,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp19 = null == claimedAt;
         }
-        const tmpResult8 = tmp(12980);
+        const tmpResult8 = tmp(13472);
         const isQuestAccessSuspended = tmp(9171).useIsQuestAccessSuspended();
         if (cResult[10] !== quest) {
           let obj5 = {
@@ -197,7 +197,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp22 = cResult[11];
         }
         const tmpResult9 = tmp(9171);
-        const questRewardClaimHandler = tmp(15401).useQuestRewardClaimHandler(tmp22);
+        const questRewardClaimHandler = tmp(15716).useQuestRewardClaimHandler(tmp22);
         ({ isClaiming, claim } = questRewardClaimHandler);
         const isLoading = questRewardClaimHandler.isLoading;
         if (cResult[12] !== claim) {
@@ -447,7 +447,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const size = { quest, height: 80, width: 80 };
-            const tmp40 = closure_11(claim(12975), size);
+            const tmp40 = closure_11(claim(13467), size);
             cResult[27] = quest;
             cResult[28] = 80;
             cResult[29] = 80;
@@ -483,7 +483,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[19] = url;
         cResult[20] = tmp5.heroImg;
         cResult[21] = tmp31;
-        const tmpResult10 = tmp(15401);
+        const tmpResult10 = tmp(15716);
       }
       const obj9 = {
         quest,
@@ -519,7 +519,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const formatToPlainStringResult = intl.formatToPlainString(quest(1126).t.EAYZAr, {
         questName: quest.config.messages.questName,
       });
-      const tmpResult4 = quest(12980);
+      const tmpResult4 = quest(13472);
       const userStatus = quest.userStatus;
       let completedAt;
       const questsInstructionsToWinReward = tmpResult4.useQuestsInstructionsToWinReward({
@@ -548,7 +548,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const isQuestAccessSuspended = quest(9171).useIsQuestAccessSuspended();
       const tmpResult5 = quest(9171);
-      const tmpResult6 = quest(15401);
+      const tmpResult6 = quest(15716);
       const questRewardClaimHandler = tmpResult6.useQuestRewardClaimHandler({
         quest,
         questContent: quest(5975).QuestContent.RUNNING_ACTIVITY,
@@ -672,7 +672,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         num = 56;
       }
       size.width = num;
-      obj11.children = closure_11(claim(12975), size);
+      obj11.children = closure_11(claim(13467), size);
       items3[2] = closure_11(closure_5, obj11);
       const obj12 = { style: tmp4.contextMenuContainer, children: null };
       const obj13 = {
@@ -692,10 +692,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         sourceQuestContent: null,
         children: null,
       };
-      const tmp6Result4 = claim(12975);
+      const tmp6Result4 = claim(13467);
       obj14.sourceQuestContent = quest(5975).QuestContent.RUNNING_ACTIVITY;
       obj14.children = contextMenuButton;
-      items5[1] = closure_11(claim(15430), obj14);
+      items5[1] = closure_11(claim(15745), obj14);
       obj12.children = items5;
       items3[3] = closure_12(closure_5, obj12);
       obj7.children = items3;
@@ -761,7 +761,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp6Result6;
       if (isQuestAccessSuspended) {
         if (tmp14) {
-          tmp6Result6 = tmp6(15396);
+          tmp6Result6 = tmp6(15711);
         }
       }
       const obj20 = { handleDisabled: true, startExpanded: true, children: null };
@@ -831,7 +831,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         RUNNING_ACTIVITY = tmp(5975).QuestContent.RUNNING_ACTIVITY;
         obj2.sourceQuestContent = RUNNING_ACTIVITY;
         obj2.children = tmp7;
-        const tmp10 = closure_11(tmp(12983).QuestContentImpressionTrackerNative, obj2);
+        const tmp10 = closure_11(tmp(13475).QuestContentImpressionTrackerNative, obj2);
         cResult[5] = stateFromStores;
         cResult[6] = tmp7;
         cResult[7] = tmp10;
@@ -853,7 +853,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_2_11(closure_16, { quest: stateFromStores });
           },
         };
-        tmp4 = closure_11(tmp(12983).QuestContentImpressionTrackerNative, obj2);
+        tmp4 = closure_11(tmp(13475).QuestContentImpressionTrackerNative, obj2);
       }
       return tmp4;
     };

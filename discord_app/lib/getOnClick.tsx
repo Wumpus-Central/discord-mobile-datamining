@@ -73,7 +73,7 @@ let closure_18 = async function _openInviteModal() {
               type: "DISPLAYED_INVITE_SHOW",
               code,
               username: "Array",
-              deeplinkAttemptId: "apply",
+              deeplinkAttemptId: "code",
               invite_instance_id,
             };
             c3 = 1;
@@ -311,7 +311,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "Set" };
+            result = { applicationId: "kind", skuId: "apply" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -329,7 +329,7 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "r" };
+      result = { applicationId: code, skuId: "a" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -528,7 +528,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(13042, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(13526, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;

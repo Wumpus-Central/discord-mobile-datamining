@@ -19,7 +19,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11760);
+const RedesignChannelListConstants = fn(11562);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1085).Permissions;
 const UnreadSetting = fn(5967).UnreadSetting;

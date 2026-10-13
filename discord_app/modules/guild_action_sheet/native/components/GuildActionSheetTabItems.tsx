@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guild(576).c(32);
       guild = guild.guild;
       let obj = guild(576);
-      const canAccessSettings = guild(14189).useGuildActionSheetPermissions(guild).canAccessSettings;
+      const canAccessSettings = guild(14526).useGuildActionSheetPermissions(guild).canAccessSettings;
       const total = stateFromStores(8030)(guild.id).total;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildChannelStore];
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      let obj2 = guild(14189);
+      let obj2 = guild(14526);
       stateFromStores = guild(504).useStateFromStores(first, S);
       if (cResult[3] === stateFromStores) {
         class S {
@@ -879,9 +879,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function GuildActionSheetTabItems(guild) {
       guild = guild.guild;
       let stateFromStores;
-      let canAccessSettings = guild(14189).useGuildActionSheetPermissions(guild).canAccessSettings;
+      let canAccessSettings = guild(14526).useGuildActionSheetPermissions(guild).canAccessSettings;
       const total = stateFromStores(8030)(guild.id).total;
-      let obj = guild(14189);
+      let obj = guild(14526);
       const items = [GuildChannelStore];
       stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
       let obj2 = guild(504);

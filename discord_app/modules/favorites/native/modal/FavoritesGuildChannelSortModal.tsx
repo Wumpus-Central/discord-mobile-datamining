@@ -24,9 +24,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const items = [...closure_1_5];
           GuildSettingsModalChannelsActionCreatorsDefault.startReordering.apply(items);
           return () => {
-            closure_1_1(16581).stopReordering();
-            const obj = closure_1_1(16581);
-            closure_1_1(16581).terminate();
+            closure_1_1(16886).stopReordering();
+            const obj = closure_1_1(16886);
+            closure_1_1(16886).terminate();
           };
         };
         let items = [];
@@ -88,9 +88,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [...closure_1_5];
         GuildSettingsModalChannelsActionCreatorsDefault.startReordering.apply(items);
         return () => {
-          closure_1_1(16581).stopReordering();
-          const obj = closure_1_1(16581);
-          closure_1_1(16581).terminate();
+          closure_1_1(16886).stopReordering();
+          const obj = closure_1_1(16886);
+          closure_1_1(16886).terminate();
         };
       }, []);
       const bottom = useSafeAreaInsetsDefault().bottom;
@@ -104,12 +104,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = {
             guildId,
             contentContainerStyle: { paddingBottom: 16 + closure_1_0 },
-            onDone: bottom(16578).closeFavoritesGuildChannelSortModal,
+            onDone: bottom(16883).closeFavoritesGuildChannelSortModal,
           };
           return jsx(GuildSettingsModalChannelsDefault, {
             guildId,
             contentContainerStyle: { paddingBottom: 16 + closure_1_0 },
-            onDone: bottom(16578).closeFavoritesGuildChannelSortModal,
+            onDone: bottom(16883).closeFavoritesGuildChannelSortModal,
           });
         };
         obj.FAVORITES_GUILD_CHANNEL_SORT = obj2;

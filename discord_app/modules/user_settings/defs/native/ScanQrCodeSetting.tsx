@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(15161).QrCodeIcon,
+  IconComponent: fn(15482).QrCodeIcon,
   onPress: apply.debounce(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {

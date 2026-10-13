@@ -81,7 +81,7 @@ export default noop.memo(
     : function SmartSearchBottomFade(height) {
         let searchHostSurfaceColor;
         const tmp = closure_7(height.height);
-        searchHostSurfaceColor = searchHostSurfaceColor(17450).useSearchHostSurfaceColor();
+        searchHostSurfaceColor = searchHostSurfaceColor(17454).useSearchHostSurfaceColor();
         let items = [searchHostSurfaceColor];
         const memo = noop.useMemo(() => {
           const obj = _modDef683(searchHostSurfaceColor);

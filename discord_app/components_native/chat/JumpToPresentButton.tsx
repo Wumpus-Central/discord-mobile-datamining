@@ -255,15 +255,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [tmp.container, tmp10];
       obj5.style = items3;
       if (tmp5) {
-        const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(11968), onPress: channelId.onJumpToPresent };
-        let tmp12Result = jsx(screenIndex(11967), {
+        const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(12484), onPress: channelId.onJumpToPresent };
+        let tmp12Result = jsx(screenIndex(12483), {
           accessibilityLabel: stringResult,
-          icon: screenIndex(11968),
+          icon: screenIndex(12484),
           onPress: channelId.onJumpToPresent,
         });
-        const tmp16 = screenIndex(11967);
+        const tmp16 = screenIndex(12483);
       } else {
-        tmp12Result = jsx(tmp3(11969).MemoedVoicePanelDismissChatButton, {});
+        tmp12Result = jsx(tmp3(12485).MemoedVoicePanelDismissChatButton, {});
       }
       obj5.children = tmp12Result;
       return <View style={null}>{null}</View>;

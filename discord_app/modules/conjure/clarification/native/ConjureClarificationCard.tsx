@@ -90,11 +90,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let id = tmp23;
       closure_13 = tmp24;
       if (cResult[5] !== tmp23) {
-        const isImageQuestionResult = clarification(17301).isImageQuestion(tmp23);
+        const isImageQuestionResult = clarification(11921).isImageQuestion(tmp23);
         cResult[5] = tmp23;
         cResult[6] = isImageQuestionResult;
         let tmp25 = isImageQuestionResult;
-        const tmpResult = clarification(17301);
+        const tmpResult = clarification(11921);
       } else {
         tmp25 = cResult[6];
       }
@@ -106,11 +106,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         let optionHeader = tmp27;
       } else {
-        optionHeader = clarification(17301).answeredOptionIds(first1[tmp23.id]);
-        const tmpResult5 = clarification(17301);
+        optionHeader = clarification(11921).answeredOptionIds(first1[tmp23.id]);
+        const tmpResult5 = clarification(11921);
       }
       const tmp6Result7 = first1(noop.useState(tmp17), 2);
-      const conjureOwnImages = clarification(17302).useConjureOwnImages(projectId, first1, tmp9);
+      const conjureOwnImages = clarification(11922).useConjureOwnImages(projectId, first1, tmp9);
       if (cResult[7] === first1) {
         if (cResult[8] === clarification) {
           if (cResult[9] === bound) {
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       let multiSelectAnswerResult = null;
                       if (tmp24) {
-                        const tmpResult7 = clarification(17303);
+                        const tmpResult7 = clarification(11923);
                         multiSelectAnswerResult = tmpResult7.multiSelectAnswer(
                           tmp23,
                           optionHeader,
@@ -396,7 +396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                                                   const tmp107 =
                                                                                                                     closure_7(
                                                                                                                       onSubmit(
-                                                                                                                        17278,
+                                                                                                                        11896,
                                                                                                                       ),
                                                                                                                       obj11,
                                                                                                                     );
@@ -563,10 +563,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                     }
                                                                                     obj16.fallback = tmp90;
                                                                                     tmp86Result = closure_6(
-                                                                                      onSubmit(17307),
+                                                                                      onSubmit(11928),
                                                                                       obj16,
                                                                                     );
-                                                                                    const tmp88 = onSubmit(17307);
+                                                                                    const tmp88 = onSubmit(11928);
                                                                                   }
                                                                                   cResult[73] = tmp21;
                                                                                   cResult[74] = tmp16;
@@ -594,8 +594,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                     onPick: tmp29,
                                                                     own: conjureOwnImages.controlsFor(tmp23, tmp21),
                                                                   };
-                                                                  let mapped = closure_6(onSubmit(17304), obj17);
-                                                                  const tmp82 = onSubmit(17304);
+                                                                  let mapped = closure_6(onSubmit(11924), obj17);
+                                                                  const tmp82 = onSubmit(11924);
                                                                 } else if (tmp24) {
                                                                   const obj18 = { hasIcons: false, children: null };
                                                                   options = tmp23.options;
@@ -880,7 +880,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       let entityAnswerResult = null;
                       if (null != tmp23.input) {
-                        const tmpResult8 = clarification(17303);
+                        const tmpResult8 = clarification(11923);
                         const input = tmp23.input;
                         let tmp37 = tmp16[tmp23.id];
                         if (tmp37 == null) {
@@ -984,7 +984,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = tmp23.id;
       cResult[12] = le;
       tmp28 = le;
-      const tmpResult6 = clarification(17302);
+      const tmpResult6 = clarification(11922);
     }
   : function ConjureClarificationCard(onSubmit) {
       ({ projectId, clarification } = onSubmit);
@@ -1024,7 +1024,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_13 = tmp16;
       let t = dependencyMap;
       const tmp9 = first(noop.useState({}), 2);
-      const isImageQuestionResult = clarification(17301).isImageQuestion(clarification.questions[bound]);
+      const isImageQuestionResult = clarification(11921).isImageQuestion(clarification.questions[bound]);
       c14 = isImageQuestionResult;
       if (true === clarification.questions[bound].multi_select) {
         let tmp20 = tmp8[tmp15.id];
@@ -1033,12 +1033,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         let answeredOptionIdsResult = tmp20;
       } else {
-        answeredOptionIdsResult = tmp17(17301).answeredOptionIds(first[tmp15.id]);
-        const tmp17Result = tmp17(17301);
+        answeredOptionIdsResult = tmp17(11921).answeredOptionIds(first[tmp15.id]);
+        const tmp17Result = tmp17(11921);
       }
       c15 = answeredOptionIdsResult;
-      const obj2 = clarification(17301);
-      const conjureOwnImages = clarification(17302).useConjureOwnImages(projectId, first, tmp4);
+      const obj2 = clarification(11921);
+      const conjureOwnImages = clarification(11922).useConjureOwnImages(projectId, first, tmp4);
       let items = [first, clarification, bound, onSubmit, clarification.questions[bound].id];
       callback = obj.useCallback((arg0) => {
         if (null != onSubmit) {
@@ -1117,7 +1117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let multiSelectAnswerResult = null;
       if (true === clarification.questions[bound].multi_select) {
-        const tmp17Result5 = tmp17(17303);
+        const tmp17Result5 = tmp17(11923);
         multiSelectAnswerResult = tmp17Result5.multiSelectAnswer(
           tmp15,
           answeredOptionIdsResult,
@@ -1128,7 +1128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       c19 = multiSelectAnswerResult;
       let entityAnswerResult = null;
       if (null != clarification.questions[bound].input) {
-        const tmp17Result6 = tmp17(17303);
+        const tmp17Result6 = tmp17(11923);
         const input = tmp15.input;
         let tmp30 = tmp10[tmp15.id];
         if (tmp30 == null) {
@@ -1225,7 +1225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: tmp.footer, children: null };
       const obj8 = { style: tmp.customField, children: null };
       let tmp47 = null;
-      const tmp17Result4 = clarification(17302);
+      const tmp17Result4 = clarification(11922);
       if (clarification.questions.length > 1) {
         const obj9 = { variant: "text-xs/semibold", color: "text-muted", children: null };
         const intl3 = tmp17(1126).intl;
@@ -1277,8 +1277,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onPick: callback1,
           own: conjureOwnImages.controlsFor(tmp15, tmp13),
         };
-        let tmp49Result6 = tmp49(tmp44(17304), obj14);
-        const tmp44Result = tmp44(17304);
+        let tmp49Result6 = tmp49(tmp44(11924), obj14);
+        const tmp44Result = tmp44(11924);
       } else if (tmp16) {
         const obj15 = { hasIcons: false, children: null };
         options = tmp15.options;
@@ -1375,8 +1375,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp57 = tmp40;
         }
         obj16.fallback = tmp57;
-        tmp49Result7 = tmp49(tmp44(17307), obj16);
-        const tmp44Result2 = tmp44(17307);
+        tmp49Result7 = tmp49(tmp44(11928), obj16);
+        const tmp44Result2 = tmp44(11928);
       }
       items7[3] = tmp49Result7;
       let tmp58 = null;

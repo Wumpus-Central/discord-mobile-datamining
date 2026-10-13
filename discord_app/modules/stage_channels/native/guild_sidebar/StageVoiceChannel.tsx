@@ -57,7 +57,7 @@ const createStyles = fn(5092);
 let obj = {
   voiceStates: { marginLeft: 36, marginBottom: 8 },
   container: {
-    marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11562).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -65,7 +65,7 @@ let obj = {
 let closure_17 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11760).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11562).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };

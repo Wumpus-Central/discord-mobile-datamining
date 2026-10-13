@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let tmp25 = cResult[15];
                 }
                 if (cResult[16] !== card.avatar) {
-                  const obj2 = { source: onAdopted(12606), style: card.avatar, importantForAccessibility: "no" };
+                  const obj2 = { source: onAdopted(13114), style: card.avatar, importantForAccessibility: "no" };
                   const tmp29 = closure_9(onAdopted(6157), obj2);
                   cResult[16] = card.avatar;
                   cResult[17] = tmp29;
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         }
                                         if (cResult[51] !== card.avatar) {
                                           const obj8 = {
-                                            source: onAdopted(14187),
+                                            source: onAdopted(14524),
                                             style: card.avatar,
                                             importantForAccessibility: "no",
                                           };
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             height: null,
                           };
                           ({ SIZE_12: obj14.width, SIZE_12: obj14.height } = GuildTagBadgeSize);
-                          tmp52Result = closure_9(Card(14143).GuildBadge, size);
+                          tmp52Result = closure_9(Card(14480).GuildBadge, size);
                         }
                         obj20.guildBadge = tmp52Result;
                         tmp52Result2 = closure_9(Card(8859).BaseGuildTagChiplet, obj20);
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap(true);
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp2(14142).adoptGuildIdentity(guildId, true), done: false };
+                  const obj5 = { value: tmp2(14479).adoptGuildIdentity(guildId, true), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -675,7 +675,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.style = items3;
       const obj7 = { source: null, style: null, importantForAccessibility: "no" };
       const tmp10 = _slicedToArray(noop.useState(false), 2);
-      obj7.source = onAdopted(12606);
+      obj7.source = onAdopted(13114);
       obj7.style = tmp.avatar;
       const items4 = [closure_9(onAdopted(6157), obj7)];
       const obj8 = { style: tmp.messageBody, children: null };
@@ -713,7 +713,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             height: null,
           };
           ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-          tmp15Result = closure_9(tmp2(14143).GuildBadge, size);
+          tmp15Result = closure_9(tmp2(14480).GuildBadge, size);
         }
         obj14.guildBadge = tmp15Result;
         tmp15Result3 = closure_9(tmp2(8859).BaseGuildTagChiplet, obj14);
@@ -736,7 +736,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj18 = { source: null, style: null, importantForAccessibility: "no" };
       const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
       const tmp4Result = onAdopted(6157);
-      obj18.source = onAdopted(14187);
+      obj18.source = onAdopted(14524);
       obj18.style = tmp.avatar;
       const items11 = [closure_9(onAdopted(6157), obj18)];
       const obj19 = { style: tmp.messageBody, children: null };

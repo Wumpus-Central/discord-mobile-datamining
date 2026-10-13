@@ -1,5 +1,5 @@
 // discord_common/js/packages/media-engine/native/index.tsx
-import formatDefault from "../../../../../_runtime/01364_format.js";
+import formatDefault from "../../../../../_runtime/01365_format.js";
 import utils_PlatformUtils from "../../../shared/utils/PlatformUtils.tsx";
 import inject from "inject.tsx";
 import VideoDefault from "ui/Video.tsx";

@@ -6,8 +6,8 @@ import ApplicationActionCreators from "../../applications/ApplicationActionCreat
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import conjureAppInServer from "../projects/conjureAppInServer.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
+import conjureAppInServer from "../projects/conjureAppInServer.tsx";
 import conjurePublishFailureMessage from "conjurePublishFailureMessage.tsx";
 import conjurePublishAction2 from "conjurePublishAction.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -789,7 +789,7 @@ let closure_28 = async function _runConjurePublishAction(arg0) {
                     const result = require("ConjureAnalytics").trackConjurePublishActionClicked(closure_0, obj4);
                     if (null != busy.disabledReason) {
                       platform.showPublishBlocked(
-                        num2(17107).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER,
+                        num2(11353).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER,
                         busy.disabledReason,
                       );
                     }
@@ -800,7 +800,7 @@ let closure_28 = async function _runConjurePublishAction(arg0) {
                     const obj7 = { value: continuePublish(closure_0, busy, tmp23), done: false };
                     return obj7;
                   } else {
-                    num2 = num2(17107).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
+                    num2 = num2(11353).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
                     flag = busy.confirmReason;
                     platform.showPublishBlocked(num2, flag, () => {
                       closure_2_29(closure_0, busy, closure_1).catch(() => {});
@@ -1030,13 +1030,13 @@ let closure_30 = async function _continuePublish() {
           closure_139_26.add(closure_138_0);
           c12 = 2;
           const requestConsent = closure_138_4.requestConsent;
-          f156337 = requestConsent;
+          f155315 = requestConsent;
           if (requestConsent == null) {
-            f156337 = (arg0) => closure_2_19(arg0, closure_1_3);
+            f155315 = (arg0) => closure_2_19(arg0, closure_1_3);
           }
           c14 = 5;
           c15 = 1;
-          const obj11 = { value: f156337(closure_138_0), done: false };
+          const obj11 = { value: f155315(closure_138_0), done: false };
           return obj11;
         }
       } catch (tmp105) {

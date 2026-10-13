@@ -36,7 +36,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { IconComponent: tmp(13575).LinkExternalMediumIcon };
+          const obj2 = { IconComponent: tmp(13912).LinkExternalMediumIcon };
           const tmp9 = closure_4(tmp(6188).TableRowIcon, obj2);
           cResult[2] = tmp9;
           let tmp7 = tmp9;
@@ -83,7 +83,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           arrow: false,
           accessibilityRole: "link",
         };
-        const obj2 = { IconComponent: url(13575).LinkExternalMediumIcon };
+        const obj2 = { IconComponent: url(13912).LinkExternalMediumIcon };
         obj.trailing = closure_4(url(6188).TableRowIcon, obj2);
         obj.onPress = function onLinkPress() {
           LinkingDefault.openURL(url);

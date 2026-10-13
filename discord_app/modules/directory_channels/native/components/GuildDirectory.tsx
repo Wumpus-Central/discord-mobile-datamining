@@ -19,7 +19,7 @@ import GuildDirectoryRowDefault from "GuildDirectoryRow.tsx";
 import GuildDirectoryPlaceholderRowDefault from "GuildDirectoryPlaceholderRow.tsx";
 import HubProgressBarUtils from "../../../hub/HubProgressBarUtils.tsx";
 import GuildDirectoryRowGenerator from "../GuildDirectoryRowGenerator.tsx";
-import _mod12397 from "../../../../../_runtime/metro/12397__.js";
+import _mod12907 from "../../../../../_runtime/metro/12907__.js";
 import HubProgressHeaderDefault from "../../../hub/native/components/progress_bar/HubProgressHeader.tsx";
 import GuildDirectoryCategorySelectorDefault from "GuildDirectoryCategorySelector.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -63,8 +63,8 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, SectionList: metroRequire, StyleSheet } = get_ActivityIndicator);
-const DirectoryEntryCategories = fn(12003).DirectoryEntryCategories;
-const GuildDirectoryConstants = fn(12008);
+const DirectoryEntryCategories = fn(12519).DirectoryEntryCategories;
+const GuildDirectoryConstants = fn(12524);
 const GUILD_DIRECTORY_BASE_HEADER_HEIGHT = GuildDirectoryConstants.GUILD_DIRECTORY_BASE_HEADER_HEIGHT;
 ({ GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT: closure_12, DirectoryChannelScrollBehavior: map1 } = GuildDirectoryConstants);
 const Constants = fn(1085);
@@ -186,7 +186,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod12397;
+        const tmpResult = _mod12907;
         cResult[2] = tmpResult;
         let tmp8 = tmpResult;
       } else {
@@ -347,7 +347,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const features = guild.features;
       const obj = { style: tmp.headerWrapper, children: null };
       const hasItem = features.has(constants2.HUB);
-      const obj2 = { source: _mod12397, style: tmp.backgroundImage };
+      const obj2 = { source: _mod12907, style: tmp.backgroundImage };
       const items = [collapsedCategories(FastImageDefault, obj2)];
       const obj3 = { style: tmp.textWrapper, children: null };
       const obj4 = {
@@ -1092,8 +1092,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj8 = { style: tmp.border };
             const items9 = [closure_18(currentCategoryId, obj8), ,];
             const obj9 = { guild: handleTapSearch, channel };
-            items9[1] = closure_18(tmp4(12525), obj9);
-            items9[2] = closure_18(tmp2(11494).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+            items9[1] = closure_18(tmp4(13035), obj9);
+            items9[2] = closure_18(tmp2(12260).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
             obj4.children = items9;
             let tmp19 = closure_19(currentCategoryId, obj4);
           }

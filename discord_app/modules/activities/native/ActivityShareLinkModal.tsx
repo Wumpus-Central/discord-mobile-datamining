@@ -6,8 +6,8 @@ import LinkIcon from "../../../design/components/Icon/native/redesign/generated/
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import formatResults from "../../share/formatResults.tsx";
 import getApplicationInstallURL from "../../applications/getApplicationInstallURL.tsx";
+import formatResults from "../../share/formatResults.tsx";
 import openActivityShareLinkModal from "../openActivityShareLinkModal.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     dependencyMap = 1;
                     c3 = 1;
                     let obj4 = {
-                      value: Promise.all(first1.map(tmp2(11558).getOrResolveChannelIdFromDestinationId)),
+                      value: Promise.all(first1.map(tmp2(12311).getOrResolveChannelIdFromDestinationId)),
                       done: false,
                     };
                     return obj4;
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 throw value;
               } else if (arg0 !== 2) {
                 closure_128_0 = value.filter(tmp2(1388).isNotNullish);
-                closure_128_1 = tmp2(14751).resolveActivityShareMessageContent(
+                closure_128_1 = tmp2(15072).resolveActivityShareMessageContent(
                   closure_129_3,
                   closure_129_14,
                   closure_129_12,
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                   })(),
                 );
-                let obj5 = tmp2(14751);
+                let obj5 = tmp2(15072);
                 let obj7 = { text: null };
                 const intl = tmp2(1126).intl;
                 const obj8 = { applicationName: closure_129_14.name };
@@ -362,8 +362,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp3(4809).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
                 closure_129_4(true, closure_129_7);
                 let obj6 = tmp3(4809);
-                const result = tmp2(14749).closeActivityShareLinkModal();
-                const obj9 = tmp2(14749);
+                const result = tmp2(15070).closeActivityShareLinkModal();
+                const obj9 = tmp2(15070);
               }
               c3 = 3;
               let obj = { value, done: true };

@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef11680 from "../../../../../_runtime/metro/11680__.js";
+import _modDef12423 from "../../../../../_runtime/metro/12423__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,8 +39,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.pinIcon) {
-          const obj2 = { source: _modDef11680, style: tmp4.pinIcon };
-          const tmp9 = jsx(native.Icon, { source: _modDef11680, style: tmp4.pinIcon });
+          const obj2 = { source: _modDef12423, style: tmp4.pinIcon };
+          const tmp9 = jsx(native.Icon, { source: _modDef12423, style: tmp4.pinIcon });
           cResult[3] = tmp4.pinIcon;
           cResult[4] = tmp9;
           let tmp6 = tmp9;
@@ -68,8 +68,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ForumPostPinIcon(containerStyle) {
       const tmp = closure_5();
-      const obj = { style: null, children: jsx(native.Icon, { source: _modDef11680, style: tmp.pinIcon }) };
+      const obj = { style: null, children: jsx(native.Icon, { source: _modDef12423, style: tmp.pinIcon }) };
       const items = [tmp.pin, containerStyle.containerStyle];
       obj.style = items;
-      return <View style={null}>{jsx(native.Icon, { source: _modDef11680, style: tmp.pinIcon })}</View>;
+      return <View style={null}>{jsx(native.Icon, { source: _modDef12423, style: tmp.pinIcon })}</View>;
     };

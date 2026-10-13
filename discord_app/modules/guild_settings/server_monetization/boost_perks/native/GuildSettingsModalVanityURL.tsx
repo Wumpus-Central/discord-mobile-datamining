@@ -8,7 +8,7 @@ import HeaderActionButton from "../../../../../design/components/Navigator/nativ
 import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
 import GuildSettingsVanityURLUtils from "../GuildSettingsVanityURLUtils.tsx";
 import ChangeVanityURLActionCreatorsDefault from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import _modDef18443 from "../../../../../../_runtime/metro/18443__.js";
+import _modDef18447 from "../../../../../../_runtime/metro/18447__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChangeVanityURLModalStore from "../../../../../stores/ChangeVanityURLModalStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -201,7 +201,7 @@ prototype["render"] = function render() {
     obj5.children = items1;
     const items3 = [options(View, obj5)];
     const obj12 = { style: styles.center, children: null };
-    const obj13 = { source: _modDef18443, style: styles.image, resizeMode: "contain" };
+    const obj13 = { source: _modDef18447, style: styles.image, resizeMode: "contain" };
     obj12.children = closure_1_8(FastImageDefault, obj13);
     items3[1] = closure_1_8(View, obj12);
     obj4.children = items3;

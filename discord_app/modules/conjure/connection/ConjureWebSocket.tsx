@@ -79,6 +79,19 @@ prototype["sendUpstreamTicketAck"] = function sendUpstreamTicketAck(id, ticket, 
   error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendRetryRemix"] = function sendRetryRemix() {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      socket.send(JSON.stringify({ type: "retry_remix" }));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendInterrupt"] = function sendInterrupt() {
   const self = this;
   if (null != this.socket) {

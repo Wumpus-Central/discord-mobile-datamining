@@ -208,7 +208,7 @@ export default noop.memo(
                             }
                             return tmp28;
                           }
-                          const obj3 = { profile: fastListRef(11631).Profiles.Guilds, children: null };
+                          const obj3 = { profile: fastListRef(12378).Profiles.Guilds, children: null };
                           const obj4 = { gesture, children: tmp25 };
                           obj3.children = closure_4(fastListRef(6335).GestureDetector, obj4);
                           const tmp31 = closure_4(StartupProfilerDefault, obj3);
@@ -286,7 +286,7 @@ export default noop.memo(
         closure_7(listProps, fastListRef);
         const obj = { profile: null, children: null };
         const tmp5 = useGuildsBarPropsDefault(fastListRef);
-        obj.profile = fastListRef(11631).Profiles.Guilds;
+        obj.profile = fastListRef(12378).Profiles.Guilds;
         const obj2 = { gesture, children: null };
         const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
         const tmp9 = StartupProfilerDefault;

@@ -9,8 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, FlatList: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsx = fn(21).jsx;
 const styles = { spacer: null, container: null };
 let size = { height: nativeDefault.space.PX_16, width: "100%" };
@@ -23,7 +22,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { style: obj.spacer };
-        const tmp6 = <React3 style={obj.spacer} />;
+        const tmp6 = <View style={obj.spacer} />;
         cResult[0] = tmp6;
         let first = tmp6;
       } else {
@@ -33,7 +32,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function FormSeparator() {
       obj = { style: obj.spacer };
-      return <React3 style={obj.spacer} />;
+      return <View style={obj.spacer} />;
     };
 ReactCompilerGating = fn(558);
 let obj2 = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -51,18 +50,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (0 === events.length) {
         if (cResult[0] === guild) {
           if (cResult[1] === onCloseAction) {
-            let tmp16 = cResult[2];
+            let tmp18 = cResult[2];
           }
-          return tmp16;
+          return tmp18;
         }
         const obj2 = { children: null };
         const obj3 = { onClose: onCloseAction, guild };
         obj2.children = jsx(tmp4(tmp2[8]), { onClose: onCloseAction, guild });
-        const tmp18 = jsx(guild(tmp2[7]).BottomSheetView, { children: null });
+        const tmp20 = jsx(guild(tmp2[7]).BottomSheetView, { children: null });
         cResult[0] = guild;
         cResult[1] = onCloseAction;
-        cResult[2] = tmp18;
-        tmp16 = tmp18;
+        cResult[2] = tmp20;
+        tmp18 = tmp20;
       } else {
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -79,156 +78,86 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[6] === onPressEvent) {
               let tmp7 = cResult[7];
             }
-            if (onPressEvent.inActionSheet) {
-              let BottomSheetFlatList = guild(tmp2[7]).BottomSheetFlatList;
-            } else {
-              BottomSheetFlatList = closure_4;
-            }
+            const tmpResult = guild(tmp2[11]);
+            const tmp9 = onPressEvent.inActionSheet ? tmpResult.BottomSheetFlashList : tmpResult.FlashList;
             if (cResult[8] === guild) {
               if (cResult[9] === onCloseAction) {
-                let tmp8 = cResult[10];
+                let tmp10 = cResult[10];
               }
               const sum = tmp4(tmp2[3]).space.PX_16 + tmp5;
               if (cResult[11] !== sum) {
                 const obj4 = { paddingBottom: sum };
-                class P {
-                  constructor() {
-                    obj = { onClose: onCloseAction, guild };
-                    return jsx(closure_1(closure_2[8]), obj);
-                  }
-                }
+                cResult[11] = sum;
                 cResult[12] = obj4;
-                class E {
-                  constructor(arg0) {
-                    item = onPressEvent.item;
-                    tmp = jsx;
-                    tmp2 = closure_1;
-                    tmp3 = closure_2;
-                    obj = { event: item, onCloseAction, onPress: onPressEvent, isNew: null };
-                    tmp6 = null != lastAckedId;
-                    tmp4 = closure_1(closure_2[9]);
-                    if (tmp6) {
-                      tmp2Result = tmp2(tmp3[10]);
-                      num = 0;
-                      tmp6 = tmp2Result.compare(item.id, tmp5) > 0;
-                    }
-                    obj.isNew = tmp6;
-                    return tmp(tmp4, obj);
-                  }
-                }
+                let tmp12 = obj4;
+              } else {
+                tmp12 = cResult[12];
               }
-              class P {
-                constructor() {
-                  obj = { onClose: onCloseAction, guild };
-                  return jsx(closure_1(closure_2[8]), obj);
+              if (cResult[13] === tmp9) {
+                if (cResult[14] === events) {
+                  if (cResult[15] === tmp7) {
+                    if (cResult[16] === tmp10) {
+                      if (cResult[17] === tmp12) {
+                        let tmp13 = cResult[18];
+                      }
+                      return tmp13;
+                    }
+                  }
                 }
               }
               const obj5 = {
-                data: null,
-                style: null,
-                keyExtractor: null,
-                renderItem: null,
-                ItemSeparatorComponent: null,
-                initialNumToRender: 5,
-                ListEmptyComponent: null,
-                contentContainerStyle: null,
+                data: events,
+                style: obj.container,
+                keyExtractor: tmp6,
+                renderItem: tmp7,
+                ItemSeparatorComponent,
+                ListEmptyComponent: tmp10,
+                contentContainerStyle: tmp12,
               };
-              class E {
-                constructor(arg0) {
-                  item = onPressEvent.item;
-                  tmp = jsx;
-                  tmp2 = closure_1;
-                  tmp3 = closure_2;
-                  obj = { event: item, onCloseAction, onPress: onPressEvent, isNew: null };
-                  tmp6 = null != lastAckedId;
-                  tmp4 = closure_1(closure_2[9]);
-                  if (tmp6) {
-                    tmp2Result = tmp2(tmp3[10]);
-                    num = 0;
-                    tmp6 = tmp2Result.compare(item.id, tmp5) > 0;
-                  }
-                  obj.isNew = tmp6;
-                  return tmp(tmp4, obj);
-                }
-              }
-              obj5.style = obj.container;
-              obj5.keyExtractor = tmp6;
-              obj5.renderItem = tmp7;
-              obj5.ItemSeparatorComponent = ItemSeparatorComponent;
-              obj5.ListEmptyComponent = tmp8;
-              obj5.contentContainerStyle = tmp10;
-              const tmp15 = (
-                <BottomSheetFlatList
-                  data={null}
-                  style={null}
-                  keyExtractor={null}
-                  renderItem={null}
-                  ItemSeparatorComponent={null}
-                  initialNumToRender={5}
-                  ListEmptyComponent={null}
-                  contentContainerStyle={null}
+              const tmp17 = (
+                <tmp9
+                  data={events}
+                  style={obj.container}
+                  keyExtractor={tmp6}
+                  renderItem={tmp7}
+                  ItemSeparatorComponent={ItemSeparatorComponent}
+                  ListEmptyComponent={tmp10}
+                  contentContainerStyle={tmp12}
                 />
               );
-              cResult[13] = BottomSheetFlatList;
+              cResult[13] = tmp9;
               cResult[14] = events;
               cResult[15] = tmp7;
-              cResult[16] = tmp8;
-              cResult[17] = tmp10;
-              cResult[18] = tmp15;
+              cResult[16] = tmp10;
+              cResult[17] = tmp12;
+              cResult[18] = tmp17;
+              tmp13 = tmp17;
             }
-            class P {
-              constructor() {
-                obj = { onClose: onCloseAction, guild };
-                return jsx(closure_1(closure_2[8]), obj);
-              }
-            }
+            const fn2 = function w() {
+              return jsx(GuildEventsNoContentDefault, { onClose: onCloseAction, guild });
+            };
             cResult[8] = guild;
-            class E {
-              constructor(arg0) {
-                item = onPressEvent.item;
-                tmp = jsx;
-                tmp2 = closure_1;
-                tmp3 = closure_2;
-                obj = { event: item, onCloseAction, onPress: onPressEvent, isNew: null };
-                tmp6 = null != lastAckedId;
-                tmp4 = closure_1(closure_2[9]);
-                if (tmp6) {
-                  tmp2Result = tmp2(tmp3[10]);
-                  num = 0;
-                  tmp6 = tmp2Result.compare(item.id, tmp5) > 0;
-                }
-                obj.isNew = tmp6;
-                return tmp(tmp4, obj);
-              }
-            }
             cResult[9] = onCloseAction;
-            cResult[10] = P;
-            tmp8 = P;
+            cResult[10] = fn2;
+            tmp10 = fn2;
           }
         }
-        class E {
-          constructor(arg0) {
-            item = onPressEvent.item;
-            tmp = jsx;
-            tmp2 = closure_1;
-            tmp3 = closure_2;
-            obj = { event: item, onCloseAction, onPress: onPressEvent, isNew: null };
-            tmp6 = null != lastAckedId;
-            tmp4 = closure_1(closure_2[9]);
-            if (tmp6) {
-              tmp2Result = tmp2(tmp3[10]);
-              num = 0;
-              tmp6 = tmp2Result.compare(item.id, tmp5) > 0;
-            }
-            obj.isNew = tmp6;
-            return tmp(tmp4, obj);
+        const fn = function _(item) {
+          item = item.item;
+          const obj = { event: item, onCloseAction, onPress: onPressEvent, isNew: null };
+          let tmp6 = null != lastAckedId;
+          if (tmp6) {
+            tmp6 = SnowflakeUtilsDefault.compare(item.id, tmp5) > 0;
+            const tmp2Result = SnowflakeUtilsDefault;
           }
-        }
+          obj.isNew = tmp6;
+          return jsx(GuildEventCardDefault, { event: item, onCloseAction, onPress: onPressEvent, isNew: null });
+        };
         cResult[4] = lastAckedId;
         cResult[5] = onCloseAction;
         cResult[6] = onPressEvent;
-        cResult[7] = E;
-        tmp7 = E;
+        cResult[7] = fn;
+        tmp7 = fn;
       }
     }
   : function GuildEventsListView(lastAckedId) {
@@ -241,18 +170,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.children = jsx(require("GuildEventsNoContent"), { onClose: onCloseAction, guild });
         return jsx(guild(onCloseAction[7]).BottomSheetView, { children: null });
       } else {
-        if (lastAckedId.inActionSheet) {
-          let BottomSheetFlatList = guild(onCloseAction[7]).BottomSheetFlatList;
-        } else {
-          BottomSheetFlatList = closure_4;
-        }
+        const tmp11 = guild(onCloseAction[11]);
         let obj = {
           data: events,
           style: null,
           keyExtractor: null,
           renderItem: null,
           ItemSeparatorComponent: null,
-          initialNumToRender: 5,
           ListEmptyComponent: null,
           contentContainerStyle: null,
         };
@@ -277,18 +201,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const obj4 = { paddingBottom: require("native").space.PX_16 + tmp3 };
         obj.contentContainerStyle = obj4;
-        return (
-          <BottomSheetFlatList
-            data={events}
-            style={null}
-            keyExtractor={null}
-            renderItem={null}
-            ItemSeparatorComponent={null}
-            initialNumToRender={5}
-            ListEmptyComponent={null}
-            contentContainerStyle={null}
-          />
-        );
+        return jsx(lastAckedId.inActionSheet ? tmp11.BottomSheetFlashList : tmp11.FlashList, {
+          data: events,
+          style: null,
+          keyExtractor: null,
+          renderItem: null,
+          ItemSeparatorComponent: null,
+          ListEmptyComponent: null,
+          contentContainerStyle: null,
+        });
       }
     };
 export { styles };

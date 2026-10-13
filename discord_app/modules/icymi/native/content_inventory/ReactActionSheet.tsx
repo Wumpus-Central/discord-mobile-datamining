@@ -6,7 +6,7 @@ import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
 import openEmojiPickerActionSheet from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import ICYMIContext from "../ICYMIContext.tsx";
-import _objectDestructuringEmpty from "../../../../../_runtime/11939__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../../_runtime/12458__objectDestructuringEmpty.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";

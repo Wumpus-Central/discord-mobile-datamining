@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjureModelSettingsContent(projectId) {
-      const cResult = projectId(576).c(27);
+      const cResult = projectId(576).c(23);
       projectId = projectId.projectId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureModelSettingsStore];
@@ -51,7 +51,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[4];
       }
       if (cResult[5] !== projectId) {
-        const fn2 = function _() {
+        const fn2 = function j() {
           return ConjureConnectionStore.getConnState(projectId);
         };
         const items3 = [projectId];
@@ -66,135 +66,85 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = projectId(504);
       const stateFromStores1 = projectId(504).useStateFromStores(tmp9, tmp11, tmp12);
-      if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const items4 = [ConjureConnectionStore];
-        cResult[8] = items4;
-        let tmp14 = items4;
-      } else {
-        tmp14 = cResult[8];
-      }
-      if (cResult[9] !== projectId) {
-        const fn3 = function x() {
-          return ConjureConnectionStore.isChatStopped(projectId);
+      if (cResult[8] !== projectId) {
+        const fn3 = function f(arg0) {
+          try {
+            conjureModelSettingsConnection.sendModelSettings(projectId, arg0);
+          } catch (err) {}
         };
-        const items5 = [projectId];
-        cResult[9] = projectId;
-        cResult[10] = fn3;
-        cResult[11] = items5;
-        let tmp17 = items5;
-        let tmp16 = fn3;
+        cResult[8] = projectId;
+        cResult[9] = fn3;
+        let tmp14 = fn3;
       } else {
-        tmp16 = cResult[10];
-        tmp17 = cResult[11];
+        tmp14 = cResult[9];
       }
-      const tmpResult3 = projectId(504);
-      const tmp18 = "open" !== stateFromStores1 || projectId(504).useStateFromStores(tmp14, tmp16, tmp17);
-      if (cResult[12] !== projectId) {
-        class E {
-          constructor(arg0) {
-            try {
-              tmp = projectId;
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[8]);
-              tmp4 = projectId;
-              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
-              return;
-            } catch (err) {}
-            return;
-          }
-        }
-        cResult[12] = projectId;
-        cResult[13] = E;
-      } else {
-        class E {
-          constructor(arg0) {
-            try {
-              tmp = projectId;
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[8]);
-              tmp4 = projectId;
-              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
-              return;
-            } catch (err) {}
-            return;
-          }
-        }
-      }
+      let tierSettings1;
       if (stateFromStores != null) {
-        class E {
-          constructor(arg0) {
-            try {
-              tmp = projectId;
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[8]);
-              tmp4 = projectId;
-              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
-              return;
-            } catch (err) {}
-            return;
-          }
-        }
+        tierSettings1 = stateFromStores.tierSettings;
       }
-      if (null == undefined) {
-        class E {
-          constructor(arg0) {
-            try {
-              tmp = projectId;
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[8]);
-              tmp4 = projectId;
-              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
-              return;
-            } catch (err) {}
-            return;
-          }
-        }
+      if (null == tierSettings1) {
+        return null;
       } else {
-        class E {
-          constructor(arg0) {
-            try {
-              tmp = projectId;
-              tmp2 = closure_0;
-              tmp3 = closure_2;
-              obj = closure_0(closure_2[8]);
-              tmp4 = projectId;
-              sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
-              return;
-            } catch (err) {}
-            return;
-          }
-        }
-        ({ tiers, choices } = stateFromStores);
-        if (cResult[14] === choices) {
-          class E {
-            constructor(arg0) {
-              try {
-                tmp = projectId;
-                tmp2 = closure_0;
-                tmp3 = closure_2;
-                obj = closure_0(closure_2[8]);
-                tmp4 = projectId;
-                sendModelSettingsResult = obj.sendModelSettings(projectId, projectId);
-                return;
-              } catch (err) {}
-              return;
+        ({ tierSettings, tiers, choices } = stateFromStores);
+        if (cResult[10] === choices) {
+          if (cResult[11] === tmp31) {
+            if (cResult[12] === tmp14) {
+              if (cResult[13] === tierSettings) {
+                if (cResult[14] === tiers) {
+                  let tmp16 = cResult[15];
+                }
+                if (cResult[16] !== tmp31) {
+                  const intl = tmp(1126).intl;
+                  const string = intl.string;
+                  let GxpdUR = _modDef3849;
+                  if (tmp31) {
+                    GxpdUR = GxpdUR.GxpdUR;
+                    let stringResult = string(GxpdUR);
+                  } else {
+                    stringResult = string(GxpdUR["/rJzr6"]);
+                  }
+                  cResult[16] = tmp31;
+                  cResult[17] = stringResult;
+                } else {
+                  if (cResult[18] !== cResult[17]) {
+                    const obj2 = { variant: "text-xs/normal", color: "text-muted", children: tmp20 };
+                    const tmp26 = closure_7(tmp(5088).Text, obj2);
+                    cResult[18] = tmp20;
+                    cResult[19] = tmp26;
+                    let tmp24 = tmp26;
+                  } else {
+                    tmp24 = cResult[19];
+                  }
+                  if (cResult[20] === tmp24) {
+                    if (cResult[21] === tmp16) {
+                      let tmp27 = cResult[22];
+                    }
+                    return tmp27;
+                  }
+                  const obj3 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: null };
+                  const items4 = [tmp16, tmp24];
+                  obj3.children = items4;
+                  const tmp30 = closure_8(tmp(5377).Stack, obj3);
+                  cResult[20] = tmp24;
+                  cResult[21] = tmp16;
+                  cResult[22] = tmp30;
+                  tmp27 = tmp30;
+                }
+              }
             }
           }
         }
-        const obj2 = { settings: tmp24, tiers, choices, disabled: tmp18, onChange: E };
-        const tmp23 = closure_7(ConjureEffortPickerDefault, obj2);
-        cResult[14] = choices;
-        cResult[15] = tmp18;
-        cResult[16] = E;
-        cResult[17] = tmp24;
-        cResult[18] = tiers;
-        cResult[19] = tmp23;
+        const obj4 = { settings: tierSettings, tiers, choices, disabled: "open" !== stateFromStores1, onChange: tmp14 };
+        const tmp19 = closure_7(ConjureEffortPickerDefault, obj4);
+        cResult[10] = choices;
+        cResult[11] = "open" !== stateFromStores1;
+        cResult[12] = tmp14;
+        cResult[13] = tierSettings;
+        cResult[14] = tiers;
+        cResult[15] = tmp19;
+        tmp16 = tmp19;
       }
-      const tmpResult4 = projectId(504);
+      const tmpResult2 = projectId(504);
     }
   : function ConjureModelSettingsContent(projectId) {
       projectId = projectId.projectId;
@@ -208,24 +158,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = projectId(504);
       const items2 = [ConjureConnectionStore];
       const items3 = [projectId];
+      const items4 = [projectId];
       const stateFromStores1 = projectId(504).useStateFromStores(
         items2,
         () => ConjureConnectionStore.getConnState(projectId),
         items3,
       );
-      const obj2 = projectId(504);
-      const items4 = [ConjureConnectionStore];
-      const items5 = [projectId];
-      const tmp5 =
-        "open" !== stateFromStores1 ||
-        projectId(504).useStateFromStores(items4, () => ConjureConnectionStore.isChatStopped(projectId), items5);
-      const items6 = [projectId];
       let tierSettings1;
       const callback = noop.useCallback((arg0) => {
         try {
           conjureModelSettingsConnection.sendModelSettings(projectId, arg0);
         } catch (err) {}
-      }, items6);
+      }, items4);
       if (stateFromStores != null) {
         tierSettings1 = stateFromStores.tierSettings;
       }
@@ -233,23 +177,29 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         ({ tierSettings, tiers, choices } = stateFromStores);
-        const obj4 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: null };
-        const obj5 = { settings: tierSettings, tiers, choices, disabled: tmp5, onChange: callback };
-        const items7 = [closure_7(ConjureEffortPickerDefault, obj5)];
+        const obj3 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: null };
+        const obj4 = {
+          settings: tierSettings,
+          tiers,
+          choices,
+          disabled: "open" !== stateFromStores1,
+          onChange: callback,
+        };
+        const items5 = [closure_7(ConjureEffortPickerDefault, obj4)];
         const intl = tmp(1126).intl;
         const string = intl.string;
         const tmp12 = _modDef3849;
-        if (tmp5) {
+        if ("open" !== stateFromStores1) {
           let stringResult = string(tmp12.GxpdUR);
         } else {
           stringResult = string(tmp12["/rJzr6"]);
         }
-        const obj6 = { variant: "text-xs/normal", color: "text-muted", children: stringResult };
-        items7[1] = closure_7(tmp(5088).Text, obj6);
-        obj4.children = items7;
-        return closure_8(tmp(5377).Stack, obj4);
+        const obj5 = { variant: "text-xs/normal", color: "text-muted", children: stringResult };
+        items5[1] = closure_7(tmp(5088).Text, obj5);
+        obj3.children = items5;
+        return closure_8(tmp(5377).Stack, obj3);
       }
-      const obj3 = projectId(504);
+      const obj2 = projectId(504);
     };
 let closure_9 = tmp3;
 ReactCompilerGating = fn(558);

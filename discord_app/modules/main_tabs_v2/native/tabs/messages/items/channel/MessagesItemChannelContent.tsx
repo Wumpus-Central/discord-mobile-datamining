@@ -343,7 +343,7 @@ export default noop.memo(
           tmp12 = !isChangelogChannelDefault(channel.id);
         }
         const tmpResult = channel(504);
-        const tmpResult3 = channel(16471);
+        const tmpResult3 = channel(16776);
         let id = stateFromStores;
         if (stateFromStores == null) {
           id = channel.id;
@@ -458,7 +458,7 @@ export default noop.memo(
             obj19.color = str7;
             obj19.layout = tmp(9314).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
             obj19.muted = muted;
-            let tmp20Result7 = closure_6(tmp(12588).ChannelRowPreview, obj19);
+            let tmp20Result7 = closure_6(tmp(13098).ChannelRowPreview, obj19);
           } else if (channel.isDM()) {
             const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
             let guild_id;

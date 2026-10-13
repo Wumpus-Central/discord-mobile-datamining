@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import _modDef11018 from "../../../../../_runtime/metro/11018__.js";
-import _modDef14124 from "../../../../../_runtime/metro/14124__.js";
+import _modDef14461 from "../../../../../_runtime/metro/14461__.js";
 import FormStylesDefault from "FormStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
@@ -32,7 +32,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function LockedIcon() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef14124 };
+        const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef14461 };
         const tmp7 = React3(native.Icon, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
@@ -42,7 +42,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       return first;
     }
   : function LockedIcon() {
-      return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef14124 });
+      return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef14461 });
     };
 ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()

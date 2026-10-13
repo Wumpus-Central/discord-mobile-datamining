@@ -156,7 +156,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   }
   return items;
 }
-const isAllowedType = fn(11559).isAllowedType;
+const isAllowedType = fn(12312).isAllowedType;
 const Constants = fn(1085);
 ({ Permissions: closure_9, ChannelTypes: c10 } = Constants);
 const size = fn(2);

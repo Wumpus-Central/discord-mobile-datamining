@@ -326,7 +326,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = settings(1126).intl;
       const stringResult2 = intl3.string(disabled(3849).fpdVCO);
       const tmp = _slicedToArray(noop.useState(false), 2);
-      const conjureTierModelResult = settings(17063).conjureTierModel(settings, tiers, settings.tier);
+      const conjureTierModelResult = settings(11287).conjureTierModel(settings, tiers, settings.tier);
       let obj2 = { direction: "vertical", spacing: disabled(587).space.PX_16, children: null };
       const obj3 = {
         hasIcons: false,
@@ -347,7 +347,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3.title = tmp13;
       obj3.accessibilityLabel = stringResult;
-      const CONJURE_MODEL_TIERS = tmp4(17065).CONJURE_MODEL_TIERS;
+      const CONJURE_MODEL_TIERS = tmp4(11289).CONJURE_MODEL_TIERS;
       obj3.children = CONJURE_MODEL_TIERS.map((value) => {
         const obj = { label: ConjureEffortTiers.conjureTierLabel(value), subLabel: null, value: null, disabled: null };
         obj.subLabel = ConjureEffortTiers.conjureTierDescription(value);
@@ -454,7 +454,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items1[2] = tmp12Result2;
         obj10.children = items1;
         tmp11Result = closure_8(closure_7, obj10);
-        tmp4Result = tmp4(17063);
+        tmp4Result = tmp4(11287);
       }
       items[2] = tmp11Result;
       obj2.children = items;

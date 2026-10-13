@@ -164,7 +164,7 @@ function renderCategoryItem(muted) {
   const obj = { paddingLeft: 16, marginTop: num, marginBottom };
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11760);
+const RedesignChannelListConstants = fn(11562);
 ({
   CATEGORY_MARGIN_BOTTOM: closure_8,
   CATEGORY_MARGIN_TOP: closure_9,

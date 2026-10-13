@@ -20,8 +20,8 @@ const Constants = fn(1085);
   InstantInviteSources: c10,
   Routes: closure_11,
 } = Constants);
-let closure_12 = fn(12008).DirectoryChannelScrollBehavior;
-const GuildProgressConstants = fn(12204);
+let closure_12 = fn(12524).DirectoryChannelScrollBehavior;
+const GuildProgressConstants = fn(12717);
 ({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = GuildProgressConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);

@@ -176,7 +176,7 @@ obj.hero = {
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "apply" };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "backgroundColor" };
 let obj20 = {
   marginHorizontal: nativeDefault.space.PX_16,
   height: fn(10160).MOBILE_HERO_HEIGHT_PX,

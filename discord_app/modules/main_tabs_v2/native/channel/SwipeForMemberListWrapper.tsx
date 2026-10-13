@@ -10,8 +10,8 @@ import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useMountEffect from "../../../../hooks/useMountEffect.tsx";
-import getJankSurfaceName from "../../../jank_stats/native/getJankSurfaceName.tsx";
 import MainTabsNavigatorPanelContext from "../panels/MainTabsNavigatorPanelContext.tsx";
+import getJankSurfaceName from "../../../jank_stats/native/getJankSurfaceName.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

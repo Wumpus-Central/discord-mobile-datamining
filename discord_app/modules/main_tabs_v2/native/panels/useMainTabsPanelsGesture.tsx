@@ -10,7 +10,7 @@ require = fn;
 const LaunchPadTypes = fn(10659).LaunchPadTypes;
 let PlatformUtils = fn(1382);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(16437);
+const PanelsConfig = fn(16742);
 let panelsConfig = PlatformUtils
   ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG
   : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;

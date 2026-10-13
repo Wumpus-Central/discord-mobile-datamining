@@ -76,7 +76,7 @@ export default function AppLauncherRoleOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(11887, dependencyMap.paths),
+      asyncRequireImpl(11692, dependencyMap.paths),
       AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY,
       {
         option,

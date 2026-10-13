@@ -9,10 +9,10 @@ const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/conjureAgentNeedsPreview.tsx");
 
-export const conjureAgentNeedsPreview = function conjureAgentNeedsPreview(openResult) {
-  let isThinkingResult = ConjureChatStore.isThinking(openResult);
+export const conjureAgentNeedsPreview = function conjureAgentNeedsPreview(projectId) {
+  let isThinkingResult = ConjureChatStore.isThinking(projectId);
   if (!isThinkingResult) {
-    isThinkingResult = conjurePreviewControlLease.isConjureControlActive(openResult);
+    isThinkingResult = conjurePreviewControlLease.isConjureControlActive(projectId);
   }
   return isThinkingResult;
 };

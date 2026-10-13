@@ -44,7 +44,7 @@ export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VoicePanelCTACardCallerDisconnected() {
         const cResult = channelId(576).c(35);
-        channelId = noop.useContext(first(11971)).channelId;
+        channelId = noop.useContext(first(12487)).channelId;
         const tmp5 = closure_10();
         if (cResult[0] !== channelId) {
           const channel = ChannelStore.getChannel(channelId);

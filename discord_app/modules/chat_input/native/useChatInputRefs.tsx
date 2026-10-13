@@ -390,7 +390,7 @@ export default function useChatInputRefs(chatInputProps) {
                   const merged = Object.assign(ref.current);
                   obj4.chatInputRef = chatInputRef;
                   obj2.params = obj4;
-                  const result = threadCreationCallback(11673).chatInputSendApplicationCommand(obj2);
+                  const result = threadCreationCallback(12416).chatInputSendApplicationCommand(obj2);
                 },
               );
             }
@@ -415,8 +415,8 @@ export default function useChatInputRefs(chatInputProps) {
                     tmp8 = chatInputRef;
                     obj3.chatInputRef = chatInputRef;
                     obj2.params = obj3;
-                    const result = chatInputProps(11673).chatInputHandleSendText(obj2);
-                    const obj = chatInputProps(11673);
+                    const result = chatInputProps(12416).chatInputHandleSendText(obj2);
+                    const obj = chatInputProps(12416);
                   }
                   const keyboardType = chatInputProps(4987).getKeyboardType();
                   if (keyboardType === chatInputProps(1629).KeyboardTypes.SYSTEM) {

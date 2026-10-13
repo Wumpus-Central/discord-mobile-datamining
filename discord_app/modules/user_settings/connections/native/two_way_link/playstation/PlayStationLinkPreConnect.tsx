@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import _modDef12924 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef13416 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const constants = fn(12920).PlayStationLinkModalScenes;
+const constants = fn(13412).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
@@ -54,7 +54,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
             return;
           }
         }
-        tmp9[0] = _modDef12924;
+        tmp9[0] = _modDef13416;
         cResult[4] = tmp9;
       } else {
         class S {
@@ -131,7 +131,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
       const callback1 = noop.useCallback(() => {
         navigation.push(constants.ERROR, {});
       }, items1);
-      const memo = noop.useMemo(() => ({ uri: _modDef12924 }), []);
+      const memo = noop.useMemo(() => ({ uri: _modDef13416 }), []);
       const obj2 = {
         platformType: platformType.platformType,
         onError: callback1,

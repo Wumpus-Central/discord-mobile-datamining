@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = { user, guildId: "r", size: closure_0(1200).AvatarSizes.XSMALL, cutout: false };
+                const obj4 = { user, guildId: "r", size: closure_0(1200).AvatarSizes.XSMALL, cutout: null };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   user,
                   guildId: "r",
                   size: closure_0(1200).AvatarSizes.XSMALL,
-                  cutout: false,
+                  cutout: null,
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const items = [{ translateX: 4 * (first.length - 1 - index) }];
                 obj2.transform = items;
                 obj.style = obj2;
-                const obj4 = { user, guildId: "r", size: closure_0(1200).AvatarSizes.XSMALL, cutout: false };
+                const obj4 = { user, guildId: "r", size: closure_0(1200).AvatarSizes.XSMALL, cutout: null };
                 let tmp3;
                 if (index < first.length - 1) {
                   tmp3 = closure_2_11;
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   user,
                   guildId: "r",
                   size: closure_0(1200).AvatarSizes.XSMALL,
-                  cutout: false,
+                  cutout: null,
                 });
                 return (
                   <gameRelationshipsByType key={user.id} style={null}>

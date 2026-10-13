@@ -510,7 +510,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.size = tmp10(1200).AvatarSizes.EDIT_AVATAR_DECORATION;
       const items1 = [
         closure_10(purchase(8383), obj3),
-        closure_10(purchase(13480), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo }),
+        closure_10(purchase(13817), { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo }),
       ];
       obj.children = items1;
       return closure_11(View, obj);

@@ -103,7 +103,7 @@ const pressable = SettingBuilders.createPressable({
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(15889).BeakerIcon,
+  IconComponent: fn(16202).BeakerIcon,
   useDescription: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
     ? function useHasExperimentOverrideActive() {

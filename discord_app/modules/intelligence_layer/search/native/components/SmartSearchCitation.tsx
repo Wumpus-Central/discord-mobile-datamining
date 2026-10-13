@@ -234,7 +234,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   closure_0 = tmp3;
                   const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-                  const result = v2(12060).trackSmartSearchCitationOpened(obj4, v2(12058));
+                  const result = v2(12576).trackSmartSearchCitationOpened(obj4, v2(12574));
                   if ("conversation" === citation.sourceType) {
                     dependencyMap = 1;
                     v2 = 2;
@@ -242,7 +242,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled()
                     const obj5 = { value: onPressConversationCitation(citation), done: false };
                     return obj5;
                   }
-                  const obj6 = v2(12060);
+                  const obj6 = v2(12576);
                 }
               } else if (1 === tmp7) {
                 dependencyMap = 0;

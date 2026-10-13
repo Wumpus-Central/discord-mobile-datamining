@@ -11,7 +11,7 @@ import HomeDrawerStore from "HomeDrawerStore.tsx";
 import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 
 require = fn;
-const computeMaxX = fn(16452).computeMaxX;
+const computeMaxX = fn(16757).computeMaxX;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const LaunchPadTypes = fn(10659).LaunchPadTypes;
 let c10 = 144;

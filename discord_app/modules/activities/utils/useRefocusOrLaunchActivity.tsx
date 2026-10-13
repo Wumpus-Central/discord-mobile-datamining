@@ -128,7 +128,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   obj11.analyticsLocations = analyticsLocations;
                   dependencyMap = 3;
                   c5 = 1;
-                  const obj12 = { value: analyticsLocations(11614).launchActivityInBotDM(obj11), done: false };
+                  const obj12 = { value: analyticsLocations(12364).launchActivityInBotDM(obj11), done: false };
                   return obj12;
                 }
               }

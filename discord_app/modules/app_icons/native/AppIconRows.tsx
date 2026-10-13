@@ -7,7 +7,7 @@ import AppIconTypes from "../AppIconTypes.tsx";
 import AppIconUtils from "AppIconUtils.tsx";
 import AppIconRowDefault from "AppIconRow/AppIconRow.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import _objectDestructuringEmpty from "../../../../_runtime/11939__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../_runtime/12458__objectDestructuringEmpty.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 

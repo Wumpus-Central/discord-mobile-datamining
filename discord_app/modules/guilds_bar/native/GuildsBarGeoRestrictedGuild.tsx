@@ -15,7 +15,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(16739).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(17043).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
@@ -51,7 +51,7 @@ export default noop.memo(
           first = cResult[0];
         }
         let obj = restrictedGuild(576);
-        const guildsBarAnimatedWrapperStyles = restrictedGuild(16751).useGuildsBarAnimatedWrapperStyles(first);
+        const guildsBarAnimatedWrapperStyles = restrictedGuild(17055).useGuildsBarAnimatedWrapperStyles(first);
         if (cResult[1] === restrictedGuild.icon) {
           if (cResult[2] === restrictedGuild.id) {
             let tmp6 = cResult[3];
@@ -193,13 +193,13 @@ export default noop.memo(
         cResult[2] = restrictedGuild.id;
         cResult[3] = animatableSourceWithFallback;
         tmp6 = animatableSourceWithFallback;
-        const tmpResult = restrictedGuild(16751);
+        const tmpResult = restrictedGuild(17055);
       }
     : function GuildsBarGeoRestrictedGuild(restrictedGuild) {
         restrictedGuild = restrictedGuild.restrictedGuild;
         const tmp = closure_5();
         let animatableSourceWithFallback = null;
-        let obj = restrictedGuild(16751);
+        let obj = restrictedGuild(17055);
         const tmp2 = restrictedGuild;
         if (null != restrictedGuild.icon) {
           animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -236,7 +236,7 @@ export default noop.memo(
           selected: false,
           unread: false,
           circle: false,
-          styles: restrictedGuild(16751).useGuildsBarAnimatedWrapperStyles({
+          styles: restrictedGuild(17055).useGuildsBarAnimatedWrapperStyles({
             disableSelectedColor: true,
             disableBGColor: true,
           }),
@@ -245,11 +245,11 @@ export default noop.memo(
           config: memo,
           cutouts: items,
           overState: "a",
-          externalChildren: 500,
-          expandedChildren: 502,
-          children: 503,
+          externalChildren: 0,
+          expandedChildren: 17,
+          children: 4,
         };
-        const guildsBarAnimatedWrapperStyles = restrictedGuild(16751).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = restrictedGuild(17055).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: true,
         });
@@ -282,7 +282,7 @@ export default noop.memo(
           selected: false,
           unread: false,
           circle: false,
-          styles: restrictedGuild(16751).useGuildsBarAnimatedWrapperStyles({
+          styles: restrictedGuild(17055).useGuildsBarAnimatedWrapperStyles({
             disableSelectedColor: true,
             disableBGColor: true,
           }),
@@ -291,9 +291,9 @@ export default noop.memo(
           config: memo,
           cutouts: items,
           overState: "a",
-          externalChildren: 500,
-          expandedChildren: 502,
-          children: 503,
+          externalChildren: 0,
+          expandedChildren: 17,
+          children: 4,
         });
       },
 );

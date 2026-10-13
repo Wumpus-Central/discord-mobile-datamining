@@ -5,10 +5,10 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import DevToolsNavigator from "DevToolsNavigator.tsx";
-import useSortedDevToolsScreens from "../useSortedDevToolsScreens.tsx";
 import ArrowSmallUpIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx";
 import ArrowSmallDownIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallDownIcon.tsx";
+import DevToolsNavigator from "DevToolsNavigator.tsx";
+import useSortedDevToolsScreens from "../useSortedDevToolsScreens.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import BuildOverrideStore from "../../../build_overrides/BuildOverrideStore.tsx";
@@ -255,7 +255,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp10 = closure_10(tmp(16123).ArrowSmallUpIcon, {});
+          const tmp10 = closure_10(tmp(11996).ArrowSmallUpIcon, {});
           cResult[5] = tmp10;
           let tmp8 = tmp10;
         } else {
@@ -318,7 +318,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                const tmp18 = closure_10(tmp(16125).ArrowSmallDownIcon, {});
+                const tmp18 = closure_10(tmp(11998).ArrowSmallDownIcon, {});
                 cResult[15] = tmp18;
                 const tmp17 = tmp18;
               } else {

@@ -98,7 +98,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       teenId = teenId.teenId;
       const tmp4 = closure_9();
       const obj = teenId(576);
-      const spendingLimitDisplayState = teenId(15188).useSpendingLimitDisplayState(teenId.cap);
+      const spendingLimitDisplayState = teenId(15509).useSpendingLimitDisplayState(teenId.cap);
       if (cResult[0] === spendingLimitDisplayState) {
         if (cResult[1] === tmp4) {
           let tmp6 = cResult[2];
@@ -142,7 +142,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         let fn;
         if (null != teenId) {
           fn = () => {
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15186, dependencyMap.paths), { teenId }, undefined, {
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15507, dependencyMap.paths), { teenId }, undefined, {
               animation: "slide_from_right",
             });
           };
@@ -157,13 +157,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = tmp4;
       cResult[2] = tmp7;
       tmp6 = tmp7;
-      const obj2 = teenId(15188);
+      const obj2 = teenId(15509);
     }
   : function SpendingLimitRow(teenId) {
       teenId = teenId.teenId;
       const tmp = closure_9();
-      const obj = teenId(15188);
-      ({ trailing, subLabel } = getSpendingLimitRowProps(teenId(15188).useSpendingLimitDisplayState(teenId.cap), tmp));
+      const obj = teenId(15509);
+      ({ trailing, subLabel } = getSpendingLimitRowProps(teenId(15509).useSpendingLimitDisplayState(teenId.cap), tmp));
       const obj2 = { label: null, trailing: null, subLabel: null, onPress: null, arrow: null, disabled: null };
       const intl = teenId(1126).intl;
       obj2.label = intl.string(_modDef2568.gMeekL);
@@ -172,7 +172,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       let fn;
       if (null != teenId) {
         fn = () => {
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15186, dependencyMap.paths), { teenId }, undefined, {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15507, dependencyMap.paths), { teenId }, undefined, {
             animation: "slide_from_right",
           });
         };
@@ -190,8 +190,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = activeLinkUserIds(576);
       activeLinkUserIds = activeLinkUserIds(7739).useActiveLinkUserIds();
       const obj2 = activeLinkUserIds(7739);
-      const selectedTeenUser = activeLinkUserIds(15172).useSelectedTeenUser();
-      const obj3 = activeLinkUserIds(15172);
+      const selectedTeenUser = activeLinkUserIds(15493).useSelectedTeenUser();
+      const obj3 = activeLinkUserIds(15493);
       const navigation = activeLinkUserIds(1503).useNavigation();
       let rules;
       if (selectedTeenUser != null) {
@@ -225,7 +225,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         arr2 = cResult[1];
       }
       const obj4 = activeLinkUserIds(1503);
-      const spendingLimitFromUserSettings = activeLinkUserIds(15188).useSpendingLimitFromUserSettings();
+      const spendingLimitFromUserSettings = activeLinkUserIds(15509).useSpendingLimitFromUserSettings();
       if (cResult[2] !== activeLinkUserIds) {
         function handleMessageParentClick() {
           LayerActionCreators.popLayer();
@@ -260,8 +260,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp12 = cResult[7];
       }
-      const tmpResult = activeLinkUserIds(15188);
-      ({ subLabel, trailing } = navigation(15189)(arr2));
+      const tmpResult = activeLinkUserIds(15509);
+      ({ subLabel, trailing } = navigation(15510)(arr2));
       ({ teenControlsContainer, controlledSettingsHeader } = tmp4);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const obj5 = { variant: "text-sm/semibold", children: null };
@@ -420,7 +420,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = tmp20;
       cResult[15] = tmp24;
       tmp23 = tmp24;
-      const tmp14 = navigation(15189)(arr2);
+      const tmp14 = navigation(15510)(arr2);
     }
   : function FamilyCenterSettingsTeenControls() {
       function handleOpenSettings() {
@@ -807,10 +807,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function FamilyCenterSettingsParentalControls() {
       const tmp = closure_9();
-      selectedTeenUser = selectedTeenUser(15172).useSelectedTeenUser();
-      let obj = selectedTeenUser(15172);
-      const shouldLoadSettingsForSelectedTeenUser = selectedTeenUser(15172).useShouldLoadSettingsForSelectedTeenUser();
-      const obj2 = selectedTeenUser(15172);
+      selectedTeenUser = selectedTeenUser(15493).useSelectedTeenUser();
+      let obj = selectedTeenUser(15493);
+      const shouldLoadSettingsForSelectedTeenUser = selectedTeenUser(15493).useShouldLoadSettingsForSelectedTeenUser();
+      const obj2 = selectedTeenUser(15493);
       dependencyMap = selectedTeenUser(1503).useNavigation();
       let rules;
       if (selectedTeenUser != null) {
@@ -822,7 +822,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       if (rules == null) {
         rules = [];
       }
-      const ParentalControlledSpendingLimit = tmp2(15097).ParentalControlledSpendingLimit;
+      const ParentalControlledSpendingLimit = tmp2(15418).ParentalControlledSpendingLimit;
       let id;
       if (selectedTeenUser != null) {
         id = selectedTeenUser.id;
@@ -847,7 +847,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj3 = selectedTeenUser(1503);
       const tmp11 = shouldLoadSettingsForSelectedTeenUser;
-      ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(15189)(rules));
+      ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(15510)(rules));
       const obj4 = { style: tmp.parentalControlsContainer, children: null };
       const obj5 = { variant: "text-sm/semibold", children: null };
       const intl = tmp2(1126).intl;

@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = tmp(1126).intl;
       intl2.formatToPlainString(channel(1126).t.m0zYbV, { username: name });
       let obj5 = hasInputText(4962);
-      const showConvoStarterInDM = channel(11965).useShowConvoStarterInDM(channel);
+      const showConvoStarterInDM = channel(12481).useShowConvoStarterInDM(channel);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [StickersStore];
         cResult[6] = items2;
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp20 = cResult[9];
       }
-      const tmpResult7 = channel(11965);
+      const tmpResult7 = channel(12481);
       const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
       if (cResult[10] !== showConvoStarterInDM) {
         class U {

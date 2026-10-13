@@ -58,11 +58,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[2] !== asset) {
-          const assetDescription = tmp(16009).getAssetDescription(asset);
+          const assetDescription = tmp(16322).getAssetDescription(asset);
           cResult[2] = asset;
           cResult[3] = assetDescription;
           let tmp6 = assetDescription;
-          const tmpResult = tmp(16009);
+          const tmpResult = tmp(16322);
         } else {
           tmp6 = cResult[3];
         }
@@ -101,8 +101,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         let format = _require;
         let obj = dependencyMap;
         if (asset.rarity !== require("CheckpointTraitRarity").CheckpointTraitRarity.NITRO) {
-          let assetDescription = format(16009).getAssetDescription(asset);
-          const formatResult = format(16009);
+          let assetDescription = format(16322).getAssetDescription(asset);
+          const formatResult = format(16322);
         }
         const intl = format(1126).intl;
         format = intl.format;

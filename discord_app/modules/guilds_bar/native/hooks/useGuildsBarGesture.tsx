@@ -274,7 +274,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(5963).GuildsNodeType;
-const GuildsBarConstants = fn(16739);
+const GuildsBarConstants = fn(17043);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
@@ -658,7 +658,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "Set" });
+    state1.setStateShallow({ dragSpecs: "kind", overSpecs: "apply" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};

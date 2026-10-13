@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 ({ VoiceMessageAnimationState: c2, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageConstants);
 let obj = module_570.create(() => {
-  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "Set", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "Symbol", showVoiceMessagesTooltip: "function SettingListItemHighlightTsx1(){const{withSequence,withDelay,withTiming,Easing,runOnJS,clearSelectedSearchResult}=this.__closure;return{opacity:withSequence(withDelay(500,withTiming(0,{duration:0})),withTiming(0.2,{duration:300,easing:Easing.ease}),withTiming(0,{duration:300,easing:Easing.ease},\"respect-motion-settings\",function(finished){if(finished){runOnJS(clearSelectedSearchResult);}}))};}", savedVoiceMessageUploadData: "function SettingListItemHighlightTsx2(finished){const{runOnJS,clearSelectedSearchResult}=this.__closure;if(finished){runOnJS(clearSelectedSearchResult);}}", isVoiceMessageButtonMounted: "function SettingListItemHighlightTsx3(){const{withSequence,withDelay,withTiming,Easing,runOnJS,clearSelectedSearchResult}=this.__closure;return{opacity:withSequence(withDelay(500,withTiming(0,{duration:0})),withTiming(0.2,{duration:300,easing:Easing.ease}),withTiming(0,{duration:300,easing:Easing.ease},'respect-motion-settings',function(finished){if(finished){runOnJS(clearSelectedSearchResult);}}))};}", isUsingHoldGesture: "function SettingListItemHighlightTsx4(finished){const{runOnJS,clearSelectedSearchResult}=this.__closure;if(finished){runOnJS(clearSelectedSearchResult);}}" };
+  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "Set", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "Symbol", showVoiceMessagesTooltip: "auto", savedVoiceMessageUploadData: "80%", isVoiceMessageButtonMounted: "hidden", isUsingHoldGesture: "auto" };
   const items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
   obj.voiceMessageAnimationState = ReanimatedRexport.makeMutable(items);
@@ -86,7 +86,7 @@ export const hideVoiceMessagesTooltip = function hideVoiceMessagesTooltip() {
 export const resetVoiceMessageState = function resetVoiceMessageState() {
   obj = ReactBatchUpdates;
   obj.batchUpdates(() => {
-    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "code" });
+    state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "color" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {

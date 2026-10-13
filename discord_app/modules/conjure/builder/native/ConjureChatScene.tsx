@@ -9,11 +9,10 @@ import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetA
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import UploadIcon from "../../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
+import conjureStandaloneScenes from "conjureStandaloneScenes.tsx";
 import ConjureActionCreators from "../../projects/ConjureActionCreators.tsx";
 import conjurePreviewSurface from "../../preview/conjurePreviewSurface.tsx";
 import restartConjureAppFramesDefault from "../../preview/native/restartConjureAppFrames.tsx";
-import BugIcon from "../../../../design/components/Icon/native/redesign/generated/BugIcon.tsx";
-import conjureStandaloneScenes from "conjureStandaloneScenes.tsx";
 import ConjureRemixSheet from "../../remix/native/ConjureRemixSheet.tsx";
 import conjureProjectActions from "../../projects/native/conjureProjectActions.tsx";
 import ConjureSettingsSheet from "../../settings/native/ConjureSettingsSheet.tsx";
@@ -24,6 +23,7 @@ import ConjurePublishNotesSheet from "../../publish/native/ConjurePublishNotesSh
 import conjurePreviewTargets from "../../preview/conjurePreviewTargets.tsx";
 import ConjureConnectToolSheet from "../../external_connections/native/ConjureConnectToolSheet.tsx";
 import ConjureHistorySheet from "../../history/native/ConjureHistorySheet.tsx";
+import BugIcon from "../../../../design/components/Icon/native/redesign/generated/BugIcon.tsx";
 import ConjureProjectHeaderTitleDefault from "../../projects/native/ConjureProjectHeaderTitle.tsx";
 import ExperimentalDirectSelectIcon2 from "../../../../design/components/Icon/native/redesign/generated/ExperimentalDirectSelectIcon.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -43,8 +43,8 @@ const ConjureHistorySheetDefault = ConjureHistorySheet;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Keyboard: closure_7, View: closure_8 } = get_ActivityIndicator);
-const closeConnection = fn(13218).closeConnection;
-const conjureDesignFeedbackStore = fn(17104);
+const closeConnection = fn(11215).closeConnection;
+const conjureDesignFeedbackStore = fn(11350);
 ({
   enterConjureDesignFeedback: closure_11,
   exitConjureDesignFeedback: closure_12,
@@ -55,7 +55,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let obj = {
   showPublishBlocked: ConjurePublishBlockedSheetDefault,
-  promptFirstPublish: fn(17108).showConjureFirstPublishSheet,
+  promptFirstPublish: fn(11354).showConjureFirstPublishSheet,
   openPublishNotes(arg0) {
     ({ guildId, applicationId, projectName, publish, initialDraft } = arg0);
     obj = ActionSheetActionCreators;
@@ -479,9 +479,9 @@ export default function ConjureChatScene(guildId) {
           obj7.application = application;
           obj7.guildId = closure_131_24;
           obj7.onClose = function onClose() {
-            const result = c0(17110).repairConjureGuildHints(closure_1_7, closure_1_24);
-            obj = c0(17110);
-            result.finally(() => application(11413).getProject(closure_1_1)).catch(() => {});
+            const result = c0(11356).repairConjureGuildHints(closure_1_7, closure_1_24);
+            obj = c0(11356);
+            result.finally(() => application(11207).getProject(closure_1_1)).catch(() => {});
           };
           let result = application3(tmp2[33]).openConjureAppInstallModal(obj7);
           const obj2 = application3(tmp2[33]);
@@ -727,7 +727,7 @@ export default function ConjureChatScene(guildId) {
             targets,
             target,
             onChange(mode) {
-              const previewTarget = closure_2_0(17123).selectPreviewTarget(
+              const previewTarget = closure_2_0(11375).selectPreviewTarget(
                 mode,
                 closure_1_18,
                 closure_1_21,
@@ -1149,7 +1149,7 @@ export default function ConjureChatScene(guildId) {
                   obj.accessibilityLabel = intl.string(title(1126).t["UKOtz+"]);
                   obj.accessibilityActions = accessibilityActions;
                   obj.onAccessibilityAction = onAccessibilityAction;
-                  return closure_1_17(closure_1_1(17100), obj);
+                  return closure_1_17(closure_1_1(11348), obj);
                 },
               };
               items[1] = activeMode(title(navigation[70]).ContextMenu, obj2);

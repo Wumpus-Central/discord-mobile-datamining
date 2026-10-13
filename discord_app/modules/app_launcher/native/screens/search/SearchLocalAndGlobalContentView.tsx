@@ -46,7 +46,7 @@ function keyExtractor(type, arg1) {
 }
 const View = fn(17).View;
 const getSection = fn(9248).getSection;
-const FetchState = fn(11745).FetchState;
+const FetchState = fn(11547).FetchState;
 const AppLauncherNativeConstants = fn(1502);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
@@ -287,14 +287,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       let hasOptions;
       let onPressSend;
       ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-      const appLauncherIconSource = hasOptions(11729).getAppLauncherIconSource(application);
+      const appLauncherIconSource = hasOptions(11529).getAppLauncherIconSource(application);
       let tmp4 = null != appLauncherIconSource;
       if (tmp4) {
         const obj2 = { iconSource: appLauncherIconSource };
-        tmp4 = closure_10(onPressSend(11734), obj2);
+        tmp4 = closure_10(onPressSend(11534), obj2);
       }
-      obj = hasOptions(11729);
-      const tmpResult = hasOptions(11793);
+      obj = hasOptions(11529);
+      const tmpResult = hasOptions(11596);
       const commandRowSend = tmpResult.useCommandRowSend({
         command,
         context,
@@ -347,7 +347,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.onPress = onPress;
       obj4.accessibilityActions = memo;
       obj4.onAccessibilityAction = callback;
-      obj4.trailing = closure_10(onPressSend(11793), { hasOptions, sending: commandRowSend.sending, onPressSend });
+      obj4.trailing = closure_10(onPressSend(11596), { hasOptions, sending: commandRowSend.sending, onPressSend });
       return closure_10(hasOptions(6180).TableRow, obj4);
     };
 ReactCompilerGating = fn(558);

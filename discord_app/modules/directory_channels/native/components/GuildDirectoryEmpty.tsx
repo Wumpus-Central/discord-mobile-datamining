@@ -304,13 +304,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = guild(504);
       const obj3 = { contentContainerStyle: null, children: null };
       const items1 = [tmp.container];
-      const obj2 = guild(12005);
+      const obj2 = guild(12521);
       items1[1] = { paddingBottom: channel(1631)().bottom + 16 };
       obj3.contentContainerStyle = items1;
       const canCreateOrAddGuildInDirectory = obj2.useCanCreateOrAddGuildInDirectory(channel);
       const obj5 = { source: null, style: null };
       const obj4 = { paddingBottom: channel(1631)().bottom + 16 };
-      obj5.source = channel(12526);
+      obj5.source = channel(13036);
       obj5.style = tmp.header;
       const items2 = [closure_6(channel(6157), obj5), , , ,];
       const obj6 = { style: tmp.title, accessibilityRole: "header", children: null };
@@ -332,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               directoryChannelId: channel.id,
             });
           },
-          iconSource: tmp2(12527),
+          iconSource: tmp2(13037),
           title: null,
         };
         const intl3 = tmp4(1126).intl;
@@ -350,7 +350,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             constants.HUB_EMPTY_STATE,
           );
         },
-        iconSource: channel(12528),
+        iconSource: channel(13038),
         title: null,
       };
       const intl4 = tmp4(1126).intl;

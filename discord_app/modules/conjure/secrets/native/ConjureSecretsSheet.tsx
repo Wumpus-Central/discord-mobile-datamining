@@ -4,181 +4,59 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = globalThis.__r;
-
 const require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(13218).sendUserMessage;
+const sendUserMessage = fn(11215).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
-  const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, copyRow: null, copyInfo: null };
+  const obj = {
+    container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
+    copyRow: null,
+    copyInfo: null,
+    field: null,
+  };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
   obj.copyRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
   const obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
   obj.copyInfo = { flex: 1, gap: nativeDefault.space.PX_4 };
+  const obj4 = { flex: 1, gap: nativeDefault.space.PX_4 };
+  obj.field = { gap: nativeDefault.space.PX_4 };
   return obj;
 });
-const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/secrets/native/ConjureSecretsSheet.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureSecretsSheet(projectId) {
-  const cResult = projectId(ref[9]).c(56);
+export default function ConjureSecretsSheet(projectId) {
   projectId = projectId.projectId;
   const request = projectId.request;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { includeKeyboardHeight: true };
-    cResult[0] = obj2;
-    let first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  let obj = projectId(ref[9]);
-  importDefault = closure_10(require("useSafeAreaInsetsKeyboardAware")(first).insets.bottom);
-  ref = noop.useRef(null);
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj4 = {};
-    cResult[1] = obj4;
-    let tmp6 = obj4;
-  } else {
-    tmp6 = cResult[1];
-  }
-  [first1, _slicedToArray] = noop.useState(tmp6);
-  [noop, closure_6] = noop.useState(false);
-  const tmp4 = closure_10(require("useSafeAreaInsetsKeyboardAware")(first).insets.bottom);
-  [r10055, sendUserMessage] = noop.useState(false);
-  [closure_8, closure_9] = noop.useState(null);
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    class C {
-      constructor(arg0) {
-        closure_0 = projectId;
-        obj = closure_0(closure_2[11]);
-        copyResult = obj.copy(projectId, () => { ... });
-        return;
-      }
-    }
-    cResult[2] = C;
-  } else {
-    class C {
-      constructor(arg0) {
-        closure_0 = projectId;
-        obj = closure_0(closure_2[11]);
-        copyResult = obj.copy(projectId, () => { ... });
-        return;
-      }
-    }
-  }
-  closure_10 = C;
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class K {
-      constructor(arg0, arg1) {
-        closure_0 = projectId;
-        closure_1 = arg1;
-        tmp = closure_7(false);
-        tmp2 = closure_4(() => { ... });
-        return;
-      }
-    }
-    cResult[3] = K;
-  } else {
-    class K {
-      constructor(arg0, arg1) {
-        closure_0 = projectId;
-        closure_1 = arg1;
-        tmp = closure_7(false);
-        tmp2 = closure_4(() => { ... });
-        return;
-      }
-    }
-  }
-  closure_11 = K;
-  if (cResult[4] === request.fields) {
-    class K {
-      constructor(arg0, arg1) {
-        closure_0 = projectId;
-        closure_1 = arg1;
-        tmp = closure_7(false);
-        tmp2 = closure_4(() => { ... });
-        return;
-      }
-    }
-  }
-  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    class G {
-      constructor(arg0) {
-        return projectId.name;
-      }
-    }
-    cResult[7] = G;
-  } else {
-    class G {
-      constructor(arg0) {
-        return projectId.name;
-      }
-    }
-  }
-  if (cResult[8] !== first1) {
-    class X {
-      constructor(arg0) {
-        str = closure_3[projectId];
-        if (str == null) {
-          str = "";
-        }
-        return "" !== str.trim();
-      }
-    }
-    cResult[8] = first1;
-    cResult[9] = X;
-  } else {
-    class X {
-      constructor(arg0) {
-        str = closure_3[projectId];
-        if (str == null) {
-          str = "";
-        }
-        return "" !== str.trim();
-      }
-    }
-  }
-  const fields = request.fields;
-  const mapped = fields.map(G);
-  const found = mapped.filter(X);
-  cResult[4] = request.fields;
-  cResult[5] = first1;
-  cResult[6] = found;
-  const tmp10 = _slicedToArray(noop.useState(false), 2);
-}) : (function ConjureSecretsSheet(projectId) {
-  projectId = projectId.projectId;
-  const request = projectId.request;
-  importDefault = undefined;
-  let ref;
-  first = undefined;
-  _slicedToArray = undefined;
-  first1 = undefined;
-  closure_6 = undefined;
-  c7 = undefined;
+  let first;
+  noop = undefined;
   c8 = undefined;
   c9 = undefined;
-  closure_10 = undefined;
-  const tmp3 = closure_10(require("useSafeAreaInsetsKeyboardAware")({ includeKeyboardHeight: true }).insets.bottom);
-  importDefault = tmp3;
-  ref = first1.useRef(null);
-  [first, _slicedToArray] = first1.useState({});
-  [first1, closure_6] = first1.useState(false);
-  [tmp10, c7] = first1.useState(false);
-  const tmp9 = _slicedToArray(first1.useState(false), 2);
-  [c8, c9] = first1.useState(null);
-  closure_10 = first1.useCallback((arg0) => {
+  c10 = undefined;
+  const tmp3 = c10(request(6665)({ includeKeyboardHeight: true }).insets.bottom);
+  dependencyMap = tmp3;
+  const ref = noop.useRef(null);
+  const tmp5 = first(noop.useState({}), 2);
+  first = tmp5[0];
+  noop = tmp5[1];
+  const tmp7 = first(noop.useState(false), 2);
+  const first1 = tmp7[0];
+  closure_7 = tmp7[1];
+  [tmp10, c8] = first(noop.useState(false), 2);
+  const tmp9 = first(noop.useState(false), 2);
+  [c9, c10] = first(noop.useState(null), 2);
+  closure_11 = noop.useCallback((arg0) => {
     closure_0 = arg0;
-    projectId(ref[11]).copy(arg0, () => c9(closure_0));
+    projectId(closure_2[9]).copy(arg0, () => c10(closure_0));
   }, []);
-  closure_11 = first1.useCallback((arg0, arg1) => {
+  closure_12 = noop.useCallback((arg0, arg1) => {
     closure_0 = arg0;
     closure_1 = arg1;
     _undefined(false);
-    closure_4((arg0) => {
+    closure_5((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj[closure_0] = closure_1;
@@ -194,117 +72,153 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     }
     return "" !== str.trim();
   });
-  closure_13 = tmp12;
-  closure_14 = tmp13;
-  let items = [found.length > 0, found, found.length < request.fields.length, projectId, first1, first];
-  const callback = first1.useCallback(first(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === v2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            if (closure_13) {
-              if (!first1) {
-                closure_6(true);
-                _undefined(false);
-                dependencyMap = 1;
-                const obj5 = { secrets: null };
-                const _Object = Object;
-                obj5.secrets = Object.fromEntries(found.map((item) => {
-                  const items = [item, closure_1_3[item].trim()];
-                  return items;
-                }));
-                v2 = 2;
-                c3 = 1;
-                const obj6 = { value: tmp3(17310).submitProjectSecrets(projectId, obj5), done: false };
-                return obj6;
-              }
-            }
-            c3 = 3;
-          }
-        } else if (1 === tmp7) {
-          dependencyMap = 0;
-          closure_128_7(true);
-          closure_128_6(false);
-          c3 = 3;
-          const obj7 = { value: undefined, done: true };
-          return obj7;
-        } else if (arg0 === 1) {
-          c3 = 3;
+  closure_14 = tmp12;
+  closure_15 = tmp13;
+  let items = [
+    found.length > 0,
+    found,
+    found.length < request.fields.length,
+    projectId,
+    request.request_id,
+    first1,
+    first,
+  ];
+  const callback = noop.useCallback(
+    ref(function* () {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
           throw value;
-        } else if (arg0 !== 2) {
-          dependencyMap = 0;
-          const intl = tmp3(1126).intl;
-          const tmp42 = v2(3849);
-          if (closure_128_14) {
-            let UGqnoV = tmp42.sMQt5O;
-          } else {
-            UGqnoV = tmp42.UGqnoV;
-          }
-          _undefined(closure_128_0, intl.string(UGqnoV));
-          const current = closure_128_2.current;
-          if (current != null) {
-            current.closeActionSheet();
-          }
-        }
-        dependencyMap = 0;
-        c3 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } catch (tmp25) {
-        if (tmp4 === dependencyMap) {
-          c3 = tmp2;
-          throw tmp25;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          v2 = tmp;
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              projectId = tmp7;
+              if (closure_14) {
+                if (!first1) {
+                  closure_7(true);
+                  _undefined(false);
+                  c3 = 1;
+                  let submitProjectSecretsResult = projectId;
+                  const obj5 = { secrets: null };
+                  const _Object = Object;
+                  obj5.secrets = Object.fromEntries(
+                    found.map((item) => {
+                      const items = [item, closure_1_4[item].trim()];
+                      return items;
+                    }),
+                  );
+                  let request_id = request;
+                  if (null != request.request_id) {
+                    const obj6 = { request_id: null };
+                    request_id = request_id.request_id;
+                    obj6.request_id = request_id;
+                    let obj7 = obj6;
+                  } else {
+                    obj7 = {};
+                  }
+                  const merged = Object.assign(obj7);
+                  submitProjectSecretsResult = projectId(tmp44[10]).submitProjectSecrets(
+                    submitProjectSecretsResult,
+                    obj5,
+                  );
+                  c4 = 2;
+                  c5 = 1;
+                  const obj2 = projectId(tmp44[10]);
+                }
+              }
+              c5 = 3;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            closure_128_0 = tmp44;
+            closure_129_7(false);
+            if (closure_128_0 instanceof projectId(tmp44[10]).ConjureSecretRequestExpiredError) {
+              const intl = projectId(tmp44[11]).intl;
+              closure_1_7(closure_129_0, intl.string(tmp3(tmp44[12]).KVBvVy));
+              const current2 = closure_129_3.current;
+              if (current2 != null) {
+                current2.closeActionSheet();
+              }
+            } else {
+              closure_129_8(true);
+            }
+            c5 = 3;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            c3 = 0;
+            const intl2 = projectId(tmp44[11]).intl;
+            const tmp62 = tmp3(tmp44[12]);
+            if (closure_129_15) {
+              let UGqnoV = tmp62.sMQt5O;
+            } else {
+              UGqnoV = tmp62.UGqnoV;
+            }
+            closure_1_7(closure_129_0, intl2.string(UGqnoV));
+            const current = closure_129_3.current;
+            if (current != null) {
+              current.closeActionSheet();
+            }
+          }
+          c3 = 0;
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } catch (tmp44) {
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp44;
+          } else {
+            c4 = tmp;
+          }
         }
       }
-    }
-  }), items);
+    }),
+    items,
+  );
   let obj = { ref, startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
   let obj2 = { title: null };
-  let intl = projectId(ref[13]).intl;
-  obj2.title = intl.string(require("../../intl/ConjureUntranslated.messages.js").TuMGZp);
-  obj.header = c8(projectId(ref[15]).BottomSheetTitleHeader, obj2);
-  const obj3 = { style: tmp3.container, children: null };
+  let intl = projectId(1126).intl;
+  obj2.title = intl.string(request(3849).TuMGZp);
+  obj.header = c8(projectId(6839).BottomSheetTitleHeader, obj2);
+  let obj3 = { style: tmp3.container, children: null };
   let tmp15Result = null;
   if (null != request.note) {
     tmp15Result = null;
     if ("" !== request.note) {
       let obj4 = { variant: "text-sm/normal", color: "text-default", children: request.note };
-      tmp15Result = tmp15(tmp16(tmp2[16]).Text, obj4);
+      tmp15Result = tmp15(tmp16(5088).Text, obj4);
     }
   }
-  let items1 = [tmp15Result, , , , , , ];
+  let items1 = [tmp15Result, , , , , ,];
   let obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl2 = tmp16(tmp2[13]).intl;
-  obj5.children = intl2.string(require("../../intl/ConjureUntranslated.messages.js").jgDBJZ);
-  items1[1] = c8(projectId(ref[16]).Text, obj5);
+  let intl2 = tmp16(1126).intl;
+  obj5.children = intl2.string(request(3849).jgDBJZ);
+  items1[1] = c8(projectId(5088).Text, obj5);
   let tmp15Result3 = null;
   if (request.fields.length > 1) {
     let obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl3 = tmp16(tmp2[13]).intl;
-    obj6.children = intl3.string(tmp(tmp2[14])["La+pe4"]);
-    tmp15Result3 = tmp15(tmp16(tmp2[16]).Text, obj6);
+    const intl3 = tmp16(1126).intl;
+    obj6.children = intl3.string(tmp(3849)["La+pe4"]);
+    tmp15Result3 = tmp15(tmp16(5088).Text, obj6);
   }
   items1[2] = tmp15Result3;
   let copy_values = request.copy_values;
@@ -313,66 +227,107 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   }
   items1[3] = copy_values.map((children) => {
     value = children;
-    const obj = { style: closure_1.copyRow, children: null };
-    const obj2 = { style: closure_1.copyInfo, children: null };
-    const items = [_undefined2(projectId(ref[16]).Text, { variant: "text-xs/semibold", color: "text-muted", children: children.label }), _undefined2(projectId(ref[16]).Text, { variant: "text-xs/normal", color: "text-default", children: children.value })];
+    const obj = { style: closure_2.copyRow, children: null };
+    const obj2 = { style: closure_2.copyInfo, children: null };
+    const items = [
+      _undefined(projectId(closure_2[15]).Text, {
+        variant: "text-xs/semibold",
+        color: "text-muted",
+        children: children.label,
+      }),
+      _undefined(projectId(closure_2[15]).Text, {
+        variant: "text-xs/normal",
+        color: "text-default",
+        children: children.value,
+      }),
+    ];
     obj2.children = items;
-    const items1 = [_undefined3(closure_6, obj2), ];
-    const intl = projectId(ref[13]).intl;
+    const items1 = [_undefined2(first1, obj2)];
+    const intl = projectId(closure_2[11]).intl;
     if (_undefined2 === children.value) {
-      let OpuAlK = projectId(ref[13]).t.t5VZ88;
+      let OpuAlK = projectId(closure_2[11]).t.t5VZ88;
     } else {
-      OpuAlK = projectId(ref[13]).t.OpuAlK;
+      OpuAlK = projectId(closure_2[11]).t.OpuAlK;
     }
-    items1[1] = _undefined2(projectId(ref[17]).Button, {
+    items1[1] = _undefined(projectId(closure_2[16]).Button, {
       variant: "secondary",
       size: "sm",
       text: intl.string(OpuAlK),
       onPress() {
-        return closure_10(value.value);
-      }
+        return closure_11(value.value);
+      },
     });
     obj.children = items1;
-    return _undefined3(closure_6, obj, children.label);
+    return _undefined2(first1, obj, children.label);
   });
   const fields1 = request.fields;
   items1[4] = fields1.map((label) => {
-    const obj = { label: label.label, description: null, secureTextEntry: true, autoComplete: "off", autoCapitalize: "none", autoCorrect: false, value: null, onChange: null, disabled: null };
+    const obj = { style: closure_2.field, children: null };
+    const obj2 = {
+      label: label.label,
+      description: null,
+      secureTextEntry: true,
+      autoComplete: "off",
+      autoCapitalize: "none",
+      autoCorrect: false,
+      value: null,
+      onChange: null,
+      disabled: null,
+    };
     let hint;
     if (null != label.hint) {
       if ("" !== label.hint) {
         hint = label.hint;
       }
     }
-    obj.description = hint;
+    obj2.description = hint;
     let str2 = first[label.name];
     if (str2 == null) {
       str2 = "";
     }
-    obj.value = str2;
-    obj.onChange = function onChange(arg0) {
-      return closure_11(label.name, arg0);
+    obj2.value = str2;
+    obj2.onChange = function onChange(arg0) {
+      return closure_12(label.name, arg0);
     };
-    obj.disabled = first1;
-    return _undefined2(projectId(ref[18]).TextInput, obj, label.name);
+    obj2.disabled = first1;
+    const items = [_undefined(projectId(closure_2[17]).TextInput, obj2)];
+    let hosts = label.hosts;
+    if (hosts == null) {
+      hosts = [];
+    }
+    let tmp3Result = null;
+    if (hosts.length > 0) {
+      const intl = projectId(closure_2[11]).intl;
+      let hosts1 = label.hosts;
+      if (hosts1 == null) {
+        hosts1 = [];
+      }
+      const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
+      const obj4 = { hosts: hosts1.join(", ") };
+      obj3.children = intl.formatToPlainString(request(closure_2[12]).Ww9HFO, obj4);
+      tmp3Result = _undefined(projectId(closure_2[15]).Text, obj3);
+    }
+    items[1] = tmp3Result;
+    obj.children = items;
+    return _undefined2(first1, obj, label.name);
   });
   let tmp15Result4 = null;
   if (tmp10) {
     let obj7 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
-    const intl4 = tmp16(tmp2[13]).intl;
-    obj7.children = intl4.string(tmp(tmp2[14]).IrMuew);
-    tmp15Result4 = tmp15(tmp16(tmp2[16]).Text, obj7);
+    const intl4 = tmp16(1126).intl;
+    obj7.children = intl4.string(tmp(3849).IrMuew);
+    tmp15Result4 = tmp15(tmp16(5088).Text, obj7);
   }
   items1[5] = tmp15Result4;
   const obj8 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
-  const intl5 = tmp16(tmp2[13]).intl;
-  obj8.text = intl5.string(require("../../intl/ConjureUntranslated.messages.js").DUdtms);
+  const intl5 = tmp16(1126).intl;
+  obj8.text = intl5.string(request(3849).DUdtms);
   obj8.loading = first1;
   obj8.disabled = found.length <= 0;
   obj8.onPress = callback;
-  items1[6] = c8(projectId(ref[17]).Button, obj8);
+  items1[6] = c8(projectId(5379).Button, obj8);
   obj3.children = items1;
-  obj.children = c9(closure_6, obj3);
-  return c8(projectId(ref[19]).ActionSheet, obj);
-});
+  obj.children = c9(first1, obj3);
+  return c8(projectId(6899).ActionSheet, obj);
+}
 export const CONJURE_SECRETS_SHEET_KEY = "ConjureSecretsSheet";

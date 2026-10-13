@@ -9,7 +9,7 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16280);
+const UserSettingsSafetySelectedGuildStore = fn(16587);
 ({
   getSelectedGuildId: metroRequire,
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
@@ -137,7 +137,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16281, dependencyMap.paths),
+      asyncRequireImpl(16588, dependencyMap.paths),
       "SettingsPrivacyAndSafetyGuildSelectActionSheet",
     );
   },

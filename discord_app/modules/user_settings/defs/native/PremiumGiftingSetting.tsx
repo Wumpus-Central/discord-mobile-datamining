@@ -69,7 +69,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(11538).GiftIcon,
+  IconComponent: fn(12291).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },

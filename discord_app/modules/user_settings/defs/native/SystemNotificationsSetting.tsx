@@ -89,7 +89,7 @@ let closure_8 = async function _handleEnableSystemNotification() {
 };
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_5 = fn(7483).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(12124);
+const NotificationPermissionConstants = fn(12640);
 ({ EventActionType: metroRequire, EventActionLocation: closure_7 } = NotificationPermissionConstants);
 const SettingBuilders = fn(10663);
 const pressable = SettingBuilders.createPressable({

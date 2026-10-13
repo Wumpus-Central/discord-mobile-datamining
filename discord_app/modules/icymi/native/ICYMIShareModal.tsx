@@ -805,7 +805,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   c5 = 2;
                   c6 = 1;
-                  const obj6 = { value: entry(16965).sendMessageWithEmbed(obj5), done: false };
+                  const obj6 = { value: entry(17268).sendMessageWithEmbed(obj5), done: false };
                   return obj6;
                 }
               } else if (1 === tmp7) {
@@ -913,7 +913,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                 };
                 c5 = 2;
                 c6 = 1;
-                const obj7 = { value: entry(16965).sendMessageWithEmbed(obj6), done: false };
+                const obj7 = { value: entry(17268).sendMessageWithEmbed(obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp7) {

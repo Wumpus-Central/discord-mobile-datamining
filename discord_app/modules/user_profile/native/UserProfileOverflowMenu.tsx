@@ -333,7 +333,7 @@ export default function UserProfileOverflowMenu(user) {
                 trackUserProfileAction({ action: "REPORT", analyticsLocations });
                 if (user.bot) {
                   const obj4 = ActionSheetActionCreatorsDefault;
-                  const tmp18 = asyncRequireImpl(13105, dependencyMap.paths);
+                  const tmp18 = asyncRequireImpl(13589, dependencyMap.paths);
                   const BOT_REPORT_CHOOSER_KEY = BotReportChooser.BOT_REPORT_CHOOSER_KEY;
                   const obj5 = {
                     user,
@@ -432,7 +432,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
           trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13104, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13588, dependencyMap.paths), {
             userId: id,
             showUserProfile,
           });

@@ -468,10 +468,14 @@ export default noop.memo(
           items,
           () => onPressEmoji.useReducedMotion,
         );
-        const found = frequentlyUsedReactionEmojis.filter((emoji) => {
-          const obj2 = { emoji, channel: "Array", intention: constants.DEFAULT_REACT_EMOJI };
-          return !onPressEmoji(substr[17]).isEmojiFilteredOrLocked(obj2);
-        });
+        const found = frequentlyUsedReactionEmojis.filter(
+          (emoji) =>
+            !onPressEmoji(substr[17]).isEmojiFilteredOrLocked({
+              emoji,
+              channel: "Array",
+              intention: constants.DEFAULT_REACT_EMOJI,
+            }),
+        );
         substr = found.slice(0, rounded - 1);
         const items1 = [substr, selectedEmoji];
         memo = memo.useMemo(

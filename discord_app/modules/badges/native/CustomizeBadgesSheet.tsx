@@ -257,8 +257,8 @@ let obj14 = {
   textAlign: "center",
 };
 getSlotOffset.__closure = {
-  BADGE_GRID_COLUMNS: fn(14878).BADGE_GRID_COLUMNS,
-  BADGE_GRID_GAP: fn(14878).BADGE_GRID_GAP,
+  BADGE_GRID_COLUMNS: fn(15199).BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: fn(15199).BADGE_GRID_GAP,
 };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = {

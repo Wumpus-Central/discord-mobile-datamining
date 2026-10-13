@@ -52,7 +52,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return "open" === closure_6.getConnState(closure_0);
           }
         }
-        const items2 = [ConjureChatStore, ConjureConnectionStore];
+        const items2 = [ConjureChatStore];
         cResult[4] = items2;
         const tmp9 = items2;
       } else {
@@ -70,21 +70,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const items3 = [arg0];
         cResult[5] = arg0;
-        cResult[6] = tmp13;
+        cResult[6] = tmp12;
         cResult[7] = items3;
-        let tmp12 = items3;
+        let tmp11 = items3;
       } else {
         class S {
           constructor() {
             return "open" === closure_6.getConnState(closure_0);
           }
         }
-        tmp12 = cResult[7];
+        tmp11 = cResult[7];
       }
       const tmpResult = require("initialize");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, tmp13, tmp12);
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp9, tmp12, tmp11);
       const tmpResult2 = require("initialize");
-      [r10063, _slicedToArray] = noop.useState(null);
+      [r10062, _slicedToArray] = noop.useState(null);
       if (cResult[8] === id) {
         class S {
           constructor() {
@@ -92,7 +92,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn = function _() {
+      const fn = function p() {
         const obj = { frame, ok: conjureSmartContextConnection.undoContextSwitch(closure_0, id) };
         return _slicedToArray(obj);
       };
@@ -100,7 +100,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = id;
       cResult[10] = arg0;
       cResult[11] = fn;
-      const tmp15 = _slicedToArray(noop.useState(null), 2);
+      const tmp14 = _slicedToArray(noop.useState(null), 2);
     }
   : function useConjureContextSwitchRow(arg0, id) {
       _require = arg0;
@@ -115,17 +115,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       let obj = require("initialize");
-      const items2 = [ConjureChatStore, ConjureConnectionStore];
+      const items2 = [ConjureChatStore];
       const items3 = [arg0];
       const stateFromStores1 = require("initialize").useStateFromStores(
         items2,
         () => {
-          const isChatStoppedResult = ConjureConnectionStore.isChatStopped(closure_0);
-          let tmp3 = !isChatStoppedResult;
-          if (!isChatStoppedResult) {
-            tmp3 = !ConjureChatStore.isThinking(closure_0);
-          }
-          if (tmp3) {
+          const isThinkingResult = ConjureChatStore.isThinking(closure_0);
+          let tmp3 = !isThinkingResult;
+          if (!isThinkingResult) {
             tmp3 = !ConjureChatStore.isCompacting(closure_0);
           }
           return tmp3;
@@ -232,7 +229,7 @@ export const useConjureSmartContextSetting = ReactCompilerGating.isReactCompiler
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function u() {
+        const fn = function s() {
           return ConjureSmartContextStore.getSmartContext(closure_0);
         };
         const items1 = [arg0];

@@ -10,9 +10,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17761;
+    let tmp4 = 17765;
   } else {
-    tmp4 = 17767;
+    tmp4 = 17771;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

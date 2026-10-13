@@ -303,10 +303,10 @@ export default function ConjurePublishNotesSheet(guildId) {
                 ok = closure_128_0.ok;
               }
               if (false !== ok) {
-                const result = guildId(17117).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
+                const result = guildId(11363).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
                 closure_129_21();
                 dependencyMap = 0;
-                const obj = guildId(17117);
+                const obj = guildId(11363);
               }
             }
             const _Error = Error;

@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmpResult5 = tmp(504);
         const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-        const tmp20 = stateFromStores(16787)(arg0);
+        const tmp20 = stateFromStores(17091)(arg0);
         const tmpResult6 = tmp(504);
         const token = tmp(4818).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
         const tmpResult7 = tmp(4818);

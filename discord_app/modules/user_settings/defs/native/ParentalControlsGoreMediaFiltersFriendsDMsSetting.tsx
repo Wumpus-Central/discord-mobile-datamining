@@ -87,7 +87,7 @@ const pressable = SettingBuilders.createPressable({
   onPress: function onGoreContentFriendsDmOnPress() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const obj = selectedTeenId(15100);
+      const obj = selectedTeenId(15421);
       const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl = selectedTeenId(1126).intl;
       obj3.title = intl.string(selectedTeenId(1126).t["16/3Bi"]);
@@ -99,8 +99,8 @@ const pressable = SettingBuilders.createPressable({
       obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentFriendDm;
       const items = [selectedTeenId(1209).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(15105).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(15105);
+      const result = selectedTeenId(15426).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(15426);
     }
   },
   unsearchable: true,

@@ -277,7 +277,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
       options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },
     },
   };
-  closure_8 = tmp(12711)(obj6);
+  closure_8 = tmp(13217)(obj6);
   const items5 = [product];
   let obj4 = selectedSkuId(10507);
   const obj7 = {

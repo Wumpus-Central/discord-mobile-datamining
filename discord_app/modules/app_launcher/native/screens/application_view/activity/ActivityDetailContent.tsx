@@ -8,9 +8,9 @@ import AnalyticsLocationDefault from "../../../../../app_analytics/AnalyticsLoca
 import AppLauncherUtils from "../../../../utils/AppLauncherUtils.tsx";
 import AppLauncherContext from "../../../AppLauncherContext.tsx";
 import AppLauncherTypes from "../../../../AppLauncherTypes.tsx";
-import roundToNearestPixelDefault from "../../../../../voice_panel/native/utils/roundToNearestPixel.tsx";
-import DeveloperActivityShelfActionCreatorsAll from "../../../../../activities/DeveloperActivityShelfActionCreators.tsx";
 import useActivityShelfItem from "../../../../../activities/utils/useActivityShelfItem.tsx";
+import DeveloperActivityShelfActionCreatorsAll from "../../../../../activities/DeveloperActivityShelfActionCreators.tsx";
+import roundToNearestPixelDefault from "../../../../../voice_panel/native/utils/roundToNearestPixel.tsx";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -508,7 +508,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             closure_128_0 = value;
             c5 = 1;
             return {
-              value: applicationId(11615)({ targetApplicationId: tmp3, channelId: closure_128_0, analyticsLocations }),
+              value: applicationId(11538)({ targetApplicationId: tmp3, channelId: closure_128_0, analyticsLocations }),
               done: false,
             };
           }
@@ -577,7 +577,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               c4 = 3;
               c5 = 1;
               return {
-                value: tmp3(11615)({
+                value: tmp3(11538)({
                   targetApplicationId: closure_129_1,
                   channelId: closure_128_0,
                   analyticsLocations: closure_129_2,
@@ -873,15 +873,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmp2Result8 = tmp2(6858);
         const obj9 = { context, applicationId: application.id };
-        const activityAction = tmp2(11735).useActivityAction(obj9);
-        const tmp2Result9 = tmp2(11735);
-        const delayedSwapToActivityActionLeave = tmp2(11830).useDelayedSwapToActivityActionLeave(activityAction);
+        const activityAction = tmp2(11535).useActivityAction(obj9);
+        const tmp2Result9 = tmp2(11535);
+        const delayedSwapToActivityActionLeave = tmp2(11635).useDelayedSwapToActivityActionLeave(activityAction);
         const obj10 = { context, application, activityAction: delayedSwapToActivityActionLeave };
-        const tmp2Result10 = tmp2(11830);
-        ({ reason, disabled } = tmp5(11831)(obj10));
+        const tmp2Result10 = tmp2(11635);
+        ({ reason, disabled } = tmp5(11636)(obj10));
         const obj11 = { context, application, botUserId: null };
         let id;
-        tmp5(11832);
+        tmp5(11637);
         if (bot != null) {
           id = bot.id;
         }
@@ -961,13 +961,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj24 = { style: heroMediaContainerLandscape, onLayout: callback, children: null };
         const obj25 = { applicationId: application.id, width: null, contentWidth: null };
         let result = width;
-        const tmp29 = tmp5(11831)(obj10);
+        const tmp29 = tmp5(11636)(obj10);
         if (detailsContainerLandscape) {
           result = (65 * width) / 100;
         }
         obj25.width = result;
         obj25.contentWidth = tmp8;
-        obj24.children = closure_11(tmp5(11771), obj25);
+        obj24.children = closure_11(tmp5(11574), obj25);
         const items4 = [closure_11(View, obj24)];
         const items5 = [tmp.details];
         if (detailsContainerLandscape) {
@@ -982,17 +982,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj29 = { icon: null, tagName: null, accessibilityLabel: null };
         const obj30 = { style: tmp.tagIcon, size: "xs" };
         obj29.icon = closure_11(tmp2(8217).GroupIcon, obj30);
-        const tmp5Result3 = tmp5(11771);
+        const tmp5Result3 = tmp5(11574);
         let num5 = num;
         if (num == null) {
           num5 = 0;
         }
-        obj29.tagName = tmp2(11834).getItemSubtitleForMaxPlayersShort(num5);
-        const tmp2Result12 = tmp2(11834);
+        obj29.tagName = tmp2(11639).getItemSubtitleForMaxPlayersShort(num5);
+        const tmp2Result12 = tmp2(11639);
         if (num == null) {
           num = 0;
         }
-        obj29.accessibilityLabel = tmp5(11834)(num);
+        obj29.accessibilityLabel = tmp5(11639)(num);
         const items7 = [closure_11(closure_16, obj29, "participants")];
         const tags = application.tags;
         let mapped;

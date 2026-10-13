@@ -15,11 +15,11 @@ import _modDef8758 from "../../../../../_runtime/metro/08758__.js";
 import _modDef8807 from "../../../../../_runtime/metro/08807__.js";
 import _modDef10042 from "../../../../../_runtime/metro/10042__.js";
 import _modDef10347 from "../../../../../_runtime/metro/10347__.js";
-import ToggleButton from "../../../../design/components/Button/native/ToggleButton.native.tsx";
-import useToggleButtonProps from "../../../../design/components/Button/native/useToggleButtonProps.native.tsx";
 import ToggleIconButton from "../../../../design/components/Button/native/ToggleIconButton.native.tsx";
+import useToggleButtonProps from "../../../../design/components/Button/native/useToggleButtonProps.native.tsx";
+import ToggleButton from "../../../../design/components/Button/native/ToggleButton.native.tsx";
 import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState.tsx";
-import _modDef16136 from "../../../../../_runtime/metro/16136__.js";
+import _modDef16443 from "../../../../../_runtime/metro/16443__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -201,7 +201,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef16136;
+    tmpResult = _modDef16443;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/conjurePlanWidget.tsx
-import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import ApplicationWidgetConfigSurface from "../../../../discord_common/js/shared/shared-constants/ApplicationWidgetConfigSurface.tsx";
+import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import ApplicationAssetType from "../../../../discord_common/js/shared/shared-constants/ApplicationAssetType.tsx";
 import ApplicationAssetVisibility from "../../../../discord_common/js/shared/shared-constants/ApplicationAssetVisibility.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";

@@ -155,7 +155,7 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(18436, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(18440, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
@@ -538,9 +538,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ locked, integrations } = guild);
       closure_13();
       let obj = guild(576);
-      const applicationIdentityLinkedRolesEnabled = guild(18437).useApplicationIdentityLinkedRolesEnabled(guild.id);
-      let obj2 = guild(18437);
-      const applicationIdentityLinkedRolesEnabled1 = guild(18439).useApplicationIdentityLinkedRolesEnabled(
+      const applicationIdentityLinkedRolesEnabled = guild(18441).useApplicationIdentityLinkedRolesEnabled(guild.id);
+      let obj2 = guild(18441);
+      const applicationIdentityLinkedRolesEnabled1 = guild(18443).useApplicationIdentityLinkedRolesEnabled(
         guild.id,
         "guild_settings_roles_edit_connections",
       );
@@ -656,7 +656,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items2;
       tmp10 = items2;
       tmp9 = fn;
-      let obj3 = guild(18439);
+      let obj3 = guild(18443);
     }
   : function GuildSettingsRolesEditConnectionsControls(guild) {
       guild = guild.guild;
@@ -818,13 +818,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj9 = {
         handleConnectionTapped(connectionType, applicationId) {
           const items = [...memo];
-          const obj = {
-            connectionType,
-            connectionMetadataField: "Array",
-            applicationId,
-            operator: "getChannel",
-            value: 1090584578,
-          };
+          const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "y", value: "r" };
           items.push(obj);
           if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
             if (0 === items.length) {

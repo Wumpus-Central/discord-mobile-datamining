@@ -9,7 +9,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SmartSearchConstants = fn(12038);
+const SmartSearchConstants = fn(12554);
 ({ SUGGESTED_SEARCHES_WINDOW_SIZE: hasOwnProperty, SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT } = SmartSearchConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);

@@ -193,7 +193,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const v0 = 0;
     if (isQuestAccessSuspended) {
       trackQuestContentClickedWithImpression({ questId: questDockQuest.id, questContent: v0(5975).QuestContent.QUEST_BAR_MOBILE, questContentCTA: v0(7416).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent: v0(5975).QuestContent.QUEST_BAR_MOBILE });
-      v2(15396)();
+      v2(15711)();
     }
     yield v0(9172).enrollInQuest(questDockQuest.id, { questContentCTA: v0(7416).QuestContentCTA.ACCEPT_QUEST, questContent: v0(5975).QuestContent.QUEST_BAR_MOBILE, sourceQuestContent: v0(5975).QuestContent.QUEST_BAR_MOBILE });
     if (1 === tmp4) {
@@ -209,9 +209,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return { value: closure_128_3(), done: false };
       } else {
         if (closure_128_1) {
-          v2(15403)({ questId: closure_128_0.id, sourceQuestContent: v0(5975).QuestContent.QUEST_BAR_MOBILE });
+          v2(15718)({ questId: closure_128_0.id, sourceQuestContent: v0(5975).QuestContent.QUEST_BAR_MOBILE });
           closure_128_5(constants.COLLAPSED);
-          v2(15403);
+          v2(15718);
           { questId: closure_128_0.id, sourceQuestContent: v0(5975).QuestContent.QUEST_BAR_MOBILE };
         }
         dependencyMap = 3;

@@ -31,7 +31,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useFriendRequestsEveryoneSettingValue() {
       const selectedTeenId = controlledSetting(7741).useSelectedTeenId();
-      const ParentalControlledFriendSourceFlags = controlledSetting(15097).ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = controlledSetting(15418).ParentalControlledFriendSourceFlags;
       controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
       const items = [controlledSetting];
       return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
@@ -61,7 +61,7 @@ const toggle = SettingBuilders.createToggle({
       }
     : function useFriendRequestsEveryoneSettingValue() {
         const selectedTeenId = controlledSetting(7741).useSelectedTeenId();
-        const ParentalControlledFriendSourceFlags = controlledSetting(15097).ParentalControlledFriendSourceFlags;
+        const ParentalControlledFriendSourceFlags = controlledSetting(15418).ParentalControlledFriendSourceFlags;
         controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
         const items = [controlledSetting];
         return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;

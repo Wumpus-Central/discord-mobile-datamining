@@ -38,10 +38,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ guildId, powerup } = arg0);
       const tmp4 = closure_6();
       _require = tmp4;
-      const tmp6 = onDeactivate(12279)(guildId, powerup);
+      const tmp6 = onDeactivate(12792)(guildId, powerup);
       onDeactivate = tmp6.onDeactivate;
       const error = tmp6.error;
-      const arr = onDeactivate(12280)(guildId, powerup);
+      const arr = onDeactivate(12793)(guildId, powerup);
       let obj = require("c");
       const logPowerupModalOpened = require("GuildPowerupAnalytics").useLogPowerupModalOpened(
         guildId,

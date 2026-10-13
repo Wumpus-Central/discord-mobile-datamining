@@ -36,9 +36,9 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(13451).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(13788).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(13451);
+  let obj = balance(13788);
   let isPartiallyOwnedBundle = balance(9084).useProductDisableState(product.skuId).isDisabled;
   let obj2 = balance(9084);
   if (!isPartiallyOwnedBundle) {
@@ -54,7 +54,7 @@ function VCButton(balance) {
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(13454, dependencyMap.paths),
+      asyncRequireImpl(13791, dependencyMap.paths),
       {
         skuId: product.skuId,
         analyticsLocations,
@@ -70,7 +70,7 @@ function VCButton(balance) {
               },
               orbBalancePriorToPurchase,
             };
-            product(5934).pushLazy(balance(2000)(13458, dependencyMap.paths), obj3, modalKey);
+            product(5934).pushLazy(balance(2000)(13795, dependencyMap.paths), obj3, modalKey);
             const tmp4Result = product(5934);
           } else {
             const ALL = balance(1088).FractionalPremiumSKUsSets.ALL;
@@ -100,11 +100,11 @@ function VCButton(balance) {
                 product(5056).hideActionSheet();
               };
               tmp4Result3.openLazy(
-                balance(2000)(13459, dependencyMap.paths),
+                balance(2000)(13796, dependencyMap.paths),
                 "FractionalNitroCollectedActionSheet",
                 obj4,
               );
-              const tmp10 = balance(2000)(13459, dependencyMap.paths);
+              const tmp10 = balance(2000)(13796, dependencyMap.paths);
             } else {
               const obj5 = {
                 product,
@@ -113,8 +113,8 @@ function VCButton(balance) {
                 orbBalancePriorToPurchase,
                 stageCollectibleChangeForEditProfile,
               };
-              product(12772).open(obj5);
-              const tmp4Result4 = product(12772);
+              product(13278).open(obj5);
+              const tmp4Result4 = product(13278);
             }
           }
           const obj2 = product(5934);

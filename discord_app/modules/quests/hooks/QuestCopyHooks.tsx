@@ -25,7 +25,7 @@ const require = globalThis.__r;
 
 const util = v1votF6(1126);
 const utils_QuestUtils = v1votF6(7411);
-const SponsoredQuestUtils = v1votF6(12981);
+const SponsoredQuestUtils = v1votF6(13473);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);

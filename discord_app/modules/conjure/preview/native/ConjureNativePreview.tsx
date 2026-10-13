@@ -11,8 +11,8 @@ import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.na
 import leaveFrame from "../../../frames/leaveFrame.tsx";
 import ConjurePlatformUtils from "../../shared/ConjurePlatformUtils.native.tsx";
 import conjurePreviewSurface2 from "../conjurePreviewSurface.tsx";
-import UserProfileApplicationWidgetCardDefault from "../../../user_profile/native/UserProfileApplicationWidgetCard.tsx";
 import getInlineFramePresentationDefault from "../../../frames/native/getInlineFramePresentation.tsx";
+import UserProfileApplicationWidgetCardDefault from "../../../user_profile/native/UserProfileApplicationWidgetCard.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../../frames/FramesStore.tsx";
@@ -28,7 +28,7 @@ const UserProfileApplicationWidgetTypes = intl(7326);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(17104);
+const conjureDesignFeedbackStore = fn(11350);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1085);
 ({
@@ -1116,7 +1116,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
         const items8 = [closure_22(stateFromStores(10363), obj7, stateFromStores.id)];
         let tmp29Result = null;
         if (tmp2Result6.isAndroid()) {
-          tmp29Result = closure_22(tmp2(17141).PortalKeyboardRenderer, { portal: true });
+          tmp29Result = closure_22(tmp2(11510).PortalKeyboardRenderer, { portal: true });
         }
         items8[1] = tmp29Result;
         obj6.children = items8;

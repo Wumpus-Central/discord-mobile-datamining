@@ -100,7 +100,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const syncExternalStore = noop.useSyncExternalStore(first1(17132).subscribe, P);
+        const syncExternalStore = noop.useSyncExternalStore(first1(11385).subscribe, P);
         if (cResult[11] !== syncExternalStore) {
           class P {
             constructor() {
@@ -139,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj3 = { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 };
         const tmp23 = jsx(
-          first1(17738),
+          first1(17742),
           { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 },
           first1,
         );
@@ -188,7 +188,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         dependencyMap(makeIframeIdDefault());
       }, []);
-      let syncExternalStore = noop.useSyncExternalStore(iframeId(17132).subscribe, () =>
+      let syncExternalStore = noop.useSyncExternalStore(iframeId(11385).subscribe, () =>
         FramePoolManagerDefault.getWinningTargetState(id),
       );
       let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
@@ -197,7 +197,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         syncExternalStore = obj2;
       }
       obj.presentation = syncExternalStore;
-      return jsx(iframeId(17738), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+      return jsx(iframeId(17742), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
     };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");

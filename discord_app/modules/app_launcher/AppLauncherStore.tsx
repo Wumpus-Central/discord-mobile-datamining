@@ -33,7 +33,7 @@ const obj = {
   activeViewType: null,
   activeChannelId: null,
   closeReason: fn(10623).AppLauncherCloseReason.DISMISSED,
-  initialState: "code",
+  initialState: "apply",
 };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {}

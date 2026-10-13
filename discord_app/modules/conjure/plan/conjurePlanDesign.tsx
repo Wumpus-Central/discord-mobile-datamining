@@ -22,9 +22,20 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanDesign.tsx");
 
 export { CONJURE_PLAN_DESIGN_ALTS };
+export const conjurePlanDesignSurface = function conjurePlanDesignSurface(arg0) {
+  closure_0 = arg0;
+  let found = items.find((item) => conjurePlanTags.planDeclaresSurface(closure_0, item));
+  if (found == null) {
+    found = null;
+  }
+  return found;
+};
 export const conjurePlanDesignAlt = function conjurePlanDesignAlt(proposal) {
   closure_0 = proposal;
-  const found = items.find((item) => conjurePlanTags.planDeclaresSurface(closure_0, item));
+  let found = items.find((item) => conjurePlanTags.planDeclaresSurface(closure_0, item));
+  if (found == null) {
+    found = null;
+  }
   if (null == found) {
     let prop = _modDef3849["3/aHX6"];
   } else {

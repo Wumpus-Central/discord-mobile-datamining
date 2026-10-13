@@ -427,7 +427,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const intl3 = tmp(1126).intl;
             const stringResult2 = intl3.string(tmp(1126).t.ItuabN);
             const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-            const tmp43 = closure_13(tmp(12871).WindowLaunchIcon, obj10);
+            const tmp43 = closure_13(tmp(13363).WindowLaunchIcon, obj10);
             cResult[26] = stringResult2;
             cResult[27] = tmp43;
             let tmp40 = tmp43;
@@ -582,7 +582,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         title: null,
         leading: closure_13(markAsDismissed(6894).ActionSheetCloseButton, { onPress: handleCancel }),
       };
-      obj10.icon = closure_13(markAsDismissed(12871).WindowLaunchIcon, {
+      obj10.icon = closure_13(markAsDismissed(13363).WindowLaunchIcon, {
         size: "sm",
         color: nativeDefault.colors.WHITE,
       });
@@ -622,7 +622,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocalAppDetectionStore];
         const fn = function s() {
-          return appInstalled.isAppInstalled(stateFromStores(14007).DetectableAppNames.ROBLOX);
+          return appInstalled.isAppInstalled(stateFromStores(14344).DetectableAppNames.ROBLOX);
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -734,7 +734,7 @@ export const useShouldShowRobloxConnectionCoachmark = ReactCompilerGating.isReac
   : function useShouldShowRobloxConnectionCoachmark() {
       const items = [LocalAppDetectionStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-        appInstalled.isAppInstalled(stateFromStores(14007).DetectableAppNames.ROBLOX),
+        appInstalled.isAppInstalled(stateFromStores(14344).DetectableAppNames.ROBLOX),
       );
       const tmp2 = hasRoloxAccount(noop.useState(false), 2);
       const first = tmp2[0];

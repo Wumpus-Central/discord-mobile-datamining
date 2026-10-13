@@ -109,11 +109,11 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       closure_21();
       const analyticsLocations = guildId(6852)().analyticsLocations;
       if (cResult[0] !== searchContext) {
-        const searchContextId = tmp(12043).getSearchContextId(searchContext);
+        const searchContextId = tmp(12559).getSearchContextId(searchContext);
         cResult[0] = searchContext;
         cResult[1] = searchContextId;
         let tmp5 = searchContextId;
-        const tmpResult = tmp(12043);
+        const tmpResult = tmp(12559);
       } else {
         tmp5 = cResult[1];
       }
@@ -191,7 +191,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult7 = searchContext(573);
-      const fullscreenPlaceholderCount = searchContext(17395).useFullscreenPlaceholderCount(tmp16);
+      const fullscreenPlaceholderCount = searchContext(17399).useFullscreenPlaceholderCount(tmp16);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
@@ -249,7 +249,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult8 = searchContext(17395);
+      const tmpResult8 = searchContext(17399);
       const stateFromStores2 = searchContext(573).useStateFromStores(tmp19, H);
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         class H {
@@ -407,8 +407,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores4;
       const analyticsLocations = guildId(6852)().analyticsLocations;
       const tmp = closure_21();
-      dependencyMap = searchContext(12043).getSearchContextId(searchContext);
-      let obj = searchContext(12043);
+      dependencyMap = searchContext(12559).getSearchContextId(searchContext);
+      let obj = searchContext(12559);
       let items = [SearchMemberTabStore];
       const stateFromStores = searchContext(573).useStateFromStores(items, () =>
         SearchMemberTabStore.getResults(closure_3),
@@ -419,11 +419,11 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [stateFromStores4];
       const stateFromStores1 = searchContext(573).useStateFromStores(items1, () => stateFromStores4.getChannelId());
       let obj3 = searchContext(573);
-      const fullscreenPlaceholderCount = searchContext(17395).useFullscreenPlaceholderCount({
+      const fullscreenPlaceholderCount = searchContext(17399).useFullscreenPlaceholderCount({
         placeholderHeight,
         numColumns: 1,
       });
-      let obj4 = searchContext(17395);
+      let obj4 = searchContext(17399);
       const obj5 = { placeholderHeight, numColumns: 1 };
       const items2 = [callback];
       const stateFromStores2 = searchContext(573).useStateFromStores(items2, () => {
@@ -595,12 +595,12 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         return items;
       }, items11);
       const obj9 = searchContext(573);
-      const contentContainerStyles = searchContext(17457).useContentContainerStyles();
-      const obj10 = searchContext(17457);
-      const messageTabCountsErrorText = searchContext(17455).useMessageTabCountsErrorText({ searchContext });
+      const contentContainerStyles = searchContext(17461).useContentContainerStyles();
+      const obj10 = searchContext(17461);
+      const messageTabCountsErrorText = searchContext(17459).useMessageTabCountsErrorText({ searchContext });
       if (null != messageTabCountsErrorText) {
         const obj12 = { text: messageTabCountsErrorText };
-        let tmp20 = jsx(tmp2(17387), { text: messageTabCountsErrorText });
+        let tmp20 = jsx(tmp2(17391), { text: messageTabCountsErrorText });
       } else {
         if (stateFromStores4) {
           if (null != stateFromStores3) {
@@ -627,7 +627,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj14 = { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo };
-        tmp20 = jsx(tmp2(17399), { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo });
+        tmp20 = jsx(tmp2(17403), { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo });
       }
       return tmp20;
     };
@@ -707,13 +707,13 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             onUserPress: tmp(1894).dismissGlobalKeyboard,
             disableStickySections: true,
           };
-          let tmp16 = jsx(channelId(17458), {
+          let tmp16 = jsx(channelId(17462), {
             channelId,
             guildId,
             onUserPress: tmp(1894).dismissGlobalKeyboard,
             disableStickySections: true,
           });
-          const tmp15 = channelId(17458);
+          const tmp15 = channelId(17462);
         }
         cResult[7] = channelId;
         cResult[8] = guildId;
@@ -759,13 +759,13 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             onUserPress: tmp(1894).dismissGlobalKeyboard,
             disableStickySections: true,
           };
-          let tmp7 = jsx(channelId(17458), {
+          let tmp7 = jsx(channelId(17462), {
             channelId,
             guildId,
             onUserPress: tmp(1894).dismissGlobalKeyboard,
             disableStickySections: true,
           });
-          const tmp6 = channelId(17458);
+          const tmp6 = channelId(17462);
         }
         return tmp7;
       }
@@ -1009,7 +1009,7 @@ export default noop.memo(
               recipientLimit: stateFromStores2,
               wrapperStyle: tmp4.promoBanner,
             };
-            tmp24 = jsx(tmp5(17460), {
+            tmp24 = jsx(tmp5(17464), {
               location: "GroupDMDetailsMembers",
               memberCount: stateFromStores1,
               recipientLimit: stateFromStores2,
@@ -1115,7 +1115,7 @@ export default noop.memo(
               recipientLimit: tmp11,
               wrapperStyle: tmp.promoBanner,
             };
-            tmp21Result = jsx(tmp2(17460), {
+            tmp21Result = jsx(tmp2(17464), {
               location: "GroupDMDetailsMembers",
               memberCount: stateFromStores1,
               recipientLimit: tmp11,
@@ -1123,7 +1123,7 @@ export default noop.memo(
             });
           }
           obj6.listHeaderContent = tmp21Result;
-          obj4.children = jsx(tmp2(11894), {
+          obj4.children = jsx(tmp2(11699), {
             channelId: searchContext.channelId,
             disableStickySections: true,
             listStyleOverride: tmp.userList,

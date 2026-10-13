@@ -3,15 +3,15 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
-import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread.tsx";
 import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem.tsx";
 import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce.tsx";
+import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const enterDelayMs = fn(11636).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(11960).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5092);
@@ -119,15 +119,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     channel,
                   };
                   merged = Object.assign(suggestedExpressions);
-                  let tmp23 = closure_7(tmp(12145).EmojiSuggestionChatButton, obj7);
+                  let tmp23 = closure_7(tmp(12660).EmojiSuggestionChatButton, obj7);
                 } else {
                   const obj8 = {
                     active: keyboardType === tmp(1629).KeyboardTypes.EXPRESSION,
                     showKeyboardIcon,
                     onPress: onPressExpression,
                   };
-                  tmp23 = closure_7(onPressAction(11862), obj8);
-                  const tmp4Result = onPressAction(11862);
+                  tmp23 = closure_7(onPressAction(11667), obj8);
+                  const tmp4Result = onPressAction(11667);
                 }
                 cResult[12] = channel;
                 cResult[13] = keyboardType;
@@ -224,15 +224,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           channel,
         };
         const merged = Object.assign(suggestedExpressions);
-        let tmp19 = closure_7(tmp(12145).EmojiSuggestionChatButton, obj5);
+        let tmp19 = closure_7(tmp(12660).EmojiSuggestionChatButton, obj5);
       } else {
         const obj6 = {
           active: keyboardType === tmp(1629).KeyboardTypes.EXPRESSION,
           showKeyboardIcon,
           onPress: onPressExpression,
         };
-        tmp19 = closure_7(onPressAction(11862), obj6);
-        const tmp3Result = onPressAction(11862);
+        tmp19 = closure_7(onPressAction(11667), obj6);
+        const tmp3Result = onPressAction(11667);
       }
       items1[1] = tmp19;
       obj3.children = items1;
@@ -301,7 +301,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 channel,
                 onPress,
                 styleButton: "Set",
-                shouldShowThread: "Bouvet Island",
+                shouldShowThread: "parasol",
               };
               const tmp15 = React5(ChatInputActionButtonGiftOrThreadDefault, obj4);
               cResult[12] = channel;
@@ -356,7 +356,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         channel,
         onPress,
         styleButton: "Set",
-        shouldShowThread: "Bouvet Island",
+        shouldShowThread: "parasol",
       });
       return React5(ReanimatedRexportDefault.View, obj2);
     };

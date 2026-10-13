@@ -261,7 +261,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = tmp16;
       }
       const obj20 = { children: null };
-      const items5 = [tmp7, tmp8, closure_6(guildId(15531).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+      const items5 = [tmp7, tmp8, closure_6(guildId(15846).GuildRoleSubscriptionMemberPreview, { guildId, role })];
       obj20.children = items5;
       const tmp14 = closure_8(closure_7, obj20);
       cResult[3] = guildId;
@@ -294,7 +294,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled()
       const items = [
         closure_6(closure_10, obj7),
         closure_6(guildId(1200).Spacer, { size: 8 }),
-        closure_6(guildId(15531).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+        closure_6(guildId(15846).GuildRoleSubscriptionMemberPreview, { guildId, role }),
       ];
       obj6.children = items;
       const items1 = [closure_8(closure_7, obj6), , ,];

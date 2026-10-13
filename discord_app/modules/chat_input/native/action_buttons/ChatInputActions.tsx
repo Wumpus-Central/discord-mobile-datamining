@@ -10,8 +10,8 @@ import PollsIcon from "../../../../design/components/Icon/native/redesign/genera
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import CalendarPlusIcon from "../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
-import ThreadPlusIcon from "../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
 import ChatInputActionButtonDefault from "ChatInputActionButton.tsx";
+import ThreadPlusIcon from "../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
 import MediaKeyboardButtonIcon from "../../../media_keyboard/native/MediaKeyboardButtonIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -369,7 +369,7 @@ class ChatInputActions {
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(11636);
+const ChatInputConstants = fn(11960);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);

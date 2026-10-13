@@ -44,7 +44,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp7;
         }
       }
-      const tmp8 = jsx(onPressRow(11853).AppLauncherList, {
+      const tmp8 = jsx(onPressRow(11658).AppLauncherList, {
         contentContainerStyle: tmp4.emptyState,
         data: tmp5,
         renderItem: tmp6,
@@ -78,7 +78,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [onPressRow.query];
       obj.data = items;
-      return jsx(onPressRow(11853).AppLauncherList, {
+      return jsx(onPressRow(11658).AppLauncherList, {
         contentContainerStyle: closure_6().emptyState,
         data: null,
         renderItem(label) {

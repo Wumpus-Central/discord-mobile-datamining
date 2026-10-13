@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   obj14.label = tmp21(tmp(1126).t["0dOFq+"]);
-                  const obj15 = { IconComponent: tmp(11839).ArrowsUpDownIcon };
+                  const obj15 = { IconComponent: tmp(11644).ArrowsUpDownIcon };
                   obj14.icon = closure_4(tmp(6895).ActionSheetRow.Icon, obj15);
                   obj14.onPress = function onPress() {
                     onClose();
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj10 = { label: null, icon: null, onPress: null };
           const intl2 = tmp5(1126).intl;
           obj10.label = intl2.string(tmp5(1126).t["0dOFq+"]);
-          const obj11 = { IconComponent: tmp5(11839).ArrowsUpDownIcon };
+          const obj11 = { IconComponent: tmp5(11644).ArrowsUpDownIcon };
           obj10.icon = closure_4(tmp5(6895).ActionSheetRow.Icon, obj11);
           obj10.onPress = function onPress() {
             onClose();

@@ -1,8 +1,8 @@
 // discord_app/modules/channel_list_v2/native/RedesignChannelList.tsx
 import c from "../../../../_runtime/00576_c.js";
 import ChannelListState from "../../guild_sidebar/ChannelListState.tsx";
-import TTIFirstContentfulPaint from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
 import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
+import TTIFirstContentfulPaint from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
 import useHomeDrawerGesture from "../../home_drawer/native/useHomeDrawerGesture.tsx";
 import RedesignGuildHeaderDefault from "RedesignGuildHeader.tsx";
 import registerSidebarVisibilityMethods from "../../guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx";
@@ -818,7 +818,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmpResult6.isFavoritesGuildId(tmp6)) {
               const _Symbol = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmpResult7 = tmp(16728);
+                const tmpResult7 = tmp(17032);
                 cResult[14] = tmpResult7;
                 let tmp30 = tmpResult7;
               } else {
@@ -924,7 +924,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               obj4.guild = stateFromStores;
               obj4.selectedChannelId = selectedChannelId;
               obj4.selectedVoiceChannelId = stateFromStores1;
-              return closure_16(tmp2(16728).default, obj4);
+              return closure_16(tmp2(17032).default, obj4);
             } else {
               if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
                 const obj5 = { style: merged.style, guildId: selectedGuildId };

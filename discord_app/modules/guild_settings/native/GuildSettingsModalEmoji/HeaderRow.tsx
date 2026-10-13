@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _objectDestructuringEmpty from "../../../../../_runtime/11939__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../../_runtime/12458__objectDestructuringEmpty.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -53,7 +53,7 @@ function HeaderRow(guild) {
             let originalMd5;
             asyncGeneratorStep(true);
             _slicedToArray(null);
-            React5(guild(upload[15]).v4());
+            View(guild(upload[15]).v4());
             c5 = 1;
             const obj7 = guild(upload[15]);
             const obj4 = { guild_id: id.id, upload_id };
@@ -165,7 +165,7 @@ function HeaderRow(guild) {
       }
     }
   };
-  const tmp = closure_17();
+  const tmp = closure_16();
   const uploadListItem = tmp;
   [tmp3, c4] = noop.useState(false);
   const tmp2 = _slicedToArray(noop.useState(false), 2);
@@ -220,59 +220,54 @@ function HeaderRow(guild) {
     const intl5 = tmp7(1126).intl;
     obj8.text = intl5.string(tmp7(1126).t["DU0dy/"]);
     obj8.disabled = uploadDisabled;
-    canCreateExpressions = closure_15(tmp7(5379).Button, obj8);
+    canCreateExpressions = closure_14(tmp7(5379).Button, obj8);
   }
   const items1 = [canCreateExpressions, ,];
   let tmp13Result = null != tmp5;
   if (tmp13Result) {
     let obj9 = { style: tmp.errorText, variant: "text-sm/medium", color: "text-feedback-critical", children: tmp5 };
-    tmp13Result = closure_15(tmp7(5088).Text, obj9);
+    tmp13Result = closure_14(tmp7(5088).Text, obj9);
   }
   const obj10 = { children: null };
   items1[1] = tmp13Result;
   let obj11 = { style: tmp.uploadInstructionsContainer, children: null };
   const items2 = [
-    closure_15(guild(5088).Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
+    closure_14(guild(5088).Text, { variant: "text-sm/medium", color: "text-muted", children: description }),
     ,
   ];
   const obj12 = { variant: "text-xs/bold", color: "text-muted", style: tmp.uploadInstructionsHeading, children: null };
   const intl6 = tmp7(1126).intl;
   const stringResult2 = intl4.string(guild(1126).t["8Vr5Qd"]);
   obj12.children = intl6.string(guild(1126).t.jrXfyw).toUpperCase();
-  items2[1] = closure_15(guild(5088).Text, obj12);
-  items2[2] = closure_15(closure_8, {
+  items2[1] = closure_14(guild(5088).Text, obj12);
+  const str = intl6.string(guild(1126).t.jrXfyw);
+  items2[2] = closure_14(c7, {
     style: tmp.uploadInstructionsList,
-    data: items,
-    keyExtractor(id) {
-      return id.id;
-    },
-    renderItem: function renderUploadInstructionsListItem(item) {
-      item = item.item;
+    children: items.map(function renderUploadInstructionsListItem(accessibilityLabel) {
       const obj = {
         style: uploadListItem.uploadListItem,
         variant: "text-xs/medium",
         color: "text-muted",
-        accessibilityLabel: item.text,
+        accessibilityLabel: accessibilityLabel.text,
         children: null,
       };
-      const items = ["\u2022", " ", item.text];
+      const items = ["\u2022", " ", accessibilityLabel.text];
       obj.children = items;
-      return closure_2_14(Text_Text.Text, obj);
-    },
+      return map1(Text_Text.Text, obj, accessibilityLabel.id);
+    }),
   });
   obj11.children = items2;
-  items1[2] = closure_14(c7, obj11);
+  items1[2] = closure_13(c7, obj11);
   obj7.children = items1;
-  obj10.children = closure_14(c7, obj7);
-  return closure_15(closure_16, obj10);
+  obj10.children = closure_13(c7, obj7);
+  return closure_14(closure_15, obj10);
 }
-get_ActivityIndicator = fn(17);
-({ View: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
+const View = fn(17).View;
 const Constants = fn(1085);
-({ AbortCodes: c10, AnalyticEvents: closure_11, UPLOAD_SMALL_SIZE: closure_12 } = Constants);
+({ AbortCodes: closure_9, AnalyticEvents: c10, UPLOAD_SMALL_SIZE: closure_11 } = Constants);
 const EMOJI_MAX_FILESIZE_KB = fn(1393).EMOJI_MAX_FILESIZE_KB;
 const jsxProd = fn(21);
-({ jsxs: closure_14, jsx: closure_15, Fragment: closure_16 } = jsxProd);
+({ jsxs: map1, jsx: closure_14, Fragment: closure_15 } = jsxProd);
 const createStyles = fn(5092);
 let obj2 = {
   uploadInstructionsContainer: { marginTop: nativeDefault.space.PX_12 },
@@ -291,7 +286,7 @@ let obj5 = { paddingTop: nativeDefault.space.PX_16 };
 obj2.errorText = { marginTop: nativeDefault.space.PX_8 };
 let obj6 = { marginTop: nativeDefault.space.PX_8 };
 obj2.uploadListItem = { paddingRight: nativeDefault.space.PX_8 };
-let closure_17 = createStyles.createStyles(obj2);
+let closure_16 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj7 = { paddingRight: nativeDefault.space.PX_8 };
 const size = fn(2);
@@ -331,7 +326,7 @@ export const ConnectedHeaderRow = ReactCompilerGating.isReactCompilerEnabled()
         return tmp13;
       }
       const merged1 = Object.assign(tmp4);
-      const tmp15 = value2(HeaderRow, { isUploading: stateFromStores });
+      const tmp15 = closure_1_14(HeaderRow, { isUploading: stateFromStores });
       cResult[4] = stateFromStores;
       cResult[5] = tmp4;
       cResult[6] = tmp15;
@@ -347,6 +342,6 @@ export const ConnectedHeaderRow = ReactCompilerGating.isReactCompilerEnabled()
         const items = [GuildSettingsEmojiStore];
         const obj2 = { isUploading: initialize.useStateFromStores(items, () => uploadingEmoji.isUploadingEmoji()) };
         const merged1 = Object.assign(merged);
-        return value2(HeaderRow, obj2);
+        return closure_1_14(HeaderRow, obj2);
       }
     };

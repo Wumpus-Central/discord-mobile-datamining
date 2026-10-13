@@ -29,7 +29,7 @@ let obj3 = {
   channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" },
   channelTraitIcon: null,
 };
-let obj4 = { opacity: fn(11760).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+let obj4 = { opacity: fn(11562).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1382);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

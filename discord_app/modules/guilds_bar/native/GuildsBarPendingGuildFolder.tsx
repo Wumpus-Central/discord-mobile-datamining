@@ -187,9 +187,9 @@ export default noop.memo(
     : function GuildsBarPendingGuildFolder(id) {
         id = id.id;
         ({ expanded, childNodes } = id);
-        let obj = id(16751);
+        let obj = id(17055);
         importDefault = usePendingFolderGuildIdsDefault();
-        const guildsBarAnimatedWrapperStyles = id(16751).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = id(17055).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: false,
         });
@@ -244,10 +244,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: 2003,
-          config: null,
+          preventClipping: "heading-sm/semibold",
+          config: "mobile-text-heading-primary",
           externalChildren: null,
-          children: false,
+          children: "xs",
         };
         const obj3 = id(4850);
         obj4.id = "" + id;
@@ -262,10 +262,10 @@ export default noop.memo(
         let tmp8Result = null;
         if (expanded) {
           const obj5 = { folderId: id, totalItems: childNodes.length };
-          tmp8Result = jsx(tmp(16750).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+          tmp8Result = jsx(tmp(17054).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
         }
         obj4.externalChildren = tmp8Result;
-        obj4.children = jsx(id(13129).HourglassIcon, {});
+        obj4.children = jsx(id(11508).HourglassIcon, {});
         return jsx(GuildsBarAnimatedItemWrapperDefault, {
           id: null,
           accessibilityActions: null,
@@ -278,10 +278,10 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: 2003,
-          config: null,
+          preventClipping: "heading-sm/semibold",
+          config: "mobile-text-heading-primary",
           externalChildren: null,
-          children: false,
+          children: "xs",
         });
       },
 );

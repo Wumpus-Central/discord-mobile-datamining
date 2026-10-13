@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
       ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
       const rowContainer = closure_8();
-      const cardLayout = products(16234).useCardLayout();
+      const cardLayout = products(16541).useCardLayout();
       const columns = cardLayout.columns;
       const cardWidth = cardLayout.cardWidth;
       const items = [products, columns];
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         contentContainerStyle: null,
         children: null,
       };
-      let obj = products(16234);
+      let obj = products(16541);
       obj2.contentContainerStyle = {
         gap: products(8968).COLLECTIBLES_SHOP_CARD_GAP,
         paddingTop,

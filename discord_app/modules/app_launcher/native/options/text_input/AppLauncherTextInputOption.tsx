@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
       let obj = onChangeText(10622);
-      const animationDelayedAutoFocus = onChangeText(11856).useAnimationDelayedAutoFocus(autoFocus, () => {
+      const animationDelayedAutoFocus = onChangeText(11661).useAnimationDelayedAutoFocus(autoFocus, () => {
         const current = ref.current;
         if (current != null) {
           current.focus();
@@ -363,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (obj.useAppLauncherContext().entrypoint === onChangeText(10623).AppLauncherEntrypoint.VOICE) {
         let TextInput = tmp4(1200).TextInput;
       } else {
-        TextInput = guildId(11861);
+        TextInput = guildId(11666);
       }
       const items3 = [tmp.container, ,];
       if (hasError) {
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           },
         };
-        tmp14Result = tmp14(guildId(11862), obj5);
+        tmp14Result = tmp14(guildId(11667), obj5);
       }
       items4[1] = tmp14Result;
       obj3.children = items4;

@@ -16,7 +16,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const SuggestedFriendSource = fn(12424).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12934).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(5092);

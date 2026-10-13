@@ -120,7 +120,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             avatarDecoration: tmp9,
             animate: !stateFromStores,
             autoStatusCutout: null,
-            "aria-hidden": 11.5,
+            "aria-hidden": "SOURCE",
           };
           const tmp25 = timestampProducer(native.Avatar, obj5);
           cResult[12] = tmp9;
@@ -202,7 +202,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           avatarDecoration,
           animate: !stateFromStores,
           autoStatusCutout: null,
-          "aria-hidden": 11.5,
+          "aria-hidden": "SOURCE",
         };
         return timestampProducer(native.Avatar, obj);
       }, items1);

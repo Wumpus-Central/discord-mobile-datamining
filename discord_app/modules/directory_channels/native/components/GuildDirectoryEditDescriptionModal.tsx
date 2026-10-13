@@ -215,7 +215,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { value, done: true };
                 return obj4;
               } else {
-                const obj3 = tmp4(12014);
+                const obj3 = tmp4(12530);
                 dependencyMap = 1;
                 c4 = 1;
                 const obj5 = {
@@ -232,7 +232,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { value, done: true };
               return obj6;
             } else {
-              closure_1(12012).close();
+              closure_1(12528).close();
               c4 = 3;
               return { value: "IconComponent", done: null };
             }

@@ -840,7 +840,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onInviteSent: callback2,
             onPressAvatar: callback1,
           };
-          tmp17Result2 = closure_13(tmp2(17772), obj10);
+          tmp17Result2 = closure_13(tmp2(17776), obj10);
         }
         const obj11 = { children: null };
         items4[1] = tmp17Result2;

@@ -24,8 +24,8 @@ let obj2 = {
   conjureTile: null,
 };
 let size = {
-  width: fn(17194).MESSAGE_AVATAR_SIZE,
-  height: fn(17194).MESSAGE_AVATAR_SIZE,
+  width: fn(11810).MESSAGE_AVATAR_SIZE,
+  height: fn(11810).MESSAGE_AVATAR_SIZE,
   borderRadius: nativeDefault.radii.sm,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,

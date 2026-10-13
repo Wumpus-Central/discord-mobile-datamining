@@ -3,9 +3,9 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import _modDef4702 from "../../../../../_runtime/metro/04702__.js";
 import DownloadIcon from "../../../../design/components/Icon/native/redesign/generated/DownloadIcon.tsx";
+import RefreshIcon2 from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
 import MobileNativeUpdateUtilsAll from "../../../mobile_native_updater/MobileNativeUpdateUtils.tsx";
 import useIsStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
-import RefreshIcon2 from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
 import MobileNativeUpdateStore from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
 
 require = fn;

@@ -54,7 +54,7 @@ const NativePermissionTypes = fn(7483).NativePermissionTypes;
 let closure_22 = fn(10863).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(7260).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5071).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(14073).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(14410).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(7993).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -211,7 +211,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj20 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
+      const obj20 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: null };
       const obj25 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj20.navigationSettings = obj25;
       rootNavigationRef1(inviteCode[31])(obj20);
@@ -302,7 +302,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(14085, dependencyMap.paths),
+                    asyncRequireImpl(14422, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );

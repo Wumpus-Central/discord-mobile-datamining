@@ -879,15 +879,15 @@ export const ShopCategory = ReactCompilerGating.isReactCompilerEnabled() ? (func
   dependencyMap = category(1503).useNavigation();
   const unpublishedAt = category.unpublishedAt;
   let obj = category(1503);
-  const filteredAndSortedProducts = category(15351).useFilteredAndSortedProducts({ products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive });
+  const filteredAndSortedProducts = category(15668).useFilteredAndSortedProducts({ products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive });
   const mobileBannerUrl = category.mobileBannerUrl;
-  let obj2 = category(15351);
+  let obj2 = category(15668);
   let obj3 = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
-  const collectiblesShopDeepLinkProps = category(16208).useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
+  const collectiblesShopDeepLinkProps = category(16515).useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
   const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
   const ref = unpublishedAt.useRef(null);
-  const obj4 = category(16208);
+  const obj4 = category(16515);
   let items = [category.storeListingId];
   const recyclingState = category(8625).useRecyclingState(null, items, () => {
     const current = ref.current;
@@ -900,9 +900,9 @@ export const ShopCategory = ReactCompilerGating.isReactCompilerEnabled() ? (func
   if (tmp9) {
     tmp9 = productIndex > 0;
   }
-  const obj7 = category(16212);
-  const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({ shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(16212).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId });
-  const obj8 = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(16212).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
+  const obj7 = category(16519);
+  const scrollToInitialIndexOnce = obj7.useScrollToInitialIndexOnce({ shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(16519).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId });
+  const obj8 = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: category(16519).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
   collectiblesAnalyticsContext = category(8971).useCollectiblesAnalyticsContext();
   const tmp4Result = category(8971);
   isInImprovedMobileShopLoading = category(9079).useIsInImprovedMobileShopLoading();

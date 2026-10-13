@@ -217,7 +217,7 @@ export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
   DispatcherDefault.dispatch({
     type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES",
     pendingBadgeDisplayOrder: "code",
-    pendingBadgeHiddenBadges: "width",
+    pendingBadgeHiddenBadges: "top",
   });
 };
 export const hasPendingBadgeSettings = function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {

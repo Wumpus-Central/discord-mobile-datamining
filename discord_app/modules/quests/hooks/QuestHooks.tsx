@@ -1765,11 +1765,11 @@ let tmp17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       if (cResult[3] !== id) {
-        const result = tmp(12966).isVideoQuestProgressing(id);
+        const result = tmp(13458).isVideoQuestProgressing(id);
         cResult[3] = id;
         cResult[4] = result;
         let tmp8 = result;
-        const tmpResult2 = tmp(12966);
+        const tmpResult2 = tmp(13458);
       } else {
         tmp8 = cResult[4];
       }
@@ -5000,7 +5000,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
                   c1 = 3;
                   c4 = 1;
                   const obj6 = {
-                    value: previewAdCreativeIds(12973).fetchBountyPreview(
+                    value: previewAdCreativeIds(13465).fetchBountyPreview(
                       arr,
                       previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE,
                     ),
@@ -5012,7 +5012,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
               c1 = 2;
               c4 = 1;
               const obj7 = {
-                value: previewAdCreativeIds(12973).fetchQuestHomeBounties(
+                value: previewAdCreativeIds(13465).fetchQuestHomeBounties(
                   previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE,
                 ),
                 done: false,

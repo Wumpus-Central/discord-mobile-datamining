@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureUtils from "../../shared/ConjureUtils.tsx";
-import ConjureActionCreators from "../ConjureActionCreators.tsx";
-import ConjureProjectIconDefault from "ConjureProjectIcon.tsx";
-import MentionsBadgeDefault from "../../../guild_sidebar/native/MentionsBadge.tsx";
 import conjureStandaloneScenes from "../../builder/native/conjureStandaloneScenes.tsx";
+import ConjureActionCreators from "../ConjureActionCreators.tsx";
 import ConjureCreateSheet from "../../create/native/ConjureCreateSheet.tsx";
 import ConjureRemixSheet from "../../remix/native/ConjureRemixSheet.tsx";
 import ConjureSettingsSheet from "../../settings/native/ConjureSettingsSheet.tsx";
+import ConjureProjectIconDefault from "ConjureProjectIcon.tsx";
+import MentionsBadgeDefault from "../../../guild_sidebar/native/MentionsBadge.tsx";
 import ConjureHeaderIconButtonDefault from "../../shared/native/ConjureHeaderIconButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingsProtoStore from "../../../user_settings/UserSettingsProtoStore.tsx";
@@ -79,7 +79,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ({ onPress, onMore } = project);
       const tmp4 = closure_11(0);
       const obj = project(576);
-      const conjureProjectBadge = project(11414).useConjureProjectBadge(project.id);
+      const conjureProjectBadge = project(11208).useConjureProjectBadge(project.id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureProjectStore];
         cResult[0] = items;
@@ -101,7 +101,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const obj2 = project(11414);
+      const obj2 = project(11208);
       const stateFromStores = project(504).useStateFromStores(first, tmp8, tmp9);
       if (cResult[4] !== project.updated_at) {
         let formatToPlainStringResult;
@@ -271,8 +271,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       project = project.project;
       const onMore = project.onMore;
       const tmp = closure_11(0);
-      const conjureProjectBadge = project(11414).useConjureProjectBadge(project.id);
-      const obj = project(11414);
+      const conjureProjectBadge = project(11208).useConjureProjectBadge(project.id);
+      const obj = project(11208);
       const items = [ConjureProjectStore];
       const items1 = [project.id];
       const stateFromStores = project(504).useStateFromStores(
@@ -364,29 +364,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       navigation = guildId(1503).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureProjectStore];
-        class P {
-          constructor() {
-            return closure_1_8.getOwnedProjects();
-          }
-        }
+        const fn = function y() {
+          return ConjureProjectStore.getOwnedProjects();
+        };
         const items1 = [];
         cResult[0] = items;
-        cResult[1] = P;
+        cResult[1] = fn;
         cResult[2] = items1;
         tmp6 = items;
+        tmp7 = fn;
         tmp8 = items1;
       } else {
         [tmp6, tmp7, tmp8] = cResult;
       }
       let obj2 = guildId(1503);
-      const stateFromStoresArray = guildId(504).useStateFromStoresArray(tmp6, P, tmp8);
+      const stateFromStoresArray = guildId(504).useStateFromStoresArray(tmp6, tmp7, tmp8);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ConjureProjectStore];
-        class P {
-          constructor() {
-            return closure_1_8.getOwnedProjects();
-          }
-        }
         cResult[3] = items2;
         let tmp10 = items2;
       } else {
@@ -399,11 +393,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items3 = [guildId];
-        class P {
-          constructor() {
-            return closure_1_8.getOwnedProjects();
-          }
-        }
         cResult[4] = guildId;
         cResult[5] = I;
         cResult[6] = items3;
@@ -425,17 +414,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items4 = [ConjureProjectStore];
-        class P {
-          constructor() {
-            return closure_1_8.getOwnedProjects();
-          }
-        }
+        const fn2 = function f() {
+          return ConjureProjectStore.getProjectsFetchState();
+        };
         const items5 = [];
         cResult[7] = items4;
-        cResult[8] = tmp18;
+        cResult[8] = fn2;
         cResult[9] = items5;
         let tmp17 = items5;
-        let tmp16 = tmp18;
+        let tmp16 = fn2;
         const tmp15 = items4;
       } else {
         class I {
@@ -462,13 +449,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[13] = guildId;
-        class P {
-          constructor() {
-            return closure_1_8.getOwnedProjects();
-          }
-        }
-        cResult[14] = tmp20;
-        let found = tmp20;
+        cResult[14] = tmp19;
+        let found = tmp19;
       } else {
         class I {
           constructor() {
@@ -493,11 +475,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[15] = M;
-        class P {
-          constructor() {
-            return closure_1_8.getOwnedProjects();
-          }
-        }
       } else {
         class M {
           constructor(arg0, arg1) {
@@ -516,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       found = stateFromStoresArray.filter(found);
-      const sorted = found.sort(tmp21);
+      const sorted = found.sort(M);
       cResult[10] = stateFromStoresArray;
       cResult[11] = guildId;
       cResult[12] = sorted;
@@ -664,15 +641,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items11 = [navigation, callback1];
       const effect = stateFromStoresArray1.useEffect(() => {
         navigation.setOptions({
-          headerRight() {
+          headerRight(arg0) {
+            ({ tintColor, pressColor, pressOpacity } = arg0);
             const obj = {
-              IconComponent: guildId(stateFromStoresArray[23]).PlusLargeIcon,
+              tintColor,
+              pressColor,
+              pressOpacity,
               onPress,
+              displayMode: "minimal",
+              backImage(color) {
+                return closure_1_9(closure_1_0(closure_1_2[23]).PlusMediumIcon, { size: "md", color: color.tintColor });
+              },
               accessibilityLabel: null,
             };
             const intl = guildId(stateFromStoresArray[24]).intl;
             obj.accessibilityLabel = intl.string(guildId(stateFromStoresArray[24]).t.CumH4u);
-            return closure_2_9(navigation(stateFromStoresArray[22]), obj);
+            return closure_2_9(guildId(stateFromStoresArray[22]).HeaderBackButton, obj);
           },
         });
       }, items11);

@@ -59,3 +59,41 @@ export const conjureSettingBaseline = function conjureSettingBaseline(found, mem
   }
   return tmp;
 };
+export const conjureSecretsSubmission = function conjureSecretsSubmission(memo, secrets) {
+  if (0 === Object.keys(secrets).length) {
+    return {};
+  } else {
+    const obj2 = {};
+    const _Object2 = Object;
+    function _loop(item10009) {
+      memo = item10009;
+      const found = memo.find((key) => key.key === closure_0);
+      let hosts;
+      if (found != null) {
+        hosts = found.hosts;
+      }
+      let tmp3 = null != hosts;
+      if (tmp3) {
+        tmp3 = hosts.length > 0;
+      }
+      if (tmp3) {
+        obj2[item10009] = hosts;
+      }
+    }
+    const keys = Object.keys(secrets);
+    for (const item10009 of keys) {
+      let _loopResult = _loop(item10009);
+      continue;
+    }
+    const obj = { secrets };
+    const _Object = Object;
+    if (Object.keys(obj2).length > 0) {
+      const obj3 = { hosts: obj2 };
+      let obj4 = obj3;
+    } else {
+      obj4 = {};
+    }
+    const merged = Object.assign(obj4);
+    return obj;
+  }
+};

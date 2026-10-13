@@ -83,7 +83,7 @@ export default {
     let obj2 = { guildId: guild_id, location: "3ad37d_1" };
     const tmp4Result = tmp4(5895);
     const isStageVideoEnabledResult = tmp4(5895).isStageVideoEnabled(guild_id);
-    let result = tmp4(17596).canCurrentUserManageMessageFilters(guild_id);
+    let result = tmp4(17600).canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;
     set = new Set();
@@ -133,13 +133,13 @@ export default {
       items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1126).t["rrh/W6"]));
       if (tmp.showStageChannelPermissions) {
         const intl28 = tmp4(1126).intl;
-        const items1 = [obj33(17597).generateChannelStageSection(tmp3, intl28.string(tmp4(1126).t.yniauk))];
+        const items1 = [obj33(17601).generateChannelStageSection(tmp3, intl28.string(tmp4(1126).t.yniauk))];
         let items2 = items1;
-        const obj33Result = obj33(17597);
+        const obj33Result = obj33(17601);
       } else {
         items2 = [];
       }
-      obj33 = obj33(17597);
+      obj33 = obj33(17601);
       const intl29 = tmp4(1126).intl;
       channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1126).t.b8lplT));
       items[HermesBuiltin.arraySpread(items2, 5)] = channelEventsSection;
@@ -365,7 +365,7 @@ export default {
       }
       return mapped;
     }
-    const tmp4Result2 = tmp4(17596);
+    const tmp4Result2 = tmp4(17600);
   },
   generateGuildPermissionSpec(features) {
     set = new Set();

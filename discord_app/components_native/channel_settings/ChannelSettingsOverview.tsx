@@ -82,7 +82,7 @@ const ChannelRecord = fn(2069);
   GUILD_WEBHOOK_CHANNEL_TYPES: closure_14,
 } = ChannelRecord);
 const isGuildNSFW = fn(2083).isGuildNSFW;
-let closure_25 = fn(17568).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(17572).ChannelSettingsAutoFocusElement;
 const Constants = fn(1085);
 ({
   AnalyticEvents: closure_26,
@@ -567,7 +567,7 @@ class ChannelSettingsOverview extends PureComponent {
       closure_128_6 = tmp2(6946).conjureChannelAppId(closure_128_1);
       if (tmp106 != guild2) {
         if (tmp106 != closure_128_6) {
-          const conjureServerApp = tmp2(11408).loadConjureServerApp(guild2.id, closure_128_6);
+          const conjureServerApp = tmp2(12202).loadConjureServerApp(guild2.id, closure_128_6);
           tmp106 = closure_128_5;
           conjureServerApp.then((app) => {
             if (null == app) {
@@ -579,7 +579,7 @@ class ChannelSettingsOverview extends PureComponent {
             }
             return tmp6;
           }, closure_128_5);
-          tmp2(11408);
+          tmp2(12202);
         }
       }
       closure_128_5();
@@ -967,7 +967,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(17573).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(17577).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1295,7 +1295,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj7.value = Math.min(channel.userLimit, tmp10);
       obj7.maximumValue = tmp10;
       obj7.onValueChange = this.handleUserLimitChange;
-      items2[1] = closure_1_47(tmp7(14293).Slider, obj7);
+      items2[1] = closure_1_47(tmp7(14614).Slider, obj7);
       obj3.children = items2;
       obj2.children = __V(tmp7(6182).Card, obj3);
       items.push(closure_1_47(tmp7(6265).TableRowGroup, obj2, "channel-user-limit"));
@@ -1480,7 +1480,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     const obj4 = { text: stringResult };
     obj3.trailing = closure_47(self(6180).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(2075).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(17580).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(17584).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
@@ -1843,7 +1843,7 @@ prototype["renderCategory"] = function renderCategory() {
         const obj = self(5421);
       }
       const obj2 = {
-        icon: closure_47(tmp7(16590).FolderPlusIcon, {}),
+        icon: closure_47(tmp7(16895).FolderPlusIcon, {}),
         label: null,
         trailing: null,
         arrow: null,

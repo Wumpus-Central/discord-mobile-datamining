@@ -18,7 +18,7 @@ const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT
   LAUNCH_PAD_PULL_TAB_WIDTH,
   LAUNCH_PAD_SPRING_CONFIG: closure_11,
 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(11636).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11960).CHAT_INPUT_HEIGHT;
 const jsx = fn(21).jsx;
 const createStyles = fn(5092);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };

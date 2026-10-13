@@ -156,7 +156,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(5400).AST_KEY.MENTION] = obj15;
   const obj16 = {};
   const merged13 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 5400).AST_KEY.CHANNEL_MENTION]);
-  obj16.react = num(11768).inlineChannelMentionReact;
+  obj16.react = num(11570).inlineChannelMentionReact;
   obj[num(5400).AST_KEY.CHANNEL_MENTION] = obj16;
   const obj17 = {};
   const merged14 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 5400).AST_KEY.ATTACHMENT_LINK]);
@@ -172,7 +172,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj18.react = defaultReactFn;
   obj[num(5400).AST_KEY.SOUNDBOARD] = obj18;
   obj[num(5400).AST_KEY.GUILD] = { react: defaultReactFn };
-  const obj19 = { react: num(11768).createInlineChannelReact("\u{1F4AC}") };
+  const obj19 = { react: num(11570).createInlineChannelReact("\u{1F4AC}") };
   obj[num(5400).AST_KEY.CHANNEL] = obj19;
   const obj21 = {};
   const merged16 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 5400).AST_KEY.COMMAND_MENTION]);
@@ -209,7 +209,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(5400).AST_KEY.SUBTEXT] = { react: defaultReactFn };
   return obj;
 }
-const MUTED_OPACITY_CONTENT = fn(11760).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11562).MUTED_OPACITY_CONTENT;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const regExp = new RegExp(fn(5087).ANSI_CONTROL_SEQUENCE_RE, "g");

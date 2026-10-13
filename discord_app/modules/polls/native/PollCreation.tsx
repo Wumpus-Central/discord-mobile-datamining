@@ -25,7 +25,7 @@ require = fn;
 function PollDurationSelectionRow(selectedDuration) {
   selectedDuration = selectedDuration.selectedDuration;
   const onChange = selectedDuration.onChange;
-  const tmp = onChange(11910)()[selectedDuration];
+  const tmp = onChange(11719)()[selectedDuration];
   let obj = {
     label: null,
     accessibilityLabel: null,
@@ -42,7 +42,7 @@ function PollDurationSelectionRow(selectedDuration) {
   obj.accessibilityHint = intl3.string(selectedDuration(1126).t.A4PJ1o);
   obj.onPress = function handlePollDurationPress() {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11911, dependencyMap.paths), closure_2_8, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11720, dependencyMap.paths), closure_2_8, {
       selectedDuration,
       onChange,
     });
@@ -465,7 +465,7 @@ export default function PollCreation(channel) {
       intl.formatToPlainString(channel(1126).t.BByGU4, { number: indexToRemove.indexToRemove + 1 }),
     );
   }, []);
-  const tmp11 = onCancel(11912)(channel, callback, callback1);
+  const tmp11 = onCancel(11721)(channel, callback, callback1);
   answers = tmp11.answers;
   ({ question: c4, allowMultiSelect } = tmp11);
   ({
@@ -482,8 +482,8 @@ export default function PollCreation(channel) {
   const setShouldFocusOnInvalidField = tmp11.setShouldFocusOnInvalidField;
   ({ handleQuestionChange, handleSubmitPoll, duration, setDuration } = tmp11);
   let obj2 = channel(9294);
-  closure_18 = channel(11917).useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
-  let obj3 = channel(11917);
+  closure_18 = channel(11739).useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
+  let obj3 = channel(11739);
   channel(6207).useNavigatorBackPressHandler(() => {
     if (obj.isPollCreationEmpty(c4, answers)) {
       closure_18();
@@ -499,7 +499,7 @@ export default function PollCreation(channel) {
     }
     return flag;
   });
-  const obj6 = onCancel(11918)({
+  const obj6 = onCancel(11740)({
     onAddAnswer() {
       handleAddAnswer();
     },
@@ -565,7 +565,7 @@ export default function PollCreation(channel) {
       TEXT_BRAND = tmp(587).colors.TEXT_BRAND;
     }
     const obj12 = { color: TEXT_BRAND };
-    obj11.icon = tmp14(tmp4(11919).CalendarPlusIcon, obj12);
+    obj11.icon = tmp14(tmp4(11741).CalendarPlusIcon, obj12);
     obj11.onPress = function onPress() {
       const obj2 = { onSelect, currentTimestamp: scheduledTimestamp, onClear: null, entryPoint: null, channelId: null };
       let fn;
@@ -604,8 +604,8 @@ export default function PollCreation(channel) {
       anyErrorMessage = createPollError.getAnyErrorMessage();
     }
     const obj15 = { children: anyErrorMessage };
-    tmp14Result = tmp14(tmp(11921), obj15);
-    let tmpResult = tmp(11921);
+    tmp14Result = tmp14(tmp(11743), obj15);
+    let tmpResult = tmp(11743);
   }
   const items6 = [tmp14Result, ,];
   const obj16 = {

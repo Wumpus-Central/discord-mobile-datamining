@@ -2150,7 +2150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [linkCode, userId];
       const memo = noop.useMemo(() => getScreens(userId, linkCode), items);
       const obj = {
-        initialRouteName: userId(11531).FamilyCenterModalRequestSections.PREREQ_LOADING,
+        initialRouteName: userId(12284).FamilyCenterModalRequestSections.PREREQ_LOADING,
         screens: memo,
         headerBackTitle: null,
       };

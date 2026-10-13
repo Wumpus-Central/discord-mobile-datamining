@@ -263,7 +263,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj2 = { channel: stateFromStores, actions: null };
-            const tmp15 = closure_7(tmp(12671).ForLaterCardHeader, obj2);
+            const tmp15 = closure_7(tmp(13177).ForLaterCardHeader, obj2);
             cResult[8] = stateFromStores;
             cResult[9] = tmp15;
           } else {
@@ -411,7 +411,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               tmp21 = closure_8(View, obj5);
             }
             tmp20[3] = tmp21;
-            tmp19Result = closure_7(tmp(12672).ForLaterMessageRow, tmp20);
+            tmp19Result = closure_7(tmp(13178).ForLaterMessageRow, tmp20);
           }
           cResult[12] = tmp26;
           cResult[13] = isPendingRemoval;
@@ -451,7 +451,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { scheduledMessage, isPendingRemoval };
         const items1 = [closure_7(closure_10, obj3), , ,];
         const obj4 = { channel: stateFromStores, actions: null };
-        items1[1] = closure_7(tmp2(12671).ForLaterCardHeader, obj4);
+        items1[1] = closure_7(tmp2(13177).ForLaterCardHeader, obj4);
         const obj5 = { style: tmp.cardDivider };
         items1[2] = closure_7(View, obj5);
         if (isPendingRemoval) {
@@ -476,7 +476,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp9Result = closure_8(View, obj8);
           }
           obj7.footer = tmp9Result;
-          tmp10Result = closure_7(tmp2(12672).ForLaterMessageRow, obj7);
+          tmp10Result = closure_7(tmp2(13178).ForLaterMessageRow, obj7);
         }
         items1[3] = tmp10Result;
         obj2.children = items1;
@@ -619,7 +619,7 @@ export default noop.memo(
                 }
               }
               let obj2 = { channel: stateFromStores, actions: null };
-              const tmp15 = closure_7(tmp(12671).ForLaterCardHeader, obj2);
+              const tmp15 = closure_7(tmp(13177).ForLaterCardHeader, obj2);
               cResult[8] = stateFromStores;
               cResult[9] = tmp15;
             } else {
@@ -767,7 +767,7 @@ export default noop.memo(
                 tmp21 = closure_8(View, obj5);
               }
               tmp20[3] = tmp21;
-              tmp19Result = closure_7(tmp(12672).ForLaterMessageRow, tmp20);
+              tmp19Result = closure_7(tmp(13178).ForLaterMessageRow, tmp20);
             }
             cResult[12] = tmp26;
             cResult[13] = isPendingRemoval;
@@ -807,7 +807,7 @@ export default noop.memo(
           const obj3 = { scheduledMessage, isPendingRemoval };
           const items1 = [closure_7(closure_10, obj3), , ,];
           const obj4 = { channel: stateFromStores, actions: null };
-          items1[1] = closure_7(tmp2(12671).ForLaterCardHeader, obj4);
+          items1[1] = closure_7(tmp2(13177).ForLaterCardHeader, obj4);
           const obj5 = { style: tmp.cardDivider };
           items1[2] = closure_7(View, obj5);
           if (isPendingRemoval) {
@@ -832,7 +832,7 @@ export default noop.memo(
               tmp9Result = closure_8(View, obj8);
             }
             obj7.footer = tmp9Result;
-            tmp10Result = closure_7(tmp2(12672).ForLaterMessageRow, obj7);
+            tmp10Result = closure_7(tmp2(13178).ForLaterMessageRow, obj7);
           }
           items1[3] = tmp10Result;
           obj2.children = items1;

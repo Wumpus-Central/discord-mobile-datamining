@@ -44,12 +44,12 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled()
         } else if (arg0 !== 2) {
           stageCollectibleChangeForEditProfile(5056).hideAllActionSheets();
           stageCollectibleChangeForEditProfile(5056);
-          stageCollectibleChangeForEditProfile(12772).open({
+          stageCollectibleChangeForEditProfile(13278).open({
             product,
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile,
           });
-          stageCollectibleChangeForEditProfile(12772);
+          stageCollectibleChangeForEditProfile(13278);
           const collectiblesPurchases = product(7263).fetchCollectiblesPurchases();
           c3 = 0;
           product(7263);

@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const attachments1 = stateFromStores.attachments;
       noop = attachments1.map((filename) => filename.filename);
       let obj = channelId(573);
-      const explicitMediaActions = channelId(11470).useExplicitMediaActions({
+      const explicitMediaActions = channelId(12236).useExplicitMediaActions({
         onSuccess() {
           ExplicitMediaFalsePositiveActionSheet.handleSuccess(closure_5);
           const result = ExplicitMediaFalsePositiveActionCreatorsDefault.disableFalsePositiveButton(
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         reportFalsePositive();
       }, items1);
-      const obj2 = channelId(11470);
+      const obj2 = channelId(12236);
       const obj3 = {
         onSuccess() {
           ExplicitMediaFalsePositiveActionSheet.handleSuccess(closure_5);
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           );
         },
       };
-      return jsx(channelId(11468).ExplicitMediaFalsePositiveActionSheet, {
+      return jsx(channelId(12234).ExplicitMediaFalsePositiveActionSheet, {
         channelId,
         messageId,
         isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading,

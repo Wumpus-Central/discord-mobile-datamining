@@ -117,9 +117,9 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = trackUserProfileWishlistAction(576).c(17);
       let obj = trackUserProfileWishlistAction(576);
       const isMobileWishlistSuggestionsEnabled =
-        trackUserProfileWishlistAction(13403).useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
+        trackUserProfileWishlistAction(13740).useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
       const tmp5 = closure_26(isMobileWishlistSuggestionsEnabled);
-      let obj2 = trackUserProfileWishlistAction(13403);
+      let obj2 = trackUserProfileWishlistAction(13740);
       const obj3 = trackUserProfileWishlistAction(4827);
       let str = "mobile-text-heading-primary";
       if (obj4.isThemeDark(obj3.useThemeContext().theme)) {
@@ -243,9 +243,9 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function WishlistEmptyState() {
       const isMobileWishlistSuggestionsEnabled =
-        trackUserProfileWishlistAction(13403).useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
+        trackUserProfileWishlistAction(13740).useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
       const tmp4 = closure_26(isMobileWishlistSuggestionsEnabled);
-      let obj = trackUserProfileWishlistAction(13403);
+      let obj = trackUserProfileWishlistAction(13740);
       let obj2 = trackUserProfileWishlistAction(4827);
       let str = "mobile-text-heading-primary";
       if (obj3.isThemeDark(obj2.useThemeContext().theme)) {
@@ -827,7 +827,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13406, dependencyMap.paths),
+      asyncRequireImpl(13743, dependencyMap.paths),
       "EditWishlistActionSheet",
       { wishlistId, analyticsContext: context, analyticsLocations },
       "stack",

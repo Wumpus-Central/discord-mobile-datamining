@@ -4,8 +4,8 @@ import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import RunAfterInteractionsUtils from "../../../utils/native/RunAfterInteractionsUtils.tsx";
 import UserSearchUtils from "../../main_tabs_v2/UserSearchUtils.tsx";
 import sortByMatchScore from "../../autocompleter/index.tsx";
-import formatResults from "../formatResults.tsx";
 import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
+import formatResults from "../formatResults.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 

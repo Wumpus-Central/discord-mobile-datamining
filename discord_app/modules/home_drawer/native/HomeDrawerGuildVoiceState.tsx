@@ -110,7 +110,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 totalCount: tmp10,
                 children: cResult[8],
               };
-              obj3.children = closure_11(guildId(13152).AvatarPile, obj4);
+              obj3.children = closure_11(guildId(13634).AvatarPile, obj4);
               const tmp18 = closure_11(View, obj3);
               cResult[11] = tmp6;
               cResult[12] = cResult[8];

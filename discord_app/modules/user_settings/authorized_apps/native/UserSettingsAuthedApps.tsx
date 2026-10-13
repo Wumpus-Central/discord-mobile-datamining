@@ -14,15 +14,15 @@ const require = globalThis.__r;
 
 const CircleInformationIcon = GlobeEarthIcon(5046);
 const GlobeEarthIcon2 = GlobeEarthIcon(9104);
-const EmbedIcon = GlobeEarthIcon(12905);
+const EmbedIcon = GlobeEarthIcon(13397);
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: closure_4, ActivityIndicator: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
+({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const FetchState = fn(6797).FetchState;
 const Constants = fn(1085);
-({ AnalyticsPages: closure_9, UserSettingsSections: c10 } = Constants);
+({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_24 = nativeDefault.space.PX_24;
 const createStyles = fn(5092);
 let obj2 = {
@@ -33,7 +33,7 @@ let obj2 = {
   headerDescription: { marginTop: 12 },
   appListHeader: { marginTop: 24 },
 };
-let closure_15 = createStyles.createStyles(obj2);
+let closure_14 = createStyles.createStyles(obj2);
 fn(558);
 let obj3 = { paddingHorizontal: 16, paddingTop: nativeDefault.space.PX_24 };
 const ReactCompilerGating = fn(558);
@@ -47,7 +47,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] !== style) {
           GlobeEarthIcon = GlobeEarthIcon2.GlobeEarthIcon;
           const obj2 = { style, size: "xs" };
-          tmp = closure_1_11(GlobeEarthIcon, obj2);
+          tmp = collapsed(GlobeEarthIcon, obj2);
           cResult[0] = style;
           cResult[1] = tmp;
         }
@@ -55,7 +55,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (applications.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
           if (cResult[2] !== style) {
             const obj3 = { style, size: "xs" };
-            const tmp8 = closure_1_11(EmbedIcon.EmbedIcon, obj3);
+            const tmp8 = collapsed(EmbedIcon.EmbedIcon, obj3);
             cResult[2] = style;
             cResult[3] = tmp8;
             let tmp6 = tmp8;
@@ -65,7 +65,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp3 = tmp6;
         } else if (cResult[4] !== style) {
           const obj4 = { style, size: "xs" };
-          const tmp5 = closure_1_11(CircleInformationIcon.CircleInformationIcon, obj4);
+          const tmp5 = collapsed(CircleInformationIcon.CircleInformationIcon, obj4);
           cResult[4] = style;
           cResult[5] = tmp5;
           tmp3 = tmp5;
@@ -82,13 +82,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       return noop.useMemo(() => {
         if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
           const obj2 = { style, size: "xs" };
-          return closure_2_11(GlobeEarthIcon2.GlobeEarthIcon, obj2);
+          return collapsed(GlobeEarthIcon2.GlobeEarthIcon, obj2);
         } else if (applications.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
           const obj3 = { style, size: "xs" };
-          return closure_2_11(EmbedIcon.EmbedIcon, obj3);
+          return collapsed(EmbedIcon.EmbedIcon, obj3);
         } else {
           const obj = { style, size: "xs" };
-          return closure_2_11(CircleInformationIcon.CircleInformationIcon, obj);
+          return collapsed(CircleInformationIcon.CircleInformationIcon, obj);
         }
       }, items);
     };
@@ -97,8 +97,8 @@ let result = size.fileFinishedImporting("modules/user_settings/authorized_apps/n
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function UserSettingsAuthedApps() {
-      const cResult = require("c").c(37);
-      const tmp4 = closure_15();
+      const cResult = require("c").c(38);
+      const tmp4 = closure_14();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [AuthorizedAppsStore];
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp12 = cResult[5];
         }
         if (cResult[6] !== navigation) {
-          class H {
+          class D {
             constructor(arg0) {
               item = arg0.item;
               index = arg0.index;
@@ -158,14 +158,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 end: index === arg0.numItems - 1,
               };
               obj1 = { application: item.application };
-              obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-              return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+              obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+              return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
             }
           }
           cResult[6] = navigation;
-          cResult[7] = H;
+          cResult[7] = D;
         } else {
-          class H {
+          class D {
             constructor(arg0) {
               item = arg0.item;
               index = arg0.index;
@@ -187,14 +187,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 end: index === arg0.numItems - 1,
               };
               obj1 = { application: item.application };
-              obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-              return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+              obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+              return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
             }
           }
         }
-        noop = H;
+        noop = D;
         if (null != appAuthTokens) {
-          class H {
+          class D {
             constructor(arg0) {
               item = arg0.item;
               index = arg0.index;
@@ -216,12 +216,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 end: index === arg0.numItems - 1,
               };
               obj1 = { application: item.application };
-              obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-              return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+              obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+              return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
             }
           }
           if (stateFromStoresObject.fetchState === FetchState.FETCHED) {
-            class H {
+            class D {
               constructor(arg0) {
                 item = arg0.item;
                 index = arg0.index;
@@ -243,12 +243,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   end: index === arg0.numItems - 1,
                 };
                 obj1 = { application: item.application };
-                obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
               }
             }
             if (0 === appAuthTokens.length) {
-              class H {
+              class D {
                 constructor(arg0) {
                   item = arg0.item;
                   index = arg0.index;
@@ -270,12 +270,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     end: index === arg0.numItems - 1,
                   };
                   obj1 = { application: item.application };
-                  obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                  return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                  obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                  return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                 }
               }
               if (cResult[10] !== tmp12) {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -297,14 +297,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
                 cResult[10] = tmp12;
-                cResult[11] = tmp29;
+                cResult[11] = tmp31;
               } else {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -326,14 +326,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
               }
-              const _Symbol = Symbol;
+              const _Symbol2 = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -355,15 +355,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
                 const stringResult = obj6.string(tmp(tmp2[19]).t["E+SM6T"]);
                 cResult[12] = stringResult;
-                const tmp30 = stringResult;
+                const tmp32 = stringResult;
               } else {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -385,13 +385,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
               }
               if (cResult[13] !== tmp4.emptyText) {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -413,21 +413,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
                 let obj2 = {
                   color: "mobile-text-heading-primary",
                   style: tmp4.emptyText,
                   variant: "heading-md/extrabold",
-                  children: tmp30,
+                  children: tmp32,
                 };
-                const tmp33 = closure_11(tmp(tmp2[18]).Text, obj2);
+                const tmp35 = closure_10(tmp(tmp2[18]).Text, obj2);
                 cResult[13] = tmp4.emptyText;
-                cResult[14] = tmp33;
+                cResult[14] = tmp35;
               } else {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -449,13 +449,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
               }
               if (cResult[15] === tmp4.emptyContainer) {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -477,21 +477,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
               }
-              let obj3 = { style: tmp27, children: null };
-              let items1 = [tmp29, tmp32];
+              let obj3 = { style: tmp29, children: null };
+              let items1 = [tmp31, tmp34];
               obj3.children = items1;
-              const tmp37 = closure_12(closure_4, obj3);
+              const tmp39 = closure_11(closure_4, obj3);
               cResult[15] = tmp4.emptyContainer;
-              cResult[16] = tmp29;
-              cResult[17] = tmp32;
-              cResult[18] = tmp37;
+              cResult[16] = tmp31;
+              cResult[17] = tmp34;
+              cResult[18] = tmp39;
             } else {
-              class H {
+              class D {
                 constructor(arg0) {
                   item = arg0.item;
                   index = arg0.index;
@@ -513,13 +513,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     end: index === arg0.numItems - 1,
                   };
                   obj1 = { application: item.application };
-                  obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                  return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                  obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                  return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                 }
               }
               const sum = appAuthTokens(navigation[13])().bottom + PX_24;
               if (cResult[19] !== sum) {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -541,15 +541,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
                 tmp16[0] = sum;
                 cResult[19] = sum;
                 cResult[20] = tmp16;
               } else {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -571,13 +571,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
               }
               if (cResult[21] === tmp4.container) {
-                class H {
+                class D {
                   constructor(arg0) {
                     item = arg0.item;
                     index = arg0.index;
@@ -599,12 +599,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       end: index === arg0.numItems - 1,
                     };
                     obj1 = { application: item.application };
-                    obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                    return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                    obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                    return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                   }
                 }
                 if (cResult[24] !== tmp12) {
-                  class H {
+                  class D {
                     constructor(arg0) {
                       item = arg0.item;
                       index = arg0.index;
@@ -626,12 +626,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         end: index === arg0.numItems - 1,
                       };
                       obj1 = { application: item.application };
-                      obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                      return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                      obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                      return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                     }
                   }
                   cResult[24] = tmp12;
-                  class M {
+                  class G {
                     constructor(arg0) {
                       obj = { item: arg0.item, index: arg0.index, numItems: appAuthTokens.length };
                       return closure_3(obj);
@@ -639,7 +639,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   cResult[25] = tmp19;
                 } else {
-                  class H {
+                  class D {
                     constructor(arg0) {
                       item = arg0.item;
                       index = arg0.index;
@@ -661,13 +661,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         end: index === arg0.numItems - 1,
                       };
                       obj1 = { application: item.application };
-                      obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                      return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                      obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                      return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                     }
                   }
                 }
                 if (cResult[26] === appAuthTokens.length) {
-                  class H {
+                  class D {
                     constructor(arg0) {
                       item = arg0.item;
                       index = arg0.index;
@@ -689,12 +689,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         end: index === arg0.numItems - 1,
                       };
                       obj1 = { application: item.application };
-                      obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                      return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                      obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                      return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                     }
                   }
                   if (cResult[29] !== appAuthTokens) {
-                    class H {
+                    class D {
                       constructor(arg0) {
                         item = arg0.item;
                         index = arg0.index;
@@ -716,33 +716,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           end: index === arg0.numItems - 1,
                         };
                         obj1 = { application: item.application };
-                        obj.icon = closure_1_11(appAuthTokens(closure_2[22]), obj1);
-                        return closure_1_11(closure_0(closure_2[21]).TableRow, obj, item.id);
+                        obj.icon = closure_1_10(appAuthTokens(closure_2[22]), obj1);
+                        return closure_1_10(closure_0(closure_2[21]).TableRow, obj);
                       }
                     }
                     if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
-                      class V {
+                      class Z {
                         constructor(arg0, arg1) {
                           NumberResult = Number(arg1.id);
                           return NumberResult - Number(arg0.id);
                         }
                       }
-                      cResult[31] = V;
-                      class M {
+                      cResult[31] = Z;
+                      class G {
                         constructor(arg0) {
                           obj = { item: arg0.item, index: arg0.index, numItems: appAuthTokens.length };
                           return closure_3(obj);
                         }
                       }
                     } else {
-                      class V {
+                      class Z {
                         constructor(arg0, arg1) {
                           NumberResult = Number(arg1.id);
                           return NumberResult - Number(arg0.id);
                         }
                       }
                     }
-                    class M {
+                    class G {
                       constructor(arg0) {
                         obj = { item: arg0.item, index: arg0.index, numItems: appAuthTokens.length };
                         return closure_3(obj);
@@ -751,44 +751,51 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     cResult[29] = appAuthTokens;
                     cResult[30] = tmp22;
                   } else {
-                    class V {
+                    class Z {
                       constructor(arg0, arg1) {
                         NumberResult = Number(arg1.id);
                         return NumberResult - Number(arg0.id);
                       }
                     }
-                    if (cResult[32] === tmp21) {
-                      class V {
+                    const _Symbol = Symbol;
+                    class G {
+                      constructor(arg0) {
+                        obj = { item: arg0.item, index: arg0.index, numItems: appAuthTokens.length };
+                        return closure_3(obj);
+                      }
+                    }
+                    if (cResult[33] === tmp21) {
+                      class Z {
                         constructor(arg0, arg1) {
                           NumberResult = Number(arg1.id);
                           return NumberResult - Number(arg0.id);
                         }
                       }
                     }
-                    class M {
-                      constructor(arg0) {
-                        obj = { item: arg0.item, index: arg0.index, numItems: appAuthTokens.length };
-                        return closure_3(obj);
-                      }
-                    }
-                    let obj4 = { contentContainerStyle: tmp17, ListHeaderComponent: tmp19, renderItem: M, data: tmp21 };
-                    const tmp26 = closure_11(closure_6, obj4);
-                    cResult[32] = tmp21;
-                    cResult[33] = tmp17;
-                    cResult[34] = tmp19;
-                    cResult[35] = M;
-                    cResult[36] = tmp26;
+                    let obj4 = {
+                      contentContainerStyle: tmp17,
+                      ListHeaderComponent: tmp19,
+                      renderItem: G,
+                      data: tmp21,
+                      keyExtractor: tmp25,
+                    };
+                    const tmp28 = closure_10(tmp(tmp2[25]).FlashList, obj4);
+                    cResult[33] = tmp21;
+                    cResult[34] = tmp17;
+                    cResult[35] = tmp19;
+                    cResult[36] = G;
+                    cResult[37] = tmp28;
                   }
                 }
-                class M {
+                class G {
                   constructor(arg0) {
                     obj = { item: arg0.item, index: arg0.index, numItems: appAuthTokens.length };
                     return closure_3(obj);
                   }
                 }
                 cResult[26] = appAuthTokens.length;
-                cResult[27] = H;
-                cResult[28] = M;
+                cResult[27] = D;
+                cResult[28] = G;
               }
               const items2 = [tmp4.container, tmp16];
               cResult[21] = tmp4.container;
@@ -798,32 +805,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[8] !== tmp4.spinner) {
-          class V {
+          class Z {
             constructor(arg0, arg1) {
               NumberResult = Number(arg1.id);
               return NumberResult - Number(arg0.id);
             }
           }
-          class M {
+          class G {
             constructor(arg0) {
               obj = { item: arg0.item, index: arg0.index, numItems: appAuthTokens.length };
               return closure_3(obj);
             }
           }
-          const tmp40 = closure_11(closure_5, { style: null, animating: true, size: "large" });
+          const tmp42 = closure_10(closure_5, { style: null, animating: true, size: "large" });
           cResult[8] = tmp4.spinner;
-          cResult[9] = tmp40;
+          cResult[9] = tmp42;
           let obj5 = { style: null, animating: true, size: "large" };
-          const tmp38 = tmp40;
+          const tmp40 = tmp42;
         } else {
-          class V {
+          class Z {
             constructor(arg0, arg1) {
               NumberResult = Number(arg1.id);
               return NumberResult - Number(arg0.id);
             }
           }
         }
-        return tmp38;
+        return tmp40;
       }
       function renderHeader() {
         const obj = { children: null };
@@ -831,21 +838,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
         const intl = util.intl;
         obj3.children = intl.string(util.t.HU3RFw);
-        const items = [closure_2_11(Text_Text.Text, obj3)];
+        const items = [collapsed(Text_Text.Text, obj3)];
         const obj4 = { style: closure_0.headerDescription, variant: "heading-sm/medium", children: null };
         const intl2 = util.intl;
         obj4.children = intl2.string(util.t.Nu5Yi0);
-        items[1] = closure_2_11(Text_Text.Text, obj4);
+        items[1] = collapsed(Text_Text.Text, obj4);
         obj2.children = items;
-        const items1 = [__initData(React4, obj2)];
+        const items1 = [closure_2_11(React4, obj2)];
         const obj5 = { style: closure_0.appListHeader, children: null };
         const obj6 = { title: null };
         const intl3 = util.intl;
         obj6.title = intl3.string(util.t.PHjkRE);
-        obj5.children = closure_2_11(TableRowGroup.TableRowGroupTitle, obj6);
-        items1[1] = closure_2_11(React4, obj5);
+        obj5.children = collapsed(TableRowGroup.TableRowGroupTitle, obj6);
+        items1[1] = collapsed(React4, obj5);
         obj.children = items1;
-        return __initData(map1, obj);
+        return closure_2_11(__initData, obj);
       }
       cResult[3] = tmp4.appListHeader;
       cResult[4] = tmp4.headerDescription;
@@ -854,7 +861,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult4 = require("Link");
     }
   : function UserSettingsAuthedApps() {
-      const tmp = closure_15();
+      const tmp = closure_14();
       _require = tmp;
       let items = [AuthorizedAppsStore];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
@@ -873,7 +880,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         item = item.item;
         const index = item.index;
         let obj = {
-          icon: closure_1_11(appAuthTokens(navigation[22]), { application: item.application }),
+          icon: closure_1_10(appAuthTokens(navigation[22]), { application: item.application }),
           label: item.application.name,
           onPress: function handleAppPress() {
             UserSettingsModalActionCreatorsDefault.setSection(constants2.AUTHORIZED_APP);
@@ -889,7 +896,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           start: 0 === index,
           end: index === item.numItems - 1,
         };
-        return closure_1_11(closure_0(navigation[21]).TableRow, obj, item.id);
+        return closure_1_10(closure_0(navigation[21]).TableRow, obj);
       }, items1);
       if (null != appAuthTokens) {
         if (stateFromStoresObject.fetchState === FetchState.FETCHED) {
@@ -899,21 +906,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: null };
             const intl = util.intl;
             obj3.children = intl.string(util.t.HU3RFw);
-            const items = [closure_2_11(Text_Text.Text, obj3)];
+            const items = [collapsed(Text_Text.Text, obj3)];
             const obj4 = { style: closure_0.headerDescription, variant: "heading-sm/medium", children: null };
             const intl2 = util.intl;
             obj4.children = intl2.string(util.t.Nu5Yi0);
-            items[1] = closure_2_11(Text_Text.Text, obj4);
+            items[1] = collapsed(Text_Text.Text, obj4);
             obj2.children = items;
-            const items1 = [__initData(React4, obj2)];
+            const items1 = [closure_2_11(React4, obj2)];
             const obj5 = { style: closure_0.appListHeader, children: null };
             const obj6 = { title: null };
             const intl3 = util.intl;
             obj6.title = intl3.string(util.t.PHjkRE);
-            obj5.children = closure_2_11(TableRowGroup.TableRowGroupTitle, obj6);
-            items1[1] = closure_2_11(React4, obj5);
+            obj5.children = collapsed(TableRowGroup.TableRowGroupTitle, obj6);
+            items1[1] = collapsed(React4, obj5);
             obj.children = items1;
-            return __initData(map1, obj);
+            return closure_2_11(__initData, obj);
           }
           if (0 === appAuthTokens.length) {
             let obj4 = { style: tmp.emptyContainer, children: null };
@@ -926,11 +933,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             let intl = tmp3(tmp2[19]).intl;
             obj5.children = intl.string(tmp3(tmp2[19]).t["E+SM6T"]);
-            items2[1] = closure_11(tmp3(tmp2[18]).Text, obj5);
+            items2[1] = closure_10(tmp3(tmp2[18]).Text, obj5);
             obj4.children = items2;
-            let tmp10 = closure_12(closure_4, obj4);
+            let tmp10 = closure_11(closure_4, obj4);
           } else {
-            let obj6 = { contentContainerStyle: null, ListHeaderComponent: null, renderItem: null, data: null };
+            let obj6 = {
+              contentContainerStyle: null,
+              ListHeaderComponent: null,
+              renderItem: null,
+              data: null,
+              keyExtractor: null,
+            };
             const items3 = [tmp.container];
             const obj7 = { paddingBottom: appAuthTokens(navigation[13])().bottom + PX_24 };
             items3[1] = obj7;
@@ -940,12 +953,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_3({ item: item.item, index: item.index, numItems: appAuthTokens.length });
             };
             obj6.data = appAuthTokens.sort((id, id2) => Number(id2.id) - Number(id.id));
-            tmp10 = closure_11(closure_6, obj6);
+            obj6.keyExtractor = function keyExtractor(id) {
+              return id.id;
+            };
+            tmp10 = closure_10(tmp3(tmp2[25]).FlashList, obj6);
           }
         }
         return tmp10;
       }
-      tmp10 = closure_11(closure_5, { style: tmp.spinner, animating: true, size: "large" });
+      tmp10 = closure_10(closure_5, { style: tmp.spinner, animating: true, size: "large" });
       let obj3 = require("Link");
       const obj8 = { style: tmp.spinner, animating: true, size: "large" };
     };

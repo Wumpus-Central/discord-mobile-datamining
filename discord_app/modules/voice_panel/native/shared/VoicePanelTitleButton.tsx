@@ -13,7 +13,7 @@ import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import ShieldLockIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldLockIcon.tsx";
 import QuestActivityButtonDefault from "../../../frames/panel/native/QuestActivityButton.tsx";
 import VoicePanelHeaderUserState from "../header/VoicePanelHeaderUserState.tsx";
-import _modDef17839 from "../../../../../_runtime/metro/17839__.js";
+import _modDef17843 from "../../../../../_runtime/metro/17843__.js";
 import VoicePanelSettingsActionCreators from "../header/VoicePanelSettingsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
@@ -230,7 +230,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityHint: first,
         accessibilityLabel: tmp9,
         text: name,
-        icon: _modDef17839,
+        icon: _modDef17843,
         iconPosition: "start",
         onPress,
       });
@@ -244,7 +244,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityHint: first,
         accessibilityLabel: tmp9,
         text: name,
-        icon: _modDef17839,
+        icon: _modDef17843,
         iconPosition: "start",
         onPress,
       };
@@ -268,7 +268,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = util.intl;
       obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
       obj2.text = name;
-      obj2.icon = _modDef17839;
+      obj2.icon = _modDef17843;
       obj2.onPress = onPress;
       return options(native.HeaderButton, obj2);
     };
@@ -675,7 +675,7 @@ export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VoicePanelTitleButton() {
         const cResult = guildId(576).c(19);
-        const context = noop.useContext(channelId(11971));
+        const context = noop.useContext(channelId(12487));
         guildId = context.guildId;
         channelId = context.channelId;
         ({ channelType, focused } = context);
@@ -695,7 +695,7 @@ export default noop.memo(
         const obj = guildId(576);
         const tmp4 = channelId;
         const derivedStateFromSharedValue = guildId(8395).useDerivedStateFromSharedValue(focused, first);
-        const tmp8 = tmp4(17810)(derivedStateFromSharedValue, channelId, guildId);
+        const tmp8 = tmp4(17814)(derivedStateFromSharedValue, channelId, guildId);
         if (cResult[1] === channelId) {
           if (cResult[2] === guildId) {
             let tmp9 = cResult[3];
@@ -779,7 +779,7 @@ export default noop.memo(
         const tmpResult = guildId(8395);
       }
     : function VoicePanelTitleButton() {
-        const context = noop.useContext(channelId(11971));
+        const context = noop.useContext(channelId(12487));
         const guildId = context.guildId;
         channelId = context.channelId;
         ({ channelType, focused } = context);
@@ -790,7 +790,7 @@ export default noop.memo(
           }
           return id;
         });
-        const tmp3 = channelId(17810)(derivedStateFromSharedValue, channelId, guildId);
+        const tmp3 = channelId(17814)(derivedStateFromSharedValue, channelId, guildId);
         const items = [guildId, channelId];
         const onPress = noop.useCallback(() => {
           const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

@@ -32,11 +32,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
   let tmp4 = closure_10();
   _require = tmp4;
   if (cResult[0] !== source) {
-    const splitMarkdownBlocksResult = tmp(17213).splitMarkdownBlocks(source);
+    const splitMarkdownBlocksResult = tmp(11831).splitMarkdownBlocks(source);
     cResult[0] = source;
     cResult[1] = splitMarkdownBlocksResult;
     marker = splitMarkdownBlocksResult;
-    const tmpResult = tmp(17213);
+    const tmpResult = tmp(11831);
   } else {
     marker = cResult[1];
   }

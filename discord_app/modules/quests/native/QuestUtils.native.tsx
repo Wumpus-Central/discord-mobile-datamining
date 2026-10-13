@@ -16,9 +16,9 @@ import utils_QuestUtils from "../utils/QuestUtils.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
 import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import CloudIcon from "../../../design/components/Icon/native/redesign/generated/CloudIcon.tsx";
 import QuestOrbsRewardModal from "QuestOrbsRewardModal.native.tsx";
 import openQuestCollectibleRewardModal from "openQuestCollectibleRewardModal.tsx";
-import CloudIcon from "../../../design/components/Icon/native/redesign/generated/CloudIcon.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
@@ -26,7 +26,7 @@ import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12977, dependencyMap.paths), timestampProducer, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13469, dependencyMap.paths), timestampProducer, {
     questId,
     questContent,
     questContentPosition,
@@ -38,7 +38,7 @@ function viewReward(quest) {
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12977, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13469, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };

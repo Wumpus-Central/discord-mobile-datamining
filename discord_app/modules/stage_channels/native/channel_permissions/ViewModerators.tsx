@@ -22,7 +22,7 @@ function openAddModeratorsActionSheet(channel) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(17587, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
+  obj2.openLazy(asyncRequireImpl(17591, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
     channel,
     canSkip: flag,
   });
@@ -275,11 +275,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj2 = ActionSheetActionCreatorsDefault;
                       const obj3 = { channel, canSkip: false };
                       obj2.openLazy(
-                        asyncRequireImpl(17587, dependencyMap.paths),
+                        asyncRequireImpl(17591, dependencyMap.paths),
                         "channel-add-moderators-" + channel.id,
                         obj3,
                       );
-                      const tmp7 = asyncRequireImpl(17587, dependencyMap.paths);
+                      const tmp7 = asyncRequireImpl(17591, dependencyMap.paths);
                     }
                   };
                   obj6.disabled = !canUpdateStageChannelModerators;
@@ -520,11 +520,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = ActionSheetActionCreatorsDefault;
                 const obj3 = { channel, canSkip: false };
                 obj2.openLazy(
-                  asyncRequireImpl(17587, dependencyMap.paths),
+                  asyncRequireImpl(17591, dependencyMap.paths),
                   "channel-add-moderators-" + channel.id,
                   obj3,
                 );
-                const tmp7 = asyncRequireImpl(17587, dependencyMap.paths);
+                const tmp7 = asyncRequireImpl(17591, dependencyMap.paths);
               }
             };
             obj9.disabled = !canUpdateStageChannelModerators;

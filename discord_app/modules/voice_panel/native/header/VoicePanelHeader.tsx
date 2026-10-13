@@ -25,15 +25,15 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11972);
+const VoicePanelConstants = fn(12488);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(11975).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(11970).VoicePanelControlsModes;
+const EDGE_GUTTER = fn(12491).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12486).VoicePanelControlsModes;
 const ParticipantTypes = fn(5115).ParticipantTypes;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);

@@ -12,8 +12,8 @@ export const computeDaysUntilNextBadgeDate = function computeDaysUntilNextBadgeD
   return Math.max(0, _modDef4702(arg0).add(arg1, "months").add(1, "day").diff(_modDef4702(), "days"));
 };
 export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
-  nextTenureBadge = nextTenureBadge(13721).useNextTenureBadge();
-  let obj = nextTenureBadge(13721);
+  nextTenureBadge = nextTenureBadge(14058).useNextTenureBadge();
+  let obj = nextTenureBadge(14058);
   const premiumSince = nextTenureBadge(10564).usePremiumSince();
   const items = [nextTenureBadge, premiumSince];
   return useMemo(() => {

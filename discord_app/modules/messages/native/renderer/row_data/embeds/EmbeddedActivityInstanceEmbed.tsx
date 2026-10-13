@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx
 import util from "../../../../../../intl/index.native.tsx";
 import ApplicationActionCreators from "../../../../../applications/ApplicationActionCreators.tsx";
+import getApplicationInstallURL from "../../../../../applications/getApplicationInstallURL.tsx";
 import ContentClassificationVisibility from "../../../../../content_classification/ContentClassificationVisibility.tsx";
 import CodedLinksTypes from "coded_links/CodedLinksTypes.tsx";
 import getPlayInContext from "../../../../../applications/message_embed/utils/getPlayInContext.tsx";
 import nativeAppMessageEmbedUtil from "../../../../../applications/message_embed/native/utils/nativeAppMessageEmbedUtil.tsx";
-import getApplicationInstallURL from "../../../../../applications/getApplicationInstallURL.tsx";
 import useEmbeddedActivityParticipantAvatarUris from "coded_links/useEmbeddedActivityParticipantAvatarUris.tsx";
 import EmbeddedApplicationInstanceUtils from "../../../../EmbeddedApplicationInstanceUtils.tsx";
 import EmbeddedActivitiesStore from "../../../../../activities/EmbeddedActivitiesStore.tsx";

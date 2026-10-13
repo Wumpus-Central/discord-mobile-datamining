@@ -9,7 +9,7 @@ import ConjureConnectionStore from "../../connection/ConjureConnectionStore.tsx"
 import ConjureModelSettingsStore from "../../model_settings/ConjureModelSettingsStore.tsx";
 import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
-const useConjureProjectSettingsFormDefault = tmp5(17082);
+const useConjureProjectSettingsFormDefault = tmp5(11317);
 const require = fn;
 const View = fn(17).View;
 const isProjectOwner = fn(10652).isProjectOwner;
@@ -184,7 +184,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { onLayout: callback, children: null };
       if (tabs.length > 3) {
         const obj4 = { state: segmentedControlState };
-        let tmp8Result = closure_11(tmp5(12359).Tabs, obj4);
+        let tmp8Result = closure_11(tmp5(11341).Tabs, obj4);
       } else {
         const obj5 = { state: segmentedControlState };
         tmp8Result = closure_11(tmp5(8779).SegmentedControl, obj5);
@@ -433,9 +433,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (guild_id == null) {
         guild_id = guildId;
       }
-      const tmpResultResult = stateFromStores1(17082)(projectId, guild_id);
+      const tmpResultResult = stateFromStores1(11317)(projectId, guild_id);
       asyncGeneratorStep = tmpResultResult;
-      const tmp13 = stateFromStores1(17094)({ projectId, scopeKeys, note, notifyAgent, isPreview });
+      const tmp13 = stateFromStores1(11329)({ projectId, scopeKeys, note, notifyAgent, isPreview });
       _slicedToArray = tmp13;
       isScoped = tmp13.isScoped;
       loaded = tmp13.loaded;
@@ -575,7 +575,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3849).bA4VU5);
       const intl2 = tmp4(1126).intl;
       const tmpResult2 = stateFromStores1(3849);
-      const tmpResult = stateFromStores1(17082);
+      const tmpResult = stateFromStores1(11317);
       obj5.header = closure_11(projectId(6839).BottomSheetTitleHeader, {
         title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe),
       });
@@ -627,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp21Result3 = null;
         if ("model" === found) {
           const obj9 = { projectId };
-          tmp21Result3 = tmp21(tmp4(17099).ConjureModelSettingsContent, obj9);
+          tmp21Result3 = tmp21(tmp4(11340).ConjureModelSettingsContent, obj9);
         }
       }
       items9[5] = tmp21Result3;

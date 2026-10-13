@@ -142,7 +142,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
   const tmp = closure_16();
   const rect = activeRoute(1631)();
   const effect = noop.useEffect(() => {
-    closure_0(15995).resetEditedCharacter();
+    closure_0(16308).resetEditedCharacter();
   }, []);
   _require = require("CheckpointFlows").getCheckpointFlow(flag);
   [activeRoute, dependencyMap] = noop.useState(require("CheckpointNavigation").CheckpointRoute.HOME);
@@ -167,25 +167,25 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
     VoiceNormalIcon = tmp5(8229).VoiceNormalIcon;
   }
   const tmp5Result3 = require("initialize");
-  noop = activeRoute(16005)(tmp2(16006));
-  activeRoute(16007)();
-  const tmp2Result = activeRoute(16005);
+  noop = activeRoute(16318)(tmp2(16319));
+  activeRoute(16320)();
+  const tmp2Result = activeRoute(16318);
   [tmp18, tmp19] = noop.useState(require("CheckpointCustomizationUtils").CheckpointCustomizationOption.BASE);
   if (!tmp13) {
-    let BASE = tmp5(16009).getCustomizationOptionForCharacterStage(characterStage);
+    let BASE = tmp5(16322).getCustomizationOptionForCharacterStage(characterStage);
     if (BASE == null) {
-      BASE = tmp5(16009).CheckpointCustomizationOption.BASE;
+      BASE = tmp5(16322).CheckpointCustomizationOption.BASE;
     }
-    const tmp5Result4 = tmp5(16009);
+    const tmp5Result4 = tmp5(16322);
   }
   const tmp21 = require("CheckpointCustomizationUtils").CUSTOMIZATION_OPTION_TRAITS[tmp18];
   const tmp6Result = _slicedToArray(
     noop.useState(require("CheckpointCustomizationUtils").CheckpointCustomizationOption.BASE),
     2,
   );
-  ({ blockedTraits, character: c6, selectedCharacterTraits } = activeRoute(16012)());
+  ({ blockedTraits, character: c6, selectedCharacterTraits } = activeRoute(16325)());
   const hasItem = blockedTraits.includes(tmp21);
-  const tmp22 = activeRoute(16012)();
+  const tmp22 = activeRoute(16325)();
   [tmp25, c7] = noop.useState(false);
   if (tmp13) {
     let first1 = blockedTraits[0];
@@ -228,14 +228,14 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
     str3 = "no-hide-descendants";
   }
   obj7.importantForAccessibility = str3;
-  obj7.children = closure_13(activeRoute(16013), { stage: characterStage, activeCustomizationOption: tmp18 });
+  obj7.children = closure_13(activeRoute(16326), { stage: characterStage, activeCustomizationOption: tmp18 });
   const items2 = [closure_13(c7, obj7), , , ,];
   if (tmp31Result) {
     const obj8 = { children: null };
-    const items3 = [closure_13(tmp2(16014), {})];
+    const items3 = [closure_13(tmp2(16327), {})];
     let obj9 = { style: tmp.layer, children: null };
     let obj10 = { route: activeRoute };
-    obj9.children = closure_13(tmp2(16016), obj10);
+    obj9.children = closure_13(tmp2(16329), obj10);
     items3[1] = closure_13(tmp32, obj9);
     obj8.children = items3;
     tmp31Result = closure_15(closure_14, obj8);
@@ -246,26 +246,26 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
   obj11.style = items4;
   const obj12 = { uri: null, style: null };
   const tmp6Result2 = _slicedToArray(noop.useState(false), 2);
-  obj12.uri = activeRoute(16036);
+  obj12.uri = activeRoute(16349);
   obj12.style = tmp.logo;
-  const items5 = [closure_13(activeRoute(16023), obj12)];
+  const items5 = [closure_13(activeRoute(16336), obj12)];
   const obj13 = { style: tmp.headerActions, children: null };
   const obj14 = { onPress: null, accessibilityLabel: null, children: null };
-  const tmp2Result5 = activeRoute(16023);
+  const tmp2Result5 = activeRoute(16336);
   obj14.onPress = require("CheckpointActionCreators").toggleMute;
   let intl = tmp5(1126).intl;
   const t = tmp5(1126).t;
   obj14.accessibilityLabel = intl.string(stateFromStores ? t.YqAjXy : t.w4m945);
   obj14.children = closure_13(VoiceNormalIcon, { color, size: "xs" });
-  const items6 = [closure_13(activeRoute(16037), obj14)];
+  const items6 = [closure_13(activeRoute(16350), obj14)];
   const obj16 = { onPress: null, accessibilityLabel: null, children: null };
   const obj15 = { color, size: "xs" };
-  const tmp2Result6 = activeRoute(16037);
+  const tmp2Result6 = activeRoute(16350);
   obj16.onPress = activeRoute(5934).pop;
   let intl2 = tmp5(1126).intl;
   obj16.accessibilityLabel = intl2.string(require("util").t.cpT0Cq);
   obj16.children = closure_13(require("XSmallIcon").XSmallIcon, { color, size: "xs" });
-  items6[1] = closure_13(activeRoute(16037), obj16);
+  items6[1] = closure_13(activeRoute(16350), obj16);
   obj13.children = items6;
   items5[1] = closure_15(c7, obj13);
   obj11.children = items5;
@@ -300,23 +300,23 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
         disableSwitching: hasItem,
         disabled: tmp25,
       };
-      tmp30Result = closure_13(tmp5(16038).FinalizeTraitTabs, obj20);
+      tmp30Result = closure_13(tmp5(16351).FinalizeTraitTabs, obj20);
     }
     const items8 = [tmp30Result];
     const obj21 = {
       activeCustomizationOption: tmp18,
       disabled: tmp25,
       showEarnedCount: !tmp13,
-      onSelectOption: tmp5(15995).selectCharacterTrait,
+      onSelectOption: tmp5(16308).selectCharacterTrait,
     };
-    items8[1] = closure_13(tmp2(16042), obj21);
+    items8[1] = closure_13(tmp2(16355), obj21);
     obj18.children = items8;
     result = closure_15(tmp32, obj18);
     const obj19 = { marginLeft: null, marginRight: null, marginBottom: null };
-    const tmp2Result8 = tmp2(16042);
+    const tmp2Result8 = tmp2(16355);
   }
   items2[3] = result;
-  items2[4] = closure_13(activeRoute(16048), {
+  items2[4] = closure_13(activeRoute(16361), {
     activeRoute,
     onBack: function handleBack() {
       const timestamp = Date.now();
@@ -350,7 +350,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(16000).CheckpointFetchStates;
+const CheckpointFetchStates = fn(16313).CheckpointFetchStates;
 const CheckpointConstants = fn(5437);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_11, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);

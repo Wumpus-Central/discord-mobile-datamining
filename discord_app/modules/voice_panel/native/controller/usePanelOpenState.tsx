@@ -8,7 +8,7 @@ import VoicePanelStore from "../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11972).VoicePanelModes;
+const VoicePanelModes = fn(12488).VoicePanelModes;
 const Constants = fn(1085);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = {

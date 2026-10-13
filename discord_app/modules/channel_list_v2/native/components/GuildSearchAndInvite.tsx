@@ -24,7 +24,7 @@ function handleInviteDisabledPress() {
   useAlertStore.openAlert("invites-disabled", __initData(lazyResult, {}));
 }
 const View = fn(17).View;
-const SEARCH_BAR_MARGIN_BOTTOM = fn(11760).SEARCH_BAR_MARGIN_BOTTOM;
+const SEARCH_BAR_MARGIN_BOTTOM = fn(11562).SEARCH_BAR_MARGIN_BOTTOM;
 const Constants = fn(1085);
 ({ GuildFeatures: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -488,9 +488,9 @@ export default noop.memo(
         }
         const tmp12 = useStableCallbackDefault(B);
         const tmpResult = guild(504);
-        const shouldShowInvitesDisabledNotif = guild(12079).useShouldShowInvitesDisabledNotif(guild);
+        const shouldShowInvitesDisabledNotif = guild(12595).useShouldShowInvitesDisabledNotif(guild);
         useCanSeeEventsInChannelListDefault(guild.id);
-        const tmpResult2 = guild(12079);
+        const tmpResult2 = guild(12595);
         ({ hasUnread, handlePress, handleLongPress } = useEventsButtonPropsDefault(guild));
         if (undefined !== useEventsButton && useEventsButton) {
           class B {
@@ -589,8 +589,8 @@ export default noop.memo(
             constants2.GUILD_HEADER,
           );
         });
-        const shouldShowInvitesDisabledNotif = guild(12079).useShouldShowInvitesDisabledNotif(guild);
-        const obj2 = guild(12079);
+        const shouldShowInvitesDisabledNotif = guild(12595).useShouldShowInvitesDisabledNotif(guild);
+        const obj2 = guild(12595);
         const tmp5 = useEventsButtonPropsDefault(guild);
         const obj3 = {
           guildId: guild.id,

@@ -291,7 +291,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "code" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "color" };
   };
   cResult[1] = channelId;
   cResult[2] = focusedParticipantStreamId;
@@ -436,7 +436,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "code" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "color" };
   }, items1);
   const items2 = [stateFromStoresObject.selectedParticipantSpeaking];
   const effect = noop.useEffect(() => {

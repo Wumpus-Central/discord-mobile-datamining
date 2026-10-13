@@ -36,11 +36,11 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
       const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
       if (cResult[2] !== stateFromStores) {
         const tmp10 = UserSettingSearchManagerDefault;
-        const tmp102 = new tmp10(tmp(14969).getSettingSearchableTitles(), stateFromStores);
+        const tmp102 = new tmp10(tmp(15290).getSettingSearchableTitles(), stateFromStores);
         cResult[2] = stateFromStores;
         cResult[3] = tmp102;
         let tmp8 = tmp102;
-        const tmpResult2 = tmp(14969);
+        const tmpResult2 = tmp(15290);
       } else {
         tmp8 = cResult[3];
       }
@@ -61,7 +61,7 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
             const isBlockedResult = SettingTreeManagerDefault.isBlocked(setting, closure_0);
             let tmp3 = !isBlockedResult;
             if (!isBlockedResult) {
-              tmp3 = !closure_0(14834).SETTING_RENDERER_CONFIG[setting].unsearchable;
+              tmp3 = !closure_0(15155).SETTING_RENDERER_CONFIG[setting].unsearchable;
             }
             return tmp3;
           });
@@ -157,10 +157,10 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
             scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
             const found = scoredSearchResults.filter((setting) => {
               setting = setting.setting;
-              const isBlockedResult = scoredSearchResults(14970).isBlocked(setting, closure_0);
+              const isBlockedResult = scoredSearchResults(15291).isBlocked(setting, closure_0);
               let tmp3 = !isBlockedResult;
               if (!isBlockedResult) {
-                tmp3 = !stateFromStores(14834).SETTING_RENDERER_CONFIG[setting].unsearchable;
+                tmp3 = !stateFromStores(15155).SETTING_RENDERER_CONFIG[setting].unsearchable;
               }
               return tmp3;
             });

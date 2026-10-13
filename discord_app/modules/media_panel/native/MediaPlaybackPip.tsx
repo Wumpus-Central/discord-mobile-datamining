@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(17797).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(17801).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5092);
@@ -215,7 +215,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj4 = { style: { flex: 1 }, children: null };
                 const obj5 = { spacing: 20, speed: 0.2, children: tmp26 };
-                const items2 = [closure_15(tmp(17969).Marquee, obj5)];
+                const items2 = [closure_15(tmp(17973).Marquee, obj5)];
                 const obj6 = {
                   start: { x: 0, y: 0 },
                   end: { x: 1, y: 0 },
@@ -356,7 +356,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             if (memo) {
               const obj6 = { style: { flex: 1 }, children: null };
               const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-              const items3 = [closure_15(tmp2(17969).Marquee, obj7)];
+              const items3 = [closure_15(tmp2(17973).Marquee, obj7)];
               const obj8 = {
                 start: { x: 0, y: 0 },
                 end: { x: 1, y: 0 },

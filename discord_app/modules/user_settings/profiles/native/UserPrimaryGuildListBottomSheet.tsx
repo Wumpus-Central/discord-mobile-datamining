@@ -147,7 +147,22 @@ let closure_11 = noop.memo(
                               accessibilityState,
                               trailing: tmp31,
                             };
-                            const tmp37 = closure_7(item(6180).TableRow, obj4);
+                            class C {
+                              constructor() {
+                                id = undefined;
+                                tmp = onSelectGuild;
+                                if (item != null) {
+                                  id = item.id;
+                                }
+                                if (id == null) {
+                                  id = null;
+                                }
+                                tmpResult = tmp(id);
+                                obj = closure_1(closure_2[12]);
+                                hideActionSheetResult = obj.hideActionSheet();
+                                return;
+                              }
+                            }
                             cResult[25] = accessibilityRole;
                             cResult[26] = accessibilityState;
                             cResult[27] = end;
@@ -164,6 +179,22 @@ let closure_11 = noop.memo(
                         const items = [tmp24, tmp28];
                         obj5.children = items;
                         const tmp34 = closure_8(View, obj5);
+                        class C {
+                          constructor() {
+                            id = undefined;
+                            tmp = onSelectGuild;
+                            if (item != null) {
+                              id = item.id;
+                            }
+                            if (id == null) {
+                              id = null;
+                            }
+                            tmpResult = tmp(id);
+                            obj = closure_1(closure_2[12]);
+                            hideActionSheetResult = obj.hideActionSheet();
+                            return;
+                          }
+                        }
                         cResult[21] = tmp4.itemTrailingStyle;
                         cResult[22] = tmp24;
                         cResult[23] = tmp28;
@@ -195,6 +226,22 @@ let closure_11 = noop.memo(
                 cResult[14] = profile;
                 cResult[15] = item;
                 cResult[16] = tmp4.tag;
+                class C {
+                  constructor() {
+                    id = undefined;
+                    tmp = onSelectGuild;
+                    if (item != null) {
+                      id = item.id;
+                    }
+                    if (id == null) {
+                      id = null;
+                    }
+                    tmpResult = tmp(id);
+                    obj = closure_1(closure_2[12]);
+                    hideActionSheetResult = obj.hideActionSheet();
+                    return;
+                  }
+                }
                 cResult[17] = tmp4.tagStyles;
                 cResult[18] = tmp26Result;
                 tmp24 = tmp26Result;
@@ -215,21 +262,26 @@ let closure_11 = noop.memo(
           if (item != null) {
             id1 = item.id;
           }
-          const fn = function v() {
-            let id;
-            if (item != null) {
-              id = item.id;
+          class C {
+            constructor() {
+              id = undefined;
+              tmp = onSelectGuild;
+              if (item != null) {
+                id = item.id;
+              }
+              if (id == null) {
+                id = null;
+              }
+              tmpResult = tmp(id);
+              obj = closure_1(closure_2[12]);
+              hideActionSheetResult = obj.hideActionSheet();
+              return;
             }
-            if (id == null) {
-              id = null;
-            }
-            onSelectGuild(id);
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-          };
+          }
           cResult[5] = id1;
           cResult[6] = onSelectGuild;
-          cResult[7] = fn;
-          tmp15 = fn;
+          cResult[7] = C;
+          tmp15 = C;
           const tmpResult = item(4832);
         }
         let guildTagBadgeUrl = null != item;
@@ -355,7 +407,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
     } else {
       const obj3 = { guilds: _undefined };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(14905, dependencyMap.paths),
+        asyncRequireImpl(15226, dependencyMap.paths),
         "GuildTagCreateGuildListBottomSheet",
         obj3,
       );
@@ -481,6 +533,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   obj13.header = memo1(closure_9, obj14);
   const obj15 = {
     ref,
+    maintainVisibleContentPosition: { disabled: true },
     accessibilityRole: "radiogroup",
     accessibilityLabel: null,
     keyboardShouldPersistTaps: "handled",
@@ -527,6 +580,6 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
     obj.onSelectGuild = onSelectGuild;
     return React5(closure_11, obj);
   };
-  obj13.children = memo(availableGuilds(onSelectGuild[32]).BottomSheetFlatList, obj15);
+  obj13.children = memo(availableGuilds(onSelectGuild[32]).BottomSheetFlashList, obj15);
   return memo(availableGuilds(onSelectGuild[30]).BottomSheet, obj13);
 }

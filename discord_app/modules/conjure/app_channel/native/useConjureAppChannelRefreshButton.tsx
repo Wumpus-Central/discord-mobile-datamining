@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[3] !== tmp7) {
             const obj3 = { source: null, IconComponent: null, onPress: null, accessibilityLabel: null };
-            RetryIcon = tmp(12622).RetryIcon;
+            RetryIcon = tmp(11303).RetryIcon;
             obj3.IconComponent = RetryIcon;
             obj3.onPress = tmp7;
             obj3.accessibilityLabel = tmp9;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (!tmp5) {
           const obj2 = {
             source: null,
-            IconComponent: tmp(12622).RetryIcon,
+            IconComponent: tmp(11303).RetryIcon,
             onPress() {
               application_id = application_id.application_id;
               if (application_id == null) {

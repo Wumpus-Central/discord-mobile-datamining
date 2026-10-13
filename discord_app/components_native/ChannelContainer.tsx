@@ -140,7 +140,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled()
               let tmp21 = cResult[13];
             }
             const effect = noop.useEffect(tmp20, tmp21);
-            const channelStyles = tmp(12687).useChannelStyles();
+            const channelStyles = tmp(13193).useChannelStyles();
             if (cResult[14] === channel) {
               if (cResult[15] === stateFromStores) {
                 let tmp25 = cResult[16];
@@ -210,14 +210,14 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled()
               tmp29 = null;
               if (stateFromStores) {
                 const obj5 = { channel };
-                tmp29 = closure_10(tmp9(12688), obj5);
+                tmp29 = closure_10(tmp9(13194), obj5);
               }
             }
             cResult[14] = channel;
             cResult[15] = stateFromStores;
             cResult[16] = tmp29;
             tmp25 = tmp29;
-            const tmpResult4 = tmp(12687);
+            const tmpResult4 = tmp(13193);
           }
         }
       }
@@ -331,7 +331,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = null;
         if (stateFromStores) {
           const obj4 = { channel };
-          tmp15 = closure_10(channelId(12688), obj4);
+          tmp15 = closure_10(channelId(13194), obj4);
         }
       }
       const items3 = [tmp15, children.children];

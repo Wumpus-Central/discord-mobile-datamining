@@ -38,7 +38,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(2120).isEveryoneRole;
-let closure_15 = fn(18401).GuildSettingsRoleEditSections;
+let closure_15 = fn(18405).GuildSettingsRoleEditSections;
 const Constants = fn(1085);
 ({
   GuildSettingsSections: closure_16,
