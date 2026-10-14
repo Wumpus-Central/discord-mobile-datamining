@@ -16,12 +16,12 @@ function handlePress() {
   obj2.icon = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open("UNKNOWN_CHANNEL_UPDATE_DISCORD", obj2);
 }
-const UnreadSetting = fn(5967).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   container: {
-    marginVertical: fn(11562).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11572).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -29,7 +29,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11562).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11572).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };

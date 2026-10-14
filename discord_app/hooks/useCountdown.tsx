@@ -22,11 +22,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       if (cResult[0] !== expiresAt) {
         const _Date = Date;
-        const diffAsUnitsResult = tmp(4793).diffAsUnits(Date.now(), expiresAt);
+        const diffAsUnitsResult = tmp(4795).diffAsUnits(Date.now(), expiresAt);
         cResult[0] = expiresAt;
         cResult[1] = diffAsUnitsResult;
         let tmp5 = diffAsUnitsResult;
-        const tmpResult = tmp(4793);
+        const tmpResult = tmp(4795);
       } else {
         tmp5 = cResult[1];
       }

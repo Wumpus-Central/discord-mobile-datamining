@@ -13,7 +13,7 @@ require = fn;
 const ComponentActions = fn(1085).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round };
 obj2.badge = size;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = useChatBadgeDefault(channelId.channelId);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { icon: null, accessibilityLabel: null, onPress: null };
-        const obj3 = { color: nativeDefault.colors.WHITE, size: "sm" };
+        const obj3 = { color: nativeDefault.colors.ICON_STRONG, size: "sm" };
         obj2.icon = hasOwnProperty(ChatIcon.ChatIcon, obj3);
         const intl = util.intl;
         obj2.accessibilityLabel = intl.string(util.t["5KxXrK"]);
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { icon: null, accessibilityLabel: null, onPress: null };
       const tmp7 = NativeViewDefault;
       const tmp9 = VoicePanelIconButtonDefault;
-      obj.icon = hasOwnProperty(ChatIcon.ChatIcon, { color: nativeDefault.colors.WHITE, size: "sm" });
+      obj.icon = hasOwnProperty(ChatIcon.ChatIcon, { color: nativeDefault.colors.ICON_STRONG, size: "sm" });
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t["5KxXrK"]);
       obj.onPress = callback;

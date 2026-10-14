@@ -74,7 +74,7 @@ function markDismissibleContentAsDismissedPostProcessing(content, groupName) {
     groupName = groupName.groupName;
   }
   obj.groupName = groupName;
-  options(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
+  React6(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
   const tmp = !DismissibleContentFrameworkStore.hasUserHitDCCap();
 }
 let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(arg0) {
@@ -753,7 +753,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "Array" };
+      return { isDismissed: false, lastDismissedAtMs: "a" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

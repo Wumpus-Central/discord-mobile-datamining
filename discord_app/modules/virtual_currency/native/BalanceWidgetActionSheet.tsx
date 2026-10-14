@@ -5,9 +5,9 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import _mod13296 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_animated.mp4.js";
-import _mod13297 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_static.png.js";
-import _mod13298 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js";
+import _mod13335 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_animated.mp4.js";
+import _mod13336 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_static.png.js";
+import _mod13337 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const Constants = fn(1085);
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_13 = createStyles.createStyles((color) => {
   const obj = {
     actions: {
@@ -133,9 +133,9 @@ export default function _default(balance) {
     let tmp = null;
     if (num > 4100) {
       const obj = {
-        backgroundVideo: _mod13296.default,
-        backgroundImage: _mod13297.default,
-        bannerImage: _mod13298.default,
+        backgroundVideo: _mod13335.default,
+        backgroundImage: _mod13336.default,
+        bannerImage: _mod13337.default,
         bannerText: null,
       };
       const intl = util.intl;

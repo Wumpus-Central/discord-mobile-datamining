@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp5 = first1(noop.useState(""), 2);
-      const initialSnowflakeSelectOptions = tmp(8258).getInitialSnowflakeSelectOptions(
+      const initialSnowflakeSelectOptions = tmp(8265).getInitialSnowflakeSelectOptions(
         selectActionComponent,
         containerId,
         guildId,

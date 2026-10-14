@@ -258,7 +258,7 @@ export const useMaybeFetchCollectiblesShopHome = ReactCompilerGating.isReactComp
         let tmp = !hasExpiredShopBlocks;
         if (!hasExpiredShopBlocks) {
           const _Date = Date;
-          tmp = Date.now() - c6 < options;
+          tmp = Date.now() - c6 < React6;
         }
         return tmp;
       }, items5);

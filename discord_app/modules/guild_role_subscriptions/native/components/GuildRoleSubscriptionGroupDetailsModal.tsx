@@ -15,13 +15,13 @@ import RoleTierEditStore from "../RoleTierEditStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(15813);
+const GuildRoleSubscriptionsConstants = fn(15850);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } =
   GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1085).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_12 = createStyles.createStyles({
   coverPhoto: { height: 114, width: "100%" },
   coverDescription: { marginTop: 16 },
@@ -46,7 +46,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp6.header) {
         const obj3 = { style: tmp6.header, children: first };
-        const tmp12 = options(FormHeaderDefault, obj3);
+        const tmp12 = React6(FormHeaderDefault, obj3);
         cResult[1] = tmp6.header;
         cResult[2] = tmp12;
         let tmp10 = tmp12;
@@ -75,7 +75,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 color: "text-default",
                 children: tmp16,
               };
-              const tmp20 = options(Text_Text.Text, obj4);
+              const tmp20 = React6(Text_Text.Text, obj4);
               cResult[9] = tmp4.coverDescription;
               cResult[10] = tmp20;
               let tmp18 = tmp20;
@@ -89,7 +89,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[15] !== tmp4.paddedContainer) {
                   const obj5 = { style: tmp4.paddedContainer };
-                  const tmp27 = options(FormSeparatorDefault, obj5);
+                  const tmp27 = React6(FormSeparatorDefault, obj5);
                   cResult[15] = tmp4.paddedContainer;
                   cResult[16] = tmp27;
                   let tmp25 = tmp27;
@@ -107,7 +107,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[18] !== tmp6.header) {
                   const obj6 = { style: tmp6.header, children: tmp28 };
-                  const tmp32 = options(FormHeaderDefault, obj6);
+                  const tmp32 = React6(FormHeaderDefault, obj6);
                   cResult[18] = tmp6.header;
                   cResult[19] = tmp32;
                   let tmp30 = tmp32;
@@ -166,7 +166,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   onChange: setDescription,
                   disabled: roleSubscriptionSettingsDisabled,
                 };
-                const tmp38 = options(Form.FormInput, obj8);
+                const tmp38 = React6(Form.FormInput, obj8);
                 cResult[21] = description;
                 cResult[22] = tmp6.textInput;
                 cResult[23] = roleSubscriptionSettingsDisabled;
@@ -187,7 +187,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp15 = options(FormImagePicker.ImagePickerIcon, {
+      const tmp15 = React6(FormImagePicker.ImagePickerIcon, {
         style: tmp4.coverPhoto,
         image: cover,
         imageUploadSize: UPLOAD_BANNER_SIZE.width,
@@ -224,10 +224,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp2.header, children: null };
       const intl = util.intl;
       obj3.children = intl.string(util.t["3S8gA7"]);
-      const items = [options(FormHeaderDefault, obj3), , , ,];
+      const items = [React6(FormHeaderDefault, obj3), , , ,];
       const obj4 = { style: tmp.paddedContainer, children: null };
       const items1 = [
-        options(FormImagePicker.ImagePickerIcon, {
+        React6(FormImagePicker.ImagePickerIcon, {
           style: tmp.coverPhoto,
           image: cover,
           imageUploadSize: UPLOAD_BANNER_SIZE.width,
@@ -241,10 +241,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { style: tmp.coverDescription, variant: "text-sm/medium", color: "text-default", children: null };
       const intl2 = util.intl;
       obj6.children = intl2.string(util.t["0ng4rB"]);
-      items1[1] = options(Text_Text.Text, obj6);
+      items1[1] = React6(Text_Text.Text, obj6);
       obj4.children = items1;
       items[1] = collapsed(View, obj4);
-      items[2] = options(FormSeparatorDefault, { style: tmp.paddedContainer });
+      items[2] = React6(FormSeparatorDefault, { style: tmp.paddedContainer });
       const obj8 = { style: tmp2.header, children: null };
       const obj5 = {
         style: tmp.coverPhoto,
@@ -259,7 +259,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { style: tmp.paddedContainer };
       const intl3 = util.intl;
       obj8.children = intl3.string(util.t["74JctW"]);
-      items[3] = options(FormHeaderDefault, obj8);
+      items[3] = React6(FormHeaderDefault, obj8);
       const obj9 = {
         style: tmp2.textInput,
         showTopContainer: false,
@@ -275,7 +275,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj9.placeholder = intl4.string(util.t["3YHwoG"]);
       obj9.onChange = setDescription;
       obj9.disabled = roleSubscriptionSettingsDisabled;
-      items[4] = options(Form.FormInput, obj9);
+      items[4] = React6(Form.FormInput, obj9);
       obj2.children = items;
       return collapsed(closure_1_11, obj2);
     };
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               const merged = Object.assign(arg0);
               obj2.children = tmp15;
-              const tmp26 = options(GuildRoleSubscriptionTierEditStepDefault, obj2);
+              const tmp26 = React6(GuildRoleSubscriptionTierEditStepDefault, obj2);
               cResult[8] = tmp9;
               cResult[9] = arg0;
               cResult[10] = tmp15;
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.setCover = tmp6;
       obj3.description = arr;
       obj3.setDescription = tmp8;
-      const tmp17 = options(closure_13, obj3);
+      const tmp17 = React6(closure_13, obj3);
       cResult[2] = tmp5;
       cResult[3] = arr;
       cResult[4] = arg0;
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.cover = tmp2;
       obj2.setCover = tmp3;
       obj2.description = first;
-      obj.children = options(closure_13, obj2);
-      return options(GuildRoleSubscriptionTierEditStepDefault, obj);
+      obj.children = React6(closure_13, obj2);
+      return React6(GuildRoleSubscriptionTierEditStepDefault, obj);
     };
 export const Content = tmp5;

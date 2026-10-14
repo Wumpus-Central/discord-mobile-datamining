@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7748);
+const RowGeneratorConstants = fn(7754);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -285,8 +285,8 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "Symbol",
           shouldInitialScroll: "Array",
-          animated: "ACTIVITY_LAYOUT_MODE_UPDATE",
-          scrollPosition: null,
+          animated: "2026-10-badge-directory-updates",
+          scrollPosition: "user",
           focusTargetId: null,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
@@ -319,11 +319,11 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9338).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9347).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9338);
-          applyArgumentsResult(5103).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(9347);
+          applyArgumentsResult(5107).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -356,14 +356,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(5103).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(5103);
+            applyArgumentsResult(5107).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5107);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "asc",
-        selectedChannelId: "asc",
-        tapLinkData: "https://support.discord.com/hc/articles/14155043715735",
+        messageChannel: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE",
+        selectedChannelId: null,
+        tapLinkData: "text-feedback-warning",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -641,7 +641,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4827).ThemeContext;
+ChatPreviewBase.contextType = fn(4829).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const ReactCompilerGating = fn(558);
 let obj5 = { height: 44, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -698,9 +698,9 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = channelId(504).useStateFromStores(tmp11, C);
       const width = useWindowDimensionsDefault().width;
       const tmpResult5 = channelId(504);
-      const isChannelSpoilerGated = channelId(5944).useIsChannelSpoilerGated(stateFromStores1);
-      const tmpResult6 = channelId(5944);
-      const isChannelContentGated = channelId(5924).useIsChannelContentGated(stateFromStores1);
+      const isChannelSpoilerGated = channelId(5949).useIsChannelSpoilerGated(stateFromStores1);
+      const tmpResult6 = channelId(5949);
+      const isChannelContentGated = channelId(5929).useIsChannelContentGated(stateFromStores1);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class C {
           constructor() {
@@ -723,7 +723,7 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp18 = cResult[6];
       }
-      const tmpResult7 = channelId(5924);
+      const tmpResult7 = channelId(5929);
       const stateFromStores2 = channelId(504).useStateFromStores(tmp17, tmp18);
       if (!isChannelSpoilerGated) {
         class C {
@@ -780,10 +780,10 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [ChannelStore];
       const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
       const obj2 = channelId(504);
-      const isChannelSpoilerGated = channelId(5944).useIsChannelSpoilerGated(stateFromStores1);
-      const obj3 = channelId(5944);
-      const isChannelContentGated = channelId(5924).useIsChannelContentGated(stateFromStores1);
-      const obj4 = channelId(5924);
+      const isChannelSpoilerGated = channelId(5949).useIsChannelSpoilerGated(stateFromStores1);
+      const obj3 = channelId(5949);
+      const isChannelContentGated = channelId(5929).useIsChannelContentGated(stateFromStores1);
+      const obj4 = channelId(5929);
       const items2 = [ActionSheetStore];
       const obj6 = {};
       const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

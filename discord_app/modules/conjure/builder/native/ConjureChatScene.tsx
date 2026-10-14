@@ -9,17 +9,16 @@ import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetA
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import UploadIcon from "../../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
-import conjureStandaloneScenes from "conjureStandaloneScenes.tsx";
 import ConjureActionCreators from "../../projects/ConjureActionCreators.tsx";
 import conjurePreviewSurface from "../../preview/conjurePreviewSurface.tsx";
 import restartConjureAppFramesDefault from "../../preview/native/restartConjureAppFrames.tsx";
+import conjureStandaloneScenes from "conjureStandaloneScenes.tsx";
 import ConjureRemixSheet from "../../remix/native/ConjureRemixSheet.tsx";
 import conjureProjectActions from "../../projects/native/conjureProjectActions.tsx";
 import ConjureSettingsSheet from "../../settings/native/ConjureSettingsSheet.tsx";
 import ConjurePublishBlockedSheetDefault from "../../publish/native/ConjurePublishBlockedSheet.tsx";
 import useConjurePublishAction from "../../publish/useConjurePublishAction.tsx";
 import conjurePublishAction from "../../publish/conjurePublishAction.tsx";
-import ConjurePublishNotesSheet from "../../publish/native/ConjurePublishNotesSheet.tsx";
 import conjurePreviewTargets from "../../preview/conjurePreviewTargets.tsx";
 import ConjureConnectToolSheet from "../../external_connections/native/ConjureConnectToolSheet.tsx";
 import ConjureHistorySheet from "../../history/native/ConjureHistorySheet.tsx";
@@ -36,40 +35,25 @@ import ConjurePublishStatusStore from "../../publish/ConjurePublishStatusStore.t
 const require = globalThis.__r;
 const ConjureRemixSheetDefault = ConjureRemixSheet;
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
-const ConjurePublishNotesSheetDefault = ConjurePublishNotesSheet;
 const ConjureConnectToolSheetDefault = ConjureConnectToolSheet;
 const ConjureHistorySheetDefault = ConjureHistorySheet;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Keyboard: closure_7, View: closure_8 } = get_ActivityIndicator);
-const closeConnection = fn(11215).closeConnection;
-const conjureDesignFeedbackStore = fn(11350);
+const closeConnection = fn(10663).closeConnection;
+const conjureDesignFeedbackStore = fn(11362);
 ({
   enterConjureDesignFeedback: closure_11,
   exitConjureDesignFeedback: closure_12,
   useConjureDesignFeedback: map1,
 } = conjureDesignFeedbackStore);
-const isLaunched = fn(10802).isLaunched;
+const isLaunched = fn(10697).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let obj = {
   showPublishBlocked: ConjurePublishBlockedSheetDefault,
-  promptFirstPublish: fn(11354).showConjureFirstPublishSheet,
-  openPublishNotes(arg0) {
-    ({ guildId, applicationId, projectName, publish, initialDraft } = arg0);
-    obj = ActionSheetActionCreators;
-    obj.showActionSheet({
-      content: constants(ConjurePublishNotesSheetDefault, {
-        guildId,
-        applicationId,
-        projectName,
-        publish,
-        initialDraft,
-      }),
-      key: ConjurePublishNotesSheet.CONJURE_PUBLISH_NOTES_SHEET_KEY,
-    });
-  },
+  promptFirstPublish: fn(11366).showConjureFirstPublishSheet,
   showError(text) {
     return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_FAILED", { text, variant: "critical" });
   },
@@ -77,7 +61,7 @@ let obj = {
     return ToastActionCreatorsDefault.open("CONJURE_PUBLISH_SUCCEEDED", { text: intl, variant: "success" });
   },
 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_20 = createStyles.createStyles((paddingBottom) => {
   obj = {
     content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom },
@@ -195,10 +179,10 @@ export default function ConjureChatScene(guildId) {
   let conjureRemoveTarget;
   let memo7;
   navigation = require("useNavigation").useNavigation();
-  const bottom = projectId(navigation[19])().bottom;
+  const bottom = projectId(navigation[17])().bottom;
   const tmp5 = frameSurfaceOptions(bottom);
   _slicedToArray = tmp5;
-  const tmp6 = projectId(navigation[20])();
+  const tmp6 = projectId(navigation[18])();
   noop = tmp6;
   const tmp8 = _slicedToArray(noop.useState(0), 2);
   closure_6 = tmp9;
@@ -409,7 +393,7 @@ export default function ConjureChatScene(guildId) {
     const project = ConjureActionCreators.getProject(projectId);
     project.catch(() => {});
   }, items11);
-  const tmp32 = null != previewAppId && null != projectId(navigation[31])(previewAppId);
+  const tmp32 = null != previewAppId && null != projectId(navigation[29])(previewAppId);
   const tmpResult21 = require("conjurePreviewModes");
   result1 = require("ConjureInstallTarget").conjureInstallGuildId(stateFromStores, stateFromStores2, guildId);
   const items12 = [result1, previewAppId, data, stateFromStores, projectId];
@@ -446,7 +430,7 @@ export default function ConjureChatScene(guildId) {
               }
               if (tmp7) {
                 if (null == data) {
-                  application = application(tmp2[24]).fetchApplication(previewAppId);
+                  application = application(tmp2[22]).fetchApplication(previewAppId);
                   c4 = 1;
                   c5 = 1;
                   const obj6 = {
@@ -479,12 +463,12 @@ export default function ConjureChatScene(guildId) {
           obj7.application = application;
           obj7.guildId = closure_131_24;
           obj7.onClose = function onClose() {
-            const result = c0(11356).repairConjureGuildHints(closure_1_7, closure_1_24);
-            obj = c0(11356);
-            result.finally(() => application(11207).getProject(closure_1_1)).catch(() => {});
+            const result = c0(11368).repairConjureGuildHints(closure_1_7, closure_1_24);
+            obj = c0(11368);
+            result.finally(() => application(10684).getProject(closure_1_1)).catch(() => {});
           };
-          let result = application3(tmp2[33]).openConjureAppInstallModal(obj7);
-          const obj2 = application3(tmp2[33]);
+          let result = application3(tmp2[31]).openConjureAppInstallModal(obj7);
+          const obj2 = application3(tmp2[31]);
         } catch (tmp27) {
           c5 = tmp;
           throw tmp27;
@@ -640,8 +624,8 @@ export default function ConjureChatScene(guildId) {
   active = data(projectId).active;
   const tmpResult25 = require("ReanimatedRexport");
   conjureControlActive = require("conjurePreviewControlLease").useConjureControlActive(projectId);
-  let intl = tmp(tmp2[37]).intl;
-  const tmp4Result = projectId(navigation[38]);
+  let intl = tmp(tmp2[35]).intl;
+  const tmp4Result = projectId(navigation[36]);
   if (conjureControlActive) {
     let Sme0T0 = tmp4Result.Sme0T0;
   } else {
@@ -664,8 +648,8 @@ export default function ConjureChatScene(guildId) {
   );
   const items16 = [activeMode, frameSurface, appChannel];
   memo1 = obj2.useMemo(() => conjurePreviewTargets.activePreviewTarget(activeMode, frameSurface, appChannel), items16);
-  let intl2 = tmp(tmp2[37]).intl;
-  stringResult1 = intl2.string(tmp4(tmp2[38])["N+VA1J"]);
+  let intl2 = tmp(tmp2[35]).intl;
+  stringResult1 = intl2.string(tmp4(tmp2[36])["N+VA1J"]);
   const items17 = [memo1, availability.modes.length, stringResult1, tmp53];
   const memo2 = obj2.useMemo(() => {
     obj = { id: "chat", label: null, page: null };
@@ -714,7 +698,7 @@ export default function ConjureChatScene(guildId) {
       let fn;
       if (closure_26) {
         if (closure_38) {
-          fn = (color) => activeMode(closure_1_0(10533).ChevronSmallDownIcon, { size: "xs", color });
+          fn = (color) => activeMode(closure_1_0(10543).ChevronSmallDownIcon, { size: "xs", color });
         }
       }
       preview.renderTrailingIcon = fn;
@@ -723,11 +707,11 @@ export default function ConjureChatScene(guildId) {
       let fn2;
       if (closure_38) {
         fn2 = () =>
-          projectId(navigation[41])({
+          projectId(navigation[39])({
             targets,
             target,
             onChange(mode) {
-              const previewTarget = closure_2_0(11375).selectPreviewTarget(
+              const previewTarget = closure_2_0(11385).selectPreviewTarget(
                 mode,
                 closure_1_18,
                 closure_1_21,
@@ -759,7 +743,7 @@ export default function ConjureChatScene(guildId) {
   const tmpResult27 = require("SegmentedControlState");
   const segmentedControlState = tmpResult27.useSegmentedControlState({
     items: memo2,
-    pageWidth: projectId(navigation[42])().width - 2 * setFrameSurface,
+    pageWidth: projectId(navigation[40])().width - 2 * setFrameSurface,
     onSetActiveIndex: callback2,
   });
   if (tmp37) {
@@ -777,7 +761,7 @@ export default function ConjureChatScene(guildId) {
   }, items19);
   const items20 = [previewAppId];
   const effect3 = obj2.useEffect(
-    () => (null != previewAppId ? () => closure_0(navigation[44]).leaveConjurePreviewFrame(previewAppId) : undefined),
+    () => (null != previewAppId ? () => closure_0(navigation[42]).leaveConjurePreviewFrame(previewAppId) : undefined),
     items20,
   );
   const items21 = [guildId, stateFromStores2, isLoading];
@@ -785,7 +769,7 @@ export default function ConjureChatScene(guildId) {
     platform = { guildId, platform, busy: null == stateFromStores2 || isLoading };
     return platform;
   }, items21);
-  const tmp87 = projectId(navigation[35])(projectId, memo4);
+  const tmp87 = projectId(navigation[33])(projectId, memo4);
   closure_42 = tmp87;
   if (projectGuildId == null) {
     projectGuildId = guildId;
@@ -802,7 +786,7 @@ export default function ConjureChatScene(guildId) {
   memo5 = obj2.useMemo(
     () =>
       conjureStandaloneScenes.projectOpener(closure_0, (projectId) =>
-        closure_1_2.push(closure_0(navigation[28]).ConjureScreenScenes.CHAT, { projectId }),
+        closure_1_2.push(closure_0(navigation[26]).ConjureScreenScenes.CHAT, { projectId }),
       ),
     items23,
   );
@@ -837,16 +821,16 @@ export default function ConjureChatScene(guildId) {
       } else {
         ref.current = true;
         const obj8 = { text: null, icon: null };
-        const intl2 = closure_0(navigation[37]).intl;
-        obj8.text = intl2.string(projectId(navigation[38]).qqlUiW);
-        obj8.icon = closure_0(navigation[48]).UndoIcon;
-        projectId(navigation[15]).open("VIBEGRATIONS_VERSION_RESTORING", obj8);
+        const intl2 = closure_0(navigation[35]).intl;
+        obj8.text = intl2.string(projectId(navigation[36]).qqlUiW);
+        obj8.icon = closure_0(navigation[47]).UndoIcon;
+        projectId(navigation[13]).open("VIBEGRATIONS_VERSION_RESTORING", obj8);
         c5 = 2;
-        projectId(navigation[15]);
+        projectId(navigation[13]);
         c6 = 4;
         c7 = 1;
         return {
-          value: closure_0(navigation[49]).restoreSourceHistoryEntry(closure_1, closure_130_0.sha),
+          value: closure_0(navigation[48]).restoreSourceHistoryEntry(closure_1, closure_130_0.sha),
           done: false,
         };
       }
@@ -855,8 +839,8 @@ export default function ConjureChatScene(guildId) {
       ref.current = false;
       throw closure_4;
     } else if (3 === tmp8) {
-      const intl = closure_0(navigation[37]).intl;
-      closure_0(navigation[50]).presentError(intl.string(projectId(navigation[38])["PSdo+w"]));
+      const intl = closure_0(navigation[35]).intl;
+      closure_0(navigation[49]).presentError(intl.string(projectId(navigation[36])["PSdo+w"]));
       c5 = 0;
       ref.current = false;
       c7 = 3;
@@ -874,14 +858,14 @@ export default function ConjureChatScene(guildId) {
         } else {
           c5 = 1;
           const obj13 = { text: null, icon: null };
-          const intl3 = closure_0(navigation[37]).intl;
+          const intl3 = closure_0(navigation[35]).intl;
           const obj16 = { title: null };
-          obj16.title = closure_0(navigation[51]).versionTitle(closure_130_0.subject).short;
-          obj13.text = intl3.formatToPlainString(projectId(navigation[38]).Z4n6LX, obj16);
-          obj13.icon = closure_0(navigation[48]).UndoIcon;
-          projectId(navigation[15]).open("VIBEGRATIONS_VERSION_RESTORED", obj13);
-          closure_0(navigation[51]);
-          projectId(navigation[15]);
+          obj16.title = closure_0(navigation[50]).versionTitle(closure_130_0.subject).short;
+          obj13.text = intl3.formatToPlainString(projectId(navigation[36]).Z4n6LX, obj16);
+          obj13.icon = closure_0(navigation[47]).UndoIcon;
+          projectId(navigation[13]).open("VIBEGRATIONS_VERSION_RESTORED", obj13);
+          closure_0(navigation[50]);
+          projectId(navigation[13]);
         }
       } else if (arg0 === 1) {
         c7 = 3;
@@ -894,14 +878,14 @@ export default function ConjureChatScene(guildId) {
       } else {
         closure_130_2 = value;
         if (null != closure_130_2) {
-          closure_0(navigation[50]).presentError(closure_130_2);
-          closure_0(navigation[50]);
+          closure_0(navigation[49]).presentError(closure_130_2);
+          closure_0(navigation[49]);
         }
       }
       c5 = 0;
       ref.current = false;
     }
-    yield closure_0(navigation[52]).rewindDataAfterVersionRestore(closure_1, closure_130_1);
+    yield closure_0(navigation[51]).rewindDataAfterVersionRestore(closure_1, closure_130_1);
     closure_3 = tmp4;
     closure_130_0 = closure_0;
     let tmp57 = closure_1;
@@ -947,7 +931,7 @@ export default function ConjureChatScene(guildId) {
   }, items27);
   const obj12 = {
     items: memo2,
-    pageWidth: projectId(navigation[42])().width - 2 * setFrameSurface,
+    pageWidth: projectId(navigation[40])().width - 2 * setFrameSurface,
     onSetActiveIndex: callback2,
   };
   conjureDebugPaneEnabled = require("useConjureDebugAccess").useConjureDebugPaneEnabled();
@@ -958,7 +942,7 @@ export default function ConjureChatScene(guildId) {
   );
   const items29 = [frameSurface];
   const memo6 = obj2.useMemo(() => conjurePreviewSurface.getConjurePreviewSurface(undefined, frameSurface), items29);
-  const tmp98 = availability(projectId(navigation[56])(previewAppId, memo6));
+  const tmp98 = availability(projectId(navigation[55])(previewAppId, memo6));
   closure_53 = tmp98;
   const items30 = [previewAppId];
   callback9 = obj2.useCallback(() => {
@@ -996,9 +980,9 @@ export default function ConjureChatScene(guildId) {
     }
   }
   obj13.refreshApplicationId = tmp104;
-  const tmp4Result1Result = projectId(navigation[58])(obj13);
+  const tmp4Result1Result = projectId(navigation[57])(obj13);
   preview = tmp4Result1Result;
-  const tmp4Result3 = projectId(navigation[58]);
+  const tmp4Result3 = projectId(navigation[57]);
   isConjureProjectMuted = require("conjureProjectMute").useIsConjureProjectMuted(projectId);
   const tmpResult30 = require("conjureProjectMute");
   conjureRemoveTarget = require("conjureRemoveApp").useConjureRemoveTarget(projectId);
@@ -1139,7 +1123,7 @@ export default function ConjureChatScene(guildId) {
                   ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
                   obj = {
                     ref,
-                    IconComponent: title(9242).MoreHorizontalIcon,
+                    IconComponent: title(9251).MoreHorizontalIcon,
                     onPress,
                     accessibilityLabel: null,
                     accessibilityActions: null,
@@ -1149,17 +1133,17 @@ export default function ConjureChatScene(guildId) {
                   obj.accessibilityLabel = intl.string(title(1126).t["UKOtz+"]);
                   obj.accessibilityActions = accessibilityActions;
                   obj.onAccessibilityAction = onAccessibilityAction;
-                  return closure_1_17(closure_1_1(11348), obj);
+                  return closure_1_17(closure_1_1(11360), obj);
                 },
               };
-              items[1] = activeMode(title(navigation[70]).ContextMenu, obj2);
+              items[1] = activeMode(title(navigation[69]).ContextMenu, obj2);
               obj.children = items;
               tmp = tmp2(tmp3, obj);
             } else {
               if (active) {
                 let ExperimentalDirectSelectIcon = c25;
               } else {
-                ExperimentalDirectSelectIcon = title(navigation[69]).ExperimentalDirectSelectIcon;
+                ExperimentalDirectSelectIcon = title(navigation[68]).ExperimentalDirectSelectIcon;
               }
               const obj3 = {
                 IconComponent: ExperimentalDirectSelectIcon,
@@ -1171,8 +1155,8 @@ export default function ConjureChatScene(guildId) {
               const obj4 = { selected: active };
               obj3.accessibilityState = obj4;
               obj3.disabled = disabled;
-              activeMode(projectId(navigation[68]), obj3);
-              const tmp10 = projectId(navigation[68]);
+              activeMode(projectId(navigation[67]), obj3);
+              const tmp10 = projectId(navigation[67]);
             }
           }
           return tmp;
@@ -1183,18 +1167,18 @@ export default function ConjureChatScene(guildId) {
       let tmp2 = navigation;
       if (!projectExists) {
         if (!stateFromStores1) {
-          let uk6jhJ = projectId(tmp2[38]).G1WwgK;
+          let uk6jhJ = projectId(tmp2[36]).G1WwgK;
         }
         tmp3(uk6jhJ);
       }
-      tmp2 = projectId(tmp2[38]);
+      tmp2 = projectId(tmp2[36]);
       uk6jhJ = tmp2.uk6jhJ;
     }
   }, items36);
   const items37 = [guildId, projectId];
   const effect6 = obj2.useEffect(() => {
     const result = ConjureActionCreators.setSelectedProjectForGuild(closure_0, projectId);
-    return () => closure_0(navigation[30]).setSelectedProjectForGuild(closure_1_0, null);
+    return () => closure_0(navigation[28]).setSelectedProjectForGuild(closure_1_0, null);
   }, items37);
   if (projectExists) {
     const obj14 = { style: null, children: null };
@@ -1204,7 +1188,7 @@ export default function ConjureChatScene(guildId) {
     if (tmp51) {
       const obj15 = { style: tmp5.segments, children: null };
       let obj16 = { state: segmentedControlState, extras: memo3 };
-      obj15.children = activeMode(tmp4(tmp2[74]), obj16);
+      obj15.children = activeMode(tmp4(tmp2[73]), obj16);
       tmp118 = activeMode(projectExists, obj15);
     }
     const items39 = [tmp118];
@@ -1238,7 +1222,7 @@ export default function ConjureChatScene(guildId) {
           launch: frameLaunchParams,
           visible: tmp56,
         };
-        obj18.children = activeMode(tmp(tmp2[44]).PreviewFrame, obj19);
+        obj18.children = activeMode(tmp(tmp2[42]).PreviewFrame, obj19);
         tmp123Result = tmp123(tmp121, obj18);
       }
     }
@@ -1261,7 +1245,7 @@ export default function ConjureChatScene(guildId) {
             frameHostAvailable: tmp32,
             permissionsGate: null,
           };
-          const tmp4Result4 = tmp4(tmp2[44]);
+          const tmp4Result4 = tmp4(tmp2[42]);
           let tmp127 = null;
           if (tmpResult32.permissionReviewBlocksMode(activeMode, result)) {
             const obj22 = { onReviewPermissions: callback, loading: isLoading, previewBotMissing: tmp63 };
@@ -1270,7 +1254,7 @@ export default function ConjureChatScene(guildId) {
           obj21.permissionsGate = tmp127;
           obj20.children = activeMode(tmp4Result4, obj21);
           tmp125Result = tmp125(tmp121, obj20);
-          tmpResult32 = tmp(tmp2[29]);
+          tmpResult32 = tmp(tmp2[27]);
         }
       }
     }
@@ -1286,13 +1270,13 @@ export default function ConjureChatScene(guildId) {
     obj23.style = items41;
     const obj24 = { value: memo4, children: null };
     const obj25 = { projectId, transcriptTopInset: tmp8[0], onRestoreVersion: callback6, hidden: tmp53 };
-    obj24.children = activeMode(tmp4(tmp2[75]), obj25);
-    obj23.children = activeMode(tmp(tmp2[35]).ConjurePublishActionContext.Provider, obj24);
-    items40[2] = activeMode(tmp4(tmp2[22]).View, obj23);
+    obj24.children = activeMode(tmp4(tmp2[74]), obj25);
+    obj23.children = activeMode(tmp(tmp2[33]).ConjurePublishActionContext.Provider, obj24);
+    items40[2] = activeMode(tmp4(tmp2[20]).View, obj23);
     obj17.children = items40;
     items39[1] = setMode(projectExists, obj17);
     obj14.children = items39;
-    let tmp111Result1 = tmp117(tmp4(tmp2[22]).View, obj14);
+    let tmp111Result1 = tmp117(tmp4(tmp2[20]).View, obj14);
   } else {
     const obj26 = { style: null, children: null };
     const items42 = [,];
@@ -1303,20 +1287,20 @@ export default function ConjureChatScene(guildId) {
     } else {
       const obj27 = { style: tmp5.listError, children: null };
       const obj28 = { variant: "heading-lg/semibold", color: "text-default", children: null };
-      let intl3 = tmp(tmp2[37]).intl;
-      obj28.children = intl3.string(tmp4(tmp2[38]).G1WwgK);
-      const items43 = [tmp111(tmp(tmp2[72]).Text, obj28), ,];
+      let intl3 = tmp(tmp2[35]).intl;
+      obj28.children = intl3.string(tmp4(tmp2[36]).G1WwgK);
+      const items43 = [tmp111(tmp(tmp2[71]).Text, obj28), ,];
       const obj29 = { variant: "text-md/normal", color: "text-muted", children: null };
-      const intl4 = tmp(tmp2[37]).intl;
-      obj29.children = intl4.string(tmp4(tmp2[38]).fINulo);
-      items43[1] = tmp111(tmp(tmp2[72]).Text, obj29);
+      const intl4 = tmp(tmp2[35]).intl;
+      obj29.children = intl4.string(tmp4(tmp2[36]).fINulo);
+      items43[1] = tmp111(tmp(tmp2[71]).Text, obj29);
       const obj30 = { variant: "secondary", size: "sm", text: null, onPress: null };
-      const intl5 = tmp(tmp2[37]).intl;
-      obj30.text = intl5.string(tmp4(tmp2[38])["WFJ/vb"]);
+      const intl5 = tmp(tmp2[35]).intl;
+      obj30.text = intl5.string(tmp4(tmp2[36])["WFJ/vb"]);
       obj30.onPress = function onPress() {
         return ConjureActionCreators.listProjects(closure_0);
       };
-      items43[2] = tmp111(tmp(tmp2[73]).Button, obj30);
+      items43[2] = tmp111(tmp(tmp2[72]).Button, obj30);
       obj27.children = items43;
       tmp111Result = setMode(tmp112, obj27);
     }

@@ -3,8 +3,8 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import StringUtils from "../../../utils/StringUtils.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import UserProfileApplicationWidgetTypes from "../UserProfileApplicationWidgetTypes.tsx";
 import UserProfilePersonalWidget from "../UserProfilePersonalWidget.tsx";
 import GameProfileAnalyticUtils from "../../game_profile/GameProfileAnalyticUtils.tsx";
@@ -20,11 +20,11 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileSections = fn(8308).UserProfileSections;
+const UserProfileSections = fn(8315).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   board: { gap: nativeDefault.space.PX_16 },
   coverPlaceholder: null,
@@ -213,12 +213,12 @@ let closure_16 = noop.memo(
           obj.source = obj3;
           const items = [style, coverPlaceholder.coverPlaceholder];
           obj.style = items;
-          let tmp4 = options(FastImageDefault, obj);
+          let tmp4 = React6(FastImageDefault, obj);
         } else {
           const obj4 = { style: null };
           const items1 = [style, coverPlaceholder.coverPlaceholder];
           obj4.style = items1;
-          tmp4 = options(timestampProducer, obj4);
+          tmp4 = React6(timestampProducer, obj4);
         }
         cResult[0] = style;
         coverPlaceholder = coverPlaceholder.coverPlaceholder;
@@ -235,12 +235,12 @@ let closure_16 = noop.memo(
           obj2.source = obj3;
           const items = [style, tmp.coverPlaceholder];
           obj2.style = items;
-          let tmp4 = options(FastImageDefault, obj2);
+          let tmp4 = React6(FastImageDefault, obj2);
         } else {
           const obj = { style: null };
           const items1 = [style, tmp.coverPlaceholder];
           obj.style = items1;
-          tmp4 = options(timestampProducer, obj);
+          tmp4 = React6(timestampProducer, obj);
         }
         return tmp4;
       },
@@ -366,9 +366,9 @@ let closure_17 = noop.memo(
             children: flatMapResult.map((meta) => {
               meta = meta.meta;
               const obj = { style: closure_0.tag, children: null };
-              const items = [options(meta.icon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED })];
+              const items = [React6(meta.icon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED })];
               const obj2 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-              items[1] = options(Text_Text.Text, {
+              items[1] = React6(Text_Text.Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
                 children: meta.getText(),
@@ -468,7 +468,7 @@ let closure_18 = noop.memo(
                       lineClamp: 2,
                       children: gameName,
                     };
-                    const tmp22 = options(Text_Text.Text, obj3);
+                    const tmp22 = React6(Text_Text.Text, obj3);
                     cResult[17] = gameName;
                     cResult[18] = tmp22;
                   } else {
@@ -500,7 +500,7 @@ let closure_18 = noop.memo(
                     accessibilityLabel: gameName,
                     children: tmp21,
                   };
-                  const tmp26 = options(hasOwnProperty, obj4);
+                  const tmp26 = React6(hasOwnProperty, obj4);
                   cResult[19] = gameName;
                   cResult[20] = M;
                   cResult[21] = null == tmp6;
@@ -516,7 +516,7 @@ let closure_18 = noop.memo(
               accessibilityLabel: gameName,
               children: tmp11,
             };
-            const tmp18 = options(hasOwnProperty, obj5);
+            const tmp18 = React6(hasOwnProperty, obj5);
             cResult[10] = gameName;
             cResult[11] = tmp7;
             cResult[12] = tmp8;
@@ -524,7 +524,7 @@ let closure_18 = noop.memo(
             cResult[14] = tmp18;
           }
           const obj6 = { uri: coverImageUrl, style: tmp10 };
-          const tmp14 = options(closure_16, obj6);
+          const tmp14 = React6(closure_16, obj6);
           cResult[7] = coverImageUrl;
           cResult[8] = tmp10;
           cResult[9] = tmp14;
@@ -566,11 +566,11 @@ let closure_18 = noop.memo(
         const obj3 = { uri: tmp4.coverImageUrl, style: null };
         const items = [tmp.favoriteCover, { width: coverWidth }];
         obj3.style = items;
-        obj2.children = options(closure_16, obj3);
-        const items1 = [options(hasOwnProperty, obj2)];
+        obj2.children = React6(closure_16, obj3);
+        const items1 = [React6(hasOwnProperty, obj2)];
         const obj4 = { style: tmp.favoriteDetails, children: null };
         const items2 = [
-          options(hasOwnProperty, {
+          React6(hasOwnProperty, {
             onPress() {
               let tmp;
               if (closure_0 != null) {
@@ -581,7 +581,7 @@ let closure_18 = noop.memo(
             disabled: null == tmp5,
             accessibilityRole: "button",
             accessibilityLabel: gameName,
-            children: options(Text_Text.Text, {
+            children: React6(Text_Text.Text, {
               variant: "text-md/semibold",
               color: "text-default",
               lineClamp: 2,
@@ -601,7 +601,7 @@ let closure_18 = noop.memo(
           disabled: null == tmp5,
           accessibilityRole: "button",
           accessibilityLabel: gameName,
-          children: options(Text_Text.Text, {
+          children: React6(Text_Text.Text, {
             variant: "text-md/semibold",
             color: "text-default",
             lineClamp: 2,
@@ -617,7 +617,7 @@ let closure_18 = noop.memo(
         if (!isNullOrEmptyResult) {
           const obj7 = { style: tmp.comment, children: null };
           const obj8 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-          const items3 = [options(QuoteIcon.QuoteIcon, obj8)];
+          const items3 = [React6(QuoteIcon.QuoteIcon, obj8)];
           const obj9 = {
             variant: "text-sm/normal",
             color: "text-muted",
@@ -625,12 +625,12 @@ let closure_18 = noop.memo(
             style: tmp.commentText,
             children: game.comment,
           };
-          items3[1] = options(Text_Text.Text, obj9);
+          items3[1] = React6(Text_Text.Text, obj9);
           obj7.children = items3;
           tmp6Result = collapsed(timestampProducer, obj7);
         }
         items2[1] = tmp6Result;
-        items2[2] = options(closure_17, { tags: game.tags });
+        items2[2] = React6(closure_17, { tags: game.tags });
         obj4.children = items2;
         items1[1] = collapsed(timestampProducer, obj4);
         obj.children = items1;
@@ -718,7 +718,7 @@ let closure_19 = noop.memo(
                       }
                     }
                     const obj3 = { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName };
-                    const tmp22 = options(Text_Text.Text, obj3);
+                    const tmp22 = React6(Text_Text.Text, obj3);
                     cResult[17] = gameName;
                     cResult[18] = tmp22;
                   } else {
@@ -750,7 +750,7 @@ let closure_19 = noop.memo(
                     accessibilityLabel: gameName,
                     children: tmp21,
                   };
-                  const tmp26 = options(hasOwnProperty, obj4);
+                  const tmp26 = React6(hasOwnProperty, obj4);
                   cResult[19] = gameName;
                   cResult[20] = M;
                   cResult[21] = null == tmp6;
@@ -766,7 +766,7 @@ let closure_19 = noop.memo(
               accessibilityLabel: gameName,
               children: tmp11,
             };
-            const tmp18 = options(hasOwnProperty, obj5);
+            const tmp18 = React6(hasOwnProperty, obj5);
             cResult[10] = gameName;
             cResult[11] = tmp7;
             cResult[12] = tmp8;
@@ -774,7 +774,7 @@ let closure_19 = noop.memo(
             cResult[14] = tmp18;
           }
           const obj6 = { uri: coverImageUrl, style: tmp10 };
-          const tmp14 = options(closure_16, obj6);
+          const tmp14 = React6(closure_16, obj6);
           cResult[7] = coverImageUrl;
           cResult[8] = tmp10;
           cResult[9] = tmp14;
@@ -816,11 +816,11 @@ let closure_19 = noop.memo(
         const obj3 = { uri: tmp3.coverImageUrl, style: null };
         const items = [tmp.listCover, { width: coverWidth }];
         obj3.style = items;
-        obj2.children = options(closure_16, obj3);
-        const items1 = [options(hasOwnProperty, obj2)];
+        obj2.children = React6(closure_16, obj3);
+        const items1 = [React6(hasOwnProperty, obj2)];
         const obj4 = { style: tmp.listDetails, children: null };
         const items2 = [
-          options(hasOwnProperty, {
+          React6(hasOwnProperty, {
             onPress() {
               let tmp;
               if (closure_0 != null) {
@@ -831,14 +831,14 @@ let closure_19 = noop.memo(
             disabled: null == tmp4,
             accessibilityRole: "button",
             accessibilityLabel: gameName,
-            children: options(Text_Text.Text, {
+            children: React6(Text_Text.Text, {
               variant: "text-md/medium",
               color: "text-default",
               lineClamp: 2,
               children: gameName,
             }),
           }),
-          options(closure_17, { tags: game.tags }),
+          React6(closure_17, { tags: game.tags }),
         ];
         obj4.children = items2;
         items1[1] = collapsed(timestampProducer, obj4);
@@ -907,7 +907,7 @@ let closure_20 = noop.memo(
               accessibilityLabel: gameName,
               children: tmp9,
             };
-            const tmp16 = options(hasOwnProperty, obj3);
+            const tmp16 = React6(hasOwnProperty, obj3);
             cResult[10] = gameName;
             cResult[11] = tmp5;
             cResult[12] = tmp6;
@@ -916,7 +916,7 @@ let closure_20 = noop.memo(
             tmp13 = tmp16;
           }
           const obj4 = { uri: coverImageUrl, style: tmp8 };
-          const tmp12 = options(closure_16, obj4);
+          const tmp12 = React6(closure_16, obj4);
           cResult[7] = coverImageUrl;
           cResult[8] = tmp8;
           cResult[9] = tmp12;
@@ -956,8 +956,8 @@ let closure_20 = noop.memo(
         const obj2 = { uri: coverImageUrl, style: null };
         const items = [tmp.gridCover, { width: coverWidth }];
         obj2.style = items;
-        obj.children = options(closure_16, obj2);
-        return options(hasOwnProperty, obj);
+        obj.children = React6(closure_16, obj2);
+        return React6(hasOwnProperty, obj);
       },
 );
 ReactCompilerGating = fn(558);
@@ -1004,7 +1004,7 @@ const memoResult = noop.memo(
           arr2 = cResult[4];
         }
         const type = widget.type;
-        if (userId(7322).WidgetType.FAVORITE_GAMES === type) {
+        if (userId(7328).WidgetType.FAVORITE_GAMES === type) {
           if (cResult[5] === tmp12) {
             if (cResult[6] === result) {
               if (cResult[7] === disableInteraction) {
@@ -1026,7 +1026,7 @@ const memoResult = noop.memo(
           num4 = 10;
           cResult[10] = tmp56;
         } else {
-          if (tmp(7322).WidgetType.CURRENT_GAMES === type) {
+          if (tmp(7328).WidgetType.CURRENT_GAMES === type) {
             if (cResult[11] === tmp10) {
               if (cResult[12] === arr2) {
                 let arr5 = cResult[13];
@@ -1090,7 +1090,7 @@ const memoResult = noop.memo(
                             stringResult = intl2.formatToPlainString(tmp(1126).t.zr0Y5R, obj5);
                           }
                           const obj6 = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
-                          obj4.children = closure_9(tmp(5088).Text, obj6);
+                          obj4.children = closure_9(tmp(5092).Text, obj6);
                           closure_9(closure_5, obj4);
                         }
                       }
@@ -1107,7 +1107,7 @@ const memoResult = noop.memo(
               const tmp39 =
                 tmp12 > num4 &&
                 arr5.map((game) =>
-                  options(closure_19, { userId, game, coverWidth: result, disableInteraction }, game.gameId),
+                  React6(closure_19, { userId, game, coverWidth: result, disableInteraction }, game.gameId),
                 );
               cResult[14] = tmp12;
               cResult[15] = result;
@@ -1126,8 +1126,8 @@ const memoResult = noop.memo(
             cResult[13] = substr;
             arr5 = substr;
           } else {
-            if (tmp(7322).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-              if (tmp(7322).WidgetType.PLAYED_GAMES !== type) {
+            if (tmp(7328).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+              if (tmp(7328).WidgetType.PLAYED_GAMES !== type) {
                 return null;
               }
             }
@@ -1193,7 +1193,7 @@ const memoResult = noop.memo(
                             stringResult1 = intl.formatToPlainString(tmp(1126).t.zr0Y5R, obj10);
                           }
                           const obj11 = { variant: "text-sm/medium", color: "text-muted", children: stringResult1 };
-                          obj9.children = closure_9(tmp(5088).Text, obj11);
+                          obj9.children = closure_9(tmp(5092).Text, obj11);
                           closure_9(closure_5, obj9);
                         }
                       }
@@ -1210,7 +1210,7 @@ const memoResult = noop.memo(
               const tmp20 =
                 tmp12 > num4 &&
                 arr3.map((game) =>
-                  options(closure_20, { userId, game, coverWidth: result, disableInteraction }, game.gameId),
+                  React6(closure_20, { userId, game, coverWidth: result, disableInteraction }, game.gameId),
                 );
               cResult[34] = tmp12;
               cResult[35] = result;
@@ -1230,11 +1230,11 @@ const memoResult = noop.memo(
             arr3 = substr1;
           }
           if (cResult[51] !== widget) {
-            const widgetTitle = tmp(11503).getWidgetTitle(widget);
+            const widgetTitle = tmp(11513).getWidgetTitle(widget);
             cResult[51] = widget;
             cResult[52] = widgetTitle;
             let tmp60 = widgetTitle;
-            const tmpResult2 = tmp(11503);
+            const tmpResult2 = tmp(11513);
           } else {
             tmp60 = cResult[52];
           }
@@ -1274,7 +1274,7 @@ const memoResult = noop.memo(
                   }
                 }
                 const obj14 = { style: cardStyle, title: tmp60, trailingAction: tmp62, children: tmp66 };
-                const tmp72 = closure_9(disableInteraction(6904), obj14);
+                const tmp72 = closure_9(disableInteraction(6909), obj14);
                 cResult[61] = cardStyle;
                 cResult[62] = tmp60;
                 cResult[63] = tmp62;
@@ -1290,7 +1290,7 @@ const memoResult = noop.memo(
           }
           if (tmp63) {
             const obj15 = { userId, widget };
-            tmp63 = closure_9(disableInteraction(13708), obj15);
+            tmp63 = closure_9(disableInteraction(13746), obj15);
           }
           cResult[53] = disableInteraction;
           cResult[54] = stateFromStores;
@@ -1338,7 +1338,7 @@ const memoResult = noop.memo(
           let mapped = tmp8 > 0;
           if (mapped) {
             mapped = substr.map((game) =>
-              options(closure_19, { userId, game, coverWidth, disableInteraction }, game.gameId),
+              React6(closure_19, { userId, game, coverWidth, disableInteraction }, game.gameId),
             );
           }
           obj3.children = mapped;
@@ -1383,7 +1383,7 @@ const memoResult = noop.memo(
           let mapped1 = tmp8 > 0;
           if (mapped1) {
             mapped1 = substr1.map((game) =>
-              options(closure_20, { userId, game, coverWidth, disableInteraction }, game.gameId),
+              React6(closure_20, { userId, game, coverWidth, disableInteraction }, game.gameId),
             );
           }
           obj8.children = mapped1;
@@ -1449,7 +1449,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { userId, widget, cardStyle };
-        tmp2 = options(UserProfileApplicationWidgetCardDefault, obj2);
+        tmp2 = React6(UserProfileApplicationWidgetCardDefault, obj2);
         cResult[0] = cardStyle;
         cResult[1] = userId;
         cResult[2] = widget;
@@ -1460,7 +1460,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { userId, widget, cardStyle };
-        const tmp11 = options(UserProfilePersonalWidgetCardDefault, obj3);
+        const tmp11 = React6(UserProfilePersonalWidgetCardDefault, obj3);
         cResult[4] = cardStyle;
         cResult[5] = userId;
         cResult[6] = widget;
@@ -1475,7 +1475,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { userId, widget, cardStyle };
-        const tmp7 = options(memoResult, obj4);
+        const tmp7 = React6(memoResult, obj4);
         cResult[8] = cardStyle;
         cResult[9] = userId;
         cResult[10] = widget;
@@ -1487,13 +1487,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       ({ userId, widget, cardStyle } = arg0);
       if (widget instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
         const obj2 = { userId, widget, cardStyle };
-        let tmp3Result = options(UserProfileApplicationWidgetCardDefault, obj2);
+        let tmp3Result = React6(UserProfileApplicationWidgetCardDefault, obj2);
       } else if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
         const obj3 = { userId, widget, cardStyle };
-        tmp3Result = options(UserProfilePersonalWidgetCardDefault, obj3);
+        tmp3Result = React6(UserProfilePersonalWidgetCardDefault, obj3);
       } else {
         const obj = { userId, widget, cardStyle };
-        tmp3Result = options(memoResult, obj);
+        tmp3Result = React6(memoResult, obj);
       }
       return tmp3Result;
     };
@@ -1510,7 +1510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_13();
       const obj = userId(576);
       const tmp4 = undefined === isVisible || isVisible;
-      const displayableBoardWidgets = userId(13714).useDisplayableBoardWidgets(userId);
+      const displayableBoardWidgets = userId(13752).useDisplayableBoardWidgets(userId);
       let num = 0;
       closure_15(tmp4, displayableBoardWidgets.length > 0);
       if (0 === displayableBoardWidgets.length) {
@@ -1546,14 +1546,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[3] = mapped;
         }
         const fn = function f(widget) {
-          return options(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey());
+          return React6(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey());
         };
         cResult[4] = cardStyle;
         cResult[5] = userId;
         cResult[6] = fn;
         tmp8 = fn;
       }
-      const tmpResult = userId(13714);
+      const tmpResult = userId(13752);
     }
   : function UserProfileWidgetsBoard(userId) {
       userId = userId.userId;
@@ -1563,14 +1563,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const cardStyle = userId.cardStyle;
       const tmp = closure_13();
-      const displayableBoardWidgets = userId(13714).useDisplayableBoardWidgets(userId);
+      const displayableBoardWidgets = userId(13752).useDisplayableBoardWidgets(userId);
       closure_15(flag, displayableBoardWidgets.length > 0);
       let tmp3 = null;
       if (0 !== displayableBoardWidgets.length) {
         const obj2 = {
           style: tmp.board,
           children: displayableBoardWidgets.map((widget) =>
-            options(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey()),
+            React6(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey()),
           ),
         };
         tmp3 = closure_9(closure_6, obj2);

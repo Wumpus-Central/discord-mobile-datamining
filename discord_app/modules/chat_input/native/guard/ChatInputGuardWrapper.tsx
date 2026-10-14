@@ -16,10 +16,10 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const isThread = fn(2069).isThread;
-const TextAreaCta = fn(11960).TextAreaCta;
+const TextAreaCta = fn(11996).TextAreaCta;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = fn(6732).PHONE_VERIFICATION_MODAL_KEY;
+let closure_14 = fn(6736).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");
@@ -398,11 +398,17 @@ export default function ChatInputGuardWrapper(channel) {
                     }
                   }
                 }
-                return children;
+                if (null == tmp10) {
+                  return children;
+                } else {
+                  const obj25 = { pendingGameProfileReturn: tmp10 };
+                  tmp21Result = jsx(tmp7(tmp3[37]), { pendingGameProfileReturn: tmp10 });
+                  tmp23 = jsx;
+                }
               }
             }
           }
-          const obj25 = {
+          const obj26 = {
             showLinkedLobbyApplicationLoadingIndicator,
             requiredLinkedLobbyApplication,
             shouldRelaunchLinkedLobbyApplication,
@@ -416,8 +422,12 @@ export default function ChatInputGuardWrapper(channel) {
         }
       }
     }
-    const obj26 = { channel, isReadonlyAnnouncementsChannel: tmp9 };
-    tmp21Result = jsx(tmp7(tmp3[38]), { channel, isReadonlyAnnouncementsChannel: tmp9 });
+    const obj27 = { channel, isReadonlyAnnouncementsChannel: tmp9, pendingGameProfileReturn: tmp10 };
+    tmp21Result = jsx(tmp7(tmp3[38]), {
+      channel,
+      isReadonlyAnnouncementsChannel: tmp9,
+      pendingGameProfileReturn: tmp10,
+    });
     tmp23 = jsx;
   }
   return tmp23(channel(tmp3[33]).ChatInputGuardContainer, {

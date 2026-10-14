@@ -20,7 +20,7 @@ require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, code: { fontFamily: fn(1085).Fonts.CODE_BOLD }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.border = { height: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -95,14 +95,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       closure_10 = Math.ceil(tmp5(9).renderLatestMessages.importTime);
       const _Symbol2 = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const lastTrackedAppUiViewed2Properties = tmp(7197).getLastTrackedAppUiViewed2Properties();
+        const lastTrackedAppUiViewed2Properties = tmp(7203).getLastTrackedAppUiViewed2Properties();
         class G {
           constructor() {
             return closure_7.alertStartupMetrics;
           }
         }
         let tmp20 = lastTrackedAppUiViewed2Properties;
-        const tmpResult2 = tmp(7197);
+        const tmpResult2 = tmp(7203);
       } else {
         tmp20 = cResult[6];
       }
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_1 = undefined;
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp5(4983).getAppFirstVisibleTimestamp(), done: false };
+                  const obj5 = { value: tmp5(4985).getAppFirstVisibleTimestamp(), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -157,9 +157,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 return obj6;
               } else {
                 closure_128_0 = value;
-                closure_128_1 = tmp5(13141)(closure_128_0);
+                closure_128_1 = tmp5(13176)(closure_128_0);
                 const obj7 = { message: closure_128_1 };
-                tmp2(8482).showShareActionSheet(obj7, "Startup Timing");
+                tmp2(8489).showShareActionSheet(obj7, "Startup Timing");
                 c3 = 3;
                 return { value: "IconComponent", done: null };
               }
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 }
               }
               let obj4 = { contentContainerStyle: tmp28, ListHeaderComponent: tmp29, data: tmp11, renderItem: tmp31 };
-              const tmp34 = closure_8(tmp(8625).FlashList, obj4);
+              const tmp34 = closure_8(tmp(6818).FlashList, obj4);
               cResult[19] = tmp11;
               cResult[20] = tmp28;
               cResult[21] = tmp29;
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
   }
   let obj = require("c");
-  const parts = checked(13141)(useResult, !checked, first1).split("\n");
+  const parts = checked(13176)(useResult, !checked, first1).split("\n");
   cResult[0] = useResult;
   cResult[1] = checked;
   cResult[2] = first1;
@@ -492,7 +492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(4983).getAppFirstVisibleTimestamp(), done: false };
+            const obj5 = { value: tmp5(4985).getAppFirstVisibleTimestamp(), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -504,9 +504,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(13141)(closure_128_0);
+          closure_128_1 = tmp5(13176)(closure_128_0);
           const obj7 = { message: closure_128_1 };
-          tmp2(8482).showShareActionSheet(obj7, "Startup Timing");
+          tmp2(8489).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
           return { value: "IconComponent", done: null };
         }
@@ -540,35 +540,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj5.children = "" + result + "s (" + Math.round(closure_7 / num * 100) + "%)";
     const items1 = ["Native: ", closure_2_8(closure_12, obj5)];
     obj4.children = items1;
-    const items2 = [options(closure_12, obj4), , , , , , , ];
+    const items2 = [React6(closure_12, obj4), , , , , , , ];
     const obj6 = { children: null };
     const obj7 = { color: "text-brand", children: null };
     const result1 = closure_11 / 1000;
     obj7.children = "" + result1 + "s (" + Math.round(closure_11 / num * 100) + "%)";
     const items3 = ["JS Imports: ", closure_2_8(closure_12, obj7)];
     obj6.children = items3;
-    items2[1] = options(closure_12, obj6);
+    items2[1] = React6(closure_12, obj6);
     const obj8 = { children: null };
     const obj9 = { color: "text-brand", children: null };
     const result2 = closure_8 / 1000;
     obj9.children = "" + result2 + "s (" + Math.round(closure_8 / num * 100) + "%)";
     const items4 = ["Mini Cache: ", closure_2_8(closure_12, obj9)];
     obj8.children = items4;
-    items2[2] = options(closure_12, obj8);
+    items2[2] = React6(closure_12, obj8);
     const obj10 = { children: null };
     const obj11 = { color: "text-brand", children: null };
     const result3 = closure_9 / 1000;
     obj11.children = "" + result3 + "s (" + Math.round(closure_9 / num * 100) + "%)";
     const items5 = ["Lazy Cache: ", closure_2_8(closure_12, obj11)];
     obj10.children = items5;
-    items2[3] = options(closure_12, obj10);
+    items2[3] = React6(closure_12, obj10);
     const obj12 = { children: null };
     const obj13 = { color: "text-brand", children: null };
     const result4 = closure_10 / 1000;
     obj13.children = "" + result4 + "s (" + Math.round(closure_10 / num * 100) + "%)";
     const items6 = ["Ready: ", closure_2_8(closure_12, obj13)];
     obj12.children = items6;
-    items2[4] = options(closure_12, obj12);
+    items2[4] = React6(closure_12, obj12);
     let str = "";
     if (null != num) {
       str = "";
@@ -579,7 +579,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj14 = { children: null };
     const items7 = ["TTI (first contentful paint): ", closure_2_8(closure_12, { color: "text-brand", children: str })];
     obj14.children = items7;
-    items2[5] = options(closure_12, obj14);
+    items2[5] = React6(closure_12, obj14);
     let prop;
     if (lastTrackedAppUiViewed2Properties != null) {
       prop = lastTrackedAppUiViewed2Properties.time_display_messages_with_cache_end;
@@ -594,7 +594,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj15 = { children: null };
     const items8 = ["Cached Messages Render: ", closure_2_8(closure_12, { color: "text-brand", children: str3 })];
     obj15.children = items8;
-    items2[6] = options(closure_12, obj15);
+    items2[6] = React6(closure_12, obj15);
     let prop1;
     if (lastTrackedAppUiViewed2Properties != null) {
       prop1 = lastTrackedAppUiViewed2Properties.time_display_latest_messages_end;
@@ -613,9 +613,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj20 = { children: null };
     const items9 = ["Latest Messages Render: ", closure_2_8(closure_12, { color: "text-brand", children: str5 })];
     obj20.children = items9;
-    items2[7] = options(closure_12, obj20);
+    items2[7] = React6(closure_12, obj20);
     obj19.children = items2;
-    obj18.label = options(collapsed, obj19);
+    obj18.label = React6(collapsed, obj19);
     obj17.children = closure_2_8(TableRow.TableRow, obj18);
     items[1] = closure_2_8(TableRowGroup.TableRowGroup, obj17);
     const obj21 = { title: "Legend", hasIcons: false, children: null };
@@ -623,7 +623,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj23 = { children: null };
     const items10 = [closure_2_8(closure_12, { children: "\u2615 - Java / Kotlin" }), closure_2_8(closure_12, { children: "\u{1F3A8} - React render" }), closure_2_8(closure_12, { children: "\u{1F4BE} - CacheStore" }), closure_2_8(closure_12, { children: "\u{1F9A5} - Slow Store Update / Handler" }), closure_2_8(closure_12, { children: "\u{1F3C3} - Startup Event" }), closure_2_8(closure_12, { children: "\u{1F310} - Socket Event" })];
     obj23.children = items10;
-    obj22.label = options(collapsed, obj23);
+    obj22.label = React6(collapsed, obj23);
     obj21.children = closure_2_8(TableRow.TableRow, obj22);
     items[2] = closure_2_8(TableRowGroup.TableRowGroup, obj21);
     const obj24 = { title: "Detailed Times", hasIcons: false, children: null };
@@ -644,18 +644,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       })
     ];
     obj24.children = items11;
-    items[3] = options(TableRowGroup.TableRowGroup, obj24);
+    items[3] = React6(TableRowGroup.TableRowGroup, obj24);
     const obj27 = { title: "Share Timings", hasIcons: true, children: closure_2_8(TableRow.TableRow, { icon: closure_2_8(ShareIcon.ShareIcon, {}), label: "Copy timings to clipboard.", arrow: true, onPress }) };
     items[4] = closure_2_8(TableRowGroup.TableRowGroup, obj27);
     obj.children = items;
-    const items12 = [options(Stack_Stack.Stack, obj), closure_2_8(View, { style: border.border })];
+    const items12 = [React6(Stack_Stack.Stack, obj), closure_2_8(View, { style: border.border })];
     obj16.children = items12;
-    return options(collapsed, obj16);
+    return React6(collapsed, obj16);
   };
   obj5.data = memo;
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(8625).FlashList, obj5);
+  obj4.children = closure_8(tmp10(6818).FlashList, obj5);
   return closure_8(checked, obj4);
 });

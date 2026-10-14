@@ -2,15 +2,10 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
-import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import ShareEventUtils from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
-import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import SearchableDestinationListDefault from "../../share/native/SearchableDestinationList.tsx";
 import useShareChatInputActions from "../../share/native/useShareChatInputActions.tsx";
 import ShareChatInputDefault from "../../share/native/ShareChatInput.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -23,33 +18,27 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AbortCodes = fn(1085).AbortCodes;
-const UserRowModes = fn(10217).UserRowModes;
-const MessageSendLocation = fn(5085).MessageSendLocation;
+const UserRowModes = fn(10227).UserRowModes;
+const MessageSendLocation = fn(5089).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
-  headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 },
-  headerRightContainer: null,
-  footer: null,
-};
-let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
-obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
-let obj4 = { paddingRight: nativeDefault.space.PX_16 };
-obj2.footer = {
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "flex-end",
-  paddingHorizontal: nativeDefault.space.PX_16,
-  paddingVertical: nativeDefault.space.PX_12,
-  gap: nativeDefault.space.PX_12,
-  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
-  borderTopWidth: 1,
-  borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
+  footer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "flex-end",
+    paddingHorizontal: nativeDefault.space.PX_16,
+    paddingVertical: nativeDefault.space.PX_12,
+    gap: nativeDefault.space.PX_12,
+    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+    borderTopWidth: 1,
+    borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
+  },
 };
 let closure_13 = createStyles.createStyles(obj2);
 fn(558);
-let obj5 = {
+let obj3 = {
   display: "flex",
   flexDirection: "row",
   alignItems: "flex-end",
@@ -268,16 +257,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           tmp17 = items1;
         }
       }
-      class T {
-        constructor() {
-          tmp = onSend(closure_1);
-          return;
-        }
-      }
+      const fn = function b() {
+        onSend(first);
+      };
       cResult[1] = text;
       cResult[2] = onSend;
-      cResult[3] = T;
-      tmp11 = T;
+      cResult[3] = fn;
+      tmp11 = fn;
       const tmpResult = useShareChatInputActions;
     }
   : function GravityShareFooter(arg0) {
@@ -340,11 +326,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function ICYMIShareModal(title) {
-      const cResult = require("c").c(34);
-      _require = title.title;
-      ({ originDestinationId, linkText } = title);
-      forwardToChannel = title.forwardToChannel;
+  ? function ICYMIShareModal(forwardToChannel) {
+      const cResult = require("c").c(25);
+      ({ title, originDestinationId, linkText } = forwardToChannel);
+      _require = linkText;
+      forwardToChannel = forwardToChannel.forwardToChannel;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [];
         cResult[0] = items;
@@ -352,40 +338,117 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
+      const tmp5 = _slicedToArray(noop.useState(first), 2);
+      first1 = tmp5[0];
       let obj = require("c");
-      first1 = first1(noop.useState(first), 2)[0];
-      let tmp3 = first1(noop.useState(first), 2);
-      [r10035, asyncGeneratorStep] = first1(noop.useState(false), 2);
+      const tmp = _require;
+      [tmp7, _slicedToArray] = noop.useState(false);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        class R {
-          constructor() {
-            arr = linkText(forwardToChannel[21]);
-            arr1 = arr.pop();
-            return;
-          }
-        }
-        cResult[1] = R;
+        const fn = function b() {
+          forwardToChannel(first1[21]).pop();
+        };
+        cResult[1] = fn;
+        let tmp8 = fn;
       } else {
-        class R {
-          constructor() {
-            arr = linkText(forwardToChannel[21]);
-            arr1 = arr.pop();
-            return;
-          }
-        }
+        tmp8 = cResult[1];
       }
       if (cResult[2] === forwardToChannel) {
-        class R {
-          constructor() {
-            arr = linkText(forwardToChannel[21]);
-            arr1 = arr.pop();
-            return;
+        if (cResult[3] === linkText) {
+          if (cResult[4] === first1) {
+            let tmp9 = cResult[5];
           }
+          const tmp11 = forwardToChannel(tmp2[26])();
+          const height = forwardToChannel(tmp2[27])().height;
+          if (cResult[6] === tmp11.bottom) {
+            if (cResult[7] === height) {
+              let tmp12 = cResult[8];
+            }
+            if (cResult[9] !== tmp12) {
+              let obj2 = { height: tmp12 };
+              cResult[9] = tmp12;
+              cResult[10] = obj2;
+              let tmp13 = obj2;
+            } else {
+              tmp13 = cResult[10];
+            }
+            if (cResult[11] !== title) {
+              let obj3 = { title, onClose: tmp8 };
+              const tmp16 = closure_11(tmp10(tmp2[29]), obj3);
+              cResult[11] = title;
+              cResult[12] = tmp16;
+              let tmp14 = tmp16;
+            } else {
+              tmp14 = cResult[12];
+            }
+            const sum = tmp11.bottom + tmp10(tmp2[10]).space.PX_8;
+            const sum1 = sum + tmp10(tmp2[10]).space.PX_96;
+            if (cResult[13] === originDestinationId) {
+              if (cResult[14] === sum1) {
+                let tmp19 = cResult[15];
+              }
+              if (cResult[16] === length) {
+                if (cResult[17] === tmp9) {
+                  if (cResult[18] === tmp7) {
+                    let tmp23 = cResult[19];
+                  }
+                  if (cResult[20] === tmp13) {
+                    if (cResult[21] === tmp14) {
+                      if (cResult[22] === tmp19) {
+                        if (cResult[23] === tmp23) {
+                          let tmp27 = cResult[24];
+                        }
+                        return tmp27;
+                      }
+                    }
+                  }
+                  let obj4 = { style: tmp13, children: null };
+                  const items1 = [tmp14, tmp19, tmp23];
+                  obj4.children = items1;
+                  const tmp30 = closure_12(View, obj4);
+                  cResult[20] = tmp13;
+                  cResult[21] = tmp14;
+                  cResult[22] = tmp19;
+                  cResult[23] = tmp23;
+                  cResult[24] = tmp30;
+                  tmp27 = tmp30;
+                }
+              }
+              let obj5 = { count: length, isSending: tmp7, onSend: tmp9 };
+              const tmp26 = closure_11(closure_14, obj5);
+              cResult[16] = length;
+              cResult[17] = tmp9;
+              cResult[18] = tmp7;
+              cResult[19] = tmp26;
+              tmp23 = tmp26;
+            }
+            let obj6 = {
+              rowMode: UserRowModes.TOGGLE,
+              onSelectedDestinationChange: tmp5[1],
+              originDestination: originDestinationId,
+              insetEnd: sum1,
+              disableGradient: true,
+              disableStickySections: true,
+            };
+            const tmp22 = closure_11(tmp10(tmp2[30]), obj6);
+            cResult[13] = originDestinationId;
+            cResult[14] = sum1;
+            cResult[15] = tmp22;
+            tmp19 = tmp22;
+          }
+          let str = "100%";
+          if (tmpResult.isAndroid()) {
+            str = height + tmp11.bottom;
+          }
+          cResult[6] = tmp11.bottom;
+          cResult[7] = height;
+          cResult[8] = str;
+          tmp12 = str;
+          tmpResult = tmp(tmp2[28]);
         }
       }
       _require = asyncGeneratorStep(async (arg0) => {
-        if (v3 === 2) {
-          v3 = 3;
+        if (c4 === 2) {
+          c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp5 === 3) {
           if (arg0 === 1) {
@@ -398,37 +461,36 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         } else {
           try {
-            v3 = 2;
-            if (0 === c3) {
+            c4 = 2;
+            if (0 === v1) {
               if (arg0 === 1) {
-                v3 = 3;
+                c4 = 3;
                 throw value;
               } else if (arg0 === 2) {
-                v3 = 3;
+                c4 = 3;
                 let obj3 = { value, done: true };
                 return obj3;
               } else {
-                dependencyMap = tmp2;
-                closure_129_0 = title;
-                v3(true);
-                c3 = 1;
-                v3 = 1;
+                closure_129_0 = closure_0;
+                v1(true);
+                v1 = 1;
+                c4 = 1;
                 let obj4 = {
-                  value: Promise.all(c3.map(title(forwardToChannel[22]).getOrResolveChannelIdFromDestinationId)),
+                  value: Promise.all(tmp2.map(closure_0(first1[22]).getOrResolveChannelIdFromDestinationId)),
                   done: false,
                 };
                 return obj4;
               }
             } else if (arg0 === 1) {
-              v3 = 3;
+              c4 = 3;
               throw value;
             } else if (arg0 === 2) {
-              v3 = 3;
+              c4 = 3;
               let obj = { value, done: true };
               return obj;
             } else {
               const mapped = value.map((item) => channel.getChannel(item));
-              const found = mapped.filter(title(forwardToChannel[23]).isNotNullish);
+              const found = mapped.filter(closure_0(first1[23]).isNotNullish);
               const item = found.forEach(
                 (() => {
                   closure_0 = c4(function* (arg0) {
@@ -459,10 +521,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                             if (null != closure_0) {
                               if (closure_0.trim().length > 0) {
                                 const _HermesInternal = HermesInternal;
-                                let combined = "" + closure_0 + "\n\n" + closure_2_1;
+                                let combined = "" + closure_0 + "\n\n" + closure_0;
                               }
                               const parsed = tmp3(dependencyMap[24]).parse(closure_0, combined);
-                              if (null == closure_2_2) {
+                              if (null == closure_2_1) {
                                 const tmp8Result = tmp3(dependencyMap[25]);
                                 const obj5 = { location: constants.ICYMI };
                                 c2 = 1;
@@ -477,7 +539,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                               const obj2 = tmp3(dependencyMap[24]);
                             }
-                            combined = closure_2_1;
+                            combined = closure_0;
                           }
                         } else if (arg0 === 1) {
                           c1 = 3;
@@ -507,12 +569,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   };
                 })(),
               );
-              linkText(forwardToChannel[21]).pop();
-              v3 = 3;
+              forwardToChannel(first1[21]).pop();
+              c4 = 3;
               return { value: "IconComponent", done: null };
             }
           } catch (tmp7) {
-            v3 = tmp;
+            c4 = tmp;
             throw tmp7;
           }
         }
@@ -531,14 +593,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = linkText;
       cResult[4] = first1;
       cResult[5] = handleSendForwards;
-      const tmp5 = first1(noop.useState(false), 2);
+      tmp9 = handleSendForwards;
+      const tmp6 = _slicedToArray(noop.useState(false), 2);
     }
-  : function ICYMIShareModal(originDestination) {
-      const title = originDestination.title;
-      ({ linkText: importDefault, forwardToChannel: dependencyMap } = originDestination);
-      let first;
-      c4 = undefined;
-      noop = async function _handleSendForwards2(arg0) {
+  : function ICYMIShareModal(arg0) {
+      ({ linkText: require, forwardToChannel: importDefault } = arg0);
+      _slicedToArray = undefined;
+      noop = undefined;
+      closure_4 = async function _handleSendForwards2(arg0) {
         if (c4 === 2) {
           c4 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -563,12 +625,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 let obj3 = { value, done: true };
                 return obj3;
               } else {
-                closure_129_0 = title;
-                asyncGeneratorStep(true);
+                closure_129_0 = closure_0;
+                _slicedToArray(true);
                 c3 = 1;
                 c4 = 1;
                 let obj4 = {
-                  value: Promise.all(first.map(title(tmp2[22]).getOrResolveChannelIdFromDestinationId)),
+                  value: Promise.all(first.map(closure_0(tmp2[22]).getOrResolveChannelIdFromDestinationId)),
                   done: false,
                 };
                 return obj4;
@@ -582,7 +644,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             } else {
               const mapped = value.map((item) => channel.getChannel(item));
-              const found = mapped.filter(title(tmp2[23]).isNotNullish);
+              const found = mapped.filter(closure_0(tmp2[23]).isNotNullish);
               const item = found.forEach(
                 (() => {
                   closure_0 = c4(function* (arg0) {
@@ -613,10 +675,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                             if (null != closure_0) {
                               if (closure_0.trim().length > 0) {
                                 const _HermesInternal = HermesInternal;
-                                let combined = "" + closure_0 + "\n\n" + closure_2_1;
+                                let combined = "" + closure_0 + "\n\n" + closure_0;
                               }
                               const parsed = tmp3(dependencyMap[24]).parse(closure_0, combined);
-                              if (null == closure_2_2) {
+                              if (null == closure_2_1) {
                                 const tmp8Result = tmp3(dependencyMap[25]);
                                 const obj5 = { location: constants.ICYMI };
                                 c2 = 1;
@@ -631,7 +693,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                               const obj2 = tmp3(dependencyMap[24]);
                             }
-                            combined = closure_2_1;
+                            combined = closure_0;
                           }
                         } else if (arg0 === 1) {
                           c1 = 3;
@@ -671,68 +733,46 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       };
-      const tmp = first(noop.useState([]), 2);
-      first = tmp[0];
-      [tmp3, c4] = first(noop.useState(false), 2);
+      ({ title, originDestinationId } = arg0);
+      const tmp = _slicedToArray(noop.useState([]), 2);
+      const first = tmp[0];
+      [tmp3, c3] = noop.useState(false);
       const callback = noop.useCallback(() => {
-        ModalActionCreatorsDefault.pop();
+        require("ModalActionCreators").pop();
       }, []);
-      const tmp2 = first(noop.useState(false), 2);
-      const rect = useSafeAreaInsetsDefault();
-      let height = useWindowDimensionsDefault().height;
-      const items = [rect.bottom, height];
+      const tmp5 = require("useSafeAreaInsets")();
+      noop = tmp5;
+      let height = require("useWindowDimensions")().height;
+      const items = [tmp5.bottom, height];
       let obj = {
         style: noop.useMemo(() => {
           height = "100%";
           if (obj.isAndroid()) {
-            height = height + rect.bottom;
+            height = height + bottom.bottom;
           }
           return { height };
         }, items),
         children: null,
       };
-      let obj4 = {
-        title,
-        headerTitle() {
-          return closure_2_11(HeaderShared.GenericHeaderTitle, { title });
-        },
-        headerTitleAlign: "center",
-        headerStatusBarHeight: null,
-        headerLeft: null,
-        headerLeftContainerStyle: null,
-        headerRightContainerStyle: null,
-      };
-      const tmp11 = title;
-      const tmp5 = closure_13();
-      const tmp9 = rect;
-      let num = 0;
-      if (!obj3.isIOS()) {
-        num = rect.top;
-      }
-      obj4.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-      obj3 = title(1382);
-      obj4.headerLeft = tmp11(6201).getHeaderCloseButton(callback);
-      ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } =
-        tmp5);
-      const items1 = [closure_11(title(6210).Header, obj4), ,];
-      let obj5 = {
+      const items1 = [closure_11(require("SearchableDestinationListHeader"), { title, onClose: callback }), ,];
+      let obj2 = {
         rowMode: UserRowModes.TOGGLE,
         onSelectedDestinationChange: tmp[1],
-        originDestination: originDestination.originDestinationId,
+        originDestination: originDestinationId,
         insetEnd: null,
         disableGradient: true,
         disableStickySections: true,
       };
-      const tmp11Result = tmp11(6201);
-      const sum = rect.bottom + nativeDefault.space.PX_8;
-      obj5.insetEnd = sum + nativeDefault.space.PX_96;
-      items1[1] = closure_11(SearchableDestinationListDefault, obj5);
+      const tmp2 = _slicedToArray(noop.useState(false), 2);
+      const sum = tmp5.bottom + require("native").space.PX_8;
+      obj2.insetEnd = sum + require("native").space.PX_96;
+      items1[1] = closure_11(require("SearchableDestinationList"), obj2);
       items1[2] = closure_11(closure_14, {
         count: first.length,
         isSending: tmp3,
         onSend: function handleSendForwards(arg0) {
           const self = this;
-          const apply = closure_5.apply;
+          const apply = closure_4.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
@@ -742,7 +782,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         },
       });
       obj.children = items1;
-      return closure_12(tmp9, obj);
+      return closure_12(height, obj);
     };
 let closure_15 = tmp5;
 const size = fn(2);
@@ -805,7 +845,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   c5 = 2;
                   c6 = 1;
-                  const obj6 = { value: entry(17268).sendMessageWithEmbed(obj5), done: false };
+                  const obj6 = { value: entry(17302).sendMessageWithEmbed(obj5), done: false };
                   return obj6;
                 }
               } else if (1 === tmp7) {
@@ -913,7 +953,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                 };
                 c5 = 2;
                 c6 = 1;
-                const obj7 = { value: entry(17268).sendMessageWithEmbed(obj6), done: false };
+                const obj7 = { value: entry(17302).sendMessageWithEmbed(obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp7) {

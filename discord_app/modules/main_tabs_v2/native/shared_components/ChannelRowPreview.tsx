@@ -351,7 +351,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj5 = { style: tmp15, children: null };
                       const items = [tmp19, tmp22];
                       obj5.children = items;
-                      const tmp29 = options(View, obj5);
+                      const tmp29 = React6(View, obj5);
                       cResult[24] = tmp15;
                       cResult[25] = tmp19;
                       cResult[26] = tmp22;
@@ -381,7 +381,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = { lineClamp: num, variant, maxFontSizeMultiplier: 1.75, color, style: tmp17, children: null };
           const items1 = [combined, text];
           obj7.children = items1;
-          const tmp21 = options(Text_Text.Text, obj7);
+          const tmp21 = React6(Text_Text.Text, obj7);
           cResult[14] = num;
           cResult[15] = color;
           cResult[16] = text;
@@ -466,7 +466,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const items = [combined, text];
         obj7.children = items;
-        const items1 = [options(Text_Text.Text, obj7)];
+        const items1 = [React6(Text_Text.Text, obj7)];
         let tmp14 = null != trailingIcon;
         if (tmp14) {
           const obj8 = {
@@ -479,7 +479,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         items1[1] = tmp14;
         obj5.children = items1;
-        return options(View, obj5);
+        return React6(View, obj5);
       }
     };
 let closure_12 = tmp3;
@@ -640,7 +640,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         gifAutoPlay = false;
       }
       ({ textColor, gradientStyles, gradientColors } = arg0);
-      const tmp = gifAutoPlay(5031)();
+      const tmp = gifAutoPlay(5033)();
       let obj = createStyles;
       dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT })(tmp);
       const obj2 = { seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT };
@@ -674,7 +674,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return obj;
       }, items);
-      return closure_8(gifAutoPlay(9374), {
+      return closure_8(gifAutoPlay(9383), {
         pointerEvents: "none",
         horizontalOffset: 0,
         modifyRow(message) {

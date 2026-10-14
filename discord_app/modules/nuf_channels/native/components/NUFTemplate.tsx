@@ -1,16 +1,16 @@
 // discord_app/modules/nuf_channels/native/components/NUFTemplate.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { padding: 16, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   title: { textAlign: "center", marginBottom: 8 },

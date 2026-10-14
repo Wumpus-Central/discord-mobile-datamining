@@ -78,11 +78,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4748).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(6790).OnboardingConnectionType;
+let closure_7 = fn(4750).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(6794).OnboardingConnectionType;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4736).GuildMemberFlags;
+const GuildMemberFlags = fn(4738).GuildMemberFlags;
 let date = new Date(1682488800000);
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -533,7 +533,7 @@ export const getMinimumSetOfDefaultChannelIds = function getMinimumSetOfDefaultC
       if (channelIds == null) {
         channelIds = [];
       }
-      options = required.options;
+      const options = required.options;
       const push = navigation.push;
       const items = [];
       HermesBuiltin.arraySpread(

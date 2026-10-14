@@ -13,7 +13,7 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
   _require = id;
   importDefault = guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(require("asyncRequireImpl")(12692, dependencyMap.paths), "NewChannelFollower." + id, {
+  obj.openLazy(require("asyncRequireImpl")(12728, dependencyMap.paths), "NewChannelFollower." + id, {
     sourceChannelId: id,
     sourceGuildId: guildId,
     targetChannelId,

@@ -82,13 +82,14 @@ ThemeStore.displayName = "ThemeStore";
 ThemeStore.persistKey = "ThemeStore";
 const items = [
   (theme) => {
-    let ONYX = theme.theme;
-    if ("amoled" === ONYX) {
-      ONYX = ThemeTypes.ONYX;
+    if ("amoled" === theme.theme) {
+      theme = ThemeTypes.ONYX;
+    } else {
+      theme = theme.theme;
     }
     obj = {};
     const merged = Object.assign(theme);
-    obj.theme = ONYX;
+    obj.theme = theme;
     return obj;
   },
   (preferences) => {

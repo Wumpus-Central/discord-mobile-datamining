@@ -9,12 +9,12 @@ import useMediaItemSpoilerState from "../useMediaItemSpoilerState.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = View(4850);
-const VisualEffectViewDefault = View(5365);
+const ReanimatedRexportDefault = View(4852);
+const VisualEffectViewDefault = View(5370);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8419);
+const Constants = fn(8426);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -92,7 +92,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10Result;
     };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles({
   containerPortrait: { height: 60 },
   thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 },
@@ -136,7 +136,7 @@ let closure_12 = noop.memo(function MediaThumbnail(source) {
     closure_1_8(closure_10, { source, index }),
   ];
   obj2.children = items3;
-  obj.children = options(hasOwnProperty, obj2);
+  obj.children = React6(hasOwnProperty, obj2);
   return closure_1_8(ReanimatedRexportDefault.View, obj);
 });
 const __initData = {

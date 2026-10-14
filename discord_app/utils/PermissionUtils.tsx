@@ -104,7 +104,7 @@ function computePermissionsForMember(excludeGuildPermissions) {
     } else {
       unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guild.id);
     }
-    const tmp11 = unsafeMutableRoles[options(undefined, guild)];
+    const tmp11 = unsafeMutableRoles[React6(undefined, guild)];
     const tmp12 = null != tmp11 ? tmp11.permissions : combineResult;
     let tmp13 = tmp12;
     if (null != member) {

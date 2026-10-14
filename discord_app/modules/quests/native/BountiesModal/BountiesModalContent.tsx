@@ -5,7 +5,7 @@ import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import Patterns from "../../../../../_runtime/05059_Patterns.js";
+import Patterns from "../../../../../_runtime/05063_Patterns.js";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
@@ -58,9 +58,9 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(5972);
+const QuestConstants = fn(5977);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(15604);
+const BountiesModalConstants = fn(15641);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -140,7 +140,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         return size;
       }, items);
     };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_21 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },
@@ -212,8 +212,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                               const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                               const tmpResult = tmp(504);
-                              const balance = tmp(9061).useFetchVirtualCurrencyBalance().balance;
-                              const tmpResult2 = tmp(9061);
+                              const balance = tmp(9066).useFetchVirtualCurrencyBalance().balance;
+                              const tmpResult2 = tmp(9066);
                               [tmp25, _slicedToArray] = noop.useState(null);
                               if (tmp25 == null) {
                                 class F {
@@ -882,8 +882,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       const height = useWindowDimensionsDefault().height;
       const size = closure_20();
       let obj = sharedValue(576);
-      sharedValue = sharedValue(4850).useSharedValue(0);
-      let obj2 = sharedValue(4850);
+      sharedValue = sharedValue(4852).useSharedValue(0);
+      let obj2 = sharedValue(4852);
       [tmp4, importDefault] = noop.useState(null);
       dependencyMap = noop.useRef(null);
       bounty = noop.useRef(0);

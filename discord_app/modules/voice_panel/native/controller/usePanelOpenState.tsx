@@ -8,7 +8,7 @@ import VoicePanelStore from "../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(12488).VoicePanelModes;
+const VoicePanelModes = fn(12524).VoicePanelModes;
 const Constants = fn(1085);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = {
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (first !== pathname.pathname) {
                     closure_1_6(tmp);
                     const obj2 = { path: null };
-                    const RouteParam = closure_0(4957).RouteParam;
-                    const obj = closure_0(4944);
-                    const RouteParam2 = closure_0(4957).RouteParam;
+                    const RouteParam = closure_0(4959).RouteParam;
+                    const obj = closure_0(4946);
+                    const RouteParam2 = closure_0(4959).RouteParam;
                     obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
                     const matchPathResult = obj.matchPath(pathname.pathname, obj2);
                     const guildIdResult = RouteParam.guildId();
@@ -125,10 +125,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp2 = matchPathResult.params.channelId === closure_0;
                       }
                       if (!tmp2) {
-                        closure_1(10805)();
+                        closure_1(10728)();
                       }
                     }
-                    obj3 = closure_0(11193);
+                    obj3 = closure_0(11263);
                   }
                 });
                 return () => {
@@ -283,20 +283,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
       }, items);
       const tmp3 = connected(
-        doCloseChannel.useState(() => closure_1(11200).getHistory().location.pathname),
+        doCloseChannel.useState(() => closure_1(11270).getHistory().location.pathname),
         2,
       );
       const first = tmp3[0];
       closure_6 = tmp3[1];
       const items1 = [arg0, first];
       const effect1 = doCloseChannel.useEffect(() => {
-        closure_0 = closure_1(11200).addRouteChangeListener((pathname) => {
+        closure_0 = closure_1(11270).addRouteChangeListener((pathname) => {
           if (first !== pathname.pathname) {
             closure_1_6(tmp);
             const obj2 = { path: null };
-            const RouteParam = closure_0(4957).RouteParam;
-            const obj = closure_0(4944);
-            const RouteParam2 = closure_0(4957).RouteParam;
+            const RouteParam = closure_0(4959).RouteParam;
+            const obj = closure_0(4946);
+            const RouteParam2 = closure_0(4959).RouteParam;
             obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
             const matchPathResult = obj.matchPath(pathname.pathname, obj2);
             const guildIdResult = RouteParam.guildId();
@@ -306,10 +306,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = matchPathResult.params.channelId === closure_0;
               }
               if (!tmp2) {
-                closure_1(10805)();
+                closure_1(10728)();
               }
             }
-            obj3 = closure_0(11193);
+            obj3 = closure_0(11263);
           }
         });
         return () => {

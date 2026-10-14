@@ -793,7 +793,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       guildId = guildId.guildId;
       if (cResult[0] !== guildId) {
         const obj2 = { guildId };
-        const tmp6 = options(closure_11, obj2);
+        const tmp6 = React6(closure_11, obj2);
         cResult[0] = guildId;
         cResult[1] = tmp6;
         let tmp3 = tmp6;
@@ -806,7 +806,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp7;
       }
-      const tmp8 = options(GuildSettingsRoleSubscriptionContainerDefault, { guildId, children: tmp3 });
+      const tmp8 = React6(GuildSettingsRoleSubscriptionContainerDefault, { guildId, children: tmp3 });
       cResult[2] = guildId;
       cResult[3] = tmp3;
       cResult[4] = tmp8;
@@ -814,6 +814,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
       guildId = guildId.guildId;
-      const obj = { guildId, children: options(closure_11, { guildId }) };
-      return options(GuildSettingsRoleSubscriptionContainerDefault, obj);
+      const obj = { guildId, children: React6(closure_11, { guildId }) };
+      return React6(GuildSettingsRoleSubscriptionContainerDefault, obj);
     };

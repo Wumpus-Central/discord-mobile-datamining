@@ -21,7 +21,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" },
   content: { paddingHorizontal: nativeDefault.space.PX_16 },
@@ -307,7 +307,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
           replacedBy = migrationData.replacedBy;
         }
       }
-      const getOrFetchApplication = deprecatedPlatformTypes(6858).useGetOrFetchApplication(replacedBy);
+      const getOrFetchApplication = deprecatedPlatformTypes(6863).useGetOrFetchApplication(replacedBy);
       const tmp10 = useStartAuthorizeDefault(getOrFetchApplication);
       ({ hasAlreadyLinked, canStartAuthorization } = tmp10);
       if (!fetchingConnections) {
@@ -356,7 +356,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
           replacedBy = migrationData.replacedBy;
         }
       }
-      const getOrFetchApplication = deprecatedPlatformTypes(6858).useGetOrFetchApplication(replacedBy);
+      const getOrFetchApplication = deprecatedPlatformTypes(6863).useGetOrFetchApplication(replacedBy);
       const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
       ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
       if (!fetchingConnections) {

@@ -5,15 +5,15 @@ import validateOpenInviteDialog from "../../../helpers/validateOpenInviteDialog.
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let Constants = fn(5639);
+let Constants = fn(5644);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1085);
 ({ InstantInviteSources: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
-const NativePermissionTypes = fn(7483).NativePermissionTypes;
+const NativePermissionTypes = fn(7489).NativePermissionTypes;
 let obj = {};
 let obj2 = { scope: null, handler: null };
 let obj3 = {};
-const items = [fn(8458).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
+const items = [fn(8465).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
 obj3[RPC_SCOPE_CONFIG.ANY] = items;
 obj2.scope = obj3;
 obj2.handler = function handler(socket) {
@@ -32,10 +32,10 @@ obj2.handler = function handler(socket) {
   }
 };
 obj[RPCCommands.OPEN_INVITE_DIALOG] = obj2;
-const CONTEXT_MENU_ICON_NAMES = fn(15057);
+const CONTEXT_MENU_ICON_NAMES = fn(15095);
 let obj5 = { scope: null, handler: null };
 let obj6 = {};
-const items1 = [fn(8458).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
+const items1 = [fn(8465).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
 obj6[RPC_SCOPE_CONFIG.ANY] = items1;
 obj5.scope = obj6;
 obj5.handler = function handler(socket) {
@@ -69,36 +69,42 @@ obj5.handler = function handler(socket) {
             closure_128_1 = undefined;
             closure_128_2 = undefined;
             closure_128_3 = undefined;
+            closure_128_4 = undefined;
             const id = socket.application.id;
             closure_128_0 = id;
             if (null == id) {
               const obj4 = { errorCode: constants.INVALID_COMMAND };
-              const tmp66 = new tmp2(10936)(obj4, "No application.");
-              throw tmp66;
+              const tmp74 = new tmp3(11010)(obj4, "No application.");
+              throw tmp74;
             } else {
-              let tmp46;
-              if (tmp2(15040)(socket)) {
-                tmp46 = tmp2(10810)(socket.context.surface);
+              let tmp49;
+              if (tmp3(15078)(socket)) {
+                tmp49 = tmp3(10716)(socket.context.surface);
               }
-              closure_128_1 = tmp46;
-              if (null == tmp46) {
+              closure_128_1 = tmp49;
+              if (null == tmp49) {
                 const obj5 = { errorCode: constants.UNKNOWN_ERROR };
-                const tmp58 = new tmp2(10936)(obj5, "Unable to find selected channel");
-                throw tmp58;
+                const tmp66 = new tmp3(11010)(obj5, "Unable to find selected channel");
+                throw tmp66;
               } else {
-                const permission = tmp2(7500).requestPermission(constants2.PHOTOS);
-                dependencyMap = 1;
-                c3 = 1;
-                const obj6 = {
-                  value: permission.catch(() => {
-                    throw new closure_1_1(dependencyMap[6])(
-                      { errorCode: constants.UNKNOWN_ERROR },
-                      "Failed requesting photo permissions",
-                    );
-                  }),
-                  done: false,
-                };
-                return obj6;
+                const obj6 = { mediaType: "photo", includeBase64: false, selectionLimit: 1 };
+                closure_128_2 = obj6;
+                if (!obj21.canUseAndroidPhotoPicker(obj6)) {
+                  const permission = tmp3(7506).requestPermission(constants2.PHOTOS);
+                  dependencyMap = 2;
+                  c3 = 1;
+                  const obj7 = {
+                    value: permission.catch(() => {
+                      throw new closure_1_1(dependencyMap[6])(
+                        { errorCode: constants.UNKNOWN_ERROR },
+                        "Failed requesting photo permissions",
+                      );
+                    }),
+                    done: false,
+                  };
+                  return obj7;
+                }
+                obj21 = tmp3(7776);
               }
             }
           }
@@ -108,24 +114,24 @@ obj5.handler = function handler(socket) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          } else if (value) {
-            dependencyMap = 2;
-            c3 = 1;
-            const obj8 = {
-              value: tmp2(7770).launchImageLibraryAsync({
-                mediaType: "photo",
-                includeBase64: false,
-                selectionLimit: 1,
-              }),
-              done: false,
-            };
+            const obj8 = { value, done: true };
             return obj8;
           } else {
-            const obj9 = { errorCode: constants.UNKNOWN_ERROR };
-            const tmp42 = new tmp2(10936)(obj9, "Missing photo permissions");
-            throw tmp42;
+            closure_128_3 = value.assets[0];
+            if (null == closure_128_3) {
+              const obj9 = { errorCode: constants.UNKNOWN_ERROR };
+              const tmp45 = new tmp3(11010)(obj9, "No image selected");
+              throw tmp45;
+            } else {
+              const obj11 = { name: closure_128_3.fileName, type: closure_128_3.type, uri: closure_128_3.uri };
+              dependencyMap = 3;
+              c3 = 1;
+              const obj13 = {
+                value: tmp2(10933).uploadImageAttachment(closure_128_0, closure_128_1, obj11),
+                done: false,
+              };
+              return obj13;
+            }
           }
         } else if (2 === tmp6) {
           if (arg0 === 1) {
@@ -133,52 +139,44 @@ obj5.handler = function handler(socket) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj10 = { value, done: true };
-            return obj10;
-          } else {
-            closure_128_2 = value.assets[0];
-            if (null == closure_128_2) {
-              const obj11 = { errorCode: constants.UNKNOWN_ERROR };
-              const tmp36 = new tmp2(10936)(obj11, "No image selected");
-              throw tmp36;
-            } else {
-              const obj13 = { name: closure_128_2.fileName, type: closure_128_2.type, uri: closure_128_2.uri };
-              dependencyMap = 3;
-              c3 = 1;
-              const obj14 = {
-                value: tmp3(10853).uploadImageAttachment(closure_128_0, closure_128_1, obj13),
-                done: false,
-              };
-              return obj14;
-            }
+            const obj14 = { value, done: true };
+            return obj14;
+          } else if (!value) {
+            const obj15 = { errorCode: constants.UNKNOWN_ERROR };
+            const tmp36 = new tmp3(11010)(obj15, "Missing photo permissions");
+            throw tmp36;
           }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj15 = { value, done: true };
-          return obj15;
+          const obj16 = { value, done: true };
+          return obj16;
         } else {
-          closure_128_3 = value;
-          if (null != closure_128_3) {
-            if (null != closure_128_3.url) {
-              if (!(closure_128_3 instanceof tmp2(5636))) {
-                const obj = { image_url: closure_128_3.url };
+          closure_128_4 = value;
+          if (null != closure_128_4) {
+            if (null != closure_128_4.url) {
+              if (!(closure_128_4 instanceof tmp3(5641))) {
+                const obj = { image_url: closure_128_4.url };
                 c3 = 3;
-                const obj16 = { value: obj, done: true };
-                return obj16;
+                const obj17 = { value: obj, done: true };
+                return obj17;
               }
             }
           }
-          const obj17 = { errorCode: constants.UNKNOWN_ERROR };
+          const obj19 = { errorCode: constants.UNKNOWN_ERROR };
           const _JSON = JSON;
-          const tmp202 = new tmp2(10936)(obj17, JSON.stringify(closure_128_3));
+          const tmp202 = new tmp3(11010)(obj19, JSON.stringify(closure_128_4));
           throw tmp202;
         }
-      } catch (tmp68) {
+        dependencyMap = 1;
+        c3 = 1;
+        const obj20 = { value: tmp3(7776).launchImageLibraryAsync(closure_128_2), done: false };
+        return obj20;
+      } catch (tmp76) {
         c3 = tmp;
-        throw tmp68;
+        throw tmp76;
       }
     }
   })();

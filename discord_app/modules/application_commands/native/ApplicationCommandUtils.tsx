@@ -6,8 +6,8 @@ import DraftStore from "../../../stores/DraftStore.tsx";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
-import _modDef12451 from "../../../../_runtime/metro/12451__.js";
-import _modDef12452 from "../../../../_runtime/metro/12452__.js";
+import _modDef12487 from "../../../../_runtime/metro/12487__.js";
+import _modDef12488 from "../../../../_runtime/metro/12488__.js";
 import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -21,9 +21,9 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef12451);
+      return AvatarUtilsDefault.makeSource(_modDef12487);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef12452);
+      return AvatarUtilsDefault.makeSource(_modDef12488);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
@@ -62,7 +62,7 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
         if (applicationCommandManager != null) {
           const activeCommand = applicationCommandManager.props.activeCommand;
           if (activeCommand != null) {
-            options = activeCommand.options;
+            const options = activeCommand.options;
             if (options != null) {
               found = options.find((name) => name.name === name);
             }

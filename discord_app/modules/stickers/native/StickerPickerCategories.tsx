@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(9761).useStickerPickerStore;
+let useStickerPickerStore = fn(9771).useStickerPickerStore;
 const Constants = fn(1085);
 ({
   AnalyticEvents: closure_8,
@@ -23,7 +23,7 @@ const NODE_SIZE = Constants.NODE_SIZE;
 const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: {
@@ -518,7 +518,7 @@ let closure_17 = noop.memo(
           }
           if (!tmp4) {
             const obj2 = { location: null, tab: null, sticker_pack_id: null, guild_id: null };
-            const obj3 = { page: options.EXPRESSION_PICKER };
+            const obj3 = { page: React6.EXPRESSION_PICKER };
             obj2.location = obj3;
             obj2.tab = ExpressionPickerViewType.STICKER;
             obj2.sticker_pack_id = category.id;
@@ -1102,9 +1102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
       const tmp17 = categoryIndex;
-      const tmp19 = categoryIndex(9577)();
+      const tmp19 = categoryIndex(9587)();
       const items9 = [
-        closure_14(categoryIndex(6744), {
+        closure_14(categoryIndex(6748), {
           estimatedListSize: "windowSize",
           horizontal: true,
           itemSize: EXPRESSION_FOOTER_HEIGHT,
@@ -1130,12 +1130,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items10 = [,];
         ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
         obj4.style = items10;
-        const obj5 = { style: tmp.guildIcon, source: tmp17(9797) };
+        const obj5 = { style: tmp.guildIcon, source: tmp17(9807) };
         obj4.children = closure_14(categories(1200).Icon, obj5);
         obj3.children = closure_14(closure_5, obj4);
-        tmp22Result = closure_14(categories(6185).PressableOpacity, obj3);
+        tmp22Result = closure_14(categories(6189).PressableOpacity, obj3);
       }
       items9[1] = tmp22Result;
       obj.children = items9;
-      return closure_15(categoryIndex(9578), obj);
+      return closure_15(categoryIndex(9588), obj);
     };

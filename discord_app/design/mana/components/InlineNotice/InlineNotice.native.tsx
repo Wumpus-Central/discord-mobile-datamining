@@ -12,10 +12,10 @@ const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const InlineNotice = "InlineNotice";
 let obj = {
-  critical: fn(7569).HelpMessageTypes.ERROR,
-  warning: fn(7569).HelpMessageTypes.WARNING,
-  info: fn(7569).HelpMessageTypes.INFO,
-  positive: fn(7569).HelpMessageTypes.SUCCESS,
+  critical: fn(7575).HelpMessageTypes.ERROR,
+  warning: fn(7575).HelpMessageTypes.WARNING,
+  info: fn(7575).HelpMessageTypes.INFO,
+  positive: fn(7575).HelpMessageTypes.SUCCESS,
 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

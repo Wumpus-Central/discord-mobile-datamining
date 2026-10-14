@@ -6,7 +6,7 @@ import FavoriteStore from "../FavoriteStore.tsx";
 const initialize = intl(504);
 const util = intl(1126);
 const FavoritesUtils = intl(2090);
-const FavoritesHooks = intl(10313);
+const FavoritesHooks = intl(10323);
 require = fn;
 let closure_4 = fn(2078).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
 const ChannelTypes = fn(1085).ChannelTypes;

@@ -1,7 +1,7 @@
 // discord_app/design/components/LottieIcon/native/generated/YouTabLottie.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import LottieIcon from "../LottieIcon.tsx";
-import _mod14569 from "../../../../../../_runtime/metro/14569__.js";
+import _mod14606 from "../../../../../../_runtime/metro/14606__.js";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -29,7 +29,7 @@ export const YouTabLottie = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod14569;
+        const tmpResult = _mod14606;
         cResult[3] = tmpResult;
         let tmp9 = tmpResult;
       } else {
@@ -59,7 +59,7 @@ export const YouTabLottie = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(ref, Object.assign({ ref: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(LottieIcon.LottieIcon, {
-        dotLottie: _mod14569,
+        dotLottie: _mod14606,
         animation: "all",
         ref: ref.ref,
         layers,

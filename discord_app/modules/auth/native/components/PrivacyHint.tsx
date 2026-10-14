@@ -11,12 +11,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const usePromoEmailConsentStore = fn(5931).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(16676).useRegistrationUIStore;
+const usePromoEmailConsentStore = fn(5936).usePromoEmailConsentStore;
+const useRegistrationUIStore = fn(16715).useRegistrationUIStore;
 const MarketingURLs = fn(1085).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({
   multiItem: { flexDirection: "column", gap: 16 },
   checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
@@ -137,7 +137,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const items = [cResult[6], tmp18];
           obj5.children = items;
-          const tmp24 = options(React4, obj5);
+          const tmp24 = React6(React4, obj5);
           cResult[10] = accessibilityRole;
           cResult[11] = accessibilityState;
           cResult[12] = onToggleConsent;
@@ -195,7 +195,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.children = intl2.format(util.t.qMDAP0, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
       items[1] = tmp9(Text_Text.Text, obj5);
       obj2.children = items;
-      return options(React4, obj2);
+      return React6(React4, obj2);
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -282,7 +282,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { style: multiItem.multiItem, children: null };
         const items = [tmp7, tmp10];
         obj2.children = items;
-        const tmp15 = options(React3, obj2);
+        const tmp15 = React6(React3, obj2);
         multiItem = multiItem.multiItem;
         cResult[10] = multiItem;
         cResult[11] = tmp10;
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = { style: items1.multiItem, children: null };
           const items = [closure_1_8(PromotionalEmailCheckBoxDefault, {}), closure_1_8(closure_11, {})];
           obj.children = items;
-          return options(React3, obj);
+          return React6(React3, obj);
         }
       }
       if (!consentRequired) {
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_1_8(closure_12, { consent, onToggleConsent, asCheckbox: true }),
       ];
       obj3.children = items1;
-      tmp9Result = options(React3, obj3);
+      tmp9Result = React6(React3, obj3);
       tmp2 =
         useRegistrationUIStore((registrationOptions) => null != registrationOptions.registrationOptions.email) &&
         usePromoEmailConsentStore((required) => required.required);

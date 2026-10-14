@@ -1,16 +1,16 @@
 // discord_app/modules/share/native/ShareEmbed.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp9Result = null != memo;
           if (tmp9Result) {
             let obj2 = { style: tmp.thumbnail, source: memo, resizeMode: "cover" };
-            tmp9Result = closure_5(isLoadingEmbed(6157), obj2);
+            tmp9Result = closure_5(isLoadingEmbed(5034), obj2);
           }
           let obj3 = { children: null };
           const items6 = [tmp9Result];

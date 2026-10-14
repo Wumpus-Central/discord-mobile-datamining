@@ -358,7 +358,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   const obj4 = { children: null };
   const animatedScrollHandler = obj2.useAnimatedScrollHandler(G);
   const items6 = [
-    onScrollWorklet(require("../../../../_runtime/metro/16840__.js").AnimatedLegendList, {
+    onScrollWorklet(require("../../../../_runtime/metro/13246__.js").AnimatedLegendList, {
       ref: ref1,
       contentContainerStyle: memo3,
       data: tmp3.listData,

@@ -14,9 +14,9 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 const HTTPUtils = obj(1295);
-const AppAnalyticsUtils = obj(5107);
-const useStageSpeakingForCurrentUser = obj(5949);
-const StageChannelUtils = obj(7489);
+const AppAnalyticsUtils = obj(5111);
+const useStageSpeakingForCurrentUser = obj(5954);
+const StageChannelUtils = obj(7495);
 require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
@@ -47,7 +47,7 @@ function audienceAckRequestToSpeak(channel, suppress) {
     const objResult4 = StageChannelUtils;
   }
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: options.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
+  const request = { url: React6.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
   if (flag) {
     const obj5 = { silent: flag };
     let obj6 = obj5;
@@ -241,7 +241,7 @@ let closure_14 = async function _endStage(arg0) {
 };
 const Constants = fn(1085);
 ({ AbortCodes: closure_7, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
-const SafetyToastType = fn(7020).SafetyToastType;
+const SafetyToastType = fn(7026).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 
@@ -255,7 +255,7 @@ export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, ar
     obj.trackWithMetadata(constants.REQUEST_TO_SPEAK_INITIATED, obj2);
   }
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: options.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
+  const request = { url: React6.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
   let toISOStringResult = null;
   if (arg1) {
     const _Date = Date;
@@ -270,7 +270,7 @@ export const inviteUserToStage = function inviteUserToStage(voiceChannel, id) {
   const guildId = voiceChannel.getGuildId();
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: options.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
+  const request = { url: React6.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
   let obj = { suppress: false, request_to_speak_timestamp: new Date().toISOString(), channel_id: voiceChannel.id };
   request.body = obj;
   const date = new Date();
@@ -291,7 +291,7 @@ export const moveSelfToAudience = function moveSelfToAudience(channel_id) {
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: options.UPDATE_VOICE_STATE(guildId),
+    url: React6.UPDATE_VOICE_STATE(guildId),
     body: { suppress: true, channel_id: channel_id.id, self_video: false, self_stream: false },
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
@@ -302,7 +302,7 @@ export const setUserSuppress = function setUserSuppress(channel, id, suppress) {
   _modDef38(null != guildId, "This channel cannot be guildless.");
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: options.UPDATE_VOICE_STATE(guildId, id),
+    url: React6.UPDATE_VOICE_STATE(guildId, id),
     body: { suppress, channel_id: channel.id },
     rejectWithError: HTTPUtils.rejectWithMigratedError(),
   };
@@ -322,7 +322,7 @@ export const moveUserToAudience = function moveUserToAudience(user, voiceChannel
       const guildId1 = voiceChannel.getGuildId();
       _modDef38(null != guildId1, "This channel cannot be guildless.");
       const HTTP = HTTPUtils.HTTP;
-      const request = { url: options.UPDATE_VOICE_STATE(guildId1, user.id), body: null, rejectWithError: null };
+      const request = { url: React6.UPDATE_VOICE_STATE(guildId1, user.id), body: null, rejectWithError: null };
       let obj = { suppress: true, channel_id: voiceChannel.id };
       request.body = obj;
       request.rejectWithError = HTTPUtils.rejectWithMigratedError();
@@ -333,7 +333,7 @@ export const moveUserToAudience = function moveUserToAudience(user, voiceChannel
         return error;
       });
       const HTTP2 = HTTPUtils.HTTP;
-      const request1 = { url: options.UPDATE_VOICE_STATE(guildId, user.id), body: null, rejectWithError: null };
+      const request1 = { url: React6.UPDATE_VOICE_STATE(guildId, user.id), body: null, rejectWithError: null };
       const obj2 = { suppress: true, channel_id: voiceChannel.id, self_video: false, self_stream: false };
       request1.body = obj2;
       const patchResult = HTTP.patch(request);

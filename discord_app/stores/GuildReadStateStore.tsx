@@ -523,7 +523,7 @@ function recountGuild(guildId, hasItem) {
             tmp37 = tmp34;
           }
           if (tmp37) {
-            let tmp40 = options(obj14.type);
+            let tmp40 = React6(obj14.type);
             let tmp41 = !tmp40;
             if (tmp40) {
               tmp41 = 0 !== mentionCount;
@@ -1068,7 +1068,7 @@ const ChannelRecord = fn(2069);
 ({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: c10 } = ChannelRecord);
 const isGuildNSFW = fn(2083).isGuildNSFW;
 const ChannelFlags = fn(2072).ChannelFlags;
-const ReadStateConstants = fn(5967);
+const ReadStateConstants = fn(5972);
 ({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1085).NULL_STRING_GUILD_ID;
 let guilds = {};

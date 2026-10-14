@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import Suspender from "../../../../../_runtime/05330_Suspender.js";
+import Suspender from "../../../../../_runtime/05335_Suspender.js";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
@@ -18,18 +18,18 @@ function renderChat(shown) {
   const obj = {
     collapsable: false,
     style: absoluteFill.absoluteFill,
-    children: options(VoicePanelChatViewDefault, { shown }),
+    children: React6(VoicePanelChatViewDefault, { shown }),
   };
-  return options(timestampProducer, obj);
+  return React6(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12488);
+const VoicePanelConstants = fn(12524);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 200;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -87,7 +87,7 @@ const memoResult = noop.memo(
           }
           if (useRefValueDefault(ref)) {
             const obj3 = { freeze: tmp5, children: tmp15 };
-            let tmp18 = options(Suspender.Freeze, obj3);
+            let tmp18 = React6(Suspender.Freeze, obj3);
           } else {
             tmp18 = null;
           }
@@ -131,7 +131,7 @@ const memoResult = noop.memo(
         const memo = noop.useMemo(() => renderContent(shown), items1);
         if (useRefValueDefault(ref)) {
           const obj2 = { freeze: tmp2, children: memo };
-          let tmp11 = options(Suspender.Freeze, obj2);
+          let tmp11 = React6(Suspender.Freeze, obj2);
         } else {
           tmp11 = null;
         }
@@ -452,13 +452,10 @@ export default noop.memo(
         let items = [openTab];
         const items1 = [gestureSpecs];
         const callback = obj.useCallback(
-          (isVisible) => options(VoicePanelVoiceControlsDefault, { isVisible, openTab }),
+          (isVisible) => React6(VoicePanelVoiceControlsDefault, { isVisible, openTab }),
           items,
         );
-        const callback1 = obj.useCallback(
-          () => options(VoicePanelControlsAppLauncherDefault, { gestureSpecs }),
-          items1,
-        );
+        const callback1 = obj.useCallback(() => React6(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items1);
         const obj6 = { style: null, children: null };
         const items2 = [tmp4.drawer, animatedStyle];
         obj6.style = items2;

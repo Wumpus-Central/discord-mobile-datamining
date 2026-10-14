@@ -11,7 +11,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15690);
+const YouBarConstants = fn(15727);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,
@@ -24,7 +24,7 @@ const YouBarConstants = fn(15690);
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   placeholderAvatar: {
     borderRadius: nativeDefault.radii.round,
@@ -268,12 +268,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           position: "absolute",
           width: tmp8,
           height: tmp8,
-          top: -options - (native.AVATAR_SIZE_MAP[React4] - React5) / 2,
-          left: -options,
+          top: -React6 - (native.AVATAR_SIZE_MAP[React4] - React5) / 2,
+          left: -React6,
         };
         cResult[2] = size1;
         let tmp19 = size1;
-        const tmp21 = -options;
+        const tmp21 = -React6;
       } else {
         tmp19 = cResult[2];
       }
@@ -409,8 +409,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         position: "absolute",
         width: tmp3,
         height: tmp3,
-        top: -options - (native.AVATAR_SIZE_MAP[React4] - React5) / 2,
-        left: -options,
+        top: -React6 - (native.AVATAR_SIZE_MAP[React4] - React5) / 2,
+        left: -React6,
       };
       items[1] = size1;
       obj3.style = items;
@@ -421,7 +421,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [tmp.placeholderAvatar, { width: tmp3, height: tmp3, backgroundColor: token }];
       obj5.style = items2;
       const obj6 = { style: tmp.placeholderAvatarBackground };
-      const tmp7 = -options;
+      const tmp7 = -React6;
       const items3 = [__initData(View, obj6)];
       const obj7 = { size: "custom", style: null, color: "background-mod-strong" };
       const size2 = { width: native.AVATAR_SIZE_MAP[hasOwnProperty], height: native.AVATAR_SIZE_MAP[hasOwnProperty] };

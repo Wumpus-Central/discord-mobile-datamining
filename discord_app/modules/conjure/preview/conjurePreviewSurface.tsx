@@ -6,10 +6,10 @@ import FramesStore from "../../frames/FramesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FramesConstants = fn(10802);
+const FramesConstants = fn(10697);
 ({ isLaunched: c3, makeFrameId: closure_4 } = FramesConstants);
 let c5 = "0";
-const CONJURE_PREVIEW_SURFACE = { type: fn(8611).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
+const CONJURE_PREVIEW_SURFACE = { type: fn(8617).EmbeddedSurfaceType.APP_CHANNEL, channelId: "0" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewSurface.tsx");
 

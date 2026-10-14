@@ -19,7 +19,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -58,11 +58,11 @@ export default noop.memo(
               let obj = require;
               let result = dependencyMap;
               if (isChatLockedOpen) {
-                obj = obj(16739);
+                obj = obj(16778);
                 result = obj.convertPortraitToLandscapeScreens();
               } else {
-                obj(4985).dismissKeyboard();
-                const objResult = obj(4985);
+                obj(4987).dismissKeyboard();
+                const objResult = obj(4987);
                 const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
               }
               closure_4.current = true;
@@ -522,11 +522,11 @@ export default noop.memo(
             let obj = require;
             let result = dependencyMap;
             if (isChatLockedOpen) {
-              obj = obj(16739);
+              obj = obj(16778);
               result = obj.convertPortraitToLandscapeScreens();
             } else {
-              obj(4985).dismissKeyboard();
-              const objResult = obj(4985);
+              obj(4987).dismissKeyboard();
+              const objResult = obj(4987);
               const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
             }
             closure_4.current = true;
@@ -752,7 +752,7 @@ export default noop.memo(
           if (type === useChannelScreensFromNavigation.ChannelScreenType.BACKGROUND_SAVED) {
             let guildId = firstScreen.guildId;
             if (guildId == null) {
-              guildId = options;
+              guildId = React6;
             }
             ChannelActionCreatorsDefault.preload(guildId, firstScreen.channelId);
           }

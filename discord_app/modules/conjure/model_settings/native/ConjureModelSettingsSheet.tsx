@@ -108,7 +108,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   if (cResult[18] !== cResult[17]) {
                     const obj2 = { variant: "text-xs/normal", color: "text-muted", children: tmp20 };
-                    const tmp26 = closure_7(tmp(5088).Text, obj2);
+                    const tmp26 = closure_7(tmp(5092).Text, obj2);
                     cResult[18] = tmp20;
                     cResult[19] = tmp26;
                     let tmp24 = tmp26;
@@ -124,7 +124,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: null };
                   const items4 = [tmp16, tmp24];
                   obj3.children = items4;
-                  const tmp30 = closure_8(tmp(5377).Stack, obj3);
+                  const tmp30 = closure_8(tmp(5382).Stack, obj3);
                   cResult[20] = tmp24;
                   cResult[21] = tmp16;
                   cResult[22] = tmp30;
@@ -195,9 +195,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           stringResult = string(tmp12["/rJzr6"]);
         }
         const obj5 = { variant: "text-xs/normal", color: "text-muted", children: stringResult };
-        items5[1] = closure_7(tmp(5088).Text, obj5);
+        items5[1] = closure_7(tmp(5092).Text, obj5);
         obj3.children = items5;
-        return closure_8(tmp(5377).Stack, obj3);
+        return closure_8(tmp(5382).Stack, obj3);
       }
       const obj2 = projectId(504);
     };

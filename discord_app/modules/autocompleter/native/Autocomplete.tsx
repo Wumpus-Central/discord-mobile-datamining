@@ -6,16 +6,16 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
 import StringUtils from "../../../utils/StringUtils.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import TableRowTrailingText from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
 import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import TimestampUtils from "../../markup/TimestampUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
-import _modDef8262 from "../../../../_runtime/metro/08262__.js";
+import _modDef8269 from "../../../../_runtime/metro/08269__.js";
 import Form from "../../../design/void/Form/native/index.tsx";
 import StickersHooks from "../../stickers/StickersHooks.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
@@ -33,10 +33,10 @@ const Constants = fn(1085);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   row: {
-    height: fn(9717).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(9727).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -54,7 +54,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(9717).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(9727).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -111,7 +111,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp5;
       }
-      const tmp6 = options(Form.FormRow.Label, { style: tmp4.leading, text: text.text });
+      const tmp6 = React6(Form.FormRow.Label, { style: tmp4.leading, text: text.text });
       cResult[0] = text.text;
       cResult[1] = tmp4.leading;
       cResult[2] = tmp6;
@@ -120,7 +120,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function AutocompleteLabel(text) {
       const tmp = closure_11();
-      return options(Form.FormRow.Label, { style: closure_11().leading, text: text.text });
+      return React6(Form.FormRow.Label, { style: closure_11().leading, text: text.text });
     };
 fn(558);
 let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -192,7 +192,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                         leading: tmp17,
                         trailing: tmp21,
                       };
-                      const tmp27 = closure_9(tmp(8580).FormRow, obj4);
+                      const tmp27 = closure_9(tmp(8587).FormRow, obj4);
                       cResult[21] = onPress;
                       cResult[22] = tmp4.row;
                       cResult[23] = tmp13;
@@ -203,7 +203,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { user, usernameStyle: tmp20, discriminatorStyle: tmp4.trailing };
-                  const tmp24 = closure_9(guildId(8766), obj5);
+                  const tmp24 = closure_9(guildId(8770), obj5);
                   cResult[17] = tmp4.trailing;
                   cResult[18] = tmp20;
                   cResult[19] = user;
@@ -232,8 +232,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           name = stateFromStores;
         }
         if (name == null) {
-          name = guildId(4962).getName(user);
-          const obj3 = guildId(4962);
+          name = guildId(4964).getName(user);
+          const obj3 = guildId(4964);
         }
         cResult[4] = stateFromStores;
         cResult[5] = nick;
@@ -280,8 +280,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         nick = stateFromStores;
       }
       if (nick == null) {
-        nick = guildId(4962).getName(user);
-        const obj3 = guildId(4962);
+        nick = guildId(4964).getName(user);
+        const obj3 = guildId(4964);
       }
       obj2.label = closure_9(closure_12, { text: nick });
       const obj = user(504);
@@ -296,8 +296,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [,];
       ({ trailing: arr2[0], username: arr2[1] } = tmp);
       obj5.usernameStyle = items1;
-      obj2.trailing = closure_9(guildId(8766), obj5);
-      return closure_9(user(8580).FormRow, obj2);
+      obj2.trailing = closure_9(guildId(8770), obj5);
+      return closure_9(user(8587).FormRow, obj2);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -310,7 +310,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === text) {
             if (cResult[4] !== description) {
               const obj2 = { text: description };
-              const tmp15 = options(TableRowTrailingText.TableRowTrailingText, obj2);
+              const tmp15 = React6(TableRowTrailingText.TableRowTrailingText, obj2);
               cResult[4] = description;
               cResult[5] = tmp15;
               let tmp13 = tmp15;
@@ -326,7 +326,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { onPress, accessibilityRole: "menuitem", label: cResult[3], trailing: tmp13 };
-            const tmp18 = options(TableRow.TableRow, obj3);
+            const tmp18 = React6(TableRow.TableRow, obj3);
             cResult[6] = onPress;
             cResult[7] = cResult[3];
             cResult[8] = tmp13;
@@ -338,12 +338,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != badge) {
         const obj4 = { style: tmp4.labelRow, children: null };
         const obj5 = { text };
-        const items = [options(closure_12, obj5), badge];
+        const items = [React6(closure_12, obj5), badge];
         obj4.children = items;
         let tmp8 = collapsed(View, obj4);
       } else {
         const obj6 = { text };
-        tmp8 = options(closure_12, obj6);
+        tmp8 = React6(closure_12, obj6);
       }
       cResult[0] = badge;
       cResult[1] = tmp4;
@@ -357,16 +357,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != badge) {
         const obj2 = { style: tmp.labelRow, children: null };
         const obj3 = { text };
-        const items = [options(closure_12, obj3), badge];
+        const items = [React6(closure_12, obj3), badge];
         obj2.children = items;
         let tmp2Result = collapsed(View, obj2);
       } else {
         const obj4 = { text };
-        tmp2Result = options(closure_12, obj4);
+        tmp2Result = React6(closure_12, obj4);
       }
       obj.label = tmp2Result;
-      obj.trailing = options(TableRowTrailingText.TableRowTrailingText, { text: description });
-      return options(TableRow.TableRow, obj);
+      obj.trailing = React6(TableRowTrailingText.TableRowTrailingText, { text: description });
+      return React6(TableRow.TableRow, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
@@ -410,7 +410,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp14) {
             const obj3 = { text: tmp14 };
-            const tmp17 = options(TableRowTrailingText.TableRowTrailingText, obj3);
+            const tmp17 = React6(TableRowTrailingText.TableRowTrailingText, obj3);
             cResult[10] = tmp14;
             cResult[11] = tmp17;
             let tmp15 = tmp17;
@@ -426,7 +426,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj4 = { onPress, accessibilityRole: "menuitem", label: tmp11, trailing: tmp15 };
-          const tmp20 = options(TableRow.TableRow, obj4);
+          const tmp20 = React6(TableRow.TableRow, obj4);
           cResult[12] = onPress;
           cResult[13] = tmp11;
           cResult[14] = tmp15;
@@ -434,7 +434,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           tmp18 = tmp20;
         }
         const obj5 = { style: tmp8, text: combined };
-        const tmp13 = options(Form.FormRow.Label, obj5);
+        const tmp13 = React6(Form.FormRow.Label, obj5);
         cResult[5] = tmp8;
         cResult[6] = combined;
         cResult[7] = tmp13;
@@ -458,14 +458,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp = closure_11();
       items[1] = tmp5;
-      obj.label = options(Form.FormRow.Label, { style: items, text: "@" + name });
+      obj.label = React6(Form.FormRow.Label, { style: items, text: "@" + name });
       let str = "";
       if (showDescription) {
         const intl = util.intl;
         str = intl.string(util.t.HrUmDH);
       }
-      obj.trailing = options(TableRowTrailingText.TableRowTrailingText, { text: str });
-      return options(TableRow.TableRow, obj);
+      obj.trailing = React6(TableRowTrailingText.TableRowTrailingText, { text: str });
+      return React6(TableRow.TableRow, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -476,7 +476,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== channel) {
         const getGuild = GuildStore.getGuild;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef8262;
+          let channelIconWithGuild = _modDef8269;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp7);
           const tmpResult = utils_ChannelUtils;
@@ -499,7 +499,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[7] !== tmp15) {
             const obj2 = { text: tmp15 };
-            const tmp22 = options(closure_12, obj2);
+            const tmp22 = React6(closure_12, obj2);
             cResult[7] = tmp15;
             cResult[8] = tmp22;
             let tmp19 = tmp22;
@@ -521,7 +521,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { onPress, accessibilityRole: "menuitem", leading: tmp12, label: tmp19, trailing: tmp25 };
-            const tmp30 = options(Form.FormRow, obj3);
+            const tmp30 = React6(Form.FormRow, obj3);
             cResult[12] = tmp12;
             cResult[13] = onPress;
             cResult[14] = tmp19;
@@ -535,14 +535,14 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-muted",
             children: null != category && category.name,
           };
-          const tmp27 = options(Text_Text.Text, obj4);
+          const tmp27 = React6(Text_Text.Text, obj4);
           cResult[9] = tmp4.trailing;
           cResult[10] = null != category && category.name;
           cResult[11] = tmp27;
           tmp25 = tmp27;
         }
         const obj5 = { source: cResult[1], style: tmp4.autocompleteIcon };
-        const tmp14 = options(native.Icon, obj5);
+        const tmp14 = React6(native.Icon, obj5);
         cResult[2] = cResult[1];
         cResult[3] = tmp4.autocompleteIcon;
         cResult[4] = tmp14;
@@ -553,18 +553,18 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channel, category } = onPress);
       const tmp = closure_11();
       if (channel.type === constants.GUILD_CATEGORY) {
-        let channelIconWithGuild = _modDef8262;
+        let channelIconWithGuild = _modDef8269;
       } else {
         channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
       }
       const obj2 = { source: channelIconWithGuild, style: tmp.autocompleteIcon };
-      const tmp9 = options(native.Icon, { source: channelIconWithGuild, style: tmp.autocompleteIcon });
+      const tmp9 = React6(native.Icon, { source: channelIconWithGuild, style: tmp.autocompleteIcon });
       const channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
       const obj4 = {
         onPress: onPress.onPress,
         accessibilityRole: "menuitem",
         leading: tmp9,
-        label: options(closure_12, { text: channelName }),
+        label: React6(closure_12, { text: channelName }),
         trailing: null,
       };
       const obj5 = { style: tmp.trailing, variant: "text-sm/medium", color: "text-muted", children: null };
@@ -573,8 +573,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         name = category.name;
       }
       obj5.children = name;
-      obj4.trailing = options(Text_Text.Text, obj5);
-      return options(Form.FormRow, obj4);
+      obj4.trailing = React6(Text_Text.Text, obj5);
+      return React6(Form.FormRow, obj4);
     };
 ReactCompilerGating = fn(558);
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
@@ -598,7 +598,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[5] === tmp9) {
           }
           const obj3 = { style: tmp9, source: tmp10 };
-          const tmp14 = options(FastImageDefault, obj3);
+          const tmp14 = React6(FastImageDefault, obj3);
           cResult[5] = tmp9;
           cResult[6] = tmp10;
           cResult[7] = tmp14;
@@ -622,7 +622,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             const combined = ":" + name.name + ":";
             if (cResult[14] !== combined) {
               const obj4 = { text: combined };
-              const tmp21 = options(closure_12, obj4);
+              const tmp21 = React6(closure_12, obj4);
               cResult[14] = combined;
               cResult[15] = tmp21;
               let tmp18 = tmp21;
@@ -638,7 +638,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj5 = { onPress, accessibilityRole: "menuitem", leading: tmp6, label: tmp18 };
-            const tmp24 = options(Form.FormRow, obj5);
+            const tmp24 = React6(Form.FormRow, obj5);
             cResult[16] = tmp6;
             cResult[17] = onPress;
             cResult[18] = tmp18;
@@ -646,7 +646,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             tmp22 = tmp24;
           }
           const obj6 = { style: tmp5, allowFontScaling: false, children: surrogates };
-          const tmp8 = options(native.LegacyText, obj6);
+          const tmp8 = React6(native.LegacyText, obj6);
           cResult[11] = surrogates;
           cResult[12] = tmp5;
           cResult[13] = tmp8;
@@ -671,16 +671,16 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.style = items;
         const obj3 = { uri: url };
         obj2.source = obj3;
-        let tmp5 = options(FastImageDefault, obj2);
-        let tmp2 = options;
+        let tmp5 = React6(FastImageDefault, obj2);
+        let tmp2 = React6;
       } else {
-        tmp2 = options;
+        tmp2 = React6;
         const obj = { style: null, allowFontScaling: false, children: null };
         const items1 = [,];
         ({ emoji: arr[0], emojiText: arr[1] } = tmp);
         obj.style = items1;
         obj.children = surrogates;
-        tmp5 = options(native.LegacyText, obj);
+        tmp5 = React6(native.LegacyText, obj);
       }
       const obj4 = {
         onPress,
@@ -697,7 +697,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       ({ results, onPress } = arg0);
       if (cResult[0] !== results) {
         const obj2 = { results };
-        const tmp7 = options(ChannelAutocompleteEmojiUpsellDefault, obj2);
+        const tmp7 = React6(ChannelAutocompleteEmojiUpsellDefault, obj2);
         cResult[0] = results;
         cResult[1] = tmp7;
         let tmp4 = tmp7;
@@ -710,7 +710,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp8;
       }
-      const tmp9 = options(Form.FormRow, { onPress, accessibilityRole: "menuitem", label: tmp4 });
+      const tmp9 = React6(Form.FormRow, { onPress, accessibilityRole: "menuitem", label: tmp4 });
       cResult[2] = onPress;
       cResult[3] = tmp4;
       cResult[4] = tmp9;
@@ -718,10 +718,10 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function EmojiPremiumUpsell(arg0) {
       ({ results, onPress } = arg0);
-      return options(Form.FormRow, {
+      return React6(Form.FormRow, {
         onPress,
         accessibilityRole: "menuitem",
-        label: options(ChannelAutocompleteEmojiUpsellDefault, { results }),
+        label: React6(ChannelAutocompleteEmojiUpsellDefault, { results }),
       });
     };
 ReactCompilerGating = fn(558);
@@ -731,7 +731,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       ({ choice, onPress } = arg0);
       if (cResult[0] !== choice.displayName) {
         const obj2 = { text: choice.displayName };
-        const tmp7 = options(closure_12, obj2);
+        const tmp7 = React6(closure_12, obj2);
         cResult[0] = choice.displayName;
         cResult[1] = tmp7;
         let tmp4 = tmp7;
@@ -744,7 +744,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp8;
       }
-      const tmp9 = options(Form.FormRow, { onPress, accessibilityRole: "menuitem", label: tmp4 });
+      const tmp9 = React6(Form.FormRow, { onPress, accessibilityRole: "menuitem", label: tmp4 });
       cResult[2] = onPress;
       cResult[3] = tmp4;
       cResult[4] = tmp9;
@@ -752,8 +752,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function Choice(arg0) {
       ({ choice, onPress } = arg0);
-      const obj = { onPress, accessibilityRole: "menuitem", label: options(closure_12, { text: choice.displayName }) };
-      return options(Form.FormRow, obj);
+      const obj = { onPress, accessibilityRole: "menuitem", label: React6(closure_12, { text: choice.displayName }) };
+      return React6(Form.FormRow, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
@@ -784,7 +784,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
           pointerEvents: "box-only",
           children: tmp6,
         };
-        const tmp10 = options(Pressables.PressableOpacity, obj3);
+        const tmp10 = React6(Pressables.PressableOpacity, obj3);
         cResult[3] = onLongPress;
         cResult[4] = onPress;
         cResult[5] = tmp4.stickerContainer;
@@ -792,7 +792,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = tmp10;
         tmp8 = tmp10;
       }
-      const tmp7 = options(StickerDefault, { sticker, size: 40, animated: shouldAnimateSticker });
+      const tmp7 = React6(StickerDefault, { sticker, size: 40, animated: shouldAnimateSticker });
       cResult[0] = shouldAnimateSticker;
       cResult[1] = sticker;
       cResult[2] = tmp7;
@@ -802,13 +802,13 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
       ({ sticker, onPress, onLongPress, isInteracting } = arg0);
       const tmp = closure_11();
       const shouldAnimateSticker = StickersHooks.useShouldAnimateSticker(isInteracting);
-      return options(Pressables.PressableOpacity, {
+      return React6(Pressables.PressableOpacity, {
         accessibilityRole: "menuitem",
         style: tmp.stickerContainer,
         onPress,
         onLongPress,
         pointerEvents: "box-only",
-        children: options(StickerDefault, { sticker, size: 40, animated: shouldAnimateSticker }),
+        children: React6(StickerDefault, { sticker, size: 40, animated: shouldAnimateSticker }),
       });
     };
 ReactCompilerGating = fn(558);
@@ -834,7 +834,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: null };
         const items = [tmp4.commandChoiceLoadingItem, tmp8];
         obj4.style = items;
-        const tmp12 = options(View, obj4);
+        const tmp12 = React6(View, obj4);
         cResult[2] = tmp4.commandChoiceLoadingItem;
         cResult[3] = tmp12;
         let tmp9 = tmp12;
@@ -852,13 +852,13 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp15;
         }
         const obj5 = { DEPRECATED_style: tmp4.row, leading: tmp13 };
-        const tmp17 = options(Form.FormRow, obj5);
+        const tmp17 = React6(Form.FormRow, obj5);
         cResult[7] = tmp4.row;
         cResult[8] = tmp13;
         cResult[9] = tmp17;
         tmp15 = tmp17;
       }
-      const tmp14 = options(View, { style: tmp4.commandChoiceLoadingContainer, children: tmp9 });
+      const tmp14 = React6(View, { style: tmp4.commandChoiceLoadingContainer, children: tmp9 });
       cResult[4] = tmp4.commandChoiceLoadingContainer;
       cResult[5] = tmp9;
       cResult[6] = tmp14;
@@ -873,9 +873,9 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: null };
       const items = [tmp.commandChoiceLoadingItem, { width: memo }];
       obj3.style = items;
-      obj2.children = options(View, obj3);
-      obj.leading = options(View, obj2);
-      return options(Form.FormRow, obj);
+      obj2.children = React6(View, obj3);
+      obj.leading = React6(View, obj2);
+      return React6(Form.FormRow, obj);
     };
 ReactCompilerGating = fn(558);
 const obj10 = {
@@ -895,8 +895,8 @@ const obj10 = {
         if (cResult[0] !== label) {
           const obj2 = { label: null };
           const obj3 = { text: label };
-          obj2.label = options(closure_12, obj3);
-          const tmp7 = options(Form.FormRow, obj2);
+          obj2.label = React6(closure_12, obj3);
+          const tmp7 = React6(Form.FormRow, obj2);
           cResult[0] = label;
           cResult[1] = tmp7;
           let tmp4 = tmp7;
@@ -906,7 +906,7 @@ const obj10 = {
         return tmp4;
       }
     : function Label(text) {
-        return options(Form.FormRow, { label: options(closure_12, { text: text.label }) });
+        return React6(Form.FormRow, { label: React6(closure_12, { text: text.label }) });
       },
   Game: null,
   Timestamp: null,
@@ -918,8 +918,8 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== label) {
         const obj2 = { label: null };
         const obj3 = { text: label };
-        obj2.label = options(closure_12, obj3);
-        const tmp7 = options(Form.FormRow, obj2);
+        obj2.label = React6(closure_12, obj3);
+        const tmp7 = React6(Form.FormRow, obj2);
         cResult[0] = label;
         cResult[1] = tmp7;
         let tmp4 = tmp7;
@@ -929,7 +929,7 @@ let tmp13 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp4;
     }
   : function Label(text) {
-      return options(Form.FormRow, { label: options(closure_12, { text: text.label }) });
+      return React6(Form.FormRow, { label: React6(closure_12, { text: text.label }) });
     };
 ReactCompilerGating = fn(558);
 obj10.Game = ReactCompilerGating.isReactCompilerEnabled()
@@ -950,7 +950,7 @@ obj10.Game = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[3] === gameIcon.gameIcon) {
             if (cResult[5] !== game.name) {
               const obj4 = { text: game.name };
-              const tmp13 = options(closure_12, obj4);
+              const tmp13 = React6(closure_12, obj4);
               cResult[5] = game.name;
               cResult[6] = tmp13;
               let tmp10 = tmp13;
@@ -972,7 +972,7 @@ obj10.Game = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj5 = { onPress, accessibilityRole: "menuitem", leading: tmp6, label: tmp10, trailing: tmp14 };
-              const tmp19 = options(Form.FormRow, obj5);
+              const tmp19 = React6(Form.FormRow, obj5);
               cResult[10] = tmp6;
               cResult[11] = onPress;
               cResult[12] = tmp10;
@@ -983,7 +983,7 @@ obj10.Game = ReactCompilerGating.isReactCompilerEnabled()
             let tmp15;
             if (extraChromeEnabled) {
               const obj6 = { platforms: game.platformAvailability };
-              tmp15 = options(GamePlatformBadgeRowDefault, obj6);
+              tmp15 = React6(GamePlatformBadgeRowDefault, obj6);
             }
             cResult[7] = extraChromeEnabled;
             cResult[8] = game.platformAvailability;
@@ -995,12 +995,12 @@ obj10.Game = ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = getGameMediaRefURLDefault(game.id, game.icon, { size: 32 });
       if (tmpResult.isNullOrEmpty(tmp7)) {
         const obj7 = { size: "sm", style: gameIcon.gameIcon };
-        let tmp8Result = options(UnknownGameIcon.UnknownGameIcon, obj7);
+        let tmp8Result = React6(UnknownGameIcon.UnknownGameIcon, obj7);
       } else {
         const obj8 = { style: gameIcon.gameIcon, source: null };
         const obj9 = { uri: tmp7 };
         obj8.source = obj9;
-        tmp8Result = options(FastImageDefault, obj8);
+        tmp8Result = React6(FastImageDefault, obj8);
       }
       cResult[1] = game.icon;
       cResult[2] = game.id;
@@ -1016,14 +1016,14 @@ obj10.Game = ReactCompilerGating.isReactCompilerEnabled()
       const obj = GameSearchRowExperimentDefault;
       if (obj2.isNullOrEmpty(tmp4)) {
         const obj3 = { size: "sm", style: tmp.gameIcon };
-        let tmp6Result = options(UnknownGameIcon.UnknownGameIcon, obj3);
-        let tmp8 = options;
+        let tmp6Result = React6(UnknownGameIcon.UnknownGameIcon, obj3);
+        let tmp8 = React6;
       } else {
         const obj4 = { style: tmp.gameIcon, source: null };
         const obj5 = { uri: tmp4 };
         obj4.source = obj5;
-        tmp6Result = options(FastImageDefault, obj4);
-        tmp8 = options;
+        tmp6Result = React6(FastImageDefault, obj4);
+        tmp8 = React6;
       }
       const obj6 = {
         onPress: game.onPress,
@@ -1058,7 +1058,7 @@ obj10.Timestamp = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[2] !== tmp4.formatted) {
           const obj2 = { text: tmp4.formatted };
-          const tmp9 = options(closure_12, obj2);
+          const tmp9 = React6(closure_12, obj2);
           cResult[2] = tmp4.formatted;
           cResult[3] = tmp9;
           let tmp6 = tmp9;
@@ -1070,7 +1070,7 @@ obj10.Timestamp = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[4] !== description) {
           const obj3 = { text: description };
-          const tmp12 = options(TableRowTrailingText.TableRowTrailingText, obj3);
+          const tmp12 = React6(TableRowTrailingText.TableRowTrailingText, obj3);
           cResult[4] = description;
           cResult[5] = tmp12;
           let tmp10 = tmp12;
@@ -1086,7 +1086,7 @@ obj10.Timestamp = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { onPress, accessibilityRole: "menuitem", label: tmp6, trailing: tmp10 };
-        const tmp15 = options(TableRow.TableRow, obj4);
+        const tmp15 = React6(TableRow.TableRow, obj4);
         cResult[6] = onPress;
         cResult[7] = tmp6;
         cResult[8] = tmp10;
@@ -1102,13 +1102,13 @@ obj10.Timestamp = ReactCompilerGating.isReactCompilerEnabled()
       if (null != result) {
         const obj2 = { onPress, accessibilityRole: "menuitem", label: null, trailing: null };
         const obj3 = { text: result.formatted };
-        obj2.label = options(closure_12, obj3);
+        obj2.label = React6(closure_12, obj3);
         if (str == null) {
           str = "";
         }
         const obj4 = { text: str };
-        obj2.trailing = options(TableRowTrailingText.TableRowTrailingText, obj4);
-        tmp5Result = options(TableRow.TableRow, obj2);
+        obj2.trailing = React6(TableRowTrailingText.TableRowTrailingText, obj4);
+        tmp5Result = React6(TableRow.TableRow, obj2);
       }
       return tmp5Result;
     };

@@ -18,13 +18,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7260);
+const FamilyCenterConstants = fn(7266);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } =
   FamilyCenterConstants);
-const THROUGHLINE_URL = fn(10382).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(10392).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 let obj2 = {
   container: {
     display: "flex",
@@ -104,7 +104,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     };
-createStyles = fn(5092);
+createStyles = fn(5096);
 let obj6 = { container: null, supportHeader: null };
 let obj3 = {
   display: "flex",
@@ -168,7 +168,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { style: container, children: null };
             const items = [tmp16, tmp19];
             obj6.children = items;
-            const tmp25 = options(React3, obj6);
+            const tmp25 = React6(React3, obj6);
             cResult[8] = tmp4.container;
             cResult[9] = tmp16;
             cResult[10] = tmp19;
@@ -221,11 +221,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
         items[1] = closure_1_8(Text_Text.Text, obj5);
         obj3.children = items;
-        tmp11 = options(React3, obj3);
+        tmp11 = React6(React3, obj3);
       }
       return tmp11;
     };
-createStyles = fn(5092);
+createStyles = fn(5096);
 const obj11 = { scrollView: { flex: 1 }, container: null };
 const obj8 = { marginBottom: nativeDefault.space.PX_4 };
 obj11.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { style: tmp4.container, children: null };
         const items = [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10];
         obj3.children = items;
-        obj2.children = options(React3, obj3);
+        obj2.children = React6(React3, obj3);
         const tmp25 = closure_1_8(common_SafeAreaView.SafeAreaPaddingView, obj2);
         cResult[6] = tmp4.container;
         cResult[7] = tmp25;
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_1_8(closure_13, {}),
       ];
       obj3.children = items;
-      obj2.children = options(React3, obj3);
+      obj2.children = React6(React3, obj3);
       obj.children = closure_1_8(common_SafeAreaView.SafeAreaPaddingView, obj2);
       return closure_1_8(React4, obj);
     };

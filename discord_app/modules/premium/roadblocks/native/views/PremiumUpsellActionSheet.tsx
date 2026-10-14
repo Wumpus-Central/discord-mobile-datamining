@@ -8,9 +8,9 @@ import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
-import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05391_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import LinearGradientDefault from "../../../../../../_runtime/05396_LinearGradient.js";
 import FileUtils from "../../../../../utils/FileUtils.tsx";
 import UploadLimits from "../../../../media_uploads/UploadLimits.tsx";
 import APNGPlayer from "../../../../image/native/APNGPlayer.android.tsx";
@@ -19,11 +19,11 @@ import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/
 import MobileEmojiPickerUpsellRestyleExperiment from "../../../experiments/MobileEmojiPickerUpsellRestyleExperiment.tsx";
 import ReactionsSpotIllustration from "../../../../../design/components/mana-assets/native/generated/ReactionsSpotIllustration.native.tsx";
 import StickersSpotIllustration from "../../../../../design/components/mana-assets/native/generated/StickersSpotIllustration.native.tsx";
-import _modDef9291 from "../../../../../../_runtime/metro/09291__.js";
-import _modDef9292 from "../../../../../../_runtime/metro/09292__.js";
+import _modDef9300 from "../../../../../../_runtime/metro/09300__.js";
+import _modDef9301 from "../../../../../../_runtime/metro/09301__.js";
 import ScheduledMessagesUtils from "../../../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
 import NitroScheduleMessageSpotIllustration from "../../../../../design/components/mana-assets/native/generated/NitroScheduleMessageSpotIllustration.native.tsx";
-import _modDef13379 from "../../../../../../_runtime/metro/13379__.js";
+import _modDef13418 from "../../../../../../_runtime/metro/13418__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../../../user_settings/ThemeStore.tsx";
@@ -37,11 +37,11 @@ const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: c10, PremiumTypes: closure_11, PremiumUpsellTypes: closure_12 } = PremiumConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
-const ApplicationStreamFPS = fn(5212).ApplicationStreamFPS;
-const premiumMax = fn(9280).MAX_SCHEDULED_MESSAGES_PER_USER;
+const ApplicationStreamFPS = fn(5216).ApplicationStreamFPS;
+const premiumMax = fn(9289).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 },
   image: { width: 240, height: 144 },
@@ -131,7 +131,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                       obj5.description = intl11.string(util.t.jBqF2k);
                       obj5.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
                       obj5.upsellType = constants.CLIENT_THEMES_UPSELL;
-                      obj5.image = _modDef9291;
+                      obj5.image = _modDef9300;
                       cResult[37] = obj5;
                       let tmp63 = obj5;
                     } else {
@@ -152,7 +152,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                       obj6.description = intl13.string(util.t.HDt8ip);
                       obj6.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
                       obj6.upsellType = constants.APP_ICON_UPSELL;
-                      obj6.image = _modDef9292;
+                      obj6.image = _modDef9301;
                       cResult[38] = obj6;
                       let tmp66 = obj6;
                     } else {
@@ -278,7 +278,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                       description: tmp82,
                       analyticsPage: constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY,
                       upsellType: constants.STREAM_QUALITY_UPSELL,
-                      image: _modDef13379,
+                      image: _modDef13418,
                       imageGradientBackground: null,
                     };
                     const obj14 = { colors: null, start: null, end: null };
@@ -578,7 +578,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj14.description = intl11.string(util.t.jBqF2k);
       obj14.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
       obj14.upsellType = constants.CLIENT_THEMES_UPSELL;
-      obj14.image = _modDef9291;
+      obj14.image = _modDef9300;
       obj3[EntitlementFeatureNames.EntitlementFeatureNames.CLIENT_THEMES] = obj14;
       const obj15 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
       const intl12 = util.intl;
@@ -587,7 +587,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj15.description = intl13.string(util.t.HDt8ip);
       obj15.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
       obj15.upsellType = constants.APP_ICON_UPSELL;
-      obj15.image = _modDef9292;
+      obj15.image = _modDef9301;
       obj3[EntitlementFeatureNames.EntitlementFeatureNames.APP_ICONS] = obj15;
       const obj16 = {
         title: null,
@@ -632,7 +632,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj20.description = intl17.formatToPlainString(util.t["4nlpei"], { fps: ApplicationStreamFPS.FPS_60 });
       obj20.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
       obj20.upsellType = constants.STREAM_QUALITY_UPSELL;
-      obj20.image = _modDef13379;
+      obj20.image = _modDef13418;
       const obj22 = {
         colors: null,
         start: ConstantsIOS.HorizontalGradient.START,
@@ -864,7 +864,7 @@ let result = size.fileFinishedImporting("modules/premium/roadblocks/native/views
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function PremiumUpsellActionSheet(arg0) {
-      const cResult = legacyProps(useTier0UpsellContent[15]).c(83);
+      const cResult = legacyProps(useTier0UpsellContent[15]).c(84);
       ({ featureName, legacyProps } = arg0);
       ({ analyticsLocations, onDismiss } = arg0);
       if (cResult[0] !== analyticsLocations) {
@@ -955,7 +955,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       let tmp32 = cResult[20];
                     }
                     const tmp34 = closure_22(tmp32)[featureName];
-                    let upsellType = tmp34;
+                    closure_4 = tmp34;
                     const _Symbol3 = Symbol;
                     if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
                       const items4 = [AccessibilityStore];
@@ -996,350 +996,356 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       if (cResult[24] === undefined) {
-                        if (cResult[25] === tmp34.upsellType) {
-                          if (cResult[26] === useTier0UpsellContent) {
-                            let tmp42 = cResult[27];
-                          }
-                          if (cResult[28] === analyticsLocations2) {
-                            if (cResult[29] === legacyProps) {
-                              if (cResult[30] === tmp34) {
-                                if (cResult[31] === useTier0UpsellContent) {
-                                  let tmp45 = cResult[32];
-                                }
-                                const effect = onViewAllPerks.useEffect(tmp42, tmp45);
-                                class Z {
-                                  constructor() {
-                                    return closure_1_5.useReducedMotion;
+                        if (cResult[25] === tmp34.analyticsPage) {
+                          if (cResult[26] === tmp34.upsellType) {
+                            if (cResult[27] === useTier0UpsellContent) {
+                              let tmp42 = cResult[28];
+                            }
+                            if (cResult[29] === analyticsLocations2) {
+                              if (cResult[30] === legacyProps) {
+                                if (cResult[31] === tmp34) {
+                                  if (cResult[32] === useTier0UpsellContent) {
+                                    let tmp45 = cResult[33];
                                   }
-                                }
-                                ({ loading, onPress } = tmp10(tmp2[46])(
-                                  useTier0UpsellContent,
-                                  onViewAllPerks,
-                                  tmp34.analyticsPage,
-                                  undefined,
-                                  tmp4,
-                                ));
-                                if (cResult[33] !== onViewAllPerks) {
-                                  function ne() {
-                                    ChatInputUtils.dismissKeyboard();
-                                    ActionSheetActionCreatorsDefault.hideActionSheet(
-                                      openPremiumUpsellActionSheet.PREMIUM_UPSELL_ACTION_SHEET_KEY,
-                                    );
-                                    onViewAllPerks();
-                                  }
-                                  cResult[33] = onViewAllPerks;
+                                  const effect = onViewAllPerks.useEffect(tmp42, tmp45);
                                   class Z {
                                     constructor() {
                                       return closure_1_5.useReducedMotion;
                                     }
                                   }
-                                  cResult[34] = ne;
-                                  let tmp52 = ne;
-                                } else {
-                                  tmp52 = cResult[34];
-                                }
-                                if (null == tmp34) {
-                                  return null;
-                                } else {
-                                  const ActionSheet = legacyProps(tmp2[48]).ActionSheet;
-                                  if (cResult[35] === tmp34) {
-                                    if (cResult[36] === tmp5) {
-                                      if (cResult[37] === stateFromStores3) {
-                                        let tmp54 = cResult[38];
+                                  ({ loading, onPress } = tmp10(tmp2[46])(
+                                    useTier0UpsellContent,
+                                    onViewAllPerks,
+                                    tmp34.analyticsPage,
+                                    undefined,
+                                    tmp4,
+                                  ));
+                                  if (cResult[34] !== onViewAllPerks) {
+                                    function ne() {
+                                      ChatInputUtils.dismissKeyboard();
+                                      ActionSheetActionCreatorsDefault.hideActionSheet(
+                                        openPremiumUpsellActionSheet.PREMIUM_UPSELL_ACTION_SHEET_KEY,
+                                      );
+                                      onViewAllPerks();
+                                    }
+                                    cResult[34] = onViewAllPerks;
+                                    class Z {
+                                      constructor() {
+                                        return closure_1_5.useReducedMotion;
                                       }
-                                      if (cResult[39] === tmp34.showBetaBadge) {
-                                        if (cResult[40] === tmp5.betaTag) {
-                                          let tmp57 = cResult[41];
+                                    }
+                                    cResult[35] = ne;
+                                    let tmp52 = ne;
+                                  } else {
+                                    tmp52 = cResult[35];
+                                  }
+                                  if (null == tmp34) {
+                                    return null;
+                                  } else {
+                                    const ActionSheet = legacyProps(tmp2[48]).ActionSheet;
+                                    if (cResult[36] === tmp34) {
+                                      if (cResult[37] === tmp5) {
+                                        if (cResult[38] === stateFromStores3) {
+                                          let tmp54 = cResult[39];
                                         }
-                                        if (cResult[42] === tmp34.title) {
-                                          if (cResult[43] === tmp5.text) {
-                                            let tmp61 = cResult[44];
+                                        if (cResult[40] === tmp34.showBetaBadge) {
+                                          if (cResult[41] === tmp5.betaTag) {
+                                            let tmp57 = cResult[42];
                                           }
-                                          if (cResult[45] === tmp5.description) {
-                                            if (cResult[46] === tmp5.text) {
-                                              let tmp65 = cResult[47];
+                                          if (cResult[43] === tmp34.title) {
+                                            if (cResult[44] === tmp5.text) {
+                                              let tmp61 = cResult[45];
                                             }
-                                            if (cResult[48] === tmp34.description) {
-                                              if (cResult[49] === tmp65) {
-                                                let tmp66 = cResult[50];
+                                            if (cResult[46] === tmp5.description) {
+                                              if (cResult[47] === tmp5.text) {
+                                                let tmp65 = cResult[48];
                                               }
-                                              if (cResult[51] === tmp5.textContainer) {
-                                                if (cResult[52] === tmp57) {
-                                                  if (cResult[53] === tmp61) {
-                                                    if (cResult[54] === tmp66) {
-                                                      let tmp70 = cResult[55];
-                                                    }
-                                                    const Button = legacyProps(tmp2[51]).Button;
-                                                    class Z {
-                                                      constructor() {
-                                                        return closure_1_5.useReducedMotion;
+                                              if (cResult[49] === tmp34.description) {
+                                                if (cResult[50] === tmp65) {
+                                                  let tmp66 = cResult[51];
+                                                }
+                                                if (cResult[52] === tmp5.textContainer) {
+                                                  if (cResult[53] === tmp57) {
+                                                    if (cResult[54] === tmp61) {
+                                                      if (cResult[55] === tmp66) {
+                                                        let tmp70 = cResult[56];
                                                       }
-                                                    }
-                                                    if (cResult[56] === tmp19) {
-                                                      if (cResult[57] === useTier0UpsellContent) {
-                                                        const tmp10Result = tmp10(tmp2[52]);
-                                                        class Z {
-                                                          constructor() {
-                                                            return closure_1_5.useReducedMotion;
-                                                          }
+                                                      const Button = legacyProps(tmp2[51]).Button;
+                                                      class Z {
+                                                        constructor() {
+                                                          return closure_1_5.useReducedMotion;
                                                         }
-                                                        if (cResult[59] === Button) {
-                                                          if (cResult[60] === loading) {
-                                                            if (cResult[61] === onPress) {
-                                                              if (cResult[62] === tmp75) {
-                                                                if (cResult[63] === tmp10Result) {
-                                                                  if (cResult[64] === str2) {
-                                                                    let tmp79 = cResult[65];
-                                                                  }
-                                                                  const _Symbol4 = Symbol;
-                                                                  class Z {
-                                                                    constructor() {
-                                                                      return closure_1_5.useReducedMotion;
+                                                      }
+                                                      if (cResult[57] === tmp19) {
+                                                        if (cResult[58] === useTier0UpsellContent) {
+                                                          const tmp10Result = tmp10(tmp2[52]);
+                                                          class Z {
+                                                            constructor() {
+                                                              return closure_1_5.useReducedMotion;
+                                                            }
+                                                          }
+                                                          if (cResult[60] === Button) {
+                                                            if (cResult[61] === loading) {
+                                                              if (cResult[62] === onPress) {
+                                                                if (cResult[63] === tmp75) {
+                                                                  if (cResult[64] === tmp10Result) {
+                                                                    if (cResult[65] === str2) {
+                                                                      let tmp79 = cResult[66];
                                                                     }
-                                                                  }
-                                                                  if (cResult[67] !== tmp52) {
-                                                                    let obj2 = {
-                                                                      variant: "secondary",
-                                                                      text: tmp83,
-                                                                      onPress: null,
-                                                                    };
+                                                                    const _Symbol4 = Symbol;
                                                                     class Z {
                                                                       constructor() {
                                                                         return closure_1_5.useReducedMotion;
                                                                       }
                                                                     }
-                                                                    const tmp86 = closure_18(
-                                                                      legacyProps(tmp2[51]).Button,
-                                                                      obj2,
-                                                                    );
-                                                                    cResult[67] = tmp52;
-                                                                    cResult[68] = tmp86;
-                                                                    let tmp84 = tmp86;
-                                                                  } else {
-                                                                    tmp84 = cResult[68];
-                                                                  }
-                                                                  if (cResult[69] === tmp98) {
-                                                                    if (cResult[70] === tmp5.buttonContainer) {
-                                                                      if (cResult[71] === tmp79) {
-                                                                        if (cResult[72] === tmp84) {
-                                                                          let tmp87 = cResult[73];
+                                                                    if (cResult[68] !== tmp52) {
+                                                                      let obj2 = {
+                                                                        variant: "secondary",
+                                                                        text: tmp83,
+                                                                        onPress: null,
+                                                                      };
+                                                                      class Z {
+                                                                        constructor() {
+                                                                          return closure_1_5.useReducedMotion;
                                                                         }
-                                                                        if (cResult[74] === tmp98) {
-                                                                          if (cResult[75] === tmp54) {
-                                                                            if (cResult[76] === tmp70) {
-                                                                              if (cResult[77] === tmp87) {
-                                                                                let tmp90 = cResult[78];
-                                                                              }
-                                                                              if (cResult[79] === ActionSheet) {
-                                                                                if (cResult[80] === onDismiss) {
-                                                                                  if (cResult[81] === tmp90) {
-                                                                                    let tmp94 = cResult[82];
+                                                                      }
+                                                                      const tmp86 = closure_18(
+                                                                        legacyProps(tmp2[51]).Button,
+                                                                        obj2,
+                                                                      );
+                                                                      cResult[68] = tmp52;
+                                                                      cResult[69] = tmp86;
+                                                                      let tmp84 = tmp86;
+                                                                    } else {
+                                                                      tmp84 = cResult[69];
+                                                                    }
+                                                                    if (cResult[70] === tmp98) {
+                                                                      if (cResult[71] === tmp5.buttonContainer) {
+                                                                        if (cResult[72] === tmp79) {
+                                                                          if (cResult[73] === tmp84) {
+                                                                            let tmp87 = cResult[74];
+                                                                          }
+                                                                          if (cResult[75] === tmp98) {
+                                                                            if (cResult[76] === tmp54) {
+                                                                              if (cResult[77] === tmp70) {
+                                                                                if (cResult[78] === tmp87) {
+                                                                                  let tmp90 = cResult[79];
+                                                                                }
+                                                                                if (cResult[80] === ActionSheet) {
+                                                                                  if (cResult[81] === onDismiss) {
+                                                                                    if (cResult[82] === tmp90) {
+                                                                                      let tmp94 = cResult[83];
+                                                                                    }
+                                                                                    return tmp94;
                                                                                   }
-                                                                                  return tmp94;
                                                                                 }
-                                                                              }
-                                                                              class Z {
-                                                                                constructor() {
-                                                                                  return closure_1_5.useReducedMotion;
+                                                                                class Z {
+                                                                                  constructor() {
+                                                                                    return closure_1_5.useReducedMotion;
+                                                                                  }
                                                                                 }
+                                                                                tmp96[1] = onDismiss;
+                                                                                tmp96[2] = tmp90;
+                                                                                const tmp97 = closure_18(
+                                                                                  ActionSheet,
+                                                                                  tmp96,
+                                                                                );
+                                                                                cResult[80] = ActionSheet;
+                                                                                cResult[81] = onDismiss;
+                                                                                cResult[82] = tmp90;
+                                                                                cResult[83] = tmp97;
+                                                                                tmp94 = tmp97;
                                                                               }
-                                                                              tmp96[1] = onDismiss;
-                                                                              tmp96[2] = tmp90;
-                                                                              const tmp97 = closure_18(
-                                                                                ActionSheet,
-                                                                                tmp96,
-                                                                              );
-                                                                              cResult[79] = ActionSheet;
-                                                                              cResult[80] = onDismiss;
-                                                                              cResult[81] = tmp90;
-                                                                              cResult[82] = tmp97;
-                                                                              tmp94 = tmp97;
                                                                             }
                                                                           }
-                                                                        }
-                                                                        class Z {
-                                                                          constructor() {
-                                                                            return closure_1_5.useReducedMotion;
+                                                                          class Z {
+                                                                            constructor() {
+                                                                              return closure_1_5.useReducedMotion;
+                                                                            }
                                                                           }
+                                                                          const items5 = [tmp54, tmp70, tmp87];
+                                                                          tmp92[0] = items5;
+                                                                          const tmp93 = closure_20(tmp98, tmp92);
+                                                                          cResult[75] = tmp98;
+                                                                          cResult[76] = tmp54;
+                                                                          cResult[77] = tmp70;
+                                                                          cResult[78] = tmp87;
+                                                                          cResult[79] = tmp93;
+                                                                          tmp90 = tmp93;
                                                                         }
-                                                                        const items5 = [tmp54, tmp70, tmp87];
-                                                                        tmp92[0] = items5;
-                                                                        const tmp93 = closure_20(tmp98, tmp92);
-                                                                        cResult[74] = tmp98;
-                                                                        cResult[75] = tmp54;
-                                                                        cResult[76] = tmp70;
-                                                                        cResult[77] = tmp87;
-                                                                        cResult[78] = tmp93;
-                                                                        tmp90 = tmp93;
                                                                       }
                                                                     }
+                                                                    let obj3 = {
+                                                                      style: tmp5.buttonContainer,
+                                                                      children: null,
+                                                                    };
+                                                                    const items6 = [tmp79, tmp84];
+                                                                    obj3.children = items6;
+                                                                    const tmp89 = closure_20(tmp98, obj3);
+                                                                    cResult[70] = tmp98;
+                                                                    cResult[71] = tmp5.buttonContainer;
+                                                                    cResult[72] = tmp79;
+                                                                    cResult[73] = tmp84;
+                                                                    cResult[74] = tmp89;
+                                                                    tmp87 = tmp89;
                                                                   }
-                                                                  let obj3 = {
-                                                                    style: tmp5.buttonContainer,
-                                                                    children: null,
-                                                                  };
-                                                                  const items6 = [tmp79, tmp84];
-                                                                  obj3.children = items6;
-                                                                  const tmp89 = closure_20(tmp98, obj3);
-                                                                  cResult[69] = tmp98;
-                                                                  cResult[70] = tmp5.buttonContainer;
-                                                                  cResult[71] = tmp79;
-                                                                  cResult[72] = tmp84;
-                                                                  cResult[73] = tmp89;
-                                                                  tmp87 = tmp89;
                                                                 }
                                                               }
                                                             }
                                                           }
+                                                          const obj4 = {
+                                                            loading,
+                                                            onPress,
+                                                            text: cResult[59],
+                                                            icon: tmp10Result,
+                                                            variant: "primary",
+                                                          };
+                                                          const tmp81 = closure_18(Button, obj4);
+                                                          cResult[60] = Button;
+                                                          cResult[61] = loading;
+                                                          cResult[62] = onPress;
+                                                          cResult[63] = cResult[59];
+                                                          cResult[64] = tmp10Result;
+                                                          cResult[65] = "primary";
+                                                          cResult[66] = tmp81;
+                                                          tmp79 = tmp81;
                                                         }
-                                                        const obj4 = {
-                                                          loading,
-                                                          onPress,
-                                                          text: cResult[58],
-                                                          icon: tmp10Result,
-                                                          variant: "primary",
-                                                        };
-                                                        const tmp81 = closure_18(Button, obj4);
-                                                        cResult[59] = Button;
-                                                        cResult[60] = loading;
-                                                        cResult[61] = onPress;
-                                                        cResult[62] = cResult[58];
-                                                        cResult[63] = tmp10Result;
-                                                        cResult[64] = "primary";
-                                                        cResult[65] = tmp81;
-                                                        tmp79 = tmp81;
                                                       }
-                                                    }
-                                                    if (useTier0UpsellContent) {
-                                                      const intl2 = legacyProps(tmp2[23]).intl;
-                                                      let stringResult = intl2.string(legacyProps(tmp2[23]).t.cM8bbx);
-                                                    } else {
-                                                      stringResult = tmp19;
-                                                      if (tmp19 == null) {
-                                                        const intl = legacyProps(tmp2[23]).intl;
-                                                        stringResult = intl.string(legacyProps(tmp2[23]).t["8x0jKT"]);
+                                                      if (useTier0UpsellContent) {
+                                                        const intl2 = legacyProps(tmp2[23]).intl;
+                                                        let stringResult = intl2.string(legacyProps(tmp2[23]).t.cM8bbx);
+                                                      } else {
+                                                        stringResult = tmp19;
+                                                        if (tmp19 == null) {
+                                                          const intl = legacyProps(tmp2[23]).intl;
+                                                          stringResult = intl.string(legacyProps(tmp2[23]).t["8x0jKT"]);
+                                                        }
                                                       }
+                                                      cResult[57] = tmp19;
+                                                      cResult[58] = useTier0UpsellContent;
+                                                      cResult[59] = stringResult;
                                                     }
-                                                    cResult[56] = tmp19;
-                                                    cResult[57] = useTier0UpsellContent;
-                                                    cResult[58] = stringResult;
                                                   }
                                                 }
+                                                class Z {
+                                                  constructor() {
+                                                    return closure_1_5.useReducedMotion;
+                                                  }
+                                                }
+                                                tmp72[0] = tmp5.textContainer;
+                                                const items7 = [tmp57, tmp61, tmp66];
+                                                tmp72[1] = items7;
+                                                const tmp73 = closure_20(tmp98, tmp72);
+                                                cResult[52] = tmp5.textContainer;
+                                                cResult[53] = tmp57;
+                                                cResult[54] = tmp61;
+                                                cResult[55] = tmp66;
+                                                cResult[56] = tmp73;
+                                                tmp70 = tmp73;
                                               }
                                               class Z {
                                                 constructor() {
                                                   return closure_1_5.useReducedMotion;
                                                 }
                                               }
-                                              tmp72[0] = tmp5.textContainer;
-                                              const items7 = [tmp57, tmp61, tmp66];
-                                              tmp72[1] = items7;
-                                              const tmp73 = closure_20(tmp98, tmp72);
-                                              cResult[51] = tmp5.textContainer;
-                                              cResult[52] = tmp57;
-                                              cResult[53] = tmp61;
-                                              cResult[54] = tmp66;
-                                              cResult[55] = tmp73;
-                                              tmp70 = tmp73;
+                                              tmp68[0] = tmp65;
+                                              tmp68[2] = tmp34.description;
+                                              const tmp69 = closure_18(legacyProps(tmp2[50]).Text, tmp68);
+                                              cResult[49] = tmp34.description;
+                                              cResult[50] = tmp65;
+                                              cResult[51] = tmp69;
+                                              tmp66 = tmp69;
                                             }
+                                            const items8 = [,];
                                             class Z {
                                               constructor() {
                                                 return closure_1_5.useReducedMotion;
                                               }
                                             }
-                                            tmp68[0] = tmp65;
-                                            tmp68[2] = tmp34.description;
-                                            const tmp69 = closure_18(legacyProps(tmp2[50]).Text, tmp68);
-                                            cResult[48] = tmp34.description;
-                                            cResult[49] = tmp65;
-                                            cResult[50] = tmp69;
-                                            tmp66 = tmp69;
+                                            items8[1] = tmp5.description;
+                                            cResult[46] = tmp5.description;
+                                            cResult[47] = tmp5.text;
+                                            cResult[48] = items8;
+                                            tmp65 = items8;
                                           }
-                                          const items8 = [,];
                                           class Z {
                                             constructor() {
                                               return closure_1_5.useReducedMotion;
                                             }
                                           }
-                                          items8[1] = tmp5.description;
-                                          cResult[45] = tmp5.description;
-                                          cResult[46] = tmp5.text;
-                                          cResult[47] = items8;
-                                          tmp65 = items8;
+                                          tmp63[0] = tmp5.text;
+                                          tmp63[3] = tmp34.title;
+                                          const tmp64 = closure_18(legacyProps(tmp2[50]).Text, tmp63);
+                                          cResult[43] = tmp34.title;
+                                          cResult[44] = tmp5.text;
+                                          cResult[45] = tmp64;
+                                          tmp61 = tmp64;
                                         }
                                         class Z {
                                           constructor() {
                                             return closure_1_5.useReducedMotion;
                                           }
                                         }
-                                        tmp63[0] = tmp5.text;
-                                        tmp63[3] = tmp34.title;
-                                        const tmp64 = closure_18(legacyProps(tmp2[50]).Text, tmp63);
-                                        cResult[42] = tmp34.title;
-                                        cResult[43] = tmp5.text;
-                                        cResult[44] = tmp64;
-                                        tmp61 = tmp64;
-                                      }
-                                      class Z {
-                                        constructor() {
-                                          return closure_1_5.useReducedMotion;
-                                        }
-                                      }
-                                      if (true === tmp34.showBetaBadge) {
-                                        const obj5 = { size: null, gradient: true, style: null };
-                                        class Z {
-                                          constructor() {
-                                            return closure_1_5.useReducedMotion;
+                                        if (true === tmp34.showBetaBadge) {
+                                          const obj5 = { size: null, gradient: true, style: null };
+                                          class Z {
+                                            constructor() {
+                                              return closure_1_5.useReducedMotion;
+                                            }
                                           }
+                                          obj5.style = tmp5.betaTag;
+                                          const tmp58 = closure_18(tmp10(tmp2[49]), obj5);
+                                          const tmp10Result2 = tmp10(tmp2[49]);
                                         }
-                                        obj5.style = tmp5.betaTag;
-                                        const tmp58 = closure_18(tmp10(tmp2[49]), obj5);
-                                        const tmp10Result2 = tmp10(tmp2[49]);
+                                        cResult[40] = tmp34.showBetaBadge;
+                                        cResult[41] = tmp5.betaTag;
+                                        cResult[42] = tmp58;
+                                        tmp57 = tmp58;
                                       }
-                                      cResult[39] = tmp34.showBetaBadge;
-                                      cResult[40] = tmp5.betaTag;
-                                      cResult[41] = tmp58;
-                                      tmp57 = tmp58;
                                     }
-                                  }
-                                  class Z {
-                                    constructor() {
-                                      return closure_1_5.useReducedMotion;
+                                    class Z {
+                                      constructor() {
+                                        return closure_1_5.useReducedMotion;
+                                      }
                                     }
+                                    const obj6 = {
+                                      pageConfig: tmp34,
+                                      styles: tmp5,
+                                      useReducedMotion: stateFromStores3,
+                                    };
+                                    const tmp56 = closure_18(closure_24, obj6);
+                                    cResult[36] = tmp34;
+                                    cResult[37] = tmp5;
+                                    cResult[38] = stateFromStores3;
+                                    cResult[39] = tmp56;
+                                    tmp54 = tmp56;
                                   }
-                                  const obj6 = { pageConfig: tmp34, styles: tmp5, useReducedMotion: stateFromStores3 };
-                                  const tmp56 = closure_18(closure_24, obj6);
-                                  cResult[35] = tmp34;
-                                  cResult[36] = tmp5;
-                                  cResult[37] = stateFromStores3;
-                                  cResult[38] = tmp56;
-                                  tmp54 = tmp56;
+                                  const tmp51 = tmp10(tmp2[46])(
+                                    useTier0UpsellContent,
+                                    onViewAllPerks,
+                                    tmp34.analyticsPage,
+                                    undefined,
+                                    tmp4,
+                                  );
                                 }
-                                const tmp51 = tmp10(tmp2[46])(
-                                  useTier0UpsellContent,
-                                  onViewAllPerks,
-                                  tmp34.analyticsPage,
-                                  undefined,
-                                  tmp4,
-                                );
                               }
                             }
-                          }
-                          const items9 = [, , ,];
-                          class Z {
-                            constructor() {
-                              return closure_1_5.useReducedMotion;
+                            const items9 = [, , ,];
+                            class Z {
+                              constructor() {
+                                return closure_1_5.useReducedMotion;
+                              }
                             }
+                            items9[1] = analyticsLocations2;
+                            items9[2] = useTier0UpsellContent;
+                            items9[3] = legacyProps;
+                            cResult[29] = analyticsLocations2;
+                            cResult[30] = legacyProps;
+                            cResult[31] = tmp34;
+                            cResult[32] = useTier0UpsellContent;
+                            cResult[33] = items9;
+                            tmp45 = items9;
                           }
-                          items9[1] = analyticsLocations2;
-                          items9[2] = useTier0UpsellContent;
-                          items9[3] = legacyProps;
-                          cResult[28] = analyticsLocations2;
-                          cResult[29] = legacyProps;
-                          cResult[30] = tmp34;
-                          cResult[31] = useTier0UpsellContent;
-                          cResult[32] = items9;
-                          tmp45 = items9;
                         }
                       }
                     }
@@ -1355,12 +1361,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const obj2 = {};
                       const merged = Object.assign(analyticsProperties);
-                      upsellType = undefined;
-                      if (upsellType != null) {
-                        upsellType = upsellType.upsellType;
+                      let upsellType;
+                      if (closure_4 != null) {
+                        upsellType = closure_4.upsellType;
                       }
                       obj2.type = upsellType;
-                      obj2.location = location;
+                      let analyticsPage;
+                      if (closure_4 != null) {
+                        analyticsPage = closure_4.analyticsPage;
+                      }
+                      obj2.location = { page: analyticsPage };
                       obj2.location_stack = analyticsLocations2;
                       const obj = AnalyticsUtilsDefault;
                       obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(
@@ -1374,9 +1384,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       obj.track(constants2.PREMIUM_UPSELL_VIEWED, obj2);
                     }
                     cResult[24] = analyticsProperties;
-                    cResult[25] = tmp34.upsellType;
-                    cResult[26] = useTier0UpsellContent;
-                    cResult[27] = ee;
+                    cResult[25] = tmp34.analyticsPage;
+                    cResult[26] = tmp34.upsellType;
+                    cResult[27] = useTier0UpsellContent;
+                    cResult[28] = ee;
                     tmp42 = ee;
                     const tmpResult17 = legacyProps(tmp2[21]);
                   }
@@ -1447,7 +1458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       analyticsLocations = undefined;
       let useTier0UpsellContent;
       let onViewAllPerks;
-      let upsellType;
+      closure_4 = undefined;
       const tmp = closure_21();
       const items = [UserStore];
       const stateFromStores = legacyProps(useTier0UpsellContent[37]).useStateFromStores(items, () =>
@@ -1492,7 +1503,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         featureName,
       };
       const tmp16 = closure_22(obj4)[featureName];
-      upsellType = tmp16;
+      closure_4 = tmp16;
       const tmp2Result13 = legacyProps(useTier0UpsellContent[37]);
       const items3 = [AccessibilityStore];
       const stateFromStores2 = legacyProps(useTier0UpsellContent[37]).useStateFromStores(
@@ -1517,12 +1528,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj2 = {};
         const merged = Object.assign(analyticsProperties);
-        upsellType = undefined;
-        if (upsellType != null) {
-          upsellType = upsellType.upsellType;
+        let upsellType;
+        if (closure_4 != null) {
+          upsellType = closure_4.upsellType;
         }
         obj2.type = upsellType;
-        obj2.location = location;
+        let analyticsPage;
+        if (closure_4 != null) {
+          analyticsPage = closure_4.analyticsPage;
+        }
+        obj2.location = { page: analyticsPage };
         obj2.location_stack = analyticsLocations;
         const obj = AnalyticsUtilsDefault;
         obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(
@@ -1571,7 +1586,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj10.children = tmp16.description;
         items6[2] = closure_18(legacyProps(tmp3[50]).Text, obj10);
         obj7.children = items6;
-        items5[1] = closure_20(upsellType, obj7);
+        items5[1] = closure_20(closure_4, obj7);
         const obj11 = { style: tmp.buttonContainer, children: null };
         const obj12 = { loading, onPress: null, text: null, icon: null, variant: null };
         let onPress = null;
@@ -1605,9 +1620,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj14.onPress = tmp21;
         items8[1] = closure_18(legacyProps(tmp3[51]).Button, obj14);
         obj11.children = items8;
-        items5[2] = closure_20(upsellType, obj11);
+        items5[2] = closure_20(closure_4, obj11);
         obj13.children = items5;
-        obj5.children = closure_20(upsellType, obj13);
+        obj5.children = closure_20(closure_4, obj13);
         tmp23Result2 = closure_18(legacyProps(tmp3[48]).ActionSheet, obj5);
       }
       return tmp23Result2;

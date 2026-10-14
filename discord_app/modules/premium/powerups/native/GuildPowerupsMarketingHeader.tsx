@@ -15,7 +15,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef683("#000000");
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guild(576).c(13);
       guild = guild.guild;
       const tmp4 = closure_7();
-      arr = arr(14206)(guild.id);
+      arr = arr(14243)(guild.id);
       if (cResult[0] !== guild.id) {
         const fn = function s() {
           if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const effect = noop.useEffect(tmp6, tmp7);
-      if (arr(12762)(guild.id)) {
+      if (arr(12798)(guild.id)) {
         let num4;
         if (arr != null) {
           num4 = arr.length;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp16 = tmp19;
           }
           let obj4 = { style: text, variant: "text-sm/semibold", children: tmp11 };
-          const tmp15 = jsx(tmp(5088).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
+          const tmp15 = jsx(tmp(5092).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
           cResult[7] = tmp4.text;
           cResult[8] = tmp11;
           cResult[9] = tmp15;
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj7 = { perks: str2 };
           obj2.children = intl.format(_modDef2600["7lwpzR"], obj7);
-          obj.children = jsx(guild(5088).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+          obj.children = jsx(guild(5092).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
           return <View style={tmp.container}>{null}</View>;
         }
       }

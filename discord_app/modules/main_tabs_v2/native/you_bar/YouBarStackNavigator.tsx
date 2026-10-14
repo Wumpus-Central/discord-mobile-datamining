@@ -22,10 +22,10 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(10637).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(10647).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9345);
+const NativeStackNavigator = fn(9354);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -90,7 +90,7 @@ export default noop.memo(
                   return {};
                 },
               };
-              const tmp30 = options(closure_12.Screen, obj5);
+              const tmp30 = React6(closure_12.Screen, obj5);
               cResult[10] = accessibilityNativeStackOptions;
               cResult[11] = tmp30;
               let tmp25 = tmp30;
@@ -111,9 +111,9 @@ export default noop.memo(
                 const obj6 = { style: React4.absoluteFillObject, children: null };
                 const obj7 = { children: null };
                 const obj8 = { id: "tabs", screenOptions: tmp12, children: tmp31 };
-                obj7.children = options(closure_12.Navigator, obj8);
-                obj6.children = options(LayerScope.LayerScope, obj7);
-                const tmp40 = options(hasOwnProperty, obj6);
+                obj7.children = React6(closure_12.Navigator, obj8);
+                obj6.children = React6(LayerScope.LayerScope, obj7);
+                const tmp40 = React6(hasOwnProperty, obj6);
                 cResult[16] = tmp12;
                 cResult[17] = tmp31;
                 cResult[18] = tmp40;
@@ -140,14 +140,14 @@ export default noop.memo(
                 return {};
               },
             };
-            tmp20 = options(closure_12.Screen, obj10);
+            tmp20 = React6(closure_12.Screen, obj10);
           }
           cResult[7] = accessibilityNativeStackOptions;
           cResult[8] = iCYMIEnabled;
           cResult[9] = tmp20;
           tmp19 = tmp20;
         }
-        const tmp18 = options(closure_12.Screen, {
+        const tmp18 = React6(closure_12.Screen, {
           name: YouBarNavigatorScreens.GUILDS,
           initialParams: current,
           getComponent: getGuildsComponent,
@@ -201,7 +201,7 @@ export default noop.memo(
         const items2 = [current, iCYMIEnabled, accessibilityNativeStackOptions];
         obj6.children = noop.useMemo(() => {
           const items = [
-            options(Screen.Screen, {
+            React6(Screen.Screen, {
               name: YouBarNavigatorScreens.GUILDS,
               initialParams: current,
               getComponent: getGuildsComponent,
@@ -222,11 +222,11 @@ export default noop.memo(
                 return {};
               },
             };
-            tmp3Result = options(Screen.Screen, obj2);
+            tmp3Result = React6(Screen.Screen, obj2);
           }
           const obj3 = { children: null };
           items[1] = tmp3Result;
-          items[2] = options(Screen.Screen, {
+          items[2] = React6(Screen.Screen, {
             name: YouBarNavigatorScreens.NOTIFICATIONS,
             getComponent: getNotificationsComponent,
             options() {

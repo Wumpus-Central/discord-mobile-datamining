@@ -13,10 +13,10 @@ import StageChannelRoleStore from "../../StageChannelRoleStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(5892).STAGE_BLOCKED_USERS_SHEET_KEY;
+let closure_8 = fn(5897).STAGE_BLOCKED_USERS_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   header: { padding: 16 },
@@ -185,7 +185,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj2 = { style: tmp4.iconContainer, children: null };
-                const obj3 = { style: tmp4.icon, source: user(7719), color: user(587).unsafe_rawColors.WHITE };
+                const obj3 = { style: tmp4.icon, source: user(7725), color: user(587).unsafe_rawColors.WHITE };
                 obj2.children = closure_9(channelId(1200).Icon, obj3);
                 tmp24 = closure_9(View, obj2);
               }
@@ -250,7 +250,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ];
       if (speaker) {
         const obj6 = { style: tmp.iconContainer, children: null };
-        const obj7 = { style: tmp.icon, source: user(7719), color: user(587).unsafe_rawColors.WHITE };
+        const obj7 = { style: tmp.icon, source: user(7725), color: user(587).unsafe_rawColors.WHITE };
         obj6.children = closure_9(native.Icon, obj7);
         speaker = closure_9(View, obj6);
       }
@@ -326,7 +326,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: first,
             };
-            const tmp38 = options(Text_Text.Text, obj2);
+            const tmp38 = React6(Text_Text.Text, obj2);
             cResult[1] = tmp4.title;
             cResult[2] = tmp38;
             let tmp36 = tmp38;
@@ -344,7 +344,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[4] !== tmp4.description) {
             const obj3 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp39 };
-            const tmp43 = options(Text_Text.Text, obj3);
+            const tmp43 = React6(Text_Text.Text, obj3);
             cResult[4] = tmp4.description;
             cResult[5] = tmp43;
             let tmp41 = tmp43;
@@ -419,7 +419,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             tmp29 = tmp32;
           }
           const obj8 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp24 };
-          const tmp28 = options(Text_Text.Text, obj8);
+          const tmp28 = React6(Text_Text.Text, obj8);
           cResult[17] = tmp4.description;
           cResult[18] = tmp24;
           cResult[19] = tmp28;
@@ -432,7 +432,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp19,
         };
-        const tmp23 = options(Text_Text.Text, obj9);
+        const tmp23 = React6(Text_Text.Text, obj9);
         cResult[12] = tmp4.title;
         cResult[13] = tmp19;
         cResult[14] = tmp23;
@@ -486,7 +486,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             tmp15 = tmp18;
           }
           const obj13 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp10 };
-          const tmp14 = options(Text_Text.Text, obj13);
+          const tmp14 = React6(Text_Text.Text, obj13);
           cResult[31] = tmp4.description;
           cResult[32] = tmp10;
           cResult[33] = tmp14;
@@ -499,7 +499,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp5,
         };
-        const tmp9 = options(Text_Text.Text, obj14);
+        const tmp9 = React6(Text_Text.Text, obj14);
         cResult[26] = tmp4.title;
         cResult[27] = tmp5;
         cResult[28] = tmp9;
@@ -521,11 +521,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl3 = util.intl;
           obj3.children = intl3.string(util.t.Uzdyho);
-          const items = [options(Text_Text.Text, obj3)];
+          const items = [React6(Text_Text.Text, obj3)];
           const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
           const intl4 = util.intl;
           obj4.children = intl4.string(util.t["P/KFXz"]);
-          items[1] = options(Text_Text.Text, obj4);
+          items[1] = React6(Text_Text.Text, obj4);
           obj2.children = items;
           let obj9 = obj2;
         }
@@ -543,12 +543,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         const obj6 = { number: ignoredUserCount };
         obj5.children = intl.format(util.t.wvygk8, obj6);
-        const items1 = [options(Text_Text.Text, obj5)];
+        const items1 = [React6(Text_Text.Text, obj5)];
         const obj7 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
         const intl2 = util.intl;
         const obj8 = { number: ignoredUserCount };
         obj7.children = intl2.format(util.t.Ri3o33, obj8);
-        items1[1] = options(Text_Text.Text, obj7);
+        items1[1] = React6(Text_Text.Text, obj7);
         obj.children = items1;
         obj9 = obj;
       } else {
@@ -563,12 +563,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const intl5 = util.intl;
         const obj11 = { number: blockedUserCount };
         obj10.children = intl5.format(util.t.HviVA9, obj11);
-        const items2 = [options(Text_Text.Text, obj10)];
+        const items2 = [React6(Text_Text.Text, obj10)];
         const obj12 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
         const intl6 = util.intl;
         const obj13 = { number: blockedUserCount };
         obj12.children = intl6.format(util.t["28qZMU"], obj13);
-        items2[1] = options(Text_Text.Text, obj12);
+        items2[1] = React6(Text_Text.Text, obj12);
         obj9.children = items2;
       }
     };
@@ -587,7 +587,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       [r10020, dependencyMap] = onPress(arr4.useState(0), 2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         function handleDismiss() {
-          onAccept(5056).hideActionSheet(closure_1_8);
+          onAccept(5060).hideActionSheet(closure_1_8);
         }
         cResult[0] = handleDismiss;
         onPress = handleDismiss;
@@ -598,9 +598,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === onAccept) {
           let tmp7 = cResult[3];
         }
-        const stageBlockedUsers = tmp(7720).useStageBlockedUsers(channel.id);
-        const tmpResult = tmp(7720);
-        const stageIgnoredUsers = tmp(7720).useStageIgnoredUsers(channel.id);
+        const stageBlockedUsers = tmp(7726).useStageBlockedUsers(channel.id);
+        const tmpResult = tmp(7726);
+        const stageIgnoredUsers = tmp(7726).useStageIgnoredUsers(channel.id);
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
@@ -645,7 +645,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { text: tmp9, onPress: tmp7 };
-          const tmp12 = closure_9(tmp(5379).Button, obj2);
+          const tmp12 = closure_9(tmp(5384).Button, obj2);
           cResult[6] = tmp7;
           cResult[7] = tmp12;
         } else {
@@ -668,7 +668,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl = tmp(1126).intl;
           obj3.text = intl.string(tmp(1126).t.CZGqeT);
           obj3.onPress = onPress;
-          const tmp14 = closure_9(tmp(5379).Button, obj3);
+          const tmp14 = closure_9(tmp(5384).Button, obj3);
           cResult[8] = tmp14;
           const tmp13 = tmp14;
         } else {
@@ -777,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   renderItem: tmp25,
                   itemSize: tmp19,
                 };
-                const tmp37 = closure_9(onAccept(6761), obj5);
+                const tmp37 = closure_9(onAccept(6765), obj5);
                 cResult[25] = tmp25;
                 cResult[26] = tmp4.container;
                 cResult[27] = tmp33;
@@ -790,7 +790,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[21] = tmp29;
             }
             function renderUser(arg0, arg1) {
-              return options(closure_12, {
+              return React6(closure_12, {
                 participant: arr4[arg1],
                 guildId: channel.getGuildId(),
                 channelId: channel.id,
@@ -809,11 +809,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { bottom: true, style: tmp4.buttons, onLayout: E, children: null };
         const items1 = [tmp11, tmp13];
         obj7.children = items1;
-        const tmp17 = closure_10(tmp(6814).SafeAreaPaddingView, obj7);
+        const tmp17 = closure_10(tmp(6819).SafeAreaPaddingView, obj7);
         cResult[9] = tmp4.buttons;
         cResult[10] = tmp11;
         cResult[11] = tmp17;
-        const tmpResult2 = tmp(7720);
+        const tmpResult2 = tmp(7726);
       }
       function handleJoin() {
         onAccept(channel);
@@ -832,9 +832,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_11();
       const tmp2 = items1(noop.useState(0), 2);
       dependencyMap = tmp2[1];
-      const stageBlockedUsers = channel(7720).useStageBlockedUsers(channel.id);
-      const obj = channel(7720);
-      const stageIgnoredUsers = channel(7720).useStageIgnoredUsers(channel.id);
+      const stageBlockedUsers = channel(7726).useStageBlockedUsers(channel.id);
+      const obj = channel(7726);
+      const stageIgnoredUsers = channel(7726).useStageIgnoredUsers(channel.id);
       const callback = noop.useCallback((nativeEvent) => {
         dependencyMap(nativeEvent.nativeEvent.layout.height);
       }, []);
@@ -846,17 +846,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onAccept(channel);
         ActionSheetActionCreatorsDefault.hideActionSheet(closure_8);
       };
-      const items = [closure_9(channel(5379).Button, obj4)];
+      const items = [closure_9(channel(5384).Button, obj4)];
       const obj5 = { variant: "secondary", text: null, onPress: null };
       const intl2 = channel(1126).intl;
       obj5.text = intl2.string(channel(1126).t.CZGqeT);
       obj5.onPress = function handleDismiss() {
-        onAccept(5056).hideActionSheet(closure_1_8);
+        onAccept(5060).hideActionSheet(closure_1_8);
       };
-      items[1] = closure_9(channel(5379).Button, obj5);
+      items[1] = closure_9(channel(5384).Button, obj5);
       obj3.children = items;
       items1 = [];
-      const obj2 = channel(7720);
+      const obj2 = channel(7726);
       HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
       const obj6 = {
         scrollable: true,
@@ -864,7 +864,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           blockedUserCount: stageBlockedUsers.length,
           ignoredUserCount: stageIgnoredUsers.length,
         }),
-        footer: closure_10(channel(6814).SafeAreaPaddingView, obj3),
+        footer: closure_10(channel(6819).SafeAreaPaddingView, obj3),
         children: null,
       };
       const obj7 = {
@@ -875,18 +875,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         renderItem: null,
         itemSize: null,
       };
-      const tmp4 = closure_10(channel(6814).SafeAreaPaddingView, obj3);
+      const tmp4 = closure_10(channel(6819).SafeAreaPaddingView, obj3);
       const intl3 = channel(1126).intl;
       obj7.accessibilityLabel = intl3.string(channel(1126).t["3VoRLH"]);
       const items2 = [items1.length];
       obj7.sections = items2;
       obj7.renderItem = function renderUser(arg0, arg1) {
-        return options(closure_12, { participant: items1[arg1], guildId: channel.getGuildId(), channelId: channel.id });
+        return React6(closure_12, { participant: items1[arg1], guildId: channel.getGuildId(), channelId: channel.id });
       };
       obj7.itemSize = function getRowHeight() {
         return 48;
       };
-      const items3 = [closure_9(onAccept(6761), obj7), closure_9(View, { style: { height: tmp2[0] } })];
+      const items3 = [closure_9(onAccept(6765), obj7), closure_9(View, { style: { height: tmp2[0] } })];
       obj6.children = items3;
-      return closure_10(channel(6840).BottomSheet, obj6);
+      return closure_10(channel(6845).BottomSheet, obj6);
     };

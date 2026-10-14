@@ -10,14 +10,14 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodStore = fn(18304);
+const AutomodStore = fn(18340);
 ({ useAutomodRulesList: closure_4, useSyncAutomodRulesEffect: hasOwnProperty } = AutomodStore);
-let closure_6 = fn(18306).useAutomodEditingRuleState;
+let closure_6 = fn(18342).useAutomodEditingRuleState;
 const Constants = fn(1085);
 ({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   stack: { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING },
   loading: null,
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               function renderCategories() {
                 if (first) {
                   let obj = { style: closure_1.loading };
-                  let mapped = options(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
+                  let mapped = React6(ActivityIndicator_ActivityIndicator.ActivityIndicator, obj);
                 } else {
                   const _Object = Object;
                   const entries = Object.entries(availableTriggerTypes);
@@ -382,7 +382,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               stringResult = intl.string(util.t.fphZb0);
             }
             obj = { title: stringResult, hasIcons: true, children: arr.map(renderTriggerType) };
-            options(TableRowGroup.TableRowGroup, obj, tmp);
+            React6(TableRowGroup.TableRowGroup, obj, tmp);
           }
         });
       }

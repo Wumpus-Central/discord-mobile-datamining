@@ -77,7 +77,7 @@ prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRe
     const referralsRemaining = ReferralTrialActionCreators.fetchReferralsRemaining();
   }
 };
-prototype["getReferralsRemaining"] = function getReferralsRemaining() {
+prototype["getReferralsRemaining"] = function getReferralsRemaining(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};

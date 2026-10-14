@@ -24,7 +24,7 @@ let closure_10 = async function _fetchVerificationForm() {
   }
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: options.GUILD_MEMBER_VERIFICATION(closure_0),
+    url: React6.GUILD_MEMBER_VERIFICATION(closure_0),
     query: null,
     oldFormErrors: true,
     rejectWithError: null,

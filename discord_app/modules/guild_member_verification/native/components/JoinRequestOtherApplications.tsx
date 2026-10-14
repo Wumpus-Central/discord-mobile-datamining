@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   label: { marginHorizontal: 16, marginBottom: 8 },
   container: {
@@ -114,7 +114,7 @@ export default noop.memo(
             if (cResult[2] === userId) {
               let tmp5 = cResult[3];
             }
-            row = tmp(17353).useOtherGuildJoinRequestsForUser(tmp5);
+            row = tmp(17387).useOtherGuildJoinRequestsForUser(tmp5);
             if (0 === row.length) {
               return null;
             } else {
@@ -129,7 +129,7 @@ export default noop.memo(
               }
               if (cResult[5] !== tmp4.label) {
                 let obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp4.label, children: tmp6 };
-                const tmp10 = closure_6(tmp(5088).Text, obj2);
+                const tmp10 = closure_6(tmp(5092).Text, obj2);
                 cResult[5] = tmp4.label;
                 cResult[6] = tmp10;
                 let tmp8 = tmp10;
@@ -211,7 +211,7 @@ export default noop.memo(
               cResult[13] = fn;
               tmp13 = fn;
             }
-            const tmpResult = tmp(17353);
+            const tmpResult = tmp(17387);
           }
         }
         let obj5 = { guildId, userId, selectedJoinRequestId };
@@ -238,7 +238,7 @@ export default noop.memo(
           let obj3 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
           const intl = tmp2(1126).intl;
           obj3.children = intl.string(tmp2(1126).t["hxa+G3"]);
-          let items = [closure_6(tmp2(5088).Text, obj3)];
+          let items = [closure_6(tmp2(5092).Text, obj3)];
           let obj4 = {
             style: tmp.container,
             children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

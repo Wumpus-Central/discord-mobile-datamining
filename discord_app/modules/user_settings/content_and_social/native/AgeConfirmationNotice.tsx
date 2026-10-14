@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7020);
+const Constants = fn(7026);
 ({ SafetySettingsNoticeAction: hasOwnProperty, SafetySettingsNoticeType: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -20,10 +20,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = sensitiveContentFilterHelpArticle(576).c(11);
       let obj = sensitiveContentFilterHelpArticle(576);
       sensitiveContentFilterHelpArticle =
-        sensitiveContentFilterHelpArticle(7000).useSensitiveContentFilterHelpArticle();
+        sensitiveContentFilterHelpArticle(7007).useSensitiveContentFilterHelpArticle();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
-          const result = sensitiveContentFilterHelpArticle(15285).trackSafetySettingsNoticeAnalytics(
+          const result = sensitiveContentFilterHelpArticle(15322).trackSafetySettingsNoticeAnalytics(
             constants2.AGE_CONFIRMATION_NOTICE,
             constants.VIEWED,
           );
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj5 = { style: tmp11, children: null };
         const obj6 = { type: "info", message: tmp13, role: "status", action: tmp16 };
-        obj5.children = jsx(tmp(7568).InlineNotice, { type: "info", message: tmp13, role: "status", action: tmp16 });
+        obj5.children = jsx(tmp(7574).InlineNotice, { type: "info", message: tmp13, role: "status", action: tmp16 });
         const tmp19 = <View style={tmp11}>{null}</View>;
         cResult[9] = tmp13;
         cResult[10] = tmp19;
@@ -230,9 +230,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function AgeConfirmationNotice() {
       sensitiveContentFilterHelpArticle =
-        sensitiveContentFilterHelpArticle(7000).useSensitiveContentFilterHelpArticle();
+        sensitiveContentFilterHelpArticle(7007).useSensitiveContentFilterHelpArticle();
       const effect = noop.useEffect(() => {
-        const result = sensitiveContentFilterHelpArticle(15285).trackSafetySettingsNoticeAnalytics(
+        const result = sensitiveContentFilterHelpArticle(15322).trackSafetySettingsNoticeAnalytics(
           constants2.AGE_CONFIRMATION_NOTICE,
           constants.VIEWED,
         );
@@ -249,14 +249,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { style: null, children: null };
       const obj3 = { marginBottom: null };
       const callback = noop.useCallback(() => {
-        const obj = onPress(7498);
+        const obj = onPress(7504);
         const result = obj.showAgeVerificationGetStartedModal({
-          entryPoint: sensitiveContentFilterHelpArticle(5918).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+          entryPoint: sensitiveContentFilterHelpArticle(5923).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
         });
         const obj2 = {
-          entryPoint: sensitiveContentFilterHelpArticle(5918).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+          entryPoint: sensitiveContentFilterHelpArticle(5923).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
         };
-        const result1 = sensitiveContentFilterHelpArticle(15285).trackSafetySettingsNoticeAnalytics(
+        const result1 = sensitiveContentFilterHelpArticle(15322).trackSafetySettingsNoticeAnalytics(
           constants2.AGE_CONFIRMATION_NOTICE,
           constants.CONFIRM_AGE,
         );
@@ -281,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.text = intl2.string(sensitiveContentFilterHelpArticle(1126).t.FDSSia);
       obj6.onClick = callback;
       obj4.action = obj6;
-      obj2.children = jsx(sensitiveContentFilterHelpArticle(7568).InlineNotice, {
+      obj2.children = jsx(sensitiveContentFilterHelpArticle(7574).InlineNotice, {
         type: "info",
         message: null,
         role: "status",

@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -58,7 +58,7 @@ export default noop.memo(
           }
           const mapped = items.map(UserStore.getUser);
           const found = mapped.filter(onSelectUser(1388).isNotNullish);
-          const mapped1 = found.map(tags(10220));
+          const mapped1 = found.map(tags(10230));
           cResult[0] = selectedUserIds;
           cResult[1] = mapped1;
           tags = mapped1;
@@ -89,7 +89,7 @@ export default noop.memo(
                     accessible: false,
                     children: tmp16,
                   };
-                  const tmp20 = jsx(onSelectUser(5088).Text, {
+                  const tmp20 = jsx(onSelectUser(5092).Text, {
                     style: tmp4.header,
                     variant: "text-sm/medium",
                     color: "text-muted",
@@ -156,7 +156,7 @@ export default noop.memo(
                     tags,
                     ref: tagListInputRef,
                   };
-                  const tmp27 = jsx(tags(8626), {
+                  const tmp27 = jsx(tags(8631), {
                     autoFocus,
                     focusOnAdd: true,
                     footer: tmp10,
@@ -217,12 +217,12 @@ export default noop.memo(
               children: null,
             };
             if (forceSearchResults) {
-              let CirclePlusIcon = onSelectUser(12584).ChevronLargeRightIcon;
+              let CirclePlusIcon = onSelectUser(12620).ChevronLargeRightIcon;
             } else {
-              CirclePlusIcon = onSelectUser(10610).CirclePlusIcon;
+              CirclePlusIcon = onSelectUser(10620).CirclePlusIcon;
             }
             obj5.children = <CirclePlusIcon size="xs" />;
-            jsx(onSelectUser(6185).PressableOpacity, {
+            jsx(onSelectUser(6189).PressableOpacity, {
               accessibilityRole: "button",
               accessibilityLabel: stringResult2,
               onPress: onForceSearchResults,

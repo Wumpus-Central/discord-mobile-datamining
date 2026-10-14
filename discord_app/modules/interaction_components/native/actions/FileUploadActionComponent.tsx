@@ -14,17 +14,17 @@ const require = globalThis.__r;
 const AttachmentPreviewDefault = AttachmentPreview;
 
 const util = obj(1126);
-const InteractionComponentUtils = obj(5436);
-const FileSizeUtils = obj(5640);
-const TableRow = obj(6180);
-const FileUpIcon = obj(11307);
+const InteractionComponentUtils = obj(5441);
+const FileSizeUtils = obj(5645);
+const TableRow = obj(6184);
+const FileUpIcon = obj(11317);
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(7244).DraftType;
+const DraftType = fn(7250).DraftType;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
@@ -47,7 +47,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const objResult = FileSizeUtils;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { IconComponent: FileUpIcon.FileUpIcon };
-        const tmp6 = options(TableRow.TableRow.Icon, obj3);
+        const tmp6 = React6(TableRow.TableRow.Icon, obj3);
         cResult[6] = tmp6;
         let tmp4 = tmp6;
       } else {
@@ -89,8 +89,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = minValues;
       cResult[3] = openFilePicker;
       cResult[4] = types;
-      cResult[5] = options(TableRow.TableRow, obj5);
-      const tmp9 = options(TableRow.TableRow, obj5);
+      cResult[5] = React6(TableRow.TableRow, obj5);
+      const tmp9 = React6(TableRow.TableRow, obj5);
     }
   : function MainAreaCanUpload(arg0) {
       ({ minValues, maxValues } = arg0);
@@ -108,7 +108,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         useKibibytes: true,
         useSpace: true,
       });
-      obj2.icon = options(TableRow.TableRow.Icon, { IconComponent: FileUpIcon.FileUpIcon });
+      obj2.icon = React6(TableRow.TableRow.Icon, { IconComponent: FileUpIcon.FileUpIcon });
       const intl = util.intl;
       obj2.label = intl.format(util.t["/2JwTv"], { maxValues });
       const obj3 = { IconComponent: FileUpIcon.FileUpIcon };
@@ -118,7 +118,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         types,
         formatSizeResult,
       );
-      return options(TableRow.TableRow, obj2);
+      return React6(TableRow.TableRow, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -127,12 +127,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { icon: null, label: null, subLabel: null, disabled: true, start: true, end: true };
         const obj3 = { IconComponent: CircleCheckIcon.CircleCheckIcon };
-        obj2.icon = options(TableRow.TableRow.Icon, obj3);
+        obj2.icon = React6(TableRow.TableRow.Icon, obj3);
         const intl = util.intl;
         obj2.label = intl.string(util.t["0PhgpK"]);
         const intl2 = util.intl;
         obj2.subLabel = intl2.string(util.t.HYg2Hn);
-        const tmp6 = options(TableRow.TableRow, obj2);
+        const tmp6 = React6(TableRow.TableRow, obj2);
         cResult[0] = tmp6;
         let first = tmp6;
       } else {
@@ -142,7 +142,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function MainAreaLimitReached() {
       const obj = {
-        icon: options(TableRow.TableRow.Icon, { IconComponent: CircleCheckIcon.CircleCheckIcon }),
+        icon: React6(TableRow.TableRow.Icon, { IconComponent: CircleCheckIcon.CircleCheckIcon }),
         label: null,
         subLabel: null,
         disabled: true,
@@ -153,7 +153,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj.label = intl.string(util.t["0PhgpK"]);
       const intl2 = util.intl;
       obj.subLabel = intl2.string(util.t.HYg2Hn);
-      return options(TableRow.TableRow, obj);
+      return React6(TableRow.TableRow, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
@@ -165,7 +165,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const item = upload.item;
       if (cResult[0] !== upload.filename) {
         const obj2 = { fileName: upload.filename };
-        const tmp7 = options(AttachmentPreview.AttachmentIcon, obj2);
+        const tmp7 = React6(AttachmentPreview.AttachmentIcon, obj2);
         cResult[0] = upload.filename;
         cResult[1] = tmp7;
         let tmp5 = tmp7;
@@ -196,7 +196,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp19 = options(XSmallIcon.XSmallIcon, { size: "sm" });
+                const tmp19 = React6(XSmallIcon.XSmallIcon, { size: "sm" });
                 cResult[12] = tmp19;
                 let tmp17 = tmp19;
               } else {
@@ -223,7 +223,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                     onPress: tmp20,
                     accessibilityLabel: tmp21,
                   };
-                  const tmp25 = options(IconButton.IconButton, obj3);
+                  const tmp25 = React6(IconButton.IconButton, obj3);
                   cResult[17] = tmp20;
                   cResult[18] = tmp25;
                   let tmp23 = tmp25;
@@ -239,7 +239,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj5 = { icon: tmp10, label: tmp14, trailing: tmp23, start: true, end: true };
-                const tmp28 = options(TableRow.TableRow, obj5);
+                const tmp28 = React6(TableRow.TableRow, obj5);
                 cResult[19] = tmp10;
                 cResult[20] = tmp14;
                 cResult[21] = tmp23;
@@ -259,7 +259,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const size = { uri: item.uri, isImage: null, isVideo: null, width: 32, height: 32, defaultPreview: null };
         ({ isImage: obj4.isImage, isVideo: obj4.isVideo } = upload);
         size.defaultPreview = tmp8;
-        const tmp13 = options(AttachmentPreviewDefault, size);
+        const tmp13 = React6(AttachmentPreviewDefault, size);
         cResult[5] = item.uri;
         cResult[6] = tmp8;
         cResult[7] = upload.isImage;
@@ -267,7 +267,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp13;
         tmp10 = tmp13;
       }
-      const tmp9 = options(View, { style: tmp4.defaultAttachmentIconWrapper, children: tmp5 });
+      const tmp9 = React6(View, { style: tmp4.defaultAttachmentIconWrapper, children: tmp5 });
       cResult[2] = tmp4.defaultAttachmentIconWrapper;
       cResult[3] = tmp5;
       cResult[4] = tmp9;
@@ -288,9 +288,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj2 = { style: closure_11().defaultAttachmentIconWrapper, children: null };
       const tmp = closure_11();
-      obj2.children = options(AttachmentPreview.AttachmentIcon, { fileName: upload.filename });
-      size.defaultPreview = options(View, obj2);
-      obj.icon = options(AttachmentPreviewDefault, size);
+      obj2.children = React6(AttachmentPreview.AttachmentIcon, { fileName: upload.filename });
+      size.defaultPreview = React6(View, obj2);
+      obj.icon = React6(AttachmentPreviewDefault, size);
       let filename = upload.filename;
       if (filename == null) {
         const intl = util.intl;
@@ -300,7 +300,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = {
         variant: "tertiary",
         size: "sm",
-        icon: options(XSmallIcon.XSmallIcon, { size: "sm" }),
+        icon: React6(XSmallIcon.XSmallIcon, { size: "sm" }),
         onPress() {
           return handleRemoveFile(upload.id);
         },
@@ -308,8 +308,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl2 = util.intl;
       obj4.accessibilityLabel = intl2.string(util.t.N86XcP);
-      obj.trailing = options(IconButton.IconButton, obj4);
-      return options(TableRow.TableRow, obj);
+      obj.trailing = React6(IconButton.IconButton, obj4);
+      return React6(TableRow.TableRow, obj);
     };
 ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -772,7 +772,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           extensions: allowedExtensions,
           uploadLimit: InteractionModal,
           onDismissKeyboard() {
-            return InteractionModal(10024).hideMediaKeyboardActionSheet();
+            return InteractionModal(10034).hideMediaKeyboardActionSheet();
           },
           onRestoreKeyboard: effectiveUploadLimit,
           onSelectFiles(arg0) {
@@ -805,7 +805,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const result = InteractionModal(customId[31]).hideMediaKeyboardActionSheet();
               if (item.isIncluded) {
                 const found = currentUploads.find((item) =>
-                  InteractionModal(7767).doesImageMatchUpload(item.node.image, item),
+                  InteractionModal(7773).doesImageMatchUpload(item.node.image, item),
                 );
                 if (null != found) {
                   callback1(found.id);
@@ -826,9 +826,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj.handleViewAllDialog(obj2);
             },
             onManageLimited() {
-              obj = InteractionModal(10023);
+              obj = InteractionModal(10033);
               const result = obj.handleLimitedPickerDialog({
-                onDismissKeyboard: InteractionModal(10024).hideMediaKeyboardActionSheet,
+                onDismissKeyboard: InteractionModal(10034).hideMediaKeyboardActionSheet,
                 onRestoreKeyboard,
               });
             },
@@ -874,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj5 = {
           hasIcons: true,
           children: currentUploads.map((upload) =>
-            options(closure_14, { upload, handleRemoveFile: callback1 }, upload.id),
+            React6(closure_14, { upload, handleRemoveFile: callback1 }, upload.id),
           ),
         };
         tmp24Result = tmp24(tmp(tmp2[35]).TableRowGroup, obj5);

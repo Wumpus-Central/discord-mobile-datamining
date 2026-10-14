@@ -16,12 +16,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(11810).MESSAGE_EDGE_INSET + fn(11810).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(11810).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(5092);
+const diff = fn(11832).MESSAGE_EDGE_INSET + fn(11832).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(11832).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(5096);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(11810).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(11832).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -50,7 +50,7 @@ obj2.content = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginLeft: diff - fn(11810).MESSAGE_CONTENT_INSET,
+  marginLeft: diff - fn(11832).MESSAGE_CONTENT_INSET,
   paddingLeft: diff1 + 4,
   height: 20,
   flexDirection: "row",
@@ -262,9 +262,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       replied = replied.replied;
       const onJump = replied.onJump;
       const tmp = closure_8();
-      const messageAuthorUser = replied(11816).useMessageAuthorUser(replied.userId);
-      const obj = replied(11816);
-      let str = replied(4962).useName(messageAuthorUser);
+      const messageAuthorUser = replied(11844).useMessageAuthorUser(replied.userId);
+      const obj = replied(11844);
+      let str = replied(4964).useName(messageAuthorUser);
       if (str == null) {
         str = "";
       }
@@ -277,7 +277,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (body == null) {
         body = replied.content;
       }
-      const obj2 = replied(4962);
+      const obj2 = replied(4964);
       const trimmed = body.replace(/\s+/g, " ").trim();
       const obj3 = {
         style: tmp.root,
@@ -294,11 +294,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != messageAuthorUser) {
         const obj5 = { style: tmp.avatar, children: null };
         const obj6 = { userId: replied.userId, size: tmp2(1200).AvatarSizes.SIZE_16 };
-        obj5.children = closure_6(tmp2(11816).ConjureUserAvatar, obj6);
+        obj5.children = closure_6(tmp2(11844).ConjureUserAvatar, obj6);
         tmp11Result = closure_6(closure_5, obj5);
       }
       items1[1] = tmp11Result;
-      items1[2] = closure_6(replied(5088).Text, {
+      items1[2] = closure_6(replied(5092).Text, {
         variant: "text-xs/semibold",
         color: "text-default",
         style: tmp.name,
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items2[1] = str3;
       items2[2] = trimmed;
       obj8.children = items2;
-      items1[3] = closure_7(replied(5088).Text, obj8);
+      items1[3] = closure_7(replied(5092).Text, obj8);
       obj3.children = items1;
       return closure_7(closure_4, obj3);
     };

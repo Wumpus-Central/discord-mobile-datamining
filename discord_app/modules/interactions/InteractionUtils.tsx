@@ -299,7 +299,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
   tmp2 = state.state === constants2.SENT;
 };
 export const canRetryInteractionData = function canRetryInteractionData(interactionData) {
-  options = interactionData.options;
+  const options = interactionData.options;
   let length;
   if (options != null) {
     length = options.length;
@@ -348,4 +348,4 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
   }
   return true;
 };
-export const interactionCallbackErrorReason = fn(5439).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(5444).interactionCallbackErrorReason;

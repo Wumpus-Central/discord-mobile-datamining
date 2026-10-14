@@ -4,8 +4,8 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Server from "../../../flow/Server.tsx";
-import SendMessageIcon from "../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import SendMessageIcon from "../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import application_commands_ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { commandIcon: null, loadingIcon: null, loadingName: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
 obj2.commandIcon = size;
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmp = closure_6();
       const tmp5 = item;
-      const applicationCommandsIconSource = item(12450).getApplicationCommandsIconSource(section);
+      const applicationCommandsIconSource = item(12486).getApplicationCommandsIconSource(section);
       const obj2 = {
         accessibilityLabel: memo,
         onPress,
@@ -379,13 +379,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp8Result = null != applicationCommandsIconSource;
       if (tmp8Result) {
         const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-        tmp8Result = jsx(section(6157), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+        tmp8Result = jsx(section(5034), { style: tmp.commandIcon, source: applicationCommandsIconSource });
       }
       obj2.icon = tmp8Result;
-      obj2.trailing = jsx(tmp5(5040).SendMessageIcon, {});
+      obj2.trailing = jsx(tmp5(5044).SendMessageIcon, {});
       obj2.start = start;
       obj2.end = end;
-      return jsx(item(6180).TableRow, {
+      return jsx(item(6184).TableRow, {
         accessibilityLabel: memo,
         onPress,
         label: item.displayName,

@@ -8,7 +8,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FrameLayoutModes = fn(10802).FrameLayoutModes;
+const FrameLayoutModes = fn(10697).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -22,9 +22,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const layoutMode = presentation.layoutMode;
       ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = presentation);
       let obj = frame(576);
-      const data = frame(6853).useApplication(frame.applicationId).data;
+      const data = frame(6858).useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
-      const obj2 = frame(6853);
+      const obj2 = frame(6858);
       const first = _slicedToArray(noop.useState(true), 2)[0];
       if (cResult[0] === frame.applicationId) {
         if (cResult[1] === frame.id) {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const layoutMode = presentation.layoutMode;
       let landscapeSafeAreasConfig = presentation.portraitSafeAreasConfig;
       ({ iframeId, onActivityCrash } = frame);
-      const data = frame(6853).useApplication(frame.applicationId).data;
+      const data = frame(6858).useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
       const tmp3 = _slicedToArray(noop.useState(true), 2);
       let first = tmp3[0];
@@ -139,8 +139,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!first) {
         first = null == data;
       }
-      let obj = frame(6853);
-      const baseActivityView = frame(10924).useBaseActivityView({
+      let obj = frame(6858);
+      const baseActivityView = frame(10999).useBaseActivityView({
         orientationLockState: orientationLock,
         showLoadingIndicator: first,
         setShowLoadingStateForLockingOrientation: tmp3[1],
@@ -175,15 +175,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         safeAreasConfig: null,
       };
       const obj4 = { type: null, frameId: null };
-      const tmpResult = frame(10924);
-      obj4.type = frame(10809).EmbeddedContextSourceType.FRAME;
+      const tmpResult = frame(10999);
+      obj4.type = frame(10715).EmbeddedContextSourceType.FRAME;
       obj4.frameId = frame.id;
       obj3.contextSource = obj4;
-      const tmp10 = layoutMode(17747);
-      obj3.queryParams = layoutMode(17744)(frame, frame(10941).ActivityPlatform.MOBILE);
+      const tmp10 = layoutMode(17783);
+      obj3.queryParams = layoutMode(17780)(frame, frame(11015).ActivityPlatform.MOBILE);
       obj3.onLoadError = callback;
-      const tmp11 = layoutMode(17744);
-      obj3.allowPopups = frame(10960).allowPopups(data);
+      const tmp11 = layoutMode(17780);
+      obj3.allowPopups = frame(11034).allowPopups(data);
       obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
       if (isLandscape) {
         landscapeSafeAreasConfig = presentation.landscapeSafeAreasConfig;
@@ -216,5 +216,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           safeAreasConfig={null}
         />
       );
-      return jsx(frame(10924).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
+      return jsx(frame(10999).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
     };

@@ -6,7 +6,7 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ requireNativeComponent, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
 const PlatformUtils = fn(1382);
 if (PlatformUtils.isAndroid()) {
@@ -374,7 +374,7 @@ export default noop.memo(
         const muted = paused.muted;
         ({ onLoad: dependencyMap, portal } = paused);
         ({ style, pointerEvents } = paused);
-        const tmp2 = muted(6647)(() => {
+        const tmp2 = muted(6651)(() => {
           let tmp;
           if (dependencyMap != null) {
             tmp = dependencyMap();
@@ -403,7 +403,7 @@ export default noop.memo(
             MediaPlayerManager.setLoopPlayback(tmp, true);
             return () => {
               loopPlayback.setLoopPlayback(portal, false);
-              muted(8398).unregisterView(portal);
+              muted(8405).unregisterView(portal);
               set.add(portal);
             };
           }

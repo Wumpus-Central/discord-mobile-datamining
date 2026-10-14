@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_6 = createStyles.createStyles({
   container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 },
   text: { textAlign: "center", paddingHorizontal: 32 },

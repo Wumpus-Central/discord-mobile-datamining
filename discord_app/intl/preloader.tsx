@@ -107,6 +107,7 @@ let closure_3 = async function _preloadAllIntlMessageFiles() {
           asyncRequireImpl(dependencyMap[78], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[79], dependencyMap.paths),
           asyncRequireImpl(dependencyMap[80], dependencyMap.paths),
+          asyncRequireImpl(dependencyMap[81], dependencyMap.paths),
         ];
         c0 = 3;
         const obj = { value: Promise.all(items), done: true };

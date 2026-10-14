@@ -8,7 +8,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const GameConsoleConstants = fn(9222);
+const GameConsoleConstants = fn(9231);
 ({ XBOX_HANDOFF_SEARCH_PARAMS: metroRequire, XBOX_URL_BASE: closure_7 } = GameConsoleConstants);
 const Constants = fn(1085);
 ({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: closure_9 } = Constants);
@@ -21,7 +21,7 @@ export default function getXboxURIForChannel(channelId, arg1) {
   guild = GuildStore.getGuild(guildId);
   let tmp4 = guildId;
   if (guildId == null) {
-    tmp4 = options;
+    tmp4 = React6;
   }
   const obj = {
     guildId: tmp4,

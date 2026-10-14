@@ -625,7 +625,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(11219).newMessage("assistant", content, obj3);
+      const newMessageResult = id(10667).newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
       newMessageResult.finished = true;
@@ -643,7 +643,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!tmpResult.turnSettled(value[findLastIndexResult])) {
           turn_id = value[findLastIndexResult];
         }
-        tmpResult = id(11217);
+        tmpResult = id(10665);
       }
       if (null != turn_id) {
         if (0 !== turn_id.steps.length) {
@@ -673,9 +673,9 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             obj6 = {};
           }
           arraySpreadResult4 = arraySpreadResult4 + 1;
-          items[arraySpreadResult4] = id(11219).newMessage("assistant", "", obj6);
+          items[arraySpreadResult4] = id(10667).newMessage("assistant", "", obj6);
           items = map.set(projectId, items);
-          const tmpResult2 = id(11219);
+          const tmpResult2 = id(10667);
         } else {
           const items1 = [,];
           const arraySpreadResult6 = HermesBuiltin.arraySpread(
@@ -692,7 +692,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items2);
       }
-      const obj2 = id(11219);
+      const obj2 = id(10667);
     }
   },
   CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
@@ -788,7 +788,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!obj.hasOpenTurn(map.get(projectId))) {
           return false;
         }
-        obj = step(11217);
+        obj = step(10665);
       }
     }
     value = map.get(projectId);

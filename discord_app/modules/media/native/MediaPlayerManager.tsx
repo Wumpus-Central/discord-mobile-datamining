@@ -39,12 +39,12 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "Set",
-    showPip: "parasol",
+    showPip: "DEVELOPER_OPTIONS_SET_ROUTING_KEY",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "strandparasol"
+    currentlyDisplayedChannelId: null
   };
   return obj;
 });

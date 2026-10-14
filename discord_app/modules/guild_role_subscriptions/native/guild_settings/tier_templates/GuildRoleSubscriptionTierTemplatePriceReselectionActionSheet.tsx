@@ -3,8 +3,8 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import useA11yRolesNative from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import PriceUtils from "../../../../../utils/PriceUtils.tsx";
 import TouchableHitBoxDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import GuildRoleSubscriptionTypeUtils from "../../../GuildRoleSubscriptionTypeUtils.tsx";
@@ -20,7 +20,7 @@ const SubscriptionIntervalTypes = fn(1392).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1096).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === containerSelected) {
           let tmp8 = cResult[4];
         }
-        const tmp9Result = importDefault(selected ? 18520 : 17332);
+        const tmp9Result = importDefault(selected ? 18556 : 17366);
         if (cResult[5] === tmp4.rowStatusIcon) {
           if (cResult[6] === tmp9Result) {
             let tmp11 = cResult[7];
@@ -113,7 +113,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp14) {
             const obj5 = { variant: "text-sm/normal", color: "text-default", children: tmp14 };
-            const tmp20 = options(Text_Text.Text, obj5);
+            const tmp20 = React6(Text_Text.Text, obj5);
             cResult[10] = tmp14;
             cResult[11] = tmp20;
             let tmp18 = tmp20;
@@ -148,7 +148,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           tmp21 = tmp23;
         }
         const obj7 = { style: tmp4.rowStatusIcon, source: tmp9Result };
-        const tmp13 = options(FastImageDefault, obj7);
+        const tmp13 = React6(FastImageDefault, obj7);
         cResult[5] = tmp4.rowStatusIcon;
         cResult[6] = tmp9Result;
         cResult[7] = tmp13;
@@ -176,8 +176,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = containerSelected;
       const obj3 = { style: tmp.rowStatusIcon, source: null };
       const tmp7 = TouchableHitBoxDefault;
-      obj3.source = importDefault(selected ? 18520 : 17332);
-      const items1 = [options(FastImageDefault, obj3)];
+      obj3.source = importDefault(selected ? 18556 : 17366);
+      const items1 = [React6(FastImageDefault, obj3)];
       const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
       const intl = util.intl;
       const obj5 = { price: null, interval: null };
@@ -189,7 +189,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         interval_count: 1,
       });
       obj4.children = intl.format(util.t.CgmBaG, obj5);
-      items1[1] = options(Text_Text.Text, obj4);
+      items1[1] = React6(Text_Text.Text, obj4);
       obj2.children = items1;
       return collapsed(tmp7, obj2);
     };

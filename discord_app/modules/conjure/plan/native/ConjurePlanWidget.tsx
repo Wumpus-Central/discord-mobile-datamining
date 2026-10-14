@@ -15,7 +15,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
       const intl = applicationId(1126).intl;
       obj3.children = intl.string(_modDef3849.ove4zH);
-      const items2 = [closure_5(applicationId(5088).Text, obj3)];
+      const items2 = [closure_5(applicationId(5092).Text, obj3)];
       const obj4 = {
         userId: stateFromStores,
         widget: memo,
@@ -121,5 +121,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.cardStyle = items3;
       items2[1] = closure_5(UserProfileApplicationWidgetCardDefault, obj4);
       obj2.children = items2;
-      return closure_6(applicationId(5377).Stack, obj2);
+      return closure_6(applicationId(5382).Stack, obj2);
     };

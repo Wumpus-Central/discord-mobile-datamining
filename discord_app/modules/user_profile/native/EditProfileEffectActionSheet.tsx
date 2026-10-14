@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05396_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
@@ -18,11 +18,11 @@ import CollectiblesPurchaseStore from "../../collectibles/CollectiblesPurchaseSt
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileEffectRecord = fn(7270).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7276).isProfileEffectRecord;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   bounceOffset: { position: "absolute", top: -250, height: 250, right: 0, left: 0 },
@@ -303,7 +303,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       let skuId;
       const callback = noop.useCallback((arg0) => {
         ({ items, size, selectedSkuId } = arg0);
-        return options(EditProfileEffectSection.EditProfileEffectRow, {
+        return React6(EditProfileEffectSection.EditProfileEffectRow, {
           items,
           size,
           selectedSkuId,
@@ -409,7 +409,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               tmp19 = tmp22;
             }
             const obj3 = { style: tmp3.previewGradient, start: tmp12, end: tmp13, colors: tmp15 };
-            const tmp18 = options(LinearGradientDefault, obj3);
+            const tmp18 = React6(LinearGradientDefault, obj3);
             cResult[9] = tmp3.previewGradient;
             cResult[10] = tmp15;
             cResult[11] = tmp18;
@@ -422,7 +422,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           tmp15 = items1;
         }
       }
-      const tmp10 = options(ProfileEffectUserPreviewDefault, { user, guildId, profileEffect: tmp8, maxWidth: 250 });
+      const tmp10 = React6(ProfileEffectUserPreviewDefault, { user, guildId, profileEffect: tmp8, maxWidth: 250 });
       cResult[0] = guildId;
       cResult[1] = tmp8;
       cResult[2] = user;
@@ -434,7 +434,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       let purchase;
       ({ previewSkuId, user, guildId } = arg0);
       const tmp = closure_12();
-      const tmp2 = purchase(8298)(previewSkuId);
+      const tmp2 = purchase(8305)(previewSkuId);
       const product = tmp2.product;
       c0 = product;
       purchase = tmp2.purchase;
@@ -458,11 +458,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp3;
       }, items);
-      const items1 = [closure_9(purchase(10511), { user, guildId, profileEffect: memo, maxWidth: 250 })];
+      const items1 = [closure_9(purchase(10521), { user, guildId, profileEffect: memo, maxWidth: 250 })];
       const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
       const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
       obj2.colors = items2;
-      items1[1] = closure_9(purchase(5391), obj2);
+      items1[1] = closure_9(purchase(5396), obj2);
       obj.children = items1;
       return closure_10(closure_5, obj);
     };
@@ -622,13 +622,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      const tmp4Result = isTryItOut(8311)(str);
+      const tmp4Result = isTryItOut(8318)(str);
       dependencyMap = tmp4Result;
       const tmp6 = selectedProfileEffect(memo.useState(currentProfileEffect), 2);
       selectedProfileEffect = tmp6[0];
-      const tmp4 = isTryItOut(8311);
-      let obj = guildId(8295);
-      const analyticsLocations = isTryItOut(6852)(tmp2(6879).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
+      const tmp4 = isTryItOut(8318);
+      let obj = guildId(8302);
+      const analyticsLocations = isTryItOut(6857)(tmp2(6884).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
       const items = [guildId, tmp4Result];
       memo = memo.useMemo(() => {
         const obj = {
@@ -690,7 +690,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = guildId(1126).intl;
       obj6.children = intl.string(guildId(1126).t["/6nv6N"]);
-      items3[1] = closure_9(guildId(5088).Text, obj6);
+      items3[1] = closure_9(guildId(5092).Text, obj6);
       items3[2] = closure_9(closure_13, {
         user,
         selectedProfileEffect,
@@ -711,7 +711,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       let skuId;
       const obj5 = { style: tmp.bounceOffset };
-      const tmp2Result = isTryItOut(6852);
+      const tmp2Result = isTryItOut(6857);
       if (currentProfileEffect != null) {
         skuId = currentProfileEffect.skuId;
       }
@@ -724,9 +724,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.isTryItOut = isTryItOut;
       obj7.onApply = callback1;
       obj7.analyticsLocations = analyticsLocations;
-      obj7.analyticsSource = isTryItOut(6879).EDIT_PROFILE_EFFECT_SHEET;
-      items4[1] = closure_9(isTryItOut(8297), obj7);
+      obj7.analyticsSource = isTryItOut(6884).EDIT_PROFILE_EFFECT_SHEET;
+      items4[1] = closure_9(isTryItOut(8304), obj7);
       obj3.children = items4;
-      obj2.children = closure_10(guildId(6840).BottomSheet, obj3);
-      return closure_9(guildId(6852).AnalyticsLocationProvider, obj2);
+      obj2.children = closure_10(guildId(6845).BottomSheet, obj3);
+      return closure_9(guildId(6857).AnalyticsLocationProvider, obj2);
     };

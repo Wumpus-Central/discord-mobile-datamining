@@ -17,7 +17,7 @@ ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDataToCustomizeDiscordSettingValue() {
       const cResult = c.c(2);
@@ -44,7 +44,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(7993).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8000).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useDataToCustomizeDiscordSettingValue() {
         const cResult = c.c(2);

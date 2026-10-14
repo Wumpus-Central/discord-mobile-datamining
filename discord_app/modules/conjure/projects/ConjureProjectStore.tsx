@@ -271,16 +271,16 @@ let result = size.fileFinishedImporting("modules/conjure/projects/ConjureProject
 
 export default conjureProjectStore;
 export { isProjectOwner };
-export const canPublishProject = function canPublishProject(owner_user_id) {
+export const canPublishProject = function canPublishProject(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let tmp3 = owner_user_id.owner_user_id === id;
+  let tmp3 = project.owner_user_id === id;
   if (!tmp3) {
-    tmp3 = ConjureProjectTypes.isProjectPublic(owner_user_id) && null != owner_user_id.guild_id;
-    const tmp6 = ConjureProjectTypes.isProjectPublic(owner_user_id) && null != owner_user_id.guild_id;
+    tmp3 = ConjureProjectTypes.isProjectPublic(project) && null != project.guild_id;
+    const tmp6 = ConjureProjectTypes.isProjectPublic(project) && null != project.guild_id;
   }
   return tmp3;
 };

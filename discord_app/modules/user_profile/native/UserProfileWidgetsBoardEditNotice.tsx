@@ -17,7 +17,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     flexDirection: "row",

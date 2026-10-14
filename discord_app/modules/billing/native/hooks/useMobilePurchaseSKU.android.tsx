@@ -8,9 +8,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(7144).useNativeCheckoutStoreOrNull;
+let closure_5 = fn(7150).useNativeCheckoutStoreOrNull;
 const CurrencyCodes = fn(1085).CurrencyCodes;
-fn(7133).GPlayBillingResult;
+fn(7139).GPlayBillingResult;
 let closure_9 = new LoggerDefault("useMobilePurchaseSKU.android");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
@@ -395,7 +395,7 @@ export default function useMobilePurchaseSKU(skuId) {
             giftInfoOptions: null,
             onPurchaseError: null,
           };
-          options = undefined;
+          let options;
           if (closure_130_9 != null) {
             options = closure_130_9.options;
           }

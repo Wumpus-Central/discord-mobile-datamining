@@ -206,6 +206,9 @@ export const ExperimentFlags = {
   SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS: "swallow_volume_only_speaking_events",
   BROWSER_TRANSCEIVER_PADDING_REMOVAL: "browser_transceiver_padding_removal",
   INTEL_GPU_DISABLE: "intel_gpu_disable",
+  WEB_STREAMING_MAINTAIN_FRAMERATE: "web_streaming_maintain_framerate",
+  WEB_STREAMING_BALANCED: "web_streaming_balanced",
+  WEB_STREAMING_MOTION_CONTENT_HINT: "web_streaming_motion_content_hint",
 };
 export const VideoQualityMode = { AUTO: 1, [1]: "AUTO", FULL: 2, [2]: "FULL" };
 export const NoiseCancellerError = {

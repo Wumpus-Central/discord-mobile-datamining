@@ -6,6 +6,7 @@ import ComponentDispatchUtils from "../utils/ComponentDispatchUtils.tsx";
 import ApexExperiment from "../modules/experiments/apex/index.tsx";
 import SidebarActionTypes from "../modules/sidebar/SidebarActionTypes.tsx";
 import FriendsSidebarExperimentDefault from "../modules/friends/FriendsSidebarExperiment.tsx";
+import FriendsSidebarTracking from "../modules/friends/FriendsSidebarTracking.tsx";
 import ExperimentStore from "../modules/experiments/ExperimentStore.tsx";
 import SearchMessageStore from "../modules/search/SearchMessageStore.tsx";
 import ChannelStore from "ChannelStore.tsx";
@@ -16,6 +17,37 @@ import SelectedGuildStore from "SelectedGuildStore.tsx";
 import UserStore from "UserStore.tsx";
 
 require = fn;
+function setIsFriendsOpen(arg0, trackClose) {
+  trackClose = undefined;
+  if (trackClose != null) {
+    trackClose = trackClose.trackClose;
+  }
+  let sidebarEnabled = true === trackClose;
+  if (!sidebarEnabled) {
+    if (sidebarEnabled) {
+      sidebarEnabled = !arg0;
+    }
+    if (sidebarEnabled) {
+      sidebarEnabled = FriendsSidebarExperimentDefault.getConfig({ location: "ChannelSectionStore" }).sidebarEnabled;
+    }
+    if (sidebarEnabled) {
+      const obj4 = {
+        open: false,
+        source: FriendsSidebarTracking.FriendsSidebarToggleSource.EXTERNAL,
+        analyticsLocations: [],
+      };
+      const result = FriendsSidebarTracking.trackFriendsSidebarToggled(obj4);
+    }
+    if (obj5.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled) {
+      flag5 = arg0;
+    } else {
+      flag4 = arg0;
+    }
+    obj5 = FriendsSidebarExperimentDefault;
+  } else {
+    FriendsSidebarExperimentDefault.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled ? flag5 : flag4;
+  }
+}
 function toggleSection(c17, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -65,18 +97,11 @@ function toggleSection(c17, arg1) {
       tmp20 = flag;
     }
     if (tmp20) {
-      if (obj3.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled) {
-        closure_22 = false;
-      } else {
-        closure_21 = false;
-      }
-      obj3 = FriendsSidebarExperimentDefault;
+      setIsFriendsOpen(false, { trackClose: true });
     }
     return tmp19;
   } else {
-    FriendsSidebarExperimentDefault.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled
-      ? closure_22
-      : closure_21;
+    FriendsSidebarExperimentDefault.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled ? flag5 : flag4;
   }
 }
 function handlePermissionsChange() {
@@ -120,8 +145,6 @@ let c17 = false;
 let c18 = false;
 let c19 = false;
 const isProfileOpen = true;
-const isFriendsOpen = true;
-const isAppBarToggleOpen = false;
 let available = false;
 let sidebars = {};
 let guildSidebars = {};
@@ -147,16 +170,14 @@ prototype["initialize"] = function initialize(isMembersOpen) {
       flag3 = true;
     }
     closure_20 = flag3;
-    let flag4 = isMembersOpen.isFriendsOpen;
+    flag4 = isMembersOpen.isFriendsOpen;
     if (flag4 == null) {
       flag4 = true;
     }
-    closure_21 = flag4;
-    let flag5 = isMembersOpen.isAppBarToggleOpen;
+    flag5 = isMembersOpen.isAppBarToggleOpen;
     if (flag5 == null) {
       flag5 = false;
     }
-    closure_22 = flag5;
     sidebars = isMembersOpen.sidebars;
     if (sidebars == null) {
       sidebars = {};
@@ -181,7 +202,15 @@ prototype["initialize"] = function initialize(isMembersOpen) {
   );
 };
 prototype["getState"] = function getState() {
-  return { isMembersOpen, isSummariesOpen, isProfileOpen, isFriendsOpen, isAppBarToggleOpen, sidebars, guildSidebars };
+  return {
+    isMembersOpen,
+    isSummariesOpen,
+    isProfileOpen,
+    isFriendsOpen: flag4,
+    isAppBarToggleOpen: flag5,
+    sidebars,
+    guildSidebars,
+  };
 };
 prototype["getSection"] = function getSection(arg0, arg1) {
   if (c26) {
@@ -205,7 +234,7 @@ prototype["getSection"] = function getSection(arg0, arg1) {
       }
       return MEMBERS;
     }
-    if (obj.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled ? closure_22 : closure_21) {
+    if (obj.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled ? flag5 : flag4) {
       if (tmp10Result.getConfig({ location: "ChannelSectionStore" }).sidebarEnabled) {
         MEMBERS = constants.FRIENDS;
       }
@@ -447,14 +476,8 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
       c17 = false;
       c18 = false;
       c19 = true;
-      if (obj.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled) {
-        closure_22 = false;
-        flag = true;
-      } else {
-        closure_21 = false;
-        flag = true;
-      }
-      obj = FriendsSidebarExperimentDefault;
+      setIsFriendsOpen(false);
+      flag = true;
     }
     return flag;
   },
@@ -582,11 +605,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
   },
   FRIENDS_SIDEBAR_SET_COLLAPSED: function handleSetFriendsSidebarCollapsed(collapsed) {
     collapsed = collapsed.collapsed;
-    if (obj.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled) {
-      closure_22 = tmp3;
-    } else {
-      closure_21 = tmp3;
-    }
+    setIsFriendsOpen(!collapsed);
     if (!collapsed) {
       if (null != SelectedChannelStore.getChannelId()) {
         delete tmp[tmp2];
@@ -597,7 +616,6 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         c26 = false;
       }
     }
-    obj = FriendsSidebarExperimentDefault;
   },
   FRIENDS_SIDEBAR_SET_AVAILABLE: function handleSetFriendsSidebarAvailable(available) {
     available = available.available;
@@ -727,7 +745,7 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
   },
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("stores/ChannelSectionStore.tsx");
+let result = size.fileFinishedImporting("stores/ChannelSectionStore.tsx");
 
 export default channelSectionStore;
 export const MESSAGE_REQUESTS_BASE_CHANNEL_ID = "message_requests";

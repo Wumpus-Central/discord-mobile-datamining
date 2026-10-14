@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   content: null,
@@ -70,7 +70,7 @@ let size = {
   width: 8,
   height: 8,
   borderRadius: nativeDefault.radii.round,
-  backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND,
+  backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND,
 };
 obj2.badgeIndicator = size;
 let obj8 = {
@@ -440,14 +440,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[16] !== tmp18) {
-            class L {
+            class N {
               constructor() {
-                hasCatalogForResult = null != targetUserId;
-                if (hasCatalogForResult) {
-                  tmp3 = closure_8;
-                  hasCatalogForResult = closure_8.hasCatalogFor(tmp);
-                }
-                return hasCatalogForResult;
+                return closure_8.hasCatalogFetchErrorFor(targetUserId);
               }
             }
             const items6 = [tmp18];
@@ -462,24 +457,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[16] = tmp18;
-            cResult[17] = tmp32;
+            cResult[17] = N;
             cResult[18] = items6;
             let tmp31 = items6;
           } else {
-            class L {
+            class N {
               constructor() {
-                hasCatalogForResult = null != targetUserId;
-                if (hasCatalogForResult) {
-                  tmp3 = closure_8;
-                  hasCatalogForResult = closure_8.hasCatalogFor(tmp);
-                }
-                return hasCatalogForResult;
+                return closure_8.hasCatalogFetchErrorFor(targetUserId);
               }
             }
             tmp31 = cResult[18];
           }
           const tmpResult6 = targetUsername(504);
-          const stateFromStores2 = targetUsername(504).useStateFromStores(tmp29, tmp32, tmp31);
+          const stateFromStores2 = targetUsername(504).useStateFromStores(tmp29, N, tmp31);
           if (cResult[19] !== tmp18) {
             class G {
               constructor() {
@@ -511,7 +501,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[19] = tmp18;
             cResult[20] = G;
             cResult[21] = items7;
-            let tmp35 = items7;
+            let tmp34 = items7;
           } else {
             class G {
               constructor() {
@@ -529,9 +519,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            tmp35 = cResult[21];
+            tmp34 = cResult[21];
           }
-          const effect = targetUserId.useEffect(G, tmp35);
+          const effect = targetUserId.useEffect(G, tmp34);
           if (cResult[22] === stateFromStores) {
             class G {
               constructor() {
@@ -549,7 +539,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            const effect1 = obj7.useEffect(Q, tmp38);
+            const effect1 = obj7.useEffect(Q, tmp37);
             if (cResult[26] !== stateFromStoresArray) {
               class G {
                 constructor() {
@@ -579,7 +569,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               cResult[27] = directoryBadges;
-              const tmp40 = directoryBadges;
+              const tmp39 = directoryBadges;
             } else {
               class G {
                 constructor() {
@@ -608,7 +598,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return id;
               }
             }
-            const owned = tmp40.owned;
+            const owned = tmp39.owned;
             if (cResult[28] === stateFromStoresArray) {
               class G {
                 constructor() {
@@ -626,7 +616,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const badgeIndicatorIds = targetUsername(10580).useBadgeDirectoryBadgeIndicators(tmp43).badgeIndicatorIds;
+              const badgeIndicatorIds = targetUsername(10590).useBadgeDirectoryBadgeIndicators(tmp42).badgeIndicatorIds;
               class U {
                 constructor() {
                   currentUser = closure_1_7.getCurrentUser();
@@ -689,13 +679,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl = targetUsername(1126).intl;
               const obj3 = { username: targetUsername };
               stringResult = intl.formatToPlainString(targetUsername(1126).t.EIcwoe, obj3);
-              const tmpResult8 = targetUsername(10580);
+              const tmpResult8 = targetUsername(10590);
             }
             const obj4 = { badges: stateFromStoresArray, enabled: !tmp17 };
             cResult[28] = stateFromStoresArray;
             cResult[29] = !tmp17;
             cResult[30] = obj4;
-            tmp43 = obj4;
+            tmp42 = obj4;
           }
           class Q {
             constructor() {
@@ -724,7 +714,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[24] = Q;
           cResult[25] = items8;
           obj7 = targetUserId;
-          tmp38 = items8;
+          tmp37 = items8;
           const tmpResult7 = targetUsername(504);
         }
         const items9 = [tmp4.footer, tmp9];
@@ -847,7 +837,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { badges: stateFromStoresArray, enabled: null };
         let tmp33Result = !tmp10;
         obj3.enabled = tmp33Result;
-        const badgeIndicatorIds = targetUsername(10580).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
+        const badgeIndicatorIds = targetUsername(10590).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
         if (null != targetUserId && targetUserId !== stateFromStores) {
           if (null != targetUsername) {
             const intl2 = targetUsername(1126).intl;
@@ -884,21 +874,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj7 = { variant: "text-md/semibold", children: null };
               const intl3 = targetUsername(1126).intl;
               obj7.children = intl3.string(targetUsername(1126).t.iufib1);
-              const items13 = [closure_10(targetUsername(5088).Text, obj7), ,];
+              const items13 = [closure_10(targetUsername(5092).Text, obj7), ,];
               const obj8 = { variant: "text-md/normal", color: "text-subtle", children: null };
               const intl4 = targetUsername(1126).intl;
               obj8.children = intl4.string(targetUsername(1126).t.eAn6z2);
-              items13[1] = closure_10(targetUsername(5088).Text, obj8);
+              items13[1] = closure_10(targetUsername(5092).Text, obj8);
               const obj9 = { variant: "secondary", size: "sm", onPress: callback, text: null };
               const intl5 = targetUsername(1126).intl;
               obj9.text = intl5.string(targetUsername(1126).t["7NqTJn"]);
-              items13[2] = closure_10(targetUsername(5379).Button, obj9);
+              items13[2] = closure_10(targetUsername(5384).Button, obj9);
               obj5.children = items13;
               return closure_11(closure_5, obj5);
             }
           }
           if (!stateFromStores1) {
-            const obj10 = { style: tmp.centered, children: closure_10(targetUsername(6154).ActivityIndicator, {}) };
+            const obj10 = { style: tmp.centered, children: closure_10(targetUsername(6160).ActivityIndicator, {}) };
             closure_10(closure_5, obj10);
           }
           let result1 = (diff - result) / 4;
@@ -941,7 +931,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             string = intl9.string;
             stringResult1 = string(targetUsername(1126).t.msyp90);
             obj16.text = stringResult1;
-            items = closure_10(targetUsername(5379).Button, obj16);
+            items = closure_10(targetUsername(5384).Button, obj16);
             obj15.children = items;
             let tmp33Result2 = closure_10(closure_5, obj15);
           } else {
@@ -951,7 +941,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj18 = { variant: "secondary", onPress: callback1, text: null };
               const intl8 = targetUsername(1126).intl;
               obj18.text = intl8.string(targetUsername(1126).t["6CLLyH"]);
-              obj17.children = closure_10(targetUsername(5379).Button, obj18);
+              obj17.children = closure_10(targetUsername(5384).Button, obj18);
               tmp33Result2 = closure_10(closure_5, obj17);
             }
           }
@@ -961,7 +951,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const intl = targetUsername(1126).intl;
         formatToPlainStringResult = intl.string(targetUsername(1126).t.UqnlQF);
-        const tmp6Result6 = targetUsername(10580);
+        const tmp6Result6 = targetUsername(10590);
       } else {
         throw new TypeError("Trying to call a non-function");
       }

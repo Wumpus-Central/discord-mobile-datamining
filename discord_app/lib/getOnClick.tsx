@@ -73,7 +73,7 @@ let closure_18 = async function _openInviteModal() {
               type: "DISPLAYED_INVITE_SHOW",
               code,
               username: "Array",
-              deeplinkAttemptId: "code",
+              deeplinkAttemptId: "apply",
               invite_instance_id,
             };
             c3 = 1;
@@ -266,7 +266,7 @@ const Constants = fn(1085);
 ({ AbortCodes, AnalyticEvents: closure_12, AppContext, InviteStates: map1, JoinGuildSources, Routes } = Constants);
 const CollectiblesShopConstants = fn(1087);
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = CollectiblesShopConstants);
-const isGameShopPath = fn(6934).isGameShopPath;
+const isGameShopPath = fn(6939).isGameShopPath;
 let obj = { skipExtensionCheck: "Array", analyticsLocations: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/getOnClick.tsx");
@@ -311,7 +311,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "kind", skuId: "apply" };
+            result = { applicationId: "lineClamp", skuId: "color" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -329,11 +329,11 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "r" };
     };
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5077).CodedLinkType.ACTIVITY_BOOKMARK) {
+    if (findCodedLinkResult.type === tmp2(5081).CodedLinkType.ACTIVITY_BOOKMARK) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -521,14 +521,14 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5077).CodedLinkType.GUILD_PRODUCT) {
+    if (findCodedLinkResult.type === tmp2(5081).CodedLinkType.GUILD_PRODUCT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(13526, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(13564, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -536,7 +536,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+    if (findCodedLinkResult.type === tmp2(5081).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
       return (preventDefault) => {
         const result = storefrontCodedLink.parseStorefrontCodedLink(_undefined.code);
         if (null == result) {
@@ -559,7 +559,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (findCodedLinkResult.type === tmp2(5081).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       return (preventDefault) => {
         const result = storefrontCodedLink.parseStorefrontCodedLink(_undefined.code);
         if (null == result) {
@@ -582,7 +582,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5077).CodedLinkType.QUESTS_EMBED) {
+    if (findCodedLinkResult.type === tmp2(5081).CodedLinkType.QUESTS_EMBED) {
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -617,11 +617,11 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp2Result = tmp2(9166);
+      tmp2Result = tmp2(9175);
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5077).CodedLinkType.COLLECTIBLES_SHOP) {
+    if (findCodedLinkResult.type === tmp2(5081).CodedLinkType.COLLECTIBLES_SHOP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -710,7 +710,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5077).CodedLinkType.APP_OAUTH2_LINK) {
+    if (findCodedLinkResult.type === tmp2(5081).CodedLinkType.APP_OAUTH2_LINK) {
       let fn = (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -736,7 +736,7 @@ export default function getOnClick(url) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(8265);
+    tmp2Result4 = tmp2(8272);
   }
   const tmp2Result3 = require("LinkUtils");
 }

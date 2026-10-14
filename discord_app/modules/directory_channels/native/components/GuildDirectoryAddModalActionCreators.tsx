@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export default {
   open(merged) {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(12523, dependencyMap.paths),
+      asyncRequireImpl(12559, dependencyMap.paths),
       merged,
       GUILD_DIRECTORY_ADD_MODAL_KEY,
     );

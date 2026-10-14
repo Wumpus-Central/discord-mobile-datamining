@@ -25,7 +25,7 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
     let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
     const obj2 = require("ShowShareActionSheetUtils");
   } else {
-    mediaShareParams = { mediaFallbackUrl: "kind", mediaStagingOptions: "apply" };
+    mediaShareParams = { mediaFallbackUrl: "lineClamp", mediaStagingOptions: "color" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {

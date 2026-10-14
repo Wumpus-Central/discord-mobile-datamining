@@ -13,7 +13,7 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1085);
 ({ KeyboardThemes: metroRequire, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   input: {
     fontSize: 16,

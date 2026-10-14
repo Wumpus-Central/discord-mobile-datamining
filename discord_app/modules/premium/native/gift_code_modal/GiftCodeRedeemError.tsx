@@ -3,13 +3,13 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Link from "../../../../../_runtime/01504_Link.js";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef10645 from "../../../../../_runtime/metro/10645__.js";
-import _modDef10646 from "../../../../../_runtime/metro/10646__.js";
+import _modDef10655 from "../../../../../_runtime/metro/10655__.js";
+import _modDef10656 from "../../../../../_runtime/metro/10656__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -45,15 +45,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       ({ container, body } = tmp4);
       if (obj2.useTheme().dark) {
-        let tmp5Result = _modDef10645;
+        let tmp5Result = _modDef10655;
         let tmp7 = importDefault;
       } else {
-        tmp5Result = _modDef10646;
+        tmp5Result = _modDef10656;
         tmp7 = importDefault;
       }
       if (cResult[0] !== tmp5Result) {
         const obj3 = { source: tmp5Result };
-        const tmp10 = hasOwnProperty(tmp7(6157), obj3);
+        const tmp10 = hasOwnProperty(tmp7(5034), obj3);
         cResult[0] = tmp5Result;
         cResult[1] = tmp10;
         let tmp8 = tmp10;
@@ -169,9 +169,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { bottom: true, style: tmp.container, children: null };
       const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
       if (theme.dark) {
-        let tmp8Result = _modDef10645;
+        let tmp8Result = _modDef10655;
       } else {
-        tmp8Result = _modDef10646;
+        tmp8Result = _modDef10656;
       }
       const items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), ,];
       const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -17,7 +17,7 @@ const createElement = fn(19).createElement;
 let c9 = 38;
 const SPRING_OPTIONS_SCALE = { damping: 30, stiffness: 400 };
 const SPRING_OPTIONS_POSITION = { damping: 30, stiffness: 400 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { groupContainer: { position: "relative" }, shadowContainer: { borderRadius: nativeDefault.radii.sm }, shadowContainerBackground: {}, shadowContainerBackgroundLight: { opacity: 0.4 }, shadowContainerBackgroundDark: { opacity: 0.15 }, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
   const size = { width: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, height: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: nativeDefault.radii.sm };

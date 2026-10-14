@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureUtils from "../../shared/ConjureUtils.tsx";
-import conjureStandaloneScenes from "../../builder/native/conjureStandaloneScenes.tsx";
 import ConjureActionCreators from "../ConjureActionCreators.tsx";
+import conjureStandaloneScenes from "../../builder/native/conjureStandaloneScenes.tsx";
 import ConjureCreateSheet from "../../create/native/ConjureCreateSheet.tsx";
 import ConjureRemixSheet from "../../remix/native/ConjureRemixSheet.tsx";
 import ConjureSettingsSheet from "../../settings/native/ConjureSettingsSheet.tsx";
@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     content: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom },
@@ -79,7 +79,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ({ onPress, onMore } = project);
       const tmp4 = closure_11(0);
       const obj = project(576);
-      const conjureProjectBadge = project(11208).useConjureProjectBadge(project.id);
+      const conjureProjectBadge = project(10685).useConjureProjectBadge(project.id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureProjectStore];
         cResult[0] = items;
@@ -101,7 +101,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const obj2 = project(11208);
+      const obj2 = project(10685);
       const stateFromStores = project(504).useStateFromStores(first, tmp8, tmp9);
       if (cResult[4] !== project.updated_at) {
         let formatToPlainStringResult;
@@ -110,9 +110,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { time: null };
           const _Date = Date;
           const date = new Date(project.updated_at);
-          obj3.time = tmp(6059).getRelativeTimestamp(date.getTime());
+          obj3.time = tmp(6064).getRelativeTimestamp(date.getTime());
           formatToPlainStringResult = intl.formatToPlainString(_modDef3849.AXydi3, obj3);
-          const tmpResult2 = tmp(6059);
+          const tmpResult2 = tmp(6064);
         }
         cResult[4] = project.updated_at;
         cResult[5] = formatToPlainStringResult;
@@ -216,7 +216,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                     onPress,
                     onLongPress: onMore,
                   };
-                  const tmp43 = closure_9(tmp(6180).TableRow, obj7);
+                  const tmp43 = closure_9(tmp(6184).TableRow, obj7);
                   cResult[19] = stateFromStores;
                   cResult[20] = onMore;
                   cResult[21] = onPress;
@@ -242,7 +242,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             tmp31 = closure_9(MentionsBadgeDefault, obj9);
           }
           const items3 = [tmp31];
-          const obj10 = { IconComponent: tmp(9242).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
+          const obj10 = { IconComponent: tmp(9251).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
           const intl4 = tmp(1126).intl;
           obj10.accessibilityLabel = intl4.string(tmp(1126).t["UKOtz+"]);
           items3[1] = closure_9(ConjureHeaderIconButtonDefault, obj10);
@@ -271,8 +271,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       project = project.project;
       const onMore = project.onMore;
       const tmp = closure_11(0);
-      const conjureProjectBadge = project(11208).useConjureProjectBadge(project.id);
-      const obj = project(11208);
+      const conjureProjectBadge = project(10685).useConjureProjectBadge(project.id);
+      const obj = project(10685);
       const items = [ConjureProjectStore];
       const items1 = [project.id];
       const stateFromStores = project(504).useStateFromStores(
@@ -286,9 +286,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { time: null };
         const _Date = Date;
         const date = new Date(project.updated_at);
-        obj3.time = tmp2(6059).getRelativeTimestamp(date.getTime());
+        obj3.time = tmp2(6064).getRelativeTimestamp(date.getTime());
         formatToPlainStringResult = intl.formatToPlainString(_modDef3849.AXydi3, obj3);
-        const tmp2Result = tmp2(6059);
+        const tmp2Result = tmp2(6064);
       }
       const obj4 = {
         label: project.name,
@@ -323,7 +323,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           tmp15Result3 = closure_9(MentionsBadgeDefault, obj6);
         }
         const items2 = [tmp15Result3];
-        const obj7 = { IconComponent: tmp2(9242).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
+        const obj7 = { IconComponent: tmp2(9251).MoreHorizontalIcon, onPress: onMore, accessibilityLabel: null };
         const intl4 = tmp2(1126).intl;
         obj7.accessibilityLabel = intl4.string(tmp2(1126).t["UKOtz+"]);
         items2[1] = closure_9(ConjureHeaderIconButtonDefault, obj7);
@@ -334,7 +334,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.trailing = tmp13Result;
       obj4.onPress = project.onPress;
       obj4.onLongPress = onMore;
-      const children = [closure_9(project(6180).TableRow, obj4)];
+      const children = [closure_9(project(6184).TableRow, obj4)];
       let tmp15Result4 = null;
       if (null != conjureProjectBadge) {
         tmp15Result4 = null;
@@ -577,7 +577,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = stateFromStoresArray1.useCallback(() => {
         const obj2 = {
           key: ConjureCreateSheet.CONJURE_CREATE_SHEET_KEY,
-          content: options(ConjureCreateSheetDefault, { guildId, onCreated: memo2 }),
+          content: React6(ConjureCreateSheetDefault, { guildId, onCreated: memo2 }),
         };
         ActionSheetActionCreators.showActionSheet(obj2);
       }, items8);
@@ -585,7 +585,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback2 = stateFromStoresArray1.useCallback((project) => {
         const obj2 = {
           key: ConjureRemixSheet.CONJURE_REMIX_SHEET_KEY,
-          content: options(ConjureRemixSheetDefault, { project, currentGuildId: guildId, onRemixed: memo2 }),
+          content: React6(ConjureRemixSheetDefault, { project, currentGuildId: guildId, onRemixed: memo2 }),
         };
         ActionSheetActionCreators.showActionSheet(obj2);
       }, items9);
@@ -620,7 +620,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             guild_id = guildId;
           }
           obj3.guildId = guild_id;
-          obj2.content = options(ConjureSettingsSheetDefault, obj3);
+          obj2.content = React6(ConjureSettingsSheetDefault, obj3);
           return obj.showActionSheet(obj2);
         };
         const result = obj.conjureProjectActions(obj2);

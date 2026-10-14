@@ -1,10 +1,10 @@
 // discord_app/modules/conjure/preview/native/restartConjureAppFrames.tsx
-import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import leaveFrame from "../../../frames/leaveFrame.tsx";
+import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 
 require = fn;
-const isLaunched = fn(10802).isLaunched;
+const isLaunched = fn(10697).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/native/restartConjureAppFrames.tsx");
 

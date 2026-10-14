@@ -69,7 +69,7 @@ export const getValidationResults = function getValidationResults(
   allowEmptyValues,
 ) {
   const obj = {};
-  options = activeCommand.options;
+  const options = activeCommand.options;
   if (null == options) {
     return obj;
   } else {

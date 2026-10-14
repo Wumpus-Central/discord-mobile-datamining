@@ -19,7 +19,7 @@ const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { container: { marginBottom: nativeDefault.space.PX_48 } };
   return obj;
@@ -38,7 +38,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = arg0;
         cResult[1] = items1;
       } else {
-        const tmp6 = _slicedToArray(tmp(7100).useSelectedDismissibleContent(cResult[1]), 2);
+        const tmp6 = _slicedToArray(tmp(7106).useSelectedDismissibleContent(cResult[1]), 2);
         first = tmp6[0];
         importDefault = tmp8;
         dependencyMap = noop.useRef(false);
@@ -99,7 +99,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = items3;
         tmp13 = items3;
         tmp12 = S;
-        const tmpResult = tmp(7100);
+        const tmpResult = tmp(7106);
       }
       const obj = first(576);
     }
@@ -110,7 +110,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         items1 = [];
       }
-      const tmp3 = _slicedToArray(first(7100).useSelectedDismissibleContent(items1), 2);
+      const tmp3 = _slicedToArray(first(7106).useSelectedDismissibleContent(items1), 2);
       first = tmp3[0];
       closure_1 = tmp5;
       dependencyMap = noop.useRef(false);
@@ -209,7 +209,7 @@ export default noop.memo(
                           const obj2 = { style: tmp5.container, children: null };
                           const items1 = [tmp22, tmp26];
                           obj2.children = items1;
-                          const tmp30 = options(View, obj2);
+                          const tmp30 = React6(View, obj2);
                           cResult[19] = tmp5.container;
                           cResult[20] = tmp22;
                           cResult[21] = tmp26;
@@ -352,7 +352,7 @@ export default noop.memo(
               }
               items1[1] = tmp21;
               obj3.children = items1;
-              return options(View, obj3);
+              return React6(View, obj3);
             } else {
               const obj5 = {
                 embedded: "inside" === placement,

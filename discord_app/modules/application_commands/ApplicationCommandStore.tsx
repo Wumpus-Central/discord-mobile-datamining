@@ -68,7 +68,7 @@ function handleSetActiveCommand(arg0) {
     tmp2.commandOrigin = commandOrigin;
     tmp2.source = source;
     obj2 = {};
-    options = undefined;
+    let options;
     if (command != null) {
       options = command.options;
     }
@@ -273,7 +273,7 @@ prototype["getActiveOption"] = function getActiveOption(channelId) {
   const activeCommand = tmp2.activeCommand;
   let found;
   if (activeCommand != null) {
-    options = activeCommand.options;
+    const options = activeCommand.options;
     if (options != null) {
       found = options.find((name) => name.name === activeOptionName.activeOptionName);
     }
@@ -375,7 +375,7 @@ prototype["getOption"] = function getOption(arg0, arg1) {
   const activeCommand = dependencyMap[arg0].activeCommand;
   let found;
   if (activeCommand != null) {
-    options = activeCommand.options;
+    const options = activeCommand.options;
     if (options != null) {
       found = options.find((name) => name.name === closure_0);
     }

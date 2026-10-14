@@ -183,7 +183,7 @@ let closure_11 = async function _getGameAnnouncements() {
   })();
 };
 const Endpoints = fn(1085).Endpoints;
-let closure_8 = fn(8965).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+let closure_8 = fn(8970).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameProfileStore, {
   getQueryId(arg0, arg1) {

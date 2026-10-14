@@ -4,7 +4,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import _modDef1355 from "../../../../_runtime/metro/01355__.js";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
-const VoiceCallOverlayType = fn(10355).VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(10365).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;
@@ -15,7 +15,7 @@ let size = {
   y: "T",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8451).OrientationType.PORTRAIT,
+  screenOrientation: fn(8458).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -26,7 +26,7 @@ const size1 = {
   y: "T",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8451).OrientationType.PORTRAIT,
+  screenOrientation: fn(8458).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,

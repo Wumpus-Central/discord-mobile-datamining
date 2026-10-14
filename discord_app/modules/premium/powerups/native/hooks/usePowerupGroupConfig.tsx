@@ -3,8 +3,8 @@ import util from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import _modDef2600 from "../../GuildPowerups.messages.js";
 import GuildTagUtils from "../../../../guild_tag/GuildTagUtils.tsx";
-import _modDef12801 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
-import _modDef12802 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
+import _modDef12837 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
+import _modDef12838 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const stringResult = intl.string(_modDef2600.KC9HRW);
           const intl2 = tmp(1126).intl;
           const stringResult1 = intl2.string(_modDef2600.GJiSmP);
-          const obj2 = { staticUrl: _modDef12801, animatedUrl: _modDef12802 };
+          const obj2 = { staticUrl: _modDef12837, animatedUrl: _modDef12838 };
           cResult[3] = stringResult;
           cResult[4] = stringResult1;
           cResult[5] = obj2;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.title = intl.string(_modDef2600.KC9HRW);
           const intl2 = util.intl;
           obj2.description = intl2.string(_modDef2600.GJiSmP);
-          const obj3 = { staticUrl: _modDef12801, animatedUrl: _modDef12802 };
+          const obj3 = { staticUrl: _modDef12837, animatedUrl: _modDef12838 };
           obj2.image = obj3;
           let stringResult;
           if (!stateFromStores) {

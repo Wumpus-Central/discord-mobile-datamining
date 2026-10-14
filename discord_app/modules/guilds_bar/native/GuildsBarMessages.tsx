@@ -151,9 +151,9 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "promise",
-          externalChildren: null,
-          expandedChildren: "bottom",
+          label: 21,
+          externalChildren: "modal_top_pill_localized",
+          expandedChildren: "message",
           children: null,
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
@@ -171,9 +171,9 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "promise",
-          externalChildren: null,
-          expandedChildren: "bottom",
+          label: 21,
+          externalChildren: "modal_top_pill_localized",
+          expandedChildren: "message",
           children: null,
         });
       },

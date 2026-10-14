@@ -15,7 +15,7 @@ export const transitionToGuild = function transitionToGuild(guildId, arg1) {
     duration: 0,
     create: "r",
     update: "end",
-    delete: "useEffect",
+    delete: "toCharArray$esjava$1",
   });
   const obj3 = router_utils;
   const obj4 = { navigationReplace: true };

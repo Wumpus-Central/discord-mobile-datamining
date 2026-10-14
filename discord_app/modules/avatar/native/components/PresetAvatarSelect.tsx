@@ -2,8 +2,8 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import defaultAvatar1Default from "../../images/defaultAvatar1.tsx";
 import defaultAvatar2Default from "../../images/defaultAvatar2.tsx";
@@ -144,7 +144,7 @@ items1[7] = {
     return intl.string(util.t.zpfUeg);
   },
 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 const obj10 = {
   container: { display: "flex", alignItems: "center", flex: 1 },
   buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" },
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
         let intl = tmp(1126).intl;
         obj2.children = intl.string(tmp(1126).t.yP28YL);
-        const tmp7 = closure_4(tmp(5088).Text, obj2);
+        const tmp7 = closure_4(tmp(5092).Text, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
       } else {

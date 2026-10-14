@@ -17,12 +17,12 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let balance;
   const tmp2 = closure_10();
   const tmp3 = balance;
-  balance = balance(9062).useFetchVirtualCurrencyBalance().balance;
+  balance = balance(9067).useFetchVirtualCurrencyBalance().balance;
   [][0] = balance;
   let obj2 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     let obj3 = { balance, onPress: tmp5 };
-    isVirtualCurrencyEnabled = closure_8(tmp3(13284).BalanceWidgetPillButton, obj3);
+    isVirtualCurrencyEnabled = closure_8(tmp3(13323).BalanceWidgetPillButton, obj3);
   }
   let items = [isVirtualCurrencyEnabled];
   const merged1 = Object.assign(merged);
@@ -54,7 +54,7 @@ function FiltersButton(setSelectedSortMethod) {
   const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15598, dependencyMap.paths),
+      asyncRequireImpl(15635, dependencyMap.paths),
       "QuestHomeSortingFilteringBottomSheet",
       {
         onSortMethodChange: setSelectedSortMethod,
@@ -80,12 +80,12 @@ function FiltersButton(setSelectedSortMethod) {
   return closure_8(setSelectedSortMethod(tmp3[22]).BaseIconButton, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(5972).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(5977).QuestHomeSortMethods;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_7 = fn(1087).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   headerTitleContainer: {
     width: "100%",
@@ -159,7 +159,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp4.headerTitleContainer, children: null };
       const items = [first, tmp10];
       obj3.children = items;
-      const tmp14 = options(View, obj3);
+      const tmp14 = React6(View, obj3);
       cResult[4] = tmp4.headerTitleContainer;
       cResult[5] = tmp10;
       cResult[6] = tmp14;
@@ -181,7 +181,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = intl.string(util.t.JALI2K);
       items[1] = closure_1_8(Text_Text.Heading, obj2);
       obj.children = items;
-      return options(View, obj);
+      return React6(View, obj);
     };
 ReactCompilerGating = fn(558);
 let obj4 = {

@@ -324,7 +324,7 @@ export const getInitialValuesFromInteractionOptions = function getInitialValuesF
   command,
   interactionOptions,
 ) {
-  options = command;
+  let options = command;
   const obj = {};
   function _loop(iter) {
     options = iter;

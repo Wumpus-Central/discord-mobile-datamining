@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles((arg0, height, marginBottom) => {
   if ("floating" === arg0) {
     const rect = { left: 0, right: 0, position: "absolute" };
@@ -111,7 +111,7 @@ export const ActionSheetHeaderBar = ReactCompilerGating.isReactCompilerEnabled()
                     const obj2 = { children: null };
                     const items = [tmp23, tmp18];
                     obj2.children = items;
-                    const tmp30 = options(closure_1_8, obj2);
+                    const tmp30 = React6(closure_1_8, obj2);
                     cResult[18] = tmp18;
                     cResult[19] = tmp23;
                     cResult[20] = tmp30;
@@ -200,7 +200,7 @@ export const ActionSheetHeaderBar = ReactCompilerGating.isReactCompilerEnabled()
         };
         const items2 = [React5(React3, obj7), tmp6];
         obj6.children = items2;
-        tmp7 = options(closure_1_8, obj6);
+        tmp7 = React6(closure_1_8, obj6);
       }
       return tmp7;
     };

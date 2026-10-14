@@ -79,6 +79,7 @@ export default {
   PREMIUM_GIFT_INTENT_FRIEND_ROW: "premium gift intent friend row",
   GIFT_SELECTION_MODAL_WISHLIST: "gift selection modal wishlist",
   EXPRESSION_SUGGESTIONS: "expression suggestions",
+  EMOJI_SUGGESTIONS: "emoji suggestions",
   EMOJI_PICKER: "emoji picker",
   STICKER_PICKER: "sticker picker",
   STICKER_POPOUT: "sticker popout",
@@ -648,7 +649,6 @@ export default {
   CROISSANT_REWARD_MODAL: "xgpp reward modal",
   XBOX_PERKS_CONNECTION_FOOTER: "xbox perks connection footer",
   XBOX_PERKS_MODAL: "xbox perks modal",
-  YOUTUBE_NITRO_TAB_POPOVER: "youtube nitro tab popover",
   YOUTUBE_3PP_NAGBAR: "youtube 3pp nagbar",
   CUSTOM_TYPING_INDICATOR_EDITOR: "custom typing indicator editor",
   CUSTOM_TYPING_INDICATOR_PROFILE_ROW: "custom typing indicator profile row",
@@ -657,4 +657,5 @@ export default {
   CUSTOM_TYPING_INDICATOR_ANNOUNCEMENT_SHEET: "custom typing indicator announcement sheet",
   CHAT_TYPING_INDICATOR: "chat typing indicator",
   BEST_BUY_PREMIUM_TAB_POPOVER: "best buy premium tab popover",
+  FRIENDS_SIDEBAR: "friends sidebar",
 };

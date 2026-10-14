@@ -8,7 +8,7 @@ function keyExtractor(id) {
   return id.id;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = {
     content: { paddingBottom: arg0 + nativeDefault.space.PX_16 },

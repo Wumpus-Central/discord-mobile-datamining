@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: null, gifImage: null, gifImageSelected: null };
   const size = {
@@ -47,7 +47,7 @@ export default function GIFPickerItemView(onPressGIF) {
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(9751, dependencyMap.paths),
+      asyncRequireImpl(9761, dependencyMap.paths),
       "GIFPickerItemActionSheet",
       { item },
       "stack",

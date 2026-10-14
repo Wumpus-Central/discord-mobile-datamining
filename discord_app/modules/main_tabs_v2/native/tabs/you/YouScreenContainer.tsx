@@ -7,13 +7,13 @@ import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const useWindowDimensionsDefault = tmp4(1497);
-const useChatLayoutDefault = tmp4(4979);
-const YouScreenDefault = tmp4(17547);
+const useChatLayoutDefault = tmp4(4981);
+const YouScreenDefault = tmp4(17581);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(10637).RootNavigatorScreen;
+const RootNavigatorScreen = fn(10647).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   container: {
     flex: 1,

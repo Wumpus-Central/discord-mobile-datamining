@@ -3,11 +3,23 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_4 = async function _createProxyTicket(arg0) {
+let closure_5 = async function _createProxyTicket(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c3 = 0;
   return (async (arg0, value, arg2) => {
+    (function prewarmApplication(arg0) {
+      const tmp = channel_id(surface[3])(arg0);
+      if (null != tmp) {
+        try {
+          const _fetch = fetch;
+          const _URL = URL;
+          const str2 = new URL("/.discord/prewarm", tmp);
+          const response = fetch(str2.toString(), { method: "GET", mode: "no-cors", credentials: "omit" });
+          response.catch(() => {});
+        } catch (err) {}
+      }
+    })(closure_0);
     const obj4 = { use_stateless_ticket: true };
     if (null != channel_id) {
       obj4.channel_id = channel_id;
@@ -27,7 +39,7 @@ const result = size.fileFinishedImporting("modules/activities/createProxyTicket.
 
 export const createProxyTicket = function createProxyTicket() {
   const self = this;
-  const apply = closure_4.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

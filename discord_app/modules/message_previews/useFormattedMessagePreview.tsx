@@ -203,7 +203,7 @@ function formatMessagePreview(type, isBlocked) {
                   tmp10 = obj;
                 }
               }
-              ({ authorNick, otherUser, otherUserNick, isCallActive, currentUserId } = isBlocked);
+              ({ authorNick, otherUser, otherUserNick, isCallActive, currentUserId, actorNick } = isBlocked);
               if (type.type === MessageTypes.MessageTypes.RECIPIENT_ADD) {
                 if (null != otherUserNick) {
                   const obj29 = { type: "text", text: null };
@@ -217,11 +217,11 @@ function formatMessagePreview(type, isBlocked) {
                   obj29.text = intl27.formatToPlainString(util.t.MMN2Jq, obj30);
                   let tmp21 = obj29;
                 }
-                let tmp29;
+                let tmp31;
                 if (null != tmp21) {
-                  tmp29 = tmp21;
+                  tmp31 = tmp21;
                 }
-                return tmp29;
+                return tmp31;
               }
               if (type.type === MessageTypes.MessageTypes.RECIPIENT_REMOVE) {
                 if (null != otherUserNick) {
@@ -289,61 +289,67 @@ function formatMessagePreview(type, isBlocked) {
               } else if (type.type === MessageTypes.MessageTypes.CHANNEL_PINNED_MESSAGE) {
                 const obj40 = { type: "text", text: null };
                 const intl19 = util.intl;
-                const obj41 = { username: authorNick, usernameHook: _mod12.identity };
-                obj40.text = intl19.formatToPlainString(util.t.vfkjqx, obj41);
+                const obj42 = { username: authorNick, usernameHook: _mod12.identity };
+                obj40.text = intl19.formatToPlainString(util.t.vfkjqx, obj42);
                 tmp21 = obj40;
               } else if (type.type === MessageTypes.MessageTypes.USER_JOIN) {
-                const obj42 = { type: "text", text: null };
-                const intl18 = util.intl;
-                const obj43 = { username: authorNick, usernameHook: null };
-                const systemMessageUserJoin = SystemMessageUtilsDefault.getSystemMessageUserJoin(type.id);
-                obj43.usernameHook = _mod12.identity;
-                obj42.text = intl18.formatToPlainString(systemMessageUserJoin, obj43);
-                tmp21 = obj42;
+                const obj43 = { type: "text", text: null };
+                if (type.author.bot) {
+                  obj43.text = SystemMessageUtilsDefault.getSystemMessageAppAdded(authorNick, actorNick);
+                  let tmp24 = obj43;
+                } else {
+                  const intl18 = util.intl;
+                  const obj44 = { username: authorNick, usernameHook: null };
+                  const systemMessageUserJoin = SystemMessageUtilsDefault.getSystemMessageUserJoin(type.id);
+                  obj44.usernameHook = _mod12.identity;
+                  obj43.text = intl18.formatToPlainString(systemMessageUserJoin, obj44);
+                  tmp24 = obj43;
+                }
+                tmp21 = tmp24;
               } else if (type.type === MessageTypes.MessageTypes.THREAD_CREATED) {
-                const obj44 = { type: "text", text: null };
+                const obj45 = { type: "text", text: null };
                 const intl17 = util.intl;
-                const obj45 = {
+                const obj46 = {
                   actorName: authorNick,
                   actorHook: _mod12.identity,
                   threadName: type.content,
                   threadOnClick: _mod12.identity,
                 };
-                obj44.text = intl17.formatToPlainString(util.t.SGaUAU, obj45);
-                tmp21 = obj44;
+                obj45.text = intl17.formatToPlainString(util.t.SGaUAU, obj46);
+                tmp21 = obj45;
               } else if (type.type === MessageTypes.MessageTypes.PREMIUM_REFERRAL) {
-                const obj46 = { type: "text", text: null };
+                const obj47 = { type: "text", text: null };
                 const intl16 = util.intl;
-                const obj47 = { username: authorNick };
-                obj46.text = intl16.formatToPlainString(util.t.lieTqU, obj47);
-                tmp21 = obj46;
+                const obj48 = { username: authorNick };
+                obj47.text = intl16.formatToPlainString(util.t.lieTqU, obj48);
+                tmp21 = obj47;
               } else if (type.type === MessageTypes.MessageTypes.STAGE_START) {
-                const obj48 = { type: "text", text: null };
+                const obj49 = { type: "text", text: null };
                 const intl15 = util.intl;
-                const obj49 = { username: authorNick, usernameOnClick: _mod12.identity, topic: type.content };
-                obj48.text = intl15.formatToPlainString(util.t.aZtRW8, obj49);
-                tmp21 = obj48;
+                const obj50 = { username: authorNick, usernameOnClick: _mod12.identity, topic: type.content };
+                obj49.text = intl15.formatToPlainString(util.t.aZtRW8, obj50);
+                tmp21 = obj49;
               } else if (type.type === MessageTypes.MessageTypes.STAGE_END) {
-                const obj50 = { type: "text", text: null };
+                const obj51 = { type: "text", text: null };
                 const intl14 = util.intl;
-                const obj51 = { username: authorNick, usernameOnClick: _mod12.identity, topic: type.content };
-                obj50.text = intl14.formatToPlainString(util.t.vMJhvG, obj51);
-                tmp21 = obj50;
+                const obj52 = { username: authorNick, usernameOnClick: _mod12.identity, topic: type.content };
+                obj51.text = intl14.formatToPlainString(util.t.vMJhvG, obj52);
+                tmp21 = obj51;
               } else if (type.type === MessageTypes.MessageTypes.STAGE_SPEAKER) {
-                const obj52 = { type: "text", text: null };
+                const obj53 = { type: "text", text: null };
                 const intl13 = util.intl;
-                const obj53 = { username: authorNick, usernameOnClick: _mod12.identity };
-                obj52.text = intl13.formatToPlainString(util.t.V4uCm4, obj53);
-                tmp21 = obj52;
+                const obj54 = { username: authorNick, usernameOnClick: _mod12.identity };
+                obj53.text = intl13.formatToPlainString(util.t.V4uCm4, obj54);
+                tmp21 = obj53;
               } else if (type.type === MessageTypes.MessageTypes.STAGE_TOPIC) {
-                const obj54 = { type: "text", text: null };
+                const obj55 = { type: "text", text: null };
                 const intl12 = util.intl;
-                const obj55 = { username: authorNick, usernameOnClick: _mod12.identity, topic: type.content };
-                obj54.text = intl12.formatToPlainString(util.t.ro3RM0, obj55);
-                tmp21 = obj54;
+                const obj56 = { username: authorNick, usernameOnClick: _mod12.identity, topic: type.content };
+                obj55.text = intl12.formatToPlainString(util.t.ro3RM0, obj56);
+                tmp21 = obj55;
               } else if (type.type === MessageTypes.MessageTypes.VOICE_SESSION) {
-                const obj56 = { type: "text", text: VoiceSessionUtils.getVoiceSessionMessageContent(type) };
-                tmp21 = obj56;
+                const obj57 = { type: "text", text: VoiceSessionUtils.getVoiceSessionMessageContent(type) };
+                tmp21 = obj57;
                 const tmp4Result = VoiceSessionUtils;
               }
             }
@@ -381,7 +387,7 @@ const result = size.fileFinishedImporting("modules/message_previews/useFormatted
 export { isMessageContentPreviewable };
 export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFormattedMessagePreview(author, id) {
-      const _require = author;
+      _require = author;
       const cResult = require("c").c(10);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RelationshipStore];
@@ -447,38 +453,47 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
           let tmp18 = cResult[9];
         }
         const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
-        const tmpResult5 = tmp(504);
+        const tmpResult6 = tmp(504);
+        const tmpResult7 = tmp(5632);
         const obj2 = {
           message: author,
           channel: id,
           currentUserId: stateFromStores,
           authorNick: stringResult,
-          otherUser: stateFromStores1,
-          otherUserNick: tmp(5627).useNullableUserAuthor(stateFromStores1, id).nick,
-          isBlocked,
-          isIgnored,
-          isCallActive: tmp10,
+          actorNick: null,
+          otherUser: null,
+          otherUserNick: null,
+          isBlocked: null,
+          isIgnored: null,
+          isCallActive: null,
         };
+        let nick1;
+        if (null != author.actor) {
+          nick1 = tmpResult8.useNullableUserAuthor(author.actor, id).nick;
+        }
+        obj2.actorNick = nick1;
+        obj2.otherUser = stateFromStores1;
+        obj2.otherUserNick = tmpResult7.useNullableUserAuthor(stateFromStores1, id).nick;
+        obj2.isBlocked = isBlocked;
+        obj2.isIgnored = isIgnored;
+        obj2.isCallActive = tmp10;
         return formatMessagePreview(author, obj2);
       }
-      class I {
-        constructor() {
-          user = undefined;
-          if (closure_0.mentions.length > 0) {
-            tmp3 = closure_5;
-            user = closure_5.getUser(tmp.mentions[0]);
-          }
-          return user;
+      const fn3 = function k() {
+        let user;
+        if (author.mentions.length > 0) {
+          user = UserStore.getUser(tmp.mentions[0]);
         }
-      }
+        return user;
+      };
       cResult[7] = author.mentions[0];
       cResult[8] = author.mentions.length;
-      cResult[9] = I;
-      tmp18 = I;
-      const tmpResult4 = require("initialize");
+      cResult[9] = fn3;
+      tmp18 = fn3;
+      const tmpResult5 = require("initialize");
     }
   : function useFormattedMessagePreview(author, channel) {
-      const _require = author;
+      _require = author;
       const items = [RelationshipStore];
       const items1 = [author.author.id];
       const stateFromStoresObject = require("initialize").useStateFromStoresObject(
@@ -513,17 +528,29 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
         return user;
       });
       const tmpResult = require("initialize");
-      const tmpResult2 = require("useMessageAuthor");
-      return formatMessagePreview(author, {
+      const tmpResult3 = require("useMessageAuthor");
+      const obj3 = {
         message: author,
         channel,
         currentUserId: stateFromStores,
         authorNick: stringResult,
-        otherUser: stateFromStores1,
-        otherUserNick: require("useMessageAuthor").useNullableUserAuthor(stateFromStores1, channel).nick,
-        isBlocked,
-        isIgnored,
-        isCallActive: tmp4,
-      });
+        actorNick: null,
+        otherUser: null,
+        otherUserNick: null,
+        isBlocked: null,
+        isIgnored: null,
+        isCallActive: null,
+      };
+      let nick1;
+      if (null != author.actor) {
+        nick1 = tmpResult4.useNullableUserAuthor(author.actor, channel).nick;
+      }
+      obj3.actorNick = nick1;
+      obj3.otherUser = stateFromStores1;
+      obj3.otherUserNick = tmpResult3.useNullableUserAuthor(stateFromStores1, channel).nick;
+      obj3.isBlocked = isBlocked;
+      obj3.isIgnored = isIgnored;
+      obj3.isCallActive = tmp4;
+      return formatMessagePreview(author, obj3);
     };
 export { formatMessagePreview };

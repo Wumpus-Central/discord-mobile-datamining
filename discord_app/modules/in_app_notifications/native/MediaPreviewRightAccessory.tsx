@@ -5,9 +5,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import utils_ImageUtils from "../../../utils/native/ImageUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import VisualEffectViewDefault from "../../visual_effect_view/native/VisualEffectView.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ObscuredMediaUtils from "../../explicit_media_redaction/ObscuredMediaUtils.tsx";
 import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
 import ExplicitMediaRedactionUtils from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
@@ -25,15 +25,15 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const ClipViewDefault = ClipView;
 
 const PlatformUtils = ImageWarningIcon(1382);
-const EyeIcon = ImageWarningIcon(6652);
-const ImageWarningIcon2 = ImageWarningIcon(8209);
+const EyeIcon = ImageWarningIcon(6656);
+const ImageWarningIcon2 = ImageWarningIcon(8216);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 let obj2 = { badge: null, icon: null };
 let size = {
   alignItems: "center",
@@ -49,7 +49,7 @@ let size = {
 obj2.badge = size;
 obj2.icon = { width: 10, height: 10 };
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(5092);
+createStyles = fn(5096);
 let obj3 = { badge: null };
 let size1 = {
   width: 20,
@@ -64,7 +64,7 @@ let size1 = {
 };
 obj3.badge = size1;
 let closure_12 = createStyles.createStyles(obj3);
-createStyles = fn(5092);
+createStyles = fn(5096);
 let obj5 = {
   mediaThumbnailContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" },
   mediaThumbnail: { width: "100%", height: "100%" },
@@ -103,9 +103,9 @@ obj5.spoilerPill = {
   alignItems: "center",
 };
 let closure_13 = createStyles.createStyles(obj5);
-createStyles = fn(5092);
+createStyles = fn(5096);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
-createStyles = fn(5092);
+createStyles = fn(5096);
 let obj11 = {
   padding: nativeDefault.space.PX_4,
   borderRadius: nativeDefault.radii.xs,
@@ -114,7 +114,7 @@ let obj11 = {
   alignItems: "center",
 };
 let closure_15 = createStyles.createStyles({
-  rightAccessoryContainer: { marginLeft: fn(13088).RIGHT_ACCESSORY_LEFT_MARGIN },
+  rightAccessoryContainer: { marginLeft: fn(13123).RIGHT_ACCESSORY_LEFT_MARGIN },
 });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -234,7 +234,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { children: null };
                 const items = [children, tmp5, tmp9, tmp18];
                 obj4.children = items;
-                const tmp25 = collapsed(options, obj4);
+                const tmp25 = collapsed(React6, obj4);
                 cResult[12] = children;
                 cResult[13] = tmp5;
                 cResult[14] = tmp9;
@@ -324,7 +324,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = tmp14Result;
       items[3] = closure_1_8(View, obj4);
       obj6.children = items;
-      return collapsed(options, obj6);
+      return collapsed(React6, obj6);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1045,7 +1045,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp4;
     };
 ReactCompilerGating = fn(558);
-let obj12 = { rightAccessoryContainer: { marginLeft: fn(13088).RIGHT_ACCESSORY_LEFT_MARGIN } };
+let obj12 = { rightAccessoryContainer: { marginLeft: fn(13123).RIGHT_ACCESSORY_LEFT_MARGIN } };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 

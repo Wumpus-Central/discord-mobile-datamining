@@ -74,6 +74,18 @@ const result = size.fileFinishedImporting("modules/conjure/experiments/ConjureGu
 export const useIsConjureGuildEnabled = tmp2;
 export { isConjureGuildEnabled };
 export { hasConjureGuild };
+export const hasConjureGuildWithoutExposure = function hasConjureGuildWithoutExposure(conjure_resume) {
+  const values = Object.values(GuildStore.getGuilds());
+  for (const item10012 of values) {
+    let obj2 = { guildId: item10012.id, location: arg0 };
+    if (closure_4.getConfig(obj2, { autoTrackExposure: false }).enabled) {
+      obj.return();
+      let flag = true;
+      return true;
+    }
+  }
+  return false;
+};
 export const useHasConjureGuild = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasConjureGuild(arg0) {
       _require = arg0;
@@ -86,7 +98,7 @@ export const useHasConjureGuild = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function l() {
           return hasConjureGuild(Object.values(GuildStore.getGuilds()), closure_0);
         };
         const items1 = [arg0];

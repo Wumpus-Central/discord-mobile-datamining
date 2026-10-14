@@ -6,8 +6,8 @@ import user from "../../../../discord_common/js/packages/protos/discord_protos/u
 import _modDef3851 from "../intl/CustomTypingIndicator.messages.js";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset.tsx";
-import _modDef12396 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
-import _modDef12397 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
+import _modDef12432 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
+import _modDef12433 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 },
   typingText: { maxWidth: 100 },
@@ -29,7 +29,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [_modDef12396, _modDef12397, _modDef12396];
+        const items = [_modDef12432, _modDef12433, _modDef12432];
         cResult[0] = items;
         let first = items;
       } else {
@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         textStyle: tmp.typingText,
         emojiSource: null,
       };
-      const items = [_modDef12396, _modDef12397, _modDef12396];
+      const items = [_modDef12432, _modDef12433, _modDef12432];
       obj2.emojiSource = items;
       obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, {
         name: "Locke",
@@ -138,8 +138,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = markAsDismissed(576);
       const tmp10 = analyticsLocations;
-      analyticsLocations = analyticsLocations(6852)(
-        analyticsLocations(6879).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK,
+      analyticsLocations = analyticsLocations(6857)(
+        analyticsLocations(6884).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK,
       ).analyticsLocations;
       if (cResult[2] !== markAsDismissed) {
         class P {
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = analyticsLocations;
       cResult[7] = markAsDismissed;
       cResult[8] = fn;
-      const tmp11 = analyticsLocations(6852);
+      const tmp11 = analyticsLocations(6857);
     }
   : function CustomTypingIndicatorProfileCoachmark(visible) {
       visible = visible.visible;

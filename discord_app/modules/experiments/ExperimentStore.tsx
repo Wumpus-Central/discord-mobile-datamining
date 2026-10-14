@@ -897,7 +897,7 @@ function handleGuildChange(arg0) {
     continue;
   }
 }
-const ExperimentConstants = fn(5017);
+const ExperimentConstants = fn(5019);
 ({ ExperimentBuckets: hasOwnProperty, ExperimentTypes: metroRequire, ExposureTypes: closure_7 } = ExperimentConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, EMPTY_STRING_SNOWFLAKE_ID: closure_9, UserFlags: c10 } = Constants);
@@ -1095,7 +1095,7 @@ prototype["getUserExperimentDescriptor"] = function getUserExperimentDescriptor(
 prototype["getGuildExperimentDescriptor"] = function getGuildExperimentDescriptor(id, guildId) {
   let tmp = guildId;
   if (guildId == null) {
-    tmp = options;
+    tmp = React6;
   }
   if (c26) {
     if (null != tmp2) {

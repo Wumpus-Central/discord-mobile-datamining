@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(17808, dependencyMap.paths);
+  return asyncRequireImpl(17844, dependencyMap.paths);
 }
-const VoicePanelModes = fn(12488).VoicePanelModes;
-const isActivityParticipant = fn(5115).isActivityParticipant;
+const VoicePanelModes = fn(12524).VoicePanelModes;
+const isActivityParticipant = fn(5119).isActivityParticipant;
 const jsx = fn(21).jsx;
 const VoiceControlToggleNuxActionSheet = "VoiceControlToggleNuxActionSheet";
 const __initData = {

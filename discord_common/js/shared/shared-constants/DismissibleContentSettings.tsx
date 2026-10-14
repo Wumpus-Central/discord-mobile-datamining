@@ -251,16 +251,16 @@ const obj = {
   816: null,
   817: null,
   818: null,
-  823: null,
-  825: { is_server_arbitrated: true },
-  826: null,
-  827: { is_server_arbitrated: true },
-  831: { is_server_arbitrated: false },
-  839: { is_server_arbitrated: false },
+  825: null,
+  826: { is_server_arbitrated: true },
+  831: null,
+  839: { is_server_arbitrated: true },
   840: { is_server_arbitrated: false },
-  841: null,
-  845: null,
+  841: { is_server_arbitrated: false },
+  845: { is_server_arbitrated: false },
   848: null,
+  851: null,
+  852: null,
 };
 obj[272] = { is_server_arbitrated: false };
 obj[275] = { is_server_arbitrated: false };
@@ -466,16 +466,16 @@ obj[815] = { is_server_arbitrated: true };
 obj[816] = { is_server_arbitrated: true };
 obj[817] = { is_server_arbitrated: true };
 obj[818] = { is_server_arbitrated: true };
-obj[823] = { is_server_arbitrated: false };
 obj[825] = { is_server_arbitrated: true };
 obj[826] = { is_server_arbitrated: true };
-obj[827] = { is_server_arbitrated: true };
 obj[831] = { is_server_arbitrated: true };
 obj[839] = { is_server_arbitrated: false };
 obj[840] = { is_server_arbitrated: true };
 obj[841] = { is_server_arbitrated: true };
 obj[845] = { is_server_arbitrated: true };
 obj[848] = { is_server_arbitrated: false };
+obj[851] = { is_server_arbitrated: false };
+obj[852] = { is_server_arbitrated: false };
 const result = size.fileFinishedImporting(
   "../discord_common/js/shared/shared-constants/DismissibleContentSettings.tsx",
 );

@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(10659);
+const LaunchPadConstants = fn(10763);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({
@@ -18,9 +18,9 @@ const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT
   LAUNCH_PAD_PULL_TAB_WIDTH,
   LAUNCH_PAD_SPRING_CONFIG: closure_11,
 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(11960).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11996).CHAT_INPUT_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };
 let size = {
   position: "absolute",
@@ -1168,7 +1168,7 @@ export default noop.memo(
         obj4.hitSlop = hitSlop;
         obj4.style = tmp.pullTabButton;
         obj4.onTouchStart = function onTouchStart() {
-          const result = updaters.setLaunchPadPullTabScale(options);
+          const result = updaters.setLaunchPadPullTabScale(React6);
         };
         obj4.onPress = launchPadPullTabState(gestureState[16]);
         obj4.children = jsx(launchPadSharedState(gestureState[15]).ChannelListMagnifyingGlassIcon, { size: "xs" });

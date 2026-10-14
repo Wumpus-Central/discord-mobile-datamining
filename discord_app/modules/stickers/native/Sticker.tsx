@@ -2,11 +2,11 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import shared from "../../../design/shared.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import StickersUtils from "../StickersUtils.tsx";
 import StickersTypes from "../StickersTypes.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef6821 from "../../../../_runtime/metro/06821__.js";
-import _modDef6822 from "../../../../_runtime/metro/06822__.js";
+import _modDef6826 from "../../../../_runtime/metro/06826__.js";
+import _modDef6827 from "../../../../_runtime/metro/06827__.js";
 import NativeLottieView from "NativeLottieView.tsx";
 import NativeAPNGViewDefault from "../../../components_native/common/NativeAPNGView.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -187,9 +187,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 accessibilityLabel: null,
               };
               if (tmpResult7.isThemeDark(ThemeStore.theme)) {
-                let tmp25Result = _modDef6821;
+                let tmp25Result = _modDef6826;
               } else {
-                tmp25Result = _modDef6822;
+                tmp25Result = _modDef6827;
               }
               obj6.placeholder = tmp25Result;
               obj6.source = tmp23;
@@ -327,9 +327,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const size3 = { height: size, width: size, opacity: num };
         obj6.style = size3;
         if (tmpResult10.isThemeDark(ThemeStore.theme)) {
-          let tmp13Result = _modDef6821;
+          let tmp13Result = _modDef6826;
         } else {
-          tmp13Result = _modDef6822;
+          tmp13Result = _modDef6827;
         }
         obj6.placeholder = tmp13Result;
         const obj7 = { uri: str };

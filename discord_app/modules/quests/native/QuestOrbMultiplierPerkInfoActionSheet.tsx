@@ -26,7 +26,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const contentStyles = { marginBottom: 0 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 },
   contentContainer: null,
@@ -182,7 +182,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { style: tmp4.buttonContainer, children: null };
           const items = [tmp20, tmp22];
           obj5.children = items;
-          const tmp26 = options(View, obj5);
+          const tmp26 = React6(View, obj5);
           cResult[5] = tmp4.buttonContainer;
           cResult[6] = tmp26;
           const tmp24 = tmp26;
@@ -270,7 +270,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = { style: tmp4.buttonContainer, children: null };
           const items1 = [tmp11, tmp14];
           obj7.children = items1;
-          const tmp19 = options(View, obj7);
+          const tmp19 = React6(View, obj7);
           cResult[12] = tmp4.buttonContainer;
           cResult[13] = tmp11;
           cResult[14] = tmp19;
@@ -333,7 +333,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         obj.children = items1;
         tmp11 = obj;
       }
-      return options(View, tmp11);
+      return React6(View, tmp11);
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
@@ -420,7 +420,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                         const obj7 = { style: tmp10, children: tmp29 };
                         items[1] = closure_1_8(View, obj7);
                         obj6.children = items;
-                        const tmp38 = options(collapsed, obj6);
+                        const tmp38 = React6(collapsed, obj6);
                         cResult[27] = tmp29;
                         cResult[28] = tmp10;
                         cResult[29] = tmp38;
@@ -432,7 +432,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj8 = { style: tmp4.contentContainer, children: null };
                 const items1 = [tmp14, tmp19, tmp22, tmp25];
                 obj8.children = items1;
-                const tmp32 = options(View, obj8);
+                const tmp32 = React6(View, obj8);
                 cResult[21] = tmp4.contentContainer;
                 cResult[22] = tmp14;
                 cResult[23] = tmp19;
@@ -511,10 +511,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       items2[2] = closure_1_8(Text_Text.Text, { style: tmp.text, variant: "text-sm/normal", children: body });
       items2[3] = closure_1_8(closure_13, { eligibleToReceivePremiumRewards });
       obj4.children = items2;
-      obj3.children = options(View, obj4);
+      obj3.children = React6(View, obj4);
       items[1] = closure_1_8(View, obj3);
       obj2.children = items;
-      return options(collapsed, obj2);
+      return React6(collapsed, obj2);
     };
 ReactCompilerGating = fn(558);
 let obj6 = { width: "100%", gap: nativeDefault.space.PX_12, marginVertical: nativeDefault.space.PX_16 };
@@ -625,9 +625,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
       multiplier = multiplier.multiplier;
       const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-      const result = multiplier(9164).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+      const result = multiplier(9173).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
       dependencyMap = result;
-      let obj = multiplier(9164);
+      let obj = multiplier(9173);
       const items = [orbMultiplierEligibility];
       const items1 = [result, orbMultiplierEligibility, multiplier];
       const memo = noop.useMemo(() => {
@@ -662,14 +662,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
       let obj3 = {
         visible:
-          orbMultiplierEligibility === multiplier(9164).QuestOrbMultiplierEligibilityType.NITRO ||
-          orbMultiplierEligibility === multiplier(9164).QuestOrbMultiplierEligibilityType.UPSELL,
+          orbMultiplierEligibility === multiplier(9173).QuestOrbMultiplierEligibilityType.NITRO ||
+          orbMultiplierEligibility === multiplier(9173).QuestOrbMultiplierEligibilityType.UPSELL,
         children: null,
       };
       const tmp4 =
-        orbMultiplierEligibility === multiplier(9164).QuestOrbMultiplierEligibilityType.NITRO ||
-        orbMultiplierEligibility === multiplier(9164).QuestOrbMultiplierEligibilityType.UPSELL;
+        orbMultiplierEligibility === multiplier(9173).QuestOrbMultiplierEligibilityType.NITRO ||
+        orbMultiplierEligibility === multiplier(9173).QuestOrbMultiplierEligibilityType.UPSELL;
       obj3.children = closure_8(closure_14, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-      obj2.children = closure_8(orbMultiplierEligibility(15756), obj3);
-      return closure_8(multiplier(6840).BottomSheet, obj2);
+      obj2.children = closure_8(orbMultiplierEligibility(15793), obj3);
+      return closure_8(multiplier(6845).BottomSheet, obj2);
     };

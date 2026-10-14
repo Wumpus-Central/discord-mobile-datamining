@@ -3,4 +3,4 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/emojis/EmojiTypes.tsx");
 
-export const EmojiTypes = { UNICODE: 0, [0]: "UNICODE", GUILD: 1, [1]: "GUILD" };
+export const EmojiTypes = { UNICODE: 0, [0]: "UNICODE", GUILD: 1, [1]: "GUILD", PACK: 2, [2]: "PACK" };

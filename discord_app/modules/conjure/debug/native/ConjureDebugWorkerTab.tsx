@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { tab: { gap: nativeDefault.space.PX_24 } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -577,21 +577,21 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       let schedules = env.runtime;
       if (cResult[0] !== env) {
         let intl = tmp(1126).intl;
-        const obj2 = { env: tmp(11981).debugEnvLabel(env) };
+        const obj2 = { env: tmp(12017).debugEnvLabel(env) };
         let formatToPlainStringResult = intl.formatToPlainString(_modDef3849["92gVTm"], obj2);
         cResult[0] = env;
         cResult[1] = formatToPlainStringResult;
         let tmp4 = formatToPlainStringResult;
-        const tmpResult = tmp(11981);
+        const tmpResult = tmp(12017);
       } else {
         tmp4 = cResult[1];
       }
       if (cResult[2] !== schedules.connections) {
-        const formatCountResult = tmp(11980).formatCount(schedules.connections);
+        const formatCountResult = tmp(12016).formatCount(schedules.connections);
         cResult[2] = schedules.connections;
         cResult[3] = formatCountResult;
         let tmp7 = formatCountResult;
-        const tmpResult2 = tmp(11980);
+        const tmpResult2 = tmp(12016);
       } else {
         tmp7 = cResult[3];
       }
@@ -654,7 +654,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = schedules;
         cResult[9] = mapped;
       }
-      const tmp10 = closure_5(env(11983).DebugStatRow, { label: tmp4, value: tmp7 });
+      const tmp10 = closure_5(env(12019).DebugStatRow, { label: tmp4, value: tmp7 });
       cResult[4] = tmp4;
       cResult[5] = tmp7;
       cResult[6] = tmp10;
@@ -667,11 +667,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { children: null };
       const obj2 = { label: null, value: null };
       let intl = env(1126).intl;
-      let obj3 = { env: env(11981).debugEnvLabel(env) };
+      let obj3 = { env: env(12017).debugEnvLabel(env) };
       obj2.label = intl.formatToPlainString(_modDef3849["92gVTm"], obj3);
-      let obj4 = env(11981);
-      obj2.value = env(11980).formatCount(runtime.connections);
-      const items = [closure_5(env(11983).DebugStatRow, obj2)];
+      let obj4 = env(12017);
+      obj2.value = env(12016).formatCount(runtime.connections);
+      const items = [closure_5(env(12019).DebugStatRow, obj2)];
       const schedules = runtime.schedules;
       items[1] = schedules.map((id) => {
         const obj = { label: null, value: null, hint: null };
@@ -1185,14 +1185,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         let items = [obj2];
         let items1 = items;
       } else {
-        let obj3 = { key: "preview", label: DebugSection(11981).debugEnvLabel("preview"), metrics: preview };
+        let obj3 = { key: "preview", label: DebugSection(12017).debugEnvLabel("preview"), metrics: preview };
         items1 = [obj3];
         let obj4 = { key: "stable", label: null, metrics: null };
-        const DebugSectionResult = DebugSection(11981);
-        obj4.label = DebugSection(11981).debugEnvLabel("stable");
+        const DebugSectionResult = DebugSection(12017);
+        obj4.label = DebugSection(12017).debugEnvLabel("stable");
         obj4.metrics = stable;
         items1[1] = obj4;
-        const DebugSectionResult1 = DebugSection(11981);
+        const DebugSectionResult1 = DebugSection(12017);
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         let intl2 = DebugSection(1126).intl;
@@ -1202,7 +1202,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[5];
       }
-      DebugSection = DebugSection(11983).DebugSection;
+      DebugSection = DebugSection(12019).DebugSection;
       let obj = limits(576);
       tmp = closure_5(DebugSection, {
         title: tmp4,
@@ -1302,15 +1302,15 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp4 = limits;
         let items1 = items;
       } else {
-        let obj = { key: "preview", label: limits(11981).debugEnvLabel("preview"), metrics: tmp };
+        let obj = { key: "preview", label: limits(12017).debugEnvLabel("preview"), metrics: tmp };
         items1 = [obj];
         let obj5 = { key: "stable", label: null, metrics: null };
-        let obj2 = limits(11981);
-        obj5.label = limits(11981).debugEnvLabel("stable");
+        let obj2 = limits(12017);
+        obj5.label = limits(12017).debugEnvLabel("stable");
         obj5.metrics = stable;
         items1[1] = obj5;
         tmp4 = limits;
-        let obj4 = limits(11981);
+        let obj4 = limits(12017);
       }
       let obj6 = { title: null, children: null };
       let intl2 = tmp4(1126).intl;
@@ -1351,7 +1351,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp18Result;
       });
-      return closure_5(tmp4(11983).DebugSection, obj6);
+      return closure_5(tmp4(12019).DebugSection, obj6);
     };
 ReactCompilerGating = fn(558);
 let obj3 = { gap: nativeDefault.space.PX_24 };

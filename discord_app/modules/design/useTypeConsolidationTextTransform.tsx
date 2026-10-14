@@ -31,7 +31,7 @@ export const useTypeConsolidationEyebrow = ReactCompilerGating.isReactCompilerEn
         const obj3 = { variant: "experimental/body-sm/medium", style };
         let obj4 = obj3;
       } else {
-        obj4 = { variant, style: "a" };
+        obj4 = { variant, style: "r" };
       }
       cResult[0] = variant;
       cResult[1] = manaTypeConsolidationExperiment;
@@ -42,7 +42,7 @@ export const useTypeConsolidationEyebrow = ReactCompilerGating.isReactCompilerEn
         const obj2 = { variant: "experimental/body-sm/medium", style };
         let obj3 = obj2;
       } else {
-        obj3 = { variant, style: "a" };
+        obj3 = { variant, style: "r" };
       }
       return obj3;
     };

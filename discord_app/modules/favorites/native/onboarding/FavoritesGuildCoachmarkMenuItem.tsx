@@ -6,7 +6,7 @@ import FavoritesDismissibleContent from "../../FavoritesDismissibleContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FavoriteStore from "../../FavoriteStore.tsx";
 
-const LayerScope2 = LayerScope(6846);
+const LayerScope2 = LayerScope(6851);
 require = fn;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
@@ -43,7 +43,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = markPopoverAsDismissed(504);
       const favoritesMenuItemPopoverDismissibleContent =
-        markPopoverAsDismissed(10329).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
+        markPopoverAsDismissed(10339).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
       ({ shouldShowPopover, markPopoverAsDismissed } = favoritesMenuItemPopoverDismissibleContent);
       if (cResult[4] !== markPopoverAsDismissed) {
         class S {
@@ -159,7 +159,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[15] = tmp14;
         cResult[16] = obj2;
       }
-      const tmpResult2 = markPopoverAsDismissed(10329);
+      const tmpResult2 = markPopoverAsDismissed(10339);
     }
   : function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       let stateFromStores;

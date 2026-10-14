@@ -448,9 +448,9 @@ prototype["getMostRecentSelectedTextChannelId"] = function getMostRecentSelected
   }
   return tmp;
 };
-prototype["getCurrentlySelectedChannelId"] = function getCurrentlySelectedChannelId(guildId) {
-  if (null != guildId) {
-    let tmp = selectedChannelIds[guildId];
+prototype["getCurrentlySelectedChannelId"] = function getCurrentlySelectedChannelId(id) {
+  if (null != id) {
+    let tmp = selectedChannelIds[id];
   } else {
     tmp = c6;
   }

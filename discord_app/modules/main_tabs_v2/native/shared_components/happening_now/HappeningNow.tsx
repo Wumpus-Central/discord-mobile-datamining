@@ -4,7 +4,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06335_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06339_LegacyBaseButton.js";
 import updateSharedValueIfChanged from "../../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import HappeningNowAnalytics from "HappeningNowAnalytics.tsx";
 import happeningNowRankingUtils from "happeningNowRankingUtils.tsx";
@@ -164,16 +164,16 @@ function getItemType(kind) {
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15904);
+const HappeningNowConstants = fn(15941);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_9, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: c10, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_11 } = HappeningNowConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const ReanimatedHelperTypes = fn(6763);
+const ReanimatedHelperTypes = fn(6767);
 const context = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { containerInner: { paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING, paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING }, loading: { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 } };
 let closure_15 = createStyles.createStyles(obj);
-const Gesture = fn(6335).Gesture;
+const Gesture = fn(6339).Gesture;
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
 const gesture = Gesture.Native().disallowInterruption(true);
 const maintainVisibleContentPosition = { disabled: true };
@@ -359,7 +359,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = listRef(576);
   const isFocused = listRef(1504).useIsFocused();
   if (cResult[0] !== isFocused) {
-    const obj3 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "THREEDS_UNSUPPORTED_VERSION", isFocused };
+    const obj3 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: 15, isFocused };
     cResult[0] = isFocused;
     cResult[1] = obj3;
     let tmp6 = obj3;
@@ -369,13 +369,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = listRef(1504);
   const tmp7 = isFocused;
   const tmp8 = _slicedToArray;
-  [arr, tmp10] = isFocused(16801)(listRef.cards, tmp6);
+  [arr, tmp10] = isFocused(16839)(listRef.cards, tmp6);
   dependencyMap = tmp10;
-  const tmp9 = _slicedToArray(isFocused(16801)(listRef.cards, tmp6), 2);
-  const analyticsLocations = isFocused(6852)(isFocused(6879).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
+  const tmp9 = _slicedToArray(isFocused(16839)(listRef.cards, tmp6), 2);
+  const analyticsLocations = isFocused(6857)(isFocused(6884).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
   let num3 = 0;
   const obj4 = sharedValue;
-  const tmp11 = isFocused(6852);
+  const tmp11 = isFocused(6857);
   if (cResult[2] === length) {
     if (cResult[3] === isFocused) {
       if (cResult[4] === tmp10) {
@@ -440,7 +440,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return obj.cardSize(listRef) === closure_1_10;
             }
           }
-          const first = tmp8(tmp7(16809)(num9, D), 2)[0];
+          const first = tmp8(tmp7(16847)(num9, D), 2)[0];
           class N {
             constructor() {
               if (!closure_1) {
@@ -465,7 +465,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
             let result = obj6.filterHappeningNowCards(length);
-            const result1 = tmp(16808).sortHappeningNowCards(result);
+            const result1 = tmp(16846).sortHappeningNowCards(result);
             class N {
               constructor() {
                 if (!closure_1) {
@@ -484,7 +484,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
             cResult[14] = length;
             cResult[15] = result1;
-            const tmpResult = tmp(16808);
+            const tmpResult = tmp(16846);
           } else {
             class A {
               constructor(arg0) {
@@ -493,8 +493,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          const tmp8Result = tmp8(tmp7(16809)(num9, D), 2);
-          const happeningNowScrollSnapping = tmp(16809).useHappeningNowScrollSnapping(listRef);
+          const tmp8Result = tmp8(tmp7(16847)(num9, D), 2);
+          const happeningNowScrollSnapping = tmp(16847).useHappeningNowScrollSnapping(listRef);
           if (cResult[16] !== tmp10) {
             class Y {
               constructor(arg0) {
@@ -527,8 +527,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          const tmpResult3 = tmp(16809);
-          sharedValue = tmp(4850).useSharedValue([]);
+          const tmpResult3 = tmp(16847);
+          sharedValue = tmp(4852).useSharedValue([]);
           if (cResult[18] !== sharedValue) {
             class X {
               constructor(arg0) {
@@ -738,7 +738,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj7.onViewableItemsChanged = tmp33;
             obj7.keyExtractor = keyExtractor;
             obj7.getItemType = getItemType;
-            const tmp41 = jsx(tmp(8625).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: first, maintainVisibleContentPosition, snapToInterval: tmp25, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
+            const tmp41 = jsx(tmp(6818).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: first, maintainVisibleContentPosition, snapToInterval: tmp25, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
             cResult[31] = tmp33;
             cResult[32] = first;
             cResult[33] = tmp26;
@@ -749,7 +749,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             cResult[38] = tmp4.containerInner;
             cResult[39] = tmp41;
           }
-          const tmpResult4 = tmp(4850);
+          const tmpResult4 = tmp(4852);
         }
         class D {
           constructor(arg0, arg1) {
@@ -812,7 +812,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let callback2;
   const tmp = closure_15();
   const isFocused = listRef(children[17]).useIsFocused();
-  const obj2 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: "THREEDS_UNSUPPORTED_VERSION", isFocused };
+  const obj2 = { withoutUserCards: "IconComponent", guildId: "Array", showMultipleActivitiesPerChannel: 15, isFocused };
   const tmp7 = ref(isFocused(children[18])(listRef.cards, obj2), 2);
   children = tmp7[0];
   const loading = tmp8;
@@ -841,7 +841,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const callback = obj3.useCallback((arg0, arg1) => {
     const sum = arg1 + arg0;
     if (sum < num) {
-      let sum1 = sum / options | 0;
+      let sum1 = sum / React6 | 0;
     } else {
       sum1 = c5 + ((sum - tmp2) / collapsed | 0);
     }

@@ -22,7 +22,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildProgressConstants = fn(12717);
+const GuildProgressConstants = fn(12753);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1085);
 ({
@@ -33,7 +33,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -280,14 +280,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj3;
               } else {
                 let base64;
-                tmp5(8638).init(View);
-                const obj6 = tmp5(8638);
-                tmp2(12722).hideActionSheet(id.id);
-                const obj7 = tmp2(12722);
+                tmp5(8643).init(View);
+                const obj6 = tmp5(8643);
+                tmp2(12758).hideActionSheet(id.id);
+                const obj7 = tmp2(12758);
                 const obj4 = { size };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj5 = { value: tmp5(7769).openImagePicker(obj4), done: false };
+                const obj5 = { value: tmp5(7775).openImagePicker(obj4), done: false };
                 return obj5;
               }
             } else if (arg0 === 1) {
@@ -300,8 +300,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               base64 = value.base64;
               if (null != base64) {
-                tmp5(8638).updateIcon(closure_129_5, base64);
-                const obj = tmp5(8638);
+                tmp5(8643).updateIcon(closure_129_5, base64);
+                const obj = tmp5(8643);
               }
               c3 = 3;
               return { value: "IconComponent", done: null };

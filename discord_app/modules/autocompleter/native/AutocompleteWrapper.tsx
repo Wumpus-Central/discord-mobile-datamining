@@ -47,10 +47,10 @@ const Constants = fn(1085);
   AnalyticEvents: map1,
   UpsellTypes: closure_14,
 } = Constants);
-const BOOLEAN_CHOICES = fn(5403).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(9717);
+const BOOLEAN_CHOICES = fn(5408).BOOLEAN_CHOICES;
+const ApplicationCommandsConstants = fn(9727);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_16, AUTOCOMPLETE_ROW_HEIGHT: closure_17 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5404);
+const ChannelAutocompleteConstants = fn(5409);
 ({
   MENTION_SENTINEL: closure_18,
   CHANNEL_SENTINEL: closure_19,
@@ -59,7 +59,7 @@ const ChannelAutocompleteConstants = fn(5404);
   GAME_MENTION_INPUT_PREFIX: closure_22,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_23,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(9801).AutocompleteTypes;
+const AutocompleteTypes = fn(9811).AutocompleteTypes;
 const EmojiInteractionPoint = fn(1393).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_26, Fragment: closure_27, jsxs: closure_28 } = jsxProd);
@@ -67,8 +67,8 @@ let c29 = "text-sm/semibold";
 const hairlineWidth = StyleSheet.hairlineWidth;
 let c31 = 200;
 let closure_32 = { allowSpaces: true, maxQueryLength: 64 };
-let obj = { allowSpaces: true, maxQueryLength: fn(8237).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
-const createStyles = fn(5092);
+let obj = { allowSpaces: true, maxQueryLength: fn(8244).GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH };
+const createStyles = fn(5096);
 let closure_34 = createStyles.createStyles(
   (borderRadius, borderWidth, borderTopWidth, marginHorizontal, marginBottom) => {
     obj = {
@@ -76,6 +76,7 @@ let closure_34 = createStyles.createStyles(
       autocompleteWrapper: null,
       autocompleteContainer: null,
       autocomplete: null,
+      applicationCommands: null,
       sectionDivider: null,
       sectionTitle: null,
       stickersAutocompleteList: null,
@@ -107,6 +108,7 @@ let closure_34 = createStyles.createStyles(
       flexShrink: 1,
       backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
     };
+    obj.applicationCommands = { flexGrow: 1 };
     const obj4 = {
       flexGrow: 0,
       flexShrink: 1,
@@ -908,9 +910,9 @@ class ACWrapper {
       () =>
         autocompleteType === AutocompleteTypes.GAME_MENTIONS
           ? () => {
-              const gameSearchSession = analyticsLocations(8709).getGameSearchSession(
-                analyticsLocations(9117).GameSearchSurface.CHAT_MENTION,
-                analyticsLocations(8710).GameSearchFilterGroup.DEFAULT,
+              const gameSearchSession = analyticsLocations(8713).getGameSearchSession(
+                analyticsLocations(9122).GameSearchSurface.CHAT_MENTION,
+                analyticsLocations(8714).GameSearchFilterGroup.DEFAULT,
               );
               return gameSearchSession.end();
             }
@@ -1450,7 +1452,6 @@ class ACWrapper {
           onPressCommandItem: null,
           style: null,
           ItemSeparatorComponent: null,
-          getItemLayout: null,
           onCommandsChange: null,
         };
         obj40.channel = channel;
@@ -1483,9 +1484,13 @@ class ACWrapper {
             query,
           };
         };
-        obj40.style = items23;
+        items27 = [];
+        tmp76 = items27;
+        tmp77 = items23;
+        num4 = 0;
+        items27[HermesBuiltin.arraySpread(items23, 0)] = tmp56Result.applicationCommands;
+        obj40.style = items27;
         obj40.ItemSeparatorComponent = tmp(tmp2[36]).getItemSeparator;
-        obj40.getItemLayout = tmp(tmp2[36]).getItemLayout;
         obj40.onCommandsChange = function onCommandsChange(commands) {
           let num = 0;
           if (0 !== commands) {
@@ -1504,12 +1509,12 @@ class ACWrapper {
         if (hasStickerResults) {
           obj41 = { children: null };
           obj42 = { style: null, children: null };
-          items27 = [,];
-          items27[0] = tmp56Result.sectionTitle;
+          items28 = [,];
+          items28[0] = tmp56Result.sectionTitle;
           obj43 = { height: null };
           obj43.height = scaledTextLineHeight;
-          items27[1] = obj43;
-          obj42.style = items27;
+          items28[1] = obj43;
+          obj42.style = items28;
           obj44 = { variant: null, children: null };
           obj44.variant = tmp6;
           intl = tmp(tmp2[59]).intl;
@@ -1517,9 +1522,9 @@ class ACWrapper {
           obj45.prefix = query;
           obj44.children = intl.format(tmp(tmp2[59]).t.uferGG, obj45);
           obj42.children = tmp69(tmp(tmp2[58]).Text, obj44);
-          items28 = [,];
-          items28[0] = tmp69(tmp68, obj42);
-          tmp78 = chatInputRef;
+          items29 = [,];
+          items29[0] = tmp69(tmp68, obj42);
+          tmp80 = chatInputRef;
           obj46 = {
             horizontal: true,
             style: null,
@@ -1531,10 +1536,10 @@ class ACWrapper {
             contentInset: null,
           };
           obj47 = {};
-          tmp79 = obj47;
-          tmp80 = items23;
+          tmp81 = obj47;
+          tmp82 = items23;
           merged = Object.assign(items23);
-          tmp82 = obj47;
+          tmp84 = obj47;
           merged1 = Object.assign(tmp56Result.stickersAutocompleteList);
           obj46.style = obj47;
           obj46.keyExtractor = function keyExtractor(sticker) {
@@ -1542,15 +1547,15 @@ class ACWrapper {
           };
           obj46.data = stickerResults;
           obj46.renderItem = callback5;
-          tmp84 = autocompleteType;
+          tmp86 = autocompleteType;
           obj46.getItemLayout = autocompleteType;
           obj46.contentInset = { right: 12 };
-          items28[1] = tmp69(chatInputRef, obj46);
-          obj41.children = items28;
+          items29[1] = tmp69(chatInputRef, obj46);
+          obj41.children = items29;
           tmp67Result = tmp67(tmp71, obj41);
         }
-        items29 = [, ,];
-        items29[0] = tmp67Result;
+        items30 = [, ,];
+        items30[0] = tmp67Result;
         if (hasStickerResults) {
           hasStickerResults = hasNonStickerResults;
         }
@@ -1559,21 +1564,21 @@ class ACWrapper {
           obj48.style = tmp56Result.sectionDivider;
           hasStickerResults = tmp69(tmp4(tmp2[60]), obj48);
         }
-        items29[1] = hasStickerResults;
+        items30[1] = hasStickerResults;
         if (hasNonStickerResults) {
           obj49 = { style: null, children: null };
-          items30 = [,];
-          items30[0] = tmp56Result.sectionTitle;
+          items31 = [,];
+          items31[0] = tmp56Result.sectionTitle;
           obj50 = { height: null };
           obj50.height = scaledTextLineHeight;
-          items30[1] = obj50;
-          obj49.style = items30;
+          items31[1] = obj50;
+          obj49.style = items31;
           obj51 = { variant: null, children: null };
           obj51.variant = tmp6;
           intl2 = tmp(tmp2[59]).intl;
           obj52 = { prefix: null };
-          tmp85 = closure_20;
-          tmp86 = globalThis;
+          tmp87 = closure_20;
+          tmp88 = globalThis;
           _HermesInternal = HermesInternal;
           str2 = "";
           obj52.prefix = "" + closure_20 + query;
@@ -1582,8 +1587,8 @@ class ACWrapper {
           hasNonStickerResults = tmp69(tmp68, obj49);
         }
         obj53 = { children: null };
-        items29[2] = hasNonStickerResults;
-        obj53.children = items29;
+        items30[2] = hasNonStickerResults;
+        obj53.children = items30;
         tmp67Result1 = tmp67(tmp71, obj53);
       }
       items26[2] = tmp67Result1;
@@ -1608,7 +1613,7 @@ class ACWrapper {
       }
       obj56 = { children: null };
       items26[4] = tmp69Result3;
-      tmp89 = chatInputRef;
+      tmp91 = chatInputRef;
       obj57 = {
         style: null,
         keyExtractor: null,
@@ -1634,8 +1639,8 @@ class ACWrapper {
       tmp67Result2 = tmp67(tmp71, obj56);
     }
     obj38.children = tmp67Result2;
-    items31 = [,];
-    items31[0] = tmp69(tmp4(tmp2[54]).View, obj38);
+    items32 = [,];
+    items32[0] = tmp69(tmp4(tmp2[54]).View, obj38);
     tmp69Result4 = null != activeCommand && !commandsDisabled;
     if (tmp69Result4) {
       obj58 = { style: null, children: null };
@@ -1657,8 +1662,8 @@ class ACWrapper {
       obj58.children = tmp69(tmp4(tmp2[62]), obj59);
       tmp69Result4 = tmp69(tmp68, obj58);
     }
-    items31[1] = tmp69Result4;
-    obj1.children = items31;
+    items32[1] = tmp69Result4;
+    obj1.children = items32;
     obj60 = { style: tmp56Result.autocompletePositionRelative, children: tmp67(tmp68, obj1) };
     return tmp69(tmp68, obj60);
   }

@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_6 = createStyles.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
 let context = noop.createContext({ isForm: false });
 const ReactCompilerGating = fn(558);

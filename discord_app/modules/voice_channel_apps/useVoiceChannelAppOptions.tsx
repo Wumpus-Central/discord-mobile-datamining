@@ -237,12 +237,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
                   loadFailed: "error" === stateFromStores || tmp35,
                   fetchPhase: str,
                 };
-                const result = tmp(17582).voiceChannelAppListState(obj3);
+                const result = tmp(17616).voiceChannelAppListState(obj3);
                 cResult[31] = str;
                 cResult[32] = "error" === stateFromStores || tmp35;
                 cResult[33] = arr8.length > 0;
                 cResult[34] = result;
-                const tmpResult6 = tmp(17582);
+                const tmpResult6 = tmp(17616);
               }
               closure_130_0 = tmp21;
               let found = arr5.filter((item, index) =>
@@ -533,7 +533,7 @@ export const useVoiceChannelAppSettingOptions = ReactCompilerGating.isReactCompi
   : function useVoiceChannelAppSettingOptions(arg0, arg1) {
       _require = arg1;
       const tmp = closure_7(arg0);
-      options = tmp.options;
+      const options = tmp.options;
       const listState = tmp.listState;
       let tmp2 = null;
       if (null != arg1) {

@@ -214,6 +214,7 @@ import DesignSystemBackdropSettingDefault from "../../defs/native/DesignSystemBa
 import DesignSystemsModalSettingDefault from "../../defs/native/DesignSystemsModalSetting.tsx";
 import DesignSystemPileSettingDefault from "../../defs/native/DesignSystemPileSetting.tsx";
 import DesignSystemTagGroupSettingDefault from "../../defs/native/DesignSystemTagGroupSetting.tsx";
+import DesignSystemBadgeSettingDefault from "../../defs/native/DesignSystemBadgeSetting.tsx";
 import DesignSystemSheetsSettingDefault from "../../defs/native/DesignSystemSheetsSetting.tsx";
 import DesignSystemFormPrimitivesSettingDefault from "../../defs/native/DesignSystemFormPrimitivesSetting.tsx";
 import DesignSystemHapticsSettingDefault from "../../defs/native/DesignSystemHapticsSetting.tsx";
@@ -505,6 +506,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   DESIGN_SYSTEMS_MODAL,
   DESIGN_SYSTEM_PILE,
   DESIGN_SYSTEM_TAG_GROUP,
+  DESIGN_SYSTEM_BADGE,
   DESIGN_SYSTEM_SHEETS,
   DESIGN_SYSTEM_FORM_PRIMITIVES,
   DESIGN_SYSTEM_HAPTICS,
@@ -519,7 +521,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   USE_DATA_FOR_QUESTS,
   USE_DATA_FOR_QUESTS_3P,
   PINOT_MEMBER_SETTING,
-  PINOT_MEMBER_SETTING_SAVE,
   USE_DATA_FOR_QUESTS_SPONSORED_CONTENT,
   USE_DATA_FOR_QUESTS_3P_SPONSORED_CONTENT,
   SPONSORED_CONTENT_PREFERENCES,
@@ -548,7 +549,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS,
   PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS,
   PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS,
-  PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -776,6 +776,7 @@ const frozen = Object.freeze({
   [DESIGN_SYSTEMS_MODAL]: DesignSystemsModalSettingDefault,
   [DESIGN_SYSTEM_PILE]: DesignSystemPileSettingDefault,
   [DESIGN_SYSTEM_TAG_GROUP]: DesignSystemTagGroupSettingDefault,
+  [DESIGN_SYSTEM_BADGE]: DesignSystemBadgeSettingDefault,
   [DESIGN_SYSTEM_SHEETS]: DesignSystemSheetsSettingDefault,
   [DESIGN_SYSTEM_FORM_PRIMITIVES]: DesignSystemFormPrimitivesSettingDefault,
   [DESIGN_SYSTEM_HAPTICS]: DesignSystemHapticsSettingDefault,
@@ -790,7 +791,6 @@ const frozen = Object.freeze({
   [USE_DATA_FOR_QUESTS]: UseDataForQuestsSettingDefault,
   [USE_DATA_FOR_QUESTS_3P]: UseDataForQuests3PSettingDefault,
   [PINOT_MEMBER_SETTING]: PinotSettingsLazy.PinotMemberSetting,
-  [PINOT_MEMBER_SETTING_SAVE]: PinotSettingsLazy.PinotMemberSettingSave,
   [USE_DATA_FOR_QUESTS_SPONSORED_CONTENT]: UseDataForQuestsSetting.UseDataForQuestsSponsoredContentSetting,
   [USE_DATA_FOR_QUESTS_3P_SPONSORED_CONTENT]: UseDataForQuests3PSetting.UseDataForQuests3PSponsoredContentSetting,
   [SPONSORED_CONTENT_PREFERENCES]: SponsoredContentPreferencesSettingDefault,
@@ -819,7 +819,7 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]: ParentalControlsFriendRequestsMutualFriendsSettingDefault,
   [PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS]: ParentalControlsFriendRequestsMutualGuildsSettingDefault,
   [PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS]: ParentalControlsExplicitMediaFiltersFriendsDMsSettingDefault,
-  [PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS]:
+  [MobileUserSettings.PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS]:
     ParentalControlsExplicitMediaFiltersNonFriendsDMsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS]:
     ParentalControlsGoreMediaFiltersFriendsDMsSettingDefault,

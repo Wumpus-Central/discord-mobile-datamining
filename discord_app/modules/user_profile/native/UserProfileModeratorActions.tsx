@@ -25,12 +25,12 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4748).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4750).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
-let GuildMemberFlags = fn(4736).GuildMemberFlags;
+let GuildMemberFlags = fn(4738).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { cardContainer: { paddingBottom: 0 }, refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_16 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -204,8 +204,14 @@ export default function UserProfileModeratorActions(user) {
   let obj6 = user(showUserProfile[19]);
   const canRemoveThreadMember = user(showUserProfile[20]).useCanRemoveThreadMember(channelId);
   const obj7 = user(showUserProfile[20]);
+  let tmp13 = null;
+  if (canRemoveThreadMember) {
+    tmp13 = channelId;
+  }
+  const isThreadMember = user(showUserProfile[20]).useIsThreadMember(tmp13, user.id);
+  const obj8 = user(showUserProfile[20]);
   const items4 = [closure_10];
-  const stateFromStoresObject = user(showUserProfile[19]).useStateFromStoresObject(items4, () => {
+  const stateFromStoresObject = tmp2(tmp3[19]).useStateFromStoresObject(items4, () => {
     const obj = {
       canKickUser: GuildMemberUtils.canKickMember(user, stateFromStores),
       canBanUser: null,
@@ -264,8 +270,8 @@ export default function UserProfileModeratorActions(user) {
     canMuteMembers,
     canDeafenMembers,
   } = stateFromStoresObject);
-  const obj8 = user(showUserProfile[19]);
-  const tmp13 = closure_10;
+  const tmp15 = closure_10;
+  const tmp2Result = tmp2(tmp3[19]);
   if (canModerateMembers) {
     canModerateMembers = canKickUser;
   }
@@ -278,29 +284,29 @@ export default function UserProfileModeratorActions(user) {
   if (!canModerateMembers) {
     canModerateMembers = canManageUserRoles;
   }
-  const tmp15 = guildId(showUserProfile[23])(guildId, user.id);
+  const tmp17 = guildId(tmp3[23])(guildId, user.id);
   let id;
-  const tmp16 = guildId(tmp3[24])(voiceChannel);
+  const tmp18 = guildId(tmp3[24])(voiceChannel);
   if (voiceChannel != null) {
     id = voiceChannel.id;
   }
   const tmp4ResultResult = guildId(tmp3[25])(user.id, id);
-  let tmp20 = null != voiceChannel;
-  if (tmp20) {
+  let tmp22 = null != voiceChannel;
+  if (tmp22) {
     let channelId1;
     if (voiceState != null) {
       channelId1 = voiceState.channelId;
     }
-    tmp20 = null != channelId1;
+    tmp22 = null != channelId1;
   }
-  const tmp22 = null != voiceChannel && voiceChannel.isGuildStageVoice();
-  let tmp23 = null != voiceChannel;
-  if (tmp23) {
-    let tmp24 = !tmp22;
-    if (tmp22) {
-      tmp24 = tmp4ResultResult === tmp2(tmp3[25]).RequestToSpeakStates.ON_STAGE;
+  const tmp24 = null != voiceChannel && voiceChannel.isGuildStageVoice();
+  let tmp25 = null != voiceChannel;
+  if (tmp25) {
+    let tmp26 = !tmp24;
+    if (tmp24) {
+      tmp26 = tmp4ResultResult === tmp2(tmp3[25]).RequestToSpeakStates.ON_STAGE;
     }
-    tmp23 = tmp24;
+    tmp25 = tmp26;
   }
   const tmp4Result = guildId(tmp3[25]);
   const items5 = [trackUserProfileAction];
@@ -311,8 +317,8 @@ export default function UserProfileModeratorActions(user) {
     }
     return StageChannelRoleStore.getPermissionsForUser(user.id, id).speaker;
   });
-  const tmp2Result = tmp2(tmp3[19]);
-  const items6 = [voiceState, stateFromStores3, tmp6, tmp13];
+  const tmp2Result5 = tmp2(tmp3[19]);
+  const items6 = [voiceState, stateFromStores3, tmp6, tmp15];
   channels = tmp2(tmp3[19]).useStateFromStoresArray(items6, () => {
     if (canMoveMembers) {
       if (null != voiceChannel) {
@@ -358,24 +364,24 @@ export default function UserProfileModeratorActions(user) {
   if (null == stateFromStores) {
     return null;
   } else {
-    let tmp26 = tmp22;
-    if (tmp22) {
-      tmp26 = canModerateStage;
+    let tmp28 = tmp24;
+    if (tmp24) {
+      tmp28 = canModerateStage;
     }
-    if (tmp26) {
-      tmp26 = stateFromStores4;
+    if (tmp28) {
+      tmp28 = stateFromStores4;
     }
     const items7 = [];
-    if (!tmp26) {
-      if (tmp22) {
+    if (!tmp28) {
+      if (tmp24) {
         if (canModerateStage) {
           if (!stateFromStores4) {
-            const tmp31 =
+            const tmp33 =
               tmp4ResultResult === tmp2(tmp3[25]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
             const intl3 = tmp2(tmp3[28]).intl;
             const string = intl3.string;
             const t = tmp2(tmp3[28]).t;
-            if (tmp31) {
+            if (tmp33) {
               let stringResult = string(t.tHj7Tb);
             } else {
               stringResult = string(t.VUCWcO);
@@ -386,7 +392,7 @@ export default function UserProfileModeratorActions(user) {
               stringResult = intl4.string(tmp2(tmp3[28]).t["8Joh+p"]);
             }
             obj9.label = stringResult;
-            obj9.disabled = tmp31;
+            obj9.disabled = tmp33;
             obj9.onPress = function onPress() {
               trackUserProfileAction({ action: "PRESS_INVITE_TO_SPEAK" });
               const obj = StageChannelActionCreators;
@@ -409,16 +415,16 @@ export default function UserProfileModeratorActions(user) {
           }
         }
       }
-      let tmp36 = tmp20;
-      if (tmp20) {
-        tmp36 = canMoveMembers;
+      let tmp38 = tmp22;
+      if (tmp22) {
+        tmp38 = canMoveMembers;
       }
-      if (tmp36) {
+      if (tmp38) {
         const obj10 = { label: null, hint: null, sublabel: null, icon: null, onPress: null };
         const intl5 = tmp2(tmp3[28]).intl;
         obj10.label = intl5.string(tmp2(tmp3[28]).t.FAplms);
         obj10.hint = tmp2(tmp3[32]).FormArrow;
-        obj10.sublabel = tmp16;
+        obj10.sublabel = tmp18;
         obj10.icon = tmp2(tmp3[33]).VoiceNormalIcon;
         obj10.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MOVE_TO_CHANNEL" });
@@ -432,30 +438,30 @@ export default function UserProfileModeratorActions(user) {
           obj2.onSelect = function onSelect(id) {
             return guildId(showUserProfile[36]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11333, dependencyMap.paths), "ChannelPicker", obj2, "stack");
+          obj.openLazy(asyncRequireImpl(11345, dependencyMap.paths), "ChannelPicker", obj2, "stack");
         };
         items7.push(
           <closure_17 key="move-to-channel" label={null} hint={null} sublabel={null} icon={null} onPress={null} />,
         );
       }
-      let tmp40 = null != stateFromStores1;
-      if (tmp40) {
-        let tmp41 = canKickUser;
+      let tmp42 = null != stateFromStores1;
+      if (tmp42) {
+        let tmp43 = canKickUser;
         if (!canKickUser) {
-          tmp41 = canBanUser;
+          tmp43 = canBanUser;
         }
-        if (!tmp41) {
-          tmp41 = canChangeNick;
+        if (!tmp43) {
+          tmp43 = canChangeNick;
         }
-        if (!tmp41) {
-          tmp41 = canManageGuildRoles;
+        if (!tmp43) {
+          tmp43 = canManageGuildRoles;
         }
-        tmp40 = tmp41;
+        tmp42 = tmp43;
       }
-      if (tmp40) {
-        tmp40 = !user.isNonUserBot();
+      if (tmp42) {
+        tmp42 = !user.isNonUserBot();
       }
-      if (tmp40) {
+      if (tmp42) {
         const obj11 = { label: null, icon: null, onPress: null };
         const intl6 = tmp2(tmp3[28]).intl;
         obj11.label = intl6.string(tmp2(tmp3[28]).t.HxrBOZ);
@@ -463,7 +469,7 @@ export default function UserProfileModeratorActions(user) {
         obj11.onPress = function onPress() {
           trackUserProfileAction({ action: "PRESS_MANAGE_USER" });
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12187, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12223, dependencyMap.paths), {
             userId: user.id,
             guildId: stateFromStores.id,
             onClose() {
@@ -471,7 +477,7 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              guildId(5934).pop();
+              guildId(5939).pop();
             },
           });
         };
@@ -488,9 +494,9 @@ export default function UserProfileModeratorActions(user) {
           num = 0;
         }
         hasFlagResult = tmp2(tmp3[40]).hasFlag(num, GuildMemberFlags.BYPASSES_VERIFICATION);
-        const tmp2Result5 = tmp2(tmp3[40]);
+        const tmp2Result7 = tmp2(tmp3[40]);
       }
-      if (tmp50) {
+      if (tmp52) {
         const obj12 = { label: null, icon: null, onPress: null };
         const intl7 = tmp2(tmp3[28]).intl;
         obj12.label = intl7.string(tmp2(tmp3[28]).t.NbhSI7);
@@ -510,7 +516,7 @@ export default function UserProfileModeratorActions(user) {
         };
         items7.push(<closure_17 key="unverify" label={null} icon={null} onPress={null} />);
       }
-      if (tmp54) {
+      if (tmp56) {
         const obj13 = { label: null, icon: null, onPress: null };
         const intl8 = tmp2(tmp3[28]).intl;
         obj13.label = intl8.string(tmp2(tmp3[28]).t["6QlTeK"]);
@@ -531,7 +537,7 @@ export default function UserProfileModeratorActions(user) {
         items7.push(<closure_17 key="verify" label={null} icon={null} onPress={null} />);
       }
       if (null != stateFromStores1) {
-        if (tmp15) {
+        if (tmp17) {
           let result = tmp2(tmp3[42]).isMemberCommunicationDisabled(stateFromStores1);
           GuildMemberFlags = result;
           const intl9 = tmp2(tmp3[28]).intl;
@@ -593,30 +599,30 @@ export default function UserProfileModeratorActions(user) {
               }}
             />,
           );
-          const tmp2Result6 = tmp2(tmp3[42]);
+          const tmp2Result8 = tmp2(tmp3[42]);
         }
       }
-      let tmp63 = tmp20;
-      if (tmp20) {
-        tmp63 = tmp23;
+      let tmp65 = tmp22;
+      if (tmp22) {
+        tmp65 = tmp25;
       }
-      if (tmp63) {
-        tmp63 = canMuteMembers;
+      if (tmp65) {
+        tmp65 = canMuteMembers;
       }
-      if (!tmp63) {
-        let tmp68 = tmp20;
-        if (tmp20) {
-          tmp68 = tmp23;
+      if (!tmp65) {
+        let tmp70 = tmp22;
+        if (tmp22) {
+          tmp70 = tmp25;
         }
-        if (tmp68) {
-          tmp68 = canDeafenMembers;
+        if (tmp70) {
+          tmp70 = canDeafenMembers;
         }
-        if (!tmp68) {
-          if (tmp20) {
-            tmp20 = canMoveMembers;
+        if (!tmp70) {
+          if (tmp22) {
+            tmp22 = canMoveMembers;
           }
-          if (!tmp20) {
-            if (tmp77) {
+          if (!tmp22) {
+            if (tmp79) {
               const obj14 = { label: null, icon: null, isDestructive: true, onPress: null };
               const intl14 = tmp2(tmp3[28]).intl;
               obj14.label = intl14.string(tmp2(tmp3[28]).t["3glT6Z"]);
@@ -651,39 +657,22 @@ export default function UserProfileModeratorActions(user) {
               if (canRemoveThreadMember) {
                 if (!tmp9) {
                   if (null != channelId) {
-                    let intl16 = tmp2(tmp3[28]).intl;
-                    let string1 = intl16.string;
-                    let push = tmp2(tmp3[28]).t;
-                    if (stateFromStores3) {
-                      let string1Result = string1(push["6+b8ae"]);
-                    } else {
-                      string1Result = string1(push.at1yY3);
-                    }
-                    push = items7.push;
-                    intl16 = closure_17;
-                    string1 = {
-                      isDestructive: true,
-                      label: string1Result,
-                      icon: tmp2(tmp3[54]).ThreadMinusIcon,
-                      onPress() {
-                        UserProfileAlertUtils.confirmThreadRemove({
-                          isForumPost: stateFromStores3,
-                          user,
-                          onConfirm() {
-                            trackUserProfileAction({ action: "PRESS_REMOVE_FROM_THREAD" });
-                            guildId(showUserProfile[56]).removeMember(channelId, id.id, "Context Menu");
-                            hideActionSheet();
-                          },
-                        });
-                      },
-                    };
-                    push(
-                      <closure_17
-                        key="remove-from-thread"
-                        isDestructive
-                        label={string1Result}
-                        icon={tmp2(tmp3[54]).ThreadMinusIcon}
-                        onPress={function onPress() {
+                    if (isThreadMember) {
+                      let intl16 = tmp2(tmp3[28]).intl;
+                      let string1 = intl16.string;
+                      let push = tmp2(tmp3[28]).t;
+                      if (stateFromStores3) {
+                        let string1Result = string1(push["6+b8ae"]);
+                      } else {
+                        string1Result = string1(push.at1yY3);
+                      }
+                      push = items7.push;
+                      intl16 = closure_17;
+                      string1 = {
+                        isDestructive: true,
+                        label: string1Result,
+                        icon: tmp2(tmp3[54]).ThreadMinusIcon,
+                        onPress() {
                           UserProfileAlertUtils.confirmThreadRemove({
                             isForumPost: stateFromStores3,
                             user,
@@ -693,14 +682,33 @@ export default function UserProfileModeratorActions(user) {
                               hideActionSheet();
                             },
                           });
-                        }}
-                      />,
-                    );
+                        },
+                      };
+                      push(
+                        <closure_17
+                          key="remove-from-thread"
+                          isDestructive
+                          label={string1Result}
+                          icon={tmp2(tmp3[54]).ThreadMinusIcon}
+                          onPress={function onPress() {
+                            UserProfileAlertUtils.confirmThreadRemove({
+                              isForumPost: stateFromStores3,
+                              user,
+                              onConfirm() {
+                                trackUserProfileAction({ action: "PRESS_REMOVE_FROM_THREAD" });
+                                guildId(showUserProfile[56]).removeMember(channelId, id.id, "Context Menu");
+                                hideActionSheet();
+                              },
+                            });
+                          }}
+                        />,
+                      );
+                    }
                   }
                 }
               }
             }
-            let tmp87 = null;
+            let tmp89 = null;
             if (0 !== items7.length) {
               const obj16 = { title: null, style: null, titleStyle: null, children: null };
               const intl17 = tmp2(tmp3[28]).intl;
@@ -710,10 +718,10 @@ export default function UserProfileModeratorActions(user) {
               obj16.titleStyle = tmp.refreshCardTitle;
               const obj17 = { hasIcons: true, children: items7 };
               obj16.children = jsx(tmp2(tmp3[58]).TableRowGroup, { hasIcons: true, children: items7 });
-              tmp87 = jsx(guildId(tmp3[57]), { title: null, style: null, titleStyle: null, children: null });
+              tmp89 = jsx(guildId(tmp3[57]), { title: null, style: null, titleStyle: null, children: null });
               const tmp4Result2 = guildId(tmp3[57]);
             }
-            return tmp87;
+            return tmp89;
           } else {
             if (user.id === currentUser.id) {
               const intl13 = tmp2(tmp3[28]).intl;
@@ -788,8 +796,8 @@ export default function UserProfileModeratorActions(user) {
         };
         items7.push(<closure_17 key="server-mute" label={string3Result} icon={null} onPress={null} />);
       }
-      tmp50 = null != stateFromStores1 && !tmp9 && canModerateMembers && hasItem && hasItem1 && hasFlagResult;
-      tmp54 = null != stateFromStores1 && !tmp9 && canModerateMembers && hasItem && hasItem1 && !hasFlagResult;
+      tmp52 = null != stateFromStores1 && !tmp9 && canModerateMembers && hasItem && hasItem1 && hasFlagResult;
+      tmp56 = null != stateFromStores1 && !tmp9 && canModerateMembers && hasItem && hasItem1 && !hasFlagResult;
     } else {
       if (user.id === currentUser.id) {
         const intl2 = tmp2(tmp3[28]).intl;
@@ -821,5 +829,5 @@ export default function UserProfileModeratorActions(user) {
       );
     }
   }
-  const tmp2Result4 = tmp2(tmp3[19]);
+  const tmp2Result6 = tmp2(tmp3[19]);
 }

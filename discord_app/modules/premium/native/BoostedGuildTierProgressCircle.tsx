@@ -1,15 +1,15 @@
 // discord_app/modules/premium/native/BoostedGuildTierProgressCircle.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
 import useGuildPowerupsBoostCountDefault from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import ProgressCircleDefault from "components/ProgressCircle.tsx";
 import Tier048Px from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
-import _modDef14139 from "../../../../_runtime/metro/14139__.js";
-import _modDef14140 from "../../../../_runtime/metro/14140__.js";
-import _modDef14141 from "../../../../_runtime/metro/14141__.js";
+import _modDef14176 from "../../../../_runtime/metro/14176__.js";
+import _modDef14177 from "../../../../_runtime/metro/14177__.js";
+import _modDef14178 from "../../../../_runtime/metro/14178__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,7 +18,7 @@ const Constants = fn(1085);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4, BoostedGuildTiers: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   guildTierProgressCircle: { position: "relative", width: 70, height: 70 },
   guildTierBackground: null,
@@ -183,13 +183,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (guild.premiumTier !== constants.NONE) {
             const premiumTier = guild.premiumTier;
             if (constants.TIER_1 === premiumTier) {
-              let tier048PxSource1 = _modDef14139;
+              let tier048PxSource1 = _modDef14176;
             } else if (constants.TIER_2 !== premiumTier) {
               if (constants.TIER_3 === premiumTier) {
-                tier048PxSource1 = _modDef14141;
+                tier048PxSource1 = _modDef14178;
               }
             }
-            tier048PxSource1 = _modDef14140;
+            tier048PxSource1 = _modDef14177;
           }
           cResult[8] = guild;
           cResult[9] = theme;
@@ -234,11 +234,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (guild.premiumTier !== constants.NONE) {
             const premiumTier = guild.premiumTier;
             if (constants.TIER_1 === premiumTier) {
-              let tmp2Result4 = _modDef14139;
+              let tmp2Result4 = _modDef14176;
             } else if (constants.TIER_2 === premiumTier) {
-              tmp2Result4 = _modDef14140;
+              tmp2Result4 = _modDef14177;
             } else if (constants.TIER_3 === premiumTier) {
-              tmp2Result4 = _modDef14141;
+              tmp2Result4 = _modDef14178;
             }
           }
           const obj5 = {

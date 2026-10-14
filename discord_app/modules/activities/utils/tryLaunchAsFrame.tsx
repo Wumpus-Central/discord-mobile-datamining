@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
-import canLaunchContextlessFrame from "../../frames/utils/canLaunchContextlessFrame.tsx";
 import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
+import canLaunchContextlessFrame from "../../frames/utils/canLaunchContextlessFrame.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(10802).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10697).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

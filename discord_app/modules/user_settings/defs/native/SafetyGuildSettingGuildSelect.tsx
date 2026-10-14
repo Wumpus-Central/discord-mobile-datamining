@@ -9,14 +9,14 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16587);
+const UserSettingsSafetySelectedGuildStore = fn(16626);
 ({
   getSelectedGuildId: metroRequire,
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
   setSelectedGuildId: closure_8,
   useUserSafetySettingsSelectedGuildStore: closure_9,
 } = UserSettingsSafetySelectedGuildStore);
-const MobileUserSettings = fn(7993).MobileUserSettings;
+const MobileUserSettings = fn(8000).MobileUserSettings;
 let items = [,];
 ({ GUILD_SETTING_ACTIVITY_STATUS: arr[0], GUILD_SETTING_ACTIVITY_JOINING: arr[1] } = MobileUserSettings);
 fn(558);
@@ -70,12 +70,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       return closure_9().selectedGuildId;
     };
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDescription() {
       const cResult = c.c(2);
       const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
-      if (options().selectedGuildId === React5) {
+      if (React6().selectedGuildId === React5) {
         if (0 !== dMPermissionsOverrideCount) {
           if (cResult[0] !== dMPermissionsOverrideCount) {
             const intl = util.intl;
@@ -93,7 +93,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useDescription() {
       const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
-      if (options().selectedGuildId === React5) {
+      if (React6().selectedGuildId === React5) {
         if (0 !== dMPermissionsOverrideCount) {
           const intl = util.intl;
           const obj2 = { count: dMPermissionsOverrideCount };
@@ -108,7 +108,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
     ? function useDescription() {
         const cResult = c.c(2);
         const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
-        if (options().selectedGuildId === React5) {
+        if (React6().selectedGuildId === React5) {
           if (0 !== dMPermissionsOverrideCount) {
             if (cResult[0] !== dMPermissionsOverrideCount) {
               const intl = util.intl;
@@ -126,7 +126,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
       }
     : function useDescription() {
         const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
-        if (options().selectedGuildId === React5) {
+        if (React6().selectedGuildId === React5) {
           if (0 !== dMPermissionsOverrideCount) {
             const intl = util.intl;
             const obj2 = { count: dMPermissionsOverrideCount };
@@ -137,7 +137,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16588, dependencyMap.paths),
+      asyncRequireImpl(16627, dependencyMap.paths),
       "SettingsPrivacyAndSafetyGuildSelectActionSheet",
     );
   },

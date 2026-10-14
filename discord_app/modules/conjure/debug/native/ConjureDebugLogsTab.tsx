@@ -8,13 +8,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ConjureDebugLogStore from "../ConjureDebugLogStore.tsx";
 
 const util = Text(1126);
-const Text_Text = Text(5088);
-const Card = Text(6182);
-const Pressables = Text(6185);
-const ChevronSmallRightIcon2 = Text(6906);
-const ChevronSmallDownIcon = Text(10533);
-const ConjureDebugJson = Text(11979);
-const ConjureDebugFormat = Text(11980);
+const Text_Text = Text(5092);
+const Card = Text(6186);
+const Pressables = Text(6189);
+const ChevronSmallRightIcon2 = Text(6911);
+const ChevronSmallDownIcon = Text(10543);
+const ConjureDebugJson = Text(12015);
+const ConjureDebugFormat = Text(12016);
 require = fn;
 function keyOf(key) {
   return String(key.key);
@@ -22,7 +22,7 @@ function keyOf(key) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   list: { paddingHorizontal: nativeDefault.space.PX_16 },
   header: null,
@@ -218,7 +218,7 @@ let closure_11 = noop.memo(
                             const obj12 = { children: null };
                             items1[2] = tmp35Result;
                             obj12.children = items1;
-                            let tmp30Result = closure_1_8(options, obj12);
+                            let tmp30Result = closure_1_8(React6, obj12);
                           } else {
                             const obj13 = {
                               variant: "text-xs/normal",
@@ -317,10 +317,10 @@ let closure_11 = noop.memo(
           str = "text-feedback-critical";
         }
         if (expanded) {
-          let ChevronSmallRightIcon = tmp3(10533).ChevronSmallDownIcon;
+          let ChevronSmallRightIcon = tmp3(10543).ChevronSmallDownIcon;
           let tmp6 = tmp3;
         } else {
-          ChevronSmallRightIcon = tmp3(6906).ChevronSmallRightIcon;
+          ChevronSmallRightIcon = tmp3(6911).ChevronSmallRightIcon;
           tmp6 = tmp3;
         }
         const obj = { style: tmp.row, children: null };
@@ -328,9 +328,9 @@ let closure_11 = noop.memo(
         const obj3 = {
           variant: "text-xs/normal",
           color: "text-subtle",
-          children: tmp6(11980).formatClockTime(entry.ts),
+          children: tmp6(12016).formatClockTime(entry.ts),
         };
-        const items1 = [closure_7(tmp6(5088).Text, obj3), , ,];
+        const items1 = [closure_7(tmp6(5092).Text, obj3), , ,];
         const level = entry.level;
         let str2 = "text-feedback-critical";
         if ("error" !== level) {
@@ -340,7 +340,7 @@ let closure_11 = noop.memo(
           }
           str2 = str3;
         }
-        items1[1] = closure_7(tmp6(5088).Text, {
+        items1[1] = closure_7(tmp6(5092).Text, {
           variant: "text-xxs/semibold",
           color: str2,
           style: tmp.badge,
@@ -356,7 +356,7 @@ let closure_11 = noop.memo(
               style: tmp.badge,
               children: entry.source,
             };
-            tmp9Result = closure_7(tmp6(5088).Text, obj5);
+            tmp9Result = closure_7(tmp6(5092).Text, obj5);
           }
         }
         items1[2] = tmp9Result;
@@ -370,7 +370,7 @@ let closure_11 = noop.memo(
           };
           const intl = tmp6(1126).intl;
           obj6.children = intl.string(_modDef3849.TrC9c8);
-          tmp9Result4 = closure_7(tmp6(5088).Text, obj6);
+          tmp9Result4 = closure_7(tmp6(5092).Text, obj6);
         }
         items1[3] = tmp9Result4;
         obj2.children = items1;
@@ -379,7 +379,7 @@ let closure_11 = noop.memo(
           let tmp9Result5 = null;
           if ("" !== memo.prefix) {
             const obj7 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.prefix };
-            tmp9Result5 = closure_7(tmp6(5088).Text, obj7);
+            tmp9Result5 = closure_7(tmp6(5092).Text, obj7);
           }
           const items3 = [tmp9Result5, ,];
           const obj8 = {
@@ -410,15 +410,15 @@ let closure_11 = noop.memo(
           const obj12 = { count: memo.size };
           items5[2] = intl3.formatToPlainString(kUhyUv, obj12);
           obj11.children = items5;
-          items4[1] = closure_8(tmp6(5088).Text, obj11);
+          items4[1] = closure_8(tmp6(5092).Text, obj11);
           obj8.children = items4;
-          items3[1] = closure_8(tmp6(6185).PressableOpacity, obj8);
+          items3[1] = closure_8(tmp6(6189).PressableOpacity, obj8);
           let tmp9Result6 = null;
           if (expanded) {
             const obj13 = { variant: "primary", children: null };
             const obj14 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.pretty };
-            obj13.children = closure_7(tmp6(5088).Text, obj14);
-            tmp9Result6 = closure_7(tmp6(6182).Card, obj13);
+            obj13.children = closure_7(tmp6(5092).Text, obj14);
+            tmp9Result6 = closure_7(tmp6(6186).Card, obj13);
           }
           const obj15 = { children: null };
           items3[2] = tmp9Result6;
@@ -426,7 +426,7 @@ let closure_11 = noop.memo(
           let tmp9Result7 = closure_8(closure_9, obj15);
         } else {
           const obj16 = { variant: "text-xs/normal", color: str, selectable: true, children: entry.message };
-          tmp9Result7 = closure_7(tmp6(5088).Text, obj16);
+          tmp9Result7 = closure_7(tmp6(5092).Text, obj16);
         }
         items2[1] = tmp9Result7;
         obj.children = items2;
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_6.getHistoryState(projectId, "logs");
           }
         }
-        const DEBUG_LOG_FILTERS = tmp(11981).DEBUG_LOG_FILTERS;
+        const DEBUG_LOG_FILTERS = tmp(12017).DEBUG_LOG_FILTERS;
         tmp18[1] = DEBUG_LOG_FILTERS.map((id) => {
           const obj = { id, label: projectId(dependencyMap[20]).debugLogFilterLabel(id), page: null };
           return obj;
@@ -525,7 +525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp16 = _slicedToArray(noop.useState(""), 2);
-      const segmentedControlState = projectId(8530).useSegmentedControlState(tmp18);
+      const segmentedControlState = projectId(8537).useSegmentedControlState(tmp18);
       if (cResult[9] === first1) {
         class L {
           constructor() {
@@ -533,7 +533,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult4 = projectId(8530);
+      const tmpResult4 = projectId(8537);
       _slicedToArray = str.trim().toLowerCase();
       const found = stateFromStores.filter((log) => {
         let isRenderableLogResult = ConjureDebugLabels.isRenderableLog(log.log);

@@ -1,34 +1,33 @@
 // discord_app/modules/application_commands/native/ApplicationCommandsCategories.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import application_commands_ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
-const ApplicationCommandsCategoriesConstants = fn(12625);
-({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: closure_7 } = ApplicationCommandsCategoriesConstants);
+const View = fn(17).View;
+const ApplicationCommandsCategoriesConstants = fn(12661);
+({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: metroRequire } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" }, categoryImage: null, fadedItem: { opacity: 0.5 }, activeItem: null, item: null };
 let size = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
 obj.categoryImage = size;
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
 obj.activeItem = { opacity: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.item = { marginVertical: NODE_MARGIN, marginHorizontal: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
-let closure_9 = createStyles.createStyles(obj);
+let closure_8 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CategoryItem(section) {
-  const cResult = section(index[8]).c(27);
-  section = section.section;
+let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function CategoryItem(section) {
+  const cResult = name(index[8]).c(26);
+  name = section.section;
   handlePressCategory = section.handlePressCategory;
   ({ active, index } = section);
   const guildId = section.guildId;
-  const tmp4 = closure_9();
+  const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildMemberStore];
     cResult[0] = items;
@@ -37,27 +36,27 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     first = cResult[0];
   }
   if (cResult[1] === guildId) {
-    if (cResult[2] === section.botId) {
+    if (cResult[2] === name.botId) {
       let tmp7 = cResult[3];
     }
     const stateFromStores = tmp(index[9]).useStateFromStores(first, tmp7);
     if (cResult[4] === stateFromStores) {
-      if (cResult[5] === section) {
+      if (cResult[5] === name) {
         let tmp9 = cResult[6];
       }
       if (cResult[7] === tmp9) {
         if (cResult[10] === handlePressCategory) {
           if (cResult[13] === active) {
-            if (cResult[14] === section.name) {
-              const tmp21 = active ? tmp4.activeItem : tmp4.fadedItem;
+            if (cResult[14] === name.name) {
+              const tmp20 = active ? tmp4.activeItem : tmp4.fadedItem;
               class R {
                 constructor() {
                   return handlePressCategory(index);
                 }
               }
-              const items1 = [tmp4.item, tmp21];
+              const items1 = [tmp4.item, tmp20];
               cResult[16] = tmp4.item;
-              cResult[17] = tmp21;
+              cResult[17] = tmp20;
               cResult[18] = items1;
             }
           }
@@ -66,29 +65,28 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
               return handlePressCategory(index);
             }
           }
-          const formatToPlainString = tmp18.formatToPlainString;
-          let name = tmp(index[12]).t;
+          let t = tmp(index[12]).t;
           if (active) {
-            { applicationName: null }.applicationName = section.name;
+            t = { applicationName: null };
+            class R {
+              constructor() {
+                return handlePressCategory(index);
+              }
+            }
+            const formatToPlainStringResult = obj4.formatToPlainString(t.yl24Gd, t);
+          } else {
+            { applicationName: null }.applicationName = name.name;
             class R {
               constructor() {
                 return handlePressCategory(index);
               }
             }
             const obj2 = { applicationName: null };
-          } else {
-            { applicationName: null }.applicationName = section.name;
-            class R {
-              constructor() {
-                return handlePressCategory(index);
-              }
-            }
-            const obj3 = { applicationName: null };
           }
           cResult[13] = active;
-          name = section.name;
+          name = name.name;
           cResult[14] = name;
-          cResult[15] = tmp19;
+          cResult[15] = formatToPlainStringResult;
         }
         class R {
           constructor() {
@@ -115,33 +113,33 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       cResult[9] = tmp12;
     }
     const tmpResult = tmp(index[9]);
-    const applicationCommandsIconSource = tmp(index[10]).getApplicationCommandsIconSource(section, stateFromStores);
+    const applicationCommandsIconSource = tmp(index[10]).getApplicationCommandsIconSource(name, stateFromStores);
     cResult[4] = stateFromStores;
-    cResult[5] = section;
+    cResult[5] = name;
     cResult[6] = applicationCommandsIconSource;
     tmp9 = applicationCommandsIconSource;
     const tmpResult2 = tmp(index[10]);
   }
-  const fn = function l() {
+  const fn = function c() {
     if (null != guildId) {
       let botId;
-      if (section != null) {
-        botId = section.botId;
+      if (name != null) {
+        botId = name.botId;
       }
       if (null != botId) {
-        return GuildMemberStore.getMember(tmp, section.botId);
+        return GuildMemberStore.getMember(tmp, name.botId);
       }
     }
   };
   cResult[1] = guildId;
-  cResult[2] = section.botId;
+  cResult[2] = name.botId;
   cResult[3] = fn;
   tmp7 = fn;
-  const obj = section(index[8]);
+  const obj = name(index[8]);
 }) : (function CategoryItem(section) {
   section = section.section;
   ({ handlePressCategory: importDefault, active, index: dependencyMap, guildId: noop } = section);
-  const tmp = closure_9();
+  const tmp = closure_8();
   const items = [GuildMemberStore];
   const stateFromStores = section(504).useStateFromStores(items, () => {
     if (null != noop) {
@@ -182,14 +180,14 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   obj3.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj3.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(6185).PressableOpacity, {
+  return jsx(section(6189).PressableOpacity, {
     onPress() {
       return importDefault(dependencyMap);
     },
     accessibilityRole: "button",
     accessibilityLabel: null,
     children: null
-  }, section.name);
+  });
 }));
 ReactCompilerGating = fn(558);
 let obj4 = { opacity: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -201,18 +199,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   ({ style, sections, onPressSection } = selectedIndex);
   selectedIndex = selectedIndex.selectedIndex;
   guildId = selectedIndex.guildId;
-  closure_9();
+  closure_8();
   noop = noop.useRef(null);
   noop.useRef(null);
   noop.useRef(null);
   noop.useRef(null);
   if (cResult[0] !== selectedIndex) {
-    const fn = function c() {
+    const fn = function l() {
       if (null != ref.current) {
         if (null != ref2.current) {
           if (null != ref.current) {
             if (null != ref3.current) {
-              const result = selectedIndex * handlePressCategory;
+              const result = selectedIndex * timestampProducer;
               if (tmp8) {
                 const current = tmp3.current;
                 const obj = { offset: result };
@@ -236,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   }
   const effect = noop.useEffect(tmp4, tmp5);
   if (cResult[3] !== onPressSection) {
-    const fn2 = function u(arg0) {
+    const fn2 = function s(arg0) {
       onPressSection(arg0);
       const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
     };
@@ -248,16 +246,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   }
   handlePressCategory = tmp7;
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn3 = function x(nativeEvent) {
-      nativeEvent = nativeEvent.nativeEvent;
-      const contentOffset = nativeEvent.contentOffset;
-      closure_3.current = contentOffset.x;
-      closure_4.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
-    };
-    cResult[5] = fn3;
+    class P {
+      constructor(arg0) {
+        nativeEvent = selectedIndex.nativeEvent;
+        contentOffset = nativeEvent.contentOffset;
+        closure_3.current = contentOffset.x;
+        closure_4.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+        return;
+      }
+    }
+    cResult[5] = P;
+  } else {
+    class P {
+      constructor(arg0) {
+        nativeEvent = selectedIndex.nativeEvent;
+        contentOffset = nativeEvent.contentOffset;
+        closure_3.current = contentOffset.x;
+        closure_4.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+        return;
+      }
+    }
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    class M {
+    class A {
       constructor(arg0) {
         layout = selectedIndex.nativeEvent.layout;
         closure_3.current = 0;
@@ -266,9 +277,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
         return;
       }
     }
-    cResult[6] = M;
+    cResult[6] = A;
   } else {
-    class M {
+    class A {
       constructor(arg0) {
         layout = selectedIndex.nativeEvent.layout;
         closure_3.current = 0;
@@ -278,19 +289,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       }
     }
   }
-  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    class M {
-      constructor(arg0) {
-        layout = selectedIndex.nativeEvent.layout;
-        closure_3.current = 0;
-        closure_4.current = layout.width;
-        closure_5.current = layout.width;
-        return;
-      }
-    }
-    cResult[7] = tmp11;
-  } else {
-    class M {
+  if (cResult[7] === guildId) {
+    class A {
       constructor(arg0) {
         layout = selectedIndex.nativeEvent.layout;
         closure_3.current = 0;
@@ -300,28 +300,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       }
     }
   }
-  if (cResult[8] === guildId) {
-    class M {
-      constructor(arg0) {
-        layout = selectedIndex.nativeEvent.layout;
-        closure_3.current = 0;
-        closure_4.current = layout.width;
-        closure_5.current = layout.width;
-        return;
-      }
-    }
-  }
-  class N {
+  class M {
     constructor(arg0) {
       index = selectedIndex.index;
       obj = { active: index === selectedIndex, section: selectedIndex.item, index, handlePressCategory: closure_7, guildId };
-      return jsx(closure_10, obj);
+      return jsx(closure_9, obj);
     }
   }
-  cResult[8] = guildId;
-  cResult[9] = tmp7;
-  cResult[10] = selectedIndex;
-  cResult[11] = N;
+  cResult[7] = guildId;
+  cResult[8] = tmp7;
+  cResult[9] = selectedIndex;
+  cResult[10] = M;
   let obj = onPressSection(guildId[8]);
 }) : (function ApplicationCommandsCategories(onPressSection) {
   onPressSection = onPressSection.onPressSection;
@@ -331,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   ({ style, sections } = onPressSection);
   noop = noop.useRef(null);
   const ref2 = noop.useRef(null);
-  const ref3 = noop.useRef(null);
+  noop.useRef(null);
   const ref = noop.useRef(null);
   const items = [selectedIndex];
   const effect = noop.useEffect(() => {
@@ -339,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
       if (null != ref2.current) {
         if (null != ref.current) {
           if (null != ref3.current) {
-            const result = selectedIndex * handlePressCategory;
+            const result = selectedIndex * timestampProducer;
             if (tmp8) {
               const current = tmp3.current;
               const obj = { offset: result };
@@ -362,23 +351,33 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     closure_3.current = contentOffset.x;
     closure_4.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
   }, []);
+  const items2 = [selectedIndex, handlePressCategory, guildId];
   const callback2 = noop.useCallback((nativeEvent) => {
     const layout = nativeEvent.nativeEvent.layout;
     closure_3.current = 0;
     closure_4.current = layout.width;
     closure_5.current = layout.width;
   }, []);
-  const items2 = [selectedIndex, handlePressCategory, guildId];
-  const callback3 = noop.useCallback((arg0, index) => ({ length: callback, offset: callback * index, index }), []);
   let obj = { style: null, children: null };
-  const items3 = [closure_9().container, style];
+  const items3 = [closure_8().container, style];
   obj.style = items3;
-  const tmp = closure_9();
-  obj.children = <ref3 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
-    return id.id;
-  }} renderItem={noop.useCallback((section) => {
+  const callback3 = noop.useCallback((section) => {
     const index = section.index;
-    return <closure_10 active={index === selectedIndex} section={section.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
-  }, items2)} showsHorizontalScrollIndicator={false} onScroll={callback1} onLayout={callback2} />;
-  return <ref2 style={null}>{null}</ref2>;
+    return <closure_9 active={index === selectedIndex} section={section.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
+  }, items2);
+  obj.children = handlePressCategory(onPressSection(guildId[16]).FlashList, {
+    ref,
+    data: sections,
+    extraData: selectedIndex,
+    keyboardShouldPersistTaps: "always",
+    horizontal: true,
+    keyExtractor(id) {
+      return id.id;
+    },
+    renderItem: callback3,
+    showsHorizontalScrollIndicator: false,
+    onScroll: callback1,
+    onLayout: callback2
+  });
+  return handlePressCategory(ref2, obj);
 });

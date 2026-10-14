@@ -7,17 +7,17 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = SearchField(1126);
-const Text_Text = SearchField(5088);
-const Pressables = SearchField(6185);
-const SearchField2 = SearchField(6739);
-const GifProvider = SearchField(9737);
-const ChevronLargeLeftIcon = SearchField(9746);
+const Text_Text = SearchField(5092);
+const Pressables = SearchField(6189);
+const SearchField2 = SearchField(6743);
+const GifProvider = SearchField(9747);
+const ChevronLargeLeftIcon = SearchField(9756);
 require = fn;
 const View = fn(17).View;
 fn(1085).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   container: { paddingVertical: nativeDefault.space.PX_8 },
   headerContainer: null,
@@ -28,14 +28,14 @@ let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(9739).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(9749).GIF_PICKER_GUTTER_SPACING,
 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(9739).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(9749).GIF_PICKER_GUTTER_SPACING };
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6302).InputHeights.MD,
+  height: fn(6306).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -404,7 +404,7 @@ let obj5 = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6302).InputHeights.MD,
+  height: fn(6306).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -508,7 +508,7 @@ export default noop.memo(
           };
           items[1] = React5(Text_Text.Text, obj8);
           obj5.children = items;
-          const items1 = [options(Pressables.PressableOpacity, obj5)];
+          const items1 = [React6(Pressables.PressableOpacity, obj5)];
           let tmp18Result = categoryType === GIFPickerResultTypes.FAVORITES;
           if (tmp18Result) {
             const obj9 = { columnWidth, onQueryChange: onFavoritesQueryChange };
@@ -516,7 +516,7 @@ export default noop.memo(
           }
           items1[1] = tmp18Result;
           obj4.children = items1;
-          tmp16Result = options(View, obj4);
+          tmp16Result = React6(View, obj4);
         }
         cResult[1] = categoryType;
         cResult[2] = columnWidth;
@@ -578,7 +578,7 @@ export default noop.memo(
           };
           items[1] = React5(Text_Text.Text, obj7);
           obj4.children = items;
-          const items1 = [options(Pressables.PressableOpacity, obj4)];
+          const items1 = [React6(Pressables.PressableOpacity, obj4)];
           let tmp6Result2 = categoryType === GIFPickerResultTypes.FAVORITES;
           if (tmp6Result2) {
             const obj8 = { columnWidth, onQueryChange: onFavoritesQueryChange };
@@ -586,7 +586,7 @@ export default noop.memo(
           }
           items1[1] = tmp6Result2;
           obj3.children = items1;
-          tmp13Result = options(View, obj3);
+          tmp13Result = React6(View, obj3);
         }
         obj.children = tmp13Result;
         return React5(View, obj);

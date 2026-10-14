@@ -8,7 +8,7 @@ import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import _modDef9770 from "../../../../../_runtime/metro/09770__.js";
+import _modDef9780 from "../../../../../_runtime/metro/09780__.js";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import NativeMenuActionCreatorsDefault from "../../../native_menu/native/NativeMenuActionCreators.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
@@ -20,12 +20,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10039);
+const DeviceConstants = fn(10049);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 let obj = {
   container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" },
   image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
@@ -53,7 +53,7 @@ const rect = {
   left: 8,
   bottom: 8,
 };
-let ColorUtils = fn(4967);
+let ColorUtils = fn(4969);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.6);
 rect.borderRadius = nativeDefault.radii.xs;
 obj.labelContainer = rect;
@@ -75,13 +75,13 @@ let size2 = {
   borderWidth: 1,
   borderColor: null,
 };
-ColorUtils = fn(4967);
+ColorUtils = fn(4969);
 size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
 obj.checkIconContainer = size2;
 let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj5.borderRadius = nativeDefault.radii.xs;
-ColorUtils = fn(4967);
+ColorUtils = fn(4969);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj.selectedOverlay = obj5;
 obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
@@ -225,8 +225,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.icon) {
-          const obj2 = { source: _modDef9770, style: tmp4.icon };
-          const tmp9 = options(native.Icon, obj2);
+          const obj2 = { source: _modDef9780, style: tmp4.icon };
+          const tmp9 = React6(native.Icon, obj2);
           cResult[3] = tmp4.icon;
           cResult[4] = tmp9;
           let tmp6 = tmp9;
@@ -256,7 +256,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           tmp13 = tmp16;
         }
         const obj4 = { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label };
-        const tmp12 = options(Text_Text.Text, obj4);
+        const tmp12 = React6(Text_Text.Text, obj4);
         cResult[5] = label;
         cResult[6] = textStyle;
         cResult[7] = tmp12;
@@ -275,8 +275,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp.labelContainer, style];
       obj.style = items;
       const items1 = [
-        options(native.Icon, { source: _modDef9770, style: tmp.icon }),
-        options(Text_Text.Text, {
+        React6(native.Icon, { source: _modDef9780, style: tmp.icon }),
+        React6(Text_Text.Text, {
           style: textStyle,
           color: "text-overlay-light",
           variant: "text-xs/bold",
@@ -981,7 +981,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp10;
           }
           const obj3 = { style: tmp4, children: tmp6 };
-          const tmp13 = options(React4, obj3);
+          const tmp13 = React6(React4, obj3);
           cResult[10] = tmp4;
           cResult[11] = tmp6;
           cResult[12] = tmp13;
@@ -990,7 +990,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: null };
         const items = [tmp2.image, tmp5];
         obj4.style = items;
-        const tmp9 = options(React4, obj4);
+        const tmp9 = React6(React4, obj4);
         cResult[7] = tmp2.image;
         cResult[8] = tmp5;
         cResult[9] = tmp9;
@@ -1015,10 +1015,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: null };
       const items1 = [tmp.image, { height: size, width: size }];
       obj3.style = items1;
-      obj2.children = options(React4, obj3);
-      return options(React4, obj2);
+      obj2.children = React6(React4, obj3);
+      return React6(React4, obj2);
     };
-createStyles = fn(5092);
+createStyles = fn(5096);
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 let closure_17 = createStyles.createStyleProperties({
   backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,
@@ -1339,7 +1339,7 @@ export default noop.memo(
         const mapped = items.map((type, index) => {
           if (null == type) {
             const obj2 = { size: result, isFirstInRow: 0 === index };
-            return options(closure_16, obj2, index);
+            return React6(closure_16, obj2, index);
           } else {
             let hasItem = "type" in type;
             if (hasItem) {
@@ -1365,8 +1365,8 @@ export default noop.memo(
               obj3.totalNumItems = totalNumItems;
               obj3.numItemsPerRow = numPerRow;
               const obj4 = { color: nativeDefault.colors.ICON_SUBTLE, size: "lg" };
-              obj3.children = options(obj3[type.type].Icon, obj4);
-              return options(closure_20, obj3, index);
+              obj3.children = React6(obj3[type.type].Icon, obj4);
+              return React6(closure_20, obj3, index);
             } else {
               const obj = {
                 channelId: channel.id,
@@ -1383,7 +1383,7 @@ export default noop.memo(
                 onLongPressItem,
                 disabled,
               };
-              return options(closure_15, obj, index);
+              return React6(closure_15, obj, index);
             }
           }
         });
@@ -1438,7 +1438,7 @@ export default noop.memo(
           children: items.map((type, index) => {
             if (null == type) {
               const obj2 = { size, isFirstInRow: 0 === index };
-              return options(closure_16, obj2, index);
+              return React6(closure_16, obj2, index);
             } else {
               let hasItem = "type" in type;
               if (hasItem) {
@@ -1462,8 +1462,8 @@ export default noop.memo(
                 obj3.totalNumItems = totalNumItems;
                 obj3.numItemsPerRow = numPerRow;
                 const obj4 = { color: nativeDefault.colors.ICON_SUBTLE, size: "lg" };
-                obj3.children = options(obj[type.type].Icon, obj4);
-                return options(closure_20, obj3, index);
+                obj3.children = React6(obj[type.type].Icon, obj4);
+                return React6(closure_20, obj3, index);
               } else {
                 obj = {
                   channelId: id.id,
@@ -1480,7 +1480,7 @@ export default noop.memo(
                   onLongPressItem,
                   disabled,
                 };
-                return options(closure_15, obj, index);
+                return React6(closure_15, obj, index);
               }
             }
           }),

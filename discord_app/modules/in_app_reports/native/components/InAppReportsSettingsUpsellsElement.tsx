@@ -16,7 +16,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16 },
   settingsContainer: null,
@@ -47,14 +47,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[1];
       }
-      trackSettingsUpsellsAction(5396)(tmp6);
+      trackSettingsUpsellsAction(5401)(tmp6);
       if (cResult[2] === onButtonClick) {
         if (cResult[3] === trackSettingsUpsellsAction) {
           let tmp9 = cResult[4];
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp13 = closure_9(onButtonClick(7092).SettingsIcon, {});
+          const tmp13 = closure_9(onButtonClick(7098).SettingsIcon, {});
           cResult[5] = tmp13;
           let tmp11 = tmp13;
         } else {
@@ -73,7 +73,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { title, disabledTitle, description, disabled: tmp5, onPress: tmp9, icon: tmp11 };
-        const tmp16 = closure_9(tmp7(13903), obj2);
+        const tmp16 = closure_9(tmp7(13940), obj2);
         cResult[6] = description;
         cResult[7] = disabledTitle;
         cResult[8] = tmp5;
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const fn2 = function f(getTitle, arg1) {
           ({ getDisabledTitle, getDescription, onApply } = getTitle);
-          return options(
+          return React6(
             closure_12,
             {
               title: getTitle.getTitle(),
@@ -320,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj5.title = intl.string(tmp2(reportId[16]).t["1yxTIJ"]);
         obj5.children = settingsUpsellsConfigs.map((getTitle, index) => {
           ({ getDisabledTitle, getDescription, onApply } = getTitle);
-          return options(
+          return React6(
             closure_12,
             {
               title: getTitle.getTitle(),

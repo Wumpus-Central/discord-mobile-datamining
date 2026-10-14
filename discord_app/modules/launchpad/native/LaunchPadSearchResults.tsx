@@ -32,25 +32,25 @@ function renderItemJSX(result) {
     const type = result.type;
     if (sortByMatchScore.AutocompleterResultTypes.GUILD === type) {
       const obj2 = { guild: result.record };
-      return options(closure_14, obj2);
+      return React6(closure_14, obj2);
     } else if (sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL === type) {
       const obj3 = { channel: result.record, navigationReplace: true, showGuildBadgeIcon: true };
-      return options(shared_TextChannelDefault, obj3);
+      return React6(shared_TextChannelDefault, obj3);
     } else if (sortByMatchScore.AutocompleterResultTypes.GROUP_DM === type) {
       const obj5 = { channel: result.record, navigationReplace: true };
-      return options(shared_DMChannelDefault, obj5);
+      return React6(shared_DMChannelDefault, obj5);
     } else if (sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj6 = { channel: result.record };
-      return options(VoiceOrStageChannelDefault, obj6);
+      return React6(VoiceOrStageChannelDefault, obj6);
     } else if (sortByMatchScore.AutocompleterResultTypes.USER === type) {
       ({ record: obj4.user, comparator: obj4.comparator } = result);
-      return options(LaunchPadSearchResultUserDefault, { user: null, comparator: null });
+      return React6(LaunchPadSearchResultUserDefault, { user: null, comparator: null });
     } else if (sortByMatchScore.AutocompleterResultTypes.HEADER === type) {
       const obj8 = { name: result.record.text, styles: tmp };
       return RedesignCategory.renderCategoryItem(obj8);
     } else {
       const obj = { variant: "text-sm/semibold", children: result.type };
-      return options(Text_Text.Text, obj);
+      return React6(Text_Text.Text, obj);
     }
   }
 }
@@ -58,14 +58,14 @@ function renderSearchResultsSection() {
   const obj = { name: null };
   const intl = util.intl;
   obj.name = intl.string(util.t["zkoeq/"]);
-  return options(closure_16, obj);
+  return React6(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(5967).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   listContainer: { minHeight: 16 },
   list: { flex: -1, marginTop: 8 },
@@ -156,7 +156,7 @@ let closure_14 = noop.memo(
         const stateFromStoresObject = guild(504).useStateFromStoresObject(tmp9, tmp11);
         ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
         const tmpResult = guild(504);
-        const fontScale = guild(5386).useFontScale();
+        const fontScale = guild(5391).useFontScale();
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
             constructor() {
@@ -183,7 +183,7 @@ let closure_14 = noop.memo(
           }
           tmp15 = cResult[7];
         }
-        const tmpResult3 = guild(5386);
+        const tmpResult3 = guild(5391);
         const stateFromStores = guild(504).useStateFromStores(tmp14, tmp15);
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class I {
@@ -317,8 +317,8 @@ let closure_14 = noop.memo(
         }));
         ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
         const obj = guild(504);
-        const fontScale = guild(5386).useFontScale();
-        const obj2 = guild(5386);
+        const fontScale = guild(5391).useFontScale();
+        const obj2 = guild(5391);
         const items2 = [LocaleStore];
         const stateFromStores = guild(504).useStateFromStores(items2, () => locale.locale);
         const obj3 = guild(504);
@@ -351,7 +351,7 @@ let closure_14 = noop.memo(
         items4[2] = renderChannelContentDefault(obj8);
         obj5.children = items4;
         obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-        return tmp7(closure_9(guild(6185).PressableHighlight, obj4));
+        return tmp7(closure_9(guild(6189).PressableHighlight, obj4));
       },
 );
 ReactCompilerGating = fn(558);
@@ -375,7 +375,7 @@ let closure_16 = noop.memo(
                 return tmp8;
               }
               const obj3 = { style: tmp4.categoryWrapper, children: tmp6 };
-              const tmp11 = options(View, obj3);
+              const tmp11 = React6(View, obj3);
               cResult[5] = tmp6;
               cResult[6] = tmp4.categoryWrapper;
               cResult[7] = tmp11;
@@ -402,7 +402,7 @@ let closure_16 = noop.memo(
         ({ name, onPress, note } = arg0);
         const tmp = closure_13();
         categoryStyles = RedesignCategory.useCategoryStyles();
-        return options(View, {
+        return React6(View, {
           style: tmp.categoryWrapper,
           children: RedesignCategory.renderCategoryItem({
             name,
@@ -509,7 +509,7 @@ const memoResult = noop.memo(
                     obj2.children = string(t2["/XSoJ+"]);
                     tmp14 = obj2;
                   }
-                  obj.note = options(Text_Text.Text, tmp14);
+                  obj.note = React6(Text_Text.Text, tmp14);
                   obj.onPress = toggleExpandedHistory;
                 } else if (null != stateFromStores) {
                   const intl2 = util.intl;
@@ -520,7 +520,7 @@ const memoResult = noop.memo(
                   const intl = util.intl;
                   const t = util.t;
                   const obj3 = { name: intl.string(closure_7 ? t.C5viSQ : t.ieCAhD) };
-                  return options(tmp2, obj3);
+                  return React6(tmp2, obj3);
                 }
               };
               cResult[10] = expandedHistory;
@@ -604,7 +604,7 @@ const memoResult = noop.memo(
               obj2.children = string(t2["/XSoJ+"]);
               tmp14 = obj2;
             }
-            obj.note = options(Text_Text.Text, tmp14);
+            obj.note = React6(Text_Text.Text, tmp14);
             obj.onPress = toggleExpandedHistory;
           } else if (null != stateFromStores) {
             const intl2 = util.intl;
@@ -615,7 +615,7 @@ const memoResult = noop.memo(
             const intl = util.intl;
             const t = util.t;
             const obj3 = { name: intl.string(c7 ? t.C5viSQ : t.ieCAhD) };
-            return options(tmp2, obj3);
+            return React6(tmp2, obj3);
           }
         }, items2);
         let tmp9 = unreads(toggleExpandedHistory[11])();

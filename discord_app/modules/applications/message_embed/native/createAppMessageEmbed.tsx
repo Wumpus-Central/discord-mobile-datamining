@@ -13,9 +13,9 @@ import ApplicationCommandTypes from "../../../application_commands/ApplicationCo
 import getEmbedThemeColorsDefault from "../../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
 import ApplicationAssetUtils from "../../../../utils/ApplicationAssetUtils.tsx";
 import AppLauncherUtils from "../../../app_launcher/utils/AppLauncherUtils.tsx";
-import canLaunchContextlessFrame from "../../../frames/utils/canLaunchContextlessFrame.tsx";
-import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import ApplicationUtils from "../../../../utils/native/ApplicationUtils.tsx";
+import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
+import canLaunchContextlessFrame from "../../../frames/utils/canLaunchContextlessFrame.tsx";
 import ContentClassificationVisibility from "../../../content_classification/ContentClassificationVisibility.tsx";
 import CodedLinksTypes from "../../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksTypes.tsx";
 import getPlayInContext from "../utils/getPlayInContext.tsx";
@@ -28,10 +28,10 @@ import ApplicationAssetsStore from "../../ApplicationAssetsStore.tsx";
 import ApplicationStore from "../../ApplicationStore.tsx";
 
 require = fn;
-const FetchState = fn(8276).FetchState;
+const FetchState = fn(8283).FetchState;
 const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
-const MAIN_SURFACE = fn(10802).MAIN_SURFACE;
-const CodedLinkExtendedType = fn(9610).CodedLinkExtendedType;
+const MAIN_SURFACE = fn(10697).MAIN_SURFACE;
+const CodedLinkExtendedType = fn(9620).CodedLinkExtendedType;
 let closure_11 = ["embedded_cover"];
 let c12 = 512;
 const size = fn(2);

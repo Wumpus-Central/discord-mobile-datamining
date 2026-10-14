@@ -273,7 +273,7 @@ export default {
     return size.size > 2097152;
   },
   isDataTooBig(base64) {
-    return ImageUtils.dataUriFileSize(base64) > options;
+    return ImageUtils.dataUriFileSize(base64) > React6;
   },
 };
 export const countEmoji = function countEmoji(arr, arg1) {

@@ -21,7 +21,7 @@ const MetaQuestUtils = fn(1628);
 let closure_11 = MetaQuestUtils.isMetaQuest();
 const PlatformUtils = fn(1382);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   background: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -60,7 +60,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           accessibilityLabel: first,
           style: tmp7,
         };
-        const tmp11 = options(View, obj2);
+        const tmp11 = React6(View, obj2);
         cResult[4] = pointerEvents;
         cResult[5] = tmp7;
         cResult[6] = tmp11;
@@ -85,7 +85,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       obj.accessibilityLabel = intl.string(util.t.XONG6A);
       const items = [style, closure_13().background];
       obj.style = items;
-      return options(View, obj);
+      return React6(View, obj);
     };
 const __initData = {
   code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}",

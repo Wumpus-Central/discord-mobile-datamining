@@ -2,6 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import shared from "../../../shared.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import components_Button_Button from "../../../components/Button/native/Button.native.tsx";
 import LegacyText_LegacyTextDefault from "../../LegacyText/native/LegacyText.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -10,12 +11,11 @@ import TextStyles_mod from "../../../../modules/rebrand/native/TextStyles.tsx";
 
 require = fn;
 let closure_3 = ["lightSource", "darkSource"];
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(5096);
 let obj2 = {
   container: { alignItems: "center", justifyContent: "center", padding: 16 },
   title: null,
@@ -36,13 +36,13 @@ obj4.textAlign = "center";
 obj2.body = obj4;
 obj2.image = { marginBottom: 32 };
 obj2.cta = { alignSelf: "center", marginTop: 16 };
-let closure_9 = createStyles.createStyles(obj2);
+let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function EmptyState(arg0) {
       const cResult = c.c(26);
       ({ source, title, body, containerStyle, imageStyle, titleStyle, bodyStyle, callToAction } = arg0);
-      const tmp4 = closure_9();
+      const tmp4 = closure_8();
       if (cResult[0] === containerStyle) {
         if (cResult[1] === tmp4.container) {
           let tmp5 = cResult[2];
@@ -84,7 +84,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj2 = { style: tmp5, children: null };
                       const items = [tmp6, tmp10, tmp15, tmp19];
                       obj2.children = items;
-                      const tmp26 = closure_1_8(hasOwnProperty, obj2);
+                      const tmp26 = React5(View, obj2);
                       cResult[20] = tmp5;
                       cResult[21] = tmp6;
                       cResult[22] = tmp10;
@@ -97,13 +97,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                     if (null != callToAction) {
                       const obj3 = { style: tmp4.cta, children: null };
                       ({ label: obj6.text, onPress: obj6.onPress } = callToAction);
-                      obj3.children = React5(components_Button_Button.Button, {
+                      obj3.children = timestampProducer(components_Button_Button.Button, {
                         shrink: true,
                         text: null,
                         onPress: null,
                         size: "sm",
                       });
-                      tmp20 = React5(hasOwnProperty, obj3);
+                      tmp20 = timestampProducer(View, obj3);
                       const obj4 = { shrink: true, text: null, onPress: null, size: "sm" };
                     }
                     cResult[17] = callToAction;
@@ -112,7 +112,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
                     tmp19 = tmp20;
                   }
                   const obj5 = { style: tmp14, children: body };
-                  const tmp18 = React5(LegacyText_LegacyTextDefault, obj5);
+                  const tmp18 = timestampProducer(LegacyText_LegacyTextDefault, obj5);
                   cResult[14] = body;
                   cResult[15] = tmp14;
                   cResult[16] = tmp18;
@@ -131,7 +131,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
               const items2 = [tmp4.title, titleStyle];
               obj7.style = items2;
               obj7.children = title;
-              tmp11 = React5(LegacyText_LegacyTextDefault, obj7);
+              tmp11 = timestampProducer(LegacyText_LegacyTextDefault, obj7);
             }
             cResult[7] = tmp4.title;
             cResult[8] = title;
@@ -145,7 +145,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           const obj13 = { source, style: null };
           const items3 = [tmp4.image, imageStyle];
           obj13.style = items3;
-          tmp7 = React5(timestampProducer, obj13);
+          tmp7 = timestampProducer(FastImageDefault, obj13);
         }
         cResult[3] = imageStyle;
         cResult[4] = source;
@@ -162,7 +162,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
   : function EmptyState(arg0) {
       ({ source, title, callToAction } = arg0);
       ({ body, containerStyle, imageStyle, titleStyle, bodyStyle } = arg0);
-      const tmp = closure_9();
+      const tmp = closure_8();
       const obj = { style: null, children: null };
       const items = [tmp.container, containerStyle];
       obj.style = items;
@@ -171,45 +171,45 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { source, style: null };
         const items1 = [tmp.image, imageStyle];
         obj2.style = items1;
-        tmp4 = React5(timestampProducer, obj2);
+        tmp4 = timestampProducer(FastImageDefault, obj2);
       }
       const items2 = [tmp4, , ,];
-      let tmp7 = null;
+      let tmp8 = null;
       if (null != title) {
         const obj3 = { style: null, children: null };
         const items3 = [tmp.title, titleStyle];
         obj3.style = items3;
         obj3.children = title;
-        tmp7 = React5(LegacyText_LegacyTextDefault, obj3);
+        tmp8 = timestampProducer(LegacyText_LegacyTextDefault, obj3);
       }
-      items2[1] = tmp7;
+      items2[1] = tmp8;
       const obj4 = { style: null, children: body };
       const items4 = [tmp.body, bodyStyle];
       obj4.style = items4;
-      items2[2] = React5(LegacyText_LegacyTextDefault, obj4);
-      let tmp11Result = null;
+      items2[2] = timestampProducer(LegacyText_LegacyTextDefault, obj4);
+      let tmp12Result = null;
       if (null != callToAction) {
         const obj5 = { style: tmp.cta, children: null };
         ({ label: obj6.text, onPress: obj6.onPress } = callToAction);
-        obj5.children = React5(components_Button_Button.Button, {
+        obj5.children = timestampProducer(components_Button_Button.Button, {
           shrink: true,
           text: null,
           onPress: null,
           size: "sm",
         });
-        tmp11Result = React5(hasOwnProperty, obj5);
+        tmp12Result = timestampProducer(View, obj5);
         const obj11 = { shrink: true, text: null, onPress: null, size: "sm" };
       }
-      items2[3] = tmp11Result;
+      items2[3] = tmp12Result;
       obj.children = items2;
-      return closure_1_8(hasOwnProperty, obj);
+      return React5(View, obj);
     };
-let closure_10 = tmp9;
+let closure_9 = tmp8;
 ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/RefreshEmptyState/native/RefreshEmptyState.tsx");
 
-export default tmp9;
+export default tmp8;
 export const ThemedEmptyState = ReactCompilerGating.isReactCompilerEnabled()
   ? function ThemedEmptyState(arg0) {
       const cResult = c.c(7);
@@ -239,7 +239,7 @@ export const ThemedEmptyState = ReactCompilerGating.isReactCompilerEnabled()
         return tmp10;
       }
       const merged = Object.assign(tmp6);
-      const tmp12 = React5(closure_10, { source: tmp4 });
+      const tmp12 = timestampProducer(closure_9, { source: tmp4 });
       cResult[4] = tmp6;
       cResult[5] = tmp4;
       cResult[6] = tmp12;
@@ -255,5 +255,5 @@ export const ThemedEmptyState = ReactCompilerGating.isReactCompilerEnabled()
         lightSource = darkSource.lightSource;
       }
       const merged1 = Object.assign(merged);
-      return React5(closure_10, { source: lightSource });
+      return timestampProducer(closure_9, { source: lightSource });
     };

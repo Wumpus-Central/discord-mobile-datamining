@@ -2,7 +2,7 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod16822 from "../../../../../../../_runtime/metro/16822__.js";
+import _mod16860 from "../../../../../../../_runtime/metro/16860__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ export const SpotifyNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod16822;
+        const tmpResult = _mod16860;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -66,7 +66,7 @@ export const SpotifyNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod16822,
+        source: _mod16860,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

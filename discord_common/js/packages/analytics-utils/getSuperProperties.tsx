@@ -1,5 +1,5 @@
 // discord_common/js/packages/analytics-utils/getSuperProperties.tsx
-import Storage5 from "../storage/Storage.tsx";
+import Storage7 from "../storage/Storage.tsx";
 import encodeProperties from "encodeProperties.tsx";
 import getSystemLocale2 from "../i18n/getSystemLocale.tsx";
 import NativeDeviceModule from "../rtn-codegen/js/NativeDeviceModule.tsx";
@@ -7,6 +7,8 @@ import ClientModDetectionUtils from "../../shared/utils/ClientModDetectionUtils.
 import clientLaunchId from "clientLaunchId.tsx";
 import formatDefault from "../../../../_runtime/01365_format.js";
 import NativeMetaQuestModule from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
+import NativeClientInfoModule from "../rtn-codegen/js/NativeClientInfoModule.tsx";
+import DesignIds from "../../shared/shared-constants/DesignIds.tsx";
 import SessionStorage3 from "../storage/SessionStorage.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -71,8 +73,34 @@ function getDevice() {
   }
   return str5;
 }
+function getDeviceProperties() {
+  obj = {};
+  const tmp = getOS();
+  obj.os = tmp;
+  obj.browser = getBrowser();
+  obj.device = getDevice();
+  obj.device_model_name = (function getDeviceModelName() {
+    return NativeDeviceModule.default.getConstants().deviceModel;
+  })();
+  obj.system_locale = getSystemLocale();
+  obj.has_client_mods = ClientModDetectionUtils.usesClientMods();
+  try {
+    constants = NativeClientInfoModule.default.getConstants();
+    let str = "";
+    ({ Version, ReleaseChannel, DeviceVendorID } = constants);
+    if ("Android" === tmp) {
+      str = " - rn";
+    }
+    obj.client_version = Version + str;
+    obj.release_channel = ReleaseChannel;
+    obj.device_vendor_id = DeviceVendorID;
+    obj.design_id = DesignIds.DesignIds.DESIGN_TABS_IA;
+    return obj;
+  } catch (err) {}
+}
 const getSystemLocale = getSystemLocale2.getSystemLocale;
 const deviceProperties = "deviceProperties";
+const devicePropertiesVersion = "devicePropertiesVersion";
 const referralProperties = "referralProperties";
 if (null != DiscordNative) {
   let app = DiscordNative.app;
@@ -146,46 +174,32 @@ if (null != DiscordNative) {
     obj.os_sdk_version = tmp7;
   }
 }
-let closure_13 = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+let closure_15 = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
 if (null == obj) {
   try {
     obj = (function getCachedSuperProperties() {
-      const Storage = Storage5.Storage;
+      const Storage = Storage7.Storage;
       value = Storage.get(deviceProperties);
-      if (null == value) {
-        const tmp5 = (function getDeviceProperties() {
-          obj = {};
-          const tmp = getOS();
-          obj.os = tmp;
-          obj.browser = getBrowser();
-          obj.device = getDevice();
-          obj.system_locale = getSystemLocale();
-          obj2 = obj2(dependencyMap[2]);
-          obj.has_client_mods = obj2.usesClientMods();
-          try {
-            constants = tmp2(dependencyMap[6]).default.getConstants();
-            let str = "";
-            ({ Version, ReleaseChannel, DeviceVendorID } = constants);
-            if ("Android" === tmp) {
-              str = " - rn";
-            }
-            obj.client_version = Version + str;
-            obj.release_channel = ReleaseChannel;
-            obj.device_vendor_id = DeviceVendorID;
-            obj.design_id = tmp2(dependencyMap[7]).DesignIds.DESIGN_TABS_IA;
-            return obj;
-          } catch (err) {}
-        })();
-        const Storage2 = Storage5.Storage;
-        const result = Storage2.set(deviceProperties, tmp5);
-        value = tmp5;
+      let tmp5 = null != value;
+      if (tmp5) {
+        const Storage2 = Storage7.Storage;
+        tmp5 = 1 === Storage2.get(devicePropertiesVersion);
       }
-      const Storage3 = Storage5.Storage;
-      value3 = Storage3.get(referralProperties);
+      let tmp7 = value;
+      if (!tmp5) {
+        const tmp9 = getDeviceProperties();
+        const Storage3 = Storage7.Storage;
+        const result = Storage3.set(deviceProperties, tmp9);
+        const Storage4 = Storage7.Storage;
+        const result1 = Storage4.set(devicePropertiesVersion, 1);
+        tmp7 = tmp9;
+      }
+      const Storage5 = Storage7.Storage;
+      value3 = Storage5.get(referralProperties);
       if (null == value3) {
         obj = {};
-        const Storage4 = Storage5.Storage;
-        const result1 = Storage4.set(referralProperties, obj);
+        const Storage6 = Storage7.Storage;
+        const result2 = Storage6.set(referralProperties, obj);
         value3 = obj;
       }
       const SessionStorage = SessionStorage3.SessionStorage;
@@ -199,11 +213,11 @@ if (null == obj) {
           return obj2[item];
         });
         const SessionStorage2 = SessionStorage3.SessionStorage;
-        const result2 = SessionStorage2.set(referralProperties, obj3);
+        const result3 = SessionStorage2.set(referralProperties, obj3);
         value4 = obj3;
-        let obj2 = {};
+        const obj2 = {};
       }
-      const merged = Object.assign(value);
+      const merged = Object.assign(tmp7);
       const obj5 = {
         browser_user_agent: window.navigator.userAgent || "",
         browser_version: formatDefault.version || "",
@@ -215,15 +229,15 @@ if (null == obj) {
       if (null != constants) {
         const obj6 = {};
         const merged1 = Object.assign(obj5);
-        obj6.os_version = tmp18.systemVersion || "";
+        obj6.os_version = tmp24.systemVersion || "";
         let obj7 = obj6;
       } else {
         obj7 = {};
         const merged2 = Object.assign(obj5);
-        const tmp16Result = formatDefault;
+        const tmp22Result = formatDefault;
         let str;
-        if (tmp16Result != null) {
-          const os = tmp16Result.os;
+        if (tmp22Result != null) {
+          const os = tmp22Result.os;
           if (os != null) {
             str = os.version;
           }
@@ -250,7 +264,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("35120100000000", 10) };
+    obj = { client_build_number: parseInt("35120200000000", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;
@@ -289,7 +303,7 @@ export { getDevice };
 export const getCampaignParams = function getCampaignParams(arg0) {
   closure_0 = arg0;
   obj = {};
-  const item = closure_13.forEach((item) => {
+  const item = closure_15.forEach((item) => {
     let str = "";
     if (null != closure_0) {
       const _RegExp = RegExp;

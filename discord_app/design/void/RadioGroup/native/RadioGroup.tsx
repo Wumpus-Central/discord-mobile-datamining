@@ -12,7 +12,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let Sizes = { SMALL: 8, [8]: "SMALL", MEDIUM: 10, [10]: "MEDIUM", LARGE: 12, [12]: "LARGE" };
 let onPress = { [Sizes.SMALL]: 2, [Sizes.MEDIUM]: 3, [Sizes.LARGE]: 4 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj3 = {
   radioIcon: {
     flex: 0,
@@ -759,7 +759,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         value = null;
       }
       require = value;
-      options = value.options;
+      let options = value.options;
       if (options === undefined) {
         options = [];
       }

@@ -281,7 +281,7 @@ export const completeNewMemberAction = function completeNewMemberAction(guildId,
       }
     }
     const HTTP = HTTPUtils.HTTP;
-    const obj5 = { url: options.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
+    const obj5 = { url: React6.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
     HTTP.post(obj5);
   }
   const obj2 = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId, channelId };

@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06335_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06339_LegacyBaseButton.js";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import EmbeddedActivitiesActionCreatorsAll from "../../../activities/EmbeddedActivitiesActionCreators.tsx";
@@ -27,15 +27,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12488);
+const VoicePanelConstants = fn(12524);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12486).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17801).VoicePanelPIPModes;
-const ActivityPanelModes = fn(6067).ActivityPanelModes;
-const isLaunched = fn(10802).isLaunched;
+const VoicePanelControlsModes = fn(12522).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17837).VoicePanelPIPModes;
+const ActivityPanelModes = fn(6073).ActivityPanelModes;
+const isLaunched = fn(10697).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -225,7 +225,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePIP
                     const tmp3Result = VoicePanelPIPUtils;
                   }
                   if (value.active) {
-                    let PIP_LAYOUT_PHYSICS = options;
+                    let PIP_LAYOUT_PHYSICS = React6;
                   } else {
                     PIP_LAYOUT_PHYSICS = VoicePanelPIPUtils.PIP_LAYOUT_PHYSICS;
                   }

@@ -25,7 +25,7 @@ const createChannelRecord = fn(2069).createChannelRecord;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   empty: {
     flex: 1,
@@ -702,7 +702,7 @@ export default noop.memo(
             const obj = {
               style: setInterstitial.messages,
               channelId,
-              stickyHeader: options(ChatViewStickyHeaderDefault, { channel, ref, scrollToNewMessages }),
+              stickyHeader: React6(ChatViewStickyHeaderDefault, { channel, ref, scrollToNewMessages }),
               children: null,
             };
             const obj3 = {
@@ -722,7 +722,7 @@ export default noop.memo(
             const obj2 = { channel, ref, scrollToNewMessages };
             const tmp5 = ChatViewWrapperDefault;
             const items = [
-              options(ChatInputDefault, {
+              React6(ChatInputDefault, {
                 ref: chatInputRef,
                 channel,
                 isResourceChannel,
@@ -745,34 +745,34 @@ export default noop.memo(
             const tmp9 = MessagesDefault;
             obj5.guildId = channel.getGuildId();
             obj5.shouldRender = shouldRender;
-            items[1] = options(ChatBeginningRowDefault, obj5);
+            items[1] = React6(ChatBeginningRowDefault, obj5);
             obj3.children = items;
             const items1 = [collapsed(tmp9, obj3), , ,];
             let tmp7Result = null;
             if (!obj6.isAndroid()) {
               const obj7 = { channelId: channel.id, messagesRef: ref };
-              tmp7Result = options(PortalKeyboardInlineComponentDefault, obj7);
+              tmp7Result = React6(PortalKeyboardInlineComponentDefault, obj7);
             }
             items1[1] = tmp7Result;
             let tmp7Result3 = null;
             if (c15) {
               const obj8 = { screenIndex };
-              tmp7Result3 = options(ChatPlaceholderDefault, obj8);
+              tmp7Result3 = React6(ChatPlaceholderDefault, obj8);
             }
             items1[2] = tmp7Result3;
             obj6 = PlatformUtils;
             let tmp7Result4 = null;
             if (tmp14Result.isAndroid()) {
               const obj9 = { channelId, screenIndex, onJumpToPresent };
-              tmp7Result4 = options(JumpToPresentButtonDefault, obj9);
+              tmp7Result4 = React6(JumpToPresentButtonDefault, obj9);
             }
             const obj10 = { children: null };
             items1[3] = tmp7Result4;
             obj.children = items1;
             const items2 = [
               collapsed(tmp5, obj),
-              options(ChannelSafeAreaBottomDefault, { channelId }),
-              options(VoiceMessageOverlayDefault, { channelId }),
+              React6(ChannelSafeAreaBottomDefault, { channelId }),
+              React6(VoiceMessageOverlayDefault, { channelId }),
             ];
             obj10.children = items2;
             return collapsed(closure_2_11, obj10);

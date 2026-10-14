@@ -152,6 +152,7 @@ import NitroGem18Lottie from "components/LottieIcon/native/generated/NitroGem18L
 import NitroGem24Lottie from "components/LottieIcon/native/generated/NitroGem24Lottie.tsx";
 import MessageRequestLottie from "components/LottieIcon/native/generated/MessageRequestLottie.tsx";
 import ToggleButton from "components/Button/native/ToggleButton.native.tsx";
+import Badge_Badge from "components/Badge/native/Badge.native.tsx";
 import ContextMenuItem from "components/ContextMenu/native/ContextMenuItem.native.tsx";
 import ContextMenuContainer from "components/ContextMenu/native/ContextMenuContainer.native.tsx";
 import useManaTextMigrationHighlightRestartNotice from "components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx";
@@ -398,6 +399,7 @@ export const TabsProps = Tabs_Tabs.TabsProps;
 export const TabsVariant = Tabs_Tabs.TabsVariant;
 export const defaultCountFormatter = Tabs_Tabs.defaultCountFormatter;
 export const TabsGradient = TabsGradientDefault;
+export const Badge = Badge_Badge.Badge;
 export const TagGroup = TagGroup.TagGroup;
 export const ContextMenuItemOptions = ContextMenuItem.ContextMenuItemOptions;
 export const CONTEXT_MENU_LONG_PRESS_DURATION_MS = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;

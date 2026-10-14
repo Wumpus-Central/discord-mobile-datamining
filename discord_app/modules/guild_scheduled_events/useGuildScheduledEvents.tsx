@@ -11,7 +11,7 @@ import UpcomingEventNoticesStore from "UpcomingEventNoticesStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let GuildScheduledEventStore = fn(6054);
+let GuildScheduledEventStore = fn(6059);
 ({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const GuildScheduledEventsConstants = fn(2071);
@@ -736,7 +736,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
-function getGuildActiveEvent(guildId) {
+function getGuildActiveEvent(guild_id) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = GuildScheduledEventStore;
@@ -751,7 +751,7 @@ function getGuildActiveEvent(guildId) {
     tmp2 = PermissionStore;
   }
   closure_1 = tmp2;
-  const guildScheduledEventsByIndex = obj.getGuildScheduledEventsByIndex(closure_8.GUILD_EVENT_ACTIVE(guildId));
+  const guildScheduledEventsByIndex = obj.getGuildScheduledEventsByIndex(closure_8.GUILD_EVENT_ACTIVE(guild_id));
   return guildScheduledEventsByIndex.find((entity_type) => {
     if (entity_type.entity_type !== constants.NONE) {
       if (closure_2_7(entity_type)) {
@@ -998,11 +998,11 @@ export const useImminentUpcomingGuildEvents = ReactCompilerGating.isReactCompile
       return noop.useMemo(
         () =>
           stateFromStores.filter((status) => {
-            const eventSchedule = closure_1_0(8527).getEventSchedule(status);
+            const eventSchedule = closure_1_0(8534).getEventSchedule(status);
             ({ startTime, endTime } = eventSchedule);
-            const obj = closure_1_0(8527);
+            const obj = closure_1_0(8534);
             let toISOStringResult1;
-            const obj2 = closure_1_0(8521);
+            const obj2 = closure_1_0(8528);
             if (endTime != null) {
               toISOStringResult1 = endTime.toISOString();
             }

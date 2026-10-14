@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import TrashIcon from "../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import FormCheckbox from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import FormRadio from "../../../../design/components/Forms/native/FormRadio.native.tsx";
@@ -29,7 +29,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 1024;
 let c11 = 104;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   row: { flexDirection: "row", gap: nativeDefault.space.PX_8 },
   own: null,
@@ -167,7 +167,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { style: tmp4.broken, children: null };
           const items = [tmp17, tmp24];
           obj6.children = items;
-          const tmp30 = options(React5, obj6);
+          const tmp30 = React6(React5, obj6);
           cResult[7] = tmp4.broken;
           cResult[8] = tmp24;
           cResult[9] = tmp30;
@@ -260,7 +260,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.children = intl.string(_modDef3849.lhgD88);
         items1[1] = closure_1_8(Text_Text.Text, obj5);
         obj3.children = items1;
-        obj2.children = options(React5, obj3);
+        obj2.children = React6(React5, obj3);
         let tmp10 = obj2;
       } else {
         let tmp6Result = null;
@@ -712,7 +712,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         if (!selected) {
           items3[1] = null;
           obj10.children = items3;
-          const items4 = [options(React5, obj10)];
+          const items4 = [React6(React5, obj10)];
           const obj13 = {
             variant: "text-xs/normal",
             color: "text-muted",
@@ -722,7 +722,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           };
           items4[1] = tmp12(Text_Text.Text, obj13);
           obj6.children = items4;
-          const items5 = [options(Card.Card, obj6)];
+          const items5 = [React6(Card.Card, obj6)];
           let tmp12Result = null;
           if (null != option.image) {
             tmp12Result = null;
@@ -762,7 +762,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
           items5[1] = tmp12Result;
           obj4.children = items5;
-          return options(React5, obj4);
+          return React6(React5, obj4);
         }
       }
       const obj18 = { style: tmp.indicator, children: null };
@@ -793,7 +793,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const own = projectId.own;
       id();
       noop = tmp5;
-      options = question.options;
+      const options = question.options;
       if (cResult[0] !== options) {
         const imageOptionsLayoutResult = tmp(tmp2[18]).imageOptionsLayout(options);
         cResult[0] = options;
@@ -1209,7 +1209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_16 = undefined;
       const tmp = id();
       noop = tmp2;
-      options = question.options;
+      const options = question.options;
       let obj = projectId(disabled[18]);
       const imageOptionsLayoutResult = projectId(disabled[18]).imageOptionsLayout(options);
       closure_7 = noop.useRef(new Map());
@@ -1409,7 +1409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_128_1 = undefined;
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp2(11927).pickConjurePhotos("photo", 1), done: false };
+                  const obj5 = { value: tmp2(11958).pickConjurePhotos("photo", 1), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -1423,8 +1423,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_128_0 = value;
                 closure_128_1 = own(closure_128_0, 1)[0];
                 if (null != closure_128_1) {
-                  closure_129_4.onUpload(tmp2(11927).uploadConjurePickedFile(closure_129_0, closure_128_1));
-                  const obj = tmp2(11927);
+                  closure_129_4.onUpload(tmp2(11958).uploadConjurePickedFile(closure_129_0, closure_128_1));
+                  const obj = tmp2(11958);
                 }
                 c3 = 3;
                 return { value: "IconComponent", done: null };

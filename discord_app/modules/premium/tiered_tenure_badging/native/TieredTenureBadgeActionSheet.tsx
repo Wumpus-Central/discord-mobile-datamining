@@ -2,9 +2,9 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import TieredTenureBadgeUtils from "../../../user_profile/TieredTenureBadgeUtils.tsx";
 import showUserProfileActionSheet from "../../../user_profile/native/showUserProfileActionSheet.tsx";
@@ -24,7 +24,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   headerContainer: { paddingHorizontal: 24, alignItems: "center" },
   title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" },

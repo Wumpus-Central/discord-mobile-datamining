@@ -1,7 +1,7 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
 import c from "../../../_runtime/00576_c.js";
 import _mod1267 from "../../../_runtime/metro/01267__.js";
-import _mod4733 from "../../../_runtime/metro/04733__.js";
+import _mod4735 from "../../../_runtime/metro/04735__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -75,7 +75,7 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
         first = cResult[0];
       }
       const tmpResult = _mod1267;
-      [obj3, tmp6] = _mod1267.useStoreWithEqualityFn(closure_4, first, _mod4733.shallow);
+      [obj3, tmp6] = _mod1267.useStoreWithEqualityFn(closure_4, first, _mod4735.shallow);
       if (cResult[1] === arg0) {
         if (cResult[2] === obj3) {
           let tmp7 = cResult[3];
@@ -97,7 +97,7 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
       cResult[2] = obj3;
       cResult[3] = hasItem;
       tmp7 = hasItem;
-      const tmp5 = _slicedToArray(_mod1267.useStoreWithEqualityFn(closure_4, first, _mod4733.shallow), 2);
+      const tmp5 = _slicedToArray(_mod1267.useStoreWithEqualityFn(closure_4, first, _mod4735.shallow), 2);
     }
   : function useCommunicationDisabledNoticeStore(arg0) {
       const tmp = _slicedToArray(
@@ -108,7 +108,7 @@ export const useCommunicationDisabledNoticeStore = ReactCompilerGating.isReactCo
             ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
             return items;
           },
-          _mod4733.shallow,
+          _mod4735.shallow,
         ),
         2,
       );

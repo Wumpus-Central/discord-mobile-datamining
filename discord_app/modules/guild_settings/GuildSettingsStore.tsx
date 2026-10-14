@@ -9,7 +9,7 @@ import ChannelRecord from "../../records/ChannelRecord.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import PlainRecord from "../../lib/PlainRecord.tsx";
 import GuildRecord from "../../records/GuildRecord.tsx";
-import _modDef4702 from "../../../_runtime/metro/04702__.js";
+import _modDef4704 from "../../../_runtime/metro/04704__.js";
 import GlobalDiscoveryServersConstants from "../global_discovery_servers/GlobalDiscoveryServersConstants.tsx";
 import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils.tsx";
 import GuildSettingsVanityURLActionCreators from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
@@ -24,8 +24,11 @@ import Constants from "../../Constants.tsx";
 import PublicGuildsConstants from "../public_guilds/PublicGuildsConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-function handleFormInit(location) {
-  ({ guildId, section, subsection } = location);
+function handleFormInit(type) {
+  ({ guildId, section, subsection } = type);
+  if ("GUILD_SETTINGS_INIT" === type.type) {
+    _location = type.location;
+  }
   guild = GuildStore.getGuild(guildId);
   if (null == guild) {
     c35 = false;
@@ -60,7 +63,6 @@ function handleFormInit(location) {
     obj = obj2;
     c12 = null;
     closure_46 = {};
-    location = location.location;
     if (section === constants.TAG) {
       obj = GuildSettingsServerTagUtils;
       if (!obj.canUseMobileServerTagSettings(guildId)) {
@@ -110,7 +112,7 @@ function _createInvite(code) {
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   const created_at = code.created_at;
-  obj.createdAt = _modDef4702(created_at);
+  obj.createdAt = _modDef4704(created_at);
   ({ flags: obj.flags, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }
@@ -222,7 +224,7 @@ let closure_46 = {};
 let c47 = null;
 let c48 = 0;
 let NONE = MFALevels.NONE;
-let location = null;
+let _location = null;
 let obj = {
   primaryCategoryId: DEFAULT_DISCOVERY_CATEGORY_ID,
   secondaryCategoryIds: [],
@@ -384,7 +386,7 @@ prototype["getProps"] = function getProps() {
     originalGuild: guild,
     hasChanges: this.hasChanges(),
     guildMetadata: obj,
-    analyticsLocation: location,
+    analyticsLocation: _location,
     isGuildMetadataLoaded,
     originalProfile: profile,
     profile: obj,

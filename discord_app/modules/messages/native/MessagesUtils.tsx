@@ -215,8 +215,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9384).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(7748);
+let closure_5 = fn(9393).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(7754);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1085);
 ({
@@ -287,7 +287,13 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "o" };
+          const obj3 = {
+            sourceType: "embed",
+            source: tmp8,
+            mediaType: "image",
+            mediaUrl: tmp8.url,
+            contentType: "Array",
+          };
           return obj3;
         }
       }

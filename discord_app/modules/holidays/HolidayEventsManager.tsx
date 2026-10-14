@@ -9,7 +9,7 @@ import SoundpackStore from "../soundpacks/SoundpackStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const Soundpacks = fn(10982).Soundpacks;
+const Soundpacks = fn(11056).Soundpacks;
 class HolidayEventsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

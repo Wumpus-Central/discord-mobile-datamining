@@ -340,7 +340,7 @@ function buildSubCommands(arg0) {
   if (null == command.options) {
     return items2;
   } else {
-    options = command.options;
+    const options = command.options;
     const found = options.filter((type) => type.type === Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP);
     for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
       let push = items2.push;

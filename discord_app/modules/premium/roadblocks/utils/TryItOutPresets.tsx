@@ -2,16 +2,16 @@
 import util from "../../../../intl/index.native.tsx";
 import DisplayNameEffect from "../../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import DisplayNameFont from "../../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
-import _mod15233 from "../../../../../discord_assets/assets/user_profile/try_it_out/above_the_clouds_banner.png.js";
-import _mod15234 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/above_the_clouds_banner.gif.js";
-import _mod15237 from "../../../../../discord_assets/assets/user_profile/try_it_out/cyberpunk_banner.png.js";
-import _mod15238 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/cyberpunk_indi_banner.gif.js";
-import _mod15241 from "../../../../../discord_assets/assets/user_profile/try_it_out/shadow_realm_banner.png.js";
-import _mod15242 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/fantasy_land_banner.gif.js";
-import _mod15245 from "../../../../../discord_assets/assets/user_profile/try_it_out/starlit_dream_banner.png.js";
-import _mod15246 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/future_galaxy_banner.gif.js";
-import _mod15249 from "../../../../../discord_assets/assets/user_profile/try_it_out/neon_space_banner.png.js";
-import _mod15250 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/neon_space_banner.gif.js";
+import _mod15270 from "../../../../../discord_assets/assets/user_profile/try_it_out/above_the_clouds_banner.png.js";
+import _mod15271 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/above_the_clouds_banner.gif.js";
+import _mod15274 from "../../../../../discord_assets/assets/user_profile/try_it_out/cyberpunk_banner.png.js";
+import _mod15275 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/cyberpunk_indi_banner.gif.js";
+import _mod15278 from "../../../../../discord_assets/assets/user_profile/try_it_out/shadow_realm_banner.png.js";
+import _mod15279 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/fantasy_land_banner.gif.js";
+import _mod15282 from "../../../../../discord_assets/assets/user_profile/try_it_out/starlit_dream_banner.png.js";
+import _mod15283 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/future_galaxy_banner.gif.js";
+import _mod15286 from "../../../../../discord_assets/assets/user_profile/try_it_out/neon_space_banner.png.js";
+import _mod15287 from "../../../../../discord_assets/assets/premium/upsells/profiles/banners/neon_space_banner.gif.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -48,9 +48,9 @@ const obj3 = {
   },
   getBannerSrc(arg0) {
     if (arg0) {
-      let _default = _mod15233.default;
+      let _default = _mod15270.default;
     } else {
-      _default = _mod15234.default;
+      _default = _mod15271.default;
     }
     return _default;
   },
@@ -95,9 +95,9 @@ obj5.getPreviewThumbnailSrc = function getPreviewThumbnailSrc() {
 };
 obj5.getBannerSrc = function getBannerSrc(arg0) {
   if (arg0) {
-    let _default = _mod15237.default;
+    let _default = _mod15274.default;
   } else {
-    _default = _mod15238.default;
+    _default = _mod15275.default;
   }
   return _default;
 };
@@ -141,9 +141,9 @@ obj7.getPreviewThumbnailSrc = function getPreviewThumbnailSrc() {
 };
 obj7.getBannerSrc = function getBannerSrc(arg0) {
   if (arg0) {
-    let _default = _mod15241.default;
+    let _default = _mod15278.default;
   } else {
-    _default = _mod15242.default;
+    _default = _mod15279.default;
   }
   return _default;
 };
@@ -187,9 +187,9 @@ obj9.getPreviewThumbnailSrc = function getPreviewThumbnailSrc() {
 };
 obj9.getBannerSrc = function getBannerSrc(arg0) {
   if (arg0) {
-    let _default = _mod15245.default;
+    let _default = _mod15282.default;
   } else {
-    _default = _mod15246.default;
+    _default = _mod15283.default;
   }
   return _default;
 };
@@ -233,9 +233,9 @@ obj11.getPreviewThumbnailSrc = function getPreviewThumbnailSrc() {
 };
 obj11.getBannerSrc = function getBannerSrc(arg0) {
   if (arg0) {
-    let _default = _mod15249.default;
+    let _default = _mod15286.default;
   } else {
-    _default = _mod15250.default;
+    _default = _mod15287.default;
   }
   return _default;
 };

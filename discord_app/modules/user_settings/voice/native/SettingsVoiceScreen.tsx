@@ -3,14 +3,14 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06335_LegacyBaseButton.js";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import LegacyBaseButton from "../../../../../_runtime/06339_LegacyBaseButton.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import KrispLogo from "KrispLogo.tsx";
-import _modDef11093 from "../../../../../_runtime/metro/11093__.js";
-import _modDef11094 from "../../../../../_runtime/metro/11094__.js";
+import _modDef11163 from "../../../../../_runtime/metro/11163__.js";
+import _modDef11164 from "../../../../../_runtime/metro/11164__.js";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -55,7 +55,7 @@ function getVoiceSettings() {
   const obj9 = { children: null };
   const items6 = [closure_1_8(closure_14, {}), closure_1_8(closure_13, {})];
   obj9.children = items6;
-  obj8.subLabel = options(collapsed, obj9);
+  obj8.subLabel = React6(collapsed, obj9);
   items1[4] = obj8;
   const obj10 = { label: null, settings: null };
   const intl7 = util.intl;
@@ -88,7 +88,7 @@ function getVoiceSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(7993).MobileUserSettings;
+const MobileUserSettings = fn(8000).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
@@ -96,7 +96,7 @@ const guideURL =
   "" +
   HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) +
   "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_12 = createStyles.createStyles({
   krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" },
   logo: { marginRight: 8, height: 30, width: 67 },
@@ -108,9 +108,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_12();
       const tmp6 = useThemeDefault();
       if (obj2.isThemeLight(tmp6)) {
-        let tmp5Result = _modDef11093;
+        let tmp5Result = _modDef11163;
       } else {
-        tmp5Result = _modDef11094;
+        tmp5Result = _modDef11164;
       }
       ({ krisp, logo } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -161,7 +161,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: krisp, children: null };
         const items = [tmp10, tmp14];
         obj5.children = items;
-        const tmp20 = options(View, obj5);
+        const tmp20 = React6(View, obj5);
         cResult[6] = tmp4.krisp;
         cResult[7] = tmp10;
         cResult[8] = tmp20;
@@ -178,9 +178,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_12();
       const tmp4 = useThemeDefault();
       if (obj.isThemeLight(tmp4)) {
-        let tmp2Result = _modDef11093;
+        let tmp2Result = _modDef11163;
       } else {
-        tmp2Result = _modDef11094;
+        tmp2Result = _modDef11164;
       }
       const obj2 = { style: tmp.krisp, children: null };
       const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -198,7 +198,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = closure_1_8(Text_Text.Text, obj5);
       items[1] = closure_1_8(LegacyBaseButton.LegacyPressable, obj4);
       obj2.children = items;
-      return options(View, obj2);
+      return React6(View, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()

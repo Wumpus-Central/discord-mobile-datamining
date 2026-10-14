@@ -223,9 +223,9 @@ function pushNativeCategory(emojiSections) {
   emojiSections = emojiSections.emojiSections;
   emojiSections.push(emojiSections.renderingData);
 }
-const EmojiPickerConstants = fn(5991);
+const EmojiPickerConstants = fn(5996);
 ({ EmojiCategories: hasOwnProperty, EmojiCategoryTypes: metroRequire } = EmojiPickerConstants);
-const constants3 = fn(9430).EmojiPickerRenderingDataType;
+const constants3 = fn(9439).EmojiPickerRenderingDataType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");

@@ -26,7 +26,7 @@ class SelectedChannelManager extends tmp3 {
 const prototype = SelectedChannelManager.prototype;
 prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   guild = guild.guild;
-  const channelId = SelectedChannelStore.getChannelId(options);
+  const channelId = SelectedChannelStore.getChannelId(React6);
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (guild.id === channelId) {
     transitionToGuild.transitionToGuild(guild.id);
@@ -48,7 +48,7 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const originChannelId = channel.originChannelId;
     const channelId = SelectedChannelStore.getChannelId(collapsed);
     if (tmp) {
-      router_utils.transitionTo(closure_1_8.CHANNEL(options, channel.id));
+      router_utils.transitionTo(closure_1_8.CHANNEL(React6, channel.id));
     }
     tmp = null == SelectedGuildStore.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {

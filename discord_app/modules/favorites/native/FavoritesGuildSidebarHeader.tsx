@@ -37,11 +37,11 @@ function EmptyBody() {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16943).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16980).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
   divider: null,

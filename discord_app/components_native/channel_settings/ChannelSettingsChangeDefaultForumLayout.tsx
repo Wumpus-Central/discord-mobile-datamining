@@ -2,8 +2,8 @@
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../common/FastImage.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../actions/ChannelSettingsActionCreators.tsx";
-import _modDef17624 from "../../../_runtime/metro/17624__.js";
-import _modDef17625 from "../../../_runtime/metro/17625__.js";
+import _modDef17658 from "../../../_runtime/metro/17658__.js";
+import _modDef17659 from "../../../_runtime/metro/17659__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -12,7 +12,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     flex: 1,
@@ -66,22 +66,22 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         LIST = tmp(2075).ForumLayout.LIST;
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { icon: closure_7(tmp(17584).GridSquareIcon, {}), label: null, value: null };
+        let obj2 = { icon: closure_7(tmp(17618).GridSquareIcon, {}), label: null, value: null };
         const intl2 = tmp(1126).intl;
         obj2.label = intl2.string(tmp(1126).t["U+rQfW"]);
         obj2.value = tmp(2075).ForumLayout.GRID;
-        const tmp12 = closure_7(tmp(6262).TableRadioRow, obj2);
+        const tmp12 = closure_7(tmp(6266).TableRadioRow, obj2);
         cResult[3] = tmp12;
         let tmp10 = tmp12;
       } else {
         tmp10 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { icon: closure_7(tmp(6782).ListViewIcon, {}), label: null, value: null };
+        const obj3 = { icon: closure_7(tmp(6786).ListViewIcon, {}), label: null, value: null };
         const intl3 = tmp(1126).intl;
         obj3.label = intl3.string(tmp(1126).t.tuHPRX);
         obj3.value = tmp(2075).ForumLayout.LIST;
-        const tmp15 = closure_7(tmp(6262).TableRadioRow, obj3);
+        const tmp15 = closure_7(tmp(6266).TableRadioRow, obj3);
         cResult[4] = tmp15;
         let tmp13 = tmp15;
       } else {
@@ -102,7 +102,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[9] !== tmp4.description) {
           const obj4 = { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: tmp18 };
-          const tmp22 = closure_7(tmp(5088).Text, obj4);
+          const tmp22 = closure_7(tmp(5092).Text, obj4);
           cResult[9] = tmp4.description;
           cResult[10] = tmp22;
           let tmp20 = tmp22;
@@ -114,18 +114,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { title: null };
           const intl5 = tmp(1126).intl;
           obj5.title = intl5.string(tmp(1126).t.e4oMl4);
-          const tmp25 = closure_7(tmp(6265).TableRowGroupTitle, obj5);
+          const tmp25 = closure_7(tmp(6269).TableRowGroupTitle, obj5);
           cResult[11] = tmp25;
           let tmp23 = tmp25;
         } else {
           tmp23 = cResult[11];
         }
         if (tmp6 === tmp(2075).ForumLayout.GRID) {
-          let tmp28 = _modDef17624;
+          let tmp28 = _modDef17658;
           let tmp27 = importDefault;
         } else {
           tmp27 = importDefault;
-          tmp28 = _modDef17625;
+          tmp28 = _modDef17659;
         }
         if (cResult[12] === tmp4.thumbnailImagePortrait) {
           if (cResult[13] === tmp28) {
@@ -153,7 +153,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp33 = tmp36;
         }
         const obj7 = { style: tmp4.thumbnailImagePortrait, source: tmp28 };
-        const tmp32 = closure_7(tmp27(6157), obj7);
+        const tmp32 = closure_7(tmp27(5034), obj7);
         cResult[12] = tmp4.thumbnailImagePortrait;
         cResult[13] = tmp28;
         cResult[14] = tmp32;
@@ -162,7 +162,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { title: tmp8, defaultValue: LIST, onChange: tmp7, hasIcons: true, children: null };
       const items1 = [tmp10, tmp13];
       obj8.children = items1;
-      const tmp17 = closure_8(channel(6263).TableRadioGroup, obj8);
+      const tmp17 = closure_8(channel(6267).TableRadioGroup, obj8);
       cResult[5] = tmp7;
       cResult[6] = LIST;
       cResult[7] = tmp17;
@@ -191,32 +191,32 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.defaultValue = LIST;
       obj2.onChange = callback;
-      const obj3 = { icon: closure_7(channel(17584).GridSquareIcon, {}), label: null, value: null };
+      const obj3 = { icon: closure_7(channel(17618).GridSquareIcon, {}), label: null, value: null };
       const intl2 = tmp7(1126).intl;
       obj3.label = intl2.string(channel(1126).t["U+rQfW"]);
       obj3.value = channel(2075).ForumLayout.GRID;
-      const items1 = [closure_7(channel(6262).TableRadioRow, obj3)];
-      const obj4 = { icon: closure_7(channel(6782).ListViewIcon, {}), label: null, value: null };
+      const items1 = [closure_7(channel(6266).TableRadioRow, obj3)];
+      const obj4 = { icon: closure_7(channel(6786).ListViewIcon, {}), label: null, value: null };
       const intl3 = tmp7(1126).intl;
       obj4.label = intl3.string(channel(1126).t.tuHPRX);
       obj4.value = channel(2075).ForumLayout.LIST;
-      items1[1] = closure_7(channel(6262).TableRadioRow, obj4);
+      items1[1] = closure_7(channel(6266).TableRadioRow, obj4);
       obj2.children = items1;
-      const items2 = [closure_8(channel(6263).TableRadioGroup, obj2), , ,];
+      const items2 = [closure_8(channel(6267).TableRadioGroup, obj2), , ,];
       const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-muted", children: null };
       const intl4 = tmp7(1126).intl;
       obj5.children = intl4.string(channel(1126).t.MbX5Hu);
-      items2[1] = closure_7(channel(5088).Text, obj5);
+      items2[1] = closure_7(channel(5092).Text, obj5);
       const obj6 = { title: null };
       const intl5 = tmp7(1126).intl;
       obj6.title = intl5.string(channel(1126).t.e4oMl4);
-      items2[2] = closure_7(channel(6265).TableRowGroupTitle, obj6);
+      items2[2] = closure_7(channel(6269).TableRowGroupTitle, obj6);
       const obj7 = { style: tmp.thumbnailImagePortrait, source: null };
       const tmp2 = _slicedToArray(noop.useState(channel.defaultForumLayout), 2);
       if (tmp3 === channel(2075).ForumLayout.GRID) {
-        let tmp10Result = tmp10(17624);
+        let tmp10Result = tmp10(17658);
       } else {
-        tmp10Result = tmp10(17625);
+        tmp10Result = tmp10(17659);
       }
       obj7.source = tmp10Result;
       items2[3] = closure_7(FastImageDefault, obj7);

@@ -13,7 +13,7 @@ let closure_3 = ["steps", "onWillFocus"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { height: "100%" }, stepContainer: null };
 const rect = {
   flexDirection: "column",
@@ -22,7 +22,7 @@ const rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(6259).NAV_BAR_HEIGHT,
+  height: fn(6263).NAV_BAR_HEIGHT,
 };
 obj2.stepContainer = rect;
 let closure_10 = createStyles.createStyles(obj2);
@@ -108,7 +108,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = { style: tmp9.container, children: null };
                   const items = [tmp16, tmp28];
                   obj4.children = items;
-                  const tmp35 = options(View, obj4);
+                  const tmp35 = React6(View, obj4);
                   cResult[24] = tmp9.container;
                   cResult[25] = tmp16;
                   cResult[26] = tmp28;
@@ -211,5 +211,5 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = closure_1_8(ModalStepIndicator.ModalStepIndicator, obj5);
       items1[1] = closure_1_8(View, obj4);
       obj.children = items1;
-      return options(View, obj);
+      return React6(View, obj);
     };

@@ -16,11 +16,11 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
 let closure_3 = ["trailing"];
-const UI_SHOW_HIDE_PHYSICS = fn(12488).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(12491).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(12524).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(12527).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: null };
 const rect = {
   zIndex: 1,

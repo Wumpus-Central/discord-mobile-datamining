@@ -3,7 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import DraftStore from "../../stores/DraftStore.tsx";
 import UploadStore from "../../stores/UploadStore.tsx";
 
-const DraftType = fn(7244).DraftType;
+const DraftType = fn(7250).DraftType;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/native/UploadActionCreators.tsx");
 

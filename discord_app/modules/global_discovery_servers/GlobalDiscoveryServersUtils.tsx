@@ -31,7 +31,7 @@ let closure_13 = async function _navigateToGuild() {
   } = closure_0);
   return "Set";
 };
-const GlobalDiscoveryServersConstants = fn(8640);
+const GlobalDiscoveryServersConstants = fn(8645);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,
@@ -151,7 +151,7 @@ export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscov
 };
 export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(type) {
   if (constants.FEATURED === type) {
-    return options;
+    return React6;
   } else if (constants.GAMING === type) {
     return closure_1_8.Activity;
   } else if (constants.MUSIC === type) {
@@ -217,14 +217,15 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "toCharArray$esjava$1",
-    discoverySplash: null,
-    emojis: [],
+    discoverySplash: false,
+    emojis: false,
   };
   ({
     approximate_presence_count: obj.presenceCount,
     approximate_member_count: obj.memberCount,
     discovery_splash: obj.discoverySplash,
   } = id);
+  obj.emojis = [];
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {

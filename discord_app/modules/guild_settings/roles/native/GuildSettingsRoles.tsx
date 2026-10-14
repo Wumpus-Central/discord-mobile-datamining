@@ -38,7 +38,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(2120).isEveryoneRole;
-let closure_15 = fn(18405).GuildSettingsRoleEditSections;
+let closure_15 = fn(18441).GuildSettingsRoleEditSections;
 const Constants = fn(1085);
 ({
   GuildSettingsSections: closure_16,
@@ -49,7 +49,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { flex: 1 },
   scrollContainer: { paddingHorizontal: 12 },
@@ -474,7 +474,7 @@ let result = size.fileFinishedImporting("modules/guild_settings/roles/native/Gui
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConnectedGuildSettingsModalRoles(guildId) {
-      const cResult = guildId(guild[18]).c(135);
+      const cResult = guildId(guild[18]).c(136);
       guildId = guildId.guildId;
       let obj = guildId(guild[18]);
       closure_1 = closure_23();
@@ -1660,7 +1660,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj8 = {
             style: tmp.emptyRolesIcon,
             size: tmp3(tmp4[46]).Icon.Sizes.LARGE,
-            source: require("../../../../../_runtime/metro/08624__.js"),
+            source: require("../../../../../_runtime/metro/08630__.js"),
           };
           obj7.leading = tmp37(tmp3(tmp4[46]).Icon, obj8);
           let obj9 = { variant: "text-md/semibold", color: "interactive-text-default", children: null };
@@ -1682,6 +1682,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         wrapperStyles: null,
         contentContainerStyle: null,
         data: null,
+        keyExtractor: null,
         rowHasChanged: null,
         onRowMoved: null,
         disableSorting: null,
@@ -1718,6 +1719,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items21 = [tmp.scrollContainer, guildId.contentContainerStyle];
       obj12.contentContainerStyle = items21;
       obj12.data = roleData;
+      obj12.keyExtractor = function keyExtractor(role) {
+        return role.role.id;
+      };
       obj12.rowHasChanged = callback11;
       obj12.onRowMoved = callback6;
       obj12.disableSorting = !sorting;

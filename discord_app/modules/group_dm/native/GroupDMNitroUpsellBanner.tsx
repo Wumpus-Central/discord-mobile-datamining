@@ -7,7 +7,7 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef8081 from "../../../../_runtime/metro/08081__.js";
+import _modDef8088 from "../../../../_runtime/metro/08088__.js";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import GroupDMNitroCapExperimentDefault from "../GroupDMNitroCapExperiment.tsx";
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction.tsx";
@@ -19,7 +19,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(10751).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(10850).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -29,7 +29,7 @@ const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const locations = [0, 0.225, 1];
 let closure_17 = { mass: 0.8, stiffness: 400, damping: 32, overshootClamping: true };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 },
   floatingContent: { justifyContent: "flex-end" },
@@ -804,7 +804,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       };
                       const intl2 = util.intl;
                       obj3.children = intl2.string(util.t.KCD0Hp);
-                      const tmp29 = options(Text_Text.Text, obj3);
+                      const tmp29 = React6(Text_Text.Text, obj3);
                       cResult[21] = tmp29;
                       let tmp27 = tmp29;
                     } else {
@@ -816,7 +816,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const intl3 = util.intl;
                       const obj6 = { number };
                       obj5.children = intl3.formatToPlainString(util.t["8o8Zk5"], obj6);
-                      const tmp33 = options(Text_Text.Text, obj5);
+                      const tmp33 = React6(Text_Text.Text, obj5);
                       cResult[22] = tmp33;
                       let tmp30 = tmp33;
                     } else {
@@ -847,7 +847,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             onListInsetChange: onFloatingListInsetChange,
                             children: tmp34,
                           };
-                          tmp38 = options(closure_23, obj7);
+                          tmp38 = React6(closure_23, obj7);
                         }
                         cResult[27] = tmp34;
                         cResult[28] = tmp4;
@@ -874,10 +874,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   size: "sm",
                   variant: "experimental_premium-primary",
                   shiny: tmp23,
-                  icon: _modDef8081,
+                  icon: _modDef8088,
                   onPress: tmp14,
                 };
-                const tmp26 = options(components_Button_Button.Button, obj9);
+                const tmp26 = React6(components_Button_Button.Button, obj9);
                 cResult[17] = tmp14;
                 cResult[18] = tmp21;
                 cResult[19] = tmp23;
@@ -966,17 +966,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = !stateFromStores;
       }
       obj7.shiny = tmp15;
-      obj7.icon = _modDef8081;
+      obj7.icon = _modDef8088;
       obj7.onPress = tmp7Result;
-      obj6.trailing = options(components_Button_Button.Button, obj7);
+      obj6.trailing = React6(components_Button_Button.Button, obj7);
       const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = util.intl;
       obj8.children = intl2.string(util.t.KCD0Hp);
-      const items2 = [options(Text_Text.Text, obj8)];
+      const items2 = [React6(Text_Text.Text, obj8)];
       const obj9 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
       const intl3 = util.intl;
       obj9.children = intl3.formatToPlainString(util.t["8o8Zk5"], { number });
-      items2[1] = options(Text_Text.Text, obj9);
+      items2[1] = React6(Text_Text.Text, obj9);
       obj6.children = items2;
       const tmp11Result = collapsed(tmp5Result, obj6);
       let tmp14Result = tmp11Result;
@@ -987,7 +987,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onListInsetChange: onFloatingListInsetChange,
           children: tmp11Result,
         };
-        tmp14Result = options(closure_23, obj11);
+        tmp14Result = React6(closure_23, obj11);
       }
       return tmp14Result;
     };

@@ -1,10 +1,10 @@
 // discord_app/design/components/Icon/native/BaseIconImage.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import useToken from "../../../tokens/native/useToken.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Image = fn(17).Image;
 const jsx = fn(21).jsx;
 const dependencyMap = {
   xxs: { width: 12, height: 12 },
@@ -12,7 +12,7 @@ const dependencyMap = {
   sm: { width: 18, height: 18 },
   md: { width: 24, height: 24 },
   lg: { width: 32, height: 32 },
-  custom: { width: "kind", height: "apply" },
+  custom: { width: "lineClamp", height: "color" },
   refresh_sm: { width: 18, height: 18 },
 };
 const ReactCompilerGating = fn(558);
@@ -62,16 +62,14 @@ export const BaseIconImage = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj4 = { fadeDuration: 0, source, resizeMode, style: tmp11, accessible, accessibilityLabel };
-            const tmp15 = (
-              <Image
-                fadeDuration={0}
-                source={source}
-                resizeMode={resizeMode}
-                style={tmp11}
-                accessible={accessible}
-                accessibilityLabel={accessibilityLabel}
-              />
-            );
+            const tmp15 = jsx(FastImageDefault, {
+              fadeDuration: 0,
+              source,
+              resizeMode,
+              style: tmp11,
+              accessible,
+              accessibilityLabel,
+            });
             cResult[8] = accessibilityLabel;
             cResult[9] = accessible;
             cResult[10] = resizeMode;
@@ -101,25 +99,23 @@ export const BaseIconImage = ReactCompilerGating.isReactCompilerEnabled()
       const token = useToken.useToken(color);
       if (null != token) {
         const obj2 = { tintColor: token };
-        let tmp3 = obj2;
+        let tmp4 = obj2;
       } else {
-        if (tmp2) {
+        if (tmp3) {
           const obj3 = { tintColor: color };
-          tmp3 = obj3;
+          tmp4 = obj3;
         }
-        tmp2 = null != color && typeof color === "string";
+        tmp3 = null != color && typeof color === "string";
       }
       const obj4 = { fadeDuration: 0, source: size.source, resizeMode, style: null, accessible, accessibilityLabel };
-      const items = [dependencyMap[str], tmp3, style];
+      const items = [dependencyMap[str], tmp4, style];
       obj4.style = items;
-      return (
-        <Image
-          fadeDuration={0}
-          source={size.source}
-          resizeMode={resizeMode}
-          style={null}
-          accessible={accessible}
-          accessibilityLabel={accessibilityLabel}
-        />
-      );
+      return jsx(FastImageDefault, {
+        fadeDuration: 0,
+        source: size.source,
+        resizeMode,
+        style: null,
+        accessible,
+        accessibilityLabel,
+      });
     };

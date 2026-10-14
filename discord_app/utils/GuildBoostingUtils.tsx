@@ -4,7 +4,7 @@ import SentryUtilsDefault from "SentryUtils.native.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
 import _modDef3280 from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import _modDef4702 from "../../_runtime/metro/04702__.js";
+import _modDef4704 from "../../_runtime/metro/04704__.js";
 import PremiumUtilsAll from "PremiumUtils.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
@@ -52,7 +52,7 @@ const PremiumConstants = fn(1392);
   TotalStickerCountsByTier: closure_25,
   PerkIcons: closure_26,
 } = PremiumConstants);
-let closure_27 = fn(4783).getPremiumGroupProductName;
+let closure_27 = fn(4785).getPremiumGroupProductName;
 let obj = {
   LEVEL_1: 1,
   [1]: "LEVEL_1",
@@ -524,13 +524,13 @@ export const minimumRequiredTierForGuildFeature = apply.memoize((arg0) => {
 });
 export const boostedGuildTierToAnalyticsObjectType = function boostedGuildTierToAnalyticsObjectType(arg0) {
   if (BoostedGuildTiers.NONE === arg0) {
-    return options.NONE;
+    return React6.NONE;
   } else if (BoostedGuildTiers.TIER_1 === arg0) {
-    return options.TIER_1;
+    return React6.TIER_1;
   } else if (BoostedGuildTiers.TIER_2 === arg0) {
-    return options.TIER_2;
+    return React6.TIER_2;
   } else if (BoostedGuildTiers.TIER_3 === arg0) {
-    return options.TIER_3;
+    return React6.TIER_3;
   } else {
     return null;
   }
@@ -546,7 +546,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = _modDef4702().diff(_modDef4702(arg0), "months");
+  let num = _modDef4704().diff(_modDef4704(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -554,9 +554,9 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = _modDef4702();
+  const obj = _modDef4704();
   const entries = Object.entries(closure_28);
-  const diffResult = _modDef4702().diff(arg0, "months");
+  const diffResult = _modDef4704().diff(arg0, "months");
   while (tmp3 !== undefined) {
     let tmp6 = _slicedToArray(tmp4, 2);
     let first = tmp6[0];
@@ -911,7 +911,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj3;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8034).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8041).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

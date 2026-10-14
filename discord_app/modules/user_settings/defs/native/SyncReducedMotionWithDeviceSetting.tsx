@@ -7,7 +7,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useReducedMotionSyncSettingValue() {
       const cResult = c.c(2);
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["St+DJK"]);
   },
-  parent: fn(7993).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8000).MobileUserSettings.ACCESSIBILITY,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useReducedMotionSyncSettingValue() {
         const cResult = c.c(2);

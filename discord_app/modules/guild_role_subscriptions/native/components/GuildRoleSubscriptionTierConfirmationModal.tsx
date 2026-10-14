@@ -1,8 +1,8 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FormHeaderDefault from "../../../guild_member_verification/native/components/form_fields/FormHeader.tsx";
 import FormStylesDefault from "FormStyles.tsx";
 import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep.tsx";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.coverPhoto = size;
@@ -138,7 +138,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
       obj5.children = closure_1_8(FastImageDefault, obj6);
       items1[1] = closure_1_8(View, obj5);
       obj3.children = items1;
-      tmp13Result = collapsed(options, obj3);
+      tmp13Result = collapsed(React6, obj3);
       const tmp3Result = FormHeaderDefault;
     }
     const obj7 = { children: null };
@@ -155,7 +155,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     };
     items2[2] = closure_1_8(Text_Text.Text, obj9);
     obj7.children = items2;
-    flag = collapsed(options, obj7);
+    flag = collapsed(React6, obj7);
     const tmp3Result2 = FormHeaderDefault;
   }
   const items3 = [

@@ -1,8 +1,8 @@
 // discord_app/modules/checkpoint/2025/native/Checkpoint2025ForwardPreview.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../_runtime/00576_c.js";
-import CheckpointUtils from "../CheckpointUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import CheckpointUtils from "../CheckpointUtils.tsx";
 import checkpoint_CheckpointConstants from "../CheckpointConstants.tsx";
 import CheckpointColors from "../CheckpointColors.native.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";

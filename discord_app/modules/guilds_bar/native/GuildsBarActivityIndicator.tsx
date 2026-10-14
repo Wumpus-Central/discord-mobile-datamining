@@ -4,49 +4,49 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
-import _modDef8164 from "../../../../_runtime/metro/08164__.js";
+import _modDef8171 from "../../../../_runtime/metro/08171__.js";
 import StageIcon from "../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import VoiceNormalIcon from "../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
-import _modDef8561 from "../../../../_runtime/metro/08561__.js";
+import _modDef8568 from "../../../../_runtime/metro/08568__.js";
 import CalendarIcon from "../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
-import _modDef8777 from "../../../../_runtime/metro/08777__.js";
+import _modDef8781 from "../../../../_runtime/metro/08781__.js";
 import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import useGuildsBarGuildMediaStateDefault from "../useGuildsBarGuildMediaState.tsx";
-import _modDef17096 from "../../../../_runtime/metro/17096__.js";
-import _modDef17097 from "../../../../_runtime/metro/17097__.js";
-import _modDef17098 from "../../../../_runtime/metro/17098__.js";
+import _modDef17130 from "../../../../_runtime/metro/17130__.js";
+import _modDef17131 from "../../../../_runtime/metro/17131__.js";
+import _modDef17132 from "../../../../_runtime/metro/17132__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef8777 };
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef8781 };
     let tmp6 = obj2;
   } else if (tmp4) {
-    const obj3 = { icon: StageIcon.StageIcon, source: _modDef8561 };
+    const obj3 = { icon: StageIcon.StageIcon, source: _modDef8568 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef17096 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef17130 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef17097 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef17131 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef17098 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef17132 };
     tmp6 = obj6;
   } else {
     tmp6 = null;
     if (tmp5) {
-      const obj = { icon: AppsIcon.AppsIcon, source: _modDef8164 };
+      const obj = { icon: AppsIcon.AppsIcon, source: _modDef8171 };
       tmp6 = obj;
     }
   }
   return tmp6;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { activityWrapper: null, activityIconWrapper: null, activityIconWrapperActive: null, activityIcon: null };
 let size = {
   position: "absolute",

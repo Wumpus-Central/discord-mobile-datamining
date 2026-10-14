@@ -32,7 +32,7 @@ if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
 let c11 = 150;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   card: null,
   topRowOverlay: null,
@@ -82,7 +82,7 @@ let obj3 = {
 };
 obj.badgePillDarkMode = { backgroundColor: nativeDefault.colors.WHITE };
 let obj4 = { backgroundColor: nativeDefault.colors.WHITE };
-obj.badgePillLightMode = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+obj.badgePillLightMode = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
 obj.wishlistButton = { marginLeft: "auto", flexShrink: 0 };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -148,7 +148,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               text = tmp21;
               const _Symbol2 = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                class Y {
+                class K {
                   constructor() {
                     obj = closure_1(closure_2[17]);
                     obj1 = { text: closure_7 };
@@ -156,9 +156,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                cResult[12] = Y;
+                cResult[12] = K;
               } else {
-                class Y {
+                class K {
                   constructor() {
                     obj = closure_1(closure_2[17]);
                     obj1 = { text: closure_7 };
@@ -730,7 +730,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp14Result;
     };
-let obj5 = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+let obj5 = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardV2.tsx");
 
@@ -747,8 +747,8 @@ export default noop.memo(function CollectiblesShopCardV2(arg0) {
     let obj = { newValue: memo, children: null };
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    obj.children = options(closure_14, obj2);
-    return options(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+    obj.children = React6(closure_14, obj2);
+    return React6(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
   }
 });
 export const COLLECTIBLES_SHOP_CARD_HEIGHT = num;

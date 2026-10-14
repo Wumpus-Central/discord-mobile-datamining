@@ -1,6 +1,4 @@
 // discord_app/modules/chat_input/native/useEmojiSuggestions.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import c from "../../../../_runtime/00576_c.js";
 import EmojiTypes from "../../emojis/EmojiTypes.tsx";
 import AutocompleteUtilsDefault from "../../../utils/AutocompleteUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -37,11 +35,11 @@ function trimSurroundingPunctuation(wordSpan) {
   }
   return tmp3;
 }
-function sortSuggestedEmojis(unlocked, guildId) {
+function sortSuggestedEmojis(locked, guildId) {
   const items = [];
   const items1 = [];
   const items2 = [];
-  const iter = unlocked[Symbol.iterator]();
+  const iter = locked[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -102,8 +100,63 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(5987).LoadState;
-const EnglishEmojiSuggestionsConstants = fn(12658);
+function searchEmojiSuggestions(channel) {
+  channel = channel.channel;
+  ({ maxCount, minUnlockedEmojis } = channel);
+  const tmp = findWordSpan(channel.text, channel.selectionStart, channel.selectionEnd);
+  let tmp2 = null;
+  if (null != tmp) {
+    const replaced = tmp.query.toLowerCase().replace(closure_11, "");
+    const hasItem = set.has(replaced);
+    let tmp6 = !hasItem;
+    if (!hasItem) {
+      let hasItem1 = set2.has(replaced);
+      if (!hasItem1) {
+        hasItem1 = replaced.length >= 3;
+      }
+      tmp6 = hasItem1;
+    }
+    let tmp9 = null;
+    if (tmp6) {
+      const obj = {};
+      const merged = Object.assign(trimSurroundingPunctuation(tmp));
+      obj.query = replaced;
+      tmp9 = obj;
+    }
+    tmp2 = tmp9;
+    const str2 = tmp.query.toLowerCase();
+  }
+  if (null == tmp2) {
+    return closure_18;
+  } else {
+    const query = tmp2.query;
+    const obj4 = {
+      query,
+      channel,
+      intention: EmojiIntention.CHAT,
+      maxCount: 0,
+      matchComparator(str) {
+        closure_0 = query;
+        str = str.replace(re15, "$1_");
+        const parts = str.toLowerCase().split(re16);
+        return parts.some((item) => item.startsWith(closure_0));
+      },
+    };
+    const emojis = AutocompleteUtilsDefault.queryEmojiResults(obj4).emojis;
+    const guildId = channel.getGuildId();
+    const substr = sortSuggestedEmojis(emojis.unlocked, guildId).slice(0, maxCount);
+    const arr2 = sortSuggestedEmojis(emojis.unlocked, guildId);
+    if (substr.length < minUnlockedEmojis) {
+      let obj6 = closure_18;
+    } else {
+      obj6 = { unlockedEmojis: substr, lockedEmojis: arr4, queryStart: null, queryEnd: null };
+      ({ queryStart: obj2.queryStart, queryEnd: obj2.queryEnd } = tmp2);
+    }
+    return obj6;
+  }
+}
+const LoadState = fn(5992).LoadState;
+const EnglishEmojiSuggestionsConstants = fn(12694);
 ({ QUERY_DENYLIST: closure_7, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
 const EmojiIntention = fn(1393).EmojiIntention;
 const re10 = /(\S+)\s$/;
@@ -121,27 +174,45 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/useEmojiSuggestions.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useEmojiSuggestions(arg0) {
-      let length = dependencyMap;
-      const cResult = c.c(31);
-      ({ channel, text } = arg0);
-      require = text;
-      ({ selectionStart, selectionEnd, enabled } = arg0);
-      ({ maxCount, minUnlockedEmojis } = arg0);
+  ? function useEmojiSuggestions(channel) {
+      const cResult = channel(selectionStart[8]).c(22);
+      channel = channel.channel;
+      const text = channel.text;
+      importDefault = text;
+      selectionStart = channel.selectionStart;
+      const selectionEnd = channel.selectionEnd;
+      const enabled = channel.enabled;
+      const maxCount = channel.maxCount;
+      const minUnlockedEmojis = channel.minUnlockedEmojis;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [EmojiStore];
+        const items = [maxCount];
         class B {
           constructor() {
-            return closure_5.loadState;
+            return maxCount.loadState;
           }
         }
         cResult[0] = items;
         cResult[1] = B;
-        tmp3 = items;
+        tmp4 = items;
       } else {
-        [tmp3, tmp4] = cResult;
+        [tmp4, tmp5] = cResult;
       }
-      const stateFromStores = initialize.useStateFromStores(tmp3, B);
+      const obj = channel(selectionStart[8]);
+      const stateFromStores = channel(selectionStart[9]).useStateFromStores(tmp4, B);
+      let tmp8 = closure_18;
+      const obj3 = enabled;
+      const tmpResult = channel(selectionStart[9]);
+      [tmp10, tmp11] = selectionEnd(enabled.useState(closure_18), 2);
+      let tmp12 = enabled;
+      if (enabled) {
+        tmp12 = "" !== text;
+      }
+      if (!tmp12) {
+        tmp12 = tmp10 === tmp8;
+      }
+      if (!tmp12) {
+        tmp11(tmp8);
+      }
       if (cResult[2] === channel) {
         if (cResult[3] === stateFromStores) {
           if (cResult[4] === enabled) {
@@ -150,146 +221,84 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[7] === selectionEnd) {
                   if (cResult[8] === selectionStart) {
                     if (cResult[9] === text) {
-                      dependencyMap = tmp7;
+                      let tmp14 = cResult[10];
+                      let tmp15 = cResult[11];
+                    }
+                    const effect = obj3.useEffect(tmp14, tmp15);
+                    const _Symbol = Symbol;
+                    class B {
+                      constructor() {
+                        return maxCount.loadState;
+                      }
+                    }
+                    if (tmp17 === Symbol.for("react.memo_cache_sentinel")) {
+                      const fn2 = function j() {
+                        tmp11(closure_18);
+                      };
+                      cResult[12] = fn2;
                       class B {
                         constructor() {
-                          return closure_5.loadState;
+                          return maxCount.loadState;
                         }
                       }
-                      [tmp30, tmp31] = noop.useState(closure_18);
-                      _slicedToArray = tmp31;
-                      const tmp32 = cResult[10].unlockedEmojis.length > 0 || cResult[10].lockedEmojis.length > 0;
-                      noop = tmp32;
-                      EmojiStore = obj7.useRef(null);
-                      let tmp34 = enabled;
-                      if (enabled) {
-                        tmp34 = "" !== text;
-                      }
-                      if (!tmp34) {
-                        tmp34 = tmp30 === tmp30;
-                      }
-                      if (!tmp34) {
-                        tmp31(tmp30);
-                      }
-                      if (cResult[15] === enabled) {
-                        if (cResult[16] === tmp7) {
-                          if (cResult[17] === tmp32) {
-                            if (cResult[18] === text) {
-                              let tmp36 = cResult[19];
-                              let tmp37 = cResult[20];
-                            }
-                            const effect = obj7.useEffect(tmp36, tmp37);
-                            const _Symbol = Symbol;
-                            class B {
-                              constructor() {
-                                return closure_5.loadState;
-                              }
-                            }
-                            if (tmp39 === Symbol.for("react.memo_cache_sentinel")) {
-                              const fn2 = function _() {
-                                closure_5.current = null;
-                                tmp31(closure_18);
-                              };
-                              cResult[21] = fn2;
-                              class B {
-                                constructor() {
-                                  return closure_5.loadState;
-                                }
-                              }
-                            } else {
-                              const tmp40 = cResult[21];
-                            }
-                            if (cResult[22] === selectionEnd) {
-                              if (cResult[23] === selectionStart) {
-                                if (cResult[24] === text) {
-                                  const unlockedEmojis = tmp30.unlockedEmojis;
-                                  class B {
-                                    constructor() {
-                                      return closure_5.loadState;
-                                    }
-                                  }
-                                  if (cResult[26] === cResult[25].queryEnd) {
-                                    if (cResult[27] === tmp41.queryStart) {
-                                      if (cResult[28] === tmp47) {
-                                        if (cResult[29] === unlockedEmojis) {
-                                          let tmp48 = cResult[30];
-                                        }
-                                        return tmp48;
-                                      }
-                                    }
-                                  }
-                                  const obj2 = {
-                                    unlockedEmojis,
-                                    lockedEmojis: tmp47,
-                                    queryStart: null,
-                                    queryEnd: null,
-                                    clear: null,
-                                  };
-                                  ({ queryStart: obj9.queryStart, queryEnd: obj9.queryEnd } = cResult[25]);
-                                  obj2.clear = tmp40;
-                                  cResult[26] = cResult[25].queryEnd;
-                                  cResult[27] = cResult[25].queryStart;
-                                  cResult[28] = tmp47;
-                                  cResult[29] = unlockedEmojis;
-                                  cResult[30] = obj2;
-                                  tmp48 = obj2;
-                                }
-                              }
-                            }
-                            const tmp43 = findWordSpan(text, selectionStart, selectionEnd);
-                            if (null == tmp43) {
-                              const obj3 = { queryStart: selectionStart, queryEnd: selectionEnd };
-                              class B {
-                                constructor() {
-                                  return closure_5.loadState;
-                                }
-                              }
-                            } else {
-                              const tmp45 = trimSurroundingPunctuation(tmp43);
-                            }
-                            cResult[22] = selectionEnd;
-                            cResult[23] = selectionStart;
-                            cResult[24] = text;
-                            cResult[25] = tmp45;
-                          }
-                        }
-                      }
-                      const fn = function v() {
-                        if (enabled) {
-                          if ("" !== timeout) {
-                            if (closure_4) {
-                              let num = ref.current;
-                              if (num == null) {
-                                num = -Infinity;
-                              }
-                              const _Math = Math;
-                              const _Date = Date;
-                              const sum = num + 500;
-                              const _setTimeout = setTimeout;
-                              timeout = setTimeout(
-                                () => {
-                                  ref.current = Date.now();
-                                  closure_1_3(closure_1_2);
-                                },
-                                Math.max(0, sum - Date.now()),
-                              );
-                              return () => clearTimeout(closure_0);
-                            }
-                          }
-                        }
-                        ref.current = null;
-                      };
-                      const items1 = [enabled, text, cResult[10], tmp32];
-                      cResult[15] = enabled;
-                      cResult[16] = cResult[10];
-                      cResult[17] = tmp32;
-                      cResult[18] = text;
-                      cResult[19] = fn;
-                      cResult[20] = items1;
-                      tmp37 = items1;
-                      tmp36 = fn;
-                      const tmp29 = _slicedToArray(noop.useState(closure_18), 2);
+                    } else {
+                      const tmp18 = cResult[12];
                     }
+                    if (cResult[13] === selectionEnd) {
+                      if (cResult[14] === selectionStart) {
+                        if (cResult[15] === text) {
+                          if (enabled) {
+                            tmp8 = tmp10;
+                          }
+                          const unlockedEmojis = tmp8.unlockedEmojis;
+                          class B {
+                            constructor() {
+                              return maxCount.loadState;
+                            }
+                          }
+                          if (cResult[17] === cResult[16].queryEnd) {
+                            if (cResult[18] === tmp19.queryStart) {
+                              if (cResult[19] === tmp26) {
+                                if (cResult[20] === unlockedEmojis) {
+                                  let tmp27 = cResult[21];
+                                }
+                                return tmp27;
+                              }
+                            }
+                          }
+                          const obj2 = {
+                            unlockedEmojis,
+                            lockedEmojis: tmp26,
+                            queryStart: null,
+                            queryEnd: null,
+                            clear: null,
+                          };
+                          ({ queryStart: obj5.queryStart, queryEnd: obj5.queryEnd } = cResult[16]);
+                          obj2.clear = tmp18;
+                          cResult[17] = cResult[16].queryEnd;
+                          cResult[18] = cResult[16].queryStart;
+                          cResult[19] = tmp26;
+                          cResult[20] = unlockedEmojis;
+                          cResult[21] = obj2;
+                          tmp27 = obj2;
+                        }
+                      }
+                    }
+                    const tmp21 = findWordSpan(text, selectionStart, selectionEnd);
+                    if (null == tmp21) {
+                      const obj4 = { queryStart: selectionStart, queryEnd: selectionEnd };
+                      class B {
+                        constructor() {
+                          return maxCount.loadState;
+                        }
+                      }
+                    } else {
+                      const tmp24 = trimSurroundingPunctuation(tmp21);
+                    }
+                    cResult[13] = selectionEnd;
+                    cResult[14] = selectionStart;
+                    cResult[15] = text;
+                    cResult[16] = tmp24;
                   }
                 }
               }
@@ -297,113 +306,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      if (!enabled) {
-        let tmp9 = closure_18;
-        cResult[2] = channel;
-        class B {
-          constructor() {
-            return closure_5.loadState;
-          }
-        }
-        cResult[3] = stateFromStores;
-        cResult[4] = enabled;
-        cResult[5] = maxCount;
-        cResult[6] = minUnlockedEmojis;
-        cResult[7] = selectionEnd;
-        cResult[8] = selectionStart;
-        cResult[9] = text;
-        cResult[10] = tmp9;
-      }
-      const tmp10 = findWordSpan(text, selectionStart, selectionEnd);
-      let tmp11 = null;
-      if (null != tmp10) {
-        class B {
-          constructor() {
-            return closure_5.loadState;
-          }
-        }
-        const replaced = tmp10.query.toLowerCase().replace(closure_11, "");
-        const hasItem = set.has(replaced);
-        if (!hasItem) {
-          let hasItem1 = set2.has(replaced);
-          if (!hasItem1) {
-            hasItem1 = replaced.length >= 3;
-          }
-          class B {
-            constructor() {
-              return closure_5.loadState;
+      const fn = function q() {
+        if (enabled) {
+          if ("" !== text) {
+            if (stateFromStores === minUnlockedEmojis.Loaded) {
+              const _setTimeout = setTimeout;
+              channel = setTimeout(() => {
+                closure_1_8(
+                  searchEmojiSuggestions({ channel, text, selectionStart, selectionEnd, maxCount, minUnlockedEmojis }),
+                );
+              }, 200);
+              return () => clearTimeout(closure_0);
             }
           }
         }
-        let tmp18 = null;
-        if (tmp15) {
-          const obj5 = {};
-          class B {
-            constructor() {
-              return closure_5.loadState;
-            }
-          }
-          obj5.query = replaced;
-          tmp18 = obj5;
-        }
-        tmp11 = tmp18;
-        const str2 = tmp10.query.toLowerCase();
-        tmp15 = !hasItem;
-      }
-      if (null != tmp11) {
-        const query = tmp11.query;
-        closure_129_0 = query;
-        class B {
-          constructor() {
-            return closure_5.loadState;
-          }
-        }
-        const obj8 = {
-          query,
-          channel,
-          intention: EmojiIntention.CHAT,
-          maxCount: 0,
-          matchComparator(str) {
-            closure_0 = query;
-            str = str.replace(closure_2_15, "$1_");
-            const parts = str.toLowerCase().split(closure_2_16);
-            return parts.some((item) => item.startsWith(closure_0));
-          },
-        };
-        const emojis = obj4.queryEmojiResults(obj8).emojis;
-        const guildId = channel.getGuildId();
-        const substr = sortSuggestedEmojis(emojis.unlocked, guildId).slice(0, maxCount);
-        const tmp25 = sortSuggestedEmojis(emojis.locked, guildId);
-        length = substr.length;
-        if (length < minUnlockedEmojis) {
-          tmp9 = closure_18;
-        } else {
-          if (cResult[11] === tmp25) {
-            if (cResult[12] === substr) {
-              if (cResult[13] === tmp11) {
-                length = cResult[14];
-              }
-              tmp9 = length;
-            }
-          }
-          const obj14 = { unlockedEmojis: substr, lockedEmojis: null, queryStart: null, queryEnd: null };
-          class B {
-            constructor() {
-              return closure_5.loadState;
-            }
-          }
-          ({ queryStart: obj6.queryStart, queryEnd: obj6.queryEnd } = tmp11);
-          cResult[11] = tmp25;
-          cResult[12] = substr;
-          cResult[13] = tmp11;
-          cResult[14] = obj14;
-          length = obj14;
-        }
-        const arr3 = sortSuggestedEmojis(emojis.unlocked, guildId);
-      } else {
-        tmp9 = closure_18;
-      }
-      const tmpResult = initialize;
+      };
+      const items1 = [
+        channel,
+        stateFromStores,
+        enabled,
+        maxCount,
+        minUnlockedEmojis,
+        selectionEnd,
+        selectionStart,
+        text,
+      ];
+      cResult[2] = channel;
+      cResult[3] = stateFromStores;
+      cResult[4] = enabled;
+      cResult[5] = maxCount;
+      cResult[6] = minUnlockedEmojis;
+      cResult[7] = selectionEnd;
+      cResult[8] = selectionStart;
+      cResult[9] = text;
+      cResult[10] = fn;
+      cResult[11] = items1;
+      tmp15 = items1;
+      tmp14 = fn;
+      const tmp9 = selectionEnd(enabled.useState(closure_18), 2);
     }
   : function useEmojiSuggestions(channel) {
       channel = channel.channel;
@@ -416,6 +356,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const minUnlockedEmojis = channel.minUnlockedEmojis;
       const items = [maxCount];
       const stateFromStores = channel(selectionStart[9]).useStateFromStores(items, () => maxCount.loadState);
+      let tmp2 = closure_18;
+      let obj = channel(selectionStart[9]);
+      [tmp4, tmp5] = selectionEnd(enabled.useState(closure_18), 2);
+      c8 = tmp5;
+      let tmp6 = enabled;
+      if (enabled) {
+        tmp6 = "" !== text;
+      }
+      if (!tmp6) {
+        tmp6 = tmp4 === tmp2;
+      }
+      if (!tmp6) {
+        tmp5(tmp2);
+      }
       const items1 = [
         channel,
         stateFromStores,
@@ -426,113 +380,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         selectionStart,
         text,
       ];
-      const memo = enabled.useMemo(() => {
-        if (enabled) {
-          if (stateFromStores === LoadState.Loaded) {
-            const tmp19 = findWordSpan(text, selectionStart, selectionEnd);
-            let tmp13 = null;
-            if (null != tmp19) {
-              const replaced = tmp19.query.toLowerCase().replace(re11, "");
-              const hasItem = set.has(replaced);
-              let tmp6 = !hasItem;
-              if (!hasItem) {
-                let hasItem1 = set2.has(replaced);
-                if (!hasItem1) {
-                  hasItem1 = replaced.length >= 3;
-                }
-                tmp6 = hasItem1;
-              }
-              let tmp9 = null;
-              if (tmp6) {
-                const obj = {};
-                const merged = Object.assign(trimSurroundingPunctuation(tmp19));
-                obj.query = replaced;
-                tmp9 = obj;
-              }
-              tmp13 = tmp9;
-              const str2 = tmp19.query.toLowerCase();
-            }
-            if (null == tmp13) {
-              return closure_18;
-            } else {
-              const query = tmp13.query;
-              const obj4 = {
-                query,
-                channel,
-                intention: EmojiIntention.CHAT,
-                maxCount: 0,
-                matchComparator(str) {
-                  closure_0 = query;
-                  str = str.replace(closure_2_15, "$1_");
-                  const parts = str.toLowerCase().split(closure_2_16);
-                  return parts.some((item) => item.startsWith(closure_0));
-                },
-              };
-              const guildId = channel.getGuildId();
-              const substr = sortSuggestedEmojis(
-                AutocompleteUtilsDefault.queryEmojiResults(obj4).emojis.unlocked,
-                guildId,
-              ).slice(0, maxCount);
-              if (substr.length < minUnlockedEmojis) {
-                let obj6 = closure_18;
-              } else {
-                obj6 = { unlockedEmojis: substr, lockedEmojis: tmp28, queryStart: null, queryEnd: null };
-                ({ queryStart: obj2.queryStart, queryEnd: obj2.queryEnd } = tmp13);
-              }
-              return obj6;
-            }
-          }
-        }
-        return closure_18;
-      }, items1);
-      let tmp3 = closure_18;
-      let obj = channel(selectionStart[9]);
-      [tmp5, tmp6] = selectionEnd(enabled.useState(closure_18), 2);
-      c9 = tmp6;
-      closure_10 = tmp7;
-      enabled.useRef(null);
-      let tmp8 = enabled;
-      if (enabled) {
-        tmp8 = "" !== text;
-      }
-      if (!tmp8) {
-        tmp8 = tmp5 === tmp3;
-      }
-      if (!tmp8) {
-        tmp6(tmp3);
-      }
-      const items2 = [enabled, text, memo, memo.unlockedEmojis.length > 0 || memo.lockedEmojis.length > 0];
       const effect = obj2.useEffect(() => {
         if (enabled) {
-          if ("" !== closure_1) {
-            if (closure_10) {
-              let num = ref.current;
-              if (num == null) {
-                num = -Infinity;
-              }
-              const _Math = Math;
-              const _Date = Date;
-              const sum = num + 500;
+          if ("" !== text) {
+            if (stateFromStores === minUnlockedEmojis.Loaded) {
               const _setTimeout = setTimeout;
-              const timeout = setTimeout(
-                () => {
-                  ref.current = Date.now();
-                  _undefined(memo);
-                },
-                Math.max(0, sum - Date.now()),
-              );
+              channel = setTimeout(() => {
+                _undefined(
+                  searchEmojiSuggestions({ channel, text, selectionStart, selectionEnd, maxCount, minUnlockedEmojis }),
+                );
+              }, 200);
               return () => clearTimeout(closure_0);
             }
           }
         }
-        ref.current = null;
-      }, items2);
-      const items3 = [text, selectionStart, selectionEnd];
+      }, items1);
+      const items2 = [text, selectionStart, selectionEnd];
       const callback = obj2.useCallback(() => {
-        closure_11.current = null;
         _undefined(closure_18);
       }, []);
-      const memo1 = obj2.useMemo(() => {
+      const memo = obj2.useMemo(() => {
         const tmp3 = findWordSpan(text, selectionStart, selectionEnd);
         if (null == tmp3) {
           const obj = { queryStart: selectionStart, queryEnd: selectionEnd };
@@ -541,15 +408,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp5 = trimSurroundingPunctuation(tmp3);
         }
         return tmp5;
-      }, items3);
+      }, items2);
       if (enabled) {
-        tmp3 = tmp5;
+        tmp2 = tmp4;
       }
       return {
-        unlockedEmojis: tmp3.unlockedEmojis,
-        lockedEmojis: tmp3.lockedEmojis,
-        queryStart: memo1.queryStart,
-        queryEnd: memo1.queryEnd,
+        unlockedEmojis: tmp2.unlockedEmojis,
+        lockedEmojis: tmp2.lockedEmojis,
+        queryStart: memo.queryStart,
+        queryEnd: memo.queryEnd,
         clear: callback,
       };
     };

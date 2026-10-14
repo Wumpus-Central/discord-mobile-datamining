@@ -37,7 +37,7 @@ function renderSteps(state, style, E, context) {
         obj7.children = React5(components_Button_Button.Button, obj8);
         items[3] = React5(View, obj7);
         obj.children = items;
-        return options(closure_1_8, obj);
+        return React6(closure_1_8, obj);
       } else {
         return React5(ActivityIndicator_ActivityIndicator.ActivityIndicator, {});
       }
@@ -57,14 +57,14 @@ function renderSteps(state, style, E, context) {
   obj11.children = React5(components_Button_Button.Button, obj12);
   items1[2] = React5(View, obj11);
   obj9.children = items1;
-  return options(closure_1_8, obj9);
+  return React6(closure_1_8, obj9);
 }
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, LoginSuccessfulSources: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({
   statusContainer: { alignItems: "center", marginTop: 32 },
   avatar: { marginBottom: 16 },
@@ -104,7 +104,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       let obj2 = navigation(1503);
-      const state = navigation(16721).useAuthWebsocket(first, true).state;
+      const state = navigation(16760).useAuthWebsocket(first, true).state;
       if (cResult[1] !== navigation) {
         class E {
           constructor() {
@@ -122,7 +122,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      if (state.step === navigation(16720).RemoteAuthStep.PENDING_REMOTE_INIT) {
+      if (state.step === navigation(16759).RemoteAuthStep.PENDING_REMOTE_INIT) {
         class E {
           constructor() {
             goBackResult = closure_0.goBack();
@@ -178,7 +178,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = navigation(16721);
+      const tmpResult = navigation(16760);
       cResult[7] = context;
       cResult[8] = E;
       cResult[9] = state;
@@ -189,7 +189,7 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
   : function CompanionRemoteAuth() {
       let tmp = closure_10();
       navigation = navigation(1503).useNavigation();
-      const context = noop.useContext(fingerprint(5631));
+      const context = noop.useContext(fingerprint(5636));
       const callback = noop.useCallback((arg0) => {
         let tmp = arg0;
         const obj2 = {
@@ -207,13 +207,13 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       let obj = navigation(1503);
       const tmp5 = fingerprint;
-      const state = navigation(16721).useAuthWebsocket(callback, true).state;
+      const state = navigation(16760).useAuthWebsocket(callback, true).state;
       const items = [navigation];
       const callback1 = noop.useCallback(() => {
         navigation.goBack();
       }, items);
       fingerprint = null;
-      if (state.step === navigation(16720).RemoteAuthStep.PENDING_REMOTE_INIT) {
+      if (state.step === navigation(16759).RemoteAuthStep.PENDING_REMOTE_INIT) {
         fingerprint = state.fingerprint;
       }
       const items1 = [fingerprint];
@@ -228,10 +228,10 @@ export const CompanionRemoteAuth = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const obj4 = { headerText: null, children: null };
-      const obj3 = navigation(16721);
+      const obj3 = navigation(16760);
       const intl = tmp2(1126).intl;
       obj4.headerText = intl.string(navigation(1126).t["7fNJgA"]);
-      const tmp5Result = tmp5(6654);
+      const tmp5Result = tmp5(6658);
       obj4.children = closure_7(View, {
         style: tmp.statusContainer,
         children: renderSteps(state, tmp, callback1, context),

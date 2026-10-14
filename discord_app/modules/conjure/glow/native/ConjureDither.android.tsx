@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/glow/native/ConjureDither.android.tsx
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
-import inlineStyles from "../../../../../_runtime/07577_inlineStyles.js";
-import _mod11808 from "../../../../../_runtime/metro/11808__.js";
+import inlineStyles from "../../../../../_runtime/07583_inlineStyles.js";
+import _mod11816 from "../../../../../_runtime/metro/11816__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -186,7 +186,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                       }
                                       const BLOBS = tmp(tmp2[5]).BLOBS;
                                       const mapped = BLOBS.map((peak, index) => {
-                                        const blobReachResult = _mod11808.blobReach(peak.peak, peak.radius, bound);
+                                        const blobReachResult = _mod11816.blobReach(peak.peak, peak.radius, bound);
                                         if (blobReachResult <= 0) {
                                           return null;
                                         } else {
@@ -243,16 +243,16 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                             const mapped1 = BLOBS1.map((peak, index) => {
                               const obj = { id: "blob-" + combined3 + "-" + index, children: null };
                               const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-                              const obj3 = _mod11808;
+                              const obj3 = _mod11816;
                               ({ peak, radius } = peak);
-                              const blobReachResult = _mod11808.blobReach(
+                              const blobReachResult = _mod11816.blobReach(
                                 peak,
                                 radius,
-                                closure_6 + _mod11808.FADE_HALF,
+                                closure_6 + _mod11816.FADE_HALF,
                               );
                               obj2.offset = obj3.isoStop(
                                 blobReachResult,
-                                _mod11808.blobReach(peak.peak, peak.radius, bound),
+                                _mod11816.blobReach(peak.peak, peak.radius, bound),
                               );
                               items = [
                                 timestampProducer(inlineStyles.Stop, obj2),
@@ -418,9 +418,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const size = {
           x: item.x,
           y: item.y,
-          width: _mod11808.CELL,
-          height: _mod11808.CELL,
-          rx: _mod11808.CORNER,
+          width: _mod11816.CELL,
+          height: _mod11816.CELL,
+          rx: _mod11816.CORNER,
           fill,
           fillOpacity,
         };
@@ -442,10 +442,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       items[2] = BLOBS.map((peak, index) => {
         const obj = { id: "blob-" + combined + "-" + index, children: null };
         const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-        const obj3 = _mod11808;
+        const obj3 = _mod11816;
         ({ peak, radius } = peak);
-        const blobReachResult = _mod11808.blobReach(peak, radius, closure_5 + _mod11808.FADE_HALF);
-        obj2.offset = obj3.isoStop(blobReachResult, _mod11808.blobReach(peak.peak, peak.radius, bound));
+        const blobReachResult = _mod11816.blobReach(peak, radius, closure_5 + _mod11816.FADE_HALF);
+        obj2.offset = obj3.isoStop(blobReachResult, _mod11816.blobReach(peak.peak, peak.radius, bound));
         items = [
           timestampProducer(inlineStyles.Stop, obj2),
           timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 }),
@@ -471,7 +471,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [tmp9Result];
       const BLOBS1 = tmp(tmp2[5]).BLOBS;
       items2[1] = BLOBS1.map((peak, index) => {
-        const blobReachResult = _mod11808.blobReach(peak.peak, peak.radius, bound);
+        const blobReachResult = _mod11816.blobReach(peak.peak, peak.radius, bound);
         if (blobReachResult <= 0) {
           return null;
         } else {

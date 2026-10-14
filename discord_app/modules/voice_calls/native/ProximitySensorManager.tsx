@@ -1,5 +1,5 @@
 // discord_app/modules/voice_calls/native/ProximitySensorManager.tsx
-import PlatformUtils2 from "../../../utils/PlatformUtils.tsx";
+import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import VoiceCallTypes from "../VoiceCallTypes.tsx";
 import NativeProximitySensorManagerModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeProximitySensorManagerModule.tsx";
 import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.tsx";
@@ -13,27 +13,21 @@ function handleChange() {
   const currentRouteType = AudioRouteStore.getCurrentRouteType();
   const tmp3 = null != EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   const isConnectedResult = RTCConnectionStore.isConnected();
-  let tmp8 = currentRouteType === VoiceCallTypes.RouteTypes.RECEIVER && isConnectedResult;
-  if (tmp8) {
-    let isIOSResult = PlatformUtils2.isIOS();
+  const tmp4 = ApplicationStreamingStore.getAllActiveStreams().length > 0;
+  let tmp7 = currentRouteType === VoiceCallTypes.RouteTypes.RECEIVER && isConnectedResult;
+  if (tmp7) {
+    let isIOSResult = PlatformUtils.isIOS();
     if (!isIOSResult) {
-      let tmp10 = !tmp3;
+      let tmp9 = !tmp3;
       if (!tmp3) {
-        tmp10 = !tmp4;
+        tmp9 = !tmp4;
       }
-      isIOSResult = tmp10;
+      isIOSResult = tmp9;
     }
-    tmp8 = isIOSResult;
-    const tmp6Result = PlatformUtils2;
+    tmp7 = isIOSResult;
+    const tmp6Result = PlatformUtils;
   }
-  const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
-  tmp4 = ApplicationStreamingStore.getAllActiveStreams().length > 0;
-}
-const PlatformUtils = fn(1382);
-if (PlatformUtils.isIOS()) {
-  let ProximitySensorManager = fn(17).NativeModules.ProximitySensorManager;
-} else {
-  ProximitySensorManager = NativeProximitySensorManagerModuleDefault;
+  const result = NativeProximitySensorManagerModuleDefault.setProximityMonitoringEnabled(tmp7);
 }
 const prototype = function ProximitySensorManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/rpc/native/server/transports/
 export default function _default(logger) {
   logger = logger.logger;
   ({ source, context, postMessageToRPCClient, version, encoding, postClose } = logger);
-  return new logger(10949)({
+  return new logger(11023)({
     source,
     context,
     postMessageToRPCClient,

@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06095_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/06101_fuzzysearch.js";
 import FormRadio from "../../../../design/components/Forms/native/FormRadio.native.tsx";
 import DetailedGuildIdentityUserRowDefault from "../../native/DetailedGuildIdentityUserRow.tsx";
 import AuditLogUtils from "../AuditLogUtils.tsx";
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1085).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 },
   allUsersIconContainer: { height: 30, width: 30, alignItems: "center" },
@@ -45,7 +45,7 @@ let closure_13 = noop.memo(
         ({ accessibilityRole, accessibilityState } = radioA11yNative);
         if (cResult[2] !== selected) {
           const obj3 = { selected };
-          const tmp8 = options(FormRadio.FormRadio, obj3);
+          const tmp8 = React6(FormRadio.FormRadio, obj3);
           cResult[2] = selected;
           cResult[3] = tmp8;
           let tmp6 = tmp8;
@@ -70,7 +70,7 @@ let closure_13 = noop.memo(
             }
           }
         }
-        const tmp10 = options(DetailedGuildIdentityUserRowDefault, {
+        const tmp10 = React6(DetailedGuildIdentityUserRowDefault, {
           start,
           end,
           userId,
@@ -98,8 +98,8 @@ let closure_13 = noop.memo(
         const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
         ({ accessibilityRole, accessibilityState } = radioA11yNative);
         const obj2 = { start, end, userId, guildId, onPress, accessibilityRole, accessibilityState, trailing: null };
-        obj2.trailing = options(FormRadio.FormRadio, { selected });
-        return options(DetailedGuildIdentityUserRowDefault, obj2);
+        obj2.trailing = React6(FormRadio.FormRadio, { selected });
+        return React6(DetailedGuildIdentityUserRowDefault, obj2);
       },
 );
 ReactCompilerGating = fn(558);
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   return;
                                 }
                               }
-                              const tmp26 = closure_9(filterType(6739).SearchField, obj5);
+                              const tmp26 = closure_9(filterType(6743).SearchField, obj5);
                               cResult[25] = tmp20;
                               cResult[26] = tmp26;
                               let tmp24 = tmp26;

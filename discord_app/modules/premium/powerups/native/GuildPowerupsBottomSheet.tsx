@@ -37,8 +37,8 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const GuildPowerupsBoostGemDefault = tmp5(12770);
-const GuildPowerupsImageDefault = tmp5(12772);
+const GuildPowerupsBoostGemDefault = tmp5(12806);
+const GuildPowerupsImageDefault = tmp5(12808);
 const View = _mod17.View;
 ({ GuildPowerupType: hasOwnProperty, GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP: metroRequire } = GuildPowerupsConstants);
 let closure_7 = GameServerConstants.GAME_SERVER_POWERUP_SKU_ID;
@@ -155,7 +155,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                             const obj4 = { children: null };
                             const items1 = [tmp15, tmp25];
                             obj4.children = items1;
-                            const tmp32 = options(View, obj4);
+                            const tmp32 = React6(View, obj4);
                             cResult[20] = tmp15;
                             cResult[21] = tmp25;
                             cResult[22] = tmp32;
@@ -165,7 +165,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                         const obj5 = { style: tmp4.headerContainer, children: null };
                         const items2 = [tmp19, tmp22];
                         obj5.children = items2;
-                        const tmp28 = options(View, obj5);
+                        const tmp28 = React6(View, obj5);
                         cResult[16] = tmp4.headerContainer;
                         cResult[17] = tmp19;
                         cResult[18] = tmp22;
@@ -267,9 +267,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj8.children = items2;
-      items1[1] = options(View, obj8);
+      items1[1] = React6(View, obj8);
       obj7.children = items1;
-      return options(View, obj7);
+      return React6(View, obj7);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -323,7 +323,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           closure_2_8(iconForPerk, { style: closure_0.perkIcon }),
         ];
         obj2.children = items;
-        return options(View, obj2, "perk-" + arg1 + "-" + children.perkIcon);
+        return React6(View, obj2, "perk-" + arg1 + "-" + children.perkIcon);
       };
       cResult[5] = tmp2.perkContainer;
       cResult[6] = tmp2.perkIcon;
@@ -350,7 +350,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             closure_2_8(iconForPerk, { style: closure_0.perkIcon }),
           ];
           obj2.children = items;
-          return options(View, obj2, "perk-" + index + "-" + children.perkIcon);
+          return React6(View, obj2, "perk-" + index + "-" + children.perkIcon);
         }),
       });
     };
@@ -379,7 +379,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { children: null };
             const items = [tmp10, tmp13];
             obj2.children = items;
-            const tmp23 = options(collapsed, obj2);
+            const tmp23 = React6(collapsed, obj2);
             cResult[6] = tmp10;
             cResult[7] = tmp13;
             cResult[8] = tmp23;
@@ -399,7 +399,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             obj5.children = intl.formatToPlainString(_modDef2600.GMhQcE, obj6);
             items1[1] = closure_1_8(Text_Text.Text, obj5);
             obj3.children = items1;
-            tmp15 = options(View, obj3);
+            tmp15 = React6(View, obj3);
           }
           cResult[3] = powerup.deactivationCooldownPeriodDays;
           cResult[4] = tmp4.cooldownInfo;
@@ -446,12 +446,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.children = intl.formatToPlainString(_modDef2600.GMhQcE, obj6);
           items1[1] = closure_1_8(Text_Text.Text, obj5);
           obj3.children = items1;
-          tmp5Result = options(View, obj3);
+          tmp5Result = React6(View, obj3);
         }
         const obj7 = { children: null };
         items[1] = tmp5Result;
         obj7.children = items;
-        return options(collapsed, obj7);
+        return React6(collapsed, obj7);
       } else if (tmp2.LEVEL === type) {
         const obj = { powerup };
         return closure_1_8(closure_13, obj);
@@ -538,7 +538,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                               const obj2 = { style: tmp4.footerContainer, children: null };
                               const items = [tmp22, tmp25, tmp29, tmp32];
                               obj2.children = items;
-                              const tmp41 = options(View, obj2);
+                              const tmp41 = React6(View, obj2);
                               cResult[23] = tmp4.footerContainer;
                               cResult[24] = tmp22;
                               cResult[25] = tmp25;
@@ -725,7 +725,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (!showToggleButton) {
           items[3] = showToggleButton;
           obj.children = items;
-          return options(View, obj);
+          return React6(View, obj);
         } else {
           let str = "primary";
           if (isPowerupActive) {
@@ -794,7 +794,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: tmp4.container, children: null };
         const items = [tmp6, tmp7, tmp8];
         obj4.children = items;
-        obj3.children = options(View, obj4);
+        obj3.children = React6(View, obj4);
         const tmp16 = closure_1_8(Sheet_BottomSheet.BottomSheet, obj3);
         cResult[5] = tmp4.container;
         cResult[6] = tmp6;
@@ -831,6 +831,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_1_8(closure_15, { guildId, powerup }),
       ];
       obj3.children = items;
-      obj2.children = options(View, obj3);
+      obj2.children = React6(View, obj3);
       return closure_1_8(Sheet_BottomSheet.BottomSheet, obj2);
     };

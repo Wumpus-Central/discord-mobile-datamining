@@ -82,10 +82,10 @@ let closure_14 = async function _sendGiftIntentGif(arg0) {
 };
 let View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const MessageSendLocation = fn(5085).MessageSendLocation;
+const MessageSendLocation = fn(5089).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   messageContainer: null,

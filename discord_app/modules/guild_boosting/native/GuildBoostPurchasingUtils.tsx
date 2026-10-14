@@ -170,14 +170,14 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
               let num3 = 0;
               const sum = interval.numPremiumGuild + num2;
               if (null != closure_1_6) {
-                const numPremiumGuildSubscriptions = closure_0(4769).getNumPremiumGuildSubscriptions(
+                const numPremiumGuildSubscriptions = closure_0(4771).getNumPremiumGuildSubscriptions(
                   closure_1_6.additionalPlans,
                 );
-                const obj = closure_0(4769);
+                const obj = closure_0(4771);
                 num3 =
                   numPremiumGuildSubscriptions +
-                  c1(4769).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                const obj2 = c1(4769);
+                  c1(4771).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                const obj2 = c1(4771);
               }
               tmp = sum > num3;
             }

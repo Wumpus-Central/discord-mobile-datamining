@@ -110,9 +110,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       }, items);
       const callback = noop.useCallback(() => {
-        numMutualGuilds(13089).clearNotification();
-        const obj = numMutualGuilds(13089);
-        const rootNavigationRef = author(4977).getRootNavigationRef();
+        numMutualGuilds(13124).clearNotification();
+        const obj = numMutualGuilds(13124);
+        const rootNavigationRef = author(4979).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.navigate("message-requests");
         }
@@ -127,10 +127,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { text: null };
       let intl = author(1126).intl;
       obj3.text = intl.string(author(1126).t["Bx4/Lf"]);
-      obj.children = jsx(author(13096).SystemMessageText, { text: null });
+      obj.children = jsx(author(13131).SystemMessageText, { text: null });
       obj.onPress = callback;
       obj.notification = notification;
-      return jsx(author(13124).NotificationPressable, {
+      return jsx(author(13159).NotificationPressable, {
         icon: jsx(author(1200).Avatar, { user: author, size: author(1200).AvatarSizes.NORMAL, guildId: "r" }),
         header: memo,
         children: null,

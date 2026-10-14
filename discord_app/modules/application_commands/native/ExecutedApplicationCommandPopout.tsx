@@ -6,10 +6,10 @@ import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import Server from "../../../flow/Server.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import InteractionActionCreatorsAll from "../../interactions/InteractionActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
@@ -63,7 +63,7 @@ function getCommandOptionComponents(option) {
             },
             children: null,
           };
-          const items = [closure_1_21, channel(4962).getUserTag(user, { decoration: "never" })];
+          const items = [closure_1_21, channel(4964).getUserTag(user, { decoration: "never" })];
           obj.children = items;
           return closure_1_23(user(1200).LegacyText, obj, "optionValue-" + user.name);
         }
@@ -86,11 +86,11 @@ function getCommandOptionComponents(option) {
           userComponent = null;
           if (null != channel1) {
             let obj = { style: styles.commandOptionMentionText, children: null };
-            const items1 = [closure_19, tmp6(5421).computeChannelName(channel1, UserStore, RelationshipStore)];
+            const items1 = [closure_19, tmp6(5426).computeChannelName(channel1, UserStore, RelationshipStore)];
             obj.children = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = closure_23(tmp6(1200).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(5421);
+            const tmp6Result = tmp6(5426);
           }
         } else {
           function getRoleComponent(role) {
@@ -186,7 +186,7 @@ function getCommandOptionComponents(option) {
     if (options1 == null) {
       options1 = [];
     }
-    options = iter.options;
+    const options = iter.options;
     const iter2 = options[Symbol.iterator]();
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
@@ -310,7 +310,7 @@ function getCommandCopyText(item10021, channel, guild, name_localized) {
     if (options1 == null) {
       options1 = [];
     }
-    options = item10021.options;
+    const options = item10021.options;
     for (const item10118 of options) {
       items = items.concat(getCommandCopyText(item10118, arg1, arg2, tmp35[item10118.name]));
       continue;
@@ -320,11 +320,11 @@ function getCommandCopyText(item10021, channel, guild, name_localized) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5403).SUB_COMMAND_KEY_SEPARATOR;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5408).SUB_COMMAND_KEY_SEPARATOR;
 const Constants = fn(1085);
 ({ MessageTypes: closure_16, WHITESPACE_RE: closure_17 } = Constants);
 const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
-const ChannelAutocompleteConstants = fn(5404);
+const ChannelAutocompleteConstants = fn(5409);
 ({
   CHANNEL_SENTINEL: closure_19,
   COMMAND_SENTINEL: closure_20,
@@ -332,7 +332,7 @@ const ChannelAutocompleteConstants = fn(5404);
 } = ChannelAutocompleteConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { paddingVertical: 8, paddingHorizontal: 16, gap: 16 },
   activityIndicator: { padding: 16 },
@@ -691,7 +691,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
             if (options2 == null) {
               options2 = [];
             }
-            options = data.options;
+            const options = data.options;
             const iter = options[Symbol.iterator]();
             const nextResult = iter.next();
             while (iter !== undefined) {
@@ -869,7 +869,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
           if (options1 == null) {
             options1 = [];
           }
-          options = data.options;
+          const options = data.options;
           const iter = options[Symbol.iterator]();
           const nextResult = iter.next();
           while (iter !== undefined) {
@@ -979,7 +979,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       const chatInputRef = channelId.chatInputRef;
       const data = channelId.data;
       if (cResult[0] !== data.options) {
-        options = data.options;
+        let options = data.options;
         let someResult;
         if (options != null) {
           someResult = options.some(
@@ -1125,7 +1125,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       let channel;
       guild = undefined;
       closure_5 = undefined;
-      options = data.options;
+      let options = data.options;
       let someResult;
       if (options != null) {
         someResult = options.some(
@@ -1172,7 +1172,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           if (options1 == null) {
             options1 = [];
           }
-          options = data.options;
+          const options = data.options;
           for (const item10021 of options) {
             combined = combined.concat(getCommandCopyText(item10021, channel, guild, tmp3[item10021.name]));
             continue;
@@ -1227,7 +1227,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                   ];
                   hasItem = items2.includes(options1[0].type);
                 }
-                options = options1;
+                let options = options1;
                 if (hasItem) {
                   items1.push(options1[0].name);
                   options = options1[0].options;
@@ -1314,7 +1314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores = channelId(504).useStateFromStores(first, tmp7);
         const tmpResult = channelId(504);
-        const analyticsLocations = messageId(6852)(messageId(6879).EXECUTED_COMMAND).analyticsLocations;
+        const analyticsLocations = messageId(6857)(messageId(6884).EXECUTED_COMMAND).analyticsLocations;
         if (cResult[4] === channelId) {
           let interactionData1;
           if (stateFromStores != null) {
@@ -1360,7 +1360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     const obj2 = { value: analyticsLocations, children: tmp34 };
                                     cResult[26] = analyticsLocations;
                                     cResult[27] = tmp34;
-                                    cResult[28] = closure_22(channelId(6852).AnalyticsLocationProvider, obj2);
+                                    cResult[28] = closure_22(channelId(6857).AnalyticsLocationProvider, obj2);
                                     class S {
                                       constructor() {
                                         tmp = closure_2;
@@ -1400,12 +1400,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         return;
                                       }
                                     }
-                                    const tmp39 = closure_22(channelId(6852).AnalyticsLocationProvider, obj2);
+                                    const tmp39 = closure_22(channelId(6857).AnalyticsLocationProvider, obj2);
                                   }
                                   const obj3 = { startExpanded: true, bodyStyles: tmp4.container, children: tmp22 };
                                   cResult[23] = tmp4.container;
                                   cResult[24] = tmp22;
-                                  cResult[25] = closure_22(channelId(6840).BottomSheet, obj3);
+                                  cResult[25] = closure_22(channelId(6845).BottomSheet, obj3);
                                   class S {
                                     constructor() {
                                       tmp = closure_2;
@@ -1442,7 +1442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       return;
                                     }
                                   }
-                                  const tmp36 = closure_22(channelId(6840).BottomSheet, obj3);
+                                  const tmp36 = closure_22(channelId(6845).BottomSheet, obj3);
                                 }
                               }
                             }
@@ -1665,7 +1665,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = messageId;
         cResult[7] = S;
         tmp13 = S;
-        const tmp10 = messageId(6852);
+        const tmp10 = messageId(6857);
       }
       const fn = function l() {
         return MessageStore.getMessage(channelId, messageId);
@@ -1717,7 +1717,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
         }
       }, items1);
-      const obj2 = { value: messageId(6852)(messageId(6879).EXECUTED_COMMAND).analyticsLocations, children: null };
+      const obj2 = { value: messageId(6857)(messageId(6884).EXECUTED_COMMAND).analyticsLocations, children: null };
       const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
       let interactionData1;
       if (stateFromStores != null) {
@@ -1747,6 +1747,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9Result = closure_22(closure_5, obj7);
       }
       obj3.children = tmp9Result;
-      obj2.children = closure_22(channelId(6840).BottomSheet, obj3);
-      return closure_22(channelId(6852).AnalyticsLocationProvider, obj2);
+      obj2.children = closure_22(channelId(6845).BottomSheet, obj3);
+      return closure_22(channelId(6857).AnalyticsLocationProvider, obj2);
     };

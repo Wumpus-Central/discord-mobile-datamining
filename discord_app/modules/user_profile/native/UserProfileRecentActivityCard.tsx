@@ -6,8 +6,8 @@ import AvatarUtils from "../../../utils/AvatarUtils.tsx";
 import StringUtils from "../../../utils/StringUtils.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import shared from "../../../design/shared.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useAnalyticsLocations from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
@@ -60,7 +60,7 @@ function getEntryText(entry) {
           const obj5 = { title: entry.extra.activity_name };
           let obj6 = obj5;
         } else {
-          obj6 = { title: "r" };
+          obj6 = { title: "keys" };
         }
         return obj6;
       }
@@ -91,8 +91,8 @@ let obj = {
     return true;
   },
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8272).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8272).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8279).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8279).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -150,7 +150,7 @@ items[5] = {
     return tmp3;
   },
 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj7 = {
   body: null,
   content: null,
@@ -284,7 +284,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = "user-profile";
       cResult[5] = str.badges;
       cResult[6] = tmp10;
-      tmpResult = badgeCell(8460);
+      tmpResult = badgeCell(8467);
     }
   : function GamingEntryBadges(entry) {
       entry = entry.entry;
@@ -686,13 +686,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === user) {
             let tmp8 = cResult[5];
           }
-          const tmp9 = tmp6(13627)(tmp8);
+          const tmp9 = tmp6(13665)(tmp8);
           _require = tmp9;
           if (cResult[6] === tmp9) {
             if (cResult[7] === user.id) {
               let tmp10 = cResult[8];
             }
-            tmp6(13628)(tmp10);
+            tmp6(13666)(tmp10);
             let application_id;
             if ("application_id" in entry.extra) {
               application_id = entry.extra.application_id;
@@ -701,7 +701,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[10] === user.id) {
                 let tmp14 = cResult[11];
               }
-              const tmp15 = tmp6(8880)(tmp14);
+              const tmp15 = tmp6(8884)(tmp14);
               importDefault = tmp15;
               if (cResult[12] === tmp9) {
                 if (cResult[13] === tmp15) {

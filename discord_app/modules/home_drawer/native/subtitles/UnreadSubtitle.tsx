@@ -14,7 +14,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = subtitleStyles(576).c(16);
       ({ guild, channel, channelName, count } = arg0);
       const obj = subtitleStyles(576);
-      subtitleStyles = subtitleStyles(17086).useSubtitleStyles();
+      subtitleStyles = subtitleStyles(17123).useSubtitleStyles();
       if (cResult[0] === channel) {
         if (cResult[1] === guild) {
           let tmp5 = cResult[2];
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             count: diff,
             labelHook(children, id) {
               return jsx(
-                subtitleStyles(5088).Text,
+                subtitleStyles(5092).Text,
                 { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children },
                 id,
               );
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               );
             },
             overflowHook(children, id) {
-              return jsx(subtitleStyles(5088).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
+              return jsx(subtitleStyles(5092).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
             },
           };
           const formatResult = intl2.format(tmp(1126).t.OqlmU6, obj4);
@@ -105,17 +105,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let channelIconComponentWithGuild;
       if (null != channel) {
-        channelIconComponentWithGuild = tmp(8159).getChannelIconComponentWithGuild(channel, guild);
-        const tmpResult = tmp(8159);
+        channelIconComponentWithGuild = tmp(8166).getChannelIconComponentWithGuild(channel, guild);
+        const tmpResult = tmp(8166);
       }
       if (channelIconComponentWithGuild == null) {
-        channelIconComponentWithGuild = tmp(8208).TextIcon;
+        channelIconComponentWithGuild = tmp(8215).TextIcon;
       }
       cResult[0] = channel;
       cResult[1] = guild;
       cResult[2] = channelIconComponentWithGuild;
       tmp5 = channelIconComponentWithGuild;
-      const obj2 = subtitleStyles(17086);
+      const obj2 = subtitleStyles(17123);
     }
   : function UnreadSubtitle(arg0) {
       ({ channel, channelName } = arg0);

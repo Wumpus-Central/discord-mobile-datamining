@@ -13,7 +13,7 @@ import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallStore = fn(10354);
+const ChannelCallStore = fn(10364);
 ({
   useChannelCallStore: metroRequire,
   focusTimeout: closure_7,
@@ -58,7 +58,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = cResult[3];
       }
       let tmp14 = arg0;
-      const tmp10 = options();
+      const tmp10 = React6();
       const stateFromStores1 = initialize.useStateFromStores(tmp11, tmp12);
       const tmp16 = useIsActivityFocusedDefault(id.id);
       if (!arg0) {

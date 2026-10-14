@@ -364,6 +364,14 @@ prototype2["getMemberListSections"] = function getMemberListSections(thread) {
   }
   return sections;
 };
+prototype2["isMember"] = function isMember(arg0, arg1) {
+  let hasItem = null;
+  if (null != dependencyMap[arg0]) {
+    const allUserIds = tmp.allUserIds;
+    hasItem = allUserIds.has(arg1);
+  }
+  return hasItem;
+};
 prototype2["canUserViewChannel"] = function canUserViewChannel(arg0, arg1, arg2) {
   if (null == dependencyMap[arg0]) {
     return false;

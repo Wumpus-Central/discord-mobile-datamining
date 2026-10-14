@@ -2,13 +2,13 @@
 import c from "../../../../../_runtime/00576_c.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06335_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06339_LegacyBaseButton.js";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5972).QuestDockMode;
-const QuestDockConstants = fn(15687);
+const QuestDockMode = fn(5977).QuestDockMode;
+const QuestDockConstants = fn(15724);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: metroRequire,
@@ -1245,7 +1245,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           restingQuestDockMode,
           QuestDockMode,
           QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: closure_2_8,
-          QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: options,
+          QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: React6,
           questDockWrapperSpecs,
         };
         fn.__workletHash = 1210406087328;
@@ -1258,7 +1258,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           restingQuestDockMode,
           QuestDockMode,
           QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: closure_2_8,
-          QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: options,
+          QUEST_DOCK_GESTURE_CLOSED_VERTICAL_DELTA_MINIMUM: React6,
           questDockWrapperSpecs,
         };
         const fn2 = function s(absoluteY) {

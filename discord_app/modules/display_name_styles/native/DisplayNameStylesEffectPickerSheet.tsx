@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { padding: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_16, alignItems: "center" },
@@ -47,8 +47,8 @@ const size1 = {
   width: nativeDefault.space.PX_8,
   height: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.space.PX_8 / 2,
-  backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND,
-  shadowColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND,
+  backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND,
+  shadowColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND,
   shadowRadius: nativeDefault.space.PX_4,
   shadowOpacity: 1,
   elevation: 4,
@@ -509,18 +509,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const fn2 = function v() {
-        const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
-        if (closure_6) {
-          onSelectEffect(first);
+      class T {
+        constructor() {
+          tmp = closure_2;
+          obj = closure_0(closure_2[11]);
+          result = obj.triggerHapticFeedback(closure_0(closure_2[11]).HapticFeedbackTypes.IMPACT_MEDIUM);
+          if (closure_6) {
+            tmp3 = onSelectEffect;
+            tmp4 = closure_4;
+            tmp5 = onSelectEffect(closure_4);
+          }
+          obj2 = closure_1(tmp[12]);
+          hideActionSheetResult = obj2.hideActionSheet();
+          return;
         }
-        ActionSheetActionCreatorsDefault.hideActionSheet();
-      };
+      }
       cResult[1] = first !== selectedEffectId;
       cResult[2] = first;
       cResult[3] = onSelectEffect;
-      cResult[4] = fn2;
-      tmp10 = fn2;
+      cResult[4] = T;
+      tmp10 = T;
     }
   : function DisplayNameStylesEffectPickerSheet(userId) {
       userId = userId.userId;
@@ -530,10 +538,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       first = undefined;
       closure_5 = undefined;
       const tmp = closure_9();
-      let obj = userId(8295);
-      const visibleEffectOrder = userId(15948).useVisibleEffectOrder();
-      let obj2 = userId(15948);
-      const displayNameStylesNewEffects = userId(15949).useDisplayNameStylesNewEffects(visibleEffectOrder);
+      let obj = userId(8302);
+      const visibleEffectOrder = userId(15985).useVisibleEffectOrder();
+      let obj2 = userId(15985);
+      const displayNameStylesNewEffects = userId(15986).useDisplayNameStylesNewEffects(visibleEffectOrder);
       ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
       [first, closure_5] = first.useState(selectedEffectId);
       closure_6 = tmp7;
@@ -551,8 +559,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp2(1126).intl;
         obj6.text = intl2.string(tmp2(1126).t.XqMe3N);
         obj6.onPress = tmp8;
-        obj5.trailing = closure_7(tmp2(5379).Button, obj6);
-        obj4.header = closure_7(onSelectEffect(15953), obj5);
+        obj5.trailing = closure_7(tmp2(5384).Button, obj6);
+        obj4.header = closure_7(onSelectEffect(15990), obj5);
         const obj7 = { style: tmp.container, children: null };
         const obj8 = { style: tmp.contentContainer, children: null };
         const obj9 = {
@@ -579,11 +587,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             );
           }),
         };
-        obj8.children = closure_7(tmp2(5377).Stack, obj9);
+        obj8.children = closure_7(tmp2(5382).Stack, obj9);
         obj7.children = closure_7(closure_5, obj8);
         obj4.children = closure_7(closure_5, obj7);
-        tmp9 = closure_7(tmp2(6840).BottomSheet, obj4);
-        const tmp12 = onSelectEffect(15953);
+        tmp9 = closure_7(tmp2(6845).BottomSheet, obj4);
+        const tmp12 = onSelectEffect(15990);
       }
       return tmp9;
     };

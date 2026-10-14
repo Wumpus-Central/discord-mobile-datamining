@@ -3,9 +3,9 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import MessageEmbedTypes from "../../../../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx";
 import util from "../../../intl/index.native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useMessageAuthor from "../../messages/useMessageAuthor.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
 import ChannelListLayoutTypes from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
 import InAppNotificationUtils from "InAppNotificationUtils.tsx";
@@ -19,13 +19,13 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13088);
+const InAppNotificationConstants = fn(13123);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 const PlatformUtils = fn(1383);
 let obj3 = {
   italic: {
@@ -34,7 +34,7 @@ let obj3 = {
   },
 };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(5092);
+createStyles = fn(5096);
 let obj6 = {
   embedContainer: null,
   embedAccentBar: null,
@@ -389,7 +389,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj6 = { style: tmp4.embedContainer, children: null };
                   const items = [tmp9, tmp25, tmp29];
                   obj6.children = items;
-                  const tmp36 = options(View, obj6);
+                  const tmp36 = React6(View, obj6);
                   cResult[20] = tmp4.embedContainer;
                   cResult[21] = tmp9;
                   cResult[22] = tmp25;
@@ -403,7 +403,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = { style: tmp4.embedTextContainer, children: null };
           const items1 = [tmp13, tmp16, tmp19, tmp22];
           obj7.children = items1;
-          const tmp28 = options(View, obj7);
+          const tmp28 = React6(View, obj7);
           cResult[12] = tmp4.embedTextContainer;
           cResult[13] = tmp13;
           cResult[14] = tmp16;
@@ -508,7 +508,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items2[3] = tmp21;
       obj4.children = items2;
-      items1[1] = options(View, obj4);
+      items1[1] = React6(View, obj4);
       let tmp25 = null != thumbnail;
       if (tmp25) {
         const obj9 = { media: thumbnail };
@@ -516,7 +516,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[2] = tmp25;
       obj.children = items1;
-      return options(View, obj);
+      return React6(View, obj);
     };
 ReactCompilerGating = fn(558);
 let obj9 = {
@@ -650,7 +650,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { children: null };
             const items = [tmp28, tmp33];
             obj5.children = items;
-            const tmp39 = options(View, obj5);
+            const tmp39 = React6(View, obj5);
             cResult[14] = tmp28;
             cResult[15] = tmp33;
             cResult[16] = tmp39;
@@ -797,7 +797,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { embed: first };
         items1[1] = closure_1_8(closure_15, obj6);
         obj4.children = items1;
-        tmp43 = options(View, obj4);
+        tmp43 = React6(View, obj4);
       } else if (isForwardMessageDefault(message)) {
         let tmp29 = previewableMedia.length > 0;
         if (tmp29) {
@@ -854,7 +854,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj14 = { children: null };
             items2[1] = tmp17Result;
             obj14.children = items2;
-            return options(View, obj14);
+            return React6(View, obj14);
           }
         }
         if (null != message.poll) {
@@ -877,7 +877,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           items3[1] = closure_1_8(Text_Text.Text, obj18);
           obj16.children = items3;
-          return options(View, obj16);
+          return React6(View, obj16);
         } else {
           const obj19 = { message, lineClamp, maxHeight };
           return closure_1_8(closure_12, obj19);

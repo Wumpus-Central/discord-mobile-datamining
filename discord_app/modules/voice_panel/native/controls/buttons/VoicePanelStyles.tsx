@@ -36,7 +36,7 @@ let closure_3 = createStyles.createStyles((arg0) => {
   const obj5 = { color: nativeDefault.unsafe_rawColors.RED_400 };
   obj.iconFillSelected = { color: nativeDefault.colors.BLACK };
   const colors2 = nativeDefault.colors;
-  obj.iconBadgeIndicator = { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.WHITE };
+  obj.iconBadgeIndicator = { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.ICON_STRONG };
   return obj;
 });
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");

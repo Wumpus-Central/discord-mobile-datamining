@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     alignSelf: "center",
@@ -88,9 +88,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp9 = ClipViewDefault;
       obj4.size = GuildIcon.GuildIconSizes.XSMALL;
       obj4.style = tmp4.guildIconBG;
-      obj3.children = options(GuildIconDefault, obj4);
-      obj2.children = options(tmp9, obj3);
-      const tmp11 = options(timestampProducer, obj2);
+      obj3.children = React6(GuildIconDefault, obj4);
+      obj2.children = React6(tmp9, obj3);
+      const tmp11 = React6(timestampProducer, obj2);
       cResult[2] = guild;
       cResult[3] = tmp4.guildIconBG;
       cResult[4] = tmp11;
@@ -109,9 +109,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = ClipViewDefault;
       obj3.size = GuildIcon.GuildIconSizes.XSMALL;
       obj3.style = tmp.guildIconBG;
-      obj2.children = options(GuildIconDefault, obj3);
-      obj.children = options(tmp2, obj2);
-      return options(timestampProducer, obj);
+      obj2.children = React6(GuildIconDefault, obj3);
+      obj.children = React6(tmp2, obj2);
+      return React6(timestampProducer, obj);
     };
 const __initData = {
   code: 'function NewContentPillTsx1(){const{withSpring,showingPill,springConfig}=this.__closure;return{transform:[{translateY:withSpring(showingPill?12:0,springConfig)}],opacity:withSpring(showingPill?1:0,springConfig,"respect-motion-settings")};}',

@@ -4739,11 +4739,11 @@ function LinkParsedGridItem(author) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
-const SearchConstants = fn(9313);
+const SearchConstants = fn(9322);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_9, SearchLinkTypes: c10 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_13 = createStyles.createStyles({ iconContainer: { alignItems: "center", justifyContent: "center" }, tapToSee: { fontStyle: "italic" } });
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkEmbedGridItem(channelId) {
@@ -5008,8 +5008,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function LinkEm
       return url(onPressSearchLink, obj);
     },
     scale,
-    containerHeight: imageStyle.height + options,
-    containerWidth: imageStyle.width + options
+    containerHeight: imageStyle.height + React6,
+    containerWidth: imageStyle.width + React6
   }), items2);
   if (stateFromStores1 != null) {
     guild_id = stateFromStores1.guild_id;

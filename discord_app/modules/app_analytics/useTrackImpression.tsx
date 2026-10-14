@@ -5,7 +5,7 @@ import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/a
 import _modDef1355 from "../../../_runtime/metro/01355__.js";
 import AppAnalyticsUtils from "AppAnalyticsUtils.tsx";
 import useMountEffectDefault from "../../hooks/useMountEffect.tsx";
-import uniqueIdDefault from "../../../_runtime/05935_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/05940_uniqueId.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
@@ -54,14 +54,14 @@ function trackImpression(type) {
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj2);
   if (flag) {
-    options(null, null);
+    React6(null, null);
   } else {
     if (tmp15) {
       AnalyticsUtils2.debugLogEvent(name, result);
       closure_12(name, result);
       const tmpResult6 = AnalyticsUtils2;
     }
-    options(name, result);
+    React6(name, result);
     tmp15 = null != name && null != type;
   }
   const tmpResult5 = AppAnalyticsUtils;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       noop = noop.useRef(undefined);
       noop.useRef(undefined);
-      obj(5396)(() => {
+      obj(5401)(() => {
         if (obj.trackOnInitialLoad) {
           const tmp6 = _modDef1355(ref.current, current);
           if (!tmp6) {

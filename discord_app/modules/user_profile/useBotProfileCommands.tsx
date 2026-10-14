@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           found = commands.filter((nsfw) => {
             let tmp = true !== nsfw.nsfw;
             if (tmp) {
-              options = nsfw.options;
+              const options = nsfw.options;
               let found;
               if (options != null) {
                 found = options.find((type) => {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           found = commands.filter((nsfw) => {
             let tmp = true !== nsfw.nsfw;
             if (tmp) {
-              options = nsfw.options;
+              const options = nsfw.options;
               let found;
               if (options != null) {
                 found = options.find((type) => {

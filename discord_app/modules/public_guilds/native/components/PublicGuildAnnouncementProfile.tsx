@@ -3,18 +3,18 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import PublicGuildsUtils from "../../PublicGuildsUtils.tsx";
-import _modDef10774 from "../../../../../_runtime/metro/10774__.js";
+import _modDef10873 from "../../../../../_runtime/metro/10873__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
 let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
 obj2.avatar = size;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { source: _modDef10774, disableColor: true };
+        const obj3 = { source: _modDef10873, disableColor: true };
         const tmp14 = React4(native.Icon, obj3);
         cResult[3] = tmp14;
         let tmp11 = tmp14;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
       const items = [React4(tmp2, obj3), , ,];
       const obj5 = { style: tmp.nameWrapper, children: null };
-      const items1 = [React4(native.Icon, { source: _modDef10774, disableColor: true })];
+      const items1 = [React4(native.Icon, { source: _modDef10873, disableColor: true })];
       const obj7 = {
         style: tmp.headerText,
         variant: "heading-xl/extrabold",

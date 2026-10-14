@@ -11,8 +11,8 @@ import ChannelSafetyWarningsStore from "../../../../ChannelSafetyWarningsStore.t
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const constants = fn(10285).SafetyWarningFeedbackTypes;
-const Constants = fn(10382);
+const constants = fn(10295).SafetyWarningFeedbackTypes;
+const Constants = fn(10392);
 ({
   DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8,
   UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_9,
@@ -20,7 +20,7 @@ const Constants = fn(10382);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center" },
   buttonsContainer: { flexDirection: "row", marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           warningId,
           feedbackType,
         );
-        const tmp6 = feedbackType === constants.UPVOTE ? options : closure_2_8;
+        const tmp6 = feedbackType === constants.UPVOTE ? React6 : closure_2_8;
         const obj3 = { text: null, icon: null, iconColor: null };
         const intl = util.intl;
         obj3.text = intl.string(util.t["gd/Yqs"]);

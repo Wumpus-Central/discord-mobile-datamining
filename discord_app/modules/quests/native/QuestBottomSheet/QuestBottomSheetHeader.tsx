@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     display: "flex",
@@ -254,27 +254,27 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp2;
       gameTitle = quest.config.messages.gameTitle;
-      const questTaskDetails = quest(9171).useQuestTaskDetails(quest);
-      let obj = quest(9171);
-      const hasWatchVideoTasksResult = quest(7413).hasWatchVideoTasks(quest);
+      const questTaskDetails = quest(9180).useQuestTaskDetails(quest);
+      let obj = quest(9180);
+      const hasWatchVideoTasksResult = quest(7419).hasWatchVideoTasks(quest);
       noop = hasWatchVideoTasksResult;
-      let obj2 = quest(7413);
-      const isInGameQuestResult = quest(7413).isInGameQuest(quest);
+      let obj2 = quest(7419);
+      const isInGameQuestResult = quest(7419).isInGameQuest(quest);
       c5 = isInGameQuestResult;
-      let obj3 = quest(7413);
-      first = gameTitle(quest(9171).useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
+      let obj3 = quest(7419);
+      first = gameTitle(quest(9180).useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
       targetMinutes = questTaskDetails.targetMinutes;
       const items = [quest];
       memo = noop.useMemo(() => QuestTaskUtils.hasStreamOnDesktopTask({ quest }), items);
-      let obj4 = quest(9171);
-      hasWatchVideoOnMobileTasks = quest(15683).useHasWatchVideoOnMobileTasks(quest.config);
-      let obj5 = quest(15683);
+      let obj4 = quest(9180);
+      hasWatchVideoOnMobileTasks = quest(15720).useHasWatchVideoOnMobileTasks(quest.config);
+      let obj5 = quest(15720);
       const items1 = [first];
       const stateFromStores = quest(504).useStateFromStores(items1, () => first.getCurrentUser());
       let obj6 = quest(504);
-      defaultRewardNameWithArticle = quest(9190).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
-      const obj7 = quest(9190);
-      const isSponsoredPlayQuestResult = quest(7411).isSponsoredPlayQuest(quest);
+      defaultRewardNameWithArticle = quest(9199).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
+      const obj7 = quest(9199);
+      const isSponsoredPlayQuestResult = quest(7417).isSponsoredPlayQuest(quest);
       c11 = isSponsoredPlayQuestResult;
       const items2 = [
         null != completedAt,
@@ -354,16 +354,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ quest, step, withActionSheet, location: _location } = arg0);
       const tmp5 = closure_9();
       let obj = isScreenReaderEnabled(576);
-      const questCreative = isScreenReaderEnabled(15715).useQuestCreative(quest);
-      const tmpResult = isScreenReaderEnabled(15715);
-      const actionSheetPressHandler = isScreenReaderEnabled(15684).useActionSheetPressHandler(questCreative);
+      const questCreative = isScreenReaderEnabled(15752).useQuestCreative(quest);
+      const tmpResult = isScreenReaderEnabled(15752);
+      const actionSheetPressHandler = isScreenReaderEnabled(15721).useActionSheetPressHandler(questCreative);
       if (cResult[0] === _location) {
         if (cResult[1] === quest) {
           if (cResult[2] === step) {
             let tmp8 = cResult[3];
           }
           const tmp10 = closure_10(tmp8);
-          isScreenReaderEnabled = tmp(5362).useIsScreenReaderEnabled();
+          isScreenReaderEnabled = tmp(5367).useIsScreenReaderEnabled();
           const ref = noop.useRef(null);
           if (cResult[4] !== isScreenReaderEnabled) {
             const fn = function v() {
@@ -439,8 +439,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     obj3.onPress = actionSheetPressHandler;
                     obj3.style = tmp5.actionSheetButton;
                     const obj4 = { color: ref(587).colors.INTERACTIVE_TEXT_DEFAULT };
-                    obj3.children = closure_7(tmp(9242).MoreHorizontalIcon, obj4);
-                    tmp22 = closure_7(tmp(6185).PressableOpacity, obj3);
+                    obj3.children = closure_7(tmp(9251).MoreHorizontalIcon, obj4);
+                    tmp22 = closure_7(tmp(6189).PressableOpacity, obj3);
                   }
                   cResult[15] = actionSheetPressHandler;
                   cResult[16] = tmp5.actionSheetButton;
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               items2[1] = titleWithActionSheet;
               obj5.style = items2;
               obj5.children = tmp10;
-              tmp20Result = closure_7(tmp(5088).Text, obj5);
+              tmp20Result = closure_7(tmp(5092).Text, obj5);
             }
             cResult[10] = tmp5.title;
             cResult[11] = tmp5.titleWithActionSheet;
@@ -482,7 +482,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = containerWithActionSheet;
           cResult[9] = items3;
           tmp17 = items3;
-          const tmpResult4 = tmp(5362);
+          const tmpResult4 = tmp(5367);
         }
       }
       const obj7 = { quest, step, location: _location };
@@ -491,7 +491,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = step;
       cResult[3] = obj7;
       tmp8 = obj7;
-      const tmpResult3 = isScreenReaderEnabled(15684);
+      const tmpResult3 = isScreenReaderEnabled(15721);
     }
   : function QuestBottomSheetHeader(step) {
       ({ quest, withActionSheet } = step);
@@ -500,12 +500,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let isScreenReaderEnabled;
       let tmp = closure_9();
-      const questCreative = isScreenReaderEnabled(15715).useQuestCreative(quest);
-      let obj = isScreenReaderEnabled(15715);
-      let obj2 = isScreenReaderEnabled(15684);
+      const questCreative = isScreenReaderEnabled(15752).useQuestCreative(quest);
+      let obj = isScreenReaderEnabled(15752);
+      let obj2 = isScreenReaderEnabled(15721);
       const tmp6 = closure_10({ quest, step: step.step, location: step.location });
-      const actionSheetPressHandler = isScreenReaderEnabled(15684).useActionSheetPressHandler(questCreative);
-      isScreenReaderEnabled = isScreenReaderEnabled(5362).useIsScreenReaderEnabled();
+      const actionSheetPressHandler = isScreenReaderEnabled(15721).useActionSheetPressHandler(questCreative);
+      isScreenReaderEnabled = isScreenReaderEnabled(5367).useIsScreenReaderEnabled();
       const ref = noop.useRef(null);
       const items = [isScreenReaderEnabled];
       const effect = noop.useEffect(() => {
@@ -543,7 +543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2[1] = titleWithActionSheet;
         obj5.style = items2;
         obj5.children = tmp6;
-        tmp13Result = closure_7(tmp2(5088).Text, obj5);
+        tmp13Result = closure_7(tmp2(5092).Text, obj5);
       }
       const items3 = [tmp13Result];
       if (withActionSheet) {
@@ -559,8 +559,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.onPress = actionSheetPressHandler;
         obj6.style = tmp.actionSheetButton;
         const obj7 = { color: ref(587).colors.INTERACTIVE_TEXT_DEFAULT };
-        obj6.children = closure_7(tmp2(9242).MoreHorizontalIcon, obj7);
-        withActionSheet = closure_7(tmp2(6185).PressableOpacity, obj6);
+        obj6.children = closure_7(tmp2(9251).MoreHorizontalIcon, obj7);
+        withActionSheet = closure_7(tmp2(6189).PressableOpacity, obj6);
       }
       items3[1] = withActionSheet;
       obj4.children = items3;

@@ -7,7 +7,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import MonitoringAgentDefault from "../../../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef7729 from "../../../../../../../_runtime/metro/07729__.js";
+import _modDef7735 from "../../../../../../../_runtime/metro/07735__.js";
 import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";
 import SafetyTipsSectionDefault from "../../../../shared/native/SafetyTipsSection.tsx";
 import WasThisHelpfulSectionDefault from "WasThisHelpfulSection.tsx";
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   contentContainer: null,
@@ -114,7 +114,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj4 = { style: tmp6, children: null };
                     const items = [tmp13, tmp23, tmp27];
                     obj4.children = items;
-                    const tmp34 = options(React4, obj4);
+                    const tmp34 = React6(React4, obj4);
                     cResult[20] = tmp4.contentContainer;
                     cResult[21] = tmp27;
                     cResult[22] = tmp13;
@@ -134,7 +134,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { children: null };
               const items1 = [tmp20, actionItems];
               obj6.children = items1;
-              const tmp26 = options(React4, obj6);
+              const tmp26 = React6(React4, obj6);
               cResult[13] = actionItems;
               cResult[14] = tmp20;
               cResult[15] = tmp26;
@@ -144,7 +144,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = { style: tmp4.tipsContainer, children: null };
           const items2 = [tmp7, tmp9];
           obj7.children = items2;
-          const tmp16 = options(React4, obj7);
+          const tmp16 = React6(React4, obj7);
           cResult[6] = tmp4.tipsContainer;
           cResult[7] = tmp7;
           cResult[8] = tmp9;
@@ -182,17 +182,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items[1] = tmp2Result;
       obj3.children = items;
-      const items1 = [options(React4, obj3), ,];
+      const items1 = [React6(React4, obj3), ,];
       const obj5 = { children: null };
       const obj6 = { variant: "eyebrow", color: "text-default", style: tmp.header, children: null };
       const intl = util.intl;
       obj6.children = intl.string(util.t.K5FKtc);
       const items2 = [closure_1_8(Text_Text.Text, obj6), actionItems];
       obj5.children = items2;
-      items1[1] = options(React4, obj5);
+      items1[1] = React6(React4, obj5);
       items1[2] = closure_1_8(WasThisHelpfulSectionDefault, { channelId, warningId, senderId });
       obj2.children = items1;
-      obj.children = options(React4, obj2);
+      obj.children = React6(React4, obj2);
       return closure_1_8(hasOwnProperty, obj);
     };
 ReactCompilerGating = fn(558);
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   return warningId(senderId[14]).popWithKey(channelId);
                 },
-                source: _modDef7729,
+                source: _modDef7735,
                 iconSize: native.IconSizes.MEDIUM,
                 accessibilityLabel: null,
               };

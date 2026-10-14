@@ -10,7 +10,7 @@ import WarningIcon from "../../../../design/components/Icon/native/redesign/gene
 import ImageCarousel from "../../../../components_native/chat/ImageCarousel.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import PlusLargeIcon from "../../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
-import keepLocalCopy from "../../../../../_runtime/11273_keepLocalCopy.js";
+import keepLocalCopy from "../../../../../_runtime/11283_keepLocalCopy.js";
 import ConjureAttachmentTypes from "../ConjureAttachmentTypes.tsx";
 import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
 import ConjureModelSettingsSheet from "../../model_settings/native/ConjureModelSettingsSheet.tsx";
@@ -60,7 +60,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 120;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
@@ -696,7 +696,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       c2 = 1;
                       const obj5 = {
                         value: projectId(onSend[22]).pickConjurePhotos(
-                          "any",
+                          "mixed",
                           projectId(onSend[21]).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                         ),
                         done: false,
@@ -1201,7 +1201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
           if (arr.length > diff) {
             const intl = obj2(1126).intl;
-            let obj = { count: obj2(11284).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+            let obj = { count: obj2(11294).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
             _undefined3(intl.formatToPlainString(_modDef3849.Q0aCVZ, obj));
             const _Math = Math;
             const substr = arr.slice(0, Math.max(0, diff));
@@ -1233,7 +1233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             obj3 = obj5;
           });
-          obj2 = obj2(11796);
+          obj2 = obj2(11806);
           result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
         }
       }, items6);
@@ -1273,9 +1273,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c1 = 1;
                   dependencyMap = 1;
                   const obj5 = {
-                    value: projectId(11927).pickConjurePhotos(
-                      "any",
-                      projectId(11284).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                    value: projectId(11958).pickConjurePhotos(
+                      "mixed",
+                      projectId(11294).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                     ),
                     done: false,
                   };

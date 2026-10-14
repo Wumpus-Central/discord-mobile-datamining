@@ -2,8 +2,8 @@
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../design/void/native.tsx";
 import shared from "../../design/shared.tsx";
-import Text_Text from "../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "FastImage.tsx";
+import Text_Text from "../../design/components/Text/native/Text.tsx";
 import IconUploaderDefault from "IconUploader.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ let closure_3 = ["error"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 },
   error: {
@@ -114,7 +114,7 @@ prototype["render"] = function render() {
   obj.children = items1;
   return React5(View, obj);
 };
-IconLabelBlock.contextType = fn(4827).ThemeContext;
+IconLabelBlock.contextType = fn(4829).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

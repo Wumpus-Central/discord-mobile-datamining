@@ -41,7 +41,7 @@ let closure_22 = async function _startAudioRecording(arg0) {
           closure_129_0 = closure_0;
           closure_129_1 = undefined;
           c19 = null;
-          options(constants.REQUESTED);
+          React6(constants.REQUESTED);
           closure_2_8(closure_0);
           const mediaEngine = MediaEngineStore.getMediaEngine();
           mediaEngine.on(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, guild);
@@ -267,7 +267,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(12381);
+const VoiceMessagesUIStore = fn(12417);
 ({
   addVoiceMessageWave: hasOwnProperty,
   resetVoiceMessageState: metroRequire,
@@ -278,7 +278,7 @@ const VoiceMessagesUIStore = fn(12381);
   useVoiceMessagesUIStore: closure_11,
   VoiceMessageRecordingStatus: closure_12,
 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(12382);
+const VoiceMessageConstants = fn(12418);
 ({
   WAVEFORM_WAVE_MAX_VALUE: map1,
   VOICE_RECORDING_MIN_DB: closure_14,

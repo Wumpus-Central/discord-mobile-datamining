@@ -14,7 +14,7 @@ const require = fn;
 let closure_3 = ["sku", "isOwned", "source", "wishlistOwnerId", "size"];
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = {
   position: "absolute",
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[30] = tmp36;
                   tmp29 = tmp36;
                 }
-                OWNED = tmp(8977).WishlistItemCardOverlay.OWNED;
+                OWNED = tmp(8982).WishlistItemCardOverlay.OWNED;
               }
             }
           }
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp3Result = closure_2_8(FastImageDefault, obj2);
           }
           children[1] = tmp3Result;
-          return collapsed(options, { children });
+          return collapsed(React6, { children });
         };
         cResult[18] = tmp23;
         cResult[19] = tmp5;
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp3Result = closure_2_8(FastImageDefault, obj2);
         }
         children[1] = tmp3Result;
-        return collapsed(options, { children });
+        return collapsed(React6, { children });
       }, items5);
       const obj3 = { accessibilityLabel: sku.name, renderPreview: callback, source: sku.source, size };
       let obj2 = sku(size[9]);

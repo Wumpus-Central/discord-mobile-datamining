@@ -4,9 +4,9 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import LinearGradientDefault from "../../../../_runtime/05396_LinearGradient.js";
 import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
 import AvatarPile from "../../../design/components/Pile/native/AvatarPile.native.tsx";
 import BlockedUserUtils from "../../blocking/BlockedUserUtils.tsx";
@@ -20,11 +20,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4748).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4750).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 let obj2 = {
   voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" },
   streamPreviewShadow: null,
@@ -110,7 +110,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 totalCount: tmp10,
                 children: cResult[8],
               };
-              obj3.children = closure_11(guildId(13634).AvatarPile, obj4);
+              obj3.children = closure_11(guildId(13672).AvatarPile, obj4);
               const tmp18 = closure_11(View, obj3);
               cResult[11] = tmp6;
               cResult[12] = cResult[8];
@@ -163,7 +163,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp;
     };
-createStyles = fn(5092);
+createStyles = fn(5096);
 let obj4 = { tag: null, tagText: null };
 const rect1 = {
   paddingHorizontal: 4,

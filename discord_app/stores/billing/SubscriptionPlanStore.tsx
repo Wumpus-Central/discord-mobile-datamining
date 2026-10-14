@@ -184,11 +184,11 @@ prototype["isLoadedForSKUs"] = function isLoadedForSKUs(items) {
 };
 prototype["isFetchingForPremiumSKUs"] = function isFetchingForPremiumSKUs() {
   const self = this;
-  return options.some((item) => self.isFetchingForSKU(item));
+  return React6.some((item) => self.isFetchingForSKU(item));
 };
 prototype["isLoadedForPremiumSKUs"] = function isLoadedForPremiumSKUs() {
   const self = this;
-  return options.every((item) => self.isLoadedForSKU(item));
+  return React6.every((item) => self.isLoadedForSKU(item));
 };
 prototype["ignoreSKUFetch"] = function ignoreSKUFetch(arg0) {
   set1.add(arg0);

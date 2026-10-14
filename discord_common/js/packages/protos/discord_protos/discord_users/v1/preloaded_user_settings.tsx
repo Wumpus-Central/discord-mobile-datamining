@@ -490,7 +490,7 @@ class PreloadedUserSettings$Type extends MessageType {
     items[25] = obj1;
     items[26] = {
       no: 27,
-      name: "vibegrations",
+      name: "conjure",
       kind: "message",
       T() {
         return inAppFeedbackSettingsType1;
@@ -881,17 +881,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, w
       writeUnknownFields,
     );
   }
-  if (versions.vibegrations) {
+  if (versions.conjure) {
     const tagResult26 = tag.tag(27, _mod1210.WireType.LengthDelimited);
     const joined26 = inAppFeedbackSettingsType1
-      .internalBinaryWrite(
-        versions.vibegrations,
-        tag.tag(27, _mod1210.WireType.LengthDelimited).fork(),
-        writeUnknownFields,
-      )
+      .internalBinaryWrite(versions.conjure, tag.tag(27, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields)
       .join();
     const internalBinaryWriteResult26 = inAppFeedbackSettingsType1.internalBinaryWrite(
-      versions.vibegrations,
+      versions.conjure,
       tag.tag(27, _mod1210.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
@@ -2901,7 +2897,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(arr) {
-  const obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
+  const obj = { videoBackgroundFilterDesktop: { oneofKind: "keys" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -11421,7 +11417,7 @@ const inAppFeedbackSettingsType = new InAppFeedbackSettings$Type(
   2,
 );
 const MessageType55 = fn(1210).MessageType;
-class VibegrationsSettings$Type extends MessageType55 {
+class ConjureSettings$Type extends MessageType55 {
   constructor() {
     obj = {
       no: 1,
@@ -11437,11 +11433,11 @@ class VibegrationsSettings$Type extends MessageType55 {
     };
     items = [];
     items[0] = obj;
-    tmp1 = new tmp("discord_protos.discord_users.v1.VibegrationsSettings", items, new.target);
+    tmp1 = new tmp("discord_protos.discord_users.v1.ConjureSettings", items, new.target);
     return tmp1;
   }
 }
-const prototype55 = VibegrationsSettings$Type.prototype;
+const prototype55 = ConjureSettings$Type.prototype;
 prototype55["create"] = function create(arr) {
   const obj = { projects: {} };
   const _Object = Object;
@@ -11517,7 +11513,7 @@ prototype55["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
     }
     const _globalThis = globalThis;
     const error = new Error(
-      "unknown map entry field for field discord_protos.discord_users.v1.VibegrationsSettings.projects",
+      "unknown map entry field for field discord_protos.discord_users.v1.ConjureSettings.projects",
     );
     throw error;
   }
@@ -11573,10 +11569,10 @@ const obj59 = {
 };
 const items48 = [obj59];
 const inAppFeedbackSettingsType1 = new InAppFeedbackSettings$Type(
-  "discord_protos.discord_users.v1.VibegrationsSettings",
+  "discord_protos.discord_users.v1.ConjureSettings",
   items48,
   tmp6,
-  VibegrationsSettings$Type,
+  ConjureSettings$Type,
   "create",
   InAppFeedbackSettings$Type,
   "internalBinaryRead",
@@ -11676,15 +11672,15 @@ const inAppFeedbackSettingsType1 = new InAppFeedbackSettings$Type(
   2,
 );
 const MessageType56 = fn(1210).MessageType;
-class VibegrationsProjectSettings$Type extends MessageType56 {
+class ConjureProjectSettings$Type extends MessageType56 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "muted", kind: "scalar", T: 8 };
-    tmp1 = new tmp("discord_protos.discord_users.v1.VibegrationsProjectSettings", items, new.target);
+    tmp1 = new tmp("discord_protos.discord_users.v1.ConjureProjectSettings", items, new.target);
     return tmp1;
   }
 }
-const prototype56 = VibegrationsProjectSettings$Type.prototype;
+const prototype56 = ConjureProjectSettings$Type.prototype;
 prototype56["create"] = function create(arr) {
   const obj = { muted: false };
   const _Object = Object;
@@ -11754,12 +11750,12 @@ const items49 = [];
 const obj60 = { no: 1, name: "muted", kind: "scalar", T: 8 };
 items49[0] = obj60;
 const tmp63 = new "internalBinaryRead"(
-  "discord_protos.discord_users.v1.VibegrationsProjectSettings",
+  "discord_protos.discord_users.v1.ConjureProjectSettings",
   items49,
   tmp6,
-  VibegrationsSettings$Type,
+  ConjureSettings$Type,
   "create",
-  VibegrationsProjectSettings$Type,
+  ConjureProjectSettings$Type,
   "internalBinaryRead",
   items49,
   new.target,
@@ -11940,5 +11936,5 @@ export const InAppFeedbackState = tmp58;
 export const DefaultReactionEmoji = tmp59;
 export const InAppFeedbackSettings = tmp60;
 export const AppVersionSettings = inAppFeedbackSettingsType;
-export const VibegrationsSettings = inAppFeedbackSettingsType1;
-export const VibegrationsProjectSettings = tmp63;
+export const ConjureSettings = inAppFeedbackSettingsType1;
+export const ConjureProjectSettings = tmp63;

@@ -8,30 +8,29 @@ import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
+import LegacyBaseButton from "../../../../_runtime/06339_LegacyBaseButton.js";
 import SoundboardTypes from "../SoundboardTypes.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import TrophyIcon from "../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
-import _modDef9763 from "../../../../_runtime/metro/09763__.js";
-import _modDef17839 from "../../../../_runtime/metro/17839__.js";
+import _modDef9773 from "../../../../_runtime/metro/09773__.js";
+import _modDef17875 from "../../../../_runtime/metro/17875__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-function getItemLayout(arg0, index) {
-  return { length: closure_1_11, offset: closure_1_11 * index, index };
-}
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
-let StyleSheet = get_ActivityIndicator.StyleSheet;
-({ View: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-const setSearchQuery = fn(17823).setSearchQuery;
+({ ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
+const View = get_ActivityIndicator.View;
+const setSearchQuery = fn(17859).setSearchQuery;
 const Constants = fn(1085);
-({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_11, NODE_SIZE, NODE_MARGIN } = Constants);
+({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
+({ NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   container: {
     borderTopWidth: StyleSheet.hairlineWidth,
@@ -41,6 +40,7 @@ let obj = {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   },
+  list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: null,
   fadedItem: { opacity: 0.5 },
   activeItem: null,
@@ -114,7 +114,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp30 = cResult[3];
           }
-          let tmp12 = _modDef9763;
+          let tmp12 = _modDef9773;
           let tmp11 = null;
           let tmp14 = tmp30;
           let tmp13 = null;
@@ -151,7 +151,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp20 = cResult[7];
           }
-          tmp12 = _modDef17839;
+          tmp12 = _modDef17875;
           tmp11 = null;
           tmp14 = tmp20;
           tmp13 = null;
@@ -165,7 +165,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp16 = cResult[8];
           }
-          tmp12 = _modDef17839;
+          tmp12 = _modDef17875;
           tmp11 = null;
           tmp14 = tmp16;
           tmp13 = null;
@@ -238,7 +238,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                             accessibilityLabel: tmp14,
                             children: tmp52,
                           };
-                          const tmp58 = __initData(Pressables.PressableOpacity, obj6, tmp14);
+                          const tmp58 = __initData(Pressables.PressableOpacity, obj6);
                           cResult[32] = tmp14;
                           cResult[33] = tmp42;
                           cResult[34] = tmp52;
@@ -249,7 +249,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj7 = { style: tmp43, children: null };
                       const items = [tmp44, tmp48];
                       obj7.children = items;
-                      const tmp55 = map1(closure_1_7, obj7);
+                      const tmp55 = map1(View, obj7);
                       cResult[28] = tmp43;
                       cResult[29] = tmp44;
                       cResult[30] = tmp48;
@@ -262,7 +262,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj8 = { style: tmp5.lockContainer, children: null };
                     const obj9 = { style: tmp5.lock };
                     obj8.children = __initData(LockIcon.LockIcon, obj9);
-                    tmp49 = __initData(closure_1_7, obj8);
+                    tmp49 = __initData(View, obj8);
                   }
                   cResult[24] = tmp4;
                   cResult[25] = tmp5.lock;
@@ -319,7 +319,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
         const intl4 = util.intl;
         name = intl4.string(util.t.y3LQCG);
-        tmp6 = _modDef9763;
+        tmp6 = _modDef9773;
         tmp7 = null;
         tmp14Result = null;
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -332,13 +332,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
         const intl2 = util.intl;
         name = intl2.string(util.t.Rtvk9X);
-        tmp6 = _modDef17839;
+        tmp6 = _modDef17875;
         tmp7 = null;
         tmp14Result = null;
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
         const intl = util.intl;
         name = intl.string(util.t.sKt3xS);
-        tmp6 = _modDef17839;
+        tmp6 = _modDef17875;
         tmp7 = null;
         tmp14Result = null;
       } else {
@@ -379,51 +379,73 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { style: tmp.lockContainer, children: null };
         const obj9 = { style: tmp.lock };
         obj8.children = __initData(LockIcon.LockIcon, obj9);
-        locked = __initData(handlePressCategory, obj8);
+        locked = __initData(View, obj8);
       }
       items1[1] = locked;
       obj6.children = items1;
-      obj5.children = map1(handlePressCategory, obj6);
-      return __initData(Pressables.PressableOpacity, obj5, name);
+      obj5.children = map1(View, obj6);
+      return __initData(Pressables.PressableOpacity, obj5);
     };
 ReactCompilerGating = fn(558);
-let closure_16 = noop.memo(
-  ReactCompilerGating.isReactCompilerEnabled()
-    ? function MemoizedFlatList(ref) {
-        const cResult = c.c(6);
-        if (cResult[0] !== ref) {
-          const tmp6 = _objectWithoutProperties(ref.ref, closure_3);
-          cResult[0] = ref.ref;
-          cResult[1] = tmp6;
-          cResult[2] = ref.ref;
-          let tmp3 = ref;
-          let tmp2 = tmp6;
-        } else {
-          tmp2 = cResult[1];
-          tmp3 = cResult[2];
-        }
-        if (cResult[3] === tmp2) {
-          if (cResult[4] === tmp3) {
-            let tmp7 = cResult[5];
-          }
-          return tmp7;
-        }
-        const obj2 = {};
-        const merged = Object.assign(tmp2);
-        obj2.ref = tmp3;
-        const tmp9 = __initData(closure_1_8, obj2);
-        cResult[3] = tmp2;
-        cResult[4] = tmp3;
-        cResult[5] = tmp9;
-        tmp7 = tmp9;
+const renderScrollComponent = ReactCompilerGating.isReactCompilerEnabled()
+  ? function SoundboardCategoryScrollView(ref) {
+      const cResult = c.c(10);
+      if (cResult[0] !== ref) {
+        const tmp8 = _objectWithoutProperties(ref.ref, closure_3);
+        cResult[0] = ref.ref;
+        cResult[1] = tmp8;
+        cResult[2] = ref.ref;
+        let tmp5 = ref;
+        let tmp4 = tmp8;
+      } else {
+        tmp4 = cResult[1];
+        tmp5 = cResult[2];
       }
-    : function MemoizedFlatList(ref) {
-        const obj = {};
-        const merged = Object.assign(Object.assign(ref, Object.assign({ ref: 0 })));
-        obj.ref = ref.ref;
-        return __initData(closure_1_8, obj);
-      },
-);
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { disallowInterruption: true };
+        cResult[3] = obj2;
+        let tmp9 = obj2;
+      } else {
+        tmp9 = cResult[3];
+      }
+      const nativeGesture = LegacyBaseButton.useNativeGesture(tmp9);
+      if (cResult[4] === tmp4) {
+        if (cResult[5] === tmp5) {
+          let tmp11 = cResult[6];
+        }
+        if (cResult[7] === nativeGesture) {
+          if (cResult[8] === tmp11) {
+            let tmp14 = cResult[9];
+          }
+          return tmp14;
+        }
+        const obj3 = { gesture: nativeGesture, children: tmp11 };
+        const tmp16 = __initData(LegacyBaseButton.GestureDetector, obj3);
+        cResult[7] = nativeGesture;
+        cResult[8] = tmp11;
+        cResult[9] = tmp16;
+        tmp14 = tmp16;
+      }
+      const obj4 = { ref: tmp5 };
+      const merged = Object.assign(tmp4);
+      obj4.nestedScrollEnabled = true;
+      const tmp13 = __initData(timestampProducer, obj4);
+      cResult[4] = tmp4;
+      cResult[5] = tmp5;
+      cResult[6] = tmp13;
+      tmp11 = tmp13;
+      const tmpResult = LegacyBaseButton;
+    }
+  : function SoundboardCategoryScrollView(ref) {
+      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+      const nativeGesture = LegacyBaseButton.useNativeGesture({ disallowInterruption: true });
+      const obj2 = { gesture: nativeGesture, children: null };
+      const obj3 = { ref: ref.ref };
+      const merged1 = Object.assign(merged);
+      obj3.nestedScrollEnabled = true;
+      obj2.children = __initData(timestampProducer, obj3);
+      return __initData(LegacyBaseButton.GestureDetector, obj2);
+    };
 ReactCompilerGating = fn(558);
 let obj4 = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 size = fn(2);
@@ -432,7 +454,7 @@ let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSou
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function SoundboardSoundPickerCategories(guildId) {
-        const cResult = guildId(listRef[10]).c(31);
+        const cResult = guildId(listRef[10]).c(32);
         guildId = guildId.guildId;
         ({ categories, categoryIndex } = guildId);
         ({ style, listRef } = guildId);
@@ -446,7 +468,7 @@ export default noop.memo(
             if (null != ref.current) {
               if (null != ref2.current) {
                 if (null != ref.current) {
-                  const result = categoryIndex * closure_2_11;
+                  const result = categoryIndex * EXPRESSION_FOOTER_HEIGHT;
                   if (tmp7) {
                     const current = tmp3.current;
                     const obj = { offset: result };
@@ -469,100 +491,137 @@ export default noop.memo(
         }
         const effect = noop.useEffect(tmp6, tmp7);
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn2 = function u(nativeEvent) {
+          const fn2 = function c(nativeEvent) {
             closure_5.current = 0;
             closure_6.current = nativeEvent.nativeEvent.layout.width;
           };
           cResult[3] = fn2;
         }
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor(arg0) {
-              nativeEvent = guildId.nativeEvent;
-              contentOffset = nativeEvent.contentOffset;
-              closure_5.current = contentOffset.x;
-              closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
-              return;
-            }
-          }
-          cResult[4] = P;
-        } else {
-          class P {
-            constructor(arg0) {
-              nativeEvent = guildId.nativeEvent;
-              contentOffset = nativeEvent.contentOffset;
-              closure_5.current = contentOffset.x;
-              closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
-              return;
-            }
-          }
+          const fn3 = function x(nativeEvent) {
+            nativeEvent = nativeEvent.nativeEvent;
+            const contentOffset = nativeEvent.contentOffset;
+            closure_5.current = contentOffset.x;
+            closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+          };
+          cResult[4] = fn3;
         }
         if (cResult[5] !== listRef) {
-          class P {
+          class N {
             constructor(arg0) {
-              nativeEvent = guildId.nativeEvent;
-              contentOffset = nativeEvent.contentOffset;
-              closure_5.current = contentOffset.x;
-              closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+              closure_0 = guildId;
+              tmp = closure_1_9("");
+              setImmediateResult = setImmediate(() => {
+                let current1;
+                if (listRef != null) {
+                  current1 = listRef.current;
+                }
+                if (null != current1) {
+                  const current = listRef.current;
+                  const obj = { section, item: 0 };
+                  current.scrollToLocation(obj);
+                  const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+                }
+              });
               return;
             }
           }
           cResult[5] = listRef;
-          cResult[6] = tmp12;
+          cResult[6] = N;
         } else {
-          class P {
+          class N {
             constructor(arg0) {
-              nativeEvent = guildId.nativeEvent;
-              contentOffset = nativeEvent.contentOffset;
-              closure_5.current = contentOffset.x;
-              closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+              closure_0 = guildId;
+              tmp = closure_1_9("");
+              setImmediateResult = setImmediate(() => {
+                let current1;
+                if (listRef != null) {
+                  current1 = listRef.current;
+                }
+                if (null != current1) {
+                  const current = listRef.current;
+                  const obj = { section, item: 0 };
+                  current.scrollToLocation(obj);
+                  const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+                }
+              });
               return;
             }
           }
         }
-        handlePressCategory = tmp12;
+        handlePressCategory = N;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
+          class N {
             constructor(arg0) {
-              nativeEvent = guildId.nativeEvent;
-              contentOffset = nativeEvent.contentOffset;
-              closure_5.current = contentOffset.x;
-              closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+              closure_0 = guildId;
+              tmp = closure_1_9("");
+              setImmediateResult = setImmediate(() => {
+                let current1;
+                if (listRef != null) {
+                  current1 = listRef.current;
+                }
+                if (null != current1) {
+                  const current = listRef.current;
+                  const obj = { section, item: 0 };
+                  current.scrollToLocation(obj);
+                  const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+                }
+              });
               return;
             }
           }
           const items1 = [UserStore];
-          class F {
+          class U {
             constructor() {
-              obj = categoryIndex(listRef[23]);
+              obj = categoryIndex(listRef[24]);
               return obj.canUseSoundboardEverywhere(closure_1_10.getCurrentUser());
             }
           }
           cResult[7] = items1;
-          cResult[8] = F;
-          let tmp14 = F;
-          const tmp13 = items1;
+          cResult[8] = U;
+          let tmp13 = U;
+          const tmp12 = items1;
         } else {
-          class P {
+          class N {
             constructor(arg0) {
-              nativeEvent = guildId.nativeEvent;
-              contentOffset = nativeEvent.contentOffset;
-              closure_5.current = contentOffset.x;
-              closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+              closure_0 = guildId;
+              tmp = closure_1_9("");
+              setImmediateResult = setImmediate(() => {
+                let current1;
+                if (listRef != null) {
+                  current1 = listRef.current;
+                }
+                if (null != current1) {
+                  const current = listRef.current;
+                  const obj = { section, item: 0 };
+                  current.scrollToLocation(obj);
+                  const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+                }
+              });
               return;
             }
           }
-          tmp14 = cResult[8];
+          tmp13 = cResult[8];
         }
         let obj = guildId(listRef[10]);
-        const stateFromStores = guildId(listRef[24]).useStateFromStores(tmp13, tmp14);
+        const stateFromStores = guildId(listRef[25]).useStateFromStores(tmp12, tmp13);
         if (cResult[9] === stateFromStores) {
-          class P {
+          class N {
             constructor(arg0) {
-              nativeEvent = guildId.nativeEvent;
-              contentOffset = nativeEvent.contentOffset;
-              closure_5.current = contentOffset.x;
-              closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+              closure_0 = guildId;
+              tmp = closure_1_9("");
+              setImmediateResult = setImmediate(() => {
+                let current1;
+                if (listRef != null) {
+                  current1 = listRef.current;
+                }
+                if (null != current1) {
+                  const current = listRef.current;
+                  const obj = { section, item: 0 };
+                  current.scrollToLocation(obj);
+                  const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+                }
+              });
               return;
             }
           }
@@ -574,7 +633,7 @@ export default noop.memo(
             if (!closure_8) {
               tmp2 = closure_0;
               tmp3 = closure_2;
-              obj = closure_0(closure_2[25]);
+              obj = closure_0(closure_2[26]);
               tmp4 = guildId;
               result = obj.isSoundboardSectionNitroLocked(guildId, item.categoryInfo);
             }
@@ -597,11 +656,11 @@ export default noop.memo(
         cResult[9] = stateFromStores;
         cResult[10] = categoryIndex;
         cResult[11] = guildId;
-        cResult[12] = tmp12;
+        cResult[12] = N;
         cResult[13] = tmp4.activeItem;
         cResult[14] = tmp4.fadedItem;
         cResult[15] = H;
-        const tmpResult = guildId(listRef[24]);
+        const tmpResult = guildId(listRef[25]);
       }
     : function SoundboardSoundPickerCategories(guildId) {
         guildId = guildId.guildId;
@@ -613,13 +672,13 @@ export default noop.memo(
         closure_3 = tmp;
         const ref = noop.useRef(null);
         noop = noop.useRef(null);
-        StyleSheet = noop.useRef(null);
+        noop.useRef(null);
         const items = [categoryIndex];
         const effect = noop.useEffect(() => {
           if (null != ref.current) {
             if (null != ref2.current) {
               if (null != ref.current) {
-                const result = categoryIndex * closure_2_11;
+                const result = categoryIndex * EXPRESSION_FOOTER_HEIGHT;
                 if (tmp7) {
                   const current = tmp3.current;
                   const obj = { offset: result };
@@ -657,8 +716,8 @@ export default noop.memo(
           });
         }, items1);
         const items2 = [UserStore];
-        const stateFromStores = guildId(listRef[24]).useStateFromStores(items2, () =>
-          categoryIndex(listRef[23]).canUseSoundboardEverywhere(currentUser.getCurrentUser()),
+        const stateFromStores = guildId(listRef[25]).useStateFromStores(items2, () =>
+          categoryIndex(listRef[24]).canUseSoundboardEverywhere(currentUser.getCurrentUser()),
         );
         const items3 = [stateFromStores, guildId, callback2, categoryIndex, ,];
         ({ activeItem: arr4[4], fadedItem: arr4[5] } = tmp);
@@ -680,35 +739,31 @@ export default noop.memo(
           }
           fadedItem = closure_3.fadedItem;
         }, items3);
-        const memo = noop.useMemo(() => {
-          const Gesture = guildId(listRef[27]).Gesture;
-          return Gesture.Native().disallowInterruption(true);
-        }, []);
         let obj2 = { hostName: "soundboard-footer", children: null };
         const obj3 = { style: null, children: null };
-        const items4 = [tmp.container, { paddingBottom: categoryIndex(listRef[26])().bottom }, style];
+        const items4 = [tmp.container, { paddingBottom: categoryIndex(listRef[27])().bottom }, style];
         obj3.style = items4;
-        const items5 = [closure_12(categoryIndex(listRef[28]), { style: StyleSheet.absoluteFill })];
-        const obj5 = {
-          gesture: memo,
-          children: closure_12(closure_16, {
+        const items5 = [
+          closure_12(categoryIndex(listRef[28]), { style: callback2.absoluteFill }),
+          closure_12(guildId(listRef[29]).FlashList, {
             ref,
-            getItemLayout,
+            style: tmp.list,
             onLayout: callback,
             onScroll: callback1,
             data: categories,
+            extraData: categoryIndex,
             keyboardShouldPersistTaps: "always",
             horizontal: true,
             keyExtractor(key) {
               return String(key.key);
             },
             renderItem: callback3,
+            renderScrollComponent,
             showsHorizontalScrollIndicator: false,
           }),
-        };
-        items5[1] = closure_12(guildId(listRef[27]).GestureDetector, obj5);
+        ];
         obj3.children = items5;
-        obj2.children = closure_13(callback2, obj3);
-        return closure_12(guildId(listRef[29]).Portal, obj2);
+        obj2.children = closure_13(stateFromStores, obj3);
+        return closure_12(guildId(listRef[30]).Portal, obj2);
       },
 );

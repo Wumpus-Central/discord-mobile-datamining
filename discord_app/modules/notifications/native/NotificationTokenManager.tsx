@@ -10,7 +10,6 @@ import _modDef2894 from "../NotificationSettings.messages.js";
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import PushNotificationActionCreatorsDefault from "../../../actions/native/PushNotificationActionCreators.tsx";
 import NotificationSettingsConstants from "../NotificationSettingsConstants.tsx";
-import NotifSettingsExperiments from "NotifSettingsExperiments.tsx";
 import NotifSettingsUtilsDefault from "NotifSettingsUtils.android.tsx";
 import NativeNotifSettingsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
 import ApexExperimentStore from "../../experiments/apex/ApexExperimentStore.tsx";
@@ -19,8 +18,6 @@ import MultiAccountSwitchStore from "../../multi_account/MultiAccountSwitchStore
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
-
-const require = globalThis.__r;
 
 const NativeModules = _mod17.NativeModules;
 const NOTIF_SETTINGS = NotificationSettingsConstants.NOTIF_SETTINGS;
@@ -147,31 +144,15 @@ prototype["registerListener"] = function registerListener() {
   }
 };
 prototype["registerNotificationCategories"] = function registerNotificationCategories() {
-  const declarativeNotifSettingsExperiment = NotifSettingsExperiments.declarativeNotifSettingsExperiment;
-  const config = declarativeNotifSettingsExperiment.getConfig({ location: "registerNotificationCategories" });
-  let flag = false;
   try {
-    if (config.enabled) {
-      flag = NotifSettingsUtilsDefault.registerDeclarativeNotificationCategories();
-    }
     const self = this;
-    if (flag) {
-      const result = self.trackDisabledAndroidNotifChannels();
-    } else {
-      try {
-        if (config.clearDeclarative) {
-          SentryUtilsDefault.addBreadcrumb({ message: "Clearing declarative notification categories" });
-          NotifSettingsUtilsDefault.clear();
-        }
-        const result1 = self.registerLegacyNotificationCategories();
-      } catch (tmp12) {
-        require("SentryUtils").captureException(tmp12);
-        const obj5 = require("SentryUtils");
-      }
+    if (!obj.registerDeclarativeNotificationCategories()) {
+      const result = self.registerLegacyNotificationCategories();
     }
-  } catch (tmp6) {
-    require("SentryUtils").captureException(tmp6);
-    const obj2 = require("SentryUtils");
+    const result1 = self.trackDisabledAndroidNotifChannels();
+    obj = NotifSettingsUtilsDefault;
+  } catch (tmp3) {
+    SentryUtilsDefault.captureException(tmp3);
   }
 };
 prototype["registerLegacyNotificationCategories"] = function registerLegacyNotificationCategories() {

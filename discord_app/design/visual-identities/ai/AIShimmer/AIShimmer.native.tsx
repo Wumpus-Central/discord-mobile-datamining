@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let c12 = 30;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_13 = createStyles.createStyles((height, height2) => {
   const obj = {
     container: { alignSelf: "flex-start", height },
@@ -589,7 +589,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                 style: tmp37,
                                                                                 children: tmp52,
                                                                               };
-                                                                              const tmp59 = options(
+                                                                              const tmp59 = React6(
                                                                                 ReanimatedRexportDefault.View,
                                                                                 obj7,
                                                                               );
@@ -602,7 +602,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                                                               style: tmp39,
                                                                               children: tmp48,
                                                                             };
-                                                                            const tmp55 = options(
+                                                                            const tmp55 = React6(
                                                                               ReanimatedRexportDefault.View,
                                                                               obj8,
                                                                             );
@@ -615,7 +615,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                                                             style: tmp42,
                                                                             children: tmp44,
                                                                           };
-                                                                          const tmp51 = options(
+                                                                          const tmp51 = React6(
                                                                             ReanimatedRexportDefault.View,
                                                                             obj9,
                                                                           );
@@ -638,7 +638,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                                                 color: glyphColor,
                                                                 style: styles.glyphLayer,
                                                               };
-                                                              const tmp47 = options(closure_21, obj10);
+                                                              const tmp47 = React6(closure_21, obj10);
                                                               cResult[60] = animationProgress;
                                                               cResult[61] = glyphColor;
                                                               cResult[62] = glyphCount;
@@ -689,7 +689,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                                       animatedStyles: tmp9Result,
                                       styles,
                                     };
-                                    const tmp35 = options(closure_16, obj11);
+                                    const tmp35 = React6(closure_16, obj11);
                                     cResult[33] = animationWidth;
                                     cResult[34] = clippingWindowWidth;
                                     cResult[35] = color;
@@ -717,7 +717,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                         animatedStyles: tmp10,
                         styles,
                       };
-                      const tmp31 = options(closure_16, obj12);
+                      const tmp31 = React6(closure_16, obj12);
                       cResult[24] = animationWidth;
                       cResult[25] = clippingWindowWidth;
                       cResult[26] = color;
@@ -980,21 +980,21 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                             tmp40 = tmp43;
                                           }
                                           const obj8 = { style: tmp20, children: tmp32 };
-                                          const tmp39 = options(ReanimatedRexportDefault.View, obj8);
+                                          const tmp39 = React6(ReanimatedRexportDefault.View, obj8);
                                           cResult[50] = tmp32;
                                           cResult[51] = tmp20;
                                           cResult[52] = tmp39;
                                           tmp36 = tmp39;
                                         }
                                         const obj9 = { style: tmp22, children: tmp28 };
-                                        const tmp35 = options(ReanimatedRexportDefault.View, obj9);
+                                        const tmp35 = React6(ReanimatedRexportDefault.View, obj9);
                                         cResult[47] = tmp22;
                                         cResult[48] = tmp28;
                                         cResult[49] = tmp35;
                                         tmp32 = tmp35;
                                       }
                                       const obj10 = { style: tmp24, children: tmp25 };
-                                      const tmp31 = options(ReanimatedRexportDefault.View, obj10);
+                                      const tmp31 = React6(ReanimatedRexportDefault.View, obj10);
                                       cResult[44] = tmp24;
                                       cResult[45] = tmp25;
                                       cResult[46] = tmp31;
@@ -1008,7 +1008,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                     ellipsizeMode: "clip",
                                     children: shiftedText,
                                   };
-                                  const tmp27 = options(Text_Text.Text, obj11);
+                                  const tmp27 = React6(Text_Text.Text, obj11);
                                   cResult[40] = color;
                                   cResult[41] = shiftedText;
                                   cResult[42] = variant;
@@ -1040,14 +1040,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp20 = items3;
                     }
                     const obj12 = { style: tmp5, children: tmp11 };
-                    const tmp18 = options(ReanimatedRexportDefault.View, obj12);
+                    const tmp18 = React6(ReanimatedRexportDefault.View, obj12);
                     cResult[19] = tmp5;
                     cResult[20] = tmp11;
                     cResult[21] = tmp18;
                     tmp15 = tmp18;
                   }
                   const obj13 = { style: tmp7, children: tmp8 };
-                  const tmp14 = options(ReanimatedRexportDefault.View, obj13);
+                  const tmp14 = React6(ReanimatedRexportDefault.View, obj13);
                   cResult[16] = tmp7;
                   cResult[17] = tmp8;
                   cResult[18] = tmp14;
@@ -1055,7 +1055,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj14 = { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: text };
-              const tmp10 = options(Text_Text.Text, obj14);
+              const tmp10 = React6(Text_Text.Text, obj14);
               cResult[12] = color;
               cResult[13] = text;
               cResult[14] = variant;
@@ -1087,12 +1087,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = items;
       const obj3 = {
         style: null,
-        children: options(Text_Text.Text, { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: text }),
+        children: React6(Text_Text.Text, { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: text }),
       };
       const items1 = [styles.layer, { width: animationWidth }, animatedStyles.plainText];
       obj3.style = items1;
-      obj2.children = options(ReanimatedRexportDefault.View, obj3);
-      const items2 = [options(ReanimatedRexportDefault.View, obj2)];
+      obj2.children = React6(ReanimatedRexportDefault.View, obj3);
+      const items2 = [React6(ReanimatedRexportDefault.View, obj2)];
       const obj4 = { style: null, children: null };
       const items3 = [styles.window, { width: clippingWindowWidth }, animatedStyles.shiftedOuterWindow];
       obj4.style = items3;
@@ -1101,7 +1101,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.style = items4;
       const obj6 = {
         style: null,
-        children: options(Text_Text.Text, {
+        children: React6(Text_Text.Text, {
           variant,
           color,
           lineClamp: 1,
@@ -1111,9 +1111,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items5 = [styles.layer, { width: animationWidth }, animatedStyles.shiftedText];
       obj6.style = items5;
-      obj5.children = options(ReanimatedRexportDefault.View, obj6);
-      obj4.children = options(ReanimatedRexportDefault.View, obj5);
-      items2[1] = options(ReanimatedRexportDefault.View, obj4);
+      obj5.children = React6(ReanimatedRexportDefault.View, obj6);
+      obj4.children = React6(ReanimatedRexportDefault.View, obj5);
+      items2[1] = React6(ReanimatedRexportDefault.View, obj4);
       obj.children = items2;
       return collapsed(closure_1_11, obj);
     };
@@ -1856,7 +1856,7 @@ export const AIShimmer = noop.memo(
           }
         }
         const merged = Object.assign(tmp4);
-        const tmp12 = options(
+        const tmp12 = React6(
           closure_14,
           {
             variant: str,
@@ -1900,7 +1900,7 @@ export const AIShimmer = noop.memo(
         const merged = Object.assign(
           Object.assign(variant, Object.assign({ variant: 0, delay: 0, initialDelay: 0, duration: 0 })),
         );
-        return options(
+        return React6(
           closure_14,
           {
             variant: str,

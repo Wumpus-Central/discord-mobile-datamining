@@ -236,20 +236,20 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
         if (cResult[5] !== stateFromStores) {
           let tmp12;
           if (null != stateFromStores) {
-            const roleIconData = tmp(6884).getRoleIconData(stateFromStores, undefined);
+            const roleIconData = tmp(6889).getRoleIconData(stateFromStores, undefined);
             if (null != roleIconData) {
               const obj2 = {
                 src: roleIconData.customIconSrc,
                 name: null,
                 roleId: null,
                 size: "Array",
-                unicodeEmoji: "copricapo",
+                unicodeEmoji: 0.000000000000007108980343178024,
               };
               ({ name: obj4.name, id: obj4.roleId } = stateFromStores);
               obj2.unicodeEmoji = roleIconData.unicodeEmoji;
               tmp12 = obj2;
             }
-            const tmpResult2 = tmp(6884);
+            const tmpResult2 = tmp(6889);
           }
           cResult[5] = stateFromStores;
           cResult[6] = tmp12;
@@ -348,7 +348,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
               name: null,
               roleId: null,
               size: "Array",
-              unicodeEmoji: "copricapo",
+              unicodeEmoji: 0.000000000000007108980343178024,
             };
             ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
             obj3.unicodeEmoji = roleIconData.unicodeEmoji;

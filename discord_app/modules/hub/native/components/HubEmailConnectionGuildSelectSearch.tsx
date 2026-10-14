@@ -5,13 +5,14 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06095_fuzzysearch.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import fuzzysearchDefault from "../../../../../_runtime/06101_fuzzysearch.js";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import _mod6818 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import SearchBarNavDefault from "../../../main_tabs_v2/native/shared_components/SearchBarNav.tsx";
 import HubActionCreatorsDefault from "../../../../actions/HubActionCreators.tsx";
-import _modDef13020 from "../../../../../_runtime/metro/13020__.js";
+import _modDef13055 from "../../../../../_runtime/metro/13055__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -19,12 +20,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12992).HubEmailConnectionSteps;
+const View = fn(17).View;
+const HubEmailConnectionSteps = fn(13027).HubEmailConnectionSteps;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
+const createStyles = fn(5096);
 let obj2 = {
   scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   fauxHeader: { paddingHorizontal: 0 },
@@ -35,15 +35,15 @@ let obj2 = {
 };
 let obj3 = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginBottom: 8 };
-let closure_12 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? function EmptyState() {
       const cResult = c.c(9);
-      const tmp4 = closure_12();
+      const tmp4 = closure_11();
       if (cResult[0] !== tmp4.emptyStateImage) {
-        const obj2 = { style: tmp4.emptyStateImage, source: _modDef13020 };
-        const tmp9 = options(FastImageDefault, obj2);
+        const obj2 = { style: tmp4.emptyStateImage, source: _modDef13055 };
+        const tmp9 = closure_1_8(FastImageDefault, obj2);
         cResult[0] = tmp4.emptyStateImage;
         cResult[1] = tmp9;
         let tmp5 = tmp9;
@@ -65,7 +65,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp10,
         };
-        const tmp14 = options(Text_Text.Text, obj3);
+        const tmp14 = closure_1_8(Text_Text.Text, obj3);
         cResult[3] = tmp4.emptyStateTitle;
         cResult[4] = tmp14;
         let tmp12 = tmp14;
@@ -83,7 +83,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp4.emptyWrapper, children: null };
       const items = [tmp5, tmp12];
       obj4.children = items;
-      const tmp16 = collapsed(timestampProducer, obj4);
+      const tmp16 = React6(View, obj4);
       cResult[5] = tmp4.emptyWrapper;
       cResult[6] = tmp5;
       cResult[7] = tmp12;
@@ -91,10 +91,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       tmp15 = tmp16;
     }
   : function EmptyState() {
-      const tmp = closure_12();
+      const tmp = closure_11();
       const obj = { style: tmp.emptyWrapper, children: null };
-      const obj2 = { style: tmp.emptyStateImage, source: _modDef13020 };
-      const items = [options(FastImageDefault, obj2)];
+      const obj2 = { style: tmp.emptyStateImage, source: _modDef13055 };
+      const items = [closure_1_8(FastImageDefault, obj2)];
       const obj3 = {
         style: tmp.emptyStateTitle,
         variant: "text-sm/semibold",
@@ -103,9 +103,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = util.intl;
       obj3.children = intl.string(util.t["6HXiuE"]);
-      items[1] = options(Text_Text.Text, obj3);
+      items[1] = closure_1_8(Text_Text.Text, obj3);
       obj.children = items;
-      return collapsed(timestampProducer, obj);
+      return React6(View, obj);
     };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionGuildSelectSearch.tsx");
@@ -116,7 +116,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   noop = undefined;
   c6 = undefined;
   c7 = undefined;
-  const tmp = closure_12();
+  const tmp = closure_11();
   dependencyMap = tmp;
   closure_3 = useNavigation.useNavigation();
   [_slicedToArray, obj5.onChange] = noop.useState("");
@@ -140,8 +140,8 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   obj5.onClose = function onClose() {
     closure_3.pop();
   };
-  obj4.children = closure_9(SearchBarNavDefault, obj5);
-  const items = [closure_9(NavigatorHeader.FauxHeader, obj4)];
+  obj4.children = anyErrorMessage(SearchBarNavDefault, obj5);
+  const items = [anyErrorMessage(NavigatorHeader.FauxHeader, obj4)];
   let obj6 = {
     keyboardShouldPersistTaps: "always",
     data: found,
@@ -151,7 +151,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
         tmp2 = null;
         if ("" !== anyErrorMessage) {
           const obj = { style: error.error, children: anyErrorMessage };
-          tmp2 = options(native.LegacyText, obj);
+          tmp2 = closure_2_8(native.LegacyText, obj);
         }
       }
       return tmp2;
@@ -159,7 +159,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
     renderItem(item) {
       item = item.item;
       const id = item.id;
-      return closure_1_9(require("HubEmailConnectionGuildSelect").HubEmailConnectionGuildSelectRow, {
+      return anyErrorMessage(require("HubEmailConnectionGuildSelect").HubEmailConnectionGuildSelectRow, {
         signup: closure_3(function* () {
           if (v3 === 2) {
             v3 = 3;
@@ -188,7 +188,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                   const onClose = tmp4;
                   const email = tmp8;
                   v3(null);
-                  closure_1_7(true);
+                  constants(true);
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
@@ -197,16 +197,16 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                 }
               } else if (1 === tmp8) {
                 c3 = 0;
-                closure_1_7(false);
+                constants(false);
                 throw closure_2;
               } else {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(5635).APIError(closure_128_0);
+                  const aPIError = new id(5640).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
-                  closure_1_7(false);
+                  constants(false);
                   v3 = 3;
                 } else if (arg0 === 1) {
                   v3 = 3;
@@ -217,7 +217,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                   c3 = 1;
                 }
                 c3 = 0;
-                closure_1_7(false);
+                constants(false);
                 v3 = 3;
                 const obj6 = { value, done: true };
                 return obj6;
@@ -243,17 +243,17 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
       return id.id;
     },
     ListEmptyComponent() {
-      return closure_1_9(closure_1_13, {});
+      return anyErrorMessage(closure_1_12, {});
     },
     ItemSeparatorComponent() {
-      return closure_1_9(c6, { style: { height: 8 } });
+      return anyErrorMessage(c6, { style: { height: 8 } });
     },
     style: tmp.scrollContainer,
     contentContainerStyle: null,
   };
   const tmp8Result = SearchBarNavDefault;
   obj6.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingTop: 16 };
-  items[1] = closure_9(c7, obj6);
+  items[1] = anyErrorMessage(_mod6818.FlashList, obj6);
   obj3.children = items;
-  return closure_10(closure_11, obj3);
+  return closure_9(closure_10, obj3);
 }

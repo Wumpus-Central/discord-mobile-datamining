@@ -1510,12 +1510,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   const set1 = new Set();
   const set2 = new Set();
   self.updateSendState({ receivers: num });
-  let tmp14 = self.connection.context === tmp(5137).MediaEngineContextTypes.DEFAULT;
+  let tmp14 = self.connection.context === tmp(5141).MediaEngineContextTypes.DEFAULT;
   if (tmp14) {
     tmp14 = null != transport.camera;
   }
   self.cameraDuration.value = tmp14;
-  let tmp16 = self.connection.context === tmp(5137).MediaEngineContextTypes.DEFAULT;
+  let tmp16 = self.connection.context === tmp(5141).MediaEngineContextTypes.DEFAULT;
   if (tmp16) {
     tmp16 = null != transport.camera;
   }
@@ -1523,7 +1523,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     tmp16 = self.callUserIdsCount > 1;
   }
   self.cameraOpportunityDuration.value = tmp16;
-  let tmp18 = self.connection.context === tmp(5137).MediaEngineContextTypes.DEFAULT;
+  let tmp18 = self.connection.context === tmp(5141).MediaEngineContextTypes.DEFAULT;
   if (tmp18) {
     tmp18 = null != transport.camera;
   }
@@ -1534,7 +1534,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   if (tmp20) {
     self.cameraToggles = self.cameraToggles + 1;
   }
-  let liveBackgroundEnabled = self.connection.context === tmp(5137).MediaEngineContextTypes.DEFAULT;
+  let liveBackgroundEnabled = self.connection.context === tmp(5141).MediaEngineContextTypes.DEFAULT;
   if (liveBackgroundEnabled) {
     liveBackgroundEnabled = null != transport.camera;
   }

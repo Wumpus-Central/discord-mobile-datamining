@@ -58,10 +58,10 @@ function primaryCategoryToEmojiIcon(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(17244).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(17278).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   footer: null,
@@ -326,11 +326,11 @@ export default function ICYMITopicsScreen() {
   let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1126).intl;
   obj3.children = intl.string(first(1126).t.Y5d99L);
-  const children = [closure_10(first(5088).Text, obj3), , , ,];
+  const children = [closure_10(first(5092).Text, obj3), , , ,];
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1126).intl;
   obj4.children = intl2.string(first(1126).t.MGZsfv);
-  children[1] = closure_10(first(5088).Text, obj4);
+  children[1] = closure_10(first(5092).Text, obj4);
   children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = {
     showsVerticalScrollIndicator: false,
@@ -368,7 +368,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1126).intl;
     obj11.text = intl3.string(tmp7(1126).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = closure_10(tmp7(5379).Button, obj11);
+    obj9.children = closure_10(tmp7(5384).Button, obj11);
     tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;

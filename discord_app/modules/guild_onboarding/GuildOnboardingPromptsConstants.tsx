@@ -17,7 +17,7 @@ function serverPromptToClientPrompt(id) {
     inOnboarding: id.in_onboarding,
     type: id.type,
   };
-  options = id.options;
+  const options = id.options;
   obj.options = options.map((id) => {
     const obj = {
       id: id.id,
@@ -181,7 +181,7 @@ export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id
     in_onboarding: id.inOnboarding,
     type: id.type,
   };
-  options = id.options;
+  const options = id.options;
   obj.options = options.map((id) => {
     const obj = {
       id: id.id,

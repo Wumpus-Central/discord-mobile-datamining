@@ -1,14 +1,15 @@
 // discord_app/modules/rpc/server/commands/setOrientationLockState.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
+import Constants2 from "../../../activities/Constants.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
+import getSocketFrameDefault from "../../helpers/getSocketFrame.tsx";
 import isPostMessageSocketDefault from "../../helpers/isPostMessageSocket.tsx";
-import FramesStore from "../../../frames/FramesStore.tsx";
+import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
 
-const OrientationLockState = fn(2024).OrientationLockState;
-const Constants = fn(1096);
+const OrientationLockState = Constants2.OrientationLockState;
 const RPCErrors = Constants.RPCErrors;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");
 
 export default {
@@ -56,14 +57,14 @@ export default {
         const id = socket.application.id;
         if (null == id) {
           const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
-          const tmp18 = new RPCErrorDefault(obj2, "No application.");
-          throw tmp18;
+          const tmp19 = new RPCErrorDefault(obj2, "No application.");
+          throw tmp19;
         } else {
-          const frameByEmbeddedContext = FramesStore.getFrameByEmbeddedContext(socket.context, socket.source.iframeId);
-          if (null != frameByEmbeddedContext) {
+          const tmp12 = getSocketFrameDefault(socket);
+          if (null != tmp12) {
             const obj3 = {
               type: "FRAME_SET_ORIENTATION_LOCK_STATE",
-              frameId: frameByEmbeddedContext.id,
+              frameId: tmp12.id,
               lockState: lock_state,
               pictureInPictureLockState: picture_in_picture_lock_state,
             };

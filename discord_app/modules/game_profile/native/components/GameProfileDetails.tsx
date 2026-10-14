@@ -11,10 +11,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8470).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8477).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_8 },
   headerText: null,
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let joined;
           if (platformsContainer != null) {
             const genres1 = platformsContainer.genres;
-            const mapped = genres1.map(trackAction(8923).getGenreText);
+            const mapped = genres1.map(trackAction(8927).getGenreText);
             joined = mapped.join(", ");
           }
           let genres2;
@@ -335,10 +335,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const _Date = Date;
                   const date = new Date(tmp30);
-                  const dateFormatResult = tmp5(4793).dateFormat(date, "LL");
+                  const dateFormatResult = tmp5(4795).dateFormat(date, "LL");
                   cResult[32] = tmp30;
                   cResult[33] = dateFormatResult;
-                  const obj7 = tmp5(4793);
+                  const obj7 = tmp5(4795);
                 } else {
                   class S {
                     constructor(arg0) {
@@ -636,7 +636,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               style: headerText,
               children: tmp64,
             };
-            const tmp67 = closure_8(trackAction(5088).Text, obj5);
+            const tmp67 = closure_8(trackAction(5092).Text, obj5);
             cResult[57] = tmp4.headerText;
             cResult[58] = tmp67;
           } else {
@@ -690,7 +690,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             items1[1] = value;
             obj.children = items1;
-            return options(hasOwnProperty, obj, children.label);
+            return React6(hasOwnProperty, obj, children.label);
           });
           cResult[59] = tmp5;
           cResult[60] = tmp4.detailsRow;
@@ -779,7 +779,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const websites = game.websites;
                     if (websites != null) {
                       const mapped3 = websites.map((item) =>
-                        trackAction(9103)(item, trackAction(587).colors.ICON_SUBTLE),
+                        trackAction(9108)(item, trackAction(587).colors.ICON_SUBTLE),
                       );
                       found = mapped3.filter((item) => null != item);
                     }
@@ -832,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     style: closure_2.platformsContainer,
                     children: platforms.map((platform) =>
                       closure_1_8(
-                        game(9096).GameUpdatePlatformIcon,
+                        game(9101).GameUpdatePlatformIcon,
                         { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE },
                         platform,
                       ),
@@ -923,7 +923,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             items1[1] = value;
             obj.children = items1;
-            return options(hasOwnProperty, obj, children.label);
+            return React6(hasOwnProperty, obj, children.label);
           }),
         };
         items1[1] = closure_8(closure_5, obj3);

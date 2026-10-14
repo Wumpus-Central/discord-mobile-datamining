@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(7993).MobileUserSettings;
+const MobileUserSettings = fn(8000).MobileUserSettings;
 const Constants = fn(1085);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
@@ -204,11 +204,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
           if (!fetchedConsents.fetchedConsents) {
-            const consents = stackNavigation(15455).fetchConsents();
-            const obj = stackNavigation(15455);
+            const consents = stackNavigation(15492).fetchConsents();
+            const obj = stackNavigation(15492);
           }
-          const harvestStatus = stackNavigation(15458).fetchHarvestStatus();
-          const obj2 = stackNavigation(15458);
+          const harvestStatus = stackNavigation(15495).fetchHarvestStatus();
+          const obj2 = stackNavigation(15495);
         };
         const items = [];
         cResult[0] = fn;
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { screen: tmp(15413).SettingsScreen.DATA_AND_PRIVACY };
+          const obj3 = { screen: tmp(15450).SettingsScreen.DATA_AND_PRIVACY };
           const tmp18 = closure_8(SettingsScreenNoticesDefault, obj3);
           cResult[5] = tmp18;
           let tmp14 = tmp18;
@@ -259,12 +259,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.settings = items3;
       const intl2 = tmp(1126).intl;
       const obj8 = { helpArticle: null };
-      const tmpResult = stackNavigation(10663);
-      obj8.helpArticle = stackNavigation(8829).getSecureFramesHelpdeskArticle();
+      const tmpResult = stackNavigation(10767);
+      obj8.helpArticle = stackNavigation(8833).getSecureFramesHelpdeskArticle();
       obj7.subLabel = intl2.format(stackNavigation(1126).t["/6sFWa"], obj8);
       const items4 = [obj7];
       const obj9 = { label: null, settings: null, subLabel: null };
-      const tmpResult2 = stackNavigation(8829);
+      const tmpResult2 = stackNavigation(8833);
       const intl3 = tmp(1126).intl;
       obj9.label = intl3.string(stackNavigation(1126).t["+uHbqE"]);
       const items5 = [,];
@@ -297,11 +297,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       importDefault = tmp2;
       const effect = noop.useEffect(() => {
         if (!fetchedConsents.fetchedConsents) {
-          const consents = stackNavigation(15455).fetchConsents();
-          const obj = stackNavigation(15455);
+          const consents = stackNavigation(15492).fetchConsents();
+          const obj = stackNavigation(15492);
         }
-        const harvestStatus = stackNavigation(15458).fetchHarvestStatus();
-        const obj2 = stackNavigation(15458);
+        const harvestStatus = stackNavigation(15495).fetchHarvestStatus();
+        const obj2 = stackNavigation(15495);
       }, []);
       let items = [stackNavigation, tmp2];
       let obj2 = { children: null };
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj3 = { screen: null };
       let obj = stackNavigation(1503);
-      obj3.screen = stackNavigation(15413).SettingsScreen.DATA_AND_PRIVACY;
+      obj3.screen = stackNavigation(15450).SettingsScreen.DATA_AND_PRIVACY;
       let items1 = [closure_8(SettingsScreenNoticesDefault, obj3), closure_8(SettingLayoutDefault, { node: memo })];
       obj2.children = items1;
       return closure_10(closure_9, obj2);

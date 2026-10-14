@@ -1,19 +1,19 @@
 // discord_app/modules/notification_center/native/ForYouItemImage.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import NotificationCenterItemsTypes from "../NotificationCenterItemsTypes.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import NotificationCenterItemsTypes from "../NotificationCenterItemsTypes.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import profile_customization_ProfileCustomizationUtils from "../../profile_customization/native/ProfileCustomizationUtils.tsx";
-import _modDef8751 from "../../../../_runtime/metro/08751__.js";
-import _modDef17188 from "../../../../_runtime/metro/17188__.js";
-import _modDef17189 from "../../../../_runtime/metro/17189__.js";
-import _modDef17190 from "../../../../_runtime/metro/17190__.js";
-import _modDef17191 from "../../../../_runtime/metro/17191__.js";
-import _modDef17192 from "../../../../_runtime/metro/17192__.js";
-import _modDef17193 from "../../../../_runtime/metro/17193__.js";
-import _modDef17194 from "../../../../_runtime/metro/17194__.js";
+import _modDef8755 from "../../../../_runtime/metro/08755__.js";
+import _modDef17222 from "../../../../_runtime/metro/17222__.js";
+import _modDef17223 from "../../../../_runtime/metro/17223__.js";
+import _modDef17224 from "../../../../_runtime/metro/17224__.js";
+import _modDef17225 from "../../../../_runtime/metro/17225__.js";
+import _modDef17226 from "../../../../_runtime/metro/17226__.js";
+import _modDef17227 from "../../../../_runtime/metro/17227__.js";
+import _modDef17228 from "../../../../_runtime/metro/17228__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -21,27 +21,27 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function getFallbackIcon(type, fallbackImage) {
   if (NotificationCenterItemsTypes.NotificationCenterItems.MISSED_MESSAGES === type) {
-    const obj2 = { icon: _modDef8751, color: fallbackImage.fallbackImage.color };
+    const obj2 = { icon: _modDef8755, color: fallbackImage.fallbackImage.color };
     return obj2;
   } else if (NotificationCenterItemsTypes.NotificationCenterItems.FRIEND_REQUEST_REMINDER === type) {
-    const obj3 = { icon: _modDef17188, color: fallbackImage.fallbackImage.color };
+    const obj3 = { icon: _modDef17222, color: fallbackImage.fallbackImage.color };
     return obj3;
   } else {
     if (NotificationCenterItemsTypes.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED !== type) {
       if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES !== type) {
         if (NotificationCenterItemsTypes.NotificationCenterItems.MISSED_MESSAGES !== type) {
           if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES === type) {
-            const obj4 = { icon: _modDef17190, color: fallbackImage.fallbackImage.color };
+            const obj4 = { icon: _modDef17224, color: fallbackImage.fallbackImage.color };
             return obj4;
           } else {
-            const obj = { icon: _modDef17191, color: fallbackImage.fallbackImage.color };
+            const obj = { icon: _modDef17225, color: fallbackImage.fallbackImage.color };
             return obj;
           }
         }
       }
     }
     const obj5 = {
-      icon: _modDef17189,
+      icon: _modDef17223,
       color: fallbackImage.fallbackImageV2.color,
       backgroundStyle: fallbackImage.guildGridBackground,
     };
@@ -50,23 +50,23 @@ function getFallbackIcon(type, fallbackImage) {
 }
 function getLifecycleIcon(item_enum) {
   if (item_enum === NotificationCenterItemsTypes.ItemEnum.UPDATE_PROFILE) {
-    const obj2 = { source: _modDef17192 };
-    let tmp5 = jsx(FastImageDefault, { source: _modDef17192 });
+    const obj2 = { source: _modDef17226 };
+    let tmp5 = jsx(FastImageDefault, { source: _modDef17226 });
   } else {
     if (item_enum !== NotificationCenterItemsTypes.ItemEnum.FIND_FRIENDS) {
       if (item_enum !== NotificationCenterItemsTypes.ItemEnum.ADD_FRIEND) {
         if (item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE) {
-          const obj3 = { source: _modDef17194, style: { width: "105%" } };
-          tmp5 = jsx(FastImageDefault, { source: _modDef17194, style: { width: "105%" } });
+          const obj3 = { source: _modDef17228, style: { width: "105%" } };
+          tmp5 = jsx(FastImageDefault, { source: _modDef17228, style: { width: "105%" } });
         } else {
-          const obj = { source: _modDef17191 };
-          tmp5 = jsx(native.Icon, { source: _modDef17191 });
+          const obj = { source: _modDef17225 };
+          tmp5 = jsx(native.Icon, { source: _modDef17225 });
         }
       }
     }
-    const obj4 = { source: _modDef17193, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
+    const obj4 = { source: _modDef17227, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
     tmp5 = jsx(native.Icon, {
-      source: _modDef17193,
+      source: _modDef17227,
       size: native.IconSizes.SMALL_20,
       color: nativeDefault.unsafe_rawColors.WHITE,
     });
@@ -75,10 +75,10 @@ function getLifecycleIcon(item_enum) {
 }
 const View = fn(17).View;
 const getGuildAcronym = fn(2083).getGuildAcronym;
-const Constants = fn(17187);
+const Constants = fn(17221);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 48;
   if (arg0) {
@@ -113,7 +113,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.guildFallbackImage = size1;
   return obj;
 });
-createStyles = fn(5092);
+createStyles = fn(5096);
 let obj = {
   fallbackImage: { color: nativeDefault.colors.WHITE },
   fallbackImageV2: null,

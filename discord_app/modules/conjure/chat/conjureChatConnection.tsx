@@ -2,9 +2,9 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
-import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
+import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function appendFailureStep(turnId, projectId) {
@@ -244,10 +244,10 @@ let obj2 = {
       DispatcherDefault.dispatch(obj2);
     }
   },
-  clarification(clarification, arg1) {
-    let tmp = null != clarification.clarification;
+  clarification(onSubmit, arg1) {
+    let tmp = null != onSubmit.clarification;
     if (tmp) {
-      const questions = clarification.clarification.questions;
+      const questions = onSubmit.clarification.questions;
       let num;
       if (questions != null) {
         num = questions.length;
@@ -261,10 +261,10 @@ let obj2 = {
       const obj2 = {
         type: "CONJURE_CHAT_TURN_PATCH",
         projectId: arg1.projectId,
-        turnId: clarification.turn_id,
+        turnId: onSubmit.turn_id,
         patch: null,
       };
-      obj3 = { clarification: clarification.clarification };
+      obj3 = { clarification: onSubmit.clarification };
       obj2.patch = obj3;
       DispatcherDefault.dispatch(obj2);
     }

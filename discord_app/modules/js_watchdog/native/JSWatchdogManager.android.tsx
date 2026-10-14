@@ -227,7 +227,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (null == self._timeoutId) {
-              if (null != tmp2(18159)) {
+              if (null != tmp2(18195)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj4 = { value: self.getCurrentSessionId(), done: false };
@@ -247,7 +247,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_129_0._enabled = true;
               if (closure_129_0._pingCompleted) {
                 let checkForStallReportResult;
-                const obj = tmp2(18159);
+                const obj = tmp2(18195);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -326,11 +326,11 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
                 const uuid = closure_129_0._cachedSession.uuid;
                 c3 = 3;
               }
-              obj2 = tmp2(7194);
+              obj2 = tmp2(7200);
             }
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp2(7184).getSession(), done: false };
+            const obj6 = { value: tmp2(7190).getSession(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {

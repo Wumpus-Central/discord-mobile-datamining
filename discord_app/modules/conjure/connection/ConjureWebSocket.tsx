@@ -155,6 +155,38 @@ prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined, name) 
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendPatchNotesSent"] = function sendPatchNotesSent(sent, source_sha) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const obj2 = {
+        type: "patch_notes_sent",
+        published_revision: null,
+        guild_id: null,
+        channel_id: null,
+        message_id: null,
+      };
+      ({
+        publishedRevision: obj3.published_revision,
+        guildId: obj3.guild_id,
+        channelId: obj3.channel_id,
+        messageId: obj3.message_id,
+      } = sent);
+      if (null != source_sha) {
+        const obj5 = { source_sha };
+        let obj = obj5;
+      } else {
+        obj = {};
+      }
+      const merged = Object.assign(obj);
+      socket.send(JSON.stringify(obj2));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendLiveReload"] = function sendLiveReload(enabled) {
   const self = this;
   if (null != this.socket) {

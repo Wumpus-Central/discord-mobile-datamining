@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const MAX_FORUM_POST_TAGS = fn(6975).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(6988).MAX_FORUM_POST_TAGS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_9 = createStyles.createStyles({
   tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" },
   saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 },
@@ -235,15 +235,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp3 = closure_9();
-      let appliedTags = thread(6977).useAppliedTags(thread);
+      let appliedTags = thread(6990).useAppliedTags(thread);
       if (null != tags) {
         appliedTags = tags;
       }
-      let obj = thread(6977);
+      let obj = thread(6990);
       [first, closure_5] = first.useState(new Set(appliedTags));
       closure_6 = first.size >= closure_6;
       let set = new Set(appliedTags);
-      const visibleForumTags = thread(6977).useVisibleForumTags(thread.parentChannel);
+      const visibleForumTags = thread(6990).useVisibleForumTags(thread.parentChannel);
       let obj2 = {
         onDismiss() {
           let tmp;
@@ -259,8 +259,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = tmp4(1126).intl;
       obj3.subtitle = intl2.string(thread(1126).t["+HS9+m"]);
       obj3.subtitleStyle = tmp3.subtitle;
-      obj2.header = toggleTag(thread(6839).BottomSheetTitleHeader, obj3);
-      const tmp4Result = thread(6977);
+      obj2.header = toggleTag(thread(6844).BottomSheetTitleHeader, obj3);
+      const tmp4Result = thread(6990);
       let items = [
         toggleTag(closure_5, {
           style: tmp3.tagsContainer,
@@ -297,8 +297,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         ActionSheetActionCreatorsDefault.hideActionSheet();
       };
-      obj5.children = toggleTag(thread(5379).Button, obj6);
+      obj5.children = toggleTag(thread(5384).Button, obj6);
       items[1] = toggleTag(closure_5, obj5);
       obj2.children = items;
-      return closure_8(thread(6899).ActionSheet, obj2);
+      return closure_8(thread(6904).ActionSheet, obj2);
     };

@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4702 from "../../../../../../_runtime/metro/04702__.js";
+import _modDef4704 from "../../../../../../_runtime/metro/04704__.js";
 import DateUtils from "../../../../../utils/DateUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
@@ -22,11 +22,11 @@ const useChannelNameDefault = useChannelName;
 require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress", "onLongPress", "trailing", "subLabel", "label"];
 const View = fn(17).View;
-const UserRowModes = fn(10217).UserRowModes;
-const ReadStateTypes = fn(5967).ReadStateTypes;
+const UserRowModes = fn(10227).UserRowModes;
+const ReadStateTypes = fn(5972).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   guildIcon: { flexShrink: 0, flexGrow: 0 },
   subLabel: { display: "flex", flexDirection: "row", alignItems: "center" },
@@ -238,8 +238,8 @@ export default noop.memo(
               }
               obj2.guild = stateFromStores;
               obj2.channel = tmp4;
-              obj2.size = tmp(12347).GuildIconWithChannelTypeSizes.SMALL_32;
-              const tmp34 = closure_14(tmp(12347).GuildIconWithChannelType, obj2);
+              obj2.size = tmp(12383).GuildIconWithChannelTypeSizes.SMALL_32;
+              const tmp34 = closure_14(tmp(12383).GuildIconWithChannelType, obj2);
             }
             cResult[26] = tmp4;
             cResult[27] = stateFromStores;
@@ -428,7 +428,7 @@ export default noop.memo(
               const obj6 = {
                 variant: "text-xs/medium",
                 color: "text-subtle",
-                children: DateUtils.calendarFormatCompact(_modDef4702(tmp14)),
+                children: DateUtils.calendarFormatCompact(_modDef4704(tmp14)),
               };
               items1[1] = closure_2_14(Text_Text.Text, obj6);
               obj4.children = items1;

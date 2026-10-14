@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   fill: { flex: 1 },
   scrollView: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 },
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                 const obj4 = { style: tmp19, children: null };
                                                 const items = [tmp49, tmp53];
                                                 obj4.children = items;
-                                                const tmp59 = options(KeyboardAwareViewDefault, obj4);
+                                                const tmp59 = React6(KeyboardAwareViewDefault, obj4);
                                                 cResult[51] = tmp49;
                                                 cResult[52] = tmp53;
                                                 cResult[53] = tmp19;
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj7 = { obscured, children: null };
                                   const items1 = [tmp27, tmp42];
                                   obj7.children = items1;
-                                  const tmp48 = options(ObscuredSurfaceDefault, obj7);
+                                  const tmp48 = React6(ObscuredSurfaceDefault, obj7);
                                   cResult[38] = obscured;
                                   cResult[39] = tmp27;
                                   cResult[40] = tmp42;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               const obj8 = { style: tmp35, children: null };
                               const items2 = [body, tmp36];
                               obj8.children = items2;
-                              const tmp45 = options(hasOwnProperty, obj8);
+                              const tmp45 = React6(hasOwnProperty, obj8);
                               cResult[34] = body;
                               cResult[35] = tmp35;
                               cResult[36] = tmp36;
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               const obj11 = { children: appDetails };
                               items3[1] = React5(hasOwnProperty, obj11);
                               obj9.children = items3;
-                              tmp37 = options(closure_1_8, obj9);
+                              tmp37 = React6(closure_1_8, obj9);
                             }
                             cResult[31] = appDetails;
                             cResult[32] = tmp3.separator;
@@ -463,13 +463,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { children: appDetails };
         items6[1] = React5(hasOwnProperty, obj9);
         obj7.children = items6;
-        tmp15Result = options(closure_1_8, obj7);
+        tmp15Result = React6(closure_1_8, obj7);
       }
       items5[1] = tmp15Result;
       obj6.children = items5;
-      items3[1] = options(hasOwnProperty, obj6);
+      items3[1] = React6(hasOwnProperty, obj6);
       obj4.children = items3;
-      obj3.children = options(ObscuredSurfaceDefault, obj4);
+      obj3.children = React6(ObscuredSurfaceDefault, obj4);
       const items7 = [React5(timestampProducer, obj3)];
       let tmp17Result2 = null;
       if (null != footer) {
@@ -484,5 +484,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       items7[1] = tmp17Result2;
       obj2.children = items7;
-      return options(tmp3Result, obj2);
+      return React6(tmp3Result, obj2);
     };

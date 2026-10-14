@@ -50,8 +50,8 @@ const Constants = fn(1085);
 } = Constants);
 const CollectiblesShopConstants = fn(1087);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const UPDATE_CONFIG = fn(5070).UPDATE_CONFIG;
-const PaymentConstants = fn(5071);
+const UPDATE_CONFIG = fn(5074).UPDATE_CONFIG;
+const PaymentConstants = fn(5075);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_11, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } =
   PaymentConstants);
 const re13 = /feature\/([\w-]+)/;

@@ -5,10 +5,10 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _mod5745 from "module_5745" /* 5745 */;
+import _mod5750 from "module_5750" /* 5750 */;
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import _modDef11659 from "../../../../../../_runtime/metro/11659__.js";
+import _modDef11669 from "../../../../../../_runtime/metro/11669__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
@@ -20,11 +20,11 @@ const View = fn(17).View;
 fn(1085).AutoCompleteResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const executeCommand = apply.debounce(executeCommandDefault, fn(5403).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+const executeCommand = apply.debounce(executeCommandDefault, fn(5408).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
   leading: true,
   trailing: true,
 });
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" },
   commandChoiceLoadingItem: {
@@ -138,9 +138,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { style: null };
               const items = [closure_3.commandChoiceLoadingItem, { width }];
               obj3.style = items;
-              obj2.children = options(View, obj3);
-              obj.label = options(View, obj2);
-              return options(closure_5, obj);
+              obj2.children = React6(View, obj3);
+              obj.label = React6(View, obj2);
+              return React6(closure_5, obj);
             };
             class E {
               constructor(arg0) {
@@ -263,7 +263,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       function ListItem(arg0) {
         ({ label, onPress } = arg0);
-        return options(TableRow.TableRow, {
+        return React6(TableRow.TableRow, {
           label,
           onPress,
           start: 0 === _require,
@@ -280,7 +280,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       _modDef38(tmp4, "Invalid autocomplete result type");
       closure_3 = closure_12();
       noop = noop.useMemo(() => 100 * Math.random() + 50, []);
-      const match = _mod5745.match(item);
+      const match = _mod5750.match(item);
       let obj = { type: AutoCompleteResultTypes.CHOICE };
       let obj2 = { type: AutoCompleteResultTypes.LABEL };
       const withResult = match.with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
@@ -384,9 +384,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { style: null };
           const items = [closure_3.commandChoiceLoadingItem, { width }];
           obj3.style = items;
-          obj2.children = options(View, obj3);
-          obj.label = options(View, obj2);
-          return options(ListItem, obj);
+          obj2.children = React6(View, obj3);
+          obj.label = React6(View, obj2);
+          return React6(ListItem, obj);
         })
         .exhaustive();
     };
@@ -404,8 +404,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.emptyState) {
-        const obj2 = { style: tmp4.emptyState, lightSource: _modDef11659, darkSource: _modDef11659, title: first };
-        const tmp10 = options(native.EmptyState, obj2);
+        const obj2 = { style: tmp4.emptyState, lightSource: _modDef11669, darkSource: _modDef11669, title: first };
+        const tmp10 = React6(native.EmptyState, obj2);
         cResult[1] = tmp4.emptyState;
         cResult[2] = tmp10;
         let tmp7 = tmp10;
@@ -415,10 +415,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp7;
     }
   : function AutocompleteFailedEmptyState() {
-      const obj = { style: closure_12().emptyState, lightSource: _modDef11659, darkSource: _modDef11659, title: null };
+      const obj = { style: closure_12().emptyState, lightSource: _modDef11669, darkSource: _modDef11669, title: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.rTAbPn);
-      return options(native.EmptyState, obj);
+      return React6(native.EmptyState, obj);
     };
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -839,7 +839,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           tmp24 = W;
                         }
                         const fn2 = function $(item) {
-                          return options(closure_13, {
+                          return React6(closure_13, {
                             item: item.item,
                             index: item.index,
                             onChoiceSelect,
@@ -1118,7 +1118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items4 = [onChoiceSelect, memo];
       const items5 = [onChoiceSelect, query];
       const callback = obj.useCallback(
-        (item) => options(closure_13, { item: item.item, index: item.index, onChoiceSelect, choices: memo }),
+        (item) => React6(closure_13, { item: item.item, index: item.index, onChoiceSelect, choices: memo }),
         items4,
       );
       const callback1 = obj.useCallback(() => {

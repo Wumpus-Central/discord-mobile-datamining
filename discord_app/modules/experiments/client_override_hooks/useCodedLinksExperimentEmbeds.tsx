@@ -366,15 +366,15 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
             return clientOverrides;
           }
         }
-        tmp23[0] = obj(10673).parseRegisteredExperiments(stateFromStoresObject);
-        const objResult12 = obj(10673);
-        tmp23[1] = obj(10673).getLegacyOverridesInfo(stateFromStoresObject1);
-        const objResult13 = obj(10673);
-        tmp23[2] = obj(10674).mergeApexExperiments(stateFromStores, stateFromStores1);
-        obj = obj(10674);
+        tmp23[0] = obj(10777).parseRegisteredExperiments(stateFromStoresObject);
+        const objResult12 = obj(10777);
+        tmp23[1] = obj(10777).getLegacyOverridesInfo(stateFromStoresObject1);
+        const objResult13 = obj(10777);
+        tmp23[2] = obj(10778).mergeApexExperiments(stateFromStores, stateFromStores1);
+        obj = obj(10778);
         apexExperimentOverridesInfo = obj.getApexExperimentOverridesInfo(stateFromStores2);
         tmp23[3] = apexExperimentOverridesInfo;
-        const objResult14 = obj(10674);
+        const objResult14 = obj(10778);
       } else {
         class L {
           constructor() {

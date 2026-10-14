@@ -28,8 +28,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_14 = 2 * (fn(8929).MEDIA_ITEM_MAX_WIDTH + PX_12);
-const createStyles = fn(5092);
+let closure_14 = 2 * (fn(8933).MEDIA_ITEM_MAX_WIDTH + PX_12);
+const createStyles = fn(5096);
 let obj = {
   container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 },
   list: { overflow: "visible" },
@@ -44,8 +44,8 @@ let obj = {
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj.mediaItem = {
-  maxWidth: fn(8929).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(8929).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(8933).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(8933).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };
@@ -69,7 +69,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_15();
       if (cResult[0] !== tmp2.separator) {
         const obj2 = { style: tmp2.separator };
-        const tmp6 = options(hasOwnProperty, obj2);
+        const tmp6 = React6(hasOwnProperty, obj2);
         cResult[0] = tmp2.separator;
         cResult[1] = tmp6;
         let tmp3 = tmp6;
@@ -79,7 +79,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled()
       return tmp3;
     }
   : function Separator() {
-      return options(hasOwnProperty, { style: closure_15().separator });
+      return React6(hasOwnProperty, { style: closure_15().separator });
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
@@ -88,7 +88,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_15();
       if (cResult[0] !== tmp2.listPadding) {
         const obj2 = { style: tmp2.listPadding };
-        const tmp6 = options(hasOwnProperty, obj2);
+        const tmp6 = React6(hasOwnProperty, obj2);
         cResult[0] = tmp2.listPadding;
         cResult[1] = tmp6;
         let tmp3 = tmp6;
@@ -98,7 +98,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp3;
     }
   : function ListPadding() {
-      return options(hasOwnProperty, { style: closure_15().listPadding });
+      return React6(hasOwnProperty, { style: closure_15().listPadding });
     };
 ReactCompilerGating = fn(558);
 let closure_20 = noop.memo(
@@ -331,8 +331,8 @@ let closure_21 = noop.memo(function TrailerItem(sources) {
 });
 ReactCompilerGating = fn(558);
 let obj4 = {
-  maxWidth: fn(8929).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(8929).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(8933).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(8933).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ game, trackAction } = arg0);
       closure_15();
       let obj = trackAction(576);
-      const obscured = trackAction(8918).useObscuredSurface().obscured;
+      const obscured = trackAction(8922).useObscuredSurface().obscured;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [bound1];
         const fn = function s() {
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const obj2 = trackAction(8918);
+      const obj2 = trackAction(8922);
       const stateFromStores = trackAction(504).useStateFromStores(tmp5, tmp6);
       const tmpResult = trackAction(504);
       [tmp10, dependencyMap] = noop.useState(0);
@@ -368,10 +368,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = _slicedToArray(noop.useState(false), 2)[1];
       noop.useRef(null);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const carouselPreviewPixelSize = trackAction(8929).getCarouselPreviewPixelSize();
+        const carouselPreviewPixelSize = trackAction(8933).getCarouselPreviewPixelSize();
         cResult[2] = carouselPreviewPixelSize;
         let tmp14 = carouselPreviewPixelSize;
-        const tmpResult2 = trackAction(8929);
+        const tmpResult2 = trackAction(8933);
       } else {
         tmp14 = cResult[2];
       }
@@ -409,8 +409,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const bound = Math.max(0, Math.min(trackAction(8929).MEDIA_ITEM_MAX_WIDTH, tmp10 - PX_12 - 2 * PX_16));
-      bound1 = Math.min(trackAction(8929).MEDIA_ITEM_MAX_HEIGHT, bound / trackAction(8929).MEDIA_ITEM_ASPECT_RATIO);
+      const bound = Math.max(0, Math.min(trackAction(8933).MEDIA_ITEM_MAX_WIDTH, tmp10 - PX_12 - 2 * PX_16));
+      bound1 = Math.min(trackAction(8933).MEDIA_ITEM_MAX_HEIGHT, bound / trackAction(8933).MEDIA_ITEM_ASPECT_RATIO);
       if (cResult[6] !== arr2) {
         class F {
           constructor(arg0) {
@@ -590,7 +590,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           size.height = memo3;
           size.onScrollToIndex = callback2;
           size.setMediaModalOpen = setMediaModalOpen;
-          let tmp9 = options(closure_21, size);
+          let tmp9 = React6(closure_21, size);
         } else {
           const size1 = {
             url: item.previewUrl,
@@ -602,7 +602,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onScrollToIndex: callback2,
             setMediaModalOpen,
           };
-          tmp9 = options(closure_20, size1);
+          tmp9 = React6(closure_20, size1);
         }
         return tmp9;
       }, items8);

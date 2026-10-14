@@ -16,15 +16,15 @@ import TextStyles_mod from "../../rebrand/native/TextStyles.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const NO_WELCOME_SCREEN = fn(13059).NO_WELCOME_SCREEN;
-const WELCOME_SCREEN_TYPE = fn(13063).WELCOME_SCREEN_TYPE;
+const NO_WELCOME_SCREEN = fn(13094).NO_WELCOME_SCREEN;
+const WELCOME_SCREEN_TYPE = fn(13098).WELCOME_SCREEN_TYPE;
 const Constants = fn(1085);
 ({ AnalyticEvents: map1, Fonts, Routes: closure_14 } = Constants);
 const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const Permissions = fn(1096).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -882,8 +882,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != welcomeScreen) {
           const obj3 = { startExpanded: true, children: null };
           const obj4 = { contentContainerStyle: tmp.container, children: null };
-          const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(12993).Sizes.MEDIUM, textScale: 2 };
-          const items9 = [closure_17(onHide(12993), obj5), , , ,];
+          const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(13028).Sizes.MEDIUM, textScale: 2 };
+          const items9 = [closure_17(onHide(13028), obj5), , , ,];
           const obj6 = { style: tmp.header, variant: "heading-xl/extrabold", color: "text-default", children: null };
           const intl = tmp2(1126).intl;
           const obj7 = {
@@ -902,19 +902,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             },
           };
           obj6.children = intl.format(tmp2(1126).t["0aydCN"], obj7);
-          items9[1] = closure_17(tmp2(5088).Text, obj6);
+          items9[1] = closure_17(tmp2(5092).Text, obj6);
           const obj8 = {
             style: tmp.guildDescription,
             variant: "text-sm/medium",
             color: "text-default",
             children: welcomeScreen.description,
           };
-          items9[2] = closure_17(tmp2(5088).Text, obj8);
+          items9[2] = closure_17(tmp2(5092).Text, obj8);
           const obj9 = { style: tmp.channelsTitle, variant: "eyebrow", color: "text-default", children: null };
           const intl2 = tmp2(1126).intl;
-          const tmp17 = onHide(12993);
+          const tmp17 = onHide(13028);
           obj9.children = intl2.string(tmp2(1126).t["haj5+i"]).toUpperCase();
-          items9[3] = closure_17(tmp2(5088).Text, obj9);
+          items9[3] = closure_17(tmp2(5092).Text, obj9);
           let welcome_channels = welcomeScreen.welcome_channels;
           items9[4] = welcome_channels.map((welcomeChannel, index) => {
             closure_0 = index;
@@ -931,7 +931,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           });
           obj4.children = items9;
           obj3.children = closure_18(hasError, obj4);
-          tmp12 = closure_17(tmp2(6899).ActionSheet, obj3);
+          tmp12 = closure_17(tmp2(6904).ActionSheet, obj3);
           const str = intl2.string(tmp2(1126).t["haj5+i"]);
         }
       }

@@ -17,7 +17,7 @@ import GuildOnboardingMemberActionStore from "../GuildOnboardingMemberActionStor
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4736).GuildMemberFlags;
+const GuildMemberFlags = fn(4738).GuildMemberFlags;
 const prototype = function GuildOnboardingHomeManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -89,7 +89,7 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = asyncRequireImpl(18117, dependencyMap.paths);
+            const tmp9 = asyncRequireImpl(18153, dependencyMap.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: ConstantsIOS.ModalAnimation.FADE };
             obj2.pushLazy(tmp9, obj3, GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
@@ -183,11 +183,11 @@ const prototype = function GuildOnboardingHomeManager() {
               tmp13 = null != closure_129_5;
             }
             if (tmp13) {
-              tmp13 = closure_129_5.actionType === applyArgumentsResult(9321).NewMemberActionTypes.VIEW;
+              tmp13 = closure_129_5.actionType === applyArgumentsResult(9330).NewMemberActionTypes.VIEW;
             }
             if (tmp13) {
-              const result = applyArgumentsResult(9320).completeNewMemberAction(closure_129_0, closure_129_1);
-              const obj = applyArgumentsResult(9320);
+              const result = applyArgumentsResult(9329).completeNewMemberAction(closure_129_0, closure_129_1);
+              const obj = applyArgumentsResult(9329);
             }
             arr = memberActions;
           }

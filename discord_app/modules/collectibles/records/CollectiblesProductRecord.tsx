@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7268);
+const CollectiblesItemRecord = fn(7274);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
 let closure_7 = fn(1087).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -255,17 +255,17 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "Button",
                 type: "Array",
-                premiumType: "error",
-                items: "<string:1224736778>",
-                categorySkuId: "<string:1241513994>",
-                isCategoryReward: "<string:1258291210>",
-                prices: "<string:1275068426>",
-                previewAssets: "<string:1358954506>",
-                googleSkuIds: "<string:2722289603>",
-                eligibleOffers: "<string:4211081659>",
-                variants: "<string:1358955671>",
-                bundledProducts: "LOAD_THREADS_SUCCESS",
-                isFirstParty: "t",
+                premiumType: "code",
+                items: 1717973305,
+                categorySkuId: 1717986918,
+                isCategoryReward: 7421926,
+                prices: 822083584,
+                previewAssets: -1374389535,
+                googleSkuIds: 1072357703,
+                eligibleOffers: 113,
+                variants: -1709985792,
+                bundledProducts: -1717986919,
+                isFirstParty: true,
               };
               let str;
               if (first != null) {
@@ -309,8 +309,8 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               if (googleSkuIds == null) {
                 const obj5 = {};
                 item = "";
-                obj5[options.MOBILE] = "";
-                obj5[options.MOBILE_PREMIUM_TIER_2] = "";
+                obj5[React6.MOBILE] = "";
+                obj5[React6.MOBILE_PREMIUM_TIER_2] = "";
                 googleSkuIds = obj5;
               }
               obj3.googleSkuIds = googleSkuIds;

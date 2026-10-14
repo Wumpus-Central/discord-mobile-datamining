@@ -1,11 +1,11 @@
 // discord_app/design/void/Checkbox/native/Checkbox.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import _modDef14718 from "../../../../../_runtime/metro/14718__.js";
-import _modDef14719 from "../../../../../_runtime/metro/14719__.js";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import _modDef14756 from "../../../../../_runtime/metro/14756__.js";
+import _modDef14757 from "../../../../../_runtime/metro/14757__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Image = fn(17).Image;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -19,16 +19,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (style.selected) {
         if (cResult[0] !== style) {
           const obj2 = { style, source: null };
-          tmp = _modDef14718;
+          tmp = _modDef14756;
           obj2.source = tmp;
-          const tmp12 = <Image style={style} source={null} />;
+          const tmp12 = jsx(FastImageDefault, { style, source: null });
           cResult[0] = style;
           cResult[1] = tmp12;
         }
       } else {
         if (cResult[2] !== style) {
-          const obj3 = { style, source: _modDef14719 };
-          const tmp7 = <Image style={style} source={_modDef14719} />;
+          const obj3 = { style, source: _modDef14757 };
+          const tmp7 = jsx(FastImageDefault, { style, source: _modDef14757 });
           cResult[2] = style;
           cResult[3] = tmp7;
           let tmp3 = tmp7;
@@ -38,14 +38,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp3;
       }
     }
-  : function Checkbox(style) {
-      const obj = { style: style.style, source: null };
-      if (style.selected) {
-        obj.source = _modDef14718;
+  : function Checkbox(arg0) {
+      ({ style, selected } = arg0);
+      const obj = { style, source: null };
+      if (selected) {
+        obj.source = _modDef14756;
         let tmp5 = obj;
       } else {
-        obj.source = _modDef14719;
+        obj.source = _modDef14757;
         tmp5 = obj;
       }
-      return <Image {...tmp5} />;
+      return jsx(FastImageDefault, tmp5);
     };

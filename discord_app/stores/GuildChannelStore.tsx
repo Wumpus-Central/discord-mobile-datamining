@@ -80,7 +80,7 @@ function rebuildGuildChannels(guildId) {
     let type = channel.type;
     if (React5(type)) {
       type = SELECTABLE;
-    } else if (options(type)) {
+    } else if (React6(type)) {
       type = VOCAL;
     }
     if (channel.type === ChannelTypes.GUILD_DIRECTORY) {
@@ -192,7 +192,7 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(constants);
 }
-let closure_6 = fn(4749).createFavoritesGuildChannelRecord;
+let closure_6 = fn(4751).createFavoritesGuildChannelRecord;
 const ChannelRecord = fn(2069);
 ({
   isGuildSelectableChannelType: closure_7,

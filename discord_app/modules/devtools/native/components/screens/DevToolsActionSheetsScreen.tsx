@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   wrap: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -58,7 +58,7 @@ let items = [
     description: "Shows safety warning for inappropriate conversations",
     show() {
       return ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(16409, dependencyMap.paths),
+        asyncRequireImpl(16446, dependencyMap.paths),
         {
           warningId: "test-warning-123",
           warningType: "inappropriate_conversation",
@@ -93,7 +93,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { title: "Select Action Sheet", subtitle: null };
         const _HermesInternal = HermesInternal;
         obj2.subtitle = "" + items.length + " options";
-        const tmp8 = closure_7(tmp(6839).BottomSheetTitleHeader, obj2);
+        const tmp8 = closure_7(tmp(6844).BottomSheetTitleHeader, obj2);
         cResult[2] = tmp8;
         let tmp5 = tmp8;
       } else {
@@ -114,9 +114,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { header: tmp5, children: null };
           const obj5 = { style: tmp9, children: null };
           const obj6 = { hasIcons: true, children: tmp11 };
-          obj5.children = closure_7(tmp(6265).TableRowGroup, obj6);
+          obj5.children = closure_7(tmp(6269).TableRowGroup, obj6);
           obj4.children = closure_7(closure_5, obj5);
-          const tmp16 = closure_7(tmp(6840).BottomSheet, obj4);
+          const tmp16 = closure_7(tmp(6845).BottomSheet, obj4);
           cResult[7] = tmp11;
           cResult[8] = tmp16;
           let tmp13 = tmp16;
@@ -128,7 +128,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const mapped = items.map((type, index) => {
         closure_0 = type;
         const obj = {
-          icon: closure_1_7(selectedType(7572).WarningIcon, { size: "md" }),
+          icon: closure_1_7(selectedType(7578).WarningIcon, { size: "md" }),
           label: null,
           subLabel: null,
           onPress() {
@@ -141,7 +141,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         ({ label: obj.label, description: obj.subLabel } = type);
         let tmpResult;
         if (closure_0 === type.type) {
-          tmpResult = closure_1_7(selectedType(6196).CheckmarkLargeIcon, {
+          tmpResult = closure_1_7(selectedType(6200).CheckmarkLargeIcon, {
             size: "md",
             color: "text-feedback-positive",
           });
@@ -149,7 +149,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         obj.trailing = tmpResult;
         obj.start = 0 === index;
         obj.end = index === length.length - 1;
-        return closure_1_7(selectedType(6180).TableRow, obj, type.type);
+        return closure_1_7(selectedType(6184).TableRow, obj, type.type);
       });
       cResult[4] = tmp4;
       cResult[5] = selectedType;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = closure_7(tmp(5088).Text, { variant: "heading-lg/medium", children: "Action Sheets" });
+        const tmp13 = closure_7(tmp(5092).Text, { variant: "heading-lg/medium", children: "Action Sheets" });
         cResult[4] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -284,17 +284,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = {
         description: "Tap an option to launch the action sheet immediately",
         hasIcons: false,
-        children: closure_7(selectedType(6180).TableRow, {
+        children: closure_7(selectedType(6184).TableRow, {
           label: tmp7.label,
           subLabel: tmp7.description,
           arrow: true,
           onPress: tmp10,
         }),
       };
-      items[1] = closure_7(selectedType(6265).TableRowGroup, obj5);
+      items[1] = closure_7(selectedType(6269).TableRowGroup, obj5);
       obj4.children = items;
-      obj3.children = closure_8(selectedType(6182).Card, obj4);
-      const tmp15 = closure_7(selectedType(5377).Stack, obj3);
+      obj3.children = closure_8(selectedType(6186).Card, obj4);
+      const tmp15 = closure_7(selectedType(5382).Stack, obj3);
       cResult[5] = tmp10;
       cResult[6] = tmp7.description;
       cResult[7] = tmp7.label;
@@ -317,20 +317,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj2 = { spacing: 16, children: null };
       const obj3 = { children: null };
-      const items1 = [closure_7(selectedType(5088).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
+      const items1 = [closure_7(selectedType(5092).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
       const obj4 = {
         description: "Tap an option to launch the action sheet immediately",
         hasIcons: false,
-        children: closure_7(selectedType(6180).TableRow, {
+        children: closure_7(selectedType(6184).TableRow, {
           label: found.label,
           subLabel: found.description,
           arrow: true,
           onPress: callback,
         }),
       };
-      items1[1] = closure_7(selectedType(6265).TableRowGroup, obj4);
+      items1[1] = closure_7(selectedType(6269).TableRowGroup, obj4);
       obj3.children = items1;
-      obj2.children = closure_8(selectedType(6182).Card, obj3);
-      obj.children = closure_7(selectedType(5377).Stack, obj2);
+      obj2.children = closure_8(selectedType(6186).Card, obj3);
+      obj.children = closure_7(selectedType(5382).Stack, obj2);
       return closure_7(closure_6, obj);
     };

@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_2 = ["style", "pointerEvents", "nativeID", "accessibilityViewIsModal", "onAccessibilityEscape"];
-const VoicePanelPIPModes = fn(17801).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17837).VoicePanelPIPModes;
 const jsx = fn(21).jsx;
-let closure_6 = noop.memo(fn(5359).AccessibilityViewAnimated);
+let closure_6 = noop.memo(fn(5364).AccessibilityViewAnimated);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");

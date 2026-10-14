@@ -18,7 +18,7 @@ import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper.
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UnreadSetting = fn(5967).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
@@ -73,7 +73,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       );
       return obj;
     };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   pressable: { flex: 1 },
   pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE },

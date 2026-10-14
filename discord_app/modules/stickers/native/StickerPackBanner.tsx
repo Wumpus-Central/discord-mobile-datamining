@@ -1,7 +1,7 @@
 // discord_app/modules/stickers/native/StickerPackBanner.tsx
 import c from "../../../../_runtime/00576_c.js";
-import StickersUtils from "../StickersUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import StickersUtils from "../StickersUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

@@ -234,7 +234,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
                 if (null != arg0[closure_0]) {
                   obj = closure_0(closure_2[5]);
                   const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                  result.catch(/* F157771 */ function() { ... });
+                  result.catch(/* F158015 */ function() { ... });
                 }
                 const obj2 = {};
                 const merged = Object.assign(arg0);
@@ -298,7 +298,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
               if (null != arg0[closure_0]) {
                 obj = closure_0(closure_2[5]);
                 const result = obj.deleteStagedAttachment(id, tmp2.attachment.id);
-                result.catch(/* F157771 */ function() { ... });
+                result.catch(/* F158015 */ function() { ... });
               }
               const obj2 = {};
               const merged = Object.assign(arg0);

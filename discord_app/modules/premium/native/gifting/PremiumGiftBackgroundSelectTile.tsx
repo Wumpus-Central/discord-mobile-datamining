@@ -4,44 +4,44 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import _modDef2632 from "../../gifting/PremiumGifting.messages.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef13221 from "../../../../../_runtime/metro/13221__.js";
-import _modDef13222 from "../../../../../_runtime/metro/13222__.js";
-import _modDef13223 from "../../../../../_runtime/metro/13223__.js";
-import _modDef13224 from "../../../../../_runtime/metro/13224__.js";
-import _modDef13225 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import _modDef13226 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
-import _modDef13227 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";
-import _modDef13228 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_coffee.png.js";
-import _modDef13229 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js";
+import _modDef13260 from "../../../../../_runtime/metro/13260__.js";
+import _modDef13261 from "../../../../../_runtime/metro/13261__.js";
+import _modDef13262 from "../../../../../_runtime/metro/13262__.js";
+import _modDef13263 from "../../../../../_runtime/metro/13263__.js";
+import _modDef13264 from "../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef13265 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_cake.png.js";
+import _modDef13266 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js";
+import _modDef13267 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_coffee.png.js";
+import _modDef13268 from "../../../../../discord_assets/assets/premium/gifting/seasonal/gift_box.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const PremiumGiftStyles = fn(1392).PremiumGiftStyles;
-const GIFT_STYLE_DESCRIPTIONS = fn(13220).GIFT_STYLE_DESCRIPTIONS;
+const GIFT_STYLE_DESCRIPTIONS = fn(13259).GIFT_STYLE_DESCRIPTIONS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const GIFT_STYLE_IMG = {
-  [STANDARD_BOX]: _modDef13221,
-  [CAKE]: _modDef13222,
-  [CHEST]: _modDef13223,
-  [COFFEE]: _modDef13224,
+  [STANDARD_BOX]: _modDef13260,
+  [CAKE]: _modDef13261,
+  [CHEST]: _modDef13262,
+  [COFFEE]: _modDef13263,
 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef13225 };
+GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef13264 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SNOWGLOBE] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.BOX] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.CUP] = null;
-let obj2 = { uri: _modDef13225 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef13226 };
-let obj3 = { uri: _modDef13226 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef13227 };
-let obj4 = { uri: _modDef13227 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef13228 };
-let obj5 = { uri: _modDef13228 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef13229 };
-const createStyles = fn(5092);
+let obj2 = { uri: _modDef13264 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef13265 };
+let obj3 = { uri: _modDef13265 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef13266 };
+let obj4 = { uri: _modDef13266 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef13267 };
+let obj5 = { uri: _modDef13267 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef13268 };
+const createStyles = fn(5096);
 let closure_9 = createStyles.createStyles((arg0) => {
   const size = {
     width: 78,
@@ -70,7 +70,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   return obj;
 });
 const ReactCompilerGating = fn(558);
-const obj6 = { uri: _modDef13229 };
+const obj6 = { uri: _modDef13268 };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx");
 

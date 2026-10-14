@@ -11,7 +11,7 @@ import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05396_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
@@ -48,7 +48,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(13781, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(13818, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;
@@ -87,7 +87,7 @@ function ExpressiveNitroUpsell(arg0) {
     defaultPrice: defaultPriceFormatted,
     premiumPrice: premiumPriceFormatted,
     defaultPriceHook(children, arg1) {
-      return options(
+      return React6(
         Text_Text.Text,
         { variant: "text-sm/medium", color: "text-subtle", style: strikedPrice.strikedPrice, children },
         arg1,
@@ -107,7 +107,7 @@ function ExpressiveNitroUpsell(arg0) {
     defaultPrice: defaultPriceFormatted,
     premiumPrice: premiumPriceFormatted,
     defaultPriceHook(children, arg1) {
-      return options(
+      return React6(
         Text_Text.Text,
         { variant: "text-sm/medium", color: "text-subtle", style: strikedPrice.strikedPrice, children },
         arg1,
@@ -162,7 +162,7 @@ const Constants = fn(1085);
 ({ AnalyticsSections: closure_7, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 let obj2 = {
   priceTag: { flexDirection: "row", alignItems: "center" },
   strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 },
@@ -273,7 +273,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { variant: str2, style: tmp5, color: str, accessibilityLabel, children: priceFormatted };
-        const tmp8 = options(Text_Text.Text, obj3);
+        const tmp8 = React6(Text_Text.Text, obj3);
         cResult[3] = accessibilityLabel;
         cResult[4] = str;
         cResult[5] = priceFormatted;
@@ -309,7 +309,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items1 = [closure_12().priceTag, style];
       obj2.style = items1;
-      items[1] = options(Text_Text.Text, obj2);
+      items[1] = React6(Text_Text.Text, obj2);
       obj.children = items;
       return closure_1_11(collapsed, obj);
     };
@@ -400,7 +400,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                     let tmp33 = null;
                                     if (tmp9) {
                                       const obj3 = { discountPercentage: tmp8 };
-                                      tmp33 = options(closure_20, obj3);
+                                      tmp33 = React6(closure_20, obj3);
                                     }
                                     cResult[32] = tmp8;
                                     cResult[33] = tmp9;
@@ -414,7 +414,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                                   icon: tmp22,
                                   accessibilityLabel: cResult[27],
                                 };
-                                const tmp31 = options(closure_15, obj4);
+                                const tmp31 = React6(closure_15, obj4);
                                 cResult[28] = tmp20;
                                 cResult[29] = tmp22;
                                 cResult[30] = cResult[27];
@@ -442,7 +442,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                         let tmp23;
                         if (!tmp9) {
                           const obj6 = { color: "interactive-text-active", size: "sm", style: tmp4.orbsIcon };
-                          tmp23 = options(OrbsIcon.OrbsIcon, obj6);
+                          tmp23 = React6(OrbsIcon.OrbsIcon, obj6);
                         }
                         cResult[21] = tmp9;
                         cResult[22] = tmp4.orbsIcon;
@@ -488,11 +488,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               accessibilityLabel: null,
             };
             const obj8 = { color: "interactive-text-active", size: "sm", style: tmp4.orbsIcon };
-            obj7.icon = options(OrbsIcon.OrbsIcon, obj8);
+            obj7.icon = React6(OrbsIcon.OrbsIcon, obj8);
             const intl = util.intl;
             const obj9 = { orbAmount: original.toString() };
             obj7.accessibilityLabel = intl.formatToPlainString(util.t.QfcKZ5, obj9);
-            tmp17 = options(closure_15, obj7);
+            tmp17 = React6(closure_15, obj7);
           }
           cResult[2] = eligibleForShopDiscount;
           cResult[3] = tmp5;
@@ -565,11 +565,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: null,
           };
           const obj3 = { color: "interactive-text-active", size: "sm", style: tmp.orbsIcon };
-          obj2.icon = options(OrbsIcon.OrbsIcon, obj3);
+          obj2.icon = React6(OrbsIcon.OrbsIcon, obj3);
           const intl = util.intl;
           const obj4 = { orbAmount: original.toString() };
           obj2.accessibilityLabel = intl.formatToPlainString(util.t.QfcKZ5, obj4);
-          tmp7 = options(closure_15, obj2);
+          tmp7 = React6(closure_15, obj2);
         }
         const items1 = [tmp7, ,];
         const obj5 = {
@@ -581,7 +581,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp10Result;
         if (!result) {
           const obj6 = { color: "interactive-text-active", size: "sm", style: tmp.orbsIcon };
-          tmp10Result = options(OrbsIcon.OrbsIcon, obj6);
+          tmp10Result = React6(OrbsIcon.OrbsIcon, obj6);
         }
         obj5.icon = tmp10Result;
         const intl2 = util.intl;
@@ -595,11 +595,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           formatToPlainStringResult = formatToPlainString(t["a/Y8PK"], obj8);
         }
         obj5.accessibilityLabel = formatToPlainStringResult;
-        items1[1] = options(closure_15, obj5);
+        items1[1] = React6(closure_15, obj5);
         let tmp10Result2 = null;
         if (result) {
           const obj9 = { discountPercentage };
-          tmp10Result2 = options(closure_20, obj9);
+          tmp10Result2 = React6(closure_20, obj9);
         }
         items1[2] = tmp10Result2;
         obj.children = items1;
@@ -668,7 +668,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp10,
                 children: cResult[10],
               };
-              const tmp18 = closure_9(tmp(5088).Text, obj3);
+              const tmp18 = closure_9(tmp(5092).Text, obj3);
               cResult[13] = tmp10;
               cResult[14] = cResult[10];
               cResult[15] = tmp18;
@@ -677,7 +677,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[11] !== tmp4.underline) {
             const fn2 = function y(children, arg1) {
-              return options(Text_Text.Text, { variant: "text-md/normal", style: underline.underline, children }, arg1);
+              return React6(Text_Text.Text, { variant: "text-md/normal", style: underline.underline, children }, arg1);
             };
             cResult[11] = tmp4.underline;
             cResult[12] = fn2;
@@ -697,7 +697,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [,];
         ({ nitroIcon: arr[0], nitroIconSubscribeNow: arr[1] } = tmp4);
         obj5.style = items1;
-        const tmp9 = closure_9(tmp(9036).NitroWheelIcon, obj5);
+        const tmp9 = closure_9(tmp(9041).NitroWheelIcon, obj5);
         cResult[3] = tmp4.nitroIcon;
         cResult[4] = tmp4.nitroIconSubscribeNow;
         cResult[5] = tmp9;
@@ -749,7 +749,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = intl.format(util.t.Kxw2LT, {
         price: premiumPriceFormatted.premiumPriceFormatted,
         subscribeNowHook(children, arg1) {
-          return options(Text_Text.Text, { variant: "text-md/normal", style: underline.underline, children }, arg1);
+          return React6(Text_Text.Text, { variant: "text-md/normal", style: underline.underline, children }, arg1);
         },
       });
       items1[1] = closure_9(Text_Text.Text, obj4);
@@ -764,7 +764,7 @@ let obj6 = {
   flexDirection: "row",
   alignItems: "center",
 };
-createStyles = fn(5092);
+createStyles = fn(5096);
 let closure_19 = createStyles.createStyles(() => {
   const discount = {
     backgroundColor: "rgba(46, 204, 113, 0.25)",
@@ -812,7 +812,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === discount.discount) {
         }
         const obj3 = { style: discount.discount, children: tmp4 };
-        const tmp10 = options(React4, obj3);
+        const tmp10 = React6(React4, obj3);
         discount = discount.discount;
         cResult[2] = discount;
         cResult[3] = tmp4;
@@ -828,7 +828,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         const items = ["-", discountPercentage, "%"];
         obj2.children = items;
         obj.children = closure_1_11(Text_Text.Text, obj2);
-        tmp4 = options(React4, obj);
+        tmp4 = React6(React4, obj);
       }
       return tmp4;
     };
@@ -892,7 +892,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return closure_1_5.isFetchingGoogleSkus();
               }
             }
-            const tmp32 = options(CollectiblesShopPricePlaceholder.CollectiblesShopPricePlaceholder, {});
+            const tmp32 = React6(CollectiblesShopPricePlaceholder.CollectiblesShopPricePlaceholder, {});
           }
           class E {
             constructor() {
@@ -920,7 +920,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp27[1] = isDisabled;
           tmp27[2] = product;
           tmp27[3] = tmp7;
-          const tmp28 = options(closure_16, tmp27);
+          const tmp28 = React6(closure_16, tmp27);
           cResult[6] = tmp7;
           cResult[7] = isDisabled;
           cResult[8] = product;
@@ -960,7 +960,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [IAPStore];
       if (obj8.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus())) {
         if (null == formattedPriceForCollectiblesProduct) {
-          return options(CollectiblesShopPricePlaceholder.CollectiblesShopPricePlaceholder, {});
+          return React6(CollectiblesShopPricePlaceholder.CollectiblesShopPricePlaceholder, {});
         }
       }
       if (null == formattedPriceForCollectiblesProduct) {
@@ -972,7 +972,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             product,
             eligibleForShopDiscount: canUseShopDiscountsResult,
           };
-          tmp24 = options(closure_16, obj9);
+          tmp24 = React6(closure_16, obj9);
         }
         return tmp24;
       } else {
@@ -992,7 +992,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         const obj14 = { price: formattedPriceForCollectiblesProduct };
         obj13.accessibilityLabel = intl.formatToPlainString(util.t.sPvyr8, obj14);
-        const items1 = [options(closure_15, obj13), ,];
+        const items1 = [React6(closure_15, obj13), ,];
         let tmp31Result = null;
         if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
           tmp31Result = null;
@@ -1000,7 +1000,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj15 = {
               discountPercentage: tmpResult3.getProductDiscount(product, canUseShopDiscountsResult).discountPercentage,
             };
-            tmp31Result = options(closure_20, obj15);
+            tmp31Result = React6(closure_20, obj15);
           }
         }
         items1[1] = tmp31Result;
@@ -1016,7 +1016,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               product,
               eligibleForShopDiscount: canUseShopDiscountsResult,
             };
-            tmp31Result5 = options(closure_16, obj16);
+            tmp31Result5 = React6(closure_16, obj16);
           }
           items2[1] = tmp31Result5;
           obj11.children = items2;
@@ -1033,14 +1033,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               handleNitroSubscribe: tmp6,
               showActionSheet,
             };
-            let tmp31Result6 = options(ExpressiveNitroUpsell, obj17);
+            let tmp31Result6 = React6(ExpressiveNitroUpsell, obj17);
           } else {
             const obj18 = {
               premiumPriceFormatted: formattedPriceForCollectiblesProduct1,
               onTrackPress,
               handleNitroSubscribe: tmp6,
             };
-            tmp31Result6 = options(closure_18, obj18);
+            tmp31Result6 = React6(closure_18, obj18);
           }
         } else {
           const obj19 = {
@@ -1063,13 +1063,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj21 = { color: "interactive-text-active", style: null };
             nitroIcon = nitroIcon.nitroIcon;
             obj21.style = nitroIcon;
-            let tmp31Result7 = options(TagIcon.TagIcon, obj21);
+            let tmp31Result7 = React6(TagIcon.TagIcon, obj21);
           } else {
             const obj22 = { color: "interactive-text-active", style: nitroIcon.nitroIcon };
-            tmp31Result7 = options(NitroWheelIcon.NitroWheelIcon, obj22);
+            tmp31Result7 = React6(NitroWheelIcon.NitroWheelIcon, obj22);
           }
           obj19.icon = tmp31Result7;
-          options(closure_15, obj19);
+          React6(closure_15, obj19);
           tmpResult4 = PlatformUtils;
         }
         tmpResult3 = CollectiblesUtils;

@@ -434,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                               tmp81,
                                                                                             ];
                                                                                             obj13.children = items1;
-                                                                                            const tmp87 = options(
+                                                                                            const tmp87 = React6(
                                                                                               timestampProducer,
                                                                                               obj13,
                                                                                             );
@@ -449,7 +449,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                           };
                                                                                           const items2 = [tmp30, tmp74];
                                                                                           obj14.children = items2;
-                                                                                          const tmp80 = options(
+                                                                                          const tmp80 = React6(
                                                                                             hasOwnProperty,
                                                                                             obj14,
                                                                                           );
@@ -472,7 +472,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                                 };
                                                                                 const items3 = [tmp35, tmp70];
                                                                                 obj15.children = items3;
-                                                                                const tmp76 = options(
+                                                                                const tmp76 = React6(
                                                                                   UserProfileGradientContainerDefault,
                                                                                   obj15,
                                                                                 );
@@ -489,7 +489,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                               const obj16 = { children: null };
                                                                               const items4 = [tmp43, tmp67];
                                                                               obj16.children = items4;
-                                                                              const tmp73 = options(
+                                                                              const tmp73 = React6(
                                                                                 timestampProducer,
                                                                                 obj16,
                                                                               );
@@ -512,7 +512,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                   };
                                                                   const items5 = [tmp49, tmp52, tmp63];
                                                                   obj17.children = items5;
-                                                                  const tmp69 = options(
+                                                                  const tmp69 = React6(
                                                                     UserProfileGradientContainerDefault,
                                                                     obj17,
                                                                   );
@@ -530,7 +530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                               const obj18 = { style: tmp56, children: null };
                                                               const items6 = [tmp57, tmp60];
                                                               obj18.children = items6;
-                                                              const tmp66 = options(timestampProducer, obj18);
+                                                              const tmp66 = React6(timestampProducer, obj18);
                                                               cResult[70] = tmp56;
                                                               cResult[71] = tmp57;
                                                               cResult[72] = tmp60;
@@ -873,15 +873,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj13.children = items9;
-      items7[2] = options(timestampProducer, obj13);
+      items7[2] = React6(timestampProducer, obj13);
       obj11.children = items7;
-      items5[1] = options(UserProfileGradientContainerDefault, obj11);
+      items5[1] = React6(UserProfileGradientContainerDefault, obj11);
       obj17.children = items5;
-      items3[1] = options(timestampProducer, obj17);
+      items3[1] = React6(timestampProducer, obj17);
       obj9.children = items3;
-      items2[1] = options(tmpResult, obj9);
+      items2[1] = React6(tmpResult, obj9);
       obj16.children = items2;
-      const items10 = [options(hasOwnProperty, obj16)];
+      const items10 = [React6(hasOwnProperty, obj16)];
       const obj12 = {
         customStatusActivity,
         hasCustomProfileTheme: null != primaryColor,
@@ -893,6 +893,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: closure_1_8(UserProfileTryItOutGetPremiumUpsellDefault, { onLayout }),
       });
       obj7.children = items10;
-      obj6.children = options(timestampProducer, obj7);
+      obj6.children = React6(timestampProducer, obj7);
       return closure_1_8(native.ThemeContextProvider, obj6);
     };

@@ -157,8 +157,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "code", answered: null }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "code", answered: null }),
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "code", answered: 224 }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "code", answered: 224 }),
 };
 let closure_5 = {
   drain() {
@@ -189,8 +189,8 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
       closure_6.unshift(obj2);
     }
     if (1 === arr.length) {
-      let result = obj2(11250).setRpcCommandInterceptor(answerFor);
-      obj = obj2(11250);
+      let result = obj2(10723).setRpcCommandInterceptor(answerFor);
+      obj = obj2(10723);
     }
     const obj3 = {
       iframeId,

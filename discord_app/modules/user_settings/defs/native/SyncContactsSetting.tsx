@@ -9,7 +9,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const PlatformTypes = fn(1085).PlatformTypes;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useContactSyncSettingValue() {
       const cResult = c.c(2);
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.uSvEy7);
   },
-  parent: fn(7993).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8000).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useContactSyncSettingValue() {
         const cResult = c.c(2);

@@ -116,11 +116,11 @@ function getNotificationSettings() {
   return items1;
 }
 const View = fn(17).View;
-let closure_5 = fn(16095).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(7993).MobileUserSettings;
+let closure_5 = fn(16132).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8000).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   card: {
     marginBottom: 8,
@@ -187,7 +187,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = { children: null };
           const items = [tmp12, tmp14];
           obj7.children = items;
-          const tmp22 = closure_1_8(options, obj7);
+          const tmp22 = closure_1_8(React6, obj7);
           cResult[8] = tmp12;
           cResult[9] = tmp14;
           cResult[10] = tmp22;
@@ -260,7 +260,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         showReactivationPrompt = React5(View, obj6);
       }
       children[1] = showReactivationPrompt;
-      return closure_1_8(options, { children });
+      return closure_1_8(React6, { children });
     };
 ReactCompilerGating = fn(558);
 let obj3 = {

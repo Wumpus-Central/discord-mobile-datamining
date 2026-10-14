@@ -20,17 +20,17 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(10837);
+const usePipDimensionsDefault = tmp5(10917);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9384).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9393).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
-const ParticipantTypes = fn(5115).ParticipantTypes;
+const ParticipantTypes = fn(5119).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   container: { flex: 1, marginLeft: 12, marginRight: 12 },
   elevationShadow: null,
@@ -376,8 +376,8 @@ let closure_19 = noop.memo(
             }
           }
           const tmpResult8 = tmp(504);
-          const shouldForcePipOrientation = tmp(10834).useShouldForcePipOrientation(tmp31);
-          tmp(8327);
+          const shouldForcePipOrientation = tmp(10914).useShouldForcePipOrientation(tmp31);
+          tmp(8334);
           if (cResult[20] === channel.id) {
             class M {
               constructor() {
@@ -425,7 +425,7 @@ let closure_19 = noop.memo(
           cResult[21] = shouldForcePipOrientation;
           cResult[22] = obj2;
           tmp35 = obj2;
-          const tmpResult9 = tmp(10834);
+          const tmpResult9 = tmp(10914);
         }
         let tmp19 = stateFromStores1;
         if (null != tmp6) {

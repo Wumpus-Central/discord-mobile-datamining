@@ -13,8 +13,8 @@ import ApplicationWidgetConfigStore from "../ApplicationWidgetConfigStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-fn(11369).FetchState;
-const FetchState = fn(11256).FetchState;
+fn(11379).FetchState;
+const FetchState = fn(10743).FetchState;
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useApplicationWidgetConfig(arg0) {

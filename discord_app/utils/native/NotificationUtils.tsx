@@ -1,14 +1,14 @@
 // discord_app/utils/native/NotificationUtils.tsx
 import AnalyticsUtilsDefault from "../AnalyticsUtils.tsx";
 import NativePermissionManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativePermissionManagerModule.tsx";
-import SoundUtils from "../../modules/sound_playback/SoundUtils.tsx";
 import PushNotificationDefault from "../../lib/pushnotification/PushNotification.tsx";
+import SoundUtils from "../../modules/sound_playback/SoundUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const PermissionStateType = fn(12639).PermissionStateType;
+const PermissionStateType = fn(12675).PermissionStateType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");

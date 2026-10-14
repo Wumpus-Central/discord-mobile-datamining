@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import MediaFormatTesters from "../../../messages/MediaFormatTesters.tsx";
 import isForwardMessageDefault from "../../../forwarding/isForwardMessage.tsx";
-import inlineStyles from "../../../../../_runtime/07577_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07583_inlineStyles.js";
 import CirclePlayIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import FileIcon from "../../../../design/components/Icon/native/redesign/generated/FileIcon.tsx";
 import WaveformIcon from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
@@ -159,7 +159,7 @@ const PreviewableMediaTypes = {
   GIF: "gif",
   VOICE_MESSAGE: "voice_message",
 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -216,7 +216,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { children: null };
         const items1 = [tmp8, tmp17];
         obj5.children = items1;
-        const tmp24 = closure_1_8(options, obj5);
+        const tmp24 = closure_1_8(React6, obj5);
         cResult[7] = tmp8;
         cResult[8] = tmp17;
         cResult[9] = tmp24;
@@ -255,7 +255,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = items1;
       items[1] = closure_1_8(React4, obj4);
       obj3.children = items;
-      return closure_1_8(options, obj3);
+      return closure_1_8(React6, obj3);
     };
 ReactCompilerGating = fn(558);
 let size = fn(2);

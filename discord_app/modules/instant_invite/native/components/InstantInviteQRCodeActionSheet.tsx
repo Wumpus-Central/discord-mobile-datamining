@@ -22,7 +22,7 @@ const Constants = fn(1085);
 ({ InstantInviteSources: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_12,
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp13 = null;
             if (null != GuildStore.getGuild(channel.guild_id)) {
               const obj3 = { guild: GuildStore.getGuild(channel.guild_id), size: GuildIcon.GuildIconSizes.LARGE };
-              tmp13 = options(GuildIconDefault, obj3);
+              tmp13 = React6(GuildIconDefault, obj3);
             }
           }
           cResult[2] = link;
@@ -261,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_13(ToastUtils.presentFriendRequestAcceptedToast);
         if (cResult[4] !== cResult[1]) {
           const obj4 = { title: tmp5 };
-          const tmp21 = options(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4);
+          const tmp21 = React6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj4);
           cResult[4] = tmp5;
           cResult[5] = tmp21;
           let tmp19 = tmp21;
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let tmp37 = null != tmp10;
                     if (tmp37) {
                       const obj5 = { variant: "text-md/normal", children: tmp10.visible };
-                      tmp37 = options(Text_Text.Text, obj5);
+                      tmp37 = React6(Text_Text.Text, obj5);
                     }
                     cResult[17] = tmp10;
                     cResult[18] = tmp37;
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         return tmp43;
                       }
                       const obj6 = { header: tmp19, children: tmp39 };
-                      const tmp45 = options(ActionSheet.ActionSheet, obj6);
+                      const tmp45 = React6(ActionSheet.ActionSheet, obj6);
                       cResult[23] = tmp19;
                       cResult[24] = tmp39;
                       cResult[25] = tmp45;
@@ -341,8 +341,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (tmp29) {
               const obj9 = { style: tmp4.iconContainer, children: null };
               const obj10 = { style: tmp4.icon, children: tmp11 };
-              obj9.children = options(View, obj10);
-              tmp29 = options(View, obj9);
+              obj9.children = React6(View, obj10);
+              tmp29 = React6(View, obj9);
             }
             cResult[10] = tmp11;
             cResult[11] = tmp4.icon;
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj11 = { text: link, size: 240, style: tmp4.code, accessibilityLabel: plainText };
-        const tmp27 = options(components_native_QRCodeDefault, obj11);
+        const tmp27 = React6(components_native_QRCodeDefault, obj11);
         cResult[6] = link;
         cResult[7] = tmp4.code;
         cResult[8] = plainText;
@@ -377,12 +377,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != channel) {
         tmp9 = null;
         if (null != GuildStore.getGuild(channel.guild_id)) {
-          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6159).GuildIconSizes.LARGE };
-          tmp9 = options(GuildIconDefault, obj2);
+          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(6163).GuildIconSizes.LARGE };
+          tmp9 = React6(GuildIconDefault, obj2);
         }
       }
-      closure_13(tmp5(4808).presentFriendRequestAcceptedToast);
-      const obj3 = { header: options(tmp5(6839).BottomSheetTitleHeader, { title: stringResult }), children: null };
+      closure_13(tmp5(4810).presentFriendRequestAcceptedToast);
+      const obj3 = { header: React6(tmp5(6844).BottomSheetTitleHeader, { title: stringResult }), children: null };
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
       let plainText;
@@ -390,23 +390,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         plainText = tmp8.plainText;
       }
       obj5.accessibilityLabel = plainText;
-      const items = [options(components_native_QRCodeDefault, obj5)];
+      const items = [React6(components_native_QRCodeDefault, obj5)];
       let tmp14Result = null != tmp9;
       if (tmp14Result) {
         const obj6 = { style: tmp.iconContainer, children: null };
         const obj7 = { style: tmp.icon, children: tmp9 };
-        obj6.children = options(View, obj7);
-        tmp14Result = options(View, obj6);
+        obj6.children = React6(View, obj7);
+        tmp14Result = React6(View, obj6);
       }
       items[1] = tmp14Result;
       const items1 = [collapsed(View, { children: items })];
       let tmp14Result2 = null != tmp8;
       if (tmp14Result2) {
         const obj8 = { variant: "text-md/normal", children: tmp8.visible };
-        tmp14Result2 = options(tmp5(5088).Text, obj8);
+        tmp14Result2 = React6(tmp5(5092).Text, obj8);
       }
       items1[1] = tmp14Result2;
       obj4.children = items1;
       obj3.children = collapsed(View, obj4);
-      return options(tmp5(6899).ActionSheet, obj3);
+      return React6(tmp5(6904).ActionSheet, obj3);
     };

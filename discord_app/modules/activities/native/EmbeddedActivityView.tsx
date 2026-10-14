@@ -74,7 +74,7 @@ const Constants = fn(2024);
 fn(1373).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_16 = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const EmbeddedActivities = "EmbeddedActivities";
 let ReactCompilerGating = fn(558);
@@ -356,7 +356,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp2.loadingContainer) {
         const obj2 = { style: tmp2.loadingContainer, children: first };
-        const tmp10 = closure_1_14(options, obj2);
+        const tmp10 = closure_1_14(React6, obj2);
         cResult[1] = tmp2.loadingContainer;
         cResult[2] = tmp10;
         let tmp7 = tmp10;
@@ -366,7 +366,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp7;
     }
   : function ActivityViewLoadingIndicator() {
-      return closure_1_14(options, {
+      return closure_1_14(React6, {
         style: closure_16().loadingContainer,
         children: closure_1_14(closure_1_8, { size: "large" }),
       });
@@ -464,7 +464,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       applicationId = applicationId.applicationId;
       const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
       const merged1 = Object.assign(merged);
-      return closure_14(applicationId(10952).BaseEmbeddedAppWebView, {
+      return closure_14(applicationId(11026).BaseEmbeddedAppWebView, {
         iframeId: _slicedToArray(
           noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)),
           1,

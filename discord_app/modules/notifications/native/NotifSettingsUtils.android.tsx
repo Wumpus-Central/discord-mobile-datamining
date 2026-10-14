@@ -61,7 +61,7 @@ function formatSetting(item10022, importance) {
   }
 }
 function buildChannelsAndMapping() {
-  const assignedNotifSettingsAndMappings = map(15026).getAssignedNotifSettingsAndMappings();
+  const assignedNotifSettingsAndMappings = map(15063).getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {
     map = new Map();
@@ -123,7 +123,7 @@ function buildChannelsAndMapping() {
     let result = map.set(item10022.id, item10022.string_id);
     continue;
   }
-  const obj = map(15026);
+  const obj = map(15063);
   return {
     mapping: mappings.flatMap((notifSetting) => {
       value = map.get(notifSetting.notifSetting);
@@ -158,19 +158,6 @@ const constants = {
 let result = size.fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
 
 export default {
-  clear() {
-    let obj = NativeNotifSettingsModuleDefault;
-    if (obj == null) {
-      obj = {};
-    }
-    ({ registerAndroidNotifGroupsAndChannels, registerAndroidNotifTypeMappings } = obj);
-    if (null != registerAndroidNotifGroupsAndChannels) {
-      const result = registerAndroidNotifGroupsAndChannels([], []);
-    }
-    if (null != registerAndroidNotifTypeMappings) {
-      const result1 = registerAndroidNotifTypeMappings([]);
-    }
-  },
   registerDeclarativeNotificationCategories() {
     let obj = NativeNotifSettingsModuleDefault;
     if (obj == null) {

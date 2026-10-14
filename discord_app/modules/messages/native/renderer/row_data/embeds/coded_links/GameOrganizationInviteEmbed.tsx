@@ -8,9 +8,9 @@ import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import GameOrganizationInviteStore from "../../../../../../game_organization_invites/GameOrganizationInviteStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(9610).CodedLinkExtendedType;
-const constants = fn(10486).GameOrganizationInviteStates;
-const InviteTypes = fn(7424).InviteTypes;
+const CodedLinkExtendedType = fn(9620).CodedLinkExtendedType;
+const constants = fn(10496).GameOrganizationInviteStates;
+const InviteTypes = fn(7430).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx",

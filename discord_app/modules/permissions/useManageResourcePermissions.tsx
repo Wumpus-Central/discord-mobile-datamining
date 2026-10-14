@@ -58,7 +58,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(8572);
+const PermissionsConstants = fn(8579);
 ({
   CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7,
   CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8,
@@ -88,7 +88,7 @@ function attachChannelPermissions(channel) {
     if (channel.isGuildStageVoice()) {
       tmp = closure_1_8;
     } else if (channel.isGuildVoice()) {
-      tmp = options;
+      tmp = React6;
     }
     const items1 = [BigFlagUtilsAll.combine(tmp, Permissions.CREATE_EVENTS)];
     items1[1] = BigFlagUtilsAll.combine(tmp, Permissions.MANAGE_EVENTS);

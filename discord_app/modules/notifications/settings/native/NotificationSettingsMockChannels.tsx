@@ -10,10 +10,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(5967).UnreadSetting;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

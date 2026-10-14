@@ -222,14 +222,14 @@ function useInitialResults(disabled) {
         if (0 <= diff) {
           while (null != stateFromStores1[diff]) {
             if (obj3.startsWith(closure_2_8)) {
-              let channel = ChannelStore.getChannel(options(obj3));
+              let channel = ChannelStore.getChannel(React6(obj3));
               let guild_id;
               if (channel != null) {
                 guild_id = channel.guild_id;
               }
               let tmp17 = guild_id;
             } else {
-              tmp17 = options(obj3);
+              tmp17 = React6(obj3);
             }
             guild = GuildStore.getGuild(tmp17);
             let hasItem = null == tmp17 || set.has(tmp17) || set1.has(tmp17) || null == guild;
@@ -331,7 +331,7 @@ function useInitialResults(disabled) {
   return { initialResults: selectedUnreadGuild.useDeferredValue(memo1), unreadPrivateChannelIds: stateFromStores, unreadGuilds: stateFromStoresArray, guildHistory: memo, selectedUnreadGuild, setSelectedUnreadGuild: tmp3[1] };
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(6073);
+let NavigationHistoryStore = fn(6079);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(2069);
@@ -341,7 +341,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = nativeDefault.radii.md;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { wrapper: { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" }, launchPadContent: { flex: -1, overflow: "hidden", borderBottomLeftRadius: 24, borderBottomRightRadius: 24 }, header: { paddingHorizontal: 16, paddingTop: 16, flexDirection: "row", flexShrink: 0, flexGrow: 0 }, subheader: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", paddingStart: 8 }, tabs: null, tab: null, tabSelected: null };
 let obj3 = { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" };
 obj.tabs = { marginStart: 8, flexDirection: "row", flexShrink: 0, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: md, padding: 5, alignItems: "stretch", justifyContent: "center", gap: 5, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT };
@@ -1151,7 +1151,7 @@ let closure_37 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   return closure_28(sharedValue, obj6);
 }));
 const results = [];
-let items = [fn(8700).AutocompleterResultTypes.GUILD, fn(8700).AutocompleterResultTypes.TEXT_CHANNEL, fn(8700).AutocompleterResultTypes.GROUP_DM, fn(8700).AutocompleterResultTypes.VOICE_CHANNEL, fn(8700).AutocompleterResultTypes.USER];
+let items = [fn(8705).AutocompleterResultTypes.GUILD, fn(8705).AutocompleterResultTypes.TEXT_CHANNEL, fn(8705).AutocompleterResultTypes.GROUP_DM, fn(8705).AutocompleterResultTypes.VOICE_CHANNEL, fn(8705).AutocompleterResultTypes.USER];
 ReactCompilerGating = fn(558);
 let closure_42 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWrapperStyles() {
   const cResult = c.c(5);

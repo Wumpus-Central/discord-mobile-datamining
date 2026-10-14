@@ -7,7 +7,7 @@ import AppIconTypes from "../AppIconTypes.tsx";
 import AppIconUtils from "AppIconUtils.tsx";
 import AppIconRowDefault from "AppIconRow/AppIconRow.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
-import _objectDestructuringEmpty from "../../../../_runtime/12458__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../_runtime/12494__objectDestructuringEmpty.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_12 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -40,7 +40,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         onLongPress = cResult[0];
       }
-      const TableRowGroup = tmp(6265).TableRowGroup;
+      const TableRowGroup = tmp(6269).TableRowGroup;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t.N4YDao);
@@ -133,7 +133,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           obj.onLongPress = onLongPress;
           return createElement(AppIconRowDefault, {});
         });
-        obj.children = closure_9(merged(6265).TableRowGroup, obj2);
+        obj.children = closure_9(merged(6269).TableRowGroup, obj2);
         return closure_9(View, obj);
       }
     };
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp28 = tmp31;
                       }
                       const obj4 = { style: bottomUpsellPadding, children: tmp20 };
-                      const tmp27 = options(View, obj4);
+                      const tmp27 = React6(View, obj4);
                       cResult[20] = bottomUpsellPadding;
                       cResult[21] = tmp20;
                       cResult[22] = tmp27;
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj5 = { hasNitro: tmp10, icons: officialAppIcons, currentAppIcon, title: tmp18, onSelect };
-              const tmp23 = options(closure_13, obj5);
+              const tmp23 = React6(closure_13, obj5);
               cResult[14] = currentAppIcon;
               cResult[15] = tmp10;
               cResult[16] = officialAppIcons;
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         obj6.title = intl.string(util.t.anqaFd);
         obj6.onSelect = onSelect;
-        tmp15 = options(closure_13, obj6);
+        tmp15 = React6(closure_13, obj6);
       }
       cResult[6] = currentAppIcon;
       cResult[7] = tmp12;
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         obj4.title = intl.string(util.t.anqaFd);
         obj4.onSelect = onSelect;
-        tmp10 = options(closure_13, obj4);
+        tmp10 = React6(closure_13, obj4);
       }
       const items1 = [tmp10];
       let bottomUpsellPadding = !isPremiumResult;
@@ -307,8 +307,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { children: null };
       obj6.title = stringResult;
       obj6.onSelect = onSelect;
-      obj5.children = options(closure_13, obj6);
-      items1[1] = options(View, obj5);
+      obj5.children = React6(closure_13, obj6);
+      items1[1] = React6(View, obj5);
       obj7.children = items1;
       return closure_1_11(collapsed, obj7);
     };

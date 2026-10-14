@@ -8,7 +8,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef17312 from "../../../../../_runtime/metro/17312__.js";
+import _modDef17346 from "../../../../../_runtime/metro/17346__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_8, View: closure_9 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   toggleTruncateButton: {
     alignSelf: "flex-start",
@@ -228,7 +228,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { variant: "text-sm/medium", color: "text-default", children: tmp18 };
         t = tmp16(Text_Text.Text, obj4);
         obj3.children = t;
-        tmp16(options, obj3);
+        tmp16(React6, obj3);
       }
       const tmp10 = _slicedToArray(noop.useState(false), 2);
     }
@@ -294,7 +294,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { variant: "text-sm/medium", color: "text-default", children: stringResult };
         t = closure_1_11(Text_Text.Text, obj4);
         obj.children = t;
-        closure_1_11(options, obj);
+        closure_1_11(React6, obj);
       }
       const tmp3 = _slicedToArray(noop.useState(false), 2);
     };
@@ -309,7 +309,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.arrowButtonIcon) {
-          const obj2 = { size: native.Icon.Sizes.SMALL, source: _modDef17312, style: tmp4.arrowButtonIcon };
+          const obj2 = { size: native.Icon.Sizes.SMALL, source: _modDef17346, style: tmp4.arrowButtonIcon };
           const tmp10 = closure_1_11(native.Icon, obj2);
           cResult[3] = tmp4.arrowButtonIcon;
           cResult[4] = tmp10;
@@ -361,7 +361,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.arrowButtonText,
           children: text,
         }),
-        closure_1_11(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef17312, style: tmp.arrowButtonIcon }),
+        closure_1_11(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef17346, style: tmp.arrowButtonIcon }),
       ];
       obj.children = items;
       return __initData(Pressables.PressableOpacity, obj);
@@ -409,14 +409,14 @@ export const useFormattedSubscriptionPlan = ReactCompilerGating.isReactCompilerE
           str2 = "";
           const combined = concat(tmp8, "/mo.");
         }
-        const formatPriceResult = amount(6940).formatPrice(currency.amount, currency.currency);
+        const formatPriceResult = amount(6945).formatPrice(currency.amount, currency.currency);
         amount = currency.amount;
         concat[3] = amount;
         currency = currency.currency;
         concat[4] = currency;
         concat[5] = formatPriceResult;
         tmp8 = formatPriceResult;
-        const amountResult1 = amount(6940);
+        const amountResult1 = amount(6945);
       }
       const amountResult = amount(573);
     }
@@ -432,8 +432,8 @@ export const useFormattedSubscriptionPlan = ReactCompilerGating.isReactCompilerE
       let str = "No Price Available";
       if (null != price) {
         const _HermesInternal = HermesInternal;
-        str = "" + tmp3(6940).formatPrice(price.amount, price.currency) + "/mo.";
-        const tmp3Result = tmp3(6940);
+        str = "" + tmp3(6945).formatPrice(price.amount, price.currency) + "/mo.";
+        const tmp3Result = tmp3(6945);
       }
       return str;
     };

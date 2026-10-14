@@ -22,7 +22,7 @@ const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1085).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(17217);
+const createICYMIStyles = fn(17251);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     container: { marginTop: marginHorizontal.margin },
@@ -112,8 +112,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { guild, size: null };
         const tmp10 = ClipViewDefault;
         obj3.size = GuildIcon.GuildIconSizes.SMALL_32;
-        obj2.children = options(GuildIconDefault, obj3);
-        const tmp12 = options(tmp10, obj2);
+        obj2.children = React6(GuildIconDefault, obj3);
+        const tmp12 = React6(tmp10, obj2);
         cResult[2] = guild;
         cResult[3] = tmp12;
         let tmp7 = tmp12;
@@ -141,7 +141,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           tmp15 = tmp18;
         }
       }
-      const tmp14 = options(native.Avatar, {
+      const tmp14 = React6(native.Avatar, {
         animate: true,
         style: tmp4.authorAvatar,
         guildId: guild.id,
@@ -173,9 +173,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { guild, size: null };
       const tmp2 = ClipViewDefault;
       obj3.size = GuildIcon.GuildIconSizes.SMALL_32;
-      obj2.children = options(GuildIconDefault, obj3);
-      const items1 = [options(tmp2, obj2)];
-      items1[1] = options(native.Avatar, {
+      obj2.children = React6(GuildIconDefault, obj3);
+      const items1 = [React6(tmp2, obj2)];
+      items1[1] = React6(native.Avatar, {
         animate: true,
         style: tmp.authorAvatar,
         guildId: guild.id,
@@ -310,7 +310,7 @@ export default function ICYMICardInCard(message) {
     } else {
       if (!flag2) {
         const obj = { guild: stateFromStores1, size: GuildIcon.GuildIconSizes.NORMAL };
-        let tmp10 = options(GuildIconDefault, obj);
+        let tmp10 = React6(GuildIconDefault, obj);
       } else {
         let author = message;
         let author1;
@@ -321,7 +321,7 @@ export default function ICYMICardInCard(message) {
       const obj2 = { guild: stateFromStores1, author: null };
       author = author.author;
       obj2.author = author;
-      tmp10 = options(closure_13, obj2);
+      tmp10 = React6(closure_13, obj2);
     }
     tmp2 = null == stateFromStores1;
   }, items6);
@@ -335,7 +335,7 @@ export default function ICYMICardInCard(message) {
         color: "mobile-text-heading-primary",
         children: stateFromStores1.name,
       };
-      tmp2 = options(Text_Text.Text, obj, stateFromStores1.id);
+      tmp2 = React6(Text_Text.Text, obj, stateFromStores1.id);
     }
     return tmp2;
   }, items7);
@@ -392,13 +392,13 @@ export default function ICYMICardInCard(message) {
                 combined = "" + _undefined.slice(0, 17) + "...";
               }
               obj5.children = combined;
-              const items1 = [options(Text_Text.Text, obj5), ,];
+              const items1 = [React6(Text_Text.Text, obj5), ,];
               const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
               const intl2 = util.intl;
               obj6.children = intl2.string(util.t.CHUAYk);
-              items1[1] = options(Text_Text.Text, obj6);
+              items1[1] = React6(Text_Text.Text, obj6);
               const obj7 = { style: closure_7.genContentSubtitleChannel, children: null };
-              const items2 = [options(iconForChannel, { size: "xs", color: "text-default" })];
+              const items2 = [React6(iconForChannel, { size: "xs", color: "text-default" })];
               const obj9 = {
                 variant: "text-sm/medium",
                 color: "text-default",
@@ -408,7 +408,7 @@ export default function ICYMICardInCard(message) {
                 ellipsizeMode: "tail",
                 children,
               };
-              items2[1] = options(Text_Text.Text, obj9);
+              items2[1] = React6(Text_Text.Text, obj9);
               obj7.children = items2;
               items1[2] = collapsed(View, obj7);
               obj2.children = items1;
@@ -425,7 +425,7 @@ export default function ICYMICardInCard(message) {
     }
     const obj10 = { style: closure_7.genContentSubtitle, children: null };
     const items3 = [
-      options(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: actionLabel }),
+      React6(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: actionLabel }),
     ];
     let tmp13 = null;
     if (null != stateFromStores) {
@@ -433,9 +433,9 @@ export default function ICYMICardInCard(message) {
       const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
       const intl = util.intl;
       obj13.children = intl.string(util.t.CHUAYk);
-      const items4 = [options(Text_Text.Text, obj13)];
+      const items4 = [React6(Text_Text.Text, obj13)];
       const obj14 = { style: closure_7.genContentSubtitleChannel, children: null };
-      const items5 = [options(TextIcon, { size: "xs", color: "text-default" })];
+      const items5 = [React6(TextIcon, { size: "xs", color: "text-default" })];
       const obj15 = {
         variant: "text-sm/medium",
         color: "text-default",
@@ -445,7 +445,7 @@ export default function ICYMICardInCard(message) {
         ellipsizeMode: "tail",
         children,
       };
-      items5[1] = options(Text_Text.Text, obj15);
+      items5[1] = React6(Text_Text.Text, obj15);
       obj14.children = items5;
       items4[1] = collapsed(View, obj14);
       obj12.children = items4;

@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod8625 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod6818 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import SuggestedSearchRowDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchRow.tsx";
 import pages_ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
 import MediaGridPlaceholderDefault from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
@@ -202,11 +202,11 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9313);
+const SearchConstants = fn(9322);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -293,7 +293,7 @@ export default noop.memo(
                           const obj5 = { style: tmp5.container, children: null };
                           const items = [tmp8, tmp18];
                           obj5.children = items;
-                          const tmp27 = options(React4, obj5);
+                          const tmp27 = React6(React4, obj5);
                           cResult[17] = tmp5.container;
                           cResult[18] = tmp8;
                           cResult[19] = tmp18;
@@ -326,7 +326,7 @@ export default noop.memo(
             numColumns,
             viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig,
           };
-          const tmp23 = closure_1_8(_mod8625.AnimatedFlashList, obj6);
+          const tmp23 = closure_1_8(_mod6818.AnimatedFlashList, obj6);
           cResult[7] = ItemSeparatorComponent;
           cResult[8] = ListFooterComponent;
           cResult[9] = ListHeaderComponent;
@@ -413,8 +413,8 @@ export default noop.memo(
         obj4.ItemSeparatorComponent = ItemSeparatorComponent;
         obj4.numColumns = numColumns;
         obj4.viewabilityConfigCallbackPairs = smartSearchViewabilityConfig.smartSearchViewabilityConfig;
-        items[1] = closure_1_8(_mod8625.AnimatedFlashList, obj4);
+        items[1] = closure_1_8(_mod6818.AnimatedFlashList, obj4);
         obj.children = items;
-        return options(React4, obj);
+        return React6(React4, obj);
       },
 );

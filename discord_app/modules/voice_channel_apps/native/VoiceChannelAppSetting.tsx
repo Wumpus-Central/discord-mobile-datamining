@@ -14,7 +14,7 @@ function VoiceChannelAppRow(guildId) {
   if (application_id == null) {
     application_id = null;
   }
-  options = guildId(application_id[5]).useVoiceChannelAppSettingOptions(guildId, application_id).options;
+  const options = guildId(application_id[5]).useVoiceChannelAppSettingOptions(guildId, application_id).options;
   const found = options.find((applicationId) => applicationId.applicationId === application_id);
   const intl = guildId(application_id[6]).intl;
   const stringResult = intl.string(onChange(application_id[7]).AdT7SZ);
@@ -46,7 +46,7 @@ function VoiceChannelAppRow(guildId) {
   obj3.onPress = function handlePress() {
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(17583, dependencyMap.paths),
+      asyncRequireImpl(17617, dependencyMap.paths),
       VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY,
       { guildId, selectedApplicationId: application_id, onChange },
     );

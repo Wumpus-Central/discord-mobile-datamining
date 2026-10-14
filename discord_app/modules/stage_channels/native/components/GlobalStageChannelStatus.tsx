@@ -4,22 +4,22 @@ import util from "../../../../intl/index.native.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import StageChannelActionCreators from "../../StageChannelActionCreators.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
+import PushNotificationDefault from "../../../../lib/pushnotification/PushNotification.tsx";
 import useCanSpeakInChannelDefault from "../../useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
-import PushNotificationDefault from "../../../../lib/pushnotification/PushNotification.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
 import StageInstanceStore from "../../StageInstanceStore.tsx";
 
-const useMountEffectDefault = tmp5(5396);
+const useMountEffectDefault = tmp5(5401);
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   invitedContainer: { paddingHorizontal: nativeDefault.space.PX_8 },
   icon: null,
@@ -151,8 +151,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const stageBlockedUsersCount = tmp(7720).useStageBlockedUsersCount(tmp17);
-        const tmpResult4 = tmp(7720);
+        const stageBlockedUsersCount = tmp(7726).useStageBlockedUsersCount(tmp17);
+        const tmpResult4 = tmp(7726);
         if (channel != null) {
           class S {
             constructor() {
@@ -160,8 +160,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const stageIgnoredUsersCount = tmp(7720).useStageIgnoredUsersCount(tmp19);
-        const tmpResult5 = tmp(7720);
+        const stageIgnoredUsersCount = tmp(7726).useStageIgnoredUsersCount(tmp19);
+        const tmpResult5 = tmp(7726);
         if (channel != null) {
           class S {
             constructor() {
@@ -169,7 +169,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const getStageRTCPanelHeight = tmp(11020).useGetStageRTCPanelHeight(tmp21);
+        const getStageRTCPanelHeight = tmp(11094).useGetStageRTCPanelHeight(tmp21);
         if (cResult[7] !== channel) {
           class S {
             constructor() {
@@ -207,19 +207,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     if (null != id) {
                       if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
                         const obj5 = {
-                          entryPoint: tmp41(5918).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+                          entryPoint: tmp41(5923).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
                         };
-                        const result = stringResult(7498).showAgeVerificationGetStartedModal(obj5);
-                        const obj4 = stringResult(7498);
+                        const result = stringResult(7504).showAgeVerificationGetStartedModal(obj5);
+                        const obj4 = stringResult(7504);
                       } else {
                         v0(true);
                         v0 = 1;
                         c4 = 2;
                         c5 = 1;
-                        const obj6 = { value: tmp41(7488).audienceAckRequestToSpeak(id, false), done: false };
+                        const obj6 = { value: tmp41(7494).audienceAckRequestToSpeak(id, false), done: false };
                         return obj6;
                       }
-                      obj9 = id(5949);
+                      obj9 = id(5954);
                     }
                     c5 = 3;
                   }
@@ -235,8 +235,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   v0 = 0;
                   v0(false);
                   if (null == key.getKey()) {
-                    stateFromStores(7484).openStageChannel(id);
-                    const obj8 = stateFromStores(7484);
+                    stateFromStores(7490).openStageChannel(id);
+                    const obj8 = stateFromStores(7490);
                   }
                 }
                 v0 = 0;
@@ -404,7 +404,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp26;
           cResult[15] = items2;
         }
-        const tmpResult6 = tmp(11020);
+        const tmpResult6 = tmp(11094);
       }
       cResult[4] = stringResult;
       if (stateFromStores != null) {
@@ -462,18 +462,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 channel = tmp7;
                 if (null != id) {
                   if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                    const obj5 = { entryPoint: tmp41(5918).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                    const result = tmp3(7498).showAgeVerificationGetStartedModal(obj5);
-                    const obj4 = tmp3(7498);
+                    const obj5 = { entryPoint: tmp41(5923).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                    const result = tmp3(7504).showAgeVerificationGetStartedModal(obj5);
+                    const obj4 = tmp3(7504);
                   } else {
                     dependencyMap(true);
                     dependencyMap = 1;
                     c4 = 2;
                     c5 = 1;
-                    const obj6 = { value: tmp41(7488).audienceAckRequestToSpeak(id, false), done: false };
+                    const obj6 = { value: tmp41(7494).audienceAckRequestToSpeak(id, false), done: false };
                     return obj6;
                   }
-                  obj9 = channel(5949);
+                  obj9 = channel(5954);
                 }
                 c5 = 3;
               }
@@ -489,8 +489,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               dependencyMap = 0;
               closure_129_3(false);
               if (null == key.getKey()) {
-                tmp27(7484).openStageChannel(closure_129_0);
-                const obj8 = tmp27(7484);
+                tmp27(7490).openStageChannel(closure_129_0);
+                const obj8 = tmp27(7490);
               }
             }
             dependencyMap = 0;
@@ -539,14 +539,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         id1 = channel.id;
       }
-      const stageBlockedUsersCount = channel(7720).useStageBlockedUsersCount(id1);
-      let obj2 = channel(7720);
+      const stageBlockedUsersCount = channel(7726).useStageBlockedUsersCount(id1);
+      let obj2 = channel(7726);
       let id2;
       if (channel != null) {
         id2 = channel.id;
       }
-      let stageIgnoredUsersCount = channel(7720).useStageIgnoredUsersCount(id2);
-      channel(11020);
+      let stageIgnoredUsersCount = channel(7726).useStageIgnoredUsersCount(id2);
+      channel(11094);
       if (channel != null) {
         const id = channel.id;
       }
@@ -582,7 +582,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const intl6 = tmp6(1126).intl;
             obj9.text = intl6.string(tmp6(1126).t["1YDv7a"]);
-            obj8.children = closure_10(tmp6(5380).BaseTextButton, obj9);
+            obj8.children = closure_10(tmp6(5385).BaseTextButton, obj9);
             const items4 = [closure_10(View, obj8)];
             const obj10 = { style: tmp.buttonWrapper, children: null };
             const obj11 = {
@@ -607,7 +607,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             obj11.text = intl7.string(tmp6(1126).t.MpO0px);
             obj11.loading = tmp10;
             obj11.disabled = tmp10;
-            obj10.children = closure_10(tmp6(5379).Button, obj11);
+            obj10.children = closure_10(tmp6(5384).Button, obj11);
             items4[1] = closure_10(View, obj10);
             obj7.children = items4;
             items3[2] = closure_11(View, obj7);
@@ -690,7 +690,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (!tmp9) {
         if (!tmp8) {
-          tmp(4825);
+          tmp(4827);
           let str = "dark-content";
         }
         if (null != channel) {
@@ -842,12 +842,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[13] = tmp24;
                 tmp22 = tmp24;
               }
-              const channelIconWithGuild = tmp(8159).getChannelIconWithGuild(channel, guild);
+              const channelIconWithGuild = tmp(8166).getChannelIconWithGuild(channel, guild);
               cResult[8] = channel;
               cResult[9] = guild;
               cResult[10] = channelIconWithGuild;
               tmp20 = channelIconWithGuild;
-              const tmpResult4 = tmp(8159);
+              const tmpResult4 = tmp(8166);
             }
           }
         }
@@ -884,7 +884,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (!invitedHeaderText) {
         if (!tmp7) {
-          tmp8(4825);
+          tmp8(4827);
           let str = "dark-content";
         }
         if (null != channel) {
@@ -909,7 +909,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = {
                 style: activeSpeakerIcon,
                 size: tmp8(1200).Icon.Sizes.REFRESH_SMALL_16,
-                source: tmp8(8159).getChannelIconWithGuild(channel, guild),
+                source: tmp8(8166).getChannelIconWithGuild(channel, guild),
               };
               items2[1] = closure_10(tmp8(1200).Icon, obj5);
               let tmp13Result = "" !== str2;
@@ -949,7 +949,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               items2[2] = closure_11(tmp8(1200).LegacyText, obj8);
               obj3.children = items2;
               tmp13Result2 = closure_11(View, obj3);
-              const tmp8Result2 = tmp8(8159);
+              const tmp8Result2 = tmp8(8166);
             }
             return tmp13Result2;
           }

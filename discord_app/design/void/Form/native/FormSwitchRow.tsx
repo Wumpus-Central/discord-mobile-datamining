@@ -25,7 +25,7 @@ let closure_3 = [
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({
   trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" },
 });
@@ -202,7 +202,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             const obj7 = { style: tmp19.trailing, children: null };
             const items1 = [tmp35, null != tmp12 && tmp12];
             obj7.children = items1;
-            const tmp43 = options(View, obj7);
+            const tmp43 = React6(View, obj7);
             cResult[25] = tmp19.trailing;
             cResult[26] = tmp35;
             cResult[27] = null != tmp12 && tmp12;
@@ -293,7 +293,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp2.trailing, children: null };
       const items1 = [closure_1_8(FormLabelDefault, { numberOfLines, text: label }), null != trailing && trailing];
       obj3.children = items1;
-      obj2.label = options(View, obj3);
+      obj2.label = React6(View, obj3);
       obj2.subLabel = subLabel;
       obj2.disabled = flag;
       let handleOnPress;

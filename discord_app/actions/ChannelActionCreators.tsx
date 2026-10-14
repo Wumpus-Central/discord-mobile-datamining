@@ -432,7 +432,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "code" },
+      channel: { id, guild_id: "Array", parent_id: "parent" },
       silent: flag2,
     });
     if (flag) {
@@ -445,7 +445,7 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "code" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "parent" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     const delResult = HTTP.del(request);
@@ -589,8 +589,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7028).checkGuildTemplateDirty(closure_128_2);
-        name(7028);
+        const result = name(7034).checkGuildTemplateDirty(closure_128_2);
+        name(7034);
       }
       return closure_128_1;
     })();

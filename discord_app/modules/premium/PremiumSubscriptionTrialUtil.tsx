@@ -151,7 +151,7 @@ export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEna
       return tmp4;
     };
 export const getPremiumTrialOffer = function getPremiumTrialOffer() {
-  const mapped = options.map((item) => userTrialOffer.getUserTrialOffer(item));
+  const mapped = React6.map((item) => userTrialOffer.getUserTrialOffer(item));
   const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired);
   return found.shift();
 };

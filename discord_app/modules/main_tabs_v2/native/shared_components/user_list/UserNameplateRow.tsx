@@ -34,7 +34,7 @@ let closure_3 = [
 ];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -306,7 +306,7 @@ export const UserNameplateRow = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { adjustSpacingForIcon: null != icon };
           items3[1] = React5(TableRowDivider.TableRowDivider, obj4);
           obj3.children = items3;
-          tmp12Result2 = closure_1_8(options, obj3);
+          tmp12Result2 = closure_1_8(React6, obj3);
         }
       }
       return tmp12Result2;

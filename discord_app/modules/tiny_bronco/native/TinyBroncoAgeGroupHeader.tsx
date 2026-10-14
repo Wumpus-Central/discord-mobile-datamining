@@ -16,11 +16,11 @@ function handleOpenBlog() {
   AgeVerificationActionCreatorsDefault.openUrl(TINY_BRONCO_BLOG_URL);
 }
 const View = fn(17).View;
-const TINY_BRONCO_BLOG_URL = fn(5927).TINY_BRONCO_BLOG_URL;
+const TINY_BRONCO_BLOG_URL = fn(5932).TINY_BRONCO_BLOG_URL;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   header: { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 },
   notice: null,
@@ -58,9 +58,9 @@ let closure_10 = createStyles.createStyles(obj2);
 let items = [fn(2049).DismissibleContent.TINY_BRONCO_NOTICE];
 let closure_12 = [];
 let obj6 = {};
-obj6[fn(9625).AgeGroupState.ADULT] = _modDef3152["8TWztV"];
-obj6[fn(9625).AgeGroupState.TEEN] = _modDef3152.qSkhZH;
-obj6[fn(9625).AgeGroupState.UNVERIFIED] = _modDef3152.vGxRDB;
+obj6[fn(9635).AgeGroupState.ADULT] = _modDef3152["8TWztV"];
+obj6[fn(9635).AgeGroupState.TEEN] = _modDef3152.qSkhZH;
+obj6[fn(9635).AgeGroupState.UNVERIFIED] = _modDef3152.vGxRDB;
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AccountStatusNotice(ageGroup) {
@@ -91,7 +91,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != tmp6[0]) {
           const _Symbol3 = Symbol;
           if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp12 = closure_8(tmp(5046).CircleInformationIcon, { size: "xs", color: "text-link" });
+            const tmp12 = closure_8(tmp(5050).CircleInformationIcon, { size: "xs", color: "text-link" });
             cResult[2] = tmp12;
             let tmp10 = tmp12;
           } else {
@@ -131,7 +131,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp28 = closure_8(tmp(6208).XSmallIcon, { size: "sm", color: "icon-strong" });
+              const tmp28 = closure_8(tmp(6212).XSmallIcon, { size: "sm", color: "icon-strong" });
               cResult[11] = tmp28;
               let tmp26 = tmp28;
             } else {
@@ -171,14 +171,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               onPress: tmp8,
               children: tmp26,
             };
-            const tmp31 = closure_8(tmp(6185).PressableOpacity, obj7);
+            const tmp31 = closure_8(tmp(6189).PressableOpacity, obj7);
             cResult[12] = tmp8;
             cResult[13] = tmp4.noticeDismiss;
             cResult[14] = tmp31;
             tmp29 = tmp31;
           }
           obj8 = { style: tmp4.noticeBody, variant: "text-sm/normal", color: "text-default", children: tmp17 };
-          const tmp23 = closure_8(tmp(5088).Text, obj8);
+          const tmp23 = closure_8(tmp(5092).Text, obj8);
           cResult[7] = tmp4.noticeBody;
           cResult[8] = tmp17;
           cResult[9] = tmp23;
@@ -207,14 +207,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { style: tmp.notice, children: null };
           const obj4 = {
             style: tmp.noticeIcon,
-            children: closure_8(tmp2(5046).CircleInformationIcon, { size: "xs", color: "text-link" }),
+            children: closure_8(tmp2(5050).CircleInformationIcon, { size: "xs", color: "text-link" }),
           };
           items = [closure_8(View, obj4), ,];
           const obj5 = { style: tmp.noticeBody, variant: "text-sm/normal", color: "text-default", children: null };
           const intl = tmp2(1126).intl;
           obj6 = { handleOnBlogHook: handleOpenBlog };
           obj5.children = intl.format(obj6[arg0.ageGroup], obj6);
-          items[1] = closure_8(tmp2(5088).Text, obj5);
+          items[1] = closure_8(tmp2(5092).Text, obj5);
           const obj7 = {
             style: tmp.noticeDismiss,
             activeOpacity: 0.5,
@@ -227,8 +227,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = tmp2(1126).intl;
           obj7.accessibilityLabel = intl2.string(tmp2(1126).t.WAI6xu);
           obj7.onPress = tmp7;
-          obj7.children = closure_8(tmp2(6208).XSmallIcon, { size: "sm", color: "icon-strong" });
-          items[2] = closure_8(tmp2(6185).PressableOpacity, obj7);
+          obj7.children = closure_8(tmp2(6212).XSmallIcon, { size: "sm", color: "icon-strong" });
+          items[2] = closure_8(tmp2(6189).PressableOpacity, obj7);
           obj3.children = items;
           tmp8 = closure_9(View, obj3);
         }
@@ -236,9 +236,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp8;
     };
 let obj8 = {};
-obj8[fn(9625).AgeGroupState.ADULT] = _modDef3152.t5QjmQ;
-obj8[fn(9625).AgeGroupState.TEEN] = _modDef3152["41MDhK"];
-obj8[fn(9625).AgeGroupState.UNVERIFIED] = _modDef3152.m95jW8;
+obj8[fn(9635).AgeGroupState.ADULT] = _modDef3152.t5QjmQ;
+obj8[fn(9635).AgeGroupState.TEEN] = _modDef3152["41MDhK"];
+obj8[fn(9635).AgeGroupState.UNVERIFIED] = _modDef3152.m95jW8;
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AgeGroupDescription(ageGroup) {
@@ -452,7 +452,7 @@ export const TinyBroncoAgeGroupHeader = ReactCompilerGating.isReactCompilerEnabl
           const obj7 = { style: tmp4.header, children: null };
           items = [tmp6, tmp20, tmp22];
           obj7.children = items;
-          const tmp29 = options(View, obj7);
+          const tmp29 = React6(View, obj7);
           cResult[14] = tmp4.header;
           cResult[15] = tmp6;
           cResult[16] = tmp20;
@@ -464,7 +464,7 @@ export const TinyBroncoAgeGroupHeader = ReactCompilerGating.isReactCompilerEnabl
       obj8 = { style: tmp4.description, children: null };
       const items1 = [tmp13, tmp16];
       obj8.children = items1;
-      const tmp21 = options(View, obj8);
+      const tmp21 = React6(View, obj8);
       cResult[8] = tmp4.description;
       cResult[9] = tmp13;
       cResult[10] = tmp16;
@@ -482,8 +482,8 @@ export const TinyBroncoAgeGroupHeader = ReactCompilerGating.isReactCompilerEnabl
       obj4.children = intl.string(obj8[ageGroupState]);
       const items1 = [closure_1_8(Text_Text.Heading, obj4), closure_1_8(closure_17, { ageGroup: ageGroupState })];
       obj3.children = items1;
-      items[1] = options(View, obj3);
+      items[1] = React6(View, obj3);
       items[2] = closure_1_8(closure_18, { ageGroup: ageGroupState });
       obj2.children = items;
-      return options(View, obj2);
+      return React6(View, obj2);
     };

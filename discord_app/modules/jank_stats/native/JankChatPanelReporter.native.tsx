@@ -46,20 +46,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             openAt: 0,
             closedAt: maxWidth,
             resolveOpenName: tmp9,
-            resolveClosedName: channelId(16747).getPanelListScreenName,
+            resolveClosedName: channelId(16786).getPanelListScreenName,
           };
-          const tmp14 = jsx(showCreateThread(16750), {
+          const tmp14 = jsx(showCreateThread(16789), {
             position: translateX,
             openAt: 0,
             closedAt: maxWidth,
             resolveOpenName: tmp9,
-            resolveClosedName: channelId(16747).getPanelListScreenName,
+            resolveClosedName: channelId(16786).getPanelListScreenName,
           });
           cResult[8] = maxWidth;
           cResult[9] = translateX;
           cResult[10] = tmp14;
           tmp10 = tmp14;
-          const tmp13 = showCreateThread(16750);
+          const tmp13 = showCreateThread(16789);
         }
         const fn = function v() {
           closure_2.current = { channelId, showCreateThread };
@@ -97,13 +97,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         openAt: 0,
         closedAt: maxWidth,
         resolveOpenName: callback,
-        resolveClosedName: channelId(16747).getPanelListScreenName,
+        resolveClosedName: channelId(16786).getPanelListScreenName,
       };
-      return jsx(showCreateThread(16750), {
+      return jsx(showCreateThread(16789), {
         position: translateX,
         openAt: 0,
         closedAt: maxWidth,
         resolveOpenName: callback,
-        resolveClosedName: channelId(16747).getPanelListScreenName,
+        resolveClosedName: channelId(16786).getPanelListScreenName,
       });
     };

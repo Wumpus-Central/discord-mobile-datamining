@@ -13,11 +13,11 @@ const InviteQueueDefault = InviteQueue;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(8764);
+const InstantInviteSendStateStore = fn(8768);
 ({ setSendState: closure_9, useInstantInviteSendStates: c10 } = InstantInviteSendStateStore);
-const InviteSendStates = fn(7424).InviteSendStates;
+const InviteSendStates = fn(7430).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { acronym: null };
 let size = {
   width: 32,
@@ -144,7 +144,7 @@ export default noop.memo(
                     }
                   }
                 }
-                options(code, id, InviteSendStates.SENDING);
+                React6(code, id, InviteSendStates.SENDING);
                 const type = row.type;
                 if (InstantInviteUtils.RowTypes.FRIEND !== type) {
                   if (InstantInviteUtils.RowTypes.DM !== type) {
@@ -327,7 +327,7 @@ export default noop.memo(
                     }
                   }
                 }
-                options(code, id, InviteSendStates.SENDING);
+                React6(code, id, InviteSendStates.SENDING);
                 const type = row.type;
                 if (InstantInviteUtils.RowTypes.FRIEND !== type) {
                   if (InstantInviteUtils.RowTypes.DM !== type) {

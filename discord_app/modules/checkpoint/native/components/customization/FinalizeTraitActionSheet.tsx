@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { title: null };
         let intl = onSelectOption(1126).intl;
         obj2.title = intl.string(_modDef3118.Zl5vPW);
-        const tmp7 = jsx(onSelectOption(6839).BottomSheetTitleHeader, { title: null });
+        const tmp7 = jsx(onSelectOption(6844).BottomSheetTitleHeader, { title: null });
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -88,14 +88,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           option = option.option;
           const obj = {
             value: option,
-            label: onSelectOption(16322).getCustomizationOptionName(option),
+            label: onSelectOption(16359).getCustomizationOptionName(option),
             subLabel: null,
           };
           const intl = onSelectOption(1126).intl;
           obj.subLabel = intl.string(option.subtitle);
           return jsx(
-            onSelectOption(6262).TableRadioRow,
-            { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null },
+            onSelectOption(6266).TableRadioRow,
+            { value: option, label: onSelectOption(16359).getCustomizationOptionName(option), subLabel: null },
             option,
           );
         });
@@ -111,10 +111,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return tmp15;
       }
       let obj = onSelectOption(576);
-      const tmp16 = jsx(onSelectOption(6899).ActionSheet, {
+      const tmp16 = jsx(onSelectOption(6904).ActionSheet, {
         startExpanded: true,
         header: first,
-        children: jsx(onSelectOption(6263).TableRadioGroup, {
+        children: jsx(onSelectOption(6267).TableRadioGroup, {
           hasIcons: false,
           accessibilityLabel: tmp8,
           defaultValue: selectedOption,
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {
         startExpanded: true,
         header: first,
-        children: jsx(onSelectOption(6263).TableRadioGroup, {
+        children: jsx(onSelectOption(6267).TableRadioGroup, {
           hasIcons: false,
           accessibilityLabel: tmp8,
           defaultValue: selectedOption,
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { title: null };
       let intl = onSelectOption(1126).intl;
       obj2.title = intl.string(_modDef3118.Zl5vPW);
-      obj.header = jsx(onSelectOption(6839).BottomSheetTitleHeader, { title: null });
+      obj.header = jsx(onSelectOption(6844).BottomSheetTitleHeader, { title: null });
       const obj3 = { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null };
       const intl2 = onSelectOption(1126).intl;
       obj3.accessibilityLabel = intl2.string(_modDef3118.Zl5vPW);
@@ -155,21 +155,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj3.children = items.map((option) => {
         option = option.option;
-        const obj = { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null };
+        const obj = { value: option, label: onSelectOption(16359).getCustomizationOptionName(option), subLabel: null };
         const intl = onSelectOption(1126).intl;
         obj.subLabel = intl.string(option.subtitle);
         return jsx(
-          onSelectOption(6262).TableRadioRow,
-          { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null },
+          onSelectOption(6266).TableRadioRow,
+          { value: option, label: onSelectOption(16359).getCustomizationOptionName(option), subLabel: null },
           option,
         );
       });
-      obj.children = jsx(onSelectOption(6263).TableRadioGroup, {
+      obj.children = jsx(onSelectOption(6267).TableRadioGroup, {
         hasIcons: false,
         accessibilityLabel: null,
         defaultValue: null,
         onChange: null,
         children: null,
       });
-      return jsx(onSelectOption(6899).ActionSheet, { startExpanded: true, header: null, children: null });
+      return jsx(onSelectOption(6904).ActionSheet, { startExpanded: true, header: null, children: null });
     };

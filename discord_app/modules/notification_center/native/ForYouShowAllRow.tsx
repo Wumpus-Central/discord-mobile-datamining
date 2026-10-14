@@ -8,7 +8,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef6833 from "../../../../_runtime/metro/06833__.js";
+import _modDef6838 from "../../../../_runtime/metro/06838__.js";
 import ChannelListLayout from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import AvatarDuoPile from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";
 import ChannelPressableWrapper from "../../main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx";
@@ -18,10 +18,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Sections = fn(12934).Sections;
+const Sections = fn(12969).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles((layout) => {
   const layoutStyles = ChannelListLayout.getLayoutStyles(layout);
   const sizeStyle = ChannelListLayout.makeSizeStyle(layoutStyles.icon.wrapper.size);
@@ -209,7 +209,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj7 = { children: null };
                     const items = [tmp17, tmp26, tmp30];
                     obj7.children = items;
-                    const tmp37 = options(closure_1_8, obj7);
+                    const tmp37 = React6(closure_1_8, obj7);
                     cResult[25] = tmp26;
                     cResult[26] = tmp30;
                     cResult[27] = tmp17;
@@ -219,7 +219,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj8 = {
                     style: tmp6.icon,
                     color: tmp6.iconColor.color,
-                    source: _modDef6833,
+                    source: _modDef6838,
                     size: native.IconSizes.CUSTOM,
                   };
                   const tmp33 = React5(native.Icon, obj8);
@@ -323,11 +323,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       items1[2] = React5(native.Icon, {
         style: tmp4.icon,
         color: tmp4.iconColor.color,
-        source: _modDef6833,
+        source: _modDef6838,
         size: native.IconSizes.CUSTOM,
       });
       obj9.children = items1;
-      obj5.children = obj6.renderChannelWrapper(options(closure_1_8, obj9), { layout, fontScale, panelVariant });
+      obj5.children = obj6.renderChannelWrapper(React6(closure_1_8, obj9), { layout, fontScale, panelVariant });
       return obj4.renderChannelPressableWrapper(React5(Pressables.PressableHighlight, obj5), { layout, panelVariant });
     };
 let size = fn(2);
@@ -370,7 +370,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
         }
         if (cResult[6] !== messagesTabLayout) {
           const fn2 = function y(user) {
-            const obj = { user: user.user, guildId: "Array", size: null };
+            const obj = { user: user.user, guildId: "Array", size: "r" };
             const AvatarSizes = native.AvatarSizes;
             obj.size = ChannelListLayout.isLayoutCompact(messagesTabLayout) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;
             return React5(native.Avatar, obj, user.user.id);
@@ -428,7 +428,7 @@ export const ForYouSuggestedFriendShowAllRow = ReactCompilerGating.isReactCompil
         children: noop.useMemo(() => {
           const substr = suggestedFriends.slice(2, 4);
           return substr.map((user) => {
-            const obj = { user: user.user, guildId: "Array", size: null };
+            const obj = { user: user.user, guildId: "Array", size: "r" };
             const obj2 = suggestedFriends(messagesTabLayout[6]);
             const AvatarSizes = suggestedFriends(messagesTabLayout[13]).AvatarSizes;
             obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2)

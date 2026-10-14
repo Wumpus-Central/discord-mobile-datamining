@@ -23,7 +23,7 @@ const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1627).MEDIA_PICKER_SEND_BUTTON_SPRING
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let items = [fn(1409).DisplayNameEffect.GRADIENT, fn(1409).DisplayNameEffect.GUMMY, fn(1409).DisplayNameEffect.PRISM];
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   contentContainer: null,
@@ -549,7 +549,7 @@ export default function DisplayNameStylesEditScreen() {
         dismissFontsBadge();
       }
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(15952, dependencyMap.paths),
+        asyncRequireImpl(15989, dependencyMap.paths),
         "DisplayNameStylesFontPickerSheet",
         { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName },
       );
@@ -571,13 +571,13 @@ export default function DisplayNameStylesEditScreen() {
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj.openLazy(asyncRequireImpl(15954, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
+      obj.openLazy(asyncRequireImpl(15991, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
         userId: id,
         selectedEffectId: first1,
         onSelectEffect,
       });
       const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-      const tmp3 = asyncRequireImpl(15954, dependencyMap.paths);
+      const tmp3 = asyncRequireImpl(15991, dependencyMap.paths);
     }, items7);
     const callback6 = obj8.useCallback(() => {
       if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -588,7 +588,7 @@ export default function DisplayNameStylesEditScreen() {
           },
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15955, dependencyMap.paths),
+          asyncRequireImpl(15992, dependencyMap.paths),
           "DisplayNameStylesGummyColorPickerSheet",
           obj2,
         );
@@ -603,10 +603,10 @@ export default function DisplayNameStylesEditScreen() {
               return callback(first1, arg0);
             },
           };
-          openLazy(tmp2Result(15960, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+          openLazy(tmp2Result(15997, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
         } else {
           const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-          openLazy(tmp2Result(15964, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+          openLazy(tmp2Result(16001, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
       }
     }, items8);

@@ -32,7 +32,7 @@ export default function useSortedOnboardingPrompts(arg0) {
           let sum = num2;
         } else if (tmp2.hasNewAnswers) {
           let arr2 = items1.push(tmp2);
-          options = tmp2.options;
+          let options = tmp2.options;
           sum = num2 + options.filter((isUnseen) => isUnseen.isUnseen).length;
         } else if (tmp2.inOnboarding) {
           let arr3 = items3.push(tmp2);

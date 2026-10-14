@@ -7,7 +7,7 @@ import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 import BillingInfoStore from "../stores/billing/BillingInfoStore.tsx";
 import PaymentSourceStore from "../stores/billing/PaymentSourceStore.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
-import allSettled_mod from "../../_runtime/05645_allSettled.js";
+import allSettled_mod from "../../_runtime/05650_allSettled.js";
 
 require = fn;
 function fetchCountryCodeQueryDependencies() {
@@ -240,14 +240,14 @@ const Constants = fn(1085);
 ({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
-const isMobile = fn(5294).isMobile;
+const isMobile = fn(5299).isMobile;
 let tmp4 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(5294).isTablet;
+  tmp4 = !fn(5299).isTablet;
 }
 if (tmp4) {
-  tmp4 = -1 !== fn(5218).getChromeVersion();
-  let obj2 = fn(5218);
+  tmp4 = -1 !== fn(5222).getChromeVersion();
+  let obj2 = fn(5222);
 }
 let closure_9 = tmp4;
 const size = fn(2);
@@ -257,11 +257,13 @@ export const SUPPORTS_WEBP = tmp4;
 export const getAssetURL = function getAssetURL(application_id, mimeType, size, mp4) {
   let str = mp4;
   if (null == mp4) {
-    str = "mp4";
-    if ("video/quicktime" !== (mimeType.mimeType || mimeType.mime_type)) {
+    if (typeof mimeType === "string") {
       str = "mp4";
-      if ("video/mp4" !== tmp) {
-        str = "image/gif" === tmp ? "gif" : "webp";
+      if ("video/quicktime" !== undefined) {
+        str = "mp4";
+        if ("video/mp4" !== undefined) {
+          str = "image/gif" === undefined ? "gif" : "webp";
+        }
       }
     }
   }

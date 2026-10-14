@@ -2,8 +2,8 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons.tsx";
 import ApplicationWidgetMarkupUtils from "../../application_widget/ApplicationWidgetMarkupUtils.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
   fieldIcon: { width: 16, height: 16 },

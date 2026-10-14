@@ -22,30 +22,39 @@ let closure_11 = async function _startLurking(arg0) {
       const joinSource = closure_133_2.joinSource;
       const loadId = closure_133_2.loadId;
       const shouldNavigate = closure_133_2.shouldNavigate;
-      let tmp24 = undefined === shouldNavigate;
-      if (!tmp24) {
-        tmp24 = shouldNavigate;
+      let tmp27 = undefined === shouldNavigate;
+      if (!tmp27) {
+        tmp27 = shouldNavigate;
       }
-      closure_133_9 = tmp24;
+      closure_133_9 = tmp27;
+      const openChannel = closure_133_2.openChannel;
+      let tmp31 = undefined !== openChannel;
+      if (tmp31) {
+        tmp31 = openChannel;
+      }
+      closure_133_11 = tmp31;
       const history = closure_134_0(closure_134_2[5]).getHistory();
       guild = closure_134_6.getGuild(closure_133_0);
       const obj8 = { sourceLocationStack: closure_133_3, state: null };
       obj8.state = { analyticsSource: closure_133_1 };
-      closure_133_12 = obj8;
+      closure_133_14 = obj8;
       if (null != guild) {
         if (null != guild.joinedAt) {
           if (closure_133_9) {
             if (null == channelId) {
-              closure_134_0(closure_134_2[6]).transitionToGuild(closure_133_0, closure_133_12);
+              const obj11 = {};
+              const merged = Object.assign(closure_133_14);
+              obj11.openChannel = closure_133_11;
+              closure_134_0(closure_134_2[6]).transitionToGuild(closure_133_0, obj11);
               closure_134_0(closure_134_2[6]);
             } else {
-              const obj11 = {};
-              const merged = Object.assign(closure_133_12);
-              obj11.navigationReplace = true;
-              obj11.openChannel = true;
+              const obj12 = {};
+              const merged1 = Object.assign(closure_133_14);
+              obj12.navigationReplace = true;
+              obj12.openChannel = true;
               closure_134_1(closure_134_2[7])(
                 closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId),
-                obj11,
+                obj12,
               );
               closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId);
               closure_134_1(closure_134_2[7]);
@@ -56,19 +65,23 @@ let closure_11 = async function _startLurking(arg0) {
       if (null != guild) {
         if (closure_134_4.isLurking(closure_133_0)) {
           if (closure_133_9) {
-            const obj12 = {};
-            const merged1 = Object.assign(closure_133_12);
-            obj12.welcomeModalChannelId = channelId;
-            obj12.navigationReplace = null != channelId;
-            obj12.openChannel = null != channelId;
-            obj12.search = history.location.search;
+            const obj14 = {};
+            const merged2 = Object.assign(closure_133_14);
+            obj14.welcomeModalChannelId = channelId;
+            obj14.navigationReplace = null != channelId;
+            let tmp78 = closure_133_11;
+            if (!closure_133_11) {
+              tmp78 = null != channelId;
+            }
+            obj14.openChannel = tmp78;
+            obj14.search = history.location.search;
             c7 = 2;
             c8 = 1;
             closure_134_1(closure_134_2[8]);
             return {
               value: closure_134_1(closure_134_2[8]).transitionToGuildSync(
                 closure_133_0,
-                obj12,
+                obj14,
                 channelId,
                 closure_133_2.messageId,
               ),
@@ -77,18 +90,18 @@ let closure_11 = async function _startLurking(arg0) {
           }
         }
       }
-      let tmp45;
+      let tmp53;
       if (closure_133_3 != null) {
-        tmp45 = tmp44[closure_133_3.length - 1];
+        tmp53 = tmp52[closure_133_3.length - 1];
       }
-      let page = tmp45;
-      if (tmp45 == null) {
+      let page = tmp53;
+      if (tmp53 == null) {
         page = undefined;
         if (closure_133_1 != null) {
           page = closure_133_1.page;
         }
       }
-      closure_133_13 = page;
+      closure_133_15 = page;
       closure_134_0(closure_134_2[5]);
       c7 = 3;
       c8 = 1;
@@ -97,7 +110,7 @@ let closure_11 = async function _startLurking(arg0) {
           lurker: true,
           source: joinSource,
           loadId,
-          lurkLocation: closure_133_13,
+          lurkLocation: closure_133_15,
         }),
         done: false,
       };
@@ -118,19 +131,23 @@ let closure_11 = async function _startLurking(arg0) {
       c8 = 3;
       return { value, done: true };
     } else if (closure_133_9) {
-      const obj20 = {};
-      const merged2 = Object.assign(closure_133_12);
-      obj20.welcomeModalChannelId = channelId;
-      obj20.navigationReplace = null != channelId;
-      obj20.openChannel = null != channelId;
-      obj20.search = history.location.search;
+      const obj21 = {};
+      const merged3 = Object.assign(closure_133_14);
+      obj21.welcomeModalChannelId = channelId;
+      obj21.navigationReplace = null != channelId;
+      let tmp16 = closure_133_11;
+      if (!closure_133_11) {
+        tmp16 = null != channelId;
+      }
+      obj21.openChannel = tmp16;
+      obj21.search = history.location.search;
       c7 = 4;
       c8 = 1;
       closure_134_1(closure_134_2[8]);
       return {
         value: closure_134_1(closure_134_2[8]).transitionToGuildSync(
           closure_133_0,
-          obj20,
+          obj21,
           channelId,
           closure_133_2.messageId,
         ),
@@ -145,7 +162,7 @@ let closure_11 = async function _startLurking(arg0) {
     return { value, done: true };
   }
   if (onSuccess != null) {
-    tmp102();
+    tmp116();
   }
   await "IconComponent";
   closure_5 = tmp2;
@@ -308,7 +325,7 @@ let closure_14 = async function _fetchPublicDiscoveryGuild(arg0) {
           const HTTP = HTTPUtils.HTTP;
           const obj4 = { url: null, oldFormErrors: true, rejectWithError: true };
           const _String = String;
-          obj4.url = options.GUILD_DISCOVERY_SLUG(String(closure_0));
+          obj4.url = React6.GUILD_DISCOVERY_SLUG(String(closure_0));
           c2 = 2;
           c4 = 1;
           const obj5 = { value: HTTP.get(obj4), done: false };

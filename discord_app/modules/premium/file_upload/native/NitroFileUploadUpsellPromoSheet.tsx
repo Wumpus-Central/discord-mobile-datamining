@@ -12,7 +12,7 @@ const Constants = fn(1085);
 ({ AnalyticsPages: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj = markAsDismissed(576);
-      const unmountEffect = markAsDismissed(5396).useUnmountEffect(tmp7);
+      const unmountEffect = markAsDismissed(5401).useUnmountEffect(tmp7);
       if (cResult[4] !== U) {
         class A {
           constructor() {
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = markAsDismissed(5396);
+      const tmpResult = markAsDismissed(5401);
       ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, A, constants.PREMIUM_UPSELL_FILE_UPLOAD));
       if (cResult[6] !== onPress) {
         class M {
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp16 = jsx(tmp(17726).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        const tmp16 = jsx(tmp(17760).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
         cResult[10] = tmp16;
         const tmp15 = tmp16;
       } else {
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { illustration: tmp17, title: tmp20, description: tmp21, onDismiss: tmp14, actions: tmp27 };
-        const tmp31 = jsx(tmp(10324).PromoSheet, {
+        const tmp31 = jsx(tmp(10334).PromoSheet, {
           illustration: tmp17,
           title: tmp20,
           description: tmp21,
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[21] = tmp17;
         cResult[22] = tmp31;
       }
-      const tmp28 = jsx(markAsDismissed(5379).Button, {
+      const tmp28 = jsx(markAsDismissed(5384).Button, {
         grow: true,
         size: "lg",
         variant: "primary",

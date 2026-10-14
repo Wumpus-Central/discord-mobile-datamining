@@ -13,7 +13,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1392).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   badgeTextUppercase: { textTransform: "uppercase" },
   badgeSurfaceDarkMode: { backgroundColor: nativeDefault.colors.WHITE },
@@ -26,8 +26,8 @@ let obj2 = {
   iconTextBadge: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
-obj2.badgeSurfaceLightMode = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
-let obj4 = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+obj2.badgeSurfaceLightMode = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
+let obj4 = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
 obj2.newIconBadge = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
   borderRadius: nativeDefault.radii.round,

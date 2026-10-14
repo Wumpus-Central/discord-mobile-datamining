@@ -39,12 +39,12 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
           const intl5 = tmp9(1126).intl;
           obj3.cancelText = intl5.string(closure_0(1126).t.ZGbTcy);
           obj3.onCancel = function onCancel() {
-            const SavedMessageSortTypes = displayToast(9682).SavedMessageSortTypes;
-            return displayToast(13151).showForLaterModal(
+            const SavedMessageSortTypes = displayToast(9692).SavedMessageSortTypes;
+            return displayToast(13186).showForLaterModal(
               closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK,
             );
           };
-          closure_1(5299).show(obj3);
+          closure_1(5304).show(obj3);
           return null;
         } else {
           let message;
@@ -59,7 +59,7 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
             message = intl.string(closure_0(1126).t.R0RpRX);
           }
           const obj = { text: message, variant: "critical" };
-          closure_1(4809).open("SAVED_MESSAGE_CREATE_ERROR", obj);
+          closure_1(4811).open("SAVED_MESSAGE_CREATE_ERROR", obj);
           return null;
         }
       });
@@ -146,7 +146,7 @@ let closure_8 = async function _removeSavedMessage() {
   return "Set";
 };
 const AbortCodes = fn(1085).AbortCodes;
-const SavedMessagesConstants = fn(13161);
+const SavedMessagesConstants = fn(13196);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

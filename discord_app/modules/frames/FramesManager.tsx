@@ -17,14 +17,14 @@ const prototype = function FramesManager() {
     },
     FRAME_LAUNCH(arg0) {
       ({ applicationId, analyticsContext } = arg0);
-      const result = applyArgumentsResult(15048).trackFrameSessionStart(applicationId, analyticsContext);
+      const result = applyArgumentsResult(15086).trackFrameSessionStart(applicationId, analyticsContext);
     },
     FRAME_LAUNCH_FAIL(arg0) {
       ({ applicationId, error, analyticsContext } = arg0);
-      const result = applyArgumentsResult(15048).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+      const result = applyArgumentsResult(15086).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
     },
     FRAME_STOP(applicationId) {
-      applyArgumentsResult(15048).trackFrameSessionEnd(applicationId.applicationId);
+      applyArgumentsResult(15086).trackFrameSessionEnd(applicationId.applicationId);
     },
     VOICE_CHANNEL_SELECT(arg0) {
       const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);
@@ -32,7 +32,7 @@ const prototype = function FramesManager() {
     CHANNEL_DELETE(channel) {
       const framesForChannel = FramesStore.getFramesForChannel(channel.channel.id);
       for (const item10010 of framesForChannel) {
-        let obj = applyArgumentsResult(10821);
+        let obj = applyArgumentsResult(10726);
         let leaveFrameResult = obj.leaveFrame(item10010.id);
         continue;
       }
@@ -42,15 +42,15 @@ const prototype = function FramesManager() {
       if (!("unavailable" in guild)) {
         const allFrames = FramesStore.getAllFrames();
         for (const item10014 of allFrames) {
-          let tmp8 = item10014.surface.type !== applyArgumentsResult(8611).EmbeddedSurfaceType.MAIN;
+          let tmp8 = item10014.surface.type !== applyArgumentsResult(8617).EmbeddedSurfaceType.MAIN;
           if (tmp8) {
-            tmp8 = item10014.surface.type !== applyArgumentsResult(8611).EmbeddedSurfaceType.OVERLAY;
+            tmp8 = item10014.surface.type !== applyArgumentsResult(8617).EmbeddedSurfaceType.OVERLAY;
           }
           if (tmp8) {
             tmp8 = item10014.surface.guildId === guild.id;
           }
           if (tmp8) {
-            let tmp6Result = applyArgumentsResult(10821);
+            let tmp6Result = applyArgumentsResult(10726);
             let leaveFrameResult = tmp6Result.leaveFrame(item10014.id);
           }
           continue;
@@ -62,7 +62,7 @@ const prototype = function FramesManager() {
         let framesForChannel = FramesStore.getFramesForChannel(item10008.id);
         for (const item10018 of framesForChannel) {
           if (item10018.applicationId !== item10008.application_id) {
-            let obj = applyArgumentsResult(10821);
+            let obj = applyArgumentsResult(10726);
             let leaveFrameResult = obj.leaveFrame(tmp7.id);
           }
           continue;
@@ -76,12 +76,12 @@ const prototype = function FramesManager() {
     if (null != currentVoiceChannelId) {
       if (currentVoiceChannelId !== currentVoiceChannelId.channelId) {
         const obj2 = {
-          type: applyArgumentsResult(8611).EmbeddedSurfaceType.VOICE_CHANNEL,
+          type: applyArgumentsResult(8617).EmbeddedSurfaceType.VOICE_CHANNEL,
           channelId: currentVoiceChannelId,
         };
         const framesForSurface = FramesStore.getFramesForSurface(obj2);
         for (const item10005 of framesForSurface) {
-          let obj = applyArgumentsResult(10821);
+          let obj = applyArgumentsResult(10726);
           let leaveFrameResult = obj.leaveFrame(item10005.id);
           continue;
         }

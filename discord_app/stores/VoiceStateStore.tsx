@@ -172,7 +172,7 @@ function handleGuildCreateOrDelete(guild) {
   delete tmp2[tmp];
 }
 const ME = fn(1085).ME;
-const VoicePlatforms = fn(5115).VoicePlatforms;
+const VoicePlatforms = fn(5119).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};
@@ -311,8 +311,8 @@ prototype["getCurrentClientVoiceChannelId"] = function getCurrentClientVoiceChan
   }
   return channelId;
 };
-prototype["getUsersWithVideo"] = function getUsersWithVideo(afkChannelId) {
-  value = map.get(afkChannelId);
+prototype["getUsersWithVideo"] = function getUsersWithVideo(id) {
+  value = map.get(id);
   if (value == null) {
     value = set;
   }

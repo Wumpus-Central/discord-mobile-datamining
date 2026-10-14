@@ -139,7 +139,7 @@ function guardPrivateCallForChannel(id, fn) {
 const Constants = fn(1085);
 ({ ChannelTypes: closure_11, ComponentActions: closure_12, NOOP: map1 } = Constants);
 const AgeGateSource = fn(1110).AgeGateSource;
-const NativePermissionTypes = fn(7483).NativePermissionTypes;
+const NativePermissionTypes = fn(7489).NativePermissionTypes;
 const jsx = fn(21).jsx;
 let c17 = "voice-channel";
 const size = fn(2);
@@ -158,17 +158,17 @@ export { openChannelCallModal };
 export const maybeShowAgeGateModal = function maybeShowAgeGateModal(channelId) {
   _require = channelId;
   if (obj.shouldShowAgeGateForChannelId(channelId)) {
-    tmp(6726).runAfterInteractions(() => {
+    tmp(6730).runAfterInteractions(() => {
       AgeGateModalActionCreators.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL, closure_0);
     }, 150);
-    const tmpResult = tmp(6726);
+    const tmpResult = tmp(6730);
   }
   obj = require("AgeGateUtils");
   tmp = _require;
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(channel) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(13920, dependencyMap.paths), "" + c17 + "-" + channel.id, { channel });
+  obj.openLazy(asyncRequireImpl(13957, dependencyMap.paths), "" + c17 + "-" + channel.id, { channel });
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("" + c17 + "-" + id.id);
@@ -230,7 +230,7 @@ export const handleJoinCall = function handleJoinCall(channel) {
           } else if (flag) {
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: v1(7500).requestPermission(constants.CAMERA), done: false };
+            const obj7 = { value: v1(7506).requestPermission(constants.CAMERA), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -244,9 +244,9 @@ export const handleJoinCall = function handleJoinCall(channel) {
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
-        tmp4(4985).dismissKeyboard();
-        const obj2 = tmp4(4985);
-        const voiceChannel = v1(5889).selectVoiceChannel(closure_128_0.id, closure_128_1);
+        tmp4(4987).dismissKeyboard();
+        const obj2 = tmp4(4987);
+        const voiceChannel = v1(5894).selectVoiceChannel(closure_128_0.id, closure_128_1);
         dependencyMap = 3;
         return { value: "IconComponent", done: null };
       } catch (tmp17) {
@@ -301,7 +301,7 @@ export const handleStartCall = function handleStartCall(channel) {
             if (flag) {
               dependencyMap = 1;
               c3 = 1;
-              const obj6 = { value: tmp5(7500).requestPermission(constants2.CAMERA), done: false };
+              const obj6 = { value: tmp5(7506).requestPermission(constants2.CAMERA), done: false };
               return obj6;
             }
           }
@@ -316,7 +316,7 @@ export const handleStartCall = function handleStartCall(channel) {
           c3 = 3;
           return { value: "IconComponent", done: null };
         }
-        tmp2(4985).dismissKeyboard();
+        tmp2(4987).dismissKeyboard();
         let isFriendResult = closure_129_0.type !== constants.DM;
         if (!isFriendResult) {
           isFriendResult = friend.isFriend(closure_129_0.getRecipientId());
@@ -327,7 +327,7 @@ export const handleStartCall = function handleStartCall(channel) {
           recipientId = closure_129_0.getRecipientId();
         }
         closure_128_1 = recipientId;
-        const tmp25 = tmp5(7017);
+        const tmp25 = tmp5(7023);
         const call = tmp25.call;
         const id = closure_129_0.id;
         let tmp28 = closure_128_0;
@@ -341,7 +341,7 @@ export const handleStartCall = function handleStartCall(channel) {
           call(id, closure_129_1, tmp28, tmp25Result);
         }
         c3 = 3;
-        const obj2 = tmp2(4985);
+        const obj2 = tmp2(4987);
       } catch (tmp36) {
         c3 = tmp;
         throw tmp36;
@@ -409,7 +409,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           } else if (flag) {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: v1(7500).requestPermission(constants.CAMERA), done: false };
+            const obj6 = { value: v1(7506).requestPermission(constants.CAMERA), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -423,8 +423,8 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
-        tmp4(4985).dismissKeyboard();
-        const tmp11 = v1(7017);
+        tmp4(4987).dismissKeyboard();
+        const tmp11 = v1(7023);
         const call = tmp11.call;
         id = closure_128_0.id;
         if (typeof call === "unknown") {
@@ -433,7 +433,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           call(id, closure_128_1, true);
         }
         dependencyMap = 3;
-        const obj2 = tmp4(4985);
+        const obj2 = tmp4(4987);
       } catch (tmp18) {
         dependencyMap = tmp;
         throw tmp18;
@@ -484,7 +484,7 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
           } else if (flag) {
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: v1(7500).requestPermission(constants.CAMERA), done: false };
+            const obj7 = { value: v1(7506).requestPermission(constants.CAMERA), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -498,9 +498,9 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
-        tmp4(4985).dismissKeyboard();
-        const obj2 = tmp4(4985);
-        const voiceChannel = v1(5889).selectVoiceChannel(closure_128_0.id, closure_128_1);
+        tmp4(4987).dismissKeyboard();
+        const obj2 = tmp4(4987);
+        const voiceChannel = v1(5894).selectVoiceChannel(closure_128_0.id, closure_128_1);
         dependencyMap = 3;
         return { value: "IconComponent", done: null };
       } catch (tmp17) {

@@ -1,16 +1,16 @@
 // discord_app/modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef17103 from "../../../../_runtime/metro/17103__.js";
+import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
+import _modDef17137 from "../../../../_runtime/metro/17137__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   unavailableGuilds: {
     marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
@@ -111,10 +111,10 @@ export default noop.memo(
                 return;
               }
             }
-            const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17103 };
+            const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef17137 };
             const tmp14 = jsx(FastImageDefault, {
               style: unavailableGuilds.unavailableGuildsIcon,
-              source: _modDef17103,
+              source: _modDef17137,
             });
             cResult[6] = unavailableGuilds.unavailableGuildsIcon;
             cResult[7] = tmp14;
@@ -202,8 +202,8 @@ export default noop.memo(
             AlertActionCreatorsDefault.show(obj2);
           };
           obj2.style = tmp.unavailableGuilds;
-          const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17103 };
-          obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17103 });
+          const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef17137 };
+          obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef17137 });
           tmp5 = (
             <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
               {null}

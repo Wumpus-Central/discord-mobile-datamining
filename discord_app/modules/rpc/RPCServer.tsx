@@ -1,14 +1,14 @@
 // discord_app/modules/rpc/RPCServer.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import RpcCommandInterception from "RpcCommandInterception.tsx";
 import RPCErrorDefault from "RPCError.tsx";
 import transformUserDefault from "helpers/transformUser.tsx";
-import RpcCommandInterception from "RpcCommandInterception.tsx";
 import validateScopeDefault from "helpers/validateScope.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(5639).TransportTypes;
+const TransportTypes = fn(5644).TransportTypes;
 const Constants = fn(1085);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -50,11 +50,11 @@ class RPCServer {
   }
 }
 const prototype = RPCServer.prototype;
-prototype["registerTransport"] = function registerTransport(item10013) {
+prototype["registerTransport"] = function registerTransport(item10017) {
   const self = this;
-  item10013.on("connect", (arg0) => self.handleConnect(arg0));
-  item10013.on("request", (arg0, arg1) => self.handleRequest(arg0, arg1));
-  item10013.on("disconnect", (arg0, arg1) => self.handleDisconnect(arg0, arg1));
+  item10017.on("connect", (arg0) => self.handleConnect(arg0));
+  item10017.on("request", (arg0, arg1) => self.handleRequest(arg0, arg1));
+  item10017.on("disconnect", (arg0, arg1) => self.handleDisconnect(arg0, arg1));
 };
 prototype["handleConnect"] = function handleConnect(v) {
   const self = this;

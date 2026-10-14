@@ -246,8 +246,8 @@ class BillingError extends tmp4 {
       }
     }
     for (const key10213 in tmp1.fields) {
-      tmp45 = key10213;
-      tmp46 = closure_3;
+      tmp46 = key10213;
+      tmp47 = closure_3;
       tmp43 = closure_3[key10213];
       if (tmp43) {
       } else {
@@ -264,19 +264,30 @@ class BillingError extends tmp4 {
       }
       continue;
     }
-    tmp44 = null != global.body && typeof global.body.payment_id === "string";
-    if (tmp44) {
-      tmp1.paymentId = global.body.payment_id;
+    body = null;
+    if (typeof global !== "string") {
+      body = global.body;
+    }
+    tmp45 = null != body;
+    if (tmp45) {
+      str = "payment_id";
+      tmp45 = "payment_id" in body;
+    }
+    if (tmp45) {
+      tmp45 = typeof body.payment_id === "string";
+    }
+    if (tmp45) {
+      tmp1.paymentId = body.payment_id;
     }
     return tmp1;
   }
 }
 const prototype = BillingError.prototype;
 prototype["_isInFieldSet"] = function _isInFieldSet(set) {
-  for (const key10004 in this.fields) {
-    if (!arg0.has(key10004)) {
-      continue;
-    } else {
+  const obj = set[Symbol.iterator]();
+  while (obj !== undefined) {
+    if (tmp in this.fields) {
+      obj.return();
       let flag = true;
       return true;
     }

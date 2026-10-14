@@ -88,16 +88,16 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const NativeStackNavigator = fn(9345);
+const NativeStackNavigator = fn(9354);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 let ReactCompilerGating = fn(558);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function OrbsFlowTestModal() {
       const cResult = accessibilityNativeStackOptions(576).c(5);
       let obj = accessibilityNativeStackOptions(576);
-      accessibilityNativeStackOptions = accessibilityNativeStackOptions(6688).useAccessibilityNativeStackOptions();
+      accessibilityNativeStackOptions = accessibilityNativeStackOptions(6692).useAccessibilityNativeStackOptions();
       if (cResult[0] !== accessibilityNativeStackOptions) {
         const fn = function n(navigation) {
           const obj = {
@@ -191,7 +191,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_12();
       if (cResult[0] !== tmp4.title) {
         const obj2 = { variant: "text-lg/semibold", style: tmp4.title, children: "Balance Widget Menu" };
-        const tmp7 = options(Text_Text.Text, obj2);
+        const tmp7 = React6(Text_Text.Text, obj2);
         cResult[0] = tmp4.title;
         cResult[1] = tmp7;
         let tmp5 = tmp7;
@@ -199,7 +199,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = options(BalanceWidgetMenuDefault, {});
+        const tmp11 = React6(BalanceWidgetMenuDefault, {});
         cResult[2] = tmp11;
         let tmp8 = tmp11;
       } else {
@@ -224,8 +224,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_12();
       const obj = { spacing: 16, style: tmp.container, children: null };
       const items = [
-        options(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }),
-        options(BalanceWidgetMenuDefault, {}),
+        React6(Text_Text.Text, { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" }),
+        React6(BalanceWidgetMenuDefault, {}),
       ];
       obj.children = items;
       return collapsed(Stack_Stack.Stack, obj);
@@ -251,9 +251,9 @@ const component = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol = Symbol;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp13 = options(closure_13, {});
-              const tmp15 = options(BalanceWidgetPillSection, {});
-              const tmp16 = options(OrbCheckoutMenuDefault, {});
+              const tmp13 = React6(closure_13, {});
+              const tmp15 = React6(BalanceWidgetPillSection, {});
+              const tmp16 = React6(OrbCheckoutMenuDefault, {});
               cResult[6] = tmp13;
               cResult[7] = tmp15;
               cResult[8] = tmp16;
@@ -276,7 +276,7 @@ const component = ReactCompilerGating.isReactCompilerEnabled()
             const items = [tmp8, tmp9, tmp10];
             obj4.children = items;
             obj3.children = collapsed(React5, obj4);
-            const tmp21 = options(LayerScope.LayerScope, obj3);
+            const tmp21 = React6(LayerScope.LayerScope, obj3);
             cResult[9] = tmp4.wrap;
             cResult[10] = tmp7;
             cResult[11] = tmp21;
@@ -310,14 +310,10 @@ const component = ReactCompilerGating.isReactCompilerEnabled()
         },
         children: null,
       };
-      const items = [
-        options(closure_13, {}),
-        options(BalanceWidgetPillSection, {}),
-        options(OrbCheckoutMenuDefault, {}),
-      ];
+      const items = [React6(closure_13, {}), React6(BalanceWidgetPillSection, {}), React6(OrbCheckoutMenuDefault, {})];
       obj2.children = items;
       obj.children = collapsed(React5, obj2);
-      return options(LayerScope.LayerScope, obj);
+      return React6(LayerScope.LayerScope, obj);
     };
 const obj7 = {
   flexDirection: "row",

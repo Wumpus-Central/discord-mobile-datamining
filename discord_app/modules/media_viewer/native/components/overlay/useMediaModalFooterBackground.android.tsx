@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj3 = {
         mediaModalFooterBackgroundColorRgba: { r: tmp4, g: tmp5, b: tmp6, a: tmp7 },
-        MediaModalFooterUnderlay: "a",
+        MediaModalFooterUnderlay: "r",
       };
       cResult[0] = tmp7;
       cResult[1] = tmp6;
@@ -44,6 +44,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = _slicedToArray(tmp(useToken.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK)).rgba(), 4);
       return {
         mediaModalFooterBackgroundColorRgba: { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] },
-        MediaModalFooterUnderlay: "a",
+        MediaModalFooterUnderlay: "r",
       };
     };

@@ -3,17 +3,17 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15827 from "../../../../../_runtime/metro/15827__.js";
+import _modDef15864 from "../../../../../_runtime/metro/15864__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL },
   body: { alignItems: "center", textAlign: "center" },
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ container, body } = tmp4);
       if (cResult[1] !== tmp4.headerImage) {
-        const obj2 = { source: _modDef15827, style: tmp4.headerImage };
+        const obj2 = { source: _modDef15864, style: tmp4.headerImage };
         const tmp11 = React4(FastImageDefault, obj2);
         cResult[1] = tmp4.headerImage;
         cResult[2] = tmp11;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.body, children: null };
       const obj3 = { source: null, style: null };
       const tmp2 = common_AlertDefault;
-      obj3.source = _modDef15827;
+      obj3.source = _modDef15864;
       obj3.style = tmp.headerImage;
       const items = [React4(FastImageDefault, obj3), React4(native.Spacer, { size: 27 }), , ,];
       const obj4 = {

@@ -101,7 +101,7 @@ function queryForPrimaryAppCommand(context, id) {
     allowApplicationState: true,
   }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(9248);
+let ApplicationCommandIndexStore = fn(9257);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } =
   ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;

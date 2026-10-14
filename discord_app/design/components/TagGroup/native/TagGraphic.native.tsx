@@ -1,15 +1,15 @@
 // discord_app/design/components/TagGroup/native/TagGraphic.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import TagGroupTypes from "TagGroupTypes.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
-let closure_6 = createStyles.createStyles((width, backgroundColor) => {
+const createStyles = fn(5096);
+let closure_5 = createStyles.createStyles((width, backgroundColor) => {
   const obj = { image: { width, height: width }, avatar: null, roleDot: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.round, overflow: "hidden" };
   obj.avatar = size;
@@ -47,13 +47,13 @@ export const TagGraphic = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      const tmp7 = closure_6(tmp5, color);
+      const tmp7 = closure_5(tmp5, color);
       if ("type" in graphic) {
         const type = graphic.type;
         if ("role" === type) {
           if (cResult[2] !== tmp7.roleDot) {
             const obj2 = { style: tmp7.roleDot, accessible: false };
-            const tmp23 = <React4 style={tmp7.roleDot} accessible={false} />;
+            const tmp23 = <View style={tmp7.roleDot} accessible={false} />;
             cResult[2] = tmp7.roleDot;
             cResult[3] = tmp23;
             let tmp20 = tmp23;
@@ -69,7 +69,12 @@ export const TagGraphic = ReactCompilerGating.isReactCompilerEnabled()
             return tmp16;
           }
           const obj3 = { source: graphic.source, style: tmp7.avatar, resizeMode: "cover", accessible: false };
-          const tmp19 = <React3 source={graphic.source} style={tmp7.avatar} resizeMode="cover" accessible={false} />;
+          const tmp19 = jsx(FastImageDefault, {
+            source: graphic.source,
+            style: tmp7.avatar,
+            resizeMode: "cover",
+            accessible: false,
+          });
           cResult[4] = graphic.source;
           cResult[5] = tmp7.avatar;
           cResult[6] = tmp19;
@@ -82,7 +87,12 @@ export const TagGraphic = ReactCompilerGating.isReactCompilerEnabled()
             return tmp12;
           }
           const obj4 = { source: graphic.source, style: tmp7.image, resizeMode: "contain", accessible: false };
-          const tmp15 = <React3 source={graphic.source} style={tmp7.image} resizeMode="contain" accessible={false} />;
+          const tmp15 = jsx(FastImageDefault, {
+            source: graphic.source,
+            style: tmp7.image,
+            resizeMode: "contain",
+            accessible: false,
+          });
           cResult[7] = graphic.source;
           cResult[8] = tmp7.image;
           cResult[9] = tmp15;
@@ -121,18 +131,28 @@ export const TagGraphic = ReactCompilerGating.isReactCompilerEnabled()
           color = graphic.color;
         }
       }
-      const tmp4 = closure_6(TagGroupTypes.getTagGraphicDimension(size), color);
+      const tmp4 = closure_5(TagGroupTypes.getTagGraphicDimension(size), color);
       if ("type" in graphic) {
         const type = graphic.type;
         if ("role" === type) {
           const obj2 = { style: tmp4.roleDot, accessible: false };
-          return <React4 style={tmp4.roleDot} accessible={false} />;
+          return <View style={tmp4.roleDot} accessible={false} />;
         } else if ("avatar" === type) {
           const obj3 = { source: graphic.source, style: tmp4.avatar, resizeMode: "cover", accessible: false };
-          return <React3 source={graphic.source} style={tmp4.avatar} resizeMode="cover" accessible={false} />;
+          return jsx(FastImageDefault, {
+            source: graphic.source,
+            style: tmp4.avatar,
+            resizeMode: "cover",
+            accessible: false,
+          });
         } else if ("image" === type) {
           const obj4 = { source: graphic.source, style: tmp4.image, resizeMode: "contain", accessible: false };
-          return <React3 source={graphic.source} style={tmp4.image} resizeMode="contain" accessible={false} />;
+          return jsx(FastImageDefault, {
+            source: graphic.source,
+            style: tmp4.image,
+            resizeMode: "contain",
+            accessible: false,
+          });
         }
       }
       const obj5 = { size: null, color: null, accessible: false };

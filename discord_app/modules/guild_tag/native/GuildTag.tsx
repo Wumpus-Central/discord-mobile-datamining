@@ -3,19 +3,19 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildTagUtils from "../GuildTagUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(7888).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(7895).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = {
   container: {
     flexDirection: "row",
@@ -204,7 +204,7 @@ const memoResult1 = noop.memo(
           obj4.style = items1;
           items[1] = React5(Text_Text.Text, obj4);
           obj.children = items;
-          return options(closure_2_8, obj);
+          return React6(closure_2_8, obj);
         }
         cResult[0] = SIZE_12;
         cResult[1] = guildBadge;
@@ -253,7 +253,7 @@ const memoResult1 = noop.memo(
           obj4.style = items1;
           items[1] = React5(Text_Text.Text, obj4);
           obj.children = items;
-          return options(closure_2_8, obj);
+          return React6(closure_2_8, obj);
         }
         const tmp2 = closure_10();
         GuildTagBadgeSize = tmp2;

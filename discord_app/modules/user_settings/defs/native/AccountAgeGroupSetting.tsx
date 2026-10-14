@@ -26,7 +26,7 @@ let obj = {
   trailing: { flexDirection: "row", alignItems: "center", flexShrink: 1 },
   badge: {
     marginLeft: 0,
-    backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND,
+    backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND,
     marginRight: nativeDefault.space.PX_4,
     marginBottom: 0,
   },
@@ -34,7 +34,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 let obj2 = {
   marginLeft: 0,
-  backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND,
+  backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND,
   marginRight: nativeDefault.space.PX_4,
   marginBottom: 0,
 };

@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import EmojiAliasDefault from "EmojiAlias.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -378,18 +378,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.source = obj3;
           obj.leading = set(tmp2, obj2);
           obj.label = function label() {
-            const children = [options(EmojiAliasDefault, { name: item.name, style: emojiAlias.emojiAlias })];
+            const children = [React6(EmojiAliasDefault, { name: item.name, style: emojiAlias.emojiAlias })];
             let tmpResult = closure_1;
             if (closure_1) {
               const obj2 = { children: null };
               const obj3 = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
               const intl = util.intl;
               obj3.children = intl.string(util.t["1GlN06"]);
-              const items1 = [options(Text_Text.Text, obj3)];
+              const items1 = [React6(Text_Text.Text, obj3)];
               const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
               const intl2 = util.intl;
               obj4.children = intl2.string(util.t.J0XdJ4);
-              items1[1] = options(Text_Text.Text, obj4);
+              items1[1] = React6(Text_Text.Text, obj4);
               obj2.children = items1;
               tmpResult = closure_3_11(collapsed, obj2);
             }

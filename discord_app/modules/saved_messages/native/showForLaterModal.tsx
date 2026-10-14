@@ -13,7 +13,7 @@ export const showForLaterModal = function showForLaterModal(BOOKMARK) {
     const tmpResult = MessageRemindersSeenStorage;
   }
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(13153, dependencyMap.paths),
+    asyncRequireImpl(13188, dependencyMap.paths),
     { type: BOOKMARK },
     "for-later-modal",
     { presentation: "modal" },

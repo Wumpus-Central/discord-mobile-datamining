@@ -16,14 +16,14 @@ import GameProfileAnalyticUtils from "../../../game_profile/GameProfileAnalyticU
 import useShouldOpenGameProfileModal from "../../../game_profile/hooks/useShouldOpenGameProfileModal.tsx";
 import leaveEmbeddedActivity from "../../../activities/leaveEmbeddedActivity.tsx";
 import VoiceXIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
-import _modDef11176 from "../../../../../_runtime/metro/11176__.js";
+import _modDef11246 from "../../../../../_runtime/metro/11246__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import useStableParticipant from "../utils/useStableParticipant.tsx";
 import useVoicePanelCardUserStateIcons from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import _modDef17843 from "../../../../../_runtime/metro/17843__.js";
+import _modDef17879 from "../../../../../_runtime/metro/17879__.js";
 import getRandomNumberInRangeDefault from "../utils/getRandomNumberInRange.tsx";
-import _modDef17888 from "../../../../../_runtime/metro/17888__.js";
-import _modDef17889 from "../../../../../_runtime/metro/17889__.js";
+import _modDef17924 from "../../../../../_runtime/metro/17924__.js";
+import _modDef17925 from "../../../../../_runtime/metro/17925__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -31,10 +31,10 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
 import ReanimatedRexport_mod from "../../../reanimated/ReanimatedRexport.tsx";
 
-const useGameProfileObscuredDefault = tmp3(8238);
-const GuildTagDefault = tmp3(8859);
-const useResolveGameForProfileDefault = tmp3(8883);
-const GameTagChipletDefault = tmp3(17893);
+const useGameProfileObscuredDefault = tmp3(8245);
+const GuildTagDefault = tmp3(8863);
+const useResolveGameForProfileDefault = tmp3(8887);
+const GameTagChipletDefault = tmp3(17929);
 require = fn;
 function getAccessibilityLabel(tmp4ResultResult, label) {
   if (
@@ -70,12 +70,12 @@ function getAccessibilityLabel(tmp4ResultResult, label) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, Pressable } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12488);
+const VoicePanelConstants = fn(12524);
 ({ MODE_CHANGE_PHYSICS: closure_9, VoicePanelModes: c10 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12486).VoicePanelControlsModes;
-const VOICE_PANEL_CARD_INNER_PADDING = fn(12491).VOICE_PANEL_CARD_INNER_PADDING;
+const VoicePanelControlsModes = fn(12522).VoicePanelControlsModes;
+const VOICE_PANEL_CARD_INNER_PADDING = fn(12527).VOICE_PANEL_CARD_INNER_PADDING;
 const ThemeTypes = fn(1085).ThemeTypes;
-const CallConstants = fn(5115);
+const CallConstants = fn(5119);
 ({ ParticipantTypes: closure_14, VoicePlatforms: closure_15 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
@@ -84,7 +84,7 @@ let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_20 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let c21 = 28;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_22 = createStyles.createStyles(() => {
   const obj = {
     labelPositionContainer: {
@@ -190,14 +190,14 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
       fn.__workletHash = 3270040588948;
       fn.__initData = __initData;
-      const animatedStyle = controlsSpecs(4850).useAnimatedStyle(fn);
-      let tmp4Result = _modDef17843;
+      const animatedStyle = controlsSpecs(4852).useAnimatedStyle(fn);
+      let tmp4Result = _modDef17879;
       if (voicePlatform === constants2.XBOX) {
-        tmp4Result = _modDef17888;
+        tmp4Result = _modDef17924;
       } else if (voicePlatform === constants2.MOBILE) {
-        tmp4Result = _modDef11176;
+        tmp4Result = _modDef11246;
       } else if (voicePlatform === constants2.QUEST) {
-        tmp4Result = _modDef17889;
+        tmp4Result = _modDef17925;
       }
       if (cResult[0] === animatedStyle) {
         if (cResult[1] === tmp3.iconWithoutBackground) {
@@ -221,7 +221,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = tmp3.iconWithoutBackground;
       cResult[2] = items;
       tmp8 = items;
-      const obj2 = controlsSpecs(4850);
+      const obj2 = controlsSpecs(4852);
       const obj3 = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
     }
   : function StreamIcon(voicePlatform) {
@@ -245,14 +245,14 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { controlsSpecs, VoicePanelControlsModes, GAP: 4 };
       fn.__workletHash = 15914667672663;
       fn.__initData = __initData2;
-      const animatedStyle = controlsSpecs(4850).useAnimatedStyle(fn);
-      let tmp2Result = _modDef17843;
+      const animatedStyle = controlsSpecs(4852).useAnimatedStyle(fn);
+      let tmp2Result = _modDef17879;
       if (voicePlatform === constants2.XBOX) {
-        tmp2Result = _modDef17888;
+        tmp2Result = _modDef17924;
       } else if (voicePlatform === constants2.MOBILE) {
-        tmp2Result = _modDef11176;
+        tmp2Result = _modDef11246;
       } else if (voicePlatform === constants2.QUEST) {
-        tmp2Result = _modDef17889;
+        tmp2Result = _modDef17925;
       }
       const obj3 = { source: tmp2Result, style: null };
       const items = [tmp.iconWithoutBackground, animatedStyle];
@@ -599,7 +599,7 @@ let closure_31 = noop.memo(
         const cResult = participant(576).c(11);
         participant = participant.participant;
         ({ isSelf, layout } = participant);
-        guildId = noop.useContext(guildId(12487)).guildId;
+        guildId = noop.useContext(guildId(12523)).guildId;
         const tmp5 = closure_30(participant.controlsHidden);
         if (cResult[0] === guildId) {
           if (cResult[1] === participant) {
@@ -617,18 +617,18 @@ let closure_31 = noop.memo(
                   }
                 }
               }
-              let obj2 = { icon: tmp4(17890), onPress: tmp6, style: tmp5, layout, accessibilityLabel: cResult[5] };
-              const tmp15 = closure_16(tmp4(17783), obj2);
+              let obj2 = { icon: tmp4(17926), onPress: tmp6, style: tmp5, layout, accessibilityLabel: cResult[5] };
+              const tmp15 = closure_16(tmp4(17819), obj2);
               cResult[6] = tmp6;
               cResult[7] = layout;
               cResult[8] = cResult[5];
               cResult[9] = tmp5;
               cResult[10] = tmp15;
               tmp12 = tmp15;
-              const tmp4Result = tmp4(17783);
+              const tmp4Result = tmp4(17819);
             }
           }
-          let result = tmp(17814).isStableActivityParticipant(participant);
+          let result = tmp(17850).isStableActivityParticipant(participant);
           const intl = tmp(1126).intl;
           const string = intl.string;
           let t = tmp(1126).t;
@@ -643,7 +643,7 @@ let closure_31 = noop.memo(
           cResult[3] = isSelf;
           cResult[4] = participant;
           cResult[5] = stringResult;
-          let tmpResult = tmp(17814);
+          let tmpResult = tmp(17850);
         }
         const fn = function o() {
           if (obj.isStableStreamParticipant(participant)) {
@@ -677,7 +677,7 @@ let closure_31 = noop.memo(
         participant = participant.participant;
         let guildId;
         ({ controlsHidden, isSelf, layout } = participant);
-        guildId = noop.useContext(guildId(12487)).guildId;
+        guildId = noop.useContext(guildId(12523)).guildId;
         const items = [guildId, participant];
         const callback = noop.useCallback(() => {
           if (obj.isStableStreamParticipant(participant)) {
@@ -703,12 +703,12 @@ let closure_31 = noop.memo(
         }, items);
         let obj = { icon: null, onPress: null, style: null, layout: null, accessibilityLabel: null };
         const tmp = closure_30(controlsHidden);
-        obj.icon = guildId(17890);
+        obj.icon = guildId(17926);
         obj.onPress = callback;
         obj.style = tmp;
         obj.layout = layout;
-        const tmp4 = guildId(17783);
-        let result = participant(17814).isStableActivityParticipant(participant);
+        const tmp4 = guildId(17819);
+        let result = participant(17850).isStableActivityParticipant(participant);
         const intl = participant(1126).intl;
         const string = intl.string;
         const t = participant(1126).t;
@@ -1358,11 +1358,11 @@ let closure_50 = noop.memo(
         if (null != gameRecord) {
           if (!tmp6) {
             let obj = { game: gameRecord, userId, textColor };
-            let tmp9 = closure_16(tmp(17893), obj);
+            let tmp9 = closure_16(tmp(17929), obj);
           }
           return tmp9;
         }
-        tmp9 = closure_16(tmp(8859), { userId, textColor });
+        tmp9 = closure_16(tmp(8863), { userId, textColor });
       },
 );
 const __initData15 = {

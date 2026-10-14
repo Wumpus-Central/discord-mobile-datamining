@@ -1,9 +1,11 @@
 // discord_app/modules/activities/native/EmbeddedActivitiesNativeManager.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
+import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
+import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import EmbeddedActivitiesActionCreators from "../EmbeddedActivitiesActionCreators.tsx";
@@ -15,24 +17,38 @@ import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 import EmbeddedActivitiesManager from "../EmbeddedActivitiesManager.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const Constants = fn(1085);
+({ AnalyticEvents: metroRequire, ComponentActions: closure_7 } = Constants);
 const PlatformUtils = fn(1382);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
 }
-class EmbeddedActivitiesNativeManager extends tmp5 {
+class EmbeddedActivitiesNativeManager extends tmp6 {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    applyArgumentsResult.handleOpenEmbeddedActivity = function handleOpenEmbeddedActivity() {
+      ChatInputUtils.dismissKeyboard();
+    };
+    return applyArgumentsResult;
+  }
   _initialize() {
     self = this;
     self = this;
     _initializeResult = super._initialize();
+    tmp2 = closure_2;
+    ComponentDispatch = self(closure_2[8]).ComponentDispatch;
+    subscription = ComponentDispatch.subscribe(
+      ComponentActions.OPEN_EMBEDDED_ACTIVITY,
+      this.handleOpenEmbeddedActivity,
+    );
     lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
       removeResult = lifecycleSubscription.remove();
     }
-    obj = closure_7;
+    obj = closure_8;
     addListenerResult = undefined;
-    if (closure_7 != null) {
+    if (closure_8 != null) {
       str = "onHostDestroy";
       addListenerResult = obj.addListener("onHostDestroy", () => {
         currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
@@ -48,14 +64,14 @@ class EmbeddedActivitiesNativeManager extends tmp5 {
     if (thermalStateSubscription != null) {
       removeResult1 = thermalStateSubscription.remove();
     }
-    obj2 = closure_1(closure_2[8]);
+    obj2 = closure_1(tmp2[9]);
     self.thermalStateSubscription = obj2.addListener((rawThermalState) => {
       currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
       let _location;
       if (currentEmbeddedActivity != null) {
         _location = currentEmbeddedActivity.location;
       }
-      const embeddedActivityLocationChannelId = self(dependencyMap[9]).getEmbeddedActivityLocationChannelId(_location);
+      const embeddedActivityLocationChannelId = self(dependencyMap[10]).getEmbeddedActivityLocationChannelId(_location);
       basicChannel = basicChannel.getBasicChannel(embeddedActivityLocationChannelId);
       let compositeInstanceId;
       if (currentEmbeddedActivity != null) {
@@ -65,7 +81,7 @@ class EmbeddedActivitiesNativeManager extends tmp5 {
       if (currentEmbeddedActivity != null) {
         applicationId = currentEmbeddedActivity.applicationId;
       }
-      const obj = self(dependencyMap[9]);
+      const obj = self(dependencyMap[10]);
       const obj3 = {
         channel_id: embeddedActivityLocationChannelId,
         application_id: applicationId,
@@ -84,24 +100,29 @@ class EmbeddedActivitiesNativeManager extends tmp5 {
       DispatcherDefault.dispatch({ type: "THERMAL_STATE_CHANGE", applicationId });
       const tmp9Result = DispatcherDefault;
       let tmp14 = null != compositeInstanceId;
-      const thermalState = self(dependencyMap[12]).getThermalState();
+      const thermalState = self(dependencyMap[13]).getThermalState();
       if (tmp14) {
         tmp14 = null != applicationId;
       }
       if (tmp14) {
-        tmp14 = thermalState >= self(dependencyMap[12]).ThermalStates.SERIOUS;
+        tmp14 = thermalState >= self(dependencyMap[13]).ThermalStates.SERIOUS;
       }
       if (tmp14) {
-        const respondToSeriousThermalState = self(dependencyMap[13]).requestRespondToSeriousThermalState();
-        const tmp2Result2 = self(dependencyMap[13]);
+        const respondToSeriousThermalState = self(dependencyMap[14]).requestRespondToSeriousThermalState();
+        const tmp2Result2 = self(dependencyMap[14]);
       }
-      const tmp2Result = self(dependencyMap[12]);
+      const tmp2Result = self(dependencyMap[13]);
     });
     return;
   }
   _terminate() {
     self = this;
     _terminateResult = super._terminate();
+    ComponentDispatch = closure_0(closure_2[8]).ComponentDispatch;
+    unsubscribeResult = ComponentDispatch.unsubscribe(
+      ComponentActions.OPEN_EMBEDDED_ACTIVITY,
+      this.handleOpenEmbeddedActivity,
+    );
     lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
       removeResult = lifecycleSubscription.remove();

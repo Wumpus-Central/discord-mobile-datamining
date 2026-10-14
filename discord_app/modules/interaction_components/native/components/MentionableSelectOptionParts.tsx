@@ -21,7 +21,7 @@ const Constants = fn(1085);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   name: {
     color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -113,7 +113,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { style: tmp4.roleCountContainer, children: null };
         const items = [tmp5, tmp8];
         obj2.children = items;
-        const tmp14 = options(View, obj2);
+        const tmp14 = React6(View, obj2);
         cResult[4] = tmp4.roleCountContainer;
         cResult[5] = tmp5;
         cResult[6] = tmp14;
@@ -149,7 +149,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         closure_1_8(UserIcon.UserIcon, { size: "xs" }),
       ];
       obj.children = items;
-      return options(View, obj);
+      return React6(View, obj);
     };
 const size = fn(2);
 const result = size.fileFinishedImporting(

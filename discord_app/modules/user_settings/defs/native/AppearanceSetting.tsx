@@ -115,14 +115,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
       }
     };
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(15870).PaintPaletteIcon,
+  IconComponent: fn(15907).PaintPaletteIcon,
   useTrailing: tmp2,
   screen: {
     route: fn(1085).UserSettingsSections.APPEARANCE,

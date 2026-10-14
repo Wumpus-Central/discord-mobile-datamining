@@ -5,7 +5,7 @@ import PopoutWindowStore from "../popout-window/PopoutWindowStore.native.tsx";
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(6067).ActivityPanelModes;
+const ActivityPanelModes = fn(6073).ActivityPanelModes;
 const PopoutWindowKeys = fn(1085).PopoutWindowKeys;
 const ReactCompilerGating = fn(558);
 function getEmbeddedActivityPopoutWindowKey(arg0) {

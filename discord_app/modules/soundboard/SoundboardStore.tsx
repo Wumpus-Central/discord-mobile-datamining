@@ -4,7 +4,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
-import _modDef4702 from "../../../_runtime/metro/04702__.js";
+import _modDef4704 from "../../../_runtime/metro/04704__.js";
 import FrecencyDefault from "../../lib/Frecency.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import SoundboardFavoritesExperiment2 from "experiments/SoundboardFavoritesExperiment.tsx";
@@ -72,7 +72,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(5430);
+const SoundboardConstants = fn(5435);
 ({ DEFAULT_SOUND_GUILD_ID: closure_8, EMPTY_SOUND_ID_LIST: closure_9 } = SoundboardConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
@@ -114,7 +114,7 @@ let closure_23 = new FrecencyDefault({
       }
       return num2;
     }
-    obj = _modDef4702();
+    obj = _modDef4704();
   },
   lookupKey(arg0) {
     return arg0;
@@ -231,7 +231,7 @@ prototype["getTopSoundboardSoundsMetadata"] = function getTopSoundboardSoundsMet
 };
 prototype["getTopSoundboardSoundIds"] = function getTopSoundboardSoundIds(id) {
   if (null == id) {
-    return options;
+    return React6;
   } else {
     value = map1.get(id);
     let soundIds;
@@ -243,7 +243,7 @@ prototype["getTopSoundboardSoundIds"] = function getTopSoundboardSoundIds(id) {
       soundIds = topSoundboardSoundIdsByGuildId;
     }
     if (soundIds == null) {
-      soundIds = options;
+      soundIds = React6;
     }
     return soundIds;
   }
@@ -481,8 +481,8 @@ const soundboardStore = new SoundboardStore(DispatcherDefault, {
   TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS: function handleTopSoundboardSoundsLoaded(topSoundsMetadata) {
     topSoundsMetadata = topSoundsMetadata.topSoundsMetadata;
     const obj = { soundIds: topSoundsMetadata.map((soundId) => soundId.soundId), topSoundsTTL: null };
-    const obj2 = _modDef4702();
-    obj.topSoundsTTL = _modDef4702().add(1, "days").valueOf();
+    const obj2 = _modDef4704();
+    obj.topSoundsTTL = _modDef4704().add(1, "days").valueOf();
     const result = map1.set(topSoundsMetadata.guildId, obj);
   },
 });

@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const AppStates = fn(1085).AppStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" },
   input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" },
@@ -187,12 +187,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = {
                     color: shared.isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500,
                   };
-                  return options(hasOwnProperty, obj3);
+                  return React6(hasOwnProperty, obj3);
                 } else {
                   let tmp2 = null;
                   if (null != error) {
                     const obj = { style: error.error, variant: "text-md/medium", children: tmp };
-                    tmp2 = options(Text_Text.Text, obj);
+                    tmp2 = React6(Text_Text.Text, obj);
                   }
                   return tmp2;
                 }

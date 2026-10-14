@@ -7,18 +7,18 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import client_themes_ClientThemesUtils from "../../../client_themes/native/ClientThemesUtils.tsx";
 import useChatLayoutDefault from "../../../chat/native/useChatLayout.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05391_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05396_LinearGradient.js";
 import useYouBarTotalHeight from "hooks/useYouBarTotalHeight.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBackgroundStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(15690).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(17043).GUILD_LIST_WIDTH;
+let closure_5 = fn(15727).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(17080).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
@@ -172,7 +172,7 @@ export default noop.memo(
                           const obj4 = { children: null };
                           const items1 = [tmp16, tmp27, tmp32];
                           obj4.children = items1;
-                          const tmp39 = options(closure_1_8, obj4);
+                          const tmp39 = React6(closure_1_8, obj4);
                           cResult[32] = tmp27;
                           cResult[33] = tmp32;
                           cResult[34] = tmp16;
@@ -295,6 +295,6 @@ export default noop.memo(
         obj5.style = items4;
         items1[2] = React5(View, obj5);
         obj2.children = items1;
-        return options(closure_1_8, obj2);
+        return React6(closure_1_8, obj2);
       },
 );

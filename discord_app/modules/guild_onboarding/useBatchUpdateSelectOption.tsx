@@ -15,7 +15,7 @@ function getRoles(singleSelect, roleIds, arg2, arg3) {
   closure_1 = arg3;
   if (singleSelect.singleSelect) {
     if (arg2) {
-      options = singleSelect.options;
+      const options = singleSelect.options;
       const found = options.find((id) => closure_1.includes(id.id));
       roleIds = roleIds.roleIds;
       if (roleIds == null) {
@@ -73,7 +73,7 @@ function getChannels(arg0) {
   ({ selected, responses: importDefault } = arg0);
   if (_prompt.singleSelect) {
     if (selected) {
-      options = _prompt.options;
+      const options = _prompt.options;
       const found = options.find((id) => importDefault.includes(id.id));
       let channelIds = option.channelIds;
       if (channelIds == null) {

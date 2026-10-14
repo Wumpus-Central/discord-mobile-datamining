@@ -18,7 +18,7 @@ let closure_5 = ["title", "children", "onBack"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   header: { flexDirection: "row", marginHorizontal: nativeDefault.space.PX_16 },
   headerSpacer: null,
@@ -121,7 +121,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             obj3.ItemSeparatorComponent = tmp12;
             obj3.contentContainerStyle = tmp15;
             obj3.renderItem = tmp16;
-            const tmp21 = closure_8(tmp(8625).BottomSheetFlashList, obj3);
+            const tmp21 = closure_8(tmp(6818).BottomSheetFlashList, obj3);
             cResult[16] = arr;
             cResult[17] = tmp5;
             cResult[18] = tmp10.list;
@@ -177,7 +177,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         index = index.index;
         return renderItem({ item: index.item, index, start: 0 === index, end: index === data.length - 1 });
       };
-      return closure_8(data(8625).BottomSheetFlashList, obj);
+      return closure_8(data(6818).BottomSheetFlashList, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -259,7 +259,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj.ItemSeparatorComponent = function ItemSeparatorComponent() {
         return closure_2_8(Form.FormDivider, { style: divider.divider });
       };
-      return closure_8(renderItem(6307).BottomSheetSectionList, obj);
+      return closure_8(renderItem(6311).BottomSheetSectionList, obj);
     };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileStackedActionSheet.tsx");
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { style: tmp14, children: null };
             const items = [tmp15, tmp18, tmp21];
             obj5.children = items;
-            const tmp28 = options(View, obj5);
+            const tmp28 = React6(View, obj5);
             cResult[18] = tmp14;
             cResult[19] = tmp15;
             cResult[20] = tmp18;
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[2] = tmp4Result2;
       obj2.children = items1;
-      obj.header = options(View, obj2);
+      obj.header = React6(View, obj2);
       obj.children = children;
       return closure_1_8(Sheet_BottomSheet.BottomSheet, obj);
     };

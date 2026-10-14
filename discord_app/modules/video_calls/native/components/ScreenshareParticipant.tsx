@@ -2,12 +2,12 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06335_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06339_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef10883 from "../../../../../_runtime/metro/10883__.js";
+import _modDef10958 from "../../../../../_runtime/metro/10958__.js";
 import useScreenshareUtils from "../useScreenshareUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let tmp11 = cResult[11];
               }
               if (cResult[12] !== tmp10.image) {
-                const obj2 = { source: _modDef10883, style: tmp10.image };
+                const obj2 = { source: _modDef10958, style: tmp10.image };
                 const tmp15 = hasOwnProperty(FastImageDefault, obj2);
                 cResult[12] = tmp10.image;
                 cResult[13] = tmp15;
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = items2;
       const obj3 = { source: null, style: null };
       const tmp3 = useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 });
-      obj3.source = _modDef10883;
+      obj3.source = _modDef10958;
       obj3.style = tmp4.image;
       const items3 = [hasOwnProperty(FastImageDefault, obj3), , ,];
       const obj4 = {

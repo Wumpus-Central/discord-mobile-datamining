@@ -8,12 +8,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(12519);
+const GuildDirectoryConstants = fn(12555);
 ({ getHubGuildTemplatesMap: metroRequire, HubGuildTemplateId: closure_7 } = GuildDirectoryConstants);
-const GuildDirectoryCreate = fn(12524).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12560).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles({
   label: { marginTop: 16, marginLeft: 16, marginBottom: 8 },
   title: { marginBottom: 8, textAlign: "center" },
@@ -29,7 +29,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
       if (cResult[0] !== guildTemplate.id) {
         const fn = function l() {
-          return options(native.Icon, {
+          return React6(native.Icon, {
             source: GuildDirectoryTemplatesIcons.GUILD_TEMPLATE_ICONS[guildTemplate.id],
             disableColor: true,
             style: { width: 48, height: 48 },
@@ -54,7 +54,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { Icon: tmp3, message: guildTemplate.label, onPress: tmp4 };
-        const tmp8 = closure_9(onGuildTemplatePress(12546), obj2);
+        const tmp8 = closure_9(onGuildTemplatePress(12582), obj2);
         cResult[5] = guildTemplate.label;
         cResult[6] = tmp3;
         cResult[7] = tmp4;
@@ -73,9 +73,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   : function GuildTemplatesItem(guildTemplate) {
       guildTemplate = guildTemplate.guildTemplate;
       const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
-      return closure_9(onGuildTemplatePress(12546), {
+      return closure_9(onGuildTemplatePress(12582), {
         Icon() {
-          return options(native.Icon, {
+          return React6(native.Icon, {
             source: GuildDirectoryTemplatesIcons.GUILD_TEMPLATE_ICONS[guildTemplate.id],
             disableColor: true,
             style: { width: 48, height: 48 },

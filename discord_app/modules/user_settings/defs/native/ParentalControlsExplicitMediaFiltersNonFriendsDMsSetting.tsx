@@ -5,7 +5,7 @@ import useParentalControlSettings from "../../../parent_tools/hooks/useParentalC
 import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCenterControlledSettingsUtils.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
-const ExplicitMediaRedactionUtils = obj(8243);
+const ExplicitMediaRedactionUtils = obj(8250);
 require = fn;
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -46,7 +46,7 @@ function onObscuredContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
     const intl = selectedTeenId(1126).intl;
-    const obj = selectedTeenId(15421);
+    const obj = selectedTeenId(15458);
     const stringResult = intl.string(selectedTeenId(1126).t.GYpoAq);
     const obj3 = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
     const intl2 = selectedTeenId(1126).intl;
@@ -59,18 +59,18 @@ function onObscuredContentNonFriendsDmOnPress() {
       });
     };
     obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(15426).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(15426);
+    let result = selectedTeenId(15463).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(15463);
   }
 }
 function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["Yh+HX1"]);
 }
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
-  parent: fn(7993).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8000).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: tmp2,
   onPress: onObscuredContentNonFriendsDmOnPress,
   unsearchable: true,

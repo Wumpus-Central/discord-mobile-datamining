@@ -8,6 +8,7 @@ import NativePermissionUtilsDefault from "../../modules/native_permissions/Nativ
 import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import UploadUtils from "../UploadUtils.tsx";
 import FileUtils from "../FileUtils.tsx";
+import ImagePickerDefault from "../../modules/image/native/ImagePicker.tsx";
 import ImageConversionDecision from "../../modules/media_uploads/native/ImageConversionDecision.tsx";
 import VideoUploadUtils from "../../modules/media_uploads/native/VideoUploadUtils.tsx";
 import UploadLimits from "../../modules/media_uploads/UploadLimits.tsx";
@@ -33,7 +34,7 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp9 === 3) {
+  } else if (tmp8 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
@@ -55,26 +56,82 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_7 = tmp7;
+            closure_6 = tmp3;
             closure_135_0 = closure_0;
-            closure_135_1 = undefined;
+            closure_135_2 = undefined;
             let width;
             let height;
-            closure_135_4 = undefined;
+            closure_135_5 = undefined;
             let file;
-            closure_135_6 = undefined;
-            closure_135_8 = undefined;
-            closure_135_7 = function cleanPickedImage() {
+            closure_135_7 = undefined;
+            closure_135_9 = undefined;
+            closure_135_8 = function cleanPickedImage() {
               if (obj.isIOS()) {
-                promise.then(() => type(7770).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, "")))).catch((error) => logger.warn("Failed to remove picked image", error));
-                const nextPromise = promise.then(() => type(7770).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, ""))));
+                promise.then(() => type(obj23[9]).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, "")))).catch((error) => logger.warn("Failed to remove picked image", error));
+                const nextPromise = promise.then(() => type(obj23[9]).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, ""))));
               }
-              obj = closure_0(obj21[13]);
+              obj = closure_0(obj23[13]);
             };
-            c11 = 1;
-            c12 = 1;
-            const obj4 = { value: NativePermissionUtilsDefault.requestPermission(constants.PHOTOS), done: false };
-            return obj4;
+            const obj4 = { mediaType: "photo", includeBase64: true, disableNewIOSPicker: true };
+            closure_135_1 = obj4;
+            if (obj38.canUseAndroidPhotoPicker(obj4)) {
+              let size1 = { width: null, height: null };
+              let size = closure_135_0;
+              if ("size" in closure_135_0) {
+                size = size.size;
+                size1.width = size;
+                size1.height = closure_135_0.size;
+                let tmp81 = size1;
+              } else {
+                size1.width = size.width;
+                size1.height = closure_135_0.height;
+                tmp81 = size1;
+              }
+              closure_135_2 = tmp81;
+              width = closure_135_2.width;
+              height = closure_135_2.height;
+              size1 = new Promise((arg0, arg1) => {
+                closure_0 = arg0;
+                closure_1 = arg1;
+                type(obj23[9]).launchImageLibrary(closure_1_1, (assets) => {
+                  let first = null;
+                  if (null != assets.assets) {
+                    first = null;
+                    if (assets.assets.length > 0) {
+                      first = assets.assets[0];
+                    }
+                  }
+                  if (assets.didCancel) {
+                    const _Error2 = Error;
+                    const error = new Error(closure_2_22);
+                    closure_1(error);
+                  } else {
+                    if (null == assets.errorCode) {
+                      let uri;
+                      if (first != null) {
+                        uri = first.uri;
+                      }
+                      if (null != uri) {
+                        const obj = { uri: null, base64: null };
+                        ({ uri: obj.uri, base64: obj.base64 } = first);
+                        closure_0(obj);
+                      }
+                    }
+                    const _Error = Error;
+                    const error1 = new Error(assets.errorMessage);
+                    closure_1(error1);
+                  }
+                });
+              });
+              c11 = 2;
+              c12 = 1;
+            } else {
+              c11 = 1;
+              c12 = 1;
+              const obj5 = { value: NativePermissionUtilsDefault.requestPermission(constants.PHOTOS), done: false };
+              return obj5;
+            }
+            obj38 = ImagePickerDefault;
           }
         break;
         case 1:
@@ -83,60 +140,9 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c12 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else if (value) {
-            let size1 = { width: null, height: null };
-            let size = closure_135_0;
-            if ("size" in closure_135_0) {
-              size = size.size;
-              size1.width = size;
-              size1.height = closure_135_0.size;
-              let tmp79 = size1;
-            } else {
-              size1.width = size.width;
-              size1.height = closure_135_0.height;
-              tmp79 = size1;
-            }
-            closure_135_1 = tmp79;
-            width = closure_135_1.width;
-            height = closure_135_1.height;
-            size1 = new Promise((arg0, arg1) => {
-              closure_0 = arg0;
-              closure_1 = arg1;
-              closure_1(7770).launchImageLibrary({ mediaType: "photo", includeBase64: true, disableNewIOSPicker: true }, (assets) => {
-                let first = null;
-                if (null != assets.assets) {
-                  first = null;
-                  if (assets.assets.length > 0) {
-                    first = assets.assets[0];
-                  }
-                }
-                if (assets.didCancel) {
-                  const _Error2 = Error;
-                  const error = new Error(closure_2_22);
-                  closure_1(error);
-                } else {
-                  if (null == assets.errorCode) {
-                    let uri;
-                    if (first != null) {
-                      uri = first.uri;
-                    }
-                    if (null != uri) {
-                      const obj = { uri: null, base64: null };
-                      ({ uri: obj.uri, base64: obj.base64 } = first);
-                      closure_0(obj);
-                    }
-                  }
-                  const _Error = Error;
-                  const error1 = new Error(assets.errorMessage);
-                  closure_1(error1);
-                }
-              });
-            });
-            c11 = 2;
-            c12 = 1;
-          } else {
+            const obj6 = { value, done: true };
+            return obj6;
+          } else if (!value) {
             let _Error = Error;
             let error = new Error(closure_134_23);
             throw error;
@@ -148,51 +154,51 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c12 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
+            const obj7 = { value, done: true };
+            return obj7;
           } else {
-            closure_135_4 = value;
-            const obj7 = { uri: closure_135_4.uri, i: "" };
-            file = closure_134_0(closure_134_2[11]).getFile(obj7);
-            const obj30 = closure_134_0(closure_134_2[11]);
-            const obj32 = closure_134_1(closure_134_2[12]);
-            closure_135_6 = closure_134_1(closure_134_2[12]).fromFileUri(closure_135_4.uri).catch(() => null);
-            if (null != closure_135_4.base64) {
-              if (obj33.isAndroid()) {
-                const base64 = closure_135_4.base64;
+            closure_135_5 = value;
+            const obj8 = { uri: closure_135_5.uri, i: "" };
+            file = closure_134_0(closure_134_2[11]).getFile(obj8);
+            const obj31 = closure_134_0(closure_134_2[11]);
+            const obj33 = closure_134_1(closure_134_2[12]);
+            closure_135_7 = closure_134_1(closure_134_2[12]).fromFileUri(closure_135_5.uri).catch(() => null);
+            if (null != closure_135_5.base64) {
+              if (obj34.isAndroid()) {
+                const base64 = closure_135_5.base64;
                 if (base64.startsWith("UklGR")) {
-                  const obj8 = { base64: closure_134_16 + closure_135_4.base64, mimeType: "image/webp" };
+                  const obj9 = { base64: closure_134_16 + closure_135_5.base64, mimeType: "image/webp" };
                   c11 = 3;
                   c12 = 1;
-                  const obj9 = { value: closure_135_6, done: false };
-                  return obj9;
+                  const obj10 = { value: closure_135_7, done: false };
+                  return obj10;
                 } else {
-                  const base641 = closure_135_4.base64;
+                  const base641 = closure_135_5.base64;
                   if (4 === base641.indexOf("ZnR5cA==")) {
-                    const base642 = closure_135_4.base64;
+                    const base642 = closure_135_5.base64;
                     if (8 !== base642.indexOf("YXZpZg==")) {
-                      const base643 = closure_135_4.base64;
+                      const base643 = closure_135_5.base64;
                     }
-                    const obj10 = { base64: closure_134_17 + closure_135_4.base64, mimeType: "image/avif" };
+                    const obj11 = { base64: closure_134_17 + closure_135_5.base64, mimeType: "image/avif" };
                     c11 = 4;
                     c12 = 1;
-                    const obj11 = { value: closure_135_6, done: false };
-                    return obj11;
+                    const obj12 = { value: closure_135_7, done: false };
+                    return obj12;
                   }
                 }
               }
-              obj33 = closure_134_0(closure_134_2[13]);
+              obj34 = closure_134_0(closure_134_2[13]);
             }
             if ("image/gif" === file.type) {
-              closure_135_7();
-              const obj12 = { base64: closure_134_13 + closure_135_4.base64, mimeType: "image/gif" };
+              closure_135_8();
+              const obj13 = { base64: closure_134_13 + closure_135_5.base64, mimeType: "image/gif" };
               c11 = 5;
               c12 = 1;
-              const obj13 = { value: closure_135_6, done: false };
-              return obj13;
+              const obj14 = { value: closure_135_7, done: false };
+              return obj14;
             } else {
               c9 = 2;
-              const size2 = { uri: closure_135_4.uri, width, height, includeBase64: true, mimeType: null };
+              const size2 = { uri: closure_135_5.uri, width, height, includeBase64: true, mimeType: null };
               const preferredMimeType = closure_135_0.preferredMimeType;
               let type = preferredMimeType;
               if (preferredMimeType == null) {
@@ -201,10 +207,10 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
               size2.mimeType = type;
               c11 = 8;
               c12 = 1;
-              const obj14 = { value: closure_134_1(closure_134_2[10]).launchCropper(size2), done: false };
-              return obj14;
+              const obj15 = { value: closure_134_1(closure_134_2[9]).launchCropper(size2), done: false };
+              return obj15;
             }
-            const fromFileUriResult = closure_134_1(closure_134_2[12]).fromFileUri(closure_135_4.uri);
+            const fromFileUriResult = closure_134_1(closure_134_2[12]).fromFileUri(closure_135_5.uri);
           }
         break;
         case 3:
@@ -213,13 +219,13 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c12 = 3;
-            const obj15 = { value, done: true };
-            return obj15;
-          } else {
-            obj8.originalMd5 = value;
-            c12 = 3;
-            const obj16 = { value: obj8, done: true };
+            const obj16 = { value, done: true };
             return obj16;
+          } else {
+            obj9.originalMd5 = value;
+            c12 = 3;
+            const obj17 = { value: obj9, done: true };
+            return obj17;
           }
         break;
         case 4:
@@ -228,13 +234,13 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c12 = 3;
-            const obj17 = { value, done: true };
-            return obj17;
-          } else {
-            obj10.originalMd5 = value;
-            c12 = 3;
-            const obj18 = { value: obj10, done: true };
+            const obj18 = { value, done: true };
             return obj18;
+          } else {
+            obj11.originalMd5 = value;
+            c12 = 3;
+            const obj19 = { value: obj11, done: true };
+            return obj19;
           }
         break;
         case 5:
@@ -243,30 +249,30 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c12 = 3;
-            const obj19 = { value, done: true };
-            return obj19;
-          } else {
-            obj12.originalMd5 = value;
-            c12 = 3;
-            const obj20 = { value: obj12, done: true };
+            const obj20 = { value, done: true };
             return obj20;
+          } else {
+            obj13.originalMd5 = value;
+            c12 = 3;
+            const obj21 = { value: obj13, done: true };
+            return obj21;
           }
         break;
         case 6:
           c9 = 0;
-          closure_135_7();
+          closure_135_8();
           throw closure_10;
         case 7:
           c9 = 1;
-          closure_135_9 = closure_10;
-          if ("E_PICKER_CANCELLED" === closure_135_9.code) {
-            throw closure_135_9;
+          closure_135_10 = closure_10;
+          if ("E_PICKER_CANCELLED" === closure_135_10.code) {
+            throw closure_135_10;
           } else {
-            const obj21 = { base64: closure_134_12 + closure_135_4.base64, mimeType: file.type, errorStr: closure_135_9.message };
+            const obj23 = { base64: closure_134_12 + closure_135_5.base64, mimeType: file.type, errorStr: closure_135_10.message };
             c11 = 10;
             c12 = 1;
-            const obj22 = { value: closure_135_6, done: false };
-            return obj22;
+            const obj24 = { value: closure_135_7, done: false };
+            return obj24;
           }
         break;
         case 8:
@@ -275,22 +281,22 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 0;
-            closure_135_7();
+            closure_135_8();
             c12 = 3;
-            const obj23 = { value, done: true };
-            return obj23;
+            const obj25 = { value, done: true };
+            return obj25;
           } else {
-            closure_135_8 = value;
-            const obj28 = closure_134_1(closure_134_2[10]);
-            closure_134_1(closure_134_2[10]).cleanSingle(closure_135_8.path).catch((error) => logger.warn("Failed to remove cropped image", error));
-            const obj24 = {};
+            closure_135_9 = value;
+            const obj29 = closure_134_1(closure_134_2[9]);
+            closure_134_1(closure_134_2[9]).cleanSingle(closure_135_9.path).catch((error) => logger.warn("Failed to remove cropped image", error));
+            const obj26 = {};
             const _HermesInternal = HermesInternal;
-            obj24.base64 = "data:" + closure_135_8.mime + ";base64," + closure_135_8.data;
-            obj24.mimeType = closure_135_8.mime;
+            obj26.base64 = "data:" + closure_135_9.mime + ";base64," + closure_135_9.data;
+            obj26.mimeType = closure_135_9.mime;
             c11 = 9;
             c12 = 1;
-            const obj25 = { value: closure_135_6, done: false };
-            return obj25;
+            const obj27 = { value: closure_135_7, done: false };
+            return obj27;
           }
         break;
         case 9:
@@ -299,16 +305,16 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 0;
-            closure_135_7();
+            closure_135_8();
             c12 = 3;
-            const obj26 = { value, done: true };
-            return obj26;
+            const obj28 = { value, done: true };
+            return obj28;
           } else {
-            obj24.originalMd5 = value;
+            obj26.originalMd5 = value;
             c9 = 0;
-            closure_135_7();
+            closure_135_8();
             c12 = 3;
-            let obj = { value: obj24, done: true };
+            let obj = { value: obj26, done: true };
             return obj;
           }
         break;
@@ -318,25 +324,25 @@ let closure_25 = async function _openImagePickerUnhandled(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c9 = 0;
-            closure_135_7();
+            closure_135_8();
             c12 = 3;
-            const obj27 = { value, done: true };
-            return obj27;
+            const obj30 = { value, done: true };
+            return obj30;
           } else {
-            obj21.originalMd5 = value;
+            obj23.originalMd5 = value;
             c9 = 0;
-            closure_135_7();
+            closure_135_8();
             c12 = 3;
-            const obj29 = { value: obj21, done: true };
-            return obj29;
+            const obj32 = { value: obj23, done: true };
+            return obj32;
           }
       }
-    } catch (tmp94) {
-      closure_10 = tmp94;
+    } catch (tmp96) {
+      closure_10 = tmp96;
       if (tmp4 === c9) {
         c12 = tmp2;
-        throw tmp94;
-      } else if (tmp === tmp96) {
+        throw tmp96;
+      } else if (tmp === tmp98) {
         c11 = tmp6;
       } else {
         c11 = tmp5;
@@ -1261,7 +1267,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      obj8 = { uri, overrideType: "a" };
+                      obj8 = { uri, overrideType: "r" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1280,7 +1286,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj9 = { uri, overrideType: "a" };
+                  const obj9 = { uri, overrideType: "r" };
                   isVideo = UploadUtils.getFile(obj9).isVideo;
                   const tmp12Result12 = UploadUtils;
                 }
@@ -1939,7 +1945,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(7777);
+                      tmpResult = closure_1_0(7784);
                     }
                     const obj = closure_1_0(1382);
                   })(closure_130_0, closure_130_1)) {
@@ -2588,7 +2594,7 @@ let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1085);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(7483).NativePermissionTypes;
+const NativePermissionTypes = fn(7489).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2657,8 +2663,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(7777).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(7777).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(7784).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(7784).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

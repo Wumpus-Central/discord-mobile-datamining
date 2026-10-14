@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8272).isEntryNew }, , , ,];
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8272).isEntryNew };
+let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8279).isEntryNew }, , , ,];
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8279).isEntryNew };
 items[1] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -67,7 +67,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   },
 };
-const createICYMIStyles = fn(17217);
+const createICYMIStyles = fn(17251);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -173,7 +173,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(17267, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(17301, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");
@@ -189,9 +189,8 @@ export default function GamingLikeEntryRow(content) {
           },
         };
         author_id(openReplyActionSheet[19]).feedItemActioned(obj3);
-        const obj4 = author_id(openReplyActionSheet[20]);
-        const obj5 = { content };
-        obj4.pushLazy(() => Promise.resolve(GameShareModal), obj5, "GameShareModal", { presentation: "modal" });
+        const obj4 = { content };
+        author_id(openReplyActionSheet[20])(() => Promise.resolve(GameShareModal), obj4, "GameShareModal");
         const obj2 = author_id(openReplyActionSheet[19]);
       }
     });
@@ -227,7 +226,7 @@ export default function GamingLikeEntryRow(content) {
         isEntryActiveResult = tmp2(tmp3[5]).isEntryActive(content);
         let tmp20;
         if (null != displayNameStylesFont) {
-          let obj5 = { fontFamily: displayNameStylesFont };
+          const obj5 = { fontFamily: displayNameStylesFont };
           tmp20 = obj5;
         }
         const obj6 = { children: null };

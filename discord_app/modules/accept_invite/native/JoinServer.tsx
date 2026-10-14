@@ -12,11 +12,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(6662);
+const CreateGuildConstants = fn(6666);
 ({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: metroRequire, CreateGuildModalStates: closure_7 } = CreateGuildConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   growSpacing: { flexGrow: 2, minHeight: nativeDefault.space.PX_24 },
   container: null,
@@ -107,7 +107,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: tmp4.separator, children: null };
         items = [tmp6, tmp14, tmp17];
         obj6.children = items;
-        const tmp24 = options(React4, obj6);
+        const tmp24 = React6(React4, obj6);
         cResult[10] = tmp4.separator;
         cResult[11] = tmp6;
         cResult[12] = tmp14;
@@ -135,7 +135,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = closure_1_8(Text_Text.Text, obj4);
       items[2] = closure_1_8(React4, { style: tmp.innerSeparator });
       obj2.children = items;
-      return options(React4, obj2);
+      return React6(React4, obj2);
     };
 let closure_14 = tmp5;
 ReactCompilerGating = fn(558);
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         color: "text-muted",
                         children: tmp26,
                       };
-                      const tmp31 = closure_8(tmp(5088).Text, obj5);
+                      const tmp31 = closure_8(tmp(5092).Text, obj5);
                       cResult[20] = tmp4.exampleText;
                       cResult[21] = tmp31;
                       let tmp29 = tmp31;
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               accessibilityLabel: tmp52,
                               onPress: tmp8,
                             };
-                            const tmp57 = closure_8(tmp(5379).Button, obj7);
+                            const tmp57 = closure_8(tmp(5384).Button, obj7);
                             cResult[36] = tmp8;
                             cResult[37] = tmp57;
                             let tmp55 = tmp57;
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           disabled: submitting,
                           onPress: onDone,
                         };
-                        const tmp46 = closure_8(tmp(5379).Button, obj11);
+                        const tmp46 = closure_8(tmp(5384).Button, obj11);
                         cResult[30] = onDone;
                         cResult[31] = submitting;
                         cResult[32] = tmp46;
@@ -407,11 +407,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = tmp(1126).intl;
           obj15.children = intl.string(tmp(1126).t.jlfuFW);
-          const items3 = [closure_8(tmp(5088).Text, obj15)];
+          const items3 = [closure_8(tmp(5092).Text, obj15)];
           const obj28 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: null };
           const intl2 = tmp(1126).intl;
           obj28.children = intl2.string(tmp(1126).t.lVvN3A);
-          items3[1] = closure_8(tmp(5088).Text, obj28);
+          items3[1] = closure_8(tmp(5092).Text, obj28);
           obj14.children = items3;
           tmp13 = closure_9(closure_10, obj14);
         }
@@ -456,11 +456,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl = tmp4(1126).intl;
         obj5.children = intl.string(tmp4(1126).t.jlfuFW);
-        const items2 = [closure_8(tmp4(5088).Text, obj5)];
+        const items2 = [closure_8(tmp4(5092).Text, obj5)];
         const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
         const intl2 = tmp4(1126).intl;
         obj6.children = intl2.string(tmp4(1126).t.lVvN3A);
-        items2[1] = closure_8(tmp4(5088).Text, obj6);
+        items2[1] = closure_8(tmp4(5092).Text, obj6);
         obj4.children = items2;
         tmp7Result = closure_9(closure_10, obj4);
       }
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           );
         },
       });
-      items3[2] = closure_8(navigation(5088).Text, obj9);
+      items3[2] = closure_8(navigation(5092).Text, obj9);
       obj7.children = items3;
       const items4 = [closure_9(closure_4, obj7)];
       const obj11 = { children: null };
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj13.loading = submitting;
       obj13.disabled = submitting;
       obj13.onPress = onDone;
-      items5[1] = closure_8(navigation(5379).Button, obj13);
+      items5[1] = closure_8(navigation(5384).Button, obj13);
       items5[2] = closure_8(closure_14, {});
       const obj14 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
       const intl8 = tmp4(1126).intl;
@@ -527,7 +527,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl9 = tmp4(1126).intl;
       obj14.accessibilityLabel = intl9.string(navigation(1126).t["MOqX/G"]);
       obj14.onPress = callback;
-      items5[3] = closure_8(navigation(5379).Button, obj14);
+      items5[3] = closure_8(navigation(5384).Button, obj14);
       obj11.children = items5;
       items4[1] = closure_9(closure_10, obj11);
       obj2.children = items4;

@@ -176,7 +176,7 @@ export default noop.memo(
       }
     : function CheckboxGroupActionComponent(type) {
         type = type.type;
-        options = type.options;
+        const options = type.options;
         const maxValues = type.maxValues;
         let items = [options];
         const memo = maxValues.useMemo(() => {

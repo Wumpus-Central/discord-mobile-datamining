@@ -14,12 +14,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { chat: null, menu: null };
 let tmp3 = new RowGeneratorDefault();
 obj2.chat = { paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
-obj2.menu = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(11810).MESSAGE_CONTENT_INSET, paddingRight: fn(11810).MESSAGE_EDGE_INSET };
+obj2.menu = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(11832).MESSAGE_CONTENT_INSET, paddingRight: fn(11832).MESSAGE_EDGE_INSET };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SampleMessage(record) {
@@ -78,7 +78,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SampleM
   return hasOwnProperty(ChatItemDefault, { rowGenerator, message: record, modifyRow: callback, pointerEvents: "none" });
 });
 ReactCompilerGating = fn(558);
-let obj4 = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(11810).MESSAGE_CONTENT_INSET, paddingRight: fn(11810).MESSAGE_EDGE_INSET };
+let obj4 = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(11832).MESSAGE_CONTENT_INSET, paddingRight: fn(11832).MESSAGE_EDGE_INSET };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanBotPreview.tsx");
 
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl = tmp2(1126).intl;
     obj3.children = intl.string(_modDef3849.sA1lTv);
-    const items1 = [closure_5(tmp2(5088).Text, obj3), ];
+    const items1 = [closure_5(tmp2(5092).Text, obj3), ];
     const obj4 = {
       style: tmp.chat,
       children: items.map((menu) => {
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     };
     items1[1] = closure_5(View, obj4);
     obj2.children = items1;
-    tmp5 = closure_6(tmp2(5377).Stack, obj2);
+    tmp5 = closure_6(tmp2(5382).Stack, obj2);
   }
   return tmp5;
 });

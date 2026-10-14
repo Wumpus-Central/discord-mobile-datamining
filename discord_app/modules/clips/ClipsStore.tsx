@@ -5,7 +5,6 @@ import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
 import clipPOVOverlap from "clipPOVOverlap.tsx";
 import DistributedClipsExperimentDefault from "DistributedClipsExperiment.tsx";
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -238,7 +237,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(7763);
+const ClipsConstants = fn(7769);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire,
   ClipSaveTypes: closure_7,
@@ -252,7 +251,7 @@ const ClipsConstants = fn(7763);
 } = ClipsConstants);
 const Constants = fn(1085);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(5212);
+const StreamSettingsConstants = fn(5216);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -348,18 +347,6 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 prototype["getSettings"] = function getSettings() {
   return obj.clipsSettings;
-};
-prototype["getEnableAutoclipping"] = function getEnableAutoclipping() {
-  enabled = obj.clipsSettings.enableAutoclipping;
-  if (enabled == null) {
-    const AutoclippingDefaultOverrideExperiment =
-      AutoclippingDefaultOverrideExperiment2.AutoclippingDefaultOverrideExperiment;
-    enabled = AutoclippingDefaultOverrideExperiment.getConfig({ location: "getAutoclippingDefault" }).enabled;
-  }
-  return enabled;
-};
-prototype["hasUserSetAutoclippingSettings"] = function hasUserSetAutoclippingSettings() {
-  return null != obj.clipsSettings.enableAutoclipping;
 };
 prototype["getLastClipsSession"] = function getLastClipsSession() {
   return c24;
@@ -637,6 +624,19 @@ let items = [
       clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
     obj.clipsSettings = obj2;
     return obj;
+  },
+  (clipsSettings) => {
+    let tmp = clipsSettings;
+    if (false === clipsSettings.clipsSettings.enableAutoclipping) {
+      obj = {};
+      const merged = Object.assign(clipsSettings);
+      const obj2 = {};
+      const merged1 = Object.assign(clipsSettings.clipsSettings);
+      obj2.clipsEnabled = false;
+      obj.clipsSettings = obj2;
+      tmp = obj;
+    }
+    return tmp;
   },
 ];
 ClipsStoreClass.migrations = items;

@@ -9,7 +9,7 @@ import BigFlagUtils from "../../../../discord_common/js/shared/utils/BigFlagUtil
 
 const require = globalThis.__r;
 
-const AuditLogChange = fn(18343).AuditLogChange;
+const AuditLogChange = fn(18379).AuditLogChange;
 let closure_4 = fn(2069).isGuildSelectableChannelType;
 const hasAnyPermission = fn(2120).hasAnyPermission;
 const Constants = fn(1085);
@@ -229,7 +229,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
       }
       let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
       if (tmp35) {
-        options = id.options;
+        const options = id.options;
         let prop;
         if (options != null) {
           prop = options.auto_moderation_rule_name;
@@ -463,7 +463,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
         }
         let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
         if (tmp35) {
-          options = id.options;
+          const options = id.options;
           let prop;
           if (options != null) {
             prop = options.auto_moderation_rule_name;

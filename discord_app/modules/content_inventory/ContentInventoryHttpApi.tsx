@@ -316,7 +316,7 @@ let closure_9 = async function _postTrackToContentInventory() {
     }
   })();
 };
-const ContentInventoryFeedKey = fn(8470).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8477).ContentInventoryFeedKey;
 const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");

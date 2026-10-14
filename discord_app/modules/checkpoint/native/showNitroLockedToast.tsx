@@ -5,12 +5,12 @@ import ToastUtils from "../../toast/native/ToastUtils.tsx";
 
 require = fn;
 let obj = {};
-obj[fn(5461).CheckpointTrait.FACE] = _modDef3118["4IdR/H"];
-obj[fn(5461).CheckpointTrait.OUTFIT] = _modDef3118.NuujPd;
-obj[fn(5461).CheckpointTrait.HAT] = _modDef3118.o1Zign;
-obj[fn(5461).CheckpointTrait.WEARABLE] = _modDef3118.C0CzoH;
-obj[fn(5461).CheckpointTrait.AURA] = _modDef3118["+9TbTS"];
-obj[fn(5461).CheckpointTrait.SHOES] = _modDef3118.sTG4TS;
+obj[fn(5466).CheckpointTrait.FACE] = _modDef3118["4IdR/H"];
+obj[fn(5466).CheckpointTrait.OUTFIT] = _modDef3118.NuujPd;
+obj[fn(5466).CheckpointTrait.HAT] = _modDef3118.o1Zign;
+obj[fn(5466).CheckpointTrait.WEARABLE] = _modDef3118.C0CzoH;
+obj[fn(5466).CheckpointTrait.AURA] = _modDef3118["+9TbTS"];
+obj[fn(5466).CheckpointTrait.SHOES] = _modDef3118.sTG4TS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/showNitroLockedToast.tsx");
 

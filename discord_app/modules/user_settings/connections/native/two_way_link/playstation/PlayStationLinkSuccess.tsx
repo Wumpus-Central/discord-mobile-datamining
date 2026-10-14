@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import util from "../../../../../../intl/index.native.tsx";
+import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
-import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef13404 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef13443 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_7 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -28,7 +28,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
       const tmp4 = closure_7();
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { uri: _modDef13404 };
+        const obj3 = { uri: _modDef13443 };
         cResult[0] = obj3;
         let first = obj3;
       } else {
@@ -171,7 +171,7 @@ export const PlayStationLinkSuccess = ReactCompilerGating.isReactCompilerEnabled
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       const obj2 = { style: twoWayLinkStyles.container, children: null };
       const obj3 = { style: twoWayLinkStyles.content, children: null };
-      const memo = noop.useMemo(() => ({ uri: _modDef13404 }), []);
+      const memo = noop.useMemo(() => ({ uri: _modDef13443 }), []);
       const items = [hasOwnProperty(FastImageDefault, { source: memo, style: tmp.image }), ,];
       const obj5 = {
         variant: "heading-xl/extrabold",

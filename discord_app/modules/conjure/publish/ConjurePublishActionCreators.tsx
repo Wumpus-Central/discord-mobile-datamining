@@ -1,9 +1,21 @@
 // discord_app/modules/conjure/publish/ConjurePublishActionCreators.tsx
 import ConjureAnalytics from "../shared/ConjureAnalytics.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import UserStore from "../../../stores/UserStore.tsx";
+import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 
 require = fn;
-let closure_5 = async function _unpublishProject(arg0) {
+function unpublishProject() {
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_8 = async function _unpublishProject(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -48,9 +60,9 @@ let closure_5 = async function _unpublishProject(arg0) {
           return obj6;
         } else {
           c5 = 1;
-          const HTTP = closure_131_0(closure_131_2[3]).HTTP;
+          const HTTP = closure_131_0(closure_131_2[5]).HTTP;
           const request = {
-            url: closure_131_4.CONJURE_PROJECT_UNPUBLISH(closure_130_0),
+            url: closure_131_6.CONJURE_PROJECT_UNPUBLISH(closure_130_0),
             body: null,
             rejectWithError: false,
           };
@@ -63,20 +75,20 @@ let closure_5 = async function _unpublishProject(arg0) {
         }
       } else if (2 === tmp8) {
         c5 = 0;
-        const result = closure_131_0(closure_131_2[4]).refreshConjureInstallState(closure_130_0);
+        const result = closure_131_0(closure_131_2[6]).refreshConjureInstallState(closure_130_0);
         throw closure_4;
       } else if (arg0 === 1) {
         c7 = 3;
         throw value;
       } else if (arg0 === 2) {
         c5 = 0;
-        const result1 = closure_131_0(closure_131_2[4]).refreshConjureInstallState(closure_130_0);
+        const result1 = closure_131_0(closure_131_2[6]).refreshConjureInstallState(closure_130_0);
         c7 = 3;
         const obj9 = { value, done: true };
         return obj9;
       } else {
         c5 = 0;
-        const result2 = closure_131_0(closure_131_2[4]).refreshConjureInstallState(closure_130_0);
+        const result2 = closure_131_0(closure_131_2[6]).refreshConjureInstallState(closure_130_0);
         c7 = 3;
         const obj10 = { value, done: true };
         return obj10;
@@ -92,7 +104,43 @@ let closure_5 = async function _unpublishProject(arg0) {
     }
   }
 };
-let closure_6 = async function _refreshPublishedProject(arg0, arg1) {
+let closure_9 = async function _unpublishUserApp() {
+  closure_2 = tmp2;
+  closure_1 = tmp3;
+  closure_129_0 = closure_0;
+  await unpublishProject(closure_0, {}).catch(() => null);
+  closure_129_1 = value;
+  if (closure_129_1 != null) {
+    const ok = closure_129_1.ok;
+  }
+  if (true !== ok) {
+    return false;
+  }
+  const publishStatus = closure_130_5.getPublishStatus(closure_129_0);
+  if (null != publishStatus) {
+    closure_130_1(closure_130_2[7]).dispatch({
+      type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
+      projectId: closure_129_0,
+      published: false,
+      hasUnpublishedChanges: false,
+      surface: publishStatus.surface,
+      previewAppChannels: publishStatus.previewAppChannels,
+    });
+    closure_130_1(closure_130_2[7]);
+  }
+  const currentUser = closure_130_4.getCurrentUser();
+  if (currentUser != null) {
+    const id = currentUser.id;
+  }
+  closure_129_3 = id;
+  if (null != closure_129_3) {
+    const profile = closure_130_0(closure_130_2[8]).fetchProfile(closure_129_3);
+    profile.catch(() => {});
+    closure_130_0(closure_130_2[8]);
+  }
+  return true;
+};
+let closure_10 = async function _refreshPublishedProject(arg0, arg1) {
   closure_0 = arg0;
   let isPreview = arg1;
   c4 = 0;
@@ -147,7 +195,7 @@ let closure_6 = async function _refreshPublishedProject(arg0, arg1) {
           } else {
             c4 = 2;
             c5 = 1;
-            const obj8 = { value: closure_131_0(closure_131_2[4]).getProject(closure_130_0), done: false };
+            const obj8 = { value: closure_131_0(closure_131_2[6]).getProject(closure_130_0), done: false };
             return obj8;
           }
         } else {
@@ -172,17 +220,17 @@ let closure_6 = async function _refreshPublishedProject(arg0, arg1) {
               closure_130_6 = application_id;
               if (null != closure_130_6) {
                 const obj12 = { type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: closure_130_6 };
-                closure_131_1(closure_131_2[5]).dispatch(obj12);
-                const obj9 = closure_131_1(closure_131_2[5]);
+                closure_131_1(closure_131_2[7]).dispatch(obj12);
+                const obj9 = closure_131_1(closure_131_2[7]);
                 c4 = 3;
                 c5 = 1;
-                const obj13 = { value: closure_131_0(closure_131_2[6]).fetchApplication(closure_130_6), done: false };
+                const obj13 = { value: closure_131_0(closure_131_2[9]).fetchApplication(closure_130_6), done: false };
                 return obj13;
               } else {
                 const obj15 = { isPreview: isPreview2 };
-                closure_131_0(closure_131_2[2]).trackConjureDeployed(closure_130_0, obj15);
+                closure_131_0(closure_131_2[4]).trackConjureDeployed(closure_130_0, obj15);
                 c5 = 3;
-                const obj7 = closure_131_0(closure_131_2[2]);
+                const obj7 = closure_131_0(closure_131_2[4]);
               }
             }
           } else if (3 === tmp5) {
@@ -194,7 +242,7 @@ let closure_6 = async function _refreshPublishedProject(arg0, arg1) {
               const obj16 = { value, done: true };
               return obj16;
             } else {
-              const widgetConfigs = closure_131_0(closure_131_2[7]).fetchWidgetConfigs(closure_130_6, { force: true });
+              const widgetConfigs = closure_131_0(closure_131_2[10]).fetchWidgetConfigs(closure_130_6, { force: true });
               c4 = 4;
               c5 = 1;
               const obj17 = {
@@ -211,16 +259,16 @@ let closure_6 = async function _refreshPublishedProject(arg0, arg1) {
             const obj18 = { value, done: true };
             return obj18;
           } else if (!isPreview2) {
-            const result = closure_131_0(closure_131_2[8]).reloadConjureAppFrames(closure_130_6);
-            const obj = closure_131_0(closure_131_2[8]);
+            const result = closure_131_0(closure_131_2[11]).reloadConjureAppFrames(closure_130_6);
+            const obj = closure_131_0(closure_131_2[11]);
           }
           let tmp11 = closure_130_4;
           if (closure_130_4) {
             tmp11 = !closure_130_3;
           }
           if (tmp11) {
-            const result1 = closure_131_0(closure_131_2[9]).reloadAppFramesAfterDeploy(closure_130_6);
-            const obj2 = closure_131_0(closure_131_2[9]);
+            const result1 = closure_131_0(closure_131_2[12]).reloadAppFramesAfterDeploy(closure_130_6);
+            const obj2 = closure_131_0(closure_131_2[12]);
           }
         }
       } catch (tmp50) {
@@ -253,9 +301,10 @@ export const trackPublishFailed = function trackPublishFailed(projectId, message
   obj2.isPreview = isPreview;
   ConjureAnalytics.trackConjureErrored(projectId, obj2);
 };
-export const unpublishProject = function unpublishProject() {
+export { unpublishProject };
+export const unpublishUserApp = function unpublishUserApp() {
   const self = this;
-  const apply = closure_5.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -265,7 +314,7 @@ export const unpublishProject = function unpublishProject() {
 };
 export const refreshPublishedProject = function refreshPublishedProject() {
   const self = this;
-  const apply = closure_6.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -18,7 +18,7 @@ export const defineProtoSetting = function defineProtoSetting(
   arg4,
 ) {
   let getSetting = textAndImages;
-  let f87359 = activityRestrictedGuildIds;
+  let f87518 = activityRestrictedGuildIds;
   dependencyMap = explicitContentFromProto;
   closure_3 = explicitContentToProto;
   let obj = arg4;
@@ -38,12 +38,12 @@ export const defineProtoSetting = function defineProtoSetting(
   getSetting = function getSetting() {
     let tmp3;
     if (UserSettingsProtoStore.settings[getSetting] != null) {
-      tmp3 = tmp2[f87359];
+      tmp3 = tmp2[f87518];
     }
     return explicitContentFromProto(tmp3);
   };
   const obj2 = getSetting(558);
-  f87359 = (favorites) => {
+  f87518 = (favorites) => {
     closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(
       explicitContentFromProto[6],
@@ -51,7 +51,7 @@ export const defineProtoSetting = function defineProtoSetting(
     return PreloadedUserSettingsActionCreators.updateAsync(
       closure_0,
       async (arg0) => {
-        arg0[f87359] = closure_3(closure_0, arg0[f87359]);
+        arg0[f87518] = closure_3(closure_0, arg0[f87518]);
       },
       INFREQUENT_USER_ACTION,
     );
@@ -63,7 +63,7 @@ export const defineProtoSetting = function defineProtoSetting(
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f87365(tmp2);
+      return f87524(tmp2);
     },
     useSetting: getSetting(558).isReactCompilerEnabled()
       ? () => {
@@ -136,7 +136,7 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f87365(tmp2);
+      return f87524(tmp2);
     },
   };
 }
@@ -150,9 +150,9 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
     }
     return setting;
   }
-  const f87365 = (arg0) => {
+  const f87524 = (arg0) => {
     const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: null };
-    const items = [f87365];
+    const items = [f87524];
     obj2.settings = items;
     DispatcherDefault.dispatch(obj2);
     return getSetting.updateSetting(arg0);
@@ -172,7 +172,7 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f87365(tmp2);
+      return f87524(tmp2);
     },
   };
 }

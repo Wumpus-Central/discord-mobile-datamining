@@ -10,11 +10,11 @@ import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, useWindowDimensions: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9313);
+const SearchConstants = fn(9322);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_7, SearchFileTypes: closure_8 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -408,15 +408,15 @@ export default noop.memo(
               obj.children = tmpResult;
               return closure_2_9(scale, obj);
             };
-            return options(SearchMediaImage.SearchAttachmentMediaImage, obj4);
+            return React6(SearchMediaImage.SearchAttachmentMediaImage, obj4);
           } else if (constants.ATTACHMENT === type) {
             const size = { fileName, containerStyle: imageStyle, height: null, width: null };
             ({ height: obj2.height, width: obj2.width } = imageStyle);
-            return options(SearchMediaImage.SearchFileMediaImage, size);
+            return React6(SearchMediaImage.SearchFileMediaImage, size);
           } else if (constants.AUDIO === type) {
             const size1 = { containerStyle: imageStyle, height: null, width: null };
             ({ height: obj.height, width: obj.width } = imageStyle);
-            return options(SearchMediaImage.SearchSoundMediaImage, size1);
+            return React6(SearchMediaImage.SearchSoundMediaImage, size1);
           }
         }, items3);
         const obj3 = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };

@@ -7,7 +7,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const EMOJI_CHAT_SIZE = fn(1085).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 const PlatformUtils = fn(1382);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
@@ -18,7 +18,7 @@ let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: n
 obj3.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj3.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj3.muted = { opacity: fn(11562).MUTED_OPACITY_CONTENT };
+obj3.muted = { opacity: fn(11572).MUTED_OPACITY_CONTENT };
 let closure_6 = createStyles.createLegacyClassComponentStyles(obj3);
 const PureComponent = noop.PureComponent;
 class Spoiler extends PureComponent {
@@ -58,10 +58,16 @@ Spoiler.prototype["render"] = function render() {
       if (!noop.isValidElement(type)) {
         return type;
       } else {
-        if ("Image" === type.type.displayName) {
+        let displayName;
+        if (typeof type.type !== "string") {
+          if ("displayName" in type.type) {
+            displayName = type.type.displayName;
+          }
+        }
+        if ("Image" === displayName) {
           if (!revealed) {
             let obj = { style: placeholder.placeholder };
-            const tmp7 = <React3 style={placeholder.placeholder} />;
+            const tmp8 = <React3 style={placeholder.placeholder} />;
           }
         } else {
           const props = type.props;
@@ -149,7 +155,7 @@ Spoiler.prototype["render"] = function render() {
     return jsx(require("native").LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
 };
-Spoiler.contextType = fn(4827).ThemeContext;
+Spoiler.contextType = fn(4829).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/Spoiler.tsx");
 

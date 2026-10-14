@@ -3,13 +3,13 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef8278 from "../../../../_runtime/metro/08278__.js";
+import _modDef8285 from "../../../../_runtime/metro/08285__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8459);
+const SpotifyConstants = fn(8466);
 ({
   SPOTIFY_APP_PROTOCOL: metroRequire,
   SpotifyEndpoints: closure_7,
@@ -139,7 +139,7 @@ SpotifyTrack.prototype["render"] = function render() {
   const self = this;
   const props = this.props;
   const onPress = props.onPress;
-  return options(native.LegacyText, {
+  return React6(native.LegacyText, {
     onPress() {
       if (onPress != null) {
         tmp();
@@ -190,7 +190,7 @@ prototype["renderLink"] = function renderLink(children, index, arg2) {
   closure_1 = index;
   const onPress = this.props.onPress;
   children = [,];
-  children[0] = options(native.LegacyText, {
+  children[0] = React6(native.LegacyText, {
     onPress() {
       if (onPress != null) {
         tmp();
@@ -211,7 +211,7 @@ prototype["render"] = function render() {
   const self = this;
   const parts = this.props.artists.split("; ");
   closure_0 = parts.length - 1;
-  return options(native.LegacyText, {
+  return React6(native.LegacyText, {
     children: parts.map((item, index) => self.renderLink(item, index, index === closure_0)),
   });
 };
@@ -251,7 +251,7 @@ class SpotifyAlbum extends PureComponent3 {
   }
 }
 SpotifyAlbum.prototype["render"] = function render() {
-  return options(native.LegacyText, {
+  return React6(native.LegacyText, {
     onPress: this.handleOpenSpotifyAlbum,
     suppressHighlighting: true,
     children: this.props.text,
@@ -302,8 +302,8 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: _modDef8278 };
-        const tmp8 = closure_9(tmp(5379).Button.Icon, obj2);
+        let obj2 = { source: _modDef8285 };
+        const tmp8 = closure_9(tmp(5384).Button.Icon, obj2);
         cResult[2] = tmp8;
         let tmp5 = tmp8;
       } else {
@@ -336,7 +336,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp16;
         tmp13 = tmp16;
       }
-      const tmp12 = closure_9(activity(5379).Button, { icon: tmp5, text: tmp9, size: "sm", onPress: tmp4, grow: true });
+      const tmp12 = closure_9(activity(5384).Button, { icon: tmp5, text: tmp9, size: "sm", onPress: tmp4, grow: true });
       cResult[5] = tmp4;
       cResult[6] = tmp9;
       cResult[7] = tmp12;
@@ -347,7 +347,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
       activity = activity.activity;
       let obj = { style: activity.style, children: null };
       let obj2 = {
-        icon: closure_9(activity(5379).Button.Icon, { source: _modDef8278 }),
+        icon: closure_9(activity(5384).Button.Icon, { source: _modDef8285 }),
         text: null,
         size: "sm",
         onPress: null,
@@ -376,7 +376,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
           })
           .catch(() => {});
       };
-      obj.children = closure_9(activity(5379).Button, obj2);
+      obj.children = closure_9(activity(5384).Button, obj2);
       return closure_9(closure_5, obj);
     };
 export { SpotifyTrack };

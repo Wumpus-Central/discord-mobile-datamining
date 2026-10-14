@@ -121,7 +121,7 @@ function keyExtractor(kind, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: {
     flex: 1,
@@ -238,10 +238,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return closure_10.getCustomGuildScore(guildId);
               }
             }
-            const numberToCustomScoreResult = tmp2(8471).numberToCustomScore(stateFromStores1);
+            const numberToCustomScoreResult = tmp2(8478).numberToCustomScore(stateFromStores1);
             cResult[12] = stateFromStores1;
             cResult[13] = numberToCustomScoreResult;
-            const tmp2Result5 = tmp2(8471);
+            const tmp2Result5 = tmp2(8478);
           } else {
             class N {
               constructor() {
@@ -417,7 +417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               let tmp50 = navigation;
-              if (first1 !== navigation(7251).SECTION_INDEX_GUILD_ACTIONS) {
+              if (first1 !== navigation(7257).SECTION_INDEX_GUILD_ACTIONS) {
                 class R {
                   constructor() {
                     return closure_6.getGuild(guildId);
@@ -636,9 +636,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ICYMIStore.getCustomGuildScore(guildId),
       );
       const tmp2Result = navigation(504);
-      const numberToCustomScoreResult = navigation(8471).numberToCustomScore(stateFromStores1);
+      const numberToCustomScoreResult = navigation(8478).numberToCustomScore(stateFromStores1);
       noop = numberToCustomScoreResult;
-      const tmp2Result3 = navigation(8471);
+      const tmp2Result3 = navigation(8478);
       const items3 = [ChannelListStore];
       guildChannels = navigation(504).useStateFromStoresObject(items3, () =>
         ChannelListStore.getGuild(guildId),
@@ -760,6 +760,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.renderItem = callback;
       obj4.data = memo;
       obj4.keyExtractor = keyExtractor;
-      obj3.children = closure_11(navigation(8625).AnimatedFlashList, obj4);
+      obj3.children = closure_11(navigation(6818).AnimatedFlashList, obj4);
       return closure_11(guildChannels, obj3);
     };

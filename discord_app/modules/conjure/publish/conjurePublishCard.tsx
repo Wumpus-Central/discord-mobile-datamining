@@ -42,10 +42,10 @@ export const livePublishCardMessageId = function livePublishCardMessageId(arg0, 
     return null;
   }
 };
-export const showsOutdatedNotice = function showsOutdatedNotice(publish) {
-  let tmp = null != publish && publish.isUpdate && null == publish.disabledReason;
+export const showsOutdatedNotice = function showsOutdatedNotice(isUpdate) {
+  let tmp = null != isUpdate && isUpdate.isUpdate && null == isUpdate.disabledReason;
   if (tmp) {
-    tmp = true !== publish.publishing;
+    tmp = true !== isUpdate.publishing;
   }
   return tmp;
 };

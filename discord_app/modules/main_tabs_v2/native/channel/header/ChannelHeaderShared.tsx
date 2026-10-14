@@ -12,7 +12,7 @@ import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolid
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef13354 from "../../../../../../_runtime/metro/13354__.js";
+import _modDef13393 from "../../../../../../_runtime/metro/13393__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles(() => {
   const obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },
@@ -213,7 +213,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                             const obj2 = { style: tmp5.channelContent, children: null };
                             const items = [tmp16, tmp20];
                             obj2.children = items;
-                            const tmp27 = options(View, obj2);
+                            const tmp27 = React6(View, obj2);
                             cResult[18] = tmp5.channelContent;
                             cResult[19] = tmp16;
                             cResult[20] = tmp20;
@@ -235,7 +235,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj5 = { style: tmp5.nameWithArrow, children: null };
                     const items1 = [tmp6, tmp7, tmp12];
                     obj5.children = items1;
-                    const tmp19 = options(View, obj5);
+                    const tmp19 = React6(View, obj5);
                     cResult[10] = tmp5.nameWithArrow;
                     cResult[11] = tmp6;
                     cResult[12] = tmp7;
@@ -246,7 +246,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp13 = !tmp4;
                   if (!tmp4) {
                     const obj6 = {
-                      source: _modDef13354,
+                      source: _modDef13393,
                       size: native.Icon.Sizes.REFRESH_SMALL_16,
                       style: tmp5.arrowIcon,
                     };
@@ -349,12 +349,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = tmp8;
       let tmp5Result = !disableArrow;
       if (!disableArrow) {
-        const obj6 = { source: _modDef13354, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+        const obj6 = { source: _modDef13393, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
         tmp5Result = tmp5(native.Icon, obj6);
       }
       items[2] = tmp5Result;
       obj2.children = items;
-      const items1 = [options(View, obj2)];
+      const items1 = [React6(View, obj2)];
       let tmp5Result2 = null != subtitle;
       if (tmp5Result2) {
         const obj11 = { style: tmp.subTitleContainer, children: subtitle };
@@ -362,7 +362,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[1] = tmp5Result2;
       obj.children = items1;
-      return options(View, obj);
+      return React6(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
@@ -533,7 +533,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { children: null };
               const items = [tmp5, tmp7];
               obj2.children = items;
-              const tmp13 = options(collapsed, obj2);
+              const tmp13 = React6(collapsed, obj2);
               cResult[8] = tmp5;
               cResult[9] = tmp7;
               cResult[10] = tmp13;
@@ -595,7 +595,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6Result = closure_1_8(Text_Text.Text, obj3);
       }
       children[1] = tmp6Result;
-      return options(collapsed, { children });
+      return React6(collapsed, { children });
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()

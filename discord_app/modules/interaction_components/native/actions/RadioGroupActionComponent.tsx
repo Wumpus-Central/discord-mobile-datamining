@@ -216,7 +216,7 @@ export default noop.memo(
       }
     : function RadioGroupActionComponent(type) {
         type = type.type;
-        options = type.options;
+        const options = type.options;
         const required = type.required;
         ref = ref.useRef(null);
         const items = [options];

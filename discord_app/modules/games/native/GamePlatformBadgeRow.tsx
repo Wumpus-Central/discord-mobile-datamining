@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(12615).GamePlatformAvailability.DESKTOP] = fn(9097).ScreenIcon;
-obj[fn(12615).GamePlatformAvailability.MOBILE] = fn(6642).MobilePhoneIcon;
-obj[fn(12615).GamePlatformAvailability.CONSOLE] = fn(9212).GameControllerIcon;
-const createStyles = fn(5092);
+obj[fn(12651).GamePlatformAvailability.DESKTOP] = fn(9102).ScreenIcon;
+obj[fn(12651).GamePlatformAvailability.MOBILE] = fn(6646).MobilePhoneIcon;
+obj[fn(12651).GamePlatformAvailability.CONSOLE] = fn(9221).GameControllerIcon;
+const createStyles = fn(5096);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -38,14 +38,14 @@ export default noop.memo(
             const fn = function u(item) {
               obj = {
                 size: "xs",
-                color: "icon-subtle",
+                color: "icon-muted",
                 accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item),
               };
               return jsx(
                 obj[item],
                 {
                   size: "xs",
-                  color: "icon-subtle",
+                  color: "icon-muted",
                   accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item),
                 },
                 item,
@@ -91,7 +91,7 @@ export default noop.memo(
         const items = [platforms];
         const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
         const tmp = closure_6();
-        return jsx(platforms(5377).Stack, {
+        return jsx(platforms(5382).Stack, {
           direction: "horizontal",
           align: "center",
           spacing: nativeDefault.space.PX_4,
@@ -99,14 +99,14 @@ export default noop.memo(
           children: memo.map((item) => {
             obj = {
               size: "xs",
-              color: "icon-subtle",
+              color: "icon-muted",
               accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item),
             };
             return jsx(
               obj[item],
               {
                 size: "xs",
-                color: "icon-subtle",
+                color: "icon-muted",
                 accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item),
               },
               item,

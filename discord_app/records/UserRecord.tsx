@@ -436,11 +436,11 @@ prototype["hasHadPremium"] = function hasHadPremium(arg0) {
   const hasPurchasedFlagResult = this.hasPurchasedFlag(collapsed.PREMIUM_TIER_0);
   const hasPurchasedFlagResult1 = this.hasPurchasedFlag(collapsed.PREMIUM_TIER_1);
   const hasPurchasedFlagResult2 = this.hasPurchasedFlag(collapsed.PREMIUM_TIER_2);
-  if (options.TIER_0 === tmp) {
+  if (React6.TIER_0 === tmp) {
     return hasPurchasedFlagResult;
-  } else if (options.TIER_1 === tmp) {
+  } else if (React6.TIER_1 === tmp) {
     return hasPurchasedFlagResult1;
-  } else if (options.TIER_2 === tmp) {
+  } else if (React6.TIER_2 === tmp) {
     return hasPurchasedFlagResult2;
   } else {
     let tmp6 = hasPurchasedFlagResult;
@@ -490,7 +490,7 @@ prototype["isOnReverseTrial"] = function isOnReverseTrial() {
   return isPremiumResult;
 };
 prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, options.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
@@ -502,7 +502,7 @@ prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
   return isPremiumResult;
 };
 prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, options.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let prop;
@@ -515,7 +515,7 @@ prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
 };
 prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFractionalPremiumOnly() {
   const self = this;
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, options.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let prop;
@@ -545,7 +545,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
 };
 prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremiumWithNoStandardSub() {
   const self = this;
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, options.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let premiumSource;
@@ -560,7 +560,7 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
   return isPremiumResult;
 };
 prototype["isFractionalPremium"] = function isFractionalPremium() {
-  let isPremiumResult = PremiumTypeUtils.isPremium(this, options.TIER_2);
+  let isPremiumResult = PremiumTypeUtils.isPremium(this, React6.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;

@@ -2,8 +2,8 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useAccessibilityPressDefault from "../../a11y/native/useAccessibilityPress.tsx";
 import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import AnalyticsIcon from "../../../design/components/Icon/native/redesign/generated/AnalyticsIcon.tsx";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 fn(1085).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 },
   gifImage: null,

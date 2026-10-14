@@ -7,7 +7,7 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05391_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05396_LinearGradient.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
@@ -56,10 +56,10 @@ get_ActivityIndicator = fn(17);
 const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Gradients = fn(7152).Gradients;
+const Gradients = fn(7158).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_17 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -571,13 +571,13 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5378).withSpring, springStandard: fn(5382).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5383).withSpring, springStandard: fn(5387).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = {
   code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}",
 };
 ReactCompilerGating = fn(558);
-let obj3 = { withSpring: fn(5378).withSpring, springStandard: fn(5382).springStandard };
+let obj3 = { withSpring: fn(5383).withSpring, springStandard: fn(5387).springStandard };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 
@@ -746,7 +746,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             voice_guild_id: null,
           };
           const obj = AnalyticsUtilsDefault;
-          obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(options.TIER_2);
+          obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(React6.TIER_2);
           let guildId = RTCConnectionStore.getGuildId();
           if (guildId == null) {
             guildId = null;

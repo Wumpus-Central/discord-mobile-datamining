@@ -1,27 +1,28 @@
 // discord_app/components_native/common/SortableListView.tsx
 import c from "../../../_runtime/00576_c.js";
 import DeprecatedLayoutAnimation from "../../modules/animations/native/DeprecatedLayoutAnimation.tsx";
+import _mod6818 from "../../../discord_common/js/packages/flash-list/index.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({
-  View: c3,
-  Animated: closure_4,
-  Dimensions,
-  PanResponder: hasOwnProperty,
-  FlatList: metroRequire,
-} = get_ActivityIndicator);
+({ View: c3, Animated: closure_4, Dimensions, PanResponder: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let height = Dimensions.get("window").height;
-const collapsed = -5;
-let closure_11 = { x: 0, y: 0 };
-let closure_12 = noop.memo(function Row(current) {
-  ({ hovering, rowData, active, renderActiveDivider, hideContent, renderRow, onPressOut } = current);
-  closure_1 = noop.useRef(current);
-  noop.useRef(null);
-  const ref = noop.useRef(null);
+const React6 = -5;
+let closure_10 = { x: 0, y: 0 };
+let closure_11 = noop.memo(function Row(initialHeight) {
+  let current = initialHeight;
+  ({ hovering, rowData, active } = initialHeight);
+  ({ renderActiveDivider, hideContent, renderRow, onPressOut } = initialHeight);
+  closure_1 = noop.useRef(initialHeight);
+  let ref = noop.useRef(null);
+  initialHeight = initialHeight.initialHeight;
+  if (initialHeight == null) {
+    initialHeight = null;
+  }
+  ref = noop.useRef(initialHeight);
   const effect = noop.useEffect(() => {
     closure_1.current = current;
   });
@@ -69,26 +70,26 @@ let closure_12 = noop.memo(function Row(current) {
   if (active == null) {
     active = false;
   }
-  const obj2 = { onLayout: callback1, ref, children: null };
+  const obj3 = { onLayout: callback1, ref, children: null };
   if (hovering) {
     hovering = renderActiveDivider();
   }
   const items = [hovering];
-  let obj3 = null;
+  let obj4 = null;
   if (hideContent) {
-    obj3 = { height: 0.01, opacity: 0 };
+    obj4 = { height: 0.01, opacity: 0 };
   }
-  items[1] = React5(React3, {
-    style: obj3,
+  items[1] = timestampProducer(React3, {
+    style: obj4,
     children: noop.cloneElement(renderRow(item, index, active), {
       sortHandlers: { onLongPress: callback, onPressOut },
     }),
   });
-  obj2.children = items;
-  return closure_1_8(React3, obj2);
+  obj3.children = items;
+  return React5(React3, obj3);
 });
 const ReactCompilerGating = fn(558);
-let closure_13 = noop.memo(
+let closure_12 = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function SortRow(listPageY) {
         const cResult = c.c(16);
@@ -123,7 +124,7 @@ let closure_13 = noop.memo(
                     return tmp9;
                   }
                   const obj2 = { style: tmp6, children: tmp7 };
-                  const tmp12 = React5(RN.View, obj2);
+                  const tmp12 = timestampProducer(RN.View, obj2);
                   cResult[13] = tmp6;
                   cResult[14] = tmp7;
                   cResult[15] = tmp12;
@@ -186,7 +187,7 @@ let closure_13 = noop.memo(
         ];
         obj.style = items1;
         obj.children = renderRow(rowData.item, rowData.index, true);
-        return React5(RN.View, obj);
+        return timestampProducer(RN.View, obj);
       },
 );
 const Component = noop.Component;
@@ -206,8 +207,8 @@ class SortableListView extends Component {
     tmp21._wrapperRef = closure_2.createRef();
     tmp21._listRef = closure_2.createRef();
     tmp21.scrollContainerHeight = height;
-    obj = { active: null, hovering: false, hoverIndex: c10, pan: null };
-    valueXY = new Animated.ValueXY(closure_11);
+    obj = { active: null, hovering: false, hoverIndex: c9, pan: null };
+    valueXY = new Animated.ValueXY(closure_10);
     obj.pan = valueXY;
     tmp21.state = obj;
     tmp21.renderActive = function renderActive() {
@@ -253,7 +254,7 @@ class SortableListView extends Component {
         }
         obj2.wrapperPageY = num3;
         obj2.renderRow = tmp;
-        return React5(closure_13, obj2);
+        return timestampProducer(closure_12, obj2);
       }
     };
     tmp21.renderActiveDivider = function renderActiveDivider() {
@@ -268,15 +269,15 @@ class SortableListView extends Component {
         const obj = { style: null };
         const obj2 = { height: frameHeight };
         obj.style = obj2;
-        renderActiveDividerResult = React5(React3, obj);
+        renderActiveDividerResult = timestampProducer(React3, obj);
       }
       return renderActiveDividerResult;
     };
     tmp21.handleRowLayout = function handleRowLayout(arg0, arg1) {
       closure_0._updateLayoutMap(arg0, arg1);
     };
-    tmp21.renderItem = function renderItem(item) {
-      ({ index, active } = item);
+    tmp21.renderItem = function renderItem(arg0) {
+      ({ item, index, active } = arg0);
       ({ props, state } = closure_0);
       let tmp = null == active;
       ({ disableSorting, renderRow } = props);
@@ -297,8 +298,9 @@ class SortableListView extends Component {
       }
       const obj3 = {
         index,
-        disabled: disableSorting,
-        active,
+        initialHeight: null,
+        disabled: null,
+        active: null,
         hideContent: null,
         hovering: null,
         onPressOut: null,
@@ -309,10 +311,22 @@ class SortableListView extends Component {
         renderRow: null,
         rowData: null,
       };
-      const active3 = closure_0.state.active;
+      let tmp6;
+      if (tmp) {
+        const active3 = closure_0.state.active;
+        let frameHeight;
+        if (active3 != null) {
+          frameHeight = active3.layout.frameHeight;
+        }
+        tmp6 = frameHeight;
+      }
+      obj3.initialHeight = tmp6;
+      obj3.disabled = disableSorting;
+      obj3.active = active;
+      const active4 = closure_0.state.active;
       let index2;
-      if (active3 != null) {
-        index2 = active3.rowData.index;
+      if (active4 != null) {
+        index2 = active4.rowData.index;
       }
       obj3.hideContent = index2 === index;
       obj3.hovering = hoverIndex === index;
@@ -320,8 +334,9 @@ class SortableListView extends Component {
       obj3.pan = pan;
       obj3.renderActiveDivider = closure_0.renderActiveDivider;
       obj3.renderRow = renderRow;
-      obj3.rowData = closure_0.getMemoedRowData(index, item.item);
-      return React5(closure_12, obj3);
+      obj3.rowData = closure_0.getMemoedRowData(index, item);
+      const props2 = closure_0.props;
+      return timestampProducer(closure_11, obj3, "" + props2.keyExtractor(item, index) + ":" + index);
     };
     tmp21.handleScroll = function handleScroll(nativeEvent) {
       closure_0.scrollValue = nativeEvent.nativeEvent.contentOffset.y;
@@ -503,9 +518,9 @@ class SortableListView extends Component {
       onPanResponderGrant() {
         state.moved = true;
         const pan = state.state.pan;
-        pan.setOffset(closure_11);
+        pan.setOffset(closure_10);
         const pan2 = state.state.pan;
-        pan2.setValue(closure_11);
+        pan2.setValue(closure_10);
         const props = state.props;
         const onMoveStart = props.onMoveStart;
         if (onMoveStart != null) {
@@ -564,25 +579,31 @@ class SortableListView extends Component {
   }
 }
 const prototype = SortableListView.prototype;
+Object.defineProperty(prototype, "scrollResponder", {
+  get: function scrollResponder() {
+    const current = this._listRef.current;
+    let nativeScrollRef;
+    if (current != null) {
+      nativeScrollRef = current.getNativeScrollRef();
+    }
+    return nativeScrollRef;
+  },
+  set: undefined,
+});
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   this._isMounted = true;
   this._delayedInitTimeout = setTimeout(() => {
-    const current = self._listRef.current;
-    let scrollResponder;
+    const current = self._wrapperRef.current;
     if (current != null) {
-      scrollResponder = current.getScrollResponder();
-    }
-    self.scrollResponder = scrollResponder;
-    const current2 = self._wrapperRef.current;
-    if (current2 != null) {
-      current2.measure((frameX, frameY, frameWidth, frameHeight, pageX, pageY) => {
+      current.measure((frameX, frameY, frameWidth, frameHeight, pageX, pageY) => {
         self.wrapperLayout = { frameX, frameY, frameWidth, frameHeight, pageX, pageY };
       });
     }
   }, 1);
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
+  this._isMounted = false;
   clearTimeout(this._delayedInitTimeout);
 };
 prototype["getMemoedRowData"] = function getMemoedRowData(index, item) {
@@ -607,9 +628,17 @@ prototype["render"] = function render() {
   const obj = { ref: this._wrapperRef, style: null, children: null };
   const items = [props.wrapperStyles, { flex: 1 }];
   obj.style = items;
+  ({
+    contentContainerStyle,
+    header,
+    footer,
+    data,
+    keyExtractor,
+    scrollEnabled,
+    keyboardShouldPersistTaps,
+    scrollEventThrottle,
+  } = props);
   const obj3 = {};
-  ({ contentContainerStyle, header, footer, data, scrollEnabled, keyboardShouldPersistTaps, scrollEventThrottle } =
-    props);
   const merged = Object.assign(this._panResponder.panHandlers);
   obj3.ref = this._listRef;
   obj3.keyboardShouldPersistTaps = keyboardShouldPersistTaps;
@@ -618,16 +647,17 @@ prototype["render"] = function render() {
   obj3.ListHeaderComponent = header;
   obj3.ListFooterComponent = footer;
   obj3.data = data;
+  obj3.keyExtractor = keyExtractor;
   ({
     handleScroll: obj2.onScroll,
     handleContentSizeChange: obj2.onContentSizeChange,
     handleLayout: obj2.onLayout,
   } = this);
-  let tmp6 = null == this.state.active;
-  if (tmp6) {
-    tmp6 = false !== scrollEnabled;
+  let tmp5 = null == this.state.active;
+  if (tmp5) {
+    tmp5 = false !== scrollEnabled;
   }
-  obj3.scrollEnabled = tmp6;
+  obj3.scrollEnabled = tmp5;
   obj3.renderItem = self.renderItem;
   const active = self.state.active;
   let index;
@@ -635,9 +665,9 @@ prototype["render"] = function render() {
     index = active.rowData.index;
   }
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
-  const items1 = [React5(timestampProducer, obj3), self.renderActive()];
+  const items1 = [timestampProducer(_mod6818.FlashList, obj3), self.renderActive()];
   obj.children = items1;
-  return closure_1_8(React3, obj);
+  return React5(React3, obj);
 };
 SortableListView.defaultProps = { disableSorting: false };
 let size = fn(2);

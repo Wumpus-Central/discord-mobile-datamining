@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting(
 export default function StringSelectActionComponent(type) {
   _require = type;
   type = type.type;
-  options = type.options;
+  const options = type.options;
   const items = [options];
   const selectPlaceholder = require("InteractionComponentUtils").getSelectPlaceholder(type);
   const memo = componentStateContext.useMemo(() => {
@@ -91,7 +91,7 @@ export default function StringSelectActionComponent(type) {
       allowEmpty: null,
     };
     const combined = "StringSelectComponentActionSheet:" + customId;
-    const tmp = asyncRequireImpl(12173, dependencyMap.paths);
+    const tmp = asyncRequireImpl(12209, dependencyMap.paths);
     obj2.allowEmpty = InteractionComponentUtils.canSelectBeEmpty(selectionActionComponent, "modal");
     obj.openLazy(tmp, combined, obj2);
   };
