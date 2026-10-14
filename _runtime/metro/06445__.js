@@ -1,12 +1,8 @@
 // _runtime/metro/06445__.js
-import ComposedGestureName from "../06394_ComposedGestureName.js";
-import _mod6443 from "06443__.js";
+import _mod6446 from "06446__.js";
+import _mod6448 from "06448__.js";
+import _mod6449 from "06449__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const useSimultaneousGestures = function useSimultaneousGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
-  return _mod6443.useComposedGesture.apply(items1);
-};
+export const useCompetingGestures = _mod6446.useCompetingGestures;
+export const useExclusiveGestures = _mod6448.useExclusiveGestures;
+export const useSimultaneousGestures = _mod6449.useSimultaneousGestures;

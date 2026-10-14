@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "54b1df301be8a48609dd405b7597a135",
-  name: "RobloxNeutralIcon",
+  hash: "d6b6d301228ff846f051730b4a535337",
+  name: "SteamNeutralIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 80,
+  height: 80,
   scales: [2, 3],
-  hash: "dd2bf1474590dee83bbb5fea2b4f182c",
-  name: "CircleCheckIcon-primary",
+  hash: "09576100b2002c71d4fb565492fcbdfb",
+  name: "img_nitro_icon_80px",
   type: "png",
 });

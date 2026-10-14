@@ -1,14 +1,13 @@
 // _runtime/metro/10007__.js
-import repeatedTimeunitPattern from "../09820_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../09827_AbstractParserWithWordBoundaryChecking.js";
-import _mod10008 from "10008__.js";
+import AbstractParserWithWordBoundaryChecking from "../09837_AbstractParserWithWordBoundaryChecking.js";
+import _mod9999 from "09999__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const SVWeekdayParser = require;
+const ENTimeUnitLaterFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,36 +27,34 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:p\u00E5\\s*?)?(?:(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10008.WEEKDAY_DICTIONARY) +
-    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*vecka)?(?=\\W|$)",
+  "(" + _mod9999.TIME_UNITS_PATTERN + ")\\s{0,5}(?:dopo|pi\u00F9 tardi|da adesso|avanti|oltre|a seguire)(?=(?:\\W|$))",
   "i",
 );
-class SVWeekdayParser {
-  constructor() {
+const regExp1 = new RegExp("(" + _mod9999.TIME_UNITS_PATTERN + ")(dopo|pi\u00F9 tardi)(?=(?:\\W|$))", "i");
+class ENTimeUnitLaterFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, SVWeekdayParser);
+    tmp = c2(this, ENTimeUnitLaterFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(SVWeekdayParser);
+    obj = closure_4(ENTimeUnitLaterFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_inherits(SVWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return regExp;
+    return this.strictMode ? regExp1 : regExp;
   },
 };
 const items = [
@@ -65,29 +62,13 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const str3 = str2.toLowerCase();
-      let str4 = "last";
-      if (!str3.match(/förra|senaste/)) {
-        str4 = null;
-        if (str3.match(/nästa|kommande/)) {
-          str4 = "next";
-        }
-      }
-      return SVWeekdayParser(9847).createParsingComponentsAtWeekday(
+      const ParsingComponents = ENTimeUnitLaterFormatParser(9833).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
         reference.reference,
-        SVWeekdayParser(10008).WEEKDAY_DICTIONARY[formatted],
-        str4,
+        ENTimeUnitLaterFormatParser(9999).parseDuration(arg1[1]),
       );
     },
   },
 ];
 
-export default _createClass(SVWeekdayParser, items);
+export default _createClass(ENTimeUnitLaterFormatParser, items);

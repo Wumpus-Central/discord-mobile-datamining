@@ -12,7 +12,7 @@ export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
   const client = _mod724.getClient();
   const isolationScope = _mod724.getIsolationScope();
   if (client) {
-    options = client.getOptions();
+    const options = client.getOptions();
     let beforeBreadcrumb = options.beforeBreadcrumb;
     let tmp5 = null;
     if (undefined !== beforeBreadcrumb) {

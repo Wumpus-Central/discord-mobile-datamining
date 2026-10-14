@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/SunsetIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/ColorWaveIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "9f9f6665c181624b81b98f40c0532d57",
-  name: "SunsetIcon",
+  hash: "c1f01c1cb21b1b0825a7707e0be435be",
+  name: "ColorWaveIcon",
   type: "png",
 });

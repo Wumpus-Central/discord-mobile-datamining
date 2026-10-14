@@ -1,81 +1,45 @@
 // _runtime/metro/07878__.js
-import _mod7828 from "07828__.js";
+import _mod7835 from "07835__.js";
+import get0thIfdOffset from "../07855_get0thIfdOffset.js";
+import IFD_TYPE_0TH from "../07856_IFD_TYPE_0TH.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
 export default {
-  read(byteLength) {
-    let tmp;
-    if (6 <= byteLength.byteLength) {
-      const stringFromDataView = _mod7828.getStringFromDataView(byteLength, 3, 3);
-      const obj2 = { value: stringFromDataView, description: stringFromDataView };
-      tmp = obj2;
-    }
-    const obj3 = {
-      "GIF Version": tmp,
-      "Image Width": null,
-      "Image Height": null,
-      "Global Color Map": null,
-      "Bits Per Pixel": null,
-      "Color Resolution Depth": null,
-    };
-    let tmp5;
-    if (8 <= byteLength.byteLength) {
-      const uint16 = byteLength.getUint16(6, true);
-      const obj4 = { value: uint16, description: null };
-      const _HermesInternal = HermesInternal;
-      obj4.description = "" + uint16 + "px";
-      tmp5 = obj4;
-    }
-    obj3["Image Width"] = tmp5;
-    let tmp8;
-    if (10 <= byteLength.byteLength) {
-      const uint161 = byteLength.getUint16(8, true);
-      const obj5 = { value: uint161, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj5.description = "" + uint161 + "px";
-      tmp8 = obj5;
-    }
-    obj3["Image Height"] = tmp8;
-    let tmp11;
-    if (11 <= byteLength.byteLength) {
-      const tmp12 = (128 & byteLength.getUint8(10)) >>> 7;
-      const obj6 = { value: tmp12, description: null };
-      let str5 = "No";
-      if (1 === tmp12) {
-        str5 = "Yes";
+  read(byteLength, sum, arg2, byteOrder, arg4) {
+    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+    let tmp6 = ifd;
+    if (ifd.ShotInfo) {
+      value = ifd.ShotInfo.value;
+      const obj2 = {};
+      if (undefined !== value[27]) {
+        const obj3 = { value: value[27], description: null };
+        let str = "None";
+        if (0 !== value[27]) {
+          let str2 = "Rotate 90 CW";
+          if (1 !== tmp7) {
+            let str3 = "Rotate 180";
+            if (2 !== tmp7) {
+              let str4 = "Unknown";
+              if (3 === tmp7) {
+                str4 = "Rotate 270 CW";
+              }
+              str3 = str4;
+            }
+            str2 = str3;
+          }
+          str = str2;
+        }
+        obj3.description = str;
+        obj2.AutoRotate = obj3;
       }
-      obj6.description = str5;
-      tmp11 = obj6;
+      const tmp3Result = _mod7835;
+      delete tmp[tmp2];
+      tmp6 = _mod7835.objectAssign({}, ifd, obj2);
+      const objectAssignResult = _mod7835.objectAssign({}, ifd, obj2);
     }
-    obj3["Global Color Map"] = tmp11;
-    let tmp13;
-    if (11 <= byteLength.byteLength) {
-      const sum = 1 + (7 & byteLength.getUint8(10));
-      const obj7 = { value: sum, description: null };
-      let str6 = "bits";
-      if (1 === sum) {
-        str6 = "bit";
-      }
-      const _HermesInternal3 = HermesInternal;
-      obj7.description = "" + sum + " " + str6;
-      tmp13 = obj7;
-    }
-    obj3["Bits Per Pixel"] = tmp13;
-    let tmp16;
-    if (11 <= byteLength.byteLength) {
-      const sum1 = 1 + ((112 & byteLength.getUint8(10)) >>> 4);
-      const obj8 = { value: sum1, description: null };
-      let str9 = "bits";
-      if (1 === sum1) {
-        str9 = "bit";
-      }
-      const _HermesInternal4 = HermesInternal;
-      obj8.description = "" + sum1 + " " + str9;
-      tmp16 = obj8;
-    }
-    obj3["Color Resolution Depth"] = tmp16;
-    return obj3;
+    return tmp6;
   },
+  SHOT_INFO_AUTO_ROTATE: 27,
 };

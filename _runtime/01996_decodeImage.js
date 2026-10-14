@@ -2392,7 +2392,7 @@ let closure_130_7 = function compress(arg0, arg1, arg2, arg3, arg4) {
       }
       num39 = num39 + length7;
     }
-    const tmp163 = options(uint8Array5.buffer, arg3);
+    const tmp163 = React6(uint8Array5.buffer, arg3);
     let num45 = 0;
     if (0 < tmp163.plte.length) {
       do {

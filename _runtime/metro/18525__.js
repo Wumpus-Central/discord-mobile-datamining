@@ -1,13 +1,6 @@
 // _runtime/metro/18525__.js
-import registerAsset from "01132__.js";
+const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 92,
-  height: 53,
-  scales: [2, 3],
-  hash: "4932e4c7d6568b95e72c98ec5bd9e9c7",
-  name: "asset_role_subscription_earnings",
-  type: "png",
-});
+export default function hasUnicodeWord(arg0) {
+  return re0.test(arg0);
+}

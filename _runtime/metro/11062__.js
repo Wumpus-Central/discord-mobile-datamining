@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4f5dc667b92ff05a99d9028260a9bf5b",
-  name: "ImageSparkleIcon",
+  hash: "44d2aa5379438547523c3d419e9ade52",
+  name: "MusicSlashIcon",
   type: "png",
 });

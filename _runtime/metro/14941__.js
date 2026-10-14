@@ -1,4 +1,12 @@
 // _runtime/metro/14941__.js
-import _mod17 from "00017__.js";
+import _mod14936 from "14936__.js";
+import _mod14942 from "14942__.js";
 
-const parsed = parseInt(_mod17.Platform.Version, 10);
+export default (arg0) => {
+  if (_mod14936(arg0)) {
+    return arg0;
+  } else {
+    const tmp6 = new TypeError(_mod14942(arg0) + " is not a function");
+    throw tmp6;
+  }
+};

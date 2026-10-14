@@ -279,7 +279,7 @@ let items = [
       obj4.source = obj5;
       obj4.style = merged6;
       const element2 = createElement2(React5, obj4);
-      return <options style={merged2} onPress={takeScreenshot} accessibilityLabel={merged.triggerAriaLabel}>{element2}<closure_1_8 style={style} testID="sentry-feedback-screenshot-button">{merged.triggerLabel}</closure_1_8></options>;
+      return <React6 style={merged2} onPress={takeScreenshot} accessibilityLabel={merged.triggerAriaLabel}>{element2}<closure_1_8 style={style} testID="sentry-feedback-screenshot-button">{merged.triggerLabel}</closure_1_8></React6>;
     }
   }
 ];

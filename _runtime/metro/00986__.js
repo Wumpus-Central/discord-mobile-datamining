@@ -5,7 +5,7 @@ function processEvent(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg2;
   return fn(this, undefined, undefined, function*() {
-    options = tmp3.getOptions();
+    const options = tmp3.getOptions();
     const extra2 = value.extra;
     if (null !== extra2) {
       if (undefined !== extra2) {

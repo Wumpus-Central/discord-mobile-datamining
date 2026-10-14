@@ -1,67 +1,47 @@
 // _runtime/metro/07808__.js
-import _mod7800 from "07800__.js";
-import _mod7801 from "07801__.js";
+import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "../07809_FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.js";
+import _mod7821 from "07821__.js";
+import _mod7829 from "07829__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const isAVI = function isAVI(fileChunk) {
-  fileChunk = _mod7800.getFileChunk(fileChunk);
-  const FileTypes = _mod7801.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avi");
-};
-export const isFLV = function isFLV(fileChunk) {
-  fileChunk = _mod7800.getFileChunk(fileChunk);
-  const FileTypes = _mod7801.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "flv") && _mod7800.isFlvStringIncluded(fileChunk);
-};
-export const isM4V = function isM4V(fileChunk) {
-  fileChunk = _mod7800.getFileChunk(fileChunk);
-  const FileTypes = _mod7801.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "m4v") && _mod7800.isftypStringIncluded(fileChunk);
-};
-export const isMKV = function isMKV(fileChunk) {
-  fileChunk = _mod7800.getFileChunk(fileChunk, 64);
-  const FileTypes = _mod7801.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === _mod7800.findMatroskaDocTypeElements(fileChunk);
-};
-export const isMOV = function isMOV(fileChunk) {
-  fileChunk = _mod7800.getFileChunk(fileChunk);
-  const FileTypes = _mod7801.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mov");
-};
-export const isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
-  fileChunk = _mod7800.getFileChunk(fileChunk);
-  const FileTypes = _mod7801.FileTypes;
-  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
-  if (!checkByFileTypeResult) {
-    excludeSimilarTypes = undefined;
-    if (null != excludeSimilarTypes) {
-      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
-    }
-    let tmp8 = !excludeSimilarTypes;
-    if (!excludeSimilarTypes) {
-      const fileChunk1 = _mod7800.getFileChunk(fileChunk);
-      const FileTypes2 = _mod7801.FileTypes;
-      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod7800.isftypStringIncluded(fileChunk1);
-      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod7800.isftypStringIncluded(fileChunk1);
-    }
-    checkByFileTypeResult = tmp8;
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
   }
-  return checkByFileTypeResult;
-};
-export const isOGG = function isOGG(fileChunk) {
-  fileChunk = _mod7800.getFileChunk(fileChunk);
-  const FileTypes = _mod7801.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ogg");
-};
-export const isSWF = function isSWF(fileChunk) {
-  fileChunk = _mod7800.getFileChunk(fileChunk);
-  const FileTypes = _mod7801.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "swf");
-};
-export const isWEBM = function isWEBM(fileChunk) {
-  fileChunk = _mod7800.getFileChunk(fileChunk, 64);
-  const FileTypes = _mod7801.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === _mod7800.findMatroskaDocTypeElements(fileChunk);
-};
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
+      }
+    };
+  }
+  const _Object2 = Object;
+  fn(FILE_TYPES_REQUIRED_ADDITIONAL_CHECK, exports);
+  fn(_mod7821, exports);
+  fn(_mod7829, exports);
+} else {
+  let _Object = Object;
+}

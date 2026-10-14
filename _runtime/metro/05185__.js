@@ -1,9 +1,13 @@
 // _runtime/metro/05185__.js
-import shortOut from "../05186_shortOut.js";
-import overRest from "../05190_overRest.js";
-import flatten from "../05192_flatten.js";
+import _process from "../00539__process.js";
+import baseUnary from "../00540_baseUnary.js";
+import baseIsMap from "../05186_baseIsMap.js";
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
+const tmp = _process && _process.isMap;
+if (tmp) {
+  let _module = baseUnary(tmp);
+} else {
+  _module = baseIsMap;
 }
+
+export default _module;

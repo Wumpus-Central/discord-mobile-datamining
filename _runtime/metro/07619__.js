@@ -1,12 +1,14 @@
 // _runtime/metro/07619__.js
-import _modDef7616 from "07616__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7620 from "07620__.js";
+import _modDef7622 from "07622__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeComponentTransfer = arg1;
+const FeBlend = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +27,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeComponentTransfer {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeBlend {
   constructor() {
     self = this;
-    tmp = c2(this, FeComponentTransfer);
-    tmp2 = closure_4;
-    obj = closure_4(FeComponentTransfer);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeBlend);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeBlend);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,18 +49,36 @@ class FeComponentTransfer {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeComponentTransfer, _modDef7616);
+_inherits(FeBlend, _modDef7622);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeComponentTransfer(7593).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(FeBlend(7621).extractFilter(this.props));
+    const obj2 = FeBlend(7621);
+    const merged1 = Object.assign(FeBlend(7621).extractIn(this.props));
+    const obj3 = FeBlend(7621);
+    const merged2 = Object.assign(FeBlend(7621).extractFeBlend(this.props));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeComponentTransfer, items);
-importDefaultResultResult.displayName = "FeComponentTransfer";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.mode = "normal";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

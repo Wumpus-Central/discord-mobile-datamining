@@ -1,13 +1,13 @@
 // _runtime/metro/09845__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractParserWithWordBoundaryChecking from "../09827_AbstractParserWithWordBoundaryChecking.js";
-import now from "../09844_now.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod9829 from "09829__.js";
+import AbstractParserWithWordBoundaryChecking from "../09837_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-let self = this;
+const ENTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,134 +26,51 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const regExp = new RegExp("(" + _mod9829.TIME_UNITS_PATTERN + ")\\s{0,5}(?:ago|before|earlier)(?=\\W|$)", "i");
+const regExp1 = new RegExp("(" + _mod9829.TIME_UNITS_NO_ABBR_PATTERN + ")\\s{0,5}(?:ago|before|earlier)(?=\\W|$)", "i");
+class ENTimeUnitAgoFormatParser {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, ENTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = function c(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_7 = fn(now);
-    const re8 = /(?:this)?\s{0,3}(morning|afternoon|evening|night|midnight|midday|noon)(?=\W|$)/i;
-    class ENCasualTimeParser {
-      constructor() {
-        self = this;
-        tmp = closure_0(this, ENCasualTimeParser);
-        tmp2 = c2;
-        obj = c2(ENCasualTimeParser);
-        tmp3 = closure_1;
-        if (closure_3()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
+}
+_inherits(ENTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.strictMode ? regExp1 : regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = ENTimeUnitAgoFormatParser(9829).parseDuration(arg1[1]);
+      let relativeFromReference = null;
+      if (parseDurationResult) {
+        const ParsingComponents = ENTimeUnitAgoFormatParser(9833).ParsingComponents;
+        relativeFromReference = ParsingComponents.createRelativeFromReference(
+          reference.reference,
+          ENTimeUnitAgoFormatParser(9832).reverseDuration(parseDurationResult),
+        );
       }
-    }
-    _classCallCheck = ENCasualTimeParser;
-    _inherits(ENCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern() {
-        return re8;
-      },
-    };
-    let items = [entry];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(reference, arg1) {
-        const formatted = arg1[1].toLowerCase();
-        if ("afternoon" === formatted) {
-          let afternoonResult = closure_7.afternoon(reference.reference);
-        } else {
-          if ("evening" !== formatted) {
-            if ("night" !== formatted) {
-              if ("midnight" === formatted) {
-                afternoonResult = closure_7.midnight(reference.reference);
-              } else if ("morning" === formatted) {
-                afternoonResult = closure_7.morning(reference.reference);
-              } else if ("noon" === formatted) {
-                afternoonResult = closure_7.noon(reference.reference);
-              } else {
-                afternoonResult = null;
-              }
-            }
-          }
-          afternoonResult = closure_7.evening(reference.reference);
-        }
-        if (afternoonResult) {
-          afternoonResult.addTag("parser/ENCasualTimeParser");
-        }
-        return afternoonResult;
-      },
-    };
-    items[1] = entry1;
-    exports.default = _createClass(ENCasualTimeParser, items);
-  } else {
-    const _Object2 = Object;
-  }
-} else {
-  let _Object = Object;
-}
+      return relativeFromReference;
+    },
+  },
+];
+
+export default _createClass(ENTimeUnitAgoFormatParser, items);

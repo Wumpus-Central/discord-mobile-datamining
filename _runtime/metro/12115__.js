@@ -1,31 +1,42 @@
 // _runtime/metro/12115__.js
+import _mod12042 from "12042__.js";
+import _mod12056 from "12056__.js";
+import _mod12069 from "12069__.js";
 
-export const flatten = function flatten(arr) {
-  const items = [];
-  const item = arr.forEach((arr) => {
-    if (Array.isArray(arr)) {
-      let item = arr.forEach((arr) => {
-        if (Array.isArray(arr)) {
-          let item = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach(() => { ... });
-                } else {
-                  arr = closure_1_0.push(arr);
-                }
-              });
-            } else {
-              arr = closure_1_0.push(arr);
-            }
-          });
-        } else {
-          arr = closure_1_0.push(arr);
-        }
-      });
-    } else {
-      arr = closure_1_0.push(arr);
+require = arg1;
+const dependencyMap = arg6;
+
+export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
+  closure_0 = arg1;
+  const client = _mod12069.getClient();
+  const isolationScope = _mod12069.getIsolationScope();
+  if (client) {
+    const options = client.getOptions();
+    let beforeBreadcrumb = options.beforeBreadcrumb;
+    let tmp5 = null;
+    if (undefined !== beforeBreadcrumb) {
+      tmp5 = beforeBreadcrumb;
     }
-  });
-  return items;
+    beforeBreadcrumb = tmp5;
+    const maxBreadcrumbs = options.maxBreadcrumbs;
+    let num = 100;
+    if (undefined !== maxBreadcrumbs) {
+      num = maxBreadcrumbs;
+    }
+    if (num > 0) {
+      let obj2 = { timestamp: _mod12056.dateTimestampInSeconds() };
+      const merged = Object.assign(arg0);
+      if (tmp5) {
+        obj2 = _mod12042.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = _mod12042;
+      }
+      if (null !== obj2) {
+        if (client.emit) {
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
+        }
+        isolationScope.addBreadcrumb(obj2, num);
+      }
+      const tmpResult = _mod12056;
+    }
+  }
 };

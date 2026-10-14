@@ -1,30 +1,17 @@
 // _runtime/metro/05693__.js
-import _mod1306 from "01306__.js";
-import _mod5694 from "05694__.js";
-import _mod5695 from "05695__.js";
-import _mod5696 from "05696__.js";
+import _mod1330 from "01330__.js";
+import _mod1331 from "01331__.js";
+import _mod1337 from "01337__.js";
+import _mod5685 from "05685__.js";
 
-if (_mod5694) {
-  function setProto(arg0, arg1) {
-    if (_mod5694(arg0, arg1)) {
-      return arg0;
-    } else {
-      const tmp5 = new _mod1306("Reflect.setPrototypeOf: failed to set [[Prototype]]");
-      throw tmp5;
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!_mod1337(num)) {
+      if (_mod5685(num)) {
+        const tmp = _mod1330(num);
+        return _mod1331(tmp) === tmp;
+      }
     }
   }
-} else {
-  setProto = _mod5695;
-  if (!setProto) {
-    let setProto2 = null;
-    if (_mod5696) {
-      setProto2 = function setProto(arg0, arg1) {
-        _mod5696(arg0, arg1);
-        return arg0;
-      };
-    }
-    setProto = setProto2;
-  }
+  return false;
 }
-
-export default setProto;

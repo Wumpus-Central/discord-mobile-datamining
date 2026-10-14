@@ -1,3 +1,8 @@
 // _runtime/metro/14889__.js
+const require = globalThis.__r;
 
-export default false;
+const require = arg1;
+const dependencyMap = arg6;
+
+export const shouldPolyfill = require("14890__.js").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

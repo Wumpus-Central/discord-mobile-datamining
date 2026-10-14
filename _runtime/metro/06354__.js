@@ -1,4 +1,4 @@
 // _runtime/metro/06354__.js
-import noop from "00019__.js";
+import _modDef6355 from "06355__.js";
 
-export default noop.createContext(false);
+export default _modDef6355;

@@ -1,12 +1,11 @@
 // _runtime/metro/09977__.js
-import _mod9976 from "09976__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod9848 from "09848__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UkMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +24,31 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UkMonthNameParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class ESMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, UkMonthNameParser);
-    tmp2 = closure_4;
-    obj = closure_4(UkMonthNameParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, ESMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(ESMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,49 +61,14 @@ class UkMonthNameParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UkMonthNameParser, _mod9976.AbstractParserWithLeftBoundaryChecking);
+_classCallCheck = ESMergeDateRangeRefiner;
+_inherits(ESMergeDateRangeRefiner, fn(_mod9848).default);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "((?:\u0432|\u0443)\\s*)?(" +
-      UkMonthNameParser(9820).matchAnyPattern(UkMonthNameParser(9974).MONTH_DICTIONARY) +
-      ")\\s*(?:[,-]?\\s*(" +
-      UkMonthNameParser(9974).YEAR_PATTERN +
-      ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)"
-    );
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(?:-)\s*$/i;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!UkMonthNameParser(9974).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
-        }
-      }
-      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = UkMonthNameParser(9974).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", UkMonthNameParser(9974).parseYearPattern(index[3]));
-      } else {
-        const start3 = parsingResult.start;
-        start3.imply(
-          "year",
-          UkMonthNameParser(9821).findYearClosestToRef(createParsingResult.reference.instant, 1, tmp9),
-        );
-      }
-      return parsingResult;
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(UkMonthNameParser, items);
+export default _createClass(ESMergeDateRangeRefiner, items);

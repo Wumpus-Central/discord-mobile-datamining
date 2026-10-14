@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/audit_logs",
+  httpServerLocation: "/assets/modules/guild_automod/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ae97c00938ac0e45ca7b6bc5030bdd71",
-  name: "ic_audit_delete_24px",
+  hash: "7508dd06eca0e95324ea1e11c69f1b63",
+  name: "ic_emoji_zipper_24px",
   type: "png",
 });

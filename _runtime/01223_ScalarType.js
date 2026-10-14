@@ -113,7 +113,7 @@ ScalarType.readFieldOptions = function readFieldOptions(fields, arg1, arg2, from
     }
     return tmp2;
   });
-  options = undefined;
+  let options;
   if (null !== found) {
     if (undefined !== found) {
       options = found.options;
@@ -137,7 +137,7 @@ ScalarType.readFieldOption = function readFieldOption(fields, arg1, arg2, fromJs
     }
     return tmp2;
   });
-  options = undefined;
+  let options;
   if (null !== found) {
     if (undefined !== found) {
       options = found.options;

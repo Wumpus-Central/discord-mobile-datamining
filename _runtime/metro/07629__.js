@@ -1,14 +1,12 @@
 // _runtime/metro/07629__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7616 from "07616__.js";
-import _modDef7630 from "07630__.js";
+import _modDef7622 from "07622__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const FeOffset = fn;
+const FeDiffuseLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeOffset {
+class FeDiffuseLighting {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeOffset);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeOffset);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeDiffuseLighting);
+    tmp2 = closure_4;
+    obj = closure_4(FeDiffuseLighting);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,36 +45,18 @@ class FeOffset {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeOffset, _modDef7616);
+_inherits(FeDiffuseLighting, _modDef7622);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const merged = Object.assign(this.props);
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged1 = Object.assign(FeOffset(7615).extractFilter(this.props));
-    const obj2 = FeOffset(7615);
-    const merged2 = Object.assign(FeOffset(7615).extractIn(this.props));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const result = FeDiffuseLighting(7599).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(FeDiffuseLighting, items);
+importDefaultResultResult.displayName = "FeDiffuseLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

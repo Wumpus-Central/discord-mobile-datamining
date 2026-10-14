@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/simple",
-  width: 32,
-  height: 32,
-  scales: [2, 3],
-  hash: "d9ada236b866307c8985fc87fdd51c88",
-  name: "tier_2_32px",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 80,
+  height: 80,
+  scales: [1],
+  hash: "5f9cf938bde196c596c6b50aa389dd8b",
+  name: "img_wumpus_nitro_classic",
   type: "png",
 });

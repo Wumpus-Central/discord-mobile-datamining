@@ -100,7 +100,7 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
       }
       items = [tmp6, closure_0(arg0, tmp)];
       obj.children = items;
-      return options(defaultHiddenStyleDefault, obj, tmp);
+      return React6(defaultHiddenStyleDefault, obj, tmp);
     }, items1);
     closure_0 = tmp3;
     const items2 = [tmp3];

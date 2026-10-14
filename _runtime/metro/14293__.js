@@ -1,21 +1,13 @@
 // _runtime/metro/14293__.js
-import _mod14285 from "14285__.js";
+import registerAsset from "01132__.js";
 
-let c2 = true;
-let c3 = true;
-try {
-  const _String = String;
-  fromCharCode.apply(null, [0]);
-  try {
-    const _String2 = String;
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(1);
-    fromCharCode2.apply(null, uint8Array);
-    const buf8 = new _mod14285.Buf8(256);
-    require = 252;
-  } catch (err) {
-    c3 = false;
-  }
-} catch (err) {
-  c2 = false;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 213.5,
+  height: 19,
+  scales: [2, 3],
+  hash: "5c483e491c3f377ab1cb686f9a6d4d3b",
+  name: "img_subscription_activated_light",
+  type: "png",
+});

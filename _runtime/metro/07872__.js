@@ -1,79 +1,81 @@
 // _runtime/metro/07872__.js
-import _mod7828 from "07828__.js";
-import _modDef7833 from "07833__.js";
-import get0thIfdOffset from "../07848_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../07849_IFD_TYPE_0TH.js";
+let closure_0 = {
+  xmp: "http://ns.adobe.com/xap/1.0/",
+  tiff: "http://ns.adobe.com/tiff/1.0/",
+  exif: "http://ns.adobe.com/exif/1.0/",
+  dc: "http://purl.org/dc/elements/1.1/",
+  xmpMM: "http://ns.adobe.com/xap/1.0/mm/",
+  stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#",
+  stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#",
+  photoshop: "http://ns.adobe.com/photoshop/1.0/",
+};
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-const MODEL_ID = { K3_III: 78420 };
-let obj2 = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
-
-export default {
-  read(byteLength, arg1, arg2, arg3) {
-    const obj = _modDef7833;
-    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
-    const sum = arg1 + arg2;
-    obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
-    let LevelInfo = ifd.PentaxModelID;
-    if (LevelInfo) {
-      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
+export const isMissingNamespaceError = function isMissingNamespaceError(message) {
+  const items = [
+    "prefix is non-null and namespace is null",
+    "prefix not bound to a namespace",
+    "prefix inte bundet till en namnrymd",
+    /Namespace prefix .+ is not defined/,
+  ];
+  let num = 0;
+  if (0 < items.length) {
+    const _RegExp = RegExp;
+    const regExp = new RegExp(items[num]);
+    while (!regExp.test(message.message)) {
+      num = num + 1;
     }
-    if (LevelInfo) {
-      LevelInfo = ifd.LevelInfo;
-    }
-    let tmp10 = ifd;
-    if (LevelInfo) {
-      const sum1 = sum + ifd.LevelInfo.__offset;
-      const obj3 = {};
-      if (sum1 + 7 <= byteLength.byteLength) {
-        const int8 = byteLength.getInt8(sum1 + obj2.CAMERA_ORIENTATION);
-        const obj4 = { value: int8, description: null };
-        let str6 = "Horizontal (normal)";
-        if (0 !== int8) {
-          let str = "Rotate 270 CW";
-          if (1 !== int8) {
-            let str2 = "Rotate 180";
-            if (2 !== int8) {
-              let str3 = "Rotate 90 CW";
-              if (3 !== int8) {
-                let str4 = "Upwards";
-                if (4 !== int8) {
-                  let str5 = "Unknown";
-                  if (5 === int8) {
-                    str5 = "Downwards";
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
-              }
-              str2 = str3;
-            }
-            str = str2;
-          }
-          str6 = str;
+    return true;
+  }
+  return false;
+};
+export const addMissingNamespaces = function addMissingNamespaces(str) {
+  const match = str.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
+  if (match) {
+    const items = [];
+    const obj = /xmlns:([\w-]+)=["'][^"']+["']/g;
+    let match1 = obj.exec(str);
+    if (null !== match1) {
+      do {
+        if (-1 === items.indexOf(match1[1])) {
+          let arr = items.push(match1[1]);
         }
-        obj4.description = str6;
-        obj3.CameraOrientation = obj4;
-        const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef7833.LITTLE_ENDIAN);
-        const obj5 = { value: int16, description: "" + -0.5 * int16 };
-        obj3.RollAngle = obj5;
-        const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef7833.LITTLE_ENDIAN);
-        const obj6 = { value: int161, description: "" + -0.5 * int161 };
-        obj3.PitchAngle = obj6;
-      }
-      const tmp7Result = _mod7828;
-      delete tmp[tmp2];
-      tmp10 = _mod7828.objectAssign({}, ifd, obj3);
-      const objectAssignResult = _mod7828.objectAssign({}, ifd, obj3);
+        match1 = obj.exec(str);
+      } while (null !== match1);
     }
-    return tmp10;
-  },
-  PENTAX_IFD_OFFSET: 10,
-  MODEL_ID,
-  LIK3III: obj2,
+    const items1 = [];
+    const obj2 = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
+    let match2 = obj2.exec(str);
+    if (null !== match2) {
+      do {
+        let tmp8 = match2[1];
+        let tmp9 = "xmlns" !== tmp8 && "xml" !== tmp8;
+        if (tmp9) {
+          if (-1 === items1.indexOf(tmp8)) {
+            let arr2 = items1.push(tmp8);
+          }
+        }
+        match2 = obj2.exec(str);
+      } while (null !== match2);
+    }
+    const found = items1.filter((item) => -1 === items.indexOf(item));
+    let replaced = str;
+    if (0 !== found.length) {
+      const items2 = [];
+      for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
+        let tmp12 = found[num3];
+        let text = closure_0[tmp12];
+        if (!text) {
+          text = `http://fallback.namespace/${tmp12}`;
+        }
+        let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
+      }
+      const _RegExp = RegExp;
+      const joined = items2.join("");
+      const regExp = new RegExp("<" + tmp2 + "([^>]*)>");
+      replaced = str.replace(regExp, `<${tmp2}$1${tmp17}>`);
+    }
+    return replaced;
+  } else {
+    return str;
+  }
 };

@@ -1,0 +1,14 @@
+// _runtime/metro/15021__.js
+import _mod15022 from "15022__.js";
+import get_ActivityIndicator from "00017__.js";
+
+export default function getReactNativeDimensions() {
+  try {
+    const Dimensions = get_ActivityIndicator.Dimensions;
+    try {
+      const Dimensions2 = get_ActivityIndicator.Dimensions;
+      value = Dimensions2.get("window");
+      return _mod15022.getReactNativeDimensionsWithDimensions(tmp2, value);
+    } catch (err) {}
+  } catch (err) {}
+}

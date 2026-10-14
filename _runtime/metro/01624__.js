@@ -6,7 +6,7 @@ import noop from "00019__.js";
 require = arg1;
 
 export const useRoutePath = function useRoutePath() {
-  options = noop.useContext(get_options.LinkingContext).options;
+  const options = noop.useContext(get_options.LinkingContext).options;
   const stateForPath = BaseNavigationContainer.useStateForPath();
   if (undefined === stateForPath) {
     const _Error = Error;

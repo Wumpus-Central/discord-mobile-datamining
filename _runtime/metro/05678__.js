@@ -1,30 +1,17 @@
 // _runtime/metro/05678__.js
+import callBoundIntrinsic from "../01339_callBoundIntrinsic.js";
+import RequireObjectCoercible from "../05665_RequireObjectCoercible.js";
+import ToString from "../05679_ToString.js";
 
-export default function isArguments(callee) {
-  const call = toString.call;
-  const tmp2 = typeof call === "unknown" ? toString() : call(callee);
-  let tmp3 = "[object Arguments]" === tmp2;
-  if (!tmp3) {
-    let tmp4 = "[object Array]" !== tmp2;
-    if (tmp4) {
-      tmp4 = null !== callee;
-    }
-    if (tmp4) {
-      tmp4 = typeof callee === "object";
-    }
-    if (tmp4) {
-      tmp4 = typeof callee.length === "number";
-    }
-    if (tmp4) {
-      tmp4 = callee.length >= 0;
-    }
-    if (!tmp4) {
-      tmp3 = tmp4;
-    } else {
-      const call2 = toString.call;
-      const str2 = "[object Function]";
-      const tmp6 = typeof call2 === "unknown" ? toString() : call2(str2);
-    }
-  }
-  return tmp3;
+let closure_2 = callBoundIntrinsic("String.prototype.replace");
+const isMatch = /^\s$/.test("\u180E");
+let closure_3 = isMatch
+  ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/
+  : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
+let closure_4 = isMatch
+  ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/
+  : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
+
+export default function trim() {
+  return closure_2(closure_2(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
 }

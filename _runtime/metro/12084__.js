@@ -1,31 +1,50 @@
 // _runtime/metro/12084__.js
-import _mod12085 from "12085__.js";
-import setupIntegration from "12062__.js";
+import _mod12042 from "12042__.js";
+import spanTimeInputToSeconds from "../12047_spanTimeInputToSeconds.js";
+import _mod12057 from "12057__.js";
+import _mod12070 from "12070__.js";
 
-export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
-  name: "ModuleMetadata",
-  setup(on) {
-    options = on;
-    on.on("beforeEnvelope", (arg0) => {
-      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        if ("event" === arg1) {
-          const _Array = Array;
-          let tmp3;
-          if (Array.isArray(arg0)) {
-            tmp3 = arg0[1];
-          }
-          if (tmp3) {
-            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-            arg0[1] = tmp3;
-            const obj = options(dependencyMap[2]);
-          }
+require = arg1;
+const dependencyMap = arg6;
+
+export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+  if (activeSpan === undefined) {
+    activeSpan = spanTimeInputToSeconds.getActiveSpan();
+  }
+  let rootSpan = activeSpan;
+  if (activeSpan) {
+    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+  }
+  if (rootSpan) {
+    if (_mod12070.DEBUG_BUILD) {
+      const logger = _mod12042.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
+    }
+    const obj2 = {};
+    obj2[_mod12057.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
+    obj2[_mod12057.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
+    rootSpan.addEvent(arg0, obj2);
+  }
+};
+export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
+  if (arr) {
+    if (0 !== arr.length) {
+      let obj = {};
+      const item = arr.forEach((attributes) => {
+        const tmp = attributes.attributes || {};
+        const tmp2 = tmp[_mod12057.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
+        const tmp3 = tmp[_mod12057.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
+        let tmp4 = typeof tmp2 === "string";
+        if (typeof tmp2 === "string") {
+          tmp4 = typeof tmp3 === "number";
+        }
+        if (tmp4) {
+          obj = { value: tmp3, unit: tmp2 };
+          obj[attributes.name] = obj;
         }
       });
-    });
-    on.on("applyFrameMetadata", (type) => {
-      if (!type.type) {
-        const result = _mod12085.addMetadataToStackFrames(options.getOptions().stackParser, type);
-      }
-    });
-  },
-}));
+      return obj;
+    }
+  }
+};

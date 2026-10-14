@@ -115,12 +115,12 @@ let items = [
       obj4.style = merged6;
       const element = <React5 source={null} style={null} />;
       return (
-        <options style={merged2} onPress={null} accessibilityLabel={null}>
+        <React6 style={merged2} onPress={null} accessibilityLabel={null}>
           {element}
           <closure_1_8 style={style} testID="sentry-feedback-button">
             {merged.triggerLabel}
           </closure_1_8>
-        </options>
+        </React6>
       );
     },
   },

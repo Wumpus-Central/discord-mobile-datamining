@@ -82,7 +82,7 @@ function createProfilePayload(event_id, arg1, resources, type) {
       const obj4 = { locale: str3, model, manufacturer, architecture, is_emulator: false };
       obj.device = obj4;
       const client = _mod693.getClient();
-      options = undefined;
+      let options;
       if (client != null) {
         options = client.getOptions();
       }
@@ -360,7 +360,7 @@ function enrichWithThreadInformation(samples) {
 }
 function applyDebugMetadata(arg0) {
   const client = _mod693.getClient();
-  options = undefined;
+  let options;
   if (client != null) {
     options = client.getOptions();
   }
@@ -531,7 +531,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
     const obj6 = { name: str };
     obj5[StringResult] = obj6;
     obj4.thread_metadata = obj5;
-    options = _client.getOptions();
+    const options = _client.getOptions();
     const getSdkMetadata = _client.getSdkMetadata;
     let sdk;
     if (getSdkMetadata != null) {
@@ -721,7 +721,7 @@ export const shouldProfileSpanLegacy = function shouldProfileSpanLegacy(rootSpan
     let log = require;
     if (rootSpan.isRecording()) {
       const client = log(693).getClient();
-      options = undefined;
+      let options;
       if (client != null) {
         options = client.getOptions();
       }

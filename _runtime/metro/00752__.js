@@ -925,7 +925,7 @@ items[25] = {
     const self = this;
     dependencyMap = integrations;
     closure_0 = arg2;
-    options = this.getOptions();
+    const options = this.getOptions();
     const keys = Object.keys(this._integrations);
     integrations = integrations.integrations;
     let tmp2 = !integrations;
@@ -1031,7 +1031,7 @@ items[27] = {
     const data = arg1;
     let session = arg2;
     const session2 = arg3;
-    options = this.getOptions();
+    const options = this.getOptions();
     const sampleRate = options.sampleRate;
     closure_6 = "transaction" === type.type;
     closure_7 = tmp2;

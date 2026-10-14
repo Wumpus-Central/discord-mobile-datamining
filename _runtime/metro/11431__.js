@@ -1,5 +1,5 @@
 // _runtime/metro/11431__.js
-import _mod11414 from "11414__.js";
+import _mod11424 from "11424__.js";
 
 const self = this;
 let self2 = this;
@@ -56,16 +56,16 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "caracteres", verb: "tener" },
-          file: { unit: "bytes", verb: "tener" },
-          array: { unit: "elementos", verb: "tener" },
-          set: { unit: "elementos", verb: "tener" },
+          string: { unit: "\u062D\u0631\u0641", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" },
+          file: { unit: "\u0628\u0627\u064A\u062A", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" },
+          array: { unit: "\u0639\u0646\u0635\u0631", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" },
+          set: { unit: "\u0639\u0646\u0635\u0631", verb: "\u0623\u0646 \u064A\u062D\u0648\u064A" },
         };
         closure_1 = {
-          regex: "entrada",
-          email: "direcci\u00F3n de correo electr\u00F3nico",
-          url: "URL",
-          emoji: "emoji",
+          regex: "\u0645\u062F\u062E\u0644",
+          email: "\u0628\u0631\u064A\u062F \u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A",
+          url: "\u0631\u0627\u0628\u0637",
+          emoji: "\u0625\u064A\u0645\u0648\u062C\u064A",
           uuid: "UUID",
           uuidv4: "UUIDv4",
           uuidv6: "UUIDv6",
@@ -76,48 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "fecha y hora ISO",
-          date: "fecha ISO",
-          time: "hora ISO",
-          duration: "duraci\u00F3n ISO",
-          ipv4: "direcci\u00F3n IPv4",
-          ipv6: "direcci\u00F3n IPv6",
-          cidrv4: "rango IPv4",
-          cidrv6: "rango IPv6",
-          base64: "cadena codificada en base64",
-          base64url: "URL codificada en base64",
-          json_string: "cadena JSON",
-          e164: "n\u00FAmero E.164",
+          datetime: "\u062A\u0627\u0631\u064A\u062E \u0648\u0648\u0642\u062A \u0628\u0645\u0639\u064A\u0627\u0631 ISO",
+          date: "\u062A\u0627\u0631\u064A\u062E \u0628\u0645\u0639\u064A\u0627\u0631 ISO",
+          time: "\u0648\u0642\u062A \u0628\u0645\u0639\u064A\u0627\u0631 ISO",
+          duration: "\u0645\u062F\u0629 \u0628\u0645\u0639\u064A\u0627\u0631 ISO",
+          ipv4: "\u0639\u0646\u0648\u0627\u0646 IPv4",
+          ipv6: "\u0639\u0646\u0648\u0627\u0646 IPv6",
+          cidrv4: "\u0645\u062F\u0649 \u0639\u0646\u0627\u0648\u064A\u0646 \u0628\u0635\u064A\u063A\u0629 IPv4",
+          cidrv6: "\u0645\u062F\u0649 \u0639\u0646\u0627\u0648\u064A\u0646 \u0628\u0635\u064A\u063A\u0629 IPv6",
+          base64: "\u0646\u064E\u0635 \u0628\u062A\u0631\u0645\u064A\u0632 base64-encoded",
+          base64url: "\u0646\u064E\u0635 \u0628\u062A\u0631\u0645\u064A\u0632 base64url-encoded",
+          json_string: "\u0646\u064E\u0635 \u0639\u0644\u0649 \u0647\u064A\u0626\u0629 JSON",
+          e164: "\u0631\u0642\u0645 \u0647\u0627\u062A\u0641 \u0628\u0645\u0639\u064A\u0627\u0631 E.164",
           jwt: "JWT",
-          template_literal: "entrada",
+          template_literal: "\u0645\u062F\u062E\u0644",
         };
-        closure_2 = {
-          nan: "NaN",
-          string: "texto",
-          number: "n\u00FAmero",
-          boolean: "booleano",
-          array: "arreglo",
-          object: "objeto",
-          set: "conjunto",
-          file: "archivo",
-          date: "fecha",
-          bigint: "n\u00FAmero grande",
-          symbol: "s\u00EDmbolo",
-          undefined: "indefinido",
-          null: "nulo",
-          function: "funci\u00F3n",
-          map: "mapa",
-          record: "registro",
-          tuple: "tupla",
-          enum: "enumeraci\u00F3n",
-          union: "uni\u00F3n",
-          literal: "literal",
-          promise: "promesa",
-          void: "vac\u00EDo",
-          never: "nunca",
-          unknown: "desconocido",
-          any: "cualquiera",
-        };
+        closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -126,137 +100,187 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp56 = closure_2[parsedTypeResult];
-              if (tmp56 == null) {
-                tmp56 = parsedTypeResult;
+              let tmp50 = closure_2[parsedTypeResult];
+              if (tmp50 == null) {
+                tmp50 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Entrada inv\u00E1lida: se esperaba instanceof " + code.expected + ", recibido " + tmp56;
+                let combined =
+                  "\u0645\u062F\u062E\u0644\u0627\u062A \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644\u0629: \u064A\u0641\u062A\u0631\u0636 \u0625\u062F\u062E\u0627\u0644 instanceof " +
+                  code.expected +
+                  "\u060C \u0648\u0644\u0643\u0646 \u062A\u0645 \u0625\u062F\u062E\u0627\u0644 " +
+                  tmp50;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Entrada inv\u00E1lida: se esperaba " + expected + ", recibido " + tmp56;
+                combined =
+                  "\u0645\u062F\u062E\u0644\u0627\u062A \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644\u0629: \u064A\u0641\u062A\u0631\u0636 \u0625\u062F\u062E\u0627\u0644 " +
+                  expected +
+                  "\u060C \u0648\u0644\u0643\u0646 \u062A\u0645 \u0625\u062F\u062E\u0627\u0644 " +
+                  tmp50;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Entrada inv\u00E1lida: se esperaba " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 =
+                  "\u0645\u062F\u062E\u0644\u0627\u062A \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644\u0629: \u064A\u0641\u062A\u0631\u0636 \u0625\u062F\u062E\u0627\u0644 " +
+                  closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "Opci\u00F3n inv\u00E1lida: se esperaba una de " + closure_2.joinValues(code.values, "|");
+                combined1 =
+                  "\u0627\u062E\u062A\u064A\u0627\u0631 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062A\u0648\u0642\u0639 \u0627\u0646\u062A\u0642\u0627\u0621 \u0623\u062D\u062F \u0647\u0630\u0647 \u0627\u0644\u062E\u064A\u0627\u0631\u0627\u062A: " +
+                  closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str27 = "<";
+              let str30 = "<";
               if (code.inclusive) {
-                str27 = "<=";
+                str30 = "<=";
               }
-              let tmp34 = obj2[code.origin];
-              if (tmp34 == null) {
-                tmp34 = null;
+              let tmp29 = obj2[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
               }
-              let str28 = closure_2[code.origin];
-              if (str28 == null) {
-                str28 = code.origin;
-              }
-              if (tmp34) {
-                if (str28 == null) {
-                  str28 = "valor";
+              let str31 = code.origin;
+              if (tmp29) {
+                if (str31 == null) {
+                  str31 = "\u0627\u0644\u0642\u064A\u0645\u0629";
                 }
                 const str1 = code.maximum.toString();
-                let str34 = tmp34.unit;
-                if (str34 == null) {
-                  str34 = "elementos";
+                let str39 = tmp29.unit;
+                if (str39 == null) {
+                  str39 = "\u0639\u0646\u0635\u0631";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Demasiado grande: se esperaba que " + str28 + " tuviera " + str27 + str1 + " " + str34;
+                let combined2 =
+                  " \u0623\u0643\u0628\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0623\u0646 \u062A\u0643\u0648\u0646 " +
+                  str31 +
+                  " " +
+                  str30 +
+                  " " +
+                  str1 +
+                  " " +
+                  str39;
               } else {
-                let str29 = str28;
-                if (str28 == null) {
-                  str29 = "valor";
+                let str32 = str31;
+                if (str31 == null) {
+                  str32 = "\u0627\u0644\u0642\u064A\u0645\u0629";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Demasiado grande: se esperaba que " + str29 + " fuera " + str27 + code.maximum.toString();
+                combined2 =
+                  "\u0623\u0643\u0628\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0623\u0646 \u062A\u0643\u0648\u0646 " +
+                  str32 +
+                  " " +
+                  str30 +
+                  " " +
+                  code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str20 = ">";
+              let str21 = ">";
               if (code.inclusive) {
-                str20 = ">=";
+                str21 = ">=";
               }
-              let tmp21 = obj2[code.origin];
-              if (tmp21 == null) {
-                tmp21 = null;
+              let tmp17 = obj2[code.origin];
+              if (tmp17 == null) {
+                tmp17 = null;
               }
-              let origin3 = closure_2[code.origin];
-              if (origin3 == null) {
-                origin3 = code.origin;
-              }
-              const str48 = code.minimum.toString();
-              if (tmp21) {
+              ({ origin, minimum } = code);
+              const str55 = minimum.toString();
+              if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "Demasiado peque\u00F1o: se esperaba que " + origin3 + " tuviera " + str20 + str48 + " " + tmp21.unit;
+                  "\u0623\u0635\u063A\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0644\u0640 " +
+                  origin +
+                  " \u0623\u0646 \u064A\u0643\u0648\u0646 " +
+                  str21 +
+                  " " +
+                  str55 +
+                  " " +
+                  tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Demasiado peque\u00F1o: se esperaba que " + origin3 + " fuera " + str20 + str48;
+                combined3 =
+                  "\u0623\u0635\u063A\u0631 \u0645\u0646 \u0627\u0644\u0644\u0627\u0632\u0645: \u064A\u0641\u062A\u0631\u0636 \u0644\u0640 " +
+                  origin +
+                  " \u0623\u0646 \u064A\u0643\u0648\u0646 " +
+                  str21 +
+                  " " +
+                  str55;
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = 'Cadena inv\u00E1lida: debe comenzar con "' + code.prefix + '"';
+                let combined4 =
+                  '\u0646\u064E\u0635 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u0628\u062F\u0623 \u0628\u0640 "' +
+                  code.prefix +
+                  '"';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = 'Cadena inv\u00E1lida: debe terminar en "' + code.suffix + '"';
+                combined4 =
+                  '\u0646\u064E\u0635 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u0646\u062A\u0647\u064A \u0628\u0640 "' +
+                  code.suffix +
+                  '"';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = 'Cadena inv\u00E1lida: debe incluir "' + code.includes + '"';
+                combined4 =
+                  '\u0646\u064E\u0635 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u062A\u0636\u0645\u0651\u064E\u0646 "' +
+                  code.includes +
+                  '"';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Cadena inv\u00E1lida: debe coincidir con el patr\u00F3n " + code.pattern;
+                combined4 =
+                  "\u0646\u064E\u0635 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u0637\u0627\u0628\u0642 \u0627\u0644\u0646\u0645\u0637 " +
+                  code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Inv\u00E1lido " + format;
+                combined4 = "" + format + " \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644";
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "N\u00FAmero inv\u00E1lido: debe ser m\u00FAltiplo de " + code.divisor;
+              return (
+                "\u0631\u0642\u0645 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644: \u064A\u062C\u0628 \u0623\u0646 \u064A\u0643\u0648\u0646 \u0645\u0646 \u0645\u0636\u0627\u0639\u0641\u0627\u062A " +
+                code.divisor
+              );
             case "unrecognized_keys":
               let str3 = "";
               let str4 = "";
               if (code.keys.length > 1) {
-                str4 = "s";
+                str4 = "\u0627\u062A";
               }
               if (code.keys.length > 1) {
-                str3 = "s";
+                str3 = "\u0629";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Llave" + str4 + " desconocida" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
+              return (
+                "\u0645\u0639\u0631\u0641" +
+                str4 +
+                " \u063A\u0631\u064A\u0628" +
+                str3 +
+                ": " +
+                closure_2.joinValues(code.keys, "\u060C ")
+              );
             case "invalid_key":
-              let origin2 = closure_2[code.origin];
-              if (origin2 == null) {
-                origin2 = code.origin;
-              }
               const _HermesInternal2 = HermesInternal;
-              return "Llave inv\u00E1lida en " + origin2;
+              return (
+                "\u0645\u0639\u0631\u0641 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644 \u0641\u064A " + code.origin
+              );
             case "invalid_union":
-              return "Entrada inv\u00E1lida";
+              return "\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644";
             case "invalid_element":
-              let origin = closure_2[code.origin];
-              if (origin == null) {
-                origin = code.origin;
-              }
               const _HermesInternal = HermesInternal;
-              return "Valor inv\u00E1lido en " + origin;
+              return (
+                "\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644 \u0641\u064A " + code.origin
+              );
             default:
-              return "Entrada inv\u00E1lida";
+              return "\u0645\u062F\u062E\u0644 \u063A\u064A\u0631 \u0645\u0642\u0628\u0648\u0644";
           }
         };
         return obj;
@@ -264,7 +288,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod11414);
+    let closure_2 = fn(_mod11424);
     function error() {}
     module.exports = exports.default;
   } else {

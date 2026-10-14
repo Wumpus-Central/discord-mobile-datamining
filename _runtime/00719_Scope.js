@@ -137,12 +137,7 @@ let items = [
     key: "setUser",
     value: function setUser(user) {
       if (!user) {
-        user = {
-          email: "exports",
-          id: "WireType",
-          ip_address: "toCharArray$esjava$1",
-          username: "toCharArray$esjava$1",
-        };
+        user = { email: "code", id: "guild", ip_address: "size", username: "Array" };
       }
       const self = this;
       this._user = user;

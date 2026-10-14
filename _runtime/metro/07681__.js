@@ -1,14 +1,17 @@
 // _runtime/metro/07681__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7601 from "07601__.js";
-import _modDef7682 from "07682__.js";
+import appendTransformPropsDefault from "../07591_appendTransformProps.js";
+import extractPropsDefault from "../07598_extractProps.js";
+import extractFontDefault from "../07605_extractFont.js";
+import _modDef7607 from "07607__.js";
+import _modDef7684 from "07684__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Use = fn;
+const Text = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,71 +31,73 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 _possibleConstructorReturnDefault;
+_isNativeReflectConstruct = fn(7682);
 const jsx = fn(21).jsx;
-class Use {
+class Text {
   constructor() {
     self = this;
-    tmp = closure_3(this, Use);
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, Text);
+    items1 = [...items];
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Use);
+    obj = hasOwnProperty(Text);
     tmp3 = closure_4;
     if (closure_7()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      let tmp = matrix;
+      if (matrix) {
+        tmp = !matrix.matrix;
+      }
+      if (tmp) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      const propsAndStylesResult = Text(7598).propsAndStyles(matrix);
+      const obj = Text(7598);
+      const merged = Object.assign(
+        propsAndStylesResult,
+        Text(7599).pickNotNil(extractFontDefault(propsAndStylesResult, true)),
+      );
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(propsAndStylesResult);
+      }
+      const obj2 = Text(7599);
+    };
+    return tmp3Result;
   }
 }
-_inherits(Use, _modDef7601);
+_inherits(Text, _modDef7607);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    let str = props.href;
-    ({ children, x, y, width, height } = props);
-    if (undefined === str) {
-      str = props.xlinkHref;
-    }
-    let match = str;
-    if (str) {
-      match = str.match(Use(7593).idPattern);
-    }
-    let tmp4 = match;
-    if (match) {
-      tmp4 = match[1];
-    }
-    if (!tmp4) {
-      const _console = console;
-      console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
-    }
-    const size = { href: tmp4, x, y, width, height };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged = Object.assign(Use(7592).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = children;
-    return (
-      <tmp7
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const propsAndStylesResult = Text(7598).propsAndStyles(this.props);
+    const obj2 = {};
+    const obj = Text(7598);
+    const merged = Object.assign(propsAndStylesResult);
+    obj2.x = null;
+    obj2.y = null;
+    const tmp2Result = extractPropsDefault(obj2, this);
+    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
+    tmp2Result.ref = this.refMethod;
+    const obj3 = {};
+    const merged2 = Object.assign(tmp2Result);
+    return jsx(_modDef7684, {});
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Use, items);
-importDefaultResultResult.displayName = "Use";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+let items = [entry];
+const importDefaultResultResult = _createClass(Text, items);
+importDefaultResultResult.displayName = "Text";
 
 export default importDefaultResultResult;

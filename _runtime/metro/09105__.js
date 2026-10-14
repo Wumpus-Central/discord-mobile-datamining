@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1d8ebef8a3957ec5bd51e54121ce2c75",
-  name: "GlobeEarthIcon",
+  hash: "36a084fbace40e0af86aab037df7e8b7",
+  name: "PlaystationNeutralIcon",
   type: "png",
 });

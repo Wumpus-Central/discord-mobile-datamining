@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/hub/native/images",
+  width: 200,
+  height: 139.5,
   scales: [2, 3],
-  hash: "9f983315273ecf4164927351f28f2400",
-  name: "ic_premium_overview_24px",
+  hash: "42c68794718ccb3cc57c33bf57ed6d23",
+  name: "hub-header",
   type: "png",
 });

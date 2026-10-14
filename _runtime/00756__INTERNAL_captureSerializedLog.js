@@ -49,7 +49,7 @@ function _INTERNAL_flushLogsBuffer(getOptions, value) {
     items = [];
   }
   if (0 !== items.length) {
-    options = getOptions.getOptions();
+    const options = getOptions.getOptions();
     const obj3 = _mod760;
     ({ _metadata, tunnel } = options);
     const logEnvelope = obj3.createLogEnvelope(items, _metadata, tunnel, getOptions.getDsn());
@@ -84,7 +84,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
     client = _mod724.getClient();
   }
   if (client) {
-    options = client.getOptions();
+    const options = client.getOptions();
     ({ release, environment, enableLogs } = options);
     beforeSendLog = options.beforeSendLog;
     if (tmp11) {

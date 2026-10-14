@@ -1,15 +1,15 @@
 // _runtime/metro/04566__.js
-import _typeof_mod from "04199__.js";
-import requiredArgs_mod from "../04200_requiredArgs.js";
+import module_4382_mod from "04382__.js";
+import requiredArgs_mod from "../04202_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4382 = module_4382_mod;
+if (!module_4382) {
+  const obj = { default: module_4382 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4382;
 }
-_typeof = tmp3;
+module_4382 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isTuesday(arg0) {
+export default function isToday(arg0) {
   requiredArgs.default(1, arguments);
-  return 2 === _typeof.default(arg0).getDay();
+  return module_4382.default(arg0, Date.now());
 };
 export default exports.default;

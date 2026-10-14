@@ -1,13 +1,73 @@
 // _runtime/metro/04816__.js
-import registerAsset from "01132__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "b4d386a6c709f08f81d6e286fdb2ebc4",
-  name: "FriendsIcon",
-  type: "png",
-});
+function identity(arg0) {
+  return arg0;
+}
+function createImpl(arg0) {
+  store = store(4815).createStore(arg0);
+  function useBoundStore(arg0) {
+    let tmp = arg0;
+    closure_0 = store;
+    if (arg0 === undefined) {
+      tmp = identity;
+    }
+    closure_1 = tmp;
+    const syncExternalStore = noop.useSyncExternalStore(
+      store.subscribe,
+      () => closure_1(closure_0.getState()),
+      () => closure_1(closure_0.getInitialState()),
+    );
+    const debugValue = noop.useDebugValue(syncExternalStore);
+    return syncExternalStore;
+  }
+  const merged = Object.assign(useBoundStore, store);
+  return useBoundStore;
+}
+
+export const create = (arg0) => {
+  if (arg0) {
+    if (typeof createImpl === "function") {
+      store = store(4815).createStore(arg0);
+      function useBoundStore(arg0) {
+        let tmp = arg0;
+        closure_0 = store;
+        if (arg0 === undefined) {
+          tmp = identity;
+        }
+        closure_1 = tmp;
+        const syncExternalStore = noop.useSyncExternalStore(
+          store.subscribe,
+          () => closure_1(closure_0.getState()),
+          () => closure_1(closure_0.getInitialState()),
+        );
+        const debugValue = noop.useDebugValue(syncExternalStore);
+        return syncExternalStore;
+      }
+      const _Object = Object;
+      const merged = Object.assign(useBoundStore, store);
+      let tmp2 = useBoundStore;
+      const obj = store(4815);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    tmp2 = createImpl;
+  }
+  return tmp2;
+};
+export const useStore = function useStore(subscribe) {
+  closure_0 = subscribe;
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    tmp = identity;
+  }
+  closure_1 = tmp;
+  const syncExternalStore = noop.useSyncExternalStore(
+    subscribe.subscribe,
+    () => closure_1(closure_0.getState()),
+    () => closure_1(closure_0.getInitialState()),
+  );
+  const debugValue = noop.useDebugValue(syncExternalStore);
+  return syncExternalStore;
+};

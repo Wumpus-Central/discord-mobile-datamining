@@ -21,7 +21,7 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
     name: "ConsoleLogs",
     setup(getOptions) {
       closure_0 = getOptions;
-      options = getOptions.getOptions();
+      const options = getOptions.getOptions();
       const normalizeDepth = options.normalizeDepth;
       const normalizeMaxBreadth = options.normalizeMaxBreadth;
       if (options.enableLogs) {

@@ -40,7 +40,7 @@ export const trpcMiddleware = function trpcMiddleware() {
             closure_130_0 = path;
             ({ next: closure_130_1, rawInput, getRawInput } = closure_0);
             const client = closure_0(724).getClient();
-            options = undefined;
+            let options;
             if (client != null) {
               options = client.getOptions();
             }

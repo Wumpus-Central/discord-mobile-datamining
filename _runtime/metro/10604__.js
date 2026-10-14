@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/badge",
-  width: 30,
-  height: 30,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "581374036ac67fb316291b50b3effd2f",
-  name: "ic_badge_nitro",
+  hash: "b257d44a90a2362cd1a14481bdf7249c",
+  name: "ExperimentalEpicIcon",
   type: "png",
 });

@@ -1,22 +1,30 @@
 // _runtime/metro/05655__.js
-import callBoundIntrinsic from "../01339_callBoundIntrinsic.js";
-import properlyBoxed from "../05656_properlyBoxed.js";
-import _mod5658 from "05658__.js";
-import RequireObjectCoercible from "../05660_RequireObjectCoercible.js";
-import shimArrayPrototypeMap from "../05721_shimArrayPrototypeMap.js";
-import callBind from "../01474_callBind.js";
-import defineProperty from "05675__.js";
+import _mod5656 from "05656__.js";
 
-let closure_2 = callBind.apply(properlyBoxed());
-let closure_3 = callBoundIntrinsic("Array.prototype.slice");
-function map(arg0, arg1) {
-  RequireObjectCoercible(arg0);
-  return closure_2(arg0, closure_3(arguments, 1));
+export default function Type(num) {
+  let str = "Null";
+  if (null !== num) {
+    let str2 = "Undefined";
+    if (undefined !== num) {
+      let str3 = "Object";
+      if (!_mod5656(num)) {
+        let str4 = "Number";
+        if (typeof num !== "number") {
+          let str5 = "Boolean";
+          if (typeof num !== "boolean") {
+            let str6;
+            if (typeof num === "string") {
+              str6 = "String";
+            }
+            str5 = str6;
+          }
+          str4 = str5;
+        }
+        str3 = str4;
+      }
+      str2 = str3;
+    }
+    str = str2;
+  }
+  return str;
 }
-const obj = { getPolyfill: null, implementation: null, shim: null };
-obj.getPolyfill = properlyBoxed;
-obj.implementation = _mod5658;
-obj.shim = shimArrayPrototypeMap;
-defineProperty(map, obj);
-
-export default map;

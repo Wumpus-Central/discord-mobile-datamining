@@ -130,7 +130,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
   const client = _mod693.getClient();
   if (client) {
     ({ attributes, name, transaction, startTime } = arg0);
-    options = client.getOptions();
+    const options = client.getOptions();
     ({ release, environment, sendDefaultPii } = options);
     const integrationByName = client.getIntegrationByName("Replay");
     if (integrationByName != null) {

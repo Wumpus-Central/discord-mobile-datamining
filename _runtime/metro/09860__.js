@@ -1,11 +1,13 @@
 // _runtime/metro/09860__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import Filter from "../09839_Filter.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod9829 from "09829__.js";
+import AbstractParserWithWordBoundaryChecking from "../09837_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,16 +26,23 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class UnlikelyFormatFilter {
-  constructor(arg0) {
+const regExp = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod9829.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+const regExp1 = new RegExp(
+  "(this|last|past|next|after|\\+|-)\\s*(" + _mod9829.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)",
+  "i",
+);
+class ENTimeUnitCasualRelativeFormatParser {
+  constructor() {
+    flag = global;
+    if (global === undefined) {
+      flag = true;
+    }
     self = this;
-    tmp = closure_0(this, UnlikelyFormatFilter);
-    tmp2 = c2;
-    obj = c2(UnlikelyFormatFilter);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
@@ -41,66 +50,41 @@ class UnlikelyFormatFilter {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
+    tmp3Result.allowAbbreviations = flag;
     return tmp3Result;
   }
 }
-_classCallCheck = UnlikelyFormatFilter;
-_inherits(UnlikelyFormatFilter, Filter.Filter);
+_inherits(
+  ENTimeUnitCasualRelativeFormatParser,
+  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
+);
 const entry = {
-  key: "isValid",
-  value: function isValid(debug, text) {
-    if (str2.match(/^\d*(\.\d*)?$/)) {
-      debug.debug(() => {
-        console.log("Removing unlikely result '" + text.text + "'");
-      });
-      let flag = false;
-    } else {
-      const start = text.start;
-      if (start.isValidDate()) {
-        if (text.end) {
-          const end = text.end;
-          if (!end.isValidDate()) {
-            debug.debug(() => {
-              console.log("Removing invalid result: " + text + " (" + text.end + ")");
-            });
-            let flag2 = false;
-          }
-        }
-        const self = this;
-        const strictMode = this.strictMode;
-        let isStrictModeValidResult = !strictMode;
-        if (strictMode) {
-          isStrictModeValidResult = self.isStrictModeValid(debug, text);
-        }
-        flag2 = isStrictModeValidResult;
-      } else {
-        debug.debug(() => {
-          console.log("Removing invalid result: " + text + " (" + text.start + ")");
-        });
-        flag = false;
-      }
-    }
-    return flag;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.allowAbbreviations ? regExp : regExp1;
   },
 };
 const items = [
   entry,
   {
-    key: "isStrictModeValid",
-    value: function isStrictModeValid(debug, start) {
-      start = start.start;
-      const result = start.isOnlyWeekdayComponent();
-      let flag = !result;
-      if (result) {
-        debug.debug(() => {
-          console.log("(Strict) Removing weekday only component: " + start + " (" + start.end + ")");
-        });
-        flag = false;
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(9829).parseDuration(arg1[2]);
+      if (parseDurationResult) {
+        if ("last" !== formatted) {
+          if ("past" !== formatted) {
+            let reverseDurationResult = parseDurationResult;
+          }
+          const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(9833).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+        }
+        reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(9832).reverseDuration(parseDurationResult);
+      } else {
+        return null;
       }
-      return flag;
     },
   },
 ];
 
-export default _createClass(UnlikelyFormatFilter, items);
+export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);

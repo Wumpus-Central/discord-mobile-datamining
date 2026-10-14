@@ -1,12 +1,13 @@
 // _runtime/metro/18486__.js
-import _mod18487 from "18487__.js";
-import capitalize from "../18495_capitalize.js";
+import registerAsset from "01132__.js";
 
-export default _mod18487((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 256,
+  height: 130,
+  scales: [2, 3],
+  hash: "5bbcc6438e9b5eafb60d2e7f478ed717",
+  name: "img_invite_empty_darker",
+  type: "png",
 });

@@ -178,7 +178,7 @@ let items = [
         }
         const self = this;
         if (this._isEnabled()) {
-          options = self.getOptions();
+          const options = self.getOptions();
           const tunnel = options.tunnel;
           const obj5 = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
           ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);

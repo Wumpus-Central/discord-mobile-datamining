@@ -11,8 +11,8 @@ let closure_6 = _classPrivateFieldKey("eventViewTag");
 class NativeEventsManager {
   constructor(arg0, arg1) {
     tmp = c2(this, NativeEventsManager);
-    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "Array" });
-    definePropertyResult1 = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "Array" });
+    definePropertyResult = Object.defineProperty(this, closure_4, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "a" });
     definePropertyResult2 = Object.defineProperty(this, metroRequire, { writable: true, value: -1 });
     closure_3(this, closure_4)[closure_4] = global;
     closure_3(this, hasOwnProperty)[hasOwnProperty] = arg1;

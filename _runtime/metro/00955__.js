@@ -14,7 +14,7 @@ export const linkedErrorsIntegration = registerSpanErrorInstrumentation.defineIn
   return {
     name: "LinkedErrors",
     preprocessEvent(arg0, arg1, getOptions) {
-      options = getOptions.getOptions();
+      const options = getOptions.getOptions();
       const result = registerSpanErrorInstrumentation.applyAggregateErrorsToEvent(
         _mod907.exceptionFromError,
         options.stackParser,

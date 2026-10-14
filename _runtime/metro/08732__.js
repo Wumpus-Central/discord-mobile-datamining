@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
-  height: 24,
+  height: 24.5,
   scales: [2, 3],
-  hash: "a9bda86a153eecbc9eb21d6f5b6433f7",
-  name: "QrCodeIcon",
+  hash: "8baf8e74a5de42544f8c13cd8c4c504d",
+  name: "ic_share_android",
   type: "png",
 });

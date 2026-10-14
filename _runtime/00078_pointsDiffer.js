@@ -1,5 +1,5 @@
 // _runtime/00078_pointsDiffer.js
-let closure_0 = { x: "kind", y: "apply" };
+let closure_0 = { x: "lineClamp", y: "color" };
 
 export default function pointsDiffer(arg0, arg1) {
   let point = arg0;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1cfdcaa3b94766eef2db25157ec0c919",
-  name: "VoiceNormalIcon",
+  hash: "8aacc7898585bec38aca6cf682c01533",
+  name: "FolderIcon",
   type: "png",
 });

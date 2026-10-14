@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/GamingIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/MatteLightIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "27dc2bbcf6aa3b0cbef53a5212edf486",
-  name: "GamingIcon",
+  hash: "766fd7e004517bb3fbea8bf5121a6049",
+  name: "MatteLightIcon",
   type: "png",
 });

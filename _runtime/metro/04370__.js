@@ -1,20 +1,24 @@
 // _runtime/metro/04370__.js
-import _typeof_mod from "04371__.js";
-import _typeof_mod from "04372__.js";
-import requiredArgs_mod from "../04200_requiredArgs.js";
+import module_4205_mod from "04205__.js";
+import module_4350_mod from "04350__.js";
+import requiredArgs_mod from "../04202_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4205 = module_4205_mod;
+if (!module_4205) {
+  const obj = { default: module_4205 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4205;
 }
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+module_4205 = tmp3;
+let module_4350 = module_4350_mod;
+if (!module_4350) {
+  const obj2 = { default: module_4350 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4350;
 }
-_typeof = tmp5;
+module_4350 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -24,11 +28,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function clamp(arg0, arg1) {
-  ({ start, end } = arg1);
+export default function addYears(interval, arg1) {
   requiredArgs.default(2, arguments);
-  const items = [arg0, start];
-  const items1 = [_typeof.default(items), end];
-  return _typeof.default(items1);
+  return module_4350.default(interval, 12 * module_4205.default(arg1));
 };
 export default exports.default;

@@ -1,21 +1,9 @@
 // _runtime/metro/05187__.js
+import baseGetAllKeys from "../00668_baseGetAllKeys.js";
+import _mod5170 from "05170__.js";
+import keysIn from "../05172_keysIn.js";
 
-export default function shortOut(arg0) {
-  closure_0 = arg0;
-  c1 = 0;
-  closure_2 = 0;
-  return () => {
-    const tmp = now();
-    closure_2 = tmp;
-    if (0 < 16 - (tmp - closure_2)) {
-      const sum = c1 + 1;
-      c1 = sum;
-      if (800 <= sum) {
-        return arguments[0];
-      }
-    } else {
-      c1 = 0;
-    }
-    return closure_0(...arguments);
-  };
+export default function getAllKeysIn(arg0) {
+  const tmp = baseGetAllKeys;
+  return tmp(arg0, keysIn, _mod5170);
 }

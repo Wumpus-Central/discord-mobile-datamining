@@ -1,23 +1,17 @@
 // _runtime/metro/12064__.js
-import _mod12020 from "12020__.js";
-import _mod12050 from "12050__.js";
+import _mod12048 from "12048__.js";
 
 require = arg1;
 const dependencyMap = arg6;
+const _sentrySpan = "_sentrySpan";
 
-export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
-  let result = arg2;
-  const items = [{ type: "client_report" }];
-  if (!arg2) {
-    result = _mod12020.dateTimestampInSeconds();
-  }
-  items[1] = { timestamp: result, discarded_events };
-  if (dsn) {
-    const obj3 = { dsn };
-    let obj4 = obj3;
+export const _getSpanForScope = function _getSpanForScope(currentScope) {
+  return currentScope[_sentrySpan];
+};
+export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
+  if (arg1) {
+    const result = _mod12048.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
   } else {
-    obj4 = {};
+    delete tmp2[tmp];
   }
-  const items1 = [items];
-  return _mod12050.createEnvelope(obj4, items1);
 };

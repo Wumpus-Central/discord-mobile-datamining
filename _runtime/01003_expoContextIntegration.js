@@ -77,7 +77,7 @@ export () => {
   return {
     name: "ExpoContext",
     setup(on) {
-      options = on;
+      const options = on;
       on.on("afterInit", () => {
         if (options.getOptions().enableNative) {
           (function setExpoUpdatesNativeContext() {

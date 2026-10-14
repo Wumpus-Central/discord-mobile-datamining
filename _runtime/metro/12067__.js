@@ -1,32 +1,44 @@
 // _runtime/metro/12067__.js
-import _mod12012 from "12012__.js";
-import _mod12050 from "12050__.js";
-import _mod12053 from "12053__.js";
+function merge(arg0, obj) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = 2;
+  }
+  if (obj) {
+    if (typeof obj === "object") {
+      if (num > 0) {
+        if (arg0) {
+          if (obj) {
+            const _Object = Object;
+            if (0 === Object.keys(obj).length) {
+              return arg0;
+            }
+          }
+        }
+        obj = {};
+        const merged = Object.assign(arg0);
+        for (const key10016 in arg1) {
+          let _Object2 = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10016);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10016);
+          }
+          if (!hasOwnPropertyResult) {
+            continue;
+          } else {
+            obj[key10016] = merge(obj[key10016], arg1[key10016], num - 1);
+            continue;
+          }
+          continue;
+        }
+        return obj;
+      }
+    }
+  }
+  return obj;
+}
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
-  const obj = { sent_at: new Date().toISOString() };
-  if (sdk) {
-    sdk = sdk.sdk;
-  }
-  if (sdk) {
-    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
-    obj.sdk = obj2;
-  }
-  let tmp = arg3;
-  if (arg3) {
-    tmp = url;
-  }
-  if (tmp) {
-    obj.dsn = _mod12053.dsnToString(url);
-  }
-  if (contexts) {
-    obj.trace = _mod12012.dropUndefinedKeys(contexts);
-  }
-  const items = [{ type: "check_in" }, arg0];
-  const date = new Date();
-  const items1 = [items];
-  return _mod12050.createEnvelope(obj, items1);
-};
+export { merge };

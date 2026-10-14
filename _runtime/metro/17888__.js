@@ -6,8 +6,8 @@ export default registerAsset.registerAsset({
   httpServerLocation: "/assets/modules/voice_panel/native/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "66b9e24621d91b1d766a73314d18bc9f",
-  name: "xbox",
+  scales: [2, 3, 4],
+  hash: "10d4fca455cecd708fd329431845cd33",
+  name: "deafen",
   type: "png",
 });

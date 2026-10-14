@@ -7,7 +7,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 export const browserProfilingIntegration = registerSpanErrorInstrumentation.defineIntegration(() => ({
   name: "BrowserProfiling",
   setup(getOptions) {
-    options = getOptions.getOptions();
+    const options = getOptions.getOptions();
     uIProfiler = new uIProfiler(976).UIProfiler();
     const obj2 = uIProfiler(977);
     if (!tmp4) {

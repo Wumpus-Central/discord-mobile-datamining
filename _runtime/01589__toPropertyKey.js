@@ -150,7 +150,7 @@ export const useDescriptors = function useDescriptors(state) {
       dependencyMap = tmp;
       const items = [closure_3, ,];
       if (dependencyMap[route.name].options) {
-        options = tmp4.options;
+        const options = tmp4.options;
         const _Boolean = Boolean;
         let found = options.filter(Boolean);
       } else {
@@ -189,7 +189,7 @@ export const useDescriptors = function useDescriptors(state) {
           dependencyMap = navigation;
           const items = [closure_3, ,];
           if (dependencyMap[route.name].options) {
-            options = tmp10.options;
+            const options = tmp10.options;
             const _Boolean = Boolean;
             let found = options.filter(Boolean);
           } else {

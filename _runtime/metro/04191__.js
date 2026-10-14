@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/promotions/third_party/macaron",
   scales: [1],
-  hash: "6f4c73639d8995237de08278d7e1bc4d",
+  hash: "a7545cdfe95ea5258ea978b753aaaa14",
   name: "MacaronPhase1.compiled.messages",
   type: "jsona",
 });

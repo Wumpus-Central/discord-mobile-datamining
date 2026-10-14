@@ -81,7 +81,7 @@ function _createEvent(error) {
   let stackParserResult;
   if (stack) {
     if (client) {
-      options = client.getOptions();
+      const options = client.getOptions();
       stackParserResult = options.stackParser(stack, 0, 1);
     }
   }

@@ -384,12 +384,12 @@ function getHref(createElement, str) {
   const attr = value.setAttribute("href", str2);
   return value.href;
 }
-function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
+function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
   let sum3;
   if (str) {
     str = "src";
-    if ("src" !== value) {
-      if ("xlink:href" === value) {
+    if ("src" !== arg2) {
+      if ("xlink:href" === arg2) {
         if ("#" !== str[0]) {
           let tmp48 = str;
           if (str) {
@@ -418,7 +418,7 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
           return tmp48;
         }
       }
-      if ("background" === value) {
+      if ("background" === arg2) {
         let tmp44 = str;
         if (str) {
           let str31 = "";
@@ -445,7 +445,7 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
         }
         return tmp44;
       }
-      if ("srcset" === value) {
+      if ("srcset" === arg2) {
         let joined = str;
         if ("" !== str.trim()) {
           const match = regex2.exec(str.substring(0));
@@ -489,7 +489,7 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
                     tmp35 = href3;
                   }
                 }
-                arr = items.push(tmp35);
+                let arr = items.push(tmp35);
                 let sum2 = sum;
               } else {
                 let tmp23 = str23;
@@ -555,7 +555,7 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
           joined = items.join(", ");
         }
         return joined;
-      } else if ("style" === value) {
+      } else if ("style" === arg2) {
         let value10 = weakMap.get(createElement);
         if (!value10) {
           const element4 = <a />;
@@ -681,7 +681,7 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
         return tmp16;
       } else {
         if ("object" === arg1) {
-          if ("data" === value) {
+          if ("data" === arg2) {
             let tmp5 = str;
             if (str) {
               let str9 = "";
@@ -712,7 +712,7 @@ function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
         }
         tmp4 = str;
         if (typeof fn === "function") {
-          tmp4 = fn(value, str, arr);
+          tmp4 = fn(arg2, str, arg4);
         }
       }
     }
@@ -3189,7 +3189,7 @@ function initObservers(doc) {
       ({ mousemoveCb: drag, sampling, doc, mirror: fn3 } = doc);
       closure_2 = undefined;
       closure_3 = undefined;
-      let f83993;
+      let f84150;
       items = undefined;
       if (false === sampling.mousemove) {
         return () => {
@@ -3240,7 +3240,7 @@ function initObservers(doc) {
           closure_130_2 = {};
           closure_130_3 = null;
           closure_130_4 = 0;
-          f83993 = function() {
+          f84150 = function() {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
@@ -4538,7 +4538,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F137191 */ function() { ... };
+                            return /* F137422 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4604,7 +4604,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F137191 */ function() { ... };
+                            return /* F137422 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -5441,7 +5441,7 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
       }
       obj.timestamp = 1000 * num;
       const obj2 = { tag: "breadcrumb", payload: null };
-      const normalizer = f137233(map[8]);
+      const normalizer = f137464(map[8]);
       obj2.payload = normalizer.normalize(_null, 10, 1000);
       obj.data = obj2;
       obj.throttledAddEvent(obj);
@@ -6171,7 +6171,7 @@ function mergeWarning(_meta, arg1) {
     _meta._meta = headers;
     return _meta;
   } else {
-    const obj2 = { headers, size: "Array", _meta: null };
+    const obj2 = { headers, size: "Array", _meta: "r" };
     const obj3 = { warnings: null };
     const items1 = [arg1];
     obj3.warnings = items1;
@@ -6610,7 +6610,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                         tmp23._meta = obj11;
                         let obj14 = tmp23;
                       } else {
-                        obj14 = { headers: obj11, size: "Array", _meta: null };
+                        obj14 = { headers: obj11, size: "Array", _meta: "r" };
                         const obj16 = { warnings: null };
                         const items1 = [tmp21];
                         obj16.warnings = items1;
@@ -7388,7 +7388,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                             tmp22._meta = obj9;
                             let obj10 = tmp22;
                           } else {
-                            obj10 = { headers: obj9, size: "Array", _meta: null };
+                            obj10 = { headers: obj9, size: "Array", _meta: "r" };
                             const obj11 = { warnings: null };
                             let items2 = [tmp17];
                             obj11.warnings = items2;
@@ -7406,7 +7406,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                           tmp18._meta = obj12;
                           let obj13 = tmp18;
                         } else {
-                          obj13 = { headers: obj12, size: "Array", _meta: null };
+                          obj13 = { headers: obj12, size: "Array", _meta: "r" };
                           const obj14 = { warnings: null };
                           let items4 = [tmp14];
                           obj14.warnings = items4;
@@ -7501,7 +7501,7 @@ function enrichXhrBreadcrumb(data, xhr) {
 function handleNetworkBreadcrumbs(getOptions) {
   const client = obj2(693).getClient();
   try {
-    options = getOptions.getOptions();
+    const options = getOptions.getOptions();
     obj2 = { replay: getOptions, networkDetailAllowUrls: null, networkDetailDenyUrls: null, networkCaptureBodies: null, networkRequestHeaders: null, networkResponseHeaders: null };
     ({ networkDetailAllowUrls: obj3.networkDetailAllowUrls, networkDetailDenyUrls: obj3.networkDetailDenyUrls, networkCaptureBodies: obj3.networkCaptureBodies, networkRequestHeaders: obj3.networkRequestHeaders, networkResponseHeaders: obj3.networkResponseHeaders } = options);
     if (client) {
@@ -7681,7 +7681,7 @@ function getHandleRecordingEmit(arg0) {
             if (c1) {
               if (recordingMode.session) {
                 if (0 === recordingMode.session.segmentId) {
-                  options = recordingMode.getOptions();
+                  const options = recordingMode.getOptions();
                   const obj2 = { type: obj5.Custom, timestamp: null, data: null };
                   const _Date2 = Date;
                   obj2.timestamp = Date.now();
@@ -7815,7 +7815,7 @@ let closure_170 = async function _prepareReplayEvent(arg0) {
           closure_129_4 = obj4;
           closure_129_0.emit("preprocessEvent", closure_129_3, closure_129_4);
           obj5 = closure_130_0(closure_130_1[8]);
-          options = closure_129_0.getOptions();
+          const options = closure_129_0.getOptions();
           c3 = 2;
           c4 = 1;
           obj7 = { value: obj5.prepareEvent(options, closure_129_3, closure_129_4, closure_129_1, closure_129_0, closure_130_0(closure_130_1[8]).getIsolationScope()), done: false };

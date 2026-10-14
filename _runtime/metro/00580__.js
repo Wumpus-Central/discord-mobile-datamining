@@ -365,14 +365,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = {
-            fired: false,
-            wrapFn: "a",
-            target: -158578164606379070000000000000,
-            type:
-              -5168794690285679000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-            listener: -0.000000000000007111558102665204,
-          };
+          obj = { fired: false, wrapFn: "a", target: 838861187, type: 2030043573, listener: -1006632606 };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -399,14 +392,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = {
-            fired: false,
-            wrapFn: "a",
-            target: -158578164606379070000000000000,
-            type:
-              -5168794690285679000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-            listener: -0.000000000000007111558102665204,
-          };
+          obj = { fired: false, wrapFn: "a", target: 838861187, type: 2030043573, listener: -1006632606 };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

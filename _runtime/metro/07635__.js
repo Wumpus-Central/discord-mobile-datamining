@@ -1,11 +1,14 @@
 // _runtime/metro/07635__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7616 from "07616__.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _modDef7622 from "07622__.js";
+import _modDef7636 from "07636__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
+const FeOffset = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,46 +27,58 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class FeMergeNode {
+const jsx = fn(21).jsx;
+class FeOffset {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_0(this, FeMergeNode);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(FeMergeNode);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
+    tmp = closure_3(this, FeOffset);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeOffset);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = props.props.parent;
-      if (parent) {
-        parent.forceUpdate();
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FeMergeNode;
-_inherits(FeMergeNode, _modDef7616);
+_inherits(FeOffset, _modDef7622);
 const entry = {
   key: "render",
   value: function render() {
-    return null;
+    const self = this;
+    const merged = Object.assign(this.props);
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged1 = Object.assign(FeOffset(7621).extractFilter(this.props));
+    const obj2 = FeOffset(7621);
+    const merged2 = Object.assign(FeOffset(7621).extractIn(this.props));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(FeMergeNode, items);
-importDefaultResultResult.displayName = "FeMergeNode";
+const items = [entry];
+const importDefaultResultResult = _createClass(FeOffset, items);
+importDefaultResultResult.displayName = "FeOffset";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.dx = 0;
+obj.dy = 0;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

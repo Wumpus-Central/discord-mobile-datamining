@@ -1,20 +1,25 @@
 // _runtime/metro/14900__.js
-import _mod14872 from "14872__.js";
-import _mod14898 from "14898__.js";
+const require = globalThis.__r;
 
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod14872[arg0];
-    let tmp8;
-    if (_mod14898(tmp7)) {
-      tmp8 = tmp7;
-    }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = _mod14872[arg0];
-    if (tmp3) {
-      tmp3 = _mod14872[arg0][arg1];
-    }
-  }
-  return tmp3;
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
+  _require = locale;
+  const timezones = require("14901__.js").timezones;
+  return timezones.filter((item) =>
+    (function isSupported(timeZone, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const obj = { timeZone };
+        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
+        return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
+      } catch (err) {
+        return false;
+      }
+    })(item, closure_0),
+  );
 };

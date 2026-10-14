@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "cc6b65382ac11a7c39e085140d379e5a",
-  name: "messenger",
+  hash: "811fb35960f597c4ee3417f16bd2f9e6",
+  name: "messages",
   type: "png",
 });

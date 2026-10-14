@@ -1,26 +1,19 @@
 // _runtime/metro/07840__.js
-import findOffsets from "../07837_findOffsets.js";
-
-require = arg1;
-const dependencyMap = arg6;
+let c0 = 18761;
+let c1 = 19789;
 
 export default {
-  isAvifFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          parseBoxResult = "avif" === parseBoxResult.majorBrand;
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
+  BIG_ENDIAN: 19789,
+  LITTLE_ENDIAN: 18761,
+  getByteOrder(getUint16, c5) {
+    if (getUint16.getUint16(c5) === c0) {
+      return c0;
+    } else if (getUint16.getUint16(c5) === c1) {
+      return c1;
     } else {
-      return false;
+      const _Error = Error;
+      const error = new Error("Illegal byte order value. Faulty image.");
+      throw error;
     }
-  },
-  findAvifOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
   },
 };

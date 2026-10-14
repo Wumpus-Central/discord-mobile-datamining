@@ -133,7 +133,7 @@ export const reactNavigationIntegration = () => {
       beforeStartSpan = reactNativeTracingIntegration.options.beforeStartSpan;
     }
     if (beforeStartSpan) {
-      options = reactNativeTracingIntegration.options;
+      const options = reactNativeTracingIntegration.options;
       let beforeStartSpanResult = options.beforeStartSpan(num(flag[0]).getDefaultIdleNavigationSpanOptions());
       const obj4 = num(flag[0]);
     } else {

@@ -1,11 +1,4 @@
 // _runtime/metro/08435__.js
-import emptyFunction from "04947__.js";
+import _modDef8436 from "08436__.js";
 
-const rect = {
-  top: emptyFunction.number,
-  left: emptyFunction.number,
-  bottom: emptyFunction.number,
-  right: emptyFunction.number,
-};
-
-export default emptyFunction.shape(rect);
+export default _modDef8436({ contain: null, cover: null, stretch: null });

@@ -15,7 +15,7 @@ export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => 
   return {
     name: "LinkedErrors",
     preprocessEvent(exception, originalException, getOptions) {
-      options = getOptions.getOptions();
+      const options = getOptions.getOptions();
       const result = aggregateExceptionsFromError.applyAggregateErrorsToEvent(
         exceptionFromError.exceptionFromError,
         options.stackParser,

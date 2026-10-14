@@ -53,7 +53,7 @@ let closure_4 = async function _lazyLoadIntegration(arg0) {
               const client = closure_1_0(dependencyMap[2]).getClient();
               let str;
               if (client != null) {
-                options = client.getOptions();
+                const options = client.getOptions();
                 if (options != null) {
                   str = options.cdnBaseUrl;
                 }
@@ -103,7 +103,7 @@ let closure_4 = async function _lazyLoadIntegration(arg0) {
               const client = closure_1_0(dependencyMap[2]).getClient();
               let str;
               if (client != null) {
-                options = client.getOptions();
+                const options = client.getOptions();
                 if (options != null) {
                   str = options.cdnBaseUrl;
                 }

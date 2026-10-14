@@ -1,17 +1,16 @@
 // _runtime/metro/04619__.js
-import module_4203_mod from "04203__.js";
-import _typeof_mod from "04199__.js";
-import module_4471_mod from "04471__.js";
-import requiredArgs_mod from "../04200_requiredArgs.js";
+import module_4205_mod from "04205__.js";
+import _typeof_mod from "04201__.js";
+import requiredArgs_mod from "../04202_requiredArgs.js";
 
-let module_4203 = module_4203_mod;
-if (!module_4203) {
-  const obj = { default: module_4203 };
+let module_4205 = module_4205_mod;
+if (!module_4205) {
+  const obj = { default: module_4205 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4203;
+  tmp3 = module_4205;
 }
-module_4203 = tmp3;
+module_4205 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -20,28 +19,19 @@ if (!_typeof) {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
-let module_4471 = module_4471_mod;
-if (!module_4471) {
-  const obj3 = { default: module_4471 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4471;
-}
-module_4471 = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp7;
 
-export default function setISOWeek(arg0, arg1) {
+export default function setHours(module_4205, uTCMinutes) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4471.default(defaultResult1) - module_4203.default(arg1);
-  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
+  const defaultResult1 = _typeof.default(module_4205);
+  defaultResult1.setHours(module_4205.default(uTCMinutes));
   return defaultResult1;
 };
 export default exports.default;

@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native",
+  width: 195,
+  height: 92,
   scales: [1, 2, 3],
-  hash: "98e013109b389eb9fdfad5277cb35b88",
-  name: "ic_moderator",
+  hash: "6d3bdfffed77899f44fd075e4ef2e92a",
+  name: "krisp_logo_dark",
   type: "png",
 });

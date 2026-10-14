@@ -1,21 +1,13 @@
 // _runtime/metro/12025__.js
-import _mod12024 from "12024__.js";
-import _mod12026 from "12026__.js";
+import registerAsset from "01132__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
-  const sentryCarrier = _mod12024.getSentryCarrier(mainCarrier);
-  if (sentryCarrier.acs) {
-    let acs = sentryCarrier.acs;
-  } else {
-    acs = _mod12026.getStackAsyncContextStrategy();
-    const tmpResult = _mod12026;
-  }
-  return acs;
-};
-export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
-  const mainCarrier = _mod12024.getMainCarrier();
-  _mod12024.getSentryCarrier(mainCarrier).acs = acs;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "01cd25a11a733a16463d72c98cca83b7",
+  name: "CloudIcon",
+  type: "png",
+});

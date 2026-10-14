@@ -1,13 +1,66 @@
 // _runtime/metro/12160__.js
-import registerAsset from "01132__.js";
+import stackParserFromStackParserOptions from "../12045_stackParserFromStackParserOptions.js";
+import _mod12048 from "12048__.js";
+import _mod12158 from "12158__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 50,
-  height: 50,
-  scales: [2, 3],
-  hash: "9fa4b907ff6d9b977fcf6802f2937622",
-  name: "img_poop_dark",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
+  let replaced;
+  if (str) {
+    replaced = str.replace(/^file:\/\//, "");
+  }
+  let sum;
+  if (location.location.columnNumber) {
+    sum = location.location.columnNumber + 1;
+  }
+  let sum1;
+  if (location.location.lineNumber) {
+    sum1 = location.location.lineNumber + 1;
+  }
+  const obj2 = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
+  const obj = _mod12048;
+  obj2.function = location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
+  obj2.colno = sum;
+  obj2.lineno = sum1;
+  let filenameIsInAppResult;
+  if (replaced) {
+    filenameIsInAppResult = _mod12158.filenameIsInApp(replaced);
+    const tmp4Result = _mod12158;
+  }
+  obj2.in_app = filenameIsInAppResult;
+  return obj.dropUndefinedKeys(obj2);
+};
+export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
+  closure_0 = arg1;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  const navigation = fn();
+  c4 = false;
+  closure_5 = true;
+  const timerId = setInterval(() => {
+    const timeMs = navigation.getTimeMs();
+    let tmp2 = false === c4;
+    if (tmp2) {
+      tmp2 = timeMs > closure_0 + closure_1;
+    }
+    if (tmp2) {
+      c4 = true;
+      if (closure_5) {
+        closure_2();
+      }
+    }
+    if (timeMs < closure_0 + closure_1) {
+      c4 = false;
+    }
+  }, 20);
+  return {
+    poll() {
+      navigation.reset();
+    },
+    enabled(arg0) {
+      closure_5 = arg0;
+    },
+  };
+};

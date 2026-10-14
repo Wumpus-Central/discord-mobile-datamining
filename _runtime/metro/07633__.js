@@ -1,6 +1,6 @@
 // _runtime/metro/07633__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7616 from "07616__.js";
+import _modDef7622 from "07622__.js";
 import _modDef7634 from "07634__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeMerge = fn;
+const FeGaussianBlur = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeMerge {
+class FeGaussianBlur {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeMerge);
+    tmp = closure_3(this, FeGaussianBlur);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeMerge);
+    obj = hasOwnProperty(FeGaussianBlur);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,7 +49,7 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeMerge, _modDef7616);
+_inherits(FeGaussianBlur, _modDef7622);
 const entry = {
   key: "render",
   value: function render() {
@@ -59,9 +59,11 @@ const entry = {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(FeMerge(7615).extractFilter(this.props));
-    const obj2 = FeMerge(7615);
-    const merged1 = Object.assign(FeMerge(7615).extractFeMerge(this.props, this));
+    const merged = Object.assign(FeGaussianBlur(7621).extractFilter(this.props));
+    const obj2 = FeGaussianBlur(7621);
+    const merged1 = Object.assign(FeGaussianBlur(7621).extractIn(this.props));
+    const obj3 = FeGaussianBlur(7621);
+    const merged2 = Object.assign(FeGaussianBlur(7621).extractFeGaussianBlur(this.props));
     return (
       <tmp
         ref={function ref(arg0) {
@@ -72,9 +74,12 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
+const importDefaultResultResult = _createClass(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
+let obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

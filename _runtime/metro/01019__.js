@@ -64,7 +64,7 @@ export const createReduxEnhancer = function createReduxEnhancer(arg0) {
         const stateTransformerResult = closure_0.stateTransformer(tmp);
         if (null != stateTransformerResult) {
           const client = closure_0(dependencyMap[0]).getClient();
-          options = undefined;
+          let options;
           if (client != null) {
             options = client.getOptions();
           }
@@ -111,7 +111,7 @@ export const createReduxEnhancer = function createReduxEnhancer(arg0) {
               const stateTransformerResult = closure_0.stateTransformer(tmp);
               if (null != stateTransformerResult) {
                 const client = closure_0(dependencyMap[0]).getClient();
-                options = undefined;
+                let options;
                 if (client != null) {
                   options = client.getOptions();
                 }
