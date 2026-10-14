@@ -1,10 +1,10 @@
-// === Module 13331: StampXIcon ===
+// === Module 13370: StampXIcon ===
 
-// Module 13331 (StampXIcon)
+// Module 13370 (StampXIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4817 */;
-import _mod13332 from "module_13332" /* 13332 */;
+import BaseIconImage from "BaseIconImage" /* 4819 */;
+import _mod13371 from "module_13371" /* 13371 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const StampXIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13332;
+    const tmpResult = _mod13371;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const StampXIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13332, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13371, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

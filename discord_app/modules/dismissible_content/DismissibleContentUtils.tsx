@@ -9,9 +9,9 @@ import dismissible_content from "dismissible_content" /* 2049 */;
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 2053 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 2056 */;
 import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 2063 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4960 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10326 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 14623 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4962 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10336 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 14662 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
@@ -57,7 +57,7 @@ function markDismissibleContentAsDismissedPostProcessing(content, groupName) {
     groupName = groupName.groupName;
   }
   obj.groupName = groupName;
-  options(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
+  React6(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
   const tmp = !DismissibleContentFrameworkStore.hasUserHitDCCap();
 }
 let closure_21 = async function _markLatestVersionDismissibleContentAsDismissed(arg0) {
@@ -614,7 +614,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "Array" };
+      return { isDismissed: false, lastDismissedAtMs: "a" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

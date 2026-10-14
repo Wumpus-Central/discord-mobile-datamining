@@ -1,14 +1,14 @@
-// === Module 17589: ChannelSettingsPermissionsStore ===
+// === Module 17623: ChannelSettingsPermissionsStore ===
 
-// Module 17589 (ChannelSettingsPermissionsStore)
+// Module 17623 (ChannelSettingsPermissionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 10768 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 9698 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4757 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 10867 */;
+import ApplicationStore from "ApplicationStore" /* 5445 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 9708 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
@@ -88,7 +88,7 @@ function syncChannelUpdates(id) {
           }
           const obj5 = PermissionUtilsAll;
           tmp = null != guildId1 && null == obj2[guildId1];
-          closure_4 = obj5.areChannelsLocked(channel, category, obj4(10768).getAppChannelBotUserId(channel));
+          closure_4 = obj5.areChannelsLocked(channel, category, obj4(10867).getAppChannelBotUserId(channel));
           return true;
         }
       }
@@ -98,7 +98,7 @@ function syncChannelUpdates(id) {
 }
 const Constants = fn(1085);
 ({ ChannelSettingsSections: closure_9, ChannelTypes: c10, FormStates } = Constants);
-const ADVANCED_MODE_ON_KEY = fn(7490).ADVANCED_MODE_ON_KEY;
+const ADVANCED_MODE_ON_KEY = fn(7496).ADVANCED_MODE_ON_KEY;
 const set = new Set();
 let CLOSED = FormStates.CLOSED;
 let c15 = false;

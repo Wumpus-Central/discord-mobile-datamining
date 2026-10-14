@@ -1,13 +1,13 @@
-// === Module 12294: ModalFooter ===
+// === Module 12330: ModalFooter ===
 
-// Module 12294 (ModalFooter)
+// Module 12330 (ModalFooter)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_4 = createStyles.createStyles({ footer: { flexDirection: "column", paddingVertical: 16, paddingHorizontal: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

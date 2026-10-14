@@ -1,10 +1,10 @@
-// === Module 16891: FavoritesGuildHeaderActions ===
+// === Module 16928: FavoritesGuildHeaderActions ===
 
-// Module 16891 (FavoritesGuildHeaderActions)
+// Module 16928 (FavoritesGuildHeaderActions)
 import c from "c" /* 576 */;
-import IconButton from "IconButton" /* 7574 */;
-import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction" /* 16892 */;
-import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 16893 */;
+import IconButton from "IconButton" /* 7580 */;
+import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction" /* 16929 */;
+import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 16930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGui
 export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompilerEnabled() ? (function FavoritesGuildHeaderActionButton() {
   const cResult = c.c(4);
   ({ isPreview, label, exitPreview } = useFavoritesGuildHeaderActionDefault());
-  const tmp4Result = importDefault(isPreview ? 6209 : 10606);
+  const tmp4Result = importDefault(isPreview ? 6213 : 10616);
   if (!isPreview) {
     exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
   }
@@ -37,11 +37,11 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
   const tmp5 = useFavoritesGuildHeaderActionDefault();
 }) : (function FavoritesGuildHeaderActionButton() {
   ({ isPreview, exitPreview, label } = useFavoritesGuildHeaderActionDefault());
-  const obj = { variant: "secondary", size: "sm", icon: importDefault(isPreview ? 6209 : 10606), onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
+  const obj = { variant: "secondary", size: "sm", icon: importDefault(isPreview ? 6213 : 10616), onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
   if (!isPreview) {
     exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
   }
   obj.onPress = exitPreview;
   obj.accessibilityLabel = label;
-  return jsx(IconButton.IconButton, { variant: "secondary", size: "sm", icon: importDefault(isPreview ? 6209 : 10606), onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
+  return jsx(IconButton.IconButton, { variant: "secondary", size: "sm", icon: importDefault(isPreview ? 6213 : 10616), onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
 });

@@ -1,17 +1,17 @@
-// === Module 8626: TagListInput ===
+// === Module 8631: TagListInput ===
 
-// Module 8626 (TagListInput)
+// Module 8631 (TagListInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import spring from "spring" /* 5378 */;
-import springPresets from "springPresets" /* 5382 */;
-import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import _modDef6243 from "module_6243" /* 6243 */;
-import useInputClearButton from "useInputClearButton" /* 6295 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4830 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4852 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import spring from "spring" /* 5383 */;
+import springPresets from "springPresets" /* 5387 */;
+import LinearGradientDefault from "LinearGradient" /* 5396 */;
+import _modDef6247 from "module_6247" /* 6247 */;
+import useInputClearButton from "useInputClearButton" /* 6299 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { placeholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT }, iconContainer: null, iconLeft: null, scrollViewContent: null, horizontalScrollViewContent: null, inputInner: null, horizontalInputInner: null, searchInput: null, horizontalSearchInput: null };
   const obj2 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
@@ -44,7 +44,7 @@ let closure_10 = createStyles.createStyles(() => {
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const colors = ["transparent", "black"];
-createStyles = fn(5092);
+createStyles = fn(5096);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
   const obj2 = {};
@@ -296,13 +296,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLea
       obj5.style = items1;
       items[1] = closure_2_8(ReanimatedRexportDefault.View, obj5);
       obj3.children = items;
-      const items2 = [options(hasOwnProperty, obj3), ];
+      const items2 = [React6(hasOwnProperty, obj3), ];
       const obj6 = { style: closure_1.maskRemainder };
       items2[1] = closure_2_8(hasOwnProperty, obj6);
       obj2.children = items2;
-      obj.maskElement = options(hasOwnProperty, obj2);
+      obj.maskElement = React6(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = closure_2_8(_modDef6243, obj);
+      tmp = closure_2_8(_modDef6247, obj);
     }
     return tmp;
   }, items1);
@@ -611,29 +611,29 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   c14 = undefined;
   c17 = undefined;
   const tmp = c10();
-  const bound = Math.min(2, tags(5386).useFontScale());
-  const result = tags(6302).InputHeights.MD * bound;
+  const bound = Math.min(2, tags(5391).useFontScale());
+  const result = tags(6306).InputHeights.MD * bound;
   let tmp6 = closure_18(accessibilityHint.ref, onChangeText);
   const inputRef = tmp6.inputRef;
   const inputValueRef = tmp6.inputValueRef;
   const inputUpdate = tmp6.inputUpdate;
   const clearButton = tmp6.clearButton;
   inputRef.useRef({ start: 0, end: 0 });
-  let obj = tags(5386);
-  const keyboardBlurring = tags(6304).useKeyboardBlurring(inputRef);
-  const obj3 = tags(6304);
-  const focus = tags(4824).useFocus();
+  let obj = tags(5391);
+  const keyboardBlurring = tags(6308).useKeyboardBlurring(inputRef);
+  const obj3 = tags(6308);
+  const focus = tags(4826).useFocus();
   ({ focusProps: c8, isFocused } = focus);
-  const obj4 = tags(4824);
+  const obj4 = tags(4826);
   const tmp9 = focusOnAdd;
-  ({ onFocus: c9, onBlur: c10 } = focusOnAdd(6306)({ onFocus, onBlur }));
+  ({ onFocus: c9, onBlur: c10 } = focusOnAdd(6310)({ onFocus, onBlur }));
   const ref = inputRef.useRef(null);
-  const tmp10 = focusOnAdd(6306)({ onFocus, onBlur });
+  const tmp10 = focusOnAdd(6310)({ onFocus, onBlur });
   let tmp12 = autoClearInputOnTagAdd;
   [c12, c13] = autoClearInputOnTagAdd(inputRef.useState(null), 2);
   const tmp13 = autoClearInputOnTagAdd(inputRef.useState(null), 2);
   [tmp15, c14] = autoClearInputOnTagAdd(inputRef.useState(false), 2);
-  const tmp16 = focusOnAdd(6170)(tags);
+  const tmp16 = focusOnAdd(6174)(tags);
   const ref1 = inputRef.useRef(tags);
   const items = [focusOnAdd, inputUpdate, ref1, tags, inputRef, inputValueRef, autoClearInputOnTagAdd];
   const layoutEffect = inputRef.useLayoutEffect(() => {
@@ -689,14 +689,14 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     }
   }, items1);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp2(6307).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp2(6311).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = inputUpdate;
   }
   if (inActionSheet) {
-    let BottomSheetTextInput = tmp2(8627).BottomSheetTextInput;
+    let BottomSheetTextInput = tmp2(8632).BottomSheetTextInput;
   } else {
-    BottomSheetTextInput = tmp9(8628);
+    BottomSheetTextInput = tmp9(8633);
   }
   const result1 = 33 * bound;
   const tmp14 = autoClearInputOnTagAdd(inputRef.useState(false), 2);
@@ -744,7 +744,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     tags.map((tag, index) => {
       tags = tag;
       closure_1 = index;
-      return _undefined(tags(8629).TagListInputTagComponent, {
+      return _undefined(tags(8634).TagListInputTagComponent, {
         tag,
         selected: tag.id === c12,
         onPress(arg0) {
@@ -889,7 +889,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   const obj12 = { size: "sm", disabled, isFocused, children: null };
   if (null == icon) {
     const obj13 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
-    icon = tmp25(tmp2(6740).MagnifyingGlassIcon, obj13);
+    icon = tmp25(tmp2(6744).MagnifyingGlassIcon, obj13);
   }
   const items8 = [icon, obj5.wrap(c8(BottomSheetScrollView, obj6)), ];
   if (null == footer) {
@@ -902,6 +902,6 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   }
   items8[2] = footer;
   obj12.children = items8;
-  obj11.children = c9(tags(6301).InputFieldContainer, obj12);
+  obj11.children = c9(tags(6305).InputFieldContainer, obj12);
   return c8(inputValueRef, obj11);
 });

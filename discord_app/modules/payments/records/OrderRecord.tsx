@@ -1,11 +1,11 @@
-// === Module 7145: OrderRecord ===
+// === Module 7151: OrderRecord ===
 
-// Module 7145 (OrderRecord)
+// Module 7151 (OrderRecord)
 import Record from "Record" /* 1405 */;
-import CheckoutContextRecord from "CheckoutContextRecord" /* 7146 */;
-import SubscriptionFacetRecord from "SubscriptionFacetRecord" /* 7147 */;
+import CheckoutContextRecord from "CheckoutContextRecord" /* 7152 */;
+import SubscriptionFacetRecord from "SubscriptionFacetRecord" /* 7153 */;
 
-const BaseInvoiceRecord = fn(4778).BaseInvoiceRecord;
+const BaseInvoiceRecord = fn(4780).BaseInvoiceRecord;
 const PaymentGateways = fn(1096).PaymentGateways;
 let BillingFacetRecord;
 class BillingFacetRecord extends tmp2 {

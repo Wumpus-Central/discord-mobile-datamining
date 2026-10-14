@@ -1,16 +1,16 @@
-// === Module 16418: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 16455: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 16418 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 16455 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2958 from "module_2958" /* 2958 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Stack_Stack from "Stack/Stack" /* 5377 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10263 */;
-import types from "types" /* 10264 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10266 */;
-import _mod10270 from "module_10270" /* 10270 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import Stack_Stack from "Stack/Stack" /* 5382 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10273 */;
+import types from "types" /* 10274 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10276 */;
+import _mod10280 from "module_10280" /* 10280 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -33,7 +33,7 @@ const jsxProd = fn(21);
 let items = [...fn(1408).EFFECT_ORDER, fn(1409).DisplayNameEffect.GUMMY];
 let closure_12 = [10, 50, 100, 200];
 let items1 = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 }, container: null, batchRow: null, optionButtons: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.container = { paddingVertical: nativeDefault.space.PX_16 };
@@ -49,7 +49,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Option
   const tmp4 = closure_14();
   if (cResult[0] !== caption) {
     const obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: caption };
-    const tmp7 = closure_8(tmp(5088).Text, obj2);
+    const tmp7 = closure_8(tmp(5092).Text, obj2);
     cResult[0] = caption;
     cResult[1] = tmp7;
     let tmp5 = tmp7;
@@ -72,14 +72,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Option
           const obj3 = { spacing: 8, children: null };
           items = [tmp5, tmp13];
           obj3.children = items;
-          const tmp18 = closure_9(tmp(5377).Stack, obj3);
+          const tmp18 = closure_9(tmp(5382).Stack, obj3);
           cResult[12] = tmp5;
           cResult[13] = tmp13;
           cResult[14] = tmp18;
           tmp16 = tmp18;
         }
         const obj4 = { direction: "horizontal", spacing: 8, style: tmp8, children: cResult[5] };
-        const tmp15 = closure_8(tmp(5377).Stack, obj4);
+        const tmp15 = closure_8(tmp(5382).Stack, obj4);
         cResult[9] = tmp4.optionButtons;
         cResult[10] = cResult[5];
         cResult[11] = tmp15;
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10270.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod10280.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -525,7 +525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod10270.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod10280.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

@@ -1,17 +1,17 @@
-// === Module 17090: useGuildsBarBadges ===
+// === Module 17127: useGuildsBarBadges ===
 
-// Module 17090 (useGuildsBarBadges)
+// Module 17127 (useGuildsBarBadges)
 import native from "native" /* 1200 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4941 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17059 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17095 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4943 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17096 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 17129 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10694 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4940 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10797 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4942 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -22,7 +22,7 @@ let closure_4 = ["guildActivityIndicatorSource"];
 const Constants = fn(1085);
 ({ GuildFeatures: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_16 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -271,11 +271,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     }
     const tmpResult5 = tmp(504);
     const stateFromStores2 = tmp(504).useStateFromStores(tmp13, U, tmp17);
-    const tmp20 = stateFromStores(17091)(arg0);
+    const tmp20 = stateFromStores(17128)(arg0);
     const tmpResult6 = tmp(504);
-    const token = tmp(4818).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-    const tmpResult7 = tmp(4818);
-    const token1 = tmp(4818).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+    const token = tmp(4820).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+    const tmpResult7 = tmp(4820);
+    const token1 = tmp(4820).useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
     const diff = token1 - tmp(1200).BADGE_PADDING;
     if (cResult[12] !== diff) {
       class U {
@@ -792,7 +792,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     cResult[14] = tmp4.topRightBadge;
     cResult[15] = tmp25;
     cResult[16] = items4;
-    const tmpResult8 = tmp(4818);
+    const tmpResult8 = tmp(4820);
   }
   class C {
     constructor() {

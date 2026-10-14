@@ -1,15 +1,15 @@
-// === Module 12788: useAvailableBoostCountForPowerup ===
+// === Module 12824: useAvailableBoostCountForPowerup ===
 
-// Module 12788 (useAvailableBoostCountForPowerup)
+// Module 12824 (useAvailableBoostCountForPowerup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5007 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5009 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5008);
+const GuildPowerupsConstants = fn(5010);
 ({ GuildPowerupType: closure_7, POWERUPS_INCLUDED_IN_LEVEL: closure_8, LEVEL_SKU_ID_TO_BOOSTING_TIER: closure_9 } = GuildPowerupsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,36 +1,36 @@
-// === Module 13094: InAppNotificationContainer ===
+// === Module 13129: InAppNotificationContainer ===
 
-// Module 13094 (InAppNotificationContainer)
+// Module 13129 (InAppNotificationContainer)
 import c from "c" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import timing from "timing" /* 5093 */;
-import spring from "spring" /* 5378 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 13087 */;
-import MessageNotificationDefault from "MessageNotification" /* 13095 */;
-import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 13129 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 13130 */;
-import BugReporterNotification from "BugReporterNotification" /* 13131 */;
-import AlertNotificationDefault from "AlertNotification" /* 13148 */;
-import ReactionNotificationDefault from "ReactionNotification" /* 13149 */;
-import ReminderNotificationDefault from "ReminderNotification" /* 13150 */;
-import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 13189 */;
-import MessageRequestNotificationDefault from "MessageRequestNotification" /* 13192 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import timing from "timing" /* 5097 */;
+import spring from "spring" /* 5383 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 13122 */;
+import MessageNotificationDefault from "MessageNotification" /* 13130 */;
+import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 13164 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 13165 */;
+import BugReporterNotification from "BugReporterNotification" /* 13166 */;
+import AlertNotificationDefault from "AlertNotification" /* 13183 */;
+import ReactionNotificationDefault from "ReactionNotification" /* 13184 */;
+import ReminderNotificationDefault from "ReminderNotification" /* 13185 */;
+import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 13224 */;
+import MessageRequestNotificationDefault from "MessageRequestNotification" /* 13227 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9694 */;
+import NativeMenuStore from "NativeMenuStore" /* 9704 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(13088);
+const InAppNotificationConstants = fn(13123);
 ({ DEFAULT_ANIMATION_TIMING: closure_7, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: closure_9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: closure_11, NOTIFICATION_CONTAINER_MARGIN } = InAppNotificationConstants);
 const Constants = fn(1085);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);
 const jsx = fn(21).jsx;
 let obj = { duration: 200, easing: null };
-const Easing = fn(4850).Easing;
-obj.easing = Easing.in(fn(4850).Easing.ease);
-const createStyles = fn(5092);
+const Easing = fn(4852).Easing;
+obj.easing = Easing.in(fn(4852).Easing.ease);
+const createStyles = fn(5096);
 let closure_16 = createStyles.createStyles({ safeAreaContainer: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8, top: 0, bottom: 0 }, animatedContainer: { marginLeft: NOTIFICATION_CONTAINER_MARGIN, marginRight: NOTIFICATION_CONTAINER_MARGIN } });
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationWrapper(notification) {

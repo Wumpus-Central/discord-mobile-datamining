@@ -1,16 +1,16 @@
-// === Module 14561: MenuItem ===
+// === Module 14598: MenuItem ===
 
-// Module 14561 (MenuItem)
+// Module 14598 (MenuItem)
 import c from "c" /* 576 */;
-import IconDefault from "Icon" /* 5381 */;
-import FormRowDefault from "FormRow" /* 6828 */;
-import FormLabelDefault from "FormLabel" /* 6830 */;
-import Menu from "Menu" /* 14555 */;
+import IconDefault from "Icon" /* 5386 */;
+import FormRowDefault from "FormRow" /* 6833 */;
+import FormLabelDefault from "FormLabel" /* 6835 */;
+import Menu from "Menu" /* 14592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_5 = createStyles.createStyles({ formIcon: { width: 20, height: 20 }, formLabel: { fontSize: 14, fontWeight: "500" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,21 +1,21 @@
-// === Module 17526: AddFriendsScreen ===
+// === Module 17560: AddFriendsScreen ===
 
-// Module 17526 (AddFriendsScreen)
+// Module 17560 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8304 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8497 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12910 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12914 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 17529 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 17531 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8311 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8504 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12945 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12949 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 17563 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 17565 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7347 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7353 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -58,14 +58,14 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(12934).Sections;
+const Sections = fn(12969).Sections;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-let ContactPermissions = fn(12912).ContactPermissions;
+let ContactPermissions = fn(12947).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { flex: 1 }, inviteAppsContainerNonSticky: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 }, inviteAppsContentContainer: { paddingTop: 0, paddingBottom: 0, minWidth: "100%" }, emptyContainer: null, emptyActionContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 };
 obj2.emptyContainer = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -80,11 +80,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
   let obj = require("c");
   const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
   if (cResult[0] !== contactSyncAccount) {
-    const isContactSyncEnabledResult = tmp(12914).isContactSyncEnabled(contactSyncAccount);
+    const isContactSyncEnabledResult = tmp(12949).isContactSyncEnabled(contactSyncAccount);
     cResult[0] = contactSyncAccount;
     cResult[1] = isContactSyncEnabledResult;
     let tmp5 = isContactSyncEnabledResult;
-    let tmpResult = tmp(12914);
+    let tmpResult = tmp(12949);
   } else {
     tmp5 = cResult[1];
   }
@@ -1104,9 +1104,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       });
       let obj = sourcePage(analyticsLocations[29]);
       return sourcePage(analyticsLocations[29]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-        const name = items1(4962).getName(user.user);
-        const obj = items1(4962);
-        return name.localeCompare(items1(4962).getName(user2.user));
+        const name = items1(4964).getName(user.user);
+        const obj = items1(4964);
+        return name.localeCompare(items1(4964).getName(user2.user));
       });
     }
     const items8 = [first4, first3];
@@ -1145,9 +1145,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       }
     });
     return _modDef12.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = sourcePage(4962).getName(arg0);
-      const obj = sourcePage(4962);
-      return name.localeCompare(sourcePage(4962).getName(arg1));
+      const name = sourcePage(4964).getName(arg0);
+      const obj = sourcePage(4964);
+      return name.localeCompare(sourcePage(4964).getName(arg1));
     });
   };
   cResult[13] = first2;
@@ -1262,9 +1262,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       }
     });
     return _modDef12.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = sourcePage(4962).getName(arg0);
-      const obj = sourcePage(4962);
-      return name.localeCompare(sourcePage(4962).getName(arg1));
+      const name = sourcePage(4964).getName(arg0);
+      const obj = sourcePage(4964);
+      return name.localeCompare(sourcePage(4964).getName(arg1));
     });
   });
   let obj5 = navigation(analyticsLocations[31]);
@@ -1299,9 +1299,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
     });
     let obj = sourcePage(analyticsLocations[29]);
     return sourcePage(analyticsLocations[29]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(4962).getName(user.user);
-      const obj = items1(4962);
-      return name.localeCompare(items1(4962).getName(user2.user));
+      const name = items1(4964).getName(user.user);
+      const obj = items1(4964);
+      return name.localeCompare(items1(4964).getName(user2.user));
     });
   }, items4, memo1);
   let obj6 = navigation(analyticsLocations[31]);

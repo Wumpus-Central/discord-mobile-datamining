@@ -1,20 +1,20 @@
-// === Module 13771: IndividualProductPreview ===
+// === Module 13808: IndividualProductPreview ===
 
-// Module 13771 (IndividualProductPreview)
+// Module 13808 (IndividualProductPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import useCurrentUser from "useCurrentUser" /* 8303 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 10511 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10627 */;
-import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13772 */;
-import NameplateProductPreviewDefault from "NameplateProductPreview" /* 13773 */;
+import LinearGradientDefault from "LinearGradient" /* 5396 */;
+import useCurrentUser from "useCurrentUser" /* 8310 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 10521 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10637 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 13809 */;
+import NameplateProductPreviewDefault from "NameplateProductPreview" /* 13810 */;
 import noop from "module_19" /* 19 */;
 
 const FractionalPremiumSKUs = FractionalNitroPreview(1088);
-const FractionalNitroPreview2 = FractionalNitroPreview(13774);
-const OrbBadgePreview = FractionalNitroPreview(13777);
+const FractionalNitroPreview2 = FractionalNitroPreview(13811);
+const OrbBadgePreview = FractionalNitroPreview(13814);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
@@ -22,7 +22,7 @@ const CollectiblesShopConstants = fn(1087);
 ({ EXTERNAL_PRODUCT_SKU_IDS: hasOwnProperty, ShopCtaEnum: metroRequire } = CollectiblesShopConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { collectiblePreview: { marginTop: nativeDefault.space.PX_12, position: "relative", height: 280 }, profilePreviewContainer: { position: "relative", flex: 1, alignItems: "center", overflow: "hidden" }, profilePreview: { width: "66%" }, profilePreviewGradient: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -97,7 +97,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Profil
         tmp14 = tmp17;
       }
       const obj4 = { style: tmp3.profilePreviewGradient, start: tmp6, end: tmp7, colors: tmp9 };
-      const tmp13 = closure_7(onTrackPress(5391), obj4);
+      const tmp13 = closure_7(onTrackPress(5396), obj4);
       cResult[8] = tmp3.profilePreviewGradient;
       cResult[9] = tmp9;
       cResult[10] = tmp13;
@@ -263,7 +263,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
     }
     if (cResult[3] !== product) {
       const obj2 = { product };
-      const tmp8 = closure_7(onTrackPress(13772), obj2);
+      const tmp8 = closure_7(onTrackPress(13809), obj2);
       cResult[3] = product;
       cResult[4] = tmp8;
       let tmp5 = tmp8;

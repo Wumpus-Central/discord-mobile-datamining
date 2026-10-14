@@ -1,13 +1,13 @@
-// === Module 17455: SmartSearchExpandButton ===
+// === Module 17489: SmartSearchExpandButton ===
 
-// Module 17455 (SmartSearchExpandButton)
+// Module 17489 (SmartSearchExpandButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef4075 from "module_4075" /* 4075 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10533 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 14202 */;
-import useSearchHostSurface from "useSearchHostSurface" /* 17454 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10543 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 14239 */;
+import useSearchHostSurface from "useSearchHostSurface" /* 17488 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" }, pill: { height: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, backgroundColor, alignItems: "center", justifyContent: "center" }, surface: null };
   const obj3 = {};

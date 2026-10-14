@@ -1,6 +1,6 @@
-// === Module 11795: ConjureChatGrouping ===
+// === Module 11805: ConjureChatGrouping ===
 
-// Module 11795 (ConjureChatGrouping)
+// Module 11805 (ConjureChatGrouping)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatGrouping.tsx");

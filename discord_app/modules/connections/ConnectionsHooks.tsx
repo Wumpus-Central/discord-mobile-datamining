@@ -1,19 +1,19 @@
-// === Module 7225: ConnectionsHooks ===
+// === Module 7231: ConnectionsHooks ===
 
-// Module 7225 (ConnectionsHooks)
+// Module 7231 (ConnectionsHooks)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import PlatformsDefault from "Platforms" /* 5763 */;
+import PlatformsDefault from "Platforms" /* 5768 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5766 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const Constants = fn(1085);
 ({ ACTIVITY_PLATFORM_TYPES: closure_7, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(7226).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(7232).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -246,11 +246,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePlatforms
   const tmpResult = require("initialize");
   const obj4 = set(12);
   const items1 = [tmp15, tmp16, tmp17, tmp18, E];
-  sortByResult = obj4.sortBy(set(5763).filter(tmp8), items1);
+  sortByResult = obj4.sortBy(set(5768).filter(tmp8), items1);
   cResult[5] = tmp9;
   cResult[6] = tmp8;
   cResult[7] = sortByResult;
-  const arr3 = set(5763);
+  const arr3 = set(5768);
 }) : (function usePlatforms() {
   let items = [ConnectedAccountsStore];
   stateFromStores = stateFromStores(memo[9]).useStateFromStores(items, () => accounts.getAccounts());

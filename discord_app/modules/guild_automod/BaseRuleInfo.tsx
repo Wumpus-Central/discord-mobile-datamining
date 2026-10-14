@@ -1,10 +1,10 @@
-// === Module 18320: BaseRuleInfo ===
+// === Module 18356: BaseRuleInfo ===
 
-// Module 18320 (BaseRuleInfo)
+// Module 18356 (BaseRuleInfo)
 import util from "util" /* 1126 */;
-import Constants from "Constants" /* 12216 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 18307 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 18308 */;
+import Constants from "Constants" /* 12252 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 18343 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 18344 */;
 import size from "module_2" /* 2 */;
 
 const AutomodTriggerType = Constants.AutomodTriggerType;

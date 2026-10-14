@@ -1,14 +1,14 @@
-// === Module 17445: SmartSearchCitation ===
+// === Module 17479: SmartSearchCitation ===
 
-// Module 17445 (SmartSearchCitation)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 17446 */;
+// Module 17479 (SmartSearchCitation)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 17480 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(9313).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+let closure_5 = fn(9322).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -219,7 +219,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
           } else {
             closure_0 = tmp3;
             const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-            const result = v2(12576).trackSmartSearchCitationOpened(obj4, v2(12574));
+            const result = v2(12612).trackSmartSearchCitationOpened(obj4, v2(12610));
             if ("conversation" === citation.sourceType) {
               dependencyMap = 1;
               v2 = 2;
@@ -227,7 +227,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled() 
               const obj5 = { value: onPressConversationCitation(citation), done: false };
               return obj5;
             }
-            const obj6 = v2(12576);
+            const obj6 = v2(12612);
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;

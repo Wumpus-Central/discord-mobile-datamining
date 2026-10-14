@@ -1,19 +1,19 @@
-// === Module 8701: Autocompleter ===
+// === Module 8706: Autocompleter ===
 
-// Module 8701 (Autocompleter)
+// Module 8706 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1384 */;
 import _modDef1949 from "module_1949" /* 1949 */;
 import StringUtils from "StringUtils" /* 2031 */;
-import findCodedLinks from "findCodedLinks" /* 5072 */;
-import CodedLink from "CodedLink" /* 5077 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5970 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6096 */;
-import GuildUtilsDefault from "GuildUtils" /* 6097 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 8704 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 8702 */;
-import LinkRecord from "LinkRecord" /* 8703 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import findCodedLinks from "findCodedLinks" /* 5076 */;
+import CodedLink from "CodedLink" /* 5081 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5975 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6102 */;
+import GuildUtilsDefault from "GuildUtils" /* 6103 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 8708 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 6978 */;
+import LinkRecord from "LinkRecord" /* 8707 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -27,9 +27,9 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4748).GUILD_VOCAL_CHANNELS_KEY;
-fn(6093).AutocompleterResultTypes;
-let options = Object.freeze({});
+const GUILD_VOCAL_CHANNELS_KEY = fn(4750).GUILD_VOCAL_CHANNELS_KEY;
+fn(6099).AutocompleterResultTypes;
+const React6 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
 class Autocompleter {

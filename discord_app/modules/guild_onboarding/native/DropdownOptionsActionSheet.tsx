@@ -1,25 +1,25 @@
-// === Module 6825: DropdownOptionsActionSheet ===
+// === Module 6830: DropdownOptionsActionSheet ===
 
-// Module 6825 (DropdownOptionsActionSheet)
+// Module 6830 (DropdownOptionsActionSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import components_Button_Button from "components/Button/Button" /* 5379 */;
-import BottomSheetModal from "BottomSheetModal" /* 6307 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import components_Button_Button from "components/Button/Button" /* 5384 */;
+import BottomSheetModal from "BottomSheetModal" /* 6311 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6844 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6845 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5987 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6789 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6793 */;
 
 require = fn;
 const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({ optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24 }, newBadge: { fontWeight: "bold" }, labelRow: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, closeButtonWrapper: { marginTop: 16, marginHorizontal: 16 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function DropdownOptionRow(option) {
@@ -146,7 +146,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
                           }
                         }
                         const obj3 = { label: tmp32, selected: tmp11, leading: tmp16, trailing: tmp27, onPress: tmp13 };
-                        const tmp37 = closure_8(onSelect(6826), obj3);
+                        const tmp37 = closure_8(onSelect(6831), obj3);
                         cResult[26] = tmp16;
                         cResult[27] = tmp13;
                         cResult[28] = tmp32;
@@ -231,9 +231,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdo
             str = "";
           }
           obj7.name = str;
-          obj6.children = closure_8(onSelect(6820), obj7);
+          obj6.children = closure_8(onSelect(6825), obj7);
           const tmp19Result = closure_8(tmp20, obj6);
-          const tmp22 = onSelect(6820);
+          const tmp22 = onSelect(6825);
         } else {
           const emoji6 = option.emoji;
           let name;
@@ -574,7 +574,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Dropdown
     const obj7 = { accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
     const intl2 = util.intl;
     obj7.accessibilityLabel = intl2.string(util.t.E2ICbC);
-    options = stateFromStores.options;
+    const options = stateFromStores.options;
     obj7.children = options.map((option) => closure_2_8(closure_11, { option, responses, onSelect, canBeNew: Boolean(dependencyMap) }, option.id));
     const items2 = [closure_8(native.CardSection, obj7), ];
     const obj8 = { style: tmp.closeButtonWrapper, children: null };

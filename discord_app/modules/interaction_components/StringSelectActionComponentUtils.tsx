@@ -1,8 +1,8 @@
-// === Module 8257: StringSelectActionComponentUtils ===
+// === Module 8264: StringSelectActionComponentUtils ===
 
-// Module 8257 (StringSelectActionComponentUtils)
+// Module 8264 (StringSelectActionComponentUtils)
 import Server from "Server" /* 1998 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8251 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8258 */;
 
 require = fn;
 const size = fn(2);
@@ -17,7 +17,7 @@ export const getInitialStringSelectOptions = function getInitialStringSelectOpti
   if (type === Server.ComponentType.STRING_SELECT) {
     let mapped = interactionComponentState.values;
   } else {
-    options = selectionActionComponent.options;
+    const options = selectionActionComponent.options;
     const found = options.filter((item) => item.default);
     mapped = found.map((value) => value.value);
   }

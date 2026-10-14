@@ -1,6 +1,6 @@
-// === Module 14977: MemoryExperiment ===
+// === Module 15015: MemoryExperiment ===
 
-// Module 14977 (MemoryExperiment)
+// Module 15015 (MemoryExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
@@ -8,15 +8,18 @@ const obj = { name: "2025-12-shadow-node-spike", kind: "user", defaultConfig: { 
 const obj2 = { 1: null };
 obj2[1] = { enabled: true };
 obj.variations = obj2;
-const config = ApexExperiment.createApexExperiment(obj);
+ApexExperiment.createApexExperiment(obj);
+let enabled;
 const interval = setInterval(() => {
   let tmp = enabled;
   if (undefined === enabled) {
-    enabled = config.getConfig({ location: "startMemoryExperiment" }).enabled;
+    enabled = enabled.getConfig({ location: "startMemoryExperiment" }).enabled;
     tmp = enabled;
   }
   if (tmp) {
-    globalThis.gc();
+    if (globalThis.gc != null) {
+      globalThis.gc();
+    }
   } else {
     const _clearInterval = clearInterval;
     clearInterval(closure_1);

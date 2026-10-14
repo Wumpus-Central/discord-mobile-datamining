@@ -1,6 +1,6 @@
-// === Module 18615: GuildRoleSubscriptionTierTemplateActionCreators ===
+// === Module 18651: GuildRoleSubscriptionTierTemplateActionCreators ===
 
-// Module 18615 (GuildRoleSubscriptionTierTemplateActionCreators)
+// Module 18651 (GuildRoleSubscriptionTierTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,23 +1,23 @@
-// === Module 13782: DiscountsMegaphoneSpotIllustration ===
+// === Module 13819: DiscountsMegaphoneSpotIllustration ===
 
-// Module 13782 (DiscountsMegaphoneSpotIllustration)
+// Module 13819 (DiscountsMegaphoneSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef13783 from "module_13783" /* 13783 */;
-import _modDef13784 from "module_13784" /* 13784 */;
-import _modDef13785 from "module_13785" /* 13785 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import assetHelpers from "assetHelpers" /* 6277 */;
+import _modDef13820 from "module_13820" /* 13820 */;
+import _modDef13821 from "module_13821" /* 13821 */;
+import _modDef13822 from "module_13822" /* 13822 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13783 }, 3: null };
-let obj2 = { uri: _modDef13783 };
-obj[2] = { uri: _modDef13784 };
-const obj3 = { uri: _modDef13784 };
-obj[3] = { uri: _modDef13785 };
+let obj = { 1: null, 2: { uri: _modDef13820 }, 3: null };
+let obj2 = { uri: _modDef13820 };
+obj[2] = { uri: _modDef13821 };
+const obj3 = { uri: _modDef13821 };
+obj[3] = { uri: _modDef13822 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13785 };
+const obj4 = { uri: _modDef13822 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DiscountsMegaphoneSpotIllustration.native.tsx");
 

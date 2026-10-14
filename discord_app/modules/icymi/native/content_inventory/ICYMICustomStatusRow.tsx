@@ -1,21 +1,21 @@
-// === Module 17274: ICYMICustomStatusRow ===
+// === Module 17308: ICYMICustomStatusRow ===
 
-// Module 17274 (ICYMICustomStatusRow)
+// Module 17308 (ICYMICustomStatusRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import TrashIcon from "TrashIcon" /* 5049 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6185 */;
-import ReactionIcon from "ReactionIcon" /* 8961 */;
-import PencilIcon from "PencilIcon" /* 9724 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11912 */;
-import _modDef12428 from "module_12428" /* 12428 */;
+import TrashIcon from "TrashIcon" /* 5053 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import Pressables from "Pressables" /* 6189 */;
+import ReactionIcon from "ReactionIcon" /* 8966 */;
+import PencilIcon from "PencilIcon" /* 9734 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11941 */;
+import _modDef12464 from "module_12464" /* 12464 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import ICYMIStore from "ICYMIStore" /* 8454 */;
+import ICYMIStore from "ICYMIStore" /* 8461 */;
 
 require = fn;
 const View = fn(17).View;
@@ -23,12 +23,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let c11 = 40;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(17217);
+const createICYMIStyles = fn(17251);
 let closure_14 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {
@@ -65,7 +65,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Upload
   const cResult = c.c(4);
   const tmp4 = closure_14(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef12428, size: native.IconSizes.SMALL };
+    const obj2 = { source: _modDef12464, size: native.IconSizes.SMALL };
     const tmp8 = closure_1_8(native.Icon, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -86,7 +86,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Upload
     const obj4 = { style: tmp4.uploadContainer, children: null };
     const items = [first, tmp9];
     obj4.children = items;
-    const tmp15 = options(View, obj4);
+    const tmp15 = React6(View, obj4);
     cResult[2] = tmp4.uploadContainer;
     cResult[3] = tmp15;
     let tmp12 = tmp15;
@@ -96,13 +96,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Upload
   return tmp12;
 }) : (function UploadPlaceholder() {
   const obj = { style: closure_14(false).uploadContainer, children: null };
-  const items = [closure_1_8(native.Icon, { source: _modDef12428, size: native.IconSizes.SMALL }), ];
+  const items = [closure_1_8(native.Icon, { source: _modDef12464, size: native.IconSizes.SMALL }), ];
   const obj3 = { variant: "text-md/normal", color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3UB9ad"]);
   items[1] = closure_1_8(Text_Text.Text, obj3);
   obj.children = items;
-  return options(View, obj);
+  return React6(View, obj);
 });
 ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GravityC
   ({ customStatusExtra, renderForScreenshot, variant } = id);
   closure_14(renderForScreenshot);
   const obj = id(576);
-  const gradientBottom = id(9307).useGradientBottom();
+  const gradientBottom = id(9316).useGradientBottom();
   let backgroundColor;
   if (gradientBottom != null) {
     backgroundColor = gradientBottom.backgroundColor;
@@ -125,10 +125,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GravityC
   }
   const tmp6Result = closure_13(backgroundColor);
   if (cResult[0] !== tmp6Result.background.backgroundColor) {
-    const hexWithOpacityResult = tmp(4967).hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);
+    const hexWithOpacityResult = tmp(4969).hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);
     cResult[0] = tmp6Result.background.backgroundColor;
     cResult[1] = hexWithOpacityResult;
-    const tmpResult = tmp(4967);
+    const tmpResult = tmp(4969);
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GravityC
       }
     }
   }
-  const obj2 = id(9307);
+  const obj2 = id(9316);
   const stateFromStores = id(504).useStateFromStores(tmp12, A);
   if (customStatusExtra.emoji_id != null) {
     class A {

@@ -1,6 +1,6 @@
-// === Module 11923: ConjureClarification ===
+// === Module 11953: ConjureClarification ===
 
-// Module 11923 (ConjureClarification)
+// Module 11953 (ConjureClarification)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -9,14 +9,16 @@ import UserStore from "UserStore" /* 1390 */;
 require = fn;
 const ChannelTypes = fn(1085).ChannelTypes;
 let closure_4 = { [ChannelTypes.GUILD_TEXT]: "text", [ChannelTypes.GUILD_VOICE]: "voice", [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement", [ChannelTypes.GUILD_STAGE_VOICE]: "stage", [ChannelTypes.GUILD_FORUM]: "forum", [ChannelTypes.GUILD_MEDIA]: "media" };
-let closure_5 = { channel: "#", role: "@", user: "@" };
-let obj = { channel: null, role: null, user: null };
+let closure_5 = { channel: "#", role: "@", user: "@", project: "" };
+let obj = { channel: null, role: null, user: null, project: null };
 let items = [_modDef3849["9+dfPT"], _modDef3849.pGSJqE];
 obj.channel = items;
 let items1 = [_modDef3849["2VkCoD"], _modDef3849.c8YlX8];
 obj.role = items1;
 let items2 = [_modDef3849.GZIAxl, _modDef3849["4bptbQ"]];
 obj.user = items2;
+const items3 = [_modDef3849.twlOb6, _modDef3849.twlOb6];
+obj.project = items3;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
 
@@ -48,11 +50,11 @@ export const nextClarificationStep = function nextClarificationStep(questions, a
   }
   return null;
 };
-export const followingClarificationStep = function followingClarificationStep(clarification, arg1, bound) {
-  if (bound < clarification.questions.length - 1) {
+export const followingClarificationStep = function followingClarificationStep(result1, arg1, bound) {
+  if (bound < result1.questions.length - 1) {
     let sum = bound + 1;
   } else {
-    const questions = clarification.questions;
+    const questions = result1.questions;
     let num = 1;
     sum = null;
     if (1 <= questions.length) {
@@ -76,9 +78,9 @@ export const followingClarificationStep = function followingClarificationStep(cl
   }
   return sum;
 };
-export const formatClarificationAnswers = function formatClarificationAnswers(clarification, arg1) {
+export const formatClarificationAnswers = function formatClarificationAnswers(result1, arg1) {
   closure_0 = arg1;
-  const questions = clarification.questions;
+  const questions = result1.questions;
   const mapped = questions.map((question, index) => ({ question, index, answer: closure_0[question.id] }));
   const found = mapped.filter((answer) => {
     let tmp = null != answer.answer;
@@ -147,11 +149,11 @@ export const clarificationChannelType = function clarificationChannelType(arg0) 
   return tmp;
 };
 export const MAX_CLARIFICATION_ENTITY_PICKS = 10;
-export const clarificationEntities = function clarificationEntities(input, items1, arg2, arg3) {
-  closure_0 = input;
+export const clarificationEntities = function clarificationEntities(project, items, arg2, arg3) {
+  closure_0 = project;
   closure_1 = arg2;
   closure_2 = arg3;
-  const substr = items1.slice(0, 10);
+  const substr = items.slice(0, 10);
   return substr.map((id) => {
     closure_0 = id;
     obj = { id, name: null };
@@ -208,10 +210,10 @@ export const clarificationEntities = function clarificationEntities(input, items
     }
   });
 };
-export const entityAnswer = function entityAnswer(input, entities, str, guildId) {
+export const entityAnswer = function entityAnswer(input, tmp6Result8, str, guildId) {
   closure_0 = input;
   const trimmed = str.trim();
-  obj = { kind: "entities", entities };
+  obj = { kind: "entities", entities: tmp6Result8 };
   if (null == guildId) {
     let obj2 = {};
   } else {
@@ -225,7 +227,7 @@ export const entityAnswer = function entityAnswer(input, entities, str, guildId)
   }
   const merged1 = Object.assign(obj3);
   const items = [
-    ...entities.map((name) => {
+    ...tmp6Result8.map((name) => {
       name = name.name;
       if (name.startsWith(dependencyMap[closure_0])) {
         let name2 = name.name;

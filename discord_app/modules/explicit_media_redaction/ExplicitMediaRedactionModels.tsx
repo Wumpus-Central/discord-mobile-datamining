@@ -1,6 +1,6 @@
-// === Module 6996: ExplicitMediaRedactionModels ===
+// === Module 7003: ExplicitMediaRedactionModels ===
 
-// Module 6996 (ExplicitMediaRedactionModels)
+// Module 7003 (ExplicitMediaRedactionModels)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionModels.tsx");

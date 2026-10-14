@@ -1,9 +1,9 @@
-// === Module 10868: getCachedOrFetchActivityApplicationForLaunch ===
+// === Module 10943: getCachedOrFetchActivityApplicationForLaunch ===
 
-// Module 10868 (getCachedOrFetchActivityApplicationForLaunch)
-import fetchShelf from "fetchShelf" /* 10848 */;
+// Module 10943 (getCachedOrFetchActivityApplicationForLaunch)
+import fetchShelf from "fetchShelf" /* 10928 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
+import ApplicationStore from "ApplicationStore" /* 5445 */;
 import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 

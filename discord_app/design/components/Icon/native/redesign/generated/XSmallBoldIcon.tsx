@@ -1,10 +1,10 @@
-// === Module 10482: XSmallBoldIcon ===
+// === Module 10492: XSmallBoldIcon ===
 
-// Module 10482 (XSmallBoldIcon)
+// Module 10492 (XSmallBoldIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4817 */;
-import _mod6898 from "module_6898" /* 6898 */;
+import BaseIconImage from "BaseIconImage" /* 4819 */;
+import _mod6903 from "module_6903" /* 6903 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const XSmallBoldIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod6898;
+    const tmpResult = _mod6903;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const XSmallBoldIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod6898, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod6903, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

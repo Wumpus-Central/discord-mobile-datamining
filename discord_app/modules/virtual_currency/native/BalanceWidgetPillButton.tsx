@@ -1,10 +1,10 @@
-// === Module 13294: BalanceWidgetPillButton ===
+// === Module 13333: BalanceWidgetPillButton ===
 
-// Module 13294 (BalanceWidgetPillButton)
+// Module 13333 (BalanceWidgetPillButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5379 */;
-import _modDef9041 from "module_9041" /* 9041 */;
+import components_Button_Button from "components/Button/Button" /* 5384 */;
+import _modDef9046 from "module_9046" /* 9046 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,8 +55,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function BalanceWid
           }
         }
       }
-      const obj2 = { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef9041, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 };
-      const tmp14 = jsx(components_Button_Button.Button, { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef9041, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 });
+      const obj2 = { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef9046, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 };
+      const tmp14 = jsx(components_Button_Button.Button, { variant: str, onPress, size: "sm", text: tmp5, icon: _modDef9046, accessible: tmp4, accessibilityElementsHidden: tmp7, importantForAccessibility: str3, accessibilityLabel: cResult[4], disabled: tmp8, loading: tmp8 });
       cResult[5] = tmp4;
       cResult[6] = tmp8;
       cResult[7] = onPress;
@@ -97,7 +97,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function BalanceWid
     str = "";
   }
   obj.text = str;
-  obj.icon = _modDef9041;
+  obj.icon = _modDef9046;
   obj.accessible = flag;
   obj.accessibilityElementsHidden = !flag;
   let str2 = "no";

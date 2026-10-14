@@ -1,19 +1,19 @@
-// === Module 11905: useConjurePlanBotPreviewItems ===
+// === Module 11934: useConjurePlanBotPreviewItems ===
 
-// Module 11905 (useConjurePlanBotPreviewItems)
+// Module 11934 (useConjurePlanBotPreviewItems)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5434 */;
-import InteractionTypes from "InteractionTypes" /* 5442 */;
-import UserActionCreators from "UserActionCreators" /* 8306 */;
-import createMessage from "createMessage" /* 9812 */;
-import conjurePlanBot from "conjurePlanBot" /* 11906 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5439 */;
+import InteractionTypes from "InteractionTypes" /* 5447 */;
+import UserActionCreators from "UserActionCreators" /* 8313 */;
+import createMessage from "createMessage" /* 9822 */;
+import conjurePlanBot from "conjurePlanBot" /* 11935 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
+import ApplicationStore from "ApplicationStore" /* 5445 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import UserStore from "UserStore" /* 1390 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
 
 const require = globalThis.__r;
 const createMessageDefault = createMessage;

@@ -1,17 +1,17 @@
-// === Module 6931: SlayerStorefrontUtils ===
+// === Module 6936: SlayerStorefrontUtils ===
 
-// Module 6931 (SlayerStorefrontUtils)
+// Module 6936 (SlayerStorefrontUtils)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1384 */;
-import StoreUtils from "StoreUtils" /* 5644 */;
-import keysSorter from "keysSorter" /* 5984 */;
-import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 6935 */;
-import StorefrontUtils from "StorefrontUtils" /* 6936 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
+import StoreUtils from "StoreUtils" /* 5649 */;
+import keysSorter from "keysSorter" /* 5989 */;
+import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 6940 */;
+import StorefrontUtils from "StorefrontUtils" /* 6941 */;
+import ApplicationStore from "ApplicationStore" /* 5445 */;
 import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6933 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6938 */;
 
 const require = globalThis.__r;
 
@@ -141,14 +141,14 @@ function getSKUShareURL(guildId, applicationId) {
   }
   combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + map1.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(6932).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(6934);
+let closure_4 = fn(6937).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(6939);
 ({ getChannelsGameShopPrefix: closure_9, STOREFRONT_MARKETING_GUILD_ID: c10, STOREFRONT_MARKETING_GUILD_ID_TEST: closure_11 } = SocialLayerStorefrontConstants);
 const Constants = fn(1085);
 ({ GuildFeatures: closure_12, Routes: map1, SKUProductLines: closure_14 } = Constants);
 const CollectibleShopTab = fn(1087).CollectibleShopTab;
 let str = "jpg";
-if (fn(5644).SUPPORTS_WEBP) {
+if (fn(5649).SUPPORTS_WEBP) {
   str = "webp";
 }
 fn(558);
@@ -245,7 +245,7 @@ function getStorefrontEmbedShareURL(applicationId, join) {
   const guildId = SelectedGuildStore.getGuildId();
   if (null != guildId) {
     const _location = location;
-    if (pathname.indexOf(options(guildId)) >= 0) {
+    if (pathname.indexOf(React6(guildId)) >= 0) {
       let GAME_SHOPResult = map1.GAME_SHOP(guildId);
     }
     const _URL = URL;
@@ -450,7 +450,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          let obj4 = { primaryIconAsset: "kind", primaryIconLabel: "apply" };
+          let obj4 = { primaryIconAsset: "lineClamp", primaryIconLabel: "color" };
         } else {
           const obj3 = StoreUtils;
           obj4 = { primaryIconAsset: URLUtilsDefault.toURLSafe(obj3.getAssetURL(application_id, first.labelIconAssetId, num, "webp")), primaryIconLabel: first.label };
@@ -460,7 +460,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "kind", primaryIconLabel: "apply" };
+  return { primaryIconAsset: "lineClamp", primaryIconLabel: "color" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value2) {
   let obj = arg1;
@@ -557,7 +557,7 @@ export const getForwardedStorefrontEmbedShareURL = function getForwardedStorefro
   const guildId = SelectedGuildStore.getGuildId();
   if (null != guildId) {
     const _location = location;
-    if (pathname.indexOf(options(guildId)) >= 0) {
+    if (pathname.indexOf(React6(guildId)) >= 0) {
       let GAME_SHOPResult = map1.GAME_SHOP(guildId);
     }
     const _URL = URL;
@@ -642,7 +642,7 @@ export const isOnSocialLayerStorefrontPage = function isOnSocialLayerStorefrontP
   if (!tmp2) {
     let tmp7 = null != arg3;
     if (tmp7) {
-      tmp7 = arr.indexOf(options(arg3)) >= 0;
+      tmp7 = arr.indexOf(React6(arg3)) >= 0;
     }
     tmp2 = tmp7;
   }

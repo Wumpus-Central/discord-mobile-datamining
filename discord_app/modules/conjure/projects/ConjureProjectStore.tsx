@@ -1,9 +1,9 @@
-// === Module 10652: ConjureProjectStore ===
+// === Module 10662: ConjureProjectStore ===
 
-// Module 10652 (ConjureProjectStore)
+// Module 10662 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -273,16 +273,16 @@ let result = size.fileFinishedImporting("modules/conjure/projects/ConjureProject
 
 export default conjureProjectStore;
 export { isProjectOwner };
-export const canPublishProject = function canPublishProject(owner_user_id) {
+export const canPublishProject = function canPublishProject(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let tmp3 = owner_user_id.owner_user_id === id;
+  let tmp3 = project.owner_user_id === id;
   if (!tmp3) {
-    tmp3 = ConjureProjectTypes.isProjectPublic(owner_user_id) && null != owner_user_id.guild_id;
-    const tmp6 = ConjureProjectTypes.isProjectPublic(owner_user_id) && null != owner_user_id.guild_id;
+    tmp3 = ConjureProjectTypes.isProjectPublic(project) && null != project.guild_id;
+    const tmp6 = ConjureProjectTypes.isProjectPublic(project) && null != project.guild_id;
   }
   return tmp3;
 };

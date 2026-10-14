@@ -1,15 +1,15 @@
-// === Module 10463: MuteSettingsActionSheet ===
+// === Module 10473: MuteSettingsActionSheet ===
 
-// Module 10463 (MuteSettingsActionSheet)
+// Module 10473 (MuteSettingsActionSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 10397 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 10407 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -29,7 +29,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettings
       const intl5 = util.intl;
       stringResult = intl5.string(util.t.t0mEt2);
       obj2.children = stringResult;
-      const tmp27 = options(Text_Text.Text, obj2);
+      const tmp27 = React6(Text_Text.Text, obj2);
       cResult[0] = tmp27;
       let first = tmp27;
     } else {
@@ -46,7 +46,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettings
             }
       };
       obj3.children = intl4.format(util.t.O34r15, obj4);
-      const tmp22 = options(Text_Text.Text, obj3);
+      const tmp22 = React6(Text_Text.Text, obj3);
       cResult[1] = tmp22;
     }
   } else if (guildMessageNotifications === UserNotificationSettings.NO_MESSAGES) {
@@ -60,7 +60,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettings
             }
       };
       obj5.children = intl3.format(util.t.nRwUIL, obj6);
-      const tmp17 = options(Text_Text.Text, obj5);
+      const tmp17 = React6(Text_Text.Text, obj5);
       cResult[2] = tmp17;
     }
   } else {
@@ -81,7 +81,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettings
       cResult[4] = stringResult1;
     } else if (cResult[5] !== cResult[4]) {
       const obj7 = { variant: "text-sm/medium", color: "text-default", children: tmp7 };
-      const tmp12 = options(Text_Text.Text, obj7);
+      const tmp12 = React6(Text_Text.Text, obj7);
       cResult[5] = tmp7;
       cResult[6] = tmp12;
     }
@@ -92,7 +92,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettings
     const obj2 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl5 = util.intl;
     obj2.children = intl5.string(util.t.t0mEt2);
-    let tmp3 = options(Text_Text.Text, obj2);
+    let tmp3 = React6(Text_Text.Text, obj2);
   } else if (tmp) {
     const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl4 = util.intl;
@@ -102,7 +102,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettings
         }
     };
     obj3.children = intl4.format(util.t.O34r15, obj4);
-    tmp3 = options(Text_Text.Text, obj3);
+    tmp3 = React6(Text_Text.Text, obj3);
   } else if (guildMessageNotifications === UserNotificationSettings.NO_MESSAGES) {
     const obj5 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl3 = util.intl;
@@ -112,7 +112,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettings
         }
     };
     obj5.children = intl3.format(util.t.nRwUIL, obj6);
-    tmp3 = options(Text_Text.Text, obj5);
+    tmp3 = React6(Text_Text.Text, obj5);
   } else {
     if (guildMessageNotifications !== UserNotificationSettings.ALL_MESSAGES) {
       tmp3 = null;
@@ -126,7 +126,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function MuteSettings
       stringResult = intl.string(util.t.GGAdHV);
     }
     obj = { variant: "text-sm/medium", color: "text-default", children: stringResult };
-    options(Text_Text.Text, obj);
+    React6(Text_Text.Text, obj);
   }
   return tmp3;
 });

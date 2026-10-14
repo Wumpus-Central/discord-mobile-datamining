@@ -1,11 +1,11 @@
-// === Module 7922: ApplicationCommandStore ===
+// === Module 7929: ApplicationCommandStore ===
 
-// Module 7922 (ApplicationCommandStore)
+// Module 7929 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7243 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7249 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6061 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6066 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 require = fn;
@@ -54,7 +54,7 @@ function handleSetActiveCommand(arg0) {
     tmp2.commandOrigin = commandOrigin;
     tmp2.source = source;
     obj2 = {};
-    options = undefined;
+    let options;
     if (command != null) {
       options = command.options;
     }
@@ -205,7 +205,7 @@ prototype["getActiveOption"] = function getActiveOption(channelId) {
   const activeCommand = tmp2.activeCommand;
   let found;
   if (activeCommand != null) {
-    options = activeCommand.options;
+    const options = activeCommand.options;
     if (options != null) {
       found = options.find((name) => name.name === activeOptionName.activeOptionName);
     }
@@ -259,7 +259,7 @@ prototype["getOption"] = function getOption(arg0, arg1) {
   const activeCommand = dependencyMap[arg0].activeCommand;
   let found;
   if (activeCommand != null) {
-    options = activeCommand.options;
+    const options = activeCommand.options;
     if (options != null) {
       found = options.find((name) => name.name === closure_0);
     }

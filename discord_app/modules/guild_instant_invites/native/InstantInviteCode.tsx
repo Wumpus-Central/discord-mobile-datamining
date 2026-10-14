@@ -1,18 +1,18 @@
-// === Module 10298: InstantInviteCode ===
+// === Module 10308: InstantInviteCode ===
 
-// Module 10298 (InstantInviteCode)
+// Module 10308 (InstantInviteCode)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ClockIcon from "ClockIcon" /* 5051 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Stack_Stack from "Stack/Stack" /* 5377 */;
-import useChannelName from "useChannelName" /* 5421 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8159 */;
-import TextIcon2 from "TextIcon" /* 8208 */;
-import CountDownDefault from "CountDown" /* 9642 */;
+import ClockIcon from "ClockIcon" /* 5055 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import Stack_Stack from "Stack/Stack" /* 5382 */;
+import useChannelName from "useChannelName" /* 5426 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8166 */;
+import TextIcon2 from "TextIcon" /* 8215 */;
+import CountDownDefault from "CountDown" /* 9652 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const View = fn(17).View;
 let closure_5 = fn(2069).createChannelRecordFromInvite;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { flex: { flex: 1 }, channel: { flex: 0 }, time: { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -78,7 +78,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInv
         const obj2 = { children: null };
         const items = [tmp18, tmp21];
         obj2.children = items;
-        const tmp29 = options(Stack_Stack.Stack, obj2);
+        const tmp29 = React6(Stack_Stack.Stack, obj2);
         cResult[15] = tmp18;
         cResult[16] = tmp21;
         cResult[17] = tmp29;
@@ -95,7 +95,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInv
         const obj5 = { style: tmp4.time, deadline: expiresAt };
         items1[2] = closure_1_8(CountDownDefault, obj5);
         obj3.children = items1;
-        tmp23 = options(Stack_Stack.Stack, obj3);
+        tmp23 = React6(Stack_Stack.Stack, obj3);
       }
       cResult[12] = expiresAt;
       cResult[13] = tmp4.time;
@@ -105,7 +105,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInv
     const obj6 = { direction: "horizontal", align: "center", children: null };
     const items2 = [tmp7, tmp16];
     obj6.children = items2;
-    const tmp20 = options(Stack_Stack.Stack, obj6);
+    const tmp20 = React6(Stack_Stack.Stack, obj6);
     cResult[9] = tmp7;
     cResult[10] = tmp16;
     cResult[11] = tmp20;
@@ -129,7 +129,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInv
   obj3.children = useChannelName.computeChannelName(channel, UserStore, RelationshipStore, false);
   items[1] = closure_1_8(Text_Text.Text, obj3);
   obj2.children = items;
-  const children = [options(Stack_Stack.Stack, obj2), ];
+  const children = [React6(Stack_Stack.Stack, obj2), ];
   let tmp4Result = null != expiresAt;
   if (tmp4Result) {
     const obj4 = { direction: "horizontal", align: "center", children: null };
@@ -141,10 +141,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function InstantInv
     const obj6 = { style: tmp.time, deadline: expiresAt };
     items2[2] = closure_1_8(CountDownDefault, obj6);
     obj4.children = items2;
-    tmp4Result = options(Stack_Stack.Stack, obj4);
+    tmp4Result = React6(Stack_Stack.Stack, obj4);
   }
   children[1] = tmp4Result;
-  return options(Stack_Stack.Stack, { children });
+  return React6(Stack_Stack.Stack, { children });
 });
 let closure_11 = tmp3;
 ReactCompilerGating = fn(558);
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
     const obj4 = { children: null };
     const items = [tmp8, tmp13];
     obj4.children = items;
-    const tmp17 = options(Stack_Stack.Stack, obj4);
+    const tmp17 = React6(Stack_Stack.Stack, obj4);
     cResult[9] = tmp8;
     cResult[10] = tmp13;
     cResult[11] = tmp17;
@@ -222,12 +222,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   const obj = { style: closure_10().flex, children: null };
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
   const obj2 = { children: null };
-  const items1 = [closure_8(invite(5088).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }), ];
+  const items1 = [closure_8(invite(5092).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }), ];
   const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
   const tmp = closure_10();
   items1[1] = closure_8(closure_11, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(5377).Stack, obj2);
+  obj.children = closure_9(invite(5382).Stack, obj2);
   return closure_8(View, obj);
 });
 export const InstantInviteDetails = tmp3;

@@ -1,10 +1,10 @@
-// === Module 17478: ThreadsScreen ===
+// === Module 17512: ThreadsScreen ===
 
-// Module 17478 (ThreadsScreen)
+// Module 17512 (ThreadsScreen)
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 12674 */;
-import ThreadListDefault from "ThreadList" /* 17479 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6669 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 12710 */;
+import ThreadListDefault from "ThreadList" /* 17513 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const SearchTypes = fn(1085).SearchTypes;
 let closure_7 = fn(1125).OpenThreadAnalyticsLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { container: { flex: 1 }, screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   ({ style, channel } = arg0);
   const tmp3 = closure_9();
   let obj = channel(576);
-  const canStartThread = channel(6972).useCanStartThread(channel);
+  const canStartThread = channel(6977).useCanStartThread(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { includeKeyboardHeight: true };
     cResult[0] = obj3;
@@ -103,11 +103,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   cResult[5] = tmp3.container;
   cResult[6] = items;
   tmp9 = items;
-  let obj2 = channel(6972);
+  let obj2 = channel(6977);
 }) : (function ThreadsScreen(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const canStartThread = channel(6972).useCanStartThread(channel);
+  const canStartThread = channel(6977).useCanStartThread(channel);
   const items = [channel];
   const callback = noop.useCallback(() => {
     const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
@@ -125,7 +125,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   }, []);
   const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
   let tmp10;
-  let obj = channel(6972);
+  let obj = channel(6977);
   if (canStartThread) {
     tmp10 = callback;
   }

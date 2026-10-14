@@ -1,16 +1,17 @@
-// === Module 15078: setOrientationLockState ===
+// === Module 15116: setOrientationLockState ===
 
-// Module 15078 (setOrientationLockState)
+// Module 15116 (setOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import RPCErrorDefault from "RPCError" /* 10936 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10939 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 15040 */;
-import FramesStore from "FramesStore" /* 10807 */;
+import Constants2 from "Constants" /* 2024 */;
+import RPCErrorDefault from "RPCError" /* 11010 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11013 */;
+import getSocketFrameDefault from "getSocketFrame" /* 15077 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 15078 */;
+import Constants from "Constants" /* 1096 */;
+import size from "module_2" /* 2 */;
 
-const OrientationLockState = fn(2024).OrientationLockState;
-const Constants = fn(1096);
+const OrientationLockState = Constants2.OrientationLockState;
 const RPCErrors = Constants.RPCErrors;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");
 
 export default {
@@ -38,12 +39,12 @@ export default {
         const id = socket.application.id;
         if (null == id) {
           const obj2 = { errorCode: RPCErrors.INVALID_COMMAND };
-          const tmp18 = new RPCErrorDefault(obj2, "No application.");
-          throw tmp18;
+          const tmp19 = new RPCErrorDefault(obj2, "No application.");
+          throw tmp19;
         } else {
-          const frameByEmbeddedContext = FramesStore.getFrameByEmbeddedContext(socket.context, socket.source.iframeId);
-          if (null != frameByEmbeddedContext) {
-            const obj3 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: frameByEmbeddedContext.id, lockState: lock_state, pictureInPictureLockState: picture_in_picture_lock_state };
+          const tmp12 = getSocketFrameDefault(socket);
+          if (null != tmp12) {
+            const obj3 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: tmp12.id, lockState: lock_state, pictureInPictureLockState: picture_in_picture_lock_state };
             DispatcherDefault.dispatch(obj3);
             const tmpResult = DispatcherDefault;
           }

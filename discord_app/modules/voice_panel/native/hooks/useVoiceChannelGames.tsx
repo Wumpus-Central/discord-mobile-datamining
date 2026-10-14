@@ -1,11 +1,11 @@
-// === Module 17898: useVoiceChannelGames ===
+// === Module 17934: useVoiceChannelGames ===
 
-// Module 17898 (useVoiceChannelGames)
-import useGameProfileObscured from "useGameProfileObscured" /* 8238 */;
+// Module 17934 (useVoiceChannelGames)
+import useGameProfileObscured from "useGameProfileObscured" /* 8245 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5108 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5759 */;
+import PresenceStore from "PresenceStore" /* 5112 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5764 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVoice
       }
       const stateFromStoresArray = tmp2(504).useStateFromStoresArray(first, tmp10, tmp11);
       const tmp2Result = tmp2(504);
-      const getGamesForAppIds = tmp2(8858).useGetGamesForAppIds(stateFromStoresArray);
+      const getGamesForAppIds = tmp2(8862).useGetGamesForAppIds(stateFromStoresArray);
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore];
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVoice
         tmp16 = cResult[6];
         tmp17 = cResult[7];
       }
-      const tmp2Result3 = tmp2(8858);
+      const tmp2Result3 = tmp2(8862);
       const stateFromStores = tmp2(504).useStateFromStores(tmp16, tmp17);
       if (cResult[8] === getGamesForAppIds) {
         if (cResult[9] === stateFromStores) {

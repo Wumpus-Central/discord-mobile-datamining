@@ -1,7 +1,7 @@
-// === Module 13271: iapProducts ===
+// === Module 13310: iapProducts ===
 
-// Module 13271 (iapProducts)
-import billing_iapProducts from "billing/iapProducts" /* 13272 */;
+// Module 13310 (iapProducts)
+import billing_iapProducts from "billing/iapProducts" /* 13311 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");

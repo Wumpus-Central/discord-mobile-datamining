@@ -1,8 +1,8 @@
-// === Module 10617: useBotProfileCommands ===
+// === Module 10627: useBotProfileCommands ===
 
-// Module 10617 (useBotProfileCommands)
+// Module 10627 (useBotProfileCommands)
 import c from "c" /* 576 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9808 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9818 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBotPr
       found = commands.filter((nsfw) => {
         let tmp = true !== nsfw.nsfw;
         if (tmp) {
-          options = nsfw.options;
+          const options = nsfw.options;
           let found;
           if (options != null) {
             found = options.find((type) => {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBotPr
       found = commands.filter((nsfw) => {
         let tmp = true !== nsfw.nsfw;
         if (tmp) {
-          options = nsfw.options;
+          const options = nsfw.options;
           let found;
           if (options != null) {
             found = options.find((type) => {

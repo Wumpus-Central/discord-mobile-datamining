@@ -1,20 +1,20 @@
-// === Module 11336: MentionableSelectOptionParts ===
+// === Module 11348: MentionableSelectOptionParts ===
 
-// Module 11336 (MentionableSelectOptionParts)
+// Module 11348 (MentionableSelectOptionParts)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5445 */;
-import RoleIconUtils from "RoleIconUtils" /* 6884 */;
-import RoleIconDefault from "RoleIcon" /* 6902 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8622 */;
-import DiscordTagDefault from "DiscordTag" /* 8766 */;
-import UserIcon from "UserIcon" /* 11337 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5450 */;
+import RoleIconUtils from "RoleIconUtils" /* 6889 */;
+import RoleIconDefault from "RoleIcon" /* 6907 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8628 */;
+import DiscordTagDefault from "DiscordTag" /* 8770 */;
+import UserIcon from "UserIcon" /* 11349 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import PresenceStore from "PresenceStore" /* 5108 */;
+import PresenceStore from "PresenceStore" /* 5112 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const Constants = fn(1085);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { name: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 }, discriminator: null, roleCountContainer: null, roleCountText: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
 obj2.discriminator = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
@@ -80,7 +80,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMe
     const obj2 = { style: tmp4.roleCountContainer, children: null };
     const items = [tmp5, tmp8];
     obj2.children = items;
-    const tmp14 = options(View, obj2);
+    const tmp14 = React6(View, obj2);
     cResult[4] = tmp4.roleCountContainer;
     cResult[5] = tmp5;
     cResult[6] = tmp14;
@@ -97,7 +97,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleMe
   const obj = { style: tmp.roleCountContainer, children: null };
   const items = [closure_1_8(Text_Text.Text, { style: tmp.roleCountText, variant: "text-sm/medium", color: "interactive-text-default", children: children.count }), closure_1_8(UserIcon.UserIcon, { size: "xs" })];
   obj.children = items;
-  return options(View, obj);
+  return React6(View, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectOptionParts.tsx");

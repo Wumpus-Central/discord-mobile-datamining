@@ -1,6 +1,6 @@
-// === Module 12235: ExplicitMediaRedactionActionCreators ===
+// === Module 12271: ExplicitMediaRedactionActionCreators ===
 
-// Module 12235 (ExplicitMediaRedactionActionCreators)
+// Module 12271 (ExplicitMediaRedactionActionCreators)
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import size from "module_2" /* 2 */;

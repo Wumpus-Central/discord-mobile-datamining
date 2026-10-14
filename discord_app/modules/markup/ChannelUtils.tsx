@@ -1,6 +1,6 @@
-// === Module 5424: markup/ChannelUtils ===
+// === Module 5429: markup/ChannelUtils ===
 
-// Module 5424 (markup/ChannelUtils)
+// Module 5429 (markup/ChannelUtils)
 import ChannelRecord from "ChannelRecord" /* 2069 */;
 import size from "module_2" /* 2 */;
 

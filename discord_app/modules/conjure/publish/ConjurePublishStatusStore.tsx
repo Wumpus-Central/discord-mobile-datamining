@@ -1,13 +1,14 @@
-// === Module 11230: ConjurePublishStatusStore ===
+// === Module 10678: ConjurePublishStatusStore ===
 
-// Module 11230 (ConjurePublishStatusStore)
+// Module 10678 (ConjurePublishStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
 
 const map = new Map();
 const set = new Set();
 const set1 = new Set();
+let closure_4 = [];
 const Store = initializeDefault.Store;
 class ConjurePublishStatusStore extends Store {
 }
@@ -58,6 +59,7 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
   },
   CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function handleProjectPublishStatusUpdate(publishedRevision) {
     ({ projectId, surface, previewAppChannels } = publishedRevision);
+    let patchNotesSent = previewAppChannels;
     publishedRevision = publishedRevision.publishedRevision;
     ({ published, hasUnpublishedChanges } = publishedRevision);
     if (publishedRevision === undefined) {
@@ -71,6 +73,7 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
     if (flag === undefined) {
       flag = false;
     }
+    patchNotesSent = publishedRevision.patchNotesSent;
     let str = "unpublished";
     if (published) {
       let str2 = "up_to_date";
@@ -80,6 +83,25 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
       str = str2;
     }
     value = map.get(projectId);
+    if (null == patchNotesSent) {
+      let patchNotesSent1;
+      if (value != null) {
+        patchNotesSent1 = value.patchNotesSent;
+      }
+      if (patchNotesSent1 == null) {
+        patchNotesSent1 = closure_4;
+      }
+      patchNotesSent = patchNotesSent1;
+    } else {
+      let patchNotesSent2;
+      if (value != null) {
+        patchNotesSent2 = value.patchNotesSent;
+      }
+      if (patchNotesSent2 == null) {
+        patchNotesSent2 = closure_4;
+      }
+      patchNotesSent2.length === patchNotesSent.length && patchNotesSent2.every((publishedRevision, index) => publishedRevision.publishedRevision === patchNotesSent[index].publishedRevision && publishedRevision.messageId === tmp[index].messageId);
+    }
     let state;
     if (value != null) {
       state = value.state;
@@ -88,11 +110,13 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
       if (value.surface === surface) {
         if (value.previewAppChannels.length === previewAppChannels.length) {
           const previewAppChannels2 = value.previewAppChannels;
-          if (previewAppChannels2.every((item, index) => item === previewAppChannels[index])) {
+          if (previewAppChannels2.every((item, index) => item === patchNotesSent[index])) {
             if (value.publishedRevision === publishedRevision) {
               if (value.publishedAt === publishedAt) {
                 if (value.publishing === flag) {
-                  return false;
+                  if (value.patchNotesSent === patchNotesSent) {
+                    return false;
+                  }
                 }
               }
             }
@@ -100,7 +124,7 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
         }
       }
     }
-    const result = map.set(projectId, { state: str, surface, previewAppChannels, publishedRevision, publishedAt, publishing: flag });
+    const result = map.set(projectId, { state: str, surface, previewAppChannels, publishedRevision, publishedAt, publishing: flag, patchNotesSent });
   },
   CONJURE_PROJECT_PUBLISH_START: function handleProjectPublishStart(projectId) {
     set.add(projectId.projectId);
@@ -116,6 +140,24 @@ const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefaul
       set1.add(projectId);
     } else {
       set1.delete(projectId);
+    }
+  },
+  CONJURE_PROJECT_PATCH_NOTES_SENT: function handleProjectPatchNotesSent(arg0) {
+    ({ projectId, sent } = arg0);
+    value = map.get(projectId);
+    if (null == value) {
+      return false;
+    } else {
+      const obj2 = {};
+      const merged = Object.assign(value);
+      let patchNotesSent = value.patchNotesSent;
+      if (patchNotesSent == null) {
+        patchNotesSent = closure_4;
+      }
+      const items = [];
+      items[HermesBuiltin.arraySpread(patchNotesSent.filter((publishedRevision) => publishedRevision.publishedRevision !== sent.publishedRevision), 0)] = sent;
+      obj2.patchNotesSent = items;
+      const result = map.set(projectId, obj2);
     }
   },
   CONJURE_PROJECT_DELETE_SUCCESS: function handleProjectDeleteSuccess(projectId) {

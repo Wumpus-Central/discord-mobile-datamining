@@ -1,16 +1,16 @@
-// === Module 9300: PressableNavigatorBackIcon ===
+// === Module 9309: PressableNavigatorBackIcon ===
 
-// Module 9300 (PressableNavigatorBackIcon)
+// Module 9309 (PressableNavigatorBackIcon)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import _modDef9301 from "module_9301" /* 9301 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 9302 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9304 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import _modDef9310 from "module_9310" /* 9310 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 9311 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9313 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6078 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6084 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ let closure_3 = ["navigation", "onPress", "badgeCutoutColor", "ref"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
   const rect = { position: "absolute", minWidth: native.BADGE_SIZE, height: native.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
@@ -110,7 +110,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
   let backgroundColor = require("useToken").useToken(tmp4);
   const tmpResult3 = require("useToken");
   if (backgroundColor == null) {
-    backgroundColor = tmpResult4.useGradientValue(tmp(4936).GradientPercentage.START);
+    backgroundColor = tmpResult4.useGradientValue(tmp(4938).GradientPercentage.START);
   }
   if (backgroundColor == null) {
     backgroundColor = tmp12.maskStroke.backgroundColor;
@@ -132,7 +132,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
       cResult[14] = formatToPlainStringResult;
     } else {
       if (cResult[15] !== tmp12.actionButtonIcon.tintColor) {
-        const obj5 = { source: _modDef9301, style: null };
+        const obj5 = { source: _modDef9310, style: null };
         const obj6 = { tintColor: tmp12.actionButtonIcon.tintColor };
         obj5.style = obj6;
         const tmp31 = closure_10(FastImageDefault, obj5);
@@ -174,7 +174,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
               obj8.onPress = tmp23;
               obj8.style = tmp12.actionButtonPressable;
               obj8.children = tmp37;
-              obj7.children = closure_10(tmp(6185).PressableOpacity, obj8);
+              obj7.children = closure_10(tmp(6189).PressableOpacity, obj8);
               const tmp48 = closure_10(PressableNavigatorButtonWrapperDefault, obj7);
               cResult[25] = tmp23;
               cResult[26] = tmp7;

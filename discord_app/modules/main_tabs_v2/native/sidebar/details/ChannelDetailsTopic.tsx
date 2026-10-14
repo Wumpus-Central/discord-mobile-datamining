@@ -1,11 +1,11 @@
-// === Module 17503: ChannelDetailsTopic ===
+// === Module 17537: ChannelDetailsTopic ===
 
-// Module 17503 (ChannelDetailsTopic)
+// Module 17537 (ChannelDetailsTopic)
 import c from "c" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5079 */;
-import spring from "spring" /* 5378 */;
-import ChannelUtils from "ChannelUtils" /* 5414 */;
+import UserUtilsDefault from "UserUtils" /* 4964 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5083 */;
+import spring from "spring" /* 5383 */;
+import ChannelUtils from "ChannelUtils" /* 5419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -13,13 +13,13 @@ import UserStore from "UserStore" /* 1390 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(9630);
+const ChannelDetailsConstants = fn(9640);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PlatformUtils = fn(1382);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_15 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
 const EMPTY_STYLE = {};
 const constants = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
@@ -385,7 +385,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
     }
     if (cResult[5] === tmp7) {
     }
-    Text = Text(5088).Text;
+    Text = Text(5092).Text;
     const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", style: tmp7, children: stateFromStores };
     tmp = closure_11(Text, obj3);
     cResult[5] = tmp7;
@@ -414,7 +414,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5088).Text, obj2);
+    tmp4 = closure_11(channel(5092).Text, obj2);
   }
   return tmp4;
 });
@@ -457,7 +457,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
     }
     if (cResult[5] === tmp7) {
     }
-    Text = Text(5088).Text;
+    Text = Text(5092).Text;
     const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", style: tmp7, children: stateFromStores };
     tmp = closure_11(Text, obj3);
     cResult[5] = tmp7;
@@ -475,7 +475,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5088).Text, obj2);
+    tmp4 = closure_11(channel(5092).Text, obj2);
   }
   return tmp4;
 });

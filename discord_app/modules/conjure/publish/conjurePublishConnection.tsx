@@ -1,11 +1,11 @@
-// === Module 11263: conjurePublishConnection ===
+// === Module 10751: conjurePublishConnection ===
 
-// Module 11263 (conjurePublishConnection)
+// Module 10751 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11235 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 11254 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 11230 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10683 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10741 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10678 */;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {
@@ -50,7 +50,7 @@ export const publishStepHandlers = {
     }
   },
   publish_status(published, projectId) {
-    const obj2 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, published: true === published.published, hasUnpublishedChanges: true === published.has_unpublished_changes, surface: null, previewAppChannels: null, publishedRevision: null, publishedAt: null, publishing: null };
+    const obj2 = { type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE", projectId: projectId.projectId, published: true === published.published, hasUnpublishedChanges: true === published.has_unpublished_changes, surface: null, previewAppChannels: null, publishedRevision: null, publishedAt: null, publishing: null, patchNotesSent: null };
     const surface = published.surface;
     let tmp = null;
     if (null != surface) {
@@ -78,6 +78,29 @@ export const publishStepHandlers = {
     }
     obj2.publishedAt = published_at;
     obj2.publishing = true === published.publishing;
+    let flatMapResult;
+    if (Array.isArray(published.patch_notes_sent)) {
+      const patch_notes_sent = published.patch_notes_sent;
+      flatMapResult = patch_notes_sent.flatMap((published_revision) => {
+        published_revision = undefined;
+        if (published_revision != null) {
+          published_revision = published_revision.published_revision;
+        }
+        if (typeof published_revision === "number") {
+          if (typeof published_revision.guild_id === "string") {
+            if (typeof published_revision.channel_id === "string") {
+              if (typeof published_revision.message_id === "string") {
+                const obj = { publishedRevision: null, guildId: null, channelId: null, messageId: null };
+                ({ published_revision: obj.publishedRevision, guild_id: obj.guildId, channel_id: obj.channelId, message_id: obj.messageId } = published_revision);
+                const items = [obj];
+              }
+              return [];
+            }
+          }
+        }
+      });
+    }
+    obj2.patchNotesSent = flatMapResult;
     DispatcherDefault.dispatch(obj2);
   },
   publish_result(ok, projectId) {
@@ -222,8 +245,8 @@ export const publishProject = function publishProject(id) {
     }
   });
 };
-export const draftPatchNotes = function draftPatchNotes(id) {
-  closure_0 = id;
+export const draftPatchNotes = function draftPatchNotes(c0) {
+  closure_0 = c0;
   return new Promise((resolve, reject) => {
     const conjureSocket = conjureProjectSockets.getConjureSocket(closure_0);
     if (null != conjureSocket) {
@@ -239,9 +262,9 @@ export const draftPatchNotes = function draftPatchNotes(id) {
         resolve,
         reject,
         timeout: setTimeout(() => {
-            value = map1.get(id);
+            value = map1.get(closure_1_0);
             if (null != value) {
-              map1.delete(id);
+              map1.delete(closure_1_0);
               const _clearTimeout = clearTimeout;
               clearTimeout(value.timeout);
               const _Error = Error;
@@ -274,6 +297,22 @@ export const draftPatchNotes = function draftPatchNotes(id) {
       reject(error1);
     }
   });
+};
+export const recordPatchNotesSent = function recordPatchNotesSent(projectId, sent, source_sha) {
+  DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_PATCH_NOTES_SENT", projectId, sent });
+  try {
+    const conjureSocket = conjureProjectSockets.getConjureSocket(projectId);
+    if (null == conjureSocket) {
+      const _Error = Error;
+      const error = new Error("Not connected");
+      throw error;
+    } else {
+      obj4.sendPatchNotesSent(sent, source_sha);
+    }
+    obj4 = conjureSocket;
+  } catch (err) {
+  }
+  const obj2 = { type: "CONJURE_PROJECT_PATCH_NOTES_SENT", projectId, sent };
 };
 export const rejectPendingPublish = function rejectPendingPublish(projectId, arg1) {
   value = map.get(projectId);

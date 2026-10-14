@@ -1,6 +1,6 @@
-// === Module 5285: device/DeviceState ===
+// === Module 5290: device/DeviceState ===
 
-// Module 5285 (device/DeviceState)
+// Module 5290 (device/DeviceState)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

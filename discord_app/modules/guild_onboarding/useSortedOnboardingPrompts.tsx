@@ -1,8 +1,8 @@
-// === Module 10702: useSortedOnboardingPrompts ===
+// === Module 10805: useSortedOnboardingPrompts ===
 
-// Module 10702 (useSortedOnboardingPrompts)
+// Module 10805 (useSortedOnboardingPrompts)
 import noop from "module_19" /* 19 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6789 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6793 */;
 
 const require = globalThis.__r;
 
@@ -32,7 +32,7 @@ export default function useSortedOnboardingPrompts(arg0) {
           let sum = num2;
         } else if (tmp2.hasNewAnswers) {
           let arr2 = items1.push(tmp2);
-          options = tmp2.options;
+          let options = tmp2.options;
           sum = num2 + options.filter((isUnseen) => isUnseen.isUnseen).length;
         } else if (tmp2.inOnboarding) {
           let arr3 = items3.push(tmp2);

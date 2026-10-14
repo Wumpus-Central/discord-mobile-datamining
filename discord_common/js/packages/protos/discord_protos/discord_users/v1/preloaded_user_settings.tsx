@@ -249,7 +249,7 @@ class PreloadedUserSettings$Type extends MessageType {
     items[25] = obj1;
     items[26] = {
       no: 27,
-      name: "vibegrations",
+      name: "conjure",
       kind: "message",
       T() {
             return inAppFeedbackSettingsType1;
@@ -414,10 +414,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, w
     const joined25 = inAppFeedbackSettingsType.internalBinaryWrite(versions.appVersionSettings, tag.tag(26, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult25 = inAppFeedbackSettingsType.internalBinaryWrite(versions.appVersionSettings, tag.tag(26, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
-  if (versions.vibegrations) {
+  if (versions.conjure) {
     const tagResult26 = tag.tag(27, _mod1210.WireType.LengthDelimited);
-    const joined26 = inAppFeedbackSettingsType1.internalBinaryWrite(versions.vibegrations, tag.tag(27, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult26 = inAppFeedbackSettingsType1.internalBinaryWrite(versions.vibegrations, tag.tag(27, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined26 = inAppFeedbackSettingsType1.internalBinaryWrite(versions.conjure, tag.tag(27, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult26 = inAppFeedbackSettingsType1.internalBinaryWrite(versions.conjure, tag.tag(27, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -2064,7 +2064,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(arr) {
-  const obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
+  const obj = { videoBackgroundFilterDesktop: { oneofKind: "keys" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -8622,7 +8622,7 @@ const obj58 = { no: 1, name: "is_using_outdated_mobile_version", kind: "scalar",
 items47[0] = obj58;
 const inAppFeedbackSettingsType = new InAppFeedbackSettings$Type("discord_protos.discord_users.v1.AppVersionSettings", items47, tmp6, AppVersionSettings$Type, "create", InAppFeedbackSettings$Type, "internalBinaryRead", "internalBinaryWrite", "binaryReadMap1", undefined, tmp, fn, dependencyMap, InboxTab, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, obj24, obj25, obj26, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, tmp59, tmp60, items47, new.target, exports, obj58, undefined, 8, 4, 3, 2);
 const MessageType55 = fn(1210).MessageType;
-class VibegrationsSettings$Type extends MessageType55 {
+class ConjureSettings$Type extends MessageType55 {
   constructor() {
     obj = {
       no: 1,
@@ -8638,11 +8638,11 @@ class VibegrationsSettings$Type extends MessageType55 {
     };
     items = [];
     items[0] = obj;
-    tmp1 = new tmp("discord_protos.discord_users.v1.VibegrationsSettings", items, new.target);
+    tmp1 = new tmp("discord_protos.discord_users.v1.ConjureSettings", items, new.target);
     return tmp1;
   }
 }
-const prototype55 = VibegrationsSettings$Type.prototype;
+const prototype55 = ConjureSettings$Type.prototype;
 prototype55["create"] = function create(arr) {
   const obj = { projects: {} };
   const _Object = Object;
@@ -8717,7 +8717,7 @@ prototype55["binaryReadMap1"] = function binaryReadMap1(arg0, pos, arg2) {
       str = str1;
     }
     const _globalThis = globalThis;
-    const error = new Error("unknown map entry field for field discord_protos.discord_users.v1.VibegrationsSettings.projects");
+    const error = new Error("unknown map entry field for field discord_protos.discord_users.v1.ConjureSettings.projects");
     throw error;
   }
   if (str == null) {
@@ -8767,17 +8767,17 @@ const obj59 = {
   }
 };
 const items48 = [obj59];
-const inAppFeedbackSettingsType1 = new InAppFeedbackSettings$Type("discord_protos.discord_users.v1.VibegrationsSettings", items48, tmp6, VibegrationsSettings$Type, "create", InAppFeedbackSettings$Type, "internalBinaryRead", "internalBinaryWrite", items48, undefined, tmp, fn, dependencyMap, InboxTab, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, obj24, obj25, obj26, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, tmp59, tmp60, inAppFeedbackSettingsType, new.target, exports, obj59, undefined, 8, 4, 3, 2);
+const inAppFeedbackSettingsType1 = new InAppFeedbackSettings$Type("discord_protos.discord_users.v1.ConjureSettings", items48, tmp6, ConjureSettings$Type, "create", InAppFeedbackSettings$Type, "internalBinaryRead", "internalBinaryWrite", items48, undefined, tmp, fn, dependencyMap, InboxTab, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, obj24, obj25, obj26, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, tmp59, tmp60, inAppFeedbackSettingsType, new.target, exports, obj59, undefined, 8, 4, 3, 2);
 const MessageType56 = fn(1210).MessageType;
-class VibegrationsProjectSettings$Type extends MessageType56 {
+class ConjureProjectSettings$Type extends MessageType56 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "muted", kind: "scalar", T: 8 };
-    tmp1 = new tmp("discord_protos.discord_users.v1.VibegrationsProjectSettings", items, new.target);
+    tmp1 = new tmp("discord_protos.discord_users.v1.ConjureProjectSettings", items, new.target);
     return tmp1;
   }
 }
-const prototype56 = VibegrationsProjectSettings$Type.prototype;
+const prototype56 = ConjureProjectSettings$Type.prototype;
 prototype56["create"] = function create(arr) {
   const obj = { muted: false };
   const _Object = Object;
@@ -8846,7 +8846,7 @@ prototype56["internalBinaryWrite"] = function internalBinaryWrite(muted, tag, wr
 const items49 = [];
 const obj60 = { no: 1, name: "muted", kind: "scalar", T: 8 };
 items49[0] = obj60;
-const tmp63 = new "internalBinaryRead"("discord_protos.discord_users.v1.VibegrationsProjectSettings", items49, tmp6, VibegrationsSettings$Type, "create", VibegrationsProjectSettings$Type, "internalBinaryRead", items49, new.target, undefined, tmp, fn, dependencyMap, InboxTab, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, obj24, obj25, obj26, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, tmp59, tmp60, inAppFeedbackSettingsType, inAppFeedbackSettingsType1, exports, obj60, undefined, 8, 4);
+const tmp63 = new "internalBinaryRead"("discord_protos.discord_users.v1.ConjureProjectSettings", items49, tmp6, ConjureSettings$Type, "create", ConjureProjectSettings$Type, "internalBinaryRead", items49, new.target, undefined, tmp, fn, dependencyMap, InboxTab, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10, obj11, obj12, obj13, obj14, obj15, obj16, obj17, obj18, obj19, obj20, obj21, obj22, obj23, obj24, obj25, obj26, preloadedUserSettingsType, tmp9, tmp10, tmp11, guildSettingsType, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24, textAndImagesSettingsType, notificationSettingsType, privacySettingsType, tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, appearanceSettingsType, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58, tmp59, tmp60, inAppFeedbackSettingsType, inAppFeedbackSettingsType1, exports, obj60, undefined, 8, 4);
 let closure_79 = tmp63;
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx");
@@ -8931,5 +8931,5 @@ export const InAppFeedbackState = tmp58;
 export const DefaultReactionEmoji = tmp59;
 export const InAppFeedbackSettings = tmp60;
 export const AppVersionSettings = inAppFeedbackSettingsType;
-export const VibegrationsSettings = inAppFeedbackSettingsType1;
-export const VibegrationsProjectSettings = tmp63;
+export const ConjureSettings = inAppFeedbackSettingsType1;
+export const ConjureProjectSettings = tmp63;

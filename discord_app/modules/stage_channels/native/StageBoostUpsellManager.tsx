@@ -1,19 +1,19 @@
-// === Module 18254: StageBoostUpsellManager ===
+// === Module 18290: StageBoostUpsellManager ===
 
-// Module 18254 (StageBoostUpsellManager)
+// Module 18290 (StageBoostUpsellManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2073 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import StageMediaHooks from "StageMediaHooks" /* 5895 */;
-import useChannelVideoLimit from "useChannelVideoLimit" /* 8789 */;
-import ActionSheetStore from "ActionSheetStore" /* 4802 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import StageMediaHooks from "StageMediaHooks" /* 5900 */;
+import useChannelVideoLimit from "useChannelVideoLimit" /* 8793 */;
+import ActionSheetStore from "ActionSheetStore" /* 4804 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6812 */;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5892).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5897).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
@@ -47,7 +47,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 const obj2 = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5955, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5960, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
                 c8 = true;
               }
             }

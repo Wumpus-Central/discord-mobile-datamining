@@ -1,12 +1,12 @@
-// === Module 18707: PendingRequestList ===
+// === Module 18743: PendingRequestList ===
 
-// Module 18707 (PendingRequestList)
+// Module 18743 (PendingRequestList)
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import _modDef2568 from "module_2568" /* 2568 */;
 import _modDef2862 from "module_2862" /* 2862 */;
-import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 15477 */;
-import _modDef15525 from "module_15525" /* 15525 */;
+import useRefreshLinkCodeOnExpiryDefault from "useRefreshLinkCodeOnExpiry" /* 15514 */;
+import _modDef15562 from "module_15562" /* 15562 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { card: { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" }, row: null, divider: null, avatar: null, details: null, actions: null, actionButton: null, acceptButton: null, declineButton: null, acceptIcon: null, declineIcon: null, inviteIconContainer: null, inviteQrButton: null, inviteShareButton: null, dividerRow: null, dividerLine: null, dividerLabel: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
 obj2.row = { flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -353,31 +353,31 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
     avatar = request.parent_avatar;
   }
   const obj = request(504);
-  const pendingRequestResolution = request(18705).usePendingRequestResolution(request.parent_id);
+  const pendingRequestResolution = request(18741).usePendingRequestResolution(request.parent_id);
   ({ isConnected, isResolved } = pendingRequestResolution);
-  const tmp2Result = request(18705);
+  const tmp2Result = request(18741);
   const obj2 = { style: tmp.row, children: null };
-  const result = request(18708).formatPendingRequestSentText(request.created_at);
+  const result = request(18744).formatPendingRequestSentText(request.created_at);
   const obj3 = { avatarStyle: tmp.avatar, source: null, disablePlaceholder: true };
-  const tmp2Result2 = request(18708);
+  const tmp2Result2 = request(18744);
   obj3.source = AvatarUtilsDefault.getUserAvatarSource({ id: request.parent_id, avatar });
   const items1 = [closure_7(request(1200).Avatar, obj3), , ];
   const obj5 = { style: tmp.details, children: null };
-  const items2 = [closure_7(request(5088).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: globalName }), , ];
+  const items2 = [closure_7(request(5092).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: globalName }), , ];
   let tmp13Result = username1 !== globalName;
   if (tmp13Result) {
     const obj7 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: username1 };
-    tmp13Result = closure_7(tmp2(5088).Text, obj7);
+    tmp13Result = closure_7(tmp2(5092).Text, obj7);
   }
   items2[1] = tmp13Result;
-  items2[2] = closure_7(request(5088).Text, { variant: "text-xs/medium", color: "text-muted", children: result });
+  items2[2] = closure_7(request(5092).Text, { variant: "text-xs/medium", color: "text-muted", children: result });
   obj5.children = items2;
   items1[1] = closure_8(closure_5, obj5);
   if (isResolved) {
     const intl3 = tmp2(1126).intl;
     const obj8 = { variant: "text-sm/normal", color: "text-muted", children: null };
     obj8.children = intl3.string(isConnected ? obj8.YQP5dE : obj8["2HvOvh"]);
-    closure_7(tmp2(5088).Text, obj8);
+    closure_7(tmp2(5092).Text, obj8);
     const tmp22 = isConnected ? obj8.YQP5dE : obj8["2HvOvh"];
   } else {
     const obj9 = { style: tmp.actions, children: null };
@@ -398,11 +398,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
         const obj12 = { size: "small", color: tmp.declineIcon.color };
         let tmp13Result6 = closure_7(closure_4, obj12);
       } else {
-        const obj13 = { size: tmp2(1200).Icon.Sizes.SMALL, color: tmp.declineIcon.color, source: _modDef15525 };
+        const obj13 = { size: tmp2(1200).Icon.Sizes.SMALL, color: tmp.declineIcon.color, source: _modDef15562 };
         tmp13Result6 = closure_7(tmp2(1200).Icon, obj13);
       }
       obj10.children = tmp13Result6;
-      items3[1] = closure_7(tmp2(6185).PressableOpacity, obj10);
+      items3[1] = closure_7(tmp2(6189).PressableOpacity, obj10);
       obj9.children = items3;
       items1[2] = closure_8(closure_5, obj9);
       obj2.children = items1;
@@ -424,10 +424,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PendingReq
         let tmp13Result7 = closure_7(closure_4, obj16);
       } else {
         const obj17 = { size: "sm", color: nativeDefault.colors.WHITE };
-        tmp13Result7 = closure_7(tmp2(8849).CheckmarkLargeBoldIcon, obj17);
+        tmp13Result7 = closure_7(tmp2(8853).CheckmarkLargeBoldIcon, obj17);
       }
       obj14.children = tmp13Result7;
-      closure_7(tmp2(6185).PressableOpacity, obj14);
+      closure_7(tmp2(6189).PressableOpacity, obj14);
     }
   }
   const obj4 = { id: request.parent_id, avatar };

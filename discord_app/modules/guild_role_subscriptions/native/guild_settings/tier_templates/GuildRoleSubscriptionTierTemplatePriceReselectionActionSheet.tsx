@@ -1,15 +1,15 @@
-// === Module 18614: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 18650: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 18614 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 18650 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import PriceUtils from "PriceUtils" /* 6940 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8674 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15839 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4834 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import PriceUtils from "PriceUtils" /* 6945 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8679 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15876 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ const SubscriptionIntervalTypes = fn(1392).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1096).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md }, rowContainer: null, containerSelected: null, rowStatusIcon: null, confirmButton: null, backToTemplates: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md };
 obj2.rowContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignSelf: "stretch", justifyContent: "flex-start", padding: 12, marginBottom: 12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
@@ -56,7 +56,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
     if (cResult[3] === containerSelected) {
       let tmp8 = cResult[4];
     }
-    const tmp9Result = importDefault(selected ? 18520 : 17332);
+    const tmp9Result = importDefault(selected ? 18556 : 17366);
     if (cResult[5] === tmp4.rowStatusIcon) {
       if (cResult[6] === tmp9Result) {
         let tmp11 = cResult[7];
@@ -77,7 +77,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
       }
       if (cResult[10] !== tmp14) {
         const obj5 = { variant: "text-sm/normal", color: "text-default", children: tmp14 };
-        const tmp20 = options(Text_Text.Text, obj5);
+        const tmp20 = React6(Text_Text.Text, obj5);
         cResult[10] = tmp14;
         cResult[11] = tmp20;
         let tmp18 = tmp20;
@@ -112,7 +112,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
       tmp21 = tmp23;
     }
     const obj7 = { style: tmp4.rowStatusIcon, source: tmp9Result };
-    const tmp13 = options(FastImageDefault, obj7);
+    const tmp13 = React6(FastImageDefault, obj7);
     cResult[5] = tmp4.rowStatusIcon;
     cResult[6] = tmp9Result;
     cResult[7] = tmp13;
@@ -139,8 +139,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
   items[1] = containerSelected;
   const obj3 = { style: tmp.rowStatusIcon, source: null };
   const tmp7 = TouchableHitBoxDefault;
-  obj3.source = importDefault(selected ? 18520 : 17332);
-  const items1 = [options(FastImageDefault, obj3), ];
+  obj3.source = importDefault(selected ? 18556 : 17366);
+  const items1 = [React6(FastImageDefault, obj3), ];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = util.intl;
   const obj5 = { price: null, interval: null };
@@ -149,7 +149,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function PriceO
   const tmp2Result = PriceUtils;
   obj5.interval = GuildRoleSubscriptionTypeUtils.formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
   obj4.children = intl.format(util.t.CgmBaG, obj5);
-  items1[1] = options(Text_Text.Text, obj4);
+  items1[1] = React6(Text_Text.Text, obj4);
   obj2.children = items1;
   return collapsed(tmp7, obj2);
 });

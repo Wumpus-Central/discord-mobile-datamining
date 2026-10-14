@@ -1,12 +1,12 @@
-// === Module 17269: useReplyActions ===
+// === Module 17303: useReplyActions ===
 
-// Module 17269 (useReplyActions)
+// Module 17303 (useReplyActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7901 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8268 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8472 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9427 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7908 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8275 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8479 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9436 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -15,9 +15,9 @@ import UserStore from "UserStore" /* 1390 */;
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7244).DraftType;
+const DraftType = fn(7250).DraftType;
 const EmojiIntention = fn(1393).EmojiIntention;
-const MessageSendLocation = fn(5085).MessageSendLocation;
+const MessageSendLocation = fn(5089).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -229,7 +229,7 @@ export const useReplyActions = function useReplyActions(cResult) {
         const obj3 = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17270, dependencyMap.paths), "ReactActionSheet", obj5);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17304, dependencyMap.paths), "ReactActionSheet", obj5);
       }
     }, items6);
     obj2.openEmojiPicker = callback2;

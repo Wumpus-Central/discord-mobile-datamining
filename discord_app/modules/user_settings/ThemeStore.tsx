@@ -6,7 +6,7 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1243 */;
 import resolveThemeDefault from "resolveTheme" /* 1250 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2046 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 14714 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 14752 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
@@ -85,13 +85,14 @@ ThemeStore.displayName = "ThemeStore";
 ThemeStore.persistKey = "ThemeStore";
 const items = [
   (theme) => {
-    let ONYX = theme.theme;
-    if ("amoled" === ONYX) {
-      ONYX = ThemeTypes.ONYX;
+    if ("amoled" === theme.theme) {
+      theme = ThemeTypes.ONYX;
+    } else {
+      theme = theme.theme;
     }
     obj = {};
     const merged = Object.assign(theme);
-    obj.theme = ONYX;
+    obj.theme = theme;
     return obj;
   },
   (preferences) => {

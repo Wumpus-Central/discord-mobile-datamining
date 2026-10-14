@@ -1,6 +1,6 @@
-// === Module 15126: MediaPlayerManager ===
+// === Module 15164: MediaPlayerManager ===
 
-// Module 15126 (MediaPlayerManager)
+// Module 15164 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,17 +8,17 @@ import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import RootNavigationRef from "RootNavigationRef" /* 4977 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 6067 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7179 */;
+import RootNavigationRef from "RootNavigationRef" /* 4979 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 6073 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7185 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import VoicePanelStore from "VoicePanelStore" /* 6074 */;
+import VoicePanelStore from "VoicePanelStore" /* 6080 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import MessageStore from "MessageStore" /* 5432 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import MessageStore from "MessageStore" /* 5437 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15127 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 15165 */;
 import module_570 from "module_570" /* 570 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;
 import size from "module_2" /* 2 */;
@@ -41,12 +41,12 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "Set",
-    showPip: "parasol",
+    showPip: "DEVELOPER_OPTIONS_SET_ROUTING_KEY",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "strandparasol"
+    currentlyDisplayedChannelId: null
   };
   return obj;
 });

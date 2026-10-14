@@ -1,10 +1,10 @@
-// === Module 4760: RelationshipStore ===
+// === Module 4762: RelationshipStore ===
 
-// Module 4760 (RelationshipStore)
+// Module 4762 (RelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4761 */;
+import MessageRecord from "MessageRecord" /* 4763 */;
 import UserStore from "UserStore" /* 1390 */;
 
 function markAllUserIdListsStale() {
@@ -94,7 +94,7 @@ let closure_14 = 0;
 const dependencyMap = {};
 let closure_16 = 0;
 let size = 0;
-let closure_19 = { friends: "exports", blocked: "WireType", ignored: "toCharArray$esjava$1", blockedOrIgnored: "toCharArray$esjava$1" };
+let closure_19 = { friends: "code", blocked: "guild", ignored: "size", blockedOrIgnored: "Array" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

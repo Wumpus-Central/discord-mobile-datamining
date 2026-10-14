@@ -1,6 +1,6 @@
-// === Module 8007: MarkupASTUtils ===
+// === Module 8014: MarkupASTUtils ===
 
-// Module 8007 (MarkupASTUtils)
+// Module 8014 (MarkupASTUtils)
 import size from "module_2" /* 2 */;
 
 function collectAst(content) {
@@ -626,10 +626,10 @@ function constrainAst(content, arg1) {
 export const NUM_MAX_AST_NODES = 200;
 export { walkAst };
 export { reinsertConsumedListSeparators };
-export const astToString = function astToString(applicationSubscriptionSystemMessageASTContent) {
+export const astToString = function astToString(intl2) {
   const items = [];
-  if (Array.isArray(applicationSubscriptionSystemMessageASTContent)) {
-    const item = applicationSubscriptionSystemMessageASTContent.forEach((content) => {
+  if (Array.isArray(intl2)) {
+    const item = intl2.forEach((content) => {
       let items = closure_1_0;
       if (closure_1_0 === undefined) {
         items = [];
@@ -1020,10 +1020,10 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
       }
       return items;
     });
-  } else if (typeof applicationSubscriptionSystemMessageASTContent.content === "string") {
-    items.push(applicationSubscriptionSystemMessageASTContent.content);
-  } else if (null != applicationSubscriptionSystemMessageASTContent.content) {
-    const content = applicationSubscriptionSystemMessageASTContent.content;
+  } else if (typeof intl2.content === "string") {
+    items.push(intl2.content);
+  } else if (null != intl2.content) {
+    const content = intl2.content;
     closure_129_0 = items;
     const _Array = Array;
     if (Array.isArray(content)) {

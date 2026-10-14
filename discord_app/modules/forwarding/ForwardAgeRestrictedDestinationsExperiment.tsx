@@ -1,6 +1,6 @@
-// === Module 12314: ForwardAgeRestrictedDestinationsExperiment ===
+// === Module 12350: ForwardAgeRestrictedDestinationsExperiment ===
 
-// Module 12314 (ForwardAgeRestrictedDestinationsExperiment)
+// Module 12350 (ForwardAgeRestrictedDestinationsExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 
 const obj = { kind: "user", name: "2026-08-forward-age-restricted-destinations", defaultConfig: { disableAgeRestrictedDestinations: false }, variations: null };

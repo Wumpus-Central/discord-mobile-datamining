@@ -1,6 +1,6 @@
-// === Module 5362: useIsScreenReaderEnabled ===
+// === Module 5367: useIsScreenReaderEnabled ===
 
-// Module 5362 (useIsScreenReaderEnabled)
+// Module 5367 (useIsScreenReaderEnabled)
 import _mod17 from "module_17" /* 17 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

@@ -1,6 +1,6 @@
-// === Module 18538: useOnboardingMonetizationEnableFlow ===
+// === Module 18574: useOnboardingMonetizationEnableFlow ===
 
-// Module 18538 (useOnboardingMonetizationEnableFlow)
+// Module 18574 (useOnboardingMonetizationEnableFlow)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -106,9 +106,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
       }
     }
   }
-  const tmp20 = refresh(18539);
-  ({ error, loading, createEnableRequest, submittedRequest } = refresh(18539)(undefined));
-  const tmp20Result = refresh(18539)(undefined);
+  const tmp20 = refresh(18575);
+  ({ error, loading, createEnableRequest, submittedRequest } = refresh(18575)(undefined));
+  const tmp20Result = refresh(18575)(undefined);
   if (features != null) {
     class T {
       constructor() {
@@ -121,11 +121,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
       }
     }
   }
-  const tmp19ResultResult = refresh(18540)(undefined);
+  const tmp19ResultResult = refresh(18576)(undefined);
   ({ loading: loading2, error: error2, refresh } = tmp19ResultResult);
   const eligibility = tmp19ResultResult.eligibility;
-  const tmp19Result = refresh(18540);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(18541)(eligibility));
+  const tmp19Result = refresh(18576);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(18577)(eligibility));
   if (features != null) {
     class T {
       constructor() {
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
       }
     }
   }
-  const tmp24 = refresh(18541)(eligibility);
+  const tmp24 = refresh(18577)(eligibility);
   if (features != null) {
     class T {
       constructor() {
@@ -485,18 +485,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(18539);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(18539)(id));
+  const tmp10 = refresh(18575);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(18575)(id));
   let id1;
-  const tmp10Result = refresh(18539)(id);
+  const tmp10Result = refresh(18575)(id);
   if (features != null) {
     id1 = features.id;
   }
-  const tmp9ResultResult = refresh(18540)(id1);
+  const tmp9ResultResult = refresh(18576)(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp9Result = refresh(18540);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(18541)(eligibility));
+  const tmp9Result = refresh(18576);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(18577)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -511,7 +511,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
     }
     tmp19 = true === hasItem3;
   }
-  const tmp16 = refresh(18541)(eligibility);
+  const tmp16 = refresh(18577)(eligibility);
   let id2;
   if (features != null) {
     id2 = features.id;

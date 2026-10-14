@@ -1,9 +1,9 @@
-// === Module 10016: ForumTagContextMenu ===
+// === Module 10026: ForumTagContextMenu ===
 
-// Module 10016 (ForumTagContextMenu)
+// Module 10026 (ForumTagContextMenu)
 import jsxProd from "jsxProd" /* 21 */;
-import ToastUtils from "ToastUtils" /* 4808 */;
-import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import ToastUtils from "ToastUtils" /* 4810 */;
+import ClipboardUtils from "ClipboardUtils" /* 6891 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumTag
   if (cResult[1] !== tagId) {
     const obj2 = {
       label: first,
-      IconComponent: tmp(10017).IdIcon,
+      IconComponent: tmp(10027).IdIcon,
       action() {
           ClipboardUtils.copy(tagId);
           ToastUtils.presentIdCopied();
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumTag
       return tmp8;
     }
   }
-  const tmp9 = jsx(tagId(9363).ContextMenu, { triggerOnLongPress: true, items: tmp7, enabled: setting, children });
+  const tmp9 = jsx(tagId(9372).ContextMenu, { triggerOnLongPress: true, items: tmp7, enabled: setting, children });
   cResult[3] = children;
   cResult[4] = tmp7;
   cResult[5] = setting;
@@ -62,11 +62,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumTag
   const enabled = DeveloperMode.useSetting();
   const intl = tagId(1126).intl;
   obj.label = intl.string(tagId(1126).t["8VG6IY"]);
-  obj.IconComponent = tagId(10017).IdIcon;
+  obj.IconComponent = tagId(10027).IdIcon;
   obj.action = function action() {
     ClipboardUtils.copy(tagId);
     ToastUtils.presentIdCopied();
   };
   const items = [obj];
-  return jsx(tagId(9363).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
+  return jsx(tagId(9372).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
 });

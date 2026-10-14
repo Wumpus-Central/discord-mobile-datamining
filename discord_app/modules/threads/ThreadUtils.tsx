@@ -1,18 +1,18 @@
-// === Module 7923: ThreadUtils ===
+// === Module 7930: ThreadUtils ===
 
-// Module 7923 (ThreadUtils)
+// Module 7930 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6804 */;
-import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7221 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7912 */;
+import _modDef4704 from "module_4704" /* 4704 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5111 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6808 */;
+import threads_getTimestampStringDefault from "threads/getTimestampString" /* 7227 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7919 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ReadStateStore from "ReadStateStore" /* 6035 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4754 */;
 
 const require = globalThis.__r;
 
@@ -154,8 +154,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
   if (cResult[5] !== createTimestamp) {
     let valueOfResult = null;
     if (null != createTimestamp) {
-      valueOfResult = _modDef4702(createTimestamp).valueOf();
-      const obj4 = _modDef4702(createTimestamp);
+      valueOfResult = _modDef4704(createTimestamp).valueOf();
+      const obj4 = _modDef4704(createTimestamp);
     }
     cResult[5] = createTimestamp;
     cResult[6] = valueOfResult;
@@ -199,8 +199,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef4702(createTimestamp).valueOf();
-    const obj3 = _modDef4702(createTimestamp);
+    valueOfResult = _modDef4704(createTimestamp).valueOf();
+    const obj3 = _modDef4704(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

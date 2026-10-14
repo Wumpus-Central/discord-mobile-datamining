@@ -1,10 +1,10 @@
-// === Module 9417: PremiumFeaturesLogo ===
+// === Module 9426: PremiumFeaturesLogo ===
 
-// Module 9417 (PremiumFeaturesLogo)
+// Module 9426 (PremiumFeaturesLogo)
 import c from "c" /* 576 */;
-import PremiumUtils from "PremiumUtils" /* 4769 */;
-import _modDef7155 from "module_7155" /* 7155 */;
-import _modDef9418 from "module_9418" /* 9418 */;
+import PremiumUtils from "PremiumUtils" /* 4771 */;
+import _modDef7161 from "module_7161" /* 7161 */;
+import _modDef9427 from "module_9427" /* 9427 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,10 +18,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   const cResult = c.c(6);
   ({ premiumType, style } = arg0);
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp5 = _modDef9418;
+    let tmp5 = _modDef9427;
     let tmp6 = importDefault;
   } else {
-    tmp5 = _modDef7155;
+    tmp5 = _modDef7161;
     tmp6 = importDefault;
   }
   if (cResult[0] !== premiumType) {
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       return tmp10;
     }
   }
-  const tmp11 = jsx(tmp6(6157), { accessible: true, accessibilityLabel: tmp8, accessibilityRole: "header", style, resizeMode: "contain", source: tmp5 });
+  const tmp11 = jsx(tmp6(5034), { accessible: true, accessibilityLabel: tmp8, accessibilityRole: "header", style, resizeMode: "contain", source: tmp5 });
   cResult[2] = tmp5;
   cResult[3] = style;
   cResult[4] = tmp8;
@@ -50,14 +50,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
 }) : (function PremiumFeaturesLogo(premiumType) {
   premiumType = premiumType.premiumType;
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp3 = _modDef9418;
+    let tmp3 = _modDef9427;
     let tmp = importDefault;
   } else {
     tmp = importDefault;
-    tmp3 = _modDef7155;
+    tmp3 = _modDef7161;
   }
   const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
-  const tmpResult = tmp(6157);
+  const tmpResult = tmp(5034);
   obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   obj.style = premiumType.style;
   obj.source = tmp3;

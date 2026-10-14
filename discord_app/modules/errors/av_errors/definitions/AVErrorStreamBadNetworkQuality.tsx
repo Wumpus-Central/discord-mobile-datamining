@@ -1,10 +1,10 @@
-// === Module 18666: AVErrorStreamBadNetworkQuality ===
+// === Module 18702: AVErrorStreamBadNetworkQuality ===
 
-// Module 18666 (AVErrorStreamBadNetworkQuality)
+// Module 18702 (AVErrorStreamBadNetworkQuality)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import AVError from "AVError" /* 5289 */;
-import AVErrorContext from "AVErrorContext" /* 18659 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7429 */;
+import AVError from "AVError" /* 5294 */;
+import AVErrorContext from "AVErrorContext" /* 18695 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7435 */;
 
 require = fn;
 const RTCConnectionQuality = fn(1085).RTCConnectionQuality;

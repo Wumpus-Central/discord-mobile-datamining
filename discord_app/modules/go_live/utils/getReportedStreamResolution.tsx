@@ -1,8 +1,8 @@
-// === Module 5272: getReportedStreamResolution ===
+// === Module 5277: getReportedStreamResolution ===
 
-// Module 5272 (getReportedStreamResolution)
-import Constants from "Constants" /* 5117 */;
-import getReportedPresetResolutionDefault from "getReportedPresetResolution" /* 5273 */;
+// Module 5277 (getReportedStreamResolution)
+import Constants from "Constants" /* 5121 */;
+import getReportedPresetResolutionDefault from "getReportedPresetResolution" /* 5278 */;
 import size from "module_2" /* 2 */;
 
 const ResolutionTypes = Constants.ResolutionTypes;

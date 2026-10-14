@@ -1,9 +1,9 @@
-// === Module 18621: CreateInstantInviteUtils ===
+// === Module 18657: CreateInstantInviteUtils ===
 
-// Module 18621 (CreateInstantInviteUtils)
+// Module 18657 (CreateInstantInviteUtils)
 import Constants from "Constants" /* 1085 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4748 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 import size from "module_2" /* 2 */;
 
 let GuildChannelStore = GuildChannelStore_mod;

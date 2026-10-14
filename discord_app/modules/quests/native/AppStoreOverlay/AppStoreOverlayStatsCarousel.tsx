@@ -1,16 +1,16 @@
-// === Module 13442: AppStoreOverlayStatsCarousel ===
+// === Module 13481: AppStoreOverlayStatsCarousel ===
 
-// Module 13442 (AppStoreOverlayStatsCarousel)
+// Module 13481 (AppStoreOverlayStatsCarousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
-import AnalyticsActions from "AnalyticsActions" /* 7407 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7416 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 13443 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 13444 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6339 */;
+import AnalyticsActions from "AnalyticsActions" /* 7413 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7422 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 13482 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 13483 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -66,7 +66,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };
@@ -181,7 +181,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppSto
           const obj5 = { children: null };
           const items = [tmp13, tmp16, tmp19];
           obj5.children = items;
-          const tmp27 = closure_1_8(options, obj5);
+          const tmp27 = closure_1_8(React6, obj5);
           cResult[14] = tmp13;
           cResult[15] = tmp16;
           cResult[16] = tmp19;
@@ -257,7 +257,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppSto
     tmp10Result = React5(timestampProducer, obj);
   }
   items2[2] = tmp10Result;
-  const tmp5Result = closure_1_8(options, { children: items2 });
+  const tmp5Result = closure_1_8(React6, { children: items2 });
   if (tmp3) {
     const obj3 = { style: items, onPress: onRatingPress, accessible: true, accessibilityRole: "button", accessibilityLabel, accessibilityHint: null, children: null };
     let stringResult;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
     first = cResult[0];
   }
   let obj = onRatingPress(576);
-  const nativeGesture = onRatingPress(6335).useNativeGesture(first);
+  const nativeGesture = onRatingPress(6339).useNativeGesture(first);
   dependencyMap = length.useRef(0);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function h() {
@@ -554,7 +554,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppStore
   cResult[6] = R;
   tmp11 = R;
   tmp7 = stats.length <= 2;
-  const tmpResult = onRatingPress(6335);
+  const tmpResult = onRatingPress(6339);
 }) : (function AppStoreOverlayStatsCarousel(arg0) {
   ({ stats, onRatingPress: require, onCarouselScroll } = arg0);
   let length;

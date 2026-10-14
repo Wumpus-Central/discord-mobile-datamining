@@ -1,10 +1,10 @@
-// === Module 8661: GuildEventRecurrences ===
+// === Module 8666: GuildEventRecurrences ===
 
-// Module 8661 (GuildEventRecurrences)
+// Module 8666 (GuildEventRecurrences)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 8662 */;
-import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 8664 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 8667 */;
+import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 8669 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { marginTop: 16 }, scrollView: { marginTop: 8, marginBottom: 8, borderRadius: nativeDefault.radii.sm, maxHeight: 140 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   const obj2 = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1126).intl;
   obj2.children = intl.string(guildEventId(1126).t["D/jjoa"]);
-  const items = [closure_6(guildEventId(5088).Text, obj2), , ];
+  const items = [closure_6(guildEventId(5092).Text, obj2), , ];
   const tmp4 = useGuildEventRecurrencesDefault(guildEventId, guildId, recurrenceRule);
   const tmp6 = c4;
   items[1] = closure_6(closure_5, {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = closure_6(tmp8(5379).Button, obj4);
+    canViewMoreRecurrences = closure_6(tmp8(5384).Button, obj4);
   }
   items[2] = canViewMoreRecurrences;
   obj.children = items;

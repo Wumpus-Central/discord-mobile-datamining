@@ -1,11 +1,14 @@
-// === Module 16602: ReactCompilerSetting ===
+// === Module 16641: ReactCompilerSetting ===
 
-// Module 16602 (ReactCompilerSetting)
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import WrenchIcon from "WrenchIcon" /* 16177 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
+// Module 16641 (ReactCompilerSetting)
+import UserSettings from "UserSettings" /* 2041 */;
+import WrenchIcon from "WrenchIcon" /* 16214 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 10767 */;
 import size from "module_2" /* 2 */;
 
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const obj = {
   useTitle() {
     return "React Compiler";
@@ -19,11 +22,17 @@ const obj = {
     }
     return str;
   },
-  usePredicate() {
-    return ReactCompilerGating.isReactCompilerBuild();
+  usePredicate: function useReactCompilerPredicate() {
+    const DeveloperMode = UserSettings.DeveloperMode;
+    let setting = DeveloperMode.useSetting();
+    if (setting) {
+      setting = ReactCompilerGating.isReactCompilerBuild();
+      const tmpResult = ReactCompilerGating;
+    }
+    return setting;
   }
 };
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
 
 export default SettingBuilders.createStatic({
   useTitle() {
@@ -38,7 +47,13 @@ export default SettingBuilders.createStatic({
     }
     return str;
   },
-  usePredicate() {
-    return ReactCompilerGating.isReactCompilerBuild();
+  usePredicate: function useReactCompilerPredicate() {
+    const DeveloperMode = UserSettings.DeveloperMode;
+    let setting = DeveloperMode.useSetting();
+    if (setting) {
+      setting = ReactCompilerGating.isReactCompilerBuild();
+      const tmpResult = ReactCompilerGating;
+    }
+    return setting;
   }
 });

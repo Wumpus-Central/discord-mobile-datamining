@@ -1,11 +1,11 @@
-// === Module 17579: VoiceChannelAppSetting ===
+// === Module 17613: VoiceChannelAppSetting ===
 
-// Module 17579 (VoiceChannelAppSetting)
+// Module 17613 (VoiceChannelAppSetting)
 import c from "c" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import useVoiceChannelApp from "useVoiceChannelApp" /* 17580 */;
-import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet" /* 17583 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import useVoiceChannelApp from "useVoiceChannelApp" /* 17614 */;
+import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet" /* 17617 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function VoiceChannelAppRow(guildId) {
   if (application_id == null) {
     application_id = null;
   }
-  options = guildId(application_id[5]).useVoiceChannelAppSettingOptions(guildId, application_id).options;
+  const options = guildId(application_id[5]).useVoiceChannelAppSettingOptions(guildId, application_id).options;
   const found = options.find((applicationId) => applicationId.applicationId === application_id);
   const intl = guildId(application_id[6]).intl;
   const stringResult = intl.string(onChange(application_id[7]).AdT7SZ);
@@ -41,7 +41,7 @@ function VoiceChannelAppRow(guildId) {
   obj3.icon = tmp8Result;
   obj3.onPress = function handlePress() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(17583, dependencyMap.paths), VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY, { guildId, selectedApplicationId: application_id, onChange });
+    obj.openLazy(asyncRequireImpl(17617, dependencyMap.paths), VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY, { guildId, selectedApplicationId: application_id, onChange });
   };
   obj2.children = jsx(guildId(application_id[9]).TableRow, { label: name, accessibilityLabel: "" + stringResult + " " + name, icon: null, onPress: null, arrow: true });
   return jsx(guildId(application_id[8]).TableRowGroup, { title: stringResult, description: null, hasIcons: null, children: null });

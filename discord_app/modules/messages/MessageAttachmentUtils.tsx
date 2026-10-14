@@ -1,13 +1,13 @@
-// === Module 12432: MessageAttachmentUtils ===
+// === Module 12468: MessageAttachmentUtils ===
 
-// Module 12432 (MessageAttachmentUtils)
+// Module 12468 (MessageAttachmentUtils)
 import util from "util" /* 1126 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6990 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 6995 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6996 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8399 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8479 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6997 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 7002 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7003 */;
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8406 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8486 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 
 require = fn;
 function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChannelType) {
@@ -177,7 +177,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
     }
   }
-  channel(6990);
+  channel(6997);
   if (cResult[7] === stateFromStores) {
     if (cResult[8] === setting) {
       let tmp11 = cResult[9];
@@ -207,7 +207,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
   const RenderSpoilers = channel(2041).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(573);
-  const enabledHarmTypesBitmaskForChannelType = channel(6990).getEnabledHarmTypesBitmaskForChannelType(channel(6996).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(6997).getEnabledHarmTypesBitmaskForChannelType(channel(7003).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 });
 export const getObscuredAlt = function getObscuredAlt(arg0) {

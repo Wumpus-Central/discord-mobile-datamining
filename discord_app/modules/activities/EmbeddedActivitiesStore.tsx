@@ -4,19 +4,19 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Server from "Server" /* 1998 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4739 */;
-import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 6040 */;
-import ContentClassificationReference from "ContentClassificationReference" /* 6041 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7247 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 10808 */;
-import getPlatformDefault from "getPlatform" /* 11518 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4741 */;
+import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 6045 */;
+import ContentClassificationReference from "ContentClassificationReference" /* 6046 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7253 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 10714 */;
+import getPlatformDefault from "getPlatform" /* 11528 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
 
-const isVoiceEmbeddedActivityDefault = combined(10481);
+const isVoiceEmbeddedActivityDefault = combined(10491);
 require = fn;
 function participantFromServer(userId) {
   return { userId: userId.user_id, sessionId: userId.session_id, nonce: userId.nonce };
@@ -27,7 +27,7 @@ function updateEmbeddedActivities(content_classification) {
   let combined = importDefault;
   const tmp3 = getURLForApplicationDefault(application_id);
   if (null != tmp3) {
-    const embeddedActivityLocationChannelId = application_id(4739).getEmbeddedActivityLocationChannelId(_location);
+    const embeddedActivityLocationChannelId = application_id(4741).getEmbeddedActivityLocationChannelId(_location);
     if (null != embeddedActivityLocationChannelId) {
       value = map2.get(embeddedActivityLocationChannelId);
       items = undefined;
@@ -136,7 +136,7 @@ function updateEmbeddedActivities(content_classification) {
               }
             }
             value11.upsert(application_id, _location.id, tmp61);
-            const embeddedActivityLocationChannelId1 = application_id(4739).getEmbeddedActivityLocationChannelId(_location);
+            const embeddedActivityLocationChannelId1 = application_id(4741).getEmbeddedActivityLocationChannelId(_location);
             if (null != embeddedActivityLocationChannelId1) {
               let value12 = map2.get(embeddedActivityLocationChannelId1);
               if (null == value12) {
@@ -150,7 +150,7 @@ function updateEmbeddedActivities(content_classification) {
                 }
               }
               value12.upsert(application_id, _location.id, tmp61);
-              let str5 = application_id(4739).getEmbeddedActivityLocationGuildId(_location);
+              let str5 = application_id(4741).getEmbeddedActivityLocationGuildId(_location);
               if (str5 == null) {
                 str5 = "0";
               }
@@ -166,9 +166,9 @@ function updateEmbeddedActivities(content_classification) {
                 }
               }
               value13.upsert(application_id, _location.id, tmp61);
-              const tmp76Result4 = application_id(4739);
+              const tmp76Result4 = application_id(4741);
             }
-            const tmp76Result = application_id(4739);
+            const tmp76Result = application_id(4741);
           } else {
             const _Array = Array;
             Array.from(value9.userIds);
@@ -197,7 +197,7 @@ function updateEmbeddedActivities(content_classification) {
               id1 = value14.location.id;
             }
             if (id1 !== _location.id) {
-              const embeddedActivityLocationChannelId2 = application_id(4739).getEmbeddedActivityLocationChannelId(_location);
+              const embeddedActivityLocationChannelId2 = application_id(4741).getEmbeddedActivityLocationChannelId(_location);
               const channel = ChannelStore.getChannel(embeddedActivityLocationChannelId2);
               if (channel != null) {
                 const guildId = channel.getGuildId();
@@ -226,7 +226,7 @@ function updateEmbeddedActivities(content_classification) {
                 const ComponentDispatch2 = application_id(1121).ComponentDispatch;
                 const obj8 = { location: _location, applicationId: application_id, isFirstActivityInChannel: 0 === arr2.length, isStart: tmp78, participants: mapped, embeddedActivity: obj7, inviterUserId };
                 ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj8);
-                application_id(10823);
+                application_id(10903);
                 if (true === renderInFramePool) {
                   let ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.DISCONNECTED;
                   const _HermesInternal2 = HermesInternal;
@@ -247,7 +247,7 @@ function updateEmbeddedActivities(content_classification) {
                 const combinedResult = DispatcherDefault;
                 const tmp41 = 0 === arr2.length;
               }
-              const tmp76Result5 = application_id(4739);
+              const tmp76Result5 = application_id(4741);
             }
           }
         }
@@ -260,10 +260,10 @@ function updateEmbeddedActivities(content_classification) {
       const _HermesInternal3 = HermesInternal;
       map4.delete("" + application_id + ":" + tmp59);
     }
-    const obj19 = application_id(4739);
+    const obj19 = application_id(4741);
   }
 }
-const ActivityPanelConstants = fn(6067);
+const ActivityPanelConstants = fn(6073);
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 const FocusedActivityLayouts = ActivityPanelConstants.FocusedActivityLayouts;
 const Constants = fn(1085);
@@ -415,8 +415,8 @@ prototype2["getSelfEmbeddedActivityForLocation"] = function getSelfEmbeddedActiv
 prototype2["getSelfEmbeddedActivities"] = function getSelfEmbeddedActivities() {
   return map;
 };
-prototype2["getEmbeddedActivitiesForGuild"] = function getEmbeddedActivitiesForGuild(guildId) {
-  value = map1.get(guildId);
+prototype2["getEmbeddedActivitiesForGuild"] = function getEmbeddedActivitiesForGuild(id) {
+  value = map1.get(id);
   items = undefined;
   if (value != null) {
     items = value.getItems("visible");

@@ -1,21 +1,21 @@
-// === Module 7992: DoubleTapNitroAlert ===
+// === Module 7999: DoubleTapNitroAlert ===
 
-// Module 7992 (DoubleTapNitroAlert)
+// Module 7999 (DoubleTapNitroAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5305 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6290 */;
-import openUserSettings from "openUserSettings" /* 7094 */;
+import AlertModal from "AlertModal" /* 5310 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6294 */;
+import openUserSettings from "openUserSettings" /* 7100 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NITRO_UPSELL_ALERT_KEY = fn(7988).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(7995).NITRO_UPSELL_ALERT_KEY;
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const MobileUserSettings = fn(7993).MobileUserSettings;
+const MobileUserSettings = fn(8000).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
     obj7.text = intl4.string(util.t["Nr6v2+"]);
     items[1] = React5(AlertModal.AlertActionButton, obj7, "cancel");
     obj6.children = items;
-    const tmp25 = options(closure_1_8, obj6);
+    const tmp25 = React6(closure_1_8, obj6);
     cResult[9] = tmp25;
     let tmp21 = tmp25;
   } else {
@@ -143,6 +143,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DoubleTa
   obj5.text = intl4.string(util.t["Nr6v2+"]);
   items[1] = React5(AlertModal.AlertActionButton, obj5, "cancel");
   obj3.children = items;
-  obj.actions = options(closure_1_8, obj3);
+  obj.actions = React6(closure_1_8, obj3);
   return React5(AlertModal.AlertModal, obj);
 });

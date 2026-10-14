@@ -1,10 +1,10 @@
-// === Module 17921: VoicePanelStyles ===
+// === Module 17957: VoicePanelStyles ===
 
-// Module 17921 (VoicePanelStyles)
+// Module 17957 (VoicePanelStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 8395 */;
-import createStyles from "createStyles" /* 5092 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 8402 */;
+import createStyles from "createStyles" /* 5096 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -21,7 +21,7 @@ let closure_3 = createStyles.createStyles((arg0) => {
   const obj5 = { color: nativeDefault.unsafe_rawColors.RED_400 };
   obj.iconFillSelected = { color: nativeDefault.colors.BLACK };
   const colors2 = nativeDefault.colors;
-  obj.iconBadgeIndicator = { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.WHITE };
+  obj.iconBadgeIndicator = { backgroundColor: arg0 ? colors2.CONTROL_BRAND_FOREGROUND : colors2.ICON_STRONG };
   return obj;
 });
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");

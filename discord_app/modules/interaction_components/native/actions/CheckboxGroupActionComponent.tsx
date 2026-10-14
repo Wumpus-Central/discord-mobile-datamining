@@ -1,7 +1,7 @@
-// === Module 18143: CheckboxGroupActionComponent ===
+// === Module 18179: CheckboxGroupActionComponent ===
 
-// Module 18143 (CheckboxGroupActionComponent)
-import TableCheckboxRow from "TableCheckboxRow" /* 6177 */;
+// Module 18179 (CheckboxGroupActionComponent)
+import TableCheckboxRow from "TableCheckboxRow" /* 6181 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -155,7 +155,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
 }) : (function CheckboxGroupActionComponent(type) {
   type = type.type;
-  options = type.options;
+  const options = type.options;
   const maxValues = type.maxValues;
   let items = [options];
   const memo = maxValues.useMemo(() => {

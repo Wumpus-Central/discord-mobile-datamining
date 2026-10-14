@@ -1,19 +1,19 @@
-// === Module 13465: BountyActionCreators ===
+// === Module 13504: BountyActionCreators ===
 
-// Module 13465 (BountyActionCreators)
+// Module 13504 (BountyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import QuestTypes from "QuestTypes" /* 5975 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7184 */;
-import QuestDataUtils from "QuestDataUtils" /* 7387 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7410 */;
-import BountiesDesktopQuestBarExperiment2 from "BountiesDesktopQuestBarExperiment" /* 13466 */;
+import QuestTypes from "QuestTypes" /* 5980 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7190 */;
+import QuestDataUtils from "QuestDataUtils" /* 7393 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7416 */;
+import BountiesDesktopQuestBarExperiment2 from "BountiesDesktopQuestBarExperiment" /* 13505 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7388 */;
-import NetworkStore from "NetworkStore" /* 5282 */;
-import BountyStore from "BountyStore" /* 7390 */;
-import QuestStore from "QuestStore" /* 7391 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7394 */;
+import NetworkStore from "NetworkStore" /* 5287 */;
+import BountyStore from "BountyStore" /* 7396 */;
+import QuestStore from "QuestStore" /* 7397 */;
 
 require = fn;
 function fetchBountiesAndDispatch() {
@@ -102,9 +102,9 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
           c1 = 1;
           const obj4 = {
             value: fetchBountiesAndDispatch(tmp5, asyncGeneratorStep(async () => {
-                      await tmp2(7184).getSession();
+                      await tmp2(7190).getSession();
                       closure_128_0 = value;
-                      const orRefreshAdSession = tmp2(7410).getOrRefreshAdSession();
+                      const orRefreshAdSession = tmp2(7416).getOrRefreshAdSession();
                       const HTTP = tmp2(1295).HTTP;
                       const request = { url: constants.QUESTS_GET_DECISIONS, query: null, rejectWithError: false, context: null };
                       const obj7 = { placement: closure_129_0, client_ad_session_id: orRefreshAdSession.uuid, client_heartbeat_session_id: null, num_decisions_requested: 5 };
@@ -790,7 +790,7 @@ let closure_19 = async function _resetPreviewDeliveryStateLookback() {
     }
   })();
 };
-const QuestsExperimentLocations = fn(5972).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
 const Endpoints = fn(1085).Endpoints;
 let closure_10 = new LoggerDefault("BountyActionCreators");
 const size = fn(2);

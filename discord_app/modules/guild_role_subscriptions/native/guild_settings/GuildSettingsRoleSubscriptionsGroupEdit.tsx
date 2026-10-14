@@ -1,10 +1,10 @@
-// === Module 18547: GuildSettingsRoleSubscriptionsGroupEdit ===
+// === Module 18583: GuildSettingsRoleSubscriptionsGroupEdit ===
 
-// Module 18547 (GuildSettingsRoleSubscriptionsGroupEdit)
+// Module 18583 (GuildSettingsRoleSubscriptionsGroupEdit)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4808 */;
-import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 18560 */;
+import ToastUtils from "ToastUtils" /* 4810 */;
+import GuildSettingsRoleSubscriptionContainerDefault from "GuildSettingsRoleSubscriptionContainer" /* 18596 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -759,7 +759,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   guildId = guildId.guildId;
   if (cResult[0] !== guildId) {
     const obj2 = { guildId };
-    const tmp6 = options(closure_11, obj2);
+    const tmp6 = React6(closure_11, obj2);
     cResult[0] = guildId;
     cResult[1] = tmp6;
     let tmp3 = tmp6;
@@ -772,13 +772,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     }
     return tmp7;
   }
-  const tmp8 = options(GuildSettingsRoleSubscriptionContainerDefault, { guildId, children: tmp3 });
+  const tmp8 = React6(GuildSettingsRoleSubscriptionContainerDefault, { guildId, children: tmp3 });
   cResult[2] = guildId;
   cResult[3] = tmp3;
   cResult[4] = tmp8;
   tmp7 = tmp8;
 }) : (function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
   guildId = guildId.guildId;
-  const obj = { guildId, children: options(closure_11, { guildId }) };
-  return options(GuildSettingsRoleSubscriptionContainerDefault, obj);
+  const obj = { guildId, children: React6(closure_11, { guildId }) };
+  return React6(GuildSettingsRoleSubscriptionContainerDefault, obj);
 });

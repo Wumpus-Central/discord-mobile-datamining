@@ -1,13 +1,13 @@
-// === Module 18613: GuildRoleSubscriptionTierTemplateUtils ===
+// === Module 18649: GuildRoleSubscriptionTierTemplateUtils ===
 
-// Module 18613 (GuildRoleSubscriptionTierTemplateUtils)
+// Module 18649 (GuildRoleSubscriptionTierTemplateUtils)
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import TextLockIcon from "TextLockIcon" /* 8206 */;
-import ImageLockIcon from "ImageLockIcon" /* 8213 */;
-import ForumLockIcon from "ForumLockIcon" /* 8214 */;
-import AnnouncementsLockIcon from "AnnouncementsLockIcon" /* 8221 */;
-import StageLockIcon from "StageLockIcon" /* 8224 */;
-import VoiceLockIcon from "VoiceLockIcon" /* 8226 */;
+import TextLockIcon from "TextLockIcon" /* 8213 */;
+import ImageLockIcon from "ImageLockIcon" /* 8220 */;
+import ForumLockIcon from "ForumLockIcon" /* 8221 */;
+import AnnouncementsLockIcon from "AnnouncementsLockIcon" /* 8228 */;
+import StageLockIcon from "StageLockIcon" /* 8231 */;
+import VoiceLockIcon from "VoiceLockIcon" /* 8233 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx");

@@ -1,6 +1,6 @@
-// === Module 5993: GuildEmojis ===
+// === Module 5998: GuildEmojis ===
 
-// Module 5993 (GuildEmojis)
+// Module 5998 (GuildEmojis)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

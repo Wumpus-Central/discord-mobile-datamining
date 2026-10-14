@@ -1,23 +1,23 @@
-// === Module 15719: VideoQuestModal ===
+// === Module 15756: VideoQuestModal ===
 
-// Module 15719 (VideoQuestModal)
+// Module 15756 (VideoQuestModal)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import spring from "spring" /* 5378 */;
-import QuestTypes from "QuestTypes" /* 5975 */;
-import AnalyticsActions from "AnalyticsActions" /* 7407 */;
-import QuestUtils from "QuestUtils" /* 9168 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13475 */;
-import applyOrientationLock2 from "applyOrientationLock" /* 13481 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 15688 */;
-import VideoQuestModalContextDefault from "VideoQuestModalContext" /* 15720 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import spring from "spring" /* 5383 */;
+import QuestTypes from "QuestTypes" /* 5980 */;
+import AnalyticsActions from "AnalyticsActions" /* 7413 */;
+import QuestUtils from "QuestUtils" /* 9177 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 13514 */;
+import applyOrientationLock2 from "applyOrientationLock" /* 13520 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 15725 */;
+import VideoQuestModalContextDefault from "VideoQuestModalContext" /* 15757 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(15687).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+let closure_6 = fn(15724).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -25,7 +25,7 @@ let c10 = -100;
 let c11 = 0.5625;
 let top = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
 const VideoQuestModalSteps = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, pillarboxed: { alignSelf: "center" }, wrapper: { flexDirection: "column", flexGrow: 1, flexShrink: 1, zIndex: 1 }, contentWrapper: { flex: 1 }, contentBackground: null, modalContentWrapper: null, backgroundWrapper: null };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

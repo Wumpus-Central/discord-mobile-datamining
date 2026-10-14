@@ -1,27 +1,27 @@
-// === Module 18430: EnhancedRoleColorsSelectStyleModal ===
+// === Module 18466: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 18430 (EnhancedRoleColorsSelectStyleModal)
+// Module 18466 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import util from "util" /* 1126 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2122 */;
 import _modDef2600 from "module_2600" /* 2600 */;
-import useThemeDefault from "useTheme" /* 5031 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5408 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6840 */;
-import RowGeneratorDefault from "RowGenerator" /* 7747 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7980 */;
-import _modDef13188 from "module_13188" /* 13188 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 18409 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 18410 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18412 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 18431 */;
+import useThemeDefault from "useTheme" /* 5033 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5413 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6844 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6845 */;
+import RowGeneratorDefault from "RowGenerator" /* 7753 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7987 */;
+import _modDef13223 from "module_13223" /* 13223 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 18445 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 18446 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18448 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 18467 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5096 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -68,10 +68,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Enhanced
   roleStyle = roleStyle.roleStyle;
   const onStyleChanged = roleStyle.onStyleChanged;
   ({ guildId, role } = roleStyle);
-  const tmp5 = closure_11(onStyleChanged(5031)());
+  const tmp5 = closure_11(onStyleChanged(5033)());
   dependencyMap = tmp5;
   let obj = roleStyle(576);
-  const hasEnhancedRoleColorsForRole = roleStyle(5408).useHasEnhancedRoleColorsForRole(guildId, role);
+  const hasEnhancedRoleColorsForRole = roleStyle(5413).useHasEnhancedRoleColorsForRole(guildId, role);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.Mi9Kbe);
@@ -80,10 +80,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Enhanced
   } else {
     first = cResult[0];
   }
-  const obj2 = roleStyle(5408);
-  const guildSettingsRoleExampleMessage = roleStyle(18431).useGuildSettingsRoleExampleMessage(first);
+  const obj2 = roleStyle(5413);
+  const guildSettingsRoleExampleMessage = roleStyle(18467).useGuildSettingsRoleExampleMessage(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp13 = new tmp4(7747)();
+    const tmp13 = new tmp4(7753)();
     cResult[1] = tmp13;
     let tmp10 = tmp13;
   } else {
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Enhanced
     let obj3 = { title: null };
     const intl2 = tmp(1126).intl;
     obj3.title = intl2.string(tmp(1126).t["9wVJRB"]);
-    const tmp17 = closure_9(tmp(6839).BottomSheetTitleHeader, obj3);
+    const tmp17 = closure_9(tmp(6844).BottomSheetTitleHeader, obj3);
     cResult[2] = tmp17;
     let tmp15 = tmp17;
   } else {
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Enhanced
                         let items = [tmp22, tmp26];
                         obj5.children = items;
                         obj4.children = closure_10(guildSettingsRoleExampleMessage, obj5);
-                        const tmp36 = closure_9(tmp(6840).BottomSheet, obj4);
+                        const tmp36 = closure_9(tmp(6845).BottomSheet, obj4);
                         cResult[20] = tmp5.container;
                         cResult[21] = tmp22;
                         cResult[22] = tmp26;
@@ -153,13 +153,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Enhanced
                       obj9.gradientColors = items1;
                       const intl4 = tmp(1126).intl;
                       obj9.children = intl4.string(tmp4(2600)["+/IHLl"]);
-                      obj8.magical = closure_9(tmp(5088).Text, obj9);
+                      obj8.magical = closure_9(tmp(5092).Text, obj9);
                       obj7.children = intl3.format(tmp4(2600).VpEDJc, obj8);
-                      const items2 = [closure_9(tmp(5088).Text, obj7), ];
+                      const items2 = [closure_9(tmp(5092).Text, obj7), ];
                       const obj10 = { style: tmp5.upsellText, variant: "text-sm/normal", children: null };
                       const intl5 = tmp(1126).intl;
                       obj10.children = intl5.string(tmp4(2600).FJZeZF);
-                      items2[1] = closure_9(tmp(5088).Text, obj10);
+                      items2[1] = closure_9(tmp(5092).Text, obj10);
                       obj6.children = items2;
                       tmp27 = closure_10(guildSettingsRoleExampleMessage, obj6);
                     }
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Enhanced
           const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
           message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
           message.message.shouldShowRoleOnName = true;
-          message.message.avatarURL = _modDef13188;
+          message.message.avatarURL = _modDef13223;
         }
       }),
 
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Enhanced
   cResult[11] = tmp5.text;
   cResult[12] = mapped;
   tmp20 = mapped;
-  const tmpResult = roleStyle(18431);
+  const tmpResult = roleStyle(18467);
 }) : (function EnhancedRoleColorsSelectStyleModal(arg0) {
   ({ roleStyle: require, onStyleChanged: importDefault } = arg0);
   ({ guildId, role } = arg0);
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Enhanced
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef13188;
+              message.message.avatarURL = _modDef13223;
             }
           }),
 

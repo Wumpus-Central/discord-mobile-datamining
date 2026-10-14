@@ -1,14 +1,14 @@
-// === Module 15038: validateEmbeddedAppFrame ===
+// === Module 15075: validateEmbeddedAppFrame ===
 
-// Module 15038 (validateEmbeddedAppFrame)
+// Module 15075 (validateEmbeddedAppFrame)
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
-import RPCErrorDefault from "RPCError" /* 10936 */;
-import RPCHelpers from "RPCHelpers" /* 10945 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 11244 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 15040 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15039 */;
-import FramesStore from "FramesStore" /* 10807 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8617 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10712 */;
+import RPCErrorDefault from "RPCError" /* 11010 */;
+import RPCHelpers from "RPCHelpers" /* 11019 */;
+import getSocketFrameDefault from "getSocketFrame" /* 15077 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 15078 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15076 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -16,50 +16,50 @@ function validateEmbeddedAppFrame(transport) {
   RPCHelpers.validateApplication(transport.application);
   if (obj3.isEmbeddedApplication(transport.application)) {
     if (isPostMessageSocketDefault(transport)) {
-      const frameByEmbeddedContext = FramesStore.getFrameByEmbeddedContext(transport.context, transport.source.iframeId);
-      let tmp21 = null;
-      if (null != frameByEmbeddedContext) {
-        tmp21 = null;
-        if (frameByEmbeddedContext.applicationId === transport.application.id) {
-          const tmp22 = frameByEmbeddedContext.applicationId === ConjureBuilderPreviewStore.getBuilderPreviewApplicationId() || frameByEmbeddedContext.data.prefersPictureInPictureOnNavigateAway;
-          const type = frameByEmbeddedContext.surface.type;
+      const tmp18 = getSocketFrameDefault(transport);
+      let tmp20 = null;
+      if (null != tmp18) {
+        tmp20 = null;
+        if (tmp18.applicationId === transport.application.id) {
+          const tmp21 = tmp18.applicationId === ConjureBuilderPreviewStore.getBuilderPreviewApplicationId() || tmp18.data.prefersPictureInPictureOnNavigateAway;
+          const type = tmp18.surface.type;
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
-              tmp21 = frameByEmbeddedContext;
+              tmp20 = tmp18;
               if (EmbeddedSurfaceType.EmbeddedSurfaceType.OVERLAY !== type) {
                 if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-                  let tmp23 = null;
-                  if (tmp22) {
-                    tmp23 = frameByEmbeddedContext;
+                  let tmp22 = null;
+                  if (tmp21) {
+                    tmp22 = tmp18;
                   }
-                  tmp21 = tmp23;
+                  tmp20 = tmp22;
                 } else {
-                  tmp21 = null;
+                  tmp20 = null;
                   if (EmbeddedSurfaceType.EmbeddedSurfaceType.INTERACTION_MODAL !== type) {
-                    const surface = frameByEmbeddedContext.surface;
-                    tmp21 = null;
+                    const surface = tmp18.surface;
+                    tmp20 = null;
                   }
                 }
               }
             }
           }
-          let tmp24 = frameByEmbeddedContext;
-          if (frameByEmbeddedContext.surface.channelId === conjurePreviewSurface.CONJURE_UNKNOWN_CHANNEL) {
-            let tmp25 = null;
-            if (tmp22) {
-              tmp25 = frameByEmbeddedContext;
+          let tmp23 = tmp18;
+          if (tmp18.surface.channelId === conjurePreviewSurface.CONJURE_UNKNOWN_CHANNEL) {
+            let tmp24 = null;
+            if (tmp21) {
+              tmp24 = tmp18;
             }
-            tmp24 = tmp25;
+            tmp23 = tmp24;
           }
-          tmp21 = tmp24;
+          tmp20 = tmp23;
         }
       }
-      if (null == tmp21) {
+      if (null == tmp20) {
         const obj4 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
-        const tmp30 = new RPCErrorDefault(obj4, "Command not available for this application");
-        throw tmp30;
+        const tmp29 = new RPCErrorDefault(obj4, "Command not available for this application");
+        throw tmp29;
       } else {
-        const obj5 = { frame: tmp21, iframeId: transport.source.iframeId };
+        const obj5 = { frame: tmp20, iframeId: transport.source.iframeId };
         return obj5;
       }
     } else {

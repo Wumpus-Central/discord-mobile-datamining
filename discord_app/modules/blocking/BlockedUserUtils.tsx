@@ -1,8 +1,7 @@
-// === Module 14341: BlockedUserUtils ===
+// === Module 14378: BlockedUserUtils ===
 
-// Module 14341 (BlockedUserUtils)
-import _modDef12 from "module_12" /* 12 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+// Module 14378 (BlockedUserUtils)
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 
 const require = fn;
 const size = fn(2);
@@ -30,24 +29,13 @@ export const filterOutBlockedOrIgnoredUserIds = function filterOutBlockedOrIgnor
     return !hasItem;
   });
 };
-export const filterOutStreamsByBlockedOwner = function filterOutStreamsByBlockedOwner(allApplicationStreams) {
-  return allApplicationStreams.filter((ownerId) => !blockedOrIgnored.isBlockedOrIgnored(ownerId.ownerId));
-};
-export const hasBlockedOrIgnoredUserIds = function hasBlockedOrIgnoredUserIds(items, blockedOrIgnoredIDs) {
+export const hasBlockedOrIgnoredUserIds = function hasBlockedOrIgnoredUserIds(items, blockedOrIgnoredUserIds) {
   return items.some((item) => {
-    if (null != blockedOrIgnoredIDs) {
-      let hasItem = blockedOrIgnoredIDs.has(item);
+    if (null != blockedOrIgnoredUserIds) {
+      let hasItem = blockedOrIgnoredUserIds.has(item);
     } else {
       hasItem = RelationshipStore.isBlockedOrIgnored(item);
     }
     return hasItem;
   });
-};
-export const voiceStateHasBlockedUsers = function voiceStateHasBlockedUsers(userId) {
-  return RelationshipStore.isBlockedOrIgnored(userId.userId);
-};
-export const filterBlockedUsersFromVoiceStates = function filterBlockedUsersFromVoiceStates(voiceStates) {
-  const found = _modDef12(voiceStates).filter((userId) => !blockedOrIgnored.isBlockedOrIgnored(userId.userId));
-  const arr = _modDef12(voiceStates);
-  return found.keyBy("userId").value();
 };

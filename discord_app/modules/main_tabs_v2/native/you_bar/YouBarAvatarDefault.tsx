@@ -1,24 +1,24 @@
-// === Module 17150: YouBarAvatarDefault ===
+// === Module 17184: YouBarAvatarDefault ===
 
-// Module 17150 (YouBarAvatarDefault)
+// Module 17184 (YouBarAvatarDefault)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import useToken from "useToken" /* 4818 */;
-import ReactionIcon from "ReactionIcon" /* 8961 */;
-import ClipView from "ClipView" /* 9017 */;
+import useToken from "useToken" /* 4820 */;
+import ReactionIcon from "ReactionIcon" /* 8966 */;
+import ClipView from "ClipView" /* 9022 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15690);
+const YouBarConstants = fn(15727);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_4, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty, YOU_BAR_STATUS_INSET: metroRequire, YOU_BAR_HEIGHT: closure_7, YOU_BAR_LARGE_STATUS_SIZE: closure_8, YOU_BAR_PADDING: closure_9, YOU_BAR_STATUS_OFFSET: c10 } = YouBarConstants);
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { placeholderAvatar: { borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, justifyContent: "center", alignItems: "center" }, placeholderAvatarBackground: null, avatarShadow: null };
 let rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round };
 obj.placeholderAvatarBackground = rect;
@@ -204,10 +204,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
     tmp17 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const size1 = { position: "absolute", width: tmp8, height: tmp8, top: -options - (native.AVATAR_SIZE_MAP[React4] - React5) / 2, left: -options };
+    const size1 = { position: "absolute", width: tmp8, height: tmp8, top: -React6 - (native.AVATAR_SIZE_MAP[React4] - React5) / 2, left: -React6 };
     cResult[2] = size1;
     let tmp19 = size1;
-    const tmp21 = -options;
+    const tmp21 = -React6;
   } else {
     tmp19 = cResult[2];
   }
@@ -320,7 +320,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
   obj2.style = size;
   const obj3 = { style: null, children: null };
   const items = [tmp.avatarShadow, ];
-  const size1 = { position: "absolute", width: tmp3, height: tmp3, top: -options - (native.AVATAR_SIZE_MAP[React4] - React5) / 2, left: -options };
+  const size1 = { position: "absolute", width: tmp3, height: tmp3, top: -React6 - (native.AVATAR_SIZE_MAP[React4] - React5) / 2, left: -React6 };
   items[1] = size1;
   obj3.style = items;
   const obj4 = { cutouts: null, children: null };
@@ -330,7 +330,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Avatar
   const items2 = [tmp.placeholderAvatar, { width: tmp3, height: tmp3, backgroundColor: token }];
   obj5.style = items2;
   const obj6 = { style: tmp.placeholderAvatarBackground };
-  const tmp7 = -options;
+  const tmp7 = -React6;
   const items3 = [__initData(View, obj6), ];
   const obj7 = { size: "custom", style: null, color: "background-mod-strong" };
   const size2 = { width: native.AVATAR_SIZE_MAP[hasOwnProperty], height: native.AVATAR_SIZE_MAP[hasOwnProperty] };

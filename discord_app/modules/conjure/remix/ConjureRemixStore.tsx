@@ -1,6 +1,6 @@
-// === Module 11231: ConjureRemixStore ===
+// === Module 10679: ConjureRemixStore ===
 
-// Module 11231 (ConjureRemixStore)
+// Module 10679 (ConjureRemixStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

@@ -1,6 +1,6 @@
-// === Module 15799: ? ===
+// === Module 15836: ? ===
 
-// Module 15799
+// Module 15836
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/quests/bounties/BG_Smoke_Baked_Android_Frame0.png.js");

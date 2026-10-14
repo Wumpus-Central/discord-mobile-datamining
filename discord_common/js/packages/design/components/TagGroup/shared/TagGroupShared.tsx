@@ -1,6 +1,6 @@
-// === Module 11769: TagGroupShared ===
+// === Module 11779: TagGroupShared ===
 
-// Module 11769 (TagGroupShared)
+// Module 11779 (TagGroupShared)
 import size from "module_2" /* 2 */;
 
 let closure_0 = { xs: "text-xs/normal", sm: "text-sm/normal", md: "text-md/normal" };

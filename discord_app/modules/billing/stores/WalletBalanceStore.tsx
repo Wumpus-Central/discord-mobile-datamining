@@ -1,6 +1,6 @@
-// === Module 7098: WalletBalanceStore ===
+// === Module 7104: WalletBalanceStore ===
 
-// Module 7098 (WalletBalanceStore)
+// Module 7104 (WalletBalanceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

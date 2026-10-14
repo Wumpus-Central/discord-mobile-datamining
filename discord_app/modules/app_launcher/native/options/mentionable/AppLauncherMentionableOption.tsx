@@ -1,27 +1,27 @@
-// === Module 11694: AppLauncherMentionableOption ===
+// === Module 11704: AppLauncherMentionableOption ===
 
-// Module 11694 (AppLauncherMentionableOption)
+// Module 11704 (AppLauncherMentionableOption)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import UserCircleIcon from "UserCircleIcon" /* 10286 */;
-import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 11691 */;
-import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 11692 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11693 */;
-import UsernameTextDefault from "UsernameText" /* 11695 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import UserCircleIcon from "UserCircleIcon" /* 10296 */;
+import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 11701 */;
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 11702 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11703 */;
+import UsernameTextDefault from "UsernameText" /* 11705 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const StatusTypes = fn(1096).StatusTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -198,7 +198,7 @@ export default function AppLauncherMentionableOption(option) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(11691, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(11701, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onMentionablePress(mentionable) {

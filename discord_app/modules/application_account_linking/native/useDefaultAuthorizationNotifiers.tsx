@@ -1,9 +1,9 @@
-// === Module 17010: useDefaultAuthorizationNotifiers ===
+// === Module 17047: useDefaultAuthorizationNotifiers ===
 
-// Module 17010 (useDefaultAuthorizationNotifiers)
+// Module 17047 (useDefaultAuthorizationNotifiers)
 import util from "util" /* 1126 */;
 import _modDef3312 from "module_3312" /* 3312 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4811 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
 
@@ -71,7 +71,7 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
     if (cResult[7] === value) {
       let tmp13 = cResult[8];
     }
-    const previousWhen = tmp(5922).usePreviousWhen(tmp13);
+    const previousWhen = tmp(5927).usePreviousWhen(tmp13);
     if (cResult[9] === tmp12) {
       if (cResult[10] === value) {
         if (cResult[11] === tmp5) {
@@ -110,7 +110,7 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
     cResult[14] = items1;
     tmp16 = items1;
     tmp15 = fn3;
-    const tmpResult4 = tmp(5922);
+    const tmpResult4 = tmp(5927);
   }
   const obj4 = { value, shouldUpdate: tmp12 };
   cResult[6] = tmp12;

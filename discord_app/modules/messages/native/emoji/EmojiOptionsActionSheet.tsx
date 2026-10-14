@@ -1,9 +1,9 @@
-// === Module 9555: EmojiOptionsActionSheet ===
+// === Module 9565: EmojiOptionsActionSheet ===
 
-// Module 9555 (EmojiOptionsActionSheet)
-import ToastUtils from "ToastUtils" /* 4808 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+// Module 9565 (EmojiOptionsActionSheet)
+import ToastUtils from "ToastUtils" /* 4810 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import ClipboardUtils from "ClipboardUtils" /* 6891 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiOpt
     tmp4 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp8 = jsx(tmp(5038).LinkIcon, {});
+    const tmp8 = jsx(tmp(5042).LinkIcon, {});
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.cIoudn);
     cResult[2] = tmp8;
@@ -43,9 +43,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiOpt
     let obj2 = { children: null };
     const obj3 = { hasIcons: true, children: null };
     const obj4 = { icon: tmp5, label: tmp6, onPress: tmp4 };
-    obj3.children = jsx(tmp(6180).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
-    obj2.children = jsx(tmp(6265).TableRowGroup, { hasIcons: true, children: null });
-    const tmp12 = jsx(tmp(6899).ActionSheet, { children: null });
+    obj3.children = jsx(tmp(6184).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
+    obj2.children = jsx(tmp(6269).TableRowGroup, { hasIcons: true, children: null });
+    const tmp12 = jsx(tmp(6904).ActionSheet, { children: null });
     cResult[4] = tmp4;
     cResult[5] = tmp12;
     let tmp10 = tmp12;
@@ -63,11 +63,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiOpt
   }, items);
   let obj = { children: null };
   let obj2 = { hasIcons: true, children: null };
-  const obj3 = { icon: jsx(emojiSrc(5038).LinkIcon, {}), label: null, onPress: null };
+  const obj3 = { icon: jsx(emojiSrc(5042).LinkIcon, {}), label: null, onPress: null };
   const intl = emojiSrc(1126).intl;
   obj3.label = intl.string(emojiSrc(1126).t.cIoudn);
   obj3.onPress = callback;
-  obj2.children = jsx(emojiSrc(6180).TableRow, { icon: jsx(emojiSrc(5038).LinkIcon, {}), label: null, onPress: null });
-  obj.children = jsx(emojiSrc(6265).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(emojiSrc(6899).ActionSheet, { children: null });
+  obj2.children = jsx(emojiSrc(6184).TableRow, { icon: jsx(emojiSrc(5042).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(emojiSrc(6269).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(emojiSrc(6904).ActionSheet, { children: null });
 });

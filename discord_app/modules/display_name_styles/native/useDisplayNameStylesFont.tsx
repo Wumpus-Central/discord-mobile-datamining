@@ -1,9 +1,9 @@
-// === Module 8854: useDisplayNameStylesFont ===
+// === Module 8858: useDisplayNameStylesFont ===
 
-// Module 8854 (useDisplayNameStylesFont)
+// Module 8858 (useDisplayNameStylesFont)
 import c from "c" /* 576 */;
 import DisplayNameFont from "DisplayNameFont" /* 1410 */;
-import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 5629 */;
+import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 5634 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

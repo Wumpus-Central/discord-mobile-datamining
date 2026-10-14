@@ -1,6 +1,6 @@
-// === Module 6933: SocialLayerStorefrontStore ===
+// === Module 6938: SocialLayerStorefrontStore ===
 
-// Module 6933 (SocialLayerStorefrontStore)
+// Module 6938 (SocialLayerStorefrontStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
@@ -391,7 +391,7 @@ obj = {
       const merged7 = Object.assign(obj12);
       obj12 = obj8;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "r" };
+      obj = { state: "error", fetchedAt: null, storefront: "o" };
       const _Date = Date;
       obj.fetchedAt = Date.now();
       if (null != guildId) {

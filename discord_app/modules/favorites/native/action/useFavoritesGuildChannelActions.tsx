@@ -1,6 +1,6 @@
-// === Module 10468: useFavoritesGuildChannelActions ===
+// === Module 10478: useFavoritesGuildChannelActions ===
 
-// Module 10468 (useFavoritesGuildChannelActions)
+// Module 10478 (useFavoritesGuildChannelActions)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import FavoriteStore from "FavoriteStore" /* 2068 */;
@@ -193,6 +193,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(10329).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(10339).useFavoritesBetaTagDismissibleContent(tmp7);
   return { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: isFavoritableChannelResult, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
 });

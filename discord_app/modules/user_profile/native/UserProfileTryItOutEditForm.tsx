@@ -1,39 +1,39 @@
-// === Module 16500: UserProfileTryItOutEditForm ===
+// === Module 16539: UserProfileTryItOutEditForm ===
 
-// Module 16500 (UserProfileTryItOutEditForm)
+// Module 16539 (UserProfileTryItOutEditForm)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import native from "native" /* 4827 */;
-import components_Button_Button from "components/Button/Button" /* 5379 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6852 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8294 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8311 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8354 */;
-import useUserProfileColors from "useUserProfileColors" /* 8365 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8368 */;
-import useBadgesDefault from "useBadges" /* 8369 */;
-import DiceIcon from "DiceIcon" /* 9037 */;
-import userSettingToActivity from "userSettingToActivity" /* 10513 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 10514 */;
-import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 10531 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10532 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11189 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 15162 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15175 */;
-import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 15177 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15181 */;
-import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 15184 */;
-import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 15229 */;
-import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 15251 */;
-import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 15272 */;
-import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 16501 */;
+import native from "native" /* 4829 */;
+import components_Button_Button from "components/Button/Button" /* 5384 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6857 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6884 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8301 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8318 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8361 */;
+import useUserProfileColors from "useUserProfileColors" /* 8372 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8375 */;
+import useBadgesDefault from "useBadges" /* 8376 */;
+import DiceIcon from "DiceIcon" /* 9042 */;
+import userSettingToActivity from "userSettingToActivity" /* 10523 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 10524 */;
+import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 10541 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10542 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11259 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 15200 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15213 */;
+import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 15215 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15219 */;
+import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 15222 */;
+import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 15266 */;
+import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 15288 */;
+import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 15309 */;
+import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 16540 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8292 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -371,7 +371,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                                                                         const obj13 = { style: tmp29, children: null };
                                                                                         const items1 = [tmp77, tmp81];
                                                                                         obj13.children = items1;
-                                                                                        const tmp87 = options(timestampProducer, obj13);
+                                                                                        const tmp87 = React6(timestampProducer, obj13);
                                                                                         cResult[97] = tmp77;
                                                                                         cResult[98] = tmp81;
                                                                                         cResult[99] = tmp29;
@@ -381,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                                                                       const obj14 = { children: null };
                                                                                       const items2 = [tmp30, tmp74];
                                                                                       obj14.children = items2;
-                                                                                      const tmp80 = options(hasOwnProperty, obj14);
+                                                                                      const tmp80 = React6(hasOwnProperty, obj14);
                                                                                       cResult[92] = tmp74;
                                                                                       cResult[93] = tmp30;
                                                                                       cResult[94] = tmp80;
@@ -394,7 +394,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                                                             const obj15 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: tmp34, children: null };
                                                                             const items3 = [tmp35, tmp70];
                                                                             obj15.children = items3;
-                                                                            const tmp76 = options(UserProfileGradientContainerDefault, obj15);
+                                                                            const tmp76 = React6(UserProfileGradientContainerDefault, obj15);
                                                                             cResult[85] = gradientFallbackBackground;
                                                                             cResult[86] = primaryColor;
                                                                             cResult[87] = secondaryColor;
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                                                           const obj16 = { children: null };
                                                                           const items4 = [tmp43, tmp67];
                                                                           obj16.children = items4;
-                                                                          const tmp73 = options(timestampProducer, obj16);
+                                                                          const tmp73 = React6(timestampProducer, obj16);
                                                                           cResult[82] = tmp43;
                                                                           cResult[83] = tmp67;
                                                                           cResult[84] = tmp73;
@@ -421,7 +421,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                                               const obj17 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor, containerStyle: tmp48, children: null };
                                                               const items5 = [tmp49, tmp52, tmp63];
                                                               obj17.children = items5;
-                                                              const tmp69 = options(UserProfileGradientContainerDefault, obj17);
+                                                              const tmp69 = React6(UserProfileGradientContainerDefault, obj17);
                                                               cResult[74] = gradientFallbackBackground;
                                                               cResult[75] = primaryColor;
                                                               cResult[76] = secondaryColor;
@@ -436,7 +436,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                                           const obj18 = { style: tmp56, children: null };
                                                           const items6 = [tmp57, tmp60];
                                                           obj18.children = items6;
-                                                          const tmp66 = options(timestampProducer, obj18);
+                                                          const tmp66 = React6(timestampProducer, obj18);
                                                           cResult[70] = tmp56;
                                                           cResult[71] = tmp57;
                                                           cResult[72] = tmp60;
@@ -664,19 +664,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const obj17 = { children: null };
   const items9 = [tmp19Result, closure_1_8(UserProfileTryItOutFieldsDefault, { currentUser, mode: "edit", initialTarget: initialTarget.initialTarget })];
   obj13.children = items9;
-  items7[2] = options(timestampProducer, obj13);
+  items7[2] = React6(timestampProducer, obj13);
   obj11.children = items7;
-  items5[1] = options(UserProfileGradientContainerDefault, obj11);
+  items5[1] = React6(UserProfileGradientContainerDefault, obj11);
   obj17.children = items5;
-  items3[1] = options(timestampProducer, obj17);
+  items3[1] = React6(timestampProducer, obj17);
   obj9.children = items3;
-  items2[1] = options(tmpResult, obj9);
+  items2[1] = React6(tmpResult, obj9);
   obj16.children = items2;
-  const items10 = [options(hasOwnProperty, obj16), ];
+  const items10 = [React6(hasOwnProperty, obj16), ];
   const obj12 = { customStatusActivity, hasCustomProfileTheme: null != primaryColor, style: tmp3.customStatusBubble, emojiOnlyStyle: tmp3.emojiOnlyCustomStatusBubble };
   const tmpResult2 = UserProfileGradientContainerDefault;
   items10[1] = closure_1_8(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, { children: closure_1_8(UserProfileTryItOutGetPremiumUpsellDefault, { onLayout }) });
   obj7.children = items10;
-  obj6.children = options(timestampProducer, obj7);
+  obj6.children = React6(timestampProducer, obj7);
   return closure_1_8(native.ThemeContextProvider, obj6);
 });

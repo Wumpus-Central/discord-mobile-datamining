@@ -1,9 +1,9 @@
-// === Module 10821: leaveFrame ===
+// === Module 10726: leaveFrame ===
 
-// Module 10821 (leaveFrame)
+// Module 10726 (leaveFrame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import FramesStore from "FramesStore" /* 10807 */;
+import FramesStore from "FramesStore" /* 10713 */;
 
 require = fn;
 const size = fn(2);

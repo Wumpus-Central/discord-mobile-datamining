@@ -1,14 +1,14 @@
-// === Module 15966: TypingIndicatorSetting ===
+// === Module 16003: TypingIndicatorSetting ===
 
-// Module 15966 (TypingIndicatorSetting)
+// Module 16003 (TypingIndicatorSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
 import _modDef3851 from "module_3851" /* 3851 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12387 */;
-import ChatDotsIcon from "ChatDotsIcon" /* 15967 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 15322 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12423 */;
+import ChatDotsIcon from "ChatDotsIcon" /* 16004 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 15359 */;
+import SettingBuilders from "SettingBuilders" /* 10767 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

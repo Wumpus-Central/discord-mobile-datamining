@@ -1,13 +1,13 @@
-// === Module 16820: HappeningNowCardActivitySubtitle ===
+// === Module 16858: HappeningNowCardActivitySubtitle ===
 
-// Module 16820 (HappeningNowCardActivitySubtitle)
+// Module 16858 (HappeningNowCardActivitySubtitle)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useChannelNameDefault from "useChannelName" /* 5421 */;
-import isStreamingDefault from "isStreaming" /* 8385 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8651 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10253 */;
-import HappeningNowCard from "HappeningNowCard" /* 15905 */;
+import useChannelNameDefault from "useChannelName" /* 5426 */;
+import isStreamingDefault from "isStreaming" /* 8392 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8656 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10263 */;
+import HappeningNowCard from "HappeningNowCard" /* 15942 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
@@ -59,7 +59,7 @@ function getActivitySubtitle(activity, stream) {
 const View = fn(17).View;
 const ActivityTypes = fn(1085).ActivityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_7 = createStyles.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled();
@@ -121,7 +121,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       cResult[10] = tmp33;
     }
     const obj4 = { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 };
-    const tmp29 = jsx(voiceState(15905).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 });
+    const tmp29 = jsx(voiceState(15942).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp24, children: tmp23 });
     cResult[5] = tmp23;
     cResult[6] = tmp24;
     cResult[7] = tmp29;
@@ -140,7 +140,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       tmp12 = getChannelA11yLabelDefault(obj7);
     }
     const obj8 = { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) };
-    obj6.children = jsx(voiceState(15905).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) });
+    obj6.children = jsx(voiceState(15942).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp12, children: useChannelNameDefault(stateFromStores1) });
     return <View style={tmp2.cardDetails}>{null}</View>;
   }
 };
@@ -155,7 +155,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         let tmp8 = cResult[2];
       }
       if (cResult[3] !== tmp8) {
-        HappeningNowCardSubtitle = HappeningNowCardSubtitle(15905).HappeningNowCardSubtitle;
+        HappeningNowCardSubtitle = HappeningNowCardSubtitle(15942).HappeningNowCardSubtitle;
         const obj3 = { lineClamp: 1, children: tmp8 };
         tmp6 = <HappeningNowCardSubtitle lineClamp={1}>{tmp8}</HappeningNowCardSubtitle>;
         cResult[3] = tmp8;

@@ -1,9 +1,9 @@
-// === Module 6157: FastImage ===
+// === Module 5034: FastImage ===
 
-// Module 6157 (FastImage)
+// Module 5034 (FastImage)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 6158 */;
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5035 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

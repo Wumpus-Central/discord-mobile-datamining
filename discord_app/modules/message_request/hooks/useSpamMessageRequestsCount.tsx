@@ -1,9 +1,9 @@
-// === Module 17653: useSpamMessageRequestsCount ===
+// === Module 17687: useSpamMessageRequestsCount ===
 
-// Module 17653 (useSpamMessageRequestsCount)
+// Module 17687 (useSpamMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6056 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6061 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

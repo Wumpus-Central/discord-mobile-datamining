@@ -1,23 +1,23 @@
-// === Module 11924: clarification/ConjureImageOptions ===
+// === Module 11955: clarification/ConjureImageOptions ===
 
-// Module 11924 (clarification/ConjureImageOptions)
+// Module 11955 (clarification/ConjureImageOptions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
-import TrashIcon from "TrashIcon" /* 5049 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import FormCheckbox from "FormCheckbox" /* 6178 */;
-import Card from "Card" /* 6182 */;
-import FormRadio from "FormRadio" /* 6266 */;
-import IconButton from "IconButton" /* 7574 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8209 */;
-import openMediaModal from "openMediaModal" /* 8387 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11894 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 11921 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 11925 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4834 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import TrashIcon from "TrashIcon" /* 5053 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import FormCheckbox from "FormCheckbox" /* 6182 */;
+import Card from "Card" /* 6186 */;
+import FormRadio from "FormRadio" /* 6270 */;
+import IconButton from "IconButton" /* 7580 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8216 */;
+import openMediaModal from "openMediaModal" /* 8394 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11923 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 11951 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 11956 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 1024;
 let c11 = 104;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, own: null, galleryContent: null, rowTile: null, card: null, ring: null, ringSelected: null, frame: null, frameInert: null, image: null, broken: null, brokenText: null, indicator: null, caption: null, view: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.own = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
@@ -122,7 +122,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
       const obj6 = { style: tmp4.broken, children: null };
       const items = [tmp17, tmp24];
       obj6.children = items;
-      const tmp30 = options(React5, obj6);
+      const tmp30 = React6(React5, obj6);
       cResult[7] = tmp4.broken;
       cResult[8] = tmp24;
       cResult[9] = tmp30;
@@ -207,7 +207,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
     obj5.children = intl.string(_modDef3849.lhgD88);
     items1[1] = closure_1_8(Text_Text.Text, obj5);
     obj3.children = items1;
-    obj2.children = options(React5, obj3);
+    obj2.children = React6(React5, obj3);
     let tmp10 = obj2;
   } else {
     let tmp6Result = null;
@@ -631,11 +631,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
     if (!selected) {
       items3[1] = null;
       obj10.children = items3;
-      const items4 = [options(React5, obj10), ];
+      const items4 = [React6(React5, obj10), ];
       const obj13 = { variant: "text-xs/normal", color: "text-muted", lineClamp: 1, style: tmp.caption, children: ConjureImageOptions.imageOptionCaption(option) };
       items4[1] = tmp12(Text_Text.Text, obj13);
       obj6.children = items4;
-      const items5 = [options(Card.Card, obj6), ];
+      const items5 = [React6(Card.Card, obj6), ];
       let tmp12Result = null;
       if (null != option.image) {
         tmp12Result = null;
@@ -664,7 +664,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
       }
       items5[1] = tmp12Result;
       obj4.children = items5;
-      return options(React5, obj4);
+      return React6(React5, obj4);
     }
   }
   const obj18 = { style: tmp.indicator, children: null };
@@ -694,7 +694,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
   const own = projectId.own;
   id();
   noop = tmp5;
-  options = question.options;
+  const options = question.options;
   if (cResult[0] !== options) {
     const imageOptionsLayoutResult = tmp(tmp2[18]).imageOptionsLayout(options);
     cResult[0] = options;
@@ -1063,7 +1063,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
   closure_16 = undefined;
   const tmp = id();
   noop = tmp2;
-  options = question.options;
+  const options = question.options;
   let obj = projectId(disabled[18]);
   const imageOptionsLayoutResult = projectId(disabled[18]).imageOptionsLayout(options);
   closure_7 = noop.useRef(new Map());
@@ -1216,7 +1216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(11927).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(11958).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -1230,8 +1230,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(11927).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(11927);
+            closure_129_4.onUpload(tmp2(11958).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(11958);
           }
           c3 = 3;
           return { value: "IconComponent", done: null };

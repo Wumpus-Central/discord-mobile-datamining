@@ -1,6 +1,6 @@
-// === Module 10581: BadgeDirectorySeenStore ===
+// === Module 10591: BadgeDirectorySeenStore ===
 
-// Module 10581 (BadgeDirectorySeenStore)
+// Module 10591 (BadgeDirectorySeenStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

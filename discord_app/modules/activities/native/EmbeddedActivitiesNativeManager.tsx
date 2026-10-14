@@ -1,40 +1,53 @@
-// === Module 15120: EmbeddedActivitiesNativeManager ===
+// === Module 15158: EmbeddedActivitiesNativeManager ===
 
-// Module 15120 (EmbeddedActivitiesNativeManager)
+// Module 15158 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5296 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10853 */;
-import activityWebViewController from "activityWebViewController" /* 10928 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15121 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4811 */;
+import ChatInputUtils from "ChatInputUtils" /* 4987 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5301 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5305 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10933 */;
+import activityWebViewController from "activityWebViewController" /* 11003 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15159 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15122 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15160 */;
 
 require = fn;
-const AnalyticEvents = fn(1085).AnalyticEvents;
+const Constants = fn(1085);
+({ AnalyticEvents: metroRequire, ComponentActions: closure_7 } = Constants);
 const PlatformUtils = fn(1382);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
 }
-class EmbeddedActivitiesNativeManager extends tmp5 {
+class EmbeddedActivitiesNativeManager extends tmp6 {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    applyArgumentsResult.handleOpenEmbeddedActivity = function handleOpenEmbeddedActivity() {
+      ChatInputUtils.dismissKeyboard();
+    };
+    return applyArgumentsResult;
+  }
   _initialize() {
     self = this;
     self = this;
     _initializeResult = super._initialize();
+    tmp2 = closure_2;
+    ComponentDispatch = self(closure_2[8]).ComponentDispatch;
+    subscription = ComponentDispatch.subscribe(ComponentActions.OPEN_EMBEDDED_ACTIVITY, this.handleOpenEmbeddedActivity);
     lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
       removeResult = lifecycleSubscription.remove();
     }
-    obj = closure_7;
+    obj = closure_8;
     addListenerResult = undefined;
-    if (closure_7 != null) {
+    if (closure_8 != null) {
       str = "onHostDestroy";
       addListenerResult = obj.addListener("onHostDestroy", () => {
         currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
@@ -50,14 +63,14 @@ class EmbeddedActivitiesNativeManager extends tmp5 {
     if (thermalStateSubscription != null) {
       removeResult1 = thermalStateSubscription.remove();
     }
-    obj2 = closure_1(closure_2[8]);
+    obj2 = closure_1(tmp2[9]);
     self.thermalStateSubscription = obj2.addListener((rawThermalState) => {
       currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
       let _location;
       if (currentEmbeddedActivity != null) {
         _location = currentEmbeddedActivity.location;
       }
-      const embeddedActivityLocationChannelId = self(dependencyMap[9]).getEmbeddedActivityLocationChannelId(_location);
+      const embeddedActivityLocationChannelId = self(dependencyMap[10]).getEmbeddedActivityLocationChannelId(_location);
       basicChannel = basicChannel.getBasicChannel(embeddedActivityLocationChannelId);
       let compositeInstanceId;
       if (currentEmbeddedActivity != null) {
@@ -67,7 +80,7 @@ class EmbeddedActivitiesNativeManager extends tmp5 {
       if (currentEmbeddedActivity != null) {
         applicationId = currentEmbeddedActivity.applicationId;
       }
-      const obj = self(dependencyMap[9]);
+      const obj = self(dependencyMap[10]);
       const obj3 = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, thermal_state: rawThermalState.rawThermalState, guild_id: null, media_session_id: null };
       let guild_id;
       if (basicChannel != null) {
@@ -79,24 +92,26 @@ class EmbeddedActivitiesNativeManager extends tmp5 {
       DispatcherDefault.dispatch({ type: "THERMAL_STATE_CHANGE", applicationId });
       const tmp9Result = DispatcherDefault;
       let tmp14 = null != compositeInstanceId;
-      const thermalState = self(dependencyMap[12]).getThermalState();
+      const thermalState = self(dependencyMap[13]).getThermalState();
       if (tmp14) {
         tmp14 = null != applicationId;
       }
       if (tmp14) {
-        tmp14 = thermalState >= self(dependencyMap[12]).ThermalStates.SERIOUS;
+        tmp14 = thermalState >= self(dependencyMap[13]).ThermalStates.SERIOUS;
       }
       if (tmp14) {
-        const respondToSeriousThermalState = self(dependencyMap[13]).requestRespondToSeriousThermalState();
-        const tmp2Result2 = self(dependencyMap[13]);
+        const respondToSeriousThermalState = self(dependencyMap[14]).requestRespondToSeriousThermalState();
+        const tmp2Result2 = self(dependencyMap[14]);
       }
-      const tmp2Result = self(dependencyMap[12]);
+      const tmp2Result = self(dependencyMap[13]);
     });
     return;
   }
   _terminate() {
     self = this;
     _terminateResult = super._terminate();
+    ComponentDispatch = closure_0(closure_2[8]).ComponentDispatch;
+    unsubscribeResult = ComponentDispatch.unsubscribe(ComponentActions.OPEN_EMBEDDED_ACTIVITY, this.handleOpenEmbeddedActivity);
     lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
       removeResult = lifecycleSubscription.remove();

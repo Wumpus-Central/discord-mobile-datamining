@@ -1,21 +1,21 @@
-// === Module 15141: LocalMessageCacheManager ===
+// === Module 15179: LocalMessageCacheManager ===
 
-// Module 15141 (LocalMessageCacheManager)
+// Module 15179 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import DateUtils from "DateUtils" /* 4793 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7179 */;
-import createMessageDefault from "createMessage" /* 9812 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 10783 */;
+import _modDef4704 from "module_4704" /* 4704 */;
+import DateUtils from "DateUtils" /* 4795 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7185 */;
+import createMessageDefault from "createMessage" /* 9822 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 10882 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4761 */;
+import MessageRecord from "MessageRecord" /* 4763 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import MessageStore from "MessageStore" /* 5432 */;
+import MessageStore from "MessageStore" /* 5437 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;
 
 require = fn;
@@ -44,8 +44,8 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, c7) {
   if (null != arg0) {
-    const tmp4 = _modDef4702();
-    const tmp5 = _modDef4702(arg0);
+    const tmp4 = _modDef4704();
+    const tmp5 = _modDef4704(arg0);
     return DateUtils.isWithinInterval(tmp4, tmp5, c7);
   } else {
     return false;
@@ -243,7 +243,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
   }
 };
 const MessageStates = fn(1085).MessageStates;
-const MutexUtils = fn(15142);
+const MutexUtils = fn(15180);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -964,7 +964,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(5752);
+                let obj9 = values(5757);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

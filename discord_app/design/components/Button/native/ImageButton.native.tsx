@@ -1,10 +1,10 @@
-// === Module 8760: ImageButton ===
+// === Module 8764: ImageButton ===
 
-// Module 8760 (ImageButton)
+// Module 8764 (ImageButton)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5378 */;
-import springPresets from "springPresets" /* 5382 */;
-import ButtonConstants from "ButtonConstants" /* 5384 */;
+import spring from "spring" /* 5383 */;
+import springPresets from "springPresets" /* 5387 */;
+import ButtonConstants from "ButtonConstants" /* 5389 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,12 +12,11 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["size", "label", "grow", "image", "accessibilityLabel", "maxFontSizeMultiplier", "onPressIn", "onPressOut", "ref"];
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
-let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(5096);
+let closure_9 = createStyles.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = ButtonConstants.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {
     MEDIUM_BUTTON_PADDING = ButtonConstants.SMALL_BUTTON_PADDING;
@@ -83,107 +82,95 @@ export const ImageButton = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     str = tmp13;
   }
   let obj = require("c");
-  const tmp17 = closure_10(str, require("ButtonHooks").useIconSizeStyles(str, true, tmp8).width, tmp5);
+  const tmp17 = closure_9(str, require("ButtonHooks").useIconSizeStyles(str, true, tmp8).width, tmp5);
   const tmpResult = require("ButtonHooks");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
   if (cResult[11] === onPressIn) {
     if (cResult[14] === tmp10) {
-      class T {
-        constructor() {
-          tmp = closure_0;
-          tmp2 = closure_2;
-          obj = closure_0(closure_2[11]);
-          num = 0;
-          if (1 === closure_2.get()) {
-            num = 1;
+      class E {
+        constructor(arg0) {
+          result = closure_2.set(0);
+          if (closure_1 != null) {
+            tmp3 = onPressOut;
+            tmp2Result = tmp2(onPressOut);
           }
-          obj1 = { opacity: obj.withSpring(num, tmp(tmp2[12]).ON_PRESS_SPRING, "animate-always") };
-          return obj1;
+          return;
         }
       }
       const obj2 = { withSpring: tmp(tmp2[11]).withSpring, pressed: sharedValue, ON_PRESS_SPRING: tmp(tmp2[12]).ON_PRESS_SPRING };
-      T.__closure = obj2;
-      T.__workletHash = 12412199607843;
-      T.__initData = __initData;
-      const animatedStyle = tmp(tmp2[10]).useAnimatedStyle(T);
+      tmp21.__closure = obj2;
+      tmp21.__workletHash = 12412199607843;
+      tmp21.__initData = __initData;
+      const animatedStyle = tmp(tmp2[10]).useAnimatedStyle(tmp21);
       if (cResult[17] === tmp6) {
         if (cResult[18] === tmp17.image) {
-          let tmp23 = cResult[19];
+          let tmp24 = cResult[19];
         }
         if (cResult[20] === animatedStyle) {
           if (cResult[21] === tmp17.imageDim) {
-            let tmp27 = cResult[22];
+            let tmp28 = cResult[22];
           }
           if (cResult[23] === tmp17.imageWrapper) {
-            if (cResult[24] === tmp23) {
-              class T {
-                constructor() {
-                  tmp = closure_0;
-                  tmp2 = closure_2;
-                  obj = closure_0(closure_2[11]);
-                  num = 0;
-                  if (1 === closure_2.get()) {
-                    num = 1;
+            if (cResult[24] === tmp24) {
+              class E {
+                constructor(arg0) {
+                  result = closure_2.set(0);
+                  if (closure_1 != null) {
+                    tmp3 = onPressOut;
+                    tmp2Result = tmp2(onPressOut);
                   }
-                  obj1 = { opacity: obj.withSpring(num, tmp(tmp2[12]).ON_PRESS_SPRING, "animate-always") };
-                  return obj1;
+                  return;
                 }
               }
             }
           }
-          class T {
-            constructor() {
-              tmp = closure_0;
-              tmp2 = closure_2;
-              obj = closure_0(closure_2[11]);
-              num = 0;
-              if (1 === closure_2.get()) {
-                num = 1;
+          class E {
+            constructor(arg0) {
+              result = closure_2.set(0);
+              if (closure_1 != null) {
+                tmp3 = onPressOut;
+                tmp2Result = tmp2(onPressOut);
               }
-              obj1 = { opacity: obj.withSpring(num, tmp(tmp2[12]).ON_PRESS_SPRING, "animate-always") };
-              return obj1;
+              return;
             }
           }
           const obj3 = { style: tmp17.imageWrapper, children: null };
-          const items = [tmp23, tmp27];
+          const items = [tmp24, tmp28];
           obj3.children = items;
-          const tmp32 = closure_9(closure_6, obj3);
+          const tmp33 = closure_8(View, obj3);
           cResult[23] = tmp17.imageWrapper;
-          cResult[24] = tmp23;
-          cResult[25] = tmp27;
-          cResult[26] = tmp32;
+          cResult[24] = tmp24;
+          cResult[25] = tmp28;
+          cResult[26] = tmp33;
         }
-        class T {
-          constructor() {
-            tmp = closure_0;
-            tmp2 = closure_2;
-            obj = closure_0(closure_2[11]);
-            num = 0;
-            if (1 === closure_2.get()) {
-              num = 1;
+        class E {
+          constructor(arg0) {
+            result = closure_2.set(0);
+            if (closure_1 != null) {
+              tmp3 = onPressOut;
+              tmp2Result = tmp2(onPressOut);
             }
-            obj1 = { opacity: obj.withSpring(num, tmp(tmp2[12]).ON_PRESS_SPRING, "animate-always") };
-            return obj1;
+            return;
           }
         }
         const obj4 = { style: null };
         const items1 = [tmp17.imageDim, animatedStyle];
         obj4.style = items1;
-        const tmp29 = closure_8(require("ReanimatedRexport").View, obj4);
+        const tmp30 = closure_7(require("ReanimatedRexport").View, obj4);
         cResult[20] = animatedStyle;
         cResult[21] = tmp17.imageDim;
-        cResult[22] = tmp29;
-        tmp27 = tmp29;
+        cResult[22] = tmp30;
+        tmp28 = tmp30;
       }
       const obj5 = { source: tmp6, style: tmp17.image };
-      const tmp26 = closure_8(closure_7, obj5);
+      const tmp27 = closure_7(require("FastImage"), obj5);
       cResult[17] = tmp6;
       cResult[18] = tmp17.image;
-      cResult[19] = tmp26;
-      tmp23 = tmp26;
+      cResult[19] = tmp27;
+      tmp24 = tmp27;
       const tmpResult4 = tmp(tmp2[10]);
     }
-    class G {
+    class E {
       constructor(arg0) {
         result = closure_2.set(0);
         if (closure_1 != null) {
@@ -195,9 +182,9 @@ export const ImageButton = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     }
     cResult[14] = tmp10;
     cResult[15] = sharedValue;
-    cResult[16] = G;
+    cResult[16] = E;
   }
-  const fn = function v(arg0) {
+  const fn = function w(arg0) {
     const result = sharedValue.set(1);
     if (closure_0 != null) {
       tmp2(arg0);
@@ -217,7 +204,7 @@ export const ImageButton = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   ({ grow, image } = size);
   const merged = Object.assign(size, Object.assign({ size: 0, label: 0, grow: 0, image: 0, accessibilityLabel: 0, maxFontSizeMultiplier: 0, onPressIn: 0, onPressOut: 0, ref: 0 }));
   let sharedValue;
-  const tmp4 = closure_10(str, onPressIn(sharedValue[9]).useIconSizeStyles(str, true, maxFontSizeMultiplier).width, grow);
+  const tmp4 = closure_9(str, onPressIn(sharedValue[9]).useIconSizeStyles(str, true, maxFontSizeMultiplier).width, grow);
   let obj = onPressIn(sharedValue[9]);
   sharedValue = onPressIn(sharedValue[10]).useSharedValue(0);
   const items = [sharedValue, onPressIn];
@@ -235,7 +222,7 @@ export const ImageButton = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     }
   }, items1);
   const obj2 = onPressIn(sharedValue[10]);
-  class B {
+  class N {
     constructor() {
       tmp = closure_0;
       tmp2 = closure_2;
@@ -249,18 +236,18 @@ export const ImageButton = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     }
   }
   const obj3 = onPressIn(sharedValue[10]);
-  B.__closure = { withSpring: onPressIn(sharedValue[11]).withSpring, pressed: sharedValue, ON_PRESS_SPRING: onPressIn(sharedValue[12]).ON_PRESS_SPRING };
-  B.__workletHash = 2649796969632;
-  B.__initData = __initData2;
+  N.__closure = { withSpring: onPressIn(sharedValue[11]).withSpring, pressed: sharedValue, ON_PRESS_SPRING: onPressIn(sharedValue[12]).ON_PRESS_SPRING };
+  N.__workletHash = 2649796969632;
+  N.__initData = __initData2;
   const obj5 = { style: tmp4.imageWrapper, children: null };
-  const animatedStyle = obj3.useAnimatedStyle(B);
-  const items2 = [closure_8(closure_7, { source: image, style: tmp4.image }), ];
+  const animatedStyle = obj3.useAnimatedStyle(N);
+  const items2 = [closure_7(onPressOut(sharedValue[13]), { source: image, style: tmp4.image }), ];
   const obj7 = { style: null };
   const items3 = [tmp4.imageDim, animatedStyle];
   obj7.style = items3;
-  items2[1] = closure_8(onPressOut(sharedValue[10]).View, obj7);
+  items2[1] = closure_7(onPressOut(sharedValue[10]).View, obj7);
   obj5.children = items2;
-  const tmp11 = closure_9(closure_6, obj5);
+  const tmp11 = closure_8(View, obj5);
   if (null != label) {
     const obj8 = { style: tmp4.labelPressable };
     const merged1 = Object.assign(merged);
@@ -277,11 +264,11 @@ export const ImageButton = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj9.onPressIn = callback;
     obj9.onPressOut = callback1;
     obj9.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items4 = [closure_8(onPressIn(tmp3[13]).BaseIconButton, obj9), ];
+    const items4 = [closure_7(onPressIn(tmp3[14]).BaseIconButton, obj9), ];
     const obj10 = { variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier, children: label };
-    items4[1] = closure_8(onPressIn(tmp3[14]).Text, obj10);
+    items4[1] = closure_7(onPressIn(tmp3[15]).Text, obj10);
     obj8.children = items4;
-    let tmp10Result = closure_9(onPressIn(tmp3[15]).BaseButton, obj8);
+    let tmp10Result = closure_8(onPressIn(tmp3[16]).BaseButton, obj8);
   } else {
     const obj11 = { ref };
     const merged3 = Object.assign(merged);
@@ -292,7 +279,7 @@ export const ImageButton = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj11.variant = "secondary";
     obj11.onPressIn = callback;
     obj11.onPressOut = callback1;
-    tmp10Result = closure_8(onPressIn(tmp3[13]).BaseIconButton, obj11);
+    tmp10Result = closure_7(onPressIn(tmp3[14]).BaseIconButton, obj11);
   }
   return tmp10Result;
 });

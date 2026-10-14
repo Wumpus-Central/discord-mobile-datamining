@@ -1,6 +1,6 @@
-// === Module 14422: RemoteAuthModal ===
+// === Module 14459: RemoteAuthModal ===
 
-// Module 14422 (RemoteAuthModal)
+// Module 14459 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,17 +8,17 @@ import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import components_Button_Button from "components/Button/Button" /* 5379 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import ButtonGroup from "ButtonGroup" /* 5958 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6154 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6667 */;
-import _modDef14421 from "module_14421" /* 14421 */;
-import _modDef14423 from "module_14423" /* 14423 */;
-import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 14424 */;
-import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 14428 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import components_Button_Button from "components/Button/Button" /* 5384 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5939 */;
+import ButtonGroup from "ButtonGroup" /* 5963 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6160 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6671 */;
+import _modDef14458 from "module_14458" /* 14458 */;
+import _modDef14460 from "module_14460" /* 14460 */;
+import QrLoginSpotIllustration from "QrLoginSpotIllustration" /* 14461 */;
+import QrSuccessSpotIllustration from "QrSuccessSpotIllustration" /* 14465 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ get_ActivityIndicator = fn(17);
 const Endpoints = fn(1085).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { background: { width: "100%", height: "100%" }, container: { flex: 1, alignItems: "stretch", alignContent: "center" }, imageStyle: null, logo: null, mainImage: null, warningCaption: null, caption: null, mainCard: null, buttonGroup: null, loadingContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -157,10 +157,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
     HTTP.post(request).then((body) => {
       dependencyMap(body.body.handshake_token);
       closure_1_1(constants.LOADED);
-      const result = remoteAuthFingerprint(6667).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(6671).DeprecatedLayoutAnimation();
     }).catch(() => {
       closure_1_1(constants.NOT_FOUND);
-      const result = remoteAuthFingerprint(6667).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(6671).DeprecatedLayoutAnimation();
     });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -237,7 +237,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const obj4 = { scale };
-      const tmp18 = closure_7(tmp(14424).QrLoginSpotIllustration, obj4);
+      const tmp18 = closure_7(tmp(14461).QrLoginSpotIllustration, obj4);
       cResult[7] = tmp18;
       let tmp15 = tmp18;
     } else {
@@ -257,7 +257,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
       const obj6 = { variant: "heading-md/extrabold", children: null };
       const intl = tmp(1126).intl;
       obj6.children = intl.string(tmp(1126).t.jD2pqF);
-      const tmp25 = closure_7(tmp(5088).Heading, obj6);
+      const tmp25 = closure_7(tmp(5092).Heading, obj6);
       cResult[10] = tmp25;
       let tmp23 = tmp25;
     } else {
@@ -308,7 +308,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
         }
         if (cResult[20] !== tmp11) {
           const obj8 = { variant: "secondary", text: tmp37, onPress: tmp11 };
-          const tmp41 = closure_7(tmp(5379).Button, obj8);
+          const tmp41 = closure_7(tmp(5384).Button, obj8);
           cResult[20] = tmp11;
           cResult[21] = tmp41;
           let tmp39 = tmp41;
@@ -342,7 +342,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
         const obj10 = { style: tmp4.buttonGroup, children: null };
         const items2 = [tmp34, tmp39];
         obj10.children = items2;
-        const tmp44 = closure_8(tmp(5958).ButtonGroup, obj10);
+        const tmp44 = closure_8(tmp(5963).ButtonGroup, obj10);
         cResult[22] = tmp4.buttonGroup;
         cResult[23] = tmp34;
         cResult[24] = tmp39;
@@ -351,7 +351,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
       }
     }
     const obj11 = { text: tmp32, onPress: tmp12, disabled: tmp14 };
-    const tmp36 = closure_7(tmp(5379).Button, obj11, combined);
+    const tmp36 = closure_7(tmp(5384).Button, obj11, combined);
     cResult[15] = tmp12;
     cResult[16] = tmp14;
     cResult[17] = combined;
@@ -518,7 +518,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
   const obj8 = { children: null };
   const items = [tmp9, tmp13, tmp18, tmp25];
   obj8.children = items;
-  const tmp29 = closure_1_8(options, obj8);
+  const tmp29 = closure_1_8(React6, obj8);
   cResult[10] = tmp9;
   cResult[11] = tmp18;
   cResult[12] = tmp25;
@@ -545,7 +545,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
   obj6.children = React5(components_Button_Button.Button, obj7);
   items[3] = React5(ButtonGroup.ButtonGroup, obj6);
   obj.children = items;
-  return closure_1_8(options, obj);
+  return closure_1_8(React6, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAuthNotFound() {
@@ -607,7 +607,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
   const obj6 = { children: null };
   const items = [first, tmp10, tmp17];
   obj6.children = items;
-  const tmp21 = closure_1_8(options, obj6);
+  const tmp21 = closure_1_8(React6, obj6);
   cResult[7] = tmp10;
   cResult[8] = tmp17;
   cResult[9] = tmp21;
@@ -631,7 +631,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remote
   obj4.children = React5(components_Button_Button.Button, obj5);
   items[2] = React5(ButtonGroup.ButtonGroup, obj4);
   obj.children = items;
-  return closure_1_8(options, obj);
+  return closure_1_8(React6, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAuthLoading() {
@@ -665,7 +665,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
   const tmp3 = closure_10();
   const top = useSafeAreaInsetsDefault().top;
   if (cResult[0] !== tmp3.imageStyle) {
-    const obj2 = { source: _modDef14423, style: tmp3.imageStyle };
+    const obj2 = { source: _modDef14460, style: tmp3.imageStyle };
     const tmp8 = React5(FastImageDefault, obj2);
     cResult[0] = tmp3.imageStyle;
     cResult[1] = tmp8;
@@ -742,7 +742,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
   const obj8 = { style: null, source: null };
   const items1 = [tmp3.logo, tmp9];
   obj8.style = items1;
-  obj8.source = _modDef14421;
+  obj8.source = _modDef14458;
   const tmp12 = React5(FastImageDefault, obj8);
   cResult[4] = tmp3.logo;
   cResult[5] = tmp9;
@@ -752,12 +752,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RemoteAu
 }) : (function RemoteAuth(arg0) {
   const tmp = closure_10();
   const obj = { style: tmp.background, children: null };
-  const obj2 = { source: _modDef14423, style: tmp.imageStyle };
+  const obj2 = { source: _modDef14460, style: tmp.imageStyle };
   const items = [React5(FastImageDefault, obj2), , ];
   const obj3 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj3.style = items1;
-  obj3.source = _modDef14421;
+  obj3.source = _modDef14458;
   items[1] = React5(FastImageDefault, obj3);
   const obj4 = { style: tmp.container, children: null };
   const obj5 = { style: tmp.mainCard, children: null };

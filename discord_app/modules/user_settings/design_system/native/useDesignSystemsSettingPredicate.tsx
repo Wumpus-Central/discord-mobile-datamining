@@ -1,7 +1,7 @@
-// === Module 16437: useDesignSystemsSettingPredicate ===
+// === Module 16474: useDesignSystemsSettingPredicate ===
 
-// Module 16437 (useDesignSystemsSettingPredicate)
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15442 */;
+// Module 16474 (useDesignSystemsSettingPredicate)
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15479 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,7 +1,7 @@
-// === Module 11311: openConjureRemoveAppAlert ===
+// === Module 11321: openConjureRemoveAppAlert ===
 
-// Module 11311 (openConjureRemoveAppAlert)
-import useAlertStore from "useAlertStore" /* 5301 */;
+// Module 11321 (openConjureRemoveAppAlert)
+import useAlertStore from "useAlertStore" /* 5306 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_9 = createStyles.createStyles({ title: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemoveAppAlert(project) {
@@ -379,13 +379,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
             let tmp37 = tmp3;
             let deleteProject = dependencyMap;
             if (_slicedToArray) {
-              tmp37 = tmp37(11207);
+              tmp37 = tmp37(10684);
               deleteProject = tmp37.deleteProject;
               let deleteProjectResult = deleteProject(user.id);
             } else {
               const obj5 = { alsoRemovePreviewBot };
-              deleteProjectResult = tmp37(11254).unpublishProject(user.id, obj5);
-              const tmp37Result = tmp37(11254);
+              deleteProjectResult = tmp37(10741).unpublishProject(user.id, obj5);
+              const tmp37Result = tmp37(10741);
             }
             deleteProjectResult.catch(() => null);
             dependencyMap = 1;
@@ -420,10 +420,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           } else {
             if (!closure_129_4) {
               const obj7 = { text: null, variant: "success" };
-              const obj = tmp2(4809);
-              obj7.text = tmp3(11312).conjureRemoveAppSuccess(closure_129_1);
+              const obj = tmp2(4811);
+              obj7.text = tmp3(11322).conjureRemoveAppSuccess(closure_129_1);
               obj.open("CONJURE_APP_REMOVED", obj7);
-              const obj3 = tmp3(11312);
+              const obj3 = tmp3(11322);
             }
             c3 = 3;
             return { value: "IconComponent", done: null };

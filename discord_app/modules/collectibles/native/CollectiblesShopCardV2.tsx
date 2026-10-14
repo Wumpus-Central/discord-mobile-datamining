@@ -1,24 +1,24 @@
-// === Module 8968: CollectiblesShopCardV2 ===
+// === Module 8973: CollectiblesShopCardV2 ===
 
-// Module 8968 (CollectiblesShopCardV2)
+// Module 8973 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7275 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7276 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8301 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8971 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 9034 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9036 */;
-import DiceIcon from "DiceIcon" /* 9037 */;
-import LimitedTimeBadgeDefault from "LimitedTimeBadge" /* 9039 */;
-import OrbsIcon from "OrbsIcon" /* 9040 */;
-import WishlistButton from "WishlistButton" /* 9042 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4811 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7281 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7282 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8308 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8976 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 9039 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9041 */;
+import DiceIcon from "DiceIcon" /* 9042 */;
+import LimitedTimeBadgeDefault from "LimitedTimeBadge" /* 9044 */;
+import OrbsIcon from "OrbsIcon" /* 9045 */;
+import WishlistButton from "WishlistButton" /* 9047 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7264 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7270 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
 let c11 = 150;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { card: null, topRowOverlay: null, badge: null, badgePill: null, badgeOverrideText: null, badgePillDarkMode: null, badgePillLightMode: null, wishlistButton: null };
 let size = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.card = size;
@@ -45,7 +45,7 @@ obj.badgeOverrideText = { textTransform: "uppercase" };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_4, paddingVertical: 1.5, borderRadius: nativeDefault.radii.round, flexShrink: 1 };
 obj.badgePillDarkMode = { backgroundColor: nativeDefault.colors.WHITE };
 let obj4 = { backgroundColor: nativeDefault.colors.WHITE };
-obj.badgePillLightMode = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+obj.badgePillLightMode = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
 obj.wishlistButton = { marginLeft: "auto", flexShrink: 0 };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -100,7 +100,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collec
           text = tmp21;
           const _Symbol2 = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            class Y {
+            class K {
               constructor() {
                 obj = closure_1(closure_2[17]);
                 obj1 = { text: closure_7 };
@@ -108,9 +108,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collec
                 return;
               }
             }
-            cResult[12] = Y;
+            cResult[12] = K;
           } else {
-            class Y {
+            class K {
               constructor() {
                 obj = closure_1(closure_2[17]);
                 obj1 = { text: closure_7 };
@@ -587,7 +587,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Collec
   }
   return tmp14Result;
 });
-let obj5 = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+let obj5 = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardV2.tsx");
 
@@ -604,8 +604,8 @@ export default noop.memo(function CollectiblesShopCardV2(arg0) {
     let obj = { newValue: memo, children: null };
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    obj.children = options(closure_14, obj2);
-    return options(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+    obj.children = React6(closure_14, obj2);
+    return React6(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
   }
 });
 export const COLLECTIBLES_SHOP_CARD_HEIGHT = num;

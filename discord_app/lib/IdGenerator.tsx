@@ -1,6 +1,6 @@
-// === Module 18015: IdGenerator ===
+// === Module 18051: IdGenerator ===
 
-// Module 18015 (IdGenerator)
+// Module 18051 (IdGenerator)
 import discord_common_IdGenerator from "discord_common/IdGenerator" /* 1275 */;
 import size from "module_2" /* 2 */;
 

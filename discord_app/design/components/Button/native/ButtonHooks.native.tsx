@@ -1,19 +1,19 @@
-// === Module 5385: ButtonHooks ===
+// === Module 5390: ButtonHooks ===
 
-// Module 5385 (ButtonHooks)
+// Module 5390 (ButtonHooks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4818 */;
-import native from "native" /* 4827 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import shared from "shared" /* 4969 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import spring from "spring" /* 5378 */;
-import Icon from "Icon" /* 5381 */;
-import springPresets from "springPresets" /* 5382 */;
-import ButtonConstants from "ButtonConstants" /* 5384 */;
-import useFontScale from "useFontScale" /* 5386 */;
+import useToken from "useToken" /* 4820 */;
+import native from "native" /* 4829 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import shared from "shared" /* 4971 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import spring from "spring" /* 5383 */;
+import Icon from "Icon" /* 5386 */;
+import springPresets from "springPresets" /* 5387 */;
+import ButtonConstants from "ButtonConstants" /* 5389 */;
+import useFontScale from "useFontScale" /* 5391 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -136,9 +136,9 @@ function getButtonColorTokens(arg0) {
   }
 }
 let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(5092);
+createStyles = fn(5096);
 const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileThemedButtonStyles(arg0) {
@@ -359,7 +359,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
 });
 let closure_7 = tmp2;
 fn(558);
-createStyles = fn(5092);
+createStyles = fn(5096);
 const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonTextColorStyles(arg0) {

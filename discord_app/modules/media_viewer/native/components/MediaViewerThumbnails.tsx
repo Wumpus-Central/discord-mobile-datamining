@@ -1,22 +1,22 @@
-// === Module 13542: MediaViewerThumbnails ===
+// === Module 13580: MediaViewerThumbnails ===
 
-// Module 13542 (MediaViewerThumbnails)
+// Module 13580 (MediaViewerThumbnails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4818 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4851 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13543 */;
+import useToken from "useToken" /* 4820 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4853 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13581 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = View(4850);
-const VisualEffectViewDefault = View(5365);
+const ReanimatedRexportDefault = View(4852);
+const VisualEffectViewDefault = View(5370);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8419);
+const Constants = fn(8426);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -92,7 +92,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Obscur
   }
   return tmp10Result;
 });
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles({ containerPortrait: { height: 60 }, thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 }, thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" } });
 let closure_12 = noop.memo(function MediaThumbnail(source) {
   source = source.source;
@@ -120,7 +120,7 @@ let closure_12 = noop.memo(function MediaThumbnail(source) {
   const obj2 = { needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, accessibilityRole: "imagebutton", accessibilityLabel: "Thumbnail preview, " + index + 1 + " of " + numSources, accessibilityHint: "Double tap to focus", accessibilityState: { selected: selectedIndex === index }, onPress: callback, children: null };
   const items3 = [closure_1_8(FastImageDefault, { style: tmp.thumbnailImagePortrait, source: memo, enableAnimation: false }), closure_1_8(closure_10, { source, index })];
   obj2.children = items3;
-  obj.children = options(hasOwnProperty, obj2);
+  obj.children = React6(hasOwnProperty, obj2);
   return closure_1_8(ReanimatedRexportDefault.View, obj);
 });
 const __initData = { code: "function MediaViewerThumbnailsTsx1(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}" };

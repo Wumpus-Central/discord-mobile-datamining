@@ -1,12 +1,12 @@
-// === Module 16508: useMaybeFetchShopHome ===
+// === Module 16547: useMaybeFetchShopHome ===
 
-// Module 16508 (useMaybeFetchShopHome)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7263 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7309 */;
+// Module 16547 (useMaybeFetchShopHome)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7269 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7315 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5016 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7264 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7306 */;
+import ExperimentStore from "ExperimentStore" /* 5018 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7270 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7312 */;
 
 const require = globalThis.__r;
 
@@ -248,7 +248,7 @@ export const useMaybeFetchCollectiblesShopHome = ReactCompilerGating.isReactComp
     let tmp = !hasExpiredShopBlocks;
     if (!hasExpiredShopBlocks) {
       const _Date = Date;
-      tmp = Date.now() - c6 < options;
+      tmp = Date.now() - c6 < React6;
     }
     return tmp;
   }, items5);

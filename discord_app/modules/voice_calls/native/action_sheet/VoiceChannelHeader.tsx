@@ -1,25 +1,25 @@
-// === Module 13947: VoiceChannelHeader ===
+// === Module 13984: VoiceChannelHeader ===
 
-// Module 13947 (VoiceChannelHeader)
+// Module 13984 (VoiceChannelHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import useChannelNameDefault from "useChannelName" /* 5421 */;
-import Pressables from "Pressables" /* 6185 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 6796 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8683 */;
-import _modDef10332 from "module_10332" /* 10332 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 10748 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11016 */;
-import CallStateHooks from "CallStateHooks" /* 13948 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13949 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 13950 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import useChannelNameDefault from "useChannelName" /* 5426 */;
+import Pressables from "Pressables" /* 6189 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6800 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8688 */;
+import _modDef10342 from "module_10342" /* 10342 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 10847 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 11090 */;
+import CallStateHooks from "CallStateHooks" /* 13985 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13986 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13987 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 
 const CallStateHooksDefault = CallStateHooks;
 
@@ -29,7 +29,7 @@ const Constants = fn(1085);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { alignSelf: "stretch", flexDirection: "row", paddingVertical: 10, paddingHorizontal: 16, alignItems: "center" }, middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 }, icons: { flexDirection: "row", tintColor: nativeDefault.colors.WHITE }, subtitle: null, subtitleWrapper: null };
 let obj3 = { flexDirection: "row", tintColor: nativeDefault.colors.WHITE };
 obj2.subtitle = { fontSize: 12, lineHeight: 16, color: nativeDefault.colors.WHITE };
@@ -151,7 +151,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   }
   const obj = channel(576);
   const stateFromStores = channel(504).useStateFromStores(first, tmp7);
-  const tmp10 = stateFromStores1(11016)(channel);
+  const tmp10 = stateFromStores1(11090)(channel);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [EmbeddedActivitiesStore];
     cResult[3] = items1;
@@ -193,7 +193,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   const tmp9 = stateFromStores1;
   const tmpResult = channel(504);
   stateFromStores1 = channel(504).useStateFromStores(tmp11, A, tmp15);
-  const tmp17 = tmp9(5421)(channel);
+  const tmp17 = tmp9(5426)(channel);
   if (stateFromStores != null) {
     class A {
       constructor() {
@@ -245,7 +245,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
                 }
               }
               let obj2 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-md/semibold", color: "text-overlay-light", children: tmp17 };
-              const tmp34 = closure_10(tmp(5088).Text, obj2);
+              const tmp34 = closure_10(tmp(5092).Text, obj2);
             }
             cResult[21] = tmp17;
             cResult[22] = tmp34;
@@ -269,7 +269,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
                 }
               }
               const obj3 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-xs/medium", color: "text-overlay-light", children: tmp18 };
-              const tmp36 = closure_10(tmp(5088).Text, obj3);
+              const tmp36 = closure_10(tmp(5092).Text, obj3);
             }
             cResult[23] = tmp18;
             cResult[24] = tmp36;
@@ -414,9 +414,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { size: channel(1200).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
   if (isRoleRequiredDefault(channel)) {
-    let tmp5Result = tmp5(13952);
+    let tmp5Result = tmp5(13989);
   } else {
-    tmp5Result = tmp5(11127);
+    tmp5Result = tmp5(11197);
   }
   obj6.source = tmp5Result;
   obj6.style = tmp.icons;
@@ -425,13 +425,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   let tmp14Result = formatToPlainStringResult;
   if (typeof formatToPlainStringResult === "string") {
     const obj8 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-md/semibold", color: "text-overlay-light", children: formatToPlainStringResult };
-    tmp14Result = closure_10(tmp2(5088).Text, obj8);
+    tmp14Result = closure_10(tmp2(5092).Text, obj8);
   }
   const items4 = [tmp14Result, ];
   let tmp14Result3 = name;
   if (typeof name === "string") {
     const obj9 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-xs/medium", color: "text-overlay-light", children: name };
-    tmp14Result3 = closure_10(tmp2(5088).Text, obj9);
+    tmp14Result3 = closure_10(tmp2(5092).Text, obj9);
   }
   items4[1] = tmp14Result3;
   obj7.children = items4;
@@ -466,14 +466,14 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
     }
     return tmp7;
   }
-  const tmp8 = collapsed(closure_15, { onPress, iconSource: _modDef10332, iconStyle: tmp4.icons, accessibilityLabel: first });
+  const tmp8 = collapsed(closure_15, { onPress, iconSource: _modDef10342, iconStyle: tmp4.icons, accessibilityLabel: first });
   cResult[1] = onPress;
   cResult[2] = tmp4.icons;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-  const obj2 = { onPress, iconSource: _modDef10332, iconStyle: tmp4.icons, accessibilityLabel: first };
+  const obj2 = { onPress, iconSource: _modDef10342, iconStyle: tmp4.icons, accessibilityLabel: first };
 }) : (function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10332, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef10342, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return collapsed(closure_15, obj);

@@ -1,10 +1,10 @@
-// === Module 15364: MFACodeInput ===
+// === Module 15401: MFACodeInput ===
 
-// Module 15364 (MFACodeInput)
+// Module 15401 (MFACodeInput)
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4969 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import shared from "shared" /* 4971 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import ClipboardUtils from "ClipboardUtils" /* 6891 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const AppStates = fn(1085).AppStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" }, input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" }, status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 }, error: { color: nativeDefault.unsafe_rawColors.RED_400 }, minHeightGuard: { minHeight: 20 } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -180,12 +180,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MFACodeI
             if (showActivityIndicator) {
               const unsafe_rawColors = nativeDefault.unsafe_rawColors;
               const obj3 = { color: shared.isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500 };
-              return options(hasOwnProperty, obj3);
+              return React6(hasOwnProperty, obj3);
             } else {
               let tmp2 = null;
               if (null != error) {
                 const obj = { style: error.error, variant: "text-md/medium", children: tmp };
-                tmp2 = options(Text_Text.Text, obj);
+                tmp2 = React6(Text_Text.Text, obj);
               }
               return tmp2;
             }

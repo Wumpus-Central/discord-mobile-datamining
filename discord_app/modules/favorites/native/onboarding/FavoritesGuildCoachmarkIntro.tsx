@@ -1,14 +1,14 @@
-// === Module 17075: FavoritesGuildCoachmarkIntro ===
+// === Module 17112: FavoritesGuildCoachmarkIntro ===
 
-// Module 17075 (FavoritesGuildCoachmarkIntro)
+// Module 17112 (FavoritesGuildCoachmarkIntro)
 import util from "util" /* 1126 */;
 import _modDef3442 from "module_3442" /* 3442 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10323 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17070 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10333 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17107 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17046 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17083 */;
 
 require = fn;
 const FAVORITES = fn(1085).FAVORITES;
@@ -59,8 +59,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
       ReanimatedRexport.runOnJS(closure_2)(arg0);
     }
   };
-  const tmpResult = markAsDismissed(4850);
-  fn2.__closure = { runOnJS: markAsDismissed(4850).runOnJS, setScrolledToTop: tmp10 };
+  const tmpResult = markAsDismissed(4852);
+  fn2.__closure = { runOnJS: markAsDismissed(4852).runOnJS, setScrolledToTop: tmp10 };
   fn2.__workletHash = 13648062364539;
   fn2.__initData = __initData2;
   const animatedReaction = tmpResult.useAnimatedReaction(C, fn2);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   cResult[11] = I;
   cResult[12] = tmp9;
   cResult[13] = { visible: tmp9, position: "bottom", title: tmp14, description: tmp15, onDismiss: I, renderImgComponent: G, buttonLabel: tmp20, onButtonPress: D };
-  const obj2 = { runOnJS: markAsDismissed(4850).runOnJS, setScrolledToTop: tmp10 };
+  const obj2 = { runOnJS: markAsDismissed(4852).runOnJS, setScrolledToTop: tmp10 };
   const obj3 = { visible: tmp9, position: "bottom", title: tmp14, description: tmp15, onDismiss: I, renderImgComponent: G, buttonLabel: tmp20, onButtonPress: D };
 }) : (function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;

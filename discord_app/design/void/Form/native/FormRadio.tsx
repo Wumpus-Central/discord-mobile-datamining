@@ -1,35 +1,37 @@
-// === Module 6834: Form/FormRadio ===
+// === Module 6839: Form/FormRadio ===
 
-// Module 6834 (Form/FormRadio)
+// Module 6839 (Form/FormRadio)
 import c from "c" /* 576 */;
+import FastImageDefault from "FastImage" /* 5034 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
-let closure_5 = createStyles.createStyles({ radio: { width: 22, height: 22 } });
+const createStyles = fn(5096);
+let closure_4 = createStyles.createStyles({ radio: { width: 22, height: 22 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormRadio.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormRadio(selected) {
   const cResult = c.c(3);
-  const tmp3 = closure_5();
-  const tmp4 = importDefault(selected.selected ? 6835 : 6836);
+  const tmp3 = closure_4();
+  const tmp4Result = importDefault(selected.selected ? 6840 : 6841);
   if (cResult[0] === tmp3.radio) {
-    if (cResult[1] === tmp4) {
-      let tmp5 = cResult[2];
+    if (cResult[1] === tmp4Result) {
+      let tmp6 = cResult[2];
     }
-    return tmp5;
+    return tmp6;
   }
-  const tmp6 = <Image style={tmp3.radio} source={tmp4} />;
+  const tmp7 = jsx(FastImageDefault, { style: tmp3.radio, source: tmp4Result });
   cResult[0] = tmp3.radio;
-  cResult[1] = tmp4;
-  cResult[2] = tmp6;
-  tmp5 = tmp6;
-  const obj2 = { style: tmp3.radio, source: tmp4 };
+  cResult[1] = tmp4Result;
+  cResult[2] = tmp7;
+  tmp6 = tmp7;
+  const obj2 = { style: tmp3.radio, source: tmp4Result };
 }) : (function FormRadio(selected) {
-  const obj = { style: closure_5().radio, source: importDefault(selected.selected ? 6835 : 6836) };
-  return <Image style={closure_5().radio} source={importDefault(selected.selected ? 6835 : 6836)} />;
+  const obj = { style: closure_4().radio, source: null };
+  const tmp = closure_4();
+  obj.source = importDefault(selected.selected ? 6840 : 6841);
+  return jsx(FastImageDefault, { style: closure_4().radio, source: null });
 });

@@ -1,18 +1,18 @@
-// === Module 6795: GuildOnboardingUtils ===
+// === Module 6799: GuildOnboardingUtils ===
 
-// Module 6795 (GuildOnboardingUtils)
+// Module 6799 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import FlagUtilsAll from "FlagUtils" /* 1403 */;
 import StringUtils from "StringUtils" /* 2031 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 6791 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 6796 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4757 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 6795 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6800 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
-import GuildChannelStore from "GuildChannelStore" /* 4748 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5766 */;
+import GuildChannelStore from "GuildChannelStore" /* 4750 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 
 const require = globalThis.__r;
 
@@ -79,11 +79,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4748).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(6790).OnboardingConnectionType;
+let closure_7 = fn(4750).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(6794).OnboardingConnectionType;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4736).GuildMemberFlags;
+const GuildMemberFlags = fn(4738).GuildMemberFlags;
 let date = new Date(1682488800000);
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -525,7 +525,7 @@ export const getMinimumSetOfDefaultChannelIds = function getMinimumSetOfDefaultC
       if (channelIds == null) {
         channelIds = [];
       }
-      options = required.options;
+      const options = required.options;
       const push = navigation.push;
       const items = [];
       HermesBuiltin.arraySpread(options.reduce((acc, channelIds) => {

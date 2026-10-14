@@ -1,18 +1,18 @@
-// === Module 17345: MembersPruneActionSheet ===
+// === Module 17379: MembersPruneActionSheet ===
 
-// Module 17345 (MembersPruneActionSheet)
+// Module 17379 (MembersPruneActionSheet)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6968 */;
-import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 17347 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6973 */;
+import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 17381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-const PrunePreviewStore = fn(17346);
+const PrunePreviewStore = fn(17380);
 ({ usePrunePreview: hasOwnProperty, setPrunePreview: metroRequire, clearAllPrunePreviews: closure_7 } = PrunePreviewStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

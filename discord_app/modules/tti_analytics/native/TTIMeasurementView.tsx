@@ -1,8 +1,8 @@
-// === Module 12261: TTIMeasurementView ===
+// === Module 12297: TTIMeasurementView ===
 
-// Module 12261 (TTIMeasurementView)
-import TTIMeasurementNativeComponentDefault from "TTIMeasurementNativeComponent" /* 12262 */;
-import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 5368 */;
+// Module 12297 (TTIMeasurementView)
+import TTIMeasurementNativeComponentDefault from "TTIMeasurementNativeComponent" /* 12298 */;
+import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 5373 */;
 
 const obj = { componentName: "DCDTTIMeasurementView", componentFoundInstance: null };
 obj.componentFoundInstance = TTIMeasurementNativeComponentDefault;

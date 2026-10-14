@@ -1,6 +1,6 @@
-// === Module 11789: conjurePublishCard ===
+// === Module 11799: conjurePublishCard ===
 
-// Module 11789 (conjurePublishCard)
+// Module 11799 (conjurePublishCard)
 import _modDef3849 from "module_3849" /* 3849 */;
 import size from "module_2" /* 2 */;
 
@@ -44,10 +44,10 @@ export const livePublishCardMessageId = function livePublishCardMessageId(arg0, 
     return null;
   }
 };
-export const showsOutdatedNotice = function showsOutdatedNotice(publish) {
-  let tmp = null != publish && publish.isUpdate && null == publish.disabledReason;
+export const showsOutdatedNotice = function showsOutdatedNotice(isUpdate) {
+  let tmp = null != isUpdate && isUpdate.isUpdate && null == isUpdate.disabledReason;
   if (tmp) {
-    tmp = true !== publish.publishing;
+    tmp = true !== isUpdate.publishing;
   }
   return tmp;
 };

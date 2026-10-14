@@ -1,24 +1,24 @@
-// === Module 15157: ProfileCustomizationSettingScreen ===
+// === Module 15195: ProfileCustomizationSettingScreen ===
 
-// Module 15157 (ProfileCustomizationSettingScreen)
+// Module 15195 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ChatInputUtils from "ChatInputUtils" /* 4985 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6671 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9634 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10643 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15158 */;
-import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15178 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15265 */;
-import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15266 */;
-import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15275 */;
+import ChatInputUtils from "ChatInputUtils" /* 4987 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5111 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6675 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9644 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10653 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 15196 */;
+import useUserProfileEditFormDefault from "useUserProfileEditForm" /* 15216 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 15302 */;
+import useGuildProfileEditFormDefault from "useGuildProfileEditForm" /* 15303 */;
+import useMaybeFetchCollectiblesRecommendationsDefault from "useMaybeFetchCollectiblesRecommendations" /* 15312 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10578 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10588 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8292 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_19 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {
@@ -68,15 +68,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   useMaybeFetchCollectiblesRecommendationsDefault();
   closure_19();
   let obj = obj5(576);
-  const token = obj5(4818).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  const token = obj5(4820).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
   obj5 = token;
   const tmp8 = _slicedToArray(stateFromStores.useState(0), 2);
   importDefault = tmp8[1];
   [dependencyMap, closure_3] = stateFromStores.useState(false);
-  let obj2 = obj5(4818);
+  let obj2 = obj5(4820);
   const nativeStackNavigation = obj5(1503).useNativeStackNavigation();
   let obj3 = obj5(1503);
-  const params = obj5(6683).useSettingNavigationRoute().params;
+  const params = obj5(6687).useSettingNavigationRoute().params;
   let autoFocusElement;
   if (params != null) {
     autoFocusElement = params.autoFocusElement;
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }
-  let obj4 = obj5(6683);
+  let obj4 = obj5(6687);
   const obj6 = { items: tmp13, pageWidth: tmp8[0], defaultIndex: null, onPageChange: null, onPageChangeStart: null };
   if (field === ProfileCustomizationSubsection.GUILD) {
     class D {
@@ -141,7 +141,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj = { hasEdits: stateFromStores, resetPending: UserSettingsAccountActionCreators.resetAllPending, onHasEdits: ChatInputUtils.dismissKeyboard, onConfirm };
     return maybeShowDiscardChangesAlertDefault(obj);
   };
-  const segmentedControlState = obj5(8530).useSegmentedControlState(obj6);
+  const segmentedControlState = obj5(8537).useSegmentedControlState(obj6);
   const activeIndex = segmentedControlState.activeIndex;
   const tmp18 = items[activeIndex.get(activeIndex)];
   if (tmp18 == null) {
@@ -265,7 +265,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp35 = cResult[11];
   }
-  const tmpResult = obj5(8530);
+  const tmpResult = obj5(8537);
   stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
   closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
   if (cResult[12] === tmp29) {

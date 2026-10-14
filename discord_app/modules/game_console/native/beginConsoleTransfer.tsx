@@ -1,8 +1,8 @@
-// === Module 11110: beginConsoleTransfer ===
+// === Module 11180: beginConsoleTransfer ===
 
-// Module 11110 (beginConsoleTransfer)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11111 */;
-import transferToXboxDefault from "transferToXbox" /* 11123 */;
+// Module 11180 (beginConsoleTransfer)
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11181 */;
+import transferToXboxDefault from "transferToXbox" /* 11193 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

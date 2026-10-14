@@ -1,27 +1,27 @@
-// === Module 9452: Coachmark ===
+// === Module 9461: Coachmark ===
 
-// Module 9452 (Coachmark)
+// Module 9461 (Coachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4827 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5371 */;
-import Graphic from "Graphic" /* 9453 */;
+import native from "native" /* 4829 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5376 */;
+import Graphic from "Graphic" /* 9462 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
 
 require = fn;
 let closure_3 = ["style"];
 let closure_4 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, Pressable } = get_ActivityIndicator);
-const Image = get_ActivityIndicator.Image;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let closure_15 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const createStyles = fn(5092);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+let closure_14 = ReanimatedRexport.createAnimatedComponent(Pressable);
+const createStyles = fn(5096);
 let obj = { container: { position: "absolute", alignItems: "center" }, shadow: null, body: null, textGap: null, textOnlyPadding: null, bodyBgColor: null, gradient: null, bodyContainer: null, center: null, buttonSpacing: null, text: null, cursorContainer: null, cursorHead: null, cursorSpine: null, image: null, bottomMargin: null, closeButton: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_BUTTON_OVERLAY);
 obj.shadow = {};
@@ -50,8 +50,8 @@ let obj9 = { height: nativeDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
 obj.bottomMargin = { marginBottom: nativeDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
 let rect = { position: "absolute", top: nativeDefault.modules.mobile.COACHMARK_BUTTON_SPACING, right: nativeDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
 obj.closeButton = rect;
-let closure_16 = createStyles.createStyles(obj);
-let closure_17 = { "21/9": 90, "16/9": 90, "6/4": 60, "2/1": 40, "1/1": 40 };
+let closure_15 = createStyles.createStyles(obj);
+let closure_16 = { "21/9": 90, "16/9": 90, "6/4": 60, "2/1": 40, "1/1": 40 };
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(arg0) {
   const cResult = ref(gradient[10]).c(102);
@@ -60,7 +60,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
   if (undefined !== offsetY) {
     num = offsetY;
   }
-  const tmp4 = closure_16();
+  const tmp4 = closure_15();
   ref = noop.useRef(null);
   const obj = ref(gradient[10]);
   [tmp7, importDefault] = noop.useState(null);
@@ -79,12 +79,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
     tmp10 = cResult[1];
   }
   if (cResult[2] !== gradient) {
-    function te() {
+    function ee() {
       const result = gradient.set(0);
     }
     cResult[2] = gradient;
-    cResult[3] = te;
-    let tmp11 = te;
+    cResult[3] = ee;
+    let tmp11 = ee;
   } else {
     tmp11 = cResult[3];
   }
@@ -96,6 +96,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
     cResult[4] = buttonPressAnimationProps;
     cResult[5] = tmp17;
     cResult[6] = style;
+    let tmp14 = style;
+    let tmp13 = tmp17;
+  } else {
+    tmp13 = cResult[5];
+    tmp14 = cResult[6];
   }
   if (null == graphic) {
     let bottomMargin = null;
@@ -106,21 +111,21 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
           if (cResult[20] === bottomMargin) {
           }
           const obj2 = { style: tmp4.bottomMargin, children: bottomMargin };
-          const tmp42 = closure_12(closure_8, obj2);
+          const tmp41 = closure_11(closure_8, obj2);
           cResult[20] = bottomMargin;
           bottomMargin = tmp4.bottomMargin;
           cResult[21] = bottomMargin;
-          cResult[22] = tmp42;
+          cResult[22] = tmp41;
         }
       } else {
         if (cResult[17] === imgSource) {
         }
         const obj3 = { source: imgSource, style: tmp4.image };
-        const tmp37 = closure_12(Image, obj3);
+        const tmp36 = closure_11(require("FastImage"), obj3);
         cResult[17] = imgSource;
         imgSource = tmp4.image;
         cResult[18] = imgSource;
-        cResult[19] = tmp37;
+        cResult[19] = tmp36;
       }
     } else if (cResult[15] !== renderImgComponent) {
       const renderImgComponentResult = renderImgComponent();
@@ -132,7 +137,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
     if (str == null) {
       str = "1/1";
     }
-    if (cResult[7] !== closure_17[str]) {
+    if (cResult[7] !== closure_16[str]) {
       let size = { height: tmp18, width: "auto" };
       cResult[7] = tmp18;
       cResult[8] = size;
@@ -150,7 +155,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
         }
       }
       const obj4 = { style: tmp4.bottomMargin, children: tmp20 };
-      const tmp29 = closure_12(closure_8, obj4);
+      const tmp29 = closure_11(closure_8, obj4);
       cResult[12] = tmp4.bottomMargin;
       cResult[13] = tmp20;
       cResult[14] = tmp29;
@@ -159,20 +164,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
     const obj5 = {};
     const merged = Object.assign(graphic);
     obj5.style = tmp19;
-    const tmp25 = closure_12(tmp(tmp2[13]).Graphic, obj5);
+    const tmp25 = closure_11(tmp(tmp2[13]).Graphic, obj5);
     cResult[9] = graphic;
     cResult[10] = tmp19;
     cResult[11] = tmp25;
     tmp20 = tmp25;
   }
   if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-    function ge() {
+    function be() {
       const result = setAccessibilityFocus.setAccessibilityFocus({ ref, delay: 100 });
     }
-    cResult[23] = ge;
-    let tmp44 = ge;
+    cResult[23] = be;
+    let tmp43 = be;
   } else {
-    tmp44 = cResult[23];
+    tmp43 = cResult[23];
   }
   let textOnlyPadding;
   if (null == graphic) {
@@ -180,25 +185,25 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
   }
   if (cResult[24] === tmp4.text) {
     if (cResult[25] === textOnlyPadding) {
-      let tmp46 = cResult[26];
+      let tmp45 = cResult[26];
     }
-    if (cResult[27] === tmp46) {
+    if (cResult[27] === tmp45) {
       if (cResult[28] === title) {
-        let tmp47 = cResult[29];
+        let tmp46 = cResult[29];
       }
       if (cResult[30] === description) {
         if (cResult[31] === tmp4.text) {
-          let tmp50 = cResult[32];
+          let tmp49 = cResult[32];
         }
         if (cResult[33] === tmp4.textGap) {
-          if (cResult[34] === tmp47) {
-            if (cResult[35] === tmp50) {
-              let tmp53 = cResult[36];
+          if (cResult[34] === tmp46) {
+            if (cResult[35] === tmp49) {
+              let tmp52 = cResult[36];
             }
             if (cResult[37] === tmp26) {
               if (cResult[38] === tmp4.center) {
-                if (cResult[39] === tmp53) {
-                  let tmp57 = cResult[40];
+                if (cResult[39] === tmp52) {
+                  let tmp56 = cResult[40];
                 }
                 if (cResult[41] === buttonIcon) {
                   if (cResult[42] === buttonLabel) {
@@ -207,38 +212,38 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
                         if (cResult[45] === experimental_withBlurBackground) {
                           if (cResult[46] === onButtonPress) {
                             if (cResult[47] === tmp4.buttonSpacing) {
-                              let tmp61 = cResult[48];
+                              let tmp60 = cResult[48];
                             }
                             const _Symbol = Symbol;
                             if (cResult[49] === Symbol.for("react.memo_cache_sentinel")) {
-                              const intl = tmp(tmp2[17]).intl;
-                              const stringResult = intl.string(tmp(tmp2[17]).t.cpT0Cq);
+                              const intl = tmp(tmp2[18]).intl;
+                              const stringResult = intl.string(tmp(tmp2[18]).t.cpT0Cq);
                               cResult[49] = stringResult;
-                              let tmp69 = stringResult;
+                              let tmp67 = stringResult;
                             } else {
-                              tmp69 = cResult[49];
+                              tmp67 = cResult[49];
                             }
                             const _Symbol2 = Symbol;
                             if (cResult[50] === Symbol.for("react.memo_cache_sentinel")) {
                               const obj6 = { size: "xs", color: require("native").colors.ICON_STRONG };
-                              const tmp73 = closure_12(tmp(tmp2[18]).XSmallIcon, obj6);
-                              cResult[50] = tmp73;
-                              let tmp71 = tmp73;
+                              const tmp71 = closure_11(tmp(tmp2[19]).XSmallIcon, obj6);
+                              cResult[50] = tmp71;
+                              let tmp69 = tmp71;
                             } else {
-                              tmp71 = cResult[50];
+                              tmp69 = cResult[50];
                             }
                             if (cResult[51] === tmp10) {
                               if (cResult[52] === tmp11) {
                                 if (cResult[53] === onDismiss) {
                                   if (cResult[54] === tmp4.closeButton) {
-                                    let tmp74 = cResult[55];
+                                    let tmp72 = cResult[55];
                                   }
-                                  if (cResult[56] === tmp57) {
-                                    if (cResult[57] === tmp61) {
-                                      if (cResult[58] === tmp74) {
-                                        let tmp78 = cResult[59];
+                                  if (cResult[56] === tmp56) {
+                                    if (cResult[57] === tmp60) {
+                                      if (cResult[58] === tmp72) {
+                                        let tmp76 = cResult[59];
                                       }
-                                      if (cResult[60] === tmp78) {
+                                      if (cResult[60] === tmp76) {
                                         if (cResult[61] === experimental_withBlurBackground) {
                                           if (cResult[62] === gradientColor) {
                                             if (cResult[63] === gradient) {
@@ -247,81 +252,158 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
                                                   if (cResult[66] === tmp4.gradient) {
                                                     const _Symbol3 = Symbol;
                                                     if (cResult[68] === Symbol.for("react.memo_cache_sentinel")) {
-                                                      class Pe {
-                                                        constructor(arg0) {
-                                                          nativeEvent = arg0.nativeEvent;
-                                                          size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                                          tmp = closure_1(size);
-                                                          return;
-                                                        }
+                                                      function we(nativeEvent) {
+                                                        nativeEvent = nativeEvent.nativeEvent;
+                                                        const size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
+                                                        importDefault(size);
                                                       }
-                                                      cResult[68] = Pe;
+                                                      cResult[68] = we;
+                                                      let tmp88 = we;
                                                     } else {
-                                                      class Pe {
-                                                        constructor(arg0) {
-                                                          nativeEvent = arg0.nativeEvent;
-                                                          size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                                          tmp = closure_1(size);
-                                                          return;
-                                                        }
-                                                      }
+                                                      tmp88 = cResult[68];
                                                     }
                                                     if (cResult[69] !== tmp4.shadow) {
-                                                      class Pe {
-                                                        constructor(arg0) {
-                                                          nativeEvent = arg0.nativeEvent;
-                                                          size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                                          tmp = closure_1(size);
-                                                          return;
-                                                        }
-                                                      }
-                                                      if (obj21.isIOS()) {
-                                                        class Pe {
-                                                          constructor(arg0) {
-                                                            nativeEvent = arg0.nativeEvent;
-                                                            size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                                            tmp = closure_1(size);
-                                                            return;
-                                                          }
-                                                        }
+                                                      let shadow;
+                                                      if (tmpResult5.isIOS()) {
+                                                        shadow = tmp4.shadow;
                                                       }
                                                       cResult[69] = tmp4.shadow;
-                                                      cResult[70] = undefined;
+                                                      cResult[70] = shadow;
+                                                      let tmp89 = shadow;
+                                                      tmpResult5 = tmp(tmp2[22]);
                                                     } else {
-                                                      class Pe {
-                                                        constructor(arg0) {
-                                                          nativeEvent = arg0.nativeEvent;
-                                                          size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                                          tmp = closure_1(size);
-                                                          return;
-                                                        }
-                                                      }
+                                                      tmp89 = cResult[70];
                                                     }
+                                                    let num68 = 0;
                                                     if (null != tmp7) {
-                                                      class Pe {
-                                                        constructor(arg0) {
-                                                          nativeEvent = arg0.nativeEvent;
-                                                          size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                                          tmp = closure_1(size);
-                                                          return;
+                                                      num68 = 1;
+                                                    }
+                                                    if (cResult[71] === num68) {
+                                                      if (cResult[72] === tooltipX) {
+                                                        if (cResult[73] === tooltipY) {
+                                                          let tmp91 = cResult[74];
                                                         }
+                                                        if (cResult[75] === tmp4.container) {
+                                                          if (cResult[76] === tmp89) {
+                                                            if (cResult[77] === tmp91) {
+                                                              let tmp92 = cResult[78];
+                                                            }
+                                                            if (cResult[79] === adjustmentX) {
+                                                              if (cResult[80] === position) {
+                                                                let tmp93 = cResult[81];
+                                                              }
+                                                              if (cResult[82] === enterExitAnimatedStyles) {
+                                                                if (cResult[83] === tmp4.shadow) {
+                                                                  if (cResult[85] === tmp14) {
+                                                                    if (cResult[86] === tmp4.body) {
+                                                                      if (cResult[87] === tmp97) {
+                                                                        let tmp99 = cResult[88];
+                                                                      }
+                                                                      if (cResult[89] === tmp13) {
+                                                                        if (cResult[90] === tmp80) {
+                                                                          if (cResult[91] === onDismiss) {
+                                                                            if (cResult[92] === tmp99) {
+                                                                              let tmp102 = cResult[93];
+                                                                            }
+                                                                            if (cResult[94] === adjustmentX) {
+                                                                              if (cResult[95] === position) {
+                                                                                let tmp109 = cResult[96];
+                                                                              }
+                                                                              if (cResult[97] === tmp92) {
+                                                                                if (cResult[98] === tmp93) {
+                                                                                  if (cResult[99] === tmp102) {
+                                                                                    if (cResult[100] === tmp109) {
+                                                                                      let tmp113 = cResult[101];
+                                                                                    }
+                                                                                    return tmp113;
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                              const obj7 = { onLayout: tmp88, style: tmp92, children: null };
+                                                                              const items = [tmp93, tmp102, tmp109];
+                                                                              obj7.children = items;
+                                                                              const tmp116 = closure_12(closure_8, obj7);
+                                                                              cResult[97] = tmp92;
+                                                                              cResult[98] = tmp93;
+                                                                              cResult[99] = tmp102;
+                                                                              cResult[100] = tmp109;
+                                                                              cResult[101] = tmp116;
+                                                                              tmp113 = tmp116;
+                                                                            }
+                                                                            let tmp110 = "top" === position;
+                                                                            if (tmp110) {
+                                                                              const obj8 = { position: "top", adjustmentX };
+                                                                              tmp110 = closure_11(closure_18, obj8);
+                                                                            }
+                                                                            cResult[94] = adjustmentX;
+                                                                            cResult[95] = position;
+                                                                            cResult[96] = tmp110;
+                                                                            tmp109 = tmp110;
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                      const obj9 = {};
+                                                                      const merged1 = Object.assign(tmp13);
+                                                                      obj9.onAccessibilityEscape = onDismiss;
+                                                                      obj9.accessible = false;
+                                                                      obj9.onPress = onDismiss;
+                                                                      obj9.style = tmp99;
+                                                                      obj9.children = tmp80;
+                                                                      const tmp108 = closure_11(closure_14, obj9);
+                                                                      cResult[89] = tmp13;
+                                                                      cResult[90] = tmp80;
+                                                                      cResult[91] = onDismiss;
+                                                                      cResult[92] = tmp99;
+                                                                      cResult[93] = tmp108;
+                                                                      tmp102 = tmp108;
+                                                                    }
+                                                                  }
+                                                                  const items1 = [tmp4.body, ];
+                                                                  items1[HermesBuiltin.arraySpread(cResult[84], 1)] = tmp14;
+                                                                  cResult[85] = tmp14;
+                                                                  cResult[86] = tmp4.body;
+                                                                  cResult[87] = cResult[84];
+                                                                  cResult[88] = items1;
+                                                                  tmp99 = items1;
+                                                                }
+                                                              }
+                                                              if (tmpResult6.isAndroid()) {
+                                                                const items2 = [tmp4.shadow, enterExitAnimatedStyles];
+                                                                let items3 = items2;
+                                                              } else {
+                                                                items3 = [];
+                                                              }
+                                                              cResult[82] = enterExitAnimatedStyles;
+                                                              enterExitAnimatedStyles = tmp4.shadow;
+                                                              cResult[83] = enterExitAnimatedStyles;
+                                                              cResult[84] = items3;
+                                                              tmpResult6 = tmp(tmp2[22]);
+                                                            }
+                                                            let tmp94 = "bottom" === position;
+                                                            if (tmp94) {
+                                                              const obj10 = { position: "bottom", adjustmentX };
+                                                              tmp94 = closure_11(closure_18, obj10);
+                                                            }
+                                                            cResult[79] = adjustmentX;
+                                                            cResult[80] = position;
+                                                            cResult[81] = tmp94;
+                                                            tmp93 = tmp94;
+                                                          }
+                                                        }
+                                                        const items4 = [tmp4.container, tmp89, tmp91];
+                                                        cResult[75] = tmp4.container;
+                                                        cResult[76] = tmp89;
+                                                        cResult[77] = tmp91;
+                                                        cResult[78] = items4;
+                                                        tmp92 = items4;
                                                       }
                                                     }
-                                                    if (cResult[71] === 0) {
-                                                      class Pe {
-                                                        constructor(arg0) {
-                                                          nativeEvent = arg0.nativeEvent;
-                                                          size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                                          tmp = closure_1(size);
-                                                          return;
-                                                        }
-                                                      }
-                                                    }
-                                                    const rect = { opacity: 0, top: tooltipY, left: tooltipX };
-                                                    cResult[71] = 0;
+                                                    const rect = { opacity: num68, top: tooltipY, left: tooltipX };
+                                                    cResult[71] = num68;
                                                     cResult[72] = tooltipX;
                                                     cResult[73] = tooltipY;
                                                     cResult[74] = rect;
+                                                    tmp91 = rect;
                                                   }
                                                 }
                                               }
@@ -330,139 +412,78 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
                                         }
                                       }
                                       if (experimental_withBlurBackground) {
-                                        class Pe {
-                                          constructor(arg0) {
-                                            nativeEvent = arg0.nativeEvent;
-                                            size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                            tmp = closure_1(size);
-                                            return;
-                                          }
-                                        }
-                                        const obj7 = { style: tmp4.bodyContainer, blurTheme: "dark", pressed: gradient, children: tmp78 };
-                                        let tmp83Result = closure_12(tmp(tmp2[19]).BackgroundBlurView, obj7);
+                                        const obj11 = { style: tmp4.bodyContainer, blurTheme: "dark", pressed: gradient, children: tmp76 };
+                                        let tmp81Result = closure_11(tmp(tmp2[20]).BackgroundBlurView, obj11);
                                       } else {
-                                        class Pe {
-                                          constructor(arg0) {
-                                            nativeEvent = arg0.nativeEvent;
-                                            size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                            tmp = closure_1(size);
-                                            return;
-                                          }
-                                        }
-                                        const items = [, ];
+                                        const obj12 = { style: null, children: null };
+                                        const items5 = [, ];
                                         ({ bodyContainer: arr6[0], bodyBgColor: arr6[1] } = tmp4);
-                                        tmp85[0] = items;
-                                        let tmp86 = null;
+                                        obj12.style = items5;
+                                        let tmp83 = null;
                                         if (null != gradientColor) {
-                                          class Pe {
-                                            constructor(arg0) {
-                                              nativeEvent = arg0.nativeEvent;
-                                              size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                                              tmp = closure_1(size);
-                                              return;
-                                            }
-                                          }
-                                          const obj8 = { style: tmp4.gradient, color: gradientColor, backgroundColor: require("native").colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT };
-                                          tmp86 = closure_12(tmp(tmp2[20]).ExpressiveGradient, obj8);
+                                          const obj13 = { style: tmp4.gradient, color: gradientColor, backgroundColor: require("native").colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT };
+                                          tmp83 = closure_11(tmp(tmp2[21]).ExpressiveGradient, obj13);
                                         }
-                                        const items1 = [tmp86, tmp78];
-                                        tmp85[1] = items1;
-                                        tmp83Result = closure_13(closure_8, tmp85);
+                                        const items6 = [tmp83, tmp76];
+                                        obj12.children = items6;
+                                        tmp81Result = closure_12(closure_8, obj12);
                                       }
-                                      cResult[60] = tmp78;
+                                      cResult[60] = tmp76;
                                       cResult[61] = experimental_withBlurBackground;
                                       cResult[62] = gradientColor;
                                       cResult[63] = gradient;
                                       cResult[64] = tmp4.bodyBgColor;
                                       ({ bodyContainer: tmp3[65], gradient } = tmp4);
                                       cResult[66] = gradient;
-                                      cResult[67] = tmp83Result;
+                                      cResult[67] = tmp81Result;
                                     }
                                   }
-                                  const obj9 = { children: null };
-                                  const items2 = [tmp57, tmp61, tmp74];
-                                  obj9.children = items2;
-                                  const tmp81 = closure_13(closure_14, obj9);
-                                  cResult[56] = tmp57;
-                                  cResult[57] = tmp61;
-                                  cResult[58] = tmp74;
-                                  cResult[59] = tmp81;
-                                  tmp78 = tmp81;
+                                  const obj14 = { children: null };
+                                  const items7 = [tmp56, tmp60, tmp72];
+                                  obj14.children = items7;
+                                  const tmp79 = closure_12(closure_13, obj14);
+                                  cResult[56] = tmp56;
+                                  cResult[57] = tmp60;
+                                  cResult[58] = tmp72;
+                                  cResult[59] = tmp79;
+                                  tmp76 = tmp79;
                                 }
                               }
                             }
-                            const obj10 = { accessibilityRole: "button", accessibilityLabel: tmp69, style: tmp4.closeButton, onPress: onDismiss, onPressIn: tmp10, onPressOut: tmp11, children: tmp71 };
-                            const tmp77 = closure_12(Pressable, obj10);
+                            const obj15 = { accessibilityRole: "button", accessibilityLabel: tmp67, style: tmp4.closeButton, onPress: onDismiss, onPressIn: tmp10, onPressOut: tmp11, children: tmp69 };
+                            const tmp75 = closure_11(Pressable, obj15);
                             cResult[51] = tmp10;
                             cResult[52] = tmp11;
                             cResult[53] = onDismiss;
                             cResult[54] = tmp4.closeButton;
-                            cResult[55] = tmp77;
-                            tmp74 = tmp77;
+                            cResult[55] = tmp75;
+                            tmp72 = tmp75;
                           }
                         }
                       }
                     }
                   }
                 }
+                let tmp61 = null;
                 if (null != buttonLabel) {
-                  class Pe {
-                    constructor(arg0) {
-                      nativeEvent = arg0.nativeEvent;
-                      size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                      tmp = closure_1(size);
-                      return;
-                    }
-                  }
+                  tmp61 = null;
                   if (null != onButtonPress) {
-                    class Pe {
-                      constructor(arg0) {
-                        nativeEvent = arg0.nativeEvent;
-                        size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                        tmp = closure_1(size);
-                        return;
-                      }
-                    }
-                    const obj11 = { style: tmp4.buttonSpacing };
-                    const items3 = [closure_12(closure_8, obj11), ];
+                    const obj16 = { style: tmp4.buttonSpacing };
+                    const items8 = [closure_11(closure_8, obj16), ];
                     if (experimental_withBlurBackground) {
-                      class Pe {
-                        constructor(arg0) {
-                          nativeEvent = arg0.nativeEvent;
-                          size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                          tmp = closure_1(size);
-                          return;
-                        }
-                      }
-                      tmp67[2] = buttonIcon;
-                      tmp67[3] = buttonLabel;
-                      tmp67[4] = onButtonPress;
-                      let obj12 = tmp67;
+                      const obj17 = { variant: "secondary-overlay", size: "lg", icon: buttonIcon, text: buttonLabel, onPress: onButtonPress, grow: true };
+                      let obj18 = obj17;
                     } else {
-                      class Pe {
-                        constructor(arg0) {
-                          nativeEvent = arg0.nativeEvent;
-                          size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                          tmp = closure_1(size);
-                          return;
-                        }
-                      }
+                      let str2 = buttonVariant;
                       if (buttonVariant == null) {
-                        class Pe {
-                          constructor(arg0) {
-                            nativeEvent = arg0.nativeEvent;
-                            size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
-                            tmp = closure_1(size);
-                            return;
-                          }
-                        }
+                        str2 = "secondary";
                       }
-                      obj12 = { variant: tmp66, size: "sm", icon: buttonIcon, text: buttonLabel, onPress: onButtonPress, shiny: buttonShiny, grow: true };
+                      obj18 = { variant: str2, size: "sm", icon: buttonIcon, text: buttonLabel, onPress: onButtonPress, shiny: buttonShiny, grow: true };
                     }
-                    const obj13 = { children: null };
-                    items3[1] = closure_12(tmp(tmp2[16]).Button, obj12);
-                    obj13.children = items3;
-                    closure_13(closure_14, obj13);
+                    const obj19 = { children: null };
+                    items8[1] = closure_11(tmp(tmp2[17]).Button, obj18);
+                    obj19.children = items8;
+                    closure_12(closure_13, obj19);
                   }
                 }
                 cResult[41] = buttonIcon;
@@ -472,51 +493,51 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
                 cResult[45] = experimental_withBlurBackground;
                 cResult[46] = onButtonPress;
                 cResult[47] = tmp4.buttonSpacing;
-                cResult[48] = null;
-                tmp61 = tmp62;
+                cResult[48] = tmp61;
+                tmp60 = tmp61;
               }
             }
-            const obj14 = { ref, accessibilityRole: "alert", style: tmp4.center, accessible: true, onLayout: tmp44, children: null };
-            const items4 = [tmp26, tmp53];
-            obj14.children = items4;
-            const tmp60 = closure_13(closure_8, obj14);
+            const obj20 = { ref, accessibilityRole: "alert", style: tmp4.center, accessible: true, onLayout: tmp43, children: null };
+            const items9 = [tmp26, tmp52];
+            obj20.children = items9;
+            const tmp59 = closure_12(closure_8, obj20);
             cResult[37] = tmp26;
             cResult[38] = tmp4.center;
-            cResult[39] = tmp53;
-            cResult[40] = tmp60;
-            tmp57 = tmp60;
+            cResult[39] = tmp52;
+            cResult[40] = tmp59;
+            tmp56 = tmp59;
           }
         }
-        const obj15 = { style: tmp4.textGap, children: null };
-        const items5 = [tmp47, tmp50];
-        obj15.children = items5;
-        const tmp56 = closure_13(closure_8, obj15);
+        const obj21 = { style: tmp4.textGap, children: null };
+        const items10 = [tmp46, tmp49];
+        obj21.children = items10;
+        const tmp55 = closure_12(closure_8, obj21);
         cResult[33] = tmp4.textGap;
-        cResult[34] = tmp47;
-        cResult[35] = tmp50;
-        cResult[36] = tmp56;
-        tmp53 = tmp56;
+        cResult[34] = tmp46;
+        cResult[35] = tmp49;
+        cResult[36] = tmp55;
+        tmp52 = tmp55;
       }
-      const obj16 = { style: tmp4.text, variant: "text-sm/medium", color: "text-subtle", children: description };
-      const tmp52 = closure_12(tmp(tmp2[15]).Text, obj16);
+      const obj22 = { style: tmp4.text, variant: "text-sm/medium", color: "text-subtle", children: description };
+      const tmp51 = closure_11(tmp(tmp2[16]).Text, obj22);
       cResult[30] = description;
       cResult[31] = tmp4.text;
-      cResult[32] = tmp52;
-      tmp50 = tmp52;
+      cResult[32] = tmp51;
+      tmp49 = tmp51;
     }
-    const obj17 = { style: tmp46, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title };
-    const tmp49 = closure_12(tmp(tmp2[15]).Text, obj17);
-    cResult[27] = tmp46;
+    const obj23 = { style: tmp45, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title };
+    const tmp48 = closure_11(tmp(tmp2[16]).Text, obj23);
+    cResult[27] = tmp45;
     cResult[28] = title;
-    cResult[29] = tmp49;
-    tmp47 = tmp49;
+    cResult[29] = tmp48;
+    tmp46 = tmp48;
   }
-  const items6 = [tmp4.text, textOnlyPadding];
+  const items11 = [tmp4.text, textOnlyPadding];
   cResult[24] = tmp4.text;
   cResult[25] = textOnlyPadding;
-  cResult[26] = items6;
-  tmp46 = items6;
-  const tmpResult2 = ref(gradient[12]);
+  cResult[26] = items11;
+  tmp45 = items11;
+  const tmpResult4 = ref(gradient[12]);
 }) : (function Coachmark(graphic) {
   ({ targetMeasurements, surfaceMeasurements, offsetY } = graphic);
   let num = 0;
@@ -528,11 +549,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
   const imgSource = graphic.imgSource;
   ({ position, onDismiss, buttonLabel, buttonVariant, buttonIcon, onButtonPress, gradientColor, experimental_withBlurBackground, renderImgComponent } = graphic);
   ({ buttonShiny, enterExitAnimatedStyles } = graphic);
-  const tmp = closure_16();
+  const tmp = closure_15();
   closure_3 = tmp;
   const ref = noop.useRef(null);
   [tmp4, _objectWithoutProperties] = sharedValue(noop.useState(null), 2);
-  let tmp7 = imgSource(renderImgComponent[11])(tmp4, surfaceMeasurements, targetMeasurements, position, -8 + num);
+  const tmp7 = imgSource(renderImgComponent[11])(tmp4, surfaceMeasurements, targetMeasurements, position, -8 + num);
   const adjustmentX = tmp7.adjustmentX;
   ({ tooltipX, tooltipY } = tmp7);
   const tmp3 = sharedValue(noop.useState(null), 2);
@@ -569,25 +590,25 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
         if (str == null) {
           str = "1/1";
         }
-        const size = { height: closure_17[str], width: "auto" };
+        const size = { height: closure_16[str], width: "auto" };
         obj3.style = size;
-        obj2.children = __initData(Graphic.Graphic, obj3);
-        return __initData(closure_2_8, obj2);
+        obj2.children = closure_2_11(Graphic.Graphic, obj3);
+        return closure_2_11(closure_2_8, obj2);
       } else {
         let tmp2 = null;
         if (null != renderImgComponent) {
-          tmp2 = tmp21();
+          tmp2 = tmp22();
         }
         if (null != imgSource) {
           const obj = { source: tmp3, style: closure_3.image };
-          tmp2 = __initData(Image, obj);
+          tmp2 = closure_2_11(FastImageDefault, obj);
         }
-        let tmp7 = null;
+        let tmp8 = null;
         if (null != tmp2) {
           const obj4 = { style: closure_3.bottomMargin, children: tmp2 };
-          tmp7 = __initData(closure_2_8, obj4);
+          tmp8 = closure_2_11(closure_2_8, obj4);
         }
-        return tmp7;
+        return tmp8;
       }
     }, items2),
 
@@ -599,17 +620,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
     textOnlyPadding = tmp.textOnlyPadding;
   }
   items4[1] = textOnlyPadding;
-  const items5 = [closure_12(graphic(renderImgComponent[15]).Text, { style: items4, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), closure_12(graphic(renderImgComponent[15]).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-subtle", children: description })];
+  const items5 = [closure_11(graphic(renderImgComponent[16]).Text, { style: items4, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), closure_11(graphic(renderImgComponent[16]).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-subtle", children: description })];
   obj4.children = items5;
-  items3[1] = closure_13(closure_8, obj4);
+  items3[1] = closure_12(closure_8, obj4);
   obj3.children = items3;
-  const items6 = [closure_13(closure_8, obj3), , ];
+  const items6 = [closure_12(closure_8, obj3), , ];
   let tmp19 = null;
   if (null != buttonLabel) {
     tmp19 = null;
     if (null != onButtonPress) {
       const obj6 = { style: tmp.buttonSpacing };
-      const items7 = [closure_12(closure_8, obj6), ];
+      const items7 = [closure_11(closure_8, obj6), ];
       if (experimental_withBlurBackground) {
         const obj7 = { variant: "secondary-overlay", size: "lg", icon: buttonIcon, text: buttonLabel, onPress: onButtonPress, grow: true };
         let obj8 = obj7;
@@ -620,29 +641,29 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
         obj8 = { variant: buttonVariant, size: "sm", icon: buttonIcon, text: buttonLabel, onPress: onButtonPress, shiny: buttonShiny, grow: true };
       }
       const obj9 = { children: null };
-      items7[1] = closure_12(tmp8(renderImgComponent[16]).Button, obj8);
+      items7[1] = closure_11(tmp8(renderImgComponent[17]).Button, obj8);
       obj9.children = items7;
-      closure_13(closure_14, obj9);
+      closure_12(closure_13, obj9);
     }
   }
   const obj10 = { children: null };
   items6[1] = tmp19;
   const obj11 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, onPressIn: null, onPressOut: null, children: null };
-  const intl = tmp8(renderImgComponent[17]).intl;
-  obj11.accessibilityLabel = intl.string(graphic(renderImgComponent[17]).t.cpT0Cq);
+  const intl = tmp8(renderImgComponent[18]).intl;
+  obj11.accessibilityLabel = intl.string(graphic(renderImgComponent[18]).t.cpT0Cq);
   obj11.style = tmp.closeButton;
   obj11.onPress = onDismiss;
   obj11.onPressIn = callback;
   obj11.onPressOut = callback1;
   const obj5 = { style: tmp.text, variant: "text-sm/medium", color: "text-subtle", children: description };
   const tmp13 = _objectWithoutProperties(buttonPressAnimationProps, ref);
-  obj11.children = closure_12(graphic(renderImgComponent[18]).XSmallIcon, { size: "xs", color: imgSource(renderImgComponent[8]).colors.ICON_STRONG });
-  items6[2] = closure_12(Pressable, obj11);
+  obj11.children = closure_11(graphic(renderImgComponent[19]).XSmallIcon, { size: "xs", color: imgSource(renderImgComponent[8]).colors.ICON_STRONG });
+  items6[2] = closure_11(Pressable, obj11);
   obj10.children = items6;
-  const tmp14Result2 = closure_13(closure_14, obj10);
+  const tmp14Result2 = closure_12(closure_13, obj10);
   if (experimental_withBlurBackground) {
     const obj13 = { style: tmp.bodyContainer, blurTheme: "dark", pressed: sharedValue, children: tmp14Result2 };
-    let tmp14Result3 = closure_12(tmp8(renderImgComponent[19]).BackgroundBlurView, obj13);
+    let tmp14Result3 = closure_11(tmp8(renderImgComponent[20]).BackgroundBlurView, obj13);
   } else {
     const obj14 = { style: null, children: null };
     const items8 = [, ];
@@ -651,11 +672,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
     let tmp17Result4 = null;
     if (null != gradientColor) {
       const obj15 = { style: tmp.gradient, color: gradientColor, backgroundColor: tmp5(renderImgComponent[8]).colors.MOBILE_COACHMARK_BACKGROUND_DEFAULT };
-      tmp17Result4 = closure_12(tmp8(renderImgComponent[20]).ExpressiveGradient, obj15);
+      tmp17Result4 = closure_11(tmp8(renderImgComponent[21]).ExpressiveGradient, obj15);
     }
     const items9 = [tmp17Result4, tmp14Result2];
     obj14.children = items9;
-    tmp14Result3 = closure_13(closure_8, obj14);
+    tmp14Result3 = closure_12(closure_8, obj14);
   }
   const obj16 = {
     onLayout(nativeEvent) {
@@ -682,7 +703,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
   let tmp17Result5 = "bottom" === position;
   if (tmp17Result5) {
     const obj17 = { position: "bottom", adjustmentX };
-    tmp17Result5 = closure_12(closure_19, obj17);
+    tmp17Result5 = closure_11(closure_18, obj17);
   }
   const items11 = [tmp17Result5, , ];
   const obj18 = {};
@@ -691,7 +712,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
   obj18.accessible = false;
   obj18.onPress = onDismiss;
   const items12 = [tmp.body, ];
-  tmp8Result = graphic(renderImgComponent[21]);
+  tmp8Result = graphic(renderImgComponent[22]);
   if (tmp8Result2.isAndroid()) {
     const items13 = [tmp.shadow, enterExitAnimatedStyles];
     let items14 = items13;
@@ -701,22 +722,22 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachmark(ar
   items12[HermesBuiltin.arraySpread(items14, 1)] = buttonPressAnimationProps.style;
   obj18.style = items12;
   obj18.children = tmp14Result3;
-  items11[1] = closure_12(closure_15, obj18);
+  items11[1] = closure_11(closure_14, obj18);
   let tmp17Result6 = "top" === position;
   if (tmp17Result6) {
     const obj19 = { position: "top", adjustmentX };
-    tmp17Result6 = closure_12(closure_19, obj19);
+    tmp17Result6 = closure_11(closure_18, obj19);
   }
   items11[2] = tmp17Result6;
   obj16.children = items11;
-  return closure_13(closure_8, obj16);
+  return closure_12(closure_8, obj16);
 });
-let closure_18 = tmp5;
+let closure_17 = tmp5;
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cursor(position) {
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cursor(position) {
   const cResult = c.c(17);
   position = position.position;
-  const tmp2 = closure_16();
+  const tmp2 = closure_15();
   let str = "column";
   if ("top" === position) {
     str = "column-reverse";
@@ -737,7 +758,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cursor
           }
           if (cResult[9] !== tmp2.cursorHead) {
             const obj2 = { style: tmp2.cursorHead };
-            const tmp13 = __initData(closure_1_8, obj2);
+            const tmp13 = closure_1_11(closure_1_8, obj2);
             cResult[9] = tmp2.cursorHead;
             cResult[10] = tmp13;
             let tmp10 = tmp13;
@@ -746,7 +767,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cursor
           }
           if (cResult[11] !== tmp2.cursorSpine) {
             const obj3 = { style: tmp2.cursorSpine };
-            const tmp17 = __initData(closure_1_8, obj3);
+            const tmp17 = closure_1_11(closure_1_8, obj3);
             cResult[11] = tmp2.cursorSpine;
             cResult[12] = tmp17;
             let tmp14 = tmp17;
@@ -764,7 +785,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cursor
           const obj4 = { style: tmp9, children: null };
           const items = [tmp10, tmp14];
           obj4.children = items;
-          const tmp21 = map1(closure_1_8, obj4);
+          const tmp21 = __initData(closure_1_8, obj4);
           cResult[13] = tmp9;
           cResult[14] = tmp10;
           cResult[15] = tmp14;
@@ -787,7 +808,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cursor
   }
 }) : (function Cursor(arg0) {
   ({ position, adjustmentX } = arg0);
-  const tmp = closure_16();
+  const tmp = closure_15();
   let str = "column";
   if ("top" === position) {
     str = "column-reverse";
@@ -795,9 +816,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cursor
   const obj = { style: null, children: null };
   const items = [tmp.cursorContainer, "top" === position ? { marginTop: -6 } : { marginBottom: -6 }, { flexDirection: str, left: -adjustmentX }];
   obj.style = items;
-  const items1 = [__initData(closure_1_8, { style: tmp.cursorHead }), __initData(closure_1_8, { style: tmp.cursorSpine })];
+  const items1 = [closure_1_11(closure_1_8, { style: tmp.cursorHead }), closure_1_11(closure_1_8, { style: tmp.cursorSpine })];
   obj.children = items1;
-  return map1(closure_1_8, obj);
+  return __initData(closure_1_8, obj);
 });
 ReactCompilerGating = fn(558);
 let obj10 = { marginBottom: nativeDefault.modules.mobile.COACHMARK_BUTTON_SPACING };
@@ -814,7 +835,7 @@ export const CoachmarkContainer = ReactCompilerGating.isReactCompilerEnabled() ?
   if (cResult[0] !== experimental_withBlurBackground) {
     const obj3 = {};
     const merged = Object.assign(experimental_withBlurBackground);
-    const tmp11 = __initData(closure_18, obj3);
+    const tmp11 = closure_1_11(closure_17, obj3);
     cResult[0] = experimental_withBlurBackground;
     cResult[1] = tmp11;
     let tmp5 = tmp11;
@@ -827,7 +848,7 @@ export const CoachmarkContainer = ReactCompilerGating.isReactCompilerEnabled() ?
     }
     return tmp12;
   }
-  const tmp13 = __initData(native.ThemeContextProvider, { theme: DARK, children: tmp5 });
+  const tmp13 = closure_1_11(native.ThemeContextProvider, { theme: DARK, children: tmp5 });
   cResult[2] = tmp5;
   cResult[3] = DARK;
   cResult[4] = tmp13;
@@ -839,6 +860,6 @@ export const CoachmarkContainer = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const obj2 = { theme: DARK, children: null };
   const merged = Object.assign(experimental_withBlurBackground);
-  obj2.children = __initData(closure_18, {});
-  return __initData(native.ThemeContextProvider, obj2);
+  obj2.children = closure_1_11(closure_17, {});
+  return closure_1_11(native.ThemeContextProvider, obj2);
 });

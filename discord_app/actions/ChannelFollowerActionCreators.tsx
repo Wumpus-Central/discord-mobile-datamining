@@ -1,6 +1,6 @@
-// === Module 12696: ChannelFollowerActionCreators ===
+// === Module 12732: ChannelFollowerActionCreators ===
 
-// Module 12696 (ChannelFollowerActionCreators)
+// Module 12732 (ChannelFollowerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

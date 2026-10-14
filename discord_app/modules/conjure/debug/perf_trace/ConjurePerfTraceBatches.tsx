@@ -1,6 +1,6 @@
-// === Module 11221: ConjurePerfTraceBatches ===
+// === Module 10669: ConjurePerfTraceBatches ===
 
-// Module 11221 (ConjurePerfTraceBatches)
+// Module 10669 (ConjurePerfTraceBatches)
 import size from "module_2" /* 2 */;
 
 function foldRecord(map, nextResult) {

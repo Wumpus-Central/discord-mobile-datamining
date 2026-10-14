@@ -1,6 +1,6 @@
-// === Module 6030: StickersStore ===
+// === Module 6035: StickersStore ===
 
-// Module 6030 (StickersStore)
+// Module 6035 (StickersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2091 */;
@@ -8,8 +8,8 @@ import TryLoad from "TryLoad" /* 2111 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildMembershipStore from "GuildMembershipStore" /* 2067 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import GuildStickersStore from "GuildStickersStore" /* 6031 */;
-import StickersPackStore from "StickersPackStore" /* 6032 */;
+import GuildStickersStore from "GuildStickersStore" /* 6036 */;
+import StickersPackStore from "StickersPackStore" /* 6037 */;
 
 require = fn;
 function loadSavedGuildStickers() {
@@ -58,7 +58,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
               Loaded = tmp27.Loaded;
               c2 = 1;
               c3 = 1;
-              const obj6 = { value: TryLoad.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () => closure_2_1(6033).getAsync(closure_1_0))), done: false };
+              const obj6 = { value: TryLoad.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () => closure_2_1(6038).getAsync(closure_1_0))), done: false };
               return obj6;
             }
           }

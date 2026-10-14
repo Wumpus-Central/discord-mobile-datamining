@@ -1,11 +1,11 @@
-// === Module 16873: RedesignVoiceUserSummary ===
+// === Module 16910: RedesignVoiceUserSummary ===
 
-// Module 16873 (RedesignVoiceUserSummary)
-import ChannelUtils from "ChannelUtils" /* 5414 */;
-import VoiceUserSummaryDefault from "VoiceUserSummary" /* 16869 */;
+// Module 16910 (RedesignVoiceUserSummary)
+import ChannelUtils from "ChannelUtils" /* 5419 */;
+import VoiceUserSummaryDefault from "VoiceUserSummary" /* 16906 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5116 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5120 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -108,23 +108,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
         const tmp16 = cResult[14];
       }
       const obj3 = { channels, selectedChannelId: "r", selectedVoiceChannelId: stateFromStores1, voiceStates: stateFromStores };
-      summarizedVoiceUsers = summarizedVoiceUsers(5414).computeSummarizedVoiceUsers(obj3);
+      summarizedVoiceUsers = summarizedVoiceUsers(5419).computeSummarizedVoiceUsers(obj3);
       const found = summarizedVoiceUsers.filter(tmp16);
       cResult[10] = channels;
       cResult[11] = stateFromStores1;
       cResult[12] = stateFromStores;
       cResult[13] = found;
-      const summarizedVoiceUsersResult2 = summarizedVoiceUsers(5414);
+      const summarizedVoiceUsersResult2 = summarizedVoiceUsers(5419);
     }
   }
   const summarizedVoiceUsersResult1 = summarizedVoiceUsers(504);
-  const isAnyVoiceStateStageResult = summarizedVoiceUsers(5414).isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores);
+  const isAnyVoiceStateStageResult = summarizedVoiceUsers(5419).isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores);
   cResult[6] = channels;
   cResult[7] = stateFromStores1;
   cResult[8] = stateFromStores;
   cResult[9] = isAnyVoiceStateStageResult;
   tmp12 = isAnyVoiceStateStageResult;
-  const summarizedVoiceUsersResult3 = summarizedVoiceUsers(5414);
+  const summarizedVoiceUsersResult3 = summarizedVoiceUsers(5419);
 }) : (function RedesignVoiceUserSummary(channels) {
   channels = channels.channels;
   const guildId = channels.guildId;
@@ -138,7 +138,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
   const items3 = [channels, stateFromStores1, stateFromStores];
   const stageIcon = stateFromStores1.useMemo(() => ChannelUtils.isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores), items3);
   const obj2 = channels(stateFromStores[6]);
-  const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers({ channels, selectedChannelId: "r", selectedVoiceChannelId: stateFromStores1, voiceStates: stateFromStores });
+  const obj4 = { channels, selectedChannelId: "r", selectedVoiceChannelId: stateFromStores1, voiceStates: stateFromStores };
+  const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers(obj4);
   const users = summarizedVoiceUsers.filter((item) => null != item);
   return jsx(guildId(stateFromStores[8]), { users, max: 8, renderIcon: true, guildId, stageIcon });
 });

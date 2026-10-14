@@ -1,20 +1,20 @@
-// === Module 16171: AppVersionSetting ===
+// === Module 16208: AppVersionSetting ===
 
-// Module 16171 (AppVersionSetting)
+// Module 16208 (AppVersionSetting)
 import util from "util" /* 1126 */;
-import CopyClientInfoSetting from "CopyClientInfoSetting" /* 16172 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 16209 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1381 */;
 
 require = fn;
 const constants = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = util.intl;
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10172).ClydeIcon,
+  IconComponent: fn(10182).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;
@@ -39,7 +39,7 @@ export default SettingBuilders.createStatic({
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(10172).ClydeIcon,
+  IconComponent: fn(10182).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;

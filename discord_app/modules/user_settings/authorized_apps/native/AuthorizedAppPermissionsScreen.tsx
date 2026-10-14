@@ -1,9 +1,9 @@
-// === Module 15545: AuthorizedAppPermissionsScreen ===
+// === Module 15582: AuthorizedAppPermissionsScreen ===
 
-// Module 15545 (AuthorizedAppPermissionsScreen)
+// Module 15582 (AuthorizedAppPermissionsScreen)
 import c from "c" /* 576 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6683 */;
-import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions" /* 15546 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6687 */;
+import UserSettingsAuthedAppPermissionsDefault from "UserSettingsAuthedAppPermissions" /* 15583 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

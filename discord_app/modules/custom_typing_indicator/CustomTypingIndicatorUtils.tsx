@@ -1,15 +1,15 @@
-// === Module 12389: CustomTypingIndicatorUtils ===
+// === Module 12425: CustomTypingIndicatorUtils ===
 
-// Module 12389 (CustomTypingIndicatorUtils)
+// Module 12425 (CustomTypingIndicatorUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import user2 from "user" /* 1398 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1411 */;
 import _modDef3851 from "module_3851" /* 3851 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
-import EmojiStore from "EmojiStore" /* 5987 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4766 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8292 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import SortedGuildStore from "SortedGuildStore" /* 5963 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;

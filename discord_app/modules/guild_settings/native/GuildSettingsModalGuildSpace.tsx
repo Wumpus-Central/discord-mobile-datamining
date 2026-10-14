@@ -1,21 +1,21 @@
-// === Module 18617: GuildSettingsModalGuildSpace ===
+// === Module 18653: GuildSettingsModalGuildSpace ===
 
-// Module 18617 (GuildSettingsModalGuildSpace)
+// Module 18653 (GuildSettingsModalGuildSpace)
 import nativeDefault from "native" /* 587 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import _modDef2472 from "module_2472" /* 2472 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
-import ServerHubAnalytics from "ServerHubAnalytics" /* 18298 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8643 */;
+import ServerHubAnalytics from "ServerHubAnalytics" /* 18334 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8639 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8644 */;
 
 require = fn;
 const Constants = fn(1085);
 ({ Permissions: metroRequire, SystemChannelFlags: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { flex: 1 }, content: { paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -186,22 +186,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     obj6.title = intl.string(tmp2(1126).t["0JLdD3"]);
     const intl2 = tmp2(1126).intl;
     obj6.description = intl2.string(tmp2(1126).t.Xa1KEN);
-    const obj7 = { guild: stateFromStores, flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS, settingType: tmp2(18298).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES, label: null, subLabel: null, disabled: null };
+    const obj7 = { guild: stateFromStores, flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS, settingType: tmp2(18334).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES, label: null, subLabel: null, disabled: null };
     const intl3 = tmp2(1126).intl;
     obj7.label = intl3.string(_modDef2472.btBTIw);
     const intl4 = tmp2(1126).intl;
     obj7.subLabel = intl4.string(tmp2(1126).t.n3aRYQ);
     obj7.disabled = !stateFromStores1;
     const items4 = [closure_8(closure_12, obj7), ];
-    const obj8 = { guild: stateFromStores, flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS, settingType: tmp2(18298).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES, label: null, disabled: null };
+    const obj8 = { guild: stateFromStores, flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS, settingType: tmp2(18334).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES, label: null, disabled: null };
     const intl5 = tmp2(1126).intl;
     obj8.label = intl5.string(tmp2(1126).t["9tlK5J"]);
     obj8.disabled = !stateFromStores1;
     items4[1] = closure_8(closure_12, obj8);
     obj6.children = items4;
-    obj5.children = closure_9(tmp2(6265).TableRowGroup, obj6);
-    obj4.children = closure_8(tmp2(5377).Stack, obj5);
-    const items5 = [closure_8(tmp2(8580).Form, obj4), closure_8(tmp2(6728).NavScrim, {})];
+    obj5.children = closure_9(tmp2(6269).TableRowGroup, obj6);
+    obj4.children = closure_8(tmp2(5382).Stack, obj5);
+    const items5 = [closure_8(tmp2(8587).Form, obj4), closure_8(tmp2(6732).NavScrim, {})];
     obj3.children = items5;
     tmp6 = closure_9(closure_10, obj3);
   }

@@ -1,6 +1,6 @@
-// === Module 8323: UserProfilePerformanceAnalyticsExperiment ===
+// === Module 8330: UserProfilePerformanceAnalyticsExperiment ===
 
-// Module 8323 (UserProfilePerformanceAnalyticsExperiment)
+// Module 8330 (UserProfilePerformanceAnalyticsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

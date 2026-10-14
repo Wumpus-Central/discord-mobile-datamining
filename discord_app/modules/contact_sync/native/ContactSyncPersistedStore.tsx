@@ -1,6 +1,6 @@
-// === Module 12913: ContactSyncPersistedStore ===
+// === Module 12948: ContactSyncPersistedStore ===
 
-// Module 12913 (ContactSyncPersistedStore)
+// Module 12948 (ContactSyncPersistedStore)
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;

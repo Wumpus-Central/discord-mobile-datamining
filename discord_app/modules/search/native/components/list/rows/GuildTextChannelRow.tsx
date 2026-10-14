@@ -1,17 +1,17 @@
-// === Module 17420: GuildTextChannelRow ===
+// === Module 17454: GuildTextChannelRow ===
 
-// Module 17420 (GuildTextChannelRow)
+// Module 17454 (GuildTextChannelRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
-import SearchUtils from "SearchUtils" /* 12559 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 17408 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 17411 */;
+import SearchUtils from "SearchUtils" /* 12595 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 17442 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 17445 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["channel", "trailing", "lastMessageId", "onPress"];
-const layout = fn(9313).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9322).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

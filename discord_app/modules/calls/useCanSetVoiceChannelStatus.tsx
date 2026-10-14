@@ -1,7 +1,7 @@
-// === Module 17849: useCanSetVoiceChannelStatus ===
+// === Module 17885: useCanSetVoiceChannelStatus ===
 
-// Module 17849 (useCanSetVoiceChannelStatus)
-import PermissionStore from "PermissionStore" /* 4750 */;
+// Module 17885 (useCanSetVoiceChannelStatus)
+import PermissionStore from "PermissionStore" /* 4752 */;
 
 const require = globalThis.__r;
 

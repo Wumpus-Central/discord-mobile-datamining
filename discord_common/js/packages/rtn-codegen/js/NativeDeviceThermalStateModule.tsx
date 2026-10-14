@@ -1,6 +1,6 @@
-// === Module 5297: NativeDeviceThermalStateModule ===
+// === Module 5302: NativeDeviceThermalStateModule ===
 
-// Module 5297 (NativeDeviceThermalStateModule)
+// Module 5302 (NativeDeviceThermalStateModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

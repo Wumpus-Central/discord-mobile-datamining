@@ -1,8 +1,8 @@
-// === Module 7888: GuildTagConstants ===
+// === Module 7895: GuildTagConstants ===
 
-// Module 7888 (GuildTagConstants)
+// Module 7895 (GuildTagConstants)
 import Constants from "Constants" /* 1085 */;
-import Powerups from "Powerups" /* 5011 */;
+import Powerups from "Powerups" /* 5013 */;
 import size from "module_2" /* 2 */;
 
 const GuildFeatures = Constants.GuildFeatures;

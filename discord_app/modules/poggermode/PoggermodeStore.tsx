@@ -1,13 +1,13 @@
-// === Module 13959: PoggermodeStore ===
+// === Module 13996: PoggermodeStore ===
 
-// Module 13959 (PoggermodeStore)
+// Module 13996 (PoggermodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import PoggermodeUtils from "PoggermodeUtils" /* 13960 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 13997 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7366 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7372 */;
 
 require = fn;
 function updateCombo(userId) {
@@ -82,18 +82,18 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(7367);
+const PoggermodeConstants = fn(7373);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: metroRequire } = PoggermodeConstants);
 const ComponentActions = fn(1085).ComponentActions;
 const set = new Set();
-const secondaryIndexMap = new fn(4745).SecondaryIndexMap(function indexedBy(arg0) {
+const secondaryIndexMap = new fn(4747).SecondaryIndexMap(function indexedBy(arg0) {
   const items = [, ];
   ({ userId: arr[0], channelId: arr[1] } = arg0);
   return items;
 }, function sortBy(channelId) {
   return "" + channelId.channelId + "-" + channelId.userId;
 });
-const secondaryIndexMap1 = new fn(4745).SecondaryIndexMap(function indexedBy(combo) {
+const secondaryIndexMap1 = new fn(4747).SecondaryIndexMap(function indexedBy(combo) {
   const items = [, , ];
   ({ messageId: arr[0], channelId: arr[1] } = combo);
   items[2] = combo.combo.userId;

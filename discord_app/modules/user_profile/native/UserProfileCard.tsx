@@ -1,22 +1,22 @@
-// === Module 6904: UserProfileCard ===
+// === Module 6909: UserProfileCard ===
 
-// Module 6904 (UserProfileCard)
+// Module 6909 (UserProfileCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6185 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6906 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import Pressables from "Pressables" /* 6189 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6911 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_2 = ["title", "titleLeadingIcon", "titleIcon", "titleStyle", "trailingAction", "children", "style"];
 const View = fn(17).View;
-const Constants = fn(6905);
+const Constants = fn(6910);
 ({ CARD_ROWS_COLUMN_GAP, CARD_ROWS_ICON_SIZE, CARD_ROWS_ICON_SIZE_VARIANT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { title: { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, titleContent: null, text: null, row: null, rowLabel: null, rowLabelText: null, rowSublabel: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.titleContent = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -221,7 +221,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileC
   } else {
     if (cResult[3] !== cResult[1]) {
       const obj2 = { children: tmp2 };
-      const tmp11 = React5(options, obj2);
+      const tmp11 = React5(React6, obj2);
       cResult[3] = tmp2;
       cResult[4] = tmp11;
       let tmp8 = tmp11;
@@ -234,7 +234,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileC
   const obj = { children: null };
   const Children = noop.Children;
   obj.children = Children.map(children.children, (children, arg1) => closure_1_7(React.Fragment, { children }, arg1));
-  return React5(options, obj);
+  return React5(React6, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCard.tsx");

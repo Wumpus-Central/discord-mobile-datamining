@@ -1,20 +1,20 @@
-// === Module 7906: TrackingUtils ===
+// === Module 7913: TrackingUtils ===
 
-// Module 7906 (TrackingUtils)
+// Module 7913 (TrackingUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 2074 */;
-import ForumSessionAnalyticsManagerDefault from "ForumSessionAnalyticsManager" /* 7909 */;
-import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7910 */;
-import ForumPostAnalyticsManagerDefault from "ForumPostAnalyticsManager" /* 7911 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6060 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
-import ThreadMembersStore from "ThreadMembersStore" /* 7907 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7006 */;
+import ForumSessionAnalyticsManagerDefault from "ForumSessionAnalyticsManager" /* 7916 */;
+import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7917 */;
+import ForumPostAnalyticsManagerDefault from "ForumPostAnalyticsManager" /* 7918 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6065 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4754 */;
+import ThreadMembersStore from "ThreadMembersStore" /* 7914 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7013 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import DraftStore from "DraftStore" /* 7244 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7908 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6979 */;
+import DraftStore from "DraftStore" /* 7250 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7915 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6992 */;
 
 require = fn;
 function collectForumAnalyticsMetadata(sessionId) {
@@ -71,7 +71,7 @@ function collectForumAnalyticsMetadata(sessionId) {
   }
   return tmp;
 }
-const DraftType = fn(7244).DraftType;
+const DraftType = fn(7250).DraftType;
 const Permissions = fn(1085).Permissions;
 const ChannelFlags = fn(2072).ChannelFlags;
 const constants = fn(1125).ThreadSortOrderReadableForAnalytics;

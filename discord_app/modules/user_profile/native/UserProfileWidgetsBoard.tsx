@@ -1,20 +1,20 @@
-// === Module 13700: UserProfileWidgetsBoard ===
+// === Module 13738: UserProfileWidgetsBoard ===
 
-// Module 13700 (UserProfileWidgetsBoard)
+// Module 13738 (UserProfileWidgetsBoard)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import StringUtils from "StringUtils" /* 2031 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7326 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7327 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8879 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8880 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11398 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 13705 */;
-import QuoteIcon from "QuoteIcon" /* 13706 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 13710 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7332 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7333 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8883 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8884 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11408 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 13743 */;
+import QuoteIcon from "QuoteIcon" /* 13744 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 13748 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -22,11 +22,11 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileSections = fn(8308).UserProfileSections;
+const UserProfileSections = fn(8315).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { board: { gap: nativeDefault.space.PX_16 }, coverPlaceholder: null, favoriteRow: null, favoriteDetails: null, favoriteCover: null, list: null, listRow: null, listCover: null, listDetails: null, comment: null, commentText: null, grid: null, gridCover: null, tags: null, tag: null, viewMore: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj.coverPlaceholder = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -155,12 +155,12 @@ let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj.source = obj3;
     const items = [style, coverPlaceholder.coverPlaceholder];
     obj.style = items;
-    let tmp4 = options(FastImageDefault, obj);
+    let tmp4 = React6(FastImageDefault, obj);
   } else {
     const obj4 = { style: null };
     const items1 = [style, coverPlaceholder.coverPlaceholder];
     obj4.style = items1;
-    tmp4 = options(timestampProducer, obj4);
+    tmp4 = React6(timestampProducer, obj4);
   }
   cResult[0] = style;
   coverPlaceholder = coverPlaceholder.coverPlaceholder;
@@ -176,12 +176,12 @@ let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj2.source = obj3;
     const items = [style, tmp.coverPlaceholder];
     obj2.style = items;
-    let tmp4 = options(FastImageDefault, obj2);
+    let tmp4 = React6(FastImageDefault, obj2);
   } else {
     const obj = { style: null };
     const items1 = [style, tmp.coverPlaceholder];
     obj.style = items1;
-    tmp4 = options(timestampProducer, obj);
+    tmp4 = React6(timestampProducer, obj);
   }
   return tmp4;
 }));
@@ -303,9 +303,9 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       children: flatMapResult.map((meta) => {
           meta = meta.meta;
           const obj = { style: closure_0.tag, children: null };
-          const items = [options(meta.icon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED }), ];
+          const items = [React6(meta.icon, { size: "xs", color: nativeDefault.colors.TEXT_MUTED }), ];
           const obj2 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
-          items[1] = options(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: meta.getText() });
+          items[1] = React6(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: meta.getText() });
           obj.children = items;
           return collapsed(timestampProducer, obj, meta.tag);
         })
@@ -393,7 +393,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                 }
               }
               const obj3 = { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName };
-              const tmp22 = options(Text_Text.Text, obj3);
+              const tmp22 = React6(Text_Text.Text, obj3);
               cResult[17] = gameName;
               cResult[18] = tmp22;
             } else {
@@ -419,7 +419,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
               }
             }
             const obj4 = { onPress: M, disabled: null == tmp6, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp21 };
-            const tmp26 = options(hasOwnProperty, obj4);
+            const tmp26 = React6(hasOwnProperty, obj4);
             cResult[19] = gameName;
             cResult[20] = M;
             cResult[21] = null == tmp6;
@@ -429,7 +429,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }
       const obj5 = { onPress: tmp7, disabled: tmp8, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp11 };
-      const tmp18 = options(hasOwnProperty, obj5);
+      const tmp18 = React6(hasOwnProperty, obj5);
       cResult[10] = gameName;
       cResult[11] = tmp7;
       cResult[12] = tmp8;
@@ -437,7 +437,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       cResult[14] = tmp18;
     }
     const obj6 = { uri: coverImageUrl, style: tmp10 };
-    const tmp14 = options(closure_16, obj6);
+    const tmp14 = React6(closure_16, obj6);
     cResult[7] = coverImageUrl;
     cResult[8] = tmp10;
     cResult[9] = tmp14;
@@ -478,11 +478,11 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const obj3 = { uri: tmp4.coverImageUrl, style: null };
   const items = [tmp.favoriteCover, { width: coverWidth }];
   obj3.style = items;
-  obj2.children = options(closure_16, obj3);
-  const items1 = [options(hasOwnProperty, obj2), ];
+  obj2.children = React6(closure_16, obj3);
+  const items1 = [React6(hasOwnProperty, obj2), ];
   const obj4 = { style: tmp.favoriteDetails, children: null };
   const items2 = [
-    options(hasOwnProperty, {
+    React6(hasOwnProperty, {
       onPress() {
         let tmp;
         if (closure_0 != null) {
@@ -493,7 +493,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       disabled: null == tmp5,
       accessibilityRole: "button",
       accessibilityLabel: gameName,
-      children: options(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
+      children: React6(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
     }),
   ,
 
@@ -509,7 +509,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     disabled: null == tmp5,
     accessibilityRole: "button",
     accessibilityLabel: gameName,
-    children: options(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
+    children: React6(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", lineClamp: 2, children: gameName })
   };
   let trimmed;
   if (game.comment != null) {
@@ -520,14 +520,14 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   if (!isNullOrEmptyResult) {
     const obj7 = { style: tmp.comment, children: null };
     const obj8 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    const items3 = [options(QuoteIcon.QuoteIcon, obj8), ];
+    const items3 = [React6(QuoteIcon.QuoteIcon, obj8), ];
     const obj9 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: tmp.commentText, children: game.comment };
-    items3[1] = options(Text_Text.Text, obj9);
+    items3[1] = React6(Text_Text.Text, obj9);
     obj7.children = items3;
     tmp6Result = collapsed(timestampProducer, obj7);
   }
   items2[1] = tmp6Result;
-  items2[2] = options(closure_17, { tags: game.tags });
+  items2[2] = React6(closure_17, { tags: game.tags });
   obj4.children = items2;
   items1[1] = collapsed(timestampProducer, obj4);
   obj.children = items1;
@@ -612,7 +612,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                 }
               }
               const obj3 = { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName };
-              const tmp22 = options(Text_Text.Text, obj3);
+              const tmp22 = React6(Text_Text.Text, obj3);
               cResult[17] = gameName;
               cResult[18] = tmp22;
             } else {
@@ -638,7 +638,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
               }
             }
             const obj4 = { onPress: M, disabled: null == tmp6, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp21 };
-            const tmp26 = options(hasOwnProperty, obj4);
+            const tmp26 = React6(hasOwnProperty, obj4);
             cResult[19] = gameName;
             cResult[20] = M;
             cResult[21] = null == tmp6;
@@ -648,7 +648,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }
       const obj5 = { onPress: tmp7, disabled: tmp8, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp11 };
-      const tmp18 = options(hasOwnProperty, obj5);
+      const tmp18 = React6(hasOwnProperty, obj5);
       cResult[10] = gameName;
       cResult[11] = tmp7;
       cResult[12] = tmp8;
@@ -656,7 +656,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       cResult[14] = tmp18;
     }
     const obj6 = { uri: coverImageUrl, style: tmp10 };
-    const tmp14 = options(closure_16, obj6);
+    const tmp14 = React6(closure_16, obj6);
     cResult[7] = coverImageUrl;
     cResult[8] = tmp10;
     cResult[9] = tmp14;
@@ -697,11 +697,11 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const obj3 = { uri: tmp3.coverImageUrl, style: null };
   const items = [tmp.listCover, { width: coverWidth }];
   obj3.style = items;
-  obj2.children = options(closure_16, obj3);
-  const items1 = [options(hasOwnProperty, obj2), ];
+  obj2.children = React6(closure_16, obj3);
+  const items1 = [React6(hasOwnProperty, obj2), ];
   const obj4 = { style: tmp.listDetails, children: null };
   const items2 = [
-    options(hasOwnProperty, {
+    React6(hasOwnProperty, {
       onPress() {
         let tmp;
         if (closure_0 != null) {
@@ -712,9 +712,9 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       disabled: null == tmp4,
       accessibilityRole: "button",
       accessibilityLabel: gameName,
-      children: options(Text_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName })
+      children: React6(Text_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 2, children: gameName })
     }),
-    options(closure_17, { tags: game.tags })
+    React6(closure_17, { tags: game.tags })
   ];
   obj4.children = items2;
   items1[1] = collapsed(timestampProducer, obj4);
@@ -774,7 +774,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }
       const obj3 = { onPress: tmp5, disabled: tmp6, accessibilityRole: "button", accessibilityLabel: gameName, children: tmp9 };
-      const tmp16 = options(hasOwnProperty, obj3);
+      const tmp16 = React6(hasOwnProperty, obj3);
       cResult[10] = gameName;
       cResult[11] = tmp5;
       cResult[12] = tmp6;
@@ -783,7 +783,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       tmp13 = tmp16;
     }
     const obj4 = { uri: coverImageUrl, style: tmp8 };
-    const tmp12 = options(closure_16, obj4);
+    const tmp12 = React6(closure_16, obj4);
     cResult[7] = coverImageUrl;
     cResult[8] = tmp8;
     cResult[9] = tmp12;
@@ -822,8 +822,8 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const obj2 = { uri: coverImageUrl, style: null };
   const items = [tmp.gridCover, { width: coverWidth }];
   obj2.style = items;
-  obj.children = options(closure_16, obj2);
-  return options(hasOwnProperty, obj);
+  obj.children = React6(closure_16, obj2);
+  return React6(hasOwnProperty, obj);
 }));
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function WidgetSection(userId) {
@@ -867,7 +867,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     arr2 = cResult[4];
   }
   const type = widget.type;
-  if (userId(7322).WidgetType.FAVORITE_GAMES === type) {
+  if (userId(7328).WidgetType.FAVORITE_GAMES === type) {
     if (cResult[5] === tmp12) {
       if (cResult[6] === result) {
         if (cResult[7] === disableInteraction) {
@@ -889,7 +889,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     num4 = 10;
     cResult[10] = tmp56;
   } else {
-    if (tmp(7322).WidgetType.CURRENT_GAMES === type) {
+    if (tmp(7328).WidgetType.CURRENT_GAMES === type) {
       if (cResult[11] === tmp10) {
         if (cResult[12] === arr2) {
           let arr5 = cResult[13];
@@ -953,7 +953,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
                       stringResult = intl2.formatToPlainString(tmp(1126).t.zr0Y5R, obj5);
                     }
                     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: stringResult };
-                    obj4.children = closure_9(tmp(5088).Text, obj6);
+                    obj4.children = closure_9(tmp(5092).Text, obj6);
                     closure_9(closure_5, obj4);
                   }
                 }
@@ -967,7 +967,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
             }
           }
         }
-        const tmp39 = tmp12 > num4 && arr5.map((game) => options(closure_19, { userId, game, coverWidth: result, disableInteraction }, game.gameId));
+        const tmp39 = tmp12 > num4 && arr5.map((game) => React6(closure_19, { userId, game, coverWidth: result, disableInteraction }, game.gameId));
         cResult[14] = tmp12;
         cResult[15] = result;
         cResult[16] = disableInteraction;
@@ -985,8 +985,8 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
       cResult[13] = substr;
       arr5 = substr;
     } else {
-      if (tmp(7322).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-        if (tmp(7322).WidgetType.PLAYED_GAMES !== type) {
+      if (tmp(7328).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+        if (tmp(7328).WidgetType.PLAYED_GAMES !== type) {
           return null;
         }
       }
@@ -1052,7 +1052,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
                       stringResult1 = intl.formatToPlainString(tmp(1126).t.zr0Y5R, obj10);
                     }
                     const obj11 = { variant: "text-sm/medium", color: "text-muted", children: stringResult1 };
-                    obj9.children = closure_9(tmp(5088).Text, obj11);
+                    obj9.children = closure_9(tmp(5092).Text, obj11);
                     closure_9(closure_5, obj9);
                   }
                 }
@@ -1066,7 +1066,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
             }
           }
         }
-        const tmp20 = tmp12 > num4 && arr3.map((game) => options(closure_20, { userId, game, coverWidth: result, disableInteraction }, game.gameId));
+        const tmp20 = tmp12 > num4 && arr3.map((game) => React6(closure_20, { userId, game, coverWidth: result, disableInteraction }, game.gameId));
         cResult[34] = tmp12;
         cResult[35] = result;
         cResult[36] = disableInteraction;
@@ -1085,11 +1085,11 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
       arr3 = substr1;
     }
     if (cResult[51] !== widget) {
-      const widgetTitle = tmp(11503).getWidgetTitle(widget);
+      const widgetTitle = tmp(11513).getWidgetTitle(widget);
       cResult[51] = widget;
       cResult[52] = widgetTitle;
       let tmp60 = widgetTitle;
-      const tmpResult2 = tmp(11503);
+      const tmpResult2 = tmp(11513);
     } else {
       tmp60 = cResult[52];
     }
@@ -1129,7 +1129,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
             }
           }
           const obj14 = { style: cardStyle, title: tmp60, trailingAction: tmp62, children: tmp66 };
-          const tmp72 = closure_9(disableInteraction(6904), obj14);
+          const tmp72 = closure_9(disableInteraction(6909), obj14);
           cResult[61] = cardStyle;
           cResult[62] = tmp60;
           cResult[63] = tmp62;
@@ -1145,7 +1145,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
     if (tmp63) {
       const obj15 = { userId, widget };
-      tmp63 = closure_9(disableInteraction(13708), obj15);
+      tmp63 = closure_9(disableInteraction(13746), obj15);
     }
     cResult[53] = disableInteraction;
     cResult[54] = stateFromStores;
@@ -1188,7 +1188,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     const obj3 = { style: tmp.list, children: null };
     let mapped = tmp8 > 0;
     if (mapped) {
-      mapped = substr.map((game) => options(closure_19, { userId, game, coverWidth, disableInteraction }, game.gameId));
+      mapped = substr.map((game) => React6(closure_19, { userId, game, coverWidth, disableInteraction }, game.gameId));
     }
     obj3.children = mapped;
     const items2 = [closure_9(closure_6, obj3), ];
@@ -1231,7 +1231,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     const obj8 = { style: tmp.grid, children: null };
     let mapped1 = tmp8 > 0;
     if (mapped1) {
-      mapped1 = substr1.map((game) => options(closure_20, { userId, game, coverWidth, disableInteraction }, game.gameId));
+      mapped1 = substr1.map((game) => React6(closure_20, { userId, game, coverWidth, disableInteraction }, game.gameId));
     }
     obj8.children = mapped1;
     const items3 = [closure_9(closure_6, obj8), ];
@@ -1294,7 +1294,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Widget
       }
     }
     const obj2 = { userId, widget, cardStyle };
-    tmp2 = options(UserProfileApplicationWidgetCardDefault, obj2);
+    tmp2 = React6(UserProfileApplicationWidgetCardDefault, obj2);
     cResult[0] = cardStyle;
     cResult[1] = userId;
     cResult[2] = widget;
@@ -1305,7 +1305,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Widget
       }
     }
     const obj3 = { userId, widget, cardStyle };
-    const tmp11 = options(UserProfilePersonalWidgetCardDefault, obj3);
+    const tmp11 = React6(UserProfilePersonalWidgetCardDefault, obj3);
     cResult[4] = cardStyle;
     cResult[5] = userId;
     cResult[6] = widget;
@@ -1320,7 +1320,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Widget
       }
     }
     const obj4 = { userId, widget, cardStyle };
-    const tmp7 = options(memoResult, obj4);
+    const tmp7 = React6(memoResult, obj4);
     cResult[8] = cardStyle;
     cResult[9] = userId;
     cResult[10] = widget;
@@ -1331,13 +1331,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Widget
   ({ userId, widget, cardStyle } = arg0);
   if (widget instanceof UserProfileApplicationWidgetTypes.ApplicationWidget) {
     const obj2 = { userId, widget, cardStyle };
-    let tmp3Result = options(UserProfileApplicationWidgetCardDefault, obj2);
+    let tmp3Result = React6(UserProfileApplicationWidgetCardDefault, obj2);
   } else if (widget instanceof UserProfilePersonalWidget.UserProfilePersonalWidget) {
     const obj3 = { userId, widget, cardStyle };
-    tmp3Result = options(UserProfilePersonalWidgetCardDefault, obj3);
+    tmp3Result = React6(UserProfilePersonalWidgetCardDefault, obj3);
   } else {
     const obj = { userId, widget, cardStyle };
-    tmp3Result = options(memoResult, obj);
+    tmp3Result = React6(memoResult, obj);
   }
   return tmp3Result;
 });
@@ -1353,7 +1353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const tmp5 = closure_13();
   const obj = userId(576);
   const tmp4 = undefined === isVisible || isVisible;
-  const displayableBoardWidgets = userId(13714).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(13752).useDisplayableBoardWidgets(userId);
   let num = 0;
   closure_15(tmp4, displayableBoardWidgets.length > 0);
   if (0 === displayableBoardWidgets.length) {
@@ -1389,14 +1389,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       cResult[3] = mapped;
     }
     const fn = function f(widget) {
-      return options(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey());
+      return React6(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey());
     };
     cResult[4] = cardStyle;
     cResult[5] = userId;
     cResult[6] = fn;
     tmp8 = fn;
   }
-  const tmpResult = userId(13714);
+  const tmpResult = userId(13752);
 }) : (function UserProfileWidgetsBoard(userId) {
   userId = userId.userId;
   let flag = userId.isVisible;
@@ -1405,11 +1405,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }
   const cardStyle = userId.cardStyle;
   const tmp = closure_13();
-  const displayableBoardWidgets = userId(13714).useDisplayableBoardWidgets(userId);
+  const displayableBoardWidgets = userId(13752).useDisplayableBoardWidgets(userId);
   closure_15(flag, displayableBoardWidgets.length > 0);
   let tmp3 = null;
   if (0 !== displayableBoardWidgets.length) {
-    const obj2 = { style: tmp.board, children: displayableBoardWidgets.map((widget) => options(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey())) };
+    const obj2 = { style: tmp.board, children: displayableBoardWidgets.map((widget) => React6(closure_22, { userId, widget, cardStyle }, widget.getUniqueKey())) };
     tmp3 = closure_9(closure_6, obj2);
   }
   return tmp3;

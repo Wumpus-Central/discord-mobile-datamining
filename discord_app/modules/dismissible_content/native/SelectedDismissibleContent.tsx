@@ -1,8 +1,8 @@
-// === Module 10013: SelectedDismissibleContent ===
+// === Module 10023: SelectedDismissibleContent ===
 
-// Module 10013 (SelectedDismissibleContent)
+// Module 10023 (SelectedDismissibleContent)
 import c from "c" /* 576 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7100 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7106 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

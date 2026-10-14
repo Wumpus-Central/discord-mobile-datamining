@@ -1,6 +1,6 @@
-// === Module 11210: useConjureWindowFocused ===
+// === Module 10687: useConjureWindowFocused ===
 
-// Module 11210 (useConjureWindowFocused)
+// Module 10687 (useConjureWindowFocused)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import AppStateStore from "AppStateStore" /* 1999 */;

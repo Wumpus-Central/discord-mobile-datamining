@@ -1,16 +1,16 @@
-// === Module 12447: ForumPostPlaceholder ===
+// === Module 12483: ForumPostPlaceholder ===
 
-// Module 12447 (ForumPostPlaceholder)
+// Module 12483 (ForumPostPlaceholder)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import timing from "timing" /* 5093 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import timing from "timing" /* 5097 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { postPlaceholder: { height: 2 * nativeDefault.space.PX_64, marginBottom: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj);
 let c8 = 0.55;
@@ -93,8 +93,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return tmp7;
     }
   }
-  const tmpResult2 = stateFromStores(4850);
-  I.__closure = { reducedMotion: stateFromStores, ROW_OPACITY_END: v055, withDelay: stateFromStores(4850).withDelay, INITIAL_DELAY_MS, withRepeat: stateFromStores(4850).withRepeat, withSequence: stateFromStores(4850).withSequence, withTiming: stateFromStores(5093).withTiming, timingConfig };
+  const tmpResult2 = stateFromStores(4852);
+  I.__closure = { reducedMotion: stateFromStores, ROW_OPACITY_END: v055, withDelay: stateFromStores(4852).withDelay, INITIAL_DELAY_MS, withRepeat: stateFromStores(4852).withRepeat, withSequence: stateFromStores(4852).withSequence, withTiming: stateFromStores(5097).withTiming, timingConfig };
   I.__workletHash = 9488742940898;
   I.__initData = __initData;
   const animatedStyle = tmpResult2.useAnimatedStyle(I);
@@ -110,7 +110,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     let obj3 = { variant: "secondary", style: tmp4.postPlaceholder };
-    const tmp12 = jsx(tmp(6182).Card, { variant: "secondary", style: tmp4.postPlaceholder });
+    const tmp12 = jsx(tmp(6186).Card, { variant: "secondary", style: tmp4.postPlaceholder });
     cResult[3] = tmp4.postPlaceholder;
     cResult[4] = tmp12;
   } else {
@@ -138,11 +138,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return tmp13;
   }
-  tmp13 = jsx(timingConfig(4850).View, { style: animatedStyle, pointerEvents: "none", children: tmp11 });
+  tmp13 = jsx(timingConfig(4852).View, { style: animatedStyle, pointerEvents: "none", children: tmp11 });
   cResult[5] = animatedStyle;
   cResult[6] = tmp11;
   cResult[7] = tmp13;
-  let obj2 = { reducedMotion: stateFromStores, ROW_OPACITY_END: v055, withDelay: stateFromStores(4850).withDelay, INITIAL_DELAY_MS, withRepeat: stateFromStores(4850).withRepeat, withSequence: stateFromStores(4850).withSequence, withTiming: stateFromStores(5093).withTiming, timingConfig };
+  let obj2 = { reducedMotion: stateFromStores, ROW_OPACITY_END: v055, withDelay: stateFromStores(4852).withDelay, INITIAL_DELAY_MS, withRepeat: stateFromStores(4852).withRepeat, withSequence: stateFromStores(4852).withSequence, withTiming: stateFromStores(5097).withTiming, timingConfig };
 }) : (function ForumPostPlaceholder() {
   const tmp = closure_7();
   const items = [AccessibilityStore];
@@ -150,8 +150,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const timingConfig = _slicedToArray(noop.useState(() => {
     const obj = { timingConfig: null };
     const obj2 = { duration: 1000 + 500 * Math.random(), easing: null };
-    const Easing = stateFromStores(4850).Easing;
-    obj2.easing = Easing.inOut(stateFromStores(4850).Easing.sin);
+    const Easing = stateFromStores(4852).Easing;
+    obj2.easing = Easing.inOut(stateFromStores(4852).Easing.sin);
     obj.timingConfig = obj2;
     return obj;
   }), 1)[0].timingConfig;
@@ -171,11 +171,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     return tmp7;
   };
-  let obj2 = stateFromStores(4850);
-  fn.__closure = { reducedMotion: stateFromStores, ROW_OPACITY_END: v055, withDelay: stateFromStores(4850).withDelay, INITIAL_DELAY_MS, withRepeat: stateFromStores(4850).withRepeat, withSequence: stateFromStores(4850).withSequence, withTiming: stateFromStores(5093).withTiming, timingConfig };
+  let obj2 = stateFromStores(4852);
+  fn.__closure = { reducedMotion: stateFromStores, ROW_OPACITY_END: v055, withDelay: stateFromStores(4852).withDelay, INITIAL_DELAY_MS, withRepeat: stateFromStores(4852).withRepeat, withSequence: stateFromStores(4852).withSequence, withTiming: stateFromStores(5097).withTiming, timingConfig };
   fn.__workletHash = 13857107900577;
   fn.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  let obj4 = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(6182).Card, { variant: "secondary", style: tmp.postPlaceholder }) };
-  return jsx(timingConfig(4850).View, { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(6182).Card, { variant: "secondary", style: tmp.postPlaceholder }) });
+  let obj4 = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(6186).Card, { variant: "secondary", style: tmp.postPlaceholder }) };
+  return jsx(timingConfig(4852).View, { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(6186).Card, { variant: "secondary", style: tmp.postPlaceholder }) });
 }));

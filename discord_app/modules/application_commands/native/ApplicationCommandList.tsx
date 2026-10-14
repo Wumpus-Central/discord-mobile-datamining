@@ -1,21 +1,20 @@
-// === Module 12631: ApplicationCommandList ===
+// === Module 12667: ApplicationCommandList ===
 
-// Module 12631 (ApplicationCommandList)
+// Module 12667 (ApplicationCommandList)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const FlatList = fn(17).FlatList;
 const jsx = fn(21).jsx;
-let closure_7 = 3 * fn(9717).AUTOCOMPLETE_ROW_HEIGHT;
+let closure_6 = 3 * fn(9727).AUTOCOMPLETE_ROW_HEIGHT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ApplicationCommandList(onPressCommandItem) {
-  const cResult = channel(commands[5]).c(26);
+  const cResult = channel(commands[4]).c(27);
   ({ style, channel } = onPressCommandItem);
   onPressCommandItem = onPressCommandItem.onPressCommandItem;
-  ({ query, ItemSeparatorComponent, getItemLayout, onCommandsChange } = onPressCommandItem);
+  ({ query, ItemSeparatorComponent, onCommandsChange } = onPressCommandItem);
   if (cResult[0] !== channel) {
     const obj2 = { channel, type: "channel" };
     cResult[0] = channel;
@@ -25,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     tmp4 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [channel(tmp2[6]).ApplicationCommandType.CHAT];
+    const items = [channel(tmp2[5]).ApplicationCommandType.CHAT];
     cResult[2] = items;
     let tmp5 = items;
   } else {
@@ -40,14 +39,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     tmp6 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { placeholderCount: 3, limit: 7, scoreMethod: channel(tmp2[7]).ScoreMethod.COMMAND_OR_APPLICATION };
+    const obj4 = { placeholderCount: 3, limit: 7, scoreMethod: channel(tmp2[6]).ScoreMethod.COMMAND_OR_APPLICATION };
     cResult[5] = obj4;
     let tmp7 = obj4;
   } else {
     tmp7 = cResult[5];
   }
-  let obj = channel(commands[5]);
-  const query1 = onCommandsChange(commands[8]).useQuery(tmp4, tmp6, tmp7);
+  let obj = channel(commands[4]);
+  const query1 = onCommandsChange(commands[7]).useQuery(tmp4, tmp6, tmp7);
   commands = query1.commands;
   const sections = query1.sections;
   const scrollDown = query1.scrollDown;
@@ -74,10 +73,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
           }
           const effect = sections.useEffect(tmp12, tmp15);
           if (cResult[16] !== scrollDown) {
-            class D {
+            class M {
               constructor(arg0) {
                 nativeEvent = onPressCommandItem.nativeEvent;
-                if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - closure_7) {
+                if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - closure_6) {
                   tmp = scrollDown;
                   tmp2 = scrollDown();
                 }
@@ -85,12 +84,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
               }
             }
             cResult[16] = scrollDown;
-            cResult[17] = D;
+            cResult[17] = M;
           } else {
-            class D {
+            class M {
               constructor(arg0) {
                 nativeEvent = onPressCommandItem.nativeEvent;
-                if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - closure_7) {
+                if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - closure_6) {
                   tmp = scrollDown;
                   tmp2 = scrollDown();
                 }
@@ -100,26 +99,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
           }
           const _Symbol = Symbol;
           if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-            class R {
+            class D {
               constructor(arg0) {
                 return onPressCommandItem.id;
               }
             }
-            cResult[18] = R;
+            cResult[18] = D;
           } else {
-            class R {
+            class D {
               constructor(arg0) {
                 return onPressCommandItem.id;
               }
             }
           }
-          if (cResult[19] === ItemSeparatorComponent) {
-            class R {
-              constructor(arg0) {
-                return onPressCommandItem.id;
-              }
-            }
-          }
+          const _Symbol2 = Symbol;
           class P {
             constructor() {
               if (onCommandsChange != null) {
@@ -135,15 +128,54 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
               return;
             }
           }
-          const obj6 = { style, keyExtractor: R, data: commands, renderItem: tmp9, ItemSeparatorComponent, getItemLayout, onScroll: D };
-          const tmp22 = <scrollDown style={style} keyExtractor={R} data={commands} renderItem={tmp9} ItemSeparatorComponent={ItemSeparatorComponent} getItemLayout={getItemLayout} onScroll={D} />;
-          cResult[19] = ItemSeparatorComponent;
-          cResult[20] = commands;
-          cResult[21] = getItemLayout;
-          cResult[22] = D;
-          cResult[23] = tmp9;
-          cResult[24] = style;
-          cResult[25] = tmp22;
+          if (tmp20 === Symbol.for("react.memo_cache_sentinel")) {
+            class D {
+              constructor(arg0) {
+                return onPressCommandItem.id;
+              }
+            }
+            class R {
+              constructor(arg0) {
+                str = "command";
+                if (onPressCommandItem.inputType === channel(commands[8]).ApplicationCommandInputType.PLACEHOLDER) {
+                  str = "placeholder";
+                }
+                return str;
+              }
+            }
+            cResult[19] = tmp23;
+            cResult[20] = R;
+          } else {
+            class D {
+              constructor(arg0) {
+                return onPressCommandItem.id;
+              }
+            }
+            class R {
+              constructor(arg0) {
+                str = "command";
+                if (onPressCommandItem.inputType === channel(commands[8]).ApplicationCommandInputType.PLACEHOLDER) {
+                  str = "placeholder";
+                }
+                return str;
+              }
+            }
+          }
+          if (cResult[21] === ItemSeparatorComponent) {
+            class D {
+              constructor(arg0) {
+                return onPressCommandItem.id;
+              }
+            }
+          }
+          const obj6 = { style, keyExtractor: D, data: commands, maintainVisibleContentPosition: tmp23, getItemType: R, renderItem: tmp9, ItemSeparatorComponent, onScroll: M };
+          const tmp26 = scrollDown(channel(tmp2[11]).FlashList, obj6);
+          cResult[21] = ItemSeparatorComponent;
+          cResult[22] = commands;
+          cResult[23] = M;
+          cResult[24] = tmp9;
+          cResult[25] = style;
+          cResult[26] = tmp26;
         }
         const items1 = [length1, onCommandsChange];
         class P {
@@ -166,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
         tmp15 = items1;
       }
       if (commands != null) {
-        class R {
+        class D {
           constructor(arg0) {
             return onPressCommandItem.id;
           }
@@ -197,10 +229,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     constructor(arg0) {
       item = onPressCommandItem.item;
       tmp = commands;
-      if (item.inputType === channel(commands[9]).ApplicationCommandInputType.PLACEHOLDER) {
-        tmp7 = closure_1_6;
+      if (item.inputType === channel(commands[8]).ApplicationCommandInputType.PLACEHOLDER) {
+        tmp7 = scrollDown;
         tmp8 = onPressCommandItem;
-        return closure_1_6(onPressCommandItem(tmp[10]), {});
+        return scrollDown(onPressCommandItem(tmp[9]), {});
       } else {
         arr = sections;
         tmp2 = null;
@@ -209,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
           found = arr.find(() => { ... });
         }
         closure_1 = found;
-        tmp4 = closure_1_6;
+        tmp4 = scrollDown;
         tmp5 = onPressCommandItem;
         obj = { command: null, section: null, onPress: null, guildId: null, highlighted: null };
         obj.command = item;
@@ -219,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
         obj.guildId = item.guild_id;
         num = 0;
         obj.highlighted = 0 === onPressCommandItem.index;
-        return closure_1_6(onPressCommandItem(tmp[11]), obj);
+        return scrollDown(onPressCommandItem(tmp[10]), obj);
       }
     }
   }
@@ -228,18 +260,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   cResult[8] = sections;
   cResult[9] = T;
   tmp9 = T;
-  const obj5 = onCommandsChange(commands[8]);
+  const obj5 = onCommandsChange(commands[7]);
 }) : (function ApplicationCommandList(channel) {
   channel = channel.channel;
   const onPressCommandItem = channel.onPressCommandItem;
   const onCommandsChange = channel.onCommandsChange;
   let commands;
-  ({ style, query, ItemSeparatorComponent, getItemLayout } = channel);
+  ({ style, query, ItemSeparatorComponent } = channel);
   const obj2 = { text: query, commandTypes: null };
-  const items = [channel(commands[6]).ApplicationCommandType.CHAT];
+  const items = [channel(commands[5]).ApplicationCommandType.CHAT];
   obj2.commandTypes = items;
-  let obj = onCommandsChange(commands[8]);
-  const query1 = obj.useQuery({ channel, type: "channel" }, obj2, { placeholderCount: 3, limit: 7, scoreMethod: channel(commands[7]).ScoreMethod.COMMAND_OR_APPLICATION });
+  let obj = onCommandsChange(commands[7]);
+  const tmp = commands;
+  const tmp2 = channel;
+  const query1 = obj.useQuery({ channel, type: "channel" }, obj2, { placeholderCount: 3, limit: 7, scoreMethod: channel(commands[6]).ScoreMethod.COMMAND_OR_APPLICATION });
   commands = query1.commands;
   const sections = query1.sections;
   const scrollDown = query1.scrollDown;
@@ -248,8 +282,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   const callback = sections.useCallback((item) => {
     item = item.item;
     let found;
-    if (item.inputType === channel(commands[9]).ApplicationCommandInputType.PLACEHOLDER) {
-      return jsx(onPressCommandItem(commands[10]), {});
+    if (item.inputType === channel(commands[8]).ApplicationCommandInputType.PLACEHOLDER) {
+      return scrollDown(onPressCommandItem(commands[9]), {});
     } else {
       found = undefined;
       if (sections != null) {
@@ -264,15 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
         guildId: item.guild_id,
         highlighted: 0 === item.index
       };
-      return jsx(onPressCommandItem(commands[11]), {
-        command: item,
-        section: found,
-        onPress() {
-            return onPressCommandItem(item, found);
-          },
-        guildId: item.guild_id,
-        highlighted: 0 === item.index
-      });
+      return scrollDown(onPressCommandItem(commands[10]), obj);
     }
   }, items1);
   if (commands != null) {
@@ -292,13 +318,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
     }
   }, items2);
   const items3 = [scrollDown];
-  const obj3 = { placeholderCount: 3, limit: 7, scoreMethod: channel(commands[7]).ScoreMethod.COMMAND_OR_APPLICATION };
-  return <scrollDown style={style} keyExtractor={function keyExtractor(id) {
-    return id.id;
-  }} data={commands} renderItem={callback} ItemSeparatorComponent={ItemSeparatorComponent} getItemLayout={getItemLayout} onScroll={sections.useCallback((nativeEvent) => {
+  const callback1 = sections.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
-    if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - closure_7) {
+    if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - closure_6) {
       scrollDown();
     }
-  }, items3)} />;
+  }, items3);
+  return scrollDown(tmp2(tmp[11]).FlashList, {
+    style,
+    keyExtractor(id) {
+      return id.id;
+    },
+    data: commands,
+    maintainVisibleContentPosition: { disabled: true },
+    getItemType(inputType) {
+      let str = "command";
+      if (inputType.inputType === channel(commands[8]).ApplicationCommandInputType.PLACEHOLDER) {
+        str = "placeholder";
+      }
+      return str;
+    },
+    renderItem: callback,
+    ItemSeparatorComponent,
+    onScroll: callback1
+  });
 });

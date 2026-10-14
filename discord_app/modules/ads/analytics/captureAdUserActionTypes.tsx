@@ -1,6 +1,6 @@
-// === Module 9178: captureAdUserActionTypes ===
+// === Module 9187: captureAdUserActionTypes ===
 
-// Module 9178 (captureAdUserActionTypes)
+// Module 9187 (captureAdUserActionTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/analytics/captureAdUserActionTypes.tsx");

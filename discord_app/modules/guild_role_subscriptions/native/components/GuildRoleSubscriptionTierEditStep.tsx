@@ -1,15 +1,15 @@
-// === Module 18559: GuildRoleSubscriptionTierEditStep ===
+// === Module 18595: GuildRoleSubscriptionTierEditStep ===
 
-// Module 18559 (GuildRoleSubscriptionTierEditStep)
+// Module 18595 (GuildRoleSubscriptionTierEditStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useNavigation from "useNavigation" /* 1503 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import components_Button_Button from "components/Button/Button" /* 5379 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6814 */;
-import FormSeparatorDefault from "FormSeparator" /* 15825 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import components_Button_Button from "components/Button/Button" /* 5384 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6819 */;
+import FormSeparatorDefault from "FormSeparator" /* 15862 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" }, scrollContainer: { flexGrow: 1 }, headerContainer: { position: "relative", paddingTop: 48, paddingBottom: 8, paddingHorizontal: 16, alignItems: "center" }, title: { marginTop: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, separator: { marginTop: 24 }, footerContainer: { width: "100%", padding: 16 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -57,7 +57,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
       const obj3 = { top: true, style: tmp4.headerContainer, children: null };
       const items = [tmp5, tmp7, tmp10];
       obj3.children = items;
-      const tmp16 = options(common_SafeAreaView.SafeAreaPaddingView, obj3);
+      const tmp16 = React6(common_SafeAreaView.SafeAreaPaddingView, obj3);
       cResult[8] = tmp4.headerContainer;
       cResult[9] = tmp5;
       cResult[10] = tmp7;
@@ -84,7 +84,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
   const obj = { top: true, style: tmp.headerContainer, children: null };
   const items = [closure_1_8(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title }), closure_1_8(Text_Text.Text, { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), closure_1_8(FormSeparatorDefault, { style: tmp.separator })];
   obj.children = items;
-  return options(common_SafeAreaView.SafeAreaPaddingView, obj);
+  return React6(common_SafeAreaView.SafeAreaPaddingView, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Footer(canProceedToNextStep) {
@@ -167,7 +167,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Footer
   const tmp = closure_10();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = closure_1_8(tmp5(5379).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  obj.children = closure_1_8(tmp5(5384).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
   return closure_1_8(timestampProducer, obj);
 });
 ReactCompilerGating = fn(558);
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
             const obj3 = { style: container.container, children: null };
             const items = [tmp29, tmp36, tmp40];
             obj3.children = items;
-            const tmp50 = options(timestampProducer, obj3);
+            const tmp50 = React6(timestampProducer, obj3);
             container = container.container;
             cResult[15] = container;
             cResult[16] = tmp29;
@@ -287,7 +287,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
           const obj7 = { style: container.container, children: null };
           const items1 = [tmp11, tmp4.children, tmp18];
           obj7.children = items1;
-          const tmp28 = options(timestampProducer, obj7);
+          const tmp28 = React6(timestampProducer, obj7);
           cResult[25] = tmp4.children;
           cResult[26] = container.container;
           cResult[27] = tmp11;
@@ -372,5 +372,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     items2[2] = closure_1_8(closure_12, obj8);
     obj6.children = items2;
   }
-  return options(timestampProducer, obj6);
+  return React6(timestampProducer, obj6);
 });

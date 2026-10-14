@@ -1,6 +1,6 @@
-// === Module 16607: InGameDMsSetting ===
+// === Module 16646: InGameDMsSetting ===
 
-// Module 16607 (InGameDMsSetting)
+// Module 16646 (InGameDMsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInGameD
   }
   return SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL;
 });
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInGameDMsSettingOptions() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -80,7 +80,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
   },
-  parent: fn(7993).MobileUserSettings.CONNECTED_GAMES,
+  parent: fn(8000).MobileUserSettings.CONNECTED_GAMES,
   useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (function useInGameDMsSettingOptions() {
     const cResult = c.c(3);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

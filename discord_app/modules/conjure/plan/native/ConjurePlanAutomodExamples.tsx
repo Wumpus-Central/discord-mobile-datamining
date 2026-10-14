@@ -1,6 +1,6 @@
-// === Module 11907: ConjurePlanAutomodExamples ===
+// === Module 11936: ConjurePlanAutomodExamples ===
 
-// Module 11907 (ConjurePlanAutomodExamples)
+// Module 11936 (ConjurePlanAutomodExamples)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
@@ -8,22 +8,22 @@ import native from "native" /* 1200 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import Stack_Stack from "Stack/Stack" /* 5377 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 11908 */;
+import Stack_Stack from "Stack/Stack" /* 5382 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 11937 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = Text(5088);
+const Text_Text = Text(5092);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { blocked: fn(10409).ShieldIcon, alert: fn(8773).BellIcon, allowed: fn(6868).CircleCheckIcon };
+let obj = { blocked: fn(10419).ShieldIcon, alert: fn(8777).BellIcon, allowed: fn(6873).CircleCheckIcon };
 let obj2 = { blurple: { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND }, red: null, green: null };
 let obj3 = { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND };
 obj2.red = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let obj4 = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj2.green = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj7 = { heading: null, examples: null, section: null, sectionHeader: null, sectionLabel: null, rows: null, row: null, blockedRow: null, blockedBar: null, rowBody: null };
 let obj5 = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj7.heading = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

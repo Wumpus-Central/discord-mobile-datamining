@@ -1,17 +1,17 @@
-// === Module 17320: GuildOnboardingHomePage ===
+// === Module 17354: GuildOnboardingHomePage ===
 
-// Module 17320 (GuildOnboardingHomePage)
+// Module 17354 (GuildOnboardingHomePage)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6098 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9320 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5111 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6104 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9329 */;
 import noop from "module_19" /* 19 */;
-import ExperimentStore from "ExperimentStore" /* 5016 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6926 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 7916 */;
+import ExperimentStore from "ExperimentStore" /* 5018 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6931 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 7923 */;
 
 require = fn;
-const NO_SETTINGS = fn(6926).NO_SETTINGS;
+const NO_SETTINGS = fn(6931).NO_SETTINGS;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
@@ -21,7 +21,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildO
   guildId = guildId.guildId;
   let obj = guildId(576);
   let tmp = guildId;
-  const sharedValue = guildId(4850).useSharedValue(-999);
+  const sharedValue = guildId(4852).useSharedValue(-999);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildOnboardingHomeSettingsStore];
     cResult[0] = items;
@@ -44,9 +44,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildO
       }
     }
   }
-  let obj2 = guildId(4850);
+  let obj2 = guildId(4852);
   const stateFromStores = tmp(504).useStateFromStores(first, I);
-  const tmp9 = stateFromStores(6927)(guildId);
+  const tmp9 = stateFromStores(6932)(guildId);
   let tmp10 = !tmp9;
   if (!tmp9) {
     class I {
@@ -138,12 +138,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildO
   guildId = guildId.guildId;
   dependencyMap = undefined;
   let tmp = dependencyMap;
-  const sharedValue = guildId(4850).useSharedValue(-999);
-  let obj = guildId(4850);
+  const sharedValue = guildId(4852).useSharedValue(-999);
+  let obj = guildId(4852);
   const items = [GuildOnboardingHomeSettingsStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildOnboardingHomeSettingsStore.getSettings(guildId));
   let tmp4 = stateFromStores;
-  const tmp5 = stateFromStores(6927)(guildId);
+  const tmp5 = stateFromStores(6932)(guildId);
   let tmp6 = !tmp5;
   if (!tmp5) {
     let num;
@@ -208,14 +208,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildO
   } else {
     let obj3 = { guildId, scrollValue: sharedValue, children: null };
     const obj4 = { guildId, hideDescription: tmp5 };
-    const items3 = [closure_9(tmp4(17321), obj4), ];
+    const items3 = [closure_9(tmp4(17355), obj4), ];
     if (tmp5) {
       let obj5 = { children: null };
       const obj6 = { guildId };
-      const items4 = [closure_9(tmp4(17326), obj6), , ];
+      const items4 = [closure_9(tmp4(17360), obj6), , ];
       const obj7 = { guildId };
-      items4[1] = closure_9(tmp4(17330), obj7);
-      tmp4 = tmp4(17331);
+      items4[1] = closure_9(tmp4(17364), obj7);
+      tmp4 = tmp4(17365);
       const obj8 = { guildId };
       tmp = closure_9(tmp4, obj8);
       items4[2] = tmp;
@@ -223,12 +223,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildO
       let tmp12Result = closure_11(closure_10, obj5);
     } else {
       const obj9 = { guildId };
-      tmp12Result = closure_9(tmp4(17334), obj9);
+      tmp12Result = closure_9(tmp4(17368), obj9);
     }
     items3[1] = tmp12Result;
     obj3.children = items3;
-    closure_11(tmp4(17337), obj3);
-    const tmp4Result = tmp4(17337);
+    closure_11(tmp4(17371), obj3);
+    const tmp4Result = tmp4(17371);
   }
   let obj2 = guildId(504);
 });

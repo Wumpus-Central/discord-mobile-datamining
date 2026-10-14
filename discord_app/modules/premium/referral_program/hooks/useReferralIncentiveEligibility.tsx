@@ -1,11 +1,11 @@
-// === Module 14066: useReferralIncentiveEligibility ===
+// === Module 14103: useReferralIncentiveEligibility ===
 
-// Module 14066 (useReferralIncentiveEligibility)
+// Module 14103 (useReferralIncentiveEligibility)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8086 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 14063 */;
-import SubscriptionStore from "SubscriptionStore" /* 4775 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8093 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 14100 */;
+import SubscriptionStore from "SubscriptionStore" /* 4777 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

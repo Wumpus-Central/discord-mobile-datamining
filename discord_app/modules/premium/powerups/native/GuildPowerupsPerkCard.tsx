@@ -1,18 +1,18 @@
-// === Module 12822: GuildPowerupsPerkCard ===
+// === Module 12858: GuildPowerupsPerkCard ===
 
-// Module 12822 (GuildPowerupsPerkCard)
+// Module 12858 (GuildPowerupsPerkCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import shared from "shared" /* 4969 */;
-import useThemeDefault from "useTheme" /* 5031 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6664 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12772 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12773 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12818 */;
+import shared from "shared" /* 4971 */;
+import useThemeDefault from "useTheme" /* 5033 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import LinearGradientDefault from "LinearGradient" /* 5396 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6668 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12808 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12809 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12854 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ let closure_3 = ["title", "description", "imageUrl", "isImageAnimated", "riveCom
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, card: { padding: 0, overflow: "hidden" }, contentContainer: null, imageContainer: null, gradient: null, headerContainer: null, badge: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.contentContainer = { gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16 };

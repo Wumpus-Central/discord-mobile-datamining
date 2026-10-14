@@ -1,27 +1,27 @@
-// === Module 17464: GroupDMNitroUpsellBanner ===
+// === Module 17498: GroupDMNitroUpsellBanner ===
 
-// Module 17464 (GroupDMNitroUpsellBanner)
+// Module 17498 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import spring from "spring" /* 5378 */;
-import components_Button_Button from "components/Button/Button" /* 5379 */;
-import _modDef8081 from "module_8081" /* 8081 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 10749 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 10752 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 10756 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 17465 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import spring from "spring" /* 5383 */;
+import components_Button_Button from "components/Button/Button" /* 5384 */;
+import _modDef8088 from "module_8088" /* 8088 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 10848 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 10851 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 10855 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 17499 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(10751).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(10850).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -31,7 +31,7 @@ const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const locations = [0, 0.225, 1];
 let closure_17 = { mass: 0.8, stiffness: 400, damping: 32, overshootClamping: true };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 }, floatingContent: { justifyContent: "flex-end" }, floatingBanner: { backgroundColor: "transparent", paddingTop: 0, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_18 = createStyles.createStyles(obj2);
 const __initData = { code: "function GroupDMNitroUpsellBannerTsx1(){const{opacity,translateY}=this.__closure;return{opacity:opacity.get(),transform:[{translateY:translateY.get()}]};}" };
@@ -772,7 +772,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
                   const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
                   const intl2 = util.intl;
                   obj3.children = intl2.string(util.t.KCD0Hp);
-                  const tmp29 = options(Text_Text.Text, obj3);
+                  const tmp29 = React6(Text_Text.Text, obj3);
                   cResult[21] = tmp29;
                   let tmp27 = tmp29;
                 } else {
@@ -784,7 +784,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
                   const intl3 = util.intl;
                   const obj6 = { number };
                   obj5.children = intl3.formatToPlainString(util.t["8o8Zk5"], obj6);
-                  const tmp33 = options(Text_Text.Text, obj5);
+                  const tmp33 = React6(Text_Text.Text, obj5);
                   cResult[22] = tmp33;
                   let tmp30 = tmp33;
                 } else {
@@ -810,7 +810,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
                     let tmp38 = tmp34;
                     if (tmp4) {
                       const obj7 = { visible: tmp16, hideGradient: hideFloatingGradient, onListInsetChange: onFloatingListInsetChange, children: tmp34 };
-                      tmp38 = options(closure_23, obj7);
+                      tmp38 = React6(closure_23, obj7);
                     }
                     cResult[27] = tmp34;
                     cResult[28] = tmp4;
@@ -832,8 +832,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
                 tmp34 = tmp36;
               }
             }
-            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef8081, onPress: tmp14 };
-            const tmp26 = options(components_Button_Button.Button, obj9);
+            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef8088, onPress: tmp14 };
+            const tmp26 = React6(components_Button_Button.Button, obj9);
             cResult[17] = tmp14;
             cResult[18] = tmp21;
             cResult[19] = tmp23;
@@ -904,23 +904,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
     tmp15 = !stateFromStores;
   }
   obj7.shiny = tmp15;
-  obj7.icon = _modDef8081;
+  obj7.icon = _modDef8088;
   obj7.onPress = tmp7Result;
-  obj6.trailing = options(components_Button_Button.Button, obj7);
+  obj6.trailing = React6(components_Button_Button.Button, obj7);
   const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = util.intl;
   obj8.children = intl2.string(util.t.KCD0Hp);
-  const items2 = [options(Text_Text.Text, obj8), ];
+  const items2 = [React6(Text_Text.Text, obj8), ];
   const obj9 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
   const intl3 = util.intl;
   obj9.children = intl3.formatToPlainString(util.t["8o8Zk5"], { number });
-  items2[1] = options(Text_Text.Text, obj9);
+  items2[1] = React6(Text_Text.Text, obj9);
   obj6.children = items2;
   const tmp11Result = collapsed(tmp5Result, obj6);
   let tmp14Result = tmp11Result;
   if (floating) {
     const obj11 = { visible: tmp9, hideGradient: hideFloatingGradient, onListInsetChange: onFloatingListInsetChange, children: tmp11Result };
-    tmp14Result = options(closure_23, obj11);
+    tmp14Result = React6(closure_23, obj11);
   }
   return tmp14Result;
 });

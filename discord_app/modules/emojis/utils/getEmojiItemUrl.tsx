@@ -1,6 +1,6 @@
-// === Module 9515: getEmojiItemUrl ===
+// === Module 9525: getEmojiItemUrl ===
 
-// Module 9515 (getEmojiItemUrl)
+// Module 9525 (getEmojiItemUrl)
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import size from "module_2" /* 2 */;
 

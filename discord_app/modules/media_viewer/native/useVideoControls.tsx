@@ -1,12 +1,12 @@
-// === Module 8390: useVideoControls ===
+// === Module 8397: useVideoControls ===
 
-// Module 8390 (useVideoControls)
+// Module 8397 (useVideoControls)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8388 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8391 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8395 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ require = fn;
 const jsx = fn(21).jsx;
 const module_570 = fn(570);
 const obj5 = module_570.create(() => ({ controls: "Set", paused: true }));
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

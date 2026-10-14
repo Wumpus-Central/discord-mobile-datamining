@@ -1,6 +1,6 @@
-// === Module 7432: HookErrorStore ===
+// === Module 7438: HookErrorStore ===
 
-// Module 7432 (HookErrorStore)
+// Module 7438 (HookErrorStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;

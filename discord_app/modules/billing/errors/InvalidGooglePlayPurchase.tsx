@@ -1,7 +1,7 @@
-// === Module 10061: InvalidGooglePlayPurchase ===
+// === Module 10071: InvalidGooglePlayPurchase ===
 
-// Module 10061 (InvalidGooglePlayPurchase)
-import BillingError from "BillingError" /* 4791 */;
+// Module 10071 (InvalidGooglePlayPurchase)
+import BillingError from "BillingError" /* 4793 */;
 
 const prototype = function InvalidGooglePlayPurchase() {
   return HermesBuiltin.applyArguments(new.target, new.target);

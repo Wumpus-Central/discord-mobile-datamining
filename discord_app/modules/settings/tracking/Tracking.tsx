@@ -1,9 +1,9 @@
-// === Module 15294: settings/tracking/Tracking ===
+// === Module 15331: settings/tracking/Tracking ===
 
-// Module 15294 (settings/tracking/Tracking)
+// Module 15331 (settings/tracking/Tracking)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6685 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6689 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

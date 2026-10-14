@@ -1,11 +1,11 @@
-// === Module 10567: OrbsBadgeCoachmark ===
+// === Module 10577: OrbsBadgeCoachmark ===
 
-// Module 10567 (OrbsBadgeCoachmark)
+// Module 10577 (OrbsBadgeCoachmark)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import useCoachmark from "useCoachmark" /* 9443 */;
-import _modDef10568 from "module_10568" /* 10568 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import useCoachmark from "useCoachmark" /* 9452 */;
+import _modDef10578 from "module_10578" /* 10578 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,14 +13,14 @@ require = fn;
 let closure_3 = ["badgeRef"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 80, height: 80 }, coachmarkDescription: { marginBottom: -10 } });
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsBadgeCoachmarkImg() {
   const cResult = c.c(6);
   const tmp3 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef10568 };
+    const obj2 = { uri: _modDef10578 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -51,7 +51,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsBad
   const tmp = closure_8();
   const obj = { style: tmp.coachmarkImageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef10568 };
+  const obj3 = { uri: _modDef10578 };
   obj2.source = obj3;
   obj2.style = tmp.coachmarkImage;
   obj.children = jsx(FastImageDefault, { source: null, style: null });
@@ -80,7 +80,7 @@ export default function OrbsBadgeCoachmark(badgeRef) {
       tmp9 = cResult[1];
       tmp10 = cResult[2];
     }
-    obj3 = obj3(9443);
+    obj3 = obj3(9452);
     coachmark = obj3.useCoachmark(tmp9, tmp10);
   } else {
     const merged = Object.assign(badgeRef, Object.assign({ badgeRef: 0 }));
@@ -116,7 +116,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
         rootNavigationRef = obj.getRootNavigationRef();
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
-            setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
+            setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "keys" });
             return;
           }
         }
@@ -136,7 +136,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
         rootNavigationRef = obj.getRootNavigationRef();
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
-            setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
+            setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "keys" });
             return;
           }
         }
@@ -152,7 +152,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
         rootNavigationRef = obj.getRootNavigationRef();
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
-            setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
+            setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "keys" });
             return;
           }
         }
@@ -166,7 +166,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
           rootNavigationRef = obj.getRootNavigationRef();
           if (null != rootNavigationRef) {
             if (rootNavigationRef.isReady()) {
-              setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
+              setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "keys" });
               return;
             }
           }
@@ -183,7 +183,7 @@ export const useOrbsBadgeCoachmark = ReactCompilerGating.isReactCompilerEnabled(
           rootNavigationRef = obj.getRootNavigationRef();
           if (null != rootNavigationRef) {
             if (rootNavigationRef.isReady()) {
-              setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "r" });
+              setParamsResult = rootNavigationRef.setParams({ showOrbsBadgeCoachmark: "keys" });
               return;
             }
           }

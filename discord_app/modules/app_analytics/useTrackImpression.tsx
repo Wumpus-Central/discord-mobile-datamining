@@ -1,17 +1,17 @@
-// === Module 8972: useTrackImpression ===
+// === Module 8977: useTrackImpression ===
 
-// Module 8972 (useTrackImpression)
+// Module 8977 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtils2 from "AnalyticsUtils" /* 1265 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import _modDef1355 from "module_1355" /* 1355 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
-import useMountEffectDefault from "useMountEffect" /* 5396 */;
-import uniqueIdDefault from "uniqueId" /* 5935 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5111 */;
+import useMountEffectDefault from "useMountEffect" /* 5401 */;
+import uniqueIdDefault from "uniqueId" /* 5940 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
 
 const require = globalThis.__r;
 
@@ -56,14 +56,14 @@ function trackImpression(type) {
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj2);
   if (flag) {
-    options(null, null);
+    React6(null, null);
   } else {
     if (tmp15) {
       AnalyticsUtils2.debugLogEvent(name, result);
       closure_12(name, result);
       const tmpResult6 = AnalyticsUtils2;
     }
-    options(name, result);
+    React6(name, result);
     tmp15 = null != name && null != type;
   }
   const tmpResult5 = AppAnalyticsUtils;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5396)(() => {
+  obj(5401)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = _modDef1355(ref.current, current);
       if (!tmp6) {

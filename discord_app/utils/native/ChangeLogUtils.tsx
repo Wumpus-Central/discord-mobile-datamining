@@ -1,23 +1,23 @@
-// === Module 8126: utils/ChangeLogUtils ===
+// === Module 8133: utils/ChangeLogUtils ===
 
-// Module 8126 (utils/ChangeLogUtils)
+// Module 8133 (utils/ChangeLogUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6664 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 8128 */;
-import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 8129 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6668 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8135 */;
+import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 8136 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 5399 */;
+import CustomMarkup from "CustomMarkup" /* 5404 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, container: null, text: null };
 let obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5969).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-let obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5969).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5974).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+let obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5974).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});
@@ -229,7 +229,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = output(5088).Text;
+    Paragraph = output(5092).Text;
   }
   if (cResult[0] === Paragraph) {
     if (cResult[1] === node.content) {
@@ -258,7 +258,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   }
   let obj = output(576);
   const forResult = Symbol.for("react.early_return_sentinel");
-  const result = output(8127).splitParagraphAtImages(node.content);
+  const result = output(8134).splitParagraphAtImages(node.content);
   if (true === state.changelogImagesDisabled) {
     if (cResult[9] === node.content) {
       if (cResult[10] === output) {
@@ -300,7 +300,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     cResult[12] = outputResult;
     tmp13 = outputResult;
   } else {
-    output(8127);
+    output(8134);
   }
   if (cResult[18] === Paragraph) {
     if (cResult[19] === output) {
@@ -349,7 +349,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   cResult[21] = tmp4;
   cResult[22] = T;
   tmp20 = T;
-  const tmpResult = output(8127);
+  const tmpResult = output(8134);
 }) : (function ChangeLogParagraph(state) {
   ({ node, output } = state);
   state = state.state;
@@ -361,9 +361,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = output(5088).Text;
+    Paragraph = output(5092).Text;
   }
-  const result = output(8127).splitParagraphAtImages(node.content);
+  const result = output(8134).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -401,7 +401,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     }
     return tmp7;
   }
-  let obj = output(8127);
+  let obj = output(8134);
   tmp7 = <Paragraph key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
 });

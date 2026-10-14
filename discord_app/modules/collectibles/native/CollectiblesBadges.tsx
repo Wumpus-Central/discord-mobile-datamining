@@ -1,13 +1,13 @@
-// === Module 9034: CollectiblesBadges ===
+// === Module 9039: CollectiblesBadges ===
 
-// Module 9034 (CollectiblesBadges)
+// Module 9039 (CollectiblesBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import LockIcon from "LockIcon" /* 8223 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9035 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9036 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import LockIcon from "LockIcon" /* 8230 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9040 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9041 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,11 +15,11 @@ const View = fn(17).View;
 const PremiumTypes = fn(1392).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { badgeTextUppercase: { textTransform: "uppercase" }, badgeSurfaceDarkMode: { backgroundColor: nativeDefault.colors.WHITE }, badgeSurfaceLightMode: null, newIconBadge: null, limitedTimeBadge: null, lockIconBadge: null, newLockIconBadge: null, badgePill: null, iconTextBadge: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
-obj2.badgeSurfaceLightMode = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
-let obj4 = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
+obj2.badgeSurfaceLightMode = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
+let obj4 = { backgroundColor: nativeDefault.colors.BADGE_PRIMARY_BACKGROUND };
 obj2.newIconBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, paddingHorizontal: 6, paddingVertical: 2 };
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, paddingHorizontal: 6, paddingVertical: 2 };
 obj2.limitedTimeBadge = { backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.md, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4 };

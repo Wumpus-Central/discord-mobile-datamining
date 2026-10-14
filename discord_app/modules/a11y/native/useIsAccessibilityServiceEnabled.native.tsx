@@ -1,8 +1,8 @@
-// === Module 7897: useIsAccessibilityServiceEnabled ===
+// === Module 7904: useIsAccessibilityServiceEnabled ===
 
-// Module 7897 (useIsAccessibilityServiceEnabled)
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5303 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
+// Module 7904 (useIsAccessibilityServiceEnabled)
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5308 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5367 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

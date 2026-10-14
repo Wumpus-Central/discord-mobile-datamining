@@ -1,9 +1,9 @@
-// === Module 6750: useFastestListPropsPlaceholder ===
+// === Module 6754: useFastestListPropsPlaceholder ===
 
-// Module 6750 (useFastestListPropsPlaceholder)
+// Module 6754 (useFastestListPropsPlaceholder)
 import c from "c" /* 576 */;
-import ColorUtils from "ColorUtils" /* 4967 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6751 */;
+import ColorUtils from "ColorUtils" /* 4969 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6755 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function createNativePlaceholderConfig(listFooter) {
   if (type == null) {
     NONE = FastestListPropsPlaceholder.FastestListPropsPlaceholderType.NONE;
   }
-  const size = { borderRadius: "Array", borderTopLeftRadius: "defineProperty", borderTopRightRadius: "colors", borderBottomLeftRadius: "width", borderBottomRightRadius: "surrogates", divider: "top", dividerColor: "a", dividerPaddingLeft: "constructor", dividerPaddingRight: "analyticsLocations", placeholderShape: "bottom", placeholderShapeColor: "key", placeholderShapeCount: "status", placeholderShapeGap: "flex", placeholderShapePaddingHorizontal: "substring_i", placeholderShapePaddingVertical: "lj", placeholderFeedBackgroundColor: "it", placeholderFeedColor: "justifyContent", placeholderFeedLabelPadding: "status", placeholderFeedLabelPaddingInnerRatio: "code", placeholderFeedLabelSize: "start", placeholderFeedLabelSecondarySize: "alignItems", placeholderFeedPadding: "backgroundColor", placeholderFeedShape: "method", placeholderFeedShapeSize: "right", placeholderType: NONE, width: -0.00000001583770905069261, height: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006406666249354277, verticalAlignment: 0.000000000000000000000000000000000000000000000000000000000000000000051421011221215305, horizontalAlignment: 5.2 };
+  const size = { borderRadius: "Array", borderTopLeftRadius: "defineProperty", borderTopRightRadius: "code", borderBottomLeftRadius: "IconComponent", borderBottomRightRadius: "item", divider: "code", dividerColor: "status", dividerPaddingLeft: "useSharedValue", dividerPaddingRight: "channel", placeholderShape: "useMemo", placeholderShapeColor: "now", placeholderShapeCount: "a", placeholderShapeGap: "toCharArray$esjava$1", placeholderShapePaddingHorizontal: "scales", placeholderShapePaddingVertical: "raw", placeholderFeedBackgroundColor: "a", placeholderFeedColor: "toCharArray$esjava$1", placeholderFeedLabelPadding: "get", placeholderFeedLabelPaddingInnerRatio: "messageId", placeholderFeedLabelSize: "a", placeholderFeedLabelSecondarySize: "toCharArray$esjava$1", placeholderFeedPadding: "withTiming", placeholderFeedShape: "split", placeholderFeedShapeSize: "a", placeholderType: NONE, width: true, height: true, verticalAlignment: true, horizontalAlignment: true };
   if (null == listFooter) {
     return size;
   } else {
@@ -134,9 +134,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(6751).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(6755).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(6751).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(6755).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

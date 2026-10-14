@@ -1,11 +1,11 @@
-// === Module 11935: ConjureIdeaCards ===
+// === Module 11971: ConjureIdeaCards ===
 
-// Module 11935 (ConjureIdeaCards)
+// Module 11971 (ConjureIdeaCards)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Stack_Stack from "Stack/Stack" /* 5377 */;
-import Card from "Card" /* 6182 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import Stack_Stack from "Stack/Stack" /* 5382 */;
+import Card from "Card" /* 6186 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,11 +14,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5092);
-let obj2 = { ideaCards: { gap: fn(11814).BLOCK_GAP } };
+const createStyles = fn(5096);
+let obj2 = { ideaCards: { gap: fn(11842).BLOCK_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { gap: fn(11814).BLOCK_GAP };
+let obj3 = { gap: fn(11842).BLOCK_GAP };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureIdeaCards.tsx");
 
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
     const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     let intl = onPick(1126).intl;
     obj2.children = intl.string(_modDef3849["wx/o8Y"]);
-    const tmp8 = closure_4(onPick(5088).Text, obj2);
+    const tmp8 = closure_4(onPick(5092).Text, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
   } else {
@@ -66,15 +66,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
       };
       const intl = onPick(1126).intl;
       obj.accessibilityLabel = intl.formatToPlainString(_modDef3849.H8G39M, { title: title.title });
-      const items = [closure_1_4(onPick(5088).Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
+      const items = [closure_1_4(onPick(5092).Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
       let tmpResult = null;
       if ("" !== title.value) {
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: title.value };
-        tmpResult = closure_1_4(onPick(5088).Text, obj4);
+        tmpResult = closure_1_4(onPick(5092).Text, obj4);
       }
       items[1] = tmpResult;
-      obj.children = closure_1_5(onPick(5377).Stack, { direction: "vertical", spacing: 4, children: items });
-      return closure_1_4(onPick(6182).Card, obj, title.id);
+      obj.children = closure_1_5(onPick(5382).Stack, { direction: "vertical", spacing: 4, children: items });
+      return closure_1_4(onPick(6186).Card, obj, title.id);
     };
     cResult[4] = onPick;
     cResult[5] = fn;

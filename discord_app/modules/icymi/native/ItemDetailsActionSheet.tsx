@@ -1,22 +1,22 @@
-// === Module 17225: ItemDetailsActionSheet ===
+// === Module 17259: ItemDetailsActionSheet ===
 
-// Module 17225 (ItemDetailsActionSheet)
+// Module 17259 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import useChannelNameDefault from "useChannelName" /* 5421 */;
-import GuildIcon from "GuildIcon" /* 6159 */;
-import TableRow from "TableRow" /* 6180 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6203 */;
-import TableRowGroup from "TableRowGroup" /* 6265 */;
-import ActionSheet from "ActionSheet" /* 6899 */;
-import ICYMIUtils from "ICYMIUtils" /* 8471 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 10469 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 17226 */;
+import useChannelNameDefault from "useChannelName" /* 5426 */;
+import GuildIcon from "GuildIcon" /* 6163 */;
+import TableRow from "TableRow" /* 6184 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6207 */;
+import TableRowGroup from "TableRowGroup" /* 6269 */;
+import ActionSheet from "ActionSheet" /* 6904 */;
+import ICYMIUtils from "ICYMIUtils" /* 8478 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 10479 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 17260 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import ICYMIStore from "ICYMIStore" /* 8454 */;
+import ICYMIStore from "ICYMIStore" /* 8461 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

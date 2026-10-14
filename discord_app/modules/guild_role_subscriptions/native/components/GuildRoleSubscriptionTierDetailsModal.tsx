@@ -1,26 +1,26 @@
-// === Module 18595: GuildRoleSubscriptionTierDetailsModal ===
+// === Module 18631: GuildRoleSubscriptionTierDetailsModal ===
 
-// Module 18595 (GuildRoleSubscriptionTierDetailsModal)
+// Module 18631 (GuildRoleSubscriptionTierDetailsModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Form from "Form" /* 8580 */;
-import FormHeaderDefault from "FormHeader" /* 8677 */;
-import FormStylesDefault from "FormStyles" /* 14462 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15820 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15835 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18552 */;
-import FormImagePicker from "FormImagePicker" /* 18558 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18559 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 18575 */;
-import FormPriceTierDefault from "FormPriceTier" /* 18596 */;
+import Form from "Form" /* 8587 */;
+import FormHeaderDefault from "FormHeader" /* 8682 */;
+import FormStylesDefault from "FormStyles" /* 14499 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15857 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15872 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 18588 */;
+import FormImagePicker from "FormImagePicker" /* 18594 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18595 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 18611 */;
+import FormPriceTierDefault from "FormPriceTier" /* 18632 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(15813);
+const GuildRoleSubscriptionsConstants = fn(15850);
 ({ GuildRoleSubscriptionsTierScenes: hasOwnProperty, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
 const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
@@ -68,7 +68,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   }
   if (cResult[3] !== tmp5.header) {
     const obj8 = { style: tmp5.header, children: tmp17 };
-    const tmp21 = options(FormHeaderDefault, obj8);
+    const tmp21 = React6(FormHeaderDefault, obj8);
     cResult[3] = tmp5.header;
     cResult[4] = tmp21;
   }
@@ -111,8 +111,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   cResult[8] = tmp13;
   cResult[9] = roleSubscriptionSettingsDisabled;
   cResult[10] = B;
-  cResult[11] = options(FormImagePickerDefault, obj9);
-  const tmp26 = options(FormImagePickerDefault, obj9);
+  cResult[11] = React6(FormImagePickerDefault, obj9);
+  const tmp26 = React6(FormImagePickerDefault, obj9);
 }) : (function Content() {
   const tmp3 = FormStylesDefault();
   const editStateContext = EditStateContextProvider.useEditStateContext();
@@ -142,7 +142,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const tmp4Result2 = RoleSubscriptionSettingsDisabledContext;
   const intl = util.intl;
   obj7.children = intl.string(util.t["6XpbbR"]);
-  const items = [options(FormHeaderDefault, obj7), , , , , , , ];
+  const items = [React6(FormHeaderDefault, obj7), , , , , , , ];
   const obj8 = { description: null, image: null, imageUploadSize: null, previewShape: null, setImage: null, disabled: null };
   const tmpResult = FormHeaderDefault;
   const intl2 = util.intl;
@@ -154,42 +154,42 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     return _require(uri.uri);
   };
   obj8.disabled = roleSubscriptionSettingsDisabled;
-  items[1] = options(FormImagePickerDefault, obj8);
+  items[1] = React6(FormImagePickerDefault, obj8);
   const obj9 = { style: tmp3.header, children: null };
   const tmpResult6 = FormImagePickerDefault;
   const intl3 = util.intl;
   obj9.children = intl3.string(util.t.rJ6Oad);
-  items[2] = options(FormHeaderDefault, obj9);
+  items[2] = React6(FormHeaderDefault, obj9);
   const obj10 = { style: tmp3.textInput, showTopContainer: false, multiline: false, maxLength: maxLength2, value: tmp7, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null, disabled: null };
   const intl4 = util.intl;
   obj10.placeholder = intl4.string(util.t["i4/g+E"]);
   obj10.onChange = tmp8;
   obj10.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
   obj10.disabled = roleSubscriptionSettingsDisabled;
-  items[3] = options(Form.FormInput, obj10);
+  items[3] = React6(Form.FormInput, obj10);
   const obj11 = { style: tmp3.header, children: null };
   const tmpResult7 = FormHeaderDefault;
   const intl5 = util.intl;
   obj11.children = intl5.string(util.t["74JctW"]);
-  items[4] = options(FormHeaderDefault, obj11);
+  items[4] = React6(FormHeaderDefault, obj11);
   const obj12 = { style: tmp3.textInput, showTopContainer: false, multiline: true, maxLength, numberOfLines: 3, value: tmp15, placeholder: null, onChange: null, disabled: null };
   const intl6 = util.intl;
   obj12.placeholder = intl6.string(util.t["3YHwoG"]);
   obj12.onChange = tmp16;
   obj12.disabled = roleSubscriptionSettingsDisabled;
-  items[5] = options(Form.FormInput, obj12);
+  items[5] = React6(Form.FormInput, obj12);
   const obj13 = { style: tmp3.header, children: null };
   const tmpResult8 = FormHeaderDefault;
   const intl7 = util.intl;
   obj13.children = intl7.string(util.t.CrRVAx);
-  items[6] = options(FormHeaderDefault, obj13);
+  items[6] = React6(FormHeaderDefault, obj13);
   const tmpResult9 = FormHeaderDefault;
   if (!tmp20) {
     tmp20 = roleSubscriptionSettingsDisabled;
   }
   const obj14 = { disabled: tmp20, guildId: editStateContext.guildId, price: tmp12, onChange: tmp13 };
   const obj15 = { children: null };
-  items[7] = options(FormPriceTierDefault, obj14);
+  items[7] = React6(FormPriceTierDefault, obj14);
   obj15.children = items;
   return closure_1_11(collapsed, obj15);
 });
@@ -197,7 +197,7 @@ ReactCompilerGating = fn(558);
 const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleSubscriptionTierDetailsTab() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp5 = options(closure_12, {});
+    const tmp5 = React6(closure_12, {});
     cResult[0] = tmp5;
     let first = tmp5;
   } else {
@@ -205,7 +205,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   return first;
 }) : (function GuildRoleSubscriptionTierDetailsTab() {
-  return options(closure_12, {});
+  return React6(closure_12, {});
 }));
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     [tmp7, tmp8] = cResult;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp14 = options(memoResult, {});
+    const tmp14 = React6(memoResult, {});
     cResult[2] = tmp14;
     let tmp11 = tmp14;
   } else {
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   obj6 = GuildRoleSubscriptionListingEditStateUtilsAll;
   const merged = Object.assign(arg0);
   obj7.children = tmp11;
-  const tmp18 = options(GuildRoleSubscriptionTierEditStepDefault, obj7);
+  const tmp18 = React6(GuildRoleSubscriptionTierEditStepDefault, obj7);
   cResult[3] = tmp4;
   cResult[4] = arg0;
   cResult[5] = tmp18;
@@ -285,7 +285,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
   obj6.canProceedToNextStep = tmp3;
   obj6.nextStep = constants.CHANNEL_BENEFITS;
   const merged = Object.assign(arg0);
-  obj6.children = options(memoResult, {});
-  return options(GuildRoleSubscriptionTierEditStepDefault, obj6);
+  obj6.children = React6(memoResult, {});
+  return React6(GuildRoleSubscriptionTierEditStepDefault, obj6);
 });
 export const GuildRoleSubscriptionTierDetailsTab = memoResult;

@@ -1,20 +1,20 @@
-// === Module 17039: FavoritesGuildSidebarHeader ===
+// === Module 17076: FavoritesGuildSidebarHeader ===
 
-// Module 17039 (FavoritesGuildSidebarHeader)
+// Module 17076 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import _modDef3442 from "module_3442" /* 3442 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Stack_Stack from "Stack/Stack" /* 5377 */;
-import ChatIcon from "ChatIcon" /* 8199 */;
-import TextIcon from "TextIcon" /* 8208 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8229 */;
-import FavoritesHooks from "FavoritesHooks" /* 10313 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10316 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13198 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import Stack_Stack from "Stack/Stack" /* 5382 */;
+import ChatIcon from "ChatIcon" /* 8206 */;
+import TextIcon from "TextIcon" /* 8215 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8236 */;
+import FavoritesHooks from "FavoritesHooks" /* 10323 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10326 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 13233 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,11 +35,11 @@ function EmptyBody() {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16943).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16980).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

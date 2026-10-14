@@ -1,22 +1,22 @@
-// === Module 18535: CreatorHighlightSection ===
+// === Module 18571: CreatorHighlightSection ===
 
-// Module 18535 (CreatorHighlightSection)
+// Module 18571 (CreatorHighlightSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import LinkingDefault from "Linking" /* 4806 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import _modDef9467 from "module_9467" /* 9467 */;
-import EmojiIconDefault from "EmojiIcon" /* 15848 */;
+import LinkingDefault from "Linking" /* 4808 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import _mod6818 from "module_6818" /* 6818 */;
+import _modDef9476 from "module_9476" /* 9476 */;
+import EmojiIconDefault from "EmojiIcon" /* 15885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5092);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5096);
 let obj2 = { horizontalContainer: { flexDirection: "row" }, serverSubscriberCount: { marginTop: 8 }, subscriberCountContainer: { alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BRAND_530, paddingEnd: 8, borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, subscriberCount: null, subscriberCountIcon: null, cardContainer: null, cardHeaderContainer: null, guildIcon: null, ownerQuote: null, ownerUsername: null, premiumEmojisTitle: null, viewServerButtonContainer: null, viewServerButton: null, emojiSectionContainer: null, emojiContainer: null, emojiListItem: null, emoji: null };
 let obj3 = { alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BRAND_530, paddingEnd: 8, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj2.subscriberCount = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_630, paddingHorizontal: 8, paddingVertical: 4 };
@@ -36,12 +36,12 @@ let obj6 = { width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_MOD
 obj2.emojiContainer = { width: "100%", marginTop: 8, paddingHorizontal: 8, justifyContent: "space-around", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, alignItems: "center", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.emojiListItem = { marginHorizontal: 8 };
 obj2.emoji = { height: 24, width: 24, marginVertical: 8 };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildServerSubscriberCount(arg0) {
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildServerSubscriberCount(arg0) {
   const cResult = c.c(14);
   ({ subscriberCount, style } = arg0);
-  const tmp4 = closure_8();
+  const tmp4 = closure_7();
   if (cResult[0] === style) {
     if (cResult[1] === tmp4.horizontalContainer) {
       if (cResult[2] === tmp4.subscriberCountContainer) {
@@ -52,8 +52,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSe
           let tmp6 = cResult[6];
         }
         if (cResult[7] !== tmp4.subscriberCountIcon) {
-          const obj2 = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp4.subscriberCountIcon, source: _modDef9467 };
-          const tmp12 = timestampProducer(native.Icon, obj2);
+          const obj2 = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp4.subscriberCountIcon, source: _modDef9476 };
+          const tmp12 = hasOwnProperty(native.Icon, obj2);
           cResult[7] = tmp4.subscriberCountIcon;
           cResult[8] = tmp12;
           let tmp9 = tmp12;
@@ -65,7 +65,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSe
           const obj3 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
           const intl = util.intl;
           obj3.children = intl.string(util.t["3NNXPW"]);
-          const tmp16 = timestampProducer(Text_Text.Text, obj3);
+          const tmp16 = hasOwnProperty(Text_Text.Text, obj3);
           cResult[9] = tmp16;
           let tmp14 = tmp16;
         } else {
@@ -82,7 +82,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSe
         const obj4 = { style: tmp5, children: null };
         const items = [tmp6, tmp9, tmp14];
         obj4.children = items;
-        const tmp20 = React5(React4, obj4);
+        const tmp20 = timestampProducer(View, obj4);
         cResult[10] = tmp5;
         cResult[11] = tmp6;
         cResult[12] = tmp9;
@@ -90,7 +90,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSe
         tmp17 = tmp20;
       }
       const obj5 = { style: tmp4.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount };
-      const tmp8 = timestampProducer(Text_Text.Text, obj5);
+      const tmp8 = hasOwnProperty(Text_Text.Text, obj5);
       cResult[4] = tmp4.subscriberCount;
       cResult[5] = subscriberCount;
       cResult[6] = tmp8;
@@ -107,31 +107,31 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSe
   tmp5 = items1;
 }) : (function GuildServerSubscriberCount(arg0) {
   ({ subscriberCount, style } = arg0);
-  const tmp = closure_8();
+  const tmp = closure_7();
   const obj = { style: null, children: null };
   const items = [, , ];
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj.style = items;
-  const items1 = [timestampProducer(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef9467 }), ];
+  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), hasOwnProperty(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef9476 }), ];
   const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["3NNXPW"]);
-  items1[2] = timestampProducer(Text_Text.Text, obj4);
+  items1[2] = hasOwnProperty(Text_Text.Text, obj4);
   obj.children = items1;
-  return React5(React4, obj);
+  return timestampProducer(View, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorGuildCard(highlightedCreatorGuild) {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorGuildCard(highlightedCreatorGuild) {
   const cResult = require("c").c(58);
   highlightedCreatorGuild = highlightedCreatorGuild.highlightedCreatorGuild;
-  const tmp4 = closure_8();
+  const tmp4 = closure_7();
   _require = tmp4;
   let obj = require("c");
   const typeConsolidationEyebrow = require("useTypeConsolidationTextTransform").useTypeConsolidationEyebrow("CreatorHighlightSection", "text-xs/semibold");
   const guild_id = highlightedCreatorGuild.guild_id;
   ({ quote, quote_attribution, quote_attribution_title } = highlightedCreatorGuild);
-  const tmp7 = guild_id(18536)(guild_id, 3, 60);
+  const tmp7 = guild_id(18572)(guild_id, 3, 60);
   dependencyMap = tmp7;
   const hasAllImperativeDetails = tmp7.hasAllImperativeDetails;
   if (cResult[0] === tmp7.details) {
@@ -141,7 +141,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
     if (tmp8) {
       const _Symbol2 = Symbol;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp67 = closure_6(tmp6(18508), {});
+        const tmp67 = closure_5(tmp6(18544), {});
         cResult[3] = tmp67;
         let tmp65 = tmp67;
       } else {
@@ -149,7 +149,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
       }
       if (cResult[4] !== tmp4.cardContainer) {
         const obj3 = { style: tmp4.cardContainer, children: tmp65 };
-        const tmp71 = closure_6(closure_4, obj3);
+        const tmp71 = closure_5(View, obj3);
         cResult[4] = tmp4.cardContainer;
         cResult[5] = tmp71;
         let tmp68 = tmp71;
@@ -173,7 +173,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
         }
         if (cResult[11] !== guildName) {
           const obj5 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: guildName };
-          const tmp17 = closure_6(tmp(5088).Text, obj5);
+          const tmp17 = closure_5(tmp(5092).Text, obj5);
           cResult[11] = guildName;
           cResult[12] = tmp17;
           let tmp15 = tmp17;
@@ -253,7 +253,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
                                               const obj6 = { style: tmp4.cardContainer, children: null };
                                               let items = [tmp27, tmp31, tmp39, tmp42, tmp56];
                                               obj6.children = items;
-                                              const tmp63 = closure_7(closure_4, obj6);
+                                              const tmp63 = closure_6(View, obj6);
                                               cResult[51] = tmp4.cardContainer;
                                               cResult[52] = tmp39;
                                               cResult[53] = tmp42;
@@ -264,14 +264,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
                                               tmp60 = tmp63;
                                             }
                                             const obj7 = { style: viewServerButtonContainer, children: tmp53 };
-                                            const tmp59 = closure_6(closure_4, obj7);
+                                            const tmp59 = closure_5(View, obj7);
                                             cResult[48] = tmp4.viewServerButtonContainer;
                                             cResult[49] = tmp53;
                                             cResult[50] = tmp59;
                                             tmp56 = tmp59;
                                           }
                                           const obj8 = { pillStyle: viewServerButton, text: tmp51, onPress: tmp9, shrink: true };
-                                          const tmp55 = closure_6(tmp(5380).BaseTextButton, obj8);
+                                          const tmp55 = closure_5(tmp(5385).BaseTextButton, obj8);
                                           cResult[45] = tmp9;
                                           cResult[46] = tmp4.viewServerButton;
                                           cResult[47] = tmp55;
@@ -297,7 +297,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
                           obj10.variant = typeConsolidationEyebrow.variant;
                           const intl3 = tmp(1126).intl;
                           obj10.children = intl3.string(tmp(1126).t.wg53L8);
-                          const items2 = [closure_6(tmp(5088).Text, obj10), ];
+                          const items2 = [closure_5(tmp(5092).Text, obj10), ];
                           const obj11 = { style: null, children: null };
                           const items3 = [, ];
                           ({ horizontalContainer: arr5[0], emojiContainer: arr5[1] } = tmp4);
@@ -308,7 +308,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
                                                       const items = [, ];
                                                       ({ emoji: arr[0], emojiListItem: arr[1] } = closure_0);
                                                       obj.style = items;
-                                                      return timestampProducer(EmojiIconDefault, obj, id.id);
+                                                      return hasOwnProperty(EmojiIconDefault, obj, id.id);
                                                     }),
 
                           ];
@@ -317,13 +317,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
                             const obj12 = { style: tmp4.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: null };
                             const _HermesInternal = HermesInternal;
                             obj12.children = "+" + notShownEmojiCount;
-                            tmp47Result = closure_6(tmp(5088).Text, obj12);
+                            tmp47Result = closure_5(tmp(5092).Text, obj12);
                           }
                           items4[1] = tmp47Result;
                           obj11.children = items4;
-                          items2[1] = closure_7(closure_4, obj11);
+                          items2[1] = closure_6(View, obj11);
                           obj9.children = items2;
-                          tmp45Result = closure_7(closure_4, obj9);
+                          tmp45Result = closure_6(View, obj9);
                         }
                         cResult[33] = emojisToShow;
                         cResult[34] = typeConsolidationEyebrow;
@@ -339,7 +339,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
                         tmp42 = tmp45Result;
                       }
                       const obj13 = { style: tmp34, variant: "text-sm/normal", color: "text-default", lineClamp: 1, lineBreakMode: "tail", children: tmp35 };
-                      const tmp41 = closure_6(tmp(5088).Text, obj13);
+                      const tmp41 = closure_5(tmp(5092).Text, obj13);
                       cResult[30] = tmp4.ownerUsername;
                       cResult[31] = tmp35;
                       cResult[32] = tmp41;
@@ -360,7 +360,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
                     tmp35 = formatResult;
                   }
                   const obj15 = { style: tmp4.ownerQuote, variant: "text-md/normal", color: "text-default", children: quote };
-                  const tmp33 = closure_6(tmp(5088).Text, obj15);
+                  const tmp33 = closure_5(tmp(5092).Text, obj15);
                   cResult[24] = quote;
                   cResult[25] = tmp4.ownerQuote;
                   cResult[26] = tmp33;
@@ -370,7 +370,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
               const obj16 = { style: tmp4.horizontalContainer, children: null };
               const items5 = [tmp12, tmp23];
               obj16.children = items5;
-              const tmp30 = closure_7(closure_4, obj16);
+              const tmp30 = closure_6(View, obj16);
               cResult[20] = tmp4.horizontalContainer;
               cResult[21] = tmp12;
               cResult[22] = tmp23;
@@ -381,7 +381,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
           const obj17 = { style: tmp4.cardHeaderContainer, children: null };
           const items6 = [tmp15, tmp18];
           obj17.children = items6;
-          const tmp26 = closure_7(closure_4, obj17);
+          const tmp26 = closure_6(View, obj17);
           cResult[16] = tmp4.cardHeaderContainer;
           cResult[17] = tmp15;
           cResult[18] = tmp18;
@@ -391,7 +391,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
         let tmp20 = null != subscriberCount;
         if (tmp20) {
           const obj18 = { subscriberCount, style: tmp4.serverSubscriberCount };
-          tmp20 = closure_6(closure_9, obj18);
+          tmp20 = closure_5(closure_8, obj18);
         }
         cResult[13] = tmp4.serverSubscriberCount;
         cResult[14] = subscriberCount;
@@ -399,7 +399,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
         tmp18 = tmp20;
       }
       const obj19 = { style: tmp4.guildIcon, source: tmp11 };
-      const tmp14 = closure_6(tmp6(6157), obj19);
+      const tmp14 = closure_5(tmp6(5034), obj19);
       cResult[8] = tmp4.guildIcon;
       cResult[9] = tmp11;
       cResult[10] = tmp14;
@@ -408,7 +408,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
       return null;
     }
   }
-  const fn = function n() {
+  const fn = function o() {
     if (hasAllImperativeDetails) {
       const storePageUrl = details.details.storePageUrl;
       if (null != storePageUrl) {
@@ -423,19 +423,19 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
   const obj2 = require("useTypeConsolidationTextTransform");
 }) : (function CreatorGuildCard(highlightedCreatorGuild) {
   highlightedCreatorGuild = highlightedCreatorGuild.highlightedCreatorGuild;
-  const tmp = closure_8();
+  const tmp = closure_7();
   _require = tmp;
   const typeConsolidationEyebrow = require("useTypeConsolidationTextTransform").useTypeConsolidationEyebrow("CreatorHighlightSection", "text-xs/semibold");
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(18536)(guild_id, 3, 60);
+  const tmp6 = guild_id(18572)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18508), {}) };
-    return closure_6(closure_4, obj2);
+    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp5(18544), {}) };
+    return closure_5(View, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;
     ({ subscriberCount, emojisToShow, notShownEmojiCount } = details);
@@ -445,22 +445,22 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
     const obj5 = { style: tmp.guildIcon, source: null };
     const obj6 = { uri: guildAvatarUrl };
     obj5.source = obj6;
-    const items1 = [closure_6(tmp5(6157), obj5), ];
+    const items1 = [closure_5(tmp5(5034), obj5), ];
     const obj7 = { style: tmp.cardHeaderContainer, children: null };
     const obj8 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: guildName };
-    const items2 = [closure_6(tmp2(5088).Text, obj8), ];
+    const items2 = [closure_5(tmp2(5092).Text, obj8), ];
     let tmp11Result = null != subscriberCount;
     if (tmp11Result) {
       const obj9 = { subscriberCount, style: tmp.serverSubscriberCount };
-      tmp11Result = closure_6(closure_9, obj9);
+      tmp11Result = closure_5(closure_8, obj9);
     }
     items2[1] = tmp11Result;
     obj7.children = items2;
-    items1[1] = closure_7(closure_4, obj7);
+    items1[1] = closure_6(View, obj7);
     obj4.children = items1;
-    const items3 = [closure_7(closure_4, obj4), , , , ];
+    const items3 = [closure_6(View, obj4), , , , ];
     const obj10 = { style: tmp.ownerQuote, variant: "text-md/normal", color: "text-default", children: quote };
-    items3[1] = closure_6(tmp2(5088).Text, obj10);
+    items3[1] = closure_5(tmp2(5092).Text, obj10);
     const obj11 = { style: tmp.ownerUsername, variant: "text-sm/normal", color: "text-default", lineClamp: 1, lineBreakMode: "tail", children: null };
     const intl = tmp2(1126).intl;
     const obj12 = { attributionName: quote_attribution, attributionTitle: null };
@@ -470,7 +470,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
     }
     obj12.attributionTitle = quote_attribution_title;
     obj11.children = intl.format(tmp2(1126).t.m0b6Kj, obj12);
-    items3[2] = closure_6(tmp2(5088).Text, obj11);
+    items3[2] = closure_5(tmp2(5092).Text, obj11);
     let tmp9Result = null != emojisToShow;
     if (tmp9Result) {
       tmp9Result = emojisToShow.length > 0;
@@ -483,7 +483,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
       obj14.variant = typeConsolidationEyebrow.variant;
       const intl3 = tmp2(1126).intl;
       obj14.children = intl3.string(tmp2(1126).t.wg53L8);
-      const items5 = [closure_6(tmp2(5088).Text, obj14), ];
+      const items5 = [closure_5(tmp2(5092).Text, obj14), ];
       const obj15 = { style: null, children: null };
       const items6 = [, ];
       ({ horizontalContainer: arr7[0], emojiContainer: arr7[1] } = tmp);
@@ -494,7 +494,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
               const items = [, ];
               ({ emoji: arr[0], emojiListItem: arr[1] } = closure_0);
               obj.style = items;
-              return timestampProducer(EmojiIconDefault, obj, id.id);
+              return hasOwnProperty(EmojiIconDefault, obj, id.id);
             }),
 
       ];
@@ -503,13 +503,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
         const obj16 = { style: tmp.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: null };
         const _HermesInternal = HermesInternal;
         obj16.children = "+" + notShownEmojiCount;
-        tmp11Result2 = closure_6(tmp2(5088).Text, obj16);
+        tmp11Result2 = closure_5(tmp2(5092).Text, obj16);
       }
       items7[1] = tmp11Result2;
       obj15.children = items7;
-      items5[1] = closure_7(closure_4, obj15);
+      items5[1] = closure_6(View, obj15);
       obj13.children = items5;
-      tmp9Result = closure_7(closure_4, obj13);
+      tmp9Result = closure_6(View, obj13);
     }
     items3[3] = tmp9Result;
     const obj17 = { style: tmp.viewServerButtonContainer, children: null };
@@ -517,17 +517,18 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Creato
     const intl4 = tmp2(1126).intl;
     obj18.text = intl4.string(tmp2(1126).t.mQ2IGa);
     obj18.onPress = tmp7;
-    obj17.children = closure_6(tmp2(5380).BaseTextButton, obj18);
-    items3[4] = closure_6(closure_4, obj17);
+    obj17.children = closure_5(tmp2(5385).BaseTextButton, obj18);
+    items3[4] = closure_5(View, obj17);
     obj3.children = items3;
-    return closure_7(closure_4, obj3);
+    return closure_6(View, obj3);
   } else {
     return null;
   }
   let obj = require("useTypeConsolidationTextTransform");
 });
-function renderItem(highlightedCreatorGuild) {
-  return timestampProducer(closure_10, { highlightedCreatorGuild: highlightedCreatorGuild.item });
+function renderItem(item) {
+  const highlightedCreatorGuild = item.item;
+  return hasOwnProperty(closure_9, { highlightedCreatorGuild }, highlightedCreatorGuild.guild_id);
 }
 ReactCompilerGating = fn(558);
 let obj7 = { width: "100%", marginTop: 8, paddingHorizontal: 8, justifyContent: "space-around", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, alignItems: "center", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
@@ -548,16 +549,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorH
   }
   if (cResult[1] !== highlightedCreators) {
     const obj2 = { data: highlightedCreators, horizontal: true, keyExtractor: first, renderItem };
-    const tmp7 = timestampProducer(hasOwnProperty, obj2);
+    const tmp8 = hasOwnProperty(_mod6818.FlashList, obj2);
     cResult[1] = highlightedCreators;
-    cResult[2] = tmp7;
-    let tmp3 = tmp7;
+    cResult[2] = tmp8;
+    let tmp5 = tmp8;
   } else {
-    tmp3 = cResult[2];
+    tmp5 = cResult[2];
   }
-  return tmp3;
+  return tmp5;
 }) : (function CreatorHighlightSection(data) {
-  return timestampProducer(hasOwnProperty, {
+  return hasOwnProperty(_mod6818.FlashList, {
     data: data.highlightedCreators,
     horizontal: true,
     keyExtractor(guild_id) {

@@ -1,18 +1,18 @@
-// === Module 18585: GuildRoleSubscriptionEmojiEditorModal ===
+// === Module 18621: GuildRoleSubscriptionEmojiEditorModal ===
 
-// Module 18585 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 18621 (GuildRoleSubscriptionEmojiEditorModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
-import common_AlertDefault from "common/Alert" /* 5398 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import EmojiAliasDefault from "EmojiAlias" /* 18571 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5304 */;
+import common_AlertDefault from "common/Alert" /* 5403 */;
+import EmojiAliasDefault from "EmojiAlias" /* 18607 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5988 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5993 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" }, emojiList: null, row: null, emojiImage: null, emojiAlias: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
 obj2.emojiList = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -322,18 +322,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
       obj2.source = obj3;
       obj.leading = set(tmp2, obj2);
       obj.label = function label() {
-        const children = [options(EmojiAliasDefault, { name: item.name, style: emojiAlias.emojiAlias }), ];
+        const children = [React6(EmojiAliasDefault, { name: item.name, style: emojiAlias.emojiAlias }), ];
         let tmpResult = closure_1;
         if (closure_1) {
           const obj2 = { children: null };
           const obj3 = { variant: "text-sm/normal", color: "interactive-text-active", children: null };
           const intl = util.intl;
           obj3.children = intl.string(util.t["1GlN06"]);
-          const items1 = [options(Text_Text.Text, obj3), ];
+          const items1 = [React6(Text_Text.Text, obj3), ];
           const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
           const intl2 = util.intl;
           obj4.children = intl2.string(util.t.J0XdJ4);
-          items1[1] = options(Text_Text.Text, obj4);
+          items1[1] = React6(Text_Text.Text, obj4);
           obj2.children = items1;
           tmpResult = closure_3_11(collapsed, obj2);
         }

@@ -1,6 +1,6 @@
-// === Module 15609: useBountiesRecapScroll ===
+// === Module 15646: useBountiesRecapScroll ===
 
-// Module 15609 (useBountiesRecapScroll)
+// Module 15646 (useBountiesRecapScroll)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

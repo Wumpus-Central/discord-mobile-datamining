@@ -1,11 +1,11 @@
-// === Module 11500: refreshApplicationWidget ===
+// === Module 11510: refreshApplicationWidget ===
 
-// Module 11500 (refreshApplicationWidget)
+// Module 11510 (refreshApplicationWidget)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
 const Endpoints = fn(1085).Endpoints;
-const promiseDeduper = new fn(10682).PromiseDeduper();
+const promiseDeduper = new fn(10744).PromiseDeduper();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/refreshApplicationWidget.tsx");
 

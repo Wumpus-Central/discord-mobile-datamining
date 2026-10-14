@@ -1,10 +1,10 @@
-// === Module 8974: useWishlistNUXActionSheet ===
+// === Module 8979: useWishlistNUXActionSheet ===
 
-// Module 8974 (useWishlistNUXActionSheet)
+// Module 8979 (useWishlistNUXActionSheet)
 import dismissible_content from "dismissible_content" /* 2049 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4938 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4940 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7321 */;
+import UserProfileStore from "UserProfileStore" /* 7327 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;

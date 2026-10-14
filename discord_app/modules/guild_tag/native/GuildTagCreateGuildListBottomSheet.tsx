@@ -1,18 +1,18 @@
-// === Module 15226: GuildTagCreateGuildListBottomSheet ===
+// === Module 15263: GuildTagCreateGuildListBottomSheet ===
 
-// Module 15226 (GuildTagCreateGuildListBottomSheet)
+// Module 15263 (GuildTagCreateGuildListBottomSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Powerups from "Powerups" /* 5011 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import GuildIconDefault from "GuildIcon" /* 6159 */;
-import TableRowGroup from "TableRowGroup" /* 6265 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
-import ActionSheet from "ActionSheet" /* 6899 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12730 */;
+import Powerups from "Powerups" /* 5013 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import GuildIconDefault from "GuildIcon" /* 6163 */;
+import TableRowGroup from "TableRowGroup" /* 6269 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6844 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6884 */;
+import ActionSheet from "ActionSheet" /* 6904 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12766 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5020 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5022 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -54,7 +54,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
     tmp8 = cResult[4];
   }
   if (cResult[5] !== guild) {
-    const obj3 = { guild, size: tmp(6159).GuildIconSizes.SMALL_32 };
+    const obj3 = { guild, size: tmp(6163).GuildIconSizes.SMALL_32 };
     const tmp14 = closure_4(GuildIconDefault, obj3);
     cResult[5] = guild;
     cResult[6] = tmp14;
@@ -86,7 +86,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
       }
     }
   }
-  const tmp17 = closure_4(guild(6180).TableRow, { label: guild.name, subLabel: tmp8, icon: tmp10, arrow: true, onPress: tmp15 });
+  const tmp17 = closure_4(guild(6184).TableRow, { label: guild.name, subLabel: tmp8, icon: tmp10, arrow: true, onPress: tmp15 });
   cResult[9] = guild.name;
   cResult[10] = tmp8;
   cResult[11] = tmp10;
@@ -109,7 +109,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
   obj2.subLabel = formatToPlainStringResult;
   const obj4 = { guild, size: null };
   let obj = guild(504);
-  obj4.size = guild(6159).GuildIconSizes.SMALL_32;
+  obj4.size = guild(6163).GuildIconSizes.SMALL_32;
   obj2.icon = closure_4(GuildIconDefault, obj4);
   obj2.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -118,7 +118,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRo
     obj2.analyticsLocation = AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE;
     openGuildPowerupsModalDefault(obj2);
   };
-  return closure_4(guild(6180).TableRow, obj2);
+  return closure_4(guild(6184).TableRow, obj2);
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

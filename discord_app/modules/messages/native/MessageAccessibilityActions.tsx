@@ -1,10 +1,10 @@
-// === Module 7986: MessageAccessibilityActions ===
+// === Module 7993: MessageAccessibilityActions ===
 
-// Module 7986 (MessageAccessibilityActions)
+// Module 7993 (MessageAccessibilityActions)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7987 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 7990 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7994 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7997 */;
 import size from "module_2" /* 2 */;
 
 const MessageAccessibilityAction = { VIEW_PROFILE: "view_profile", ADD_REACTION: "add_reaction", ADD_QUICK_REACTION: "add_quick_reaction", REPLY: "reply", MESSAGE_ACTIONS_MENU: "message_actions_menu", EDIT_GDM: "edit_gdm", OPEN_PINS: "open_pins", JUMP_TO_MESSAGE: "jump_to_message" };

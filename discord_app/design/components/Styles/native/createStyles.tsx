@@ -1,18 +1,18 @@
-// === Module 5092: createStyles ===
+// === Module 5096: createStyles ===
 
-// Module 5092 (createStyles)
+// Module 5096 (createStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import SemanticColorContext from "SemanticColorContext" /* 4819 */;
-import native from "native" /* 4827 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5028 */;
-import timing from "timing" /* 5093 */;
-import timingPresets from "timingPresets" /* 5096 */;
+import SemanticColorContext from "SemanticColorContext" /* 4821 */;
+import native from "native" /* 4829 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5030 */;
+import timing from "timing" /* 5097 */;
+import timingPresets from "timingPresets" /* 5100 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4937 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4939 */;
 
 const require = globalThis.__r;
 
@@ -140,7 +140,7 @@ export const createStyles = function createStyles(rect) {
     items = undefined;
     const cResult = closure_0(576).c(4);
     const obj = closure_0(576);
-    const themeContext = closure_0(4827).useThemeContext();
+    const themeContext = closure_0(4829).useThemeContext();
     if (cResult[0] === items) {
       if (cResult[1] === themeContext) {
         obj4 = cResult[2];
@@ -154,7 +154,7 @@ export const createStyles = function createStyles(rect) {
     }
     let fromEntries = globalThis;
     const items1 = [];
-    const obj2 = closure_0(4827);
+    const obj2 = closure_0(4829);
     items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
     const tmp6 = createCacheKey();
     value = items.get(tmp6);
@@ -207,7 +207,7 @@ export const createStyles = function createStyles(rect) {
   }) : (function useStyles() {
     items = [...arguments];
     let obj3;
-    const themeContext = closure_0(4827).useThemeContext();
+    const themeContext = closure_0(4829).useThemeContext();
     const items1 = [];
     items1[HermesBuiltin.arraySpread(items, 0)] = themeContext.key;
     const tmp2 = createCacheKey();
@@ -252,7 +252,7 @@ export const createStyles = function createStyles(rect) {
       const result = obj2.set(tmp2, obj3);
       return obj3;
     }
-    const obj = closure_0(4827);
+    const obj = closure_0(4829);
     obj2 = themeContext;
   });
 };

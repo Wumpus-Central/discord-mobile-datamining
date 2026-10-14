@@ -1,14 +1,14 @@
-// === Module 13548: MediaModalOverlayAltText ===
+// === Module 13586: MediaModalOverlayAltText ===
 
-// Module 13548 (MediaModalOverlayAltText)
+// Module 13586 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 10687 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 10790 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = { container: { backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, marginVertical: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 + arg0, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, alignSelf: "flex-end" } };
   return obj;
@@ -57,7 +57,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
         const intl = PressableOpacity(1126).intl;
         obj2.children = intl.string(PressableOpacity(1126).t.Q5VqrN);
-        const tmp9 = jsx(PressableOpacity(5088).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+        const tmp9 = jsx(PressableOpacity(5092).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
         cResult[3] = tmp9;
         let tmp7 = tmp9;
       } else {
@@ -65,7 +65,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       if (cResult[4] === container.container) {
       }
-      PressableOpacity = PressableOpacity(6185).PressableOpacity;
+      PressableOpacity = PressableOpacity(6189).PressableOpacity;
       const obj3 = { style: container.container, onPress: tmp4, hitSlop: tmp6, children: tmp7 };
       tmp = <PressableOpacity style={container.container} onPress={tmp4} hitSlop={tmp6}>{tmp7}</PressableOpacity>;
       container = container.container;
@@ -99,8 +99,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
       const intl = tmp3(1126).intl;
       obj2.children = intl.string(tmp3(1126).t.Q5VqrN);
-      obj.children = jsx(tmp3(5088).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(6185).PressableOpacity, {
+      obj.children = jsx(tmp3(5092).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(6189).PressableOpacity, {
         style: tmp2.container,
         onPress() {
               if (str == null) {

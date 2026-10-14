@@ -1,15 +1,15 @@
-// === Module 7987: DoubleTapToReactUtils ===
+// === Module 7994: DoubleTapToReactUtils ===
 
-// Module 7987 (DoubleTapToReactUtils)
-import ReactionUtils from "ReactionUtils" /* 4762 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4768 */;
+// Module 7994 (DoubleTapToReactUtils)
+import ReactionUtils from "ReactionUtils" /* 4764 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4766 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4770 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5987 */;
+import EmojiStore from "EmojiStore" /* 5992 */;
 
 require = fn;
 const isContentShown = fn(2057).isContentShown;
-const NITRO_UPSELL_ALERT_KEY = fn(7988).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(7995).NITRO_UPSELL_ALERT_KEY;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const EmojiConstants = fn(1393);
 ({ EmojiDisabledReasons: closure_8, EmojiIntention: closure_9 } = EmojiConstants);
@@ -134,11 +134,11 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
       }
       const reactions = message.reactions;
       if (reactions.some((emoji) => ReactionUtils.emojiEquals(emoji.emoji, obj5) && emoji.me)) {
-        const result2 = tmp(5057).triggerHapticFeedback(tmp(5057).HapticFeedbackTypes.IMPACT_LIGHT);
-        const tmpResult10 = tmp(5057);
-        const obj6 = { channelId: channel.id, messageId: message.id, emoji: tmp8, location: tmp(7900).ReactionLocations.DOUBLE_TAP };
-        tmp(7900).removeReaction(obj6);
-        const tmpResult11 = tmp(7900);
+        const result2 = tmp(5061).triggerHapticFeedback(tmp(5061).HapticFeedbackTypes.IMPACT_LIGHT);
+        const tmpResult10 = tmp(5061);
+        const obj6 = { channelId: channel.id, messageId: message.id, emoji: tmp8, location: tmp(7907).ReactionLocations.DOUBLE_TAP };
+        tmp(7907).removeReaction(obj6);
+        const tmpResult11 = tmp(7907);
       } else {
         if (flag) {
           let byName = UnicodeEmojisDefault.getByName("heart");
@@ -177,39 +177,39 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
             if (emojiUnavailableReason === constants.PREMIUM_LOCKED) {
               const lazyResult = noop.lazy(() => obj5(paths[16])(paths[15], paths.paths));
               const obj11 = { emojiName: customEmojiById.name };
-              tmp(5301).openAlert(NITRO_UPSELL_ALERT_KEY, <lazyResult emojiName={customEmojiById.name} />);
-              const tmpResult12 = tmp(5301);
+              tmp(5306).openAlert(NITRO_UPSELL_ALERT_KEY, <lazyResult emojiName={customEmojiById.name} />);
+              const tmpResult12 = tmp(5306);
             } else if (null != emojiUnavailableReason) {
               const obj13 = { emojiName: customEmojiById.name, reason: emojiUnavailableReason };
-              const result3 = tmp(7991).showDoubleTapErrorToast(obj13);
-              const tmpResult13 = tmp(7991);
+              const result3 = tmp(7998).showDoubleTapErrorToast(obj13);
+              const tmpResult13 = tmp(7998);
             }
           }
-          const result4 = tmp(5057).triggerHapticFeedback(tmp(5057).HapticFeedbackTypes.IMPACT_LIGHT);
-          const tmpResult15 = tmp(7900);
+          const result4 = tmp(5061).triggerHapticFeedback(tmp(5061).HapticFeedbackTypes.IMPACT_LIGHT);
+          const tmpResult15 = tmp(7907);
           const id = channel.id;
-          tmpResult15.addReaction(id, message.id, tmp8, tmp(7900).ReactionLocations.DOUBLE_TAP);
-          const tmpResult14 = tmp(5057);
+          tmpResult15.addReaction(id, message.id, tmp8, tmp(7907).ReactionLocations.DOUBLE_TAP);
+          const tmpResult14 = tmp(5061);
           const obj14 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-          const result5 = tmp(4938).UNSAFE_markDismissibleContentAsDismissed(tmp(2049).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj14);
+          const result5 = tmp(4940).UNSAFE_markDismissibleContentAsDismissed(tmp(2049).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj14);
           if (isContentShown(tmp(2049).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL)) {
             const obj15 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION, forceTrack: true };
-            const result6 = tmp(4938).UNSAFE_markDismissibleContentAsDismissed(tmp(2049).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL, obj15);
-            const tmpResult17 = tmp(4938);
+            const result6 = tmp(4940).UNSAFE_markDismissibleContentAsDismissed(tmp(2049).DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL, obj15);
+            const tmpResult17 = tmp(4940);
           }
-          const tmpResult16 = tmp(4938);
+          const tmpResult16 = tmp(4940);
         } else if (!flag) {
           let emojiName1;
           if (setting != null) {
             emojiName1 = setting.emojiName;
           }
           const obj16 = { emojiName: emojiName1 };
-          const result7 = tmp(7991).showDoubleTapErrorToast(obj16);
-          const tmpResult18 = tmp(7991);
+          const result7 = tmp(7998).showDoubleTapErrorToast(obj16);
+          const tmpResult18 = tmp(7998);
         }
       }
     }
-    tmpResult = tmp(7989);
+    tmpResult = tmp(7996);
   }
 };
 export const areEmojisEqual = function areEmojisEqual(customEmojiById, emoji) {

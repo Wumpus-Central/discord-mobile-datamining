@@ -1,10 +1,10 @@
-// === Module 9746: ChevronLargeLeftIcon ===
+// === Module 9756: ChevronLargeLeftIcon ===
 
-// Module 9746 (ChevronLargeLeftIcon)
+// Module 9756 (ChevronLargeLeftIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4817 */;
-import _mod9747 from "module_9747" /* 9747 */;
+import BaseIconImage from "BaseIconImage" /* 4819 */;
+import _mod9757 from "module_9757" /* 9757 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChevronLargeLeftIcon = ReactCompilerGating.isReactCompilerEnabled()
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9747;
+    const tmpResult = _mod9757;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChevronLargeLeftIcon = ReactCompilerGating.isReactCompilerEnabled()
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9747, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9757, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

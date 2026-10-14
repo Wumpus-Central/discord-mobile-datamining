@@ -1,7 +1,7 @@
-// === Module 12312: ShareConstants ===
+// === Module 12348: ShareConstants ===
 
-// Module 12312 (ShareConstants)
-import sortByMatchScore from "sortByMatchScore" /* 8700 */;
+// Module 12348 (ShareConstants)
+import sortByMatchScore from "sortByMatchScore" /* 8705 */;
 import size from "module_2" /* 2 */;
 
 const items = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GROUP_DM];

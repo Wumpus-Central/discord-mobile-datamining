@@ -1,17 +1,17 @@
-// === Module 12466: PremiumAnimatedGiftButton ===
+// === Module 12502: PremiumAnimatedGiftButton ===
 
-// Module 12466 (PremiumAnimatedGiftButton)
+// Module 12502 (PremiumAnimatedGiftButton)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const useRef = fn(19).useRef;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
   const obj = { containerRefresh: null, animationRefresh: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.sm, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
@@ -307,7 +307,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
   }, items1);
   let FadeOut;
   if (!stateFromStores) {
-    FadeOut = tmp(4850).FadeOut;
+    FadeOut = tmp(4852).FadeOut;
   }
   const obj5 = { exiting: FadeOut, children: null };
   const items2 = [tmp7.containerRefresh, style, ];
@@ -327,7 +327,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
   const merged = Object.assign(accessibilityState);
   obj6.accessibilityState = { disabled };
   const merged1 = Object.assign(arg0);
-  obj6.children = jsx(tmp3(6106), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
+  obj6.children = jsx(tmp3(6112), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
   obj5.children = jsx(require("Pressables").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
-  return jsx(stateFromStores(4850).View, { exiting: FadeOut, children: null });
+  return jsx(stateFromStores(4852).View, { exiting: FadeOut, children: null });
 });

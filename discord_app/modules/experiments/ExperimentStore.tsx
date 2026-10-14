@@ -1,6 +1,6 @@
-// === Module 5016: ExperimentStore ===
+// === Module 5018: ExperimentStore ===
 
-// Module 5016 (ExperimentStore)
+// Module 5018 (ExperimentStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage5 from "Storage" /* 510 */;
@@ -8,7 +8,7 @@ import Dispatcher from "Dispatcher" /* 584 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1264 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import BuildOverrideUtils from "BuildOverrideUtils" /* 1379 */;
-import GuildFilters from "GuildFilters" /* 5018 */;
+import GuildFilters from "GuildFilters" /* 5020 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
@@ -721,7 +721,7 @@ function handleGuildChange(arg0) {
     continue;
   }
 }
-const ExperimentConstants = fn(5017);
+const ExperimentConstants = fn(5019);
 ({ ExperimentBuckets: hasOwnProperty, ExperimentTypes: metroRequire, ExposureTypes: closure_7 } = ExperimentConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, EMPTY_STRING_SNOWFLAKE_ID: closure_9, UserFlags: c10 } = Constants);
@@ -879,7 +879,7 @@ prototype["getUserExperimentDescriptor"] = function getUserExperimentDescriptor(
 prototype["getGuildExperimentDescriptor"] = function getGuildExperimentDescriptor(id, guildId) {
   let tmp = guildId;
   if (guildId == null) {
-    tmp = options;
+    tmp = React6;
   }
   if (c26) {
     if (null != tmp2) {

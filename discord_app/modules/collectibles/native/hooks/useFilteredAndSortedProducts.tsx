@@ -1,11 +1,11 @@
-// === Module 15668: useFilteredAndSortedProducts ===
+// === Module 15705: useFilteredAndSortedProducts ===
 
-// Module 15668 (useFilteredAndSortedProducts)
+// Module 15705 (useFilteredAndSortedProducts)
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
-import useBadBundleFilter from "useBadBundleFilter" /* 15669 */;
-import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 15670 */;
-import usePurchasedProductsSort from "usePurchasedProductsSort" /* 15671 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4771 */;
+import useBadBundleFilter from "useBadBundleFilter" /* 15706 */;
+import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 15707 */;
+import usePurchasedProductsSort from "usePurchasedProductsSort" /* 15708 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -109,8 +109,8 @@ export const useFilteredAndSortedProducts = ReactCompilerGating.isReactCompilerE
     const items = [tmp7, badBundleFilter, tmp6];
     const _Symbol = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-      const fn2 = function h(value, fn) {
-        return fn(value);
+      const fn2 = function h(arg0, fn) {
+        return fn(arg0);
       };
       cResult[8] = fn2;
       let tmp9 = fn2;

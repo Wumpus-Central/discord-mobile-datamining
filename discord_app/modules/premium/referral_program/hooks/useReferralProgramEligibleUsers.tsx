@@ -1,10 +1,10 @@
-// === Module 14069: useReferralProgramEligibleUsers ===
+// === Module 14106: useReferralProgramEligibleUsers ===
 
-// Module 14069 (useReferralProgramEligibleUsers)
+// Module 14106 (useReferralProgramEligibleUsers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7175 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7181 */;
 
 const require = globalThis.__r;
 
@@ -148,7 +148,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                 if (null != tmp65) {
                   if (0 !== stateFromStores) {
                     c8 = 2;
-                    let tmp70 = options(true);
+                    let tmp70 = React6(true);
                     dependencyMap = 0;
                     let items = [];
                     dependencyMap = HermesBuiltin.arraySpread(first2.values(), dependencyMap);
@@ -156,7 +156,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                     stateFromStores = dependencyMap;
                     closure_3 = dependencyMap[Symbol.iterator]();
                     if (closure_3 === undefined) {
-                      let obj5 = searchQuery(7176);
+                      let obj5 = searchQuery(7182);
                       c9 = 4;
                       c10 = 1;
                       let obj6 = { value: obj5.fetchReferralEligibleUsers(closure_133_0, closure_134_0, closure_133_1), done: false };
@@ -166,9 +166,9 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                       closure_133_3 = tmp44;
                       closure_133_4 = stateFromStores(closure_133_3, 2);
                       closure_133_5 = closure_133_4[0];
-                      if (closure_133_4[1] === searchQuery(7176).ReferralOfferStatus.PENDING) {
+                      if (closure_133_4[1] === searchQuery(7182).ReferralOfferStatus.PENDING) {
                         if (!closure_134_12.has(closure_133_5)) {
-                          obj3 = searchQuery(8306);
+                          obj3 = searchQuery(8313);
                           c9 = 5;
                           c10 = 1;
                           let obj7 = { value: obj3.getUser(closure_133_5), done: false };

@@ -1,15 +1,15 @@
-// === Module 16028: SyncReducedMotionWithDeviceSetting ===
+// === Module 16065: SyncReducedMotionWithDeviceSetting ===
 
-// Module 16028 (SyncReducedMotionWithDeviceSetting)
+// Module 16065 (SyncReducedMotionWithDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15014 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15052 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReducedMotionSyncSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["St+DJK"]);
   },
-  parent: fn(7993).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8000).MobileUserSettings.ACCESSIBILITY,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useReducedMotionSyncSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

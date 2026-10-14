@@ -1,15 +1,15 @@
-// === Module 5644: StoreUtils ===
+// === Module 5649: StoreUtils ===
 
-// Module 5644 (StoreUtils)
+// Module 5649 (StoreUtils)
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import BillingInfoStore from "BillingInfoStore" /* 4771 */;
-import PaymentSourceStore from "PaymentSourceStore" /* 4772 */;
-import SubscriptionStore from "SubscriptionStore" /* 4775 */;
-import allSettled_mod from "allSettled" /* 5645 */;
+import BillingInfoStore from "BillingInfoStore" /* 4773 */;
+import PaymentSourceStore from "PaymentSourceStore" /* 4774 */;
+import SubscriptionStore from "SubscriptionStore" /* 4777 */;
+import allSettled_mod from "allSettled" /* 5650 */;
 
 require = fn;
 function fetchCountryCodeQueryDependencies() {
@@ -240,14 +240,14 @@ const Constants = fn(1085);
 ({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
-const isMobile = fn(5294).isMobile;
+const isMobile = fn(5299).isMobile;
 let tmp4 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(5294).isTablet;
+  tmp4 = !fn(5299).isTablet;
 }
 if (tmp4) {
-  tmp4 = -1 !== fn(5218).getChromeVersion();
-  let obj2 = fn(5218);
+  tmp4 = -1 !== fn(5222).getChromeVersion();
+  let obj2 = fn(5222);
 }
 let closure_9 = tmp4;
 const size = fn(2);
@@ -257,11 +257,13 @@ export const SUPPORTS_WEBP = tmp4;
 export const getAssetURL = function getAssetURL(application_id, mimeType, size, mp4) {
   let str = mp4;
   if (null == mp4) {
-    str = "mp4";
-    if ("video/quicktime" !== (mimeType.mimeType || mimeType.mime_type)) {
+    if (typeof mimeType === "string") {
       str = "mp4";
-      if ("video/mp4" !== tmp) {
-        str = "image/gif" === tmp ? "gif" : "webp";
+      if ("video/quicktime" !== undefined) {
+        str = "mp4";
+        if ("video/mp4" !== undefined) {
+          str = "image/gif" === undefined ? "gif" : "webp";
+        }
       }
     }
   }

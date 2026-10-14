@@ -1,10 +1,10 @@
-// === Module 17557: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 17591: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 17557 (DisplayNameStylesFlywheelProfileCoachmark)
+// Module 17591 (DisplayNameStylesFlywheelProfileCoachmark)
 import c from "c" /* 576 */;
 import _modDef2958 from "module_2958" /* 2958 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 17558 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4771 */;
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 17592 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(4769).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(4771).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1126).intl;
   const string = intl.string;
   const tmp6 = markAsDismissed(2958);
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
       return closure_1_7(closure_1_9, {});
     }
   }), items2);
-  const obj2 = markAsDismissed(4769);
-  const coachmark = visible(9443).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(4771);
+  const coachmark = visible(9452).useCoachmark(visible.targetRef, memo);
   return null;
 });

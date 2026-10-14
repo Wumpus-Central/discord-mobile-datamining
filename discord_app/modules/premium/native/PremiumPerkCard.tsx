@@ -1,34 +1,34 @@
-// === Module 14027: PremiumPerkCard ===
+// === Module 14064: PremiumPerkCard ===
 
-// Module 14027 (PremiumPerkCard)
+// Module 14064 (PremiumPerkCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import components_Button_Button from "components/Button/Button" /* 5379 */;
-import useFontScale from "useFontScale" /* 5386 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
-import openUserSettings from "openUserSettings" /* 7094 */;
-import _modDef14029 from "module_14029" /* 14029 */;
-import _modDef14030 from "module_14030" /* 14030 */;
-import _modDef14031 from "module_14031" /* 14031 */;
-import _modDef14032 from "module_14032" /* 14032 */;
-import _modDef14033 from "module_14033" /* 14033 */;
-import _modDef14034 from "module_14034" /* 14034 */;
-import _modDef14035 from "module_14035" /* 14035 */;
-import _modDef14036 from "module_14036" /* 14036 */;
-import _modDef14037 from "module_14037" /* 14037 */;
-import _modDef14038 from "module_14038" /* 14038 */;
-import _modDef14039 from "module_14039" /* 14039 */;
-import _modDef14040 from "module_14040" /* 14040 */;
-import _modDef14041 from "module_14041" /* 14041 */;
-import _modDef14042 from "module_14042" /* 14042 */;
-import _modDef14043 from "module_14043" /* 14043 */;
-import _modDef14044 from "module_14044" /* 14044 */;
-import _modDef14045 from "module_14045" /* 14045 */;
-import PillTextDefault from "PillText" /* 14046 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import components_Button_Button from "components/Button/Button" /* 5384 */;
+import useFontScale from "useFontScale" /* 5391 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6884 */;
+import openUserSettings from "openUserSettings" /* 7100 */;
+import _modDef14066 from "module_14066" /* 14066 */;
+import _modDef14067 from "module_14067" /* 14067 */;
+import _modDef14068 from "module_14068" /* 14068 */;
+import _modDef14069 from "module_14069" /* 14069 */;
+import _modDef14070 from "module_14070" /* 14070 */;
+import _modDef14071 from "module_14071" /* 14071 */;
+import _modDef14072 from "module_14072" /* 14072 */;
+import _modDef14073 from "module_14073" /* 14073 */;
+import _modDef14074 from "module_14074" /* 14074 */;
+import _modDef14075 from "module_14075" /* 14075 */;
+import _modDef14076 from "module_14076" /* 14076 */;
+import _modDef14077 from "module_14077" /* 14077 */;
+import _modDef14078 from "module_14078" /* 14078 */;
+import _modDef14079 from "module_14079" /* 14079 */;
+import _modDef14080 from "module_14080" /* 14080 */;
+import _modDef14081 from "module_14081" /* 14081 */;
+import _modDef14082 from "module_14082" /* 14082 */;
+import PillTextDefault from "PillText" /* 14083 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePerkCar
   return useFontScale.useFontScale() > 1 ? frozen[arg0].scaledFontHeight : frozen[arg0].height;
 });
 let closure_13 = tmp6;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: null, headerComponent: null, image: null, title: null, description: null, button: null, imageContainer: null, imageOverlayText: null, imageOverlayTextContainer: null, pillTextContainer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -142,21 +142,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
               cResult[19] = tmp37;
             }
             const obj3 = { style: imageOverlayTextContainer, children: tmp27 };
-            const tmp33 = options(React4, obj3);
+            const tmp33 = React6(React4, obj3);
             cResult[13] = tmp7.imageOverlayTextContainer;
             cResult[14] = tmp27;
             cResult[15] = tmp33;
             tmp30 = tmp33;
           }
           const obj4 = { style: imageOverlayText2, variant: "text-md/bold", children: tmp25 };
-          const tmp29 = options(Text_Text.Text, obj4);
+          const tmp29 = React6(Text_Text.Text, obj4);
           cResult[10] = tmp7.imageOverlayText;
           cResult[11] = tmp25;
           cResult[12] = tmp29;
           tmp27 = tmp29;
         }
         const obj5 = { style: tmp20, source: imageSrc };
-        const tmp24 = options(FastImageDefault, obj5);
+        const tmp24 = React6(FastImageDefault, obj5);
         cResult[5] = imageSrc;
         cResult[6] = tmp20;
         cResult[7] = tmp24;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
           let tmp10 = tmp16;
         }
         const obj6 = { style: tmp15, source: imageSrc };
-        const tmp19 = options(FastImageDefault, obj6);
+        const tmp19 = React6(FastImageDefault, obj6);
         cResult[23] = imageSrc;
         cResult[24] = tmp15;
         cResult[25] = tmp19;
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
         tmp10 = tmp11;
       }
       const obj7 = { style: tmp7.headerComponent, children: headerComponent };
-      const tmp14 = options(React4, obj7);
+      const tmp14 = React6(React4, obj7);
       cResult[26] = headerComponent;
       cResult[27] = tmp7.headerComponent;
       cResult[28] = tmp14;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
   if (null != description) {
     if (cResult[29] !== description) {
       const obj8 = { variant: "text-sm/normal", children: description };
-      const tmp42 = options(Text_Text.Text, obj8);
+      const tmp42 = React6(Text_Text.Text, obj8);
       cResult[29] = description;
       cResult[30] = tmp42;
     }
@@ -282,8 +282,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
                   if (tmp60) {
                     const obj10 = { style: tmp7.button, children: null };
                     const obj11 = { size: "sm", variant: "secondary", text: tmp4, onPress: buttonOnPress };
-                    obj10.children = options(components_Button_Button.Button, obj11);
-                    tmp60 = options(React4, obj10);
+                    obj10.children = React6(components_Button_Button.Button, obj11);
+                    tmp60 = React6(React4, obj10);
                   }
                   cResult[50] = buttonOnPress;
                   cResult[51] = tmp4;
@@ -292,14 +292,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
                   tmp59 = tmp60;
                 }
                 const obj12 = { style: tmp7.description, children: tmp39 };
-                const tmp58 = options(hasOwnProperty, obj12);
+                const tmp58 = React6(hasOwnProperty, obj12);
                 cResult[47] = tmp39;
                 cResult[48] = tmp7.description;
                 cResult[49] = tmp58;
                 tmp55 = tmp58;
               }
               const obj13 = { style: tmp51, variant: "heading-lg/extrabold", accessibilityRole: "header", children: title };
-              const tmp54 = options(Text_Text.Text, obj13);
+              const tmp54 = React6(Text_Text.Text, obj13);
               cResult[44] = tmp51;
               cResult[45] = title;
               cResult[46] = tmp54;
@@ -314,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
           let tmp48 = null != pillText;
           if (tmp48) {
             const obj14 = { pillText, style: tmp7.pillTextContainer };
-            tmp48 = options(PillTextDefault, obj14);
+            tmp48 = React6(PillTextDefault, obj14);
           }
           cResult[38] = pillText;
           cResult[39] = tmp7.pillTextContainer;
@@ -360,12 +360,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
       const items = [tmp4.image, imageStyle];
       obj3.style = items;
       obj3.source = imageSrc;
-      const items1 = [options(FastImageDefault, obj3), ];
+      const items1 = [React6(FastImageDefault, obj3), ];
       const obj4 = { style: tmp4.imageOverlayTextContainer, children: null };
       imageSrc = Text_Text.Text;
       const obj5 = { style: tmp4.imageOverlayText, variant: "text-md/bold", children: imageOverlayText.toUpperCase() };
-      obj4.children = options(imageSrc, obj5);
-      items1[1] = options(React4, obj4);
+      obj4.children = React6(imageSrc, obj5);
+      items1[1] = React6(React4, obj4);
       obj2.children = items1;
       let tmp13 = collapsed(React4, obj2);
     } else {
@@ -373,17 +373,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
       const items2 = [tmp4.image, imageStyle];
       obj6.style = items2;
       obj6.source = imageSrc;
-      tmp13 = options(FastImageDefault, obj6);
+      tmp13 = React6(FastImageDefault, obj6);
     }
   } else {
     let tmp7 = null;
     if (null != headerComponent) {
       obj = { style: tmp4.headerComponent, children: headerComponent };
-      tmp7 = options(React4, obj);
+      tmp7 = React6(React4, obj);
     }
     if (null != description) {
       const obj7 = { variant: "text-sm/normal", children: description };
-      let tmp21 = options(Text_Text.Text, obj7);
+      let tmp21 = React6(Text_Text.Text, obj7);
     } else {
       tmp21 = null;
       if (null != bodyComponent) {
@@ -403,22 +403,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
     let tmp28 = null != pillText;
     if (tmp28) {
       const obj10 = { pillText, style: tmp4.pillTextContainer };
-      tmp28 = options(PillTextDefault, obj10);
+      tmp28 = React6(PillTextDefault, obj10);
     }
     const items4 = [tmp28, tmp7, , , ];
     const obj11 = { style: null, variant: "heading-lg/extrabold", accessibilityRole: "header", children: null };
     const items5 = [tmp4.title, titleStyle];
     obj11.style = items5;
     obj11.children = title;
-    items4[2] = options(Text_Text.Text, obj11);
+    items4[2] = React6(Text_Text.Text, obj11);
     const obj12 = { style: tmp4.description, children: tmp21 };
-    items4[3] = options(hasOwnProperty, obj12);
+    items4[3] = React6(hasOwnProperty, obj12);
     let tmp32Result = null != buttonOnPress;
     if (tmp32Result) {
       const obj13 = { style: tmp4.button, children: null };
       const obj14 = { size: "sm", variant: "secondary", text: cta, onPress: buttonOnPress };
-      obj13.children = options(components_Button_Button.Button, obj14);
-      tmp32Result = options(React4, obj13);
+      obj13.children = React6(components_Button_Button.Button, obj14);
+      tmp32Result = React6(React4, obj13);
     }
     items4[4] = tmp32Result;
     obj9.children = items4;
@@ -431,21 +431,21 @@ export { PerkCardVariant };
 export const PERK_CARD_SIZES = frozen;
 export const usePerkCardHeight = tmp6;
 export const usePremiumPerkCard = function usePremiumPerkCard() {
-  subscriptionPlansLoaded = subscriptionPlansLoaded(14028).useSubscriptionPlansLoaded();
-  let obj = subscriptionPlansLoaded(14028);
-  const maxFileSizeForPremiumType = subscriptionPlansLoaded(4769).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2);
+  subscriptionPlansLoaded = subscriptionPlansLoaded(14065).useSubscriptionPlansLoaded();
+  let obj = subscriptionPlansLoaded(14065);
+  const maxFileSizeForPremiumType = subscriptionPlansLoaded(4771).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2);
   const callback = noop.useCallback(() => {
     const obj2 = { screen: constants.COLLECTIBLES_SHOP, params: null };
-    const obj = subscriptionPlansLoaded(7094);
+    const obj = subscriptionPlansLoaded(7100);
     obj2.params = { analyticsSource: AnalyticsLocationDefault.PREMIUM_MARKETING_PERK_CARD };
     obj.openUserSettings(obj2);
   }, []);
   const callback1 = noop.useCallback(() => {
-    subscriptionPlansLoaded(7094).openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION });
+    subscriptionPlansLoaded(7100).openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION });
   }, []);
   const items = [subscriptionPlansLoaded];
   const callback2 = noop.useCallback(() => {
-    subscriptionPlansLoaded(7094).openUserSettings({ screen: constants.APPEARANCE_THEME_PICKER });
+    subscriptionPlansLoaded(7100).openUserSettings({ screen: constants.APPEARANCE_THEME_PICKER });
   }, []);
   const callback3 = noop.useCallback(() => {
     const obj2 = { screen: constants.GUILD_BOOSTING, params: { shouldFetchSubscriptionPlans: !subscriptionPlansLoaded } };
@@ -454,13 +454,13 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   const obj3 = { customProfile: null, clientThemes: null, serverBoosts: null, greyServerBoosts: null, customAppIcons: null, emoji: null, customSounds: null, sticker: null, earlyAccess: null, memberPricing: null, largeUploads: null, hdVideo: null, superReactions: null, entranceSounds: null, badge: null, greyBadge: null, xboxGamePass: null };
   const obj4 = { title: null, description: null, imageSrc: null, buttonOnPress: null };
   const callback4 = noop.useCallback(() => {
-    subscriptionPlansLoaded(7094).openUserSettings({ screen: constants.APP_ICONS });
+    subscriptionPlansLoaded(7100).openUserSettings({ screen: constants.APP_ICONS });
   }, []);
   const intl = subscriptionPlansLoaded(1126).intl;
   obj4.title = intl.string(subscriptionPlansLoaded(1126).t.KcyDwF);
   const intl2 = subscriptionPlansLoaded(1126).intl;
   obj4.description = intl2.string(subscriptionPlansLoaded(1126).t.Mt3U1W);
-  obj4.imageSrc = _modDef14029;
+  obj4.imageSrc = _modDef14066;
   obj4.buttonOnPress = callback1;
   obj3.customProfile = obj4;
   const obj5 = { title: null, description: null, imageSrc: null, buttonOnPress: null };
@@ -468,7 +468,7 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj5.title = intl3.string(subscriptionPlansLoaded(1126).t.kWM48G);
   const intl4 = subscriptionPlansLoaded(1126).intl;
   obj5.description = intl4.string(subscriptionPlansLoaded(1126).t.CjRASJ);
-  obj5.imageSrc = _modDef14030;
+  obj5.imageSrc = _modDef14067;
   obj5.buttonOnPress = callback2;
   obj3.clientThemes = obj5;
   const obj6 = { title: null, description: null, imageSrc: null, buttonOnPress: null };
@@ -476,7 +476,7 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj6.title = intl5.string(subscriptionPlansLoaded(1126).t["NyDu/6"]);
   const intl6 = subscriptionPlansLoaded(1126).intl;
   obj6.description = intl6.string(subscriptionPlansLoaded(1126).t["4pEwXL"]);
-  obj6.imageSrc = _modDef14031;
+  obj6.imageSrc = _modDef14068;
   obj6.buttonOnPress = callback3;
   obj3.serverBoosts = obj6;
   const obj7 = { title: null, description: null, imageSrc: null, imageOverlayText: null };
@@ -484,7 +484,7 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj7.title = intl7.string(subscriptionPlansLoaded(1126).t["NyDu/6"]);
   const intl8 = subscriptionPlansLoaded(1126).intl;
   obj7.description = intl8.string(subscriptionPlansLoaded(1126).t["4pEwXL"]);
-  obj7.imageSrc = _modDef14032;
+  obj7.imageSrc = _modDef14069;
   const intl9 = subscriptionPlansLoaded(1126).intl;
   obj7.imageOverlayText = intl9.string(subscriptionPlansLoaded(1126).t["/VzCKE"]);
   obj3.greyServerBoosts = obj7;
@@ -493,7 +493,7 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj8.title = intl10.string(subscriptionPlansLoaded(1126).t.OuItFi);
   const intl11 = subscriptionPlansLoaded(1126).intl;
   obj8.description = intl11.string(subscriptionPlansLoaded(1126).t.mPyrE6);
-  obj8.imageSrc = _modDef14033;
+  obj8.imageSrc = _modDef14070;
   obj8.buttonOnPress = callback4;
   obj3.customAppIcons = obj8;
   const obj9 = { title: null, description: null, imageSrc: null };
@@ -501,35 +501,35 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj9.title = intl12.string(subscriptionPlansLoaded(1126).t["R2IV/Q"]);
   const intl13 = subscriptionPlansLoaded(1126).intl;
   obj9.description = intl13.string(subscriptionPlansLoaded(1126).t.R5Xag2);
-  obj9.imageSrc = _modDef14034;
+  obj9.imageSrc = _modDef14071;
   obj3.emoji = obj9;
   const obj10 = { title: null, description: null, imageSrc: null };
   const intl14 = subscriptionPlansLoaded(1126).intl;
   obj10.title = intl14.string(subscriptionPlansLoaded(1126).t.LWsArT);
   const intl15 = subscriptionPlansLoaded(1126).intl;
   obj10.description = intl15.string(subscriptionPlansLoaded(1126).t["4lSyCY"]);
-  obj10.imageSrc = _modDef14035;
+  obj10.imageSrc = _modDef14072;
   obj3.customSounds = obj10;
   const obj11 = { title: null, description: null, imageSrc: null };
   const intl16 = subscriptionPlansLoaded(1126).intl;
   obj11.title = intl16.string(subscriptionPlansLoaded(1126).t.tzdIwI);
   const intl17 = subscriptionPlansLoaded(1126).intl;
   obj11.description = intl17.string(subscriptionPlansLoaded(1126).t.hJG8ZN);
-  obj11.imageSrc = _modDef14036;
+  obj11.imageSrc = _modDef14073;
   obj3.sticker = obj11;
   const obj12 = { title: null, description: null, imageSrc: null };
   const intl18 = subscriptionPlansLoaded(1126).intl;
   obj12.title = intl18.string(subscriptionPlansLoaded(1126).t.EYxi0o);
   const intl19 = subscriptionPlansLoaded(1126).intl;
   obj12.description = intl19.string(subscriptionPlansLoaded(1126).t.M9AIt1);
-  obj12.imageSrc = _modDef14037;
+  obj12.imageSrc = _modDef14074;
   obj3.earlyAccess = obj12;
   const obj13 = { title: null, description: null, imageSrc: null, buttonOnPress: null };
   const intl20 = subscriptionPlansLoaded(1126).intl;
   obj13.title = intl20.string(subscriptionPlansLoaded(1126).t["H4/NBN"]);
   const intl21 = subscriptionPlansLoaded(1126).intl;
   obj13.description = intl21.string(subscriptionPlansLoaded(1126).t.wo3D3T);
-  obj13.imageSrc = _modDef14038;
+  obj13.imageSrc = _modDef14075;
   obj13.buttonOnPress = callback;
   obj3.memberPricing = obj13;
   const obj14 = { title: null, description: null, imageSrc: null };
@@ -537,58 +537,58 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   obj14.title = intl22.formatToPlainString(subscriptionPlansLoaded(1126).t.jqhAdL, { premiumMaxSize: maxFileSizeForPremiumType });
   const intl23 = subscriptionPlansLoaded(1126).intl;
   obj14.description = intl23.formatToPlainString(subscriptionPlansLoaded(1126).t["HI+cfm"], { premiumMaxSize: maxFileSizeForPremiumType });
-  obj14.imageSrc = _modDef14039;
+  obj14.imageSrc = _modDef14076;
   obj3.largeUploads = obj14;
   const obj15 = { title: null, description: null, imageSrc: null };
   const intl24 = subscriptionPlansLoaded(1126).intl;
   obj15.title = intl24.string(subscriptionPlansLoaded(1126).t.RSXQYO);
   const intl25 = subscriptionPlansLoaded(1126).intl;
   obj15.description = intl25.string(subscriptionPlansLoaded(1126).t.ymCPxp);
-  obj15.imageSrc = _modDef14040;
+  obj15.imageSrc = _modDef14077;
   obj3.hdVideo = obj15;
   const obj16 = { title: null, description: null, imageSrc: null };
   const intl26 = subscriptionPlansLoaded(1126).intl;
   obj16.title = intl26.string(subscriptionPlansLoaded(1126).t["6S7kO7"]);
   const intl27 = subscriptionPlansLoaded(1126).intl;
   obj16.description = intl27.string(subscriptionPlansLoaded(1126).t.A0U9fk);
-  obj16.imageSrc = _modDef14041;
+  obj16.imageSrc = _modDef14078;
   obj3.superReactions = obj16;
   const obj17 = { title: null, description: null, imageSrc: null };
   const intl28 = subscriptionPlansLoaded(1126).intl;
   obj17.title = intl28.string(subscriptionPlansLoaded(1126).t["f4M+H9"]);
   const intl29 = subscriptionPlansLoaded(1126).intl;
   obj17.description = intl29.string(subscriptionPlansLoaded(1126).t["7ZCYvC"]);
-  obj17.imageSrc = _modDef14042;
+  obj17.imageSrc = _modDef14079;
   obj3.entranceSounds = obj17;
   const obj18 = { title: null, description: null, imageSrc: null };
   const intl30 = subscriptionPlansLoaded(1126).intl;
   obj18.title = intl30.string(subscriptionPlansLoaded(1126).t.dcFfSJ);
   const intl31 = subscriptionPlansLoaded(1126).intl;
   obj18.description = intl31.string(subscriptionPlansLoaded(1126).t["37MFFq"]);
-  obj18.imageSrc = _modDef14043;
+  obj18.imageSrc = _modDef14080;
   obj3.badge = obj18;
   const obj19 = { title: null, description: null, imageSrc: null, imageOverlayText: null };
   const intl32 = subscriptionPlansLoaded(1126).intl;
   obj19.title = intl32.string(subscriptionPlansLoaded(1126).t.dcFfSJ);
   const intl33 = subscriptionPlansLoaded(1126).intl;
   obj19.description = intl33.string(subscriptionPlansLoaded(1126).t["37MFFq"]);
-  obj19.imageSrc = _modDef14044;
+  obj19.imageSrc = _modDef14081;
   const intl34 = subscriptionPlansLoaded(1126).intl;
   obj19.imageOverlayText = intl34.string(subscriptionPlansLoaded(1126).t["/VzCKE"]);
   obj3.greyBadge = obj19;
   const obj20 = { title: null, imageSrc: null, imageStyle: null, bodyComponent: null };
   const intl35 = subscriptionPlansLoaded(1126).intl;
   obj20.title = intl35.string(subscriptionPlansLoaded(1126).t.aJE9i1);
-  let obj2 = subscriptionPlansLoaded(4769);
-  obj20.imageSrc = { uri: _modDef14045 };
+  let obj2 = subscriptionPlansLoaded(4771);
+  obj20.imageSrc = { uri: _modDef14082 };
   obj20.imageStyle = { aspectRatio: 1.9789473684210526 };
   const obj22 = { variant: "text-sm/normal", children: null };
   const intl36 = subscriptionPlansLoaded(1126).intl;
   const obj23 = { termsLink: null };
-  const obj21 = { uri: _modDef14045 };
+  const obj21 = { uri: _modDef14082 };
   obj23.termsLink = HelpdeskUtilsDefault.getArticleURL(NITRO_2_POINT_0.NITRO_2_POINT_0);
   obj22.children = intl36.format(subscriptionPlansLoaded(1126).t["9Wv+8h"], obj23);
-  obj20.bodyComponent = closure_9(subscriptionPlansLoaded(5088).Text, obj22);
+  obj20.bodyComponent = closure_9(subscriptionPlansLoaded(5092).Text, obj22);
   obj3.xboxGamePass = obj20;
   return obj3;
 };

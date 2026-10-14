@@ -1,6 +1,6 @@
-// === Module 12592: SmartSearchExperiments ===
+// === Module 12628: SmartSearchExperiments ===
 
-// Module 12592 (SmartSearchExperiments)
+// Module 12628 (SmartSearchExperiments)
 import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;

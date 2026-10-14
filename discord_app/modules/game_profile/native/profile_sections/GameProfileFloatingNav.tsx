@@ -1,14 +1,14 @@
-// === Module 9119: GameProfileFloatingNav ===
+// === Module 9128: GameProfileFloatingNav ===
 
-// Module 9119 (GameProfileFloatingNav)
+// Module 9128 (GameProfileFloatingNav)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import timing from "timing" /* 5093 */;
-import native from "native" /* 8542 */;
-import YouBannerDecorations from "YouBannerDecorations" /* 9120 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 13490 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import timing from "timing" /* 5097 */;
+import native from "native" /* 8549 */;
+import YouBannerDecorations from "YouBannerDecorations" /* 9129 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 13528 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -24,9 +24,9 @@ const PX_8 = nativeDefault.space.PX_8;
 const PX_48 = nativeDefault.space.PX_48;
 const PX_6 = nativeDefault.space.PX_6;
 let c15 = 320;
-const Easing = fn(4850).Easing;
-const easing = Easing.inOut(fn(4850).Easing.cubic);
-const createStyles = fn(5092);
+const Easing = fn(4852).Easing;
+const easing = Easing.inOut(fn(4852).Easing.cubic);
+const createStyles = fn(5096);
 let closure_17 = createStyles.createStyles((bottom) => {
   const obj = { wrap: null, scrim: null, pill: null, pillBlur: null, pillRow: null, selection: null, item: null, label: null };
   const obj2 = {};
@@ -94,7 +94,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NavIte
     }
     if (cResult[9] !== IconComponent) {
       const obj5 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-      const tmp12 = options(IconComponent, obj5);
+      const tmp12 = React6(IconComponent, obj5);
       cResult[9] = IconComponent;
       cResult[10] = tmp12;
       let tmp9 = tmp12;
@@ -139,7 +139,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NavIte
       tmp16 = tmp19;
     }
     const obj7 = { style: labelStyle, variant: "text-xs/semibold", color: "text-strong", lineClamp: 1, maxFontSizeMultiplier: 2, children: label };
-    const tmp15 = options(Text_Text.Text, obj7);
+    const tmp15 = React6(Text_Text.Text, obj7);
     cResult[11] = label;
     cResult[12] = labelStyle;
     cResult[13] = tmp15;
@@ -163,7 +163,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NavIte
   const obj2 = { ref: containerRef, style: null, accessibilityRole: "tab", accessibilityLabel: label, accessibilityState: { selected }, onPress, onLayout: callback, hitSlop: nativeDefault.space.PX_8, children: null };
   const items1 = [style, { width }];
   obj2.style = items1;
-  const items2 = [options(IconComponent, { size: "md", color: nativeDefault.colors.ICON_STRONG }), options(Text_Text.Text, { style: labelStyle, variant: "text-xs/semibold", color: "text-strong", lineClamp: 1, maxFontSizeMultiplier: 2, children: label })];
+  const items2 = [React6(IconComponent, { size: "md", color: nativeDefault.colors.ICON_STRONG }), React6(Text_Text.Text, { style: labelStyle, variant: "text-xs/semibold", color: "text-strong", lineClamp: 1, maxFontSizeMultiplier: 2, children: label })];
   obj2.children = items2;
   return collapsed(native.PressableScale, obj2);
 });
@@ -185,9 +185,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
     first = cResult[0];
   }
   let obj = selectedTab(576);
-  const isGameProfileCommunitiesMobileEnabled = selectedTab(13496).useIsGameProfileCommunitiesMobileEnabled(first);
-  const tmpResult = selectedTab(13496);
-  const token = selectedTab(4818).useToken(tmp4(587).colors.BACKGROUND_BASE_LOWEST);
+  const isGameProfileCommunitiesMobileEnabled = selectedTab(13534).useIsGameProfileCommunitiesMobileEnabled(first);
+  const tmpResult = selectedTab(13534);
+  const token = selectedTab(4820).useToken(tmp4(587).colors.BACKGROUND_BASE_LOWEST);
   if (cResult[1] !== token) {
     let obj5 = tmp4(683)(token);
     const hexResult = tmp4(683)(token).alpha(0).hex();
@@ -300,11 +300,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
         return obj;
       }
     }
-    let obj4 = { selectedLayout: tmp15[0][selectedTab], withTiming: tmp(5093).withTiming, SELECTION_MS: v320, SELECTION_EASE: easing };
+    let obj4 = { selectedLayout: tmp15[0][selectedTab], withTiming: tmp(5097).withTiming, SELECTION_MS: v320, SELECTION_EASE: easing };
     A.__closure = obj4;
     A.__workletHash = 14859052305644;
     A.__initData = __initData;
-    const animatedStyle = tmp(4850).useAnimatedStyle(A);
+    const animatedStyle = tmp(4852).useAnimatedStyle(A);
     if (isGameProfileCommunitiesMobileEnabled) {
       class P {
         constructor(arg0, arg1) {
@@ -359,8 +359,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
             return;
           }
         }
-        tmp23[0] = tmp(8915).GameProfileNavTab.OVERVIEW;
-        tmp23[1] = tmp(9212).GameControllerIcon;
+        tmp23[0] = tmp(8919).GameProfileNavTab.OVERVIEW;
+        tmp23[1] = tmp(9221).GameControllerIcon;
         const intl = tmp(1126).intl;
         tmp23[2] = intl.string(tmp(1126).t.qHmbyh);
         cResult[8] = tmp23;
@@ -421,7 +421,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
           }
         }
         tmp24[0] = tmp23;
-        let obj6 = { tab: tmp(8915).GameProfileNavTab.COMMUNITIES, IconComponent: tmp(8217).GroupIcon, label: null };
+        let obj6 = { tab: tmp(8919).GameProfileNavTab.COMMUNITIES, IconComponent: tmp(8224).GroupIcon, label: null };
         const intl2 = tmp(1126).intl;
         obj6.label = intl2.string(tmp(1126).t["3xFZEo"]);
         tmp24[1] = obj6;
@@ -509,7 +509,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
               return;
             }
           }
-          const tmp29 = closure_9(tmp(8542).BackgroundBlurFill, {});
+          const tmp29 = closure_9(tmp(8549).BackgroundBlurFill, {});
           cResult[13] = tmp29;
           const tmp28 = tmp29;
         } else {
@@ -676,7 +676,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
           cResult[20] = selectedTab;
           cResult[21] = tmp5.item;
           cResult[22] = tmp5.label;
-          cResult[23] = closure_9(tmp(13490).YouScreenNavIconMeasurer, obj8);
+          cResult[23] = closure_9(tmp(13528).YouScreenNavIconMeasurer, obj8);
           class A {
             constructor() {
               tmp = closure_5;
@@ -706,12 +706,12 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
               return obj;
             }
           }
-          const tmp37 = closure_9(tmp(13490).YouScreenNavIconMeasurer, obj8);
+          const tmp37 = closure_9(tmp(13528).YouScreenNavIconMeasurer, obj8);
         }
         const obj9 = { style: null, pointerEvents: "none" };
         let items = [tmp5.selection, animatedStyle];
         obj9.style = items;
-        const tmp35 = closure_9(tmp4(4850).View, obj9);
+        const tmp35 = closure_9(tmp4(4852).View, obj9);
         cResult[16] = animatedStyle;
         cResult[17] = tmp5.selection;
         class A {
@@ -777,7 +777,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
           return obj;
         }
       }
-      const tmp27 = closure_9(tmp4(5391), obj10);
+      const tmp27 = closure_9(tmp4(5396), obj10);
     } else {
       class P {
         constructor(arg0, arg1) {
@@ -807,14 +807,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
       }
       return null;
     }
-    const tmpResult4 = tmp(4850);
+    const tmpResult4 = tmp(4852);
   }
   const items1 = [tmp9, token];
   cResult[3] = token;
   cResult[4] = tmp9;
   cResult[5] = items1;
   tmp11 = items1;
-  const tmpResult3 = selectedTab(4818);
+  const tmpResult3 = selectedTab(4820);
 }) : (function FloatingNav(navigation) {
   navigation = navigation.navigation;
   c4 = undefined;
@@ -823,16 +823,16 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
   const selectTab = navigation.selectTab;
   const tmp3 = closure_17(selectTab(1631)().bottom);
   dependencyMap = tmp3;
-  const isGameProfileCommunitiesMobileEnabled = selectedTab(13496).useIsGameProfileCommunitiesMobileEnabled({ location: "GameProfileFloatingNav" });
-  let obj = selectedTab(13496);
-  const token = selectedTab(4818).useToken(selectTab(587).colors.BACKGROUND_BASE_LOWEST);
+  const isGameProfileCommunitiesMobileEnabled = selectedTab(13534).useIsGameProfileCommunitiesMobileEnabled({ location: "GameProfileFloatingNav" });
+  let obj = selectedTab(13534);
+  const token = selectedTab(4820).useToken(selectTab(587).colors.BACKGROUND_BASE_LOWEST);
   let items = [token];
   const memo = noop.useMemo(() => {
     const obj = _modDef683(token);
     const items = [_modDef683(token).alpha(0).hex(), token];
     return items;
   }, items);
-  let obj2 = selectedTab(4818);
+  let obj2 = selectedTab(4820);
   [tmp9, c4] = noop.useState({});
   _slicedToArray = noop.useCallback((arg0, arg1) => {
     closure_0 = arg0;
@@ -858,7 +858,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
     });
   }, []);
   noop = tmp10;
-  selectedTab(4850);
+  selectedTab(4852);
   const fn = function s() {
     if (null == styles) {
       let obj = { opacity: 0 };
@@ -875,29 +875,29 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
     return obj;
   };
   const tmp8 = _slicedToArray(noop.useState({}), 2);
-  fn.__closure = { selectedLayout: tmp9[selectedTab], withTiming: selectedTab(5093).withTiming, SELECTION_MS: v320, SELECTION_EASE: easing };
+  fn.__closure = { selectedLayout: tmp9[selectedTab], withTiming: selectedTab(5097).withTiming, SELECTION_MS: v320, SELECTION_EASE: easing };
   fn.__workletHash = 5966559078959;
   fn.__initData = __initData2;
   if (isGameProfileCommunitiesMobileEnabled) {
-    let obj4 = { tab: tmp4(8915).GameProfileNavTab.OVERVIEW, IconComponent: tmp4(9212).GameControllerIcon, label: null };
+    let obj4 = { tab: tmp4(8919).GameProfileNavTab.OVERVIEW, IconComponent: tmp4(9221).GameControllerIcon, label: null };
     const intl = tmp4(1126).intl;
     obj4.label = intl.string(tmp4(1126).t.qHmbyh);
     const items1 = [obj4, ];
-    let obj5 = { tab: tmp4(8915).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(8217).GroupIcon, label: null };
+    let obj5 = { tab: tmp4(8919).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(8224).GroupIcon, label: null };
     const intl2 = tmp4(1126).intl;
     obj5.label = intl2.string(tmp4(1126).t["3xFZEo"]);
     items1[1] = obj5;
     let obj6 = { style: tmp3.wrap, pointerEvents: "box-none", onLayout: navigation.onLayout, children: null };
     const obj7 = { colors: memo, style: tmp3.scrim, pointerEvents: "none" };
-    const items2 = [closure_9(tmp(5391), obj7), ];
+    const items2 = [closure_9(tmp(5396), obj7), ];
     const obj8 = { style: tmp3.pill, accessibilityRole: "tablist", children: null };
-    const obj9 = { style: tmp3.pillBlur, pointerEvents: "none", children: closure_9(tmp4(8542).BackgroundBlurFill, {}) };
+    const obj9 = { style: tmp3.pillBlur, pointerEvents: "none", children: closure_9(tmp4(8549).BackgroundBlurFill, {}) };
     const items3 = [closure_9(closure_7, obj9), ];
     const obj10 = { style: tmp3.pillRow, children: null };
     const obj11 = { style: null, pointerEvents: "none" };
     const items4 = [tmp3.selection, tmp12];
     obj11.style = items4;
-    const items5 = [closure_9(tmp(4850).View, obj11), ];
+    const items5 = [closure_9(tmp(4852).View, obj11), ];
     const obj12 = {
       children: items1.map((IconComponent) => {
           const tab = IconComponent.tab;
@@ -916,7 +916,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
           }, tab);
         })
     };
-    items5[1] = closure_9(tmp4(13490).YouScreenNavIconMeasurer, obj12);
+    items5[1] = closure_9(tmp4(13528).YouScreenNavIconMeasurer, obj12);
     obj10.children = items5;
     items3[1] = closure_10(closure_7, obj10);
     obj8.children = items3;
@@ -926,11 +926,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Floati
   } else {
     return null;
   }
-  let obj3 = { selectedLayout: tmp9[selectedTab], withTiming: selectedTab(5093).withTiming, SELECTION_MS: v320, SELECTION_EASE: easing };
+  let obj3 = { selectedLayout: tmp9[selectedTab], withTiming: selectedTab(5097).withTiming, SELECTION_MS: v320, SELECTION_EASE: easing };
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileFloatingNav.tsx");
+const result = size.fileFinishedImporting("modules/game_profile/native/profile_sections/GameProfileFloatingNav.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProfileFloatingNav(game) {
   const cResult = c.c(5);
@@ -960,7 +960,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   } else if (cResult[3] !== tmp3) {
     const obj2 = {};
     const merged = Object.assign(tmp3);
-    const tmp13 = options(closure_21, obj2);
+    const tmp13 = React6(closure_21, obj2);
     cResult[num5] = tmp3;
     num5 = 4;
     cResult[4] = tmp13;
@@ -979,7 +979,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   if (num >= 3) {
     const obj = {};
     const merged1 = Object.assign(merged);
-    tmp2 = options(closure_21, obj);
+    tmp2 = React6(closure_21, obj);
   }
   return tmp2;
 });

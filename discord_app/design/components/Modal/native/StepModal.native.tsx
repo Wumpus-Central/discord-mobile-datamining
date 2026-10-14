@@ -1,11 +1,11 @@
-// === Module 14610: StepModal ===
+// === Module 14649: StepModal ===
 
-// Module 14610 (StepModal)
+// Module 14649 (StepModal)
 import c from "c" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import NavigatorConstants from "NavigatorConstants" /* 6259 */;
-import Modal from "Modal" /* 10603 */;
-import ModalStepIndicator from "ModalStepIndicator" /* 14611 */;
+import NavigatorConstants from "NavigatorConstants" /* 6263 */;
+import Modal from "Modal" /* 10613 */;
+import ModalStepIndicator from "ModalStepIndicator" /* 14650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -15,9 +15,9 @@ let closure_3 = ["steps", "onWillFocus"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { height: "100%" }, stepContainer: null };
-const rect = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: fn(6259).NAV_BAR_HEIGHT };
+const rect = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: fn(6263).NAV_BAR_HEIGHT };
 obj2.stepContainer = rect;
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -101,7 +101,7 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj4 = { style: tmp9.container, children: null };
               const items = [tmp16, tmp28];
               obj4.children = items;
-              const tmp35 = options(View, obj4);
+              const tmp35 = React6(View, obj4);
               cResult[24] = tmp9.container;
               cResult[25] = tmp16;
               cResult[26] = tmp28;
@@ -203,5 +203,5 @@ export const StepModal = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj4.children = closure_1_8(ModalStepIndicator.ModalStepIndicator, obj5);
   items1[1] = closure_1_8(View, obj4);
   obj.children = items1;
-  return options(View, obj);
+  return React6(View, obj);
 });

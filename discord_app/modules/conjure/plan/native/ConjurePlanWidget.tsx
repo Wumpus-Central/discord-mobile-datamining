@@ -1,23 +1,23 @@
-// === Module 11914: ConjurePlanWidget ===
+// === Module 11943: ConjurePlanWidget ===
 
-// Module 11914 (ConjurePlanWidget)
+// Module 11943 (ConjurePlanWidget)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Stack_Stack from "Stack/Stack" /* 5377 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7326 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8368 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11398 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import Stack_Stack from "Stack/Stack" /* 5382 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7332 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8375 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 11408 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -110,11 +110,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl = applicationId(1126).intl;
   obj3.children = intl.string(_modDef3849.ove4zH);
-  const items2 = [closure_5(applicationId(5088).Text, obj3), ];
+  const items2 = [closure_5(applicationId(5092).Text, obj3), ];
   const obj4 = { userId: stateFromStores, widget: memo, rendererProps: applicationId.rendererProps, cardStyle: null };
   const items3 = [tmp2.card, tmp.card];
   obj4.cardStyle = items3;
   items2[1] = closure_5(UserProfileApplicationWidgetCardDefault, obj4);
   obj2.children = items2;
-  return closure_6(applicationId(5377).Stack, obj2);
+  return closure_6(applicationId(5382).Stack, obj2);
 });

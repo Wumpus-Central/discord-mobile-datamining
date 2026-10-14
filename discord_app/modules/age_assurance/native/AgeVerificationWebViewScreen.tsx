@@ -1,25 +1,25 @@
-// === Module 7521: AgeVerificationWebViewScreen ===
+// === Module 7527: AgeVerificationWebViewScreen ===
 
-// Module 7521 (AgeVerificationWebViewScreen)
+// Module 7527 (AgeVerificationWebViewScreen)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4806 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5909 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7511 */;
+import LinkingDefault from "Linking" /* 4808 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4978 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5914 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7517 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(5917).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(7499);
+let closure_6 = fn(5922).AGE_VERIFICATION_MODAL_KEY;
+const AgeVerificationIncodeWebViewConstants = fn(7505);
 ({ AgeVerificationIncodeResultStatus: closure_7, buildIncodeFallbackSessionInjection: closure_8, parseIncodeWebViewMessage: closure_9 } = AgeVerificationIncodeWebViewConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
 let c13 = 15000;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: null, loadingOverlay: null, webView: null };
 const tmp4 = new LoggerDefault("AgeVerificationWebViewScreen");
 obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     }
     const fn2 = function q(nativeEvent) {
       try {
-        const tmp3 = options(nativeEvent.nativeEvent.data);
+        const tmp3 = React6(nativeEvent.nativeEvent.data);
         if (null != tmp3) {
           if ("capture_complete" === tmp4.kind) {
             const result = AgeVerificationURLActionCreators.registerIncodeInterview(tmp3.interviewId);
@@ -548,7 +548,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
   const items4 = [webviewUrl];
   const callback4 = noop.useCallback((nativeEvent) => {
     try {
-      const tmp3 = options(nativeEvent.nativeEvent.data);
+      const tmp3 = React6(nativeEvent.nativeEvent.data);
       if (null != tmp3) {
         if ("capture_complete" === tmp4.kind) {
           const result = AgeVerificationURLActionCreators.registerIncodeInterview(tmp3.interviewId);

@@ -1,8 +1,8 @@
-// === Module 11354: ConjureFirstPublishSheet ===
+// === Module 11366: ConjureFirstPublishSheet ===
 
-// Module 11354 (ConjureFirstPublishSheet)
+// Module 11366 (ConjureFirstPublishSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5060 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,14 +14,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureFirstPublishSheet = "ConjureFirstPublishSheet";
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureFirstPublishSheet(projectId) {
-  const cResult = trimmed(name[8]).c(53);
+  const cResult = trimmed(name[8]).c(51);
   projectId = projectId.projectId;
   name = projectId.name;
   let description = projectId.description;
@@ -191,7 +191,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   const name = projectId.name;
   const onDone = projectId.onDone;
   let description;
-  let first1;
+  let iconURL;
   c7 = undefined;
   let trimmed;
   c11 = undefined;
@@ -222,7 +222,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
             return obj3;
           } else {
             closure_128_0 = undefined;
-            if (!first2) {
+            if (!first1) {
               if (null == closure_2_11) {
                 ConjureFirstPublishSheet(true);
                 _undefined(null);
@@ -230,7 +230,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                 const obj6 = { name, description };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp5(11355).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
+                const obj7 = { value: tmp5(11367).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
                 return obj7;
               }
             }
@@ -259,18 +259,18 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
     }
   };
   const tmp = trimmed();
-  [str, tmp5] = description(first1.useState(name), 2);
-  const tmp6 = description(first1.useState(description), 2);
+  [str, tmp5] = description(iconURL.useState(name), 2);
+  const tmp6 = description(iconURL.useState(description), 2);
   description = tmp6[0];
-  const tmp8 = description(first1.useState(null), 2);
-  first1 = tmp8[0];
+  const tmp8 = description(iconURL.useState(null), 2);
+  iconURL = tmp8[0];
   closure_6 = tmp8[1];
-  let obj = first1;
-  const tmp4 = description(first1.useState(name), 2);
-  [tmp11, c7] = description(first1.useState(null), 2);
-  const tmp12 = description(first1.useState(false), 2);
-  const first2 = tmp12[0];
-  closure_9 = tmp12[1];
+  let obj = iconURL;
+  const tmp4 = description(iconURL.useState(name), 2);
+  [tmp10, c7] = description(iconURL.useState(null), 2);
+  const tmp11 = description(iconURL.useState(false), 2);
+  const first1 = tmp11[0];
+  closure_9 = tmp11[1];
   trimmed = str.trim();
   let result = null;
   if (trimmed !== name) {
@@ -299,50 +299,45 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   obj4.subtitle = intl2.string(name(description[14]).Gzmlyg);
   obj3.header = c7(projectId(description[15]).BottomSheetTitleHeader, obj4);
   const obj5 = { style: tmp.content, children: null };
-  let iconURL = first1;
-  if (first1 == null) {
+  if (iconURL == null) {
     iconURL = name(description[9])(projectId).iconURL;
   }
-  let obj6 = {
-    iconURL,
-    canRemove: null != first1,
-    onIconChange(arg0) {
-      closure_6(arg0);
-      _undefined(null);
-    },
-    name: str,
-    nameError: result,
-    onNameChange: tmp5,
-    description,
-    onDescriptionChange: tmp6[1],
-    previewName: null,
-    disabled: null
-  };
-  if ("" === trimmed) {
-    trimmed = name;
-  }
-  obj6.previewName = trimmed;
-  obj6.disabled = first2;
-  const items1 = [c7(projectId(description[16]).ConjureAppIdentitySection, obj6), , ];
-  let tmp18Result = null;
-  if (null != tmp11) {
+  const items1 = [
+    c7(projectId(description[16]).ConjureAppIdentitySection, {
+      iconURL,
+      onIconChange(arg0) {
+        closure_6(arg0);
+        _undefined(null);
+      },
+      name: str,
+      nameError: result,
+      onNameChange: tmp5,
+      description,
+      onDescriptionChange: tmp6[1],
+      disabled: first1
+    }),
+  ,
+
+  ];
+  let tmp17Result = null;
+  if (null != tmp10) {
     let obj7 = { accessibilityRole: "alert", children: null };
-    const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: tmp11 };
-    obj7.children = tmp18(tmp19(tmp3[17]).Text, obj8);
-    tmp18Result = tmp18(tmp21, obj7);
+    const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: tmp10 };
+    obj7.children = tmp17(tmp18(tmp3[17]).Text, obj8);
+    tmp17Result = tmp17(tmp20, obj7);
   }
-  items1[1] = tmp18Result;
+  items1[1] = tmp17Result;
   const obj9 = { style: tmp.actions, children: null };
   const obj10 = { variant: "secondary", grow: true, text: null, disabled: null, onPress: null };
-  const intl3 = tmp19(tmp3[13]).intl;
+  const intl3 = tmp18(tmp3[13]).intl;
   obj10.text = intl3.string(name(description[14])["bz/M68"]);
-  obj10.disabled = first2;
+  obj10.disabled = first1;
   obj10.onPress = onPress;
   const items2 = [c7(projectId(description[18]).Button, obj10), ];
   const obj11 = { variant: "primary", grow: true, text: null, loading: null, disabled: null, onPress: null };
-  const intl4 = tmp19(tmp3[13]).intl;
+  const intl4 = tmp18(tmp3[13]).intl;
   obj11.text = intl4.string(name(description[14]).dyIV6M);
-  obj11.loading = first2;
+  obj11.loading = first1;
   obj11.disabled = null != result;
   obj11.onPress = function onPress() {
     (function publish() {
@@ -360,9 +355,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   };
   items2[1] = c7(projectId(description[18]).Button, obj11);
   obj9.children = items2;
-  items1[2] = first2(closure_6, obj9);
+  items1[2] = first1(closure_6, obj9);
   obj5.children = items1;
-  obj3.children = first2(closure_6, obj5);
+  obj3.children = first1(closure_6, obj5);
   return c7(projectId(description[19]).ActionSheet, obj3);
 });
 const size = fn(2);

@@ -1,16 +1,16 @@
-// === Module 17391: pages/ErrorScreen ===
+// === Module 17425: pages/ErrorScreen ===
 
-// Module 17391 (pages/ErrorScreen)
+// Module 17425 (pages/ErrorScreen)
 import c from "c" /* 576 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4830 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6669 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = tmp(5088);
+const Text_Text = tmp(5092);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_6 = createStyles.createStyles({ container: { justifyContent: "center", alignItems: "center", height: "100%", display: "flex" }, text: { textAlign: "center", width: "75%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

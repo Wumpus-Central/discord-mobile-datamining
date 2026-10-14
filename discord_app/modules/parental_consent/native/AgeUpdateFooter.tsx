@@ -1,17 +1,17 @@
-// === Module 18706: AgeUpdateFooter ===
+// === Module 18742: AgeUpdateFooter ===
 
-// Module 18706 (AgeUpdateFooter)
+// Module 18742 (AgeUpdateFooter)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef2862 from "module_2862" /* 2862 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7498 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5923 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7504 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_4 = createStyles.createStyles({ text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

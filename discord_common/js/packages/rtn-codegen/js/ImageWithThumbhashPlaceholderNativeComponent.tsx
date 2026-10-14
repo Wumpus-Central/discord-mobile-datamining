@@ -1,6 +1,6 @@
-// === Module 8960: ImageWithThumbhashPlaceholderNativeComponent ===
+// === Module 8965: ImageWithThumbhashPlaceholderNativeComponent ===
 
-// Module 8960 (ImageWithThumbhashPlaceholderNativeComponent)
+// Module 8965 (ImageWithThumbhashPlaceholderNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

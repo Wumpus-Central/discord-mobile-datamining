@@ -1,28 +1,28 @@
-// === Module 9716: autocompleter/AutocompleteUtils ===
+// === Module 9726: autocompleter/AutocompleteUtils ===
 
-// Module 9716 (autocompleter/AutocompleteUtils)
+// Module 9726 (autocompleter/AutocompleteUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import useChannelName from "useChannelName" /* 5421 */;
-import TimestampUtils from "TimestampUtils" /* 8156 */;
-import FormDividerDefault from "FormDivider" /* 8584 */;
+import UserUtilsDefault from "UserUtils" /* 4964 */;
+import useChannelName from "useChannelName" /* 5426 */;
+import TimestampUtils from "TimestampUtils" /* 8163 */;
+import FormDividerDefault from "FormDivider" /* 8591 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4748 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import GuildChannelStore from "GuildChannelStore" /* 4750 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 let closure_3 = fn(2069).isGuildSelectableChannelType;
 const Constants = fn(1085);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(9717);
+const ApplicationCommandsConstants = fn(9727);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5404);
+const ChannelAutocompleteConstants = fn(5409);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -84,7 +84,7 @@ export const getItemLayout = function getItemLayout(arg0, index) {
       type = tmp2.type;
     }
   }
-  const tmp3 = type === constants.EMOJI ? options : collapsed;
+  const tmp3 = type === constants.EMOJI ? React6 : collapsed;
   const obj = { length: tmp3, offset: null, index };
   const result = index * tmp3;
   obj.offset = result + Math.max(0, (index - 1) * hairlineWidth);

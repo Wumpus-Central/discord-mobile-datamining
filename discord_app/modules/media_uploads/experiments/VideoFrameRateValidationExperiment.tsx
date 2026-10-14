@@ -1,6 +1,6 @@
-// === Module 7781: VideoFrameRateValidationExperiment ===
+// === Module 7788: VideoFrameRateValidationExperiment ===
 
-// Module 7781 (VideoFrameRateValidationExperiment)
+// Module 7788 (VideoFrameRateValidationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

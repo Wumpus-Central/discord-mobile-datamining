@@ -1,9 +1,9 @@
-// === Module 15146: useTrackNavigatorScreenImpression ===
+// === Module 15184: useTrackNavigatorScreenImpression ===
 
-// Module 15146 (useTrackNavigatorScreenImpression)
+// Module 15184 (useTrackNavigatorScreenImpression)
 import c from "c" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8972 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8977 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 12837: getBoostRowMessageText ===
+// === Module 12873: getBoostRowMessageText ===
 
-// Module 12837 (getBoostRowMessageText)
+// Module 12873 (getBoostRowMessageText)
 import util from "util" /* 1126 */;
 import _modDef2600 from "module_2600" /* 2600 */;
-import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 12832 */;
+import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 12868 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");

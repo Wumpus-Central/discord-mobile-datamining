@@ -8,16 +8,16 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import router_utils from "router_utils" /* 1112 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7032 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4978 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7038 */;
 import GatedChannelStore from "GatedChannelStore" /* 2117 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildChannelStore from "GuildChannelStore" /* 4748 */;
+import GuildChannelStore from "GuildChannelStore" /* 4750 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
 
 require = fn;
 function handleConnectionOpen(sessionId) {
@@ -405,9 +405,9 @@ prototype["getMostRecentSelectedTextChannelId"] = function getMostRecentSelected
   }
   return tmp;
 };
-prototype["getCurrentlySelectedChannelId"] = function getCurrentlySelectedChannelId(guildId) {
-  if (null != guildId) {
-    let tmp = selectedChannelIds[guildId];
+prototype["getCurrentlySelectedChannelId"] = function getCurrentlySelectedChannelId(id) {
+  if (null != id) {
+    let tmp = selectedChannelIds[id];
   } else {
     tmp = c6;
   }

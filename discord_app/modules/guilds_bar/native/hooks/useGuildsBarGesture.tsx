@@ -1,22 +1,22 @@
-// === Module 17045: useGuildsBarGesture ===
+// === Module 17082: useGuildsBarGesture ===
 
-// Module 17045 (useGuildsBarGesture)
+// Module 17082 (useGuildsBarGesture)
 import util from "util" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
-import shared from "shared" /* 4969 */;
-import HapticUtils from "HapticUtils" /* 5057 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
-import FastList from "FastList" /* 6761 */;
-import ContextMenuState from "ContextMenuState" /* 9364 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11573 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4852 */;
+import shared from "shared" /* 4971 */;
+import HapticUtils from "HapticUtils" /* 5061 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5367 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6339 */;
+import FastList from "FastList" /* 6765 */;
+import ContextMenuState from "ContextMenuState" /* 9373 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11583 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import SortedGuildStore from "SortedGuildStore" /* 5963 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17046 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 17083 */;
 import debounce from "debounce" /* 551 */;
 
 const require = globalThis.__r;
@@ -275,19 +275,19 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(5963).GuildsNodeType;
-const GuildsBarConstants = fn(17043);
+const GuildsNodeType = fn(5968).GuildsNodeType;
+const GuildsBarConstants = fn(17080);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
 let __closure = { pan: null, itemMeasurements: null, activeIndex: null };
-let ReanimatedRexport = fn(4850);
+let ReanimatedRexport = fn(4852);
 __closure.pan = ReanimatedRexport.makeMutable(-1);
-ReanimatedRexport = fn(4850);
+ReanimatedRexport = fn(4852);
 __closure.itemMeasurements = ReanimatedRexport.makeMutable([]);
-ReanimatedRexport = fn(4850);
+ReanimatedRexport = fn(4852);
 __closure.activeIndex = ReanimatedRexport.makeMutable(-1);
-let closure_16 = debounce(fn(5057).triggerHapticFeedback, 16);
+let closure_16 = debounce(fn(5061).triggerHapticFeedback, 16);
 let closure_17 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -602,7 +602,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "kind", overSpecs: "apply" });
+    state1.setStateShallow({ dragSpecs: "lineClamp", overSpecs: "color" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -784,10 +784,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(9364).ContextMenuStore;
+        const ContextMenuStore = tmp66(9373).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(9364).hideContextMenu();
-          const tmp66Result = tmp66(9364);
+          tmp66(9373).hideContextMenu();
+          const tmp66Result = tmp66(9373);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -824,9 +824,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(6761).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(6765).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(6761).FastListItemTypes.SECTION === type) {
+                    if (tmp66(6765).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";

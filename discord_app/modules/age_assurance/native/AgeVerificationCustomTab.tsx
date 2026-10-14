@@ -1,10 +1,10 @@
-// === Module 7531: AgeVerificationCustomTab ===
+// === Module 7537: AgeVerificationCustomTab ===
 
-// Module 7531 (AgeVerificationCustomTab)
+// Module 7537 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5054 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

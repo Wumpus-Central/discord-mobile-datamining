@@ -1,12 +1,12 @@
-// === Module 5113: VoiceStateStore ===
+// === Module 5117: VoiceStateStore ===
 
-// Module 5113 (VoiceStateStore)
+// Module 5117 (VoiceStateStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
 import _slicedToArray from "module_32" /* 32 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 5114 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 5118 */;
 
 require = fn;
 function updateVoiceState(arg0, arg1, fn) {
@@ -146,7 +146,7 @@ function handleGuildCreateOrDelete(guild) {
   delete tmp2[tmp];
 }
 const ME = fn(1085).ME;
-const VoicePlatforms = fn(5115).VoicePlatforms;
+const VoicePlatforms = fn(5119).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};
@@ -286,8 +286,8 @@ prototype["getCurrentClientVoiceChannelId"] = function getCurrentClientVoiceChan
   }
   return channelId;
 };
-prototype["getUsersWithVideo"] = function getUsersWithVideo(afkChannelId) {
-  value = map.get(afkChannelId);
+prototype["getUsersWithVideo"] = function getUsersWithVideo(id) {
+  value = map.get(id);
   if (value == null) {
     value = set;
   }

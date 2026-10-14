@@ -1,13 +1,13 @@
-// === Module 17266: GamingLikeEntryRow ===
+// === Module 17300: GamingLikeEntryRow ===
 
-// Module 17266 (GamingLikeEntryRow)
+// Module 17300 (GamingLikeEntryRow)
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8268 */;
-import utils from "utils" /* 8272 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8472 */;
-import BadgesAll from "Badges" /* 13615 */;
-import TrendingType from "TrendingType" /* 13620 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8275 */;
+import utils from "utils" /* 8279 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8479 */;
+import BadgesAll from "Badges" /* 13653 */;
+import TrendingType from "TrendingType" /* 13658 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -15,8 +15,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8272).isEntryNew }, , , , ];
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8272).isEntryNew };
+let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8279).isEntryNew }, , , , ];
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8279).isEntryNew };
 items[1] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -69,7 +69,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   }
 };
-const createICYMIStyles = fn(17217);
+const createICYMIStyles = fn(17251);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -144,16 +144,15 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(17267, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(17301, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");
         const obj = author_id(openReplyActionSheet[19]);
         const obj3 = { itemId: content.id, itemType: "hotwheels_gaming_activity", actionParameters: { actionGestureType: "press", actionTargetElement: "forward_button", actionIntentType: "share", actionDestinationType: null } };
         author_id(openReplyActionSheet[19]).feedItemActioned(obj3);
-        const obj4 = author_id(openReplyActionSheet[20]);
-        const obj5 = { content };
-        obj4.pushLazy(() => Promise.resolve(GameShareModal), obj5, "GameShareModal", { presentation: "modal" });
+        const obj4 = { content };
+        author_id(openReplyActionSheet[20])(() => Promise.resolve(GameShareModal), obj4, "GameShareModal");
         const obj2 = author_id(openReplyActionSheet[19]);
       }
     });
@@ -180,7 +179,7 @@ export default function GamingLikeEntryRow(content) {
         isEntryActiveResult = tmp2(tmp3[5]).isEntryActive(content);
         let tmp20;
         if (null != displayNameStylesFont) {
-          let obj5 = { fontFamily: displayNameStylesFont };
+          const obj5 = { fontFamily: displayNameStylesFont };
           tmp20 = obj5;
         }
         const obj6 = { children: null };

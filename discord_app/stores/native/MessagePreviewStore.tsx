@@ -1,10 +1,10 @@
-// === Module 8481: MessagePreviewStore ===
+// === Module 8488: MessagePreviewStore ===
 
-// Module 8481 (MessagePreviewStore)
+// Module 8488 (MessagePreviewStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5434 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5439 */;
 
 require = fn;
 let c3 = null;

@@ -1,22 +1,22 @@
-// === Module 17434: FileGridItem ===
+// === Module 17468: FileGridItem ===
 
-// Module 17434 (FileGridItem)
-import MediaFormatTesters from "MediaFormatTesters" /* 5419 */;
-import ImageIcon from "ImageIcon" /* 8215 */;
-import VideoIcon from "VideoIcon" /* 10770 */;
-import FileIcon from "FileIcon" /* 11670 */;
-import SearchMediaImage from "SearchMediaImage" /* 17422 */;
+// Module 17468 (FileGridItem)
+import MediaFormatTesters from "MediaFormatTesters" /* 5424 */;
+import ImageIcon from "ImageIcon" /* 8222 */;
+import VideoIcon from "VideoIcon" /* 10869 */;
+import FileIcon from "FileIcon" /* 11680 */;
+import SearchMediaImage from "SearchMediaImage" /* 17456 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, useWindowDimensions: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9313);
+const SearchConstants = fn(9322);
 ({ FILE_OR_LINK_IMAGE_BUFFER: closure_7, SearchFileTypes: closure_8 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -380,15 +380,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         obj.children = tmpResult;
         return closure_2_9(scale, obj);
       };
-      return options(SearchMediaImage.SearchAttachmentMediaImage, obj4);
+      return React6(SearchMediaImage.SearchAttachmentMediaImage, obj4);
     } else if (constants.ATTACHMENT === type) {
       const size = { fileName, containerStyle: imageStyle, height: null, width: null };
       ({ height: obj2.height, width: obj2.width } = imageStyle);
-      return options(SearchMediaImage.SearchFileMediaImage, size);
+      return React6(SearchMediaImage.SearchFileMediaImage, size);
     } else if (constants.AUDIO === type) {
       const size1 = { containerStyle: imageStyle, height: null, width: null };
       ({ height: obj.height, width: obj.width } = imageStyle);
-      return options(SearchMediaImage.SearchSoundMediaImage, size1);
+      return React6(SearchMediaImage.SearchSoundMediaImage, size1);
     }
   }, items3);
   const obj3 = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };

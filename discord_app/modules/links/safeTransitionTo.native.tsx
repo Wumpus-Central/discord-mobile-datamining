@@ -1,10 +1,10 @@
-// === Module 6950: safeTransitionTo ===
+// === Module 6955: safeTransitionTo ===
 
-// Module 6950 (safeTransitionTo)
+// Module 6955 (safeTransitionTo)
 import router_utils from "router_utils" /* 1112 */;
-import LinkUtils from "LinkUtils" /* 5422 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 6951 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 6952 */;
+import LinkUtils from "LinkUtils" /* 5427 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 6956 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 6957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -119,7 +119,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "r" };
+        closure_2 = { guildId: "keys" };
       }
       c5 = 2;
       c6 = 1;

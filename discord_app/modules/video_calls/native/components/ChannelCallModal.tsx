@@ -1,29 +1,29 @@
-// === Module 10825: ChannelCallModal ===
+// === Module 10905: ChannelCallModal ===
 
-// Module 10825 (ChannelCallModal)
+// Module 10905 (ChannelCallModal)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7482 */;
-import VoiceChatHooks from "VoiceChatHooks" /* 10358 */;
-import RevealProvider from "RevealProvider" /* 10827 */;
-import CameraPreviewDefault from "CameraPreview" /* 10830 */;
-import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 10967 */;
-import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 10968 */;
-import PanGestureAnimations from "PanGestureAnimations" /* 11192 */;
-import RouteManagerUtils from "RouteManagerUtils" /* 11193 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4978 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7488 */;
+import VoiceChatHooks from "VoiceChatHooks" /* 10368 */;
+import RevealProvider from "RevealProvider" /* 10907 */;
+import CameraPreviewDefault from "CameraPreview" /* 10910 */;
+import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 11041 */;
+import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 11042 */;
+import PanGestureAnimations from "PanGestureAnimations" /* 11262 */;
+import RouteManagerUtils from "RouteManagerUtils" /* 11263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 const PanGestureAnimationsDefault = PanGestureAnimations;
 
 require = fn;
-const ChannelCallStore = fn(10354);
+const ChannelCallStore = fn(10364);
 ({ useChannelCallOrientationHandlers: closure_7, resetChannelCallStore: closure_8, useChannelCallStore: closure_9, setVoiceChatDrawerState: c10, useIsVoiceChatFocused: closure_11 } = ChannelCallStore);
-let VoiceChatDrawerState = fn(10355).VoiceChatDrawerState;
-const Constants = fn(10826);
+let VoiceChatDrawerState = fn(10365).VoiceChatDrawerState;
+const Constants = fn(10906);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -113,14 +113,14 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       if (null != first) {
         ChannelCallModalManagerDefault.initialize(tmp);
         return () => {
-          closure_1_1(10967).terminate();
-          const obj = closure_1_1(10967);
-          closure_1_1(10361).setHidden(false);
-          const obj2 = closure_1_1(10361);
+          closure_1_1(11041).terminate();
+          const obj = closure_1_1(11041);
+          closure_1_1(10371).setHidden(false);
+          const obj2 = closure_1_1(10371);
           if (!obj3.isModalOpen(closure_1_34)) {
             closure_1_8();
           }
-          obj3 = channel(4976);
+          obj3 = channel(4978);
         };
       }
     };
@@ -152,14 +152,14 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(10967).terminate();
-        const obj = closure_1_1(10967);
-        closure_1_1(10361).setHidden(false);
-        const obj2 = closure_1_1(10361);
+        closure_1_1(11041).terminate();
+        const obj = closure_1_1(11041);
+        closure_1_1(10371).setHidden(false);
+        const obj2 = closure_1_1(10371);
         if (!obj3.isModalOpen(closure_1_34)) {
           closure_1_8();
         }
-        obj3 = channel(4976);
+        obj3 = channel(4978);
       };
     }
   }, items);
@@ -187,12 +187,12 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwi
   fn.__closure = { width };
   fn.__workletHash = 15383459308604;
   fn.__initData = __initData;
-  const derivedValue = width(4850).useDerivedValue(fn);
+  const derivedValue = width(4852).useDerivedValue(fn);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function l() {
-      width(4850).runOnJS(width(4985).dismissKeyboard)();
+      width(4852).runOnJS(width(4987).dismissKeyboard)();
     };
-    const obj3 = { runOnJS: width(4850).runOnJS, dismissKeyboard: width(4985).dismissKeyboard };
+    const obj3 = { runOnJS: width(4852).runOnJS, dismissKeyboard: width(4987).dismissKeyboard };
     fn2.__closure = obj3;
     fn2.__workletHash = 4086900686382;
     fn2.__initData = __initData2;
@@ -233,7 +233,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwi
   cResult[4] = translateX;
   cResult[5] = obj4;
   tmp8 = obj4;
-  const obj2 = width(4850);
+  const obj2 = width(4852);
 }) : (function useSwipeToChatGesture(width) {
   width = width.width;
   ({ translateX, enabled, isGestureInProgress } = width);
@@ -245,17 +245,17 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSwi
   fn.__workletHash = 11365418877886;
   fn.__initData = __initData3;
   const fn2 = function c() {
-    width(4850).runOnJS(width(4985).dismissKeyboard)();
+    width(4852).runOnJS(width(4987).dismissKeyboard)();
   };
   const obj2 = { runOnJS: null, dismissKeyboard: null };
-  const derivedValue = width(4850).useDerivedValue(fn);
-  obj2.runOnJS = width(4850).runOnJS;
-  obj2.dismissKeyboard = width(4985).dismissKeyboard;
+  const derivedValue = width(4852).useDerivedValue(fn);
+  obj2.runOnJS = width(4852).runOnJS;
+  obj2.dismissKeyboard = width(4987).dismissKeyboard;
   fn2.__closure = obj2;
   fn2.__workletHash = 17381416484264;
   fn2.__initData = __initData4;
   const callback = noop.useCallback(fn2, []);
-  const obj = width(4850);
+  const obj = width(4852);
   const obj3 = { lowerBounds: -width, upperBounds: 0, translate: translateX, vertical: false, snapPositions: derivedValue, onStart: callback, isGestureInProgress };
   const obj4 = PanGestureAnimationsDefault({ lowerBounds: -width, upperBounds: 0, translate: translateX, vertical: false, snapPositions: derivedValue, onStart: callback, isGestureInProgress });
   let items = [-closure_13, closure_13];

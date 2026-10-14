@@ -1,12 +1,12 @@
-// === Module 10317: FavoritesGuildUpsellSheet ===
+// === Module 10327: FavoritesGuildUpsellSheet ===
 
-// Module 10317 (FavoritesGuildUpsellSheet)
+// Module 10327 (FavoritesGuildUpsellSheet)
 import router_utils from "router_utils" /* 1112 */;
 import _modDef3442 from "module_3442" /* 3442 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9394 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9395 */;
-import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10318 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10323 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9403 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9404 */;
+import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10328 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10333 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   const cResult = analyticsLocations(576).c(22);
   ({ limit, source, variant } = arg0);
   if (undefined === limit) {
-    limit = tmp(10314).FREE_FAVORITE_LIMIT;
+    limit = tmp(10324).FREE_FAVORITE_LIMIT;
   }
   let str = "channel_context_menu";
   if (undefined !== source) {
@@ -32,10 +32,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   if (undefined !== variant) {
     str2 = variant;
   }
-  analyticsLocations = first(10318)(str).analyticsLocations;
+  analyticsLocations = first(10328)(str).analyticsLocations;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
-      first(5056).hideActionSheet(analyticsLocations(10316).FAVORITES_UPSELL_SHEET_KEY);
+      first(5060).hideActionSheet(analyticsLocations(10326).FAVORITES_UPSELL_SHEET_KEY);
     };
     cResult[0] = fn;
     first = fn;
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
       if (cResult[4] === limit) {
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp17 = closure_6(tmp(10319).FavoritesSpotIllustration, {});
+          const tmp17 = closure_6(tmp(10329).FavoritesSpotIllustration, {});
           cResult[6] = tmp17;
           let tmp15 = tmp17;
         } else {
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
                       openPremiumModalDefault(obj);
                     }
           };
-          const tmp22 = closure_6(tmp(5379).Button, obj2);
+          const tmp22 = closure_6(tmp(5384).Button, obj2);
           cResult[8] = analyticsLocations;
           cResult[9] = tmp22;
           let tmp20 = tmp22;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
           }
           if (cResult[13] !== cResult[11]) {
             const obj3 = { size: "lg", variant: "secondary", text: tmp23, onPress: tmp27 };
-            const tmp30 = closure_6(tmp(5379).Button, obj3);
+            const tmp30 = closure_6(tmp(5384).Button, obj3);
             cResult[13] = tmp23;
             cResult[14] = tmp30;
             let tmp28 = tmp30;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
               }
             }
             const obj4 = { title: tmp7, description: tmp11, illustration: tmp15, actions: tmp31 };
-            const tmp36 = closure_6(tmp(10324).PromoSheet, obj4);
+            const tmp36 = closure_6(tmp(10334).PromoSheet, obj4);
             cResult[18] = tmp31;
             cResult[19] = tmp7;
             cResult[20] = tmp11;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
           const obj5 = { children: null };
           const items = [tmp20, tmp28];
           obj5.children = items;
-          const tmp33 = closure_7(tmp(5958).ButtonGroup, obj5);
+          const tmp33 = closure_7(tmp(5963).ButtonGroup, obj5);
           cResult[15] = tmp28;
           cResult[16] = tmp20;
           cResult[17] = tmp33;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
 }) : (function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(10314).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(10324).FREE_FAVORITE_LIMIT;
   }
   let str = limit.source;
   if (str === undefined) {
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   }
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault(str).analyticsLocations;
   importDefault = noop.useCallback(() => {
-    closure_1(5056).hideActionSheet(analyticsLocations(10316).FAVORITES_UPSELL_SHEET_KEY);
+    closure_1(5060).hideActionSheet(analyticsLocations(10326).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = analyticsLocations(1126).intl;
   const tmp8 = _modDef3442;
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     formatToPlainStringResult = intl2.string(tmp3(3442)["WaP/lz"]);
   }
   obj.description = formatToPlainStringResult;
-  obj.illustration = closure_6(analyticsLocations(10319).FavoritesSpotIllustration, {});
+  obj.illustration = closure_6(analyticsLocations(10329).FavoritesSpotIllustration, {});
   const obj3 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = tmp7(1126).intl;
   obj3.text = intl3.string(analyticsLocations(1126).t.pj0XBN);
@@ -194,11 +194,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     const obj = { analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
   };
-  const items = [closure_6(analyticsLocations(5379).Button, obj3), ];
+  const items = [closure_6(analyticsLocations(5384).Button, obj3), ];
   const intl4 = tmp7(1126).intl;
   const tmp3Result = _modDef3442;
   const obj4 = { children: null };
-  items[1] = closure_6(analyticsLocations(5379).Button, {
+  items[1] = closure_6(analyticsLocations(5384).Button, {
     size: "lg",
     variant: "secondary",
     text: intl4.string("limit_reached" === str2 ? tmp3Result.PprSsy : tmp3Result["+dSwhE"]),
@@ -209,6 +209,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     }
   });
   obj4.children = items;
-  obj.actions = closure_7(analyticsLocations(5958).ButtonGroup, obj4);
-  return closure_6(analyticsLocations(10324).PromoSheet, obj);
+  obj.actions = closure_7(analyticsLocations(5963).ButtonGroup, obj4);
+  return closure_6(analyticsLocations(10334).PromoSheet, obj);
 });

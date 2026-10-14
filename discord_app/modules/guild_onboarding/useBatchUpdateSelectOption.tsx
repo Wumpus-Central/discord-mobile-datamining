@@ -1,13 +1,13 @@
-// === Module 10703: useBatchUpdateSelectOption ===
+// === Module 10806: useBatchUpdateSelectOption ===
 
-// Module 10703 (useBatchUpdateSelectOption)
+// Module 10806 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6794 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6798 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6789 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6793 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ function getRoles(singleSelect, roleIds, arg2, arg3) {
   closure_1 = arg3;
   if (singleSelect.singleSelect) {
     if (arg2) {
-      options = singleSelect.options;
+      const options = singleSelect.options;
       const found = options.find((id) => closure_1.includes(id.id));
       roleIds = roleIds.roleIds;
       if (roleIds == null) {
@@ -75,7 +75,7 @@ function getChannels(arg0) {
   ({ selected, responses: importDefault } = arg0);
   if (_prompt.singleSelect) {
     if (selected) {
-      options = _prompt.options;
+      const options = _prompt.options;
       const found = options.find((id) => importDefault.includes(id.id));
       let channelIds = option.channelIds;
       if (channelIds == null) {

@@ -1,19 +1,19 @@
-// === Module 17374: SearchScreenSearchBar ===
+// === Module 17408: SearchScreenSearchBar ===
 
-// Module 17374 (SearchScreenSearchBar)
+// Module 17408 (SearchScreenSearchBar)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
-import mergeProps from "mergeProps" /* 4823 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6305 */;
-import layout_SearchBarDefault from "layout/SearchBar" /* 17375 */;
-import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 17377 */;
-import SearchFilterButtonDefault from "SearchFilterButton" /* 17382 */;
+import mergeProps from "mergeProps" /* 4825 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6309 */;
+import layout_SearchBarDefault from "layout/SearchBar" /* 17409 */;
+import SearchFilterSuggestionsDefault from "SearchFilterSuggestions" /* 17411 */;
+import SearchFilterButtonDefault from "SearchFilterButton" /* 17416 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 }, headerWithBackButton: { paddingLeft: 0 }, headerSearch: { flex: 1, flexGrow: 1 }, headerControlsRight: { paddingRight: 16, paddingLeft: 12 }, suggestionsAnchor: { height: 0 }, suggestions: { position: "absolute", left: 0, right: -50, top: 8 }, suggestionsWithBackButton: { left: -28 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -25,11 +25,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp4 = closure_7();
   ref1 = noop.useRef(null);
   if (cResult[0] !== ref) {
-    const mergeRefsResult = tmp(4823).mergeRefs(ref, ref1);
+    const mergeRefsResult = tmp(4825).mergeRefs(ref, ref1);
     cResult[0] = ref;
     cResult[1] = mergeRefsResult;
     let tmp6 = mergeRefsResult;
-    const tmpResult = tmp(4823);
+    const tmpResult = tmp(4825);
   } else {
     tmp6 = cResult[1];
   }

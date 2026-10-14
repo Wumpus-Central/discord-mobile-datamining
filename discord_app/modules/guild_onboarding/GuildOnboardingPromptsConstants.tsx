@@ -1,6 +1,6 @@
-// === Module 6790: GuildOnboardingPromptsConstants ===
+// === Module 6794: GuildOnboardingPromptsConstants ===
 
-// Module 6790 (GuildOnboardingPromptsConstants)
+// Module 6794 (GuildOnboardingPromptsConstants)
 import util from "util" /* 1126 */;
 import _modDef1355 from "module_1355" /* 1355 */;
 import StringUtils from "StringUtils" /* 2031 */;
@@ -10,7 +10,7 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 require = fn;
 function serverPromptToClientPrompt(id) {
   let obj = { id: id.id, options: null, title: id.title, singleSelect: id.single_select, disabled: id.disabled, required: id.required, inOnboarding: id.in_onboarding, type: id.type };
-  options = id.options;
+  const options = id.options;
   obj.options = options.map((id) => {
     const obj = { id: id.id, channelIds: id.channel_ids, roleIds: id.role_ids, emoji: id.emoji, title: id.title, description: null };
     let str = id.description;
@@ -120,7 +120,7 @@ export const getEmptyPrompt = function getEmptyPrompt(inOnboarding) {
 };
 export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id) {
   let obj = { id: id.id, options: null, title: id.title, single_select: id.singleSelect, disabled: id.disabled, required: id.required, in_onboarding: id.inOnboarding, type: id.type };
-  options = id.options;
+  const options = id.options;
   obj.options = options.map((id) => {
     const obj = { id: id.id, channel_ids: id.channelIds, role_ids: id.roleIds, emoji: id.emoji, emoji_id: null, emoji_name: null, emoji_animated: null, title: null, description: null };
     const emoji = id.emoji;

@@ -1,13 +1,13 @@
-// === Module 6862: GameIcon ===
+// === Module 6867: GameIcon ===
 
-// Module 6862 (GameIcon)
+// Module 6867 (GameIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import _modDef6863 from "module_6863" /* 6863 */;
-import _modDef6864 from "module_6864" /* 6864 */;
-import _modDef6865 from "module_6865" /* 6865 */;
-import _modDef6866 from "module_6866" /* 6866 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import _modDef6868 from "module_6868" /* 6868 */;
+import _modDef6869 from "module_6869" /* 6869 */;
+import _modDef6870 from "module_6870" /* 6870 */;
+import _modDef6871 from "module_6871" /* 6871 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const PremiumSubscriptionSKUs = fn(1392).PremiumSubscriptionSKUs;
 const jsx = fn(21).jsx;
 const GameIconSizes = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
 let obj2 = { [GameIconSizes.SIZE_24]: 24, [GameIconSizes.SMALL]: 32, [GameIconSizes.NORMAL]: 48, [GameIconSizes.LARGE]: 80 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj4 = { gameIcon: { justifyContent: "center", alignItems: "center" }, size24: null, small: null, normal: null, large: null, placeholder: null, entityWrapper: null };
 let size = { width: obj2.size_24, height: obj2.size_24, borderRadius: nativeDefault.radii.sm };
 obj4.size24 = size;
@@ -119,7 +119,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameIcon(a
             }
           }
           if (null == tmp17) {
-            tmp17 = _modDef6866;
+            tmp17 = _modDef6871;
             items1.push(tmp4.placeholder);
           }
           cResult[5] = game;
@@ -135,17 +135,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameIcon(a
           tmp8 = items1;
         } else {
           if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
-            let tmp11 = _modDef6863;
+            let tmp11 = _modDef6868;
             cResult[14] = skuId;
             cResult[15] = tmp11;
           } else if (PremiumSubscriptionSKUs.TIER_1 !== skuId) {
             if (PremiumSubscriptionSKUs.TIER_2 === skuId) {
-              tmp11 = _modDef6865;
+              tmp11 = _modDef6870;
             } else {
               tmp11 = null;
             }
           }
-          tmp11 = _modDef6864;
+          tmp11 = _modDef6869;
         }
       }
     }
@@ -177,7 +177,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameIcon(a
       }
     }
     if (null == tmp12) {
-      tmp12 = _modDef6866;
+      tmp12 = _modDef6871;
       items.push(tmp2.placeholder);
     }
     const obj3 = { style: null, children: null };

@@ -1,27 +1,27 @@
-// === Module 17933: VoicePanelVideoButton ===
+// === Module 17969: VoicePanelVideoButton ===
 
-// Module 17933 (VoicePanelVideoButton)
+// Module 17969 (VoicePanelVideoButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CameraRive from "CameraRive" /* 4904 */;
-import useAlertStore from "useAlertStore" /* 5301 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 5907 */;
-import CallsUtils from "CallsUtils" /* 8786 */;
-import VideoIcon from "VideoIcon" /* 10770 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 10851 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13345 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 13653 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17934 */;
+import CameraRive from "CameraRive" /* 4906 */;
+import useAlertStore from "useAlertStore" /* 5306 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 5912 */;
+import CallsUtils from "CallsUtils" /* 8790 */;
+import VideoIcon from "VideoIcon" /* 10869 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 10931 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13384 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 13691 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17970 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10831 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10911 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 
 require = fn;
 const View = fn(17).View;
-const Features = fn(5117).Features;
+const Features = fn(5121).Features;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);

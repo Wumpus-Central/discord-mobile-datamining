@@ -1,12 +1,12 @@
-// === Module 11985: ConjureDebugAnalytics ===
+// === Module 12021: ConjureDebugAnalytics ===
 
-// Module 11985 (ConjureDebugAnalytics)
+// Module 12021 (ConjureDebugAnalytics)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 11980 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 11981 */;
-import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 11983 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 12016 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 12017 */;
+import ConjureDebugPrimitives from "ConjureDebugPrimitives" /* 12019 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

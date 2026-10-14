@@ -1,8 +1,8 @@
-// === Module 4979: useChatLayout ===
+// === Module 4981: useChatLayout ===
 
-// Module 4979 (useChatLayout)
+// Module 4981 (useChatLayout)
 import c from "c" /* 576 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4980 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4982 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowSizeClassifierDefault = useWindowSizeClassifier;

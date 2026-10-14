@@ -1,14 +1,14 @@
-// === Module 6789: GuildOnboardingPromptsStore ===
+// === Module 6793: GuildOnboardingPromptsStore ===
 
-// Module 6789 (GuildOnboardingPromptsStore)
+// Module 6793 (GuildOnboardingPromptsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 6791 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 6795 */;
 import ImpersonateStore from "ImpersonateStore" /* 2118 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 6785 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 6789 */;
 
 require = fn;
 function handleUpdate(arg0) {
@@ -81,8 +81,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(6785).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(6790).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(6789).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(6794).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -153,7 +153,7 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       let intersectionResult = closure_13;
     } else {
       const self = this;
-      options = found.options;
+      const options = found.options;
       const mapped = options.map((id) => id.id);
       intersectionResult = _modDef12.intersection(mapped, this.getOnboardingResponses(guildId));
     }

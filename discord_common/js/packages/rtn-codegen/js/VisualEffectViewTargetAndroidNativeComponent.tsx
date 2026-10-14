@@ -1,6 +1,6 @@
-// === Module 17555: VisualEffectViewTargetAndroidNativeComponent ===
+// === Module 17589: VisualEffectViewTargetAndroidNativeComponent ===
 
-// Module 17555 (VisualEffectViewTargetAndroidNativeComponent)
+// Module 17589 (VisualEffectViewTargetAndroidNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

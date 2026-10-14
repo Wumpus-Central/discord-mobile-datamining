@@ -1,10 +1,10 @@
-// === Module 7175: ReferralTrialStore ===
+// === Module 7181: ReferralTrialStore ===
 
-// Module 7175 (ReferralTrialStore)
+// Module 7181 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MessageTypes from "MessageTypes" /* 1101 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7176 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7182 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -80,7 +80,7 @@ prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRe
     const referralsRemaining = ReferralTrialActionCreators.fetchReferralsRemaining();
   }
 };
-prototype["getReferralsRemaining"] = function getReferralsRemaining() {
+prototype["getReferralsRemaining"] = function getReferralsRemaining(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};

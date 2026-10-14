@@ -1,19 +1,19 @@
-// === Module 8088: PremiumSubscriptionOfferUtil ===
+// === Module 8095: PremiumSubscriptionOfferUtil ===
 
-// Module 8088 (PremiumSubscriptionOfferUtil)
+// Module 8095 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import Server from "Server" /* 1998 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7170 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8089 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8090 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8091 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8092 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 8095 */;
+import _modDef4704 from "module_4704" /* 4704 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7176 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8096 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8097 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8098 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8099 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 8102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4775 */;
+import SubscriptionStore from "SubscriptionStore" /* 4777 */;
 
 require = fn;
 function getDiscountInfo(active_discount_id) {
@@ -41,7 +41,7 @@ function getDiscountInfo(active_discount_id) {
               } else if (closure_1_8 === active_discount_id) {
                 const obj7 = { duration: 12, percentage: 20, discountId: active_discount_id };
                 return obj7;
-              } else if (options === active_discount_id) {
+              } else if (React6 === active_discount_id) {
                 const obj8 = { duration: 12, percentage: 30, discountId: active_discount_id };
                 return obj8;
               } else if (value3 === active_discount_id) {
@@ -94,8 +94,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     let tmp10 = null != prop;
     if (tmp10) {
       const _Date = Date;
-      tmp10 = _modDef4702(Date.now()) <= _modDef4702(prop);
-      const tmp12Result = _modDef4702(Date.now());
+      tmp10 = _modDef4704(Date.now()) <= _modDef4704(prop);
+      const tmp12Result = _modDef4704(Date.now());
     }
     cResult[2] = prop;
     cResult[3] = tmp10;
@@ -117,8 +117,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp4 = null != prop;
   if (tmp4) {
     const _Date = Date;
-    tmp4 = _modDef4702(Date.now()) <= _modDef4702(prop);
-    const tmp6Result = _modDef4702(Date.now());
+    tmp4 = _modDef4704(Date.now()) <= _modDef4704(prop);
+    const tmp6Result = _modDef4704(Date.now());
   }
   return tmp4;
 });

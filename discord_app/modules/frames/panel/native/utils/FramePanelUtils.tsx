@@ -1,13 +1,13 @@
-// === Module 18156: FramePanelUtils ===
+// === Module 18192: FramePanelUtils ===
 
-// Module 18156 (FramePanelUtils)
+// Module 18192 (FramePanelUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FramesStore from "FramesStore" /* 10807 */;
+import FramesStore from "FramesStore" /* 10713 */;
 
 require = fn;
-const asLaunched = fn(10802).asLaunched;
-const ActivityPanelModes = fn(6067).ActivityPanelModes;
+const asLaunched = fn(10697).asLaunched;
+const ActivityPanelModes = fn(6073).ActivityPanelModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/utils/FramePanelUtils.tsx");

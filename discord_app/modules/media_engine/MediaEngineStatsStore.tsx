@@ -1,6 +1,6 @@
-// === Module 5130: MediaEngineStatsStore ===
+// === Module 5134: MediaEngineStatsStore ===
 
-// Module 5130 (MediaEngineStatsStore)
+// Module 5134 (MediaEngineStatsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

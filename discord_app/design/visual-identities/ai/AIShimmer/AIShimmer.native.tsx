@@ -1,12 +1,12 @@
-// === Module 11942: AIShimmer ===
+// === Module 11978: AIShimmer ===
 
-// Module 11942 (AIShimmer)
+// Module 11978 (AIShimmer)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import AIShimmerTypes from "AIShimmerTypes" /* 11943 */;
-import waveTransition2 from "waveTransition" /* 11944 */;
-import createWaveTransition from "createWaveTransition" /* 11945 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import AIShimmerTypes from "AIShimmerTypes" /* 11979 */;
+import waveTransition2 from "waveTransition" /* 11980 */;
+import createWaveTransition from "createWaveTransition" /* 11981 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let c12 = 30;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_13 = createStyles.createStyles((height, height2) => {
   const obj = { container: { alignSelf: "flex-start", height }, sizer: { opacity: 0 }, layer: { position: "absolute", top: 0, left: 0, height }, glyphLayer: null, window: { position: "absolute", top: 0, left: 0, height, overflow: "hidden" } };
   const rect = { position: "absolute", top: (height - height2) / 2, left: 0, height: height2 };
@@ -512,21 +512,21 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
                                                                             tmp60 = tmp63;
                                                                           }
                                                                           const obj7 = { style: tmp37, children: tmp52 };
-                                                                          const tmp59 = options(ReanimatedRexportDefault.View, obj7);
+                                                                          const tmp59 = React6(ReanimatedRexportDefault.View, obj7);
                                                                           cResult[74] = tmp37;
                                                                           cResult[75] = tmp52;
                                                                           cResult[76] = tmp59;
                                                                           tmp56 = tmp59;
                                                                         }
                                                                         const obj8 = { style: tmp39, children: tmp48 };
-                                                                        const tmp55 = options(ReanimatedRexportDefault.View, obj8);
+                                                                        const tmp55 = React6(ReanimatedRexportDefault.View, obj8);
                                                                         cResult[71] = tmp39;
                                                                         cResult[72] = tmp48;
                                                                         cResult[73] = tmp55;
                                                                         tmp52 = tmp55;
                                                                       }
                                                                       const obj9 = { style: tmp42, children: tmp44 };
-                                                                      const tmp51 = options(ReanimatedRexportDefault.View, obj9);
+                                                                      const tmp51 = React6(ReanimatedRexportDefault.View, obj9);
                                                                       cResult[68] = tmp42;
                                                                       cResult[69] = tmp44;
                                                                       cResult[70] = tmp51;
@@ -538,7 +538,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
                                                             }
                                                           }
                                                           const obj10 = { animationProgress, slotCount: glyphCount, overshootInSlots: result1, glyphChoices: pass.band, fontSize: glyphFontSize, color: glyphColor, style: styles.glyphLayer };
-                                                          const tmp47 = options(closure_21, obj10);
+                                                          const tmp47 = React6(closure_21, obj10);
                                                           cResult[60] = animationProgress;
                                                           cResult[61] = glyphColor;
                                                           cResult[62] = glyphCount;
@@ -580,7 +580,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
                                   }
                                 }
                                 const obj11 = { text: pass.slotB, shiftedText: tmp24, variant, color, animationWidth, clippingWindowWidth, animatedStyles: tmp9Result, styles };
-                                const tmp35 = options(closure_16, obj11);
+                                const tmp35 = React6(closure_16, obj11);
                                 cResult[33] = animationWidth;
                                 cResult[34] = clippingWindowWidth;
                                 cResult[35] = color;
@@ -599,7 +599,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
                     }
                   }
                   const obj12 = { text: pass.slotA, shiftedText: tmp22, variant, color, animationWidth, clippingWindowWidth, animatedStyles: tmp10, styles };
-                  const tmp31 = options(closure_16, obj12);
+                  const tmp31 = React6(closure_16, obj12);
                   cResult[24] = animationWidth;
                   cResult[25] = clippingWindowWidth;
                   cResult[26] = color;
@@ -803,21 +803,21 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
                                         tmp40 = tmp43;
                                       }
                                       const obj8 = { style: tmp20, children: tmp32 };
-                                      const tmp39 = options(ReanimatedRexportDefault.View, obj8);
+                                      const tmp39 = React6(ReanimatedRexportDefault.View, obj8);
                                       cResult[50] = tmp32;
                                       cResult[51] = tmp20;
                                       cResult[52] = tmp39;
                                       tmp36 = tmp39;
                                     }
                                     const obj9 = { style: tmp22, children: tmp28 };
-                                    const tmp35 = options(ReanimatedRexportDefault.View, obj9);
+                                    const tmp35 = React6(ReanimatedRexportDefault.View, obj9);
                                     cResult[47] = tmp22;
                                     cResult[48] = tmp28;
                                     cResult[49] = tmp35;
                                     tmp32 = tmp35;
                                   }
                                   const obj10 = { style: tmp24, children: tmp25 };
-                                  const tmp31 = options(ReanimatedRexportDefault.View, obj10);
+                                  const tmp31 = React6(ReanimatedRexportDefault.View, obj10);
                                   cResult[44] = tmp24;
                                   cResult[45] = tmp25;
                                   cResult[46] = tmp31;
@@ -825,7 +825,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
                                 }
                               }
                               const obj11 = { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: shiftedText };
-                              const tmp27 = options(Text_Text.Text, obj11);
+                              const tmp27 = React6(Text_Text.Text, obj11);
                               cResult[40] = color;
                               cResult[41] = shiftedText;
                               cResult[42] = variant;
@@ -857,14 +857,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
                   tmp20 = items3;
                 }
                 const obj12 = { style: tmp5, children: tmp11 };
-                const tmp18 = options(ReanimatedRexportDefault.View, obj12);
+                const tmp18 = React6(ReanimatedRexportDefault.View, obj12);
                 cResult[19] = tmp5;
                 cResult[20] = tmp11;
                 cResult[21] = tmp18;
                 tmp15 = tmp18;
               }
               const obj13 = { style: tmp7, children: tmp8 };
-              const tmp14 = options(ReanimatedRexportDefault.View, obj13);
+              const tmp14 = React6(ReanimatedRexportDefault.View, obj13);
               cResult[16] = tmp7;
               cResult[17] = tmp8;
               cResult[18] = tmp14;
@@ -872,7 +872,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
             }
           }
           const obj14 = { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: text };
-          const tmp10 = options(Text_Text.Text, obj14);
+          const tmp10 = React6(Text_Text.Text, obj14);
           cResult[12] = color;
           cResult[13] = text;
           cResult[14] = variant;
@@ -901,23 +901,23 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Shimme
   const obj2 = { style: null, children: null };
   const items = [styles.window, { width: clippingWindowWidth }, animatedStyles.plainWindow];
   obj2.style = items;
-  const obj3 = { style: null, children: options(Text_Text.Text, { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: text }) };
+  const obj3 = { style: null, children: React6(Text_Text.Text, { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: text }) };
   const items1 = [styles.layer, { width: animationWidth }, animatedStyles.plainText];
   obj3.style = items1;
-  obj2.children = options(ReanimatedRexportDefault.View, obj3);
-  const items2 = [options(ReanimatedRexportDefault.View, obj2), ];
+  obj2.children = React6(ReanimatedRexportDefault.View, obj3);
+  const items2 = [React6(ReanimatedRexportDefault.View, obj2), ];
   const obj4 = { style: null, children: null };
   const items3 = [styles.window, { width: clippingWindowWidth }, animatedStyles.shiftedOuterWindow];
   obj4.style = items3;
   const obj5 = { style: null, children: null };
   const items4 = [styles.window, { width: clippingWindowWidth }, animatedStyles.shiftedInnerWindow];
   obj5.style = items4;
-  const obj6 = { style: null, children: options(Text_Text.Text, { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: shiftedText }) };
+  const obj6 = { style: null, children: React6(Text_Text.Text, { variant, color, lineClamp: 1, ellipsizeMode: "clip", children: shiftedText }) };
   const items5 = [styles.layer, { width: animationWidth }, animatedStyles.shiftedText];
   obj6.style = items5;
-  obj5.children = options(ReanimatedRexportDefault.View, obj6);
-  obj4.children = options(ReanimatedRexportDefault.View, obj5);
-  items2[1] = options(ReanimatedRexportDefault.View, obj4);
+  obj5.children = React6(ReanimatedRexportDefault.View, obj6);
+  obj4.children = React6(ReanimatedRexportDefault.View, obj5);
+  items2[1] = React6(ReanimatedRexportDefault.View, obj4);
   obj.children = items2;
   return collapsed(closure_1_11, obj);
 });
@@ -1463,7 +1463,7 @@ export const AIShimmer = noop.memo(ReactCompilerGating.isReactCompilerEnabled() 
     }
   }
   const merged = Object.assign(tmp4);
-  const tmp12 = options(closure_14, { variant: str, delay: AI_TEXT_EFFECT_DEFAULT_DELAY, initialDelay: num7, duration: AI_TEXT_EFFECT_DEFAULT_DURATION }, str);
+  const tmp12 = React6(closure_14, { variant: str, delay: AI_TEXT_EFFECT_DEFAULT_DELAY, initialDelay: num7, duration: AI_TEXT_EFFECT_DEFAULT_DURATION }, str);
   cResult[6] = AI_TEXT_EFFECT_DEFAULT_DELAY;
   cResult[7] = AI_TEXT_EFFECT_DEFAULT_DURATION;
   cResult[8] = num7;
@@ -1490,5 +1490,5 @@ export const AIShimmer = noop.memo(ReactCompilerGating.isReactCompilerEnabled() 
     AI_TEXT_EFFECT_DEFAULT_DURATION = AIShimmerTypes.AI_TEXT_EFFECT_DEFAULT_DURATION;
   }
   const merged = Object.assign(Object.assign(variant, Object.assign({ variant: 0, delay: 0, initialDelay: 0, duration: 0 })));
-  return options(closure_14, { variant: str, delay: AI_TEXT_EFFECT_DEFAULT_DELAY, initialDelay: num, duration: AI_TEXT_EFFECT_DEFAULT_DURATION }, str);
+  return React6(closure_14, { variant: str, delay: AI_TEXT_EFFECT_DEFAULT_DELAY, initialDelay: num, duration: AI_TEXT_EFFECT_DEFAULT_DURATION }, str);
 }));

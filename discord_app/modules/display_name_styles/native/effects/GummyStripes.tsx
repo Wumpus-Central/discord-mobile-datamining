@@ -1,6 +1,6 @@
-// === Module 15194: GummyStripes ===
+// === Module 15231: GummyStripes ===
 
-// Module 15194 (GummyStripes)
+// Module 15231 (GummyStripes)
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_5 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

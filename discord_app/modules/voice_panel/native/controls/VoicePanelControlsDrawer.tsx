@@ -1,33 +1,33 @@
-// === Module 17946: VoicePanelControlsDrawer ===
+// === Module 17982: VoicePanelControlsDrawer ===
 
-// Module 17946 (VoicePanelControlsDrawer)
+// Module 17982 (VoicePanelControlsDrawer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import Suspender from "Suspender" /* 5330 */;
-import spring from "spring" /* 5378 */;
-import useRefValueDefault from "useRefValue" /* 6161 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9580 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12485 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12495 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17947 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17958 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import Suspender from "Suspender" /* 5335 */;
+import spring from "spring" /* 5383 */;
+import useRefValueDefault from "useRefValue" /* 6165 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9590 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 12521 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12531 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17983 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17994 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function renderChat(shown) {
-  const obj = { collapsable: false, style: absoluteFill.absoluteFill, children: options(VoicePanelChatViewDefault, { shown }) };
-  return options(timestampProducer, obj);
+  const obj = { collapsable: false, style: absoluteFill.absoluteFill, children: React6(VoicePanelChatViewDefault, { shown }) };
+  return React6(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12488);
+const VoicePanelConstants = fn(12524);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 200;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -83,7 +83,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     }
     if (useRefValueDefault(ref)) {
       const obj3 = { freeze: tmp5, children: tmp15 };
-      let tmp18 = options(Suspender.Freeze, obj3);
+      let tmp18 = React6(Suspender.Freeze, obj3);
     } else {
       tmp18 = null;
     }
@@ -126,7 +126,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const memo = noop.useMemo(() => renderContent(shown), items1);
   if (useRefValueDefault(ref)) {
     const obj2 = { freeze: tmp2, children: memo };
-    let tmp11 = options(Suspender.Freeze, obj2);
+    let tmp11 = React6(Suspender.Freeze, obj2);
   } else {
     tmp11 = null;
   }
@@ -375,8 +375,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const animatedReaction = obj4.useAnimatedReaction(M, W);
   let items = [openTab];
   const items1 = [gestureSpecs];
-  const callback = obj.useCallback((isVisible) => options(VoicePanelVoiceControlsDefault, { isVisible, openTab }), items);
-  const callback1 = obj.useCallback(() => options(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items1);
+  const callback = obj.useCallback((isVisible) => React6(VoicePanelVoiceControlsDefault, { isVisible, openTab }), items);
+  const callback1 = obj.useCallback(() => React6(VoicePanelControlsAppLauncherDefault, { gestureSpecs }), items1);
   const obj6 = { style: null, children: null };
   const items2 = [tmp4.drawer, animatedStyle];
   obj6.style = items2;

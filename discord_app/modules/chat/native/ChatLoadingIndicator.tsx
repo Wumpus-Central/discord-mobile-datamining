@@ -1,18 +1,18 @@
-// === Module 13351: ChatLoadingIndicator ===
+// === Module 13390: ChatLoadingIndicator ===
 
-// Module 13351 (ChatLoadingIndicator)
+// Module 13390 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import timing from "timing" /* 5093 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import timing from "timing" /* 5097 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5305 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
-import MessageStore from "MessageStore" /* 5432 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5762 */;
+import MessageStore from "MessageStore" /* 5437 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
@@ -56,7 +56,7 @@ const View = fn(17).View;
 const AppStates = fn(1085).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = { height: 8, width: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.pulse = size;
@@ -493,8 +493,8 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
     }
     return tmp7;
   };
-  const PressableOpacityResult2 = PressableOpacity(4850);
-  fn3.__closure = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(4850).withRepeat, withSequence: PressableOpacity(4850).withSequence, withTiming: PressableOpacity(5093).withTiming, Easing: PressableOpacity(4850).Easing };
+  const PressableOpacityResult2 = PressableOpacity(4852);
+  fn3.__closure = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(4852).withRepeat, withSequence: PressableOpacity(4852).withSequence, withTiming: PressableOpacity(5097).withTiming, Easing: PressableOpacity(4852).Easing };
   fn3.__workletHash = 17454673879926;
   fn3.__initData = __initData;
   const animatedStyle = PressableOpacityResult2.useAnimatedStyle(fn3);
@@ -507,7 +507,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       let obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl = PressableOpacity(1126).intl;
       obj3.children = intl.string(PressableOpacity(1126).t.JwIJMV);
-      const tmp17 = closure_13(PressableOpacity(5088).Text, obj3);
+      const tmp17 = closure_13(PressableOpacity(5092).Text, obj3);
       cResult[7] = tmp17;
       let tmp15 = tmp17;
     } else {
@@ -520,7 +520,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       if (!stateFromStores1) {
         return tmp18;
       } else if (cResult[11] !== tmp18) {
-        PressableOpacity = PressableOpacity(6185).PressableOpacity;
+        PressableOpacity = PressableOpacity(6189).PressableOpacity;
         let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
         tmp = closure_13(PressableOpacity, obj4);
         cResult[11] = tmp18;
@@ -544,7 +544,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
   cResult[5] = tmp3.pulse;
   cResult[6] = tmp14;
   tmp13 = tmp14;
-  let obj2 = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(4850).withRepeat, withSequence: PressableOpacity(4850).withSequence, withTiming: PressableOpacity(5093).withTiming, Easing: PressableOpacity(4850).Easing };
+  let obj2 = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(4852).withRepeat, withSequence: PressableOpacity(4852).withSequence, withTiming: PressableOpacity(5097).withTiming, Easing: PressableOpacity(4852).Easing };
 }) : (function ChannelHeaderLoadingIndicator() {
   const tmp = closure_16();
   let items = [AccessibilityStore];
@@ -592,8 +592,8 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
     }
     return tmp7;
   };
-  let obj3 = stateFromStores(4850);
-  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4850).withRepeat, withSequence: stateFromStores(4850).withSequence, withTiming: stateFromStores(5093).withTiming, Easing: stateFromStores(4850).Easing };
+  let obj3 = stateFromStores(4852);
+  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4852).withRepeat, withSequence: stateFromStores(4852).withSequence, withTiming: stateFromStores(5097).withTiming, Easing: stateFromStores(4852).Easing };
   fn.__workletHash = 9356373946997;
   fn.__initData = __initData2;
   let obj5 = { style: tmp.container, children: null };
@@ -605,13 +605,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
   let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1126).intl;
   obj7.children = intl.string(stateFromStores(1126).t.JwIJMV);
-  items3[1] = closure_13(stateFromStores(5088).Text, obj7);
+  items3[1] = closure_13(stateFromStores(5092).Text, obj7);
   obj5.children = items3;
   const tmp8 = closure_14(View, obj5);
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(6185).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(6189).PressableOpacity, obj8);
   }
   return tmp7Result;
 });

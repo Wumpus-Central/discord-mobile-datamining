@@ -1,6 +1,6 @@
-// === Module 9009: getAssetWHRatio ===
+// === Module 9014: getAssetWHRatio ===
 
-// Module 9009 (getAssetWHRatio)
+// Module 9014 (getAssetWHRatio)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/getAssetWHRatio.tsx");

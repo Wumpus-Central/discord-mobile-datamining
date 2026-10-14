@@ -1,9 +1,9 @@
-// === Module 15473: FamilyCenterParentalConsentNotice ===
+// === Module 15510: FamilyCenterParentalConsentNotice ===
 
-// Module 15473 (FamilyCenterParentalConsentNotice)
+// Module 15510 (FamilyCenterParentalConsentNotice)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 15474 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 15511 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const jsx = fn(21).jsx;
 let c5 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, link: { textDecorationLine: "underline" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
               return tmp14;
             }
             const obj4 = { style: tmp3.container, text: cResult[5] };
-            const tmp17 = jsx(onPress(15474), { style: tmp3.container, text: cResult[5] });
+            const tmp17 = jsx(onPress(15511), { style: tmp3.container, text: cResult[5] });
             cResult[6] = tmp3.container;
             cResult[7] = cResult[5];
             cResult[8] = tmp17;

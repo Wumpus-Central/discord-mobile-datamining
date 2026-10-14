@@ -1,13 +1,13 @@
-// === Module 16837: MessagesItemSuggestedFriendsHeader ===
+// === Module 16875: MessagesItemSuggestedFriendsHeader ===
 
-// Module 16837 (MessagesItemSuggestedFriendsHeader)
+// Module 16875 (MessagesItemSuggestedFriendsHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8395 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10226 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8402 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10236 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,8 +15,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(5088).TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
-const createStyles = fn(5092);
+const sum = fn(5092).TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+const createStyles = fn(5096);
 let obj = { headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" }, stickyOverlay: null, headerText: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

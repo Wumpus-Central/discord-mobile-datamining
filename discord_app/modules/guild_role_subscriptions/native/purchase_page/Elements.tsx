@@ -1,20 +1,20 @@
-// === Module 17311: Elements ===
+// === Module 17345: Elements ===
 
-// Module 17311 (Elements)
+// Module 17345 (Elements)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6185 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9399 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9402 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15835 */;
-import _modDef17312 from "module_17312" /* 17312 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import Pressables from "Pressables" /* 6189 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9408 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9411 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15872 */;
+import _modDef17346 from "module_17346" /* 17346 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4774 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4776 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_8, View: closure_9 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { toggleTruncateButton: { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 }, arrowButton: null, arrowButtonText: null, arrowButtonIcon: null };
 let obj3 = { alignSelf: "flex-start", borderBottomWidth: 0.8, borderColor: nativeDefault.colors.TEXT_DEFAULT, marginTop: 2 };
 obj2.arrowButton = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -200,7 +200,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TruncatedTex
     const obj4 = { variant: "text-sm/medium", color: "text-default", children: tmp18 };
     t = tmp16(Text_Text.Text, obj4);
     obj3.children = t;
-    tmp16(options, obj3);
+    tmp16(React6, obj3);
   }
   const tmp10 = _slicedToArray(noop.useState(false), 2);
 }) : (function TruncatedText(lineClamp) {
@@ -265,7 +265,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TruncatedTex
     const obj4 = { variant: "text-sm/medium", color: "text-default", children: stringResult };
     t = closure_1_11(Text_Text.Text, obj4);
     obj.children = t;
-    closure_1_11(options, obj);
+    closure_1_11(React6, obj);
   }
   const tmp3 = _slicedToArray(noop.useState(false), 2);
 });
@@ -279,7 +279,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ArrowButton(
       let tmp5 = cResult[2];
     }
     if (cResult[3] !== tmp4.arrowButtonIcon) {
-      const obj2 = { size: native.Icon.Sizes.SMALL, source: _modDef17312, style: tmp4.arrowButtonIcon };
+      const obj2 = { size: native.Icon.Sizes.SMALL, source: _modDef17346, style: tmp4.arrowButtonIcon };
       const tmp10 = closure_1_11(native.Icon, obj2);
       cResult[3] = tmp4.arrowButtonIcon;
       cResult[4] = tmp10;
@@ -318,7 +318,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ArrowButton(
   ({ text, onPress } = arg0);
   const tmp = closure_13();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  const items = [closure_1_11(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), closure_1_11(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef17312, style: tmp.arrowButtonIcon })];
+  const items = [closure_1_11(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), closure_1_11(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef17346, style: tmp.arrowButtonIcon })];
   obj.children = items;
   return __initData(Pressables.PressableOpacity, obj);
 });
@@ -364,14 +364,14 @@ export const useFormattedSubscriptionPlan = ReactCompilerGating.isReactCompilerE
       str2 = "";
       const combined = concat(tmp8, "/mo.");
     }
-    const formatPriceResult = amount(6940).formatPrice(currency.amount, currency.currency);
+    const formatPriceResult = amount(6945).formatPrice(currency.amount, currency.currency);
     amount = currency.amount;
     concat[3] = amount;
     currency = currency.currency;
     concat[4] = currency;
     concat[5] = formatPriceResult;
     tmp8 = formatPriceResult;
-    const amountResult1 = amount(6940);
+    const amountResult1 = amount(6945);
   }
   const amountResult = amount(573);
 }) : (function useFormattedSubscriptionPlan(arg0) {
@@ -384,8 +384,8 @@ export const useFormattedSubscriptionPlan = ReactCompilerGating.isReactCompilerE
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(6940).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(6940);
+    str = "" + tmp3(6945).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(6945);
   }
   return str;
 });

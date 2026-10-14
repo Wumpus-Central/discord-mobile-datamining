@@ -1,25 +1,25 @@
-// === Module 15677: QuestHomeOrbShopCarousel ===
+// === Module 15714: QuestHomeOrbShopCarousel ===
 
-// Module 15677 (QuestHomeOrbShopCarousel)
+// Module 15714 (QuestHomeOrbShopCarousel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import AnalyticsActions from "AnalyticsActions" /* 7407 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7416 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8971 */;
-import SkeletonCardDefault from "SkeletonCard" /* 9087 */;
-import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 15665 */;
-import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 15678 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import AnalyticsActions from "AnalyticsActions" /* 7413 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7422 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8976 */;
+import SkeletonCardDefault from "SkeletonCard" /* 9092 */;
+import usePopularOrbShopProducts from "usePopularOrbShopProducts" /* 15702 */;
+import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 15715 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
-import BountyStore from "BountyStore" /* 7390 */;
+import BountyStore from "BountyStore" /* 7396 */;
 
 require = fn;
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(5972).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(5977).BOUNTY_ORB_AMOUNT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let PX_20 = nativeDefault.space.PX_20;
@@ -33,7 +33,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ListEd
     const obj2 = { style: null };
     const obj3 = { width };
     obj2.style = obj3;
-    const tmp5 = options(View, obj2);
+    const tmp5 = React6(View, obj2);
     cResult[0] = width;
     cResult[1] = tmp5;
     let tmp2 = tmp5;
@@ -42,7 +42,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ListEd
   }
   return tmp2;
 }) : (function ListEdgeSpacer(width) {
-  return options(View, { style: { width: width.width } });
+  return React6(View, { style: { width: width.width } });
 });
 ReactCompilerGating = fn(558);
 const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemSeparator() {
@@ -51,7 +51,7 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (f
     const obj2 = { style: null };
     const obj3 = { width: PX_12 };
     obj2.style = obj3;
-    const tmp6 = options(View, obj2);
+    const tmp6 = React6(View, obj2);
     cResult[0] = tmp6;
     let first = tmp6;
   } else {
@@ -60,10 +60,10 @@ const ItemSeparatorComponent = ReactCompilerGating.isReactCompilerEnabled() ? (f
   return first;
 }) : (function ItemSeparator() {
   const obj = { style: { width: PX_12 } };
-  return options(View, obj);
+  return React6(View, obj);
 });
-const data = Array.from({ length: fn(15665).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
-const createStyles = fn(5092);
+const data = Array.from({ length: fn(15702).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const createStyles = fn(5096);
 let closure_17 = createStyles.createStyles(() => {
   const obj = { standaloneRoot: { marginTop: nativeDefault.space.PX_32 }, headerMediaRoot: null };
   const obj2 = { marginTop: nativeDefault.space.PX_32 };
@@ -107,7 +107,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useObt
   });
 });
 fn(558);
-let obj3 = { length: fn(15665).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
+let obj3 = { length: fn(15702).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHomeOrbShopCarouselHeading(arg0) {
   const cResult = c.c(12);
@@ -154,14 +154,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestH
           return tmp14;
         }
         const obj3 = { style: tmp8, children: tmp11 };
-        const tmp17 = options(View, obj3);
+        const tmp17 = React6(View, obj3);
         cResult[9] = tmp8;
         cResult[10] = tmp11;
         cResult[11] = tmp17;
         tmp14 = tmp17;
       }
       const obj4 = { variant: str, color: "text-strong", children: tmp9 };
-      const tmp13 = options(Text_Text.Heading, obj4);
+      const tmp13 = React6(Text_Text.Heading, obj4);
       cResult[6] = str;
       cResult[7] = tmp9;
       cResult[8] = tmp13;
@@ -207,8 +207,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestH
   const obj3 = { variant: str, color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.format(util.t.CXlsRP, { orbAmount: orbAmount.orbRewardAmount });
-  obj2.children = options(Text_Text.Heading, obj3);
-  return options(View, obj2);
+  obj2.children = React6(Text_Text.Heading, obj3);
+  return React6(View, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHomeOrbShopCarouselPlaceholder(cardHeight) {
@@ -325,7 +325,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestH
   }
   const fn = function t() {
     const size = { width: cardWidth, height: cardHeight };
-    return options(SkeletonCardDefault, size);
+    return React6(SkeletonCardDefault, size);
   };
   cResult[0] = cardHeight;
   cResult[1] = cardWidth;
@@ -340,13 +340,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestH
   ({ listStyle, cardStride } = cardWidth);
   const callback = noop.useCallback(() => {
     const size = { width: cardWidth, height: cardHeight };
-    return options(SkeletonCardDefault, size);
+    return React6(SkeletonCardDefault, size);
   }, items);
   const items1 = [listEdgeSpacing];
   const callback1 = noop.useCallback((arg0) => "placeholder-" + arg0, []);
   const items2 = [listEdgeSpacing];
-  const callback2 = noop.useCallback(() => options(closure_14, { width: listEdgeSpacing }), items1);
-  const callback3 = noop.useCallback(() => options(closure_14, { width: listEdgeSpacing }), items2);
+  const callback2 = noop.useCallback(() => React6(closure_14, { width: listEdgeSpacing }), items1);
+  const callback3 = noop.useCallback(() => React6(closure_14, { width: listEdgeSpacing }), items2);
   const obj = { horizontal: true, accessibilityRole: "list", accessibilityLabel: null, accessibilityState: null, data: null, keyExtractor: null, renderItem: null, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToInterval: null, showsHorizontalScrollIndicator: false, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null };
   const intl = cardWidth(listEdgeSpacing[13]).intl;
   obj.accessibilityLabel = intl.string(cardWidth(listEdgeSpacing[13]).t.hVV8Wi);
@@ -431,17 +431,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
   const tmp5 = undefined !== embedded && embedded;
   let ONYX = obtainableOrbRewards(504).useStateFromStores(tmp8, tmp9);
   if (tmp5) {
-    ONYX = obtainableOrbRewards(15653).ThemeTypes.ONYX;
+    ONYX = obtainableOrbRewards(15690).ThemeTypes.ONYX;
   }
   if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-    let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(15678).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
+    let COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(15715).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
   } else {
-    COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(8968).COLLECTIBLES_SHOP_CARD_WIDTH;
+    COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(8973).COLLECTIBLES_SHOP_CARD_WIDTH;
   }
   if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-    COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(15678).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
+    COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(15715).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
   } else {
-    COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(8968).COLLECTIBLES_SHOP_CARD_HEIGHT;
+    COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(8973).COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
   if (cResult[2] !== COLLECTIBLES_SHOP_CARD_WIDTH) {
     const sum = COLLECTIBLES_SHOP_CARD_WIDTH + PX_12;
@@ -611,8 +611,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
   const memo = flag4.useMemo(() => ({ height: COLLECTIBLES_SHOP_CARD_HEIGHT }), items);
   const items1 = [listEdgeSpacing];
   const items2 = [listEdgeSpacing];
-  const callback = flag4.useCallback(() => options(closure_14, { width: listEdgeSpacing }), items1);
-  const callback1 = flag4.useCallback(() => options(closure_14, { width: listEdgeSpacing }), items2);
+  const callback = flag4.useCallback(() => React6(closure_14, { width: listEdgeSpacing }), items1);
+  const callback1 = flag4.useCallback(() => React6(closure_14, { width: listEdgeSpacing }), items2);
   const tmp10 = listEdgeSpacing(flag4.useState(0), 2);
   first = tmp10[0];
   closure_9 = tmp10[1];
@@ -660,8 +660,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
   }, items4);
   const callback3 = obj.useCallback((arg0) => {
     ({ item, index } = arg0);
-    const obj = { newValue: { tilePosition: index, pageSection: "quest_home_orb_shop" }, children: options(QuestHomeOrbShopRewardCardDefault, { product: item, cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH, cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT, hideCardDetails: flag3, clickable: flag4 }) };
-    return options(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+    const obj = { newValue: { tilePosition: index, pageSection: "quest_home_orb_shop" }, children: React6(QuestHomeOrbShopRewardCardDefault, { product: item, cardWidth: COLLECTIBLES_SHOP_CARD_WIDTH, cardHeight: COLLECTIBLES_SHOP_CARD_HEIGHT, hideCardDetails: flag3, clickable: flag4 }) };
+    return React6(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
   }, items5);
   if (tmp12) {
     if (flag3) {

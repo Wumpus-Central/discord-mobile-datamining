@@ -1,6 +1,6 @@
-// === Module 8084: ? ===
+// === Module 8091: ? ===
 
-// Module 8084
+// Module 8091
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/referral_program/trialExchange.png.js");

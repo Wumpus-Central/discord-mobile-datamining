@@ -1,18 +1,18 @@
-// === Module 11598: ApplicationCommandOptionValueParser ===
+// === Module 11608: ApplicationCommandOptionValueParser ===
 
-// Module 11598 (ApplicationCommandOptionValueParser)
+// Module 11608 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import Server from "Server" /* 1998 */;
-import useChannelName from "useChannelName" /* 5421 */;
-import MessageParser from "MessageParser" /* 7370 */;
+import useChannelName from "useChannelName" /* 5426 */;
+import MessageParser from "MessageParser" /* 7376 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6034 */;
-import GuildChannelStore from "GuildChannelStore" /* 4748 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6039 */;
+import GuildChannelStore from "GuildChannelStore" /* 4750 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const MessageParserDefault = MessageParser;
@@ -43,7 +43,7 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: closure_0(5421).computeChannelName(id, UserStore, RelationshipStore) };
+      const obj = { id: id.id, text: closure_0(5426).computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
     });
   } else {
@@ -78,7 +78,7 @@ function getChannels(getGuildId, arr) {
   }
 }
 let closure_6 = fn(2069).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(5404);
+const ChannelAutocompleteConstants = fn(5409);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {
 
@@ -298,7 +298,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
     return {};
   } else {
     const obj3 = {};
-    options = command.options;
+    const options = command.options;
     const parserState = MessageParser.createParserState(channel);
     const iter = options[Symbol.iterator]();
     const nextResult = iter.next();

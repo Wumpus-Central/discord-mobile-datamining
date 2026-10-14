@@ -1,13 +1,13 @@
-// === Module 15266: useGuildProfileEditForm ===
+// === Module 15303: useGuildProfileEditForm ===
 
-// Module 15266 (useGuildProfileEditForm)
+// Module 15303 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
-import UserProfileStore from "UserProfileStore" /* 7321 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8292 */;
+import UserProfileStore from "UserProfileStore" /* 7327 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import SortedGuildStore from "SortedGuildStore" /* 5963 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 let closure_4 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(8285).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8292).IGNORE_GUILD_IDS;
 let FormStates = fn(1085).FormStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

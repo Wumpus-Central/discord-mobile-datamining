@@ -1,11 +1,11 @@
-// === Module 15058: definitions ===
+// === Module 15096: definitions ===
 
-// Module 15058 (definitions)
-import OAuth2Scopes from "OAuth2Scopes" /* 8458 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
-import ActivityPlatform from "ActivityPlatform" /* 10941 */;
-import helpers from "helpers" /* 15059 */;
-import contextMenuIcons from "contextMenuIcons" /* 15060 */;
+// Module 15096 (definitions)
+import OAuth2Scopes from "OAuth2Scopes" /* 8465 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8617 */;
+import ActivityPlatform from "ActivityPlatform" /* 11015 */;
+import helpers from "helpers" /* 15097 */;
+import contextMenuIcons from "contextMenuIcons" /* 15098 */;
 import size from "module_2" /* 2 */;
 
 function VoiceCapabilities(boolean) {
@@ -996,7 +996,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "y"
+    response: "Set"
   },
   [helpers.RPCCommand.GET_CONTEXT]: obj29,
   [helpers.RPCCommand.GET_USER]: {

@@ -1,9 +1,9 @@
-// === Module 10667: ActivitiesActionCreators ===
+// === Module 10771: ActivitiesActionCreators ===
 
-// Module 10667 (ActivitiesActionCreators)
+// Module 10771 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7015 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5111 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7021 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, ActivityTypes: metroRequire, AnalyticEvents: closure_7, LoggingInviteTypes: closure_8 } = Constants);
-const MessageSendLocation = fn(5085).MessageSendLocation;
+const MessageSendLocation = fn(5089).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 

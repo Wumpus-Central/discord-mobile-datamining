@@ -1,11 +1,11 @@
-// === Module 5242: NativeMuteManager ===
+// === Module 5247: NativeMuteManager ===
 
-// Module 5242 (NativeMuteManager)
+// Module 5247 (NativeMuteManager)
 import LoggerDefault from "Logger" /* 3 */;
 import inject from "inject" /* 2014 */;
 import Timers from "Timers" /* 2060 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
-import AudioRouteStore from "AudioRouteStore" /* 5132 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5248 */;
+import AudioRouteStore from "AudioRouteStore" /* 5136 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 

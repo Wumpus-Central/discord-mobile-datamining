@@ -1,9 +1,9 @@
-// === Module 15177: UserProfileEditFormSharedStyles ===
+// === Module 15215: UserProfileEditFormSharedStyles ===
 
-// Module 15177 (UserProfileEditFormSharedStyles)
+// Module 15215 (UserProfileEditFormSharedStyles)
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 6905 */;
-import createStyles from "createStyles" /* 5092 */;
+import Constants from "Constants" /* 6910 */;
+import createStyles from "createStyles" /* 5096 */;
 import size from "module_2" /* 2 */;
 
 ({ ARBITRARY_LARGE_OFFSET, FLOATING_UPSELL_HEIGHT } = Constants);

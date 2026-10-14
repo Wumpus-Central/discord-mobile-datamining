@@ -1,26 +1,26 @@
-// === Module 13133: BugReporterModal ===
+// === Module 13168: BugReporterModal ===
 
-// Module 13133 (BugReporterModal)
+// Module 13168 (BugReporterModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import NavigatorHeader from "NavigatorHeader" /* 6201 */;
-import TableRadioRow from "TableRadioRow" /* 6262 */;
-import Navigator from "Navigator" /* 6688 */;
-import HeaderActionButton from "HeaderActionButton" /* 7089 */;
-import UploadDefault from "Upload" /* 7758 */;
-import UploadPlatform from "UploadPlatform" /* 7759 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5939 */;
+import NavigatorHeader from "NavigatorHeader" /* 6205 */;
+import TableRadioRow from "TableRadioRow" /* 6266 */;
+import Navigator from "Navigator" /* 6692 */;
+import HeaderActionButton from "HeaderActionButton" /* 7095 */;
+import UploadDefault from "Upload" /* 7764 */;
+import UploadPlatform from "UploadPlatform" /* 7765 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import BugReportStore from "BugReportStore" /* 13132 */;
+import BugReportStore from "BugReportStore" /* 13167 */;
 import n from "module_683" /* 683 */;
 
 require = fn;
@@ -55,7 +55,131 @@ class BugCreateScreen {
     closure_22 = undefined;
     closure_23 = undefined;
     closure_24 = undefined;
-    closure_25 = async function _handleAttachmentSelect() {
+    closure_25 = async function _pickAttachment() {
+      if (c6 === 2) {
+        c6 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_4 = tmp5;
+              closure_3 = tmp2;
+              closure_131_0 = undefined;
+              closure_131_1 = undefined;
+              closure_131_2 = undefined;
+              closure_131_3 = undefined;
+              if (obj14.isIOS()) {
+                c5 = 1;
+                c6 = 1;
+                const obj4 = { value: mimeType(size[27]).launchImageLibraryAsync({ mediaType: "mixed", includeBase64: false, selectionLimit: 1 }), done: false };
+                return obj4;
+              } else {
+                c5 = 2;
+                c6 = 1;
+                const obj5 = { value: filename(size[28]).handleDocumentSelection({ pickMultiple: false }), done: false };
+                return obj5;
+              }
+              obj14 = filename(size[26]);
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              closure_131_0 = value;
+              const assets = closure_131_0.assets;
+              first = undefined;
+              if (assets != null) {
+                first = assets[0];
+              }
+              closure_131_1 = first;
+              let tmp29 = null;
+              if (!closure_131_0.didCancel) {
+                tmp29 = null;
+                if (null != closure_131_1) {
+                  const obj7 = {};
+                  const merged = Object.assign(closure_131_1);
+                  obj7.uri = closure_131_1.uri;
+                  obj7.originalUri = closure_131_1.uri;
+                  obj7.platform = filename(size[16]).UploadPlatform.REACT_NATIVE;
+                  obj7.filename = closure_131_1.fileName;
+                  tmp29 = obj7;
+                }
+              }
+              c6 = 3;
+              const obj9 = { value: tmp29, done: true };
+              return obj9;
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj11 = { value, done: true };
+            return obj11;
+          } else {
+            closure_131_2 = value;
+            first1 = undefined;
+            if (closure_131_2 != null) {
+              first1 = closure_131_2[0];
+            }
+            closure_131_3 = first1;
+            let tmp9 = null;
+            if (null != closure_131_3) {
+              const obj = { uri: closure_131_3.uri, originalUri: closure_131_3.uri, platform: filename(size[16]).UploadPlatform.REACT_NATIVE, filename: null, mimeType: null, size: null };
+              const name = closure_131_3.name;
+              filename = name;
+              if (name == null) {
+                const parts = closure_131_3.uri.split("/");
+                filename = parts.at(-1);
+              }
+              obj.filename = filename;
+              const type = closure_131_3.type;
+              mimeType = type;
+              if (type == null) {
+                mimeType = undefined;
+              }
+              obj.mimeType = mimeType;
+              size = closure_131_3.size;
+              if (size == null) {
+                size = undefined;
+              }
+              obj.size = size;
+              tmp9 = obj;
+            }
+            c6 = 3;
+            const obj12 = { value: tmp9, done: true };
+            return obj12;
+          }
+        } catch (tmp46) {
+          c6 = tmp;
+          throw tmp46;
+        }
+      }
+    };
+    closure_26 = async function _handleAttachmentSelect() {
       if (c3 === 2) {
         c3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -63,31 +187,42 @@ class BugCreateScreen {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "IconComponent", done: null };
         }
       } else {
         try {
           c3 = 2;
-          if (0 === dependencyMap) {
+          if (0 === c2) {
             if (arg0 === 1) {
               c3 = 3;
               throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
+              closure_0 = tmp2;
               closure_128_0 = undefined;
               closure_128_1 = undefined;
-              closure_128_2 = undefined;
-              closure_128_3 = undefined;
-              dependencyMap = 1;
+              c2 = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(7770).launchImageLibraryAsync({ mediaType: "any", includeBase64: false, selectionLimit: 1 }), done: false };
-              return obj5;
+              const obj4 = {
+                value: (function pickAttachment() {
+                          const self = this;
+                          const apply = closure_1_25.apply;
+                          if (typeof apply === "unknown") {
+                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                          } else {
+                            applyArgumentsResult = apply(self, arguments);
+                          }
+                          return applyArgumentsResult;
+                        })(),
+                done: false
+              };
+              return obj4;
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -99,30 +234,21 @@ class BugCreateScreen {
           } else {
             closure_128_0 = value;
             if (null != closure_128_0) {
-              closure_128_1 = closure_128_0.assets[0];
-              closure_129_23.current = closure_129_7.length;
-              const obj6 = {};
-              const merged = Object.assign(closure_128_1);
-              obj6.uri = closure_128_1.uri;
-              obj6.originalUri = closure_128_1.uri;
-              obj6.platform = tmp2(7759).UploadPlatform.REACT_NATIVE;
-              obj6.filename = closure_128_1.fileName;
-              closure_128_2 = obj6;
-              const tmp34 = new tmp5(7758)(closure_128_2);
-              closure_128_3 = tmp34;
+              const tmp13 = new tmp5(c2[17])(closure_128_0);
+              closure_128_1 = tmp13;
               closure_129_23.current = closure_129_7.length;
               closure_129_8((arg0) => {
                 const items = [];
-                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_3;
+                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_1;
                 return items;
               });
             }
             c3 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp8) {
+        } catch (tmp19) {
           c3 = tmp;
-          throw tmp8;
+          throw tmp19;
         }
       }
     };
@@ -325,14 +451,14 @@ class BugCreateScreen {
                                 const intl2 = closure_2_0(1126).intl;
                                 obj5.text = intl2.string(closure_2_0(1126).t.jB8yOL);
                                 obj5.duration = duration;
-                                closure_2_1(4809).open("BUG_REPORT_BUG_SUBMITTED", obj5);
-                                const obj6 = closure_2_1(4809);
+                                closure_2_1(4811).open("BUG_REPORT_BUG_SUBMITTED", obj5);
+                                const obj6 = closure_2_1(4811);
                               } else {
                                 const obj7 = { text: null, variant: "critical" };
                                 const intl = closure_2_0(1126).intl;
                                 obj7.text = intl.string(closure_2_0(1126).t["4t1o0u"]);
-                                closure_2_1(4809).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
-                                const obj4 = closure_2_1(4809);
+                                closure_2_1(4811).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                                const obj4 = closure_2_1(4811);
                               }
                               c6 = 3;
                             }
@@ -377,7 +503,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        const obj11 = { value: closure_2_0(13135).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        const obj11 = { value: closure_2_0(13170).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj11;
                       } catch (tmp46) {
                         c6 = tmp;
@@ -400,10 +526,10 @@ class BugCreateScreen {
                     let intl2 = handleSubmit(1126).intl;
                     obj5.text = intl2.string(handleSubmit(1126).t.Uuqbcm);
                     obj5.duration = duration;
-                    screenshot(4809).open("BUG_REPORT_SUBMITTING_BUG", obj5);
+                    screenshot(4811).open("BUG_REPORT_SUBMITTING_BUG", obj5);
                     closure_1_16(true);
                     first8();
-                    let obj9 = screenshot(4809);
+                    let obj9 = screenshot(4811);
                   }
                   priority = 3;
                 } else {
@@ -412,7 +538,7 @@ class BugCreateScreen {
                     let obj7 = { text: null, variant: "critical" };
                     let intl = handleSubmit(1126).intl;
                     obj7.text = intl.string(handleSubmit(1126).t["4t1o0u"]);
-                    screenshot(4809).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
+                    screenshot(4811).open("BUG_REPORT_FAILED_TO_SUBMIT", obj7);
                     callback(false);
                     priority = 3;
                     const obj8 = { value: undefined, done: true };
@@ -420,7 +546,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(13134).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(13169).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -622,14 +748,14 @@ class BugCreateScreen {
     tmp31 = closure_11;
     tmp33 = closure_10;
     tmp32 = closure_12;
-    obj1 = { bottomOffset: screenshotUri(closure_2[28]).TEXT_AREA_HEIGHT, children: null };
+    obj1 = { bottomOffset: screenshotUri(closure_2[30]).TEXT_AREA_HEIGHT, children: null };
     obj20 = { spacing: 24, style: tmp.container, children: null };
     obj21 = { spacing: 8, children: null };
     obj22 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
     intl = screenshotUri(closure_2[14]).intl;
     obj22.children = intl.string(screenshotUri(closure_2[14]).t.tM969v);
     items6 = [, ];
-    items6[0] = closure_10(screenshotUri(closure_2[30]).Text, obj22);
+    items6[0] = closure_10(screenshotUri(closure_2[32]).Text, obj22);
     obj23 = { children: null };
     obj24 = {
       horizontal: true,
@@ -638,16 +764,16 @@ class BugCreateScreen {
       children: first3.map((uri) => {
             const obj = { style: closure_2.attachmentContainer, children: null };
             const size = { uri: uri.item.uri, isImage: uri.isImage, isVideo: uri.isVideo, height: 280, width: 134 };
-            const items = [first4(screenshot(closure_2[32]), size), ];
+            const items = [first4(screenshot(closure_2[34]), size), ];
             const obj2 = {
               onPress: () => {
                 closure_8((arr) => arr.filter((item) => item !== closure_1_0));
               },
               style: closure_2.closeContainer,
-              children: first4(screenshotUri(closure_2[34]).Icon, { source: screenshot(closure_2[35]), size: screenshotUri(closure_2[34]).Icon.Sizes.REFRESH_SMALL_16, color: screenshot(closure_2[8]).unsafe_rawColors.WHITE })
+              children: first4(screenshotUri(closure_2[36]).Icon, { source: screenshot(closure_2[37]), size: screenshotUri(closure_2[36]).Icon.Sizes.REFRESH_SMALL_16, color: screenshot(closure_2[8]).unsafe_rawColors.WHITE })
             };
             closure_0 = uri;
-            items[1] = first4(screenshotUri(closure_2[33]).PressableOpacity, obj2);
+            items[1] = first4(screenshotUri(closure_2[35]).PressableOpacity, obj2);
             obj.children = items;
             return closure_11(first2, obj, uri.id);
           })
@@ -659,7 +785,7 @@ class BugCreateScreen {
     obj25.text = intl2.string(screenshotUri(closure_2[14]).t.HVxmOD);
     obj25.onPress = function handleAttachmentSelect() {
       const self = this;
-      const apply = closure_25.apply;
+      const apply = closure_26.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -667,19 +793,19 @@ class BugCreateScreen {
       }
       return applyArgumentsResult;
     };
-    items7[1] = closure_10(screenshotUri(closure_2[36]).Button, obj25);
+    items7[1] = closure_10(screenshotUri(closure_2[38]).Button, obj25);
     obj23.children = items7;
-    items6[1] = closure_11(screenshotUri(closure_2[31]).Card, obj23);
+    items6[1] = closure_11(screenshotUri(closure_2[33]).Card, obj23);
     obj21.children = items6;
     items8 = [, , , , , , ];
-    items8[0] = closure_11(screenshotUri(closure_2[29]).Stack, obj21);
+    items8[0] = closure_11(screenshotUri(closure_2[31]).Stack, obj21);
     obj26 = { label: null, placeholder: null, onChange: null, clearable: true, autoCapitalize: "sentences" };
     intl3 = screenshotUri(closure_2[14]).intl;
     obj26.label = intl3.string(screenshotUri(closure_2[14]).t.OZRgjw);
     intl4 = screenshotUri(closure_2[14]).intl;
     obj26.placeholder = intl4.string(screenshotUri(closure_2[14]).t["6mpW05"]);
     obj26.onChange = tmp2[1];
-    items8[1] = closure_10(screenshotUri(closure_2[37]).TextInput, obj26);
+    items8[1] = closure_10(screenshotUri(closure_2[39]).TextInput, obj26);
     if (!stateFromStores) {
       items8[2] = stateFromStores;
       obj27 = { title: null, defaultValue: null, onChange: null, hasIcons: true, children: null };
@@ -704,21 +830,21 @@ class BugCreateScreen {
         obj.icon = collapsed(tmp, obj2);
         return collapsed(TableRadioRow.TableRadioRow, obj, value);
       });
-      items8[3] = tmp33(tmp21(tmp22[43]).TableRadioGroup, obj27);
+      items8[3] = tmp33(tmp21(tmp22[45]).TableRadioGroup, obj27);
       obj28 = { label: null, placeholder: null, onChange: null, autoCorrect: true, autoCapitalize: "sentences" };
       intl8 = tmp21(tmp22[14]).intl;
       obj28.label = intl8.string(tmp21(tmp22[14]).t["1SplH2"]);
       intl9 = tmp21(tmp22[14]).intl;
       obj28.placeholder = intl9.string(tmp21(tmp22[14]).t.CQmAZd);
       obj28.onChange = tmp4[1];
-      items8[4] = tmp33(tmp21(tmp22[44]).TextArea, obj28);
+      items8[4] = tmp33(tmp21(tmp22[46]).TextArea, obj28);
       obj29 = { label: null, placeholder: null, onChange: null, clearable: true };
       intl10 = tmp21(tmp22[14]).intl;
       obj29.label = intl10.string(tmp21(tmp22[14]).t["7p5pqh"]);
       intl11 = tmp21(tmp22[14]).intl;
       obj29.placeholder = intl11.string(tmp21(tmp22[14]).t.HewMzo);
       obj29.onChange = tmp7[1];
-      items8[5] = tmp33(tmp21(tmp22[37]).TextInput, obj29);
+      items8[5] = tmp33(tmp21(tmp22[39]).TextInput, obj29);
       tmp35 = closure_6;
       obj30 = { style: null, children: null };
       obj30.style = tmp.offButton;
@@ -726,11 +852,11 @@ class BugCreateScreen {
       intl12 = tmp21(tmp22[14]).intl;
       obj31.text = intl12.string(tmp21(tmp22[14]).t["636e+U"]);
       obj31.onPress = function onPress() {
-        const result = screenshotUri(closure_2[45]).setDeveloperOptionSettings({ bugReporterEnabled: false });
-        const obj = screenshotUri(closure_2[45]);
-        screenshot(closure_2[46]).terminate(true);
+        const result = screenshotUri(closure_2[47]).setDeveloperOptionSettings({ bugReporterEnabled: false });
+        const obj = screenshotUri(closure_2[47]);
+        screenshot(closure_2[48]).terminate(true);
         state.setState({ isReportOpen: false });
-        const obj2 = screenshot(closure_2[46]);
+        const obj2 = screenshot(closure_2[48]);
         screenshot(closure_2[11]).pop();
         const arr = screenshot(closure_2[11]);
         const obj4 = { text: null, variant: "success" };
@@ -738,22 +864,22 @@ class BugCreateScreen {
         obj4.text = intl.string(screenshotUri(closure_2[14]).t["J3/feu"]);
         screenshot(closure_2[18]).open("BUG_REPORT_HAS_BEEN_TURNED_OFF_TEXT", obj4);
       };
-      obj30.children = tmp33(tmp21(tmp22[36]).Button, obj31);
+      obj30.children = tmp33(tmp21(tmp22[38]).Button, obj31);
       items8[6] = tmp33(closure_6, obj30);
       obj20.children = items8;
-      obj1.children = tmp31(screenshotUri(closure_2[29]).Stack, obj20);
+      obj1.children = tmp31(screenshotUri(closure_2[31]).Stack, obj20);
       items9 = [, ];
-      items9[0] = tmp33(screenshotUri(closure_2[27]).KeyboardAwareScrollView, obj1);
+      items9[0] = tmp33(screenshotUri(closure_2[29]).KeyboardAwareScrollView, obj1);
       tmp33Result = null;
       if (first4) {
         tmp33Result = tmp33(function Submitting() {
           const tmp = closure_14();
           const obj = { style: tmp.submittingOverlay, children: null };
-          const items = [first4(screenshot(closure_2[47]), { sticker: first5, animated: true, size: 148 }), ];
+          const items = [first4(screenshot(closure_2[49]), { sticker: first5, animated: true, size: 148 }), ];
           const obj3 = { style: tmp.submittingText, variant: "heading-md/medium", children: null };
           const intl = screenshotUri(closure_2[14]).intl;
           obj3.children = intl.string(screenshotUri(closure_2[14]).t.Uuqbcm);
-          items[1] = first4(screenshotUri(closure_2[30]).Text, obj3);
+          items[1] = first4(screenshotUri(closure_2[32]).Text, obj3);
           obj.children = items;
           return closure_11(first2, obj);
         }, {});
@@ -769,7 +895,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13145, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13180, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;
@@ -778,9 +904,9 @@ class BugCreateScreen {
         name = intl6.string(tmp21(tmp22[14]).t["77VVd8"]);
       }
       obj34.label = name;
-      obj34 = tmp33(tmp21(tmp22[39]).TableRow, obj34);
+      obj34 = tmp33(tmp21(tmp22[41]).TableRow, obj34);
       obj33.children = obj34;
-      tmp33Result1 = tmp33(tmp21(tmp22[38]).TableRowGroup, obj33);
+      tmp33Result1 = tmp33(tmp21(tmp22[40]).TableRowGroup, obj33);
     }
     return;
   }
@@ -790,7 +916,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { padding: 16 }, attachmentCarousel: { justifyContent: "center", minWidth: "100%" }, attachmentContainer: { marginHorizontal: 4, marginBottom: 16 }, closeContainer: null, priorityIcon: null, offButton: null, submittingOverlay: null, submittingText: null };
 let size = { position: "absolute", top: 6, right: 10, height: 20, width: 20, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: null };
 const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
@@ -860,6 +986,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BugRepor
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(6688).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(6692).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 });
 export { BugCreateScreen };

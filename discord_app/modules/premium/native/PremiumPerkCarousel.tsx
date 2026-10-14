@@ -1,7 +1,7 @@
-// === Module 14083: PremiumPerkCarousel ===
+// === Module 14120: PremiumPerkCarousel ===
 
-// Module 14083 (PremiumPerkCarousel)
-import PremiumPerkCard from "PremiumPerkCard" /* 14027 */;
+// Module 14120 (PremiumPerkCarousel)
+import PremiumPerkCard from "PremiumPerkCard" /* 14064 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_8 = createStyles.createStyles({ title: { marginLeft: 24 }, indicators: { marginBottom: -36 }, carousel: { marginTop: 16 }, carouselCard: { marginLeft: 8 }, lastCarouselCard: { marginRight: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

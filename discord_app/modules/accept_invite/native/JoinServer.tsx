@@ -1,24 +1,24 @@
-// === Module 6661: JoinServer ===
+// === Module 6665: JoinServer ===
 
-// Module 6661 (JoinServer)
+// Module 6665 (JoinServer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6285 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6663 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6665 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6289 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6667 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6669 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(6662);
+const CreateGuildConstants = fn(6666);
 ({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: metroRequire, CreateGuildModalStates: closure_7 } = CreateGuildConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { growSpacing: { flexGrow: 2, minHeight: nativeDefault.space.PX_24 }, container: null, textInput: null, innerSeparator: null, separator: null, orText: null, header: null, description: null, exampleText: null };
 let obj3 = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
 obj2.container = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -93,7 +93,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrSeparato
     const obj6 = { style: tmp4.separator, children: null };
     items = [tmp6, tmp14, tmp17];
     obj6.children = items;
-    const tmp24 = options(React4, obj6);
+    const tmp24 = React6(React4, obj6);
     cResult[10] = tmp4.separator;
     cResult[11] = tmp6;
     cResult[12] = tmp14;
@@ -119,7 +119,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrSeparato
   items[1] = closure_1_8(Text_Text.Text, obj4);
   items[2] = closure_1_8(React4, { style: tmp.innerSeparator });
   obj2.children = items;
-  return options(React4, obj2);
+  return React6(React4, obj2);
 });
 let closure_14 = tmp5;
 ReactCompilerGating = fn(558);
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinServ
                 }
                 if (cResult[20] !== tmp4.exampleText) {
                   const obj5 = { style: tmp4.exampleText, variant: "text-sm/medium", color: "text-muted", children: tmp26 };
-                  const tmp31 = closure_8(tmp(5088).Text, obj5);
+                  const tmp31 = closure_8(tmp(5092).Text, obj5);
                   cResult[20] = tmp4.exampleText;
                   cResult[21] = tmp31;
                   let tmp29 = tmp31;
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinServ
                       }
                       if (cResult[36] !== tmp8) {
                         const obj7 = { size: "lg", variant: "secondary", text: tmp51, accessibilityLabel: tmp52, onPress: tmp8 };
-                        const tmp57 = closure_8(tmp(5379).Button, obj7);
+                        const tmp57 = closure_8(tmp(5384).Button, obj7);
                         cResult[36] = tmp8;
                         cResult[37] = tmp57;
                         let tmp55 = tmp57;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinServ
                       tmp58 = tmp61;
                     }
                     const obj11 = { size: "lg", text: tmp40, accessibilityLabel: tmp41, loading: submitting, disabled: submitting, onPress: onDone };
-                    const tmp46 = closure_8(tmp(5379).Button, obj11);
+                    const tmp46 = closure_8(tmp(5384).Button, obj11);
                     cResult[30] = onDone;
                     cResult[31] = submitting;
                     cResult[32] = tmp46;
@@ -345,11 +345,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinServ
       const obj15 = { style: tmp4.header, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
       const intl = tmp(1126).intl;
       obj15.children = intl.string(tmp(1126).t.jlfuFW);
-      const items3 = [closure_8(tmp(5088).Text, obj15), ];
+      const items3 = [closure_8(tmp(5092).Text, obj15), ];
       const obj28 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: null };
       const intl2 = tmp(1126).intl;
       obj28.children = intl2.string(tmp(1126).t.lVvN3A);
-      items3[1] = closure_8(tmp(5088).Text, obj28);
+      items3[1] = closure_8(tmp(5092).Text, obj28);
       obj14.children = items3;
       tmp13 = closure_9(closure_10, obj14);
     }
@@ -387,11 +387,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinServ
     const obj5 = { style: tmp.header, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp4(1126).intl;
     obj5.children = intl.string(tmp4(1126).t.jlfuFW);
-    const items2 = [closure_8(tmp4(5088).Text, obj5), ];
+    const items2 = [closure_8(tmp4(5092).Text, obj5), ];
     const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
     const intl2 = tmp4(1126).intl;
     obj6.children = intl2.string(tmp4(1126).t.lVvN3A);
-    items2[1] = closure_8(tmp4(5088).Text, obj6);
+    items2[1] = closure_8(tmp4(5092).Text, obj6);
     obj4.children = items2;
     tmp7Result = closure_9(closure_10, obj4);
   }
@@ -420,7 +420,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinServ
       return closure_1_8(navigation(dependencyMap[10]).Text, { variant: "text-sm/medium", color: "text-default", children }, arg1);
     }
   });
-  items3[2] = closure_8(navigation(5088).Text, obj9);
+  items3[2] = closure_8(navigation(5092).Text, obj9);
   obj7.children = items3;
   const items4 = [closure_9(closure_4, obj7), ];
   const obj11 = { children: null };
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinServ
   obj13.loading = submitting;
   obj13.disabled = submitting;
   obj13.onPress = onDone;
-  items5[1] = closure_8(navigation(5379).Button, obj13);
+  items5[1] = closure_8(navigation(5384).Button, obj13);
   items5[2] = closure_8(closure_14, {});
   const obj14 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
   const intl8 = tmp4(1126).intl;
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinServ
   const intl9 = tmp4(1126).intl;
   obj14.accessibilityLabel = intl9.string(navigation(1126).t["MOqX/G"]);
   obj14.onPress = callback;
-  items5[3] = closure_8(navigation(5379).Button, obj14);
+  items5[3] = closure_8(navigation(5384).Button, obj14);
   obj11.children = items5;
   items4[1] = closure_9(closure_10, obj11);
   obj2.children = items4;

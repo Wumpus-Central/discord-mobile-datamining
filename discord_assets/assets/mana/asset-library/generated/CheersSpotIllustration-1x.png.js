@@ -1,6 +1,6 @@
-// === Module 17029: ? ===
+// === Module 17066: ? ===
 
-// Module 17029
+// Module 17066
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CheersSpotIllustration-1x.png.js");

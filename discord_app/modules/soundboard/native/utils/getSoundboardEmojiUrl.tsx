@@ -1,6 +1,6 @@
-// === Module 12353: getSoundboardEmojiUrl ===
+// === Module 12389: getSoundboardEmojiUrl ===
 
-// Module 12353 (getSoundboardEmojiUrl)
+// Module 12389 (getSoundboardEmojiUrl)
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import size from "module_2" /* 2 */;
 

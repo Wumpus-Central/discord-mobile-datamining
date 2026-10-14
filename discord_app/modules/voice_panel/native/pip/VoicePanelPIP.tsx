@@ -1,27 +1,27 @@
-// === Module 17900: VoicePanelPIP ===
+// === Module 17936: VoicePanelPIP ===
 
-// Module 17900 (VoicePanelPIP)
+// Module 17936 (VoicePanelPIP)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4739 */;
-import native from "native" /* 4827 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import ExternalPipDefault from "ExternalPip" /* 5221 */;
-import spring from "spring" /* 5378 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10373 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10853 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12487 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 12494 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17799 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17800 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17802 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17901 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4741 */;
+import native from "native" /* 4829 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import ExternalPipDefault from "ExternalPip" /* 5225 */;
+import spring from "spring" /* 5383 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6339 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10383 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10727 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10933 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12523 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 12530 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17835 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17836 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17838 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17937 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import FramesStore from "FramesStore" /* 10807 */;
-import VoicePanelStore from "VoicePanelStore" /* 6074 */;
+import FramesStore from "FramesStore" /* 10713 */;
+import VoicePanelStore from "VoicePanelStore" /* 6080 */;
 
 require = fn;
 function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
@@ -29,15 +29,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12488);
+const VoicePanelConstants = fn(12524);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12486).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17801).VoicePanelPIPModes;
-const ActivityPanelModes = fn(6067).ActivityPanelModes;
-const isLaunched = fn(10802).isLaunched;
+const VoicePanelControlsModes = fn(12522).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17837).VoicePanelPIPModes;
+const ActivityPanelModes = fn(6073).ActivityPanelModes;
+const isLaunched = fn(10697).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -227,7 +227,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePIP
                     const tmp3Result = VoicePanelPIPUtils;
                   }
                   if (value.active) {
-                    let PIP_LAYOUT_PHYSICS = options;
+                    let PIP_LAYOUT_PHYSICS = React6;
                   } else {
                     PIP_LAYOUT_PHYSICS = VoicePanelPIPUtils.PIP_LAYOUT_PHYSICS;
                   }

@@ -1,11 +1,11 @@
-// === Module 9803: ApplicationCommandOptionUtils ===
+// === Module 9813: ApplicationCommandOptionUtils ===
 
-// Module 9803 (ApplicationCommandOptionUtils)
+// Module 9813 (ApplicationCommandOptionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1998 */;
-import RegexUtilsDefault from "RegexUtils" /* 5076 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5403 */;
-import numberParts from "numberParts" /* 9804 */;
+import RegexUtilsDefault from "RegexUtils" /* 5080 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5408 */;
+import numberParts from "numberParts" /* 9814 */;
 import size from "module_2" /* 2 */;
 
 function getString(arg0, arg1) {
@@ -323,7 +323,7 @@ export const normalizeNumericString = function normalizeNumericString(locale, tr
   return trimmed.replace(regExp, "").replace(regExp1, ".");
 };
 export const getInitialValuesFromInteractionOptions = function getInitialValuesFromInteractionOptions(command, interactionOptions) {
-  options = command;
+  let options = command;
   const obj = {};
   function _loop(iter) {
     options = iter;

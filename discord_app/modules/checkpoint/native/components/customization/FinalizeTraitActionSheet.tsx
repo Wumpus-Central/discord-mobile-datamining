@@ -1,10 +1,10 @@
-// === Module 16352: FinalizeTraitActionSheet ===
+// === Module 16389: FinalizeTraitActionSheet ===
 
-// Module 16352 (FinalizeTraitActionSheet)
+// Module 16389 (FinalizeTraitActionSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import _modDef3118 from "module_3118" /* 3118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 16322 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 16359 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finalize
     const obj2 = { title: null };
     let intl = onSelectOption(1126).intl;
     obj2.title = intl.string(_modDef3118.Zl5vPW);
-    const tmp7 = jsx(onSelectOption(6839).BottomSheetTitleHeader, { title: null });
+    const tmp7 = jsx(onSelectOption(6844).BottomSheetTitleHeader, { title: null });
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
@@ -58,10 +58,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finalize
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const mapped = items.map((option) => {
       option = option.option;
-      const obj = { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null };
+      const obj = { value: option, label: onSelectOption(16359).getCustomizationOptionName(option), subLabel: null };
       const intl = onSelectOption(1126).intl;
       obj.subLabel = intl.string(option.subtitle);
-      return jsx(onSelectOption(6262).TableRadioRow, { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null }, option);
+      return jsx(onSelectOption(6266).TableRadioRow, { value: option, label: onSelectOption(16359).getCustomizationOptionName(option), subLabel: null }, option);
     });
     cResult[4] = mapped;
     let tmp12 = mapped;
@@ -75,19 +75,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finalize
     return tmp15;
   }
   let obj = onSelectOption(576);
-  const tmp16 = jsx(onSelectOption(6899).ActionSheet, { startExpanded: true, header: first, children: jsx(onSelectOption(6263).TableRadioGroup, { hasIcons: false, accessibilityLabel: tmp8, defaultValue: selectedOption, onChange: tmp11, children: tmp12 }) });
+  const tmp16 = jsx(onSelectOption(6904).ActionSheet, { startExpanded: true, header: first, children: jsx(onSelectOption(6267).TableRadioGroup, { hasIcons: false, accessibilityLabel: tmp8, defaultValue: selectedOption, onChange: tmp11, children: tmp12 }) });
   cResult[5] = selectedOption;
   cResult[6] = tmp11;
   cResult[7] = tmp16;
   tmp15 = tmp16;
-  const obj3 = { startExpanded: true, header: first, children: jsx(onSelectOption(6263).TableRadioGroup, { hasIcons: false, accessibilityLabel: tmp8, defaultValue: selectedOption, onChange: tmp11, children: tmp12 }) };
+  const obj3 = { startExpanded: true, header: first, children: jsx(onSelectOption(6267).TableRadioGroup, { hasIcons: false, accessibilityLabel: tmp8, defaultValue: selectedOption, onChange: tmp11, children: tmp12 }) };
 }) : (function FinalizeTraitActionSheet(onSelectOption) {
   onSelectOption = onSelectOption.onSelectOption;
   let obj = { startExpanded: true, header: null, children: null };
   const obj2 = { title: null };
   let intl = onSelectOption(1126).intl;
   obj2.title = intl.string(_modDef3118.Zl5vPW);
-  obj.header = jsx(onSelectOption(6839).BottomSheetTitleHeader, { title: null });
+  obj.header = jsx(onSelectOption(6844).BottomSheetTitleHeader, { title: null });
   const obj3 = { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null };
   const intl2 = onSelectOption(1126).intl;
   obj3.accessibilityLabel = intl2.string(_modDef3118.Zl5vPW);
@@ -98,11 +98,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Finalize
   };
   obj3.children = items.map((option) => {
     option = option.option;
-    const obj = { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null };
+    const obj = { value: option, label: onSelectOption(16359).getCustomizationOptionName(option), subLabel: null };
     const intl = onSelectOption(1126).intl;
     obj.subLabel = intl.string(option.subtitle);
-    return jsx(onSelectOption(6262).TableRadioRow, { value: option, label: onSelectOption(16322).getCustomizationOptionName(option), subLabel: null }, option);
+    return jsx(onSelectOption(6266).TableRadioRow, { value: option, label: onSelectOption(16359).getCustomizationOptionName(option), subLabel: null }, option);
   });
-  obj.children = jsx(onSelectOption(6263).TableRadioGroup, { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null });
-  return jsx(onSelectOption(6899).ActionSheet, { startExpanded: true, header: null, children: null });
+  obj.children = jsx(onSelectOption(6267).TableRadioGroup, { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null });
+  return jsx(onSelectOption(6904).ActionSheet, { startExpanded: true, header: null, children: null });
 });

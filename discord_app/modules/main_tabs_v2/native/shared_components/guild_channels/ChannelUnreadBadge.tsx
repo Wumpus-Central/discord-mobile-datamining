@@ -1,19 +1,19 @@
-// === Module 16773: ChannelUnreadBadge ===
+// === Module 16812: ChannelUnreadBadge ===
 
-// Module 16773 (ChannelUnreadBadge)
-import useFontScale from "useFontScale" /* 5386 */;
-import Badge from "Badge" /* 9303 */;
-import ChannelListLayout from "ChannelListLayout" /* 11563 */;
+// Module 16812 (ChannelUnreadBadge)
+import useFontScale from "useFontScale" /* 5391 */;
+import Badge from "Badge" /* 9312 */;
+import ChannelListLayout from "ChannelListLayout" /* 11573 */;
 import noop from "module_19" /* 19 */;
 
 const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11562).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(5967).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11572).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(5972).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

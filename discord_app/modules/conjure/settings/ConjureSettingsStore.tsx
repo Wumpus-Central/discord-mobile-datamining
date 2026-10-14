@@ -1,6 +1,6 @@
-// === Module 11232: ConjureSettingsStore ===
+// === Module 10680: ConjureSettingsStore ===
 
-// Module 11232 (ConjureSettingsStore)
+// Module 10680 (ConjureSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

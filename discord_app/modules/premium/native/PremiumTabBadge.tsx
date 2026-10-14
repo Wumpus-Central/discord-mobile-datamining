@@ -1,6 +1,6 @@
-// === Module 15583: PremiumTabBadge ===
+// === Module 15620: PremiumTabBadge ===
 
-// Module 15583 (PremiumTabBadge)
+// Module 15620 (PremiumTabBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,33 +10,33 @@ import native from "native" /* 1200 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import PremiumUtils from "PremiumUtils" /* 4769 */;
-import useBadgeTextVariant from "useBadgeTextVariant" /* 4830 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4938 */;
-import shared from "shared" /* 4969 */;
-import useThemeDefault from "useTheme" /* 5031 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7100 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7170 */;
-import ReferralProgramUtils from "ReferralProgramUtils" /* 8085 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8086 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8090 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8972 */;
-import MarketingComponentType from "MarketingComponentType" /* 10095 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 14048 */;
-import _modDef15584 from "module_15584" /* 15584 */;
+import PremiumUtils from "PremiumUtils" /* 4771 */;
+import useBadgeTextVariant from "useBadgeTextVariant" /* 4832 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4940 */;
+import shared from "shared" /* 4971 */;
+import useThemeDefault from "useTheme" /* 5033 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import LinearGradientDefault from "LinearGradient" /* 5396 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7106 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7176 */;
+import ReferralProgramUtils from "ReferralProgramUtils" /* 8092 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8093 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8097 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8977 */;
+import MarketingComponentType from "MarketingComponentType" /* 10105 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 14085 */;
+import _modDef15621 from "module_15621" /* 15621 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4775 */;
+import SubscriptionStore from "SubscriptionStore" /* 4777 */;
 
 require = fn;
 const View = fn(17).View;
 let closure_6 = fn(1392).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-const Gradients = fn(7152).Gradients;
+const Gradients = fn(7158).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { tag: { paddingVertical: 4, paddingHorizontal: 8, borderRadius: nativeDefault.radii.round }, badge: null, badgeBackgroundLightTheme: null, badgeBackgroundDarkTheme: null, acked: null, ackedBadge: null, icon: null, uppercase: null, text: null, premiumDiscountBadge: null };
 let obj3 = { paddingVertical: 4, paddingHorizontal: 8, borderRadius: nativeDefault.radii.round };
 obj2.badge = { display: "flex", minWidth: 16, minHeight: 16, paddingHorizontal: 8, justifyContent: "center", alignItems: "center", gap: 4, borderRadius: nativeDefault.radii.round };
@@ -158,7 +158,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function OfferB
     useTrackImpressionDefault(tmp5, tmp8);
     if (acked) {
       if (cResult[5] !== acked2.icon) {
-        const obj4 = { source: _modDef15584, size: native.Icon.Sizes.EXTRA_SMALL, color: acked2.icon.color, style: acked2.icon };
+        const obj4 = { source: _modDef15621, size: native.Icon.Sizes.EXTRA_SMALL, color: acked2.icon.color, style: acked2.icon };
         const tmp17 = closure_1_8(native.Icon, obj4);
         cResult[5] = acked2.icon;
         cResult[6] = tmp17;
@@ -182,7 +182,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function OfferB
             const obj5 = { style: acked2.acked, children: null };
             const items = [tmp15, tmp19];
             obj5.children = items;
-            const tmp25 = options(View, obj5);
+            const tmp25 = React6(View, obj5);
             acked2 = acked2.acked;
             cResult[14] = acked2;
             cResult[15] = tmp15;
@@ -237,7 +237,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function OfferB
   tmp6(obj2, { disableTrack: null == componentId });
   if (acked) {
     const obj5 = { style: tmp4.acked, children: null };
-    const obj6 = { source: _modDef15584, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp4.icon.color, style: tmp4.icon };
+    const obj6 = { source: _modDef15621, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp4.icon.color, style: tmp4.icon };
     const items = [closure_1_8(native.Icon, obj6), ];
     const obj7 = { variant: badgeTextVariant, color: "interactive-text-default", style: null, children: null };
     const items1 = [, ];
@@ -246,7 +246,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function OfferB
     obj7.children = ackedBadgeCopy;
     items[1] = closure_1_8(Text_Text.Text, obj7);
     obj5.children = items;
-    let tmp10 = options(View, obj5);
+    let tmp10 = React6(View, obj5);
   } else {
     const obj8 = { label: badgeCopy };
     tmp10 = closure_1_8(closure_11, obj8);
@@ -482,7 +482,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumT
                     let tmp68 = cResult[48];
                   }
                   if (cResult[49] !== tmp5.icon) {
-                    const obj14 = { source: _modDef15584, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp5.icon.color, style: tmp5.icon };
+                    const obj14 = { source: _modDef15621, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp5.icon.color, style: tmp5.icon };
                     const tmp72 = closure_1_8(native.Icon, obj14);
                     cResult[49] = tmp5.icon;
                     cResult[50] = tmp72;
@@ -518,7 +518,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumT
                       const obj15 = { style: tmp68, children: null };
                       const items2 = [tmp69, tmp76];
                       obj15.children = items2;
-                      const tmp82 = options(View, obj15);
+                      const tmp82 = React6(View, obj15);
                       cResult[58] = tmp76;
                       cResult[59] = tmp68;
                       cResult[60] = tmp69;
@@ -780,7 +780,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumT
           const items4 = [, ];
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = intl);
           obj11.style = items4;
-          const obj12 = { source: _modDef15584, size: native.Icon.Sizes.EXTRA_SMALL, color: intl.icon.color, style: intl.icon };
+          const obj12 = { source: _modDef15621, size: native.Icon.Sizes.EXTRA_SMALL, color: intl.icon.color, style: intl.icon };
           const items5 = [closure_1_8(native.Icon, obj12), ];
           const obj13 = { variant: badgeTextVariant, color: "interactive-text-default", style: null, children: null };
           const items6 = [, ];
@@ -790,7 +790,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumT
           obj13.children = intl6.string(util.t["/DTtr6"]);
           items5[1] = closure_1_8(Text_Text.Text, obj13);
           obj11.children = items5;
-          let tmp41 = options(View, obj11);
+          let tmp41 = React6(View, obj11);
         } else {
           const obj14 = { style: intl.premiumDiscountBadge, colors: ["#db00a4", "#5968f0"], start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, children: null };
           const obj15 = { variant: badgeTextVariant, color: "text-overlay-light", style: null, children: null };

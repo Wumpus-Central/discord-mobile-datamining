@@ -1,6 +1,6 @@
-// === Module 13731: UserProfileDismissibleUpsells ===
+// === Module 13769: UserProfileDismissibleUpsells ===
 
-// Module 13731 (UserProfileDismissibleUpsells)
+// Module 13769 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 587 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
 import noop from "module_19" /* 19 */;
@@ -8,21 +8,21 @@ import UserStore from "UserStore" /* 1390 */;
 
 const util = ShopIcon(1126);
 const native = ShopIcon(1200);
-const Text_Text = ShopIcon(5088);
-const components_Button_Button = ShopIcon(5379);
-const Pressables = ShopIcon(6185);
-const XSmallIcon = ShopIcon(6208);
-const NitroWheelIcon = ShopIcon(9036);
-const ShopIcon2 = ShopIcon(11631);
+const Text_Text = ShopIcon(5092);
+const components_Button_Button = ShopIcon(5384);
+const Pressables = ShopIcon(6189);
+const XSmallIcon = ShopIcon(6212);
+const NitroWheelIcon = ShopIcon(9041);
+const ShopIcon2 = ShopIcon(11641);
 require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8308).TrackUserProfileActions;
+const TrackUserProfileActions = fn(8315).TrackUserProfileActions;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(7152).Gradients.PREMIUM_GUILD];
+let items = [...fn(7158).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { upsellContainer: { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };
 let obj3 = { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.customProfileThemeUpsellContainer = { backgroundColor: nativeDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                         obj6.children = closure_2_8(XSmallIcon.XSmallIcon, { size: "sm" });
                         items[1] = closure_2_8(Pressables.PressableOpacity, obj6);
                         obj4.children = items;
-                        const items1 = [options(View, obj4), ];
+                        const items1 = [React6(View, obj4), ];
                         let obj7 = { style: tmp12Result3.upsellButtonsContainer, children: null };
                         let obj8 = { style: tmp12Result3.upsellButton, children: null };
                         let Button = components_Button_Button.Button;
@@ -193,10 +193,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                         obj9 = closure_2_8(View, obj10);
                         obj8[1] = obj9;
                         obj7.children = obj8;
-                        obj7 = options(View, obj7);
+                        obj7 = React6(View, obj7);
                         items1[1] = obj7;
                         obj3.children = items1;
-                        obj3 = options(View, obj3);
+                        obj3 = React6(View, obj3);
                         obj.children = obj3;
                         closure_2_8(native.GradientBorder, obj);
                         const tmp12Result = closure_2_8(View, obj8);
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         obj6.children = closure_2_8(XSmallIcon.XSmallIcon, { size: "sm" });
         items[1] = closure_2_8(Pressables.PressableOpacity, obj6);
         obj4.children = items;
-        const items1 = [options(View, obj4), ];
+        const items1 = [React6(View, obj4), ];
         let obj7 = { style: tmp12Result3.upsellButtonsContainer, children: null };
         let obj8 = { style: tmp12Result3.upsellButton, children: null };
         let Button = components_Button_Button.Button;
@@ -342,10 +342,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         obj9 = closure_2_8(View, obj10);
         obj8[1] = obj9;
         obj7.children = obj8;
-        obj7 = options(View, obj7);
+        obj7 = React6(View, obj7);
         items1[1] = obj7;
         obj3.children = items1;
-        obj3 = options(View, obj3);
+        obj3 = React6(View, obj3);
         obj.children = obj3;
         closure_2_8(native.GradientBorder, obj);
         const tmp12Result = closure_2_8(View, obj8);

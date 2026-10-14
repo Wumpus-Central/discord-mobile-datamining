@@ -1,21 +1,21 @@
-// === Module 18438: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 18474: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 18438 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 18474 (GuildSettingsRoleEditConnectionConfiguration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
-import shared from "shared" /* 4969 */;
-import useThemeDefault from "useTheme" /* 5031 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import PlatformsDefault from "Platforms" /* 5763 */;
-import TableRow from "TableRow" /* 6180 */;
-import Pressables from "Pressables" /* 6185 */;
-import XSmallIcon from "XSmallIcon" /* 6208 */;
-import TableRowGroup from "TableRowGroup" /* 6265 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 10712 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 18439 */;
+import shared from "shared" /* 4971 */;
+import useThemeDefault from "useTheme" /* 5033 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import PlatformsDefault from "Platforms" /* 5768 */;
+import TableRow from "TableRow" /* 6184 */;
+import Pressables from "Pressables" /* 6189 */;
+import XSmallIcon from "XSmallIcon" /* 6212 */;
+import TableRowGroup from "TableRowGroup" /* 6269 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 10815 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 18475 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -96,11 +96,11 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1085).PlatformTypes;
-const Constants = fn(6877);
+const Constants = fn(6882);
 ({ MetadataFields: closure_7, OperatorTypes: closure_8, MetadataItemTypes: closure_9, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: c10, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { numericalInputContainerIOSInline: { marginTop: -2 }, numericalInputContainerAndroidInline: null, numericalInputContainerBase: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm }, numericalInput: null, appNumericalInput: null, appNumericalInputContainer: null, appNumericalInputText: null, numericalInputDisabled: null, metadataRow: null, metadataRowText: null };
 let obj3 = { transform: null };
 let items = [{ translateY: 10 }];
@@ -472,7 +472,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Boolea
     }
     _slicedToArray(tmp, num);
   };
-  return onChangeText(metadataField(6896).TableSwitchRow, obj, metadataField);
+  return onChangeText(metadataField(6901).TableSwitchRow, obj, metadataField);
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NumericalConfigRule(existingPendingConfiguration) {
@@ -1282,7 +1282,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(18439).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(18475).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -1290,9 +1290,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
       value = iter.value;
     }
   }
-  let obj = metadataField(18439);
-  const tmpResult = metadataField(18439);
-  str1 = metadataField(18439).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(18475);
+  const tmpResult = metadataField(18475);
+  str1 = metadataField(18475).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -1368,7 +1368,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
       obj5.children = onInputValueChange(metadataField(1200).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer"), ];
       const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(5088).Text, obj7);
+      items1[1] = onInputValueChange(metadataField(5092).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -1404,9 +1404,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
           _slicedToArray(tmp3, num);
         }
     };
-    return onInputValueChange(metadataField(6896).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(6901).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(18439).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(18475).displayedValueFor(value, realizedOperatorForResult);
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlueskyMetadataRules(arg0) {

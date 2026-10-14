@@ -1,7 +1,7 @@
-// === Module 6754: getFastestListSectionsWithErrorChecking ===
+// === Module 6758: getFastestListSectionsWithErrorChecking ===
 
-// Module 6754 (getFastestListSectionsWithErrorChecking)
-import FastestListLogger from "FastestListLogger" /* 6748 */;
+// Module 6758 (getFastestListSectionsWithErrorChecking)
+import FastestListLogger from "FastestListLogger" /* 6752 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 8470: ContentInventoryConstants ===
+// === Module 8477: ContentInventoryConstants ===
 
-// Module 8470 (ContentInventoryConstants)
+// Module 8477 (ContentInventoryConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryConstants.tsx");

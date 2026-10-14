@@ -1,16 +1,16 @@
-// === Module 17565: YouExpiringTrialOfferCard ===
+// === Module 17599: YouExpiringTrialOfferCard ===
 
-// Module 17565 (YouExpiringTrialOfferCard)
+// Module 17599 (YouExpiringTrialOfferCard)
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import useCountdownDefault from "useCountdown" /* 7162 */;
-import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 17566 */;
+import _modDef4704 from "module_4704" /* 4704 */;
+import LinearGradientDefault from "LinearGradient" /* 5396 */;
+import useCountdownDefault from "useCountdown" /* 7168 */;
+import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 17600 */;
 import noop from "module_19" /* 19 */;
-import NoticeStore from "NoticeStore" /* 14352 */;
+import NoticeStore from "NoticeStore" /* 14389 */;
 
 require = fn;
 function getNoticeCopy(days, trialPeriod, termsUrl) {
@@ -36,12 +36,12 @@ function getNoticeCopy(days, trialPeriod, termsUrl) {
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, HelpdeskArticles: closure_7, HorizontalGradient: closure_8, NoticeTypes: closure_9 } = Constants);
-const Gradients = fn(7152).Gradients;
+const Gradients = fn(7158).Gradients;
 let closure_11 = fn(1392).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = 10 * DurationsDefault.Millis.SECOND;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { header: { flexDirection: "row", alignItems: "flex-start", marginBottom: 16, marginRight: 32 }, closeButton: { position: "absolute", top: 16, right: 16 }, closeIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, linearGradient: { width: "100%", height: "100%", position: "absolute", overflow: "hidden" }, primaryCTA: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.primaryCTA = { borderRadius: nativeDefault.radii.round, gap: 4 };
@@ -56,10 +56,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
   navigateToPremium = navigateToPremium.navigateToPremium;
   const style = navigateToPremium.style;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const addResult = untilAtLeast(4702)().add(5, "days");
+    const addResult = untilAtLeast(4704)().add(5, "days");
     cResult[0] = addResult;
     untilAtLeast = addResult;
-    let obj2 = untilAtLeast(4702)();
+    let obj2 = untilAtLeast(4704)();
   } else {
     untilAtLeast = cResult[0];
   }
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
   let obj = navigateToPremium(576);
   const stateFromStores = navigateToPremium(573).useStateFromStores(tmp8, tmp9);
   const tmpResult = navigateToPremium(573);
-  const premiumTrialOffer = navigateToPremium(7170).usePremiumTrialOffer();
+  const premiumTrialOffer = navigateToPremium(7176).usePremiumTrialOffer();
   if (cResult[3] !== premiumTrialOffer) {
     let num5 = 0;
     if (null != premiumTrialOffer) {
@@ -104,9 +104,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
   } else {
     tmp13 = cResult[4];
   }
-  const tmp16 = untilAtLeast(7162)(tmp13, closure_15);
-  const tmpResult4 = navigateToPremium(7170);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(17564).useShouldShowExpiringTrialOfferCard();
+  const tmp16 = untilAtLeast(7168)(tmp13, closure_15);
+  const tmpResult4 = navigateToPremium(7176);
+  shouldShowExpiringTrialOfferCard = navigateToPremium(17598).useShouldShowExpiringTrialOfferCard();
   if (cResult[5] === stateFromStores) {
     if (cResult[6] === shouldShowExpiringTrialOfferCard) {
       if (cResult[7] === premiumTrialOffer) {
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
                                                       return tmp(tmp2, obj);
                                                     }
                                                   }
-                                                  const tmp77 = closure_12(tmp15(6904), tmp76);
+                                                  const tmp77 = closure_12(tmp15(6909), tmp76);
                                                   cResult[58] = tmp70;
                                                   cResult[59] = style;
                                                   cResult[60] = tmp77;
@@ -434,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
                                   }
                                 }
                                 let obj4 = { style: null, accessibilityRole: "button", accessibilityLabel: tmp49, hitSlop: tmp50, onPress: tmp53, children: tmp54 };
-                                const tmp58 = closure_12(tmp(6185).PressableOpacity, obj4);
+                                const tmp58 = closure_12(tmp(6189).PressableOpacity, obj4);
                                 cResult[37] = tmp7.closeButton;
                                 cResult[38] = tmp53;
                                 cResult[39] = tmp54;
@@ -500,7 +500,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
               PREMIUM_TRIAL = constants2.PREMIUM_TRIAL;
             }
             const header = tmp7.header;
-            const Text = tmp(5088).Text;
+            const Text = tmp(5092).Text;
             const tmp29Result = tmp29(PREMIUM_TRIAL);
             const subscriptionTrial3 = premiumTrialOffer.subscriptionTrial;
             let interval;
@@ -514,7 +514,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
               intervalCount1 = subscriptionTrial4.intervalCount;
             }
             obj5.intervalCount = intervalCount1;
-            const tmp35Result = getNoticeCopy(tmp16, tmp(4769).formatIntervalDuration(obj5), tmp29Result);
+            const tmp35Result = getNoticeCopy(tmp16, tmp(4771).formatIntervalDuration(obj5), tmp29Result);
             cResult[10] = tmp16;
             cResult[11] = tmp7.header;
             const subscriptionTrial5 = premiumTrialOffer.subscriptionTrial;
@@ -567,7 +567,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
             tmp26 = header;
             tmp25 = tmp34;
             tmp24 = Text;
-            const tmpResult6 = tmp(4769);
+            const tmpResult6 = tmp(4771);
           }
         }
         return null;
@@ -612,20 +612,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
   cResult[9] = items1;
   tmp19 = items1;
   tmp18 = O;
-  const tmpResult5 = navigateToPremium(17564);
+  const tmpResult5 = navigateToPremium(17598);
 }) : (function YouExpiringTrialOfferCard(navigateToPremium) {
   navigateToPremium = navigateToPremium.navigateToPremium;
   let shouldShowExpiringTrialOfferCard;
-  importDefault = _modDef4702().add(5, "days");
+  importDefault = _modDef4704().add(5, "days");
   const tmp3 = closure_16();
   dependencyMap = tmp3;
-  let obj = _modDef4702();
+  let obj = _modDef4704();
   const items = [shouldShowExpiringTrialOfferCard];
   const stateFromStores = navigateToPremium(573).useStateFromStores(items, () => shouldShowExpiringTrialOfferCard.getNoticeType());
   let obj2 = navigateToPremium(573);
-  const premiumTrialOffer = navigateToPremium(7170).usePremiumTrialOffer();
+  const premiumTrialOffer = navigateToPremium(7176).usePremiumTrialOffer();
   let num = 0;
-  let obj3 = navigateToPremium(7170);
+  let obj3 = navigateToPremium(7176);
   if (null != premiumTrialOffer) {
     num = 0;
     if (null != premiumTrialOffer.expiresAt) {
@@ -634,7 +634,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
     }
   }
   const tmp7Result = useCountdownDefault(num, closure_15);
-  shouldShowExpiringTrialOfferCard = navigateToPremium(17564).useShouldShowExpiringTrialOfferCard();
+  shouldShowExpiringTrialOfferCard = navigateToPremium(17598).useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {
     let tmp = shouldShowExpiringTrialOfferCard;
@@ -675,8 +675,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
         const obj6 = { children: null };
         const obj7 = { variant: "heading-sm/medium", color: "text-default", children: null };
         obj5.intervalCount = intervalCount;
-        obj7.children = getNoticeCopy(tmp7Result, tmp4(4769).formatIntervalDuration(obj5), articleURL);
-        obj4.children = closure_12(tmp4(5088).Text, obj7);
+        obj7.children = getNoticeCopy(tmp7Result, tmp4(4771).formatIntervalDuration(obj5), articleURL);
+        obj4.children = closure_12(tmp4(5092).Text, obj7);
         const items2 = [closure_12(tmp17, obj4), , ];
         const obj8 = { style: tmp3.closeButton, accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, onPress: null, children: null };
         const intl = tmp4(1126).intl;
@@ -692,7 +692,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
         };
         const size = { width: 16, height: 16, color: tmp3.closeIcon.color };
         obj8.children = closure_12(tmp4(1200).CloseIcon, size);
-        items2[1] = closure_12(tmp4(6185).PressableOpacity, obj8);
+        items2[1] = closure_12(tmp4(6189).PressableOpacity, obj8);
         const obj9 = { style: tmp3.primaryCTA, text: null, onPress: null, renderIcon: null, renderLinearGradient: null };
         const intl2 = tmp4(1126).intl;
         obj9.text = intl2.string(tmp4(1126).t.J61px0);
@@ -708,7 +708,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
         };
         obj9.renderLinearGradient = function renderLinearGradient() {
           const obj = { style: linearGradient.linearGradient, start: constants3.START, end: constants3.END, colors: null };
-          if (options.PREMIUM_TIER_0_TRIAL_ENDING === stateFromStores) {
+          if (React6.PREMIUM_TIER_0_TRIAL_ENDING === stateFromStores) {
             let PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_0;
           } else if (tmp4.PREMIUM_TIER_2_TRIAL_ENDING === stateFromStores) {
             PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_2_TRI_COLOR;
@@ -723,14 +723,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouExpir
         };
         items2[2] = closure_12(tmp4(1200).ShinyButton, obj9);
         obj6.children = items2;
-        const tmp4Result2 = tmp4(4769);
+        const tmp4Result2 = tmp4(4771);
         const obj10 = { style: navigateToPremium.style, children: closure_14(closure_13, obj6) };
-        return closure_12(tmp(6904), obj10);
+        return closure_12(tmp(6909), obj10);
       }
     }
     return null;
   } else {
     return null;
   }
-  const tmp4Result = navigateToPremium(17564);
+  const tmp4Result = navigateToPremium(17598);
 });

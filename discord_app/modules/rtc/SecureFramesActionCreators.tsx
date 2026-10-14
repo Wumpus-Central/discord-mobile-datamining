@@ -1,6 +1,6 @@
-// === Module 8831: SecureFramesActionCreators ===
+// === Module 8835: SecureFramesActionCreators ===
 
-// Module 8831 (SecureFramesActionCreators)
+// Module 8835 (SecureFramesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

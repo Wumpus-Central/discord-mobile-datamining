@@ -1,18 +1,18 @@
-// === Module 6180: TableRow ===
+// === Module 6184: TableRow ===
 
-// Module 6180 (TableRow)
+// Module 6184 (TableRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4818 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import useFontScale from "useFontScale" /* 5386 */;
-import TableRowDivider from "TableRowDivider" /* 6175 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6181 */;
-import Card from "Card" /* 6182 */;
-import TableRowArrow from "TableRowArrow" /* 6189 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6191 */;
-import DragIcon from "DragIcon" /* 6192 */;
+import useToken from "useToken" /* 4820 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import useFontScale from "useFontScale" /* 5391 */;
+import TableRowDivider from "TableRowDivider" /* 6179 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6185 */;
+import Card from "Card" /* 6186 */;
+import TableRowArrow from "TableRowArrow" /* 6193 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 6195 */;
+import DragIcon from "DragIcon" /* 6196 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const style = { padding: 0 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
   let num = 1;
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRow(arg
                                       const obj3 = { adjustSpacingForIcon: tmp28 };
                                       items[1] = closure_1_8(TableRowDivider.TableRowDivider, obj3);
                                       obj2.children = items;
-                                      tmp40 = collapsed(options, obj2);
+                                      tmp40 = collapsed(React6, obj2);
                                     }
                                     cResult[38] = tmp32;
                                     cResult[39] = tmp28;
@@ -286,14 +286,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRow(arg
       const obj3 = { adjustSpacingForIcon: null != icon };
       items[1] = closure_1_8(TableRowDivider.TableRowDivider, obj3);
       obj2.children = items;
-      tmp11 = collapsed(options, obj2);
+      tmp11 = collapsed(React6, obj2);
     }
   }
   return tmp11;
 });
-tmp4.Icon = fn(6188).TableRowIcon;
-tmp4.Arrow = fn(6189).TableRowArrow;
-tmp4.TrailingText = fn(6191).TableRowTrailingText;
+tmp4.Icon = fn(6192).TableRowIcon;
+tmp4.Arrow = fn(6193).TableRowArrow;
+tmp4.TrailingText = fn(6195).TableRowTrailingText;
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function TableRowInner(disabled) {
   const cResult = c.c(53);

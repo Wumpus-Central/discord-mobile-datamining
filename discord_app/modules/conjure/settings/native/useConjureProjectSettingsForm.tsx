@@ -1,15 +1,15 @@
-// === Module 11317: useConjureProjectSettingsForm ===
+// === Module 11328: useConjureProjectSettingsForm ===
 
-// Module 11317 (useConjureProjectSettingsForm)
+// Module 11328 (useConjureProjectSettingsForm)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5060 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6952 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
 
 const require = globalThis.__r;
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -20,7 +20,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1085).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(5092);
+let createStyles = fn(5096);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -31,7 +31,7 @@ obj2.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefault.spac
 let obj6 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5092);
+createStyles = fn(5096);
 let closure_14 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -740,31 +740,29 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       }
     }
   }), items3);
-  let obj6 = {
-    iconURL: tmp7.iconURL,
-    canRemove: null != tmp7.icon,
-    onIconChange(channelId) {
-      closure_5.setIcon(channelId);
-      closure_1_21(null);
-    },
-    name: str2,
-    nameError: tmp22,
-    onNameChange: callback,
-    description: tmp7.description,
-    onDescriptionChange(description) {
-      closure_5.setDescription(description);
-      closure_1_21(null);
-    },
-    previewName: null,
-    disabled: null
-  };
-  let tmp44 = trimmed;
-  if ("" === trimmed) {
-    tmp44 = tmp11;
-  }
-  obj6.previewName = tmp44;
-  obj6.disabled = first2;
-  const items4 = [prop(require("ConjureAppIdentity").ConjureAppIdentitySection, obj6), , , , , ];
+  const items4 = [
+    prop(require("ConjureAppIdentity").ConjureAppIdentitySection, {
+      iconURL: tmp7.iconURL,
+      onIconChange(channelId) {
+        closure_5.setIcon(channelId);
+        closure_1_21(null);
+      },
+      name: str2,
+      nameError: tmp22,
+      onNameChange: callback,
+      description: tmp7.description,
+      onDescriptionChange(description) {
+        closure_5.setDescription(description);
+        closure_1_21(null);
+      },
+      disabled: first2
+    }),
+  ,
+  ,
+  ,
+  ,
+
+  ];
   let tmp43Result = null;
   if (result) {
     let obj7 = { hasIcons: false, children: null };
@@ -825,11 +823,11 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     obj13.label = intl6.string(tmp6(tmp3[16])["pO3+p5"]);
     const intl7 = tmp2(tmp3[15]).intl;
     obj13.subLabel = intl7.string(tmp6(tmp3[16])["9MdtK9"]);
-    let tmp49 = first2;
+    let tmp48 = first2;
     if (!first2) {
-      tmp49 = !isPublic;
+      tmp48 = !isPublic;
     }
-    obj13.disabled = tmp49;
+    obj13.disabled = tmp48;
     let stringResult;
     if (!isPublic) {
       const intl8 = tmp2(tmp3[15]).intl;

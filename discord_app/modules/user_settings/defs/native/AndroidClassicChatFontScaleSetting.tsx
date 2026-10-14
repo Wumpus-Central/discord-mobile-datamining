@@ -1,14 +1,14 @@
-// === Module 15925: AndroidClassicChatFontScaleSetting ===
+// === Module 15962: AndroidClassicChatFontScaleSetting ===
 
-// Module 15925 (AndroidClassicChatFontScaleSetting)
+// Module 15962 (AndroidClassicChatFontScaleSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import _mod4733 from "module_4733" /* 4733 */;
-import SettingsConstants from "SettingsConstants" /* 7993 */;
-import FontScaleStore from "FontScaleStore" /* 15873 */;
+import _mod4735 from "module_4735" /* 4735 */;
+import SettingsConstants from "SettingsConstants" /* 8000 */;
+import FontScaleStore from "FontScaleStore" /* 15910 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
+import SettingBuilders from "SettingBuilders" /* 10767 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -25,9 +25,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useClassic
   } else {
     first = cResult[0];
   }
-  return useFontScaleStore(first, _mod4733.shallow);
+  return useFontScaleStore(first, _mod4735.shallow);
 }) : (function useClassicChatFontScaleValue() {
-  return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, _mod4733.shallow);
+  return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, _mod4735.shallow);
 });
 const toggle = SettingBuilders.createToggle({
   useTitle() {
@@ -46,9 +46,9 @@ const toggle = SettingBuilders.createToggle({
     } else {
       first = cResult[0];
     }
-    return useFontScaleStore(first, _mod4733.shallow);
+    return useFontScaleStore(first, _mod4735.shallow);
   }) : (function useClassicChatFontScaleValue() {
-    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, _mod4733.shallow);
+    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, _mod4735.shallow);
   }),
   onValueChange: function onClassicChatFontScaleChange(isClassicChatFontScaleEnabled) {
     _require = isClassicChatFontScaleEnabled;

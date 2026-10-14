@@ -1,11 +1,11 @@
-// === Module 4774: SubscriptionPlanStore ===
+// === Module 4776: SubscriptionPlanStore ===
 
-// Module 4774 (SubscriptionPlanStore)
+// Module 4776 (SubscriptionPlanStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FunctionUtils from "FunctionUtils" /* 2039 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4770 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4772 */;
 
 require = fn;
 function addSubscriptionPlan(fromServer) {
@@ -150,11 +150,11 @@ prototype["isLoadedForSKUs"] = function isLoadedForSKUs(items) {
 };
 prototype["isFetchingForPremiumSKUs"] = function isFetchingForPremiumSKUs() {
   const self = this;
-  return options.some((item) => self.isFetchingForSKU(item));
+  return React6.some((item) => self.isFetchingForSKU(item));
 };
 prototype["isLoadedForPremiumSKUs"] = function isLoadedForPremiumSKUs() {
   const self = this;
-  return options.every((item) => self.isLoadedForSKU(item));
+  return React6.every((item) => self.isLoadedForSKU(item));
 };
 prototype["ignoreSKUFetch"] = function ignoreSKUFetch(arg0) {
   set1.add(arg0);

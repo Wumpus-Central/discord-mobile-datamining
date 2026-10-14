@@ -1,10 +1,10 @@
-// === Module 17626: ChannelDetailsScreen ===
+// === Module 17660: ChannelDetailsScreen ===
 
-// Module 17626 (ChannelDetailsScreen)
+// Module 17660 (ChannelDetailsScreen)
 import c from "c" /* 576 */;
 import Link from "Link" /* 1504 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4981 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 17371 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4983 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 17405 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

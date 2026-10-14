@@ -1,20 +1,20 @@
-// === Module 18346: GuildSettingsModalAuditLogFilter ===
+// === Module 18382: GuildSettingsModalAuditLogFilter ===
 
-// Module 18346 (GuildSettingsModalAuditLogFilter)
+// Module 18382 (GuildSettingsModalAuditLogFilter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6095 */;
-import FormRadio from "FormRadio" /* 6266 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10300 */;
-import AuditLogUtils from "AuditLogUtils" /* 18344 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 18347 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4834 */;
+import UserUtilsDefault from "UserUtils" /* 4964 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6101 */;
+import FormRadio from "FormRadio" /* 6270 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10310 */;
+import AuditLogUtils from "AuditLogUtils" /* 18380 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 18383 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18342 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 18378 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1085).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 }, allUsersIconContainer: { height: 30, width: 30, alignItems: "center" } };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -42,7 +42,7 @@ let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (cResult[2] !== selected) {
     const obj3 = { selected };
-    const tmp8 = options(FormRadio.FormRadio, obj3);
+    const tmp8 = React6(FormRadio.FormRadio, obj3);
     cResult[2] = selected;
     cResult[3] = tmp8;
     let tmp6 = tmp8;
@@ -67,7 +67,7 @@ let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
   }
-  const tmp10 = options(DetailedGuildIdentityUserRowDefault, { start, end, userId, guildId, onPress, accessibilityRole, accessibilityState, trailing: tmp6 });
+  const tmp10 = React6(DetailedGuildIdentityUserRowDefault, { start, end, userId, guildId, onPress, accessibilityRole, accessibilityState, trailing: tmp6 });
   cResult[4] = accessibilityRole;
   cResult[5] = accessibilityState;
   cResult[6] = end;
@@ -85,8 +85,8 @@ let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj2 = { start, end, userId, guildId, onPress, accessibilityRole, accessibilityState, trailing: null };
-  obj2.trailing = options(FormRadio.FormRadio, { selected });
-  return options(DetailedGuildIdentityUserRowDefault, obj2);
+  obj2.trailing = React6(FormRadio.FormRadio, { selected });
+  return React6(DetailedGuildIdentityUserRowDefault, obj2);
 }));
 ReactCompilerGating = fn(558);
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 };
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          const tmp26 = closure_9(filterType(6739).SearchField, obj5);
+                          const tmp26 = closure_9(filterType(6743).SearchField, obj5);
                           cResult[25] = tmp20;
                           cResult[26] = tmp26;
                           let tmp24 = tmp26;

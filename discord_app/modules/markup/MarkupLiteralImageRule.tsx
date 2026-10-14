@@ -1,8 +1,8 @@
-// === Module 11490: MarkupLiteralImageRule ===
+// === Module 11500: MarkupLiteralImageRule ===
 
-// Module 11490 (MarkupLiteralImageRule)
+// Module 11500 (MarkupLiteralImageRule)
 import _modDef1949 from "module_1949" /* 1949 */;
-import MarkupTypes from "MarkupTypes" /* 5400 */;
+import MarkupTypes from "MarkupTypes" /* 5405 */;
 
 require = fn;
 const obj = {};

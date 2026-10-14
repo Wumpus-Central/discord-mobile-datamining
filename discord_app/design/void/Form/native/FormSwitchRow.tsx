@@ -1,13 +1,13 @@
-// === Module 8592: FormSwitchRow ===
+// === Module 8598: FormSwitchRow ===
 
-// Module 8592 (FormSwitchRow)
+// Module 8598 (FormSwitchRow)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import RedesignCompat from "RedesignCompat" /* 6264 */;
-import FormRowDefault from "FormRow" /* 6828 */;
-import FormLabelDefault from "FormLabel" /* 6830 */;
-import TableSwitchRow from "TableSwitchRow" /* 6896 */;
-import Form_FormSwitchDefault from "Form/FormSwitch" /* 8590 */;
+import RedesignCompat from "RedesignCompat" /* 6268 */;
+import FormRowDefault from "FormRow" /* 6833 */;
+import FormLabelDefault from "FormLabel" /* 6835 */;
+import TableSwitchRow from "TableSwitchRow" /* 6901 */;
+import Form_FormSwitchDefault from "Form/FormSwitch" /* 8596 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ let closure_3 = ["onValueChange", "value", "disabled", "label", "subLabel", "acc
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({ trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function FormSwitchRow(onValueChange) {
@@ -191,7 +191,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function FormSw
         const obj7 = { style: tmp19.trailing, children: null };
         const items1 = [tmp35, null != tmp12 && tmp12];
         obj7.children = items1;
-        const tmp43 = options(View, obj7);
+        const tmp43 = React6(View, obj7);
         cResult[25] = tmp19.trailing;
         cResult[26] = tmp35;
         cResult[27] = null != tmp12 && tmp12;
@@ -268,7 +268,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function FormSw
   const obj3 = { style: tmp2.trailing, children: null };
   const items1 = [closure_1_8(FormLabelDefault, { numberOfLines, text: label }), null != trailing && trailing];
   obj3.children = items1;
-  obj2.label = options(View, obj3);
+  obj2.label = React6(View, obj3);
   obj2.subLabel = subLabel;
   obj2.disabled = flag;
   let handleOnPress;

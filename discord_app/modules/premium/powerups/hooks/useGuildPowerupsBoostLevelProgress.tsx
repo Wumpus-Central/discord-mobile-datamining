@@ -1,7 +1,7 @@
-// === Module 8034: useGuildPowerupsBoostLevelProgress ===
+// === Module 8041: useGuildPowerupsBoostLevelProgress ===
 
-// Module 8034 (useGuildPowerupsBoostLevelProgress)
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8030 */;
+// Module 8041 (useGuildPowerupsBoostLevelProgress)
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8037 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;

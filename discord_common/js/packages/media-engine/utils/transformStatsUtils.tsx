@@ -1,6 +1,6 @@
-// === Module 5201: transformStatsUtils ===
+// === Module 5205: transformStatsUtils ===
 
-// Module 5201 (transformStatsUtils)
+// Module 5205 (transformStatsUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/transformStatsUtils.tsx");

@@ -1,25 +1,25 @@
-// === Module 5107: AppAnalyticsUtils ===
+// === Module 5111: AppAnalyticsUtils ===
 
-// Module 5107 (AppAnalyticsUtils)
+// Module 5111 (AppAnalyticsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import ChannelRecord from "ChannelRecord" /* 2069 */;
 import ChannelConstants from "ChannelConstants" /* 2072 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4748 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5020 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4750 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5022 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import PresenceStore from "PresenceStore" /* 5108 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
+import PresenceStore from "PresenceStore" /* 5112 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
-import VoiceStateStore from "VoiceStateStore" /* 5113 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
+import VoiceStateStore from "VoiceStateStore" /* 5117 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -259,7 +259,7 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj3);
       const tmp9Result = obj3(12)(VoiceStateStore.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(14398).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(14435).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }

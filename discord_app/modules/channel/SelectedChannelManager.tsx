@@ -1,14 +1,14 @@
-// === Module 18247: SelectedChannelManager ===
+// === Module 18283: SelectedChannelManager ===
 
-// Module 18247 (SelectedChannelManager)
+// Module 18283 (SelectedChannelManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5889 */;
-import transitionToGuild from "transitionToGuild" /* 7053 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5894 */;
+import transitionToGuild from "transitionToGuild" /* 7059 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6812 */;
 
 require = fn;
 const findFirstVoiceChannelId = fn(2116).findFirstVoiceChannelId;
@@ -24,7 +24,7 @@ class SelectedChannelManager extends tmp3 {
 const prototype = SelectedChannelManager.prototype;
 prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   guild = guild.guild;
-  const channelId = SelectedChannelStore.getChannelId(options);
+  const channelId = SelectedChannelStore.getChannelId(React6);
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
   if (guild.id === channelId) {
     transitionToGuild.transitionToGuild(guild.id);
@@ -46,7 +46,7 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const originChannelId = channel.originChannelId;
     const channelId = SelectedChannelStore.getChannelId(collapsed);
     if (tmp) {
-      router_utils.transitionTo(closure_1_8.CHANNEL(options, channel.id));
+      router_utils.transitionTo(closure_1_8.CHANNEL(React6, channel.id));
     }
     tmp = null == SelectedGuildStore.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {

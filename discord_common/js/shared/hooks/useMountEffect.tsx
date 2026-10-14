@@ -1,6 +1,6 @@
-// === Module 5397: hooks/useMountEffect ===
+// === Module 5402: hooks/useMountEffect ===
 
-// Module 5397 (hooks/useMountEffect)
+// Module 5402 (hooks/useMountEffect)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,16 +1,15 @@
-// === Module 14464: ShareScreen ===
+// === Module 14501: ShareScreen ===
 
-// Module 14464 (ShareScreen)
+// Module 14501 (ShareScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HeaderShared from "HeaderShared" /* 9298 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 14468 */;
-import ShareEmbedDefault from "ShareEmbed" /* 14469 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 14505 */;
+import ShareEmbedDefault from "ShareEmbed" /* 14506 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 
 require = fn;
 function getAttachmentsRestriction(type) {
@@ -32,24 +31,12 @@ const ChannelRecord = fn(2069);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(12310).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10217).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(12346).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10227).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5092);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, headerLeftContainer: null, headerRightContainer: null };
-let PlatformUtils = fn(1382);
-let num = 0;
-if (PlatformUtils.isIOS()) {
-  num = nativeDefault.space.PX_16;
-}
-obj2.headerLeftContainer = { paddingLeft: num };
-PlatformUtils = fn(1382);
-let num2 = 0;
-if (PlatformUtils.isIOS()) {
-  num2 = nativeDefault.space.PX_16;
-}
-obj2.headerRightContainer = { paddingRight: num2 };
+const createStyles = fn(5096);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareScreen.tsx");
@@ -60,14 +47,14 @@ export default function ShareScreen(appEntryKey) {
   const onClose = appEntryKey.onClose;
   initialSelectedDestinations = undefined;
   _slicedToArray = undefined;
-  let length;
-  c8 = undefined;
+  noop = undefined;
+  c6 = undefined;
+  closure_7 = undefined;
   let first1;
   let embed;
   let isLoading;
-  const tmp = closure_19();
   let items = [sharedContent];
-  [initialSelectedDestinations, _slicedToArray] = length.useState(length.useMemo(() => {
+  [initialSelectedDestinations, _slicedToArray] = noop.useState(noop.useMemo(() => {
     const items = [];
     if (null != sharedContent.targetUserId) {
       const obj = { type: "user", id: sharedContent.targetUserId };
@@ -79,36 +66,44 @@ export default function ShareScreen(appEntryKey) {
     }
     return items;
   }, items));
-  length = initialSelectedDestinations.length;
-  closure_6 = tmp4;
-  const callback = length.useCallback((arg0) => {
+  if (sharedContent.attachments.length > closure_13) {
+    let intl2 = appEntryKey(onClose[13]).intl;
+    let obj2 = { limit: tmp4 };
+    let formatToPlainStringResult = intl2.formatToPlainString(appEntryKey(onClose[13]).t["qqyp/e"], obj2);
+  } else if (length >= MAX_DESTINATION_COUNT) {
+    let intl = appEntryKey(onClose[13]).intl;
+    let obj3 = { count: tmp6 };
+    formatToPlainStringResult = intl.formatToPlainString(appEntryKey(onClose[13]).t["3Fbkir"], obj3);
+  }
+  const callback = obj.useCallback((arg0) => {
     closure_4(arg0);
   }, []);
-  const tmp6 = _slicedToArray(length.useState(0), 2);
-  closure_7 = tmp6[1];
-  [tmp8, c8] = length.useState(false);
-  closure_9 = length.useRef(tmp8);
-  if (length <= 1) {
-    let intl2 = appEntryKey(onClose[14]).intl;
-    let stringResult = intl2.string(appEntryKey(onClose[14]).t.TXNS7S);
-    let tmp10 = onClose;
-    let tmp12 = appEntryKey;
+  const tmp2Result = _slicedToArray(noop.useState(0), 2);
+  noop = tmp2Result[1];
+  const tmp = closure_19();
+  [tmp15, c6] = noop.useState(false);
+  closure_7 = obj.useRef(tmp15);
+  if (initialSelectedDestinations.length <= 1) {
+    const intl4 = appEntryKey(onClose[13]).intl;
+    let stringResult = intl4.string(appEntryKey(onClose[13]).t.TXNS7S);
+    let tmp17 = onClose;
+    let tmp19 = appEntryKey;
   } else {
-    tmp10 = onClose;
-    let intl = appEntryKey(onClose[14]).intl;
-    let obj2 = { count: length };
-    stringResult = intl.formatToPlainString(appEntryKey(onClose[14]).t.jWtYUm, obj2);
-    tmp12 = appEntryKey;
+    tmp17 = onClose;
+    let intl3 = appEntryKey(onClose[13]).intl;
+    let obj4 = { count: length };
+    stringResult = intl3.formatToPlainString(appEntryKey(onClose[13]).t.jWtYUm, obj4);
+    tmp19 = appEntryKey;
   }
   let str = sharedContent.text;
   if (str == null) {
     str = "";
   }
-  const tmp2Result = _slicedToArray(length.useState(str), 2);
-  first1 = tmp2Result[0];
-  const tmp18 = sharedContent(tmp10[15])(first1);
-  embed = tmp18.embed;
-  isLoading = tmp18.isLoading;
+  const tmp2Result4 = _slicedToArray(noop.useState(str), 2);
+  first1 = tmp2Result4[0];
+  const tmp25 = sharedContent(tmp17[14])(first1);
+  embed = tmp25.embed;
+  isLoading = tmp25.isLoading;
   const items1 = [appEntryKey, onClose, initialSelectedDestinations, sharedContent.attachments, first1];
   const items2 = [embed, isLoading, sharedContent.attachments];
   const callback1 = obj.useCallback(initialSelectedDestinations(function*() {
@@ -154,14 +149,14 @@ export default function ShareScreen(appEntryKey) {
               c3 = 1;
               c4 = 2;
               React = 1;
-              let obj5 = { value: Promise.all(first.map(appEntryKey(tmp103[16]).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj5 = { value: Promise.all(first.map(appEntryKey(tmp103[15]).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj5;
             }
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          closure_129_8(false);
-          closure_129_9.current = false;
+          closure_129_6(false);
+          closure_129_7.current = false;
           throw tmp103;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
@@ -169,20 +164,20 @@ export default function ShareScreen(appEntryKey) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            closure_129_8(false);
-            closure_129_9.current = false;
+            closure_129_6(false);
+            closure_129_7.current = false;
             React = 3;
             const obj6 = { value, done: true };
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = appEntryKey(tmp103[17]).pairDestinationsWithChannels(closure_129_3, closure_128_0);
+            closure_128_1 = appEntryKey(tmp103[16]).pairDestinationsWithChannels(closure_129_3, closure_128_0);
             if (0 === closure_128_1.length) {
-              const intl3 = appEntryKey(tmp103[14]).intl;
-              appEntryKey(tmp103[18]).showInformationToast(intl3.string(appEntryKey(tmp103[14]).t.wFcUiF));
+              const intl3 = appEntryKey(tmp103[13]).intl;
+              appEntryKey(tmp103[17]).showInformationToast(intl3.string(appEntryKey(tmp103[13]).t.wFcUiF));
               c3 = 0;
-              closure_129_8(false);
-              closure_129_9.current = false;
+              closure_129_6(false);
+              closure_129_7.current = false;
               React = 3;
               let obj8 = { value: undefined, done: true };
               return obj8;
@@ -254,14 +249,14 @@ export default function ShareScreen(appEntryKey) {
                                         const obj9 = { attachments, channel: channel2, comment };
                                         c5 = 3;
                                         c6 = 1;
-                                        const obj10 = { value: closure_3_0(paths[18]).sendShareMessage(obj9), done: false };
+                                        const obj10 = { value: closure_3_0(paths[17]).sendShareMessage(obj9), done: false };
                                         return obj10;
                                       }
                                     }
                                   } else if (2 === tmp7) {
                                     c4 = 0;
                                     closure_129_3 = attachment_mimetypes;
-                                    const obj11 = { status: "failed", destination: closure_129_0, uploadError: closure_3_0(paths[17]).getShareUploadError(closure_129_3) };
+                                    const obj11 = { status: "failed", destination: closure_129_0, uploadError: closure_3_0(paths[16]).getShareUploadError(closure_129_3) };
                                     c6 = 3;
                                     const obj12 = { value: obj11, done: true };
                                     return obj12;
@@ -276,7 +271,7 @@ export default function ShareScreen(appEntryKey) {
                                   } else {
                                     c4 = 0;
                                     const obj15 = { guild_id: channel2.guild_id, channel_id: channel2.id, channel_type: channel2.type, num_attachments: attachments.length, attachment_mimetypes };
-                                    tmp3(paths[19]).track(constants.SHARE_MESSAGE_SENT, obj15);
+                                    tmp3(paths[18]).track(constants.SHARE_MESSAGE_SENT, obj15);
                                     const obj16 = { status: "sent", destination: closure_129_0, channelId: closure_129_1 };
                                     c6 = 3;
                                     const obj = { value: obj16, done: true };
@@ -308,7 +303,7 @@ export default function ShareScreen(appEntryKey) {
               };
               return obj9;
             }
-            const obj23 = appEntryKey(tmp103[17]);
+            const obj23 = appEntryKey(tmp103[16]);
           }
         } else if (3 === tmp7) {
           if (arg0 === 1) {
@@ -316,14 +311,14 @@ export default function ShareScreen(appEntryKey) {
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            closure_129_8(false);
-            closure_129_9.current = false;
+            closure_129_6(false);
+            closure_129_7.current = false;
             React = 3;
             let obj10 = { value, done: true };
             return obj10;
           } else {
             closure_128_4 = value;
-            closure_128_5 = appEntryKey(tmp103[17]).resolveShareSendOutcome(closure_128_4);
+            closure_128_5 = appEntryKey(tmp103[16]).resolveShareSendOutcome(closure_128_4);
             sentDestinations = closure_128_5.sentDestinations;
             failedDestinations = closure_128_5.failedDestinations;
             transitionChannelId = closure_128_5.transitionChannelId;
@@ -333,35 +328,35 @@ export default function ShareScreen(appEntryKey) {
                 let obj11 = { channelId: transitionChannelId };
                 c4 = 4;
                 React = 1;
-                let obj13 = { value: tmp3(tmp103[20]).fetchMessages(obj11), done: false };
+                let obj13 = { value: tmp3(tmp103[19]).fetchMessages(obj11), done: false };
                 return obj13;
               }
             }
             if (sentDestinations.length > 0) {
-              closure_129_4((arr) => appEntryKey(onClose[17]).withoutSentDestinations(arr, closure_1_6));
-              closure_129_7((arg0) => arg0 + 1);
+              closure_129_4((arr) => appEntryKey(onClose[16]).withoutSentDestinations(arr, closure_1_6));
+              closure_129_5((arg0) => arg0 + 1);
             }
             if (null == uploadErrorToAlert) {
               closure_128_10 = React.lazy(() => closure_1_0(paths[25])(paths[24], paths.paths));
               const obj14 = { title: null, content: null, failedDestinations: null };
-              const intl = appEntryKey(tmp103[14]).intl;
-              obj14.title = intl.string(appEntryKey(tmp103[14]).t.dA1gbw);
-              const intl2 = appEntryKey(tmp103[14]).intl;
+              const intl = appEntryKey(tmp103[13]).intl;
+              obj14.title = intl.string(appEntryKey(tmp103[13]).t.dA1gbw);
+              const intl2 = appEntryKey(tmp103[13]).intl;
               let obj15 = { count: failedDestinations.length };
-              obj14.content = intl2.formatToPlainString(appEntryKey(tmp103[14]).t.thm88D, obj15);
+              obj14.content = intl2.formatToPlainString(appEntryKey(tmp103[13]).t.thm88D, obj15);
               obj14.failedDestinations = failedDestinations;
               appEntryKey(tmp103[26]).openAlert("share-failed-alert-modal", closure_1_16(closure_128_10, obj14));
               c3 = 0;
-              closure_129_8(false);
-              closure_129_9.current = false;
+              closure_129_6(false);
+              closure_129_7.current = false;
               const obj4 = appEntryKey(tmp103[26]);
             } else {
               appEntryKey(tmp103[23]);
               let obj16 = { file: uploadErrorToAlert.file, guildId: uploadErrorToAlert.guildId, analyticsLocations: [], code: uploadErrorToAlert.code, reason: uploadErrorToAlert.reason, appEntryKey: closure_129_0 };
             }
             c3 = 0;
-            closure_129_8(false);
-            closure_129_9.current = false;
+            closure_129_6(false);
+            closure_129_7.current = false;
             React = 3;
             return { value: "IconComponent", done: null };
           }
@@ -370,22 +365,22 @@ export default function ShareScreen(appEntryKey) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 0;
-          closure_129_8(false);
-          closure_129_9.current = false;
+          closure_129_6(false);
+          closure_129_7.current = false;
           React = 3;
           const obj17 = { value, done: true };
           return obj17;
         } else {
-          appEntryKey(tmp103[21]).transitionToChannel(transitionChannelId, { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
-          const obj18 = appEntryKey(tmp103[21]);
+          appEntryKey(tmp103[20]).transitionToChannel(transitionChannelId, { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
+          const obj18 = appEntryKey(tmp103[20]);
           if (obj19.isAndroid()) {
             tmp3(tmp103[22]).launchApp();
             let obj = tmp3(tmp103[22]);
           }
           closure_129_2();
           c3 = 0;
-          closure_129_8(false);
-          closure_129_9.current = false;
+          closure_129_6(false);
+          closure_129_7.current = false;
           React = 3;
           const obj22 = { value: undefined, done: true };
           return obj22;
@@ -419,63 +414,51 @@ export default function ShareScreen(appEntryKey) {
     }
     return tmp4Result;
   }, items2);
-  let obj3 = { style: tmp.container, children: null };
-  let obj5 = { title: null, headerTitle: null, headerTitleAlign: "center", headerLeft: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
-  let intl3 = tmp12(tmp10[14]).intl;
-  obj5.title = intl3.string(tmp12(tmp10[14]).t["MR7/kg"]);
-  obj5.headerTitle = function headerTitle(title) {
-    if (closure_6) {
-      const intl2 = util.intl;
-      const obj2 = { limit };
-      let subtitle = intl2.formatToPlainString(util.t["qqyp/e"], obj2);
-    } else if (length >= MAX_DESTINATION_COUNT) {
-      const intl = util.intl;
-      const obj = { count: tmp2 };
-      subtitle = intl.formatToPlainString(util.t["3Fbkir"], obj);
-    }
-    return value3(HeaderShared.GenericHeaderTitle, { title: title.children, subtitle, subtitleColor: "text-feedback-warning", variant: "redesign/heading-18/bold" });
-  };
-  const tmp23 = closure_6;
-  const tmp7 = _slicedToArray(length.useState(false), 2);
-  let headerCloseButton;
-  if (!tmp12Result.isMetaQuest()) {
-    headerCloseButton = tmp12(tmp10[32]).getHeaderCloseButton(onClose);
-    const tmp12Result4 = tmp12(tmp10[32]);
-  }
-  obj5.headerLeft = headerCloseButton;
-  ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  tmp12Result = tmp12(tmp10[31]);
+  let obj5 = { style: tmp.container, children: null };
+  let obj6 = { title: null, subtitle: null, subtitleColor: "text-feedback-warning", headerStatusBarHeight: null, onClose: null };
+  const tmp2Result3 = _slicedToArray(noop.useState(false), 2);
+  const tmp30 = c6;
+  const intl5 = tmp19(tmp17[13]).intl;
+  obj6.title = intl5.string(tmp19(tmp17[13]).t["MR7/kg"]);
+  obj6.subtitle = formatToPlainStringResult;
+  const tmp31 = sharedContent(tmp17[30]);
   let PX_8;
-  if (tmp12Result5.isIOS()) {
-    PX_8 = tmp17(tmp10[12]).space.PX_8;
+  if (tmp19Result.isIOS()) {
+    PX_8 = tmp24(tmp17[12]).space.PX_8;
   }
-  obj5.headerStatusBarHeight = PX_8;
-  const items3 = [closure_16(tmp12(tmp10[29]).Header, obj5), , ];
-  let obj6 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations, onSelectedDestinationChange: callback, getRowIsUnavailable: null, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: null, disableLongPress: null };
-  let tmp27;
-  tmp12Result5 = tmp12(tmp10[13]);
+  obj6.headerStatusBarHeight = PX_8;
+  tmp19Result = tmp19(tmp17[21]);
+  let tmp33;
+  if (!tmp19Result3.isMetaQuest()) {
+    tmp33 = onClose;
+  }
+  obj6.onClose = tmp33;
+  const items3 = [closure_16(tmp31, obj6), , ];
+  let obj7 = { rowMode: UserRowModes.TOGGLE, initialSelectedDestinations, onSelectedDestinationChange: callback, getRowIsUnavailable: null, insetEnd: 0, disableGradient: true, disableStickySections: true, disableSelection: null, disableLongPress: null };
+  let tmp35;
+  tmp19Result3 = tmp19(tmp17[31]);
   if (sharedContent.attachments.length > 0) {
-    tmp27 = getAttachmentsRestriction;
+    tmp35 = getAttachmentsRestriction;
   }
-  obj6.getRowIsUnavailable = tmp27;
-  obj6.disableSelection = length >= MAX_DESTINATION_COUNT || sharedContent.attachments.length > closure_13;
-  const tmp17Result = sharedContent(tmp10[33]);
-  obj6.disableLongPress = tmp12(tmp10[13]).isAndroid();
-  items3[1] = closure_16(tmp17Result, obj6, tmp6[0]);
-  let obj7 = { text: first1, setText: tmp2Result[1], preview: memo, sendLabel: stringResult, canSend: null, isSending: null, onSend: null, disabled: null, appEntryKey: null };
-  let tmp29 = length > 0;
-  const tmp12Result6 = tmp12(tmp10[13]);
-  if (tmp29) {
-    tmp29 = !tmp4;
+  obj7.getRowIsUnavailable = tmp35;
+  obj7.disableSelection = initialSelectedDestinations.length >= MAX_DESTINATION_COUNT || sharedContent.attachments.length > closure_13;
+  const tmp24Result = sharedContent(tmp17[32]);
+  obj7.disableLongPress = tmp19(tmp17[21]).isAndroid();
+  items3[1] = closure_16(tmp24Result, obj7, tmp2Result[0]);
+  let obj8 = { text: first1, setText: tmp2Result4[1], preview: memo, sendLabel: stringResult, canSend: null, isSending: null, onSend: null, disabled: null, appEntryKey: null };
+  let tmp37 = length > 0;
+  const tmp19Result4 = tmp19(tmp17[21]);
+  if (tmp37) {
+    tmp37 = !tmp5;
   }
-  let obj8 = { children: null };
-  obj7.canSend = tmp29;
-  obj7.isSending = tmp8;
-  obj7.onSend = callback1;
-  obj7.disabled = sharedContent.attachments.length > closure_13;
-  obj7.appEntryKey = appEntryKey;
-  items3[2] = closure_16(sharedContent(tmp10[34]), obj7);
-  obj3.children = items3;
-  obj8.children = closure_18(tmp23, obj3);
-  return closure_16(tmp12(tmp10[29]).SafeAreaProviderCompat, obj8);
+  let obj9 = { children: null };
+  obj8.canSend = tmp37;
+  obj8.isSending = tmp15;
+  obj8.onSend = callback1;
+  obj8.disabled = sharedContent.attachments.length > closure_13;
+  obj8.appEntryKey = appEntryKey;
+  items3[2] = closure_16(sharedContent(tmp17[33]), obj8);
+  obj5.children = items3;
+  obj9.children = closure_18(tmp30, obj5);
+  return closure_16(tmp19(tmp17[29]).SafeAreaProviderCompat, obj9);
 };

@@ -1,6 +1,6 @@
-// === Module 5241: SingleCpuCopyExperiment ===
+// === Module 5246: SingleCpuCopyExperiment ===
 
-// Module 5241 (SingleCpuCopyExperiment)
+// Module 5246 (SingleCpuCopyExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

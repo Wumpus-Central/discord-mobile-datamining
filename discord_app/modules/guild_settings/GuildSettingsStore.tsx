@@ -1,6 +1,6 @@
-// === Module 8639: GuildSettingsStore ===
+// === Module 8644: GuildSettingsStore ===
 
-// Module 8639 (GuildSettingsStore)
+// Module 8644 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -11,23 +11,26 @@ import ChannelRecord from "ChannelRecord" /* 2069 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
 import PlainRecord from "PlainRecord" /* 2080 */;
 import GuildRecord from "GuildRecord" /* 2083 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 8640 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8641 */;
-import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 8643 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8644 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8645 */;
-import GuildProfileStore from "GuildProfileStore" /* 8617 */;
-import InviteRecord from "InviteRecord" /* 8499 */;
+import _modDef4704 from "module_4704" /* 4704 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 8645 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8646 */;
+import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 8648 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8649 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8650 */;
+import GuildProfileStore from "GuildProfileStore" /* 8623 */;
+import InviteRecord from "InviteRecord" /* 8506 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
 import Constants from "Constants" /* 1085 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8065 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8072 */;
 import size from "module_2" /* 2 */;
 
-function handleFormInit(location) {
-  ({ guildId, section, subsection } = location);
+function handleFormInit(type) {
+  ({ guildId, section, subsection } = type);
+  if ("GUILD_SETTINGS_INIT" === type.type) {
+    _location = type.location;
+  }
   guild = GuildStore.getGuild(guildId);
   if (null == guild) {
     c35 = false;
@@ -62,7 +65,6 @@ function handleFormInit(location) {
     obj = obj2;
     c12 = null;
     closure_46 = {};
-    location = location.location;
     if (section === constants.TAG) {
       obj = GuildSettingsServerTagUtils;
       if (!obj.canUseMobileServerTagSettings(guildId)) {
@@ -99,7 +101,7 @@ function _createInvite(code) {
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   const created_at = code.created_at;
-  obj.createdAt = _modDef4702(created_at);
+  obj.createdAt = _modDef4704(created_at);
   ({ flags: obj.flags, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }
@@ -162,7 +164,7 @@ let closure_46 = {};
 let c47 = null;
 let c48 = 0;
 let NONE = MFALevels.NONE;
-let location = null;
+let _location = null;
 let obj = { primaryCategoryId: DEFAULT_DISCOVERY_CATEGORY_ID, secondaryCategoryIds: [], keywords: [], emojiDiscoverabilityEnabled: true, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: false, reasonsToJoin: [], socialLinks: [], about: "" };
 let c52 = false;
 let obj2 = obj;
@@ -292,7 +294,7 @@ prototype["getBans"] = function getBans() {
   return items;
 };
 prototype["getProps"] = function getProps() {
-  obj = { submitting: this.isSubmitting(), integrations, section, subsection, errors, guild, bans, bansVersion, invites: obj, selectedRoleId, fetchedEmbed, embedEnabled, embedChannelId: _null, guildSpaceSettings: settings, mfaLevel: NONE, searchQuery, vanityURLCode, vanityURLUses, originalGuild: guild, hasChanges: this.hasChanges(), guildMetadata: obj, analyticsLocation: location, isGuildMetadataLoaded, originalProfile: profile, profile: obj };
+  obj = { submitting: this.isSubmitting(), integrations, section, subsection, errors, guild, bans, bansVersion, invites: obj, selectedRoleId, fetchedEmbed, embedEnabled, embedChannelId: _null, guildSpaceSettings: settings, mfaLevel: NONE, searchQuery, vanityURLCode, vanityURLUses, originalGuild: guild, hasChanges: this.hasChanges(), guildMetadata: obj, analyticsLocation: _location, isGuildMetadataLoaded, originalProfile: profile, profile: obj };
   return obj;
 };
 GuildSettingsStore.displayName = "GuildSettingsStore";

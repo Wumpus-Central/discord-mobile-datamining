@@ -1,19 +1,19 @@
-// === Module 11664: AppLauncherAutocompleteActionSheet ===
+// === Module 11674: AppLauncherAutocompleteActionSheet ===
 
-// Module 11664 (AppLauncherAutocompleteActionSheet)
+// Module 11674 (AppLauncherAutocompleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import _mod5745 from "module_5745" /* 5745 */;
-import TableRow from "TableRow" /* 6180 */;
-import executeCommandDefault from "executeCommand" /* 9802 */;
-import _modDef11659 from "module_11659" /* 11659 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import _mod5750 from "module_5750" /* 5750 */;
+import TableRow from "TableRow" /* 6184 */;
+import executeCommandDefault from "executeCommand" /* 9812 */;
+import _modDef11669 from "module_11669" /* 11669 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7921 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7928 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import apply from "module_12" /* 12 */;
 
@@ -22,8 +22,8 @@ const View = fn(17).View;
 fn(1085).AutoCompleteResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const executeCommand = apply.debounce(executeCommandDefault, fn(5403).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
-const createStyles = fn(5092);
+const executeCommand = apply.debounce(executeCommandDefault, fn(5408).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
+const createStyles = fn(5096);
 let obj = { commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" }, commandChoiceLoadingItem: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: 16, borderRadius: nativeDefault.radii.lg, alignSelf: "flex-start" }, emptyState: { backgroundColor: "transparent" } };
 let closure_12 = createStyles.createStyles(obj);
 fn(558);
@@ -117,9 +117,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Item(c
           const obj3 = { style: null };
           const items = [closure_3.commandChoiceLoadingItem, { width }];
           obj3.style = items;
-          obj2.children = options(View, obj3);
-          obj.label = options(View, obj2);
-          return options(closure_5, obj);
+          obj2.children = React6(View, obj3);
+          obj.label = React6(View, obj2);
+          return React6(closure_5, obj);
         };
         class E {
           constructor(arg0) {
@@ -221,7 +221,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Item(c
   noop = undefined;
   function ListItem(arg0) {
     ({ label, onPress } = arg0);
-    return options(TableRow.TableRow, { label, onPress, start: 0 === _require, end: _require === length.length - 1 });
+    return React6(TableRow.TableRow, { label, onPress, start: 0 === _require, end: _require === length.length - 1 });
   }
   let tmp4 = item.type === AutoCompleteResultTypes.CHOICE;
   if (!tmp4) {
@@ -233,7 +233,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Item(c
   _modDef38(tmp4, "Invalid autocomplete result type");
   closure_3 = closure_12();
   noop = noop.useMemo(() => 100 * Math.random() + 50, []);
-  const match = _mod5745.match(item);
+  const match = _mod5750.match(item);
   let obj = { type: AutoCompleteResultTypes.CHOICE };
   let obj2 = { type: AutoCompleteResultTypes.LABEL };
   const withResult = match.with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
@@ -317,9 +317,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Item(c
     const obj3 = { style: null };
     const items = [closure_3.commandChoiceLoadingItem, { width }];
     obj3.style = items;
-    obj2.children = options(View, obj3);
-    obj.label = options(View, obj2);
-    return options(ListItem, obj);
+    obj2.children = React6(View, obj3);
+    obj.label = React6(View, obj2);
+    return React6(ListItem, obj);
   }).exhaustive();
 });
 ReactCompilerGating = fn(558);
@@ -335,8 +335,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Autoco
     first = cResult[0];
   }
   if (cResult[1] !== tmp4.emptyState) {
-    const obj2 = { style: tmp4.emptyState, lightSource: _modDef11659, darkSource: _modDef11659, title: first };
-    const tmp10 = options(native.EmptyState, obj2);
+    const obj2 = { style: tmp4.emptyState, lightSource: _modDef11669, darkSource: _modDef11669, title: first };
+    const tmp10 = React6(native.EmptyState, obj2);
     cResult[1] = tmp4.emptyState;
     cResult[2] = tmp10;
     let tmp7 = tmp10;
@@ -345,10 +345,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Autoco
   }
   return tmp7;
 }) : (function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef11659, darkSource: _modDef11659, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef11669, darkSource: _modDef11669, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
-  return options(native.EmptyState, obj);
+  return React6(native.EmptyState, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx");
@@ -760,7 +760,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
                       tmp24 = W;
                     }
                     const fn2 = function $(item) {
-                      return options(closure_13, { item: item.item, index: item.index, onChoiceSelect, choices: arr3 });
+                      return React6(closure_13, { item: item.item, index: item.index, onChoiceSelect, choices: arr3 });
                     };
                     class V {
                       constructor() {
@@ -1007,7 +1007,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   }, items3);
   const items4 = [onChoiceSelect, memo];
   const items5 = [onChoiceSelect, query];
-  const callback = obj.useCallback((item) => options(closure_13, { item: item.item, index: item.index, onChoiceSelect, choices: memo }), items4);
+  const callback = obj.useCallback((item) => React6(closure_13, { item: item.item, index: item.index, onChoiceSelect, choices: memo }), items4);
   const callback1 = obj.useCallback(() => {
     if ("" !== first) {
       if (onChoiceSelect != null) {

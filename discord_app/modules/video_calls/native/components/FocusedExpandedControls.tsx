@@ -1,33 +1,33 @@
-// === Module 11131: FocusedExpandedControls ===
+// === Module 11201: FocusedExpandedControls ===
 
-// Module 11131 (FocusedExpandedControls)
+// Module 11201 (FocusedExpandedControls)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import Form from "Form" /* 8580 */;
-import CallsUtils from "CallsUtils" /* 8786 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 8793 */;
-import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11052 */;
-import VolumeSliderDefault from "VolumeSlider" /* 11081 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11102 */;
-import _modDef11132 from "module_11132" /* 11132 */;
-import _modDef11133 from "module_11133" /* 11133 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11134 */;
-import useDeafStatesDefault from "useDeafStates" /* 11135 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import Form from "Form" /* 8587 */;
+import CallsUtils from "CallsUtils" /* 8790 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 8797 */;
+import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11122 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11151 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11172 */;
+import _modDef11202 from "module_11202" /* 11202 */;
+import _modDef11203 from "module_11203" /* 11203 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11204 */;
+import useDeafStatesDefault from "useDeafStates" /* 11205 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5902 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const View = fn(17).View;
-const MediaEngineContextTypes = fn(5117).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5121).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { formTintColor: { tintColor: nativeDefault.colors.ICON_STRONG }, formColor: null, sparkle: null, sparkle2: null };
 let obj3 = { tintColor: nativeDefault.colors.ICON_STRONG };
 obj2.formColor = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -50,7 +50,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
         return tmp5;
       } else {
         if (cResult[3] !== tmp4.sparkle2) {
-          const obj2 = { style: tmp4.sparkle2, source: _modDef11132 };
+          const obj2 = { style: tmp4.sparkle2, source: _modDef11202 };
           const tmp13 = React5(FastImageDefault, obj2);
           cResult[3] = tmp4.sparkle2;
           cResult[4] = tmp13;
@@ -59,7 +59,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
           tmp9 = cResult[4];
         }
         if (cResult[5] !== tmp4.sparkle) {
-          const obj3 = { style: tmp4.sparkle, source: _modDef11133 };
+          const obj3 = { style: tmp4.sparkle, source: _modDef11203 };
           const tmp18 = React5(FastImageDefault, obj3);
           cResult[5] = tmp4.sparkle;
           cResult[6] = tmp18;
@@ -100,10 +100,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Expand
     if (iconSource.showIconSparkle) {
       const obj = { children: null };
       const items = [tmp11, , ];
-      const obj3 = { style: tmp.sparkle2, source: _modDef11132 };
+      const obj3 = { style: tmp.sparkle2, source: _modDef11202 };
       items[1] = React5(FastImageDefault, obj3);
       const obj4 = { style: tmp.sparkle, source: null };
-      obj4.source = _modDef11133;
+      obj4.source = _modDef11203;
       items[2] = React5(FastImageDefault, obj4);
       obj.children = items;
       tmp7 = closure_1_8(View, obj);
@@ -298,7 +298,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function StreamVolume
     const obj5 = { children: null };
     const items2 = [tmp17, tmp23];
     obj5.children = items2;
-    const tmp29 = closure_1_8(options, obj5);
+    const tmp29 = closure_1_8(React6, obj5);
     cResult[11] = tmp17;
     cResult[12] = tmp23;
     cResult[13] = tmp29;
@@ -364,7 +364,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AudioRouteBu
   channelId = channelId.channelId;
   const isConnectedToVoiceChannel = channelId.isConnectedToVoiceChannel;
   const obj = channelId(576);
-  const routeSource = channelId(8786).useMaskedSpeakerStates().routeSource;
+  const routeSource = channelId(8790).useMaskedSpeakerStates().routeSource;
   if (cResult[0] === channelId) {
     if (cResult[1] === isConnectedToVoiceChannel) {
       let tmp4 = cResult[2];
@@ -398,7 +398,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AudioRouteBu
   cResult[1] = isConnectedToVoiceChannel;
   cResult[2] = fn;
   tmp4 = fn;
-  const obj2 = channelId(8786);
+  const obj2 = channelId(8790);
 }) : (function AudioRouteButton(arg0) {
   ({ channelId: require, isConnectedToVoiceChannel: importDefault } = arg0);
   const obj2 = {
@@ -473,7 +473,7 @@ export const DeafenButton = ReactCompilerGating.isReactCompilerEnabled() ? (func
     tmp7 = cResult[1];
   }
   const onPress = tmp7.onPress;
-  const tmp5Result = importDefault(tmp7.deaf ? 11136 : 11137);
+  const tmp5Result = importDefault(tmp7.deaf ? 11206 : 11207);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
     const stringResult = intl.string(util.t.wjcRFX);
@@ -503,7 +503,7 @@ export const DeafenButton = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const tmp3 = useDeafStatesDefault(disabled.channel);
   const deafHandler = VoiceActionUtils.createDeafHandler(tmp3);
-  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 11136 : 11137), label: null };
+  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 11206 : 11207), label: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t.wjcRFX);
   return React5(closure_12, obj2);

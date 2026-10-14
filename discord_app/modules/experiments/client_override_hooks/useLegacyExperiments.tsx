@@ -1,11 +1,11 @@
-// === Module 10673: useLegacyExperiments ===
+// === Module 10777: useLegacyExperiments ===
 
-// Module 10673 (useLegacyExperiments)
+// Module 10777 (useLegacyExperiments)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ExperimentManager from "ExperimentManager" /* 5021 */;
+import ExperimentManager from "ExperimentManager" /* 5023 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5016 */;
+import ExperimentStore from "ExperimentStore" /* 5018 */;
 
 require = fn;
 function parseRegisteredExperiments(stateFromStoresObject) {
@@ -23,17 +23,17 @@ function parseRegisteredExperiments(stateFromStoresObject) {
       if (typeof type.description === "object") {
         let experimentBucketName = tmp.description[index];
       } else {
-        experimentBucketName = closure_1(8143).getExperimentBucketName(item);
-        const obj3 = closure_1(8143);
+        experimentBucketName = closure_1(8150).getExperimentBucketName(item);
+        const obj3 = closure_1(8150);
       }
       obj.label = experimentBucketName;
-      obj.shortLabel = closure_1(8143).getExperimentBucketName(item);
+      obj.shortLabel = closure_1(8150).getExperimentBucketName(item);
       if (item === constants.CONTROL) {
-        let TREATMENT = obj(8145).Variation_Type.CONTROL;
+        let TREATMENT = obj(8152).Variation_Type.CONTROL;
       } else if (item === tmp4.NOT_ELIGIBLE) {
-        TREATMENT = obj(8145).Variation_Type.UNSPECIFIED;
+        TREATMENT = obj(8152).Variation_Type.UNSPECIFIED;
       } else {
-        TREATMENT = obj(8145).Variation_Type.TREATMENT;
+        TREATMENT = obj(8152).Variation_Type.TREATMENT;
       }
       obj.type = TREATMENT;
       return obj;
@@ -65,7 +65,7 @@ function getLegacyOverridesInfo(stateFromStoresObject1) {
   return obj;
 }
 const useMemo = fn(19).useMemo;
-const ExperimentConstants = fn(5017);
+const ExperimentConstants = fn(5019);
 ({ ExperimentBuckets: metroRequire, ExperimentTypes: closure_7 } = ExperimentConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

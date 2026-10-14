@@ -1,11 +1,11 @@
-// === Module 10579: BadgeUtils ===
+// === Module 10589: BadgeUtils ===
 
-// Module 10579 (BadgeUtils)
+// Module 10589 (BadgeUtils)
 import util from "util" /* 1126 */;
 import StringUtils from "StringUtils" /* 2031 */;
-import Constants from "Constants" /* 8308 */;
-import BadgeId from "BadgeId" /* 8309 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8318 */;
+import Constants from "Constants" /* 8315 */;
+import BadgeId from "BadgeId" /* 8316 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8325 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {

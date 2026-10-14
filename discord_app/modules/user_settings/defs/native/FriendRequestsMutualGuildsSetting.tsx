@@ -1,12 +1,12 @@
-// === Module 15580: FriendRequestsMutualGuildsSetting ===
+// === Module 15617: FriendRequestsMutualGuildsSetting ===
 
-// Module 15580 (FriendRequestsMutualGuildsSetting)
+// Module 15617 (FriendRequestsMutualGuildsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import FlagUtilsAll from "FlagUtils" /* 1403 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6684 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15417 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6688 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15454 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsMutualGuildsSettingValue() {
   const cResult = c.c(2);
   const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
@@ -43,7 +43,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.mozb8f);
   },
-  parent: fn(7993).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8000).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsMutualGuildsSettingValue() {
     const cResult = c.c(2);
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;

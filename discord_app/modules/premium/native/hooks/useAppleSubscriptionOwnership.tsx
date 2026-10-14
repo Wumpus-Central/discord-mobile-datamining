@@ -1,11 +1,11 @@
-// === Module 14013: useAppleSubscriptionOwnership ===
+// === Module 14050: useAppleSubscriptionOwnership ===
 
-// Module 14013 (useAppleSubscriptionOwnership)
+// Module 14050 (useAppleSubscriptionOwnership)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplePurchasesStore from "ApplePurchasesStore" /* 14014 */;
+import ApplePurchasesStore from "ApplePurchasesStore" /* 14051 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
-import IAPStore from "IAPStore" /* 7132 */;
+import IAPStore from "IAPStore" /* 7138 */;
 
 const require = fn;
 const AppStates = fn(1085).AppStates;

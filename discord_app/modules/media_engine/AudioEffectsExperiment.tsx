@@ -1,6 +1,6 @@
-// === Module 14700: AudioEffectsExperiment ===
+// === Module 14738: AudioEffectsExperiment ===
 
-// Module 14700 (AudioEffectsExperiment)
+// Module 14738 (AudioEffectsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

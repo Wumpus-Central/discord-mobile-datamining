@@ -1,17 +1,17 @@
-// === Module 11541: BannerBase ===
+// === Module 11551: BannerBase ===
 
-// Module 11541 (BannerBase)
+// Module 11551 (BannerBase)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import ColorUtils from "ColorUtils" /* 4967 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import spring from "spring" /* 5378 */;
-import _mod11542 from "module_11542" /* 11542 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import ColorUtils from "ColorUtils" /* 4969 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import spring from "spring" /* 5383 */;
+import _mod11552 from "module_11552" /* 11552 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 
 const require = globalThis.__r;
 
@@ -21,9 +21,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerTextContainerWithImage: null, bannerTextContainerWithoutImage: null, bannerText: null, bannerTextCentered: null };
-const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(11528).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
+const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(11538).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 obj2.banner = rect;
 obj2.bannerGradientColor = { backgroundColor: "#7eaaff" };
 const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                                   return obj1;
                                 }
                               }
-                              const tmp55 = closure_8(tmp8(4850).View, obj4);
+                              const tmp55 = closure_8(tmp8(4852).View, obj4);
                               cResult[46] = tmp20;
                               cResult[47] = tmp30;
                               cResult[48] = tmp33;
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                 let tmp35 = null != image;
                 if (tmp35) {
                   const obj7 = { style: tmp4.imageContainer, children: null };
-                  const obj8 = { style: tmp4.trinketsLottie, source: _mod11542, autoPlay: !stateFromStores };
+                  const obj8 = { style: tmp4.trinketsLottie, source: _mod11552, autoPlay: !stateFromStores };
                   class M {
                     constructor() {
                       obj = closure_1;
@@ -471,11 +471,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                       return obj1;
                     }
                   }
-                  tmp40[0] = closure_7(tmp8(6106), obj8);
+                  tmp40[0] = closure_7(tmp8(6112), obj8);
                   tmp40[1] = image;
                   obj7.children = tmp40;
                   tmp35 = closure_8(View, obj7);
-                  const tmp8Result = tmp8(6106);
+                  const tmp8Result = tmp8(6112);
                 }
                 cResult[29] = image;
                 cResult[30] = tmp4.imageContainer;
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                 tmp33 = tmp35;
               }
               const obj9 = { start: tmp26, end: tmp27, colors: tmp14, style: tmp29 };
-              const tmp32 = closure_7(tmp8(5391), obj9);
+              const tmp32 = closure_7(tmp8(5396), obj9);
               class M {
                 constructor() {
                   obj = closure_1;
@@ -758,15 +758,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
   const obj8 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: null };
   const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
   obj8.style = items3;
-  const items4 = [closure_7(sharedValue(5391), obj8), , ];
+  const items4 = [closure_7(sharedValue(5396), obj8), , ];
   let tmp11Result = null != image;
   if (tmp11Result) {
     const obj9 = { style: tmp.imageContainer, children: null };
-    const obj10 = { style: tmp.trinketsLottie, source: tmp4(11542), autoPlay: !stateFromStores };
-    const items5 = [closure_7(tmp7(6106), obj10), image];
+    const obj10 = { style: tmp.trinketsLottie, source: tmp4(11552), autoPlay: !stateFromStores };
+    const items5 = [closure_7(tmp7(6112), obj10), image];
     obj9.children = items5;
     tmp11Result = closure_8(View, obj9);
-    const tmp7Result = tmp7(6106);
+    const tmp7Result = tmp7(6112);
   }
   items4[1] = tmp11Result;
   const items6 = [tmp.bannerTextContainer, ];
@@ -781,5 +781,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
   obj11.children = closure_7(require("Text/Text").Text, { variant: "text-md/semibold", color: "text-overlay-light", style: items7, children: children.text });
   items4[2] = closure_7(View, obj11);
   obj7.children = items4;
-  return closure_8(sharedValue(4850).View, obj7);
+  return closure_8(sharedValue(4852).View, obj7);
 });

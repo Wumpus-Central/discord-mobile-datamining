@@ -1,13 +1,16 @@
-// === Module 16084: InlineEmojiSuggestionsSetting ===
+// === Module 16121: InlineEmojiSuggestionsSetting ===
 
-// Module 16084 (InlineEmojiSuggestionsSetting)
+// Module 16121 (InlineEmojiSuggestionsSetting)
 import util from "util" /* 1126 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import SettingsConstants from "SettingsConstants" /* 7993 */;
-import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12383 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
+import SettingsConstants from "SettingsConstants" /* 8000 */;
+import MobileEmojiSuggestionsExperiment from "MobileEmojiSuggestionsExperiment" /* 12419 */;
+import Constants from "Constants" /* 1085 */;
+import SettingBuilders from "SettingBuilders" /* 10767 */;
 import size from "module_2" /* 2 */;
 
+({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -15,7 +18,12 @@ const toggle = SettingBuilders.createToggle({
   },
   parent: SettingsConstants.MobileUserSettings.CHAT,
   useValue: UserSettings.InlineEmojiSuggestionsEnabled.useSetting,
-  onValueChange: UserSettings.InlineEmojiSuggestionsEnabled.updateSetting,
+  onValueChange: function onInlineEmojiSuggestionsValueChange(enabled) {
+    const obj2 = { enabled, location: { section: constants2.SETTINGS_TEXT_AND_IMAGES } };
+    AnalyticsUtilsDefault.track(constants.INLINE_EMOJI_SUGGESTIONS_TOGGLED, obj2);
+    const InlineEmojiSuggestionsEnabled = UserSettings.InlineEmojiSuggestionsEnabled;
+    InlineEmojiSuggestionsEnabled.updateSetting(enabled);
+  },
   usePredicate() {
     return MobileEmojiSuggestionsExperiment.useMobileEmojiSuggestionsConfig({ location: "InlineEmojiSuggestionsSetting" }).enabled;
   }

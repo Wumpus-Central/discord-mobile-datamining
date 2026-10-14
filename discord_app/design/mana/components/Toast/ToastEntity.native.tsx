@@ -1,17 +1,17 @@
-// === Module 14601: ToastEntity ===
+// === Module 14640: ToastEntity ===
 
-// Module 14601 (ToastEntity)
+// Module 14640 (ToastEntity)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 6157 */;
+import FastImageDefault from "FastImage" /* 5034 */;
 import noop from "module_19" /* 19 */;
 
 const utils_StringUtils = Text(2032);
-const Text_Text = Text(5088);
+const Text_Text = Text(5092);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { entity: { flexShrink: 0, width: 24, height: 24, alignItems: "center", justifyContent: "center", overflow: "hidden" }, image: { width: 24, height: 24 }, glyph: { textAlign: "center" }, avatar: { borderRadius: nativeDefault.radii.round }, guild: null, guildAcronym: null };
 let obj3 = { borderRadius: nativeDefault.radii.round };
 obj2.guild = { borderRadius: nativeDefault.radii.sm };

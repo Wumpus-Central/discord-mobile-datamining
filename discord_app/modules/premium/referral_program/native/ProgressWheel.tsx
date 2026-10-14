@@ -1,14 +1,14 @@
-// === Module 14079: ProgressWheel ===
+// === Module 14116: ProgressWheel ===
 
-// Module 14079 (ProgressWheel)
+// Module 14116 (ProgressWheel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4818 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import inlineStyles from "inlineStyles" /* 7577 */;
-import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 14062 */;
-import _modDef14080 from "module_14080" /* 14080 */;
-import _modDef14081 from "module_14081" /* 14081 */;
+import useToken from "useToken" /* 4820 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import inlineStyles from "inlineStyles" /* 7583 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 14099 */;
+import _modDef14117 from "module_14117" /* 14117 */;
+import _modDef14118 from "module_14118" /* 14118 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 let c6 = 160;
 const strokeDasharray = 2 * Math.PI * 77;
 let c8 = "#53ac66";
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_9 = createStyles.createStyles({ progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 }, progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 }, glowImage: { position: "absolute", width: 180, height: 180 } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
           let tmp23 = cResult[10];
         }
         if (altImage == null) {
-          altImage = _modDef14081;
+          altImage = _modDef14118;
         }
         if (cResult[11] !== altImage) {
           const obj5 = { uri: altImage };
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
   }
   let tmp12 = tmp10;
   if (tmp10) {
-    const obj9 = { source: _modDef14080, style: tmp4.glowImage };
+    const obj9 = { source: _modDef14117, style: tmp4.glowImage };
     tmp12 = React4(FastImageDefault, obj9);
     const tmp5Result = FastImageDefault;
   }
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
   let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
-    const obj4 = { source: _modDef14080, style: tmp.glowImage };
+    const obj4 = { source: _modDef14117, style: tmp.glowImage };
     tmp9 = React4(FastImageDefault, obj4);
     const tmp4Result = FastImageDefault;
   }
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Progress
   const obj5 = { cx: 80, cy: 80, r: 77, stroke, strokeWidth: 6, fill: "transparent", strokeDasharray, strokeDashoffset: strokeDasharray * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" };
   const tmp4Result3 = inlineStylesDefault;
   if (altImage == null) {
-    altImage = _modDef14081;
+    altImage = _modDef14118;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj3.children = items;

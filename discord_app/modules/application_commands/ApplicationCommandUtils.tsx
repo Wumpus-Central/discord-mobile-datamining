@@ -1,17 +1,17 @@
-// === Module 7243: ApplicationCommandUtils ===
+// === Module 7249: ApplicationCommandUtils ===
 
-// Module 7243 (ApplicationCommandUtils)
+// Module 7249 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants2 from "Constants" /* 1096 */;
 import Server from "Server" /* 1998 */;
 import ChannelRecord from "ChannelRecord" /* 2069 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
-import DraftStore from "DraftStore" /* 7244 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7246 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7247 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5403 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5111 */;
+import DraftStore from "DraftStore" /* 7250 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7252 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7253 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5408 */;
 import Constants from "Constants" /* 1085 */;
 import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;
@@ -342,7 +342,7 @@ function buildSubCommands(arg0) {
   if (null == command.options) {
     return items2;
   } else {
-    options = command.options;
+    const options = command.options;
     const found = options.filter((type) => type.type === Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP);
     for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
       let push = items2.push;

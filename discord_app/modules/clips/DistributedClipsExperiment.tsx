@@ -1,6 +1,6 @@
-// === Module 14628: DistributedClipsExperiment ===
+// === Module 14667: DistributedClipsExperiment ===
 
-// Module 14628 (DistributedClipsExperiment)
+// Module 14667 (DistributedClipsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

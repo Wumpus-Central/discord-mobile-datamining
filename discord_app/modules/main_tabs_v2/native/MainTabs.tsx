@@ -1,20 +1,20 @@
-// === Module 16737: MainTabs ===
+// === Module 16776: MainTabs ===
 
-// Module 16737 (MainTabs)
+// Module 16776 (MainTabs)
 import c from "c" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import native from "native" /* 4827 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4972 */;
-import useActiveTheme from "useActiveTheme" /* 9309 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10226 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 16738 */;
+import native from "native" /* 4829 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4974 */;
+import useActiveTheme from "useActiveTheme" /* 9318 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10236 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 16777 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_6 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

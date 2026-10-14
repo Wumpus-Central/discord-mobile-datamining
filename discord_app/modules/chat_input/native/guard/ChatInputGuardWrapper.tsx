@@ -1,27 +1,27 @@
-// === Module 12668: ChatInputGuardWrapper ===
+// === Module 12704: ChatInputGuardWrapper ===
 
-// Module 12668 (ChatInputGuardWrapper)
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4737 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4756 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
-import MemberVerificationUtils from "MemberVerificationUtils" /* 6171 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7018 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 10719 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 12674 */;
+// Module 12704 (ChatInputGuardWrapper)
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4739 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4758 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5111 */;
+import MemberVerificationUtils from "MemberVerificationUtils" /* 6175 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7024 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 10822 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 12710 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4751 */;
+import LurkingStore from "LurkingStore" /* 4753 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5891 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5896 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const isThread = fn(2069).isThread;
-const TextAreaCta = fn(11960).TextAreaCta;
+const TextAreaCta = fn(11996).TextAreaCta;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = fn(6732).PHONE_VERIFICATION_MODAL_KEY;
+let closure_14 = fn(6736).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");
@@ -278,18 +278,24 @@ export default function ChatInputGuardWrapper(channel) {
                     }
                   }
                 }
-                return children;
+                if (null == tmp10) {
+                  return children;
+                } else {
+                  const obj25 = { pendingGameProfileReturn: tmp10 };
+                  tmp21Result = jsx(tmp7(tmp3[37]), { pendingGameProfileReturn: tmp10 });
+                  tmp23 = jsx;
+                }
               }
             }
           }
-          const obj25 = { showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication, shouldRelaunchLinkedLobbyApplication };
+          const obj26 = { showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication, shouldRelaunchLinkedLobbyApplication };
           tmp21Result = jsx(tmp7(tmp3[40]), { showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication, shouldRelaunchLinkedLobbyApplication });
           tmp23 = jsx;
         }
       }
     }
-    const obj26 = { channel, isReadonlyAnnouncementsChannel: tmp9 };
-    tmp21Result = jsx(tmp7(tmp3[38]), { channel, isReadonlyAnnouncementsChannel: tmp9 });
+    const obj27 = { channel, isReadonlyAnnouncementsChannel: tmp9, pendingGameProfileReturn: tmp10 };
+    tmp21Result = jsx(tmp7(tmp3[38]), { channel, isReadonlyAnnouncementsChannel: tmp9, pendingGameProfileReturn: tmp10 });
     tmp23 = jsx;
   }
   return tmp23(channel(tmp3[33]).ChatInputGuardContainer, { screenIndex, channelId: channel.id, onJumpToPresent, children: tmp21Result });

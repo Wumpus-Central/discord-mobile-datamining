@@ -1,13 +1,13 @@
-// === Module 5244: SpatialAudioStore ===
+// === Module 5249: SpatialAudioStore ===
 
-// Module 5244 (SpatialAudioStore)
+// Module 5249 (SpatialAudioStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5246 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5251 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -72,8 +72,8 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(5245).DEFAULT_SPATIAL_AUDIO_OPTIONS;
-const Constants = fn(5117);
+const DEFAULT_SPATIAL_AUDIO_OPTIONS = fn(5250).DEFAULT_SPATIAL_AUDIO_OPTIONS;
+const Constants = fn(5121);
 ({ Features: closure_7, MediaEngineContextTypes: closure_8, SpatialAudioStatus } = Constants);
 let obj = {};
 let isSpatial = {};
@@ -95,8 +95,8 @@ prototype["initialize"] = function initialize(enabled) {
   const items = [ApexExperimentStore];
   self.syncWith(items, handleExperimentChange);
   const mediaEngine = MediaEngineStore.getMediaEngine();
-  mediaEngine.on(self(5137).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial.isSpatial));
-  mediaEngine.on(self(5137).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
+  mediaEngine.on(self(5141).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial.isSpatial));
+  mediaEngine.on(self(5141).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
     let flag = arg0 !== global;
     if (flag) {
       global = arg0;

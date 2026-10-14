@@ -1,19 +1,19 @@
-// === Module 11756: ConjureConnectToolSheet ===
+// === Module 11766: ConjureConnectToolSheet ===
 
-// Module 11756 (ConjureConnectToolSheet)
+// Module 11766 (ConjureConnectToolSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import ToastUtils from "ToastUtils" /* 4808 */;
-import AlertModal from "AlertModal" /* 5305 */;
-import ClipboardUtils from "ClipboardUtils" /* 6886 */;
+import ToastUtils from "ToastUtils" /* 4810 */;
+import AlertModal from "AlertModal" /* 5310 */;
+import ClipboardUtils from "ClipboardUtils" /* 6891 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, section: null, actions: null, action: null, failedRow: null, failedText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.section = { gap: nativeDefault.space.PX_8 };
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   const cResult = connection(576).c(24);
   const tmp4 = closure_7();
   let obj = connection(576);
-  const mcpConnectionPanel = connection(11757).useMcpConnectionPanel(projectId.projectId);
+  const mcpConnectionPanel = connection(11767).useMcpConnectionPanel(projectId.projectId);
   connection = mcpConnectionPanel.connection;
   ({ loading, failed, mint } = mcpConnectionPanel);
   if (cResult[0] !== connection) {
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     const obj3 = { title: null };
     let intl = tmp(1126).intl;
     obj3.title = intl.string(mint(3849)["7937yd"]);
-    const tmp9 = closure_5(tmp(6839).BottomSheetTitleHeader, obj3);
+    const tmp9 = closure_5(tmp(6844).BottomSheetTitleHeader, obj3);
     cResult[4] = tmp9;
   } else {
     class C {
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
     let intl2 = tmp(1126).intl;
     obj4.children = intl2.string(mint(3849).WltAg2);
-    const tmp12 = closure_5(tmp(5088).Text, obj4);
+    const tmp12 = closure_5(tmp(5092).Text, obj4);
     cResult[5] = tmp12;
   } else {
     class C {
@@ -214,18 +214,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     const obj6 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     const intl4 = tmp(1126).intl;
     obj6.children = intl4.string(mint(3849).UCwV3L);
-    const items = [closure_5(tmp(5088).Text, obj6), , , ];
+    const items = [closure_5(tmp(5092).Text, obj6), , , ];
     const obj7 = { variant: "primary", children: null };
     const obj8 = { variant: "text-sm/normal", color: "text-default", selectable: true, children: connection.url };
-    obj7.children = closure_5(tmp(5088).Text, obj8);
-    items[1] = closure_5(tmp(6182).Card, obj7);
+    obj7.children = closure_5(tmp(5092).Text, obj8);
+    items[1] = closure_5(tmp(6186).Card, obj7);
     const obj9 = { style: tmp4.actions, children: null };
     const obj10 = { style: tmp4.action, children: null };
     const obj11 = { variant: "primary", size: "md", text: null, onPress: null };
     const intl5 = tmp(1126).intl;
     obj11.text = intl5.string(tmp(1126).t.OpuAlK);
     obj11.onPress = tmp6;
-    obj10.children = closure_5(tmp(5379).Button, obj11);
+    obj10.children = closure_5(tmp(5384).Button, obj11);
     const items1 = [closure_5(View, obj10), ];
     const obj12 = { style: tmp4.action, children: null };
     const obj13 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
@@ -233,18 +233,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     obj13.text = intl6.string(mint(3849).FBKOBq);
     obj13.loading = loading;
     obj13.onPress = section;
-    obj12.children = closure_5(tmp(5379).Button, obj13);
+    obj12.children = closure_5(tmp(5384).Button, obj13);
     items1[1] = closure_5(View, obj12);
     obj9.children = items1;
     items[2] = closure_6(View, obj9);
     const obj14 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl7 = tmp(1126).intl;
-    const obj15 = { time: tmp(11758).formatMcpConnectionExpiry(connection) };
+    const obj15 = { time: tmp(11768).formatMcpConnectionExpiry(connection) };
     obj14.children = intl7.format(mint(3849).EQ8k1i, obj15);
-    items[3] = closure_5(tmp(5088).Text, obj14);
+    items[3] = closure_5(tmp(5092).Text, obj14);
     obj5.children = items;
     let tmp13 = closure_6(View, obj5);
-    const tmpResult = tmp(11758);
+    const tmpResult = tmp(11768);
   } else {
     class C {
       constructor() {
@@ -284,7 +284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
       const obj16 = { variant: "text-sm/normal", color: "text-muted", children: null };
       let intl3 = tmp(1126).intl;
       obj16.children = intl3.string(mint(3849).Q6xQTM);
-      tmp13 = closure_5(tmp(5088).Text, obj16);
+      tmp13 = closure_5(tmp(5092).Text, obj16);
     }
   }
   cResult[6] = connection;
@@ -295,12 +295,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   ({ actions: tmp3[11], section } = tmp4);
   cResult[12] = section;
   cResult[13] = tmp13;
-  let obj2 = connection(11757);
+  let obj2 = connection(11767);
 }) : (function ConjureConnectToolSheet(projectId) {
   let connection;
   mint = undefined;
   const tmp = closure_7();
-  const mcpConnectionPanel = connection(11757).useMcpConnectionPanel(projectId.projectId);
+  const mcpConnectionPanel = connection(11767).useMcpConnectionPanel(projectId.projectId);
   connection = mcpConnectionPanel.connection;
   ({ loading, mint } = mcpConnectionPanel);
   const items = [connection];
@@ -328,29 +328,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   const obj3 = { title: null };
   let intl = connection(1126).intl;
   obj3.title = intl.string(mint(3849)["7937yd"]);
-  obj2.header = closure_5(connection(6839).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_5(connection(6844).BottomSheetTitleHeader, obj3);
   const obj4 = { style: tmp.content, children: null };
   const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
   let intl2 = connection(1126).intl;
   obj5.children = intl2.string(mint(3849).WltAg2);
-  const items2 = [closure_5(connection(5088).Text, obj5), , ];
+  const items2 = [closure_5(connection(5092).Text, obj5), , ];
   if (null != connection) {
     const obj6 = { style: tmp.section, children: null };
     const obj7 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     const intl4 = tmp2(1126).intl;
     obj7.children = intl4.string(tmp8(3849).UCwV3L);
-    const items3 = [closure_5(tmp2(5088).Text, obj7), , , ];
+    const items3 = [closure_5(tmp2(5092).Text, obj7), , , ];
     const obj8 = { variant: "primary", children: null };
     const obj9 = { variant: "text-sm/normal", color: "text-default", selectable: true, children: connection.url };
-    obj8.children = closure_5(tmp2(5088).Text, obj9);
-    items3[1] = closure_5(tmp2(6182).Card, obj8);
+    obj8.children = closure_5(tmp2(5092).Text, obj9);
+    items3[1] = closure_5(tmp2(6186).Card, obj8);
     const obj10 = { style: tmp.actions, children: null };
     const obj11 = { style: tmp.action, children: null };
     const obj12 = { variant: "primary", size: "md", text: null, onPress: null };
     const intl5 = tmp2(1126).intl;
     obj12.text = intl5.string(tmp2(1126).t.OpuAlK);
     obj12.onPress = callback;
-    obj11.children = closure_5(tmp2(5379).Button, obj12);
+    obj11.children = closure_5(tmp2(5384).Button, obj12);
     const items4 = [closure_5(View, obj11), ];
     const obj13 = { style: tmp.action, children: null };
     const obj14 = { variant: "secondary", size: "md", text: null, loading: null, onPress: null };
@@ -358,25 +358,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     obj14.text = intl6.string(tmp8(3849).FBKOBq);
     obj14.loading = loading;
     obj14.onPress = callback1;
-    obj13.children = closure_5(tmp2(5379).Button, obj14);
+    obj13.children = closure_5(tmp2(5384).Button, obj14);
     items4[1] = closure_5(View, obj13);
     obj10.children = items4;
     items3[2] = closure_6(View, obj10);
     const obj15 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl7 = tmp2(1126).intl;
-    const obj16 = { time: tmp2(11758).formatMcpConnectionExpiry(connection) };
+    const obj16 = { time: tmp2(11768).formatMcpConnectionExpiry(connection) };
     obj15.children = intl7.format(tmp8(3849).EQ8k1i, obj16);
-    items3[3] = closure_5(tmp2(5088).Text, obj15);
+    items3[3] = closure_5(tmp2(5092).Text, obj15);
     obj6.children = items3;
     let tmp7Result = closure_6(View, obj6);
-    const tmp2Result = tmp2(11758);
+    const tmp2Result = tmp2(11768);
   } else {
     tmp7Result = null;
     if (loading) {
       const obj17 = { variant: "text-sm/normal", color: "text-muted", children: null };
       let intl3 = tmp2(1126).intl;
       obj17.children = intl3.string(tmp8(3849).Q6xQTM);
-      tmp7Result = closure_5(tmp2(5088).Text, obj17);
+      tmp7Result = closure_5(tmp2(5092).Text, obj17);
     }
   }
   items2[1] = tmp7Result;
@@ -387,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     const obj20 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const intl8 = tmp2(1126).intl;
     obj20.children = intl8.string(tmp8(3849).IAF2eN);
-    obj19.children = closure_5(tmp2(5088).Text, obj20);
+    obj19.children = closure_5(tmp2(5092).Text, obj20);
     const items5 = [closure_5(View, obj19), ];
     const obj21 = { variant: "secondary", size: "sm", text: null, loading: null, onPress: null };
     const intl9 = tmp2(1126).intl;
@@ -396,13 +396,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     obj21.onPress = function onPress() {
       mint(false);
     };
-    items5[1] = closure_5(tmp2(5379).Button, obj21);
+    items5[1] = closure_5(tmp2(5384).Button, obj21);
     obj18.children = items5;
     tmp9Result2 = closure_6(View, obj18);
   }
   items2[2] = tmp9Result2;
   obj4.children = items2;
   obj2.children = closure_6(View, obj4);
-  return closure_5(connection(6899).ActionSheet, obj2);
+  return closure_5(connection(6904).ActionSheet, obj2);
 });
 export const CONJURE_CONNECT_TOOL_SHEET_KEY = "ConjureConnectToolSheet";

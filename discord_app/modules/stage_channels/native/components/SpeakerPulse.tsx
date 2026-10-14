@@ -1,11 +1,11 @@
-// === Module 14745: SpeakerPulse ===
+// === Module 14783: SpeakerPulse ===
 
-// Module 14745 (SpeakerPulse)
+// Module 14783 (SpeakerPulse)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import timing from "timing" /* 5093 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import timing from "timing" /* 5097 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 
 require = fn;
 const View = fn(17).View;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 let c9 = 0.16;
 let c10 = 250;
 let c11 = 500;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { pulse: { backgroundColor: nativeDefault.colors.WHITE }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.border = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };

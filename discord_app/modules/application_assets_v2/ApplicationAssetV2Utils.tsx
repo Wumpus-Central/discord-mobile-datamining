@@ -1,6 +1,6 @@
-// === Module 11497: ApplicationAssetV2Utils ===
+// === Module 11507: ApplicationAssetV2Utils ===
 
-// Module 11497 (ApplicationAssetV2Utils)
+// Module 11507 (ApplicationAssetV2Utils)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
 import size from "module_2" /* 2 */;

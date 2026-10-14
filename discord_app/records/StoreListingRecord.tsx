@@ -1,7 +1,7 @@
-// === Module 15084: StoreListingRecord ===
+// === Module 15122: StoreListingRecord ===
 
-// Module 15084 (StoreListingRecord)
-import GameStoreAsset from "GameStoreAsset" /* 15085 */;
+// Module 15122 (StoreListingRecord)
+import GameStoreAsset from "GameStoreAsset" /* 15123 */;
 import Record from "Record" /* 1405 */;
 import UserRecord from "UserRecord" /* 1404 */;
 

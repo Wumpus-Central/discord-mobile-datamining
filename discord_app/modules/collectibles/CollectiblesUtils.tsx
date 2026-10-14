@@ -1,6 +1,6 @@
-// === Module 7276: CollectiblesUtils ===
+// === Module 7282: CollectiblesUtils ===
 
-// Module 7276 (CollectiblesUtils)
+// Module 7282 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1096 */;
 import util from "util" /* 1126 */;
@@ -9,13 +9,13 @@ import PerksStateUtils from "PerksStateUtils" /* 1396 */;
 import user from "user" /* 1398 */;
 import NameplateRecord from "NameplateRecord" /* 1991 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
-import PriceUtils from "PriceUtils" /* 6940 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7269 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7270 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7271 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7275 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7277 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4771 */;
+import PriceUtils from "PriceUtils" /* 6945 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7275 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7276 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7277 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7281 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7283 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -643,7 +643,7 @@ export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(st
     const fullYear1 = stateFromStores.getFullYear();
     const month1 = stateFromStores.getMonth();
     const _Math = Math;
-    tmp = Math.floor((Date.UTC(fullYear1, month1, stateFromStores.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000) <= options;
+    tmp = Math.floor((Date.UTC(fullYear1, month1, stateFromStores.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000) <= React6;
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }
   return tmp;

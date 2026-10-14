@@ -1,10 +1,10 @@
-// === Module 16757: HomeDrawerStore ===
+// === Module 16796: HomeDrawerStore ===
 
-// Module 16757 (HomeDrawerStore)
+// Module 16796 (HomeDrawerStore)
 import Constants from "Constants" /* 1085 */;
-import _mod4733 from "module_4733" /* 4733 */;
-import timing from "timing" /* 5093 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16758 */;
+import _mod4735 from "module_4735" /* 4735 */;
+import timing from "timing" /* 5097 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16797 */;
 import identity from "module_1267" /* 1267 */;
 import size from "module_2" /* 2 */;
 
@@ -49,7 +49,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     closure_1().lastInteractionAt.current = Date.now();
   };
   return obj;
-}, _mod4733.shallow);
+}, _mod4735.shallow);
 let result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;

@@ -1,14 +1,14 @@
-// === Module 13239: SocialLayerStorefrontWishlistItemCard ===
+// === Module 13278: SocialLayerStorefrontWishlistItemCard ===
 
-// Module 13239 (SocialLayerStorefrontWishlistItemCard)
+// Module 13278 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8977 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9029 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8982 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9034 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
-import SentGiftsStore from "SentGiftsStore" /* 13237 */;
+import ApplicationStore from "ApplicationStore" /* 5445 */;
+import SentGiftsStore from "SentGiftsStore" /* 13276 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const require = fn;
 let closure_3 = ["sku", "isOwned", "source", "wishlistOwnerId", "size"];
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_8, left: nativeDefault.space.PX_8, width: 24, height: 24, borderRadius: nativeDefault.radii.sm, zIndex: 1 };
 obj2.applicationIcon = size;
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
               cResult[30] = tmp36;
               tmp29 = tmp36;
             }
-            OWNED = tmp(8977).WishlistItemCardOverlay.OWNED;
+            OWNED = tmp(8982).WishlistItemCardOverlay.OWNED;
           }
         }
       }
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
         tmp3Result = closure_2_8(FastImageDefault, obj2);
       }
       children[1] = tmp3Result;
-      return collapsed(options, { children });
+      return collapsed(React6, { children });
     };
     cResult[18] = tmp23;
     cResult[19] = tmp5;
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
       tmp3Result = closure_2_8(FastImageDefault, obj2);
     }
     children[1] = tmp3Result;
-    return collapsed(options, { children });
+    return collapsed(React6, { children });
   }, items5);
   const obj3 = { accessibilityLabel: sku.name, renderPreview: callback, source: sku.source, size };
   let obj2 = sku(size[9]);

@@ -1,16 +1,15 @@
-// === Module 15071: ActivityShareLinkModal ===
+// === Module 15109: ActivityShareLinkModal ===
 
-// Module 15071 (ActivityShareLinkModal)
+// Module 15109 (ActivityShareLinkModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4808 */;
-import LinkIcon from "LinkIcon" /* 5038 */;
-import ClipboardUtils from "ClipboardUtils" /* 6886 */;
-import HeaderActionButton from "HeaderActionButton" /* 7089 */;
-import HeaderShared from "HeaderShared" /* 9298 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 11625 */;
-import formatResults from "formatResults" /* 12311 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15070 */;
+import ToastUtils from "ToastUtils" /* 4810 */;
+import LinkIcon from "LinkIcon" /* 5042 */;
+import ClipboardUtils from "ClipboardUtils" /* 6891 */;
+import HeaderActionButton from "HeaderActionButton" /* 7095 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 11635 */;
+import formatResults from "formatResults" /* 12347 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,26 +19,20 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
 require = fn;
 const View = fn(17).View;
-let UserRowModes = fn(10217).UserRowModes;
-const MessageSendLocation = fn(5085).MessageSendLocation;
+let UserRowModes = fn(10227).UserRowModes;
+const MessageSendLocation = fn(5089).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5092);
-let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null, container: null };
-let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
-obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
-let obj4 = { paddingRight: nativeDefault.space.PX_16 };
-obj2.header = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-let obj5 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-obj2.container = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(5096);
+let obj2 = { container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj6 = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+let obj3 = { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/ActivityShareLinkModal.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ActivityShareLinkModal(applicationId) {
-  const cResult = applicationId(linkId[13]).c(74);
+  const cResult = applicationId(linkId[13]).c(64);
   applicationId = applicationId.applicationId;
   const customId = applicationId.customId;
   linkId = applicationId.linkId;
@@ -82,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     tmp15 = cResult[4];
   }
   const tmp12Result = onShare(noop.useState(tmp15), 2);
-  const currentUser = tmp12Result[0];
+  UserStore = tmp12Result[0];
   EmbeddedActivitiesStore = tmp12Result[1];
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class K {
@@ -107,13 +100,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
         return;
       }
     }
-    const items2 = [currentUser];
-    const fn2 = function q() {
-      return currentUser.getCurrentUser();
-    };
+    const items2 = [UserStore];
+    class Q {
+      constructor() {
+        return closure_8.getCurrentUser();
+      }
+    }
     cResult[6] = items2;
-    cResult[7] = fn2;
-    let tmp19 = fn2;
+    cResult[7] = Q;
+    let tmp19 = Q;
     const tmp18 = items2;
   } else {
     class K {
@@ -148,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       }
     }
   }
-  const fn3 = function z() {
+  const fn2 = function z() {
     const obj2 = { applicationId, referrerId: null, customId: null, linkId: null };
     let id;
     if (stateFromStores1 != null) {
@@ -160,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     closure_12(getApplicationInstallURL.getActivityLaunchURL(obj2));
   };
   cResult[11] = undefined;
-  cResult[12] = fn3;
+  cResult[12] = fn2;
   const tmpResult4 = applicationId(linkId[14]);
 }) : (function ActivityShareLinkModal(applicationId) {
   applicationId = applicationId.applicationId;
@@ -250,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
             if (null != first3) {
               dependencyMap = 1;
               c3 = 1;
-              let obj4 = { value: Promise.all(first1.map(tmp2(12311).getOrResolveChannelIdFromDestinationId)), done: false };
+              let obj4 = { value: Promise.all(first1.map(tmp2(12347).getOrResolveChannelIdFromDestinationId)), done: false };
               return obj4;
             } else {
               c3 = 3;
@@ -261,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
           throw value;
         } else if (arg0 !== 2) {
           closure_128_0 = value.filter(tmp2(1388).isNotNullish);
-          closure_128_1 = tmp2(15072).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
+          closure_128_1 = tmp2(15110).resolveActivityShareMessageContent(closure_129_3, closure_129_14, closure_129_12);
           closure_129_6(true);
           const item = closure_128_0.forEach((() => {
             closure_0 = closure_1_3(function*(arg0) {
@@ -291,11 +286,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
                     } else {
                       channel = channel.getChannel(closure_0);
                       if (null != channel) {
-                        const obj2 = closure_2_1(7179);
+                        const obj2 = closure_2_1(7185);
                         const obj6 = { location: constants.ACTIVITY_SHARE };
                         c2 = 1;
                         c1 = 1;
-                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(7370).parse(channel, c1), false, obj6), done: false };
+                        const obj7 = { value: obj2.sendMessage(closure_0, closure_2_1(7376).parse(channel, c1), false, obj6), done: false };
                         return obj7;
                       }
                     }
@@ -326,16 +321,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
               return applyArgumentsResult;
             };
           })());
-          let obj5 = tmp2(15072);
+          let obj5 = tmp2(15110);
           let obj7 = { text: null };
           const intl = tmp2(1126).intl;
           const obj8 = { applicationName: closure_129_14.name };
           obj7.text = intl.formatToPlainString(tmp2(1126).t.jQULqL, obj8);
-          tmp3(4809).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
+          tmp3(4811).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
           closure_129_4(true, closure_129_7);
-          let obj6 = tmp3(4809);
-          const result = tmp2(15070).closeActivityShareLinkModal();
-          const obj9 = tmp2(15070);
+          let obj6 = tmp3(4811);
+          const result = tmp2(15108).closeActivityShareLinkModal();
+          const obj9 = tmp2(15108);
         }
         c3 = 3;
         let obj = { value, done: true };
@@ -360,15 +355,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     }, items8),
     children: null
   };
-  let obj7 = { headerStyle: tmp.header, title: null, headerTitle: null, headerLeft: null, headerRight: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null, headerTitleAlign: "center" };
-  let intl = applicationId(linkId[24]).intl;
-  obj7.title = intl.string(applicationId(linkId[24]).t.r9qKow);
-  obj7.headerTitle = function headerTitle(children) {
-    return __initData(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle: message, variant: "redesign/heading-18/bold" });
-  };
+  let obj4 = { title: null, subtitle: null, headerRight: null, onClose: null };
   let obj2 = applicationId(linkId[14]);
-  obj7.headerLeft = applicationId(linkId[33]).getHeaderCloseButton(callback1);
-  obj7.headerRight = function headerRight(arg0) {
+  const tmp22 = first2;
+  let intl = applicationId(linkId[24]).intl;
+  obj4.title = intl.string(applicationId(linkId[24]).t.r9qKow);
+  obj4.subtitle = message;
+  obj4.headerRight = function headerRight(arg0) {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.onPress = onPress;
@@ -377,34 +370,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     obj.IconComponent = LinkIcon.LinkIcon;
     return __initData(HeaderActionButton.HeaderActionButton, obj);
   };
-  ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  let obj5 = applicationId(linkId[33]);
-  let num = 0;
-  if (!obj6.isIOS()) {
-    num = customId(linkId[30])().top;
-  }
-  obj7.headerStatusBarHeight = num + customId(linkId[11]).space.PX_8;
-  const items9 = [first2(applicationId(linkId[34]).Header, obj7), ];
-  let obj8 = { style: tmp.container, children: null };
-  const items10 = [first2(customId(linkId[35]), { absolute: true }), first2(customId(linkId[36]), { disableGradient: true, disableStickySections: true, initialSelectedDestinations: [], insetEnd: 0, onSelectedDestinationChange: callback, originDestination: memo, rowMode: UserRowModes.TOGGLE }), ];
-  const obj10 = { disabled: tmp7, floatingBackgroundColor: tmp.container.backgroundColor, isVisible: first1.length > 0, loading: tmp7, onPress: null, text: null };
+  obj4.onClose = callback1;
+  const items9 = [first2(customId(linkId[31]), obj4), ];
+  let obj5 = { style: tmp.container, children: null };
+  const items10 = [first2(customId(linkId[32]), { absolute: true }), first2(customId(linkId[33]), { disableGradient: true, disableStickySections: true, initialSelectedDestinations: [], insetEnd: 0, onSelectedDestinationChange: callback, originDestination: memo, rowMode: UserRowModes.TOGGLE }), ];
+  let obj7 = { disabled: tmp7, floatingBackgroundColor: tmp.container.backgroundColor, isVisible: first1.length > 0, loading: tmp7, onPress: null, text: null };
   let tmp24;
   if (!tmp7) {
     tmp24 = callback2;
   }
-  obj10.onPress = tmp24;
+  obj7.onPress = tmp24;
   if (1 === first1.length) {
     const intl3 = tmp2(tmp3[24]).intl;
     let stringResult = intl3.string(tmp2(tmp3[24]).t.TXNS7S);
   } else {
     const intl2 = tmp2(tmp3[24]).intl;
-    const obj16 = { count: length };
-    stringResult = intl2.formatToPlainString(tmp2(tmp3[24]).t.jWtYUm, obj16);
+    let obj8 = { count: length };
+    stringResult = intl2.formatToPlainString(tmp2(tmp3[24]).t.jWtYUm, obj8);
   }
-  obj10.text = stringResult;
-  items10[2] = first2(applicationId(linkId[37]).ModalFloatingAction, obj10);
-  obj8.children = items10;
-  items9[1] = closure_13(c6, obj8);
+  obj7.text = stringResult;
+  items10[2] = tmp22(applicationId(linkId[34]).ModalFloatingAction, obj7);
+  obj5.children = items10;
+  items9[1] = closure_13(c6, obj5);
   obj3.children = items9;
   return closure_13(c6, obj3);
 });

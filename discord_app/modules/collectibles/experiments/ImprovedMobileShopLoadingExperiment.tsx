@@ -1,6 +1,6 @@
-// === Module 9079: ImprovedMobileShopLoadingExperiment ===
+// === Module 9084: ImprovedMobileShopLoadingExperiment ===
 
-// Module 9079 (ImprovedMobileShopLoadingExperiment)
+// Module 9084 (ImprovedMobileShopLoadingExperiment)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

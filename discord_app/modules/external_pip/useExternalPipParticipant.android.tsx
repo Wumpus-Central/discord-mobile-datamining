@@ -1,14 +1,14 @@
-// === Module 17753: useExternalPipParticipant ===
+// === Module 17789: useExternalPipParticipant ===
 
-// Module 17753 (useExternalPipParticipant)
+// Module 17789 (useExternalPipParticipant)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
 
 require = fn;
 function hasOnlySelfParticipant(participants, meId) {
@@ -35,7 +35,7 @@ function hasOnlySelfParticipant(participants, meId) {
     return true;
   }
 }
-const CallConstants = fn(5115);
+const CallConstants = fn(5119);
 ({ isStreamParticipant: closure_8, ParticipantTypes: closure_9 } = CallConstants);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
@@ -293,7 +293,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "color" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "apply" };
   };
   cResult[1] = channelId;
   cResult[2] = focusedParticipantStreamId;
@@ -438,7 +438,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "color" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "apply" };
   }, items1);
   const items2 = [stateFromStoresObject.selectedParticipantSpeaking];
   const effect = noop.useEffect(() => {

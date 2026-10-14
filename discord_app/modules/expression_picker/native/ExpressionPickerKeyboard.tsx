@@ -1,15 +1,15 @@
-// === Module 11754: ExpressionPickerKeyboard ===
+// === Module 11764: ExpressionPickerKeyboard ===
 
-// Module 11754 (ExpressionPickerKeyboard)
+// Module 11764 (ExpressionPickerKeyboard)
 import KeyboardTypes from "KeyboardTypes" /* 1629 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
-import native from "native" /* 4827 */;
-import getEmojiTextDefault from "getEmojiText" /* 11755 */;
+import native from "native" /* 4829 */;
+import getEmojiTextDefault from "getEmojiText" /* 11765 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const KEYBOARD_ANIMATION_CONFIG = fn(11513).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(11523).KEYBOARD_ANIMATION_CONFIG;
 const jsx = fn(21).jsx;
 let __initData = { code: "function ExpressionPickerKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;}" };
 let closure_8 = { code: "function ExpressionPickerKeyboardTsx2(){const{bottomSheetExpandingOrExpanded,maximum,minimum}=this.__closure;return{height:bottomSheetExpandingOrExpanded.get()?maximum:minimum};}" };

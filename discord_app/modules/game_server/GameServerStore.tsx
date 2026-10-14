@@ -1,9 +1,9 @@
-// === Module 8031: GameServerStore ===
+// === Module 8038: GameServerStore ===
 
-// Module 8031 (GameServerStore)
+// Module 8038 (GameServerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8033 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8040 */;
 
 function handleGameServerInstanceCreated(arg0) {
   ({ guildId, gameServer } = arg0);

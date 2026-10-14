@@ -1,13 +1,13 @@
-// === Module 14542: GuildHeaderCountsStore ===
+// === Module 14579: GuildHeaderCountsStore ===
 
-// Module 14542 (GuildHeaderCountsStore)
+// Module 14579 (GuildHeaderCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 6981 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 6980 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5020 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5022 */;
 import UserStore from "UserStore" /* 1390 */;
-import VoiceStateStore from "VoiceStateStore" /* 5113 */;
+import VoiceStateStore from "VoiceStateStore" /* 5117 */;
 
 const obj = {};
 const dependencyMap = obj;
@@ -56,21 +56,21 @@ const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "code", memberCount: "isReactCompilerEnabled" };
+      dependencyMap[guildId] = { activeChannelsCount: "uri", onlineCount: "code", memberCount: "ddd" };
     }
     dependencyMap[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "code", memberCount: "isReactCompilerEnabled" };
+      dependencyMap[guildId] = { activeChannelsCount: "uri", onlineCount: "code", memberCount: "ddd" };
     }
     dependencyMap[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "code", memberCount: "isReactCompilerEnabled" };
+      dependencyMap[guildId] = { activeChannelsCount: "uri", onlineCount: "code", memberCount: "ddd" };
     }
     dependencyMap[guildId].activeChannelsCount = guildId.count;
   }

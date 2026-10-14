@@ -1,22 +1,22 @@
-// === Module 14445: UserCodeInput ===
+// === Module 14482: UserCodeInput ===
 
-// Module 14445 (UserCodeInput)
+// Module 14482 (UserCodeInput)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import components_Button_Button from "components/Button/Button" /* 5379 */;
-import TextInput from "TextInput" /* 6286 */;
-import useUserCodeSubmit from "useUserCodeSubmit" /* 14447 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 14448 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import components_Button_Button from "components/Button/Button" /* 5384 */;
+import TextInput from "TextInput" /* 6290 */;
+import useUserCodeSubmit from "useUserCodeSubmit" /* 14484 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 14485 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const OAuthConstants = fn(14446).OAuthConstants;
+const OAuthConstants = fn(14483).OAuthConstants;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({ text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -200,5 +200,5 @@ export const UserCodeInput = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   obj8.disabled = arr.length !== OAuthConstants.USER_CODE_LENGTH;
   items1[2] = React5(components_Button_Button.Button, obj8);
   obj2.children = items1;
-  return closure_1_8(options, obj2);
+  return closure_1_8(React6, obj2);
 });

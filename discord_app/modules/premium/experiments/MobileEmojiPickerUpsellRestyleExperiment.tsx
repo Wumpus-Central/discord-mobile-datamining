@@ -1,8 +1,8 @@
-// === Module 9282: MobileEmojiPickerUpsellRestyleExperiment ===
+// === Module 9291: MobileEmojiPickerUpsellRestyleExperiment ===
 
-// Module 9282 (MobileEmojiPickerUpsellRestyleExperiment)
+// Module 9291 (MobileEmojiPickerUpsellRestyleExperiment)
 import c from "c" /* 576 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9281 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9290 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

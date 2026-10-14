@@ -1,6 +1,6 @@
-// === Module 12468: PortalKeyboardPlaceholder ===
+// === Module 12504: PortalKeyboardPlaceholder ===
 
-// Module 12468 (PortalKeyboardPlaceholder)
+// Module 12504 (PortalKeyboardPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
@@ -8,17 +8,17 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import KeyboardTypes from "KeyboardTypes" /* 1629 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1897 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4987 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6627 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6668 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9307 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4989 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6631 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6672 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9316 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_6 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   let absoluteFillObject = null;
   if (obj.isIOS()) {

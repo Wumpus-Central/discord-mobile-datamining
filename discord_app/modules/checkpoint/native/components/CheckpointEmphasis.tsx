@@ -1,12 +1,12 @@
-// === Module 16339: CheckpointEmphasis ===
+// === Module 16376: CheckpointEmphasis ===
 
-// Module 16339 (CheckpointEmphasis)
+// Module 16376 (CheckpointEmphasis)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import useFontScale from "useFontScale" /* 5386 */;
-import inlineStyles from "inlineStyles" /* 7577 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10515 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import useFontScale from "useFontScale" /* 5391 */;
+import inlineStyles from "inlineStyles" /* 7583 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10525 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -14,13 +14,13 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(5437).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5442).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PlatformUtils = fn(1383);
-const CheckpointCustomizationUtils = fn(16322);
+const CheckpointCustomizationUtils = fn(16359);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj4 = { container: { paddingHorizontal: nativeDefault.space.PX_6 }, emphasis: { flexDirection: "row", alignItems: "center" }, text: null };
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_6 };
 obj4.text = { color: "black", textTransform: "uppercase", paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_6, fontSize: 14, lineHeight: 19 };

@@ -1,6 +1,6 @@
-// === Module 4829: AccessibilityAnnouncerLiveRegion ===
+// === Module 4831: AccessibilityAnnouncerLiveRegion ===
 
-// Module 4829 (AccessibilityAnnouncerLiveRegion)
+// Module 4831 (AccessibilityAnnouncerLiveRegion)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,8 +8,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, Text: c2 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const module_4812 = fn(4812);
-const state = module_4812.create(() => ({ message: "emoji", version: false }));
+const module_4814 = fn(4814);
+const state = module_4814.create(() => ({ message: "emoji", version: false }));
 const styles = StyleSheet.create({ liveRegion: { position: "absolute", top: 0, left: 0, width: 1, height: 1, opacity: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

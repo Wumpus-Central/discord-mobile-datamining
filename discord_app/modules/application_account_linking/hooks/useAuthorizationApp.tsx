@@ -1,10 +1,10 @@
-// === Module 6857: useAuthorizationApp ===
+// === Module 6862: useAuthorizationApp ===
 
-// Module 6857 (useAuthorizationApp)
+// Module 6862 (useAuthorizationApp)
 import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6858 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6863 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
+import ApplicationStore from "ApplicationStore" /* 5445 */;
 import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 
 const require = globalThis.__r;

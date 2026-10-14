@@ -1,13 +1,13 @@
-// === Module 18655: ReferralMessageManager ===
+// === Module 18691: ReferralMessageManager ===
 
-// Module 18655 (ReferralMessageManager)
+// Module 18691 (ReferralMessageManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import MessageTypes from "MessageTypes" /* 1101 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8092 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18175 */;
-import SubscriptionStore from "SubscriptionStore" /* 4775 */;
-import UserOfferStore from "UserOfferStore" /* 7173 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6808 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8099 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18211 */;
+import SubscriptionStore from "SubscriptionStore" /* 4777 */;
+import UserOfferStore from "UserOfferStore" /* 7179 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6812 */;
 
 require = fn;
 function handleReferralMessages(type) {

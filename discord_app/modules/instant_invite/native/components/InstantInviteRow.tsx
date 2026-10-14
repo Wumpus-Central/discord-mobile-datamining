@@ -1,25 +1,25 @@
-// === Module 8763: InstantInviteRow ===
+// === Module 8767: InstantInviteRow ===
 
-// Module 8763 (InstantInviteRow)
+// Module 8767 (InstantInviteRow)
 import nativeDefault from "native" /* 587 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 8685 */;
-import InviteQueue from "InviteQueue" /* 8765 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 8690 */;
+import InviteQueue from "InviteQueue" /* 8769 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 8684 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8689 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8698 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8703 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const InviteQueueDefault = InviteQueue;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(8764);
+const InstantInviteSendStateStore = fn(8768);
 ({ setSendState: closure_9, useInstantInviteSendStates: c10 } = InstantInviteSendStateStore);
-const InviteSendStates = fn(7424).InviteSendStates;
+const InviteSendStates = fn(7430).InviteSendStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { acronym: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
 obj.acronym = size;
@@ -131,7 +131,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          options(code, id, InviteSendStates.SENDING);
+          React6(code, id, InviteSendStates.SENDING);
           const type = row.type;
           if (InstantInviteUtils.RowTypes.FRIEND !== type) {
             if (InstantInviteUtils.RowTypes.DM !== type) {
@@ -291,7 +291,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          options(code, id, InviteSendStates.SENDING);
+          React6(code, id, InviteSendStates.SENDING);
           const type = row.type;
           if (InstantInviteUtils.RowTypes.FRIEND !== type) {
             if (InstantInviteUtils.RowTypes.DM !== type) {

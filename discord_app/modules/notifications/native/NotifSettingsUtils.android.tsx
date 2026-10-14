@@ -1,10 +1,10 @@
-// === Module 15024: NotifSettingsUtils ===
+// === Module 15061: NotifSettingsUtils ===
 
-// Module 15024 (NotifSettingsUtils)
+// Module 15061 (NotifSettingsUtils)
 import util from "util" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15025 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15020 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15062 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15058 */;
 import size from "module_2" /* 2 */;
 
 function inferImportanceFromBehavior(visibility) {
@@ -55,7 +55,7 @@ function formatSetting(item10022, importance) {
   }
 }
 function buildChannelsAndMapping() {
-  const assignedNotifSettingsAndMappings = map(15026).getAssignedNotifSettingsAndMappings();
+  const assignedNotifSettingsAndMappings = map(15063).getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {
     map = new Map();
@@ -117,7 +117,7 @@ function buildChannelsAndMapping() {
     let result = map.set(item10022.id, item10022.string_id);
     continue;
   }
-  const obj = map(15026);
+  const obj = map(15063);
   return {
     mapping: mappings.flatMap((notifSetting) => {
       value = map.get(notifSetting.notifSetting);
@@ -137,19 +137,6 @@ const constants = { NONE: 0, [0]: "NONE", MIN: 1, [1]: "MIN", LOW: 2, [2]: "LOW"
 let result = size.fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
 
 export default {
-  clear() {
-    let obj = NativeNotifSettingsModuleDefault;
-    if (obj == null) {
-      obj = {};
-    }
-    ({ registerAndroidNotifGroupsAndChannels, registerAndroidNotifTypeMappings } = obj);
-    if (null != registerAndroidNotifGroupsAndChannels) {
-      const result = registerAndroidNotifGroupsAndChannels([], []);
-    }
-    if (null != registerAndroidNotifTypeMappings) {
-      const result1 = registerAndroidNotifTypeMappings([]);
-    }
-  },
   registerDeclarativeNotificationCategories() {
     let obj = NativeNotifSettingsModuleDefault;
     if (obj == null) {

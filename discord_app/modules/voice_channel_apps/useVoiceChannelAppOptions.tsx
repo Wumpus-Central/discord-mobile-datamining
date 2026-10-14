@@ -1,14 +1,14 @@
-// === Module 17581: useVoiceChannelAppOptions ===
+// === Module 17615: useVoiceChannelAppOptions ===
 
-// Module 17581 (useVoiceChannelAppOptions)
+// Module 17615 (useVoiceChannelAppOptions)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6858 */;
-import ConjureUtils from "ConjureUtils" /* 6946 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11207 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6863 */;
+import ConjureUtils from "ConjureUtils" /* 6951 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
 
 const require = globalThis.__r;
 const useGetOrFetchApplicationsDefault = useGetOrFetchApplications;
@@ -230,12 +230,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
             }
             const tmpResult5 = tmp(504);
             let obj3 = { hasRows: arr8.length > 0, loadFailed: "error" === stateFromStores || tmp35, fetchPhase: str };
-            const result = tmp(17582).voiceChannelAppListState(obj3);
+            const result = tmp(17616).voiceChannelAppListState(obj3);
             cResult[31] = str;
             cResult[32] = "error" === stateFromStores || tmp35;
             cResult[33] = arr8.length > 0;
             cResult[34] = result;
-            const tmpResult6 = tmp(17582);
+            const tmpResult6 = tmp(17616);
           }
           closure_130_0 = tmp21;
           let found = arr5.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).isEmbeddedApplication(dependencyMap[index]));
@@ -479,7 +479,7 @@ export const useVoiceChannelAppSettingOptions = ReactCompilerGating.isReactCompi
 }) : (function useVoiceChannelAppSettingOptions(arg0, arg1) {
   _require = arg1;
   const tmp = closure_7(arg0);
-  options = tmp.options;
+  const options = tmp.options;
   const listState = tmp.listState;
   let tmp2 = null;
   if (null != arg1) {

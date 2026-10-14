@@ -1,8 +1,8 @@
-// === Module 4850: ReanimatedRexport ===
+// === Module 4852: ReanimatedRexport ===
 
-// Module 4850 (ReanimatedRexport)
+// Module 4852 (ReanimatedRexport)
 import cancelAnimationDefault from "cancelAnimation" /* 1656 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4851 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4853 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1383 */;
 import size from "module_2" /* 2 */;
 

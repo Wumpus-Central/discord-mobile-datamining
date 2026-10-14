@@ -1,11 +1,11 @@
-// === Module 11341: Tabs/Tabs ===
+// === Module 11353: Tabs/Tabs ===
 
-// Module 11341 (Tabs/Tabs)
+// Module 11353 (Tabs/Tabs)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
-import spring from "spring" /* 5378 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6335 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9580 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4852 */;
+import spring from "spring" /* 5383 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6339 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9590 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 
@@ -24,7 +24,7 @@ let c9 = 0.04;
 let c10 = 0.9;
 let c11 = 16;
 let closure_12 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_13 = createStyles.createStyles((gap, arg1) => {
   const obj = { container: { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
   const obj2 = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
@@ -740,7 +740,7 @@ export const Tabs = ReactCompilerGating.isReactCompilerEnabled() ? (function Tab
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(11342).TabItem, obj, id);
+      return variant(state(11354).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

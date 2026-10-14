@@ -1,26 +1,26 @@
-// === Module 17159: YouBarFloatingShade ===
+// === Module 17193: YouBarFloatingShade ===
 
-// Module 17159 (YouBarFloatingShade)
+// Module 17193 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import useToken from "useToken" /* 4818 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4936 */;
-import useChatLayoutDefault from "useChatLayout" /* 4979 */;
-import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15692 */;
+import useToken from "useToken" /* 4820 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4938 */;
+import useChatLayoutDefault from "useChatLayout" /* 4981 */;
+import LinearGradientDefault from "LinearGradient" /* 5396 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15729 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4937 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4939 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(15690).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(17043).GUILD_LIST_WIDTH;
+let closure_5 = fn(15727).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(17080).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useYouBarGradientBackground() {
@@ -168,7 +168,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     const obj4 = { children: null };
                     const items1 = [tmp16, tmp27, tmp32];
                     obj4.children = items1;
-                    const tmp39 = options(closure_1_8, obj4);
+                    const tmp39 = React6(closure_1_8, obj4);
                     cResult[32] = tmp27;
                     cResult[33] = tmp32;
                     cResult[34] = tmp16;
@@ -274,5 +274,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj5.style = items4;
   items1[2] = React5(View, obj5);
   obj2.children = items1;
-  return options(closure_1_8, obj2);
+  return React6(closure_1_8, obj2);
 }));

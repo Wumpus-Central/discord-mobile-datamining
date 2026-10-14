@@ -1,32 +1,32 @@
-// === Module 13770: CollectiblesItemMiniPreview ===
+// === Module 13807: CollectiblesItemMiniPreview ===
 
-// Module 13770 (CollectiblesItemMiniPreview)
+// Module 13807 (CollectiblesItemMiniPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils from "utils" /* 1990 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import ProfileEffectDefault from "ProfileEffect" /* 9005 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9014 */;
-import NameplateDefault from "Nameplate" /* 9022 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9026 */;
-import _modDef9027 from "module_9027" /* 9027 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import ProfileEffectDefault from "ProfileEffect" /* 9010 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9019 */;
+import NameplateDefault from "Nameplate" /* 9027 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9031 */;
+import _modDef9032 from "module_9032" /* 9032 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7269).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7275).isAvatarDecorationRecord;
 const isNameplateRecord = fn(1991).isNameplateRecord;
-const isProfileEffectRecord = fn(7270).isProfileEffectRecord;
-const isProfileFrameRecord = fn(7271).isProfileFrameRecord;
-let closure_8 = fn(8348).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileEffectRecord = fn(7276).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7277).isProfileFrameRecord;
+let closure_8 = fn(8355).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, framePreview: { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" }, profileEffect: null, sampleProfile: null, nameplate: null, nameplateTile: null, nameplateStrip: null };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(9002).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9007).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.nameplate = { overflow: "hidden", borderTopRightRadius: nativeDefault.radii.xs, borderBottomRightRadius: nativeDefault.radii.xs };
 obj.nameplateTile = { alignItems: "flex-start" };
 obj.nameplateStrip = { width: "90%", aspectRatio: 1.6, position: "relative" };
@@ -65,14 +65,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return tmp68;
         }
         const obj2 = { style: tmp6, children: tmp64 };
-        const tmp71 = options(View, obj2);
+        const tmp71 = React6(View, obj2);
         cResult[8] = tmp64;
         cResult[9] = tmp6;
         cResult[10] = tmp71;
         tmp68 = tmp71;
       }
       const obj3 = { item, size: result };
-      const tmp67 = options(AvatarDecorationSampleV2Default, obj3);
+      const tmp67 = React6(AvatarDecorationSampleV2Default, obj3);
       cResult[5] = item;
       cResult[6] = result;
       cResult[7] = tmp67;
@@ -96,14 +96,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return tmp59;
             }
             const obj4 = { style: tmp6, children: tmp55 };
-            const tmp62 = options(View, obj4);
+            const tmp62 = React6(View, obj4);
             cResult[18] = tmp55;
             cResult[19] = tmp6;
             cResult[20] = tmp62;
             tmp59 = tmp62;
           }
           const obj5 = { style: tmp4.framePreview, children: tmp50 };
-          const tmp58 = options(View, obj5);
+          const tmp58 = React6(View, obj5);
           cResult[15] = tmp4.framePreview;
           cResult[16] = tmp50;
           cResult[17] = tmp58;
@@ -111,7 +111,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
       const obj6 = { profileFrame: item, previewWidth: result1, previewHeight: diff, profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-      const tmp54 = options(ProfileFrameSamplePreviewDefault, obj6);
+      const tmp54 = React6(ProfileFrameSamplePreviewDefault, obj6);
       cResult[11] = item;
       cResult[12] = result1;
       cResult[13] = diff;
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     } else if (isProfileEffectRecord(item)) {
       const _Symbol = Symbol;
       if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj7 = { uri: _modDef9027 };
+        const obj7 = { uri: _modDef9032 };
         cResult[21] = obj7;
         let tmp28 = obj7;
       } else {
@@ -128,7 +128,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       if (cResult[22] !== tmp4.sampleProfile) {
         const obj8 = { source: tmp28, style: tmp4.sampleProfile, resizeMode: "cover" };
-        const tmp33 = options(FastImageDefault, obj8);
+        const tmp33 = React6(FastImageDefault, obj8);
         cResult[22] = tmp4.sampleProfile;
         cResult[23] = tmp33;
         let tmp30 = tmp33;
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       if (cResult[24] !== item.skuId) {
         const obj9 = { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true };
-        const tmp37 = options(ProfileEffectDefault, obj9);
+        const tmp37 = React6(ProfileEffectDefault, obj9);
         cResult[24] = item.skuId;
         cResult[25] = tmp37;
         let tmp34 = tmp37;
@@ -156,7 +156,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return tmp42;
           }
           const obj10 = { style: tmp6, children: tmp38 };
-          const tmp45 = options(View, obj10);
+          const tmp45 = React6(View, obj10);
           cResult[30] = tmp38;
           cResult[31] = tmp6;
           cResult[32] = tmp45;
@@ -201,21 +201,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return tmp23;
             }
             const obj12 = { style: tmp14, children: tmp19 };
-            const tmp26 = options(View, obj12);
+            const tmp26 = React6(View, obj12);
             cResult[44] = tmp14;
             cResult[45] = tmp19;
             cResult[46] = tmp26;
             tmp23 = tmp26;
           }
           const obj13 = { style: tmp4.nameplateStrip, children: tmp15 };
-          const tmp22 = options(View, obj13);
+          const tmp22 = React6(View, obj13);
           cResult[41] = tmp4.nameplateStrip;
           cResult[42] = tmp15;
           cResult[43] = tmp22;
           tmp19 = tmp22;
         }
         const obj14 = { nameplate: tmp12, fullOpacity: true, style: tmp4.nameplate };
-        const tmp18 = options(NameplateDefault, obj14);
+        const tmp18 = React6(NameplateDefault, obj14);
         cResult[38] = tmp12;
         cResult[39] = tmp4.nameplate;
         cResult[40] = tmp18;
@@ -242,28 +242,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (isAvatarDecorationRecord(item)) {
     const obj2 = { style: items, children: null };
     const obj3 = { item, size: 0.75 * size };
-    obj2.children = options(AvatarDecorationSampleV2Default, obj3);
-    return options(View, obj2);
+    obj2.children = React6(AvatarDecorationSampleV2Default, obj3);
+    return React6(View, obj2);
   } else if (isProfileFrameRecord(item)) {
     const obj4 = { style: items, children: null };
     const obj5 = { style: tmp.framePreview, children: null };
     const obj6 = { profileFrame: item, previewWidth: size * closure_8, previewHeight: size - 2 * PX_8, profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-    obj5.children = options(ProfileFrameSamplePreviewDefault, obj6);
-    obj4.children = options(View, obj5);
-    return options(View, obj4);
+    obj5.children = React6(ProfileFrameSamplePreviewDefault, obj6);
+    obj4.children = React6(View, obj5);
+    return React6(View, obj4);
   } else if (isProfileEffectRecord(item)) {
     const obj7 = { style: items, children: null };
     const obj8 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
     const obj9 = { source: null, style: null, resizeMode: "cover" };
-    const obj10 = { uri: _modDef9027 };
+    const obj10 = { uri: _modDef9032 };
     obj9.source = obj10;
     obj9.style = tmp.sampleProfile;
-    const items1 = [options(FastImageDefault, obj9), ];
+    const items1 = [React6(FastImageDefault, obj9), ];
     const obj11 = { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true };
-    items1[1] = options(ProfileEffectDefault, obj11);
+    items1[1] = React6(ProfileEffectDefault, obj11);
     obj8.children = items1;
     obj7.children = collapsed(View, obj8);
-    return options(View, obj7);
+    return React6(View, obj7);
   } else if (isNameplateRecord(item)) {
     const obj12 = { style: null, children: null };
     const items2 = [items, tmp.nameplateTile];
@@ -271,9 +271,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj13 = { style: tmp.nameplateStrip, children: null };
     const nameplateData = utils.getNameplateData(item);
     const obj14 = { nameplate: nameplateData, fullOpacity: true, style: tmp.nameplate };
-    obj13.children = options(NameplateDefault, obj14);
-    obj12.children = options(View, obj13);
-    return options(View, obj12);
+    obj13.children = React6(NameplateDefault, obj14);
+    obj12.children = React6(View, obj13);
+    return React6(View, obj12);
   } else {
     return null;
   }

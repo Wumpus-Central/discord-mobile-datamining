@@ -1,24 +1,24 @@
-// === Module 11915: conjurePlanSurfaces ===
+// === Module 11944: conjurePlanSurfaces ===
 
-// Module 11915 (conjurePlanSurfaces)
+// Module 11944 (conjurePlanSurfaces)
 import _modDef3849 from "module_3849" /* 3849 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6947 */;
-import conjurePlanTags from "conjurePlanTags" /* 11901 */;
-import conjurePlanDesign from "conjurePlanDesign" /* 11909 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6952 */;
+import conjurePlanTags from "conjurePlanTags" /* 11930 */;
+import conjurePlanDesign from "conjurePlanDesign" /* 11938 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let obj = {};
-obj[fn(6947).ConjureSupportedSurface.APP_CHANNEL] = _modDef3849.NBUCvF;
-obj[fn(6947).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3849.vrwvp8;
-obj[fn(6947).ConjureSupportedSurface.ACTIVITY] = _modDef3849.oMJF0T;
-obj[fn(6947).ConjureSupportedSurface.OVERLAY] = _modDef3849.u06zRd;
-obj[fn(6947).ConjureSupportedSurface.PROFILE_WIDGET] = _modDef3849.NZrNII;
-obj[fn(6947).ConjureSupportedSurface.AUTOMOD] = _modDef3849["bu0/4I"];
-obj[fn(6947).ConjureSupportedSurface.BOT] = _modDef3849.Crinff;
-obj[fn(6947).ConjureSupportedSurface.APPLICATION_COMMANDS] = _modDef3849.M3ty0r;
-let items = [fn(6947).ConjureSupportedSurface.APP_CHANNEL, fn(6947).ConjureSupportedSurface.ACTIVITY, fn(6947).ConjureSupportedSurface.OVERLAY, fn(6947).ConjureSupportedSurface.VOICE_CHANNEL, fn(6947).ConjureSupportedSurface.PROFILE_WIDGET, fn(6947).ConjureSupportedSurface.AUTOMOD, fn(6947).ConjureSupportedSurface.BOT, fn(6947).ConjureSupportedSurface.APPLICATION_COMMANDS];
+obj[fn(6952).ConjureSupportedSurface.APP_CHANNEL] = _modDef3849.NBUCvF;
+obj[fn(6952).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3849.vrwvp8;
+obj[fn(6952).ConjureSupportedSurface.ACTIVITY] = _modDef3849.oMJF0T;
+obj[fn(6952).ConjureSupportedSurface.OVERLAY] = _modDef3849.u06zRd;
+obj[fn(6952).ConjureSupportedSurface.PROFILE_WIDGET] = _modDef3849.NZrNII;
+obj[fn(6952).ConjureSupportedSurface.AUTOMOD] = _modDef3849["bu0/4I"];
+obj[fn(6952).ConjureSupportedSurface.BOT] = _modDef3849.Crinff;
+obj[fn(6952).ConjureSupportedSurface.APPLICATION_COMMANDS] = _modDef3849.M3ty0r;
+let items = [fn(6952).ConjureSupportedSurface.APP_CHANNEL, fn(6952).ConjureSupportedSurface.ACTIVITY, fn(6952).ConjureSupportedSurface.OVERLAY, fn(6952).ConjureSupportedSurface.VOICE_CHANNEL, fn(6952).ConjureSupportedSurface.PROFILE_WIDGET, fn(6952).ConjureSupportedSurface.AUTOMOD, fn(6952).ConjureSupportedSurface.BOT, fn(6952).ConjureSupportedSurface.APPLICATION_COMMANDS];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanSurfaces.tsx");
 
@@ -75,6 +75,20 @@ export const conjurePlanSurfaceRows = function conjurePlanSurfaceRows(proposal, 
         stringResult1 = intl3.formatToPlainString(keys(dependencyMap[1]).Xa5mPA, obj2);
         formatToPlainStringResult = stringResult;
       }
+    }
+    const surface_descriptions = proposal.surface_descriptions;
+    let trimmed;
+    if (surface_descriptions != null) {
+      if (surface_descriptions[surface] != null) {
+        trimmed = str.trim();
+      }
+    }
+    let tmp16 = null != trimmed;
+    if (tmp16) {
+      tmp16 = "" !== trimmed;
+    }
+    if (tmp16) {
+      stringResult1 = trimmed;
     }
     const obj3 = { surface, title: formatToPlainStringResult, description: stringResult1, channelNames: items, preview: null };
     let found = keys.find((item) => {

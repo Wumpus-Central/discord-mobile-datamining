@@ -1,10 +1,10 @@
-// === Module 14056: TieredTenureBadgePerkCard ===
+// === Module 14093: TieredTenureBadgePerkCard ===
 
-// Module 14056 (TieredTenureBadgePerkCard)
+// Module 14093 (TieredTenureBadgePerkCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 10537 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 10547 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -13,19 +13,19 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_9 = createStyles.createStyles({ badgeNameContainer: { flexDirection: "row" }, tenureRequirements: { marginStart: 4 }, image: { width: "100%", height: "100%" }, imageContainer: { height: 238, paddingVertical: 32 }, upcomingBadge: { opacity: 0.4 }, title: { marginTop: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
 
 export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
-  tieredTenureBadgeData = tieredTenureBadgeData(10564).useTieredTenureBadgeData();
-  let obj = tieredTenureBadgeData(10564);
-  const premiumSince = tieredTenureBadgeData(10564).usePremiumSince();
-  let obj2 = tieredTenureBadgeData(10564);
-  const timeUntilNextBadge = tieredTenureBadgeData(14057).useTimeUntilNextBadge();
+  tieredTenureBadgeData = tieredTenureBadgeData(10574).useTieredTenureBadgeData();
+  let obj = tieredTenureBadgeData(10574);
+  const premiumSince = tieredTenureBadgeData(10574).usePremiumSince();
+  let obj2 = tieredTenureBadgeData(10574);
+  const timeUntilNextBadge = tieredTenureBadgeData(14094).useTimeUntilNextBadge();
   const tmp6 = closure_9();
-  let obj3 = tieredTenureBadgeData(14057);
+  let obj3 = tieredTenureBadgeData(14094);
   const items = [UserStore];
   const stateFromStores = tieredTenureBadgeData(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj4 = tieredTenureBadgeData(504);
@@ -33,7 +33,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
   if (tieredTenureBadgeData != null) {
     id = tieredTenureBadgeData.id;
   }
-  const mobileTenureBadgeImages = tieredTenureBadgeData(10538).useMobileTenureBadgeImages(id);
+  const mobileTenureBadgeImages = tieredTenureBadgeData(10548).useMobileTenureBadgeImages(id);
   if (mobileTenureBadgeImages != null) {
     const large = mobileTenureBadgeImages.large;
   }
@@ -48,10 +48,10 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
   } else {
     const intl9 = tmp(1126).intl;
     let stringResult = intl9.string(tmp(1126).t["jyYgZ+"]);
-    if (tieredTenureBadgeData.status === tmp(10564).TieredTenureBadgeStatus.UPCOMING) {
+    if (tieredTenureBadgeData.status === tmp(10574).TieredTenureBadgeStatus.UPCOMING) {
       const intl2 = tmp(1126).intl;
       stringResult = intl2.string(tmp(1126).t.O9TBwQ);
-    } else if (tieredTenureBadgeData.status === tmp(10564).TieredTenureBadgeStatus.WITHHELD) {
+    } else if (tieredTenureBadgeData.status === tmp(10574).TieredTenureBadgeStatus.WITHHELD) {
       const intl = tmp(1126).intl;
       stringResult = intl.string(tmp(1126).t.lHYDUu);
     }
@@ -59,11 +59,11 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     let tmp14 = large;
     if (null != premiumSince) {
       const status = tieredTenureBadgeData.status;
-      if (tmp(10564).TieredTenureBadgeStatus.EARNED !== status) {
-        if (tmp(10564).TieredTenureBadgeStatus.WITHHELD !== status) {
+      if (tmp(10574).TieredTenureBadgeStatus.EARNED !== status) {
+        if (tmp(10574).TieredTenureBadgeStatus.WITHHELD !== status) {
           formatResult = null;
           tmp14 = large;
-          if (tmp(10564).TieredTenureBadgeStatus.UPCOMING === status) {
+          if (tmp(10574).TieredTenureBadgeStatus.UPCOMING === status) {
             formatResult = null;
             tmp14 = large;
             if (null != timeUntilNextBadge) {
@@ -76,7 +76,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
               const date = new Date(premiumSince);
               obj6.date = date;
               formatResult = intl3.format(tmp(1126).t.vwLvec, obj6);
-              tmp14 = stateFromStores(14059);
+              tmp14 = stateFromStores(14096);
             }
           }
         }
@@ -93,20 +93,20 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     const obj10 = { variant: "heading-md/medium", color: "text-default", children: null };
     const intl6 = tmp(1126).intl;
     obj10.children = intl6.string(tieredTenureBadgeData.nameUnformatted);
-    const items2 = [closure_7(tmp(5088).Text, obj10), ];
-    const obj11 = { variant: "heading-md/medium", color: "text-muted", style: tmp6.tenureRequirements, children: tmp(10563).getTenureBadgeRequirementString(tieredTenureBadgeData.id, tieredTenureBadgeData.tenureReqNumMonths) };
-    items2[1] = closure_7(tmp(5088).Text, obj11);
+    const items2 = [closure_7(tmp(5092).Text, obj10), ];
+    const obj11 = { variant: "heading-md/medium", color: "text-muted", style: tmp6.tenureRequirements, children: tmp(10573).getTenureBadgeRequirementString(tieredTenureBadgeData.id, tieredTenureBadgeData.tenureReqNumMonths) };
+    items2[1] = closure_7(tmp(5092).Text, obj11);
     obj9.children = items2;
     const items3 = [closure_8(View, obj9), ];
     let tmp30Result = null != formatResult;
     if (tmp30Result) {
       const obj12 = { variant: "heading-sm/normal", color: "text-muted", children: formatResult };
-      tmp30Result = closure_7(tmp(5088).Text, obj12);
+      tmp30Result = closure_7(tmp(5092).Text, obj12);
     }
     const obj13 = { children: null };
     items3[1] = tmp30Result;
     obj13.children = items3;
-    const tmpResult = tmp(10563);
+    const tmpResult = tmp(10573);
     const obj14 = { title: null, titleStyle: null, bodyComponent: null, cta: null, buttonOnPress: null, headerComponent: null, pillText: null };
     const tmp28Result = closure_8(View, obj13);
     const intl7 = tmp(1126).intl;
@@ -118,10 +118,10 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     obj14.buttonOnPress = tmp11;
     const obj15 = { style: tmp6.imageContainer, children: null };
     const items4 = [tmp6.image, ];
-    const tmp34 = stateFromStores(14027);
-    let upcomingBadge = tieredTenureBadgeData.status === tmp(10564).TieredTenureBadgeStatus.UPCOMING;
+    const tmp34 = stateFromStores(14064);
+    let upcomingBadge = tieredTenureBadgeData.status === tmp(10574).TieredTenureBadgeStatus.UPCOMING;
     if (!upcomingBadge) {
-      upcomingBadge = tieredTenureBadgeData.status === tmp(10564).TieredTenureBadgeStatus.WITHHELD;
+      upcomingBadge = tieredTenureBadgeData.status === tmp(10574).TieredTenureBadgeStatus.WITHHELD;
     }
     if (upcomingBadge) {
       upcomingBadge = tmp6.upcomingBadge;
@@ -131,10 +131,10 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     obj16.style = items4;
     const obj17 = { uri: tmp14 };
     obj16.source = obj17;
-    obj15.children = closure_7(stateFromStores(6157), obj16);
+    obj15.children = closure_7(stateFromStores(5034), obj16);
     obj14.headerComponent = closure_7(View, obj15);
     obj14.pillText = stringResult;
     return closure_7(tmp34, obj14);
   }
-  const obj5 = tieredTenureBadgeData(10538);
+  const obj5 = tieredTenureBadgeData(10548);
 };

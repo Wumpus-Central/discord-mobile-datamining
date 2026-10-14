@@ -1,19 +1,19 @@
-// === Module 10952: BaseEmbeddedAppWebView ===
+// === Module 11026: BaseEmbeddedAppWebView ===
 
-// Module 10952 (BaseEmbeddedAppWebView)
+// Module 11026 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import URLUtilsDefault from "URLUtils" /* 1384 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
-import usePreviousDefault from "usePrevious" /* 5922 */;
-import WebView from "WebView" /* 7522 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 10931 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5304 */;
+import usePreviousDefault from "usePrevious" /* 5927 */;
+import WebView from "WebView" /* 7528 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 10719 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9066 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9071 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -40,7 +40,7 @@ const Linking = fn(17).Linking;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_10 = fn(2024).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_12 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_13 = new LoggerDefault("BaseEmbeddedAppWebView");
 const PlatformUtils = fn(1382);
@@ -652,7 +652,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                     c7 = 1;
                                                                     c8 = 2;
                                                                     c9 = 1;
-                                                                    const obj6 = { value: closure_1_15.injectJavaScript(applicationId(10931)(obj4)), done: false };
+                                                                    const obj6 = { value: closure_1_15.injectJavaScript(applicationId(10719)(obj4)), done: false };
                                                                     return obj6;
                                                                   }
                                                                 }
@@ -660,7 +660,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                 if (1 === tmp8) {
                                                                   c7 = 0;
                                                                   if (null != ref.current) {
-                                                                    closure_1_28(applicationId(10931)(closure_132_0));
+                                                                    closure_1_28(applicationId(10719)(closure_132_0));
                                                                   }
                                                                 } else if (arg0 === 1) {
                                                                   c9 = 3;
@@ -1606,7 +1606,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                       c7 = 1;
                       c8 = 2;
                       c9 = 1;
-                      const obj6 = { value: memo.injectJavaScript(applicationId(10931)(obj4)), done: false };
+                      const obj6 = { value: memo.injectJavaScript(applicationId(10719)(obj4)), done: false };
                       return obj6;
                     }
                   }
@@ -1614,7 +1614,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                   if (1 === tmp8) {
                     c7 = 0;
                     if (null != ref.current) {
-                      callback4(applicationId(10931)(closure_132_0));
+                      callback4(applicationId(10719)(closure_132_0));
                     }
                   } else if (arg0 === 1) {
                     c9 = 3;

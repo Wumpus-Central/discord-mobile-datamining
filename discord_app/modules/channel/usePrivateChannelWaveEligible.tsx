@@ -1,10 +1,10 @@
-// === Module 16778: usePrivateChannelWaveEligible ===
+// === Module 16817: usePrivateChannelWaveEligible ===
 
-// Module 16778 (usePrivateChannelWaveEligible)
+// Module 16817 (usePrivateChannelWaveEligible)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import MessageStore from "MessageStore" /* 5432 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import _modDef4704 from "module_4704" /* 4704 */;
+import MessageStore from "MessageStore" /* 5437 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 
 const require = globalThis.__r;
 
@@ -255,11 +255,11 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
         }
       }
       const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(isDM.id);
-      const tmpResult9 = tmp(4793);
-      const isWithinIntervalResult = tmpResult9.isWithinInterval(_modDef4702(), _modDef4702(extractTimestampResult), c7);
+      const tmpResult9 = tmp(4795);
+      const isWithinIntervalResult = tmpResult9.isWithinInterval(_modDef4704(), _modDef4704(extractTimestampResult), c7);
       cResult[19] = isDM.id;
       cResult[20] = isWithinIntervalResult;
-      const tmp28 = _modDef4702();
+      const tmp28 = _modDef4704();
     } else {
       class T {
         constructor() {
@@ -268,7 +268,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
       }
     }
     const tmpResult8 = tmp(504);
-    const strangerDangerWarning = tmp(10383).useStrangerDangerWarning(isDM.id);
+    const strangerDangerWarning = tmp(10393).useStrangerDangerWarning(isDM.id);
     if (tmp4) {
       class T {
         constructor() {
@@ -385,8 +385,8 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
   const obj6 = require("DateUtils");
-  const tmp9 = recipientId(4702)();
-  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(4702)(), recipientId(4702)(extractTimestampResult), c7);
+  const tmp9 = recipientId(4704)();
+  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(4704)(), recipientId(4704)(extractTimestampResult), c7);
   const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;

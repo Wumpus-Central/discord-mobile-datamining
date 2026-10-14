@@ -1,10 +1,10 @@
-// === Module 9099: PlaystationNeutralIcon ===
+// === Module 9104: PlaystationNeutralIcon ===
 
-// Module 9099 (PlaystationNeutralIcon)
+// Module 9104 (PlaystationNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4817 */;
-import _mod9100 from "module_9100" /* 9100 */;
+import BaseIconImage from "BaseIconImage" /* 4819 */;
+import _mod9105 from "module_9105" /* 9105 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const PlaystationNeutralIcon = ReactCompilerGating.isReactCompilerEnabled
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9100;
+    const tmpResult = _mod9105;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const PlaystationNeutralIcon = ReactCompilerGating.isReactCompilerEnabled
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9100, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9105, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

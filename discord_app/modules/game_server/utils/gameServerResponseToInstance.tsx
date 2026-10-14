@@ -1,6 +1,6 @@
-// === Module 8033: gameServerResponseToInstance ===
+// === Module 8040: gameServerResponseToInstance ===
 
-// Module 8033 (gameServerResponseToInstance)
+// Module 8040 (gameServerResponseToInstance)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");

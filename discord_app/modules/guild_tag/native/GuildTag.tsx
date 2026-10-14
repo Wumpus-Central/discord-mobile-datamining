@@ -1,23 +1,23 @@
-// === Module 8859: GuildTag ===
+// === Module 8863: GuildTag ===
 
-// Module 8859 (GuildTag)
+// Module 8863 (GuildTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import GuildTagUtils from "GuildTagUtils" /* 8290 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import GuildTagUtils from "GuildTagUtils" /* 8297 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(7888).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(7895).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { container: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 }, tag: null };
 let PlatformUtils = fn(1382);
 let num = 16;
@@ -175,7 +175,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
     obj4.style = items1;
     items[1] = React5(Text_Text.Text, obj4);
     obj.children = items;
-    return options(closure_2_8, obj);
+    return React6(closure_2_8, obj);
   }
   cResult[0] = SIZE_12;
   cResult[1] = guildBadge;
@@ -223,7 +223,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
     obj4.style = items1;
     items[1] = React5(Text_Text.Text, obj4);
     obj.children = items;
-    return options(closure_2_8, obj);
+    return React6(closure_2_8, obj);
   }
   const tmp2 = closure_10();
   GuildTagBadgeSize = tmp2;

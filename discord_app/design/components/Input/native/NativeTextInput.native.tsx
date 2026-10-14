@@ -1,11 +1,11 @@
-// === Module 6304: NativeTextInput ===
+// === Module 6308: NativeTextInput ===
 
-// Module 6304 (NativeTextInput)
+// Module 6308 (NativeTextInput)
 import c from "c" /* 576 */;
-import native from "native" /* 4820 */;
-import native2 from "native" /* 4827 */;
-import useMountEffect from "useMountEffect" /* 5396 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6306 */;
+import native from "native" /* 4822 */;
+import native2 from "native" /* 4829 */;
+import useMountEffect from "useMountEffect" /* 5401 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6310 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1499 */;
 
@@ -80,7 +80,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
         const mountLayoutEffect = useMountEffect.useMountLayoutEffect(tmp8);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { value: "kind", defaultValue: "apply" };
+          const obj2 = { value: "lineClamp", defaultValue: "color" };
           cResult[8] = obj2;
           let tmp11 = obj2;
         } else {
@@ -143,7 +143,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
       current.setNativeProps(obj);
     }
   });
-  return { value: "kind", defaultValue: "apply" };
+  return { value: "lineClamp", defaultValue: "color" };
 });
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePanGestureWrapper(arg0) {

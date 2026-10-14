@@ -1,9 +1,9 @@
-// === Module 12853: openConjureProjectInBuilder ===
+// === Module 12889: openConjureProjectInBuilder ===
 
-// Module 12853 (openConjureProjectInBuilder)
-import ConjureUtils from "ConjureUtils" /* 6946 */;
-import ConjureActivity from "ConjureActivity" /* 12854 */;
-import openConjureProject from "openConjureProject" /* 12855 */;
+// Module 12889 (openConjureProjectInBuilder)
+import ConjureUtils from "ConjureUtils" /* 6951 */;
+import ConjureActivity from "ConjureActivity" /* 11962 */;
+import openConjureProject from "openConjureProject" /* 12890 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/projects/openConjureProjectInBuilder.tsx");

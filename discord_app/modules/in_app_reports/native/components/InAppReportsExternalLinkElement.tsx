@@ -1,14 +1,14 @@
-// === Module 13911: InAppReportsExternalLinkElement ===
+// === Module 13948: InAppReportsExternalLinkElement ===
 
-// Module 13911 (InAppReportsExternalLinkElement)
+// Module 13948 (InAppReportsExternalLinkElement)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import LinkingDefault from "Linking" /* 4806 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6663 */;
+import LinkingDefault from "Linking" /* 4808 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6667 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5092 */;
+import createStyles from "createStyles" /* 5096 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -34,8 +34,8 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Externa
     }
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { IconComponent: tmp(13912).LinkExternalMediumIcon };
-      const tmp9 = closure_4(tmp(6188).TableRowIcon, obj2);
+      const obj2 = { IconComponent: tmp(13949).LinkExternalMediumIcon };
+      const tmp9 = closure_4(tmp(6192).TableRowIcon, obj2);
       cResult[2] = tmp9;
       let tmp7 = tmp9;
     } else {
@@ -50,7 +50,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Externa
       }
     }
     const obj3 = { label: link_text, subLabel: link_description, trailing: tmp7, onPress: tmp5, arrow: false, accessibilityRole: "link" };
-    const tmp12 = closure_4(tmp(8582).RowButton, obj3);
+    const tmp12 = closure_4(tmp(8589).RowButton, obj3);
     cResult[3] = link_description;
     cResult[4] = link_text;
     cResult[5] = tmp5;
@@ -66,12 +66,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Externa
   let tmp3 = null;
   if (data.is_localized) {
     const obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
-    const obj2 = { IconComponent: url(13912).LinkExternalMediumIcon };
-    obj.trailing = closure_4(url(6188).TableRowIcon, obj2);
+    const obj2 = { IconComponent: url(13949).LinkExternalMediumIcon };
+    obj.trailing = closure_4(url(6192).TableRowIcon, obj2);
     obj.onPress = function onLinkPress() {
       LinkingDefault.openURL(url);
     };
-    tmp3 = closure_4(url(8582).RowButton, obj);
+    tmp3 = closure_4(url(8589).RowButton, obj);
   }
   return tmp3;
 });

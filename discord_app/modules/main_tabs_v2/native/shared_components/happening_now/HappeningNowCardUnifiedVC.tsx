@@ -1,15 +1,15 @@
-// === Module 16813: HappeningNowCardUnifiedVC ===
+// === Module 16851: HappeningNowCardUnifiedVC ===
 
-// Module 16813 (HappeningNowCardUnifiedVC)
+// Module 16851 (HappeningNowCardUnifiedVC)
 import c from "c" /* 576 */;
-import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 16804 */;
-import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 16814 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16826 */;
-import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16827 */;
+import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 16842 */;
+import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 16852 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16864 */;
+import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16865 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5902 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 
 require = fn;
 const jsx = fn(21).jsx;

@@ -1,6 +1,6 @@
-// === Module 4770: SubscriptionPlanRecord ===
+// === Module 4772: SubscriptionPlanRecord ===
 
-// Module 4770 (SubscriptionPlanRecord)
+// Module 4772 (SubscriptionPlanRecord)
 import Record from "Record" /* 1405 */;
 
 const PremiumConstants = fn(1392);

@@ -1,13 +1,13 @@
-// === Module 11777: useConjurePreviewMenu ===
+// === Module 11787: useConjurePreviewMenu ===
 
-// Module 11777 (useConjurePreviewMenu)
+// Module 11787 (useConjurePreviewMenu)
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import ToastUtils from "ToastUtils" /* 4808 */;
-import conjureExternalConnections from "conjureExternalConnections" /* 11759 */;
-import conjureProjectMenuItems from "conjureProjectMenuItems" /* 11779 */;
+import ToastUtils from "ToastUtils" /* 4810 */;
+import conjureExternalConnections from "conjureExternalConnections" /* 11769 */;
+import conjureProjectMenuItems from "conjureProjectMenuItems" /* 11789 */;
 import noop from "module_19" /* 19 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 11232 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10680 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

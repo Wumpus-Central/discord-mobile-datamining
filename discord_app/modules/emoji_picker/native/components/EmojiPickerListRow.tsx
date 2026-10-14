@@ -1,19 +1,19 @@
-// === Module 9514: EmojiPickerListRow ===
+// === Module 9524: EmojiPickerListRow ===
 
-// Module 9514 (EmojiPickerListRow)
+// Module 9524 (EmojiPickerListRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import native from "native" /* 1200 */;
 import PlatformUtils2 from "PlatformUtils" /* 1382 */;
-import shared from "shared" /* 4969 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import Pressables from "Pressables" /* 6185 */;
-import _modDef6821 from "module_6821" /* 6821 */;
-import _modDef6822 from "module_6822" /* 6822 */;
-import LockIcon from "LockIcon" /* 8223 */;
-import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 9515 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 9516 */;
+import shared from "shared" /* 4971 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import Pressables from "Pressables" /* 6189 */;
+import _modDef6826 from "module_6826" /* 6826 */;
+import _modDef6827 from "module_6827" /* 6827 */;
+import LockIcon from "LockIcon" /* 8230 */;
+import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 9525 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 9526 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
@@ -22,12 +22,12 @@ require = fn;
 let closure_3 = ["nativeRow"];
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9430);
+const EmojiPickerListConstants = fn(9439);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1241).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
 const PlatformUtils = fn(1382);
 let num = 28;
@@ -51,7 +51,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiI
   const tmp4 = closure_11();
   if (cResult[0] !== tmp4.lock) {
     const obj2 = { style: tmp4.lock };
-    const tmp7 = options(LockIcon.LockIcon, obj2);
+    const tmp7 = React6(LockIcon.LockIcon, obj2);
     cResult[0] = tmp4.lock;
     cResult[1] = tmp7;
     let tmp5 = tmp7;
@@ -64,7 +64,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiI
     }
     return tmp8;
   }
-  const tmp9 = options(hasOwnProperty, { style: tmp4.lockContainer, children: tmp5 });
+  const tmp9 = React6(hasOwnProperty, { style: tmp4.lockContainer, children: tmp5 });
   cResult[2] = tmp4.lockContainer;
   cResult[3] = tmp5;
   cResult[4] = tmp9;
@@ -72,8 +72,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiI
   const obj3 = { style: tmp4.lockContainer, children: tmp5 };
 }) : (function EmojiItemLockedOverlay() {
   const tmp = closure_11();
-  const obj = { style: tmp.lockContainer, children: options(LockIcon.LockIcon, { style: tmp.lock }) };
-  return options(hasOwnProperty, obj);
+  const obj = { style: tmp.lockContainer, children: React6(LockIcon.LockIcon, { style: tmp.lock }) };
+  return React6(hasOwnProperty, obj);
 });
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(emoji) {
@@ -116,7 +116,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
                       if (cResult[19] !== disabled) {
                         let tmp20 = disabled;
                         if (disabled) {
-                          tmp20 = options(closure_12, {});
+                          tmp20 = React6(closure_12, {});
                         }
                         cResult[19] = disabled;
                         cResult[20] = tmp20;
@@ -157,7 +157,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
             }
             if (null == emoji.id) {
               const obj3 = { allowFontScaling: false, style: surrogates.surrogates, children: emoji.surrogates };
-              const tmp11 = options(native.LegacyText, obj3);
+              const tmp11 = React6(native.LegacyText, obj3);
               cResult[13] = emoji.id;
               cResult[14] = emoji.surrogates;
               cResult[15] = image;
@@ -170,14 +170,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
             const obj4 = { resizeMode: "contain", style: surrogates.image, placeholder: null, source: null, usesSmallCache: true };
             const tmp14 = FastImageDefault;
             if (tmpResult.isThemeDark(ThemeStore.theme)) {
-              let tmp13Result = _modDef6821;
+              let tmp13Result = _modDef6826;
             } else {
-              tmp13Result = _modDef6822;
+              tmp13Result = _modDef6827;
             }
             obj4.placeholder = tmp13Result;
             const obj5 = { uri: image };
             obj4.source = obj5;
-            options(tmp14, obj4);
+            React6(tmp14, obj4);
             tmpResult = shared;
           }
           const fn2 = function f() {
@@ -236,22 +236,22 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
     const obj2 = { resizeMode: "contain", style: tmp.image, placeholder: null, source: null, usesSmallCache: true };
     const tmp2Result = FastImageDefault;
     if (tmp6Result.isThemeDark(ThemeStore.theme)) {
-      tmp3 = 6821;
+      tmp3 = 6826;
       let tmp2Result2 = importDefault(tmp3);
     } else {
-      tmp2Result2 = _modDef6822;
+      tmp2Result2 = _modDef6827;
     }
     obj2.placeholder = tmp2Result2;
     const obj3 = { uri: tmp4 };
     obj2.source = obj3;
-    options(tmp2Result, obj2);
+    React6(tmp2Result, obj2);
     tmp6Result = shared;
   } else {
     const obj4 = { allowFontScaling: false, style: tmp.surrogates, children: emoji.surrogates };
-    const tmp8 = options(native.LegacyText, obj4);
+    const tmp8 = React6(native.LegacyText, obj4);
     const items1 = [tmp8, ];
     if (disabled) {
-      disabled = options(closure_12, {});
+      disabled = React6(closure_12, {});
     }
     items1[1] = disabled;
     obj.children = items1;
@@ -312,7 +312,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       }
                     }
                     const obj2 = { style: tmp2.row, rowData: tmp8, onPressEmoji: tmp12, onLongPressEmoji: tmp13 };
-                    const tmp17 = options(EmojiPickerListRowViewDefault, obj2);
+                    const tmp17 = React6(EmojiPickerListRowViewDefault, obj2);
                     cResult[17] = tmp2.row;
                     cResult[18] = tmp8;
                     cResult[19] = tmp12;
@@ -446,7 +446,7 @@ let closure_14 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
   };
-  return options(EmojiPickerListRowViewDefault, obj2);
+  return React6(EmojiPickerListRowViewDefault, obj2);
 }));
 ReactCompilerGating = fn(558);
 let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiPickerListRow(arg0) {
@@ -472,7 +472,7 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                       return tmp15;
                     }
                     const obj2 = { style: tmp2.row, children: tmp3 };
-                    const tmp18 = options(hasOwnProperty, obj2);
+                    const tmp18 = React6(hasOwnProperty, obj2);
                     cResult[11] = tmp3;
                     cResult[12] = tmp2.row;
                     cResult[13] = tmp18;
@@ -494,7 +494,7 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp6 = emojis[sum];
       if (undefined === tmp6) {
         let obj3 = { style: tmp2.image };
-        let arr = items.push(options(hasOwnProperty, obj3, sum));
+        let arr = items.push(React6(hasOwnProperty, obj3, sum));
       } else {
         let obj4 = { emoji: tmp6, category, animateEmoji, disabled: null, onPressEmoji: null, onLongPressEmoji: null, isSectionNitroLocked: null };
         let hasItem = null != tmp6.id;
@@ -505,7 +505,7 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         obj4.onPressEmoji = onPressEmoji;
         obj4.onLongPressEmoji = onLongPressEmoji;
         obj4.isSectionNitroLocked = isSectionNitroLocked;
-        let arr3 = items.push(options(closure_13, obj4, sum));
+        let arr3 = items.push(React6(closure_13, obj4, sum));
       }
       sum = sum + 1;
     } while (sum < result + rowSize);
@@ -534,7 +534,7 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp4 = emojis[sum];
       if (undefined === tmp4) {
         let obj2 = { style: tmp.image };
-        let arr = items.push(options(hasOwnProperty, obj2, sum));
+        let arr = items.push(React6(hasOwnProperty, obj2, sum));
       } else {
         let obj = { emoji: tmp4, category, animateEmoji, disabled: null, onPressEmoji: null, onLongPressEmoji: null, isSectionNitroLocked: null };
         let hasItem = null != tmp4.id;
@@ -545,12 +545,12 @@ let closure_15 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         obj.onPressEmoji = onPressEmoji;
         obj.onLongPressEmoji = onLongPressEmoji;
         obj.isSectionNitroLocked = isSectionNitroLocked;
-        let arr3 = items.push(options(closure_13, obj, sum));
+        let arr3 = items.push(React6(closure_13, obj, sum));
       }
       sum = sum + 1;
     } while (sum < result + rowSize);
   }
-  return options(hasOwnProperty, { style: tmp.row, children: items });
+  return React6(hasOwnProperty, { style: tmp.row, children: items });
 }));
 ReactCompilerGating = fn(558);
 const alphaResult = _modDef683("#000000").alpha(0.2);
@@ -580,7 +580,7 @@ export const EmojiPickerListRow = noop.memo(ReactCompilerGating.isReactCompilerE
     if (cResult[3] !== tmp4) {
       const obj2 = {};
       const merged = Object.assign(tmp4);
-      const tmp22 = options(closure_14, obj2);
+      const tmp22 = React6(closure_14, obj2);
       cResult[3] = tmp4;
       cResult[4] = tmp22;
     }
@@ -588,7 +588,7 @@ export const EmojiPickerListRow = noop.memo(ReactCompilerGating.isReactCompilerE
     if (cResult[5] !== tmp4) {
       const obj3 = {};
       const merged1 = Object.assign(tmp4);
-      const tmp15 = options(closure_15, obj3);
+      const tmp15 = React6(closure_15, obj3);
       cResult[5] = tmp4;
       cResult[6] = tmp15;
       let tmp9 = tmp15;
@@ -604,5 +604,5 @@ export const EmojiPickerListRow = noop.memo(ReactCompilerGating.isReactCompilerE
   }
   const merged = Object.assign(nativeRow, Object.assign({ nativeRow: 0 }));
   const merged1 = Object.assign(merged);
-  return options(nativeRow ? closure_14 : closure_15, {});
+  return React6(nativeRow ? closure_14 : closure_15, {});
 }));

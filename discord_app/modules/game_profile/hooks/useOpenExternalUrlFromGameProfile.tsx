@@ -1,8 +1,8 @@
-// === Module 8888: useOpenExternalUrlFromGameProfile ===
+// === Module 8892: useOpenExternalUrlFromGameProfile ===
 
-// Module 8888 (useOpenExternalUrlFromGameProfile)
-import openURLDefault from "openURL" /* 4800 */;
-import GameUtilsDefault from "GameUtils" /* 8889 */;
+// Module 8892 (useOpenExternalUrlFromGameProfile)
+import openURLDefault from "openURL" /* 4802 */;
+import GameUtilsDefault from "GameUtils" /* 8893 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

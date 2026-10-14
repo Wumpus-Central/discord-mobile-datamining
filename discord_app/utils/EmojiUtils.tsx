@@ -1,15 +1,15 @@
-// === Module 4768: EmojiUtils ===
+// === Module 4770: EmojiUtils ===
 
-// Module 4768 (EmojiUtils)
+// Module 4770 (EmojiUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import ImageUtils from "ImageUtils" /* 1494 */;
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4742 */;
-import EmojiTypes from "EmojiTypes" /* 4767 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5992 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7925 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4744 */;
+import EmojiTypes from "EmojiTypes" /* 4769 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4771 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5997 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7932 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -264,7 +264,7 @@ export default {
     return size.size > 2097152;
   },
   isDataTooBig(base64) {
-    return ImageUtils.dataUriFileSize(base64) > options;
+    return ImageUtils.dataUriFileSize(base64) > React6;
   }
 };
 export const countEmoji = function countEmoji(arr, arg1) {

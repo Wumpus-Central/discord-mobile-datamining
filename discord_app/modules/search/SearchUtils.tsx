@@ -1,28 +1,28 @@
-// === Module 12559: SearchUtils ===
+// === Module 12595: SearchUtils ===
 
-// Module 12559 (SearchUtils)
+// Module 12595 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import useChannelName from "useChannelName" /* 5421 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 12558 */;
-import SearchTokens from "SearchTokens" /* 12560 */;
+import _modDef4704 from "module_4704" /* 4704 */;
+import UserUtilsDefault from "UserUtils" /* 4964 */;
+import useChannelName from "useChannelName" /* 5426 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 12594 */;
+import SearchTokens from "SearchTokens" /* 12596 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildChannelStore from "GuildChannelStore" /* 4748 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5925 */;
+import GuildChannelStore from "GuildChannelStore" /* 4750 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5930 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(9313).SearchTabs;
+const SearchTabs = fn(9322).SearchTabs;
 const Constants = fn(1085);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({ SearchPopoutModes: map1, IS_SEARCH_ANSWER_TOKEN: closure_14, IS_SEARCH_FILTER_TOKEN: closure_15, SearchModes: closure_16, ME, GuildFeatures: closure_17 } = Constants);
@@ -87,7 +87,7 @@ export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, t
   return "" + channelId + "-" + tab + "-" + searchResultsQuery;
 };
 export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(cResult) {
-  const diffResult = _modDef4702().diff(_modDef4702(cResult), "s");
+  const diffResult = _modDef4704().diff(_modDef4704(cResult), "s");
   if (diffResult > c19) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -125,7 +125,7 @@ export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestam
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef4702();
+  const obj = _modDef4704();
 };
 export const getIndexingErrorText = function getIndexingErrorText(searchContext) {
   const type = searchContext.type;

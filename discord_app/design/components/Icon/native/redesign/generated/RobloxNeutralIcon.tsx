@@ -1,10 +1,10 @@
-// === Module 8902: RobloxNeutralIcon ===
+// === Module 8906: RobloxNeutralIcon ===
 
-// Module 8902 (RobloxNeutralIcon)
+// Module 8906 (RobloxNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4817 */;
-import _mod8903 from "module_8903" /* 8903 */;
+import BaseIconImage from "BaseIconImage" /* 4819 */;
+import _mod8907 from "module_8907" /* 8907 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const RobloxNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8903;
+    const tmpResult = _mod8907;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const RobloxNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8903, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8907, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

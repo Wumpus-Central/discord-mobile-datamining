@@ -1,19 +1,19 @@
-// === Module 12825: GuildPowerupsGameServerCard ===
+// === Module 12861: GuildPowerupsGameServerCard ===
 
-// Module 12825 (GuildPowerupsGameServerCard)
+// Module 12861 (GuildPowerupsGameServerCard)
 import nativeDefault from "native" /* 587 */;
-import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12826 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 12827 */;
+import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12862 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 12863 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
-import GameServerStore from "GameServerStore" /* 8031 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
+import GameServerStore from "GameServerStore" /* 8038 */;
 
-const useGuildPowerupOnShowMoreDefault = description(12817);
-const GuildPowerupsPerkCardDefault = description(12822);
+const useGuildPowerupOnShowMoreDefault = description(12853);
+const GuildPowerupsPerkCardDefault = description(12858);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { riveContainer: { flex: 1, paddingVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
           }
         }
         obj2.dataBinding = { reducedMotion: null };
-        const tmp18 = jsx(tmp(4918).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+        const tmp18 = jsx(tmp(4920).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
         cResult[5] = stateFromStores1;
         cResult[6] = tmp18;
         let tmp16 = tmp18;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
       const obj6 = { stateMachine: "SM_Auto", dataBinding: null };
       const obj10 = { reducedMotion: stateFromStores1 };
       obj6.dataBinding = obj10;
-      obj5.children = jsx(tmp2(4918).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+      obj5.children = jsx(tmp2(4920).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
       obj4.riveComponent = <View style={tmp.riveContainer}>{null}</View>;
       obj4.status = tmp6;
       obj4.onPress = tmp9;

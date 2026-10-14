@@ -1,7 +1,7 @@
-// === Module 7302: ImmersiveBannerBlockRecord ===
+// === Module 7308: ImmersiveBannerBlockRecord ===
 
-// Module 7302 (ImmersiveBannerBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 7295 */;
+// Module 7308 (ImmersiveBannerBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7301 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function ImmersiveBannerBlockRecord(end_time) {

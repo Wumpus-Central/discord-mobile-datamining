@@ -1,6 +1,6 @@
-// === Module 8327: useIsScreenLandscape ===
+// === Module 8334: useIsScreenLandscape ===
 
-// Module 8327 (useIsScreenLandscape)
+// Module 8334 (useIsScreenLandscape)
 import c from "c" /* 576 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1500 */;
 import noop from "module_19" /* 19 */;

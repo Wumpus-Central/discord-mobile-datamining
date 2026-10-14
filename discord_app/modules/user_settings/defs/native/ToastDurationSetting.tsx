@@ -1,20 +1,20 @@
-// === Module 16025: ToastDurationSetting ===
+// === Module 16062: ToastDurationSetting ===
 
-// Module 16025 (ToastDurationSetting)
+// Module 16062 (ToastDurationSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 10610 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15014 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15922 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 10620 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15052 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15959 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 
 require = fn;
 const Accessibility = fn(1085).Accessibility;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useToastDurationSettingProps() {
   const cResult = c.c(15);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -117,7 +117,7 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t["3oxlia"]);
   },
-  parent: fn(7993).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8000).MobileUserSettings.ACCESSIBILITY,
   useProps: ReactCompilerGating.isReactCompilerEnabled() ? (function useToastDurationSettingProps() {
     const cResult = c.c(15);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

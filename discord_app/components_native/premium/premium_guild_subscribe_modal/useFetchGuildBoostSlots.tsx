@@ -1,10 +1,10 @@
-// === Module 14203: useFetchGuildBoostSlots ===
+// === Module 14240: useFetchGuildBoostSlots ===
 
-// Module 14203 (useFetchGuildBoostSlots)
+// Module 14240 (useFetchGuildBoostSlots)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7119 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7125 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
 
 const require = fn;

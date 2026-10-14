@@ -1,24 +1,24 @@
-// === Module 10408: WasThisHelpfulSection ===
+// === Module 10418: WasThisHelpfulSection ===
 
-// Module 10408 (WasThisHelpfulSection)
+// Module 10418 (WasThisHelpfulSection)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10395 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10396 */;
-import ShieldIcon from "ShieldIcon" /* 10409 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4811 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10405 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10406 */;
+import ShieldIcon from "ShieldIcon" /* 10419 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10285 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10295 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const constants = fn(10285).SafetyWarningFeedbackTypes;
-const Constants = fn(10382);
+const constants = fn(10295).SafetyWarningFeedbackTypes;
+const Constants = fn(10392);
 ({ DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8, UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_9, FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { flexDirection: "column", alignItems: "center" }, buttonsContainer: { flexDirection: "row", marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonsBackground: null, buttonsBackgroundInactive: null, buttonsBackgroundActive: null, buttonIconInactive: null, buttonIconActive: null };
 let size = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj2.buttonsBackground = size;
@@ -302,7 +302,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WasThisH
   const items3 = [channelId, warningId, senderId, stateFromStores];
   closure_4 = stateFromStores.useCallback((feedbackType, cta) => {
     const result = ChannelSafetyWarningsActionCreators.setChannelSafetyWarningFeedback(channelId, warningId, feedbackType);
-    const tmp6 = feedbackType === constants.UPVOTE ? options : closure_2_8;
+    const tmp6 = feedbackType === constants.UPVOTE ? React6 : closure_2_8;
     const obj3 = { text: null, icon: null, iconColor: null };
     const intl = util.intl;
     obj3.text = intl.string(util.t["gd/Yqs"]);

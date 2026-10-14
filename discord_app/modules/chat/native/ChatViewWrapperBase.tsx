@@ -1,10 +1,10 @@
-// === Module 10380: ChatViewWrapperBase ===
+// === Module 10390: ChatViewWrapperBase ===
 
-// Module 10380 (ChatViewWrapperBase)
+// Module 10390 (ChatViewWrapperBase)
 import c from "c" /* 576 */;
-import LayerScope from "LayerScope" /* 6846 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 10378 */;
-import StickyWrapper from "StickyWrapper" /* 10379 */;
+import LayerScope from "LayerScope" /* 6851 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 10388 */;
+import StickyWrapper from "StickyWrapper" /* 10389 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

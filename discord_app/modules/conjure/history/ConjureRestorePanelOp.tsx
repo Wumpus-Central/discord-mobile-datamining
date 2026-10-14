@@ -1,6 +1,6 @@
-// === Module 11774: ConjureRestorePanelOp ===
+// === Module 11784: ConjureRestorePanelOp ===
 
-// Module 11774 (ConjureRestorePanelOp)
+// Module 11784 (ConjureRestorePanelOp)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/history/ConjureRestorePanelOp.tsx");

@@ -1,25 +1,25 @@
-// === Module 18590: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 18626: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 18590 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 18626 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import FormHeaderDefault from "FormHeader" /* 8677 */;
-import FormStylesDefault from "FormStyles" /* 14462 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18559 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 18575 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 18591 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import FormHeaderDefault from "FormHeader" /* 8682 */;
+import FormStylesDefault from "FormStyles" /* 14499 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18595 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 18611 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 18627 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 18557 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 18593 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.coverPhoto = size;
@@ -128,7 +128,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
       obj5.children = closure_1_8(FastImageDefault, obj6);
       items1[1] = closure_1_8(View, obj5);
       obj3.children = items1;
-      tmp13Result = collapsed(options, obj3);
+      tmp13Result = collapsed(React6, obj3);
       const tmp3Result = FormHeaderDefault;
     }
     const obj7 = { children: null };
@@ -140,7 +140,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     const obj9 = { style: tmp2.description, variant: "text-md/medium", color: "interactive-text-active", children: _slicedToArray(RoleTierEditStore.useGroupDescriptionState(), 1)[0] };
     items2[2] = closure_1_8(Text_Text.Text, obj9);
     obj7.children = items2;
-    flag = collapsed(options, obj7);
+    flag = collapsed(React6, obj7);
     const tmp3Result2 = FormHeaderDefault;
   }
   const items3 = [flag, closure_1_8(GuildRoleSubscriptionListingPreview.GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];

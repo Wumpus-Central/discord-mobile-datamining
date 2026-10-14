@@ -1,20 +1,19 @@
-// === Module 15087: subscriptionHelpers ===
+// === Module 15125: subscriptionHelpers ===
 
-// Module 15087 (subscriptionHelpers)
-import QuestTaskUtils from "QuestTaskUtils" /* 7413 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8327 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 15040 */;
-import useThermalState from "useThermalState" /* 15042 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15043 */;
+// Module 15125 (subscriptionHelpers)
+import QuestTaskUtils from "QuestTaskUtils" /* 7419 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8334 */;
+import getSocketFrameDefault from "getSocketFrame" /* 15077 */;
+import useThermalState from "useThermalState" /* 15080 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 15081 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15039 */;
-import FramesStore from "FramesStore" /* 10807 */;
-import QuestStore from "QuestStore" /* 7391 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15076 */;
+import QuestStore from "QuestStore" /* 7397 */;
 
 require = fn;
 const RPCEvents = fn(1085).RPCEvents;
 const Constants = fn(2024);
-({ ActivityLayoutMode: closure_7, ActivityScreenOrientation: closure_8 } = Constants);
+({ ActivityLayoutMode: metroRequire, ActivityScreenOrientation: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
@@ -29,12 +28,12 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     if (null != id) {
       layoutModeForApp = EmbeddedActivitiesStore.getLayoutModeForApp(id);
     }
-    let tmp39 = null;
+    let tmp37 = null;
     if (null != layoutModeForApp) {
       const obj2 = { is_pip_mode: layoutModeForApp !== constants.FOCUSED };
-      tmp39 = obj2;
+      tmp37 = obj2;
     }
-    return tmp39;
+    return tmp37;
   } else if (RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE === arg1) {
     const application2 = application.application;
     let id1;
@@ -45,24 +44,20 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     if (null != id1) {
       layoutModeForApp1 = EmbeddedActivitiesStore.getLayoutModeForApp(id1);
     }
-    let tmp34 = null;
+    let tmp32 = null;
     if (null != layoutModeForApp1) {
       const obj5 = { layout_mode: layoutModeForApp1 };
-      tmp34 = obj5;
+      tmp32 = obj5;
     }
-    return tmp34;
+    return tmp32;
   } else if (RPCEvents.FRAME_LAYOUT_MODE_UPDATE === arg1) {
-    if (isPostMessageSocketDefault(application)) {
-      const frameByEmbeddedContext = FramesStore.getFrameByEmbeddedContext(application.context, application.source.iframeId);
-      let tmp29 = null;
-      if (null != frameByEmbeddedContext) {
-        const obj7 = { layout_mode: frameByEmbeddedContext.data.layoutMode };
-        tmp29 = obj7;
-      }
-      return tmp29;
-    } else {
-      return null;
+    const tmp26 = getSocketFrameDefault(application);
+    let tmp27 = null;
+    if (null != tmp26) {
+      const obj7 = { layout_mode: tmp26.data.layoutMode };
+      tmp27 = obj7;
     }
+    return tmp27;
   } else if (RPCEvents.THERMAL_STATE_UPDATE === arg1) {
     const thermalState = useThermalState.getThermalState();
     let tmp23 = null;
@@ -72,7 +67,7 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     }
     return tmp23;
   } else if (RPCEvents.ORIENTATION_UPDATE === arg1) {
-    const obj9 = { screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? constants.LANDSCAPE : constants.PORTRAIT };
+    const obj9 = { screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? React5.LANDSCAPE : React5.PORTRAIT };
     return obj9;
   } else if (RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === arg1) {
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();

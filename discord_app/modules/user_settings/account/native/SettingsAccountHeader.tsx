@@ -1,27 +1,27 @@
-// === Module 15283: SettingsAccountHeader ===
+// === Module 15320: SettingsAccountHeader ===
 
-// Module 15283 (SettingsAccountHeader)
+// Module 15320 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5379 */;
-import TableRow from "TableRow" /* 6180 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6198 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6686 */;
-import openUserSettings from "openUserSettings" /* 7094 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15284 */;
+import components_Button_Button from "components/Button/Button" /* 5384 */;
+import TableRow from "TableRow" /* 6184 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6202 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6690 */;
+import openUserSettings from "openUserSettings" /* 7100 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 15321 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1085).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7020).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7026).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -35,7 +35,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
         },
       noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE
     };
-    const tmp9 = options(SafetySettingsNoticeDefault, obj2);
+    const tmp9 = React6(SafetySettingsNoticeDefault, obj2);
     cResult[0] = tmp9;
     let first = tmp9;
   } else {
@@ -50,7 +50,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
     },
     noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE
   };
-  return options(SafetySettingsNoticeDefault, obj);
+  return React6(SafetySettingsNoticeDefault, obj);
 });
 ReactCompilerGating = fn(558);
 let obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
@@ -149,7 +149,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return;
         }
       }
-      const tmp16 = options(closure_12, {});
+      const tmp16 = React6(closure_12, {});
     }
     cResult[7] = stateFromStores1;
     cResult[8] = tmp16;
@@ -183,8 +183,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj3 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6.text, button: obj6.accessibilityLabel } = tmp8);
       obj3.onPress = I;
-      obj2.trailing = options(components_Button_Button.Button, obj3);
-      const tmp19 = options(TableRow.TableRow, obj2);
+      obj2.trailing = React6(components_Button_Button.Button, obj3);
+      const tmp19 = React6(TableRow.TableRow, obj2);
     }
     cResult[9] = tmp8;
     cResult[10] = tmp19;
@@ -230,7 +230,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj4 = { style: tmp.header, children: null };
     let tmp11 = null;
     if (stateFromStores1) {
-      tmp11 = options(closure_12, {});
+      tmp11 = React6(closure_12, {});
     }
     const items2 = [tmp11, ];
     let tmp14 = null;
@@ -240,8 +240,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj10 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6.text, button: obj6.accessibilityLabel } = bannerText);
       obj10.onPress = callback;
-      obj9.trailing = options(components_Button_Button.Button, obj10);
-      tmp14 = options(TableRow.TableRow, obj9);
+      obj9.trailing = React6(components_Button_Button.Button, obj10);
+      tmp14 = React6(TableRow.TableRow, obj9);
     }
     items2[1] = tmp14;
     obj4.children = items2;

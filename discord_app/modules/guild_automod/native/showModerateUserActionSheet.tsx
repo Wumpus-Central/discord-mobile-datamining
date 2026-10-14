@@ -1,12 +1,12 @@
-// === Module 12183: showModerateUserActionSheet ===
+// === Module 12219: showModerateUserActionSheet ===
 
-// Module 12183 (showModerateUserActionSheet)
+// Module 12219 (showModerateUserActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/native/showModerateUserActionSheet.tsx");
 
 export default function showModerateUserActionSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12184, dependencyMap.paths), "ModerateUserActionSheet", arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12220, dependencyMap.paths), "ModerateUserActionSheet", arg0);
 };

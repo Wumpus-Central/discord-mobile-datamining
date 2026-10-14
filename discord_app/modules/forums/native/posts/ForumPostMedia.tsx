@@ -1,16 +1,16 @@
-// === Module 12429: ForumPostMedia ===
+// === Module 12465: ForumPostMedia ===
 
-// Module 12429 (ForumPostMedia)
+// Module 12465 (ForumPostMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1496 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import shared from "shared" /* 4969 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5365 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10454 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 12430 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12432 */;
+import shared from "shared" /* 4971 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5370 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10464 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 12466 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12468 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let closure_12 = Math.min(PixelRatio.get(), 4);
 let closure_13 = Math.min(PixelRatio.get(), 4);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { mediaContainer: { position: "relative", overflow: "hidden" }, thumbnailBorder: { borderRadius: nativeDefault.radii.sm }, thumbnail: { height: 80, width: 80 }, spoilerIconContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center" }, spoilerIcon: null, gridMediaContainer: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj2.spoilerIcon = { color: nativeDefault.unsafe_rawColors.PRIMARY_300, alignSelf: "center" };
@@ -81,7 +81,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
           tmp15 = tmp18;
         }
         const obj3 = { shouldSpoiler, blurTheme };
-        const tmp14 = options(closure_17, obj3);
+        const tmp14 = React6(closure_17, obj3);
         cResult[9] = blurTheme;
         cResult[10] = shouldSpoiler;
         cResult[11] = tmp14;
@@ -89,7 +89,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
       }
     }
     const obj4 = { style: tmp6, source, blurRadius: num, resizeMode: "cover" };
-    const tmp10 = options(FastImageDefault, obj4);
+    const tmp10 = React6(FastImageDefault, obj4);
     cResult[5] = num;
     cResult[6] = source;
     cResult[7] = tmp6;
@@ -117,7 +117,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
   const obj2 = { style: null, source, blurRadius: num, resizeMode: "cover" };
   const items = [timestampProducer.absoluteFill, { width, height }];
   obj2.style = items;
-  const items1 = [options(FastImageDefault, obj2), options(closure_17, { shouldSpoiler, blurTheme })];
+  const items1 = [React6(FastImageDefault, obj2), React6(closure_17, { shouldSpoiler, blurTheme })];
   obj.children = items1;
   return collapsed(hasOwnProperty, obj);
 });
@@ -149,13 +149,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
       tmp9 = tmp12;
     }
     const obj3 = { shouldSpoiler, blurTheme };
-    const tmp8 = options(closure_17, obj3);
+    const tmp8 = React6(closure_17, obj3);
     cResult[3] = blurTheme;
     cResult[4] = shouldSpoiler;
     cResult[5] = tmp8;
     tmp5 = tmp8;
   }
-  const tmp4 = options(FastImageDefault, { style: iosStyle, source, resizeMode: "cover" });
+  const tmp4 = React6(FastImageDefault, { style: iosStyle, source, resizeMode: "cover" });
   cResult[0] = iosStyle;
   cResult[1] = source;
   cResult[2] = tmp4;
@@ -163,7 +163,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
 }) : (function ForumPostMediaIOS(arg0) {
   const obj = { children: null };
   ({ shouldSpoiler, blurTheme, source, iosStyle } = arg0);
-  const items = [options(FastImageDefault, { style: iosStyle, source, resizeMode: "cover" }), options(closure_17, { shouldSpoiler, blurTheme })];
+  const items = [React6(FastImageDefault, { style: iosStyle, source, resizeMode: "cover" }), React6(closure_17, { shouldSpoiler, blurTheme })];
   obj.children = items;
   return collapsed(closure_1_11, obj);
 });
@@ -177,7 +177,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostMed
   } else {
     if (cResult[0] !== blurTheme) {
       const obj2 = { blurTheme, style: timestampProducer.absoluteFill };
-      const tmp8 = options(VisualEffectViewDefault, obj2);
+      const tmp8 = React6(VisualEffectViewDefault, obj2);
       cResult[0] = blurTheme;
       cResult[1] = tmp8;
       let tmp4 = tmp8;
@@ -186,7 +186,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostMed
     }
     if (cResult[2] !== tmp3.spoilerIcon) {
       const size = { style: tmp3.spoilerIcon, height: 30, width: 30 };
-      const tmp12 = options(SpoilerIconDefault, size);
+      const tmp12 = React6(SpoilerIconDefault, size);
       cResult[2] = tmp3.spoilerIcon;
       cResult[3] = tmp12;
       let tmp9 = tmp12;
@@ -208,7 +208,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostMed
       cResult[9] = tmp20;
     }
     const obj4 = { style: tmp3.spoilerIconContainer, children: tmp9 };
-    const tmp16 = options(hasOwnProperty, obj4);
+    const tmp16 = React6(hasOwnProperty, obj4);
     cResult[4] = tmp3.spoilerIconContainer;
     cResult[5] = tmp9;
     cResult[6] = tmp16;
@@ -221,11 +221,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostMed
   if (shouldSpoiler) {
     const obj = { children: null };
     const obj2 = { blurTheme, style: timestampProducer.absoluteFill };
-    const items = [options(VisualEffectViewDefault, obj2), ];
+    const items = [React6(VisualEffectViewDefault, obj2), ];
     const obj3 = { style: tmp.spoilerIconContainer, children: null };
     const size = { style: tmp.spoilerIcon, height: 30, width: 30 };
-    obj3.children = options(SpoilerIconDefault, size);
-    items[1] = options(hasOwnProperty, obj3);
+    obj3.children = React6(SpoilerIconDefault, size);
+    items[1] = React6(hasOwnProperty, obj3);
     obj.children = items;
     tmp2 = collapsed(closure_1_11, obj);
   }
@@ -243,10 +243,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
     if (cResult[0] !== isMediaPost) {
       const obj2 = {};
       const merged = Object.assign(isMediaPost);
-      const tmp29 = closure_9(ref(12431), obj2);
+      const tmp29 = closure_9(ref(12467), obj2);
       cResult[0] = isMediaPost;
       cResult[1] = tmp29;
-      const tmp25 = ref(12431);
+      const tmp25 = ref(12467);
     }
   } else {
     if (tmpResult.isAndroid()) {
@@ -272,7 +272,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
       tmp8 = cResult[5];
     }
     if (null != isMediaPost.obscureReason) {
-      const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(6995).AGE_VERIFICATION_OBSCURABLE_REASONS;
+      const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(7002).AGE_VERIFICATION_OBSCURABLE_REASONS;
       if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(isMediaPost.obscureReason)) {
         if (tmp7) {
           if (cResult[6] === isMediaPost.containerStyle) {
@@ -310,7 +310,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
                 }
               }
               const obj5 = { androidRippleConfig: ANDROID_FOREGROUND_RIPPLE, activeOpacity: 0, onPress: M, children: tmp8 };
-              const tmp38 = closure_9(tmp(6185).PressableOpacity, obj5);
+              const tmp38 = closure_9(tmp(6189).PressableOpacity, obj5);
               cResult[10] = tmp8;
               cResult[11] = tmp38;
             } else {
@@ -385,9 +385,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(12431), obj2);
+    let tmp6Result = closure_9(ref(12467), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(12431);
+    const tmp19 = ref(12467);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};
@@ -403,7 +403,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
     tmp3Result = tmp3(1382);
   }
   if (null != obscureReason.obscureReason) {
-    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(6995).AGE_VERIFICATION_OBSCURABLE_REASONS;
+    const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(7002).AGE_VERIFICATION_OBSCURABLE_REASONS;
     if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
       if (shouldAgeVerifyForReason) {
         const obj5 = { style: null, ref: null, children: null };
@@ -414,12 +414,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
           androidRippleConfig: ANDROID_FOREGROUND_RIPPLE,
           activeOpacity: 0,
           onPress() {
-                  const obj = ref(7498);
-                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(5918).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
+                  const obj = ref(7504);
+                  const result = obj.showAgeVerificationGetStartedModal({ entryPoint: obscureReason(5923).AgeVerificationModalEntryPoint.FORUM_POST_MEDIA_PREVIEW });
                 },
           children: tmp6Result
         };
-        obj5.children = tmp12(tmp3(6185).PressableOpacity, obj6);
+        obj5.children = tmp12(tmp3(6189).PressableOpacity, obj6);
         let tmp12Result = tmp12(closure_5, obj5);
       }
       return tmp12Result;
@@ -443,7 +443,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumP
         },
       children: tmp6Result
     };
-    obj7.children = tmp12(tmp3(6185).PressableOpacity, obj8);
+    obj7.children = tmp12(tmp3(6189).PressableOpacity, obj8);
     tmp12Result = tmp12(closure_5, obj7);
   } else {
     const obj9 = { style: null, ref: null, children: null };
@@ -604,7 +604,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostMed
                           }
                         }
                         const obj6 = { iosStyle: tmp17, androidStyle: tmp18, containerStyle: tmp21, obscureReason, shouldSpoiler: shouldObscure, blurTheme, source: tmp14, onPress: tmp6, isMediaPost: tmp23 };
-                        const tmp28 = options(closure_18, obj6);
+                        const tmp28 = React6(closure_18, obj6);
                         cResult[28] = blurTheme;
                         cResult[29] = obscureReason;
                         cResult[30] = tmp6;
@@ -846,7 +846,7 @@ export const ForumPostGridMedia = ReactCompilerGating.isReactCompilerEnabled() ?
                     }
                   }
                   const obj5 = { containerStyle: tmp4.gridMediaContainer, iosStyle: tmp25, androidStyle: tmp26, shouldSpoiler: shouldObscure, obscureReason, blurTheme, source: tmp16, isPortrait: media.height >= media.width, isMediaPost: tmp8 };
-                  const tmp32 = options(closure_18, obj5);
+                  const tmp32 = React6(closure_18, obj5);
                   cResult[27] = blurTheme;
                   cResult[28] = tmp8;
                   cResult[29] = obscureReason;

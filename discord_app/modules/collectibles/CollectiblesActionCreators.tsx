@@ -1,24 +1,24 @@
-// === Module 7263: CollectiblesActionCreators ===
+// === Module 7269: CollectiblesActionCreators ===
 
-// Module 7263 (CollectiblesActionCreators)
+// Module 7269 (CollectiblesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import RootNavigationRef from "RootNavigationRef" /* 4977 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7276 */;
-import LayerActionCreators from "LayerActionCreators" /* 7307 */;
-import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7308 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7309 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7310 */;
-import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 7311 */;
+import RootNavigationRef from "RootNavigationRef" /* 4979 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7282 */;
+import LayerActionCreators from "LayerActionCreators" /* 7313 */;
+import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7314 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7315 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7316 */;
+import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 7317 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5091 */;
+import DevSettingsStore from "DevSettingsStore" /* 5095 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7264 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7279 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7280 */;
-import CollectiblesShopStore from "CollectiblesShopStore" /* 7281 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7266 */;
-import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 7292 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7270 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7285 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7286 */;
+import CollectiblesShopStore from "CollectiblesShopStore" /* 7287 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7272 */;
+import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 7298 */;
 
 require = fn;
 function openCollectiblesShop(arg0) {
@@ -66,7 +66,7 @@ let closure_21 = async function _fetchCollectiblesCategories(arg0) {
   closure_132_0 = _require;
   closure_132_1 = closure_1;
   closure_132_2 = dependencyMap;
-  options = _require;
+  let options = _require;
   if (_require == null) {
     options = {};
   }
@@ -966,15 +966,15 @@ let closure_31 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
     }
   }
 };
-const addDebugLog = fn(7278).addDebugLog;
-let closure_11 = fn(7282).CollectiblesCategoriesRecord;
-const CollectiblesMarketingRecord = fn(7286);
+const addDebugLog = fn(7284).addDebugLog;
+let closure_11 = fn(7288).CollectiblesCategoriesRecord;
+const CollectiblesMarketingRecord = fn(7292);
 ({ CollectiblesMarketingsRecord: closure_12, rehydratePersistedMarketings: map1 } = CollectiblesMarketingRecord);
-let closure_16 = fn(7293).CollectiblesShopHomeRecord;
+let closure_16 = fn(7299).CollectiblesShopHomeRecord;
 const constants = fn(1087).CollectiblesMobileShopScreen;
 const Constants = fn(1085);
 ({ Endpoints: closure_18, Routes, UserSettingsSections: closure_19 } = Constants);
-const CollectiblesShopHomeStore = fn(7306);
+const CollectiblesShopHomeStore = fn(7312);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
@@ -982,7 +982,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4977).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4979).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

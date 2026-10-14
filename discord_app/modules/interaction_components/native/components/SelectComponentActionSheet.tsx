@@ -1,23 +1,23 @@
-// === Module 11339: SelectComponentActionSheet ===
+// === Module 11351: SelectComponentActionSheet ===
 
-// Module 11339 (SelectComponentActionSheet)
+// Module 11351 (SelectComponentActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import FormCheckbox from "FormCheckbox" /* 6178 */;
-import TableRow from "TableRow" /* 6180 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8768 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4834 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import FormCheckbox from "FormCheckbox" /* 6182 */;
+import TableRow from "TableRow" /* 6184 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8772 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(6841).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(6846).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" }, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };
 let size = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
 obj2.tagListIconWrapper = size;
@@ -274,10 +274,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
     const obj3 = { size: "sm", variant: str, disabled: selectButtonDisabled, onPress: renderIcon.submitSelection, text: null };
     const intl3 = tmp6(1126).intl;
     obj3.text = intl3.string(tmp6(1126).t.XqMe3N);
-    tmp5Result = closure_8(tmp6(5379).Button, obj3);
+    tmp5Result = closure_8(tmp6(5384).Button, obj3);
   }
   obj.trailing = tmp5Result;
-  const children = [closure_8(renderIcon(6839).BottomSheetTitleHeader, obj), ];
+  const children = [closure_8(renderIcon(6844).BottomSheetTitleHeader, obj), ];
   let tmp5Result4 = null;
   if (null != onQueryChange) {
     tmp5Result4 = null;
@@ -311,8 +311,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
         }
         onQueryChange(ref);
       };
-      tmp5Result4 = closure_8(selectedOptions(8626), obj4);
-      const tmp13 = selectedOptions(8626);
+      tmp5Result4 = closure_8(selectedOptions(8631), obj4);
+      const tmp13 = selectedOptions(8631);
     }
   }
   children[1] = tmp5Result4;
@@ -813,7 +813,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectCo
   const skipIcon = selectionActionComponent.skipIcon;
   const renderDescription = selectionActionComponent.renderDescription;
   const renderOptionSuffix = selectionActionComponent.renderOptionSuffix;
-  options = selectionActionComponent.options;
+  const options = selectionActionComponent.options;
   const itemStyle = selectionActionComponent.itemStyle;
   const isSelected = selectionActionComponent.isSelected;
   const itemAccessibilityLabel = selectionActionComponent.itemAccessibilityLabel;

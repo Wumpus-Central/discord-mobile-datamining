@@ -1,12 +1,12 @@
-// === Module 14338: ActiveChannelsStore ===
+// === Module 14375: ActiveChannelsStore ===
 
-// Module 14338 (ActiveChannelsStore)
+// Module 14375 (ActiveChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
 
 function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {

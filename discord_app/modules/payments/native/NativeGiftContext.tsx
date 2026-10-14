@@ -1,32 +1,32 @@
-// === Module 10055: NativeGiftContext ===
+// === Module 10065: NativeGiftContext ===
 
-// Module 10055 (NativeGiftContext)
+// Module 10065 (NativeGiftContext)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import BillingUtils from "BillingUtils" /* 4784 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6879 */;
-import ContextUtilsDefault from "ContextUtils" /* 7148 */;
-import BadgeId from "BadgeId" /* 8309 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8322 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10053 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10097 */;
+import BillingUtils from "BillingUtils" /* 4786 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5305 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6884 */;
+import ContextUtilsDefault from "ContextUtils" /* 7154 */;
+import BadgeId from "BadgeId" /* 8316 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8329 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10063 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10107 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8317 */;
-import PromotionsStore from "PromotionsStore" /* 9122 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10056 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8324 */;
+import PromotionsStore from "PromotionsStore" /* 9131 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10066 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-fn(7133).GPlayBillingResult;
+fn(7139).GPlayBillingResult;
 const PremiumConstants = fn(1392);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 let PaymentGateways = fn(1096).PaymentGateways;
@@ -839,7 +839,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyn
     obj3 = externalGatewayFacet;
     let tmp6 = planId(externalGatewayFacet.useState(0), 2);
   }
-  let obj4 = { orderId: "a", planId: -158578164606379070000000000000, planSelection: { premiumType, planInterval }, giftInfo: -0.000000000000007111558102665204 };
+  let obj4 = { orderId: "a", planId: 838861187, planSelection: { premiumType, planInterval }, giftInfo: -1006632606 };
   cResult[0] = planInterval;
   cResult[1] = premiumType;
   cResult[2] = obj4;
@@ -858,7 +858,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyn
   const setPremiumType = order.setPremiumType;
   const setPlanInterval = order.setPlanInterval;
   const setError = order.setError;
-  let obj = { orderId: "a", planId: -158578164606379070000000000000, planSelection: { premiumType, planInterval }, giftInfo: -0.000000000000007111558102665204 };
+  let obj = { orderId: "a", planId: 838861187, planSelection: { premiumType, planInterval }, giftInfo: -1006632606 };
   closure_13 = externalGatewayFacet.useRef(obj);
   externalGatewayFacet.useRef(false);
   externalGatewayFacet.useRef(null);

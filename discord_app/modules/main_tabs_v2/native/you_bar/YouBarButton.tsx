@@ -1,22 +1,22 @@
-// === Module 17156: YouBarButton ===
+// === Module 17190: YouBarButton ===
 
-// Module 17156 (YouBarButton)
+// Module 17190 (YouBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import IconButton from "IconButton" /* 7574 */;
-import ClipView from "ClipView" /* 9017 */;
-import BadgeDefault from "Badge" /* 9303 */;
+import IconButton from "IconButton" /* 7580 */;
+import ClipView from "ClipView" /* 9022 */;
+import BadgeDefault from "Badge" /* 9312 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15690);
+const YouBarConstants = fn(15727);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { buttonContainer: { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" } };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -109,7 +109,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
     }
     return tmp6;
   }
-  const rect = { position: "absolute", left: sum, top: sum1, right: "constructor", bottom: "Promise", padding: "ip", minWidth: "useRef" };
+  const rect = { position: "absolute", left: sum, top: sum1, right: "code", bottom: "min", padding: "forEach", minWidth: "apply" };
   cResult[0] = sum;
   cResult[1] = sum1;
   cResult[2] = rect;
@@ -127,7 +127,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIco
   }
   const items = [size, badgeSize, num2, num];
   return noop.useMemo(() => {
-    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "constructor", bottom: "Promise", padding: "ip", minWidth: "useRef" };
+    const rect = { position: "absolute", left: size - badgeSize + num, top: size - badgeSize + num2, right: "code", bottom: "min", padding: "forEach", minWidth: "apply" };
     return rect;
   }, items);
 });

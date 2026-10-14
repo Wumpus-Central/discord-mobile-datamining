@@ -1,6 +1,6 @@
-// === Module 6724: config ===
+// === Module 6728: config ===
 
-// Module 6724 (config)
+// Module 6728 (config)
 import size from "module_2" /* 2 */;
 
 const designConfig = {

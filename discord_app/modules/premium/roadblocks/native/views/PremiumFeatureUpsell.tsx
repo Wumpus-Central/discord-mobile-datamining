@@ -1,21 +1,21 @@
-// === Module 9535: PremiumFeatureUpsell ===
+// === Module 9545: PremiumFeatureUpsell ===
 
-// Module 9535 (PremiumFeatureUpsell)
+// Module 9545 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import PremiumUtils from "PremiumUtils" /* 4769 */;
-import spring from "spring" /* 5378 */;
-import springPresets from "springPresets" /* 5382 */;
-import LinearGradientDefault from "LinearGradient" /* 5391 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9036 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9278 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9281 */;
+import PremiumUtils from "PremiumUtils" /* 4771 */;
+import spring from "spring" /* 5383 */;
+import springPresets from "springPresets" /* 5387 */;
+import LinearGradientDefault from "LinearGradient" /* 5396 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9041 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9287 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9290 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
 
 const require = globalThis.__r;
 
@@ -54,10 +54,10 @@ get_ActivityIndicator = fn(17);
 const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Gradients = fn(7152).Gradients;
+const Gradients = fn(7158).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_17 = createStyles.createStyles((arg0) => {
   const obj = { container: { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_12, justifyContent: "space-between" }, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelIcon: null, nitroWheelDisabled: null, button: null, gradient: null };
   const obj3 = {};
@@ -477,11 +477,11 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5378).withSpring, springStandard: fn(5382).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5383).withSpring, springStandard: fn(5387).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = { code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}" };
 ReactCompilerGating = fn(558);
-let obj3 = { withSpring: fn(5378).withSpring, springStandard: fn(5382).springStandard };
+let obj3 = { withSpring: fn(5383).withSpring, springStandard: fn(5387).springStandard };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 
@@ -642,7 +642,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       }
       const obj2 = { type: STREAM_QUALITY_UPSELL, location: _location, location_stack: analyticsLocations, sku_id: null, voice_guild_id: null };
       const obj = AnalyticsUtilsDefault;
-      obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(options.TIER_2);
+      obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(React6.TIER_2);
       let guildId = RTCConnectionStore.getGuildId();
       if (guildId == null) {
         guildId = null;

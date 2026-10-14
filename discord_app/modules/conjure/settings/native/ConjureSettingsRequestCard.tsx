@@ -1,9 +1,9 @@
-// === Module 11933: ConjureSettingsRequestCard ===
+// === Module 11968: ConjureSettingsRequestCard ===
 
-// Module 11933 (ConjureSettingsRequestCard)
+// Module 11968 (ConjureSettingsRequestCard)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11316 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5060 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 11327 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
@@ -11,7 +11,7 @@ const ConjureSettingsSheetDefault = ConjureSettingsSheet;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
         const intl = tmp(1126).intl;
         obj2.children = intl.string(note(3849)["jZjP+I"]);
-        const tmp10 = closure_4(tmp(5088).Text, obj2);
+        const tmp10 = closure_4(tmp(5092).Text, obj2);
         cResult[4] = tmp10;
         let tmp7 = tmp10;
       } else {
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       } else {
         if (cResult[7] !== cResult[6]) {
           const obj3 = { variant: "text-sm/normal", color: "text-default", children: tmp11 };
-          const tmp17 = closure_4(tmp(5088).Text, obj3);
+          const tmp17 = closure_4(tmp(5092).Text, obj3);
           cResult[7] = tmp11;
           cResult[8] = tmp17;
           let tmp15 = tmp17;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         }
         if (cResult[10] !== tmp5) {
           const obj4 = { variant: "secondary", size: "sm", onPress: tmp5, text: tmp18 };
-          const tmp23 = closure_4(tmp(5379).Button, obj4);
+          const tmp23 = closure_4(tmp(5384).Button, obj4);
           cResult[10] = tmp5;
           cResult[11] = tmp23;
           let tmp21 = tmp23;
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         const obj5 = { style: tmp4.card, children: null };
         const items = [tmp7, tmp15, tmp21];
         obj5.children = items;
-        const tmp27 = closure_5(note(11896), obj5);
+        const tmp27 = closure_5(note(11838), obj5);
         cResult[12] = tmp4.card;
         cResult[13] = tmp15;
         cResult[14] = tmp21;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = projectId(1126).intl;
   obj2.children = intl.string(request(3849)["jZjP+I"]);
-  const items1 = [closure_4(projectId(5088).Text, obj2), , ];
+  const items1 = [closure_4(projectId(5092).Text, obj2), , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -130,11 +130,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     const obj4 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp8(1126).intl;
     obj4.text = intl3.string(tmp4(3849).d49riY);
-    items1[2] = closure_4(tmp8(5379).Button, obj4);
+    items1[2] = closure_4(tmp8(5384).Button, obj4);
     obj.children = items1;
     return closure_5(tmp6, obj);
   }
   const intl2 = tmp8(1126).intl;
   note = intl2.string(tmp4(3849).XuOf5s);
-  tmp6 = request(11896);
+  tmp6 = request(11838);
 });

@@ -1,14 +1,14 @@
-// === Module 11753: MediaKeyboardBottomSheet ===
+// === Module 11763: MediaKeyboardBottomSheet ===
 
-// Module 11753 (MediaKeyboardBottomSheet)
+// Module 11763 (MediaKeyboardBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import ChatInputUtils from "ChatInputUtils" /* 4985 */;
-import HapticUtils from "HapticUtils" /* 5057 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5058 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import ChatInputUtils from "ChatInputUtils" /* 4987 */;
+import HapticUtils from "HapticUtils" /* 5061 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5062 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ const MetaQuestUtils = fn(1628);
 let closure_11 = MetaQuestUtils.isMetaQuest();
 const PlatformUtils = fn(1382);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
 let closure_13 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -50,7 +50,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaK
       return tmp8;
     }
     const obj2 = { pointerEvents, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: first, style: tmp7 };
-    const tmp11 = options(View, obj2);
+    const tmp11 = React6(View, obj2);
     cResult[4] = pointerEvents;
     cResult[5] = tmp7;
     cResult[6] = tmp11;
@@ -68,7 +68,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function MediaK
   obj.accessibilityLabel = intl.string(util.t.XONG6A);
   const items = [style, closure_13().background];
   obj.style = items;
-  return options(View, obj);
+  return React6(View, obj);
 });
 const __initData = { code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}" };
 let closure_16 = { code: "function MediaKeyboardBottomSheetTsx2(isOpen_0,wasOpen){const{IS_IOS,runOnJS,handleSheetOpenChange}=this.__closure;if(IS_IOS&&isOpen_0!==wasOpen&&(wasOpen!=null||isOpen_0)){runOnJS(handleSheetOpenChange)(isOpen_0);}}" };

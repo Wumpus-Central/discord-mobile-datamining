@@ -1,10 +1,10 @@
-// === Module 9249: ApplicationFrecencyStore ===
+// === Module 9258: ApplicationFrecencyStore ===
 
-// Module 9249 (ApplicationFrecencyStore)
+// Module 9258 (ApplicationFrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FrecencyDefault from "Frecency" /* 5129 */;
+import FrecencyDefault from "Frecency" /* 5133 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 

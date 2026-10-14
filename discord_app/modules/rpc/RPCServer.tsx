@@ -1,16 +1,16 @@
-// === Module 15111: RPCServer ===
+// === Module 15149: RPCServer ===
 
-// Module 15111 (RPCServer)
+// Module 15149 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import RPCErrorDefault from "RPCError" /* 10936 */;
-import transformUserDefault from "transformUser" /* 10946 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 11250 */;
-import validateScopeDefault from "validateScope" /* 15054 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 10723 */;
+import RPCErrorDefault from "RPCError" /* 11010 */;
+import transformUserDefault from "transformUser" /* 11020 */;
+import validateScopeDefault from "validateScope" /* 15092 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const TransportTypes = fn(5639).TransportTypes;
+const TransportTypes = fn(5644).TransportTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire, RPCCommands: closure_7, RPCErrors: closure_8, RPCEvents: closure_9 } = Constants);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
@@ -41,11 +41,11 @@ class RPCServer {
   }
 }
 const prototype = RPCServer.prototype;
-prototype["registerTransport"] = function registerTransport(item10013) {
+prototype["registerTransport"] = function registerTransport(item10017) {
   const self = this;
-  item10013.on("connect", (arg0) => self.handleConnect(arg0));
-  item10013.on("request", (arg0, arg1) => self.handleRequest(arg0, arg1));
-  item10013.on("disconnect", (arg0, arg1) => self.handleDisconnect(arg0, arg1));
+  item10017.on("connect", (arg0) => self.handleConnect(arg0));
+  item10017.on("request", (arg0, arg1) => self.handleRequest(arg0, arg1));
+  item10017.on("disconnect", (arg0, arg1) => self.handleDisconnect(arg0, arg1));
 };
 prototype["handleConnect"] = function handleConnect(v) {
   const self = this;

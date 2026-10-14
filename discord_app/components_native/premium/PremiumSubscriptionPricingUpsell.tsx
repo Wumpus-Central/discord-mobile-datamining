@@ -1,17 +1,17 @@
-// === Module 14164: PremiumSubscriptionPricingUpsell ===
+// === Module 14201: PremiumSubscriptionPricingUpsell ===
 
-// Module 14164 (PremiumSubscriptionPricingUpsell)
+// Module 14201 (PremiumSubscriptionPricingUpsell)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 14028 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 14065 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 import UserStore from "UserStore" /* 1390 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4774 */;
-import SubscriptionStore from "SubscriptionStore" /* 4775 */;
-import IAPStore from "IAPStore" /* 7132 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4776 */;
+import SubscriptionStore from "SubscriptionStore" /* 4777 */;
+import IAPStore from "IAPStore" /* 7138 */;
 
 require = fn;
 const View = fn(17).View;
@@ -20,7 +20,7 @@ const PremiumConstants = fn(1392);
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_21 = createStyles.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function PricingSubheadingCopy() {
@@ -43,7 +43,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp5, T);
   if (cResult[2] !== stateFromStores) {
-    const hasBoostDiscountResult = stateFromStores2(4769).hasBoostDiscount(stateFromStores);
+    const hasBoostDiscountResult = stateFromStores2(4771).hasBoostDiscount(stateFromStores);
     class T {
       constructor() {
         return closure_1_7.getCurrentUser();
@@ -51,7 +51,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
     }
     cResult[2] = stateFromStores;
     cResult[3] = hasBoostDiscountResult;
-    const obj3 = stateFromStores2(4769);
+    const obj3 = stateFromStores2(4771);
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [LocaleStore];

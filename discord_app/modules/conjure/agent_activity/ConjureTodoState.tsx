@@ -1,8 +1,8 @@
-// === Module 11791: ConjureTodoState ===
+// === Module 11801: ConjureTodoState ===
 
-// Module 11791 (ConjureTodoState)
-import conjureChatTurns from "conjureChatTurns" /* 11217 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 11792 */;
+// Module 11801 (ConjureTodoState)
+import conjureChatTurns from "conjureChatTurns" /* 10665 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 11802 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoState.tsx");
@@ -96,8 +96,8 @@ export const supersededChecklists = function supersededChecklists(memo) {
   }
   return set;
 };
-export const checklistExpanded = function checklistExpanded(c14, render_id, set) {
-  value = c14.get(render_id);
+export const checklistExpanded = function checklistExpanded(c13, render_id, set) {
+  value = c13.get(render_id);
   if (value == null) {
     value = !set;
   }

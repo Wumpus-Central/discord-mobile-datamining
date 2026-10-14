@@ -1,7 +1,7 @@
-// === Module 15154: SettingBlocklistStore ===
+// === Module 15192: SettingBlocklistStore ===
 
-// Module 15154 (SettingBlocklistStore)
-import ZustandStore from "ZustandStore" /* 4989 */;
+// Module 15192 (SettingBlocklistStore)
+import ZustandStore from "ZustandStore" /* 4991 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => {

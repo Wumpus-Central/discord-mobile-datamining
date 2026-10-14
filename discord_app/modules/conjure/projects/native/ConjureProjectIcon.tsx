@@ -1,21 +1,21 @@
-// === Module 11345: ConjureProjectIcon ===
+// === Module 11357: ConjureProjectIcon ===
 
-// Module 11345 (ConjureProjectIcon)
+// Module 11357 (ConjureProjectIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useConjureProjectIconDefault from "useConjureProjectIcon" /* 11346 */;
+import useConjureProjectIconDefault from "useConjureProjectIcon" /* 11358 */;
 import noop from "module_19" /* 19 */;
 
 const AvatarUtils = obj(1415);
-const FastImageDefault = tmp3(6157);
-const AppsIcon = obj(8234);
+const FastImageDefault = tmp3(5034);
+const AppsIcon = obj(8241);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const dependencyMap = { header: 20, list: 32 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   const obj = { frame: { width, height: width, borderRadius, overflow: "hidden", alignItems: "center", justifyContent: "center" }, placeholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG }, image: { width, height: width }, border: null, glyph: null };
   const obj3 = {};

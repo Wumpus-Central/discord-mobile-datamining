@@ -1,22 +1,22 @@
-// === Module 13615: Badges ===
+// === Module 13653: Badges ===
 
-// Module 13615 (Badges)
+// Module 13653 (Badges)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import utils from "utils" /* 8272 */;
-import TrophyIcon from "TrophyIcon" /* 8926 */;
-import GameControllerIcon from "GameControllerIcon" /* 9212 */;
-import TimerIcon2 from "TimerIcon" /* 10763 */;
-import RetryIcon2 from "RetryIcon" /* 11303 */;
-import FireIcon2 from "FireIcon" /* 13499 */;
-import useTimestampTickedNow from "useTimestampTickedNow" /* 13613 */;
-import NewUserIcon from "NewUserIcon" /* 13616 */;
-import FlashIcon2 from "FlashIcon" /* 13618 */;
-import TrendingType from "TrendingType" /* 13620 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import utils from "utils" /* 8279 */;
+import TrophyIcon from "TrophyIcon" /* 8930 */;
+import GameControllerIcon from "GameControllerIcon" /* 9221 */;
+import TimerIcon2 from "TimerIcon" /* 10862 */;
+import RetryIcon2 from "RetryIcon" /* 11313 */;
+import FireIcon2 from "FireIcon" /* 13537 */;
+import useTimestampTickedNow from "useTimestampTickedNow" /* 13651 */;
+import NewUserIcon from "NewUserIcon" /* 13654 */;
+import FlashIcon2 from "FlashIcon" /* 13656 */;
+import TrendingType from "TrendingType" /* 13658 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 
@@ -27,7 +27,7 @@ const jsxProd = fn(21);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;
@@ -82,10 +82,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ActiveTimest
   const tmpResult = utils;
 }) : (function ActiveTimestamp(style) {
   const entry = style.entry;
-  const now = entry(13613).useTimestampTickedNow().now;
+  const now = entry(13651).useTimestampTickedNow().now;
   const items = [entry, now];
   const children = noop.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
-  return closure_6(entry(5088).Text, { style: style.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children });
+  return closure_6(entry(5092).Text, { style: style.style, variant: "text-sm/medium", tabularNumbers: true, color: "text-feedback-positive", children });
 });
 let closure_14 = tmp6;
 ReactCompilerGating = fn(558);

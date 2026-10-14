@@ -1,6 +1,6 @@
-// === Module 9257: DiceRollConstants ===
+// === Module 9266: DiceRollConstants ===
 
-// Module 9257 (DiceRollConstants)
+// Module 9266 (DiceRollConstants)
 import size from "module_2" /* 2 */;
 
 const items = [4, 6, 8, 10, 12, 20];

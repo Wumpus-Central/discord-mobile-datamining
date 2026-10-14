@@ -1,23 +1,23 @@
-// === Module 13007: InkQuillSpotIllustration ===
+// === Module 13042: InkQuillSpotIllustration ===
 
-// Module 13007 (InkQuillSpotIllustration)
+// Module 13042 (InkQuillSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef13008 from "module_13008" /* 13008 */;
-import _modDef13009 from "module_13009" /* 13009 */;
-import _modDef13010 from "module_13010" /* 13010 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import assetHelpers from "assetHelpers" /* 6277 */;
+import _modDef13043 from "module_13043" /* 13043 */;
+import _modDef13044 from "module_13044" /* 13044 */;
+import _modDef13045 from "module_13045" /* 13045 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13008 }, 3: null };
-let obj2 = { uri: _modDef13008 };
-obj[2] = { uri: _modDef13009 };
-const obj3 = { uri: _modDef13009 };
-obj[3] = { uri: _modDef13010 };
+let obj = { 1: null, 2: { uri: _modDef13043 }, 3: null };
+let obj2 = { uri: _modDef13043 };
+obj[2] = { uri: _modDef13044 };
+const obj3 = { uri: _modDef13044 };
+obj[3] = { uri: _modDef13045 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13010 };
+const obj4 = { uri: _modDef13045 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/InkQuillSpotIllustration.native.tsx");
 

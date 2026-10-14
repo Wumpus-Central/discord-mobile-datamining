@@ -1,6 +1,6 @@
-// === Module 12914: ContactSyncUtils ===
+// === Module 12949: ContactSyncUtils ===
 
-// Module 12914 (ContactSyncUtils)
+// Module 12949 (ContactSyncUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
@@ -9,12 +9,12 @@ import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import LinkingDefault from "Linking" /* 4806 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
-import ContactSyncManager from "ContactSyncManager" /* 12915 */;
+import LinkingDefault from "Linking" /* 4808 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5939 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5943 */;
+import ContactSyncManager from "ContactSyncManager" /* 12950 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5766 */;
 
 require = fn;
 let closure_18 = async function _uploadContacts(arg0) {
@@ -100,9 +100,9 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(12913);
+const ContactSyncPersistedStore = fn(12948);
 ({ useContactSyncStore: metroRequire, clearDismissState: closure_7, deleteStoredContacts: closure_8 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(12912);
+const ContactSyncConstants = fn(12947);
 ({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: c10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
 const Constants = fn(1085);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = Constants);
@@ -358,5 +358,5 @@ export const handleOpenLearnMoreLink = function handleOpenLearnMoreLink() {
   obj.openURL(HelpdeskUtilsDefault.getArticleURL(constants4.CONTACT_SYNC));
 };
 export const transitionToAddFriendsLandingPage = function transitionToAddFriendsLandingPage() {
-  ModalActionCreatorsDefault.popWithKey(options);
+  ModalActionCreatorsDefault.popWithKey(React6);
 };

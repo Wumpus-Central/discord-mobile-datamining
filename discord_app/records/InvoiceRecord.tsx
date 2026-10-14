@@ -1,7 +1,7 @@
-// === Module 4778: InvoiceRecord ===
+// === Module 4780: InvoiceRecord ===
 
-// Module 4778 (InvoiceRecord)
-import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4779 */;
+// Module 4780 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4781 */;
 import Record from "Record" /* 1405 */;
 
 require = fn;
@@ -273,11 +273,16 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(body) {
 prototype2["getWalletAmount"] = function getWalletAmount() {
   const paymentLegs = this.paymentLegs;
   return paymentLegs.reduce((acc, payment_gateway) => {
-    let sum = acc;
+    let diff = acc;
     if (payment_gateway.payment_gateway === constants.TDS) {
-      sum = acc + payment_gateway.amount;
+      let num = payment_gateway.amount_short;
+      const sum = acc + payment_gateway.amount;
+      if (num == null) {
+        num = 0;
+      }
+      diff = sum - num;
     }
-    return sum;
+    return diff;
   }, 0);
 };
 prototype2["getAmountDue"] = function getAmountDue() {

@@ -4,10 +4,9 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import DiscordNativeDefault from "DiscordNative" /* 4731 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 14626 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14628 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14629 */;
+import DiscordNativeDefault from "DiscordNative" /* 4733 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 14665 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14667 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2019 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -240,11 +239,11 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(7763);
+const ClipsConstants = fn(7769);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire, ClipSaveTypes: closure_7, ClipsUserEducationType: closure_8, ClipsLogger: closure_9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: closure_11, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, DEFAULT_CLIPS_BITRATE_PERCENT } = ClipsConstants);
 const Constants = fn(1085);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(5212);
+const StreamSettingsConstants = fn(5216);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -316,17 +315,6 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 prototype["getSettings"] = function getSettings() {
   return obj.clipsSettings;
-};
-prototype["getEnableAutoclipping"] = function getEnableAutoclipping() {
-  enabled = obj.clipsSettings.enableAutoclipping;
-  if (enabled == null) {
-    const AutoclippingDefaultOverrideExperiment = AutoclippingDefaultOverrideExperiment2.AutoclippingDefaultOverrideExperiment;
-    enabled = AutoclippingDefaultOverrideExperiment.getConfig({ location: "getAutoclippingDefault" }).enabled;
-  }
-  return enabled;
-};
-prototype["hasUserSetAutoclippingSettings"] = function hasUserSetAutoclippingSettings() {
-  return null != obj.clipsSettings.enableAutoclipping;
 };
 prototype["getLastClipsSession"] = function getLastClipsSession() {
   return c24;
@@ -603,6 +591,19 @@ let items = [
     obj2.decoupledClipsEnabled = clipsSettings.clipsSettings.clipsEnabled && clipsSettings.clipsSettings.decoupledClipsEnabled;
     obj.clipsSettings = obj2;
     return obj;
+  },
+  (clipsSettings) => {
+    let tmp = clipsSettings;
+    if (false === clipsSettings.clipsSettings.enableAutoclipping) {
+      obj = {};
+      const merged = Object.assign(clipsSettings);
+      const obj2 = {};
+      const merged1 = Object.assign(clipsSettings.clipsSettings);
+      obj2.clipsEnabled = false;
+      obj.clipsSettings = obj2;
+      tmp = obj;
+    }
+    return tmp;
   }
 ];
 ClipsStoreClass.migrations = items;

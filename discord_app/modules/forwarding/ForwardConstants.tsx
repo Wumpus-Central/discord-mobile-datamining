@@ -1,6 +1,6 @@
-// === Module 12310: ForwardConstants ===
+// === Module 12346: ForwardConstants ===
 
-// Module 12310 (ForwardConstants)
+// Module 12346 (ForwardConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/forwarding/ForwardConstants.tsx");

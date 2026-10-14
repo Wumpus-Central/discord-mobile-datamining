@@ -1,8 +1,8 @@
-// === Module 10443: ShowSafetyToast ===
+// === Module 10453: ShowSafetyToast ===
 
-// Module 10443 (ShowSafetyToast)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
-import ShieldIcon from "ShieldIcon" /* 10409 */;
+// Module 10453 (ShowSafetyToast)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4811 */;
+import ShieldIcon from "ShieldIcon" /* 10419 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/self_mod/shared/ShowSafetyToast.native.tsx");

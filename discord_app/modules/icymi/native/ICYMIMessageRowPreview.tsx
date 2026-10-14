@@ -1,16 +1,16 @@
-// === Module 17259: ICYMIMessageRowPreview ===
+// === Module 17293: ICYMIMessageRowPreview ===
 
-// Module 17259 (ICYMIMessageRowPreview)
+// Module 17293 (ICYMIMessageRowPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import useThemeDefault from "useTheme" /* 5031 */;
-import createStyles from "createStyles" /* 5092 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7002 */;
-import RowGeneratorDefault from "RowGenerator" /* 7747 */;
-import RenderMessageOptionsContext from "RenderMessageOptionsContext" /* 7749 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8264 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9314 */;
+import useThemeDefault from "useTheme" /* 5033 */;
+import createStyles from "createStyles" /* 5096 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7009 */;
+import RowGeneratorDefault from "RowGenerator" /* 7753 */;
+import RenderMessageOptionsContext from "RenderMessageOptionsContext" /* 7755 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8271 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9323 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -308,11 +308,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
   const tmp5 = useThemeDefault();
   if (cResult[0] !== tmp5) {
     const obj2 = { seeMoreLabelColor: tmp4(587).colors.TEXT_DEFAULT };
-    const tmp7 = lineClamp(5092).createNativeStyleProperties(obj2)(tmp5);
+    const tmp7 = lineClamp(5096).createNativeStyleProperties(obj2)(tmp5);
     cResult[0] = tmp5;
     cResult[1] = tmp7;
     let tmp6 = tmp7;
-    const tmpResult = lineClamp(5092);
+    const tmpResult = lineClamp(5096);
   } else {
     tmp6 = cResult[1];
   }
@@ -349,7 +349,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
       tmp14 = cResult[7];
     }
     if (cResult[8] !== messageOptions) {
-      const obj4 = new tmp4(7747)();
+      const obj4 = new tmp4(7753)();
       const obj3 = { renderEmbeds: tmp10, inlineEmbedMedia: tmp12, inlineAttachmentMedia: tmp14, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
       const merged = Object.assign(messageOptions);
       obj4.setOptions(obj3);
@@ -374,7 +374,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
       }
     }
     const obj5 = { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight };
-    const tmp26 = jsx(tmp4(9374), { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight });
+    const tmp26 = jsx(tmp4(9383), { pointerEvents: str, horizontalOffset: 0, modifyRow: tmp8, message, rowGenerator: tmp16, messageSizeCacheRef, maxHeight });
     cResult[10] = maxHeight;
     cResult[11] = message;
     cResult[12] = messageSizeCacheRef;
@@ -406,7 +406,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
   if (str === undefined) {
     str = "none";
   }
-  const tmp = messageOptions(5031)();
+  const tmp = messageOptions(5033)();
   let obj = createStyles;
   dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(587).colors.TEXT_DEFAULT })(tmp);
   const RenderEmbeds = UserSettings.RenderEmbeds;
@@ -422,7 +422,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIM
     obj.setOptions({ renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay: false, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true });
     return obj;
   }, items);
-  return jsx(messageOptions(9374), {
+  return jsx(messageOptions(9383), {
     pointerEvents: str,
     horizontalOffset: 0,
     modifyRow(arg0) {
@@ -544,11 +544,11 @@ export const MessageRowPreview = noop.memo(ReactCompilerGating.isReactCompilerEn
     obj.pointerEvents = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(7002)(message);
+  const tmp3 = merged(7009)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   const obj2 = {};
-  const merged2 = Object.assign(message(7749).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(7755).DEFAULT_OPTIONS);
   obj2.ignoreMentioned = true;
   obj2.renderReplies = false;
   obj2.renderThreadEmbeds = false;

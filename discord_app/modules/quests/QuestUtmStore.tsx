@@ -1,6 +1,6 @@
-// === Module 7412: QuestUtmStore ===
+// === Module 7418: QuestUtmStore ===
 
-// Module 7412 (QuestUtmStore)
+// Module 7418 (QuestUtmStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
@@ -9,7 +9,7 @@ let obj = module_570.create((arg0) => {
   obj = {
     utmSourceCurrent: "r",
     utmMediumCurrent: "emoji",
-    utmCampaignCurrent: "IconComponent",
+    utmCampaignCurrent: "justifyContent",
     utmContentCurrent: "toCharArray$esjava$1",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });

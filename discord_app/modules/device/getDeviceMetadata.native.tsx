@@ -1,7 +1,7 @@
-// === Module 7365: getDeviceMetadata ===
+// === Module 7371: getDeviceMetadata ===
 
-// Module 7365 (getDeviceMetadata)
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7197 */;
+// Module 7371 (getDeviceMetadata)
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7203 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/device/getDeviceMetadata.native.tsx");

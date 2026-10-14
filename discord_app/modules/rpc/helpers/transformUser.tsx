@@ -1,6 +1,6 @@
-// === Module 10946: transformUser ===
+// === Module 11020: transformUser ===
 
-// Module 10946 (transformUser)
+// Module 11020 (transformUser)
 import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1985 */;
 import size from "module_2" /* 2 */;
 

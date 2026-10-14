@@ -1,6 +1,6 @@
-// === Module 6748: FastestListLogger ===
+// === Module 6752: FastestListLogger ===
 
-// Module 6748 (FastestListLogger)
+// Module 6752 (FastestListLogger)
 import LoggerDefault from "Logger" /* 3 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 

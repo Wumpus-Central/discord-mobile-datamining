@@ -1,6 +1,6 @@
-// === Module 7700: FakePlayAgeSignalsExperiment ===
+// === Module 7706: FakePlayAgeSignalsExperiment ===
 
-// Module 7700 (FakePlayAgeSignalsExperiment)
+// Module 7706 (FakePlayAgeSignalsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

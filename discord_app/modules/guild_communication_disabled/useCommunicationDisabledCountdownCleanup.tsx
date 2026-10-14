@@ -1,6 +1,6 @@
-// === Module 12710: useCommunicationDisabledCountdownCleanup ===
+// === Module 12746: useCommunicationDisabledCountdownCleanup ===
 
-// Module 12710 (useCommunicationDisabledCountdownCleanup)
+// Module 12746 (useCommunicationDisabledCountdownCleanup)
 import noop from "module_19" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

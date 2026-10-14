@@ -1,8 +1,8 @@
-// === Module 17473: SearchIndexingScreen ===
+// === Module 17507: SearchIndexingScreen ===
 
-// Module 17473 (SearchIndexingScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12573 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17391 */;
+// Module 17507 (SearchIndexingScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12609 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17425 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -30,11 +30,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchIn
   }
   const effect = noop.useEffect(tmp4, tmp5);
   if (cResult[3] !== searchContext) {
-    const indexingErrorText = searchContext(12559).getIndexingErrorText(searchContext);
+    const indexingErrorText = searchContext(12595).getIndexingErrorText(searchContext);
     cResult[3] = searchContext;
     cResult[4] = indexingErrorText;
     let tmp7 = indexingErrorText;
-    const tmpResult = searchContext(12559);
+    const tmpResult = searchContext(12595);
   } else {
     tmp7 = cResult[4];
   }
@@ -54,6 +54,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchIn
   const effect = noop.useEffect(() => {
     search_tracking_TrackingDefault.trackSearchIndexing({ searchContext });
   }, items);
-  const text = searchContext(12559).getIndexingErrorText(searchContext);
+  const text = searchContext(12595).getIndexingErrorText(searchContext);
   return jsx(pages_ErrorScreenDefault, { text });
 });

@@ -1,14 +1,14 @@
-// === Module 10180: SocialLayerStorefrontGiftProductDetails ===
+// === Module 10190: SocialLayerStorefrontGiftProductDetails ===
 
-// Module 10180 (SocialLayerStorefrontGiftProductDetails)
+// Module 10190 (SocialLayerStorefrontGiftProductDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6858 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9029 */;
-import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10161 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6863 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9034 */;
+import StorefrontNativeUtils from "StorefrontNativeUtils" /* 10171 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const constants = fn(1085).PriceSetAssignmentPurchaseTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginHorizontal: nativeDefault.space.PX_16 }, text: null, appInfo: null, appIcon: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, marginHorizontal: nativeDefault.space.PX_16 };
 obj2.text = { flex: 1, gap: nativeDefault.space.PX_4 };
@@ -155,9 +155,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
   sku = sku.sku;
   let getOrFetchApplication;
   const tmp = closure_8();
-  getOrFetchApplication = getOrFetchApplication(6858).useGetOrFetchApplication(sku.applicationId);
-  let obj = getOrFetchApplication(6858);
-  const userPrice = getOrFetchApplication(10161).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
+  getOrFetchApplication = getOrFetchApplication(6863).useGetOrFetchApplication(sku.applicationId);
+  let obj = getOrFetchApplication(6863);
+  const userPrice = getOrFetchApplication(10171).useFormattedSKUPrice({ sku, priceSetAssignmentPurchaseType: constants.GIFT }).userPrice;
   const items = [getOrFetchApplication];
   const memo = noop.useMemo(() => {
     let applicationIconSource = null;
@@ -181,17 +181,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
     }
     const items2 = [tmp8Result, ];
     const obj8 = { variant: "text-sm/medium", color: "text-muted", children: getOrFetchApplication.name };
-    items2[1] = closure_6(tmp2(5088).Text, obj8);
+    items2[1] = closure_6(tmp2(5092).Text, obj8);
     obj6.children = items2;
     tmp6Result = closure_7(View, obj6);
   }
-  const items3 = [tmp6Result, closure_6(getOrFetchApplication(5088).Text, { variant: "text-md/semibold", children: sku.name })];
+  const items3 = [tmp6Result, closure_6(getOrFetchApplication(5092).Text, { variant: "text-md/semibold", children: sku.name })];
   obj5.children = items3;
   items1[1] = closure_7(View, obj5);
   let tmp8Result2 = null != userPrice;
   if (tmp8Result2) {
     const obj10 = { variant: "text-md/semibold", children: userPrice };
-    tmp8Result2 = closure_6(tmp2(5088).Text, obj10);
+    tmp8Result2 = closure_6(tmp2(5092).Text, obj10);
   }
   items1[2] = tmp8Result2;
   obj4.children = items1;

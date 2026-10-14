@@ -1,6 +1,6 @@
-// === Module 14632: UserSettingsVoiceAndVideoConstants ===
+// === Module 14670: UserSettingsVoiceAndVideoConstants ===
 
-// Module 14632 (UserSettingsVoiceAndVideoConstants)
+// Module 14670 (UserSettingsVoiceAndVideoConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/voice/UserSettingsVoiceAndVideoConstants.tsx");

@@ -1,20 +1,20 @@
-// === Module 9767: StickerPackDetailActionSheet ===
+// === Module 9777: StickerPackDetailActionSheet ===
 
-// Module 9767 (StickerPackDetailActionSheet)
+// Module 9777 (StickerPackDetailActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 9773 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 9783 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const StickerPickerConstants = fn(9728);
+const StickerPickerConstants = fn(9738);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: metroRequire } = StickerPickerConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(6841).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6846).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
-let closure_12 = createStyles.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "call" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
+const createStyles = fn(5096);
+let closure_12 = createStyles.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "bm" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/StickerPackDetailActionSheet.tsx");
@@ -254,7 +254,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj6 = { style: tmp.stickers, contentContainerStyle: null, children: null };
   obj3 = stickerPack(onClose[14]);
   obj6.contentContainerStyle = { paddingBottom: 32 + analyticsPopoutType(onClose[10])().bottom };
-  obj6.children = chunkResult.map((stickers, index) => options(StickerPickerListRowDefault, { containerWidth: rounded, stickers, rowSize: rounded, onPressSticker, nativeRow: false }, index));
+  obj6.children = chunkResult.map((stickers, index) => React6(StickerPickerListRowDefault, { containerWidth: rounded, stickers, rowSize: rounded, onPressSticker, nativeRow: false }, index));
   obj4.children = onPressSticker(stickerPack(onClose[17]).BottomSheetScrollView, obj6);
   const children = [onPressSticker(stickerPack(onClose[13]).BottomSheet, obj4), , ];
   let tmp14Result = null != tmp5;

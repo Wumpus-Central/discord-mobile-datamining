@@ -1,11 +1,11 @@
-// === Module 8089: PremiumSubscriptionTrialUtil ===
+// === Module 8096: PremiumSubscriptionTrialUtil ===
 
-// Module 8089 (PremiumSubscriptionTrialUtil)
+// Module 8096 (PremiumSubscriptionTrialUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import UserStore from "UserStore" /* 1390 */;
-import SubscriptionStore from "SubscriptionStore" /* 4775 */;
-import UserOfferStore from "UserOfferStore" /* 7173 */;
+import SubscriptionStore from "SubscriptionStore" /* 4777 */;
+import UserOfferStore from "UserOfferStore" /* 7179 */;
 
 require = fn;
 const PremiumConstants = fn(1392);
@@ -139,7 +139,7 @@ export const useCurrentPremiumTrialTier = ReactCompilerGating.isReactCompilerEna
   return tmp4;
 });
 export const getPremiumTrialOffer = function getPremiumTrialOffer() {
-  const mapped = options.map((item) => userTrialOffer.getUserTrialOffer(item));
+  const mapped = React6.map((item) => userTrialOffer.getUserTrialOffer(item));
   const found = mapped.filter((hasExpired) => null != hasExpired && !hasExpired.hasExpired);
   return found.shift();
 };

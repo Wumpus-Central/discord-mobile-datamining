@@ -1,9 +1,9 @@
-// === Module 6846: LayerScope ===
+// === Module 6851: LayerScope ===
 
-// Module 6846 (LayerScope)
+// Module 6851 (LayerScope)
 import c from "c" /* 576 */;
-import useInitialValueDefault from "useInitialValue" /* 6170 */;
-import LayerContext from "LayerContext" /* 6847 */;
+import useInitialValueDefault from "useInitialValue" /* 6174 */;
+import LayerContext from "LayerContext" /* 6852 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(6847).LayerContext);
+  const context = noop.useContext(zIndex(6852).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   const items = [context];
@@ -82,7 +82,7 @@ export const LayerScope = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   const obj3 = { value: tmp5, children: null };
   const items = [children, tmp6];
   obj3.children = items;
-  const tmp11 = options(LayerContext.LayerContext.Provider, obj3);
+  const tmp11 = React6(LayerContext.LayerContext.Provider, obj3);
   cResult[3] = children;
   cResult[4] = tmp5;
   cResult[5] = tmp6;
@@ -99,5 +99,5 @@ export const LayerScope = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   };
   const items = [children, closure_1_8(Layer, { zIndex })];
   obj.children = items;
-  return options(LayerContext.LayerContext.Provider, obj);
+  return React6(LayerContext.LayerContext.Provider, obj);
 });

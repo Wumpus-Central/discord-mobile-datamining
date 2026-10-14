@@ -1,6 +1,6 @@
-// === Module 7491: ForumPlatformUtils ===
+// === Module 7497: ForumPlatformUtils ===
 
-// Module 7491 (ForumPlatformUtils)
+// Module 7497 (ForumPlatformUtils)
 import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 

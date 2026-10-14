@@ -1,15 +1,15 @@
-// === Module 11208: conjureUnread ===
+// === Module 10685: conjureUnread ===
 
-// Module 11208 (conjureUnread)
+// Module 10685 (conjureUnread)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectMute from "conjureProjectMute" /* 11209 */;
+import conjureProjectMute from "conjureProjectMute" /* 10686 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import ReadStateStore from "ReadStateStore" /* 6035 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+import ReadStateStore from "ReadStateStore" /* 6040 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
 
 const require = globalThis.__r;
 
@@ -50,7 +50,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(5967).ReadStateTypes;
+const ReadStateTypes = fn(5972).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureProjectBadge(arg0) {
@@ -385,7 +385,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
   }
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-  const tmp9 = stateFromStores(11210)();
+  const tmp9 = stateFromStores(10687)();
   dependencyMap = tmp9;
   if (cResult[4] === tmp9) {
     if (cResult[5] === projectId) {
@@ -439,7 +439,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
     }
     return tmp2;
   }, items1);
-  let tmp2 = stateFromStores(11210)();
+  let tmp2 = stateFromStores(10687)();
   dependencyMap = tmp2;
   const items2 = [projectId, stateFromStores, tmp2];
   const effect = noop.useEffect(() => {

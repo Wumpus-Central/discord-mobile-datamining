@@ -1,6 +1,6 @@
-// === Module 9155: constants ===
+// === Module 9164: constants ===
 
-// Module 9155 (constants)
+// Module 9164 (constants)
 import size from "module_2" /* 2 */;
 
 const items = ["logitech", "youtube", "best_buy"];

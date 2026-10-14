@@ -1,6 +1,6 @@
-// === Module 8603: ChannelPermissionsUtils ===
+// === Module 8609: ChannelPermissionsUtils ===
 
-// Module 8603 (ChannelPermissionsUtils)
+// Module 8609 (ChannelPermissionsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import util from "util" /* 1126 */;
@@ -8,11 +8,11 @@ import Server from "Server" /* 1998 */;
 import ChannelRecord from "ChannelRecord" /* 2069 */;
 import GuildRecord from "GuildRecord" /* 2083 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2123 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import ChannelUtils from "ChannelUtils" /* 5414 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7490 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8604 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4757 */;
+import UserUtilsDefault from "UserUtils" /* 4964 */;
+import ChannelUtils from "ChannelUtils" /* 5419 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7496 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8610 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2120 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import UserStore from "UserStore" /* 1390 */;

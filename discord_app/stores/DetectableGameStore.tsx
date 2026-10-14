@@ -57,6 +57,9 @@ function convertGameRecordToGame(id) {
   obj.thirdPartySkus = thirdPartySkus;
   return obj;
 }
+function toNameKey(item10026) {
+  return item10026.trim().toLowerCase();
+}
 function addGameIdToNameCache(id, arg1) {
   value = map.get(arg1);
   if (undefined === value) {
@@ -77,10 +80,9 @@ function addDetectableGame(id) {
     tmp = convertGameRecordToGame(id);
   }
   const result = closure_8.set(id.id, tmp);
-  ({ name, id } = tmp);
-  addGameIdToNameCache(id, name.toLowerCase());
+  addGameIdToNameCache(tmp.id, toNameKey(tmp.name));
   for (const item10026 of tmp5) {
-    let tmp7 = addGameIdToNameCache(tmp.id, item10026.toLowerCase());
+    let tmp8 = addGameIdToNameCache(tmp.id, toNameKey(item10026));
     continue;
   }
   if (obj.isDesktop()) {
@@ -184,7 +186,7 @@ prototype["searchGamesByName"] = function searchGamesByName(name) {
   if (null == name) {
     return [];
   } else {
-    value = map.get(name.toLowerCase());
+    value = map.get(name.trim().toLowerCase());
     if (undefined === value) {
       let items = [];
     } else {

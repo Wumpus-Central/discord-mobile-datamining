@@ -1,19 +1,19 @@
-// === Module 4748: GuildChannelStore ===
+// === Module 4750: GuildChannelStore ===
 
-// Module 4748 (GuildChannelStore)
+// Module 4750 (GuildChannelStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
-import useChannelName from "useChannelName" /* 5421 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4757 */;
+import useChannelName from "useChannelName" /* 5426 */;
 import GatedChannelStore from "GatedChannelStore" /* 2117 */;
 import FavoriteStore from "FavoriteStore" /* 2068 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
-import RelationshipStore from "RelationshipStore" /* 4760 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
+import RelationshipStore from "RelationshipStore" /* 4762 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -79,7 +79,7 @@ function rebuildGuildChannels(guildId) {
     let type = channel.type;
     if (React5(type)) {
       type = SELECTABLE;
-    } else if (options(type)) {
+    } else if (React6(type)) {
       type = VOCAL;
     }
     if (channel.type === ChannelTypes.GUILD_DIRECTORY) {
@@ -189,7 +189,7 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(constants);
 }
-let closure_6 = fn(4749).createFavoritesGuildChannelRecord;
+let closure_6 = fn(4751).createFavoritesGuildChannelRecord;
 const ChannelRecord = fn(2069);
 ({ isGuildSelectableChannelType: closure_7, GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8, isGuildVocalChannelType: closure_9, createChannelRecord } = ChannelRecord);
 const Constants = fn(1085);

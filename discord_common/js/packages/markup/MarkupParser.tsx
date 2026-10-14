@@ -1,7 +1,7 @@
-// === Module 8005: MarkupParser ===
+// === Module 8012: MarkupParser ===
 
-// Module 8005 (MarkupParser)
-import markup_MarkupParser from "markup/MarkupParser" /* 8006 */;
+// Module 8012 (MarkupParser)
+import markup_MarkupParser from "markup/MarkupParser" /* 8013 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

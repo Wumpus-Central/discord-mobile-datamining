@@ -1,11 +1,11 @@
-// === Module 12660: EmojiSuggestionChatButton ===
+// === Module 12696: EmojiSuggestionChatButton ===
 
-// Module 12660 (EmojiSuggestionChatButton)
+// Module 12696 (EmojiSuggestionChatButton)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import spring from "spring" /* 5378 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12656 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import spring from "spring" /* 5383 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12692 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles((height) => {
   const obj = { wrapper: { height, width: height }, glyphOverlay: null, glyphButton: null, image: null, surrogates: null };
   const obj2 = {};

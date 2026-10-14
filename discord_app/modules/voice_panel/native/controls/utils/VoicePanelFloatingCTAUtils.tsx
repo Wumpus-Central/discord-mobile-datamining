@@ -1,25 +1,25 @@
-// === Module 17817: VoicePanelFloatingCTAUtils ===
+// === Module 17853: VoicePanelFloatingCTAUtils ===
 
-// Module 17817 (VoicePanelFloatingCTAUtils)
+// Module 17853 (VoicePanelFloatingCTAUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4938 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import XSmallIcon from "XSmallIcon" /* 6208 */;
-import getDeviceSpecificString from "getDeviceSpecificString" /* 7966 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8395 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8535 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12487 */;
-import SoundboardIcon from "SoundboardIcon" /* 12777 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17785 */;
-import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 17819 */;
-import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 17820 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17821 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4940 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import XSmallIcon from "XSmallIcon" /* 6212 */;
+import getDeviceSpecificString from "getDeviceSpecificString" /* 7973 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8402 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8542 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12523 */;
+import SoundboardIcon from "SoundboardIcon" /* 12813 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17821 */;
+import GuildScheduledEventsNoticesActionCreators from "GuildScheduledEventsNoticesActionCreators" /* 17855 */;
+import useChannelFloatingCTAContentDefault from "useChannelFloatingCTAContent" /* 17856 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17857 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
-import EventBannerStore from "EventBannerStore" /* 17818 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import EventBannerStore from "EventBannerStore" /* 17854 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 const require = globalThis.__r;
@@ -83,22 +83,22 @@ function getDismissableCTAProps(arg0) {
   }
 }
 const Pressable = fn(17).Pressable;
-let closure_8 = fn(6054).isGuildScheduledEventActive;
+let closure_8 = fn(6059).isGuildScheduledEventActive;
 const constants = fn(2071).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
 const OverrideFloatingCTA = { BAD_CONNECTION: "BAD_CONNECTION" };
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildEventControlsProps(id) {
   const cResult = imminentUpcomingGuildEvents(576).c(28);
-  stateFromStores(5031)();
+  stateFromStores(5033)();
   let obj = imminentUpcomingGuildEvents(576);
   const tmp4 = stateFromStores;
-  const tmp6 = stateFromStores(17785)(noop.useContext(stateFromStores(12487)).channelId);
+  const tmp6 = stateFromStores(17821)(noop.useContext(stateFromStores(12523)).channelId);
   id = undefined;
   if (id != null) {
     id = id.id;
   }
-  imminentUpcomingGuildEvents = imminentUpcomingGuildEvents(8655).useImminentUpcomingGuildEvents(id);
+  imminentUpcomingGuildEvents = imminentUpcomingGuildEvents(8660).useImminentUpcomingGuildEvents(id);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [EventBannerStore];
     cResult[0] = items;
@@ -124,26 +124,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGui
     tmp11 = cResult[2];
     tmp12 = cResult[3];
   }
-  let obj2 = imminentUpcomingGuildEvents(8655);
+  let obj2 = imminentUpcomingGuildEvents(8660);
   stateFromStores = imminentUpcomingGuildEvents(573).useStateFromStores(first, tmp11, tmp12);
   const tmpResult = imminentUpcomingGuildEvents(573);
   let tmp15 = null != stateFromStores;
-  imminentUpcomingGuildEvents(8573).useManageResourcePermissions(id).canManageGuildEvent(stateFromStores);
+  imminentUpcomingGuildEvents(8580).useManageResourcePermissions(id).canManageGuildEvent(stateFromStores);
   if (tmp15) {
     tmp15 = closure_8(stateFromStores);
   }
   if (cResult[4] !== stateFromStores) {
-    const nextRecurrenceIdInEvent = tmp(8521).getNextRecurrenceIdInEvent(stateFromStores);
+    const nextRecurrenceIdInEvent = tmp(8528).getNextRecurrenceIdInEvent(stateFromStores);
     cResult[4] = stateFromStores;
     cResult[5] = nextRecurrenceIdInEvent;
     let tmp17 = nextRecurrenceIdInEvent;
-    const tmpResult4 = tmp(8521);
+    const tmpResult4 = tmp(8528);
   } else {
     tmp17 = cResult[5];
   }
   dependencyMap = tmp17;
   let guild_id;
-  const tmpResult3 = imminentUpcomingGuildEvents(8573);
+  const tmpResult3 = imminentUpcomingGuildEvents(8580);
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
@@ -151,7 +151,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGui
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
   }
-  tmp4(8517)(guild_id, id1, tmp17);
+  tmp4(8524)(guild_id, id1, tmp17);
   if (cResult[6] === stateFromStores) {
     if (cResult[9] !== stateFromStores) {
       class F {
@@ -203,7 +203,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGui
   cResult[6] = stateFromStores;
   cResult[7] = tmp17;
   cResult[8] = fn2;
-  const tmp4Result = tmp4(8517);
+  const tmp4Result = tmp4(8524);
 }) : (function useGuildEventControlsProps(id) {
   const tmp = stateFromStores;
   const tmp3 = stateFromStores(nextRecurrenceIdInEvent[11])();
@@ -339,8 +339,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCal
           obj2.label = intl.string(tmp(1126).t.N4nebq);
           const intl2 = tmp(1126).intl;
           obj2.subLabel = intl2.string(tmp(1126).t.o2XPr2);
-          const obj3 = { IconComponent: tmp(10331).GroupPlusIcon, variant: "translucent" };
-          obj2.icon = jsx(tmp(8582).RowButton.Icon, { IconComponent: tmp(10331).GroupPlusIcon, variant: "translucent" });
+          const obj3 = { IconComponent: tmp(10341).GroupPlusIcon, variant: "translucent" };
+          obj2.icon = jsx(tmp(8589).RowButton.Icon, { IconComponent: tmp(10341).GroupPlusIcon, variant: "translucent" });
           obj2.onPress = inviteMembersCallback;
           tmp12 = obj2;
         }
@@ -383,8 +383,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCal
           obj2.label = intl.string(tmp3(1126).t.N4nebq);
           const intl2 = tmp3(1126).intl;
           obj2.subLabel = intl2.string(tmp3(1126).t.o2XPr2);
-          const obj3 = { IconComponent: tmp3(10331).GroupPlusIcon, variant: "translucent" };
-          obj2.icon = jsx(tmp3(8582).RowButton.Icon, { IconComponent: tmp3(10331).GroupPlusIcon, variant: "translucent" });
+          const obj3 = { IconComponent: tmp3(10341).GroupPlusIcon, variant: "translucent" };
+          obj2.icon = jsx(tmp3(8589).RowButton.Icon, { IconComponent: tmp3(10341).GroupPlusIcon, variant: "translucent" });
           obj2.onPress = tmp6;
           tmp7 = obj2;
         }
@@ -431,7 +431,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOve
   }
 }) : (function useOverrideFloatingCTAProps(arg0) {
   closure_0 = arg0;
-  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(12487)).setShowFloatingCTA;
+  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(12523)).setShowFloatingCTA;
   const items = [setShowFloatingCTA, arg0];
   return noop.useMemo(() => {
     let tmp = null;

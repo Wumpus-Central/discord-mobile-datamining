@@ -1,20 +1,20 @@
-// === Module 11535: useActivityShelfItem ===
+// === Module 11545: useActivityShelfItem ===
 
-// Module 11535 (useActivityShelfItem)
+// Module 11545 (useActivityShelfItem)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import Server from "Server" /* 1998 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4739 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6858 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9233 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10803 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10812 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10918 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10919 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10962 */;
-import getPlatformDefault from "getPlatform" /* 11518 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11536 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11537 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4741 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6863 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9242 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10731 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10901 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10993 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10994 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11036 */;
+import getPlatformDefault from "getPlatform" /* 11528 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11546 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11547 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
@@ -37,8 +37,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = referrerId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(6852)().analyticsLocations;
-  closure_13 = context(10919)();
+  analyticsLocations = context(6857)().analyticsLocations;
+  closure_13 = context(10994)();
   obj = canLaunchContextlessFrame;
   closure_14 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
@@ -280,7 +280,7 @@ function useOnActivityItemSelected(arg0) {
 }
 const STAFF_RELEASE_PHASES = fn(2024).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1085).ApplicationFlags;
-const MAIN_SURFACE = fn(10802).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10697).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);

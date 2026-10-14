@@ -1,6 +1,6 @@
-// === Module 13489: getIconSize ===
+// === Module 13527: getIconSize ===
 
-// Module 13489 (getIconSize)
+// Module 13527 (getIconSize)
 import size from "module_2" /* 2 */;
 
 const ICON_SIZE = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "emoji", refresh_sm: true };

@@ -1,11 +1,11 @@
-// === Module 17046: GuildsBarDnDStore ===
+// === Module 17083: GuildsBarDnDStore ===
 
-// Module 17046 (GuildsBarDnDStore)
+// Module 17083 (GuildsBarDnDStore)
 import c from "c" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
-import _mod4733 from "module_4733" /* 4733 */;
-import SortedGuildStore from "SortedGuildStore" /* 5963 */;
+import _mod4735 from "module_4735" /* 4735 */;
+import SortedGuildStore from "SortedGuildStore" /* 5968 */;
 import identity from "module_1267" /* 1267 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -19,7 +19,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "emoji", dropSpecs: "toCharArray$esjava$1", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 50, scrollPosition: 100, windowSize: 100, setStateShallow: 50, dropStart: 100, dropComplete: true };
+  let obj = { dragSpecs: "Boolean", overSpecs: "emoji", dropSpecs: "toCharArray$esjava$1", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "VOICE_CHANNEL_START_TIME_UPDATE", scrollPosition: "CHANNEL_MEMBER_COUNT_UPDATE", windowSize: "THREAD_CREATE", setStateShallow: "THREAD_UPDATE", dropStart: "THREAD_DELETE", dropComplete: true };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
   let obj3 = require("ReanimatedRexport");
@@ -58,7 +58,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1272).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "code" }));
+      dropSpecs(1272).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "parent" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -83,7 +83,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "keys" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -109,7 +109,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemDra
     if (cResult[1] === arg1) {
       let tmp4 = cResult[2];
     }
-    return withEqualityFn(tmp4, _mod4733.shallow);
+    return withEqualityFn(tmp4, _mod4735.shallow);
   }
   const fn = function s(arg0) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
@@ -305,7 +305,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemDra
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4733.shallow);
+  }, _mod4735.shallow);
 });
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 

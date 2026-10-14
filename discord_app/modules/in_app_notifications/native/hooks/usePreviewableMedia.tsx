@@ -1,15 +1,15 @@
-// === Module 13099: usePreviewableMedia ===
+// === Module 13134: usePreviewableMedia ===
 
-// Module 13099 (usePreviewableMedia)
+// Module 13134 (usePreviewableMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4818 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5419 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7002 */;
-import inlineStyles from "inlineStyles" /* 7577 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 8930 */;
-import FileIcon from "FileIcon" /* 11670 */;
-import WaveformIcon from "WaveformIcon" /* 13100 */;
+import useToken from "useToken" /* 4820 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5424 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7009 */;
+import inlineStyles from "inlineStyles" /* 7583 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 8934 */;
+import FileIcon from "FileIcon" /* 11680 */;
+import WaveformIcon from "WaveformIcon" /* 13135 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -149,7 +149,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PreviewableMediaTypes = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", FILE: "file", STICKER: "sticker", GIF: "gif", VOICE_MESSAGE: "voice_message" };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -201,7 +201,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceM
     const obj5 = { children: null };
     const items1 = [tmp8, tmp17];
     obj5.children = items1;
-    const tmp24 = closure_1_8(options, obj5);
+    const tmp24 = closure_1_8(React6, obj5);
     cResult[7] = tmp8;
     cResult[8] = tmp17;
     cResult[9] = tmp24;
@@ -228,7 +228,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceM
   obj4.children = items1;
   items[1] = closure_1_8(React4, obj4);
   obj3.children = items;
-  return closure_1_8(options, obj3);
+  return closure_1_8(React6, obj3);
 });
 ReactCompilerGating = fn(558);
 let size = fn(2);

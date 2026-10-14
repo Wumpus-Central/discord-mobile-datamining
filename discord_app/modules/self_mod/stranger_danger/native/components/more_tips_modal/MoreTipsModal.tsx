@@ -1,20 +1,20 @@
-// === Module 10402: MoreTipsModal ===
+// === Module 10412: MoreTipsModal ===
 
-// Module 10402 (MoreTipsModal)
+// Module 10412 (MoreTipsModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5729 */;
-import MetricEvents from "MetricEvents" /* 5734 */;
-import HeaderActionButton from "HeaderActionButton" /* 7089 */;
-import _modDef7729 from "module_7729" /* 7729 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10395 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10403 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10408 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5734 */;
+import MetricEvents from "MetricEvents" /* 5739 */;
+import HeaderActionButton from "HeaderActionButton" /* 7095 */;
+import _modDef7735 from "module_7735" /* 7735 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10405 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10413 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10418 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10285 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10295 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.contentContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -101,7 +101,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreTi
                 const obj4 = { style: tmp6, children: null };
                 const items = [tmp13, tmp23, tmp27];
                 obj4.children = items;
-                const tmp34 = options(React4, obj4);
+                const tmp34 = React6(React4, obj4);
                 cResult[20] = tmp4.contentContainer;
                 cResult[21] = tmp27;
                 cResult[22] = tmp13;
@@ -121,7 +121,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreTi
           const obj6 = { children: null };
           const items1 = [tmp20, actionItems];
           obj6.children = items1;
-          const tmp26 = options(React4, obj6);
+          const tmp26 = React6(React4, obj6);
           cResult[13] = actionItems;
           cResult[14] = tmp20;
           cResult[15] = tmp26;
@@ -131,7 +131,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreTi
       const obj7 = { style: tmp4.tipsContainer, children: null };
       const items2 = [tmp7, tmp9];
       obj7.children = items2;
-      const tmp16 = options(React4, obj7);
+      const tmp16 = React6(React4, obj7);
       cResult[6] = tmp4.tipsContainer;
       cResult[7] = tmp7;
       cResult[8] = tmp9;
@@ -168,17 +168,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MoreTi
   }
   items[1] = tmp2Result;
   obj3.children = items;
-  const items1 = [options(React4, obj3), , ];
+  const items1 = [React6(React4, obj3), , ];
   const obj5 = { children: null };
   const obj6 = { variant: "eyebrow", color: "text-default", style: tmp.header, children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t.K5FKtc);
   const items2 = [closure_1_8(Text_Text.Text, obj6), actionItems];
   obj5.children = items2;
-  items1[1] = options(React4, obj5);
+  items1[1] = React6(React4, obj5);
   items1[2] = closure_1_8(WasThisHelpfulSectionDefault, { channelId, warningId, senderId });
   obj2.children = items1;
-  obj.children = options(React4, obj2);
+  obj.children = React6(React4, obj2);
   return closure_1_8(hasOwnProperty, obj);
 });
 ReactCompilerGating = fn(558);
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MoreTips
             onPress() {
               return warningId(senderId[14]).popWithKey(channelId);
             },
-            source: _modDef7729,
+            source: _modDef7735,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null
           };

@@ -1,6 +1,6 @@
-// === Module 15019: NotificationTokenManager ===
+// === Module 15057: NotificationTokenManager ===
 
-// Module 15019 (NotificationTokenManager)
+// Module 15057 (NotificationTokenManager)
 import _mod17 from "module_17" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
@@ -9,20 +9,17 @@ import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import _modDef2894 from "module_2894" /* 2894 */;
-import PushNotificationDefault from "PushNotification" /* 11031 */;
-import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12642 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15020 */;
-import NotifSettingsExperiments from "NotifSettingsExperiments" /* 15023 */;
-import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 15024 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15025 */;
+import PushNotificationDefault from "PushNotification" /* 10708 */;
+import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12678 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15058 */;
+import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 15061 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15062 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
-import MultiAccountStore from "MultiAccountStore" /* 12643 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 14266 */;
+import MultiAccountStore from "MultiAccountStore" /* 12679 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 14303 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;
 import size from "module_2" /* 2 */;
-
-const require = globalThis.__r;
 
 const NativeModules = _mod17.NativeModules;
 const NOTIF_SETTINGS = NotificationSettingsConstants.NOTIF_SETTINGS;
@@ -138,31 +135,15 @@ prototype["registerListener"] = function registerListener() {
   }
 };
 prototype["registerNotificationCategories"] = function registerNotificationCategories() {
-  const declarativeNotifSettingsExperiment = NotifSettingsExperiments.declarativeNotifSettingsExperiment;
-  const config = declarativeNotifSettingsExperiment.getConfig({ location: "registerNotificationCategories" });
-  let flag = false;
   try {
-    if (config.enabled) {
-      flag = NotifSettingsUtilsDefault.registerDeclarativeNotificationCategories();
-    }
     const self = this;
-    if (flag) {
-      const result = self.trackDisabledAndroidNotifChannels();
-    } else {
-      try {
-        if (config.clearDeclarative) {
-          SentryUtilsDefault.addBreadcrumb({ message: "Clearing declarative notification categories" });
-          NotifSettingsUtilsDefault.clear();
-        }
-        const result1 = self.registerLegacyNotificationCategories();
-      } catch (tmp12) {
-        require("SentryUtils").captureException(tmp12);
-        const obj5 = require("SentryUtils");
-      }
+    if (!obj.registerDeclarativeNotificationCategories()) {
+      const result = self.registerLegacyNotificationCategories();
     }
-  } catch (tmp6) {
-    require("SentryUtils").captureException(tmp6);
-    const obj2 = require("SentryUtils");
+    const result1 = self.trackDisabledAndroidNotifChannels();
+    obj = NotifSettingsUtilsDefault;
+  } catch (tmp3) {
+    SentryUtilsDefault.captureException(tmp3);
   }
 };
 prototype["registerLegacyNotificationCategories"] = function registerLegacyNotificationCategories() {

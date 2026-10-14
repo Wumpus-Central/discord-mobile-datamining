@@ -1,18 +1,18 @@
-// === Module 16597: SafetyGuildSettingMessageRequests ===
+// === Module 16636: SafetyGuildSettingMessageRequests ===
 
-// Module 16597 (SafetyGuildSettingMessageRequests)
+// Module 16636 (SafetyGuildSettingMessageRequests)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
-import common_AlertDefault from "common/Alert" /* 5398 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6684 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7498 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15417 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16590 */;
-import useShouldDisableMessageRequestSettings from "useShouldDisableMessageRequestSettings" /* 16598 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16599 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5304 */;
+import common_AlertDefault from "common/Alert" /* 5403 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5923 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6688 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7504 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15454 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16629 */;
+import useShouldDisableMessageRequestSettings from "useShouldDisableMessageRequestSettings" /* 16637 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16638 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
 require = fn;
@@ -45,9 +45,9 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(16587);
+const UserSettingsSafetySelectedGuildStore = fn(16626);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(10664).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+let closure_6 = fn(10768).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDisabled() {
@@ -109,7 +109,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDisable
   return shouldDisableMessageRequestSettings;
 });
 let closure_8 = tmp4;
-const SettingBuilders = fn(10663);
+const SettingBuilders = fn(10767);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
   const cResult = c.c(3);
   const selectedGuildId = hasOwnProperty().selectedGuildId;
@@ -184,7 +184,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.o5fjz6);
   },
-  parent: fn(7993).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8000).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
     const cResult = c.c(3);
     const selectedGuildId = hasOwnProperty().selectedGuildId;

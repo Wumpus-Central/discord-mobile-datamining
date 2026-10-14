@@ -1,22 +1,22 @@
-// === Module 9562: EmojiPickerCategories ===
+// === Module 9572: EmojiPickerCategories ===
 
-// Module 9562 (EmojiPickerCategories)
+// Module 9572 (EmojiPickerCategories)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import HapticUtils from "HapticUtils" /* 5057 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5058 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9563 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import HapticUtils from "HapticUtils" /* 5061 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5062 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9573 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiCategoryTypes = fn(5991).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(5996).EmojiCategoryTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 let ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, keyboardItem: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = { code: "function EmojiPickerCategoriesTsx1(){const{categoryIndexActive}=this.__closure;return categoryIndexActive.get();}" };
@@ -259,7 +259,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     obj.end = num2 + ref.current;
     const result = sharedValue.set(obj);
   }, items6);
-  const callback6 = categoryIndexActive.useCallback((arg0, index) => options(EmojiPickerCategoriesItemDefault, { category: categories[index], categoryIndexActive, index, handlePressCategory: callback3, loadingStyle: closure_8.listPlaceholder, locked: categories[index].isNitroLocked, style: closure_8.item }), items7);
+  const callback6 = categoryIndexActive.useCallback((arg0, index) => React6(EmojiPickerCategoriesItemDefault, { category: categories[index], categoryIndexActive, index, handlePressCategory: callback3, loadingStyle: closure_8.listPlaceholder, locked: categories[index].isNitroLocked, style: closure_8.item }), items7);
   const obj6 = { runOnJS: bottomSheetRef(categories[7]).runOnJS, handleScrollToCategoryIndex: callback2 };
   const memo1 = categoryIndexActive.useMemo(() => {
     const Gesture = bottomSheetRef(categories[13]).Gesture;

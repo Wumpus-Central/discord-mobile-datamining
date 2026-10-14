@@ -1,16 +1,16 @@
-// === Module 7789: CloudUploaderUtils ===
+// === Module 7796: CloudUploaderUtils ===
 
-// Module 7789 (CloudUploaderUtils)
+// Module 7796 (CloudUploaderUtils)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import UploadUtils from "UploadUtils" /* 7760 */;
+import UploadUtils from "UploadUtils" /* 7766 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1370 */;
 
 require = fn;
 function getUploadPayload(self) {
-  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "a" };
+  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "Array" };
   return obj;
 }
 const size = fn(2);

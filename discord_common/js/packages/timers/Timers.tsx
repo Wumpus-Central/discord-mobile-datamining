@@ -153,7 +153,7 @@ prototype5["queue"] = function queue(items) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    options = self.options;
+    let options = self.options;
     let predicate = options.predicate;
     let num;
     if (predicate != null) {
@@ -206,7 +206,7 @@ prototype5["reset"] = function reset() {
   this._flushReady = false;
   this._flushHandler.cancel();
   if (items.length > 0) {
-    options = this.options;
+    const options = this.options;
     const onCancelled = options.onCancelled;
     if (onCancelled != null) {
       onCancelled(items);

@@ -1,6 +1,6 @@
-// === Module 16849: useFavoritesGuildCategoryFullNotice ===
+// === Module 16886: useFavoritesGuildCategoryFullNotice ===
 
-// Module 16849 (useFavoritesGuildCategoryFullNotice)
+// Module 16886 (useFavoritesGuildCategoryFullNotice)
 import c from "c" /* 576 */;
 import _modDef3442 from "module_3442" /* 3442 */;
 import FavoriteStore from "FavoriteStore" /* 2068 */;
@@ -8,7 +8,7 @@ import FavoriteStore from "FavoriteStore" /* 2068 */;
 const initialize = intl(504);
 const util = intl(1126);
 const FavoritesUtils = intl(2090);
-const FavoritesHooks = intl(10313);
+const FavoritesHooks = intl(10323);
 require = fn;
 let closure_4 = fn(2078).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
 const ChannelTypes = fn(1085).ChannelTypes;

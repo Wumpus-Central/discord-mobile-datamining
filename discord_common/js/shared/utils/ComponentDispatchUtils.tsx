@@ -56,7 +56,7 @@ prototype["dispatch"] = function dispatch(arg0, arg1) {
       devtoolsReporter = self.options.devtoolsReporter;
     }
     if (devtoolsReporter) {
-      options = self.options;
+      const options = self.options;
       const _Date = Date;
       options.devtoolsReporter(arg0, arg1, Date.now() - tmp6);
     }
@@ -87,7 +87,7 @@ prototype["dispatchToLastSubscribed"] = function dispatchToLastSubscribed(arg0, 
       devtoolsReporter = self.options.devtoolsReporter;
     }
     if (devtoolsReporter) {
-      options = self.options;
+      const options = self.options;
       const _Date = Date;
       options.devtoolsReporter(arg0, arg1, Date.now() - tmp6);
     }

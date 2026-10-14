@@ -1,12 +1,12 @@
-// === Module 16510: useShopAllCatalogPages ===
+// === Module 16549: useShopAllCatalogPages ===
 
-// Module 16510 (useShopAllCatalogPages)
+// Module 16549 (useShopAllCatalogPages)
 import initializeDefault from "initialize" /* 504 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9092 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 9097 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9090 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7265 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9095 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7271 */;
 
 require = fn;
 function getCategoryForCollection(id) {

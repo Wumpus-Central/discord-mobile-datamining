@@ -1,11 +1,11 @@
-// === Module 11270: useConjureAppSlotsLeft ===
+// === Module 11280: useConjureAppSlotsLeft ===
 
-// Module 11270 (useConjureAppSlotsLeft)
+// Module 11280 (useConjureAppSlotsLeft)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11207 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10684 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,9 +1,9 @@
-// === Module 16233: UserSettingsDesignSystemsScreen ===
+// === Module 16270: UserSettingsDesignSystemsScreen ===
 
-// Module 16233 (UserSettingsDesignSystemsScreen)
+// Module 16270 (UserSettingsDesignSystemsScreen)
 import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 10663 */;
-import SettingLayoutDefault from "SettingLayout" /* 15286 */;
+import SettingBuilders from "SettingBuilders" /* 10767 */;
+import SettingLayoutDefault from "SettingLayout" /* 15323 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,8 +19,8 @@ function getDesignSystemsSettings() {
   obj2.settings = items2;
   items1[1] = obj2;
   const obj3 = { label: "In Progress", settings: null };
-  const items3 = [, , , , ];
-  ({ DESIGN_SYSTEM_SHEETS: arr4[0], DESIGN_SYSTEM_STACK: arr4[1], DESIGN_SYSTEMS_CONTEXT_MENU: arr4[2], DESIGN_SYSTEMS_TOAST: arr4[3], DESIGN_SYSTEMS_MODAL: arr4[4] } = MobileUserSettings);
+  const items3 = [, , , , , ];
+  ({ DESIGN_SYSTEM_BADGE: arr4[0], DESIGN_SYSTEM_SHEETS: arr4[1], DESIGN_SYSTEM_STACK: arr4[2], DESIGN_SYSTEMS_CONTEXT_MENU: arr4[3], DESIGN_SYSTEMS_TOAST: arr4[4], DESIGN_SYSTEMS_MODAL: arr4[5] } = MobileUserSettings);
   obj3.settings = items3;
   items1[2] = obj3;
   const obj4 = { label: "Experimental", settings: null };
@@ -34,7 +34,7 @@ function getDesignSystemsSettings() {
   items1[4] = obj5;
   return items1;
 }
-const MobileUserSettings = fn(7993).MobileUserSettings;
+const MobileUserSettings = fn(8000).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

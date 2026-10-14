@@ -1,19 +1,19 @@
-// === Module 12614: GamePlatformBadgeRow ===
+// === Module 12650: GamePlatformBadgeRow ===
 
-// Module 12614 (GamePlatformBadgeRow)
+// Module 12650 (GamePlatformBadgeRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Stack_Stack from "Stack/Stack" /* 5377 */;
-import GamePlatformBadges from "GamePlatformBadges" /* 12616 */;
+import Stack_Stack from "Stack/Stack" /* 5382 */;
+import GamePlatformBadges from "GamePlatformBadges" /* 12652 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(12615).GamePlatformAvailability.DESKTOP] = fn(9097).ScreenIcon;
-obj[fn(12615).GamePlatformAvailability.MOBILE] = fn(6642).MobilePhoneIcon;
-obj[fn(12615).GamePlatformAvailability.CONSOLE] = fn(9212).GameControllerIcon;
-const createStyles = fn(5092);
+obj[fn(12651).GamePlatformAvailability.DESKTOP] = fn(9102).ScreenIcon;
+obj[fn(12651).GamePlatformAvailability.MOBILE] = fn(6646).MobilePhoneIcon;
+obj[fn(12651).GamePlatformAvailability.CONSOLE] = fn(9221).GameControllerIcon;
+const createStyles = fn(5096);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -36,8 +36,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const fn = function u(item) {
-        obj = { size: "xs", color: "icon-subtle", accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item) };
-        return jsx(obj[item], { size: "xs", color: "icon-subtle", accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item) }, item);
+        obj = { size: "xs", color: "icon-muted", accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item) };
+        return jsx(obj[item], { size: "xs", color: "icon-muted", accessibilityLabel: GamePlatformBadges.getGamePlatformAvailabilityLabel(item) }, item);
       };
       cResult[4] = fn;
       let tmp9 = fn;
@@ -66,14 +66,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items = [platforms];
   const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
   const tmp = closure_6();
-  return jsx(platforms(5377).Stack, {
+  return jsx(platforms(5382).Stack, {
     direction: "horizontal",
     align: "center",
     spacing: nativeDefault.space.PX_4,
     style: closure_6().row,
     children: memo.map((item) => {
-      obj = { size: "xs", color: "icon-subtle", accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item) };
-      return jsx(obj[item], { size: "xs", color: "icon-subtle", accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item) }, item);
+      obj = { size: "xs", color: "icon-muted", accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item) };
+      return jsx(obj[item], { size: "xs", color: "icon-muted", accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item) }, item);
     })
   });
 }));

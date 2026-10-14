@@ -1,7 +1,7 @@
-// === Module 11974: useConjurePerfTraceTree ===
+// === Module 12010: useConjurePerfTraceTree ===
 
-// Module 11974 (useConjurePerfTraceTree)
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 11238 */;
+// Module 12010 (useConjurePerfTraceTree)
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 10692 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,8 +21,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (cResult[0] !== spans) {
     let perfTraceTreeResult = null;
     if (null != spans) {
-      perfTraceTreeResult = tmp(11238).perfTraceTree(spans);
-      const tmpResult = tmp(11238);
+      perfTraceTreeResult = tmp(10692).perfTraceTree(spans);
+      const tmpResult = tmp(10692);
     }
     cResult[0] = spans;
     cResult[1] = perfTraceTreeResult;
@@ -56,8 +56,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       const _Set = Set;
       let set = new Set();
     } else {
-      set = tmp(11238).perfTraceKeys(tmp4);
-      const tmpResult2 = tmp(11238);
+      set = tmp(10692).perfTraceKeys(tmp4);
+      const tmpResult2 = tmp(10692);
     }
     cResult[4] = tmp4;
     cResult[5] = set;

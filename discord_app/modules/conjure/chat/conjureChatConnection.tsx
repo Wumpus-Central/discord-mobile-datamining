@@ -1,12 +1,12 @@
-// === Module 11233: conjureChatConnection ===
+// === Module 10681: conjureChatConnection ===
 
-// Module 11233 (conjureChatConnection)
+// Module 10681 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import _modDef3849 from "module_3849" /* 3849 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11207 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11234 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11235 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10682 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10683 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10684 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -205,10 +205,10 @@ let obj2 = {
       DispatcherDefault.dispatch(obj2);
     }
   },
-  clarification(clarification, arg1) {
-    let tmp = null != clarification.clarification;
+  clarification(onSubmit, arg1) {
+    let tmp = null != onSubmit.clarification;
     if (tmp) {
-      const questions = clarification.clarification.questions;
+      const questions = onSubmit.clarification.questions;
       let num;
       if (questions != null) {
         num = questions.length;
@@ -219,8 +219,8 @@ let obj2 = {
       tmp = num > 0;
     }
     if (tmp) {
-      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: arg1.projectId, turnId: clarification.turn_id, patch: null };
-      obj3 = { clarification: clarification.clarification };
+      const obj2 = { type: "CONJURE_CHAT_TURN_PATCH", projectId: arg1.projectId, turnId: onSubmit.turn_id, patch: null };
+      obj3 = { clarification: onSubmit.clarification };
       obj2.patch = obj3;
       DispatcherDefault.dispatch(obj2);
     }

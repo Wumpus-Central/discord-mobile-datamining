@@ -1,6 +1,6 @@
-// === Module 12504: DoubleTapToReactChatInputBanner ===
+// === Module 12540: DoubleTapToReactChatInputBanner ===
 
-// Module 12504 (DoubleTapToReactChatInputBanner)
+// Module 12540 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,18 +9,18 @@ import native from "native" /* 1200 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import timing from "timing" /* 5093 */;
-import Pressables from "Pressables" /* 6185 */;
-import XSmallIcon from "XSmallIcon" /* 6208 */;
-import EmojiDefault from "Emoji" /* 6820 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 7990 */;
-import renderChannelBadge from "renderChannelBadge" /* 12505 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import timing from "timing" /* 5097 */;
+import Pressables from "Pressables" /* 6189 */;
+import XSmallIcon from "XSmallIcon" /* 6212 */;
+import EmojiDefault from "Emoji" /* 6825 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7997 */;
+import renderChannelBadge from "renderChannelBadge" /* 12541 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import AccessibilityStore from "AccessibilityStore" /* 5085 */;
 
 require = fn;
 function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
@@ -90,7 +90,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   }, []);
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12606, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12642, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     markAsDismissed(ContentDismissActionType.TAKE_ACTION);
   }, items2);
   const callback2 = noop.useCallback(() => {
@@ -133,7 +133,7 @@ const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { animatedContainer: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, measurement: { opacity: 0, position: "absolute" }, container: { display: "flex", flexDirection: "row", alignItems: "center", padding: 12 }, highlight: null, text: null, emojiContainer: null, emoji: null, textEmoji: null, header: null, closeButton: null };
 let obj3 = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.highlight = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -192,7 +192,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                 }
                 const _Symbol = Symbol;
                 if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp19 = options(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" });
+                  const tmp19 = React6(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" });
                   cResult[12] = tmp19;
                   let tmp17 = tmp19;
                 } else {
@@ -204,8 +204,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
                     const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
                     const intl = util.intl;
                     obj2.children = intl.string(util.t["6RUX7d"]);
-                    const tmp27 = options(Text_Text.Text, obj2);
-                    const tmp28 = options(renderChannelBadge.NewBadge, {});
+                    const tmp27 = React6(Text_Text.Text, obj2);
+                    const tmp28 = React6(renderChannelBadge.NewBadge, {});
                     cResult[16] = tmp27;
                     cResult[17] = tmp28;
                     let tmp25 = tmp28;
@@ -307,7 +307,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
           ({ emoji: obj5.style, emoji: obj5.fastImageStyle, textEmoji: obj5.textEmojiStyle } = tmp4);
           obj9.name = str;
           obj9.src = cResult[6];
-          const tmp16 = options(EmojiDefault, obj9);
+          const tmp16 = React6(EmojiDefault, obj9);
           cResult[7] = tmp4.emoji;
           cResult[8] = tmp4.textEmoji;
           cResult[9] = str;
@@ -385,7 +385,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
     url = emoji.url;
   }
   obj4.src = url;
-  const items1 = [options(EmojiDefault, obj4), options(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
+  const items1 = [React6(EmojiDefault, obj4), React6(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" })];
   obj3.children = items1;
   const items2 = [collapsed(View, obj3), , ];
   const obj6 = { style: tmp.text, children: null };
@@ -393,7 +393,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
   const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj8.children = intl.string(util.t["6RUX7d"]);
-  const items3 = [options(Text_Text.Text, obj8), options(renderChannelBadge.NewBadge, {})];
+  const items3 = [React6(Text_Text.Text, obj8), React6(renderChannelBadge.NewBadge, {})];
   obj7.children = items3;
   const items4 = [collapsed(View, obj7), ];
   const obj9 = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -407,7 +407,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
       return closure_1_9(require("Text/Text").Text, { variant: "text-xs/medium", color: "text-brand", children }, arg1);
     }
   });
-  items4[1] = options(Text_Text.Text, obj9);
+  items4[1] = React6(Text_Text.Text, obj9);
   obj6.children = items4;
   items2[1] = collapsed(View, obj6);
   const obj11 = { hitSlop: 8, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
@@ -415,8 +415,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Double
   obj11.accessibilityLabel = intl3.string(util.t.cpT0Cq);
   obj11.onPress = emoji.handleDismissBanner;
   obj11.style = tmp.closeButton;
-  obj11.children = options(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
-  items2[2] = options(Pressables.PressableOpacity, obj11);
+  obj11.children = React6(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
+  items2[2] = React6(Pressables.PressableOpacity, obj11);
   obj2.children = items2;
   return collapsed(View, obj2);
 });
@@ -450,17 +450,17 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
     if (!tmp7) {
       let tmp10 = null != channel.lastMessageId;
       if (tmp10) {
-        tmp10 = emoji(7990)(channel);
+        tmp10 = emoji(7997)(channel);
       }
       tmp9 = tmp10;
     }
     tmp5 = tmp9;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fallbackDoubleTapDisambiguatedEmoji = tmp(7987).getFallbackDoubleTapDisambiguatedEmoji();
+    const fallbackDoubleTapDisambiguatedEmoji = tmp(7994).getFallbackDoubleTapDisambiguatedEmoji();
     cResult[0] = fallbackDoubleTapDisambiguatedEmoji;
     emoji = fallbackDoubleTapDisambiguatedEmoji;
-    const tmpResult = tmp(7987);
+    const tmpResult = tmp(7994);
   } else {
     emoji = cResult[0];
   }
@@ -486,12 +486,12 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
                   let tmp = null;
                   if (visibleContent === dismissible_content.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
                     const obj = { channel, emoji, markAsDismissed };
-                    tmp = options(DoubleTapToReactChatInputBannerAnimationContainer, obj);
+                    tmp = React6(DoubleTapToReactChatInputBannerAnimationContainer, obj);
                   }
                   return tmp;
                 }
         };
-        tmp2 = closure_9(emoji(10013), obj2);
+        tmp2 = closure_9(emoji(10023), obj2);
         cResult[2] = channel;
         cResult[3] = tmp2;
       }
@@ -544,7 +544,7 @@ export const DoubleTapToReactChatInputBanner = ReactCompilerGating.isReactCompil
         let tmp = null;
         if (visibleContent === dismissible_content.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
           const obj = { channel, emoji: memo1, markAsDismissed };
-          tmp = options(DoubleTapToReactChatInputBannerAnimationContainer, obj);
+          tmp = React6(DoubleTapToReactChatInputBannerAnimationContainer, obj);
         }
         return tmp;
       };

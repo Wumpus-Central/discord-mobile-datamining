@@ -1,8 +1,8 @@
-// === Module 11321: useConjureAppIdentityDraft ===
+// === Module 11332: useConjureAppIdentityDraft ===
 
-// Module 11321 (useConjureAppIdentityDraft)
+// Module 11332 (useConjureAppIdentityDraft)
 import c from "c" /* 576 */;
-import useConjureAppIdentityDefault from "useConjureAppIdentity" /* 11322 */;
+import useConjureAppIdentityDefault from "useConjureAppIdentity" /* 11333 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/identity/useConjureAppIdentityDraft.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAppIdentityDraft(arg0) {
-  const cResult = c.c(19);
+  const cResult = c.c(18);
   const tmp2 = useConjureAppIdentityDefault(arg0);
   [tmp4, tmp5] = noop.useState(null);
   const require = tmp5;
@@ -91,13 +91,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
             }
           }
         }
-        const obj6 = { iconURL: tmp4, icon: tmp4, setIcon: tmp5, description: str, setDescription: tmp7, changes: tmp16, changed: null != tmp4 || null != tmp10, commit: U };
+        const obj6 = { iconURL: tmp4, setIcon: tmp5, description: str, setDescription: tmp7, changes: tmp16, changed: null != tmp4 || null != tmp10, commit: U };
         cResult[13] = tmp16;
         cResult[14] = str;
         cResult[15] = tmp4;
-        cResult[16] = tmp4;
-        cResult[17] = null != tmp4 || null != tmp10;
-        cResult[18] = obj6;
+        cResult[16] = null != tmp4 || null != tmp10;
+        cResult[17] = obj6;
       }
       const obj7 = {};
       const merged = Object.assign(tmp12);
@@ -126,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
 }) : (function useConjureAppIdentityDraft(arg0) {
   const tmp = useConjureAppIdentityDefault(arg0);
   const tmp2 = _slicedToArray(noop.useState(null), 2);
-  const icon = tmp2[0];
+  const first = tmp2[0];
   closure_1 = tmp4;
   [str, tmp6] = noop.useState(null);
   dependencyMap = tmp6;
@@ -136,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     tmp8 = trimmed;
   }
   trimmed = tmp8;
-  const items = [icon, tmp8];
+  const items = [first, tmp8];
   const memo = noop.useMemo(() => {
     if (null != first) {
       const obj2 = { icon: tmp };
@@ -154,13 +153,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     const merged1 = Object.assign(obj5);
     return {};
   }, items);
-  let iconURL = icon;
+  let iconURL = first;
   const callback = noop.useCallback(() => {
     closure_1(null);
     tmp6(null);
   }, []);
-  if (icon == null) {
+  if (first == null) {
     iconURL = tmp.iconURL;
   }
-  return { iconURL, icon, setIcon: tmp2[1], description: str, setDescription: tmp6, changes: memo, changed: null != icon || null != tmp8, commit: callback };
+  return { iconURL, setIcon: tmp2[1], description: str, setDescription: tmp6, changes: memo, changed: null != first || null != tmp8, commit: callback };
 });

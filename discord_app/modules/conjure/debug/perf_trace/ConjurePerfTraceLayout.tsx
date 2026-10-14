@@ -1,6 +1,6 @@
-// === Module 11238: ConjurePerfTraceLayout ===
+// === Module 10692: ConjurePerfTraceLayout ===
 
-// Module 11238 (ConjurePerfTraceLayout)
+// Module 10692 (ConjurePerfTraceLayout)
 import _slicedToArray from "module_32" /* 32 */;
 
 function walkNodes(findPerfTraceNodeResult, fn) {
@@ -386,7 +386,7 @@ export const visiblePerfTraceRows = function visiblePerfTraceRows(cResult, arg1)
 };
 export const overviewView = function overviewView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f107961 = (depth) => {
+  const f106094 = (depth) => {
     let tmp = depth.depth > 0;
     if (tmp) {
       const children = depth.children;
@@ -398,7 +398,7 @@ export const overviewView = function overviewView(children) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f107977(children);
+      tmp = f106110(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -427,7 +427,7 @@ export const extendView = function extendView(collapsed, memo, current) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f107977(children);
+      tmp = f106110(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -462,12 +462,12 @@ export const perfTraceKeys = function perfTraceKeys(cResult) {
 };
 export const expandedView = function expandedView(children) {
   const obj = { collapsed: new Set(), revealed: null };
-  const f107976 = () => true;
+  const f106109 = () => true;
   const set1 = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f107977(children);
+      tmp = f106110(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -483,12 +483,12 @@ export const expandedView = function expandedView(children) {
 };
 export const collapsedView = function collapsedView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f107977 = (depth) => depth.depth > 0;
+  const f106110 = (depth) => depth.depth > 0;
   const set = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f107977(children);
+      tmp = f106110(children);
     }
     if (tmp) {
       set.add(children.key);

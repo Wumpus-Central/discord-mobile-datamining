@@ -1,15 +1,15 @@
-// === Module 15182: useNavigateToPremiumTryItOut ===
+// === Module 15220: useNavigateToPremiumTryItOut ===
 
-// Module 15182 (useNavigateToPremiumTryItOut)
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6680 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8316 */;
+// Module 15220 (useNavigateToPremiumTryItOut)
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6684 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8323 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8285 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8292 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(8308).TrackUserProfileEditActions;
+let closure_5 = fn(8315).TrackUserProfileEditActions;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -51,8 +51,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNavig
     closure_0 = arg0;
     let obj = {
       hasEdits: UserProfileSettingsStore.showNotice(),
-      resetPending: closure_0(6671).resetAllPending,
-      onHasEdits: closure_0(4985).dismissKeyboard,
+      resetPending: closure_0(6675).resetAllPending,
+      onHasEdits: closure_0(4987).dismissKeyboard,
       onConfirm() {
         const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId: initialTarget, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW });
         const obj2 = { userId: initialTarget, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW };
@@ -60,6 +60,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNavig
         navigation.push(UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT, { initialTarget });
       }
     };
-    navigation(9634)(obj);
+    navigation(9644)(obj);
   }, items);
 });

@@ -1,19 +1,19 @@
-// === Module 10223: UsersFastList ===
+// === Module 10233: UsersFastList ===
 
-// Module 10223 (UsersFastList)
+// Module 10233 (UsersFastList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import TableRow from "TableRow" /* 6180 */;
-import Pressables from "Pressables" /* 6185 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9307 */;
-import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10225 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10226 */;
-import UserRowDefault from "UserRow" /* 10228 */;
-import GroupDMRowDefault from "GroupDMRow" /* 10279 */;
-import ChannelRowDefault from "ChannelRow" /* 10282 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import TableRow from "TableRow" /* 6184 */;
+import Pressables from "Pressables" /* 6189 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9316 */;
+import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10235 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10236 */;
+import UserRowDefault from "UserRow" /* 10238 */;
+import GroupDMRowDefault from "GroupDMRow" /* 10289 */;
+import ChannelRowDefault from "ChannelRow" /* 10292 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,11 +21,11 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const UsersFastListConstants = fn(10224);
+const UsersFastListConstants = fn(10234);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj = { sectionHeader: { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING }, stickyHeader: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, list: null, emptySection: null, section: null, interactiveSection: null, titlePressable: null, titleRow: null, badgeWrapper: null, badge: null };
 let obj3 = { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -154,7 +154,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       if (cResult[4] === clientThemesOverride) {
         let tmp10 = cResult[5];
       }
-      class V {
+      class R {
         constructor() {
           obj = scrollPosValue;
           value = undefined;
@@ -174,12 +174,12 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }
       const obj3 = { scrollPosValue, stickyAt };
-      V.__closure = obj3;
-      V.__workletHash = 15448160320615;
-      V.__initData = __initData;
-      const derivedValue = ReanimatedRexport.useDerivedValue(V);
+      R.__closure = obj3;
+      R.__workletHash = 15448160320615;
+      R.__initData = __initData;
+      const derivedValue = ReanimatedRexport.useDerivedValue(R);
       const tmpResult4 = ReanimatedRexport;
-      class E {
+      class V {
         constructor() {
           backgroundColor = "transparent";
           if (closure_3.get()) {
@@ -190,10 +190,10 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }
       const obj4 = { isSticky: derivedValue, styles: tmp4 };
-      E.__closure = obj4;
-      E.__workletHash = 11315917458152;
-      E.__initData = __initData2;
-      const animatedStyle = ReanimatedRexport.useAnimatedStyle(E);
+      V.__closure = obj4;
+      V.__workletHash = 11315917458152;
+      V.__initData = __initData2;
+      const animatedStyle = ReanimatedRexport.useAnimatedStyle(V);
       if (cResult[6] === animatedStyle) {
         if (cResult[7] === tmp4.sectionHeader) {
           let tmp15 = cResult[8];
@@ -320,7 +320,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                               cResult[36] = disableThemedGradient;
                               cResult[37] = tmp33;
                               cResult[38] = tmp15;
-                              class E {
+                              class V {
                                 constructor() {
                                   backgroundColor = "transparent";
                                   if (closure_3.get()) {
@@ -348,7 +348,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                           obj7.children = items1;
                           const tmp35 = closure_1_8(View, obj7);
                           cResult[30] = tmp10;
-                          class E {
+                          class V {
                             constructor() {
                               backgroundColor = "transparent";
                               if (closure_3.get()) {
@@ -469,7 +469,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             const tmp21 = closure_1_8(Text_Text.Text, obj11);
             cResult[15] = tmp18;
             cResult[16] = tmp5;
-            class E {
+            class V {
               constructor() {
                 backgroundColor = "transparent";
                 if (closure_3.get()) {
@@ -484,7 +484,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             tmp20 = tmp21;
           }
         }
-        class E {
+        class V {
           constructor() {
             backgroundColor = "transparent";
             if (closure_3.get()) {
@@ -521,10 +521,11 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   ({ actionTitle, badge, scrollPosValue } = stickyAt);
   stickyAt = stickyAt.stickyAt;
   ({ disableThemedGradient, titleLeading, onTitlePress } = stickyAt);
+  let derivedValue;
   let animatedStyle;
   ({ action, disableStickySections } = stickyAt);
   const tmp = closure_10();
-  noop = tmp;
+  closure_4 = tmp;
   let items = [colorOverride];
   const memo = noop.useMemo(() => {
     let tmp2 = null != colorOverride;
@@ -543,56 +544,56 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const items = [closure_4.section, null != onTitlePress && closure_4.interactiveSection, clientThemesOverride];
     return items;
   }, items1);
-  const fn = function x() {
-    value = undefined;
-    if (scrollPosValue != null) {
-      value = scrollPosValue.get();
-    }
-    let tmp2 = null != value;
-    if (tmp2) {
-      tmp2 = null != stickyAt;
-    }
-    if (tmp2) {
-      tmp2 = value >= stickyAt;
-    }
-    return tmp2;
-  };
-  fn.__closure = { scrollPosValue, stickyAt };
-  fn.__workletHash = 1305370085058;
-  fn.__initData = __initData4;
-  const derivedValue = ReanimatedRexport.useDerivedValue(fn);
-  class C {
+  class T {
     constructor() {
-      backgroundColor = "transparent";
-      if (closure_6.get()) {
-        tmp = closure_4;
-        backgroundColor = closure_4.stickyHeader.backgroundColor;
+      obj = scrollPosValue;
+      value = undefined;
+      if (scrollPosValue != null) {
+        value = obj.get();
       }
-      return { backgroundColor };
+      tmp2 = null != value;
+      if (tmp2) {
+        tmp3 = stickyAt;
+        tmp2 = null != stickyAt;
+      }
+      if (tmp2) {
+        tmp4 = stickyAt;
+        tmp2 = value >= stickyAt;
+      }
+      return tmp2;
     }
   }
-  C.__closure = { isSticky: derivedValue, styles: tmp };
-  C.__workletHash = 2763129547727;
-  C.__initData = __initData5;
-  animatedStyle = ReanimatedRexport.useAnimatedStyle(C);
+  T.__closure = { scrollPosValue, stickyAt };
+  T.__workletHash = 1305370085058;
+  T.__initData = __initData4;
+  derivedValue = ReanimatedRexport.useDerivedValue(T);
+  const fn = function w() {
+    let backgroundColor = "transparent";
+    if (derivedValue.get()) {
+      backgroundColor = closure_4.stickyHeader.backgroundColor;
+    }
+    return { backgroundColor };
+  };
+  fn.__closure = { isSticky: derivedValue, styles: tmp };
+  fn.__workletHash = 2763129547727;
+  fn.__initData = __initData5;
+  animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
   const items2 = [tmp.sectionHeader, animatedStyle];
   const memo2 = noop.useMemo(() => {
     const items = [closure_4.sectionHeader, animatedStyle];
     return items;
   }, items2);
-  class H {
-    constructor() {
-      opacity = 0;
-      if (closure_6.get()) {
-        opacity = 1;
-      }
-      return { opacity };
+  const fn2 = function x() {
+    let opacity = 0;
+    if (derivedValue.get()) {
+      opacity = 1;
     }
-  }
-  H.__closure = { isSticky: derivedValue };
-  H.__workletHash = 9025735048830;
-  H.__initData = __initData6;
-  const animatedStyle1 = ReanimatedRexport.useAnimatedStyle(H);
+    return { opacity };
+  };
+  fn2.__closure = { isSticky: derivedValue };
+  fn2.__workletHash = 9025735048830;
+  fn2.__initData = __initData6;
+  const animatedStyle1 = ReanimatedRexport.useAnimatedStyle(fn2);
   if (null == title) {
     if (null == actionTitle) {
       const obj5 = { style: tmp.emptySection };
@@ -655,7 +656,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx");
 
 export const UsersFastList = ReactCompilerGating.isReactCompilerEnabled() ? (function UsersFastListInner(getSectionProps) {
-  const cResult = getItemProps(disableThemedGradient[8]).c(32);
+  const cResult = getItemProps(disableThemedGradient[8]).c(51);
   ({ sections, getItemProps } = getSectionProps);
   getSectionProps = getSectionProps.getSectionProps;
   ({ getItemSize, keyExtractor, insetStart, insetEnd, disableBottomSafeZone, disableStickySections, disableThemedGradient } = getSectionProps);
@@ -1121,28 +1122,26 @@ export const UsersFastList = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   cResult[3] = fn;
   let obj = getItemProps(disableThemedGradient[8]);
   tmp4 = undefined !== disableBottomSafeZone && disableBottomSafeZone;
-}) : (function UsersFastListInner(getItemProps) {
-  getItemProps = getItemProps.getItemProps;
-  const getSectionProps = getItemProps.getSectionProps;
-  ({ getItemSize, insetEnd } = getItemProps);
-  ({ sections, keyExtractor, insetStart } = getItemProps);
+}) : (function UsersFastListInner(getSectionProps) {
+  ({ sections, getItemProps } = getSectionProps);
+  getSectionProps = getSectionProps.getSectionProps;
+  ({ getItemSize, keyExtractor, insetStart, insetEnd } = getSectionProps);
   if (insetEnd === undefined) {
     insetEnd = 0;
   }
-  let flag = getItemProps.disableBottomSafeZone;
+  let flag = getSectionProps.disableBottomSafeZone;
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = getItemProps.disableStickySections;
+  let flag2 = getSectionProps.disableStickySections;
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const disableThemedGradient = getItemProps.disableThemedGradient;
-  const disableBackgroundOverlay = getItemProps.disableBackgroundOverlay;
-  const listStyleOverride = getItemProps.listStyleOverride;
+  const disableThemedGradient = getSectionProps.disableThemedGradient;
+  const disableBackgroundOverlay = getSectionProps.disableBackgroundOverlay;
+  ({ inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader, listStyleOverride } = getSectionProps);
   closure_7 = undefined;
   let clientThemesOverride;
-  ({ inActionSheet, listHeaderSize, onContentLengthChange, onScroll, onLayout, renderListHeader, ref } = getItemProps);
   let tmp = closure_10();
   const list = tmp;
   let num = 0;
@@ -1150,12 +1149,11 @@ export const UsersFastList = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     num = getSectionProps(flag2[17])().bottom;
   }
   const sum = insetEnd + num;
+  const tmp5 = getSectionProps(flag2[18])();
   const tmp6 = getSectionProps(flag2[19])();
   closure_7 = tmp6;
-  const tmp5 = getSectionProps(flag2[18])();
   clientThemesOverride = getItemProps(flag2[11]).useClientThemesOverride();
   let items = [getSectionProps, flag2, disableThemedGradient];
-  const items1 = [getItemProps];
   const callback = disableBackgroundOverlay.useCallback((arg0, arg1, scrollPosValue, stickyAt) => {
     const element = getSectionProps(arg0);
     let type;
@@ -1176,7 +1174,7 @@ export const UsersFastList = ReactCompilerGating.isReactCompilerEnabled() ? (fun
       return null;
     }
   }, items);
-  const items2 = [getSectionProps, tmp6];
+  const items1 = [getItemProps];
   const callback1 = disableBackgroundOverlay.useCallback((arg0, arg1) => {
     const element = getItemProps(arg0, arg1);
     let type;
@@ -1201,12 +1199,12 @@ export const UsersFastList = ReactCompilerGating.isReactCompilerEnabled() ? (fun
       return React5(ChannelRowDefault, obj5);
     } else if ("custom" === type) {
       const obj = { children: element.component() };
-      return React5(options, obj);
+      return React5(React6, obj);
     } else {
       return null;
     }
   }, items1);
-  const items3 = [tmp.list, disableBackgroundOverlay, clientThemesOverride, listStyleOverride];
+  const items2 = [getSectionProps, tmp6];
   const callback2 = disableBackgroundOverlay.useCallback((arg0) => {
     const element = getSectionProps(arg0);
     let type;
@@ -1223,6 +1221,7 @@ export const UsersFastList = ReactCompilerGating.isReactCompilerEnabled() ? (fun
       return 0;
     }
   }, items2);
+  const items3 = [tmp.list, disableBackgroundOverlay, clientThemesOverride, listStyleOverride];
   const memo = disableBackgroundOverlay.useMemo(() => {
     const items = [list.list, , ];
     let tmp = disableBackgroundOverlay;
@@ -1234,23 +1233,45 @@ export const UsersFastList = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     return items;
   }, items3);
   let obj = getItemProps(flag2[11]);
-  let obj2 = { sections, sectionHeaderIsSticky: !flag2, sectionHeaderSize: callback2, estimatedListSize: "windowSize", keyExtractor, ref, style: memo, itemSize: null, renderItem: null, renderListHeader: null, renderSectionHeader: null, insetStart: null, insetEnd: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", inActionSheet: null, onContentLengthChange: null, onScroll: null, onLayout: null, placeholderConfig: null, listId: "users-fast-list", listHeaderSize: null, listHeaderAlwaysMounted: true, scrollReporting: "callbacks", wrapChildren: true };
   const tmp12 = getSectionProps(flag2[9])();
-  const tmp13 = closure_7;
-  if (getItemSize == null) {
-    getItemSize = tmp5;
+  if ("legend" === tmp2Result.useConfig({ location: "Users List" }).list) {
+    let obj2 = { sections, sectionHeaderIsSticky: !flag2, sectionHeaderSize: callback2, keyExtractor, ref, style: memo, itemSize: null, renderItem: null, renderListHeader: null, renderSectionHeader: null, insetStart: null, insetEnd: null, inActionSheet: null, onContentLengthChange: null, onScroll: null, onLayout: null, listHeaderSize: null };
+    if (getItemSize == null) {
+      getItemSize = tmp5;
+    }
+    obj2.itemSize = getItemSize;
+    obj2.renderItem = callback1;
+    obj2.renderListHeader = renderListHeader;
+    obj2.renderSectionHeader = callback;
+    obj2.insetStart = insetStart;
+    obj2.insetEnd = sum;
+    obj2.inActionSheet = inActionSheet;
+    obj2.onContentLengthChange = onContentLengthChange;
+    obj2.onScroll = onScroll;
+    obj2.onLayout = onLayout;
+    obj2.listHeaderSize = listHeaderSize;
+    let tmp13Result = closure_7(tmp2(tmp3[24]), obj2);
+    const tmp2Result3 = tmp2(tmp3[24]);
+  } else {
+    let obj3 = { sections, sectionHeaderIsSticky: !flag2, sectionHeaderSize: callback2, estimatedListSize: "windowSize", keyExtractor, ref, style: memo, itemSize: null, renderItem: null, renderListHeader: null, renderSectionHeader: null, insetStart: null, insetEnd: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", inActionSheet: null, onContentLengthChange: null, onScroll: null, onLayout: null, placeholderConfig: null, listId: "users-fast-list", listHeaderSize: null, listHeaderAlwaysMounted: true, scrollReporting: "callbacks", wrapChildren: true };
+    let tmp16 = getItemSize;
+    if (getItemSize == null) {
+      tmp16 = tmp5;
+    }
+    obj3.itemSize = tmp16;
+    obj3.renderItem = callback1;
+    obj3.renderListHeader = renderListHeader;
+    obj3.renderSectionHeader = callback;
+    obj3.insetStart = insetStart;
+    obj3.insetEnd = sum;
+    obj3.inActionSheet = inActionSheet;
+    obj3.onContentLengthChange = onContentLengthChange;
+    obj3.onScroll = onScroll;
+    obj3.onLayout = onLayout;
+    obj3.placeholderConfig = tmp12;
+    obj3.listHeaderSize = listHeaderSize;
+    tmp13Result = closure_7(tmp2(tmp3[25]), obj3);
+    const tmp2Result4 = tmp2(tmp3[25]);
   }
-  obj2.itemSize = getItemSize;
-  obj2.renderItem = callback1;
-  obj2.renderListHeader = renderListHeader;
-  obj2.renderSectionHeader = callback;
-  obj2.insetStart = insetStart;
-  obj2.insetEnd = sum;
-  obj2.inActionSheet = inActionSheet;
-  obj2.onContentLengthChange = onContentLengthChange;
-  obj2.onScroll = onScroll;
-  obj2.onLayout = onLayout;
-  obj2.placeholderConfig = tmp12;
-  obj2.listHeaderSize = listHeaderSize;
-  return tmp13(getSectionProps(flag2[23]), obj2);
+  return tmp13Result;
 });

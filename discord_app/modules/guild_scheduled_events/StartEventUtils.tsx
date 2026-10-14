@@ -1,6 +1,6 @@
-// === Module 8668: StartEventUtils ===
+// === Module 8673: StartEventUtils ===
 
-// Module 8668 (StartEventUtils)
+// Module 8673 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;

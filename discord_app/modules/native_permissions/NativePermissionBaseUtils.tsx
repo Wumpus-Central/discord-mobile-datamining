@@ -1,12 +1,12 @@
-// === Module 7502: NativePermissionBaseUtils ===
+// === Module 7508: NativePermissionBaseUtils ===
 
-// Module 7502 (NativePermissionBaseUtils)
+// Module 7508 (NativePermissionBaseUtils)
 import util from "util" /* 1126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NativePermissionStore from "NativePermissionStore" /* 7503 */;
+import NativePermissionStore from "NativePermissionStore" /* 7509 */;
 
 require = fn;
-const NativePermissionConstants = fn(7483);
+const NativePermissionConstants = fn(7489);
 ({ NativePermissionTypes: hasOwnProperty, NativePermissionStates: metroRequire, NativePermissionStatus: closure_7 } = NativePermissionConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let NativePermissionBaseUtils;
@@ -46,7 +46,7 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
       DENIED = constants.DENIED;
     }
     closure_128_2 = DENIED;
-    tmp5(7504).setPermission(closure_129_0, closure_128_2);
+    tmp5(7510).setPermission(closure_129_0, closure_128_2);
     let showAuthorizationError = !closure_128_1;
     if (!closure_128_1) {
       showAuthorizationError = closure_129_2.showAuthorizationError;

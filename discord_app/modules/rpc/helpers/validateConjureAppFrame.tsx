@@ -1,12 +1,12 @@
-// === Module 15037: validateConjureAppFrame ===
+// === Module 15074: validateConjureAppFrame ===
 
-// Module 15037 (validateConjureAppFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8611 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9235 */;
-import RPCErrorDefault from "RPCError" /* 10936 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15038 */;
-import ApplicationStore from "ApplicationStore" /* 5440 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10652 */;
+// Module 15074 (validateConjureAppFrame)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8617 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9244 */;
+import RPCErrorDefault from "RPCError" /* 11010 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15075 */;
+import ApplicationStore from "ApplicationStore" /* 5445 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;

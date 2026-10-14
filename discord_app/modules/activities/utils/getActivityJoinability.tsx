@@ -1,15 +1,15 @@
-// === Module 13641: getActivityJoinability ===
+// === Module 13679: getActivityJoinability ===
 
-// Module 13641 (getActivityJoinability)
+// Module 13679 (getActivityJoinability)
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import hasFlagDefault from "hasFlag" /* 7013 */;
-import getPartySize from "getPartySize" /* 10791 */;
-import isPartyFull from "isPartyFull" /* 10793 */;
-import getIsInParty from "getIsInParty" /* 10794 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 10797 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 10846 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 10920 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13642 */;
+import hasFlagDefault from "hasFlag" /* 7019 */;
+import getPartySize from "getPartySize" /* 10890 */;
+import isPartyFull from "isPartyFull" /* 10892 */;
+import getIsInParty from "getIsInParty" /* 10893 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 10896 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 10926 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 10995 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13680 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

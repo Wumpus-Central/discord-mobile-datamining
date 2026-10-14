@@ -1,15 +1,15 @@
-// === Module 4755: PermissionUtils ===
+// === Module 4757: PermissionUtils ===
 
-// Module 4755 (PermissionUtils)
+// Module 4757 (PermissionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Server from "Server" /* 1998 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2123 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4737 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4756 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4757 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4739 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4758 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4759 */;
 import ImpersonateStore from "ImpersonateStore" /* 2118 */;
-import LurkingStore from "LurkingStore" /* 4751 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
+import LurkingStore from "LurkingStore" /* 4753 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4754 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
@@ -106,7 +106,7 @@ function computePermissionsForMember(excludeGuildPermissions) {
     } else {
       unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guild.id);
     }
-    const tmp11 = unsafeMutableRoles[options(undefined, guild)];
+    const tmp11 = unsafeMutableRoles[React6(undefined, guild)];
     const tmp12 = null != tmp11 ? tmp11.permissions : combineResult;
     let tmp13 = tmp12;
     if (null != member) {

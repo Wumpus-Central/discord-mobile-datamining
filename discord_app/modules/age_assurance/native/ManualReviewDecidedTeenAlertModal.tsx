@@ -1,16 +1,16 @@
-// === Module 7713: ManualReviewDecidedTeenAlertModal ===
+// === Module 7719: ManualReviewDecidedTeenAlertModal ===
 
-// Module 7713 (ManualReviewDecidedTeenAlertModal)
+// Module 7719 (ManualReviewDecidedTeenAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3184 from "module_3184" /* 3184 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import AlertModal from "AlertModal" /* 5305 */;
-import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 7714 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import AlertModal from "AlertModal" /* 5310 */;
+import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 7720 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(5917).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(5922).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
         variant: "text-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(7498);
+          const obj = closure_1_1(7504);
           const intl = closure_1_0(1126).intl;
           return obj.openUrl(closure_1_1(2128).getArticleURL(intl.string(closure_1_1(3184).agiNYw)));
         },
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
       variant: "text-md/normal",
       color: "text-link",
       onPress() {
-        const obj = closure_1_1(7498);
+        const obj = closure_1_1(7504);
         const intl = closure_1_0(1126).intl;
         return obj.openUrl(closure_1_1(2128).getArticleURL(intl.string(closure_1_1(3184).agiNYw)));
       },

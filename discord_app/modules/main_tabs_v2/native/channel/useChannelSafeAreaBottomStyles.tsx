@@ -1,24 +1,24 @@
-// === Module 10376: useChannelSafeAreaBottomStyles ===
+// === Module 10386: useChannelSafeAreaBottomStyles ===
 
-// Module 10376 (useChannelSafeAreaBottomStyles)
+// Module 10386 (useChannelSafeAreaBottomStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import useToken from "useToken" /* 4818 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9307 */;
+import useToken from "useToken" /* 4820 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9316 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
-import LurkingStore from "LurkingStore" /* 4751 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5762 */;
+import LurkingStore from "LurkingStore" /* 4753 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
 
 require = fn;
 const InputModes = fn(1085).InputModes;
 const StaticChannelRoute = fn(2072).StaticChannelRoute;
 const constants = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, chat: { backgroundColor }, voice: { backgroundColor }, expressionPickerBackground: { backgroundColor } };
   return obj;
@@ -301,9 +301,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
   }
   return prop;
 }) : (function useChannelSafeAreaBottomStyles(arg0) {
-  const token = gradientBottom(4818).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
-  let obj = gradientBottom(4818);
-  gradientBottom = gradientBottom(9307).useGradientBottom();
+  const token = gradientBottom(4820).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
+  let obj = gradientBottom(4820);
+  gradientBottom = gradientBottom(9316).useGradientBottom();
   let backgroundColor1;
   if (gradientBottom != null) {
     backgroundColor1 = gradientBottom.backgroundColor;

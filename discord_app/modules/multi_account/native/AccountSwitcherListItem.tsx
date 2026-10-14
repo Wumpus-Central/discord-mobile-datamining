@@ -1,29 +1,29 @@
-// === Module 16682: AccountSwitcherListItem ===
+// === Module 16721: AccountSwitcherListItem ===
 
-// Module 16682 (AccountSwitcherListItem)
+// Module 16721 (AccountSwitcherListItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import Pressables from "Pressables" /* 6185 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4834 */;
+import UserUtilsDefault from "UserUtils" /* 4964 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import Pressables from "Pressables" /* 6189 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1404 */;
-import StreamerModeStore from "StreamerModeStore" /* 4963 */;
+import StreamerModeStore from "StreamerModeStore" /* 4965 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const initialize = CircleCheckIcon(504);
-const CircleInformationIcon = CircleCheckIcon(5046);
-const CircleCheckIcon2 = CircleCheckIcon(6868);
+const CircleInformationIcon = CircleCheckIcon(5050);
+const CircleCheckIcon2 = CircleCheckIcon(6873);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12643).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12679).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatusIcon(user) {
@@ -55,7 +55,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatu
       const obj2 = { color: null };
       TEXT_BRAND = nativeDefault.colors.TEXT_BRAND;
       obj2.color = TEXT_BRAND;
-      const tmp15 = options(CircleCheckIcon, obj2);
+      const tmp15 = React6(CircleCheckIcon, obj2);
       cResult[2] = tmp15;
     }
   } else if (user.tokenStatus !== MultiAccountTokenStatus.INVALID) {
@@ -64,7 +64,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatu
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-      const tmp10 = options(CircleInformationIcon.CircleInformationIcon, obj3);
+      const tmp10 = React6(CircleInformationIcon.CircleInformationIcon, obj3);
       cResult[3] = tmp10;
     }
   }
@@ -79,12 +79,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatu
   }
   if (user.id === id) {
     const obj2 = { color: nativeDefault.colors.TEXT_BRAND };
-    let tmp6 = options(CircleCheckIcon2.CircleCheckIcon, obj2);
+    let tmp6 = React6(CircleCheckIcon2.CircleCheckIcon, obj2);
   } else {
     tmp6 = null;
     if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {
       const obj3 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-      tmp6 = options(CircleInformationIcon.CircleInformationIcon, obj3);
+      tmp6 = React6(CircleInformationIcon.CircleInformationIcon, obj3);
     }
   }
   return tmp6;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
           }
         }
         obj2.children = obj7.string(util.t.seV8yt);
-        const tmp28 = options(Text_Text.Text, obj2);
+        const tmp28 = React6(Text_Text.Text, obj2);
         cResult[6] = tmp28;
       }
       class U {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
         }
       }
       obj3.children = obj5.string(util.t.tYX2ps);
-      const tmp25 = options(Text_Text.Text, obj3);
+      const tmp25 = React6(Text_Text.Text, obj3);
       cResult[7] = tmp25;
     }
     class U {
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
   }
   ({ accountSwitcherListItem, accountInfo } = tmp5);
   if (cResult[12] !== tmp15) {
-    { user: null, guildId: "a" }.user = tmp15;
+    { user: null, guildId: "r" }.user = tmp15;
     class U {
       constructor() {
         return closure_1_7.getCurrentUser();
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     cResult[12] = tmp15;
     cResult[13] = tmp35;
     let tmp33 = tmp35;
-    const obj6 = { user: null, guildId: "a" };
+    const obj6 = { user: null, guildId: "r" };
   } else {
     tmp33 = cResult[13];
   }
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
           }
         }
         obj12.children = "#" + tmp15.discriminator;
-        tmp46 = options(Text_Text.Text, obj12);
+        tmp46 = React6(Text_Text.Text, obj12);
       }
       cResult[20] = stateFromStores;
       cResult[21] = tmp15;
@@ -411,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     }
     tmp43[2] = tmp38;
     tmp43[4] = tmp39;
-    const tmp44 = options(Text_Text.Text, tmp43);
+    const tmp44 = React6(Text_Text.Text, tmp43);
     cResult[17] = tmp5.username;
     cResult[18] = tmp39;
     cResult[19] = tmp44;
@@ -449,7 +449,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
       const obj4 = { variant: "text-sm/semibold", color: "text-brand", children: null };
       const intl = util.intl;
       obj4.children = intl.string(util.t.seV8yt);
-      let tmp8 = options(Text_Text.Text, obj4);
+      let tmp8 = React6(Text_Text.Text, obj4);
     }
     if (null == onPressUser) {
       let PressableOpacity = React3;
@@ -472,8 +472,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, , ];
     const obj8 = { style: tmp.accountInfo, children: null };
-    const obj9 = { user: obj3, guildId: "a" };
-    const items3 = [options(native.Avatar, obj9), ];
+    const obj9 = { user: obj3, guildId: "r" };
+    const items3 = [React6(native.Avatar, obj9), ];
     const obj10 = { style: tmp.accountListTag, children: null };
     const obj11 = { style: tmp.tagContainer, children: null };
     const obj12 = { variant: "text-md/semibold", color: "text-default", style: tmp.username, lineClamp: 1, children: null };
@@ -484,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     }
     const obj14 = { mode: "username", identifiable: str };
     obj12.children = UserUtilsDefault.getUserTag(obj3, obj14);
-    const items4 = [options(Text_Text.Text, obj12), ];
+    const items4 = [React6(Text_Text.Text, obj12), ];
     let tmp18Result = !stateFromStores;
     if (!stateFromStores) {
       tmp18Result = !obj3.hasUniqueUsername();
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
       const obj15 = { variant: "text-md/normal", color: "text-muted", children: null };
       const _HermesInternal = HermesInternal;
       obj15.children = "#" + obj3.discriminator;
-      tmp18Result = options(Text_Text.Text, obj15);
+      tmp18Result = React6(Text_Text.Text, obj15);
     }
     items4[1] = tmp18Result;
     obj11.children = items4;
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     items2[1] = collapsed(React4, obj8);
     if (undefined === trailing) {
       const obj16 = { user };
-      trailing = options(closure_12, obj16);
+      trailing = React6(closure_12, obj16);
     }
     items2[2] = trailing;
     obj6.children = items2;
@@ -515,7 +515,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     const obj17 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
     const intl3 = util.intl;
     obj17.children = intl3.string(util.t.tYX2ps);
-    tmp8 = options(Text_Text.Text, obj17);
+    tmp8 = React6(Text_Text.Text, obj17);
   }
 });
 export const AccountStatusIcon = tmp5;

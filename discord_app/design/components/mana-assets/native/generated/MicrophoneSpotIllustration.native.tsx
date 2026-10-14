@@ -1,23 +1,23 @@
-// === Module 11040: MicrophoneSpotIllustration ===
+// === Module 11110: MicrophoneSpotIllustration ===
 
-// Module 11040 (MicrophoneSpotIllustration)
+// Module 11110 (MicrophoneSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef11041 from "module_11041" /* 11041 */;
-import _modDef11042 from "module_11042" /* 11042 */;
-import _modDef11043 from "module_11043" /* 11043 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import assetHelpers from "assetHelpers" /* 6277 */;
+import _modDef11111 from "module_11111" /* 11111 */;
+import _modDef11112 from "module_11112" /* 11112 */;
+import _modDef11113 from "module_11113" /* 11113 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11041 }, 3: null };
-let obj2 = { uri: _modDef11041 };
-obj[2] = { uri: _modDef11042 };
-const obj3 = { uri: _modDef11042 };
-obj[3] = { uri: _modDef11043 };
+let obj = { 1: null, 2: { uri: _modDef11111 }, 3: null };
+let obj2 = { uri: _modDef11111 };
+obj[2] = { uri: _modDef11112 };
+const obj3 = { uri: _modDef11112 };
+obj[3] = { uri: _modDef11113 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef11043 };
+const obj4 = { uri: _modDef11113 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MicrophoneSpotIllustration.native.tsx");
 

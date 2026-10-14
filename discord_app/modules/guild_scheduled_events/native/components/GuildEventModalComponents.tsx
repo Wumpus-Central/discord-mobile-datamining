@@ -1,23 +1,23 @@
-// === Module 8541: GuildEventModalComponents ===
+// === Module 8548: GuildEventModalComponents ===
 
-// Module 8541 (GuildEventModalComponents)
+// Module 8548 (GuildEventModalComponents)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import TableRadioRow from "TableRadioRow" /* 6262 */;
-import TableRadioGroup from "TableRadioGroup" /* 6263 */;
-import TextInput from "TextInput" /* 6286 */;
-import TextArea from "TextArea" /* 6774 */;
-import StageIcon from "StageIcon" /* 8225 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8229 */;
-import ScheduleUtils from "ScheduleUtils" /* 8521 */;
-import useGuildsUserCanStartStageIn from "useGuildsUserCanStartStageIn" /* 8556 */;
-import _modDef8557 from "module_8557" /* 8557 */;
-import _modDef8558 from "module_8558" /* 8558 */;
-import LocationIcon from "LocationIcon" /* 8559 */;
-import _modDef8561 from "module_8561" /* 8561 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import TableRadioRow from "TableRadioRow" /* 6266 */;
+import TableRadioGroup from "TableRadioGroup" /* 6267 */;
+import TextInput from "TextInput" /* 6290 */;
+import TextArea from "TextArea" /* 6778 */;
+import StageIcon from "StageIcon" /* 8232 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8236 */;
+import ScheduleUtils from "ScheduleUtils" /* 8528 */;
+import useGuildsUserCanStartStageIn from "useGuildsUserCanStartStageIn" /* 8563 */;
+import _modDef8564 from "module_8564" /* 8564 */;
+import _modDef8565 from "module_8565" /* 8565 */;
+import LocationIcon from "LocationIcon" /* 8566 */;
+import _modDef8568 from "module_8568" /* 8568 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ const GuildScheduledEventsConstants = fn(2071);
 const GuildFeatures = fn(1085).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_13 = createStyles.createStyles({ formGroup: { paddingVertical: 8 }, formGroupSmall: { paddingVertical: 4 }, formGroupLarge: { paddingTop: 16, paddingBottom: 4 }, dateInput: { flexGrow: 1, flexShrink: 1, flexBasis: "60%" }, timeInput: { flexGrow: 1, flexShrink: 1, flexBasis: "30%" }, formHeader: { marginBottom: 8 }, header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 } });
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -187,7 +187,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventEn
   obj4.value = constants.VOICE;
   const intl2 = util.intl;
   obj4.description = intl2.string(util.t["EV//4f"]);
-  obj4.icon = _modDef8557;
+  obj4.icon = _modDef8564;
   obj4.IconComponent = VoiceNormalIcon.VoiceNormalIcon;
   obj4.disabled = disabled;
   const items = [obj4, ];
@@ -197,7 +197,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventEn
   obj5.value = constants.EXTERNAL;
   const intl4 = util.intl;
   obj5.description = intl4.string(util.t.DYxrHm);
-  obj5.icon = _modDef8558;
+  obj5.icon = _modDef8565;
   obj5.IconComponent = LocationIcon.LocationIcon;
   obj5.disabled = disabled;
   items[1] = obj5;
@@ -209,7 +209,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventEn
     obj6.value = constants.STAGE_INSTANCE;
     const intl6 = util.intl;
     obj6.description = intl6.string(util.t.LgALpp);
-    obj6.icon = _modDef8561;
+    obj6.icon = _modDef8568;
     obj6.IconComponent = StageIcon.StageIcon;
     obj6.disabled = 0 === channelsUserCanStartStageIn.length || disabled;
     items.unshift(obj6);
@@ -229,7 +229,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventEn
   obj2.value = constants.VOICE;
   const intl2 = util.intl;
   obj2.description = intl2.string(util.t["EV//4f"]);
-  obj2.icon = _modDef8557;
+  obj2.icon = _modDef8564;
   obj2.IconComponent = VoiceNormalIcon.VoiceNormalIcon;
   obj2.disabled = disabled;
   const items = [obj2, ];
@@ -239,7 +239,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventEn
   obj3.value = constants.EXTERNAL;
   const intl4 = util.intl;
   obj3.description = intl4.string(util.t.DYxrHm);
-  obj3.icon = _modDef8558;
+  obj3.icon = _modDef8565;
   obj3.IconComponent = LocationIcon.LocationIcon;
   obj3.disabled = disabled;
   items[1] = obj3;
@@ -251,7 +251,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEventEn
     obj4.value = constants.STAGE_INSTANCE;
     const intl6 = util.intl;
     obj4.description = intl6.string(util.t.LgALpp);
-    obj4.icon = _modDef8561;
+    obj4.icon = _modDef8568;
     obj4.IconComponent = StageIcon.StageIcon;
     obj4.disabled = 0 === channelsUserCanStartStageIn.length || disabled;
     items.unshift(obj4);
@@ -280,7 +280,7 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
   const tmp = closure_13();
   const items = [recurrenceRule, startDate];
   dependencyMap = recurrenceOptions.useMemo(() => ScheduleUtils.recurrenceRuleToOption(startDate, recurrenceRule), items);
-  recurrenceOptions = startDate(8521).getRecurrenceOptions(startDate);
+  recurrenceOptions = startDate(8528).getRecurrenceOptions(startDate);
   const found = recurrenceOptions.find((value) => value.value === closure_3);
   let label;
   if (found != null) {
@@ -291,7 +291,7 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
   const obj4 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
   let intl = tmp2(1126).intl;
   obj4.children = intl.string(startDate(1126).t["59TVxL"]);
-  obj3.children = closure_11(startDate(5088).Text, obj4);
+  obj3.children = closure_11(startDate(5092).Text, obj4);
   const items1 = [closure_11(View, obj3), ];
   const obj5 = {
     onPress: function handleSelectOption() {
@@ -306,7 +306,7 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
         recurrenceRule(closure_3[14]).hideActionSheet();
       };
       obj3.selectedItem = selectedItem;
-      obj2.openLazy(asyncRequireImpl(8554, dependencyMap.paths), "SelectRecurrenceOption", obj3);
+      obj2.openLazy(asyncRequireImpl(8561, dependencyMap.paths), "SelectRecurrenceOption", obj3);
     },
     text: null,
     value: null,
@@ -318,11 +318,11 @@ export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
   const intl2 = tmp2(1126).intl;
   obj5.text = intl2.string(startDate(1126).t["59TVxL"]);
   obj5.value = label;
-  obj5.icon = recurrenceRule(8555);
+  obj5.icon = recurrenceRule(8562);
   const intl3 = tmp2(1126).intl;
   obj5.accessibilityLabel = intl3.string(startDate(1126).t["59TVxL"]);
   obj5.accessibilityHint = label;
-  items1[1] = closure_11(startDate(8542).InputButton, obj5);
+  items1[1] = closure_11(startDate(8549).InputButton, obj5);
   obj2.children = items1;
   return closure_12(View, obj2);
 };
@@ -413,13 +413,13 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
   const timeLabel = dateLabel.timeLabel;
   let date = dateLabel.date;
   if (date === undefined) {
-    date = timeLabel(4702)();
+    date = timeLabel(4704)();
   }
   ({ minimumDate: dependencyMap, maximumDate } = dateLabel);
   if (maximumDate === undefined) {
-    let obj = timeLabel(4702)();
-    maximumDate = timeLabel(4702)().add(30, "days").endOf("month");
-    const addResult = timeLabel(4702)().add(30, "days");
+    let obj = timeLabel(4704)();
+    maximumDate = timeLabel(4704)().add(30, "days").endOf("month");
+    const addResult = timeLabel(4704)().add(30, "days");
   }
   const disabled = dateLabel.disabled;
   let fn = dateLabel.onChange;
@@ -432,9 +432,9 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
   let obj2 = { style: tmp5.formGroup, children: null };
   let obj3 = { direction: "horizontal", spacing: 16, children: null };
   const obj4 = { style: tmp5.dateInput, children: null };
-  const items = [closure_11(time(5088).Text, { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: dateLabel }), ];
+  const items = [closure_11(time(5092).Text, { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: dateLabel }), ];
   time = "date";
-  items[1] = closure_11(time(8542).InputButton, {
+  items[1] = closure_11(time(8549).InputButton, {
     text: dateLabel,
     value: date.format("MMM Do YYYY"),
     () => {
@@ -478,7 +478,7 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
   obj4.children = items;
   const items1 = [closure_12(disabled, obj4), ];
   const obj7 = { style: tmp5.timeInput, children: null };
-  const items2 = [closure_11(time(5088).Text, { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: timeLabel }), ];
+  const items2 = [closure_11(time(5092).Text, { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: timeLabel }), ];
   const obj5 = { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: dateLabel };
   const obj6 = {
     text: dateLabel,
@@ -523,7 +523,7 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
   };
   const obj8 = { style: tmp5.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: timeLabel };
   time = "time";
-  items2[1] = closure_11(time(8542).InputButton, {
+  items2[1] = closure_11(time(8549).InputButton, {
     text: timeLabel,
     value: date.format("LT"),
     () => {
@@ -567,6 +567,6 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
   obj7.children = items2;
   items1[1] = closure_12(disabled, obj7);
   obj3.children = items1;
-  obj2.children = closure_12(time(5377).Stack, obj3);
+  obj2.children = closure_12(time(5382).Stack, obj3);
   return closure_11(disabled, obj2);
 };

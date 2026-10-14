@@ -1,16 +1,16 @@
-// === Module 8574: EditGuildEventWhere ===
+// === Module 8581: EditGuildEventWhere ===
 
-// Module 8574 (EditGuildEventWhere)
+// Module 8581 (EditGuildEventWhere)
 import util from "util" /* 1126 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
-import _modDef4702 from "module_4702" /* 4702 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8520 */;
-import EntityUtils from "EntityUtils" /* 8524 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8638 */;
+import _modDef4704 from "module_4704" /* 4704 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8527 */;
+import EntityUtils from "EntityUtils" /* 8531 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8643 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 
 const require = globalThis.__r;
 
@@ -42,14 +42,14 @@ function assertGuildEventWhereIsValid(guildEvent) {
     }
   }
 }
-let closure_8 = fn(6054).isGuildScheduledEventActive;
+let closure_8 = fn(6059).isGuildScheduledEventActive;
 const GuildScheduledEventsConstants = fn(2071);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
 const Constants = fn(1085);
 ({ Permissions: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let closure_16 = createStyles.createStyles({ channelSelection: { marginTop: 16 }, error: { paddingVertical: 8 }, text: { marginTop: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -225,11 +225,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     }
     function handleChangeEventEntityType(entityType) {
       _slicedToArray(null);
-      const obj = { entityType, scheduledEndTime: "a" };
+      const obj = { entityType, scheduledEndTime: "r" };
       if (entityType === constants.EXTERNAL) {
-        let obj2 = _modDef4702(guildEvent.scheduledStartTime);
+        let obj2 = _modDef4704(guildEvent.scheduledStartTime);
         if (obj2 == null) {
-          obj2 = _modDef4702();
+          obj2 = _modDef4704();
         }
         obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
         const addResult = obj2.add(1, "hour");
@@ -356,11 +356,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
       entityType: guildEvent.entityType,
       onChange: function handleChangeEventEntityType(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "a" };
+        const obj = { entityType, scheduledEndTime: "r" };
         if (entityType === constants.EXTERNAL) {
-          let obj2 = _modDef4702(guildEvent.scheduledStartTime);
+          let obj2 = _modDef4704(guildEvent.scheduledStartTime);
           if (obj2 == null) {
-            obj2 = _modDef4702();
+            obj2 = _modDef4704();
           }
           obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
           const addResult = obj2.add(1, "hour");
@@ -378,11 +378,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     entityType: guildEvent.entityType,
     onChange: function handleChangeEventEntityType(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "a" };
+      const obj = { entityType, scheduledEndTime: "r" };
       if (entityType === constants.EXTERNAL) {
-        let obj2 = _modDef4702(guildEvent.scheduledStartTime);
+        let obj2 = _modDef4704(guildEvent.scheduledStartTime);
         if (obj2 == null) {
-          obj2 = _modDef4702();
+          obj2 = _modDef4704();
         }
         obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
         const addResult = obj2.add(1, "hour");

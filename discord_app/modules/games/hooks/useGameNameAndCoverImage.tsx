@@ -1,9 +1,9 @@
-// === Module 13705: useGameNameAndCoverImage ===
+// === Module 13743: useGameNameAndCoverImage ===
 
-// Module 13705 (useGameNameAndCoverImage)
+// Module 13743 (useGameNameAndCoverImage)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useGame from "useGame" /* 7009 */;
+import useGame from "useGame" /* 7016 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

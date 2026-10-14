@@ -1,15 +1,15 @@
-// === Module 18054: AutomodRemovedContentSheet ===
+// === Module 18090: AutomodRemovedContentSheet ===
 
-// Module 18054 (AutomodRemovedContentSheet)
+// Module 18090 (AutomodRemovedContentSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5434 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6839 */;
-import ActionSheet from "ActionSheet" /* 6899 */;
-import RowGeneratorDefault from "RowGenerator" /* 7747 */;
-import ChatItemDefault from "ChatItem" /* 9374 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5439 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6844 */;
+import ActionSheet from "ActionSheet" /* 6904 */;
+import RowGeneratorDefault from "RowGenerator" /* 7753 */;
+import ChatItemDefault from "ChatItem" /* 9383 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const MessageFlags = fn(1085).MessageFlags;
 const jsx = fn(21).jsx;
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { content: null, blockedMessage: null };
 const tmp2 = new RowGeneratorDefault();
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodR
   if (thread != null) {
     name = thread.name;
   }
-  let obj2 = { header: jsx(message(6839).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
+  let obj2 = { header: jsx(message(6844).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
   obj.subtitle = name;
   const obj3 = { style: tmp.content, children: null };
   if (null != memo) {
@@ -191,9 +191,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodR
     let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
   } else {
     const obj6 = { variant: "text-md/normal", color: "text-default", children: action.notice };
-    tmp4Result = jsx(tmp5(5088).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
+    tmp4Result = jsx(tmp5(5092).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;
-  return jsx(message(6899).ActionSheet, { header: jsx(message(6839).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
+  return jsx(message(6904).ActionSheet, { header: jsx(message(6844).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
 });

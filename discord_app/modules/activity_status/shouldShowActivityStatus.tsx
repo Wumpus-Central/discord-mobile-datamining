@@ -1,6 +1,6 @@
-// === Module 17153: shouldShowActivityStatus ===
+// === Module 17187: shouldShowActivityStatus ===
 
-// Module 17153 (shouldShowActivityStatus)
+// Module 17187 (shouldShowActivityStatus)
 import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
 import size from "module_2" /* 2 */;

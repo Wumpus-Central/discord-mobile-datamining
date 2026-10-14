@@ -1,16 +1,16 @@
-// === Module 14414: AddFriendById ===
+// === Module 14451: AddFriendById ===
 
-// Module 14414 (AddFriendById)
+// Module 14451 (AddFriendById)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ToastUtils from "ToastUtils" /* 4808 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
-import Text_Text from "Text/Text" /* 5088 */;
-import TextField from "TextField" /* 6293 */;
-import FriendsUtils from "FriendsUtils" /* 7023 */;
-import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 14415 */;
+import ToastUtils from "ToastUtils" /* 4810 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4830 */;
+import Text_Text from "Text/Text" /* 5092 */;
+import TextField from "TextField" /* 6297 */;
+import FriendsUtils from "FriendsUtils" /* 7029 */;
+import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 14452 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const Constants = fn(1085);
 ({ PLACEHOLDER_TAG: closure_7, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, textInputContainer: { alignSelf: "stretch" }, placeholderText: null, inputAccessoryText: null, redesignInputAccessoryText: null, inputHeaderText: null, redesignGrow: null, errorStateText: null, friendMessageContainer: null, messageLabel: null, messageFooterText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 };
 obj2.placeholderText = { color: nativeDefault.colors.TEXT_MUTED };
@@ -59,7 +59,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ErrorM
       return tmp6;
     }
     const obj2 = { variant: "text-xs/medium", color: "text-feedback-critical", style: tmp5, children: errorMessage };
-    const tmp8 = options(Text_Text.Text, obj2);
+    const tmp8 = React6(Text_Text.Text, obj2);
     cResult[3] = errorMessage;
     cResult[4] = tmp5;
     cResult[5] = tmp8;
@@ -76,7 +76,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ErrorM
   const items = [, ];
   ({ inputAccessoryText: arr[0], errorStateText: arr[1] } = closure_12());
   obj.style = items;
-  return options(Text_Text.Text, obj);
+  return React6(Text_Text.Text, obj);
 });
 function AddFriendByIdInput(arg0) {
   ({ validationState, headerText } = arg0);
@@ -100,7 +100,7 @@ function AddFriendByIdInput(arg0) {
   ({ redesignInputAccessoryText: arr[0], inputHeaderText: arr[1] } = tmp3);
   items[2] = headerTextStyle;
   obj2.style = items;
-  const items1 = [options(Text_Text.Text, obj2), , ];
+  const items1 = [React6(Text_Text.Text, obj2), , ];
   const obj3 = { ref, value: textState.validatedText, accessibilityLabel: null, accessibilityHint: null, placeholder: null, placeholderTextColor: null, onChange: null, onSelectionChange: null, onKeyPress: null, onSubmitEditing: null, autoCapitalize: "none", returnKeyType: "send", keyboardType: "twitter", autoCorrect: false, blurOnSubmit: true, maxLength: 37, autoFocus: null, onFocus: null, status: null };
   const intl2 = util.intl;
   obj3.accessibilityLabel = intl2.string(util.t.qRaqel);
@@ -123,11 +123,11 @@ function AddFriendByIdInput(arg0) {
     str2 = "error";
   }
   obj3.status = str2;
-  items1[1] = options(TextField.TextField, obj3);
+  items1[1] = React6(TextField.TextField, obj3);
   let tmp9Result = null;
   if (null != message) {
     const obj4 = { errorMessage: message };
-    tmp9Result = options(closure_15, obj4);
+    tmp9Result = React6(closure_15, obj4);
   }
   items1[2] = tmp9Result;
   obj.children = items1;
@@ -507,7 +507,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
                                                         }
                                                       }
                                                       const obj7 = { size: "lg", text: tmp53, disabled: tmp28 <= 0, onPress: tmp21, loading: first2.status === constants.LOADING, grow: false };
-                                                      const tmp60 = closure_9(sourcePage(5379).Button, obj7);
+                                                      const tmp60 = closure_9(sourcePage(5384).Button, obj7);
                                                       cResult[57] = tmp21;
                                                       cResult[58] = tmp28 <= 0;
                                                       cResult[59] = first2.status === constants.LOADING;
@@ -631,7 +631,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
                               obj10.style = items4;
                               let intl = sourcePage(1126).intl;
                               obj10.children = intl.string(sourcePage(1126).t.Yi6Mpu);
-                              const items5 = [closure_9(sourcePage(5088).Text, obj10), , ];
+                              const items5 = [closure_9(sourcePage(5092).Text, obj10), , ];
                               const obj11 = { returnKeyType: "done", submitBehavior: "submit", value: first3, maxLength: 120, onSubmitEditing: tmp21, onChange: tmp18, status: null };
                               if (first2.field === constants2.MESSAGE) {
                                 class Q {
@@ -654,7 +654,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
                                 }
                               }
                               obj11.status = undefined;
-                              items5[1] = tmp36(sourcePage(6774).TextArea, obj11);
+                              items5[1] = tmp36(sourcePage(6778).TextArea, obj11);
                               if (first2.status !== constants.ERROR) {
                                 const obj12 = { style: tmp4.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
                                 class Q {
@@ -766,21 +766,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
             substr = trimmed.substring(1);
             tmp2 = substr;
           }
-          const validateDiscordTagResult = sourcePage(7023).validateDiscordTag(tmp2);
+          const validateDiscordTagResult = sourcePage(7029).validateDiscordTag(tmp2);
           if (null != validateDiscordTagResult) {
             let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
             closure_6(obj3);
           } else {
             let obj4 = { status: constants.LOADING };
             closure_6(obj4);
-            const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7018).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+            const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7024).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
             let tmp9;
             if (trimmed1.length > 0) {
               tmp9 = trimmed1;
             }
             obj6.note = tmp9;
-            const obj5 = ref(7018);
-            ref(7018).sendRequest(obj6).then(() => {
+            const obj5 = ref(7024);
+            ref(7024).sendRequest(obj6).then(() => {
               const obj = { validatedText: "", hint: null };
               const intl = util.intl;
               obj.hint = intl.string(util.t["6p7Mhh"]);
@@ -834,9 +834,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
               }
               closure_6(obj3);
             });
-            const sendRequestResult = ref(7018).sendRequest(obj6);
+            const sendRequestResult = ref(7024).sendRequest(obj6);
           }
-          let obj = sourcePage(7023);
+          let obj = sourcePage(7029);
         }
       }
       cResult[11] = first3;
@@ -941,21 +941,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(7023).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(7029).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
       } else {
         let obj4 = { status: constants.LOADING };
         closure_6(obj4);
-        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7018).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(7024).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(7018);
-        ref(7018).sendRequest(obj6).then(() => {
+        const obj5 = ref(7024);
+        ref(7024).sendRequest(obj6).then(() => {
           const obj = { validatedText: "", hint: null };
           const intl = util.intl;
           obj.hint = intl.string(util.t["6p7Mhh"]);
@@ -1009,9 +1009,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           }
           closure_6(obj3);
         });
-        const sendRequestResult = ref(7018).sendRequest(obj6);
+        const sendRequestResult = ref(7024).sendRequest(obj6);
       }
-      let obj = sourcePage(7023);
+      let obj = sourcePage(7029);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText, ref } = arg0);
@@ -1128,7 +1128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     obj7.disabled = str.trim().length <= 0;
     obj7.onPress = handleSubmitEditing;
     obj7.loading = first1.status === constants.LOADING;
-    items6[2] = closure_9(sourcePage(5379).Button, obj7);
+    items6[2] = closure_9(sourcePage(5384).Button, obj7);
     obj5.children = items6;
     return closure_10(closure_11, obj5);
   } else {
@@ -1140,7 +1140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     obj9.style = items7;
     let intl = sourcePage(1126).intl;
     obj9.children = intl.string(sourcePage(1126).t.Yi6Mpu);
-    const items8 = [closure_9(sourcePage(5088).Text, obj9), , ];
+    const items8 = [closure_9(sourcePage(5092).Text, obj9), , ];
     const obj10 = { returnKeyType: "done", submitBehavior: "submit", value: first2, maxLength: 120, onSubmitEditing: handleSubmitEditing, onChange: callback1, status: null };
     let str2;
     if (first1.field === constants2.MESSAGE) {
@@ -1149,12 +1149,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
       }
     }
     obj10.status = str2;
-    items8[1] = closure_9(sourcePage(6774).TextArea, obj10);
+    items8[1] = closure_9(sourcePage(6778).TextArea, obj10);
     if (first1.status !== constants.ERROR) {
       const obj11 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
       let intl2 = sourcePage(1126).intl;
       obj11.children = intl2.string(sourcePage(1126).t.UtfQNw);
-      let tmp17Result = closure_9(sourcePage(5088).Text, obj11);
+      let tmp17Result = closure_9(sourcePage(5092).Text, obj11);
       items8[2] = tmp17Result;
       obj8.children = items8;
       closure_10(tmp16, obj8);

@@ -1,23 +1,23 @@
-// === Module 18418: MemberRolesAbstractUI ===
+// === Module 18454: MemberRolesAbstractUI ===
 
-// Module 18418 (MemberRolesAbstractUI)
+// Module 18454 (MemberRolesAbstractUI)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6157 */;
-import assetHelpers from "assetHelpers" /* 6273 */;
-import _modDef18419 from "module_18419" /* 18419 */;
-import _modDef18420 from "module_18420" /* 18420 */;
-import _modDef18421 from "module_18421" /* 18421 */;
+import FastImageDefault from "FastImage" /* 5034 */;
+import assetHelpers from "assetHelpers" /* 6277 */;
+import _modDef18455 from "module_18455" /* 18455 */;
+import _modDef18456 from "module_18456" /* 18456 */;
+import _modDef18457 from "module_18457" /* 18457 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18419 }, 3: null };
-let obj2 = { uri: _modDef18419 };
-obj[2] = { uri: _modDef18420 };
-const obj3 = { uri: _modDef18420 };
-obj[3] = { uri: _modDef18421 };
+let obj = { 1: null, 2: { uri: _modDef18455 }, 3: null };
+let obj2 = { uri: _modDef18455 };
+obj[2] = { uri: _modDef18456 };
+const obj3 = { uri: _modDef18456 };
+obj[3] = { uri: _modDef18457 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18421 };
+const obj4 = { uri: _modDef18457 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MemberRolesAbstractUI.native.tsx");
 

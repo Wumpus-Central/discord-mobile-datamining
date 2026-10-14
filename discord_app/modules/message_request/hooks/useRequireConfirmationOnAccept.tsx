@@ -1,7 +1,7 @@
-// === Module 12679: useRequireConfirmationOnAccept ===
+// === Module 12715: useRequireConfirmationOnAccept ===
 
-// Module 12679 (useRequireConfirmationOnAccept)
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12680 */;
+// Module 12715 (useRequireConfirmationOnAccept)
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12716 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

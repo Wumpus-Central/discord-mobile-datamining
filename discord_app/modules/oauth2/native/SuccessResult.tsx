@@ -1,15 +1,15 @@
-// === Module 10865: ? ===
+// === Module 10702: ? ===
 
-// Module 10865
+// Module 10702
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
-import transitionToGuild from "transitionToGuild" /* 7053 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5939 */;
+import transitionToGuild from "transitionToGuild" /* 7059 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4750 */;
+import PermissionStore from "PermissionStore" /* 4752 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const Constants = fn(1085);
 const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollView: { flex: 1 }, scrollViewContentContainer: null, inner: null, text: null, footer: null, footerLandscape: null, footerPortrait: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollViewContentContainer = { height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
   guild = guild.guild;
   const application = guild.application;
   const tmp4 = closure_15();
-  guild(8451);
+  guild(8458);
   if (null == application) {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -475,11 +475,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
               return;
             }
           }
-          tmp52[0] = application(10866);
-          const tmp53 = closure_12(application(6157), tmp52);
+          tmp52[0] = application(10703);
+          const tmp53 = closure_12(application(5034), tmp52);
           cResult[26] = tmp53;
           const tmp49 = tmp53;
-          const tmp51 = application(6157);
+          const tmp51 = application(5034);
         } else {
           class M {
             constructor() {
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
             }
           }
           obj4.children = tmp56;
-          const tmp58 = closure_12(tmp(5088).Text, obj4);
+          const tmp58 = closure_12(tmp(5092).Text, obj4);
           cResult[28] = tmp4.text;
           cResult[29] = tmp58;
         } else {
@@ -633,7 +633,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
             }
           }
           obj6.children = tmp7;
-          tmp60 = closure_12(tmp(5088).Text, obj6);
+          tmp60 = closure_12(tmp(5092).Text, obj6);
         }
         cResult[30] = tmp4.text;
         cResult[31] = tmp7;
@@ -649,7 +649,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
         }
         if (tmp5) {
           let obj2 = { application_id: application.id };
-          AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
+          AnalyticsUtilsDefault.track(React6.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
           const _setImmediate = setImmediate;
           setImmediate(() => {
             const bestActiveInput = guild(dependencyMap[19]).getBestActiveInput();
@@ -792,7 +792,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
         id3 = guild.id;
       }
       obj.guild_id = id3;
-      AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
+      AnalyticsUtilsDefault.track(React6.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
       const tmp9Result = AnalyticsUtilsDefault;
     }
   }, items1);
@@ -813,7 +813,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
     }
     if (tmp5) {
       let obj2 = { application_id: application.id };
-      AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
+      AnalyticsUtilsDefault.track(React6.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
       const _setImmediate = setImmediate;
       setImmediate(() => {
         const bestActiveInput = guild(stateFromStores[19]).getBestActiveInput();
@@ -839,7 +839,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
     if (application != null) {
       id = application.id;
     }
-    AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+    AnalyticsUtilsDefault.track(React6.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
   }, items5);
   if (application != null) {
     id2 = application.id;
@@ -850,7 +850,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
     if (application != null) {
       id = application.id;
     }
-    AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
+    AnalyticsUtilsDefault.track(React6.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
   }, items6);
   const tmp2Result3 = guild(stateFromStores[17]);
   const items7 = [PermissionStore];

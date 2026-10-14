@@ -1,6 +1,6 @@
-// === Module 12476: getChatInputPositionStyle ===
+// === Module 12512: getChatInputPositionStyle ===
 
-// Module 12476 (getChatInputPositionStyle)
+// Module 12512 (getChatInputPositionStyle)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import size from "module_2" /* 2 */;

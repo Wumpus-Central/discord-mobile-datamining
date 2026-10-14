@@ -1,6 +1,6 @@
-// === Module 13142: ComponentProfiler ===
+// === Module 13177: ComponentProfiler ===
 
-// Module 13142 (ComponentProfiler)
+// Module 13177 (ComponentProfiler)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

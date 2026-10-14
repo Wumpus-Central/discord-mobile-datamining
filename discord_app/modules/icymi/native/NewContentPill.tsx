@@ -1,17 +1,17 @@
-// === Module 17284: NewContentPill ===
+// === Module 17318: NewContentPill ===
 
-// Module 17284 (NewContentPill)
+// Module 17318 (NewContentPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5378 */;
-import GuildIcon from "GuildIcon" /* 6159 */;
-import ICYMITypes from "ICYMITypes" /* 8467 */;
-import ICYMIUtils from "ICYMIUtils" /* 8471 */;
-import ClipView from "ClipView" /* 9017 */;
+import spring from "spring" /* 5383 */;
+import GuildIcon from "GuildIcon" /* 6163 */;
+import ICYMITypes from "ICYMITypes" /* 8474 */;
+import ICYMIUtils from "ICYMIUtils" /* 8478 */;
+import ClipView from "ClipView" /* 9022 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import ICYMIStore from "ICYMIStore" /* 8454 */;
+import ICYMIStore from "ICYMIStore" /* 8461 */;
 
 const GuildIconDefault = GuildIcon;
 const ClipViewDefault = ClipView;
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5092);
+const createStyles = fn(5096);
 let obj2 = { container: { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, guildIconBG: null, refreshMorePillContainer: null };
 let obj3 = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.guildIconBG = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -60,9 +60,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cutout
   const tmp9 = ClipViewDefault;
   obj4.size = GuildIcon.GuildIconSizes.XSMALL;
   obj4.style = tmp4.guildIconBG;
-  obj3.children = options(GuildIconDefault, obj4);
-  obj2.children = options(tmp9, obj3);
-  const tmp11 = options(timestampProducer, obj2);
+  obj3.children = React6(GuildIconDefault, obj4);
+  obj2.children = React6(tmp9, obj3);
+  const tmp11 = React6(timestampProducer, obj2);
   cResult[2] = guild;
   cResult[3] = tmp4.guildIconBG;
   cResult[4] = tmp11;
@@ -80,9 +80,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Cutout
   const tmp2 = ClipViewDefault;
   obj3.size = GuildIcon.GuildIconSizes.XSMALL;
   obj3.style = tmp.guildIconBG;
-  obj2.children = options(GuildIconDefault, obj3);
-  obj.children = options(tmp2, obj2);
-  return options(timestampProducer, obj);
+  obj2.children = React6(GuildIconDefault, obj3);
+  obj.children = React6(tmp2, obj2);
+  return React6(timestampProducer, obj);
 });
 const __initData = { code: "function NewContentPillTsx1(){const{withSpring,showingPill,springConfig}=this.__closure;return{transform:[{translateY:withSpring(showingPill?12:0,springConfig)}],opacity:withSpring(showingPill?1:0,springConfig,\"respect-motion-settings\")};}" };
 const __initData2 = { code: "function NewContentPillTsx2(){const{showingPill}=this.__closure;return{pointerEvents:showingPill?\"box-none\":\"none\"};}" };

@@ -1,18 +1,18 @@
-// === Module 8702: ThreadMemberListStore ===
+// === Module 6978: ThreadMemberListStore ===
 
-// Module 8702 (ThreadMemberListStore)
+// Module 6978 (ThreadMemberListStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
-import UserUtilsDefault from "UserUtils" /* 4962 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4757 */;
+import UserUtilsDefault from "UserUtils" /* 4964 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6980 */;
-import PresenceStore from "PresenceStore" /* 5108 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5759 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6979 */;
+import PresenceStore from "PresenceStore" /* 5112 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5764 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -364,6 +364,14 @@ prototype2["getMemberListSections"] = function getMemberListSections(thread) {
     sections = tmp.sections;
   }
   return sections;
+};
+prototype2["isMember"] = function isMember(arg0, arg1) {
+  let hasItem = null;
+  if (null != dependencyMap[arg0]) {
+    const allUserIds = tmp.allUserIds;
+    hasItem = allUserIds.has(arg1);
+  }
+  return hasItem;
 };
 prototype2["canUserViewChannel"] = function canUserViewChannel(arg0, arg1, arg2) {
   if (null == dependencyMap[arg0]) {

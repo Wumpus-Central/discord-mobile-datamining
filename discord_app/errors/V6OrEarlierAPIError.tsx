@@ -1,6 +1,6 @@
-// === Module 4792: errors/V6OrEarlierAPIError ===
+// === Module 4794: errors/V6OrEarlierAPIError ===
 
-// Module 4792 (errors/V6OrEarlierAPIError)
+// Module 4794 (errors/V6OrEarlierAPIError)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
