@@ -1,16 +1,13 @@
 // === Module 6444: ? ===
 
 // Module 6444
-import ComposedGestureName from "ComposedGestureName" /* 6394 */;
-import _mod6443 from "module_6443" /* 6443 */;
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const useExclusiveGestures = function useExclusiveGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
-  const applyResult = _mod6443.useComposedGesture.apply(items1);
-  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
-  return applyResult;
-};
+for (const key10013 in require("module_6445")) {
+  arg5[key10013] = require("module_6445")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

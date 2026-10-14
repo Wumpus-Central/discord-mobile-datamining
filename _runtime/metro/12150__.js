@@ -1,7 +1,73 @@
 // === Module 12150: ? ===
 
 // Module 12150
-import registerAsset from "module_1132" /* 1132 */;
+import _mod12069 from "module_12069" /* 12069 */;
+import _flush from "_flush" /* 12090 */;
+import _mod12115 from "module_12115" /* 12115 */;
 
+require = arg1;
+const dependencyMap = arg6;
+function getCurrentHubShim() {
+  return {
+    bindClient(arg0) {
+      const currentScope = _mod12069.getCurrentScope();
+      currentScope.setClient(arg0);
+    },
+    withScope: _mod12069.withScope,
+    getClient() {
+      return _mod12069.getClient();
+    },
+    getScope: _mod12069.getCurrentScope,
+    getIsolationScope: _mod12069.getIsolationScope,
+    captureException(arg0, arg1) {
+      const currentScope = _mod12069.getCurrentScope();
+      return currentScope.captureException(arg0, arg1);
+    },
+    captureMessage(arg0, arg1, arg2) {
+      const currentScope = _mod12069.getCurrentScope();
+      return currentScope.captureMessage(arg0, arg1, arg2);
+    },
+    captureEvent: _flush.captureEvent,
+    addBreadcrumb: _mod12115.addBreadcrumb,
+    setUser: _flush.setUser,
+    setTags: _flush.setTags,
+    setTag: _flush.setTag,
+    setExtra: _flush.setExtra,
+    setExtras: _flush.setExtras,
+    setContext: _flush.setContext,
+    getIntegration(id) {
+      const client = _mod12069.getClient();
+      let integrationByName = client;
+      if (client) {
+        integrationByName = client.getIntegrationByName(id.id);
+      }
+      if (!integrationByName) {
+        integrationByName = null;
+      }
+      return integrationByName;
+    },
+    startSession: _flush.startSession,
+    endSession: _flush.endSession,
+    captureSession(arg0) {
+      if (arg0) {
+        return _flush.endSession();
+      } else {
+        const currentScope = _mod12069.getCurrentScope();
+        const tmpResult3 = _mod12069;
+        const client = _mod12069.getClient();
+        const session = currentScope.getSession();
+        let tmp4 = client;
+        if (client) {
+          tmp4 = session;
+        }
+        if (tmp4) {
+          client.captureSession(session);
+        }
+        const tmpResult4 = _mod12069;
+      }
+    }
+  };
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 200, height: 104, scales: [2, 3], hash: "1659789d77f59f81faaeb051e5b4088e", name: "img_invalid_link_darker", type: "png" });
+export const getCurrentHub = getCurrentHubShim;
+export { getCurrentHubShim };

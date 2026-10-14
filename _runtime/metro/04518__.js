@@ -1,9 +1,9 @@
 // === Module 4518: ? ===
 
 // Module 4518
-import _mod4505 from "module_4505" /* 4505 */;
+import _mod4507 from "module_4507" /* 4507 */;
 import module_4519_mod from "module_4519" /* 4519 */;
-import startOfUTCISOWeek_mod from "startOfUTCISOWeek" /* 4436 */;
+import startOfUTCWeek_mod from "startOfUTCWeek" /* 4204 */;
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -31,15 +31,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOWeekParser, Parser) {
+function _setPrototypeOf(LocalWeekParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOWeekParser, Parser) {
-      ISOWeekParser.__proto__ = Parser;
-      return ISOWeekParser;
+    _setPrototypeOf = function _setPrototypeOf(LocalWeekParser, Parser) {
+      LocalWeekParser.__proto__ = Parser;
+      return LocalWeekParser;
     };
   }
-  return _setPrototypeOf(ISOWeekParser, Parser);
+  return _setPrototypeOf(LocalWeekParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -65,17 +65,17 @@ if (!module_4519) {
   tmp3 = module_4519;
 }
 module_4519 = tmp3;
-let startOfUTCISOWeek = startOfUTCISOWeek_mod;
-if (!startOfUTCISOWeek) {
-  const obj2 = { default: startOfUTCISOWeek };
+let startOfUTCWeek = startOfUTCWeek_mod;
+if (!startOfUTCWeek) {
+  const obj2 = { default: startOfUTCWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfUTCISOWeek;
+  tmp5 = startOfUTCWeek;
 }
-startOfUTCISOWeek = tmp5;
-const Parser = _mod4505.Parser;
+startOfUTCWeek = tmp5;
+const Parser = _mod4507.Parser;
 _createSuperInternal = undefined;
-class ISOWeekParser {
+class LocalWeekParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -125,7 +125,7 @@ class ISOWeekParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
+          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "i", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -149,7 +149,7 @@ class ISOWeekParser {
     }
   }
 }
-let dependencyMap = ISOWeekParser;
+let dependencyMap = LocalWeekParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -161,9 +161,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-ISOWeekParser.prototype = Object.create(prototype, { constructor: { value: ISOWeekParser, writable: true, configurable: true } });
+LocalWeekParser.prototype = Object.create(prototype, { constructor: { value: LocalWeekParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(ISOWeekParser, Parser);
+  _setPrototypeOf(LocalWeekParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -225,12 +225,12 @@ _createSuperInternal = function _createSuperInternal() {
 const entry = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("I" === arg1) {
-      return _createSuperInternal(4507).parseNumericPattern(_createSuperInternal(4508).numericPatterns.week, arg0);
-    } else if ("Io" === arg1) {
+    if ("w" === arg1) {
+      return _createSuperInternal(4509).parseNumericPattern(_createSuperInternal(4510).numericPatterns.week, arg0);
+    } else if ("wo" === arg1) {
       return ordinalNumber.ordinalNumber(arg0, { unit: "week" });
     } else {
-      return _createSuperInternal(4507).parseNDigits(arg1.length, arg0);
+      return _createSuperInternal(4509).parseNDigits(arg1.length, arg0);
     }
   }
 };
@@ -248,8 +248,8 @@ let items = [
   },
   {
     key: "set",
-    value: function set(arg0, arg1, arg2) {
-      return startOfUTCISOWeek.default(module_4519.default(arg0, arg2));
+    value: function set(arg0, arg1, arg2, arg3) {
+      return startOfUTCWeek.default(module_4519.default(arg0, arg2, arg3), arg3);
     }
   }
 ];
@@ -271,4 +271,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ISOWeekParser };
+export { LocalWeekParser };

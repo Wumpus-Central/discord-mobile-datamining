@@ -1,7 +1,18 @@
 // === Module 9360: ? ===
 
 // Module 9360
-import registerAsset from "module_1132" /* 1132 */;
+import noop from "module_19" /* 19 */;
 
+let context = noop.createContext(undefined);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8d9a4a6e9caf6cfaa5505c9d5954c20b", name: "ThumbsUpIcon", type: "png" });
+export const AnimatedHeaderHeightContext = context;
+export const useAnimatedHeaderHeight = function useAnimatedHeaderHeight() {
+  context = noop.useContext(context);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
+    throw error;
+  } else {
+    return context;
+  }
+};

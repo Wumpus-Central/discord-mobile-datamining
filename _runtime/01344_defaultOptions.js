@@ -262,22 +262,22 @@ function replaceGetterValues(arg0) {
   if (undefined === arg0) {
     fn = (arg0, arg1) => arg1;
   }
-  return function(D, keys) {
+  return function(arg0, arg1) {
     let tmp2;
-    let tmp = keys;
+    let tmp = arg1;
     if (closure_3.length > 0) {
       let num2 = 0;
-      tmp = keys;
+      tmp = arg1;
       if (0 < closure_3.length) {
         while (true) {
           tmp2 = closure_3[num2];
-          if (tmp2[1] === D) {
-            if (tmp2[0] === keys) {
+          if (tmp2[1] === arg0) {
+            if (tmp2[0] === arg1) {
               break;
             }
           }
           num2 = num2 + 1;
-          tmp = keys;
+          tmp = arg1;
         }
         tmp = tmp2[2];
         closure_3.splice(num2, 1);
@@ -285,7 +285,7 @@ function replaceGetterValues(arg0) {
     }
     const self = this;
     const call = fn.call;
-    return typeof call === "unknown" ? fn(D, tmp) : call(self, D, tmp);
+    return typeof call === "unknown" ? fn(arg0, tmp) : call(self, arg0, tmp);
   };
 }
 stringify.default = stringify;

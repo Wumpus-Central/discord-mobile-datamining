@@ -339,10 +339,10 @@ function styleUpdater(shareableViewDescriptors, fn, c8, sharedValue) {
 styleUpdater.__closure = { SHOULD_BE_USE_WEB: module_1659, processBoxShadow: o.processBoxShadow, isAnimated: _mod1802.isAnimated, prepareAnimation, runAnimations, updateProps: _mod1756.updateProps, shallowEqual: _mod1802.shallowEqual };
 styleUpdater.__workletHash = 3108907120254;
 styleUpdater.__initData = { code: "function styleUpdater_Pnpm_useAnimatedStyleTs3(viewDescriptors,updater,state,animationsActive,isAnimatedProps=false,forceUpdate){const{SHOULD_BE_USE_WEB,processBoxShadow,isAnimated,prepareAnimation,runAnimations,updateProps,shallowEqual}=this.__closure;var _state$animations,_updater;const animations=(_state$animations=state.animations)!==null&&_state$animations!==void 0?_state$animations:{};const newValues=(_updater=updater())!==null&&_updater!==void 0?_updater:{};const oldValues=state.last;const nonAnimatedNewValues={};let hasAnimations=false;let frameTimestamp;let hasNonAnimatedValues=false;if(!SHOULD_BE_USE_WEB&&newValues.boxShadow){processBoxShadow(newValues);}for(const key in newValues){const value=newValues[key];if(isAnimated(value)){frameTimestamp=global.__frameTimestamp||global._getAnimationTimestamp();prepareAnimation(frameTimestamp,value,animations[key],oldValues[key]);animations[key]=value;hasAnimations=true;}else{hasNonAnimatedValues=true;nonAnimatedNewValues[key]=value;delete animations[key];}}if(hasAnimations){const frame=function(timestamp){const{animations:animations,last:last,isAnimationCancelled:isAnimationCancelled}=state;if(isAnimationCancelled){state.isAnimationRunning=false;return;}const updates={};let allFinished=true;for(const propName in animations){const finished=runAnimations(animations[propName],timestamp,propName,updates,animationsActive);if(finished){if(Array.isArray(updates[propName])){updates[propName].forEach(function(obj){for(const prop in obj){if(!last[propName]||typeof last[propName]!=='object'){last[propName]={};}last[propName][prop]=obj[prop];}});}else{last[propName]=updates[propName];}delete animations[propName];}else{allFinished=false;}}if(updates){updateProps(viewDescriptors,updates);}if(!allFinished){requestAnimationFrame(frame);}else{state.isAnimationRunning=false;}};state.animations=animations;if(!state.isAnimationRunning){state.isAnimationCancelled=false;state.isAnimationRunning=true;frame(frameTimestamp);}if(hasNonAnimatedValues){updateProps(viewDescriptors,nonAnimatedNewValues);}}else{state.isAnimationCancelled=true;state.animations=[];if(!shallowEqual(oldValues,newValues)||forceUpdate){updateProps(viewDescriptors,newValues,isAnimatedProps);}}state.last=newValues;}" };
-function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
-  closure_0 = D;
+function jestStyleUpdater(arg0, fn, animations, arg3, current, c4, arg6) {
+  closure_0 = arg0;
   let last = arg3;
-  let obj2 = keys;
+  let obj2 = current;
   let animations1 = animations.animations;
   if (animations1 == null) {
     animations1 = {};
@@ -353,7 +353,7 @@ function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
   }
   last = animations.last;
   c9 = false;
-  keys = Object.keys(animations1);
+  let keys = Object.keys(animations1);
   let item = keys.forEach((item) => {
     obj = _mod1802;
     if (!obj.isAnimated(obj[item])) {
@@ -376,8 +376,8 @@ function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
     if (!animations.isAnimationRunning) {
       animations.isAnimationCancelled = false;
       animations.isAnimationRunning = true;
-      function frame(D) {
-        closure_0 = D;
+      function frame(arg0) {
+        closure_0 = arg0;
         animations = animations.animations;
         last = animations.last;
         if (animations.isAnimationCancelled) {
@@ -432,7 +432,7 @@ function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
         let _Object2 = Object;
         if (Object.keys(obj2).length) {
           const obj4 = animations(last[5]);
-          let result = obj4.updatePropsJestWrapper(D, obj2, keys, c4);
+          let result = obj4.updatePropsJestWrapper(arg0, obj2, current, c4);
         }
         if (c4) {
           animations.isAnimationRunning = false;
@@ -453,7 +453,7 @@ function jestStyleUpdater(D, fn, animations, arg3, keys, c4, arg6) {
   }
   if (!shallowEqualResult) {
     const tmp15Result = tmp15(tmp16[5]);
-    const result1 = tmp15Result.updatePropsJestWrapper(D, obj, keys, c4);
+    const result1 = tmp15Result.updatePropsJestWrapper(arg0, obj, current, c4);
   }
   const obj5 = animations(last[4]);
   tmp15 = animations;
@@ -545,7 +545,7 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
     obj.remoteState = tmp10(tmp11[9]).makeShareable(obj5);
     const tmp10Result4 = tmp10(tmp11[9]);
     obj.viewDescriptors = tmp10(tmp11[10]).makeViewDescriptorsSet();
-    obj.styleUpdaterContainer = { current: "r" };
+    obj.styleUpdaterContainer = { current: "keys" };
     tmp2.current = obj;
     const tmp10Result5 = tmp10(tmp11[10]);
   }

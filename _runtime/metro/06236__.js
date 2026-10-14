@@ -1,7 +1,15 @@
 // === Module 6236: ? ===
 
 // Module 6236
-import _mod6237 from "module_6237" /* 6237 */;
 
-
-export default _mod6237;
+export const getHeaderTitle = function getHeaderTitle(options, name) {
+  if (typeof options.headerTitle === "string") {
+    let title = options.headerTitle;
+  } else {
+    title = name;
+    if (undefined !== options.title) {
+      title = options.title;
+    }
+  }
+  return title;
+};

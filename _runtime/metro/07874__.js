@@ -1,78 +1,68 @@
 // === Module 7874: ? ===
 
 // Module 7874
-import _modDef7845 from "module_7845" /* 7845 */;
+import _mod7835 from "module_7835" /* 7835 */;
+import _modDef7852 from "module_7852" /* 7852 */;
+import _modDef7875 from "module_7875" /* 7875 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-importDefault = arg2;
-const dependencyMap = arg6;
+require = arg1;
+function getTagName(dataView, sum1) {
+  const tmp = _slicedToArray(_mod7835.getPascalStringFromDataView(dataView, sum1), 2);
+  const first = tmp[0];
+  const obj2 = { tagName: tmp[1], tagNameSize: null };
+  let num = 0;
+  const sum = 1 + first;
+  if (first % 2 === 0) {
+    num = 1;
+  }
+  obj2.tagNameSize = sum + num;
+  return obj2;
+}
+let c4 = "8BIM";
+let c5 = 2;
+let c6 = 4;
+({ length, length: closure_7 } = "8BIM");
 
 export default {
-  read(byteLength, sum) {
-    let tmp;
-    if (sum + 4 <= byteLength.byteLength) {
-      const longAt = _modDef7845.getLongAt(byteLength, sum);
-      const obj2 = { value: longAt, description: null };
-      const _HermesInternal = HermesInternal;
-      obj2.description = "" + longAt + "px";
-      tmp = obj2;
-    }
-    const obj3 = { "Image Width": tmp, "Image Height": null, "Bit Depth": null, "Color Type": null, Compression: null, Filter: null, Interlace: null };
-    let tmp6;
-    if (sum + 4 + 4 <= byteLength.byteLength) {
-      const longAt1 = _modDef7845.getLongAt(byteLength, sum + 4);
-      const obj5 = { value: longAt1, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj5.description = "" + longAt1 + "px";
-      tmp6 = obj5;
-    }
-    obj3["Image Height"] = tmp6;
-    let tmp11;
-    if (sum + 8 + 1 <= byteLength.byteLength) {
-      const byteAt = _modDef7845.getByteAt(byteLength, sum + 8);
-      const obj7 = { value: byteAt, description: null };
-      const _HermesInternal3 = HermesInternal;
-      obj7.description = "" + byteAt;
-      tmp11 = obj7;
-    }
-    obj3["Bit Depth"] = tmp11;
-    let tmp16;
-    if (sum + 9 + 1 <= byteLength.byteLength) {
-      const byteAt1 = _modDef7845.getByteAt(byteLength, sum + 9);
-      const obj9 = { value: byteAt1, description: { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] || "Unknown" };
-      tmp16 = obj9;
-    }
-    obj3["Color Type"] = tmp16;
-    let tmp20;
-    if (sum + 10 + 1 <= byteLength.byteLength) {
-      const byteAt2 = _modDef7845.getByteAt(byteLength, sum + 10);
-      const obj11 = { value: byteAt2, description: null };
-      let str6 = "Unknown";
-      if (0 === byteAt2) {
-        str6 = "Deflate/Inflate";
+  read(arg0, arg1) {
+    const uint8Array = new Uint8Array(arg0);
+    const dataView = _mod7835.getDataView(uint8Array.buffer);
+    const obj2 = {};
+    let num = 0;
+    if (0 < arg0.length) {
+      const sum = num + React5;
+      const stringFromDataView = _mod7835.getStringFromDataView(dataView, num, React5);
+      const shortAt = _modDef7852.getShortAt(dataView, sum);
+      const sum1 = sum + c5;
+      const tmp15 = getTagName(dataView, sum1);
+      let name = tmp15.tagName;
+      const sum2 = sum1 + tmp15.tagNameSize;
+      const longAt = _modDef7852.getLongAt(dataView, sum2);
+      const sum3 = sum2 + c6;
+      if (stringFromDataView === c4) {
+        const dataView1 = _mod7835.getDataView(dataView.buffer, sum3, longAt);
+        const obj7 = { id: shortAt, value: null };
+        const tmp5Result = _mod7835;
+        obj7.value = _mod7835.getStringFromDataView(dataView1, 0, longAt);
+        if (_modDef7875[shortAt]) {
+          try {
+            obj7.description = _modDef7875[shortAt].description(dataView1);
+            if (!name) {
+              name = _modDef7875[shortAt].name;
+            }
+            obj2[name] = obj7;
+          } catch (err) {
+            tmp.description = tmp2;
+          }
+        } else if (arg1) {
+          const _HermesInternal = HermesInternal;
+          obj2["undefined-" + shortAt] = obj7;
+        }
+        const tmp5Result2 = _mod7835;
       }
-      obj11.description = str6;
-      tmp20 = obj11;
+      num = sum3 + (longAt + longAt % 2);
     }
-    obj3.Compression = tmp20;
-    let tmp24;
-    if (sum + 11 + 1 <= byteLength.byteLength) {
-      const byteAt3 = _modDef7845.getByteAt(byteLength, sum + 11);
-      const obj13 = { value: byteAt3, description: null };
-      let str7 = "Unknown";
-      if (0 === byteAt3) {
-        str7 = "Adaptive";
-      }
-      obj13.description = str7;
-      tmp24 = obj13;
-    }
-    obj3.Filter = tmp24;
-    let tmp28;
-    if (sum + 12 + 1 <= byteLength.byteLength) {
-      const byteAt4 = _modDef7845.getByteAt(byteLength, sum + 12);
-      const obj15 = { value: byteAt4, description: { 0: "Noninterlaced", 1: "Adam7 Interlace" }[byteAt4] || "Unknown" };
-      tmp28 = obj15;
-    }
-    obj3.Interlace = tmp28;
-    return obj3;
+    return obj2;
   }
 };

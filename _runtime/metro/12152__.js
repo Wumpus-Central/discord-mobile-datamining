@@ -1,7 +1,20 @@
 // === Module 12152: ? ===
 
 // Module 12152
-import registerAsset from "module_1132" /* 1132 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "599bfed8ff498926fcd56f01832a54ca", name: "camera_upload", type: "png" });
+export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
+  let tmp;
+  if (undefined !== arg0) {
+    if (arg0 < 400) {
+      let str2;
+      if (arg0 >= 500) {
+        str2 = "error";
+      }
+      let str = str2;
+    } else {
+      str = "warning";
+    }
+    tmp = str;
+  }
+  return tmp;
+};

@@ -112,7 +112,7 @@ function createChildOrRootSpan(arg0) {
 }
 function _startRootSpan(name, getPropagationContext, parentSampled) {
   const client = _mod724.getClient();
-  options = undefined;
+  let options;
   if (client != null) {
     options = client.getOptions();
   }
@@ -295,7 +295,7 @@ export const startInactiveSpan = function startInactiveSpan(experimental) {
           if (_getSpanForScopeResult) {
             const client = _mod724.getClient();
             if (client) {
-              options = client.getOptions();
+              let options = client.getOptions();
             } else {
               options = {};
             }
@@ -404,7 +404,7 @@ export const startSpan = function startSpan(experimental, callback) {
             if (_getSpanForScopeResult) {
               const client = tmp(724).getClient();
               if (client) {
-                options = client.getOptions();
+                let options = client.getOptions();
               } else {
                 options = {};
               }
@@ -507,7 +507,7 @@ export const startSpanManual = function startSpanManual(experimental, arg1) {
             if (_getSpanForScopeResult) {
               const client = tmp(724).getClient();
               if (client) {
-                options = client.getOptions();
+                let options = client.getOptions();
               } else {
                 options = {};
               }

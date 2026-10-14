@@ -142,7 +142,7 @@ export const createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
     const tmp2Result = tmp2(tmp4[1]);
   }
   const merged1 = Object.assign(tmp10);
-  options = undefined;
+  let options;
   if (getDsn != null) {
     options = getDsn.getOptions();
   }

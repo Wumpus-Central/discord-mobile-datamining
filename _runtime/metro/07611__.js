@@ -2,7 +2,7 @@
 
 // Module 7611
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7601 from "module_7601" /* 7601 */;
+import _modDef7607 from "module_7607" /* 7607 */;
 import _modDef7612 from "module_7612" /* 7612 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -10,7 +10,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Ellipse = fn;
+const Circle = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Ellipse {
+class Circle {
   constructor() {
     self = this;
-    tmp = closure_3(this, Ellipse);
+    tmp = closure_3(this, Circle);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Ellipse);
+    obj = hasOwnProperty(Circle);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -52,20 +52,19 @@ class Ellipse {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Ellipse, _modDef7601);
+_inherits(Circle, _modDef7607);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
     const obj = {};
-    ({ cx, cy, rx, ry } = props);
-    const merged = Object.assign(Ellipse(7592).extract(this, props));
+    ({ cx, cy, r } = props);
+    const merged = Object.assign(Circle(7598).extract(this, props));
     obj.cx = cx;
     obj.cy = cy;
-    obj.rx = rx;
-    obj.ry = ry;
-    const obj2 = Ellipse(7592);
+    obj.r = r;
+    const obj2 = Circle(7598);
     const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
@@ -80,8 +79,8 @@ const entry = {
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Ellipse, items);
-importDefaultResultResult.displayName = "Ellipse";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
+const importDefaultResultResult = _createClass(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

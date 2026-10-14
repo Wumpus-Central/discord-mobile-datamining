@@ -17,7 +17,7 @@ let closure_6 = ["mark", "measure"];
 const NativePerformanceCxx = nullthrows(_modDef154);
 ({ reportMark: closure_8, reportMeasure: closure_9, getMarkTime: c10, clearMarks: closure_11, clearMeasures: closure_12 } = NativePerformanceCxx);
 let closure_13 = { startTime: 0, detail: "code" };
-let closure_14 = { name: "", startTime: 0, duration: 0, detail: "enabled" };
+let closure_14 = { name: "", startTime: 0, duration: 0, detail: "emoji" };
 function getMarkTimeForMeasure(arg0) {
 
 }
@@ -363,7 +363,7 @@ let items = [
         closure_14.duration = currentTimeStamp;
         closure_14.detail = tmp10;
         const performanceMeasure = new Performance(169).PerformanceMeasure(closure_14);
-        options(StringResult, num3, currentTimeStamp, performanceMeasure);
+        React6(StringResult, num3, currentTimeStamp, performanceMeasure);
         return performanceMeasure;
       }
     }

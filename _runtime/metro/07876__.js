@@ -1,109 +1,246 @@
 // === Module 7876: ? ===
 
 // Module 7876
-import _mod7828 from "module_7828" /* 7828 */;
-import PNG_CHUNK_TYPE_SIZE from "PNG_CHUNK_TYPE_SIZE" /* 7835 */;
-import _modDef7845 from "module_7845" /* 7845 */;
+import _mod7835 from "module_7835" /* 7835 */;
+import iccTags from "iccTags" /* 7877 */;
 
 require = arg1;
-importDefault = arg2;
 const dependencyMap = arg6;
-
-export default {
-  read(byteLength, arg1) {
-    const obj = {};
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let obj2 = _modDef7845;
-      let longAt = obj2.getLongAt(byteLength, arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_LENGTH_OFFSET);
-      let obj3 = _mod7828;
-      let sum = arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = obj3.getStringFromDataView(byteLength, sum, PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_SIZE);
-      if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_PHYS) {
-        let tmp22 = arg1[num];
-        let tmp23 = 4 <= longAt && tmp22 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
-        let tmp24;
-        if (tmp23) {
-          let tmpResult = _modDef7845;
-          let longAt1 = tmpResult.getLongAt(byteLength, tmp22 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          let obj4 = { value: longAt1, description: "" + longAt1 };
-          tmp24 = obj4;
-        }
-        obj["Pixels Per Unit X"] = tmp24;
-        let tmp26 = arg1[num];
-        let tmp27 = 8 <= longAt && tmp26 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 + 4 <= byteLength.byteLength;
-        let tmp28;
-        if (tmp27) {
-          let tmpResult9 = _modDef7845;
-          let longAt2 = tmpResult9.getLongAt(byteLength, tmp26 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          let obj5 = { value: longAt2, description: "" + longAt2 };
-          tmp28 = obj5;
-        }
-        obj["Pixels Per Unit Y"] = tmp28;
-        let tmp30 = arg1[num];
-        let tmp31 = 9 <= longAt && tmp30 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8 + 1 <= byteLength.byteLength;
-        let tmp32;
-        if (tmp31) {
-          let tmpResult10 = _modDef7845;
-          let byteAt = tmpResult10.getByteAt(byteLength, tmp30 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8);
-          let obj6 = { value: byteAt, description: null };
-          let str7 = "Unknown";
-          if (1 === byteAt) {
-            str7 = "meters";
+function parseTags(buffer) {
+  buffer = buffer.buffer;
+  if (buffer.byteLength !== buffer.getUint32()) {
+    const _Error3 = Error;
+    const error = new Error("ICC profile length not matching");
+    throw error;
+  } else if (buffer.byteLength < c2) {
+    const _Error2 = Error;
+    const error1 = new Error("ICC profile too short");
+    throw error1;
+  } else {
+    const obj2 = {};
+    const _Object = Object;
+    const keys = Object.keys(iccTags.iccProfile);
+    for (let num = 0; num < keys.length; num = num + 1) {
+      let tmp = keys[num];
+      let iter = iccTags.iccProfile[tmp];
+      let _parseInt = parseInt;
+      let valueResult = iter.value(buffer, parseInt(tmp, 10));
+      let descriptionResult = valueResult;
+      if (iter.description) {
+        descriptionResult = iter.description(valueResult);
+      }
+      let obj = { value: valueResult, description: descriptionResult };
+      obj2[iter.name] = obj;
+    }
+    const _String = String;
+    const _Uint8Array = Uint8Array;
+    const uint8Array = new Uint8Array(buffer.slice(36, 40));
+    if (fromCharCode.apply(null, uint8Array) !== acsp) {
+      const _Error = Error;
+      const error2 = new Error("ICC profile: missing signature");
+      throw error2;
+    } else {
+      let num6 = 132;
+      if (buffer.length < 132) {
+        return obj2;
+      } else {
+        const uint32 = buffer.getUint32(128);
+        let num7 = 0;
+        if (0 < uint32) {
+          while (buffer.length >= num6 + c8) {
+            let obj17 = _mod7835;
+            let stringFromDataView = obj17.getStringFromDataView(buffer, num6, 4);
+            let uint321 = buffer.getUint32(num6 + 4);
+            let uint322 = buffer.getUint32(num6 + 8);
+            if (uint321 > buffer.length) {
+              return obj2;
+            } else {
+              let tmp55Result = _mod7835;
+              let stringFromDataView1 = tmp55Result.getStringFromDataView(buffer, uint321, 4);
+              if (stringFromDataView1 === desc) {
+                let uint323 = buffer.getUint32(uint321 + 8);
+                if (uint323 > uint322) {
+                  return obj2;
+                } else {
+                  let _String4 = String;
+                  let _Uint8Array4 = Uint8Array;
+                  let tmp70 = new.target;
+                  let tmp71 = new.target;
+                  let uint8Array1 = new Uint8Array(buffer.slice(uint321 + 12, uint321 + uint323 + 11));
+                  let applyResult = fromCharCode4.apply(null, uint8Array1);
+                  if (iccTags.iccTags[stringFromDataView]) {
+                    let obj3 = { value: applyResult, description: applyResult };
+                    obj2[iccTags.iccTags[stringFromDataView].name] = obj3;
+                  } else {
+                    let obj4 = { value: applyResult, description: applyResult };
+                    obj2[stringFromDataView] = obj4;
+                  }
+                }
+              } else if (stringFromDataView1 === mluc) {
+                let uint324 = buffer.getUint32(uint321 + 8);
+                let sum = uint321 + 16;
+                let items = [];
+                let num4 = 0;
+                let tmp25 = require;
+                if (0 < uint324) {
+                  do {
+                    let obj6 = _mod7835;
+                    let stringFromDataView2 = obj6.getStringFromDataView(buffer, sum, 2);
+                    let obj7 = _mod7835;
+                    let stringFromDataView3 = obj7.getStringFromDataView(buffer, sum + 2, 2);
+                    let uint325 = buffer.getUint32(sum + 4);
+                    let uint326 = buffer.getUint32(sum + 8);
+                    let obj8 = _mod7835;
+                    let obj5 = { languageCode: stringFromDataView2, countryCode: stringFromDataView3, text: obj8.getUnicodeStringFromDataView(buffer, uint321 + uint326, uint325) };
+                    let arr = items.push(obj5);
+                    sum = sum + tmp22;
+                    num4 = num4 + 1;
+                    tmp25 = require;
+                  } while (num4 < uint324);
+                }
+                if (1 === uint324) {
+                  text = items[0].text;
+                  if (tmp25(7877).iccTags[stringFromDataView]) {
+                    let obj9 = { value: text, description: text };
+                    obj2[tmp25(7877).iccTags[stringFromDataView].name] = obj9;
+                  } else {
+                    let obj10 = { value: text, description: text };
+                    obj2[stringFromDataView] = obj10;
+                  }
+                } else {
+                  let obj11 = {};
+                  let num5 = 0;
+                  if (0 < items.length) {
+                    do {
+                      let _HermesInternal = HermesInternal;
+                      obj11["" + items[num5].languageCode + "-" + items[num5].countryCode] = items[num5].text;
+                      num5 = num5 + 1;
+                      length = items.length;
+                    } while (num5 < length);
+                  }
+                  if (iccTags.iccTags[stringFromDataView]) {
+                    let obj12 = { value: obj11, description: obj11 };
+                    obj2[iccTags.iccTags[stringFromDataView].name] = obj12;
+                  } else {
+                    let obj13 = { value: obj11, description: obj11 };
+                    obj2[stringFromDataView] = obj13;
+                  }
+                }
+              } else if (stringFromDataView1 === text) {
+                let _String2 = String;
+                let _Uint8Array2 = Uint8Array;
+                let tmp16 = new.target;
+                let tmp17 = new.target;
+                let uint8Array2 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + uint322 - 7));
+                let applyResult1 = fromCharCode2.apply(null, uint8Array2);
+                if (iccTags.iccTags[stringFromDataView]) {
+                  let obj14 = { value: applyResult1, description: applyResult1 };
+                  obj2[iccTags.iccTags[stringFromDataView].name] = obj14;
+                } else {
+                  let obj15 = { value: applyResult1, description: applyResult1 };
+                  obj2[stringFromDataView] = obj15;
+                }
+              } else if (stringFromDataView1 === c7) {
+                let _String3 = String;
+                let _Uint8Array3 = Uint8Array;
+                let tmp65 = new.target;
+                let tmp66 = new.target;
+                let uint8Array3 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + 12));
+                let applyResult2 = fromCharCode3.apply(null, uint8Array3);
+                if (iccTags.iccTags[stringFromDataView]) {
+                  let obj16 = { value: applyResult2, description: applyResult2 };
+                  obj2[iccTags.iccTags[stringFromDataView].name] = obj16;
+                } else {
+                  let obj18 = { value: applyResult2, description: applyResult2 };
+                  obj2[stringFromDataView] = obj18;
+                }
+              }
+              num6 = num6 + 12;
+              num7 = num7 + 1;
+            }
           }
-          obj6.description = str7;
-          tmp32 = obj6;
+          return obj2;
         }
-        obj["Pixel Units"] = tmp32;
-      } else if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_TIME) {
-        let tmp34 = arg1[num];
-        let tmp8 = 7 <= longAt && tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 7 <= byteLength.byteLength;
-        let tmp9;
-        if (tmp8) {
-          let tmpResult11 = _modDef7845;
-          let shortAt = tmpResult11.getShortAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          let tmpResult12 = _modDef7845;
-          let byteAt1 = tmpResult12.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 2);
-          let tmpResult13 = _modDef7845;
-          let byteAt2 = tmpResult13.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 3);
-          let tmpResult14 = _modDef7845;
-          let byteAt3 = tmpResult14.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          let tmpResult15 = _modDef7845;
-          let byteAt4 = tmpResult15.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 5);
-          let tmpResult16 = _modDef7845;
-          let byteAt5 = tmpResult16.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 6);
-          let obj7 = { value: null, description: null };
-          let items = [shortAt, byteAt1, byteAt2, byteAt3, byteAt4, byteAt5];
-          obj7.value = items;
-          let repeat = "0".repeat;
-          let _HermesInternal = HermesInternal;
-          let combined = "" + "0".repeat(4 - "" + shortAt.length) + shortAt;
-          let repeat2 = "0".repeat;
-          let _HermesInternal2 = HermesInternal;
-          let repeat3 = "0".repeat;
-          let combined1 = "" + "0".repeat(2 - "" + byteAt1.length) + byteAt1;
-          let _HermesInternal3 = HermesInternal;
-          let repeat4 = "0".repeat;
-          let combined2 = "" + "0".repeat(2 - "" + byteAt2.length) + byteAt2;
-          let _HermesInternal4 = HermesInternal;
-          let repeat5 = "0".repeat;
-          let combined3 = "" + "0".repeat(2 - "" + byteAt3.length) + byteAt3;
-          let _HermesInternal5 = HermesInternal;
-          let repeat6 = "0".repeat;
-          let combined4 = "" + "0".repeat(2 - "" + byteAt4.length) + byteAt4;
-          let _HermesInternal6 = HermesInternal;
-          let _HermesInternal7 = HermesInternal;
-          let str = "";
-          let str2 = "-";
-          let str3 = "-";
-          let str4 = " ";
-          let str5 = ":";
-          let str6 = ":";
-          obj7.description = "" + combined + "-" + combined1 + "-" + combined2 + " " + combined3 + ":" + combined4 + ":" + "" + "0".repeat(2 - "" + byteAt5.length) + byteAt5;
-          tmp9 = obj7;
-        }
-        obj["Modify Date"] = tmp9;
+        return obj2;
       }
     }
-    return obj;
+  }
+}
+let c2 = 84;
+const acsp = "acsp";
+const desc = "desc";
+const mluc = "mluc";
+let text = "text";
+let c7 = "sig ";
+let c8 = 12;
+
+export default {
+  read(buffer, arr, arg2) {
+    if (arg2) {
+      if (arr[0].compressionMethod !== _mod7835.COMPRESSION_METHOD_NONE) {
+        if (arr[0].compressionMethod === _mod7835.COMPRESSION_METHOD_DEFLATE) {
+          let _DataView = DataView;
+          buffer = buffer.buffer;
+          let dataView = new DataView(buffer.slice(arr[0].offset, arr[0].offset + arr[0].length));
+          const tmpResult = _mod7835;
+          const decompressResult = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview");
+          let catchPromise = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview").then(parseTags).catch(() => ({}));
+          const nextPromise = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview").then(parseTags);
+        } else {
+          catchPromise = {};
+        }
+        return catchPromise;
+      }
+    }
+    return (function readIcc(buffer, arr) {
+      let length;
+      let sum;
+      closure_0 = arr;
+      try {
+        let _Uint8Array = Uint8Array;
+        let uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
+        closure_2 = 0;
+        closure_3 = (function getBuffer(buffer) {
+          if (Array.isArray(buffer)) {
+            const _DataView = DataView;
+            const _Uint8Array = Uint8Array;
+            const dataView = new DataView(Uint8Array.from(buffer).buffer);
+            return dataView.buffer;
+          } else {
+            return buffer.buffer;
+          }
+        })(buffer);
+        function _loop(arg0) {
+          closure_0 = arg0;
+          const found = closure_0.find((chunkNumber) => chunkNumber.chunkNumber === closure_0);
+          if (found) {
+            const _Uint8Array = Uint8Array;
+            uint8Array = new Uint8Array(closure_3.slice(found.offset, found.offset + found.length));
+            const result = uint8Array.set(uint8Array, closure_2);
+            closure_2 = closure_2 + uint8Array.length;
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("ICC chunk " + arg0 + " not found");
+            throw error;
+          }
+        }
+        let num3 = 1;
+        if (1 <= arr.length) {
+          do {
+            let _loopResult = _loop(num3);
+            sum = num3 + 1;
+            num3 = sum;
+            length = arr.length;
+          } while (sum <= length);
+        }
+        let _DataView = DataView;
+        let dataView = new DataView(uint8Array.buffer);
+        return parseTags(dataView);
+      } catch (err) {
+        return {};
+      }
+    })(buffer, arr);
   }
 };
+export { parseTags };

@@ -1,24 +1,29 @@
 // === Module 7843: ? ===
 
 // Module 7843
-import _mod7828 from "module_7828" /* 7828 */;
+import findOffsets from "findOffsets" /* 7844 */;
 
 require = arg1;
 const dependencyMap = arg6;
-let c2 = 0;
-let c3 = "<?xpacket begin";
 
 export default {
-  isXMLFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod7828.getStringFromDataView(dataView, c2, length.length) === length;
+  isHeicFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
+          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
     }
-    return tmp;
   },
-  findOffsets(byteLength) {
-    const xmpChunks = [];
-    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
-    return { xmpChunks };
+  findHeicOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
   }
 };

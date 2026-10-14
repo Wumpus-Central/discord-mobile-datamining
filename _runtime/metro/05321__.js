@@ -1,25 +1,39 @@
 // === Module 5321: ? ===
 
 // Module 5321
-import _mod17 from "module_17" /* 17 */;
-import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import RNSLog2 from "RNSLog" /* 5317 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsScreenAndroid", directEventTypes: { topWillAppear: { registrationName: "onWillAppear" }, topDidAppear: { registrationName: "onDidAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topDidDisappear: { registrationName: "onDidDisappear" } }, validAttributes: null };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-const obj2 = { screenKey: true, preventNativeSelection: true, title: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, specialEffects: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, selectedDrawableIconResourceName: true, selectedImageIconResource: null, standardAppearance: true };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-obj2.selectedImageIconResource = { process: resolveAssetSource };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onWillAppear: true, onDidAppear: true, onWillDisappear: true, onDidDisappear: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = obj2;
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
 
-export default module_65.get("RNSTabsScreenAndroid", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useTabsHost = function useTabsHost(arg0) {
+  ({ componentNodeRef: require, onTabSelected } = arg0);
+  noop = undefined;
+  noop = noop.useRef(-1);
+  const effect = noop.useEffect(() => {
+    if (null != ref.current) {
+      let num2 = findNodeHandle(tmp.current);
+      if (num2 == null) {
+        num2 = -1;
+      }
+      closure_2.current = num2;
+    } else {
+      closure_2.current = -1;
+    }
+  }, []);
+  const obj = { onTabSelected: null };
+  const items = [onTabSelected];
+  obj.onTabSelected = noop.useCallback((nativeEvent) => {
+    const RNSLog = RNSLog2.RNSLog;
+    let num = ref2.current;
+    if (num == null) {
+      num = -1;
+    }
+    RNSLog.log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
+    if (onTabSelected != null) {
+      onTabSelected(nativeEvent);
+    }
+  }, items);
+  return obj;
+};

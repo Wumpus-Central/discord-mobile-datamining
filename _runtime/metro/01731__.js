@@ -80,7 +80,7 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "CONJURE_CHAT_CONN_STATE",
+      startTimestamp: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET",
       reduceMotion: null
     };
     let num = obj.velocity;

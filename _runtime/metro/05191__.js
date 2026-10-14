@@ -2,28 +2,22 @@
 
 // Module 5191
 
-export default function apply(call, arg1, arg2) {
-  if (0 === arg2.length) {
-    const call4 = call.call;
-    return typeof call4 === "unknown" ? call() : call4(arg1);
-  } else if (1 === length) {
-    const call3 = call.call;
-    const first = arg2[0];
-    return typeof call3 === "unknown" ? call(first) : call3(arg1, first);
-  } else if (2 === length) {
-    const call2 = call.call;
-    [tmp5, tmp6] = arg2;
-    return typeof call2 === "unknown" ? call(tmp5, tmp6) : call2(arg1, tmp5, tmp6);
-  } else if (3 === length) {
-    call = call.call;
-    [tmp, tmp2, tmp3] = arg2;
-    if (typeof call === "unknown") {
-      let callResult = call(tmp, tmp2, tmp3);
+export default function shortOut(arg0) {
+  closure_0 = arg0;
+  c1 = 0;
+  closure_2 = 0;
+  return () => {
+    const tmp = now();
+    closure_2 = tmp;
+    if (0 < 16 - (tmp - closure_2)) {
+      const sum = c1 + 1;
+      c1 = sum;
+      if (800 <= sum) {
+        return arguments[0];
+      }
     } else {
-      callResult = call(arg1, tmp, tmp2, tmp3);
+      c1 = 0;
     }
-    return callResult;
-  } else {
-    return call.apply(arg1, arg2);
-  }
+    return closure_0(...arguments);
+  };
 };

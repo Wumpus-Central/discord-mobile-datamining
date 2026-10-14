@@ -1,7 +1,17 @@
 // === Module 18523: ? ===
 
 // Module 18523
-import registerAsset from "module_1132" /* 1132 */;
+import arrayReduce from "arrayReduce" /* 5209 */;
+import words from "words" /* 18524 */;
+import deburr from "deburr" /* 18528 */;
 
+let closure_2 = RegExp("['\u2019]", "g");
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 87, height: 61.5, scales: [2, 3], hash: "d8d9b21fdc821b420337e07a880866f5", name: "asset_role_subscription_exclusive_perks", type: "png" });
+export default function createCompounder(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const tmp = arrayReduce;
+    const tmp2 = words;
+    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
+  };
+};

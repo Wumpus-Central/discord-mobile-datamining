@@ -1,32 +1,20 @@
 // === Module 6569: ? ===
 
 // Module 6569
-import _mod6567 from "module_6567" /* 6567 */;
+import _mod6554 from "module_6554" /* 6554 */;
+import _mod6570 from "module_6570" /* 6570 */;
 
 
-export default function _superPropBase(arg0, key10009) {
-  hasOwnProperty = {}.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  let tmp = arg0;
-  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
-    let tmp4 = _mod6567(arg0);
-    tmp = tmp4;
-    if (null !== tmp4) {
-      while (true) {
-        let hasOwnProperty2 = {}.hasOwnProperty;
-        let call2 = hasOwnProperty2.call;
-        tmp = tmp4;
-        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
-          break;
-        } else {
-          tmp4 = _mod6567(tmp4);
-          tmp = tmp4;
-          if (null === tmp4) {
-            break;
-          }
-        }
-      }
-    }
+export default function _possibleConstructorReturn(arg0, fn) {
+  if (fn) {
+    _mod6554;
+    return fn;
   }
-  return tmp;
+  if (undefined !== fn) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Derived constructors may only return object or undefined");
+    throw typeError;
+  } else {
+    return _mod6570(arg0);
+  }
 };

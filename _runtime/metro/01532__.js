@@ -9,7 +9,7 @@ require = arg1;
 
 export const useOptionsGetters = function useOptionsGetters(key) {
   key = key.key;
-  options = key.options;
+  const options = key.options;
   const navigation = key.navigation;
   noop.useRef(options);
   closure_4 = noop.useRef({});

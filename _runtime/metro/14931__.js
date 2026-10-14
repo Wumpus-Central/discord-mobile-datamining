@@ -1,13 +1,13 @@
 // === Module 14931: ? ===
 
 // Module 14931
-import _mod14879 from "module_14879" /* 14879 */;
-import _mod14888 from "module_14888" /* 14888 */;
-import all from "module_14898" /* 14898 */;
+import _mod14910 from "module_14910" /* 14910 */;
 
-let closure_0 = _mod14879(Function.toString);
-if (!all(_mod14888.inspectSource)) {
-  _mod14888.inspectSource = (arg0) => closure_0(arg0);
+const tmp = _mod14910.navigator && _mod14910.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
 }
 
-export default _mod14888.inspectSource;
+export default str;

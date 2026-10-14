@@ -14,7 +14,7 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
   return {
     name: "ThirdPartyErrorsFilter",
     setup(on) {
-      options = on;
+      const options = on;
       on.on("beforeEnvelope", (arg0) => {
         options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
           if ("event" === arg1) {

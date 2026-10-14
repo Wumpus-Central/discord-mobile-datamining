@@ -1,30 +1,18 @@
 // === Module 14932: ? ===
 
 // Module 14932
-import _mod14895 from "module_14895" /* 14895 */;
-import getOwnPropertyDescriptor_mod from "module_14875" /* 14875 */;
+import _mod14917 from "module_14917" /* 14917 */;
 
-let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = _mod14895(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod14917(1.toString);
 
-  }.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
   }
-  tmp3 = tmp5;
-}
-
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
+};

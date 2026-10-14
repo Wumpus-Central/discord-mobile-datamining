@@ -1,7 +1,33 @@
 // === Module 13289: ? ===
 
 // Module 13289
-import registerAsset from "module_1132" /* 1132 */;
+const require = globalThis.__r;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "6ab310fc9336bead9d2a9726051f2397", name: "SpendEarnOrbsLightTheme", type: "lottie" });
+for (const key10013 in require("module_13290")) {
+  arg5[key10013] = require("module_13290")[key10013];
+  continue;
+}
+for (const key10017 in require("ReplacementModesAndroid")) {
+  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
+  continue;
+}
+for (const key10021 in require("purchaseUpdatedListener")) {
+  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
+  continue;
+}
+for (const key10025 in require("module_13304")) {
+  arg5[key10025] = require("module_13304")[key10025];
+  continue;
+}
+for (const key10029 in require("module_13305")) {
+  arg5[key10029] = require("module_13305")[key10029];
+  continue;
+}
+for (const key10033 in require("PurchaseError")) {
+  arg5[key10033] = require("PurchaseError")[key10033];
+  continue;
+}
+for (const key10037 in require("module_13306")) {
+  arg5[key10037] = require("module_13306")[key10037];
+  continue;
+}

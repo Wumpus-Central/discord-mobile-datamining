@@ -1,7 +1,31 @@
 // === Module 18533: ? ===
 
 // Module 18533
-import registerAsset from "module_1132" /* 1132 */;
+import _mod637 from "module_637" /* 637 */;
+import _mod18534 from "module_18534" /* 18534 */;
+import stringToArray from "stringToArray" /* 18535 */;
+import castSlice from "castSlice" /* 18538 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 159, height: 105.5, scales: [2, 3], hash: "deeeb1ec32f8166fcc70387b3490f426", name: "role_subscription_lanyard_illo", type: "png" });
+export default function createCaseFirst(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const str = _mod637(arg0);
+    let tmp3;
+    if (_mod18534(str)) {
+      tmp3 = stringToArray(str);
+    }
+    if (tmp3) {
+      let first = tmp3[0];
+    } else {
+      first = str.charAt(0);
+    }
+    if (tmp3) {
+      let joined = castSlice(tmp3, 1).join("");
+      const obj = castSlice(tmp3, 1);
+    } else {
+      joined = str.slice(1);
+    }
+    return first[closure_0]() + joined;
+  };
+};

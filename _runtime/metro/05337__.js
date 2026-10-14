@@ -1,11 +1,7 @@
 // === Module 5337: ? ===
 
 // Module 5337
-import _mod17 from "module_17" /* 17 */;
-import module_65 from "module_65" /* 65 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStackHeaderSubview", validAttributes: { type: true, hidesSharedBackground: true, synchronousShadowStateUpdatesEnabled: true } };
 
-export default module_65.get("RNSScreenStackHeaderSubview", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default noop.createContext(undefined);

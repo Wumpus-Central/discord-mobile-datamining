@@ -49,7 +49,7 @@ export const createConsolaReporter = function createConsolaReporter() {
           }
         }
         if (set.has(str)) {
-          options = client.getOptions();
+          const options = client.getOptions();
           const normalizeDepth = options.normalizeDepth;
           let num = 3;
           if (undefined !== normalizeDepth) {

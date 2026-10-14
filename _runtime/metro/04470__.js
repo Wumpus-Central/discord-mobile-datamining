@@ -1,32 +1,19 @@
 // === Module 4470: ? ===
 
 // Module 4470
-import _typeof_mod from "module_4199" /* 4199 */;
-import requiredArgs_mod from "requiredArgs" /* 4200 */;
+import _mod4206 from "module_4206" /* 4206 */;
+import assign_mod from "assign" /* 4451 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = assign;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function getISODay(arg0) {
-  requiredArgs.default(1, arguments);
-  let num = _typeof.default(arg0).getDay();
-  if (0 === num) {
-    num = 7;
-  }
-  return num;
+export default function getDefaultOptions() {
+  return assign.default({}, _mod4206.getDefaultOptions());
 };
 export default exports.default;

@@ -273,7 +273,7 @@ let items = [
         str = "";
       }
       obj.devServerUrl = str;
-      options = undefined;
+      let options;
       if (self._integrations[self(undefined, 1005).MOBILE_REPLAY_INTEGRATION_NAME]) {
         if ("options" in self._integrations[tmp(undefined, 1005).MOBILE_REPLAY_INTEGRATION_NAME]) {
           options = self._integrations[tmp(undefined, 1005).MOBILE_REPLAY_INTEGRATION_NAME].options;

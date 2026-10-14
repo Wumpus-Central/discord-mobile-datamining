@@ -49,7 +49,7 @@ function _INTERNAL_flushMetricsBuffer(getOptions, value) {
     items = [];
   }
   if (0 !== items.length) {
-    options = getOptions.getOptions();
+    const options = getOptions.getOptions();
     const obj3 = _mod762;
     ({ _metadata, tunnel } = options);
     const metricEnvelope = obj3.createMetricEnvelope(items, _metadata, tunnel, getOptions.getDsn());
@@ -87,7 +87,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     client = _mod724.getClient();
   }
   if (client) {
-    options = client.getOptions();
+    const options = client.getOptions();
     ({ _experiments, enableMetrics, beforeSendMetric } = options);
     if (enableMetrics == null) {
       let enableMetrics1;

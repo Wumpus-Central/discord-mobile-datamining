@@ -100,7 +100,7 @@ export const dsnToString = function dsnToString(url) {
   return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
 };
 export const extractOrgIdFromClient = function extractOrgIdFromClient(client) {
-  options = client.getOptions();
+  const options = client.getOptions();
   const str = client.getDsn() || {}.host;
   if (options.orgId) {
     const _String = String;

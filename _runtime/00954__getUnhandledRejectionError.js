@@ -51,7 +51,7 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
         closure_0 = arg0;
         let result = registerSpanErrorInstrumentation.addGlobalErrorInstrumentationHandler((arg0) => {
           const client = obj2(693).getClient();
-          options = undefined;
+          let options;
           if (client != null) {
             options = client.getOptions();
           }
@@ -126,7 +126,7 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
         const result1 = obj2.addGlobalUnhandledRejectionInstrumentationHandler((reason) => {
           let captureEvent = obj2;
           const client = obj2(693).getClient();
-          options = undefined;
+          let options;
           if (client != null) {
             options = client.getOptions();
           }

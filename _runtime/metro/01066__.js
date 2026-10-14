@@ -64,7 +64,7 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       beforeStartSpan = reactNativeTracingIntegration.options.beforeStartSpan;
     }
     if (beforeStartSpan) {
-      options = reactNativeTracingIntegration.options;
+      const options = reactNativeTracingIntegration.options;
       let beforeStartSpanResult = options.beforeStartSpan(flag2(reactNativeTracingIntegration[0]).getDefaultIdleNavigationSpanOptions());
       const obj4 = flag2(reactNativeTracingIntegration[0]);
     } else {

@@ -2,7 +2,7 @@
 
 // Module 7617
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7616 from "module_7616" /* 7616 */;
+import _modDef7607 from "module_7607" /* 7607 */;
 import _modDef7618 from "module_7618" /* 7618 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -10,7 +10,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeColorMatrix = fn;
+const Ellipse = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeColorMatrix {
+class Ellipse {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeColorMatrix);
+    tmp = closure_3(this, Ellipse);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeColorMatrix);
+    obj = hasOwnProperty(Ellipse);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -52,33 +52,36 @@ class FeColorMatrix {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeColorMatrix, _modDef7616);
+_inherits(Ellipse, _modDef7607);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const obj = {
+    const props = this.props;
+    const obj = {};
+    ({ cx, cy, rx, ry } = props);
+    const merged = Object.assign(Ellipse(7598).extract(this, props));
+    obj.cx = cx;
+    obj.cy = cy;
+    obj.rx = rx;
+    obj.ry = ry;
+    const obj2 = Ellipse(7598);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(FeColorMatrix(7615).extractFilter(this.props));
-    const obj2 = FeColorMatrix(7615);
-    const merged1 = Object.assign(FeColorMatrix(7615).extractIn(this.props));
-    const obj3 = FeColorMatrix(7615);
-    const merged2 = Object.assign(FeColorMatrix(7615).extractFeColorMatrix(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef7618, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeColorMatrix, items);
-importDefaultResultResult.displayName = "FeColorMatrix";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.type = "matrix";
-obj.values = "";
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(Ellipse, items);
+importDefaultResultResult.displayName = "Ellipse";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
 
 export default importDefaultResultResult;

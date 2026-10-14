@@ -1,17 +1,14 @@
 // === Module 5690: ? ===
 
 // Module 5690
-import _mod1305 from "module_1305" /* 1305 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1339 */;
+import _mod1331 from "module_1331" /* 1331 */;
 
-const tmp = _mod1305("%Array%");
-const isArray = tmp.isArray;
-let tmp2 = !isArray;
-if (!isArray) {
-  tmp2 = callBoundIntrinsic("Object.prototype.toString");
-}
-let closure_0 = tmp2;
 
-export default tmp.isArray || (function IsArray(arg0) {
-  return "[object Array]" === closure_0(arg0);
-});
+export default function mod(arg0, arg1) {
+  const result = arg0 % arg1;
+  let sum = result;
+  if (result < 0) {
+    sum = result + arg1;
+  }
+  return _mod1331(sum);
+};

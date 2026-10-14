@@ -186,7 +186,7 @@ let items = [
           const merged1 = Object.assign(onCellLayout);
           const items3 = [_renderElementResult, tmp2];
           obj2.children = items3;
-          let tmp10Result = options(CellRendererComponent, obj2);
+          let tmp10Result = React6(CellRendererComponent, obj2);
         } else {
           const obj4 = { style: tmp7, onFocusCapture: self._onCellFocusCapture };
           let tmp12 = onCellLayout;
@@ -197,7 +197,7 @@ let items = [
           const merged2 = Object.assign(tmp12);
           const items4 = [_renderElementResult, tmp2];
           obj4.children = items4;
-          tmp10Result = options(React5, obj4);
+          tmp10Result = React6(React5, obj4);
         }
         const obj6 = { cellKey: self.props.cellKey, children: tmp10Result };
         return closure_1_8(CellRenderer(322).VirtualizedListCellContextProvider, obj6);

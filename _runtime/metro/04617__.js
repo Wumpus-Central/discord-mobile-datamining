@@ -1,18 +1,18 @@
 // === Module 4617: ? ===
 
 // Module 4617
-import module_4203_mod from "module_4203" /* 4203 */;
-import _typeof_mod from "module_4199" /* 4199 */;
-import requiredArgs_mod from "requiredArgs" /* 4200 */;
+import module_4205_mod from "module_4205" /* 4205 */;
+import _typeof_mod from "module_4201" /* 4201 */;
+import requiredArgs_mod from "requiredArgs" /* 4202 */;
 
-let module_4203 = module_4203_mod;
-if (!module_4203) {
-  const obj = { default: module_4203 };
+let module_4205 = module_4205_mod;
+if (!module_4205) {
+  const obj = { default: module_4205 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4203;
+  tmp3 = module_4205;
 }
-module_4203 = tmp3;
+module_4205 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -30,10 +30,11 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setHours(module_4203, uTCMinutes) {
+export default function setDayOfYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4203);
-  defaultResult1.setHours(module_4203.default(uTCMinutes));
+  const defaultResult1 = _typeof.default(arg0);
+  defaultResult1.setMonth(0);
+  defaultResult1.setDate(module_4205.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

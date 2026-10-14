@@ -1,12 +1,16 @@
 // === Module 14928: ? ===
 
 // Module 14928
-import _mod14875 from "module_14875" /* 14875 */;
-import _mod14909 from "module_14909" /* 14909 */;
-import _mod14926 from "module_14926" /* 14926 */;
+import prop_mod from "module_14929" /* 14929 */;
 
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
 
-export default _mod14875 ? ((arg0, arg1, arg2) => _mod14926.f(arg0, arg1, _mod14909(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+export default prop;

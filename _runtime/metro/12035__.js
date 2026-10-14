@@ -1,19 +1,7 @@
 // === Module 12035: ? ===
 
 // Module 12035
-import _mod12012 from "module_12012" /* 12012 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const _sentryScope = "_sentryScope";
-const _sentryIsolationScope = "_sentryIsolationScope";
 
-export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
-  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
-};
-export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
-  if (sentrySpan) {
-    const result = _mod12012.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
-    const result1 = _mod12012.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3b7bd4c82e3e8c361f5983d530550253", name: "ArrowSmallDownIcon", type: "png" });

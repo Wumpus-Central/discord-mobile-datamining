@@ -1,23 +1,12 @@
 // === Module 5187: ? ===
 
 // Module 5187
+import baseGetAllKeys from "baseGetAllKeys" /* 668 */;
+import _mod5170 from "module_5170" /* 5170 */;
+import keysIn from "keysIn" /* 5172 */;
 
-export default function shortOut(arg0) {
-  closure_0 = arg0;
-  c1 = 0;
-  closure_2 = 0;
-  return () => {
-    const tmp = now();
-    closure_2 = tmp;
-    if (0 < 16 - (tmp - closure_2)) {
-      const sum = c1 + 1;
-      c1 = sum;
-      if (800 <= sum) {
-        return arguments[0];
-      }
-    } else {
-      c1 = 0;
-    }
-    return closure_0(...arguments);
-  };
+
+export default function getAllKeysIn(arg0) {
+  const tmp = baseGetAllKeys;
+  return tmp(arg0, keysIn, _mod5170);
 };

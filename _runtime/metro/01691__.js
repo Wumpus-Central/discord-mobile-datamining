@@ -575,7 +575,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
             if ("color" === key10015) {
               if (tmp8) {
                 if (typeof tmp8 === "string") {
-                  let tmp4 = options(tmp8);
+                  let tmp4 = React6(tmp8);
                   obj[key10015] = tmp4;
                   continue;
                 }

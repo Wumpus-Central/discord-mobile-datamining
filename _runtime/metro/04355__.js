@@ -1,19 +1,18 @@
 // === Module 4355: ? ===
 
 // Module 4355
-import module_4203_mod from "module_4203" /* 4203 */;
+import module_4205_mod from "module_4205" /* 4205 */;
 import module_4356_mod from "module_4356" /* 4356 */;
-import module_4359_mod from "module_4359" /* 4359 */;
-import requiredArgs_mod from "requiredArgs" /* 4200 */;
+import requiredArgs_mod from "requiredArgs" /* 4202 */;
 
-let module_4203 = module_4203_mod;
-if (!module_4203) {
-  const obj = { default: module_4203 };
+let module_4205 = module_4205_mod;
+if (!module_4205) {
+  const obj = { default: module_4205 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4203;
+  tmp3 = module_4205;
 }
-module_4203 = tmp3;
+module_4205 = tmp3;
 let module_4356 = module_4356_mod;
 if (!module_4356) {
   const obj2 = { default: module_4356 };
@@ -22,25 +21,18 @@ if (!module_4356) {
   tmp5 = module_4356;
 }
 module_4356 = tmp5;
-let module_4359 = module_4359_mod;
-if (!module_4359) {
-  const obj3 = { default: module_4359 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4359;
-}
-module_4359 = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp7;
+let c3 = 3600000;
 
-export default function addISOWeekYears(arg0, arg1) {
+export default function addHours(interval, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4359.default(arg0, module_4356.default(arg0) + module_4203.default(arg1));
+  return module_4356.default(interval, module_4205.default(arg1) * c3);
 };
 export default exports.default;

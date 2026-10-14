@@ -117,7 +117,7 @@ let items = [
       obj4.source = { uri: FeedbackButton(1079).feedbackIcon };
       obj4.style = merged6;
       const element = <React5 source={null} style={null} />;
-      return <options style={merged2} onPress={null} accessibilityLabel={null}>{element}<closure_1_8 style={style} testID="sentry-feedback-button">{merged.triggerLabel}</closure_1_8></options>;
+      return <React6 style={merged2} onPress={null} accessibilityLabel={null}>{element}<closure_1_8 style={style} testID="sentry-feedback-button">{merged.triggerLabel}</closure_1_8></React6>;
     }
   }
 ];

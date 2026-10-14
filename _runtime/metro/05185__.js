@@ -1,12 +1,15 @@
 // === Module 5185: ? ===
 
 // Module 5185
-import shortOut from "shortOut" /* 5186 */;
-import overRest from "overRest" /* 5190 */;
-import flatten from "flatten" /* 5192 */;
+import _process from "_process" /* 539 */;
+import baseUnary from "baseUnary" /* 540 */;
+import baseIsMap from "baseIsMap" /* 5186 */;
 
+const tmp = _process && _process.isMap;
+if (tmp) {
+  let _module = baseUnary(tmp);
+} else {
+  _module = baseIsMap;
+}
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
-};
+export default _module;

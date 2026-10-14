@@ -1,24 +1,33 @@
 // === Module 5655: ? ===
 
 // Module 5655
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1339 */;
-import properlyBoxed from "properlyBoxed" /* 5656 */;
-import _mod5658 from "module_5658" /* 5658 */;
-import RequireObjectCoercible from "RequireObjectCoercible" /* 5660 */;
-import shimArrayPrototypeMap from "shimArrayPrototypeMap" /* 5721 */;
-import callBind from "callBind" /* 1474 */;
-import defineProperty from "module_5675" /* 5675 */;
+import _mod5656 from "module_5656" /* 5656 */;
 
-let closure_2 = callBind.apply(properlyBoxed());
-let closure_3 = callBoundIntrinsic("Array.prototype.slice");
-function map(arg0, arg1) {
-  RequireObjectCoercible(arg0);
-  return closure_2(arg0, closure_3(arguments, 1));
-}
-const obj = { getPolyfill: null, implementation: null, shim: null };
-obj.getPolyfill = properlyBoxed;
-obj.implementation = _mod5658;
-obj.shim = shimArrayPrototypeMap;
-defineProperty(map, obj);
 
-export default map;
+export default function Type(num) {
+  let str = "Null";
+  if (null !== num) {
+    let str2 = "Undefined";
+    if (undefined !== num) {
+      let str3 = "Object";
+      if (!_mod5656(num)) {
+        let str4 = "Number";
+        if (typeof num !== "number") {
+          let str5 = "Boolean";
+          if (typeof num !== "boolean") {
+            let str6;
+            if (typeof num === "string") {
+              str6 = "String";
+            }
+            str5 = str6;
+          }
+          str4 = str5;
+        }
+        str3 = str4;
+      }
+      str2 = str3;
+    }
+    str = str2;
+  }
+  return str;
+};

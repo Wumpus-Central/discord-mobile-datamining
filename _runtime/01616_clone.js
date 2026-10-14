@@ -116,7 +116,7 @@ export const useLinkProps = function useLinkProps(arg0) {
     let error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
     throw error;
   } else {
-    options = obj.useContext(get_options.LinkingContext).options;
+    const options = obj.useContext(get_options.LinkingContext).options;
     const tmp14 = _modDef1525((preventDefault) => {
       if (preventDefault != null) {
         preventDefault.preventDefault();

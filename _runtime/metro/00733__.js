@@ -61,7 +61,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         }
         return result;
       } else {
-        options = client.getOptions();
+        const options = client.getOptions();
         let DEFAULT_ENVIRONMENT = options.environment;
         if (!DEFAULT_ENVIRONMENT) {
           DEFAULT_ENVIRONMENT = DEFAULT_ENVIRONMENT2.DEFAULT_ENVIRONMENT;
@@ -120,7 +120,7 @@ export const freezeDscOnSpan = function freezeDscOnSpan(sentryNonRecordingSpan, 
   const result = _mod698.addNonEnumerableProperty(sentryNonRecordingSpan, _frozenDsc, dsc);
 };
 export const getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
-  options = getOptions.getOptions();
+  const options = getOptions.getOptions();
   let DEFAULT_ENVIRONMENT = options.environment;
   if (!DEFAULT_ENVIRONMENT) {
     DEFAULT_ENVIRONMENT = DEFAULT_ENVIRONMENT2.DEFAULT_ENVIRONMENT;
@@ -135,7 +135,7 @@ export const getDynamicSamplingContextFromScope = function getDynamicSamplingCon
   const propagationContext = getPropagationContext.getPropagationContext();
   let dsc = propagationContext.dsc;
   if (!dsc) {
-    options = getOptions.getOptions();
+    const options = getOptions.getOptions();
     let DEFAULT_ENVIRONMENT = options.environment;
     if (!DEFAULT_ENVIRONMENT) {
       DEFAULT_ENVIRONMENT = DEFAULT_ENVIRONMENT2.DEFAULT_ENVIRONMENT;

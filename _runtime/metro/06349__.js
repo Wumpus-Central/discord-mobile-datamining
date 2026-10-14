@@ -1,12 +1,21 @@
 // === Module 6349: ? ===
 
 // Module 6349
-import _modDef6350 from "module_6350" /* 6350 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod6350 from "module_6350" /* 6350 */;
+import ScrollView from "ScrollView" /* 6438 */;
+import hitSlopDefault from "hitSlop" /* 6439 */;
+import Touchable from "Touchable" /* 6450 */;
 
-({ Animated, StyleSheet } = get_ActivityIndicator);
-const animatedComponent = Animated.createAnimatedComponent(_modDef6350);
 
-export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
-export const AnimatedNativeDetector = animatedComponent;
-export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });
+export const BaseButton = _mod6350.BaseButton;
+export const BorderlessButton = _mod6350.BorderlessButton;
+export const PureNativeButton = _mod6350.PureNativeButton;
+export const RawButton = _mod6350.RawButton;
+export const RectButton = _mod6350.RectButton;
+export const FlatList = ScrollView.FlatList;
+export const RefreshControl = ScrollView.RefreshControl;
+export const ScrollView = ScrollView.ScrollView;
+export const Switch = ScrollView.Switch;
+export const TextInput = ScrollView.TextInput;
+export const Pressable = hitSlopDefault;
+export const Touchable = Touchable.Touchable;

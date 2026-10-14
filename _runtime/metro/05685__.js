@@ -1,14 +1,22 @@
 // === Module 5685: ? ===
 
 // Module 5685
-import _mod1331 from "module_1331" /* 1331 */;
+import _mod1337 from "module_1337" /* 1337 */;
 
 
-export default function mod(arg0, arg1) {
-  const result = arg0 % arg1;
-  let sum = result;
-  if (result < 0) {
-    sum = result + arg1;
+export default function isFinite(num) {
+  let tmp = typeof num === "number";
+  if (typeof num !== "number") {
+    tmp = typeof num === "bigint";
   }
-  return _mod1331(sum);
+  if (tmp) {
+    tmp = !_mod1337(num);
+  }
+  if (tmp) {
+    tmp = num !== Infinity;
+  }
+  if (tmp) {
+    tmp = num !== -Infinity;
+  }
+  return tmp;
 };

@@ -119,7 +119,7 @@ const entry = {
     let tmp8 = tmp2;
     if (tmp2) {
       const obj2 = { style: drawerSubview.drawerStatusBar };
-      tmp8 = options(ViewDefault, obj2);
+      tmp8 = React6(ViewDefault, obj2);
     }
     items1[1] = tmp8;
     obj.children = items1;
@@ -128,7 +128,7 @@ const entry = {
     const tmp3Result = collapsed(ViewDefault, obj);
     if (tmp2) {
       const obj4 = { translucent: true, backgroundColor: self.props.statusBarBackgroundColor };
-      tmp12 = options(_modDef304, obj4);
+      tmp12 = React6(_modDef304, obj4);
     }
     const items2 = [tmp12, , ];
     if (tmp2) {
@@ -137,7 +137,7 @@ const entry = {
       const obj6 = { backgroundColor: self.props.statusBarBackgroundColor };
       items3[1] = obj6;
       obj5.style = items3;
-      tmp2 = options(ViewDefault, obj5);
+      tmp2 = React6(ViewDefault, obj5);
     }
     items2[1] = tmp2;
     items2[2] = self.props.children;

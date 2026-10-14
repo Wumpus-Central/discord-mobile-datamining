@@ -2,46 +2,33 @@
 
 // Module 12120
 import _mod12121 from "module_12121" /* 12121 */;
+import setupIntegration from "module_12098" /* 12098 */;
 
-require = arg1;
-const module = arg4;
-const dependencyMap = arg6;
-function dynamicRequire(require, arg1) {
-  return require.require(arg1);
-}
 
-export { dynamicRequire };
-export const isNodeEnv = function isNodeEnv() {
-  const isBrowserBundleResult = _mod12121.isBrowserBundle();
-  if (isBrowserBundleResult) {
-    return !isBrowserBundleResult;
-  } else {
-    const _Object = Object;
-    const call = toString.call;
-    const _process = process;
-    let str = 0;
-    if (typeof process !== "undefined") {
-      str = process;
-    }
-    str = "[object process]";
-    const tmp3 = typeof call === "unknown" ? toString() : call(str);
-  }
-};
-export const loadModule = function loadModule(arg0) {
-  let tmp = arg1;
-  if (arg1 === undefined) {
-    tmp = module;
-  }
-  try {
-    let tmp3 = dynamicRequire(tmp, arg0);
-    if (!tmp3) {
-      try {
-        const _HermesInternal = HermesInternal;
-        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
-      } catch (err) {
+export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
+  name: "ModuleMetadata",
+  setup(on) {
+    const options = on;
+    on.on("beforeEnvelope", (arg0) => {
+      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        if ("event" === arg1) {
+          const _Array = Array;
+          let tmp3;
+          if (Array.isArray(arg0)) {
+            tmp3 = arg0[1];
+          }
+          if (tmp3) {
+            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+            arg0[1] = tmp3;
+            const obj = options(dependencyMap[2]);
+          }
+        }
+      });
+    });
+    on.on("applyFrameMetadata", (type) => {
+      if (!type.type) {
+        const result = _mod12121.addMetadataToStackFrames(options.getOptions().stackParser, type);
       }
-    }
-    return tmp3;
-  } catch (err) {
+    });
   }
-};
+}));

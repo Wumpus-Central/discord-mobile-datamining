@@ -1,7 +1,7 @@
 // === Module 7673: ? ===
 
 // Module 7673
-import _modDef7601 from "module_7601" /* 7601 */;
+import _modDef7607 from "module_7607" /* 7607 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -9,7 +9,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Symbol = importDefault;
+const Polyline = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,49 +30,59 @@ function _isNativeReflectConstruct() {
   }
 }
 const jsx = fn(21).jsx;
-class Symbol {
+class Polyline {
   constructor() {
     self = this;
-    tmp = c2(this, Symbol);
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, Polyline);
+    items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(Symbol);
+    obj = closure_4(Polyline);
     tmp3 = closure_3;
     if (metroRequire()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polyline(7672)(points);
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(Symbol, _modDef7601);
+_inherits(Polyline, _modDef7607);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
     const props = this.props;
-    const obj2 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign({ name: props.id });
-    const merged1 = Object.assign(Symbol(7590)(props));
-    obj2.children = props.children;
-    return jsx(Symbol(7674), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polyline(7672)(points);
+    }
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polyline(7667), { ref: this.refMethod, d: null });
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Symbol, items);
-importDefaultResultResult.displayName = "Symbol";
+let items = [entry];
+const importDefaultResultResult = _createClass(Polyline, items);
+importDefaultResultResult.displayName = "Polyline";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;
