@@ -1,7 +1,8 @@
 // === Module 15211: ? ===
 
 // Module 15211
-import registerAsset from "module_1132" /* 1132 */;
+import _mod15212 from "module_15212" /* 15212 */;
+import _mod15216 from "module_15216" /* 15216 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 8, height: 13, scales: [2, 3], hash: "f22850e4ccd7b23bc996d7a6a44cbe21", name: "ic_table_arrow_right", type: "png" });
+export default (arg0) => _mod15212(_mod15216(arg0));

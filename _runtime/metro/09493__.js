@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/GalaxyIcon", width: 60, height: 60, scales: [2, 3], hash: "2bb189919203a7299ceda12e2b9f8582", name: "GalaxyIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "0e96bcd2b2f1118c31b249938bd6d191", name: "img_nitro_animated_avatar", type: "png" });

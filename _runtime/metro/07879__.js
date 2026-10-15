@@ -1,81 +1,103 @@
 // === Module 7879: ? ===
 
 // Module 7879
-import _mod7835 from "module_7835" /* 7835 */;
-import _modDef7840 from "module_7840" /* 7840 */;
-import get0thIfdOffset from "get0thIfdOffset" /* 7855 */;
-import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 7856 */;
+import _modDef7817 from "module_7817" /* 7817 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-const MODEL_ID = { K3_III: 78420 };
-let obj2 = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
-
-export default {
-  read(byteLength, arg1, arg2, arg3) {
-    const obj = _modDef7840;
-    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
-    const sum = arg1 + arg2;
-    obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
-    let LevelInfo = ifd.PentaxModelID;
-    if (LevelInfo) {
-      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
+const Pattern = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (LevelInfo) {
-      LevelInfo = ifd.LevelInfo;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const jsx = fn(21).jsx;
+class Pattern {
+  constructor() {
+    self = this;
+    tmp = c2(this, Pattern);
+    tmp2 = closure_4;
+    obj = closure_4(Pattern);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    let tmp10 = ifd;
-    if (LevelInfo) {
-      const sum1 = sum + ifd.LevelInfo.__offset;
-      const obj3 = {};
-      if (sum1 + 7 <= byteLength.byteLength) {
-        const int8 = byteLength.getInt8(sum1 + obj2.CAMERA_ORIENTATION);
-        const obj4 = { value: int8, description: null };
-        let str6 = "Horizontal (normal)";
-        if (0 !== int8) {
-          let str = "Rotate 270 CW";
-          if (1 !== int8) {
-            let str2 = "Rotate 180";
-            if (2 !== int8) {
-              let str3 = "Rotate 90 CW";
-              if (3 !== int8) {
-                let str4 = "Upwards";
-                if (4 !== int8) {
-                  let str5 = "Unknown";
-                  if (5 === int8) {
-                    str5 = "Downwards";
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
-              }
-              str2 = str3;
-            }
-            str = str2;
-          }
-          str6 = str;
-        }
-        obj4.description = str6;
-        obj3.CameraOrientation = obj4;
-        const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef7840.LITTLE_ENDIAN);
-        const obj5 = { value: int16, description: "" + -0.5 * int16 };
-        obj3.RollAngle = obj5;
-        const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef7840.LITTLE_ENDIAN);
-        const obj6 = { value: int161, description: "" + -0.5 * int161 };
-        obj3.PitchAngle = obj6;
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Pattern, _modDef7817);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ patternTransform, patternUnits, patternContentUnits } = props);
+    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
+    if (!patternTransform) {
+      patternTransform = transform;
+    }
+    if (!patternTransform) {
+      patternTransform = props;
+    }
+    const tmp3Result = Pattern(7801)(patternTransform);
+    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
+    let num = patternUnits;
+    if (patternUnits) {
+      num = Pattern(7871)[patternUnits];
+    }
+    if (!num) {
+      num = 0;
+    }
+    size.patternUnits = num;
+    let num2 = 1;
+    if (patternContentUnits) {
+      num2 = Pattern(7871)[patternContentUnits];
+    }
+    size.patternContentUnits = num2;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
       }
-      const tmp7Result = _mod7835;
-      delete tmp[tmp2];
-      tmp10 = _mod7835.objectAssign({}, ifd, obj3);
-      const objectAssignResult = _mod7835.objectAssign({}, ifd, obj3);
-    }
-    return tmp10;
-  },
-  PENTAX_IFD_OFFSET: 10,
-  MODEL_ID,
-  LIK3III: obj2
+    };
+    const tmp3 = Pattern(7801);
+    const merged = Object.assign(size);
+    const merged1 = Object.assign(Pattern(7806)({ viewBox, preserveAspectRatio }));
+    obj.children = children;
+    return jsx(Pattern(7880), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
+  }
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(Pattern, items);
+importDefaultResultResult.displayName = "Pattern";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+
+export default importDefaultResultResult;

@@ -1,7 +1,19 @@
 // === Module 15317: ? ===
 
 // Module 15317
-import registerAsset from "module_1132" /* 1132 */;
+import _mod15318 from "module_15318" /* 15318 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/mfa/native/images", width: 380, height: 290, scales: [1], hash: "e8d550faf4e256dff3cc4faddf07f107", name: "img_keychain", type: "png" });
+export default function getReactNativeDimensions() {
+  try {
+    const Dimensions = get_ActivityIndicator.Dimensions;
+    try {
+      const Dimensions2 = get_ActivityIndicator.Dimensions;
+      value = Dimensions2.get("window");
+      return _mod15318.getReactNativeDimensionsWithDimensions(tmp2, value);
+    } catch (err) {
+    }
+  } catch (err) {
+  }
+};

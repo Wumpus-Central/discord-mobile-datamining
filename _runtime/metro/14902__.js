@@ -1,25 +1,7 @@
 // === Module 14902: ? ===
 
 // Module 14902
-const require = globalThis.__r;
+import registerAsset from "module_1132" /* 1132 */;
 
-const require = arg1;
-const dependencyMap = arg6;
 
-export const getSupportedUnits = function getSupportedUnits(locale) {
-  _require = locale;
-  const units = require("module_14903").units;
-  return units.filter((item) => (function isSupported(unit, arg1) {
-    let str = arg1;
-    if (undefined === arg1) {
-      str = "en";
-    }
-    try {
-      const obj = { style: "unit", unit };
-      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
-      return memoizedNumberFormat.resolvedOptions().unit === unit;
-    } catch (err) {
-      return false;
-    }
-  })(item, closure_0));
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "e6321d3eee6babc8e6acf553c6eec250", name: "ServerTab", type: "lottie" });

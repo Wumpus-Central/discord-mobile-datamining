@@ -1,18 +1,43 @@
 // === Module 14937: ? ===
 
 // Module 14937
-import _mod14928 from "module_14928" /* 14928 */;
-import _mod14936 from "module_14936" /* 14936 */;
-import _mod14938 from "module_14938" /* 14938 */;
-import _mod14939 from "module_14939" /* 14939 */;
+import _mod518 from "module_518" /* 518 */;
+import baseKeys from "baseKeys" /* 544 */;
+import _mod545 from "module_545" /* 545 */;
+import _mod645 from "module_645" /* 645 */;
 
 
-export default _mod14928 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = _mod14938("Symbol");
-  let tmpResultResult = _mod14936(tmp3);
-  if (tmpResultResult) {
-    tmpResultResult = _mod14939(tmp3.prototype, Object(arg0));
-    const tmpResult = _mod14939;
+export default function isEmpty(size) {
+  if (null == size) {
+    return true;
+  } else {
+    if (_mod518(size)) {
+      return !size.length;
+    }
+    const tmp = _mod645(size);
+    if ("[object Map]" != tmp) {
+      if ("[object Set]" != tmp) {
+        if (_mod545(size)) {
+          return !baseKeys(size).length;
+        } else {
+          for (const key10021 in arg0) {
+            let call = hasOwnProperty.call;
+            if (typeof call === "unknown") {
+              let callResult = hasOwnProperty(key10021);
+            } else {
+              callResult = call(arg0, key10021);
+            }
+            if (!callResult) {
+              continue;
+            } else {
+              let flag = false;
+              return false;
+            }
+          }
+          return true;
+        }
+      }
+    }
+    return !size.size;
   }
-  return tmpResultResult;
-});
+};

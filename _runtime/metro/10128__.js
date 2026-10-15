@@ -1,96 +1,78 @@
 // === Module 10128: ? ===
 
 // Module 10128
-import SINGLE_ITEM from "SINGLE_ITEM" /* 10129 */;
-import noop from "module_19" /* 19 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod10059 from "module_10059" /* 10059 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-require = arg1;
-
-export const useInitProps = function useInitProps(defaultIndex) {
-  defaultIndex = defaultIndex.defaultIndex;
-  let num = 0;
-  if (undefined !== defaultIndex) {
-    num = defaultIndex;
-  }
-  let data = defaultIndex.data;
-  if (undefined === data) {
-    data = [];
-  }
-  const loop = tmp;
-  const autoPlayInterval = defaultIndex.autoPlayInterval;
-  let num2 = 1000;
-  if (undefined !== autoPlayInterval) {
-    num2 = autoPlayInterval;
-  }
-  const scrollAnimationDuration = defaultIndex.scrollAnimationDuration;
-  let num3 = 500;
-  if (undefined !== scrollAnimationDuration) {
-    num3 = scrollAnimationDuration;
-  }
-  let style = defaultIndex.style;
-  if (undefined === style) {
-    style = {};
-  }
-  const autoFillData = defaultIndex.autoFillData;
-  noop = tmp2;
-  const enabled = defaultIndex.enabled;
-  const pagingEnabled = defaultIndex.pagingEnabled;
-  const overscrollEnabled = defaultIndex.overscrollEnabled;
-  let snapEnabled = defaultIndex.snapEnabled;
-  if (undefined === snapEnabled) {
-    let flag = defaultIndex.enableSnap;
-    if (flag == null) {
-      flag = true;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    snapEnabled = flag;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  ({ width, height } = defaultIndex);
-  if (!width) {
-    width = 0;
-  }
-  const rounded = Math.round(width);
-  if (!height) {
-    height = 0;
-  }
-  const rounded1 = Math.round(height);
-  const items = [data, undefined === loop || loop, undefined === autoFillData || autoFillData];
-  const bound = Math.max(num2, 0);
-  const memo = noop.useMemo(() => SINGLE_ITEM.computedFillDataWithAutoFillData({ loop, autoFillData, data, dataLength: data.length }), items);
-  let tmp10 = "vertical-stack" !== defaultIndex.mode;
-  if (tmp10) {
-    tmp10 = "horizontal-stack" !== defaultIndex.mode;
-  }
-  if (!tmp10) {
-    if (!defaultIndex.modeConfig) {
-      defaultIndex.modeConfig = {};
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
     }
-    const modeConfig = defaultIndex.modeConfig;
-    let showLength;
-    if (modeConfig != null) {
-      showLength = modeConfig.showLength;
+    return tmp;
+  };
+}
+class NLMergeDateTimeRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, NLMergeDateTimeRefiner);
+    tmp2 = c2;
+    obj = c2(NLMergeDateTimeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    if (showLength == null) {
-      showLength = length - 1;
-    }
-    defaultIndex.modeConfig.showLength = showLength;
+    return tmp3(self, constructResult);
   }
-  const obj = {};
-  const merged = Object.assign(defaultIndex);
-  obj.defaultIndex = num;
-  obj.autoFillData = undefined === autoFillData || autoFillData;
-  obj.data = memo;
-  obj.dataLength = memo.length;
-  obj.rawData = data;
-  obj.rawDataLength = data.length;
-  obj.loop = undefined === loop || loop;
-  obj.enabled = undefined === enabled || enabled;
-  obj.autoPlayInterval = bound;
-  obj.scrollAnimationDuration = num3;
-  obj.style = style;
-  obj.pagingEnabled = undefined === pagingEnabled || pagingEnabled;
-  obj.snapEnabled = snapEnabled;
-  obj.overscrollEnabled = undefined === overscrollEnabled || overscrollEnabled;
-  obj.width = rounded;
-  obj.height = rounded1;
-  return obj;
+}
+_classCallCheck = NLMergeDateTimeRefiner;
+_inherits(NLMergeDateTimeRefiner, fn(_mod10059).default);
+const entry = {
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(om|na|voor|in de|,|-)?\\s*$");
+    return regExp;
+  }
 };
+const items = [entry];
+
+export default _createClass(NLMergeDateTimeRefiner, items);

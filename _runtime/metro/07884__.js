@@ -1,54 +1,93 @@
 // === Module 7884: ? ===
 
 // Module 7884
-import _modDef7852 from "module_7852" /* 7852 */;
+import _modDef7817 from "module_7817" /* 7817 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-importDefault = arg2;
-const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
-
-export default {
-  read(getUint8, sum) {
-    const byteAt = _modDef7852.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
+const RadialGradient = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    const obj2 = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const jsx = fn(21).jsx;
+class RadialGradient {
+  constructor() {
+    self = this;
+    tmp = c2(this, RadialGradient);
+    tmp2 = closure_4;
+    obj = closure_4(RadialGradient);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    const obj3 = { Alpha: obj2 };
-    obj2.description = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(RadialGradient, _modDef7817);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ rx, ry, r, cx, cy, fx } = props);
+    if (undefined === fx) {
+      fx = cx;
     }
-    const obj4 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
+    let fy = props.fy;
+    const obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
+    if (undefined === fy) {
+      fy = cy;
     }
-    obj4.description = str;
-    obj3.Animation = obj4;
-    sum = sum + c2;
-    const byteAt1 = _modDef7852.getByteAt(getUint8, sum);
-    const tmpResult = _modDef7852;
-    const sum1 = byteAt1 + 256 * _modDef7852.getByteAt(getUint8, sum + 1);
-    const tmpResult6 = _modDef7852;
-    const sum2 = sum1 + 65536 * _modDef7852.getByteAt(getUint8, sum + 2) + 1;
-    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj5 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult7 = _modDef7852;
-    const byteAt2 = _modDef7852.getByteAt(getUint8, sum3);
-    const tmpResult8 = _modDef7852;
-    const sum4 = byteAt2 + 256 * _modDef7852.getByteAt(getUint8, sum3 + 1);
-    const tmpResult9 = _modDef7852;
-    const sum5 = sum4 + 65536 * _modDef7852.getByteAt(getUint8, sum3 + 2) + 1;
-    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj3;
+    obj.fy = fy;
+    if (!rx) {
+      rx = r;
+    }
+    obj.rx = rx;
+    if (!ry) {
+      ry = r;
+    }
+    obj.ry = ry;
+    obj.cx = cx;
+    obj.cy = cy;
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(RadialGradient(7870)(props, this));
+    return jsx(RadialGradient(7885), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(RadialGradient, items);
+importDefaultResultResult.displayName = "RadialGradient";
+importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
+
+export default importDefaultResultResult;

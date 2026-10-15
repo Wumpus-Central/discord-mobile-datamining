@@ -1,7 +1,12 @@
 // === Module 14618: ? ===
 
 // Module 14618
-import registerAsset from "module_1132" /* 1132 */;
+import _mod14632 from "module_14632" /* 14632 */;
+import assign from "module_14619" /* 14619 */;
+import Deflate from "Deflate" /* 14620 */;
+import Inflate from "Inflate" /* 14628 */;
 
+const obj = {};
+assign.assign(obj, Deflate, Inflate, _mod14632);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "42a20b8c34f5da51714fe4afb6b4ab7f", name: "NitroGem6", type: "lottie" });
+export default obj;

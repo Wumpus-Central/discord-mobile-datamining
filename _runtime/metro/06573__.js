@@ -1,32 +1,13 @@
 // === Module 6573: ? ===
 
 // Module 6573
-import _mod6571 from "module_6571" /* 6571 */;
+import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef6574 from "module_6574" /* 6574 */;
 
+const use = _mod19.use;
+const Platform = _mod17.Platform;
 
-export default function _superPropBase(arg0, key10009) {
-  hasOwnProperty = {}.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  let tmp = arg0;
-  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
-    let tmp4 = _mod6571(arg0);
-    tmp = tmp4;
-    if (null !== tmp4) {
-      while (true) {
-        let hasOwnProperty2 = {}.hasOwnProperty;
-        let call2 = hasOwnProperty2.call;
-        tmp = tmp4;
-        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
-          break;
-        } else {
-          tmp4 = _mod6571(tmp4);
-          tmp = tmp4;
-          if (null === tmp4) {
-            break;
-          }
-        }
-      }
-    }
-  }
-  return tmp;
+export const useEnsureGestureHandlerRootView = function useEnsureGestureHandlerRootView() {
+  use(_modDef6574);
 };

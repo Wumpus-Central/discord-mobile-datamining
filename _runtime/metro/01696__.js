@@ -113,7 +113,7 @@ applyProgressToNumber.__initData = { code: "function applyProgressToNumber_Pnpm_
 function decorateAnimation(isHigherOrder) {
   ({ onStart: require, onFrame: dependencyMap } = isHigherOrder);
   if (isHigherOrder.isHigherOrder) {
-    isHigherOrder.onStart = (reduceMotion, arg1, arg2, arg3) => {
+    isHigherOrder.onStart = (reduceMotion, keys, length, height) => {
       if (undefined === reduceMotion.reduceMotion) {
         if (typeof getReduceMotionFromConfig === "function") {
           reduceMotion.reduceMotion = value.value;
@@ -121,7 +121,7 @@ function decorateAnimation(isHigherOrder) {
           throw new TypeError("Trying to call a non-function");
         }
       }
-      return fn(reduceMotion, arg1, arg2, arg3);
+      return fn(reduceMotion, keys, length, height);
     };
   } else {
     const _Object = Object;
@@ -489,7 +489,7 @@ function defineAnimation(substr, fn) {
       if (typeof decorateAnimation === "function") {
         ({ onStart: closure_0, onFrame: closure_1 } = tmp3);
         if (tmp3.isHigherOrder) {
-          tmp3.onStart = (reduceMotion, arg1, arg2, arg3) => {
+          tmp3.onStart = (reduceMotion, keys, length, height) => {
             if (undefined === reduceMotion.reduceMotion) {
               if (typeof getReduceMotionFromConfig === "function") {
                 reduceMotion.reduceMotion = value.value;
@@ -497,7 +497,7 @@ function defineAnimation(substr, fn) {
                 throw new TypeError("Trying to call a non-function");
               }
             }
-            return fn(reduceMotion, arg1, arg2, arg3);
+            return fn(reduceMotion, keys, length, height);
           };
         } else {
           let _Object = Object;
@@ -869,7 +869,7 @@ function defineAnimation(substr, fn) {
     if (typeof decorateAnimation === "function") {
       ({ onStart: closure_129_0, onFrame: closure_129_1 } = tmp7);
       if (tmp7.isHigherOrder) {
-        tmp7.onStart = (reduceMotion, arg1, arg2, arg3) => {
+        tmp7.onStart = (reduceMotion, keys, length, height) => {
           if (undefined === reduceMotion.reduceMotion) {
             if (typeof getReduceMotionFromConfig === "function") {
               reduceMotion.reduceMotion = value.value;
@@ -877,7 +877,7 @@ function defineAnimation(substr, fn) {
               throw new TypeError("Trying to call a non-function");
             }
           }
-          return fn(reduceMotion, arg1, arg2, arg3);
+          return fn(reduceMotion, keys, length, height);
         };
         factory = tmp7;
       } else {

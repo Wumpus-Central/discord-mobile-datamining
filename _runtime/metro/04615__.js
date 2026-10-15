@@ -1,39 +1,28 @@
 // === Module 4615: ? ===
 
 // Module 4615
-import module_4205_mod from "module_4205" /* 4205 */;
-import _typeof_mod from "module_4201" /* 4201 */;
-import requiredArgs_mod from "requiredArgs" /* 4202 */;
+import module_4607_mod from "module_4607" /* 4607 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let module_4205 = module_4205_mod;
-if (!module_4205) {
-  const obj = { default: module_4205 };
+let module_4607 = module_4607_mod;
+if (!module_4607) {
+  const obj = { default: module_4607 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4205;
+  tmp3 = module_4607;
 }
-module_4205 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
+module_4607 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function setDate(module_4205, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4205);
-  defaultResult1.setDate(module_4205.default(arg1));
-  return defaultResult1;
+export default function isThisQuarter(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4607.default(Date.now(), arg0);
 };
 export default exports.default;

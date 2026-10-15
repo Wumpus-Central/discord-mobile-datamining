@@ -1,68 +1,107 @@
 // === Module 7874: ? ===
 
 // Module 7874
-import _mod7835 from "module_7835" /* 7835 */;
-import _modDef7852 from "module_7852" /* 7852 */;
-import _modDef7875 from "module_7875" /* 7875 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7817 from "module_7817" /* 7817 */;
+import unitsDefault from "units" /* 7871 */;
+import _modDef7876 from "module_7876" /* 7876 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-function getTagName(dataView, sum1) {
-  const tmp = _slicedToArray(_mod7835.getPascalStringFromDataView(dataView, sum1), 2);
-  const first = tmp[0];
-  const obj2 = { tagName: tmp[1], tagNameSize: null };
-  let num = 0;
-  const sum = 1 + first;
-  if (first % 2 === 0) {
-    num = 1;
-  }
-  obj2.tagNameSize = sum + num;
-  return obj2;
-}
-let c4 = "8BIM";
-let c5 = 2;
-let c6 = 4;
-({ length, length: closure_7 } = "8BIM");
-
-export default {
-  read(arg0, arg1) {
-    const uint8Array = new Uint8Array(arg0);
-    const dataView = _mod7835.getDataView(uint8Array.buffer);
-    const obj2 = {};
-    let num = 0;
-    if (0 < arg0.length) {
-      const sum = num + React5;
-      const stringFromDataView = _mod7835.getStringFromDataView(dataView, num, React5);
-      const shortAt = _modDef7852.getShortAt(dataView, sum);
-      const sum1 = sum + c5;
-      const tmp15 = getTagName(dataView, sum1);
-      let name = tmp15.tagName;
-      const sum2 = sum1 + tmp15.tagNameSize;
-      const longAt = _modDef7852.getLongAt(dataView, sum2);
-      const sum3 = sum2 + c6;
-      if (stringFromDataView === c4) {
-        const dataView1 = _mod7835.getDataView(dataView.buffer, sum3, longAt);
-        const obj7 = { id: shortAt, value: null };
-        const tmp5Result = _mod7835;
-        obj7.value = _mod7835.getStringFromDataView(dataView1, 0, longAt);
-        if (_modDef7875[shortAt]) {
-          try {
-            obj7.description = _modDef7875[shortAt].description(dataView1);
-            if (!name) {
-              name = _modDef7875[shortAt].name;
-            }
-            obj2[name] = obj7;
-          } catch (err) {
-            tmp.description = tmp2;
-          }
-        } else if (arg1) {
-          const _HermesInternal = HermesInternal;
-          obj2["undefined-" + shortAt] = obj7;
-        }
-        const tmp5Result2 = _mod7835;
-      }
-      num = sum3 + (longAt + longAt % 2);
+const Mask = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return obj2;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class Mask {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, Mask);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Mask);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Mask, _modDef7817);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ maskUnits, maskContentUnits, style } = props);
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
+    let num = 0;
+    if (undefined !== maskUnits) {
+      num = unitsDefault[maskUnits];
+    }
+    size.maskUnits = num;
+    let num2 = 1;
+    if (undefined !== maskContentUnits) {
+      num2 = unitsDefault[maskContentUnits];
+    }
+    size.maskContentUnits = num2;
+    let str;
+    if (props != null) {
+      str = props.maskType;
+    }
+    if (!str) {
+      let maskType;
+      if (style != null) {
+        maskType = style.maskType;
+      }
+      str = maskType;
+    }
+    if (!str) {
+      str = "luminance";
+    }
+    size.maskType = Mask(7875).maskType[str];
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(Mask(7808).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return <tmp8 ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(Mask, items);
+importDefaultResultResult.displayName = "Mask";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+
+export default importDefaultResultResult;

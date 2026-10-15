@@ -1,26 +1,44 @@
 // === Module 4701: ? ===
 
 // Module 4701
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "hi" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0}, \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" }, short: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0}, \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0}, {1}", pair: "{0} {1}", start: "{0}, {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
+import module_4702 from "module_4702" /* 4702 */;
+import module_4703 from "module_4703" /* 4703 */;
+import module_4704 from "module_4704" /* 4704 */;
+import date_mod from "module_4705" /* 4705 */;
+import date_mod from "module_4706" /* 4706 */;
+
+if (!module_4702) {
+  const obj = { default: module_4702 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4702;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+if (!module_4703) {
+  const obj2 = { default: module_4703 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4703;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0}, \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" }, short: { end: "{0} \u092F\u093E {1}", middle: "{0}, {1}", pair: "{0} \u092F\u093E {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0}, \u0914\u0930 {1}", middle: "{0}, {1}", pair: "{0} \u0914\u0930 {1}", start: "{0}, {1}" }, narrow: { end: "{0} {1}", middle: "{0}, {1}", pair: "{0} {1}", start: "{0}, {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" } } }, locale: "hi" };
-prop.push(obj);
+if (!module_4704) {
+  const obj3 = { default: module_4704 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4704;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "vi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default exports.default;

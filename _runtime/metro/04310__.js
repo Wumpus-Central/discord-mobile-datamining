@@ -5,16 +5,30 @@ let closure_0 = {
   lastWeek(getUTCDay) {
     const uTCDay = getUTCDay.getUTCDay();
     if (0 === uTCDay) {
-      let str = "\u00FAltimo";
+      return "'pro\u0161lu nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'pro\u0161lu srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'pro\u0161lu subotu u' p";
     } else {
-      str = "\u00FAltima";
+      return "'pro\u0161li' EEEE 'u' p";
     }
-    return "'" + str + "' eeee '\u00E0s' p";
   },
-  yesterday: "'ontem \u00E0s' p",
-  today: "'hoje \u00E0s' p",
-  tomorrow: "'amanh\u00E3 \u00E0s' p",
-  nextWeek: "eeee '\u00E0s' p",
+  yesterday: "'ju\u010Der u' p",
+  today: "'danas u' p",
+  tomorrow: "'sutra u' p",
+  nextWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      return "'idu\u0107u nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'idu\u0107u srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'idu\u0107u subotu u' p";
+    } else {
+      return "'pro\u0161li' EEEE 'u' p";
+    }
+  },
   other: "P"
 };
 

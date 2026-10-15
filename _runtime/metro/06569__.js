@@ -1,20 +1,12 @@
 // === Module 6569: ? ===
 
 // Module 6569
-import _mod6554 from "module_6554" /* 6554 */;
-import _mod6570 from "module_6570" /* 6570 */;
+import _modDef6570 from "module_6570" /* 6570 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
+({ Animated, StyleSheet } = get_ActivityIndicator);
+const animatedComponent = Animated.createAnimatedComponent(_modDef6570);
 
-export default function _possibleConstructorReturn(arg0, fn) {
-  if (fn) {
-    _mod6554;
-    return fn;
-  }
-  if (undefined !== fn) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Derived constructors may only return object or undefined");
-    throw typeError;
-  } else {
-    return _mod6570(arg0);
-  }
-};
+export const GestureDetectorType = { Native: 0, [0]: "Native", Virtual: 1, [1]: "Virtual", Intercepting: 2, [2]: "Intercepting" };
+export const AnimatedNativeDetector = animatedComponent;
+export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });

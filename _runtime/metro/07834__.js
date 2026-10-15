@@ -1,20 +1,9 @@
 // === Module 7834: ? ===
 
 // Module 7834
-class MetadataMissingError {
-  constructor(arg0) {
-    obj = { name: "MetadataMissingError" };
-    str = arg0;
-    if (!arg0) {
-      str = "No Exif data";
-    }
-    obj.message = str;
-    error = new Error();
-    obj.stack = error.stack;
-    return;
-  }
-}
-let error = new Error();
-MetadataMissingError.prototype = error;
+import module_65 from "module_65" /* 65 */;
 
-export default { MetadataMissingError };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeColorMatrix", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, type: true, values: true } };
+
+export default module_65.get("RNSVGFeColorMatrix", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

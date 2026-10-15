@@ -1,23 +1,77 @@
 // === Module 10127: ? ===
 
 // Module 10127
-import _mod10128 from "module_10128" /* 10128 */;
-import _mod10131 from "module_10131" /* 10131 */;
-import _mod10135 from "module_10135" /* 10135 */;
-import _mod10136 from "module_10136" /* 10136 */;
-import CarouselLayout from "CarouselLayout" /* 10137 */;
-import noop from "module_19" /* 19 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod10056 from "module_10056" /* 10056 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-require = fn;
-const jsx = fn(21).jsx;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class NLMergeDateRangeRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, NLMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(NLMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_classCallCheck = NLMergeDateRangeRefiner;
+_inherits(NLMergeDateRangeRefiner, fn(_mod10056).default);
+const entry = {
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(tot|-)\s*$/i;
+  }
+};
+const items = [entry];
 
-export default noop.forwardRef((defaultIndex, ref) => {
-  const initProps = _mod10128.useInitProps(defaultIndex);
-  const commonVariables = _mod10131.useCommonVariables(initProps);
-  const obj4 = {};
-  const merged = Object.assign(initProps);
-  obj4.dataLength = initProps.dataLength;
-  const propsErrorBoundary = _mod10135.usePropsErrorBoundary(obj4);
-  const obj5 = { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) };
-  return jsx(_mod10136.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) });
-});
+export default _createClass(NLMergeDateRangeRefiner, items);

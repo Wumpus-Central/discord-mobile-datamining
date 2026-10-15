@@ -1,49 +1,68 @@
 // === Module 4400: ? ===
 
 // Module 4400
-import _typeof_mod from "module_4201" /* 4201 */;
-import endOfDay_mod from "endOfDay" /* 4401 */;
-import endOfMonth_mod from "endOfMonth" /* 4402 */;
-import requiredArgs_mod from "requiredArgs" /* 4202 */;
+import _mod4401 from "module_4401" /* 4401 */;
+import module_4257_mod from "module_4257" /* 4257 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4257 = module_4257_mod;
+if (!module_4257) {
+  const obj = { default: module_4257 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4257;
 }
-_typeof = tmp3;
-let endOfDay = endOfDay_mod;
-if (!endOfDay) {
-  const obj2 = { default: endOfDay };
-  let tmp5 = obj2;
-} else {
-  tmp5 = endOfDay;
-}
-endOfDay = tmp5;
-let endOfMonth = endOfMonth_mod;
-if (!endOfMonth) {
-  const obj3 = { default: endOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = endOfMonth;
-}
-endOfMonth = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
+module_4257 = tmp3;
+const dependencyMap = ["\u043D\u0435\u0434\u0456\u043B\u044E", "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A", "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A", "\u0441\u0435\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440", "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E", "\u0441\u0443\u0431\u043E\u0442\u0443"];
+let closure_4 = {
+  lastWeek: function lastWeekFormat(arg0, arg1, arg2) {
+    const toDateResult = _mod4401.toDate(arg0);
+    const uTCDay = toDateResult.getUTCDay();
+    if (module_4257.default(toDateResult, arg1, arg2)) {
+      let text = `${"'\u0443 " + tmp2} о' p`;
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (5 !== uTCDay) {
+            if (6 !== uTCDay) {
+              text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0438\u0439 " + tmp2} о' p`;
+            }
+          }
+        }
+      }
+      text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0443 " + tmp2} о' p`;
+    }
+    return text;
+  },
+  yesterday: "'\u0432\u0447\u043E\u0440\u0430 \u043E' p",
+  today: "'\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u043E' p",
+  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u043E' p",
+  nextWeek: function nextWeekFormat(arg0, arg1, arg2) {
+    const toDateResult = _mod4401.toDate(arg0);
+    const uTCDay = toDateResult.getUTCDay();
+    if (module_4257.default(toDateResult, arg1, arg2)) {
+      let text = `${"'\u0443 " + tmp2} о' p`;
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (5 !== uTCDay) {
+            if (6 !== uTCDay) {
+              text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 " + tmp2} о' p`;
+            }
+          }
+        }
+      }
+      text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0443 " + tmp2} о' p`;
+    }
+    return text;
+  },
+  other: "P"
+};
 
-export default function isLastDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = endOfDay.default(defaultResult1).getTime();
-  const defaultResult2 = endOfDay.default(defaultResult1);
-  return time === endOfMonth.default(defaultResult1).getTime();
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_4[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
 };
 export default exports.default;

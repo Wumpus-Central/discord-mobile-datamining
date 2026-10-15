@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 24, height: 24, scales: [2, 3], hash: "ff0787bdfe8164338278d2c417e963a2", name: "share-android", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 279, height: 48, scales: [2, 3], hash: "e03e83c5ddeddb7941bbe7457ccf1a98", name: "img_nitro_tier_2_activated_light", type: "png" });

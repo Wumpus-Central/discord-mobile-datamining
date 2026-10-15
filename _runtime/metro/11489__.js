@@ -1,88 +1,93 @@
 // === Module 11489: ? ===
 
 // Module 11489
-import _mod11420 from "module_11420" /* 11420 */;
-import _mod11490 from "module_11490" /* 11490 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+const BackButton = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (!fn) {
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
-                continue;
-              } else {
-                let tmp6 = self2(obj, arg0, key10009);
-                continue;
-              }
-              continue;
-            } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
-              }
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    exports.parse = undefined;
-    exports.parseAsync = undefined;
-    exports.safeParse = undefined;
-    exports.safeParseAsync = undefined;
-    exports.encode = undefined;
-    exports.decode = undefined;
-    exports.encodeAsync = undefined;
-    exports.decodeAsync = undefined;
-    exports.safeEncode = undefined;
-    exports.safeDecode = undefined;
-    exports.safeEncodeAsync = undefined;
-    exports.safeDecodeAsync = undefined;
-    const fnResult = fn(_mod11420);
-    exports.parse = fnResult._parse(_mod11490.ZodRealError);
-    exports.parseAsync = fnResult._parseAsync(_mod11490.ZodRealError);
-    exports.safeParse = fnResult._safeParse(_mod11490.ZodRealError);
-    exports.safeParseAsync = fnResult._safeParseAsync(_mod11490.ZodRealError);
-    exports.encode = fnResult._encode(_mod11490.ZodRealError);
-    exports.decode = fnResult._decode(_mod11490.ZodRealError);
-    exports.encodeAsync = fnResult._encodeAsync(_mod11490.ZodRealError);
-    exports.decodeAsync = fnResult._decodeAsync(_mod11490.ZodRealError);
-    exports.safeEncode = fnResult._safeEncode(_mod11490.ZodRealError);
-    exports.safeDecode = fnResult._safeDecode(_mod11490.ZodRealError);
-    exports.safeEncodeAsync = fnResult._safeEncodeAsync(_mod11490.ZodRealError);
-    exports.safeDecodeAsync = fnResult._safeDecodeAsync(_mod11490.ZodRealError);
-  } else {
-    const _Object2 = Object;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-} else {
-  let _Object = Object;
 }
+fn(17).BackHandler;
+const jsx = fn(21).jsx;
+class BackButton {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, BackButton);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(BackButton);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handleBack = () => {
+      let flag = 0 !== closure_0.history.index;
+      if (flag) {
+        const history = closure_0.history;
+        history.goBack();
+        flag = true;
+      }
+      return flag;
+    };
+    return tmp3Result;
+  }
+}
+_inherits(BackButton, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const listener = BackHandler.addEventListener("hardwareBackPress", this.handleBack);
+  }
+};
+let items = [
+  entry,
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      const removed = BackHandler.removeEventListener("hardwareBackPress", this.handleBack);
+    }
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      return jsx(BackButton(5006).__HistoryContext.Consumer, {
+        children(history) {
+          self.history = history;
+          return self.props.children || null;
+        }
+      });
+    }
+  }
+];
+
+export default _createClass(BackButton, items);

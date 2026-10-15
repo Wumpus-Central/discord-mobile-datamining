@@ -1,7 +1,25 @@
 // === Module 5888: ? ===
 
 // Module 5888
-import registerAsset from "module_1132" /* 1132 */;
+import _mod5889 from "module_5889" /* 5889 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 128, height: 128, scales: [1], hash: "665fb7ab43f458f1e2e4d5c788dac4b4", name: "img_meta_quest_white", type: "png" });
+export default function getPolyfill() {
+  if (String.prototype.trim) {
+    const trim = "\u200B".trim;
+    if ("\u200B" === "\u200B".trim()) {
+      const trim2 = "\u180E".trim;
+      if ("\u180E" === "\u180E".trim()) {
+        const trim3 = "_\u180E".trim;
+        if ("_\u180E" === "_\u180E".trim()) {
+          const trim4 = "\u180E_".trim;
+          if ("\u180E_" === "\u180E_".trim()) {
+            const _String = String;
+          }
+          return trim5;
+        }
+      }
+    }
+  }
+  trim5 = _mod5889;
+};

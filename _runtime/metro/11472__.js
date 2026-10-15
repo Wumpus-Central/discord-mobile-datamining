@@ -1,26 +1,7 @@
 // === Module 11472: ? ===
 
 // Module 11472
-import _mod11473 from "module_11473" /* 11473 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-const mergeDefs = fn(_mod11473);
 
-export default function default_1() {
-  return mergeDefs.default();
-};
-export default exports.default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "164752cabe6d4eb331413f5b61581302", name: "ic_playstation_24px", type: "png" });

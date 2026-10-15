@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "ca5ed05660659bd429f0c8e3c3fa0755", name: "ic_trash_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 98, height: 53, scales: [2, 3], hash: "5ef9dbb61427b1140982c78eede17afd", name: "mfa-server", type: "png" });

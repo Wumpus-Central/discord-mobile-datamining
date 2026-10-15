@@ -1,69 +1,23 @@
 // === Module 14989: ? ===
 
 // Module 14989
+import _mod14981 from "module_14981" /* 14981 */;
 
-export default {
-  isASCIIDigit(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
+
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
+  }
+  try {
+    if (version instanceof _mod14981) {
+      version = version.version;
     }
-    return tmp;
-  },
-  isASCIIAlpha(input) {
-    let tmp = input >= 65;
-    if (tmp) {
-      tmp = input <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = input >= 97;
-      if (tmp2) {
-        tmp2 = input <= 122;
-      }
-      tmp = tmp2;
-    }
-    return tmp;
-  },
-  isASCIIAlphanumeric(arg0) {
-    let tmp = arg0 >= 65;
-    if (tmp) {
-      tmp = arg0 <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 97;
-      if (tmp2) {
-        tmp2 = arg0 <= 122;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = arg0 >= 48;
-      if (tmp3) {
-        tmp3 = arg0 <= 57;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  },
-  isASCIIHex(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
-    }
-    if (!tmp) {
-      let tmp2 = decodeResult >= 65;
-      if (tmp2) {
-        tmp2 = decodeResult <= 70;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = decodeResult >= 97;
-      if (tmp3) {
-        tmp3 = decodeResult <= 102;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
+    const tmp72 = new _mod14981(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
+    return null;
   }
 };

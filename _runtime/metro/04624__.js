@@ -1,48 +1,40 @@
 // === Module 4624: ? ===
 
 // Module 4624
-import module_4205_mod from "module_4205" /* 4205 */;
-import _typeof_mod from "module_4201" /* 4201 */;
-import module_4614_mod from "module_4614" /* 4614 */;
-import requiredArgs_mod from "requiredArgs" /* 4202 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let module_4205 = module_4205_mod;
-if (!module_4205) {
-  const obj = { default: module_4205 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4205;
-}
-module_4205 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp5;
-let module_4614 = module_4614_mod;
-if (!module_4614) {
-  const obj3 = { default: module_4614 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4614;
-}
-module_4614 = tmp7;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function setQuarter(arg0, arg1) {
+export default function isWithinInterval(arg0, start) {
   requiredArgs.default(2, arguments);
+  const time = _typeof.default(arg0).getTime();
   const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4205.default(arg1) - (Math.floor(defaultResult1.getMonth() / 3) + 1);
-  return module_4614.default(defaultResult1, defaultResult1.getMonth() + 3 * diff);
+  const time1 = _typeof.default(start.start).getTime();
+  const defaultResult2 = _typeof.default(start.start);
+  const time2 = _typeof.default(start.end).getTime();
+  if (time1 <= time2) {
+    return time >= time1 && time <= time2;
+  } else {
+    const _RangeError = RangeError;
+    const rangeError = new RangeError("Invalid interval");
+    throw rangeError;
+  }
+  const defaultResult3 = _typeof.default(start.end);
 };
 export default exports.default;

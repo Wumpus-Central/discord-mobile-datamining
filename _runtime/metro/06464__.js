@@ -1,11 +1,13 @@
 // === Module 6464: ? ===
 
 // Module 6464
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -26,46 +28,62 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class FlingGesture {
+const MaskedView = ["maskElement", "children"];
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, StyleSheet: closure_7, requireNativeComponent } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let closure_11 = requireNativeComponent("RNCMaskedView");
+class MaskedView {
   constructor() {
     self = this;
-    tmp = closure_0(this, FlingGesture);
-    tmp2 = c2;
-    obj = c2(FlingGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    items = [...arguments];
+    tmp = c2(this, MaskedView);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(MaskedView);
+    tmp3 = closure_3;
+    if (c10()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "FlingGestureHandler";
+    tmp3Result._hasWarnedInvalidRenderMask = false;
     return tmp3Result;
   }
 }
-_classCallCheck = FlingGesture;
-_inherits(FlingGesture, fn(6360).BaseGesture);
+_inherits(MaskedView, noop.Component);
 const entry = {
-  key: "numberOfPointers",
-  value: function numberOfPointers(numberOfPointers) {
-    this.config.numberOfPointers = numberOfPointers;
-    return this;
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ maskElement, children } = props);
+    const tmp = _objectWithoutProperties(props, MaskedView);
+    if (noop.isValidElement(maskElement)) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = { pointerEvents: "none", style: absoluteFill.absoluteFill, children: maskElement };
+      const items = [closure_1_8(timestampProducer, obj3), children];
+      obj2.children = items;
+      let tmp9 = React6(closure_11, obj2);
+    } else {
+      if (!self._hasWarnedInvalidRenderMask) {
+        const _console = console;
+        console.warn("MaskedView: Invalid `maskElement` prop was passed to MaskedView. Expected a React Element. No mask will render.");
+        self._hasWarnedInvalidRenderMask = true;
+      }
+      const obj = {};
+      const merged1 = Object.assign(tmp);
+      obj.children = children;
+      tmp9 = closure_1_8(timestampProducer, obj);
+    }
+    return tmp9;
   }
 };
-const items = [
-  entry,
-  {
-    key: "direction",
-    value: function direction(dependencyMap) {
-      this.config.direction = dependencyMap;
-      return this;
-    }
-  }
-];
+let items = [entry];
 
-export const FlingGesture = _createClass(FlingGesture, items);
+export default _createClass(MaskedView, items);

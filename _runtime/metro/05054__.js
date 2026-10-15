@@ -1,7 +1,18 @@
 // === Module 5054: ? ===
 
 // Module 5054
-import registerAsset from "module_1132" /* 1132 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod5051 from "module_5051" /* 5051 */;
 
+const useContext = _mod19.useContext;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "11be77dcd70d75753c8cf2c079b0771e", name: "TrashIcon", type: "png" });
+export const usePortalState = (name) => {
+  const tmp = useContext(_mod5051.PortalStateContext);
+  if (null === tmp) {
+    const _Error = Error;
+    const error = new Error("'PortalStateContext' cannot be null, please add 'PortalProvider' to the root component.");
+    throw error;
+  } else {
+    return tmp[name] || [];
+  }
+};

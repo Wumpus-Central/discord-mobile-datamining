@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 250, height: 200, scales: [2, 3], hash: "a58504e7154ded917c4b5c349c82a3a7", name: "img_bans_empty_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf/native/components/notification", width: 302, height: 202, scales: [1, 2], hash: "21f19c3533062eebc26337b4e7ba590a", name: "notification_upsell", type: "png" });

@@ -1,41 +1,7 @@
 // === Module 6384: ? ===
 
 // Module 6384
-import _mod19 from "module_19" /* 19 */;
-import _modDef6374 from "module_6374" /* 6374 */;
-import needsToReattach from "needsToReattach" /* 6385 */;
-import dropHandlers from "dropHandlers" /* 6386 */;
-import attachHandlers from "attachHandlers" /* 6387 */;
-import _mod6388 from "module_6388" /* 6388 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const require = globalThis.__r;
 
-_mod19.useCallback;
-
-export const useDetectorUpdater = function useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers) {
-  _require = current;
-  const preparedGesture = current2;
-  dependencyMap = gesturesToAttach;
-  const forceRender = require("convertToHandlerTag").useForceRender();
-  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
-  return gesture((arg0) => {
-    const tmp3 = _modDef6374(current.viewRef);
-    if (tmp3 === current.previousViewTag) {
-      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
-        if (!arg0) {
-          _mod6388.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
-          const tmp5Result = _mod6388;
-        }
-      }
-      obj = needsToReattach;
-    }
-    dropHandlers.dropHandlers(preparedGesture);
-    attachHandlers.attachHandlers({ preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 });
-    if (tmp3 !== current.previousViewTag) {
-      current.previousViewTag = tmp3;
-      current.forceRebuildReanimatedEvent = true;
-      forceRender();
-    }
-    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
-  }, items);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "e4080f713973c251e1438e7043339acb", name: "ic_verified_guild_icon_green_24px", type: "png" });

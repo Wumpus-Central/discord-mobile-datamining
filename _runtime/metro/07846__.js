@@ -1,7 +1,9 @@
 // === Module 7846: ? ===
 
 // Module 7846
+import module_65 from "module_65" /* 65 */;
 
-export const get64BitValue = function get64BitValue(getUint32, sum4) {
-  return getUint32.getUint32(sum4 + 4);
-};
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeOffset", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, dx: true, dy: true } };
+
+export default module_65.get("RNSVGFeOffset", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

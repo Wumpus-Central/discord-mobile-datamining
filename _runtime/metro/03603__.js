@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHk=", scales: [1], hash: "48ca733a1ebc03b11acf980b6be152a9", name: "hr.messages.48ca733a1ebc03b11acf980b6be152a9.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/rust_3pp", scales: [1], hash: "354571feac5b6fb5fc9502ef0519a4c8", name: "Rust3PP.compiled.messages", type: "jsona" });

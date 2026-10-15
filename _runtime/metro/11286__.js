@@ -1,12 +1,7 @@
 // === Module 11286: ? ===
 
 // Module 11286
-import _mod11285 from "module_11285" /* 11285 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const keepLocalCopy = function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11285.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "44d2aa5379438547523c3d419e9ade52", name: "MusicSlashIcon", type: "png" });

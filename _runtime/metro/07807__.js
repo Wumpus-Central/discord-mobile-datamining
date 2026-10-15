@@ -1,117 +1,117 @@
 // === Module 7807: ? ===
 
 // Module 7807
-function fetchFromObject(FileTypes, arr) {
-  const index = arr.indexOf(".");
-  if (index > -1) {
-    let tmp2 = fetchFromObject(FileTypes[arr.slice(arr, 0, index)], arr.slice(index + 1));
-  } else {
-    tmp2 = FileTypes[arr];
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 7801 */;
+import extractPropsDefault from "extractProps" /* 7808 */;
+import _modDef7816 from "module_7816" /* 7816 */;
+import _modDef7817 from "module_7817" /* 7817 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
+
+const G = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  return tmp2;
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class G {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, G);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(G);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(matrix);
+      }
+    };
+    return tmp3Result;
+  }
+}
+_inherits(G, _modDef7817);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    const propsAndStylesResult = G(7808).propsAndStyles(props);
+    const tmp5 = extractPropsDefault(propsAndStylesResult, this);
+    const obj = G(7808);
+    const extractFontResult = G(7815).extractFont(propsAndStylesResult);
+    if (typeof hasProps === "function") {
+      const keys = Object.keys();
+      if (keys !== undefined) {
+        let flag = true;
+        if (flag) {
+          tmp5.font = extractFontResult;
+        }
+        const obj3 = {
+          ref(arg0) {
+                return self.refMethod(arg0);
+              }
+        };
+        const merged = Object.assign(tmp5);
+        obj3.children = props.children;
+        return jsx(_modDef7816, {
+          ref(arg0) {
+                return self.refMethod(arg0);
+              }
+        });
+      }
+      flag = false;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+    const obj2 = G(7815);
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(G, items);
+importDefaultResultResult.displayName = "G";
+function hasProps(arg0) {
+
 }
 
-export const getFileChunk = function getFileChunk(fileChunk) {
-  let num = chunkSize;
-  if (chunkSize === undefined) {
-    num = 32;
-  }
-  let uint8Array = fileChunk;
-  if (fileChunk instanceof ArrayBuffer) {
-    const _Uint8Array = Uint8Array;
-    uint8Array = new Uint8Array(fileChunk);
-  }
-  if (!Array.isArray(fileChunk)) {
-    const _ArrayBuffer = ArrayBuffer;
-    if (!(fileChunk instanceof ArrayBuffer)) {
-      const _Uint8Array2 = Uint8Array;
-      if (!(fileChunk instanceof Uint8Array)) {
-        const _TypeError = TypeError;
-        const _HermesInternal = HermesInternal;
-        const typeError = new TypeError("Expected the `file` argument to be of type `Array<number>`, `Uint8Array`, or `ArrayBuffer`, got `" + typeof fileChunk + "`");
-        throw typeError;
-      }
-    }
-  }
-  const arr = Array.from(uint8Array.slice(0, num));
-  if (arr.every((item) => {
-    let tmp = typeof item === "number";
-    if (typeof item === "number") {
-      const _isNaN = isNaN;
-      tmp = !isNaN(item);
-    }
-    return tmp;
-  })) {
-    return arr;
-  } else {
-    const _TypeError2 = TypeError;
-    const typeError1 = new TypeError("File content contains illegal values");
-    throw typeError1;
-  }
-};
-export { fetchFromObject };
-export const findMatroskaDocTypeElements = function findMatroskaDocTypeElements(fileChunk) {
-  const mapped = fileChunk.map((item) => String.fromCharCode(item));
-  const joined = mapped.join("");
-  let str = "webm";
-  if (!joined.includes("webm")) {
-    let str3;
-    if (joined.includes("matroska")) {
-      str3 = "mkv";
-    }
-    str = str3;
-  }
-  return str;
-};
-export const isftypStringIncluded = function isftypStringIncluded(fileChunk) {
-  const items = [102, 116, 121, 112];
-  let num = 0;
-  if (0 < fileChunk.length - items.length) {
-    while (true) {
-      let num2 = 0;
-      let flag = true;
-      if (0 < items.length) {
-        flag = false;
-        while (fileChunk[num + num2] === items[num2]) {
-          let sum = num2 + 1;
-          num2 = sum;
-          flag = true;
-          if (sum >= items.length) {
-            break;
-          }
-        }
-      }
-      if (flag) {
-        break;
-      } else {
-        num = num + 1;
-      }
-    }
-    return true;
-  }
-  return false;
-};
-export const isFlvStringIncluded = function isFlvStringIncluded(fileChunk) {
-  const substr = fileChunk.slice(0, 3);
-  const decoder = new TextDecoder();
-  const uint8Array = new Uint8Array(substr);
-  return decoder.decode(uint8Array).includes("FLV");
-};
-export const isFileContaineJfiforExifHeader = function isFileContaineJfiforExifHeader(arg0) {
-  let tmp2 = 224 === tmp;
-  if (!tmp2) {
-    tmp2 = 225 === tmp;
-  }
-  return tmp2;
-};
-export const isAvifStringIncluded = function isAvifStringIncluded(fileChunk) {
-  const substr = fileChunk.slice(4, 12);
-  const mapped = substr.map((item) => String.fromCharCode(item));
-  return "ftypavif" === mapped.join("");
-};
-export const isHeicSignatureIncluded = function isHeicSignatureIncluded(fileChunk) {
-  const mapped = fileChunk.map((item) => String.fromCharCode(item));
-  closure_0 = mapped.join("");
-  const items = ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"];
-  return items.some((item) => closure_0.includes(item));
-};
+export default importDefaultResultResult;

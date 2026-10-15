@@ -1,16 +1,13 @@
 // === Module 6329: ? ===
 
 // Module 6329
-const fn = function n(item, value) {
-  let result = item;
-  if (typeof item === "string") {
-    const _Number = Number;
-    result = Number(item.split("%")[0]) * value / 100;
-  }
-  return Math.max(0, value - result);
-};
-fn.__closure = {};
-fn.__workletHash = 14612470006791;
-fn.__initData = { code: "function pnpm_normalizeSnapPointTs1(snapPoint,containerHeight){let normalizedSnapPoint=snapPoint;if(typeof normalizedSnapPoint==='string'){normalizedSnapPoint=Number(normalizedSnapPoint.split('%')[0])*containerHeight/100;}return Math.max(0,containerHeight-normalizedSnapPoint);}" };
+import _mod6330 from "module_6330" /* 6330 */;
 
-export const normalizeSnapPoint = fn;
+const require = globalThis.__r;
+
+for (const key10016 in require("module_6333")) {
+  arg5[key10016] = require("module_6333")[key10016];
+  continue;
+}
+
+export default _mod6330.LottieView;

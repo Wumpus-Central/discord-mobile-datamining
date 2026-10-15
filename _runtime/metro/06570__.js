@@ -1,13 +1,7 @@
 // === Module 6570: ? ===
 
 // Module 6570
+import _modDef6571 from "module_6571" /* 6571 */;
 
-export default function _assertThisInitialized(arg0) {
-  if (undefined === arg0) {
-    const _ReferenceError = ReferenceError;
-    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    throw referenceError;
-  } else {
-    return arg0;
-  }
-};
+
+export default _modDef6571;

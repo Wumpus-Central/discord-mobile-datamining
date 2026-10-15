@@ -1,150 +1,98 @@
 // === Module 6701: ? ===
 
 // Module 6701
+import _mod19 from "module_19" /* 19 */;
+import value22 from "value2" /* 6528 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 
-({ Animated, Platform } = get_ActivityIndicator);
-({ add: closure_0, multiply: closure_1 } = Animated);
+const useEffect = _mod19.useEffect;
+({ Keyboard: c3, Platform } = get_ActivityIndicator);
+const keyboardDidShow = "keyboardDidShow";
+const keyboardDidHide = "keyboardDidHide";
+let closure_6 = { code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}" };
+let closure_7 = { code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}" };
+const __initData = { code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}" };
 
-export const forUIKit = function forUIKit(arg0) {
-  ({ next, layouts } = arg0);
-  let num = 100;
-  let num2 = 100;
-  ({ current, direction } = arg0);
-  if (layouts.leftLabel) {
-    num2 = (layouts.screen.width - layouts.leftLabel.width) / 2 - 27;
-  }
-  if (layouts.title) {
-    num = (layouts.screen.width - layouts.title.width) / 2 - 27;
-  }
-  const result = layouts.screen.width / 4;
-  let num7 = 1;
-  if ("rtl" === direction) {
-    num7 = -1;
-  }
-  const progress = current.progress;
-  let num8 = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num8 = progress2.interpolate(obj);
-  }
-  const tmp2Result = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num8);
-  const obj2 = { leftButtonStyle: null, leftLabelStyle: null, rightButtonStyle: null, titleStyle: null, backgroundStyle: null };
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  obj2.leftButtonStyle = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
-  const obj4 = { transform: null };
-  const obj5 = { translateX: null };
-  const obj6 = { inputRange: [0, 1, 2], outputRange: null };
-  const items = [num2, 0, -result];
-  obj6.outputRange = items;
-  obj5.translateX = framebus(num7, tmp2Result.interpolate(obj6));
-  const items1 = [obj5];
-  obj4.transform = items1;
-  obj2.leftLabelStyle = obj4;
-  const obj3 = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
-  obj2.rightButtonStyle = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
-  const obj8 = { opacity: tmp2Result.interpolate({ inputRange: [0, 0.5, 0.75, 1, 1.5], outputRange: [0, 0, 0.1, 1, 0] }), transform: null };
-  const obj9 = { translateX: null };
-  const obj10 = { inputRange: [0.5, 1, 2], outputRange: null };
-  const items2 = [result, 0, -num];
-  obj10.outputRange = items2;
-  obj9.translateX = framebus(num7, tmp2Result.interpolate(obj10));
-  const items3 = [obj9];
-  obj8.transform = items3;
-  obj2.titleStyle = obj8;
-  const obj11 = { transform: null };
-  const obj12 = { translateX: null };
-  const obj13 = { inputRange: [0, 1, 2], outputRange: null };
-  const items4 = [layouts.screen.width, 0, -layouts.screen.width];
-  obj13.outputRange = items4;
-  obj12.translateX = framebus(num7, tmp2Result.interpolate(obj13));
-  const items5 = [obj12];
-  obj11.transform = items5;
-  obj2.backgroundStyle = obj11;
-  return obj2;
+export const useKeyboard = (includeBottomOffset) => {
+  includeBottomOffset = includeBottomOffset.includeBottomOffset;
+  let shouldHandleKeyboardEvents;
+  shouldHandleKeyboardEvents = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(false);
+  let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED);
+  const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
+  const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
+  const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
+  const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
+  const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const fn = function v(value, arg1, value2, value3, arg4) {
+    value = arg1;
+    if (value === value22.KEYBOARD_STATE.SHOWN) {
+      if (!shouldHandleKeyboardEvents.value) {
+        const items = [value, value, value2, value3];
+        sharedValue5.value = items;
+      }
+    }
+    if (value !== value22.KEYBOARD_STATE.SHOWN) {
+      value = height.value;
+    }
+    height.value = value;
+    let tmp5 = arg4;
+    if (arg4) {
+      tmp5 = includeBottomOffset;
+    }
+    if (tmp5) {
+      height.value = height.value + arg4;
+    }
+    animationDuration.value = value2;
+    animationEasing.value = value3;
+    state.value = value;
+    sharedValue5.value = [];
+  };
+  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  fn.__closure = { KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE, shouldHandleKeyboardEvents, temporaryCachedKeyboardEvent: sharedValue5, keyboardHeight: height, includeBottomOffset, keyboardAnimationDuration: animationDuration, keyboardAnimationEasing: animationEasing, keyboardState: state };
+  fn.__workletHash = 7905199978020;
+  fn.__initData = sharedValue5;
+  const workletCallback = obj7.useWorkletCallback(fn, []);
+  let items = [workletCallback];
+  state(() => {
+    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      ({ duration, easing } = endCoordinates);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN, endCoordinates.endCoordinates.height, duration, easing, includeBottomOffset(shouldHandleKeyboardEvents[3]).SCREEN_HEIGHT - endCoordinates.endCoordinates.height - endCoordinates.endCoordinates.screenY);
+    });
+    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.HIDDEN, endCoordinates.endCoordinates.height, endCoordinates.duration, endCoordinates.easing);
+    });
+    return () => {
+      closure_0.remove();
+      closure_1.remove();
+    };
+  }, items);
+  const obj8 = { KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE, shouldHandleKeyboardEvents, temporaryCachedKeyboardEvent: sharedValue5, keyboardHeight: height, includeBottomOffset, keyboardAnimationDuration: animationDuration, keyboardAnimationEasing: animationEasing, keyboardState: state };
+  const fn2 = function b() {
+    return shouldHandleKeyboardEvents.value;
+  };
+  fn2.__closure = { shouldHandleKeyboardEvents };
+  fn2.__workletHash = 11615500623565;
+  fn2.__initData = workletCallback;
+  const fn3 = function y(arg0) {
+    let tmp = arg0;
+    value = sharedValue5.value;
+    if (arg0) {
+      tmp = value.length > 0;
+    }
+    if (tmp) {
+      workletCallback(value[0], value[1], value[2], value[3]);
+    }
+  };
+  fn3.__closure = { temporaryCachedKeyboardEvent: sharedValue5, handleKeyboardEvent: workletCallback };
+  fn3.__workletHash = 16636741173520;
+  fn3.__initData = __initData;
+  const animatedReaction = includeBottomOffset(shouldHandleKeyboardEvents[2]).useAnimatedReaction(fn2, fn3, []);
+  return { state, height, animationEasing, animationDuration, shouldHandleKeyboardEvents };
 };
-export const forFade = function forFade(next) {
-  next = next.next;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const tmpResult = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
-  const interpolateResult1 = tmpResult.interpolate({ inputRange: [0, 1, 2], outputRange: [0, 1, 0] });
-  const obj2 = { leftButtonStyle: { opacity: interpolateResult1 }, rightButtonStyle: { opacity: interpolateResult1 }, titleStyle: { opacity: interpolateResult1 }, backgroundStyle: null };
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  obj2.backgroundStyle = { opacity: tmpResult.interpolate({ inputRange: [0, 1, 1.9, 2], outputRange: [0, 1, 1, 0] }) };
-  return obj2;
-};
-export const forSlideLeft = function forSlideLeft(next) {
-  next = next.next;
-  const screen = next.layouts.screen;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const obj2 = { inputRange: [0, 1, 2], outputRange: null };
-  if ("rtl" === next.direction) {
-    const items = [-screen.width, 0, screen.width];
-    let items1 = items;
-  } else {
-    items1 = [screen.width, 0, -screen.width];
-  }
-  const tmpResult = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
-  obj2.outputRange = items1;
-  const items2 = [{ translateX: React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj2) }];
-  return { leftButtonStyle: { transform: items2 }, rightButtonStyle: { transform: items2 }, titleStyle: { transform: items2 }, backgroundStyle: { transform: items2 } };
-};
-export const forSlideRight = function forSlideRight(next) {
-  next = next.next;
-  const screen = next.layouts.screen;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const obj2 = { inputRange: [0, 1, 2], outputRange: null };
-  if ("rtl" === next.direction) {
-    const items = [screen.width, 0, -screen.width];
-    let items1 = items;
-  } else {
-    items1 = [-screen.width, 0, screen.width];
-  }
-  const tmpResult = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
-  obj2.outputRange = items1;
-  const items2 = [{ translateX: React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj2) }];
-  return { leftButtonStyle: { transform: items2 }, rightButtonStyle: { transform: items2 }, titleStyle: { transform: items2 }, backgroundStyle: { transform: items2 } };
-};
-export const forSlideUp = function forSlideUp(next) {
-  next = next.next;
-  const header = next.layouts.header;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const obj2 = { translateY: null };
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const obj3 = { inputRange: [0, 1, 2], outputRange: null };
-  const items = [-header.height, 0, -header.height];
-  obj3.outputRange = items;
-  obj2.translateY = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj3);
-  const items1 = [obj2];
-  return { leftButtonStyle: { transform: items1 }, rightButtonStyle: { transform: items1 }, titleStyle: { transform: items1 }, backgroundStyle: { transform: items1 } };
-};
-export function forNoAnimation() {
-  return {};
-}

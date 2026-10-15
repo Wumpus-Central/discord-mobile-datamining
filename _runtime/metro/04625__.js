@@ -1,26 +1,26 @@
 // === Module 4625: ? ===
 
 // Module 4625
-import module_4205_mod from "module_4205" /* 4205 */;
-import _typeof_mod from "module_4201" /* 4201 */;
-import requiredArgs_mod from "requiredArgs" /* 4202 */;
+import module_4436_mod from "module_4436" /* 4436 */;
+import subDays_mod from "subDays" /* 4626 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let module_4205 = module_4205_mod;
-if (!module_4205) {
-  const obj = { default: module_4205 };
+let module_4436 = module_4436_mod;
+if (!module_4436) {
+  const obj = { default: module_4436 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4205;
+  tmp3 = module_4436;
 }
-module_4205 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+module_4436 = tmp3;
+let subDays = subDays_mod;
+if (!subDays) {
+  const obj2 = { default: subDays };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = subDays;
 }
-_typeof = tmp5;
+subDays = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -30,10 +30,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setSeconds(module_4205, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4205);
-  defaultResult1.setSeconds(module_4205.default(arg1));
-  return defaultResult1;
+export default function isYesterday(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4436.default(arg0, subDays.default(Date.now(), 1));
 };
 export default exports.default;

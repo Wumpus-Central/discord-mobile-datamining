@@ -1,5 +1,7 @@
 // === Module 14326: ? ===
 
 // Module 14326
+import registerAsset from "module_1132" /* 1132 */;
 
-export default { 2: "need dictionary", 1: "stream end", 0: "", "-1": "file error", "-2": "stream error", "-3": "data error", "-4": "insufficient memory", "-5": "buffer error", "-6": "incompatible version" };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "eedc171301ae1180a08c85018b5d2811", name: "img_boost_mobile", type: "png" });

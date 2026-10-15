@@ -1,17 +1,17 @@
 // === Module 4553: ? ===
 
 // Module 4553
-import startOfQuarter_mod from "startOfQuarter" /* 4413 */;
-import requiredArgs_mod from "requiredArgs" /* 4202 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let startOfQuarter = startOfQuarter_mod;
-if (!startOfQuarter) {
-  const obj = { default: startOfQuarter };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfQuarter;
+  tmp3 = _typeof;
 }
-startOfQuarter = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameQuarter(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfQuarter.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfQuarter.default(arg1).getTime();
+export default function isFirstDayOfMonth(arg0) {
+  requiredArgs.default(1, arguments);
+  return 1 === _typeof.default(arg0).getDate();
 };
 export default exports.default;

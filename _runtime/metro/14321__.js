@@ -1,12 +1,7 @@
 // === Module 14321: ? ===
 
 // Module 14321
-import _mod14335 from "module_14335" /* 14335 */;
-import assign from "module_14322" /* 14322 */;
-import Deflate from "Deflate" /* 14323 */;
-import Inflate from "Inflate" /* 14331 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14335);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "6a44051f0a6b82f14b7f681cb1af8576", name: "img_classic_mobile", type: "png" });

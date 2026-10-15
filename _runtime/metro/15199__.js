@@ -1,7 +1,5 @@
 // === Module 15199: ? ===
 
 // Module 15199
-import registerAsset from "module_1132" /* 1132 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_profile/images/banner", width: 300, height: 120, scales: [2], hash: "304045e52cd925d8189a6dc7c67e76c1", name: "sample_banner", type: "png" });
+export const units = ["degree", "acre", "hectare", "percent", "bit", "byte", "gigabit", "gigabyte", "kilobit", "kilobyte", "megabit", "megabyte", "petabyte", "terabit", "terabyte", "day", "hour", "millisecond", "minute", "month", "second", "week", "year", "centimeter", "foot", "inch", "kilometer", "meter", "mile-scandinavian", "mile", "millimeter", "yard", "gram", "kilogram", "ounce", "pound", "stone", "celsius", "fahrenheit", "fluid-ounce", "gallon", "liter", "milliliter"];

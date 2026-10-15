@@ -1,16 +1,28 @@
 // === Module 4364: ? ===
 
 // Module 4364
+let closure_0 = {
+  lastWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      let str = "\u00FAltimo";
+    } else {
+      str = "\u00FAltima";
+    }
+    return "'" + str + "' eeee '\u00E0s' p";
+  },
+  yesterday: "'ontem \u00E0s' p",
+  today: "'hoje \u00E0s' p",
+  tomorrow: "'amanh\u00E3 \u00E0s' p",
+  nextWeek: "eeee '\u00E0s' p",
+  other: "P"
+};
 
-export default function getTimezoneOffsetInMilliseconds(getFullYear) {
-  const fullYear = getFullYear.getFullYear();
-  const month = getFullYear.getMonth();
-  const hours = getFullYear.getHours();
-  const minutes = getFullYear.getMinutes();
-  const seconds = getFullYear.getSeconds();
-  const date1 = new Date(Date.UTC(fullYear, month, getFullYear.getDate(), hours, minutes, seconds, getFullYear.getMilliseconds()));
-  date1.setUTCFullYear(getFullYear.getFullYear());
-  const time = getFullYear.getTime();
-  return time - date1.getTime();
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_0[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
 };
 export default exports.default;

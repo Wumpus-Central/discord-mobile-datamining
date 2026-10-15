@@ -1,16 +1,7 @@
 // === Module 14928: ? ===
 
 // Module 14928
-import prop_mod from "module_14929" /* 14929 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
-}
 
-export default prop;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "38f50d4a667b2b6d0060105d222e11dd", name: "MessageRequest", type: "lottie" });

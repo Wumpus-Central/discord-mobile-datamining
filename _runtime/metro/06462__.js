@@ -1,82 +1,27 @@
 // === Module 6462: ? ===
 
 // Module 6462
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+const UIManager = fn(17).UIManager;
+const jsx = fn(21).jsx;
+try {
+  let closure_0 = fn(6463).default;
+  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
+  exports.MaskedView = function MaskedView(children) {
+    children = children.children;
+    const merged = Object.assign(children, Object.assign({ children: 0 }));
+    let tmp2 = children;
+    if (closure_2) {
+      tmp2 = children;
+      if (closure_0) {
+        const obj = {};
+        const merged1 = Object.assign(merged);
+        obj.children = children;
+        tmp2 = <tmp3 />;
+      }
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+    return tmp2;
+  };
+} catch (err) {
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-function changeEventCalculator(scale, scale2) {
-  if (undefined === scale2) {
-    const obj2 = { scaleChange: scale.scale };
-    let obj = obj2;
-  } else {
-    obj = { scaleChange: scale.scale / scale2.scale };
-  }
-  const merged = Object.assign(scale);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 9876979738005;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}" };
-class PinchGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, PinchGesture);
-    tmp2 = c2;
-    obj = c2(PinchGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "PinchGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = PinchGesture;
-_inherits(PinchGesture, fn(6360).ContinousBaseGesture);
-const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    const items = [arg0];
-    return fn(items);
-  }
-};
-let items = [entry];
-
-export const PinchGesture = _createClass(PinchGesture, items);

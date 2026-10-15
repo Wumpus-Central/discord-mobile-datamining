@@ -1,10 +1,7 @@
 // === Module 15019: ? ===
 
 // Module 15019
-import _mod15020 from "module_15020" /* 15020 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod15018 from "module_15018" /* 15018 */;
 
 
-export default function getReactNativeVersion() {
-  return _mod15020.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
-};
+export default (arg0, arg1, arg2) => _mod15018(arg0, arg1, ">", arg2);

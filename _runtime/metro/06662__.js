@@ -1,7 +1,14 @@
 // === Module 6662: ? ===
 
 // Module 6662
-import registerAsset from "module_1132" /* 1132 */;
+import ComposedGestureName from "ComposedGestureName" /* 6614 */;
+import _mod6663 from "module_6663" /* 6663 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 480, height: 413, scales: [2, 3], hash: "b25b2e24db6c14f15201cb7533aed65e", name: "register-background-dark", type: "png" });
+export const useCompetingGestures = function useCompetingGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod6663.useComposedGesture.apply(items1);
+};

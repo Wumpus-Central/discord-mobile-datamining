@@ -1,7 +1,28 @@
 // === Module 8057: ? ===
 
 // Module 8057
-import registerAsset from "module_1132" /* 1132 */;
+import findOffsets from "findOffsets" /* 8054 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/auto_moderation", width: 12, height: 12, scales: [2, 3], hash: "78a34aca822219efd275dbb2e470061d", name: "ic_closed_lock", type: "png" });
+export default {
+  isAvifFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          parseBoxResult = "avif" === parseBoxResult.majorBrand;
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  },
+  findAvifOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
+  }
+};

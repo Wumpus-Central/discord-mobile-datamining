@@ -1,18 +1,8 @@
 // === Module 6585: ? ===
 
 // Module 6585
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
 
-({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export const useUnmountFlag = () => {
-  const tmp = React(false);
-  closure_0 = tmp;
-  framebus(() => {
-    closure_0.current = false;
-    return () => {
-      closure_1_0.current = true;
-    };
-  }, []);
-  return tmp;
-};
+export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");

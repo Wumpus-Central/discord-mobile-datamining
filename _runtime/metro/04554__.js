@@ -1,17 +1,17 @@
 // === Module 4554: ? ===
 
 // Module 4554
-import startOfSecond_mod from "startOfSecond" /* 4555 */;
-import requiredArgs_mod from "requiredArgs" /* 4202 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let startOfSecond = startOfSecond_mod;
-if (!startOfSecond) {
-  const obj = { default: startOfSecond };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfSecond;
+  tmp3 = _typeof;
 }
-startOfSecond = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameSecond(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfSecond.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfSecond.default(arg1).getTime();
+export default function isFriday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 5 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

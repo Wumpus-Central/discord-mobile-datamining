@@ -1,30 +1,9 @@
 // === Module 4382: ? ===
 
 // Module 4382
-import startOfDay_mod from "startOfDay" /* 4365 */;
-import requiredArgs_mod from "requiredArgs" /* 4202 */;
+let closure_0 = { lastWeek: "'i' EEEE's kl.' p", yesterday: "'ig\u00E5r kl.' p", today: "'idag kl.' p", tomorrow: "'imorgon kl.' p", nextWeek: "EEEE 'kl.' p", other: "P" };
 
-let startOfDay = startOfDay_mod;
-if (!startOfDay) {
-  const obj = { default: startOfDay };
-  let tmp3 = obj;
-} else {
-  tmp3 = startOfDay;
-}
-startOfDay = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-
-export default function isSameDay(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfDay.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfDay.default(arg1).getTime();
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
 };
 export default exports.default;

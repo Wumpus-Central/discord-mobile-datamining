@@ -1,24 +1,12 @@
 // === Module 5161: ? ===
 
 // Module 5161
+import _mod17 from "module_17" /* 17 */;
+import _mod26 from "module_26" /* 26 */;
+import module_65 from "module_65" /* 65 */;
 
-export default function initCloneArray(arg0) {
-  let length = arg0.length;
-  const constructor = new arg0.constructor(length);
-  if (length) {
-    length = typeof arg0[0] === "string";
-  }
-  if (!length) {
-    if (length) {
-      ({ index: tmp.index, input: tmp.input } = arg0);
-    }
-    return constructor;
-  } else {
-    const call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let callResult = hasOwnProperty("index");
-    } else {
-      callResult = call(arg0, "index");
-    }
-  }
-};
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNPlainText", validAttributes: { text: true, color: _mod26.colorAttribute, fontSize: true, fontFamily: true, fontWeight: true, fontStyle: true, fontVariant: true, fontVariationSettings: true, lineHeight: true, letterSpacing: true, hasLetterSpacing: true, textAlign: true, textAlignVertical: true, textDecorationLine: true, textTransform: true, numberOfLines: true, ellipsizeMode: true, allowFontScaling: true, maxFontSizeMultiplier: true, experiment: true, lineHeightClippingIos: true, includeFontPadding: true } };
+
+export default module_65.get("RNPlainText", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

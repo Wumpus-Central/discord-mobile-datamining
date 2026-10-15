@@ -1,14 +1,7 @@
 // === Module 4217: ? ===
 
 // Module 4217
-import module_2134 from "module_2134" /* 2134 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-if (!module_2134) {
-  const obj2 = { default: module_2134 };
-  let obj = obj2;
-} else {
-  obj = module_2134;
-}
 
-export default { date: obj.default({ formats: { full: "EEEE 'den' d. MMMM y", long: "d. MMMM y", medium: "d. MMM y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'kl'. {{time}}", long: "{{date}} 'kl'. {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
-export default exports.default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/promotions/third_party/macaron", scales: [1], hash: "210ab9b8443223b37cc7fa718c0a10f7", name: "MacaronPhase2.compiled.messages", type: "jsona" });

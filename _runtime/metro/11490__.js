@@ -1,112 +1,162 @@
 // === Module 11490: ? ===
 
 // Module 11490
-import _mod11420 from "module_11420" /* 11420 */;
-import _mod11424 from "module_11424" /* 11424 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const DeepLinking = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+}
+const Linking = fn(17).Linking;
+const jsx = fn(21).jsx;
+const re8 = /.*?:\/\//g;
+let closure_1;
+class DeepLinking {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, DeepLinking);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(DeepLinking);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
     }
-    if (!fn) {
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handleChange = (url) => {
+      closure_0.push(url.url);
+    };
+    return tmp3Result;
+  }
+}
+_inherits(DeepLinking, noop.Component);
+const entry = {
+  key: "push",
+  value: function push(str) {
+    const history = this.history;
+    history.push(str.replace(re8, ""));
+  }
+};
+let items = [entry, , , ];
+const entry1 = { key: "componentDidMount", value: null };
+closure_1 = asyncGeneratorStep(async function() {
+  const self = this;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_3 = self;
+            closure_2 = self;
+            closure_1 = tmp2;
+            closure_129_0 = undefined;
+            c4 = 1;
+            c5 = 1;
+            const obj4 = { value: c5.getInitialURL(), done: false };
+            return obj4;
           }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          for (const key10009 in arg0) {
-            let tmp9 = "default" !== key10009;
-            if (!tmp9) {
-              if (!tmp9) {
-                continue;
-              } else {
-                let tmp6 = self2(obj, arg0, key10009);
-                continue;
-              }
-              continue;
-            } else {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10009);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10009);
-              }
-            }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_129_0 = value;
+          if (closure_129_0) {
+            closure_3.push(closure_129_0);
           }
+          const listener = c5.addEventListener("url", closure_3.handleChange);
+          c5 = 3;
+          return { value: "IconComponent", done: null };
         }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
+      } catch (tmp17) {
+        c5 = tmp;
+        throw tmp17;
+      }
     }
-    const _Object3 = Object;
-    exports.ZodError = undefined;
-    exports.ZodRealError = undefined;
-    const fnResult = fn(_mod11420);
-    let closure_5 = fn(_mod11424);
-    function initializer(prototype, arg1) {
-      _require = prototype;
-      const $ZodError = require("module_11420").$ZodError;
-      $ZodError.init(prototype, arg1);
-      prototype.name = "ZodError";
-      Object.defineProperties(prototype, {
-        format: {
-          value(arg0) {
-            return fnResult.formatError(closure_0, arg0);
-          }
-        },
-        flatten: {
-          value(arg0) {
-            return fnResult.flattenError(closure_0, arg0);
-          }
-        },
-        addIssue: {
-          value(arg0) {
-            const issues = prototype.issues;
-            issues.push(arg0);
-            prototype.message = JSON.stringify(prototype.issues, closure_5.jsonStringifyReplacer, 2);
-          }
-        },
-        addIssues: {
-          value(arg0) {
-            const issues = prototype.issues;
-            const items = [...arg0];
-            issues.push.apply(items);
-            prototype.message = JSON.stringify(prototype.issues, closure_5.jsonStringifyReplacer, 2);
-          }
-        },
-        isEmpty: {
-          get() {
-            return 0 === prototype.issues.length;
-          }
-        }
-      });
-    }
-    exports.ZodError = fnResult.$constructor("ZodError", initializer);
-    let obj = { Parent: null };
-    const _Error = Error;
-    obj.Parent = Error;
-    exports.ZodRealError = fnResult.$constructor("ZodError", initializer, obj);
+  })();
+});
+entry1.value = function componentDidMount() {
+  const self = this;
+  const apply = closure_1.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    const _Object2 = Object;
+    applyArgumentsResult = apply(self, arguments);
   }
-} else {
-  let _Object = Object;
-}
+  return applyArgumentsResult;
+};
+items[1] = entry1;
+items[2] = {
+  key: "componentWillUnmount",
+  value: function componentWillUnmount() {
+    const removed = Linking.removeEventListener("url", this.handleChange);
+  }
+};
+items[3] = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    return jsx(DeepLinking(closure_1[9]).__HistoryContext.Consumer, {
+      children(history) {
+        self.history = history;
+        return self.props.children || null;
+      }
+    });
+  }
+};
+
+export default _createClass(DeepLinking, items);

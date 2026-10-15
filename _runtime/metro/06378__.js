@@ -1,15 +1,7 @@
 // === Module 6378: ? ===
 
 // Module 6378
-import get_ActivityIndicator from "module_17" /* 17 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let PlatformConstants;
-if (NativeModules != null) {
-  PlatformConstants = NativeModules.PlatformConstants;
-}
-if (PlatformConstants == null) {
-  PlatformConstants = get_ActivityIndicator.Platform.constants;
-}
 
-export default PlatformConstants;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/auth", width: 1424, height: 1500, scales: [1], hash: "1241abd72512c72c105ef9e9870d04e3", name: "background-splash-mobile", type: "png" });

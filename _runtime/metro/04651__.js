@@ -1,76 +1,367 @@
 // === Module 4651: ? ===
 
 // Module 4651
-import module_2137 from "module_2137" /* 2137 */;
+import daysInWeek from "daysInWeek" /* 4434 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
+import module_4259_mod from "module_4259" /* 4259 */;
 
-if (!module_2137) {
-  const obj2 = { default: module_2137 };
-  let obj = obj2;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  let obj = { default: requiredArgs };
+  let tmp3 = obj;
 } else {
-  obj = module_2137;
+  tmp3 = requiredArgs;
 }
-const date = {
-  ordinalNumber(arg0, unit) {
-    const NumberResult = Number(arg0);
-    unit = undefined;
-    if (null != unit) {
-      unit = unit.unit;
-    }
-    if ("quarter" === unit) {
-      if (1 === NumberResult) {
-        return "I";
-      } else if (2 === NumberResult) {
-        return "II";
-      } else if (3 === NumberResult) {
-        return "III";
-      } else if (4 === NumberResult) {
-        return "IV";
-      }
-    } else if ("day" === unit) {
-      if (1 === NumberResult) {
-        return "th\u1EE9 2";
-      } else if (2 === NumberResult) {
-        return "th\u1EE9 3";
-      } else if (3 === NumberResult) {
-        return "th\u1EE9 4";
-      } else if (4 === NumberResult) {
-        return "th\u1EE9 5";
-      } else if (5 === NumberResult) {
-        return "th\u1EE9 6";
-      } else if (6 === NumberResult) {
-        return "th\u1EE9 7";
-      } else if (7 === NumberResult) {
-        return "ch\u1EE7 nh\u1EADt";
-      }
-    } else if ("week" === unit) {
-      let str5 = "th\u1EE9 nh\u1EA5t";
-      if (1 !== NumberResult) {
-        str5 = `thứ ${tmp}`;
-      }
-      return str5;
-    } else if ("dayOfYear" === unit) {
-      let str4 = "\u0111\u1EA7u ti\u00EAn";
-      if (1 !== NumberResult) {
-        str4 = `thứ ${tmp}`;
-      }
-      return str4;
-    }
-    return String(NumberResult);
-  },
-  era: obj.default({ values: { narrow: ["TCN", "SCN"], abbreviated: ["tr\u01B0\u1EDBc CN", "sau CN"], wide: ["tr\u01B0\u1EDBc C\u00F4ng Nguy\u00EAn", "sau C\u00F4ng Nguy\u00EAn"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["Qu\u00FD 1", "Qu\u00FD 2", "Qu\u00FD 3", "Qu\u00FD 4"] },
-    defaultWidth: "wide",
-    formattingValues: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["qu\u00FD I", "qu\u00FD II", "qu\u00FD III", "qu\u00FD IV"] },
-    defaultFormattingWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
-    }
-  }),
-  month: obj.default({ values: { narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], abbreviated: ["Thg 1", "Thg 2", "Thg 3", "Thg 4", "Thg 5", "Thg 6", "Thg 7", "Thg 8", "Thg 9", "Thg 10", "Thg 11", "Thg 12"], wide: ["Th\u00E1ng M\u1ED9t", "Th\u00E1ng Hai", "Th\u00E1ng Ba", "Th\u00E1ng T\u01B0", "Th\u00E1ng N\u0103m", "Th\u00E1ng S\u00E1u", "Th\u00E1ng B\u1EA3y", "Th\u00E1ng T\u00E1m", "Th\u00E1ng Ch\u00EDn", "Th\u00E1ng M\u01B0\u1EDDi", "Th\u00E1ng M\u01B0\u1EDDi M\u1ED9t", "Th\u00E1ng M\u01B0\u1EDDi Hai"] }, defaultWidth: "wide", formattingValues: { narrow: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"], abbreviated: ["thg 1", "thg 2", "thg 3", "thg 4", "thg 5", "thg 6", "thg 7", "thg 8", "thg 9", "thg 10", "thg 11", "thg 12"], wide: ["th\u00E1ng 01", "th\u00E1ng 02", "th\u00E1ng 03", "th\u00E1ng 04", "th\u00E1ng 05", "th\u00E1ng 06", "th\u00E1ng 07", "th\u00E1ng 08", "th\u00E1ng 09", "th\u00E1ng 10", "th\u00E1ng 11", "th\u00E1ng 12"] }, defaultFormattingWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"], short: ["CN", "Th 2", "Th 3", "Th 4", "Th 5", "Th 6", "Th 7"], abbreviated: ["CN", "Th\u1EE9 2", "Th\u1EE9 3", "Th\u1EE9 4", "Th\u1EE9 5", "Th\u1EE9 6", "Th\u1EE9 7"], wide: ["Ch\u1EE7 Nh\u1EADt", "Th\u1EE9 Hai", "Th\u1EE9 Ba", "Th\u1EE9 T\u01B0", "Th\u1EE9 N\u0103m", "Th\u1EE9 S\u00E1u", "Th\u1EE9 B\u1EA3y"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "am", pm: "pm", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr", morning: "sg", afternoon: "ch", evening: "t\u1ED1i", night: "\u0111\u00EAm" }, abbreviated: { am: "AM", pm: "PM", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr\u01B0a", morning: "s\u00E1ng", afternoon: "chi\u1EC1u", evening: "t\u1ED1i", night: "\u0111\u00EAm" }, wide: { am: "SA", pm: "CH", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr\u01B0a", morning: "s\u00E1ng", afternoon: "chi\u1EC1u", evening: "t\u1ED1i", night: "\u0111\u00EAm" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "am", pm: "pm", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr", morning: "sg", afternoon: "ch", evening: "t\u1ED1i", night: "\u0111\u00EAm" }, abbreviated: { am: "AM", pm: "PM", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr\u01B0a", morning: "s\u00E1ng", afternoon: "chi\u1EC1u", evening: "t\u1ED1i", night: "\u0111\u00EAm" }, wide: { am: "SA", pm: "CH", midnight: "n\u1EEDa \u0111\u00EAm", noon: "gi\u1EEFa tr\u01B0a", morning: "v\u00E0o bu\u1ED5i s\u00E1ng", afternoon: "v\u00E0o bu\u1ED5i chi\u1EC1u", evening: "v\u00E0o bu\u1ED5i t\u1ED1i", night: "v\u00E0o ban \u0111\u00EAm" } }, defaultFormattingWidth: "wide" })
-};
+requiredArgs = tmp3;
+let module_4259 = module_4259_mod;
+if (!module_4259) {
+  let obj2 = { default: module_4259 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4259;
+}
+module_4259 = tmp5;
+const dateTimeDelimiter = { dateTimeDelimiter: /[T ]/, timeZoneDelimiter: /[Z ]/i, timezone: /([Z+-].*)$/ };
+const re5 = /^-?(?:(\d{3})|(\d{2})(?:-?(\d{2}))?|W(\d{2})(?:-?(\d{1}))?|)$/;
+const re6 = /^(\d{2}(?:[.,]\d*)?)(?::?(\d{2}(?:[.,]\d*)?))?(?::?(\d{2}(?:[.,]\d*)?))?$/;
+const re7 = /^([+-])(\d{2})(?::?(\d{2}))?$/;
+let closure_8 = [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-export default date;
+export default function parseISO(claimedAt, arg1) {
+  let num = 1;
+  requiredArgs.default(1, arguments);
+  let additionalDigits;
+  if (null != arg1) {
+    additionalDigits = arg1.additionalDigits;
+  }
+  let num2 = 2;
+  if (null !== additionalDigits) {
+    num2 = 2;
+    if (undefined !== additionalDigits) {
+      num2 = additionalDigits;
+    }
+  }
+  const defaultResult1 = module_4259.default(num2);
+  if (2 !== defaultResult1) {
+    if (num !== defaultResult1) {
+      if (0 !== defaultResult1) {
+        const _RangeError = RangeError;
+        const rangeError = new RangeError("additionalDigits must be 0, 1 or 2");
+        throw rangeError;
+      }
+    }
+  }
+  if (typeof claimedAt !== "string") {
+    const _Object = Object;
+    const call = toString.call;
+    if ("[object String]" !== (typeof call === "unknown" ? toString() : call(claimedAt))) {
+      const _Date9 = Date;
+      const date = new Date(NaN);
+      return date;
+    }
+  }
+  const obj = {};
+  const parts = claimedAt.split(dateTimeDelimiter.dateTimeDelimiter);
+  if (parts.length <= 2) {
+    const first = parts[0];
+    if (obj9.test(parts[0])) {
+      let str2 = first;
+    } else {
+      obj.date = first;
+      str2 = parts[1];
+      const timeZoneDelimiter = dateTimeDelimiter.timeZoneDelimiter;
+      if (timeZoneDelimiter.test(obj.date)) {
+        obj.date = claimedAt.split(dateTimeDelimiter.timeZoneDelimiter)[0];
+        str2 = claimedAt.substr(obj.date.length, claimedAt.length);
+      }
+    }
+    if (str2) {
+      const timezone = dateTimeDelimiter.timezone;
+      const match = timezone.exec(str2);
+      if (match) {
+        obj.time = str2.replace(match[1], "");
+        obj.timezone = match[1];
+      } else {
+        obj.time = str2;
+      }
+    }
+    obj9 = /:/;
+  }
+  if (!obj.date) {
+    if (undefined) {
+      const _isNaN = isNaN;
+      if (!isNaN(undefined.getTime())) {
+        const time = undefined.getTime();
+        let num26 = 0;
+        if (obj.time) {
+          const match1 = obj.time.match(re6);
+          let num28 = NaN;
+          if (match1) {
+            let num29 = str9;
+            if (match1[1]) {
+              const _parseFloat = parseFloat;
+              num29 = parseFloat(str9.replace(",", "."));
+            }
+            if (!num29) {
+              num29 = 0;
+            }
+            let num30 = str12;
+            if (match1[2]) {
+              const _parseFloat2 = parseFloat;
+              num30 = parseFloat(str12.replace(",", "."));
+            }
+            if (!num30) {
+              num30 = 0;
+            }
+            let num31 = str15;
+            if (match1[3]) {
+              const _parseFloat3 = parseFloat;
+              num31 = parseFloat(str15.replace(",", "."));
+            }
+            if (!num31) {
+              num31 = 0;
+            }
+            if (24 === num29) {
+              let tmp63 = 0 === num30 && 0 === num31;
+              const tmp64 = 0 === num30 && 0 === num31;
+            } else {
+              tmp63 = num31 >= 0;
+              if (tmp63) {
+                tmp63 = num31 < 60;
+              }
+              if (tmp63) {
+                tmp63 = num30 >= 0;
+              }
+              if (tmp63) {
+                tmp63 = num30 < 60;
+              }
+              if (tmp63) {
+                tmp63 = num29 >= 0;
+              }
+              if (tmp63) {
+                tmp63 = num29 < 25;
+              }
+            }
+            num28 = NaN;
+            if (tmp63) {
+              const result = num29 * daysInWeek.millisecondsInHour;
+              num28 = result + num30 * daysInWeek.millisecondsInMinute + 1000 * num31;
+            }
+          }
+          const _isNaN2 = isNaN;
+          num26 = num28;
+          if (isNaN(num28)) {
+            const _Date7 = Date;
+            const date1 = new Date(NaN);
+            return date1;
+          }
+        }
+        if (obj.timezone) {
+          let num38 = 0;
+          if ("Z" !== obj.timezone) {
+            const match2 = str18.match(re7);
+            num38 = 0;
+            if (match2) {
+              if ("+" === match2[1]) {
+                num = -1;
+              }
+              const _parseInt3 = parseInt;
+              let num39 = match2[3];
+              const parsed = parseInt(match2[2]);
+              if (num39) {
+                const _parseInt4 = parseInt;
+                num39 = parseInt(match2[3]);
+              }
+              if (!num39) {
+                num39 = 0;
+              }
+              let tmp83 = num39 >= 0;
+              if (tmp83) {
+                tmp83 = num39 <= 59;
+              }
+              num38 = NaN;
+              if (tmp83) {
+                const result1 = parsed * daysInWeek.millisecondsInHour;
+                num38 = num * (result1 + num39 * daysInWeek.millisecondsInMinute);
+              }
+            }
+          }
+          const _isNaN3 = isNaN;
+          const _Date6 = Date;
+          if (isNaN(num38)) {
+            const _Date61 = new _Date6(NaN);
+            return _Date61;
+          } else {
+            const _Date62 = new _Date6(time + num26 + num38);
+            return _Date62;
+          }
+        } else {
+          const _Date4 = Date;
+          const date2 = new Date(time + num26);
+          const _Date5 = Date;
+          const date3 = new Date(0);
+          const uTCFullYear = date2.getUTCFullYear();
+          const uTCMonth = date2.getUTCMonth();
+          date3.setFullYear(uTCFullYear, uTCMonth, date2.getUTCDate());
+          const uTCHours = date2.getUTCHours();
+          const uTCMinutes = date2.getUTCMinutes();
+          const uTCSeconds = date2.getUTCSeconds();
+          date3.setHours(uTCHours, uTCMinutes, uTCSeconds, date2.getUTCMilliseconds());
+          return date3;
+        }
+      }
+    }
+    const _Date8 = Date;
+    const date4 = new Date(NaN);
+    return date4;
+  } else {
+    let date5 = globalThis;
+    const _RegExp = RegExp;
+    let num4 = 4;
+    const regExp = new RegExp("^(?:(\\d{4}|[+-]\\d{" + (4 + defaultResult1) + "})|(\\d{2}|[+-]\\d{" + (2 + defaultResult1) + "})$)");
+    const match3 = str4.match(regExp);
+    if (match3) {
+      let parsed1 = null;
+      if (match3[1]) {
+        const _parseInt = parseInt;
+        parsed1 = parseInt(match3[1]);
+      }
+      let parsed2 = null;
+      if (match3[2]) {
+        const _parseInt2 = parseInt;
+        parsed2 = parseInt(match3[2]);
+      }
+      if (null !== parsed2) {
+        parsed1 = 100 * parsed2;
+      }
+      const obj2 = { year: parsed1, restDateString: null };
+      let arr2 = match3[1];
+      if (!arr2) {
+        arr2 = match3[2];
+      }
+      obj2.restDateString = str4.slice(arr2.length);
+      let obj3 = obj2;
+    } else {
+      obj3 = { year: NaN, restDateString: "" };
+    }
+    ({ restDateString, year } = obj3);
+    if (null === year) {
+      const _Date3 = Date;
+      let match4 = new.target;
+      date5 = new Date(NaN);
+      let date6 = date5;
+    } else {
+      match4 = restDateString.match(re5);
+      if (!match4) {
+        const _Date = Date;
+        date6 = new Date(NaN);
+      }
+    }
+    let parsed3 = num;
+    if (match4[1]) {
+      parsed3 = date5.parseInt(tmp17);
+    }
+    let parsed4 = num;
+    if (match4[2]) {
+      parsed4 = date5.parseInt(tmp19);
+    }
+    const diff = parsed4 - num;
+    let parsed5 = num;
+    if (match4[3]) {
+      parsed5 = date5.parseInt(tmp22);
+    }
+    let parsed6 = num;
+    if (match4[4]) {
+      parsed6 = date5.parseInt(tmp24);
+    }
+    let parsed7 = num;
+    if (match4[5]) {
+      parsed7 = date5.parseInt(tmp26);
+    }
+    const diff1 = parsed7 - num;
+    if (!tmp16) {
+      let tmp48 = parsed6 >= num;
+      if (tmp48) {
+        tmp48 = parsed6 <= 53;
+      }
+      if (tmp48) {
+        tmp48 = diff1 >= 0;
+      }
+      if (tmp48) {
+        tmp48 = diff1 <= 6;
+      }
+      const _Date2 = date5.Date;
+      if (tmp48) {
+        const _Date21 = new _Date2(0);
+        _Date21.setUTCFullYear(year, 0, num4);
+        num4 = parsed6 - num;
+        const diff2 = 7 * num4 + diff1 + num - (_Date21.getUTCDay() || 7);
+        _Date21.setUTCDate(_Date21.getUTCDate() + diff2);
+        match4 = _Date21;
+        const tmp54 = _Date21.getUTCDay() || 7;
+      } else {
+        match4 = new _Date2(NaN);
+      }
+      date6 = match4;
+    } else {
+      const date7 = new date5.Date(0);
+      let tmp31 = diff >= 0;
+      if (0 <= diff) {
+        tmp31 = diff <= 11;
+      }
+      if (tmp31) {
+        tmp31 = parsed5 >= num;
+      }
+      if (tmp31) {
+        let tmp33 = closure_8[diff];
+        if (!tmp33) {
+          const result2 = year % 400;
+          let tmp35 = result2 === 0;
+          if (result2 !== 0) {
+            const result3 = year % num4;
+            let tmp37 = result3 === 0;
+            if (result3 === 0) {
+              tmp37 = year % 100 !== 0;
+            }
+            tmp35 = tmp37;
+          }
+          let num12 = 28;
+          if (tmp35) {
+            num12 = 29;
+          }
+          tmp33 = num12;
+        }
+        tmp31 = parsed5 <= tmp33;
+      }
+      if (tmp31) {
+        let tmp38 = parsed3 >= num;
+        if (tmp38) {
+          const result4 = year % 400;
+          let tmp40 = result4 === 0;
+          if (result4 !== 0) {
+            const result5 = year % num4;
+            let tmp42 = result5 === 0;
+            if (result5 === 0) {
+              tmp42 = year % 100 !== 0;
+            }
+            tmp40 = tmp42;
+          }
+          let num15 = 365;
+          if (tmp40) {
+            num15 = 366;
+          }
+          tmp38 = parsed3 <= num15;
+        }
+        if (tmp38) {
+          const _Math = date5.Math;
+          date7.setUTCFullYear(year, diff, _Math.max(parsed3, parsed5));
+          match4 = date7;
+          date6 = match4;
+        }
+      }
+      match4 = new date5.Date(NaN);
+    }
+    tmp16 = !match4[4];
+  }
+};
 export default exports.default;

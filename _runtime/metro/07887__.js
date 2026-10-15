@@ -1,44 +1,14 @@
 // === Module 7887: ? ===
 
 // Module 7887
-const require = globalThis.__r;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-const require = arg1;
-const dependencyMap = arg6;
-let closure_2 = [6, 7, 99];
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGRect", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x: true, y: true, height: true, width: true, rx: true, ry: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = size;
 
-export default {
-  get(buffer, Compression, arg2) {
-    let prop = Compression;
-    if (Compression) {
-      let hasItem = undefined === Compression.Compression;
-      if (!hasItem) {
-        hasItem = closure_2.includes(Compression.Compression.value);
-      }
-      prop = hasItem;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat.value;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength.value;
-    }
-    if (prop) {
-      Compression.type = "image/jpeg";
-      const sum = arg2 + Compression.JPEGInterchangeFormat.value;
-      buffer = buffer.buffer;
-      Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
-      require("module_7835").deferInit(Compression, "base64", function() {
-        return require("module_7835").getBase64Image(this.image);
-      });
-      const obj = require("module_7835");
-    }
-    return Compression;
-  }
-};
+export default module_65.get("RNSVGRect", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

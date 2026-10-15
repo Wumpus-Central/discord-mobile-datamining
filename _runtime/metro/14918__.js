@@ -1,17 +1,7 @@
 // === Module 14918: ? ===
 
 // Module 14918
-import _mod14914 from "module_14914" /* 14914 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default !_mod14914(() => {
-  const fn = () => {
-
-  };
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
-  }
-  return hasOwnPropertyResult;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "3b38f8bf8ac6605b344df2f05c37673a", name: "NitroGem9", type: "lottie" });

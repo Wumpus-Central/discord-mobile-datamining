@@ -1,44 +1,29 @@
 // === Module 4259: ? ===
 
 // Module 4259
-import module_4260 from "module_4260" /* 4260 */;
-import module_4261 from "module_4261" /* 4261 */;
-import module_4262 from "module_4262" /* 4262 */;
-import date_mod from "module_4263" /* 4263 */;
-import date_mod from "module_4264" /* 4264 */;
 
-if (!module_4260) {
-  const obj = { default: module_4260 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4260;
-}
-if (!module_4261) {
-  const obj2 = { default: module_4261 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4261;
-}
-if (!module_4262) {
-  const obj3 = { default: module_4262 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4262;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "hu", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function toInteger(arg0) {
+  if (null !== arg0) {
+    if (true !== arg0) {
+      if (false !== arg0) {
+        const _Number = Number;
+        const NumberResult = Number(arg0);
+        const _isNaN = isNaN;
+        if (isNaN(NumberResult)) {
+          return NumberResult;
+        } else {
+          if (NumberResult < 0) {
+            const _Math2 = Math;
+            let rounded = Math.ceil(NumberResult);
+          } else {
+            const _Math = Math;
+            rounded = Math.floor(NumberResult);
+          }
+          return rounded;
+        }
+      }
+    }
+  }
+  return NaN;
+};
 export default exports.default;

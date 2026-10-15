@@ -1,7 +1,8 @@
 // === Module 18773: ? ===
 
 // Module 18773
-import registerAsset from "module_1132" /* 1132 */;
+const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b7c23ecf7d498084060048eec006835a", name: "CircleInformationIcon", type: "png" });
+export default function hasUnicode(arg0) {
+  return regex.test(arg0);
+};

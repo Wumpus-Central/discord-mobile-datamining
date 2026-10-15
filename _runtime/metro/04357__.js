@@ -1,46 +1,14 @@
 // === Module 4357: ? ===
 
 // Module 4357
-import module_4205_mod from "module_4205" /* 4205 */;
-import module_4358_mod from "module_4358" /* 4358 */;
-import module_4361_mod from "module_4361" /* 4361 */;
-import requiredArgs_mod from "requiredArgs" /* 4202 */;
+import module_2134 from "module_2134" /* 2134 */;
 
-let module_4205 = module_4205_mod;
-if (!module_4205) {
-  const obj = { default: module_4205 };
-  let tmp3 = obj;
+if (!module_2134) {
+  const obj2 = { default: module_2134 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4205;
+  obj = module_2134;
 }
-module_4205 = tmp3;
-let module_4358 = module_4358_mod;
-if (!module_4358) {
-  const obj2 = { default: module_4358 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4358;
-}
-module_4358 = tmp5;
-let module_4361 = module_4361_mod;
-if (!module_4361) {
-  const obj3 = { default: module_4361 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4361;
-}
-module_4361 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
 
-export default function addISOWeekYears(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4361.default(arg0, module_4358.default(arg0) + module_4205.default(arg1));
-};
+export default { date: obj.default({ formats: { full: "EEEE, do MMMM y", long: "do MMMM y", medium: "do MMM y", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

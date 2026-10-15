@@ -1,69 +1,81 @@
 // === Module 7872: ? ===
 
 // Module 7872
-let closure_0 = { xmp: "http://ns.adobe.com/xap/1.0/", tiff: "http://ns.adobe.com/tiff/1.0/", exif: "http://ns.adobe.com/exif/1.0/", dc: "http://purl.org/dc/elements/1.1/", xmpMM: "http://ns.adobe.com/xap/1.0/mm/", stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#", stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#", photoshop: "http://ns.adobe.com/photoshop/1.0/" };
+import _modDef7817 from "module_7817" /* 7817 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-export const isMissingNamespaceError = function isMissingNamespaceError(message) {
-  const items = ["prefix is non-null and namespace is null", "prefix not bound to a namespace", "prefix inte bundet till en namnrymd", /Namespace prefix .+ is not defined/];
-  let num = 0;
-  if (0 < items.length) {
-    const _RegExp = RegExp;
-    const regExp = new RegExp(items[num]);
-    while (!regExp.test(message.message)) {
-      num = num + 1;
+const Marker = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return true;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  return false;
-};
-export const addMissingNamespaces = function addMissingNamespaces(str) {
-  const match = str.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
-  if (match) {
-    const items = [];
-    const obj = /xmlns:([\w-]+)=["'][^"']+["']/g;
-    let match1 = obj.exec(str);
-    if (null !== match1) {
-      do {
-        if (-1 === items.indexOf(match1[1])) {
-          let arr = items.push(match1[1]);
-        }
-        match1 = obj.exec(str);
-      } while (null !== match1);
+}
+const jsx = fn(21).jsx;
+class Marker {
+  constructor() {
+    self = this;
+    tmp = c2(this, Marker);
+    tmp2 = closure_4;
+    obj = closure_4(Marker);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    const items1 = [];
-    const obj2 = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
-    let match2 = obj2.exec(str);
-    if (null !== match2) {
-      do {
-        let tmp8 = match2[1];
-        let tmp9 = "xmlns" !== tmp8 && "xml" !== tmp8;
-        if (tmp9) {
-          if (-1 === items1.indexOf(tmp8)) {
-            let arr2 = items1.push(tmp8);
-          }
-        }
-        match2 = obj2.exec(str);
-      } while (null !== match2);
-    }
-    const found = items1.filter((item) => -1 === items.indexOf(item));
-    let replaced = str;
-    if (0 !== found.length) {
-      const items2 = [];
-      for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
-        let tmp12 = found[num3];
-        let text = closure_0[tmp12];
-        if (!text) {
-          text = `http://fallback.namespace/${tmp12}`;
-        }
-        let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Marker, _modDef7817);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
       }
-      const _RegExp = RegExp;
-      const joined = items2.join("");
-      const regExp = new RegExp("<" + tmp2 + "([^>]*)>");
-      replaced = str.replace(regExp, `<${tmp2}$1${tmp17}>`);
-    }
-    return replaced;
-  } else {
-    return str;
+    };
+    const obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(Marker(7806)({ viewBox, preserveAspectRatio }));
+    obj2.children = children;
+    return jsx(Marker(7873), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(Marker, items);
+importDefaultResultResult.displayName = "Marker";
+importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+
+export default importDefaultResultResult;

@@ -1,14 +1,7 @@
 // === Module 14920: ? ===
 
 // Module 14920
-import _mod14921 from "module_14921" /* 14921 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default (arg0) => {
-  if (_mod14921(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "5f77547974eb8f3f02aedbb78b4b73bc", name: "NitroGem12", type: "lottie" });

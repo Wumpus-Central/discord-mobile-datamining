@@ -1,19 +1,7 @@
 // === Module 6433: ? ===
 
 // Module 6433
-import ComposedGestureName from "ComposedGestureName" /* 6398 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6407 */;
-import _mod6422 from "module_6422" /* 6422 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
 
-export const useNativeGesture = function useNativeGesture() {
-  let tmp = cResult;
-  if (cResult === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod6422.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_ogrwmflqwrxbxbb3hpokpwnsgq/node_modules/@react-navigation/elements/lib/module/assets", width: 24, height: 24, scales: [1, 2, 3, 4], hash: "940453dc5cbfaa96cf907b3aa7791ece", name: "search-icon", type: "png" });

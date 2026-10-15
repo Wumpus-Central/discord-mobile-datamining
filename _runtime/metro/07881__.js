@@ -1,78 +1,88 @@
 // === Module 7881: ? ===
 
 // Module 7881
-import _modDef7852 from "module_7852" /* 7852 */;
+import _modDef7817 from "module_7817" /* 7817 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  read(byteLength, sum) {
-    let tmp;
-    if (sum + 4 <= byteLength.byteLength) {
-      const longAt = _modDef7852.getLongAt(byteLength, sum);
-      const obj2 = { value: longAt, description: null };
+const Polygon = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const jsx = fn(21).jsx;
+class Polygon {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, Polygon);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(Polygon);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polygon(7882)(points) + "z";
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
+  }
+}
+_inherits(Polygon, _modDef7817);
+const entry = {
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
       const _HermesInternal = HermesInternal;
-      obj2.description = "" + longAt + "px";
-      tmp = obj2;
+      combined = "M" + Polygon(7882)(points) + "z";
     }
-    const obj3 = { "Image Width": tmp, "Image Height": null, "Bit Depth": null, "Color Type": null, Compression: null, Filter: null, Interlace: null };
-    let tmp6;
-    if (sum + 4 + 4 <= byteLength.byteLength) {
-      const longAt1 = _modDef7852.getLongAt(byteLength, sum + 4);
-      const obj5 = { value: longAt1, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj5.description = "" + longAt1 + "px";
-      tmp6 = obj5;
-    }
-    obj3["Image Height"] = tmp6;
-    let tmp11;
-    if (sum + 8 + 1 <= byteLength.byteLength) {
-      const byteAt = _modDef7852.getByteAt(byteLength, sum + 8);
-      const obj7 = { value: byteAt, description: null };
-      const _HermesInternal3 = HermesInternal;
-      obj7.description = "" + byteAt;
-      tmp11 = obj7;
-    }
-    obj3["Bit Depth"] = tmp11;
-    let tmp16;
-    if (sum + 9 + 1 <= byteLength.byteLength) {
-      const byteAt1 = _modDef7852.getByteAt(byteLength, sum + 9);
-      const obj9 = { value: byteAt1, description: { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] || "Unknown" };
-      tmp16 = obj9;
-    }
-    obj3["Color Type"] = tmp16;
-    let tmp20;
-    if (sum + 10 + 1 <= byteLength.byteLength) {
-      const byteAt2 = _modDef7852.getByteAt(byteLength, sum + 10);
-      const obj11 = { value: byteAt2, description: null };
-      let str6 = "Unknown";
-      if (0 === byteAt2) {
-        str6 = "Deflate/Inflate";
-      }
-      obj11.description = str6;
-      tmp20 = obj11;
-    }
-    obj3.Compression = tmp20;
-    let tmp24;
-    if (sum + 11 + 1 <= byteLength.byteLength) {
-      const byteAt3 = _modDef7852.getByteAt(byteLength, sum + 11);
-      const obj13 = { value: byteAt3, description: null };
-      let str7 = "Unknown";
-      if (0 === byteAt3) {
-        str7 = "Adaptive";
-      }
-      obj13.description = str7;
-      tmp24 = obj13;
-    }
-    obj3.Filter = tmp24;
-    let tmp28;
-    if (sum + 12 + 1 <= byteLength.byteLength) {
-      const byteAt4 = _modDef7852.getByteAt(byteLength, sum + 12);
-      const obj15 = { value: byteAt4, description: { 0: "Noninterlaced", 1: "Adam7 Interlace" }[byteAt4] || "Unknown" };
-      tmp28 = obj15;
-    }
-    obj3.Interlace = tmp28;
-    return obj3;
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polygon(7877), { ref: this.refMethod, d: null });
   }
 };
+let items = [entry];
+const importDefaultResultResult = _createClass(Polygon, items);
+importDefaultResultResult.displayName = "Polygon";
+importDefaultResultResult.defaultProps = { points: "" };
+
+export default importDefaultResultResult;
