@@ -1,16 +1,16 @@
-// === Module 17961: VoicePanelLockedIcon ===
+// === Module 18201: VoicePanelLockedIcon ===
 
-// Module 17961 (VoicePanelLockedIcon)
+// Module 18201 (VoicePanelLockedIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import NativeViewDefault from "NativeView" /* 6166 */;
-import _modDef17962 from "module_17962" /* 17962 */;
+import NativeViewDefault from "NativeView" /* 6382 */;
+import _modDef18202 from "module_18202" /* 18202 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: null, icon: null };
 let size = { alignItems: "center", justifyContent: "center", alignSelf: "center", width: 64, height: 64, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round };
 obj2.container = size;
@@ -24,8 +24,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
   const cResult = c.c(5);
   const tmp4 = closure_4();
   if (cResult[0] !== tmp4.icon) {
-    const obj2 = { style: tmp4.icon, source: _modDef17962, size: native.IconSizes.LARGE };
-    const tmp8 = jsx(native.Icon, { style: tmp4.icon, source: _modDef17962, size: native.IconSizes.LARGE });
+    const obj2 = { style: tmp4.icon, source: _modDef18202, size: native.IconSizes.LARGE };
+    const tmp8 = jsx(native.Icon, { style: tmp4.icon, source: _modDef18202, size: native.IconSizes.LARGE });
     cResult[0] = tmp4.icon;
     cResult[1] = tmp8;
     let tmp5 = tmp8;
@@ -47,6 +47,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePan
 }) : (function VoicePanelLockedIcon() {
   const tmp = closure_4();
   const obj = { style: tmp.container, children: null };
-  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17962, size: native.IconSizes.LARGE });
+  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef18202, size: native.IconSizes.LARGE });
   return <tmp2 style={tmp.container}>{null}</tmp2>;
 });

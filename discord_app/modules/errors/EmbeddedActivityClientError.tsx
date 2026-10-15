@@ -1,6 +1,6 @@
-// === Module 10735: EmbeddedActivityClientError ===
+// === Module 10957: EmbeddedActivityClientError ===
 
-// Module 10735 (EmbeddedActivityClientError)
+// Module 10957 (EmbeddedActivityClientError)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/errors/EmbeddedActivityClientError.tsx");

@@ -1,22 +1,22 @@
-// === Module 12261: AutomodQuarantineUtils ===
+// === Module 12496: AutomodQuarantineUtils ===
 
-// Module 12261 (AutomodQuarantineUtils)
+// Module 12496 (AutomodQuarantineUtils)
 import util from "util" /* 1126 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4758 */;
-import openUserSettings2 from "openUserSettings" /* 7100 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10653 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4812 */;
+import openUserSettings2 from "openUserSettings" /* 7315 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10876 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10588 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10811 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 require = fn;
 const Constants = fn(1085);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4738).GuildMemberFlags;
+const GuildMemberFlags = fn(4792).GuildMemberFlags;
 const constants3 = fn(1095).ProfileCustomizationSubsection;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -81,7 +81,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "lineClamp", bio: "color" };
+      const obj = { nick: "Array", bio: "test" };
       guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -141,7 +141,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "lineClamp", bio: "color" };
+    const obj = { nick: "Array", bio: "test" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

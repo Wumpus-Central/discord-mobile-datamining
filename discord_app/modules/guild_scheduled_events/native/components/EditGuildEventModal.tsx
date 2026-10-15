@@ -1,16 +1,16 @@
-// === Module 8577: EditGuildEventModal ===
+// === Module 8790: EditGuildEventModal ===
 
-// Module 8577 (EditGuildEventModal)
+// Module 8790 (EditGuildEventModal)
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8526 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8527 */;
-import EntityUtils from "EntityUtils" /* 8531 */;
-import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8545 */;
-import useGetEventChannelsByType from "useGetEventChannelsByType" /* 8578 */;
-import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 8581 */;
-import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 8652 */;
-import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 8653 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8737 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8738 */;
+import EntityUtils from "EntityUtils" /* 8742 */;
+import EditGuildEventModalNavbarDefault from "EditGuildEventModalNavbar" /* 8758 */;
+import useGetEventChannelsByType from "useGetEventChannelsByType" /* 8791 */;
+import EditGuildEventWhereDefault from "EditGuildEventWhere" /* 8794 */;
+import EditGuildEventDetailsDefault from "EditGuildEventDetails" /* 8864 */;
+import EditGuildEventPreviewDefault from "EditGuildEventPreview" /* 8865 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 let closure_8 = fn(2071).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -210,7 +210,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return { value: "IconComponent", done: null };
         } else {
           if (!closure_128_5) {
-            const AccessibilityAnnouncer = tmp4(4830).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = tmp4(4884).AccessibilityAnnouncer;
             const intl = tmp4(1126).intl;
             AccessibilityAnnouncer.announce(intl.string(tmp4(1126).t["5HzXO5"]));
             closure_128_1();
@@ -220,7 +220,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               id = closure_128_2.id;
             }
           }
-          const AccessibilityAnnouncer2 = tmp4(4830).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer2 = tmp4(4884).AccessibilityAnnouncer;
           const intl2 = tmp4(1126).intl;
           AccessibilityAnnouncer2.announce(intl2.string(tmp4(1126).t["F9On+q"]));
         }

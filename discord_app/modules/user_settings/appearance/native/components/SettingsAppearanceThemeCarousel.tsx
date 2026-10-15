@@ -1,16 +1,16 @@
-// === Module 15918: SettingsAppearanceThemeCarousel ===
+// === Module 16214: SettingsAppearanceThemeCarousel ===
 
-// Module 15918 (SettingsAppearanceThemeCarousel)
+// Module 16214 (SettingsAppearanceThemeCarousel)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1254 */;
-import HapticUtils from "HapticUtils" /* 5061 */;
-import timing from "timing" /* 5097 */;
-import timingPresets from "timingPresets" /* 5100 */;
+import HapticUtils from "HapticUtils" /* 5116 */;
+import timing from "timing" /* 5152 */;
+import timingPresets from "timingPresets" /* 5155 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15919 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 16215 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { container: { gap: nativeDefault.space.PX_24, alignItems: "center" }, textCentered: { textAlign: "center" }, labelGroup: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
 let obj3 = { gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj.labelGroup = { gap: nativeDefault.space.PX_4, alignItems: "center" };

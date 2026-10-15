@@ -1,8 +1,8 @@
-// === Module 7433: isEmbeddedActivity ===
+// === Module 7643: isEmbeddedActivity ===
 
-// Module 7433 (isEmbeddedActivity)
+// Module 7643 (isEmbeddedActivity)
 import Constants from "Constants" /* 1085 */;
-import hasFlagDefault from "hasFlag" /* 7019 */;
+import hasFlagDefault from "hasFlag" /* 7232 */;
 import size from "module_2" /* 2 */;
 
 const ActivityFlags = Constants.ActivityFlags;

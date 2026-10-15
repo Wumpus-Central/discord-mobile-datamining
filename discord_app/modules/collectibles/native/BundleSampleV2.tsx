@@ -1,22 +1,22 @@
-// === Module 9006: BundleSampleV2 ===
+// === Module 9218: BundleSampleV2 ===
 
-// Module 9006 (BundleSampleV2)
+// Module 9218 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import utils from "utils" /* 1990 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9008 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9019 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9026 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9220 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9231 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9238 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(9007).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(9219).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -238,7 +238,7 @@ obj2.fgClip = obj6;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj2.fgImage = {};
 const styles = StyleSheet.create(obj2);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };

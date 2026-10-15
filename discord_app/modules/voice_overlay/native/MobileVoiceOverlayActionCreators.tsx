@@ -1,6 +1,6 @@
-// === Module 11156: MobileVoiceOverlayActionCreators ===
+// === Module 11380: MobileVoiceOverlayActionCreators ===
 
-// Module 11156 (MobileVoiceOverlayActionCreators)
+// Module 11380 (MobileVoiceOverlayActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

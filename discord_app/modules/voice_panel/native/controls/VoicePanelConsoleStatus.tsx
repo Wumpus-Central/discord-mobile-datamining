@@ -1,25 +1,25 @@
-// === Module 17952: VoicePanelConsoleStatus ===
+// === Module 18192: VoicePanelConsoleStatus ===
 
-// Module 17952 (VoicePanelConsoleStatus)
+// Module 18192 (VoicePanelConsoleStatus)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4829 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
-import spring from "spring" /* 5383 */;
+import native from "native" /* 4883 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import spring from "spring" /* 5438 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EDGE_GUTTER = fn(12527).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(12522).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(12820).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(12815).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 36;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { consoleParentContainer: { zIndex: 1, position: "absolute", bottom: 0, overflow: "hidden", left: -0.5, right: 0, alignItems: "center" }, consoleContainer: { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, overflow: "hidden" }, consoleItemContainer: { flexDirection: "row", alignItems: "center", height: 36, marginHorizontal: 18 }, consoleText: { textAlign: "left", marginStart: 4, flex: 1 }, blockingControlCover: null };
 let obj3 = { borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, overflow: "hidden" };
 obj2.blockingControlCover = { position: "absolute", bottom: 0, borderRadius: nativeDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS, flex: 1, height: CONTROLS_HEIGHT, overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj2);
 let obj5 = {};
-let merged = Object.assign(fn(12524).MODE_CHANGE_PHYSICS);
+let merged = Object.assign(fn(12817).MODE_CHANGE_PHYSICS);
 obj5.overshootClamping = true;
 const __initData = { code: "function VoicePanelConsoleStatusTsx1(){const{color,windowDimensions,EDGE_GUTTER,CONTROLS_HEIGHT,CONSOLE_STATUS_HEIGHT,withSpring,shouldShow,FADE_IN_MODE_PHYSICS,runOnJS,cleanUp}=this.__closure;return{backgroundColor:color,width:windowDimensions.get().width-EDGE_GUTTER*2,height:CONTROLS_HEIGHT+CONSOLE_STATUS_HEIGHT,borderRadius:32,transform:[{translateY:withSpring(shouldShow.get()?0:100,FADE_IN_MODE_PHYSICS,\"respect-motion-settings\",function(finished){if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}})}]};}" };
 const __initData2 = { code: "function VoicePanelConsoleStatusTsx2(finished){const{shouldShow,runOnJS,cleanUp}=this.__closure;if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}}" };

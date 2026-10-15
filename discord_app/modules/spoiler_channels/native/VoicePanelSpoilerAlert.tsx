@@ -1,10 +1,10 @@
-// === Module 13553: VoicePanelSpoilerAlert ===
+// === Module 13849: VoicePanelSpoilerAlert ===
 
-// Module 13553 (VoicePanelSpoilerAlert)
+// Module 13849 (VoicePanelSpoilerAlert)
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5310 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5894 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6104 */;
+import AlertModal from "AlertModal" /* 5365 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6105 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6320 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

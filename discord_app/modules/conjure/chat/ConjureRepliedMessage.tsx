@@ -1,32 +1,36 @@
-// === Module 11812: ConjureRepliedMessage ===
+// === Module 12037: ConjureRepliedMessage ===
 
-// Module 11812 (ConjureRepliedMessage)
+// Module 12037 (ConjureRepliedMessage)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/ConjureRepliedMessage.tsx");
 
-export const repliedMessage = function repliedMessage(memo, in_reply_to) {
-  closure_0 = in_reply_to;
-  if (null != in_reply_to) {
-    const found = memo.find((id) => {
-      let tmp = id.id === closure_0;
-      if (tmp) {
-        tmp = "user" === id.role;
-      }
-      return tmp;
-    });
-    if (null != found) {
-      const obj = { id: null, content: null };
-      ({ id: obj.id, content: obj.content } = found);
-      if (null != found.user_id) {
-        const obj2 = { userId: found.user_id };
-        let obj3 = obj2;
+export const repliedMessagesById = function repliedMessagesById(memo) {
+  const map = new Map();
+  const iter = memo[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let hasItem = "user" !== nextResult.role;
+    if (!hasItem) {
+      hasItem = map.has(tmp2.id);
+    }
+    if (hasItem) {
+      continue;
+    } else {
+      let obj = { id: null, content: null };
+      ({ id: obj2.id, content: obj2.content } = tmp2);
+      if (null != tmp2.user_id) {
+        let obj3 = { userId: null };
+        obj3.userId = tmp2.user_id;
+        let obj4 = obj3;
       } else {
-        obj3 = {};
+        obj4 = {};
       }
-      const merged = Object.assign(obj3);
-      obj.createdAt = found.created_at;
-      return obj;
+      let merged = Object.assign(obj4);
+      obj.createdAt = tmp2.created_at;
+      obj = map.set(tmp2.id, obj);
     }
   }
+  return map;
 };

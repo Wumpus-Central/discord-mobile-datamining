@@ -1,8 +1,8 @@
-// === Module 17183: YouBarUser ===
+// === Module 17423: YouBarUser ===
 
-// Module 17183 (YouBarUser)
+// Module 17423 (YouBarUser)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5383 */;
+import spring from "spring" /* 5438 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -10,11 +10,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15727);
+const YouBarConstants = fn(16023);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7, YOU_BAR_SMALL_AVATAR_NAME_MARGIN: closure_8 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { youButton: { flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS }, userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, placeholder: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.round, height: 16, width: 80 };
 obj.placeholder = size;
@@ -60,9 +60,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     fn2.__closure = obj2;
     fn2.__workletHash = 12063452832866;
     fn2.__initData = __initData;
-    const animatedStyle = tmp(4852).useAnimatedStyle(fn2);
-    const tmpResult4 = tmp(4852);
-    const name = sharedValue(4964).useName(stateFromStores);
+    const animatedStyle = tmp(4906).useAnimatedStyle(fn2);
+    const tmpResult4 = tmp(4906);
+    const name = sharedValue(5018).useName(stateFromStores);
     if (null != stateFromStores) {
       if (null != name) {
         if (cResult[21] === tmp8) {
@@ -108,14 +108,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 tmp30 = tmp33;
               }
               const obj5 = { style: tmp23, children: tmp24 };
-              const tmp29 = closure_9(tmp16(4852).View, obj5);
+              const tmp29 = closure_9(tmp16(4906).View, obj5);
               cResult[31] = tmp23;
               cResult[32] = tmp24;
               cResult[33] = tmp29;
               tmp27 = tmp29;
             }
             const obj7 = { userId: stateFromStores.id, username: name };
-            const tmp26 = closure_9(tmp16(17186), obj7);
+            const tmp26 = closure_9(tmp16(17426), obj7);
             cResult[28] = stateFromStores.id;
             cResult[29] = name;
             cResult[30] = tmp26;
@@ -128,7 +128,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tmp23 = items2;
         }
         const obj8 = { isLargeAvatar: tmp8, onPress: onAvatarPress };
-        const tmp21 = closure_9(tmp16(17185), obj8);
+        const tmp21 = closure_9(tmp16(17425), obj8);
         cResult[21] = tmp8;
         cResult[22] = onAvatarPress;
         cResult[23] = tmp21;
@@ -137,7 +137,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[6] !== tmp8) {
       const obj9 = { isLarge: tmp8 };
-      const tmp36 = closure_9(tmp16(17184), obj9);
+      const tmp36 = closure_9(tmp16(17424), obj9);
       cResult[6] = tmp8;
       cResult[7] = tmp36;
       let tmp34 = tmp36;
@@ -184,7 +184,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         cResult[20] = tmp49;
       }
       const obj13 = { style: tmp38, children: tmp39 };
-      const tmp45 = closure_9(tmp16(4852).View, obj13);
+      const tmp45 = closure_9(tmp16(4906).View, obj13);
       cResult[14] = tmp38;
       cResult[15] = tmp39;
       cResult[16] = tmp45;
@@ -205,7 +205,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[10] = youButton.userText;
     cResult[11] = items4;
     tmp38 = items4;
-    const obj6 = sharedValue(4964);
+    const obj6 = sharedValue(5018);
   }
   class T {
     constructor() {
@@ -247,32 +247,32 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   M.__closure = { nameMargin: sharedValue };
   M.__workletHash = 5882881762081;
   M.__initData = __initData2;
-  const animatedStyle = tmp2(4852).useAnimatedStyle(M);
-  const tmp2Result = tmp2(4852);
-  const name = sharedValue(4964).useName(stateFromStores);
+  const animatedStyle = tmp2(4906).useAnimatedStyle(M);
+  const tmp2Result = tmp2(4906);
+  const name = sharedValue(5018).useName(stateFromStores);
   if (null != stateFromStores) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isQuestRendered.onAvatarPress };
-      const items2 = [closure_9(tmp9(17185), obj5), ];
+      const items2 = [closure_9(tmp9(17425), obj5), ];
       const obj6 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items3;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp9(17186), obj7);
-      items2[1] = closure_9(tmp9(4852).View, obj6);
+      obj6.children = closure_9(tmp9(17426), obj7);
+      items2[1] = closure_9(tmp9(4906).View, obj6);
       obj3.children = items2;
     }
     return tmp11(View, obj3);
   }
   const obj8 = { style: tmp.youButton, children: null };
-  const items4 = [closure_9(sharedValue(17184), { isLarge: !isQuestRendered }), ];
+  const items4 = [closure_9(sharedValue(17424), { isLarge: !isQuestRendered }), ];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items5;
-  items4[1] = closure_9(sharedValue(4852).View, obj9);
+  items4[1] = closure_9(sharedValue(4906).View, obj9);
   obj8.children = items4;
   obj3 = obj8;
   const obj10 = { style: tmp.placeholder };
-  const obj4 = sharedValue(4964);
+  const obj4 = sharedValue(5018);
 }));

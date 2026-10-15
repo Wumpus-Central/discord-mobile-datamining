@@ -1,22 +1,22 @@
-// === Module 9731: ForumGuidelinesActionSheet ===
+// === Module 9939: ForumGuidelinesActionSheet ===
 
-// Module 9731 (ForumGuidelinesActionSheet)
+// Module 9939 (ForumGuidelinesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
-import LinkUtils from "LinkUtils" /* 5427 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9707 */;
-import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 9733 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+import LinkUtils from "LinkUtils" /* 5482 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9915 */;
+import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 9941 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6988).FORUM_GUIDELINES_ACTION_SHEET;
+let closure_6 = fn(7201).FORUM_GUIDELINES_ACTION_SHEET;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { scrollContainer: { paddingHorizontal: 16 }, header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 }, headerTitle: { marginTop: 8 }, guidelinesContainer: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, footer: { paddingBottom: 16 }, buttonWrapper: { marginHorizontal: 16 }, buttonPill: null, floatingButtonContainer: null, editButton: null, editText: null, editIcon: null };
 let obj3 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
 obj2.buttonPill = { borderRadius: nativeDefault.radii.sm };
@@ -323,5 +323,5 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(9731, dependencyMap.paths), closure_6, obj2);
+  obj.openLazy(asyncRequireImpl(9939, dependencyMap.paths), closure_6, obj2);
 };

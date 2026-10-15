@@ -1,14 +1,14 @@
-// === Module 12974: NUFActionCreators ===
+// === Module 13270: NUFActionCreators ===
 
-// Module 12974 (NUFActionCreators)
+// Module 13270 (NUFActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5939 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12949 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12953 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 13056 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13059 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13245 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 13249 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 13352 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13355 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5766 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5977 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -95,11 +95,11 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(12946);
+const ContactSyncModalStore = fn(13242);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
-let closure_10 = fn(12975).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(13271).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1085).PlatformTypes;
-let closure_12 = fn(6666).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+let closure_12 = fn(6882).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 7431: GuildProfileUtils ===
+// === Module 7641: GuildProfileUtils ===
 
-// Module 7431 (GuildProfileUtils)
+// Module 7641 (GuildProfileUtils)
 import Constants from "Constants" /* 1085 */;
 import ChannelRecord from "ChannelRecord" /* 2069 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;

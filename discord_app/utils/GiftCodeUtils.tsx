@@ -1,17 +1,17 @@
-// === Module 5638: GiftCodeUtils ===
+// === Module 5849: GiftCodeUtils ===
 
-// Module 5638 (GiftCodeUtils)
+// Module 5849 (GiftCodeUtils)
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import PremiumUtils from "PremiumUtils" /* 4771 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5299 */;
-import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 5749 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
+import PremiumUtils from "PremiumUtils" /* 4825 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 5354 */;
+import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 5960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 5639 */;
+import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 5850 */;
 import UserStore from "UserStore" /* 1390 */;
-import RegexUtils from "RegexUtils" /* 5080 */;
+import RegexUtils from "RegexUtils" /* 5135 */;
 
 const require = globalThis.__r;
 
@@ -59,7 +59,7 @@ let closure_18 = async function _resolveGiftCode(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -205,9 +205,9 @@ function cleanCode(str) {
 }
 function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   _require = getOrFetchSubscriptionPlan;
-  const match = require("module_5750").match(getOrFetchSubscriptionPlan);
+  const match = require("module_5961").match(getOrFetchSubscriptionPlan);
   const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = require("module_5750");
+  const str = require("module_5961");
   const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
     const intl = util.intl;
@@ -509,9 +509,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
   } else {
     intervalCount = subscriptionPlan.intervalCount;
     if (null != sender) {
-      const match = require("module_5750").match(subscriptionPlan);
+      const match = require("module_5961").match(subscriptionPlan);
       const obj2 = { interval: constants6.MONTH };
-      const str = require("module_5750");
+      const str = require("module_5961");
       const obj3 = { interval: constants6.YEAR };
       const withResult = match.with(obj2, () => {
         const intl = util.intl;
@@ -535,9 +535,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
         return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
       });
     } else {
-      const match1 = require("module_5750").match(subscriptionPlan);
+      const match1 = require("module_5961").match(subscriptionPlan);
       const obj4 = { interval: constants6.MONTH };
-      const str2 = require("module_5750");
+      const str2 = require("module_5961");
       const obj5 = { interval: constants6.YEAR };
       const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
@@ -590,9 +590,9 @@ export const getBodyText = function getBodyText(arg0) {
     return formatResult;
   } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(5750).match(subscriptionPlan);
+      const match = subscriptionPlan(5961).match(subscriptionPlan);
       const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-      const str = subscriptionPlan(5750);
+      const str = subscriptionPlan(5961);
       const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
       const withResult = match.with(obj3, () => {
         const intl = util.intl;

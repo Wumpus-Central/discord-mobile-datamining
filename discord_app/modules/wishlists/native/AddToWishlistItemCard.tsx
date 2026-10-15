@@ -1,9 +1,9 @@
-// === Module 13786: AddToWishlistItemCard ===
+// === Module 14082: AddToWishlistItemCard ===
 
-// Module 13786 (AddToWishlistItemCard)
+// Module 14082 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
-import SKUPreviewDefault from "SKUPreview" /* 8981 */;
-import HeartOutlineIcon from "HeartOutlineIcon" /* 9048 */;
+import SKUPreviewDefault from "SKUPreview" /* 9193 */;
+import HeartOutlineIcon from "HeartOutlineIcon" /* 9260 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { heartOverlay: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_4, right: nativeDefault.space.PX_4, zIndex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 obj2.heartOverlay = rect;

@@ -1,6 +1,6 @@
-// === Module 12703: ? ===
+// === Module 13000: ? ===
 
-// Module 12703
+// Module 13000
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ScheduleMessageSpotIllustration-3x.png.js");

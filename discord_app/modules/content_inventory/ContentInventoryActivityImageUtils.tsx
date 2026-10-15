@@ -1,25 +1,25 @@
-// === Module 13640: ContentInventoryActivityImageUtils ===
+// === Module 13936: ContentInventoryActivityImageUtils ===
 
-// Module 13640 (ContentInventoryActivityImageUtils)
+// Module 13936 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import Constants2 from "Constants" /* 2024 */;
-import PlatformsDefault from "Platforms" /* 5768 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6863 */;
-import useGame from "useGame" /* 7016 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8282 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8467 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8470 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10257 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10264 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13641 */;
-import useConjurePresenceActivityImageDefault from "useConjurePresenceActivityImage" /* 13643 */;
-import isOnXboxDefault from "isOnXbox" /* 13647 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 13648 */;
-import ApplicationStore from "ApplicationStore" /* 5445 */;
+import PlatformsDefault from "Platforms" /* 5979 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7077 */;
+import useGame from "useGame" /* 7229 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8492 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8678 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8681 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10470 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10477 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13937 */;
+import useConjurePresenceActivityImageDefault from "useConjurePresenceActivityImage" /* 13939 */;
+import isOnXboxDefault from "isOnXbox" /* 13943 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 13944 */;
+import ApplicationStore from "ApplicationStore" /* 5500 */;
 import Constants from "Constants" /* 1085 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -576,7 +576,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRichImage
   if (null == application_id) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { largeImage: "lineClamp", smallImage: "color" };
+      const obj3 = { largeImage: "Array", smallImage: "test" };
       cResult[2] = obj3;
       let tmp31 = obj3;
     } else {
@@ -746,7 +746,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRichImage
   }
   const data = useGame.useGame(canonicalGameId).data;
   if (null == application_id) {
-    return { largeImage: "lineClamp", smallImage: "color" };
+    return { largeImage: "Array", smallImage: "test" };
   } else {
     let large_image;
     if (application_id != null) {

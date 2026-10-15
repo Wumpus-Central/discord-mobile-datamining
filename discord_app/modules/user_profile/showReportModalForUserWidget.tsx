@@ -1,8 +1,8 @@
-// === Module 13747: showReportModalForUserWidget ===
+// === Module 14043: showReportModalForUserWidget ===
 
-// Module 13747 (showReportModalForUserWidget)
-import ReportModals from "ReportModals" /* 7728 */;
-import ApplicationStore from "ApplicationStore" /* 5445 */;
+// Module 14043 (showReportModalForUserWidget)
+import ReportModals from "ReportModals" /* 7938 */;
+import ApplicationStore from "ApplicationStore" /* 5500 */;
 
 const require = globalThis.__r;
 
@@ -19,11 +19,11 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
     applicationId = widget.applicationId;
     if (ApplicationStore.isHydrated(applicationId)) {
       let application = ApplicationStore.getApplication(applicationId);
-      let prop;
+      let conjureProjectId;
       if (application != null) {
-        prop = application.vibegrationsProjectId;
+        conjureProjectId = application.conjureProjectId;
       }
-      if (null != prop) {
+      if (null != conjureProjectId) {
         let obj = { application, entrypoint: user_profile_widget };
         let result = tmp(tmp2[2]).showReportModalForApp(obj);
         const tmpResult = tmp(tmp2[2]);
@@ -36,11 +36,11 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
       let obj3 = require("ApplicationActionCreators");
       application1.then(() => {
         const application = ApplicationStore.getApplication(applicationId);
-        let prop;
+        let conjureProjectId;
         if (application != null) {
-          prop = application.vibegrationsProjectId;
+          conjureProjectId = application.conjureProjectId;
         }
-        if (null != prop) {
+        if (null != conjureProjectId) {
           const obj3 = { application, entrypoint: user_profile_widget };
           const result = ReportModals.showReportModalForApp(obj3);
         } else {
@@ -49,11 +49,11 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
       }).catch(() => ReportModals.showReportModalForWidget(closure_0, closure_1));
       const nextPromise = application1.then(() => {
         const application = ApplicationStore.getApplication(applicationId);
-        let prop;
+        let conjureProjectId;
         if (application != null) {
-          prop = application.vibegrationsProjectId;
+          conjureProjectId = application.conjureProjectId;
         }
-        if (null != prop) {
+        if (null != conjureProjectId) {
           const obj3 = { application, entrypoint: user_profile_widget };
           const result = ReportModals.showReportModalForApp(obj3);
         } else {

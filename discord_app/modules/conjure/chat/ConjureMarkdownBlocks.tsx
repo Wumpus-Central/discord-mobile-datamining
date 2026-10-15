@@ -1,6 +1,6 @@
-// === Module 11869: ConjureMarkdownBlocks ===
+// === Module 12096: ConjureMarkdownBlocks ===
 
-// Module 11869 (ConjureMarkdownBlocks)
+// Module 12096 (ConjureMarkdownBlocks)
 import size from "module_2" /* 2 */;
 
 const re0 = /^( *)([-*]|\d+\.) +(.*)$/;

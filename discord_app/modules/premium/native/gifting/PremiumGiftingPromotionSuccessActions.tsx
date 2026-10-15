@@ -1,16 +1,16 @@
-// === Module 13316: PremiumGiftingPromotionSuccessActions ===
+// === Module 13612: PremiumGiftingPromotionSuccessActions ===
 
-// Module 13316 (PremiumGiftingPromotionSuccessActions)
+// Module 13612 (PremiumGiftingPromotionSuccessActions)
 import nativeDefault from "native" /* 587 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10062 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 13317 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10270 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 13613 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 }, promoDetails: null };
 let obj3 = { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 };
 obj2.promoDetails = { alignSelf: "stretch", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };

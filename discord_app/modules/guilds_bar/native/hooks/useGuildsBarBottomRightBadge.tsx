@@ -1,16 +1,16 @@
-// === Module 17095: useGuildsBarBottomRightBadge ===
+// === Module 17335: useGuildsBarBottomRightBadge ===
 
-// Module 17095 (useGuildsBarBottomRightBadge)
+// Module 17335 (useGuildsBarBottomRightBadge)
 import native from "native" /* 1200 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17096 */;
-import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17097 */;
-import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17101 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 17336 */;
+import GuildsBarGuildJoinRequestBadgeDefault from "GuildsBarGuildJoinRequestBadge" /* 17337 */;
+import InvitesDisabledBadgeDefault from "InvitesDisabledBadge" /* 17341 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ bottomRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -38,9 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   }
   [first, dependencyMap] = noop.useState(tmp5);
   const obj = mentionCount(576);
-  const token = mentionCount(4820).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const tmpResult = mentionCount(4820);
-  const token1 = mentionCount(4820).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
+  const token = mentionCount(4874).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const tmpResult = mentionCount(4874);
+  const token1 = mentionCount(4874).useToken(first(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
   const diff = token1 - tmp(1200).BADGE_PADDING;
   if (cResult[2] !== diff) {
     const obj2 = { bottom: diff };
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         cResult[16] = tmp27;
       }
       const obj4 = { position: "bottom-right", containerSize: token, width: diff1 };
-      const tmp23 = tmp8(17096)(obj4);
+      const tmp23 = tmp8(17336)(obj4);
       cResult[7] = token;
       cResult[8] = diff1;
       cResult[9] = tmp23;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const tmp20 = obj5;
         }
         const obj6 = { style: tmp13, joinRequestState };
-        const tmp17 = jsx(tmp8(17097), { style: tmp13, joinRequestState });
+        const tmp17 = jsx(tmp8(17337), { style: tmp13, joinRequestState });
         cResult[25] = tmp13;
         cResult[26] = joinRequestState;
         cResult[27] = tmp17;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   cResult[5] = tmp12;
   cResult[6] = items;
   tmp13 = items;
-  const tmpResult2 = mentionCount(4820);
+  const tmpResult2 = mentionCount(4874);
 }) : (function useGuildsBarBottomRightBadge(mentionCount) {
   mentionCount = mentionCount.mentionCount;
   const isMentionLowImportance = mentionCount.isMentionLowImportance;
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       obj8.cutouts = items2;
       return obj8;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "parent" };
+      return { badge: null, cutout: "Array", cutouts: "toCharArray$esjava$1" };
     }
   }, items1);
 });

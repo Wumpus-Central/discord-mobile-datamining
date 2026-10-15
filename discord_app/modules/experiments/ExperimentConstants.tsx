@@ -1,6 +1,6 @@
-// === Module 5019: ExperimentConstants ===
+// === Module 5073: ExperimentConstants ===
 
-// Module 5019 (ExperimentConstants)
+// Module 5073 (ExperimentConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/experiments/ExperimentConstants.tsx");

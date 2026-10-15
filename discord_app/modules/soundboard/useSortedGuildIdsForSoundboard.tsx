@@ -1,9 +1,9 @@
-// === Module 17863: useSortedGuildIdsForSoundboard ===
+// === Module 18103: useSortedGuildIdsForSoundboard ===
 
-// Module 17863 (useSortedGuildIdsForSoundboard)
+// Module 18103 (useSortedGuildIdsForSoundboard)
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import SortedGuildStore from "SortedGuildStore" /* 5968 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import SortedGuildStore from "SortedGuildStore" /* 6179 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -112,7 +112,7 @@ export const useSortedGuildIdsForSoundboard = ReactCompilerGating.isReactCompile
   } else {
     tmp17 = cResult[12];
   }
-  obj5 = guild_id(4771);
+  obj5 = guild_id(4825);
 }) : (function useSortedGuildIdsForSoundboard(guild_id, arg1) {
   _require = guild_id;
   closure_1 = arg1;

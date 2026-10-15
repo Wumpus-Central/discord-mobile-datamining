@@ -1,6 +1,6 @@
-// === Module 6989: sanitizeThreadName ===
+// === Module 7202: sanitizeThreadName ===
 
-// Module 6989 (sanitizeThreadName)
+// Module 7202 (sanitizeThreadName)
 import size from "module_2" /* 2 */;
 
 const re0 = /\r\n|[\r\n]/g;

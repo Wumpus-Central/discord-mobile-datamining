@@ -1,20 +1,20 @@
-// === Module 16602: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 16841: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 16602 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 16841 (CollectiblesShopViewAllCategoryItemsHeader)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import useNavigation from "useNavigation" /* 1503 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import HeaderShared from "HeaderShared" /* 9307 */;
-import _modDef9310 from "module_9310" /* 9310 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 14125 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import HeaderShared from "HeaderShared" /* 9518 */;
+import _modDef9521 from "module_9521" /* 9521 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 14422 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 12, paddingLeft: 8 }, backButton: { flex: 1 }, logo: { flex: 2, height: 36 }, dummyRightButton: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled();
@@ -128,7 +128,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
         cResult[10] = tmp27;
         cResult[11] = tmp34;
       }
-      const obj6 = { source: _modDef9310, color: buttonColor2, accessibilityLabel: tmp24, onPress: S };
+      const obj6 = { source: _modDef9521, color: buttonColor2, accessibilityLabel: tmp24, onPress: S };
       const tmp30 = React4(HeaderShared.HeaderIconButton, obj6);
       cResult[6] = buttonColor2;
       cResult[7] = S;
@@ -157,7 +157,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
     obj9.paddingTop = youBarSettingsCustomHeaderPaddingTop1;
     obj8.style = obj9;
     const obj10 = { style: tmp4.backButton, children: null };
-    const obj14 = { source: _modDef9310, color: buttonColor, accessibilityLabel: null, onPress: null };
+    const obj14 = { source: _modDef9521, color: buttonColor, accessibilityLabel: null, onPress: null };
     const intl = util.intl;
     obj14.accessibilityLabel = intl.string(util.t["13/7kX"]);
     obj14.onPress = function onPress() {

@@ -1,6 +1,6 @@
-// === Module 4783: PremiumSubscription ===
+// === Module 4837: PremiumSubscription ===
 
-// Module 4783 (PremiumSubscription)
+// Module 4837 (PremiumSubscription)
 import PremiumConstants from "PremiumConstants" /* 1392 */;
 import size from "module_2" /* 2 */;
 

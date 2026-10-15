@@ -1,9 +1,9 @@
-// === Module 4904: BountiesScrollIndicatorRive ===
+// === Module 4958: BountiesScrollIndicatorRive ===
 
-// Module 4904 (BountiesScrollIndicatorRive)
+// Module 4958 (BountiesScrollIndicatorRive)
 import c from "c" /* 576 */;
-import BaseRive from "BaseRive" /* 4846 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4899 */;
+import BaseRive from "BaseRive" /* 4900 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4953 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -136,9 +136,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bounti
           }
         }
       }
-      obj2 = { ref: tmp6, src: require("module_4905"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 };
+      obj2 = { ref: tmp6, src: require("module_4959"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 };
       let merged = Object.assign(tmp7);
-      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref: tmp6, src: require("module_4905"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 });
+      const tmp23 = jsx(tmp(tmp2[4]).BaseRive, { ref: tmp6, src: require("module_4959"), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: tmp14 });
       cResult[12] = str;
       cResult[13] = str2;
       cResult[14] = tmp6;

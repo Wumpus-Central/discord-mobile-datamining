@@ -1,6 +1,6 @@
-// === Module 17002: GuildBoostingProgressBarPersistedStore ===
+// === Module 17241: GuildBoostingProgressBarPersistedStore ===
 
-// Module 17002 (GuildBoostingProgressBarPersistedStore)
+// Module 17241 (GuildBoostingProgressBarPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

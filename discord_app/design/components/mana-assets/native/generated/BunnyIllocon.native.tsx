@@ -1,23 +1,23 @@
-// === Module 11887: BunnyIllocon ===
+// === Module 12114: BunnyIllocon ===
 
-// Module 11887 (BunnyIllocon)
+// Module 12114 (BunnyIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import assetHelpers from "assetHelpers" /* 6277 */;
-import _modDef11888 from "module_11888" /* 11888 */;
-import _modDef11889 from "module_11889" /* 11889 */;
-import _modDef11890 from "module_11890" /* 11890 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import assetHelpers from "assetHelpers" /* 6493 */;
+import _modDef12115 from "module_12115" /* 12115 */;
+import _modDef12116 from "module_12116" /* 12116 */;
+import _modDef12117 from "module_12117" /* 12117 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11888 }, 3: null };
-const obj2 = { uri: _modDef11888 };
-obj[2] = { uri: _modDef11889 };
-const obj3 = { uri: _modDef11889 };
-obj[3] = { uri: _modDef11890 };
+let obj = { 1: null, 2: { uri: _modDef12115 }, 3: null };
+const obj2 = { uri: _modDef12115 };
+obj[2] = { uri: _modDef12116 };
+const obj3 = { uri: _modDef12116 };
+obj[3] = { uri: _modDef12117 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef11890 };
+const obj4 = { uri: _modDef12117 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BunnyIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const BunnyIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6277).getAssetSource(obj);
+  obj.source = num(6493).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

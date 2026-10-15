@@ -1,10 +1,10 @@
-// === Module 11315: RemixIcon ===
+// === Module 11539: RemixIcon ===
 
-// Module 11315 (RemixIcon)
+// Module 11539 (RemixIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4819 */;
-import _mod11316 from "module_11316" /* 11316 */;
+import BaseIconImage from "BaseIconImage" /* 4873 */;
+import _mod11540 from "module_11540" /* 11540 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const RemixIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11316;
+    const tmpResult = _mod11540;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const RemixIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11316, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11540, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,12 +1,12 @@
-// === Module 8616: useGuildEmbeddedApplications ===
+// === Module 8829: useGuildEmbeddedApplications ===
 
-// Module 8616 (useGuildEmbeddedApplications)
+// Module 8829 (useGuildEmbeddedApplications)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6858 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6284 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5445 */;
+import ApplicationStore from "ApplicationStore" /* 5500 */;
 
 require = fn;
 const initialize = fn(504);

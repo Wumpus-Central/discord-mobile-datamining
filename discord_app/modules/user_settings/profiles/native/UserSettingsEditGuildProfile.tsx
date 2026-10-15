@@ -1,12 +1,12 @@
-// === Module 15302: UserSettingsEditGuildProfile ===
+// === Module 15598: UserSettingsEditGuildProfile ===
 
-// Module 15302 (UserSettingsEditGuildProfile)
+// Module 15598 (UserSettingsEditGuildProfile)
 import nativeDefault from "native" /* 587 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8319 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9644 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10653 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8530 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9852 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10876 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8292 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8503 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { guildSelector: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.none, borderTopWidth: StyleSheet.hairlineWidth, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden" } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

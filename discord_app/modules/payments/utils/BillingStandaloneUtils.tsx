@@ -1,6 +1,6 @@
-// === Module 7130: BillingStandaloneUtils ===
+// === Module 7345: BillingStandaloneUtils ===
 
-// Module 7130 (BillingStandaloneUtils)
+// Module 7345 (BillingStandaloneUtils)
 import v1 from "v1" /* 1279 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import URLUtilsDefault from "URLUtils" /* 1384 */;

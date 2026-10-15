@@ -1,10 +1,10 @@
-// === Module 13069: TabsGradient ===
+// === Module 13365: TabsGradient ===
 
-// Module 13069 (TabsGradient)
+// Module 13365 (TabsGradient)
 import c from "c" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4852 */;
-import spring from "spring" /* 5383 */;
-import LinearGradientDefault from "LinearGradient" /* 5396 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4906 */;
+import spring from "spring" /* 5438 */;
+import LinearGradientDefault from "LinearGradient" /* 5451 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 const SPRING_CONFIG = { mass: 1, damping: 30, stiffness: 250 };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_9 = createStyles.createStyles({ gradient: { width: 50, position: "absolute", top: 0, bottom: 0, zIndex: 100 }, left: { left: 0 }, right: { right: 0 } });
 const __initData = { code: "function TabsGradientNativeTsx1(){const{withSpring,visible,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};}" };
 const __initData2 = { code: "function TabsGradientNativeTsx2(){const{withSpring,visible,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(visible.get()?1:0,SPRING_CONFIG)};}" };

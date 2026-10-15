@@ -1,12 +1,12 @@
-// === Module 12880: useDMMessageToReport ===
+// === Module 13177: useDMMessageToReport ===
 
-// Module 12880 (useDMMessageToReport)
+// Module 13177 (useDMMessageToReport)
 import c from "c" /* 576 */;
-import useIsOwnedConjureApplicationDefault from "useIsOwnedConjureApplication" /* 11508 */;
-import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 12721 */;
-import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12881 */;
-import getApplicationFromBotUserIdDefault from "getApplicationFromBotUserId" /* 12882 */;
-import useMessageRequestPreview from "useMessageRequestPreview" /* 12883 */;
+import useIsOwnedConjureApplicationDefault from "useIsOwnedConjureApplication" /* 11733 */;
+import useLongestChannelMessageBeforeReply from "useLongestChannelMessageBeforeReply" /* 13018 */;
+import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 13178 */;
+import getApplicationFromBotUserIdDefault from "getApplicationFromBotUserId" /* 13179 */;
+import useMessageRequestPreview from "useMessageRequestPreview" /* 13180 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

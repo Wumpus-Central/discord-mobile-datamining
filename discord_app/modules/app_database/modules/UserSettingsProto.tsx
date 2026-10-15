@@ -1,6 +1,6 @@
-// === Module 7217: UserSettingsProto ===
+// === Module 7427: UserSettingsProto ===
 
-// Module 7217 (UserSettingsProto)
+// Module 7427 (UserSettingsProto)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;

@@ -1,13 +1,13 @@
-// === Module 8045: ApplicationCommandSourceSystemMessage ===
+// === Module 8255: ApplicationCommandSourceSystemMessage ===
 
-// Module 8045 (ApplicationCommandSourceSystemMessage)
+// Module 8255 (ApplicationCommandSourceSystemMessage)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5409 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7986 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7988 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7990 */;
-import ApplicationCommands from "ApplicationCommands" /* 8046 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5464 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8196 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8198 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8200 */;
+import ApplicationCommands from "ApplicationCommands" /* 8256 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;

@@ -1,9 +1,9 @@
-// === Module 9163: shop_tab_tooltip ===
+// === Module 9375: shop_tab_tooltip ===
 
-// Module 9163 (shop_tab_tooltip)
+// Module 9375 (shop_tab_tooltip)
 import _mod1210 from "module_1210" /* 1210 */;
-import localized_string from "localized_string" /* 9136 */;
-import theme_aware_asset from "theme_aware_asset" /* 9146 */;
+import localized_string from "localized_string" /* 9348 */;
+import theme_aware_asset from "theme_aware_asset" /* 9358 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

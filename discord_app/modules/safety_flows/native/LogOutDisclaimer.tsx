@@ -1,13 +1,13 @@
-// === Module 18732: LogOutDisclaimer ===
+// === Module 18971: LogOutDisclaimer ===
 
-// Module 18732 (LogOutDisclaimer)
+// Module 18971 (LogOutDisclaimer)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef2862 from "module_2862" /* 2862 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5935 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 14651 */;
+import _modDef2864 from "module_2864" /* 2864 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6146 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 14947 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LogOutDi
           AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
         }
     };
-    obj3.children = intl.format(_modDef2862["0DHxym"], obj4);
+    obj3.children = intl.format(_modDef2864["0DHxym"], obj4);
     obj2.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: null });
     const tmp7 = jsx(ModalDisclaimer.ModalDisclaimer, { children: null });
     cResult[0] = tmp7;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LogOutDi
   const obj = { children: null };
   const obj2 = { variant: "text-xs/medium", children: null };
   const intl = util.intl;
-  obj2.children = intl.format(_modDef2862["0DHxym"], {
+  obj2.children = intl.format(_modDef2864["0DHxym"], {
     handleLogOut() {
       AuthenticationActionCreatorsDefault.logout("safety_flows_enter_email_screen");
     }

@@ -1,14 +1,14 @@
-// === Module 12867: useMaybeGetSortedBoosts ===
+// === Module 13164: useMaybeGetSortedBoosts ===
 
-// Module 12867 (useMaybeGetSortedBoosts)
+// Module 13164 (useMaybeGetSortedBoosts)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1126 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8034 */;
-import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 12868 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8244 */;
+import getBoostLifecyclePhase from "getBoostLifecyclePhase" /* 13165 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12849 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5956 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13146 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6167 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
 

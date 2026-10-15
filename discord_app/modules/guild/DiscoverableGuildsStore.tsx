@@ -1,10 +1,10 @@
-// === Module 9125: DiscoverableGuildsStore ===
+// === Module 9337: DiscoverableGuildsStore ===
 
-// Module 9125 (DiscoverableGuildsStore)
+// Module 9337 (DiscoverableGuildsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7058 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7273 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

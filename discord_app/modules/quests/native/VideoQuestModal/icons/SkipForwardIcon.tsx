@@ -1,8 +1,8 @@
-// === Module 15675: SkipForwardIcon ===
+// === Module 15971: SkipForwardIcon ===
 
-// Module 15675 (SkipForwardIcon)
+// Module 15971 (SkipForwardIcon)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7583 */;
+import inlineStyles from "inlineStyles" /* 7793 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

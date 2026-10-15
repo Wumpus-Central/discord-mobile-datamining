@@ -1,9 +1,9 @@
-// === Module 10734: LocationMetadataStore ===
+// === Module 10956: LocationMetadataStore ===
 
-// Module 10734 (LocationMetadataStore)
+// Module 10956 (LocationMetadataStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import CountryCodeUtils from "CountryCodeUtils" /* 5916 */;
+import CountryCodeUtils from "CountryCodeUtils" /* 6127 */;
 import size from "module_2" /* 2 */;
 
 function handleSetLocationMetadata(countryCode) {

@@ -1,15 +1,15 @@
-// === Module 11105: FocusedControlsBottomControls ===
+// === Module 11329: FocusedControlsBottomControls ===
 
-// Module 11105 (FocusedControlsBottomControls)
+// Module 11329 (FocusedControlsBottomControls)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
-import timing from "timing" /* 5097 */;
-import CallPTTButton from "CallPTTButton" /* 11108 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import timing from "timing" /* 5152 */;
+import CallPTTButton from "CallPTTButton" /* 11332 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5911 */;
+import TextStyles from "TextStyles" /* 6122 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 const CallPTTButtonDefault = CallPTTButton;
@@ -17,9 +17,9 @@ const CallPTTButtonDefault = CallPTTButton;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, TouchableWithoutFeedback: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(10364);
+const ChannelCallStore = fn(10587);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(10365);
+const ChannelCallConstants = fn(10588);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1085);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -33,7 +33,7 @@ function EXTENDED_CONTROLS_OFFSET_Y(arg0) {
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {
 
 }
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { bottomDrawerContainer: null, visualEffectView: null, visualEffectViewBackground: null, expandedControlsContainer: null, aboveActionBarContainer: null, aboveActionBarChildrenContainer: null, ptbButton: null, tooltipStyle: null, containerStyle: null, labelStyle: null };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
 obj2.bottomDrawerContainer = rect;
@@ -204,15 +204,15 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
   positionY = positionY.positionY;
   const tmp4 = closure_19();
   const obj = positionY(576);
-  const canShowTooltip = positionY(11106).useCanShowTooltip(positionY(1105).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  const obj2 = positionY(11106);
+  const canShowTooltip = positionY(11330).useCanShowTooltip(positionY(1105).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  const obj2 = positionY(11330);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / c16, 1) };
   };
   fn.__closure = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
   fn.__workletHash = 15386908151356;
   fn.__initData = __initData3;
-  const animatedStyle = positionY(4852).useAnimatedStyle(fn);
+  const animatedStyle = positionY(4906).useAnimatedStyle(fn);
   if (canShowTooltip) {
     const _Symbol = Symbol;
     ({ tooltipStyle, containerStyle, labelStyle } = tmp4);
@@ -253,13 +253,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
   } else {
     return null;
   }
-  const obj3 = positionY(4852);
+  const obj3 = positionY(4906);
   const obj4 = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
 }) : (function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_19();
-  const canShowTooltip = positionY(11106).useCanShowTooltip(positionY(1105).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  positionY(4852);
+  const canShowTooltip = positionY(11330).useCanShowTooltip(positionY(1105).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  positionY(4906);
   const fn = function o() {
     return { opacity: 1 - Math.min(-1 * positionY.get() / c16, 1) };
   };
@@ -295,7 +295,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
   fn.__closure = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
   fn.__workletHash = 16821998405506;
   fn.__initData = __initData5;
-  const animatedStyle = positionY(4852).useAnimatedStyle(fn);
+  const animatedStyle = positionY(4906).useAnimatedStyle(fn);
   if (cResult[0] !== isExpanded) {
     const obj4 = { expanded: isExpanded };
     cResult[0] = isExpanded;
@@ -314,7 +314,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
     tmp7 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp13 = closure_13(tmp(6849).ActionSheetHeaderBar, {});
+    const tmp13 = closure_13(tmp(7065).ActionSheetHeaderBar, {});
     cResult[4] = tmp13;
     let tmp11 = tmp13;
   } else {
@@ -364,14 +364,14 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
     const items1 = [tmp4.aboveActionBarChildrenContainer, animatedStyle];
     obj8.style = items1;
     obj8.children = aboveActionBar;
-    tmp15 = closure_13(offsetY(4852).View, obj8);
+    tmp15 = closure_13(offsetY(4906).View, obj8);
   }
   cResult[5] = aboveActionBar;
   cResult[6] = animatedStyle;
   cResult[7] = tmp4.aboveActionBarChildrenContainer;
   cResult[8] = tmp15;
   tmp14 = tmp15;
-  const obj2 = positionY(4852);
+  const obj2 = positionY(4906);
   const obj3 = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
 }) : (function FocusedControlsAboveActionBarView(positionY) {
   positionY = positionY.positionY;
@@ -387,15 +387,15 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function Focuse
   fn.__initData = __initData6;
   const obj3 = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
   const obj4 = { style: tmp.aboveActionBarContainer, children: null };
-  const animatedStyle = positionY(4852).useAnimatedStyle(fn);
-  const items = [closure_13(closure_27, { positionY }), closure_13(positionY(6849).ActionSheetHeaderBar, {}), ];
+  const animatedStyle = positionY(4906).useAnimatedStyle(fn);
+  const items = [closure_13(closure_27, { positionY }), closure_13(positionY(7065).ActionSheetHeaderBar, {}), ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
     obj5 = { style: null, children: null };
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj5.style = items1;
     obj5.children = aboveActionBar;
-    tmp4Result = closure_13(offsetY(4852).View, obj5);
+    tmp4Result = closure_13(offsetY(4906).View, obj5);
   }
   items[2] = tmp4Result;
   obj4.children = items;

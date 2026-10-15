@@ -1,10 +1,10 @@
-// === Module 8379: VisualEffectViewThemed ===
+// === Module 8590: VisualEffectViewThemed ===
 
-// Module 8379 (VisualEffectViewThemed)
+// Module 8590 (VisualEffectViewThemed)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4971 */;
-import useThemeDefault from "useTheme" /* 5033 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5370 */;
+import shared from "shared" /* 5025 */;
+import useThemeDefault from "useTheme" /* 5087 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5425 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

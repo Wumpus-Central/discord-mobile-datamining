@@ -1,15 +1,15 @@
-// === Module 10574: useTenureBadging ===
+// === Module 10797: useTenureBadging ===
 
-// Module 10574 (useTenureBadging)
+// Module 10797 (useTenureBadging)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7336 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 10575 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 10576 */;
-import UserProfileStore from "UserProfileStore" /* 7327 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7546 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 10798 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 10799 */;
+import UserProfileStore from "UserProfileStore" /* 7537 */;
 import UserStore from "UserStore" /* 1390 */;
-import SubscriptionStore from "SubscriptionStore" /* 4777 */;
+import SubscriptionStore from "SubscriptionStore" /* 4831 */;
 
 require = fn;
 const PremiumConstants = fn(1392);

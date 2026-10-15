@@ -1,6 +1,6 @@
-// === Module 11872: conjurePageVisibility ===
+// === Module 12099: conjurePageVisibility ===
 
-// Module 11872 (conjurePageVisibility)
+// Module 12099 (conjurePageVisibility)
 import AppStateStore from "AppStateStore" /* 1999 */;
 
 const AppStates = fn(1085).AppStates;

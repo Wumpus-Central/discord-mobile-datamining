@@ -1,10 +1,10 @@
-// === Module 8120: EphemeralIndication ===
+// === Module 8330: EphemeralIndication ===
 
-// Module 8120 (EphemeralIndication)
+// Module 8330 (EphemeralIndication)
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8121 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7759 */;
+import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8331 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7969 */;
 
 require = fn;
 const Constants = fn(1085);

@@ -1,9 +1,9 @@
-// === Module 10328: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10551: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 10328 (useTrackFavoritesGuildUpsellModalOpened)
+// Module 10551 (useTrackFavoritesGuildUpsellModalOpened)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6857 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6884 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7073 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7098 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

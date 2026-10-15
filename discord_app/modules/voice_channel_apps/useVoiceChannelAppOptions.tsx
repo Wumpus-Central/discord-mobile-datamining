@@ -1,14 +1,14 @@
-// === Module 17615: useVoiceChannelAppOptions ===
+// === Module 17855: useVoiceChannelAppOptions ===
 
-// Module 17615 (useVoiceChannelAppOptions)
+// Module 17855 (useVoiceChannelAppOptions)
 import c from "c" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6863 */;
-import ConjureUtils from "ConjureUtils" /* 6951 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10684 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7077 */;
+import ConjureUtils from "ConjureUtils" /* 7165 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
 
 const require = globalThis.__r;
 const useGetOrFetchApplicationsDefault = useGetOrFetchApplications;
@@ -72,7 +72,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
     tmp11 = cResult[5];
   }
   if (cResult[6] !== guildId) {
-    const fn3 = function v() {
+    const fn3 = function f() {
       return ConjureProjectStore.getSharedProjects(closure_0);
     };
     const items3 = [guildId];
@@ -136,116 +136,357 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
           }
           ConjureProjectStore = tmp36;
           if (cResult[21] !== tmp36) {
-            const fn5 = function x() {
-              const found = closure_5.filter((item) => {
-                const current = ref.current;
-                return !current.has(item);
-              });
-              if (0 !== found.length) {
-                for (const item10010 of found) {
-                  let current = ref.current;
-                  let addResult = current.add(item10010);
-                  continue;
+            class U {
+              constructor() {
+                found = closure_5.filter((item) => {
+                  const current = ref.current;
+                  return !current.has(item);
+                });
+                closure_0 = found;
+                if (0 !== found.length) {
+                  tmp = found;
+                  tmp2 = found;
+                  for (const item10010 of found) {
+                    tmp3 = closure_1;
+                    current = closure_1.current;
+                    addResult = current.add(item10010);
+                    continue;
+                  }
+                  tmp5 = closure_1;
+                  tmp6 = closure_2;
+                  obj = closure_1(closure_2[12]);
+                  flag = true;
+                  applications = obj.fetchApplications(found, true);
+                  catchPromise = applications.catch(() => closure_1_4(true));
+                  cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
                 }
-                const applications = ref(set[11]).fetchApplications(found, true);
-                const obj = ref(set[11]);
-                applications.catch(() => closure_1_4(true)).finally(() => _slicedToArray((arg0) => {
-                  const items = [...closure_1_0];
-                  return new Set(items);
-                }));
-                const catchPromise = applications.catch(() => closure_1_4(true));
+                return;
               }
-            };
+            }
             const items4 = [tmp36];
             cResult[21] = tmp36;
-            cResult[22] = fn5;
+            cResult[22] = U;
             cResult[23] = items4;
             let tmp39 = items4;
-            let tmp38 = fn5;
           } else {
-            tmp38 = cResult[22];
+            class U {
+              constructor() {
+                found = closure_5.filter((item) => {
+                  const current = ref.current;
+                  return !current.has(item);
+                });
+                closure_0 = found;
+                if (0 !== found.length) {
+                  tmp = found;
+                  tmp2 = found;
+                  for (const item10010 of found) {
+                    tmp3 = closure_1;
+                    current = closure_1.current;
+                    addResult = current.add(item10010);
+                    continue;
+                  }
+                  tmp5 = closure_1;
+                  tmp6 = closure_2;
+                  obj = closure_1(closure_2[12]);
+                  flag = true;
+                  applications = obj.fetchApplications(found, true);
+                  catchPromise = applications.catch(() => closure_1_4(true));
+                  cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                }
+                return;
+              }
+            }
             tmp39 = cResult[23];
           }
-          const effect1 = obj2.useEffect(tmp38, tmp39);
+          const effect1 = obj2.useEffect(U, tmp39);
           if (cResult[24] === arr5) {
-            if (cResult[25] === tmp21) {
-              let arr8 = cResult[26];
+            class U {
+              constructor() {
+                found = closure_5.filter((item) => {
+                  const current = ref.current;
+                  return !current.has(item);
+                });
+                closure_0 = found;
+                if (0 !== found.length) {
+                  tmp = found;
+                  tmp2 = found;
+                  for (const item10010 of found) {
+                    tmp3 = closure_1;
+                    current = closure_1.current;
+                    addResult = current.add(item10010);
+                    continue;
+                  }
+                  tmp5 = closure_1;
+                  tmp6 = closure_2;
+                  obj = closure_1(closure_2[12]);
+                  flag = true;
+                  applications = obj.fetchApplications(found, true);
+                  catchPromise = applications.catch(() => closure_1_4(true));
+                  cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                }
+                return;
+              }
             }
             const _Symbol4 = Symbol;
             if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
+              class U {
+                constructor() {
+                  found = closure_5.filter((item) => {
+                    const current = ref.current;
+                    return !current.has(item);
+                  });
+                  closure_0 = found;
+                  if (0 !== found.length) {
+                    tmp = found;
+                    tmp2 = found;
+                    for (const item10010 of found) {
+                      tmp3 = closure_1;
+                      current = closure_1.current;
+                      addResult = current.add(item10010);
+                      continue;
+                    }
+                    tmp5 = closure_1;
+                    tmp6 = closure_2;
+                    obj = closure_1(closure_2[12]);
+                    flag = true;
+                    applications = obj.fetchApplications(found, true);
+                    catchPromise = applications.catch(() => closure_1_4(true));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                  }
+                  return;
+                }
+              }
               const items5 = [ConjureProjectStore];
               cResult[27] = items5;
-              let tmp42 = items5;
+              const tmp42 = items5;
             } else {
-              tmp42 = cResult[27];
+              class U {
+                constructor() {
+                  found = closure_5.filter((item) => {
+                    const current = ref.current;
+                    return !current.has(item);
+                  });
+                  closure_0 = found;
+                  if (0 !== found.length) {
+                    tmp = found;
+                    tmp2 = found;
+                    for (const item10010 of found) {
+                      tmp3 = closure_1;
+                      current = closure_1.current;
+                      addResult = current.add(item10010);
+                      continue;
+                    }
+                    tmp5 = closure_1;
+                    tmp6 = closure_2;
+                    obj = closure_1(closure_2[12]);
+                    flag = true;
+                    applications = obj.fetchApplications(found, true);
+                    catchPromise = applications.catch(() => closure_1_4(true));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                  }
+                  return;
+                }
+              }
             }
             if (cResult[28] !== guildId) {
-              class D {
+              class U {
                 constructor() {
-                  return closure_5.getGuildProjectsFetchState(closure_0);
+                  found = closure_5.filter((item) => {
+                    const current = ref.current;
+                    return !current.has(item);
+                  });
+                  closure_0 = found;
+                  if (0 !== found.length) {
+                    tmp = found;
+                    tmp2 = found;
+                    for (const item10010 of found) {
+                      tmp3 = closure_1;
+                      current = closure_1.current;
+                      addResult = current.add(item10010);
+                      continue;
+                    }
+                    tmp5 = closure_1;
+                    tmp6 = closure_2;
+                    obj = closure_1(closure_2[12]);
+                    flag = true;
+                    applications = obj.fetchApplications(found, true);
+                    catchPromise = applications.catch(() => closure_1_4(true));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                  }
+                  return;
                 }
               }
               const items6 = [guildId];
               cResult[28] = guildId;
-              cResult[29] = D;
+              cResult[29] = tmp45;
               cResult[30] = items6;
-              let tmp45 = items6;
+              let tmp44 = items6;
             } else {
-              class D {
+              class U {
                 constructor() {
-                  return closure_5.getGuildProjectsFetchState(closure_0);
+                  found = closure_5.filter((item) => {
+                    const current = ref.current;
+                    return !current.has(item);
+                  });
+                  closure_0 = found;
+                  if (0 !== found.length) {
+                    tmp = found;
+                    tmp2 = found;
+                    for (const item10010 of found) {
+                      tmp3 = closure_1;
+                      current = closure_1.current;
+                      addResult = current.add(item10010);
+                      continue;
+                    }
+                    tmp5 = closure_1;
+                    tmp6 = closure_2;
+                    obj = closure_1(closure_2[12]);
+                    flag = true;
+                    applications = obj.fetchApplications(found, true);
+                    catchPromise = applications.catch(() => closure_1_4(true));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                  }
+                  return;
                 }
               }
-              tmp45 = cResult[30];
+              tmp44 = cResult[30];
             }
-            const stateFromStores = tmp(504).useStateFromStores(tmp42, D, tmp45);
+            const stateFromStores = tmp(504).useStateFromStores(tmp42, tmp45, tmp44);
             let str = "unattempted";
             if ("unattempted" !== stateFromStores) {
-              class D {
+              class U {
                 constructor() {
-                  return closure_5.getGuildProjectsFetchState(closure_0);
+                  found = closure_5.filter((item) => {
+                    const current = ref.current;
+                    return !current.has(item);
+                  });
+                  closure_0 = found;
+                  if (0 !== found.length) {
+                    tmp = found;
+                    tmp2 = found;
+                    for (const item10010 of found) {
+                      tmp3 = closure_1;
+                      current = closure_1.current;
+                      addResult = current.add(item10010);
+                      continue;
+                    }
+                    tmp5 = closure_1;
+                    tmp6 = closure_2;
+                    obj = closure_1(closure_2[12]);
+                    flag = true;
+                    applications = obj.fetchApplications(found, true);
+                    catchPromise = applications.catch(() => closure_1_4(true));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                  }
+                  return;
                 }
               }
               if ("loading" === stateFromStores) {
-                class D {
+                class U {
                   constructor() {
-                    return closure_5.getGuildProjectsFetchState(closure_0);
+                    found = closure_5.filter((item) => {
+                      const current = ref.current;
+                      return !current.has(item);
+                    });
+                    closure_0 = found;
+                    if (0 !== found.length) {
+                      tmp = found;
+                      tmp2 = found;
+                      for (const item10010 of found) {
+                        tmp3 = closure_1;
+                        current = closure_1.current;
+                        addResult = current.add(item10010);
+                        continue;
+                      }
+                      tmp5 = closure_1;
+                      tmp6 = closure_2;
+                      obj = closure_1(closure_2[12]);
+                      flag = true;
+                      applications = obj.fetchApplications(found, true);
+                      catchPromise = applications.catch(() => closure_1_4(true));
+                      cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                    }
+                    return;
                   }
                 }
               } else {
-                class D {
+                class U {
                   constructor() {
-                    return closure_5.getGuildProjectsFetchState(closure_0);
+                    found = closure_5.filter((item) => {
+                      const current = ref.current;
+                      return !current.has(item);
+                    });
+                    closure_0 = found;
+                    if (0 !== found.length) {
+                      tmp = found;
+                      tmp2 = found;
+                      for (const item10010 of found) {
+                        tmp3 = closure_1;
+                        current = closure_1.current;
+                        addResult = current.add(item10010);
+                        continue;
+                      }
+                      tmp5 = closure_1;
+                      tmp6 = closure_2;
+                      obj = closure_1(closure_2[12]);
+                      flag = true;
+                      applications = obj.fetchApplications(found, true);
+                      catchPromise = applications.catch(() => closure_1_4(true));
+                      cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                    }
+                    return;
                   }
                 }
               }
               str = tmp48;
             }
             if (cResult[31] === str) {
-              class D {
+              class U {
                 constructor() {
-                  return closure_5.getGuildProjectsFetchState(closure_0);
+                  found = closure_5.filter((item) => {
+                    const current = ref.current;
+                    return !current.has(item);
+                  });
+                  closure_0 = found;
+                  if (0 !== found.length) {
+                    tmp = found;
+                    tmp2 = found;
+                    for (const item10010 of found) {
+                      tmp3 = closure_1;
+                      current = closure_1.current;
+                      addResult = current.add(item10010);
+                      continue;
+                    }
+                    tmp5 = closure_1;
+                    tmp6 = closure_2;
+                    obj = closure_1(closure_2[12]);
+                    flag = true;
+                    applications = obj.fetchApplications(found, true);
+                    catchPromise = applications.catch(() => closure_1_4(true));
+                    cleanupPromise = catchPromise.finally(() => _slicedToArray(() => { ... }));
+                  }
+                  return;
                 }
               }
             }
             const tmpResult5 = tmp(504);
             let obj3 = { hasRows: arr8.length > 0, loadFailed: "error" === stateFromStores || tmp35, fetchPhase: str };
-            const result = tmp(17616).voiceChannelAppListState(obj3);
+            const result = tmp(17856).voiceChannelAppListState(obj3);
             cResult[31] = str;
             cResult[32] = "error" === stateFromStores || tmp35;
             cResult[33] = arr8.length > 0;
             cResult[34] = result;
-            const tmpResult6 = tmp(17616);
+            const tmpResult6 = tmp(17856);
           }
           closure_130_0 = tmp21;
-          let found = arr5.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).isEmbeddedApplication(dependencyMap[index]));
+          let found = arr5.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
           cResult[24] = arr5;
           cResult[25] = tmp21;
           cResult[26] = found;
           arr8 = found;
         }
         closure_129_0 = tmp21;
-        const found1 = arr5.filter((item, index) => !dependencyMap(stateFromStoresArray1[5]).isEmbeddedApplication(dependencyMap[index]));
+        const found1 = arr5.filter((item, index) => !dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
         const mapped1 = found1.map((application_id) => application_id.application_id);
         cResult[18] = arr5;
         cResult[19] = tmp21;
@@ -279,7 +520,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
   const memo = noop.useMemo(() => voiceChannelAppCandidates(stateFromStoresArray, stateFromStoresArray1, closure_0), items4);
   const items5 = [memo];
   const memo1 = noop.useMemo(() => memo.map((application_id) => application_id.application_id), items5);
-  const tmp9 = stateFromStoresArray(stateFromStoresArray1[10])(memo1, false);
+  const tmp9 = stateFromStoresArray(stateFromStoresArray1[11])(memo1, false);
   noop = tmp9;
   let obj3 = require("initialize");
   const tmp8 = stateFromStoresArray;
@@ -292,7 +533,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
   const items6 = [memo, tmp9];
   const memo2 = noop.useMemo(() => {
     dependencyMap = closure_4;
-    const found = memo.filter((item, index) => !dependencyMap(stateFromStoresArray1[5]).isEmbeddedApplication(dependencyMap[index]));
+    const found = memo.filter((item, index) => !dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
     return found.map((application_id) => application_id.application_id);
   }, items6);
   const items7 = [memo2];
@@ -307,8 +548,8 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
         let addResult = current.add(item10010);
         continue;
       }
-      const applications = stateFromStoresArray(stateFromStoresArray1[11]).fetchApplications(found, true);
-      const obj = stateFromStoresArray(stateFromStoresArray1[11]);
+      const applications = stateFromStoresArray(stateFromStoresArray1[12]).fetchApplications(found, true);
+      const obj = stateFromStoresArray(stateFromStoresArray1[12]);
       applications.catch(() => closure_1_8(true)).finally(() => closure_2_7((arg0) => {
         const items = [...closure_1_0];
         return new Set(items);
@@ -319,7 +560,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
   const items8 = [memo, tmp9];
   const memo3 = noop.useMemo(() => {
     dependencyMap = closure_4;
-    return memo.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).isEmbeddedApplication(dependencyMap[index]));
+    return memo.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
   }, items8);
   const tmp12 = memo(noop.useState(new Set()), 2);
   const items9 = [ref];
@@ -343,7 +584,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
   obj5.loadFailed = first;
   obj5.fetchPhase = str;
   const items11 = [memo3];
-  const result = tmp2(stateFromStoresArray1[12]).voiceChannelAppListState(obj5);
+  const result = tmp2(stateFromStoresArray1[13]).voiceChannelAppListState(obj5);
   const memo4 = obj.useMemo(() => memo3.map((preview_application_id) => {
     let application_id = preview_application_id.preview_application_id;
     if (application_id == null) {
@@ -351,7 +592,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
     }
     return application_id;
   }), items11);
-  const tmp21 = tmp8(stateFromStoresArray1[10])(memo4);
+  const tmp21 = tmp8(stateFromStoresArray1[11])(memo4);
   closure_11 = tmp21;
   let obj6 = { options: null, listState: result };
   const items12 = [memo3, tmp21];
@@ -387,11 +628,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoic
 ReactCompilerGating = fn(558);
 function voiceChannelAppRows(arr, arg1) {
   closure_0 = arg1;
-  return arr.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).isEmbeddedApplication(dependencyMap[index]));
+  return arr.filter((item, index) => dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
 }
 function voiceChannelAppIdsToFetch(arr, arg1) {
   closure_0 = arg1;
-  const found = arr.filter((item, index) => !dependencyMap(stateFromStoresArray1[5]).isEmbeddedApplication(dependencyMap[index]));
+  const found = arr.filter((item, index) => !dependencyMap(stateFromStoresArray1[5]).supportsEmbeddedSurface(dependencyMap[index], dependencyMap(stateFromStoresArray1[6]).EmbeddedSurfaceType.VOICE_CHANNEL));
   return found.map((application_id) => application_id.application_id);
 }
 const size = fn(2);

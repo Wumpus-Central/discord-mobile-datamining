@@ -1,6 +1,6 @@
-// === Module 6998: ExplicitMediaStore ===
+// === Module 7211: ExplicitMediaStore ===
 
-// Module 6998 (ExplicitMediaStore)
+// Module 7211 (ExplicitMediaStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

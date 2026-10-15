@@ -1,8 +1,8 @@
-// === Module 6972: canReviewGuildMemberApplications ===
+// === Module 7185: canReviewGuildMemberApplications ===
 
-// Module 6972 (canReviewGuildMemberApplications)
+// Module 7185 (canReviewGuildMemberApplications)
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
 
 const require = globalThis.__r;
 
@@ -58,8 +58,8 @@ export const useCanReviewGuildMemberApplications = ReactCompilerGating.isReactCo
       hasItem = PermissionStore.can(constants2.KICK_MEMBERS, stateFromStores);
     }
     if (hasItem) {
-      hasItem = tmp(6175).guildHasVerificationGate(stateFromStores);
-      const tmpResult2 = tmp(6175);
+      hasItem = tmp(6391).guildHasVerificationGate(stateFromStores);
+      const tmpResult2 = tmp(6391);
     }
     cResult[3] = stateFromStores;
     cResult[4] = hasItem;

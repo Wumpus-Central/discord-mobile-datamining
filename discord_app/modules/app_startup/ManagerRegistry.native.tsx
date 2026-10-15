@@ -1,7 +1,7 @@
-// === Module 18074: ManagerRegistry ===
+// === Module 18314: ManagerRegistry ===
 
-// Module 18074 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 18756 */;
+// Module 18314 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 18995 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

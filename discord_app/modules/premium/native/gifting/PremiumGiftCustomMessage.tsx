@@ -1,18 +1,18 @@
-// === Module 10225: PremiumGiftCustomMessage ===
+// === Module 10438: PremiumGiftCustomMessage ===
 
-// Module 10225 (PremiumGiftCustomMessage)
+// Module 10438 (PremiumGiftCustomMessage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import TextArea from "TextArea" /* 6778 */;
-import NativeGiftContext from "NativeGiftContext" /* 10065 */;
+import TextArea from "TextArea" /* 6994 */;
+import NativeGiftContext from "NativeGiftContext" /* 10273 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const maxLength = fn(1392).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

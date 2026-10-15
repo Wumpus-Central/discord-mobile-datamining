@@ -1,6 +1,6 @@
-// === Module 11363: ConjureDesignFeedback ===
+// === Module 11587: ConjureDesignFeedback ===
 
-// Module 11363 (ConjureDesignFeedback)
+// Module 11587 (ConjureDesignFeedback)
 import size from "module_2" /* 2 */;
 
 function labelConjureDesignTarget(target) {
@@ -190,7 +190,7 @@ function targetLine(target) {
 }
 const frozen = Object.freeze({ x: 0.5, y: 0.5 });
 let c1 = 1000;
-let c4 = "[vibegrations:selected] ";
+let c4 = "[conjure:selected] ";
 const re5 = /^My design feedback: (\d+) comments? on the app\.$/;
 const re6 = /^(\d+)\. (.+)$/;
 const re7 = /^ {3}Feedback: ?(.*)$/;
@@ -278,7 +278,7 @@ export const parseConjureDesignRemark = function parseConjureDesignRemark(conten
     if (-1 !== index) {
       str3 = content.slice(index + 1);
     }
-    const substr1 = substr.slice(24);
+    const substr1 = substr.slice(19);
     const index1 = substr1.indexOf(" \u2014 ");
     let str5 = substr1;
     if (-1 !== index1) {

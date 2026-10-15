@@ -1,11 +1,11 @@
-// === Module 11356: ConjureStaffAccess ===
+// === Module 11580: ConjureStaffAccess ===
 
-// Module 11356 (ConjureStaffAccess)
+// Module 11580 (ConjureStaffAccess)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildChannelStore from "GuildChannelStore" /* 4750 */;
+import GuildChannelStore from "GuildChannelStore" /* 4804 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;

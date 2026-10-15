@@ -1,6 +1,6 @@
-// === Module 5229: trackVoiceAndVideoSettingsUpdate ===
+// === Module 5284: trackVoiceAndVideoSettingsUpdate ===
 
-// Module 5229 (trackVoiceAndVideoSettingsUpdate)
+// Module 5284 (trackVoiceAndVideoSettingsUpdate)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import size from "module_2" /* 2 */;

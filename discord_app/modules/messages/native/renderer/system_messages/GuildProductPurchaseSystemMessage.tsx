@@ -1,15 +1,15 @@
-// === Module 8061: GuildProductPurchaseSystemMessage ===
+// === Module 8271: GuildProductPurchaseSystemMessage ===
 
-// Module 8061 (GuildProductPurchaseSystemMessage)
+// Module 8271 (GuildProductPurchaseSystemMessage)
 import util from "util" /* 1126 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
-import useMessageAuthor from "useMessageAuthor" /* 5632 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7986 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7988 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7990 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8019 */;
-import MessageRecord from "MessageRecord" /* 4763 */;
+import useMessageAuthor from "useMessageAuthor" /* 5843 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8196 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8198 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8200 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8229 */;
+import MessageRecord from "MessageRecord" /* 4817 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;

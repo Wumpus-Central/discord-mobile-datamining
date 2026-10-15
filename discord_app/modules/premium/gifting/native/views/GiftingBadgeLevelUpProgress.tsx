@@ -1,21 +1,21 @@
-// === Module 13273: GiftingBadgeLevelUpProgress ===
+// === Module 13569: GiftingBadgeLevelUpProgress ===
 
-// Module 13273 (GiftingBadgeLevelUpProgress)
+// Module 13569 (GiftingBadgeLevelUpProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2664 from "module_2664" /* 2664 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10110 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10116 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10323 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10329 */;
 import noop from "module_19" /* 19 */;
 
 const util = format(1126);
-const Text_Text = format(5092);
+const Text_Text = format(5147);
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8324).getSingleRequirementThreshold;
+let closure_4 = fn(8535).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { gap: nativeDefault.space.PX_4, width: "100%" }, barRow: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj3 = { gap: nativeDefault.space.PX_4, width: "100%" };
 obj2.barRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

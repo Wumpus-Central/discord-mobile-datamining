@@ -1,6 +1,6 @@
-// === Module 8701: HubProgressBarConstants ===
+// === Module 8913: HubProgressBarConstants ===
 
-// Module 8701 (HubProgressBarConstants)
+// Module 8913 (HubProgressBarConstants)
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
 import size from "module_2" /* 2 */;
 

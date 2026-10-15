@@ -1,6 +1,6 @@
-// === Module 11898: ? ===
+// === Module 12125: ? ===
 
-// Module 11898
+// Module 12125
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-3x.png.js");

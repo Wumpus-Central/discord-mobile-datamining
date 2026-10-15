@@ -1,7 +1,7 @@
-// === Module 9078: Stripe3DSChallenge ===
+// === Module 9290: Stripe3DSChallenge ===
 
-// Module 9078 (Stripe3DSChallenge)
-import StripeUtils from "StripeUtils" /* 5744 */;
+// Module 9290 (Stripe3DSChallenge)
+import StripeUtils from "StripeUtils" /* 5955 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -159,7 +159,7 @@ let closure_6 = async function _authenticateStripePaymentIntent() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ client_secret: closure_129_0, payment_method_id: closure_129_1 } = closure_0);
-  return "Set";
+  return "test";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/Stripe3DSChallenge.tsx");

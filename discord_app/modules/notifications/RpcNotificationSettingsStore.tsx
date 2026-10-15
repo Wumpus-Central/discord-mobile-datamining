@@ -1,6 +1,6 @@
-// === Module 13116: RpcNotificationSettingsStore ===
+// === Module 13412: RpcNotificationSettingsStore ===
 
-// Module 13116 (RpcNotificationSettingsStore)
+// Module 13412 (RpcNotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

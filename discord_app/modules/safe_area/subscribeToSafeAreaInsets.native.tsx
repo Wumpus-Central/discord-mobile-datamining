@@ -1,6 +1,6 @@
-// === Module 10382: subscribeToSafeAreaInsets ===
+// === Module 10605: subscribeToSafeAreaInsets ===
 
-// Module 10382 (subscribeToSafeAreaInsets)
+// Module 10605 (subscribeToSafeAreaInsets)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1500 */;
 import SafeAreaStoreDefault from "SafeAreaStore" /* 1632 */;
 import size from "module_2" /* 2 */;

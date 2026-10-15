@@ -1,16 +1,16 @@
-// === Module 14004: premiumOrbsDeliveredModal ===
+// === Module 14301: premiumOrbsDeliveredModal ===
 
-// Module 14004 (premiumOrbsDeliveredModal)
-import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 14008 */;
+// Module 14301 (premiumOrbsDeliveredModal)
+import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 14305 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 7116 */;
+import EntitlementStore from "EntitlementStore" /* 7331 */;
 
 function getCoinEntitlements() {
   return EntitlementStore.getForSku(SINGLE_ORB_SKU_ID);
 }
 const EntitlementTypes = fn(1085).EntitlementTypes;
 const jsx = fn(21).jsx;
-const SINGLE_ORB_SKU_ID = fn(14005).SINGLE_ORB_SKU_ID;
+const SINGLE_ORB_SKU_ID = fn(14302).SINGLE_ORB_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_marketing/native/premiumOrbsDeliveredModal.tsx");
 
@@ -58,12 +58,12 @@ export const openOrbsModalIfDelivered = function openOrbsModalIfDelivered() {
         importDefault = tmp4;
         const obj2 = {
           importer() {
-                  return Promise.resolve((onClose) => jsx(orbsAmount(14006), { orbsAmount, onClose: onClose.onClose }));
+                  return Promise.resolve((onClose) => jsx(orbsAmount(14303), { orbsAmount, onClose: onClose.onClose }));
                 },
           isDismissable: false
         };
-        tmp2(5305).openLazy(obj2);
-        const tmp2Result = tmp2(5305);
+        tmp2(5360).openLazy(obj2);
+        const tmp2Result = tmp2(5360);
       }
     }
     obj = PremiumOrbsDeliveredModalExperimentDefault;

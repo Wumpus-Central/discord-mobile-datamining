@@ -1,11 +1,11 @@
-// === Module 5954: useStageSpeakingForCurrentUser ===
+// === Module 6165: useStageSpeakingForCurrentUser ===
 
-// Module 5954 (useStageSpeakingForCurrentUser)
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5914 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5925 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5926 */;
+// Module 6165 (useStageSpeakingForCurrentUser)
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6125 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6136 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6137 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 require = fn;
@@ -108,10 +108,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldA
     return canResult;
   }, items1);
   const obj = channelId(504);
-  const isVerifiedAdult = channelId(5914).useIsVerifiedAdult();
-  const obj2 = channelId(5914);
-  const obj3 = channelId(5926);
-  return channelId(5926).useIsFeatureAgeGated(channelId(5925).AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdult && stateFromStores;
+  const isVerifiedAdult = channelId(6125).useIsVerifiedAdult();
+  const obj2 = channelId(6125);
+  const obj3 = channelId(6137);
+  return channelId(6137).useIsFeatureAgeGated(channelId(6136).AgeGatedFeature.STAGE_SPEAKING) && !isVerifiedAdult && stateFromStores;
 });
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldShowAgeVerificationPopover(arg0) {
@@ -202,10 +202,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldSho
     return canResult;
   }, items1);
   const obj = channelId(504);
-  const isAgeVerified = channelId(5914).useIsAgeVerified();
-  const obj2 = channelId(5914);
-  const obj3 = channelId(5926);
-  return channelId(5926).useIsFeatureAgeGated(channelId(5925).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
+  const isAgeVerified = channelId(6125).useIsAgeVerified();
+  const obj2 = channelId(6125);
+  const obj3 = channelId(6137);
+  return channelId(6137).useIsFeatureAgeGated(channelId(6136).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useStageSpeakingForCurrentUser.tsx");

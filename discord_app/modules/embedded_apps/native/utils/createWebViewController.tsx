@@ -1,9 +1,9 @@
-// === Module 11005: createWebViewController ===
+// === Module 11229: createWebViewController ===
 
-// Module 11005 (createWebViewController)
+// Module 11229 (createWebViewController)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11006 */;
-import createWebViewHtmlFile from "createWebViewHtmlFile" /* 11025 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11230 */;
+import createWebViewHtmlFile from "createWebViewHtmlFile" /* 11249 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
 let closure_5 = fn(2024).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(5644).TransportTypes;
+const TransportTypes = fn(5855).TransportTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/native/utils/createWebViewController.tsx");
 

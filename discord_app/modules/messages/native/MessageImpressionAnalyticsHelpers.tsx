@@ -1,17 +1,17 @@
-// === Module 9615: MessageImpressionAnalyticsHelpers ===
+// === Module 9823: MessageImpressionAnalyticsHelpers ===
 
-// Module 9615 (MessageImpressionAnalyticsHelpers)
+// Module 9823 (MessageImpressionAnalyticsHelpers)
 import c from "c" /* 576 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5078 */;
-import CodedLink from "CodedLink" /* 5081 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6975 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7429 */;
-import MessageViewTrackingManager from "MessageViewTrackingManager" /* 9616 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 9617 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 9618 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5133 */;
+import CodedLink from "CodedLink" /* 5136 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7188 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7639 */;
+import MessageViewTrackingManager from "MessageViewTrackingManager" /* 9824 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 9825 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 9826 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5077 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5120 */;
+import InviteStore from "InviteStore" /* 5132 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5175 */;
 
 const require = globalThis.__r;
 
@@ -58,8 +58,8 @@ function getVoiceInviteEmbedRenderInfo(state) {
 }
 const Constants = fn(1085);
 ({ ChannelTypes: metroRequire, GuildFeatures: closure_7, InviteStates: closure_8, MessageFlags: closure_9 } = Constants);
-const LinkType = fn(7383).LinkType;
-const InviteTypes = fn(7430).InviteTypes;
+const LinkType = fn(7593).LinkType;
+const InviteTypes = fn(7640).InviteTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldTrackAnnouncementMessageViews(arg0) {

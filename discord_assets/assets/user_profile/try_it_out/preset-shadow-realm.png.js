@@ -1,6 +1,6 @@
-// === Module 15277: ? ===
+// === Module 15573: ? ===
 
-// Module 15277
+// Module 15573
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/user_profile/try_it_out/preset-shadow-realm.png.js");

@@ -1,10 +1,10 @@
-// === Module 15061: NotifSettingsUtils ===
+// === Module 15357: NotifSettingsUtils ===
 
-// Module 15061 (NotifSettingsUtils)
+// Module 15357 (NotifSettingsUtils)
 import util from "util" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15062 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15058 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 15358 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 15354 */;
 import size from "module_2" /* 2 */;
 
 function inferImportanceFromBehavior(visibility) {
@@ -55,7 +55,7 @@ function formatSetting(item10022, importance) {
   }
 }
 function buildChannelsAndMapping() {
-  const assignedNotifSettingsAndMappings = map(15063).getAssignedNotifSettingsAndMappings();
+  const assignedNotifSettingsAndMappings = map(15359).getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {
     map = new Map();
@@ -117,7 +117,7 @@ function buildChannelsAndMapping() {
     let result = map.set(item10022.id, item10022.string_id);
     continue;
   }
-  const obj = map(15063);
+  const obj = map(15359);
   return {
     mapping: mappings.flatMap((notifSetting) => {
       value = map.get(notifSetting.notifSetting);

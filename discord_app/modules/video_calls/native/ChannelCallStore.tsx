@@ -1,12 +1,12 @@
-// === Module 10364: ChannelCallStore ===
+// === Module 10587: ChannelCallStore ===
 
-// Module 10364 (ChannelCallStore)
+// Module 10587 (ChannelCallStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5110 */;
-import DeviceOrientation from "DeviceOrientation" /* 8458 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10366 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 10367 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 10369 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5165 */;
+import DeviceOrientation from "DeviceOrientation" /* 8669 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10589 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 10590 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 10592 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import apply from "module_12" /* 12 */;
@@ -14,16 +14,16 @@ import apply from "module_12" /* 12 */;
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10365);
+const ChannelCallConstants = fn(10588);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(2024).OrientationLockState;
-const ParticipantTypes = fn(5119).ParticipantTypes;
+const ParticipantTypes = fn(5174).ParticipantTypes;
 const timeout = new fn(2060).Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
 let obj2 = {};
-let size = { x: "Array", y: "T", width: "y", height: "IconComponent", screenOrientation: fn(8458).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: false, isInitialized: null, isVisible: null };
+let size = { x: "Array", y: "Symbol", width: "y", height: "IconComponent", screenOrientation: fn(8669).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: false, isInitialized: null, isVisible: null };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
-const size1 = { x: "Array", y: "T", width: "y", height: "IconComponent", screenOrientation: fn(8458).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: false, isInitialized: null, isVisible: null };
+const size1 = { x: "Array", y: "Symbol", width: "y", height: "IconComponent", screenOrientation: fn(8669).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: false, isInitialized: null, isVisible: null };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;
 let closure_9 = Object.freeze(obj);
@@ -142,7 +142,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
       tmp18 = cResult[5];
       tmp19 = cResult[6];
     }
-    tmpResult = tmp(10368);
+    tmpResult = tmp(10591);
     const stateFromStores = tmp(504).useStateFromStores(tmp17, tmp18, tmp19);
     const _Symbol3 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {

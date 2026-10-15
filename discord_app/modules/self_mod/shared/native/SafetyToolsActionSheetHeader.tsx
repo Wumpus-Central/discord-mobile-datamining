@@ -1,16 +1,16 @@
-// === Module 10443: SafetyToolsActionSheetHeader ===
+// === Module 10666: SafetyToolsActionSheetHeader ===
 
-// Module 10443 (SafetyToolsActionSheetHeader)
+// Module 10666 (SafetyToolsActionSheetHeader)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6205 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 10434 */;
+import NavigatorHeader from "NavigatorHeader" /* 6421 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 10657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { navbarContainer: { display: "flex", flexDirection: "row", justifyContent: "center" }, navbarLeft: { position: "absolute", left: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

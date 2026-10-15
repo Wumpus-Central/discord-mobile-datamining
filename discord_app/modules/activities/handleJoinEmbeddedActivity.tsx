@@ -1,8 +1,8 @@
-// === Module 10902: handleJoinEmbeddedActivity ===
+// === Module 11126: handleJoinEmbeddedActivity ===
 
-// Module 10902 (handleJoinEmbeddedActivity)
+// Module 11126 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5445 */;
+import ApplicationStore from "ApplicationStore" /* 5500 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -59,7 +59,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           closure_129_17 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

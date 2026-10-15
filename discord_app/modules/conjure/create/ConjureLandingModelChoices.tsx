@@ -1,7 +1,7 @@
-// === Module 11279: ConjureLandingModelChoices ===
+// === Module 11503: ConjureLandingModelChoices ===
 
-// Module 11279 (ConjureLandingModelChoices)
-import conjureLocalDev from "conjureLocalDev" /* 10749 */;
+// Module 11503 (ConjureLandingModelChoices)
+import conjureLocalDev from "conjureLocalDev" /* 10971 */;
 import size from "module_2" /* 2 */;
 
 let items = [{ id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" }, { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" }, { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" }, { id: "claude-haiku-5-5", label: "Claude Haiku 5.5", provider: "anthropic" }, { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true }, { id: "gpt-6.1-sol", label: "GPT-6.1 Sol", provider: "openai", supports_fast: true }, { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: true }, { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" }];

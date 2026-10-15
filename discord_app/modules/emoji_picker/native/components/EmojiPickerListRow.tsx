@@ -1,19 +1,19 @@
-// === Module 9524: EmojiPickerListRow ===
+// === Module 9734: EmojiPickerListRow ===
 
-// Module 9524 (EmojiPickerListRow)
+// Module 9734 (EmojiPickerListRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import native from "native" /* 1200 */;
 import PlatformUtils2 from "PlatformUtils" /* 1382 */;
-import shared from "shared" /* 4971 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import Pressables from "Pressables" /* 6189 */;
-import _modDef6826 from "module_6826" /* 6826 */;
-import _modDef6827 from "module_6827" /* 6827 */;
-import LockIcon from "LockIcon" /* 8230 */;
-import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 9525 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 9526 */;
+import shared from "shared" /* 5025 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import Pressables from "Pressables" /* 6405 */;
+import _modDef7042 from "module_7042" /* 7042 */;
+import _modDef7043 from "module_7043" /* 7043 */;
+import LockIcon from "LockIcon" /* 8440 */;
+import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 9735 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 9736 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
@@ -22,12 +22,12 @@ require = fn;
 let closure_3 = ["nativeRow"];
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9439);
+const EmojiPickerListConstants = fn(9650);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1241).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
 const PlatformUtils = fn(1382);
 let num = 28;
@@ -170,9 +170,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
             const obj4 = { resizeMode: "contain", style: surrogates.image, placeholder: null, source: null, usesSmallCache: true };
             const tmp14 = FastImageDefault;
             if (tmpResult.isThemeDark(ThemeStore.theme)) {
-              let tmp13Result = _modDef6826;
+              let tmp13Result = _modDef7042;
             } else {
-              tmp13Result = _modDef6827;
+              tmp13Result = _modDef7043;
             }
             obj4.placeholder = tmp13Result;
             const obj5 = { uri: image };
@@ -236,10 +236,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
     const obj2 = { resizeMode: "contain", style: tmp.image, placeholder: null, source: null, usesSmallCache: true };
     const tmp2Result = FastImageDefault;
     if (tmp6Result.isThemeDark(ThemeStore.theme)) {
-      tmp3 = 6826;
+      tmp3 = 7042;
       let tmp2Result2 = importDefault(tmp3);
     } else {
-      tmp2Result2 = _modDef6827;
+      tmp2Result2 = _modDef7043;
     }
     obj2.placeholder = tmp2Result2;
     const obj3 = { uri: tmp4 };

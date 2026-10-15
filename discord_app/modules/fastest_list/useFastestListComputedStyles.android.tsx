@@ -1,6 +1,6 @@
-// === Module 6750: useFastestListComputedStyles ===
+// === Module 6966: useFastestListComputedStyles ===
 
-// Module 6750 (useFastestListComputedStyles)
+// Module 6966 (useFastestListComputedStyles)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 

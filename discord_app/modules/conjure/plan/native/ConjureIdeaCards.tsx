@@ -1,11 +1,11 @@
-// === Module 11971: ConjureIdeaCards ===
+// === Module 12200: ConjureIdeaCards ===
 
-// Module 11971 (ConjureIdeaCards)
+// Module 12200 (ConjureIdeaCards)
 import util from "util" /* 1126 */;
-import _modDef3849 from "module_3849" /* 3849 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import Stack_Stack from "Stack/Stack" /* 5382 */;
-import Card from "Card" /* 6186 */;
+import _modDef3862 from "module_3862" /* 3862 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import Stack_Stack from "Stack/Stack" /* 5437 */;
+import Card from "Card" /* 6402 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,11 +14,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
-let obj2 = { ideaCards: { gap: fn(11842).BLOCK_GAP } };
+const createStyles = fn(5151);
+let obj2 = { ideaCards: { gap: fn(12067).BLOCK_GAP } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { gap: fn(11842).BLOCK_GAP };
+let obj3 = { gap: fn(12067).BLOCK_GAP };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjureIdeaCards.tsx");
 
@@ -29,8 +29,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     let intl = onPick(1126).intl;
-    obj2.children = intl.string(_modDef3849["wx/o8Y"]);
-    const tmp8 = closure_4(onPick(5092).Text, obj2);
+    obj2.children = intl.string(_modDef3862["wx/o8Y"]);
+    const tmp8 = closure_4(onPick(5147).Text, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
   } else {
@@ -65,16 +65,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
         children: null
       };
       const intl = onPick(1126).intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef3849.H8G39M, { title: title.title });
-      const items = [closure_1_4(onPick(5092).Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3862.H8G39M, { title: title.title });
+      const items = [closure_1_4(onPick(5147).Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
       let tmpResult = null;
       if ("" !== title.value) {
         const obj4 = { variant: "text-sm/normal", color: "text-muted", children: title.value };
-        tmpResult = closure_1_4(onPick(5092).Text, obj4);
+        tmpResult = closure_1_4(onPick(5147).Text, obj4);
       }
       items[1] = tmpResult;
-      obj.children = closure_1_5(onPick(5382).Stack, { direction: "vertical", spacing: 4, children: items });
-      return closure_1_4(onPick(6186).Card, obj, title.id);
+      obj.children = closure_1_5(onPick(5437).Stack, { direction: "vertical", spacing: 4, children: items });
+      return closure_1_4(onPick(6402).Card, obj, title.id);
     };
     cResult[4] = onPick;
     cResult[5] = fn;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
   let obj = { style: closure_6().ideaCards, children: null };
   const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   let intl = util.intl;
-  obj2.children = intl.string(_modDef3849["wx/o8Y"]);
+  obj2.children = intl.string(_modDef3862["wx/o8Y"]);
   let items = [
     closure_4(Text_Text.Text, obj2),
     ideas.map((title) => {
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
         children: null
       };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef3849.H8G39M, { title: title.title });
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3862.H8G39M, { title: title.title });
       const items = [closure_1_4(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: title.title }), ];
       let tmpResult = null;
       if ("" !== title.value) {

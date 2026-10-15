@@ -1,21 +1,21 @@
-// === Module 8882: GuildProfileGames ===
+// === Module 9094: GuildProfileGames ===
 
-// Module 8882 (GuildProfileGames)
+// Module 9094 (GuildProfileGames)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8883 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8884 */;
-import components_GameIconDefault from "components/GameIcon" /* 13535 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9095 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9096 */;
+import components_GameIconDefault from "components/GameIcon" /* 13831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.xs };
 obj2.lastItemOverlay = rect;

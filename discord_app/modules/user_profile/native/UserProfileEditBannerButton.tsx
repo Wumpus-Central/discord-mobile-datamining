@@ -1,21 +1,21 @@
-// === Module 15213: UserProfileEditBannerButton ===
+// === Module 15509: UserProfileEditBannerButton ===
 
-// Module 15213 (UserProfileEditBannerButton)
+// Module 15509 (UserProfileEditBannerButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Pressables from "Pressables" /* 6189 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8311 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8364 */;
-import PencilIcon from "PencilIcon" /* 9734 */;
+import Pressables from "Pressables" /* 6405 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8522 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8575 */;
+import PencilIcon from "PencilIcon" /* 9942 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileBannerDefault = tmp5(8380);
-const EditButtonDefault = tmp5(15214);
+const UserProfileBannerDefault = tmp5(8591);
+const EditButtonDefault = tmp5(15510);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { position: "relative" }, editButton: null, previewButton: null, refreshEditButtonContainer: null };
 let size = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round };
 obj2.editButton = size;

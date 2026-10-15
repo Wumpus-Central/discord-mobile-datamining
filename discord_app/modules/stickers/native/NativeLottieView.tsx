@@ -1,10 +1,10 @@
-// === Module 8025: NativeLottieView ===
+// === Module 8235: NativeLottieView ===
 
-// Module 8025 (NativeLottieView)
+// Module 8235 (NativeLottieView)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
-import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 8026 */;
+import LottieNodeNativeComponentDefault from "LottieNodeNativeComponent" /* 8236 */;
 import noop_mod from "module_19" /* 19 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

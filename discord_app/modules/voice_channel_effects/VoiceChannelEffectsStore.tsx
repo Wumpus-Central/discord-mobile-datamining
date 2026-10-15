@@ -1,12 +1,12 @@
-// === Module 10981: VoiceChannelEffectsStore ===
+// === Module 11205: VoiceChannelEffectsStore ===
 
-// Module 10981 (VoiceChannelEffectsStore)
+// Module 11205 (VoiceChannelEffectsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import shared from "shared" /* 4971 */;
-import CallConstants from "CallConstants" /* 5119 */;
-import VoiceChannelEffectsUtils from "VoiceChannelEffectsUtils" /* 7067 */;
+import shared from "shared" /* 5025 */;
+import CallConstants from "CallConstants" /* 5174 */;
+import VoiceChannelEffectsUtils from "VoiceChannelEffectsUtils" /* 7282 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

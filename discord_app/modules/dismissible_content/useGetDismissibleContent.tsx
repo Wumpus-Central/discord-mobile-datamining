@@ -1,16 +1,16 @@
-// === Module 7107: useGetDismissibleContent ===
+// === Module 7322: useGetDismissibleContent ===
 
-// Module 7107 (useGetDismissibleContent)
+// Module 7322 (useGetDismissibleContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2048 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 2050 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4940 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2052 */;
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 2057 */;
 
@@ -526,7 +526,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetVersio
     cResult[4] = version;
     cResult[5] = tmp9;
   } else {
-    result = result(4962).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+    result = result(5016).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
     if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
       tmp9 = null;
       if (null != lastDismissedVersion) {
@@ -541,7 +541,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetVersio
         tmp9 = tmp13;
       }
     }
-    const resultResult1 = result(4962);
+    const resultResult1 = result(5016);
   }
   let tmp14 = null;
   if (!result) {
@@ -692,7 +692,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetTimeRe
     }
     dependencyMap = tmp10;
     tmp5 = tmp10;
-    tmp2Result = tmp2(4962);
+    tmp2Result = tmp2(5016);
   }
   const items1 = [useGetVisibleContent(tmp5, stateFromStores, groupName), ];
   const items2 = [tmp5, groupName, stateFromStores];
@@ -773,7 +773,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSnowfl
     cResult[4] = id;
     cResult[5] = tmp8;
   } else {
-    result = result(4962).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+    result = result(5016).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
     if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
       tmp8 = null;
       if (null != lastDismissedObjectId) {
@@ -789,7 +789,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSnowfl
         tmp8 = tmp12;
       }
     }
-    const resultResult1 = result(4962);
+    const resultResult1 = result(5016);
   }
   let tmp14 = null;
   if (!result) {
@@ -943,7 +943,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSnowfl
     cResult[5] = id;
     cResult[6] = tmp11;
   } else {
-    result = result(4962).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+    result = result(5016).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
     if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
       tmp11 = null;
       if (null != lastDismissedObjectId) {
@@ -959,7 +959,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetSnowfl
         tmp11 = tmp15;
       }
     }
-    const resultResult1 = result(4962);
+    const resultResult1 = result(5016);
   }
   let tmp17 = null;
   if (!result) {
@@ -1441,7 +1441,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetTimeRe
   dependencyMap = null;
   let tmp14 = null;
   if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-    const tmp15 = !tmp(4962).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+    const tmp15 = !tmp(5016).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
     let lastDismissedAtMs1;
     if (tmp8 != null) {
       lastDismissedAtMs1 = tmp8.lastDismissedAtMs;
@@ -1452,7 +1452,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetTimeRe
     }
     dependencyMap = tmp22;
     tmp14 = tmp22;
-    const tmpResult2 = tmp(4962);
+    const tmpResult2 = tmp(5016);
   }
   cResult[3] = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
   let lastDismissedAtMs2;

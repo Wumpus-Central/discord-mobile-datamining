@@ -1,17 +1,17 @@
-// === Module 11014: buildEmbeddedContext ===
+// === Module 11238: buildEmbeddedContext ===
 
-// Module 11014 (buildEmbeddedContext)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4741 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8617 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10715 */;
+// Module 11238 (buildEmbeddedContext)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4795 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7259 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10937 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import FramesStore from "FramesStore" /* 10713 */;
-import InteractionStore from "InteractionStore" /* 7891 */;
+import FramesStore from "FramesStore" /* 10935 */;
+import InteractionStore from "InteractionStore" /* 8101 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
-const asLaunched = fn(10697).asLaunched;
-const MOBILE = fn(11015).ActivityPlatform.MOBILE;
+const asLaunched = fn(10919).asLaunched;
+const MOBILE = fn(11239).ActivityPlatform.MOBILE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/utils/buildEmbeddedContext.tsx");
 

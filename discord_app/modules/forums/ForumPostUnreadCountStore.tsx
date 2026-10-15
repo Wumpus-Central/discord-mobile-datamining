@@ -1,12 +1,12 @@
-// === Module 9337: ForumPostUnreadCountStore ===
+// === Module 9548: ForumPostUnreadCountStore ===
 
-// Module 9337 (ForumPostUnreadCountStore)
+// Module 9548 (ForumPostUnreadCountStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6065 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6276 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import ReadStateStore from "ReadStateStore" /* 6040 */;
+import ReadStateStore from "ReadStateStore" /* 6251 */;
 
 const dependencyMap = {};
 let set = new Set();

@@ -1,8 +1,8 @@
-// === Module 10899: startAuthorizationNoHook ===
+// === Module 11123: startAuthorizationNoHook ===
 
-// Module 10899 (startAuthorizationNoHook)
-import LinkingDefault from "Linking" /* 4808 */;
-import useAuthorizationApp from "useAuthorizationApp" /* 6862 */;
+// Module 11123 (startAuthorizationNoHook)
+import LinkingDefault from "Linking" /* 4862 */;
+import useAuthorizationApp from "useAuthorizationApp" /* 7076 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

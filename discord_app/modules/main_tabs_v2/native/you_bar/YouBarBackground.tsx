@@ -1,25 +1,25 @@
-// === Module 17181: YouBarBackground ===
+// === Module 17421: YouBarBackground ===
 
-// Module 17181 (YouBarBackground)
+// Module 17421 (YouBarBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 4820 */;
-import spring from "spring" /* 5383 */;
-import LinearGradientDefault from "LinearGradient" /* 5396 */;
-import _modDef6247 from "module_6247" /* 6247 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 15813 */;
+import useToken from "useToken" /* 4874 */;
+import spring from "spring" /* 5438 */;
+import LinearGradientDefault from "LinearGradient" /* 5451 */;
+import _modDef6463 from "module_6463" /* 6463 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 16109 */;
 import noop from "module_19" /* 19 */;
 
-const ReanimatedRexportDefault = tmp4(4852);
+const ReanimatedRexportDefault = tmp4(4906);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15727);
+const YouBarConstants = fn(16023);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { youRowFloating: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.modules.mobile.YOU_BAR_BORDER_RADIUS, borderTopLeftRadius: YOU_BAR_HEIGHT / 2, borderBottomLeftRadius: YOU_BAR_HEIGHT / 2 } };
 let closure_8 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -124,7 +124,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarM
             return tmp39;
           }
           const obj6 = { style: first, maskElement: tmp31, children: tmp35 };
-          const tmp42 = timestampProducer(_modDef6247, obj6);
+          const tmp42 = timestampProducer(_modDef6463, obj6);
           cResult[24] = tmp31;
           cResult[25] = tmp35;
           cResult[26] = tmp42;
@@ -172,7 +172,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouBarM
   const size1 = { position: "absolute", top: YOU_BAR_HEIGHT / 2, width: 8, left: diff - 8, height: YOU_BAR_HEIGHT / 2 };
   obj5.style = size1;
   const obj4 = { style: { position: "absolute", top: YOU_BAR_HEIGHT / 2, left: diff - 1, right: 0, bottom: 0, backgroundColor: "black" } };
-  const tmp3 = _modDef6247;
+  const tmp3 = _modDef6463;
   const tmp4 = LinearGradientDefault;
   const obj9 = _modDef683("#000000");
   const items1 = [_modDef683("#000000").alpha(0).hex(), "#000000"];

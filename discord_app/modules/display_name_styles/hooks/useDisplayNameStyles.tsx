@@ -1,6 +1,6 @@
-// === Module 5633: useDisplayNameStyles ===
+// === Module 5844: useDisplayNameStyles ===
 
-// Module 5633 (useDisplayNameStyles)
+// Module 5844 (useDisplayNameStyles)
 import _mod19 from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import UserStore from "UserStore" /* 1390 */;

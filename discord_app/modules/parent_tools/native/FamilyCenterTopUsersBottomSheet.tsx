@@ -1,23 +1,23 @@
-// === Module 15534: FamilyCenterTopUsersBottomSheet ===
+// === Module 15830: FamilyCenterTopUsersBottomSheet ===
 
-// Module 15534 (FamilyCenterTopUsersBottomSheet)
+// Module 15830 (FamilyCenterTopUsersBottomSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import UserUtilsDefault from "UserUtils" /* 4964 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import TableRow2 from "TableRow" /* 6184 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import ActionSheet from "ActionSheet" /* 6904 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7748 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import TableRow2 from "TableRow" /* 6400 */;
+import TableRowGroup from "TableRowGroup" /* 6485 */;
+import ActionSheet from "ActionSheet" /* 7118 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7958 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRow(userActivity) {
@@ -34,7 +34,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRow
         return tmp7;
       } else {
         if (cResult[11] !== tmp8) {
-          const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "r" };
+          const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "Array" };
           const tmp20 = React4(native.Avatar, obj2);
           cResult[11] = tmp8;
           cResult[12] = tmp20;
@@ -92,7 +92,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRow
     const obj2 = { label: null, subLabel: null, icon: null };
     obj2.label = UserUtilsDefault.getName(user);
     obj2.subLabel = topUserOrGuildDescription;
-    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
     obj2.icon = React4(native.Avatar, obj4);
     return React4(TableRow2.TableRow, obj2);
   }

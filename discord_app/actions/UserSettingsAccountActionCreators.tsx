@@ -1,12 +1,12 @@
-// === Module 6675: UserSettingsAccountActionCreators ===
+// === Module 6891: UserSettingsAccountActionCreators ===
 
-// Module 6675 (UserSettingsAccountActionCreators)
+// Module 6891 (UserSettingsAccountActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5935 */;
-import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 6682 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6684 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6146 */;
+import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 6898 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6900 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -59,7 +59,7 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
           let token;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -125,7 +125,7 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
 };
 const Constants = fn(1085);
 ({ Endpoints: closure_4, Routes: hasOwnProperty, DEVICE_TOKEN: metroRequire, DEVICE_VOIP_TOKEN: closure_7 } = Constants);
-const PushNotificationConstants = fn(5938);
+const PushNotificationConstants = fn(6149);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -214,8 +214,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const obj4 = { headers: null };
   const obj = avatarId(584);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(6676).buildHeadersForMd5({ [avatar(6680).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
-  let tmpResult = avatarId(6676);
+  obj4.headers = avatarId(6892).buildHeadersForMd5({ [avatar(6896).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
+  let tmpResult = avatarId(6892);
   return saveProfileAndAccountRequest(user, obj4).then((result) => {
     DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

@@ -1,6 +1,6 @@
-// === Module 12527: VoicePanelCardConstants ===
+// === Module 12820: VoicePanelCardConstants ===
 
-// Module 12527 (VoicePanelCardConstants)
+// Module 12820 (VoicePanelCardConstants)
 import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 

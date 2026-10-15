@@ -1,15 +1,15 @@
-// === Module 11343: useConjureSettingPickerOptions ===
+// === Module 11567: useConjureSettingPickerOptions ===
 
-// Module 11343 (useConjureSettingPickerOptions)
-import NicknameUtils from "NicknameUtils" /* 5414 */;
-import ConjureUtils from "ConjureUtils" /* 6951 */;
-import conjureGuildPickerSources from "conjureGuildPickerSources" /* 11344 */;
+// Module 11567 (useConjureSettingPickerOptions)
+import NicknameUtils from "NicknameUtils" /* 5469 */;
+import ConjureUtils from "ConjureUtils" /* 7165 */;
+import conjureGuildPickerSources from "conjureGuildPickerSources" /* 11568 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4750 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
-import StreamerModeStore from "StreamerModeStore" /* 4965 */;
+import GuildChannelStore from "GuildChannelStore" /* 4804 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
+import StreamerModeStore from "StreamerModeStore" /* 5019 */;
 import UserStore from "UserStore" /* 1390 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
 
 const require = globalThis.__r;
 
@@ -93,13 +93,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if ("role" === channel_filter.type) {
       tmp8 = arg0;
     }
-    const conjureGuildRoles = result(11344).useConjureGuildRoles(tmp8);
-    const resultResult1 = result(11344);
+    const conjureGuildRoles = result(11568).useConjureGuildRoles(tmp8);
+    const resultResult1 = result(11568);
     let tmp9 = null;
     if ("user" === channel_filter.type) {
       tmp9 = arg0;
     }
-    const conjureGuildMemberUsers = result(11344).useConjureGuildMemberUsers(tmp9);
+    const conjureGuildMemberUsers = result(11568).useConjureGuildMemberUsers(tmp9);
     class S {
       constructor() {
         channels = null;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       tmp11 = cResult[5];
       tmp12 = cResult[6];
     }
-    const resultResult2 = result(11344);
+    const resultResult2 = result(11568);
     const stateFromStores1 = result(504).useStateFromStores(tmp11, tmp12);
     const type = channel_filter.type;
     if ("channel" === type) {
@@ -136,13 +136,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       }
       mapped = null;
       if (!tmp20) {
-        result = result(6951).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
+        result = result(7165).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
         map = result.map;
         mapped = map((id) => {
           const obj = { id: id.id, label: closure_0(type[11]).computeChannelName(id, UserStore, RelationshipStore) };
           return obj;
         });
-        const resultResult4 = result(6951);
+        const resultResult4 = result(7165);
       }
       cResult[7] = stateFromStores;
       channel_filter = channel_filter.channel_filter;
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       if (null != stateFromStores) {
         let result = ConjureUtils.conjureSettingChannels(tmp4, tmp.channel_filter);
         mapped = result.map((id) => {
-          const obj = { id: id.id, label: closure_1_0(5426).computeChannelName(id, closure_1_6, conjureGuildMemberUsers) };
+          const obj = { id: id.id, label: closure_1_0(5481).computeChannelName(id, closure_1_6, conjureGuildMemberUsers) };
           return obj;
         });
       }
@@ -267,10 +267,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
     } else if ("user" === type) {
       return conjureGuildMemberUsers.map((id) => {
-        const result = closure_0(11344).conjureMemberUsername(id, stateFromStores1);
+        const result = closure_0(11568).conjureMemberUsername(id, stateFromStores1);
         const obj2 = { id: id.id, label: null };
-        const obj = closure_0(11344);
-        obj2.label = closure_0(5414).getName(closure_1_0, null, id);
+        const obj = closure_0(11568);
+        obj2.label = closure_0(5469).getName(closure_1_0, null, id);
         if ("" === result) {
           let obj4 = {};
         } else {

@@ -1,8 +1,8 @@
-// === Module 7726: useStageBlockedUsersCount ===
+// === Module 7936: useStageBlockedUsersCount ===
 
-// Module 7726 (useStageBlockedUsersCount)
-import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5901 */;
+// Module 7936 (useStageBlockedUsersCount)
+import StageChannelParticipants from "StageChannelParticipants" /* 6166 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6112 */;
 
 const require = globalThis.__r;
 

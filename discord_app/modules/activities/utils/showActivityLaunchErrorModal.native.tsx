@@ -1,8 +1,8 @@
-// === Module 10739: showActivityLaunchErrorModal ===
+// === Module 10961: showActivityLaunchErrorModal ===
 
-// Module 10739 (showActivityLaunchErrorModal)
+// Module 10961 (showActivityLaunchErrorModal)
 import util from "util" /* 1126 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5305 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5360 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/showActivityLaunchErrorModal.native.tsx");

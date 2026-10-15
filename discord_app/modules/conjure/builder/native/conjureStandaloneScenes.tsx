@@ -1,6 +1,6 @@
-// === Module 11276: conjureStandaloneScenes ===
+// === Module 11500: conjureStandaloneScenes ===
 
-// Module 11276 (conjureStandaloneScenes)
+// Module 11500 (conjureStandaloneScenes)
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import ChannelConstants from "ChannelConstants" /* 2072 */;

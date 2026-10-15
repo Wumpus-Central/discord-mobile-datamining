@@ -1,9 +1,9 @@
-// === Module 14565: sendGameOrganizationInvite ===
+// === Module 14862: sendGameOrganizationInvite ===
 
-// Module 14565 (sendGameOrganizationInvite)
+// Module 14862 (sendGameOrganizationInvite)
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4971 */;
-import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 14566 */;
+import shared from "shared" /* 5025 */;
+import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 14863 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -124,9 +124,9 @@ let closure_8 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
     }
   })();
 };
-const setSendState = fn(8768).setSendState;
-let closure_5 = fn(10496).GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES_ERROR_CODE;
-const InviteSendStates = fn(7430).InviteSendStates;
+const setSendState = fn(8981).setSendState;
+let closure_5 = fn(10719).GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES_ERROR_CODE;
+const InviteSendStates = fn(7640).InviteSendStates;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_organization_invites/sendGameOrganizationInvite.tsx");

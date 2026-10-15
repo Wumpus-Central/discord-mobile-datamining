@@ -1,9 +1,9 @@
-// === Module 17724: VADPermission ===
+// === Module 17964: VADPermission ===
 
-// Module 17724 (VADPermission)
+// Module 17964 (VADPermission)
 import util from "util" /* 1126 */;
-import common_AlertDefault from "common/Alert" /* 5403 */;
-import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 17721 */;
+import common_AlertDefault from "common/Alert" /* 5458 */;
+import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 17961 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

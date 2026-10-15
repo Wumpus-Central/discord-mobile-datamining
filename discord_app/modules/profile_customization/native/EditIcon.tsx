@@ -1,15 +1,15 @@
-// === Module 11340: EditIcon ===
+// === Module 11564: EditIcon ===
 
-// Module 11340 (EditIcon)
+// Module 11564 (EditIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PencilIcon from "PencilIcon" /* 9734 */;
+import PencilIcon from "PencilIcon" /* 9942 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { editIcon: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, xs: null, sm: null };
 let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md };
 obj2.xs = size;

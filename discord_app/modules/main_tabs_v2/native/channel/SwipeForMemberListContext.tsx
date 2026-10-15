@@ -1,0 +1,10 @@
+// === Module 12993: SwipeForMemberListContext ===
+
+// Module 12993 (SwipeForMemberListContext)
+import noop from "module_19" /* 19 */;
+
+const context = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/SwipeForMemberListContext.tsx");
+
+export const SwipeForMemberListContext = context;

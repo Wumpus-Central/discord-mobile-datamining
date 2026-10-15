@@ -1,6 +1,6 @@
-// === Module 10672: ConjureSmartContextStore ===
+// === Module 10895: ConjureSmartContextStore ===
 
-// Module 10672 (ConjureSmartContextStore)
+// Module 10895 (ConjureSmartContextStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

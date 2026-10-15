@@ -1,7 +1,7 @@
-// === Module 18168: IAPManager ===
+// === Module 18408: IAPManager ===
 
-// Module 18168 (IAPManager)
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6812 */;
+// Module 18408 (IAPManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
 
 const prototype = function IAPManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

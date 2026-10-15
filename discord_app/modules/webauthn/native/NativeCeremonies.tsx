@@ -1,9 +1,9 @@
-// === Module 6635: NativeCeremonies ===
+// === Module 6851: NativeCeremonies ===
 
-// Module 6635 (NativeCeremonies)
+// Module 6851 (NativeCeremonies)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1126 */;
-import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 5947 */;
+import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 6158 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -45,7 +45,7 @@ let closure_5 = async function _promptForRegisterCredential() {
           let challenge;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -150,7 +150,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               closure_129_0 = closure_0;
               c5 = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "test", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -213,7 +213,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   });
 };
 obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredentialManagerPasskey(setError) {
-  setRegistering(5947).registerPasskey;
+  setRegistering(6158).registerPasskey;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -266,7 +266,7 @@ obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredential
   }).finally(() => setRegistering(false));
 };
 obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setError) {
-  setRegistering(5947).register;
+  setRegistering(6158).register;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -320,7 +320,7 @@ obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setErro
 };
 obj.registerPasskey = function registerPasskey(setError) {
   const obj = setError(1382);
-  const tmp2 = setRegistering(5947);
+  const tmp2 = setRegistering(6158);
   if (isAndroidResult) {
     setError = undefined;
     const setError2 = setError.setError;
@@ -462,7 +462,7 @@ obj.registerPasskey = function registerPasskey(setError) {
 obj.registerSecurityKey = function registerSecurityKey(setError) {
   let register = fn;
   if (fn === undefined) {
-    register = setRegistering(5947).register;
+    register = setRegistering(6158).register;
   }
   setError = undefined;
   setError = setError.setError;

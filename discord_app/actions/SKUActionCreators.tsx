@@ -1,16 +1,16 @@
-// === Module 10180: SKUActionCreators ===
+// === Module 10393: SKUActionCreators ===
 
-// Module 10180 (SKUActionCreators)
+// Module 10393 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import BillingUtils from "BillingUtils" /* 4786 */;
-import StoreUtils from "StoreUtils" /* 5649 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5747 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7315 */;
-import TestModeUtils from "TestModeUtils" /* 9070 */;
+import BillingUtils from "BillingUtils" /* 4840 */;
+import StoreUtils from "StoreUtils" /* 5860 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5958 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7525 */;
+import TestModeUtils from "TestModeUtils" /* 9282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8996 */;
-import SKUStore from "SKUStore" /* 6094 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9208 */;
+import SKUStore from "SKUStore" /* 6310 */;
 
 require = fn;
 let closure_8 = async function _fetchSKU() {
@@ -246,7 +246,7 @@ let closure_10 = async function _fetchTestSKUsForApplication(arg0) {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -334,7 +334,7 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -544,10 +544,10 @@ let closure_14 = async function _orderSKU() {
             obj4.location_facet = obj10;
             if (closure_3) {
               const obj11 = { is_gift: true, gift_customization: null };
-              ({ recipient_id: obj7.recipient_id, gift_style: obj7.gift_style, emoji_id: obj7.emoji_id, emoji_name: obj7.emoji_name, sound_id: obj7.sound_id, reward_sku_ids: obj7.reward_sku_ids, custom_message: obj7.custom_message_contents } = closure_4);
-              obj11.gift_customization = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+              ({ is_recurring: obj7.is_recurring, recipient_id: obj7.recipient_id, gift_style: obj7.gift_style, emoji_id: obj7.emoji_id, emoji_name: obj7.emoji_name, sound_id: obj7.sound_id, reward_sku_ids: obj7.reward_sku_ids, custom_message: obj7.custom_message_contents } = closure_4);
+              obj11.gift_customization = { is_recurring: null, recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
               obj4.gifting_facet = obj11;
-              const obj12 = { recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
+              const obj12 = { is_recurring: null, recipient_id: null, gift_style: null, emoji_id: null, emoji_name: null, sound_id: null, reward_sku_ids: null, custom_message_contents: null };
             }
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.ORDER_CREATE, body: obj4, rejectWithError: null };

@@ -1,9 +1,9 @@
-// === Module 16226: CacheActionCreators ===
+// === Module 16522: CacheActionCreators ===
 
-// Module 16226 (CacheActionCreators)
+// Module 16522 (CacheActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CacheStore from "CacheStore" /* 7204 */;
+import CacheStore from "CacheStore" /* 7414 */;
 
 let closure_5 = async function _writeCaches() {
   if (1 === tmp5) {
@@ -46,7 +46,7 @@ let closure_5 = async function _writeCaches() {
     flag = false;
   }
   closure_129_0 = flag;
-  return "Set";
+  return "test";
 };
 const ChannelLoader = fn(2065).ChannelLoader;
 const size = fn(2);

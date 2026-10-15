@@ -1,21 +1,21 @@
-// === Module 9545: PremiumFeatureUpsell ===
+// === Module 9754: PremiumFeatureUpsell ===
 
-// Module 9545 (PremiumFeatureUpsell)
+// Module 9754 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import PremiumUtils from "PremiumUtils" /* 4771 */;
-import spring from "spring" /* 5383 */;
-import springPresets from "springPresets" /* 5387 */;
-import LinearGradientDefault from "LinearGradient" /* 5396 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9041 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9287 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9290 */;
+import PremiumUtils from "PremiumUtils" /* 4825 */;
+import spring from "spring" /* 5438 */;
+import springPresets from "springPresets" /* 5442 */;
+import LinearGradientDefault from "LinearGradient" /* 5451 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9253 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9498 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9501 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
 
 const require = globalThis.__r;
 
@@ -54,10 +54,10 @@ get_ActivityIndicator = fn(17);
 const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Gradients = fn(7158).Gradients;
+const Gradients = fn(7373).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_17 = createStyles.createStyles((arg0) => {
   const obj = { container: { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_12, justifyContent: "space-between" }, containerShadow: null, nitroWheel: null, labelContainer: null, text: null, nitroWheelButton: null, nitroWheelIcon: null, nitroWheelDisabled: null, button: null, gradient: null };
   const obj3 = {};
@@ -102,15 +102,15 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   const tmp7 = closure_17(useTier0UpsellContent);
   closure_3 = tmp7;
   if (cResult[2] !== featureName) {
-    let mobileEmojiPickerUpsellRestyleEnabledForFeature = tmp(tmp2[17]).getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
-    if (!mobileEmojiPickerUpsellRestyleEnabledForFeature) {
-      mobileEmojiPickerUpsellRestyleEnabledForFeature = tmp(tmp2[18]).getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
-      const tmpResult7 = tmp(tmp2[18]);
+    let result = tmp(tmp2[15]).isEmojiPickerUpsellFeature(featureName);
+    if (!result) {
+      result = tmp(tmp2[17]).getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
+      const tmpResult7 = tmp(tmp2[17]);
     }
     cResult[2] = featureName;
-    cResult[3] = mobileEmojiPickerUpsellRestyleEnabledForFeature;
-    let tmp8 = mobileEmojiPickerUpsellRestyleEnabledForFeature;
-    const tmpResult6 = tmp(tmp2[17]);
+    cResult[3] = result;
+    let tmp8 = result;
+    const tmpResult6 = tmp(tmp2[15]);
   } else {
     tmp8 = cResult[3];
   }
@@ -134,7 +134,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
         } else {
           tmp15 = cResult[12];
         }
-        const tmp18 = analyticsLocation(tmp2[21])(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, tmp15);
+        const tmp18 = analyticsLocation(tmp2[20])(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, tmp15);
         const loading = tmp18.loading;
         const onPress = tmp18.onPress;
         if (containerShadow) {
@@ -203,9 +203,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
                                               constructor() {
                                                 tmp = jsx;
                                                 obj = { style: closure_3.gradient, start: null, end: null, colors: null };
-                                                tmp2 = closure_1(closure_2[27]);
-                                                obj.start = closure_0(closure_2[28]).HorizontalGradient.START;
-                                                obj.end = closure_0(closure_2[28]).HorizontalGradient.END;
+                                                tmp2 = closure_1(closure_2[26]);
+                                                obj.start = closure_0(closure_2[27]).HorizontalGradient.START;
+                                                obj.end = closure_0(closure_2[27]).HorizontalGradient.END;
                                                 tmp3 = Gradients;
                                                 obj.colors = useTier0UpsellContent ? tmp3.PREMIUM_TIER_0 : tmp3.PREMIUM_TIER_2_TRI_COLOR;
                                                 return tmp(tmp2, obj);
@@ -229,16 +229,16 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
                                     constructor() {
                                       tmp = jsx;
                                       obj = { style: closure_3.gradient, start: null, end: null, colors: null };
-                                      tmp2 = closure_1(closure_2[27]);
-                                      obj.start = closure_0(closure_2[28]).HorizontalGradient.START;
-                                      obj.end = closure_0(closure_2[28]).HorizontalGradient.END;
+                                      tmp2 = closure_1(closure_2[26]);
+                                      obj.start = closure_0(closure_2[27]).HorizontalGradient.START;
+                                      obj.end = closure_0(closure_2[27]).HorizontalGradient.END;
                                       tmp3 = Gradients;
                                       obj.colors = useTier0UpsellContent ? tmp3.PREMIUM_TIER_0 : tmp3.PREMIUM_TIER_2_TRI_COLOR;
                                       return tmp(tmp2, obj);
                                     }
                                   }
-                                  const obj3 = { disabled: loading, shrink: true, style: tmp7.button, size: tmp(tmp2[22]).ButtonSizes.XSMALL, onPress, text: tmp30, color: tmp(tmp2[22]).ButtonColors.GREEN, renderIcon: tmp33, renderLinearGradient: tmp35 };
-                                  const tmp37 = closure_14(tmp(tmp2[22]).ShinyButton, obj3);
+                                  const obj3 = { disabled: loading, shrink: true, style: tmp7.button, size: tmp(tmp2[21]).ButtonSizes.XSMALL, onPress, text: tmp30, color: tmp(tmp2[21]).ButtonColors.GREEN, renderIcon: tmp33, renderLinearGradient: tmp35 };
+                                  const tmp37 = closure_14(tmp(tmp2[21]).ShinyButton, obj3);
                                   cResult[39] = loading;
                                   cResult[40] = onPress;
                                   cResult[41] = tmp7.button;
@@ -252,9 +252,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
                                   constructor() {
                                     tmp = jsx;
                                     obj = { style: closure_3.gradient, start: null, end: null, colors: null };
-                                    tmp2 = closure_1(closure_2[27]);
-                                    obj.start = closure_0(closure_2[28]).HorizontalGradient.START;
-                                    obj.end = closure_0(closure_2[28]).HorizontalGradient.END;
+                                    tmp2 = closure_1(closure_2[26]);
+                                    obj.start = closure_0(closure_2[27]).HorizontalGradient.START;
+                                    obj.end = closure_0(closure_2[27]).HorizontalGradient.END;
                                     tmp3 = Gradients;
                                     obj.colors = useTier0UpsellContent ? tmp3.PREMIUM_TIER_0 : tmp3.PREMIUM_TIER_2_TRI_COLOR;
                                     return tmp(tmp2, obj);
@@ -289,7 +289,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
                   tmp27 = tmp29;
                 }
                 const obj5 = { style: tmp7.text, variant: "text-sm/medium", children: tmp13 };
-                const tmp26 = closure_14(tmp(tmp2[25]).Text, obj5);
+                const tmp26 = closure_14(tmp(tmp2[24]).Text, obj5);
                 cResult[21] = tmp13;
                 cResult[22] = tmp7.text;
                 cResult[23] = tmp26;
@@ -302,9 +302,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
                 constructor() {
                   tmp = jsx;
                   obj = { style: closure_3.gradient, start: null, end: null, colors: null };
-                  tmp2 = closure_1(closure_2[27]);
-                  obj.start = closure_0(closure_2[28]).HorizontalGradient.START;
-                  obj.end = closure_0(closure_2[28]).HorizontalGradient.END;
+                  tmp2 = closure_1(closure_2[26]);
+                  obj.start = closure_0(closure_2[27]).HorizontalGradient.START;
+                  obj.end = closure_0(closure_2[27]).HorizontalGradient.END;
                   tmp3 = Gradients;
                   obj.colors = useTier0UpsellContent ? tmp3.PREMIUM_TIER_0 : tmp3.PREMIUM_TIER_2_TRI_COLOR;
                   return tmp(tmp2, obj);
@@ -320,15 +320,15 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
                 constructor() {
                   tmp = jsx;
                   obj = { style: closure_3.gradient, start: null, end: null, colors: null };
-                  tmp2 = closure_1(closure_2[27]);
-                  obj.start = closure_0(closure_2[28]).HorizontalGradient.START;
-                  obj.end = closure_0(closure_2[28]).HorizontalGradient.END;
+                  tmp2 = closure_1(closure_2[26]);
+                  obj.start = closure_0(closure_2[27]).HorizontalGradient.START;
+                  obj.end = closure_0(closure_2[27]).HorizontalGradient.END;
                   tmp3 = Gradients;
                   obj.colors = useTier0UpsellContent ? tmp3.PREMIUM_TIER_0 : tmp3.PREMIUM_TIER_2_TRI_COLOR;
                   return tmp(tmp2, obj);
                 }
               }
-              obj6.source = tmp17(useTier0UpsellContent ? tmp2[23] : tmp2[24]);
+              obj6.source = tmp17(useTier0UpsellContent ? tmp2[22] : tmp2[23]);
               obj6.style = tmp7.nitroWheel;
               closure_14(tmp23, obj6);
             }
@@ -350,7 +350,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
     cResult[10] = tmp14;
     tmp13 = tmp14;
   }
-  const fn = function f() {
+  const fn = function b() {
     let tmp3 = featureName === EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE;
     if (tmp3) {
       tmp3 = null != analyticsLocation;
@@ -373,6 +373,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
     showShadow = true;
   }
   let useTier0UpsellContent;
+  c4 = undefined;
   let loading;
   let obj = featureName(useTier0UpsellContent[16]);
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(featureName(useTier0UpsellContent[15]).getUpsellType(featureName));
@@ -380,12 +381,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   const tmp4 = closure_17(useTier0UpsellContent);
   closure_3 = tmp4;
   let obj2 = featureName(useTier0UpsellContent[15]);
-  let mobileEmojiPickerUpsellRestyleEnabledForFeature = featureName(useTier0UpsellContent[17]).getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
-  if (!mobileEmojiPickerUpsellRestyleEnabledForFeature) {
-    mobileEmojiPickerUpsellRestyleEnabledForFeature = tmp(tmp2[18]).getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
-    let tmpResult = tmp(tmp2[18]);
+  let result = featureName(useTier0UpsellContent[15]).isEmojiPickerUpsellFeature(featureName);
+  if (!result) {
+    result = tmp(tmp2[17]).getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
+    let tmpResult = tmp(tmp2[17]);
   }
-  const obj3 = featureName(useTier0UpsellContent[17]);
+  c4 = result;
+  const obj3 = featureName(useTier0UpsellContent[15]);
   const tmp7 = getPremiumUpsellLabel(useTier0UpsellContent ? closure_10.TIER_0 : closure_10.TIER_2, featureName, () => {
     let tmp3 = featureName === EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE;
     if (tmp3) {
@@ -408,13 +410,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   items[1] = showShadow;
   items[2] = featureName.style;
   const obj5 = { style: tmp4.labelContainer, children: null };
-  if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
+  if (result) {
     let items1 = [tmp13, ];
     const obj6 = { style: tmp4.text, variant: "text-sm/medium", children: tmp7 };
-    items1[1] = closure_14(tmp(tmp2[25]).Text, obj6);
+    items1[1] = closure_14(tmp(tmp2[24]).Text, obj6);
     obj5.children = items1;
     const items2 = [closure_15(closure_7, obj5), ];
-    const obj7 = { disabled: loading, shrink: true, style: tmp4.button, size: tmp(tmp2[22]).ButtonSizes.XSMALL, onPress: tmp9Result.onPress, text: null, color: null, renderIcon: null, renderLinearGradient: null };
+    const obj7 = { disabled: loading, shrink: true, style: tmp4.button, size: tmp(tmp2[21]).ButtonSizes.XSMALL, onPress: tmp9Result.onPress, text: null, color: null, renderIcon: null, renderLinearGradient: null };
     const intl = tmp(tmp2[10]).intl;
     const string = intl.string;
     const t = tmp(tmp2[10]).t;
@@ -424,9 +426,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
       stringResult = string(t["8x0jKT"]);
     }
     obj7.text = stringResult;
-    obj7.color = tmp(tmp2[22]).ButtonColors.GREEN;
+    obj7.color = tmp(tmp2[21]).ButtonColors.GREEN;
     obj7.renderIcon = function renderIcon() {
-      if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
+      if (c4) {
         const obj2 = { size: "xxs", color: nativeDefault.colors.WHITE, style: null };
         const items = [closure_3.nitroWheelIcon, ];
         let nitroWheelDisabled2 = loading;
@@ -453,12 +455,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
       const obj = { style: closure_3.gradient, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: useTier0UpsellContent ? Gradients.PREMIUM_TIER_0 : Gradients.PREMIUM_TIER_2_TRI_COLOR };
       return closure_2_14(LinearGradientDefault, obj);
     };
-    items2[1] = closure_14(tmp(tmp2[22]).ShinyButton, obj7);
+    items2[1] = closure_14(tmp(tmp2[21]).ShinyButton, obj7);
     obj4.children = items2;
     return closure_15(closure_7, obj4);
   } else {
-    const obj8 = { source: importDefault(useTier0UpsellContent ? tmp2[23] : tmp2[24]), style: tmp4.nitroWheel, disableColor: true };
-    closure_14(tmp(tmp2[22]).Icon, obj8);
+    const obj8 = { source: importDefault(useTier0UpsellContent ? tmp2[22] : tmp2[23]), style: tmp4.nitroWheel, disableColor: true };
+    closure_14(tmp(tmp2[21]).Icon, obj8);
   }
   const tmpResult2 = featureName(useTier0UpsellContent[15]);
 });
@@ -477,13 +479,13 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5383).withSpring, springStandard: fn(5387).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5438).withSpring, springStandard: fn(5442).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = { code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}" };
 ReactCompilerGating = fn(558);
-let obj3 = { withSpring: fn(5383).withSpring, springStandard: fn(5387).springStandard };
+let obj3 = { withSpring: fn(5438).withSpring, springStandard: fn(5442).springStandard };
 let size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
+let result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumFeatureUpsell(shouldShow) {
   const cResult = require("c").c(12);
@@ -500,41 +502,41 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
     tmp5 = cResult[2];
   }
   const ref = noop.useRef(false);
-  analyticsLocations = ref(tmp2[31])().analyticsLocations;
+  analyticsLocations = ref(tmp2[30])().analyticsLocations;
   let obj = require("c");
   _location = require("analytics").useAnalyticsContext().location;
-  const tmp10 = ref(analyticsLocations[33])(tmp5);
+  const tmp10 = ref(analyticsLocations[32])(tmp5);
   _objectWithoutProperties = tmp10;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
+    class I {
       constructor(arg0, arg1) {
         obj = { style: arg1, children: null };
         obj1 = {};
         merged = Object.assign(shouldShow);
         obj.children = closure_1_14(closure_1_18, obj1);
-        return closure_1_14(closure_1(analyticsLocations[34]).View, obj);
+        return closure_1_14(closure_1(analyticsLocations[33]).View, obj);
       }
     }
-    cResult[3] = R;
+    cResult[3] = I;
   } else {
-    class R {
+    class I {
       constructor(arg0, arg1) {
         obj = { style: arg1, children: null };
         obj1 = {};
         merged = Object.assign(shouldShow);
         obj.children = closure_1_14(closure_1_18, obj1);
-        return closure_1_14(closure_1(analyticsLocations[34]).View, obj);
+        return closure_1_14(closure_1(analyticsLocations[33]).View, obj);
       }
     }
   }
   if (cResult[4] === analyticsLocations) {
-    class R {
+    class I {
       constructor(arg0, arg1) {
         obj = { style: arg1, children: null };
         obj1 = {};
         merged = Object.assign(shouldShow);
         obj.children = closure_1_14(closure_1_18, obj1);
-        return closure_1_14(closure_1(analyticsLocations[34]).View, obj);
+        return closure_1_14(closure_1(analyticsLocations[33]).View, obj);
       }
     }
   }
@@ -549,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       if (tmp2) {
         tmp3 = closure_1;
         tmp4 = closure_2;
-        obj = closure_1(closure_2[19]);
+        obj = closure_1(closure_2[18]);
         tmp5 = AnalyticEvents;
         tmp6 = closure_0;
         featureName = closure_0.featureName;
@@ -608,16 +610,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   let merged = Object.assign(shouldShow, Object.assign({ shouldShow: 0 }));
   let analyticsLocations;
   const ref = noop.useRef(false);
-  analyticsLocations = ref(analyticsLocations[31])().analyticsLocations;
-  const _location = merged(analyticsLocations[32]).useAnalyticsContext().location;
-  const tmp3 = ref(analyticsLocations[33])(shouldShow.shouldShow);
+  analyticsLocations = ref(analyticsLocations[30])().analyticsLocations;
+  const _location = merged(analyticsLocations[31]).useAnalyticsContext().location;
+  const tmp3 = ref(analyticsLocations[32])(shouldShow.shouldShow);
   closure_4 = tmp3;
   const items = [ref, _location, analyticsLocations, tmp3, merged.featureName];
   const callback = noop.useCallback((arg0, style) => {
     const obj = { style, children: null };
     merged = Object.assign(arg0);
     obj.children = closure_1_14(closure_1_18, {});
-    return closure_1_14(ref(analyticsLocations[34]).View, obj);
+    return closure_1_14(ref(analyticsLocations[33]).View, obj);
   }, []);
   const effect = noop.useEffect(() => {
     const current = ref.current;
@@ -654,9 +656,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
     }
   }, items);
   let tmp8;
-  let obj = merged(analyticsLocations[32]);
+  let obj = merged(analyticsLocations[31]);
   if (tmp3) {
     tmp8 = merged;
   }
-  return closure_14(ref(analyticsLocations[35]), { useReducedMotion: false, item: tmp8, entering: animationEnterExit, exiting: animationEnterExit, renderItem: callback });
+  return closure_14(ref(analyticsLocations[34]), { useReducedMotion: false, item: tmp8, entering: animationEnterExit, exiting: animationEnterExit, renderItem: callback });
 });

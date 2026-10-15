@@ -1,37 +1,37 @@
-// === Module 9336: ForumHooks ===
+// === Module 9547: ForumHooks ===
 
-// Module 9336 (ForumHooks)
+// Module 9547 (ForumHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import useMessageAuthor from "useMessageAuthor" /* 5632 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6804 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8146 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8486 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
+import useMessageAuthor from "useMessageAuthor" /* 5843 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7020 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8356 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8697 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5992 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6039 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6065 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7013 */;
+import EmojiStore from "EmojiStore" /* 6203 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6250 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6276 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7226 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5956 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6167 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import ReadStateStore from "ReadStateStore" /* 6040 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import ReadStateStore from "ReadStateStore" /* 6251 */;
 import UserStore from "UserStore" /* 1390 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7012 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6992 */;
-import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 9337 */;
-import ForumSearchStore from "ForumSearchStore" /* 7912 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7225 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7205 */;
+import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 9548 */;
+import ForumSearchStore from "ForumSearchStore" /* 8122 */;
 
 const ThreadSortOrder = tmp(2074);
-const ForumUtils = tmp(7014);
-const ThreadUtils = tmp(7930);
+const ForumUtils = tmp(7227);
+const ThreadUtils = tmp(8140);
 require = fn;
-const ForumTimestampFormats = fn(6988).ForumTimestampFormats;
+const ForumTimestampFormats = fn(7201).ForumTimestampFormats;
 const Constants = fn(1085);
 ({ AnalyticsObjectTypes: closure_20, AnalyticsObjects: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(2072).ChannelFlags;
@@ -1018,7 +1018,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useForumPos
   const obj = id(576);
   const stateFromStores = id(504).useStateFromStores(tmp7, tmp9);
   const tmpResult = id(504);
-  const nullableMessageAuthor = id(5632).useNullableMessageAuthor(author);
+  const nullableMessageAuthor = id(5843).useNullableMessageAuthor(author);
   if (cResult[5] === tmp5) {
     if (cResult[6] === id) {
       let tmp12 = cResult[7];
@@ -1084,7 +1084,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useForumPos
   cResult[8] = items1;
   tmp13 = items1;
   tmp12 = fn2;
-  const tmpResult2 = id(5632);
+  const tmpResult2 = id(5843);
 }) : (function useForumPostMessageAuthor(author, getGuildId) {
   let id;
   if (author != null) {
@@ -1097,7 +1097,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useForumPos
   const items = [UserStore];
   const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
   const obj = id(504);
-  const nullableMessageAuthor = id(5632).useNullableMessageAuthor(author);
+  const nullableMessageAuthor = id(5843).useNullableMessageAuthor(author);
   const items1 = [guildId, id];
   const effect = noop.useEffect(() => {
     let tmp2 = null != id;
@@ -1852,9 +1852,9 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoma
   const fn = function b() {
     if (null == searchQuery) {
       if (null != ref.current) {
-        closure_1(9338).clearForumSearch(user.id);
+        closure_1(9549).clearForumSearch(user.id);
         tmp.current = null;
-        const obj2 = closure_1(9338);
+        const obj2 = closure_1(9549);
       }
     }
     if (null != searchQuery) {
@@ -1885,8 +1885,8 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoma
               }
             }
           } else {
-            closure_1(9338).clearForumSearch(user.id);
-            const obj = closure_1(9338);
+            closure_1(9549).clearForumSearch(user.id);
+            const obj = closure_1(9549);
           }
         }
       }
@@ -1936,9 +1936,9 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoma
   const effect = isSearchLoading.useEffect(() => {
     if (null == searchQuery) {
       if (null != ref.current) {
-        closure_1(9338).clearForumSearch(user.id);
+        closure_1(9549).clearForumSearch(user.id);
         tmp.current = null;
-        const obj2 = closure_1(9338);
+        const obj2 = closure_1(9549);
       }
     }
     if (null != searchQuery) {
@@ -1969,8 +1969,8 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoma
               }
             }
           } else {
-            closure_1(9338).clearForumSearch(user.id);
-            const obj = closure_1(9338);
+            closure_1(9549).clearForumSearch(user.id);
+            const obj = closure_1(9549);
           }
         }
       }

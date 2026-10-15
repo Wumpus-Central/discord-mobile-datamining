@@ -1,6 +1,6 @@
-// === Module 6098: transformSKUTenantMetadata ===
+// === Module 6314: transformSKUTenantMetadata ===
 
-// Module 6098 (transformSKUTenantMetadata)
+// Module 6314 (transformSKUTenantMetadata)
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
 import size from "module_2" /* 2 */;
 

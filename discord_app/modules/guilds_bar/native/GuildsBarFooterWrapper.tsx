@@ -1,14 +1,14 @@
-// === Module 17145: GuildsBarFooterWrapper ===
+// === Module 17385: GuildsBarFooterWrapper ===
 
-// Module 17145 (GuildsBarFooterWrapper)
+// Module 17385 (GuildsBarFooterWrapper)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4820 */;
-import NativeViewDefault from "NativeView" /* 6166 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16801 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 17080 */;
-import createStyles from "createStyles" /* 5096 */;
+import useToken from "useToken" /* 4874 */;
+import NativeViewDefault from "NativeView" /* 6382 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17040 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 17320 */;
+import createStyles from "createStyles" /* 5151 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

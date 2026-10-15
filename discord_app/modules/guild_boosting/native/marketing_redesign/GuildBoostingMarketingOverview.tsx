@@ -1,8 +1,8 @@
-// === Module 7102: GuildBoostingMarketingOverview ===
+// === Module 7317: GuildBoostingMarketingOverview ===
 
-// Module 7102 (GuildBoostingMarketingOverview)
+// Module 7317 (GuildBoostingMarketingOverview)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7123 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7338 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -14,7 +14,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

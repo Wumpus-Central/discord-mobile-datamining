@@ -1,17 +1,17 @@
-// === Module 16172: UserSettingsCommunityNotifications ===
+// === Module 16468: UserSettingsCommunityNotifications ===
 
-// Module 16172 (UserSettingsCommunityNotifications)
+// Module 16468 (UserSettingsCommunityNotifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1126 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import TableSwitchRow from "TableSwitchRow" /* 6901 */;
+import TableRowGroup from "TableRowGroup" /* 6485 */;
+import TableSwitchRow from "TableSwitchRow" /* 7115 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10797 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11021 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ container: { paddingHorizontal: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -117,8 +117,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     const mapped = keys.map(tmp16);
     const container = tmp4.container;
-    const Form = tmp(8587).Form;
-    const Stack = tmp(5382).Stack;
+    const Form = tmp(8800).Form;
+    const Stack = tmp(5437).Stack;
   }
 }) : (function UserSettingsCommunityNotifications() {
   const tmp = closure_6();
@@ -159,8 +159,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
         })
     };
-    obj3.children = closure_4(tmp2(5382).Stack, obj4);
-    tmp5 = closure_4(tmp2(8587).Form, obj3);
+    obj3.children = closure_4(tmp2(5437).Stack, obj4);
+    tmp5 = closure_4(tmp2(8800).Form, obj3);
   }
   return tmp5;
 });

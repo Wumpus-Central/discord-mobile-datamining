@@ -1,8 +1,10 @@
-// === Module 11395: FramePoolManager ===
+// === Module 11619: FramePoolManager ===
 
-// Module 11395 (FramePoolManager)
-import leaveFrame from "leaveFrame" /* 10726 */;
-import AbstractFramePoolManager from "AbstractFramePoolManager" /* 11396 */;
+// Module 11619 (FramePoolManager)
+import leaveFrame from "leaveFrame" /* 10948 */;
+import FrameStackLevel from "FrameStackLevel" /* 11622 */;
+import FrameVisibilityStore from "FrameVisibilityStore" /* 11620 */;
+import AbstractFramePoolManager from "AbstractFramePoolManager" /* 11621 */;
 
 require = fn;
 class FramePoolManager extends tmp4 {
@@ -10,6 +12,11 @@ class FramePoolManager extends tmp4 {
     tmp1 = new tmp({ maxBackgrounded: 1, timeoutMs: 90000 }, new.target, tmp);
     tmp1.poolNodeTag = 0;
     return tmp1;
+  }
+  removeFrameEntry(arg0) {
+    removeFrameEntryResult = super.removeFrameEntry(global);
+    removeFrameResult = closure_2.removeFrame(global);
+    return;
   }
 }
 const prototype = FramePoolManager.prototype;
@@ -23,18 +30,19 @@ prototype["setPoolNodeTag"] = function setPoolNodeTag(poolNodeTag) {
 prototype["getPoolNodeTag"] = function getPoolNodeTag() {
   return this.poolNodeTag;
 };
-prototype["place"] = function place() {
-
+prototype["place"] = function place(id, target, level) {
+  FrameVisibilityStore.setFrameVisible(id, level !== FrameStackLevel.FrameStackLevel.Backstage);
 };
-prototype["unplace"] = function unplace() {
-
+prototype["unplace"] = function unplace(id) {
+  FrameVisibilityStore.setFrameVisible(id, false);
 };
-prototype["destroyFrame"] = function destroyFrame(id) {
+function destroyFrame(id) {
   leaveFrame.leaveFrame(id);
-};
-const tmp5 = new "destroyFrame"({ maxBackgrounded: 1, timeoutMs: 90000 }, tmp2, tmp, prototype, FramePoolManager, "destroyFrame", new.target);
-tmp5.poolNodeTag = 0;
+}
+prototype["destroyFrame"] = destroyFrame;
+const destroyFrame1 = new destroyFrame({ maxBackgrounded: 1, timeoutMs: 90000 }, tmp2, tmp, Object, "destroyFrame", FramePoolManager, destroyFrame);
+destroyFrame1.poolNodeTag = 0;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePoolManager.tsx");
 
-export default tmp5;
+export default destroyFrame1;

@@ -1,6 +1,6 @@
-// === Module 12419: MobileEmojiSuggestionsExperiment ===
+// === Module 12712: MobileEmojiSuggestionsExperiment ===
 
-// Module 12419 (MobileEmojiSuggestionsExperiment)
+// Module 12712 (MobileEmojiSuggestionsExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -24,6 +24,6 @@ export const useMobileEmojiSuggestionsConfig = ReactCompilerGating.isReactCompil
 }) : (function useMobileEmojiSuggestionsConfig(location) {
   return closure_2.useConfig({ location: location.location });
 });
-export const getIsMobileEmojiSuggestionsConfig = function getIsMobileEmojiSuggestionsConfig(location) {
-  return closure_2.getConfig({ location: location.location });
+export const trackMobileEmojiSuggestionsExposure = function trackMobileEmojiSuggestionsExposure(location) {
+  const config = closure_2.getConfig({ location: location.location });
 };

@@ -1,24 +1,24 @@
-// === Module 17751: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 17991: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 17751 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 17991 (IncentivizedAccountLinkConfirmationBottomSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import _modDef3344 from "module_3344" /* 3344 */;
-import LinkingDefault from "Linking" /* 4808 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
-import components_Button_Button from "components/Button/Button" /* 5384 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9018 */;
-import PromoSheet from "PromoSheet" /* 10334 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 13402 */;
-import _modDef16587 from "module_16587" /* 16587 */;
-import _modDef16588 from "module_16588" /* 16588 */;
+import _modDef3346 from "module_3346" /* 3346 */;
+import LinkingDefault from "Linking" /* 4862 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+import components_Button_Button from "components/Button/Button" /* 5439 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9230 */;
+import PromoSheet from "PromoSheet" /* 10557 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13698 */;
+import _modDef16826 from "module_16826" /* 16826 */;
+import _modDef16827 from "module_16827" /* 16827 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5085 */;
+import AccessibilityStore from "AccessibilityStore" /* 5140 */;
 
 require = fn;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
@@ -66,21 +66,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
   if (cResult[4] !== stateFromStores) {
     if (stateFromStores) {
       let obj2 = { source: null, style: null };
-      const obj3 = { uri: _modDef16587 };
+      const obj3 = { uri: _modDef16826 };
       obj2.source = obj3;
       const size = { width: v150, height: v150 };
       obj2.style = size;
       let tmp11Result = jsx(FastImageDefault, { source: null, style: null });
     } else {
       if (tmpResult2.isAndroid()) {
-        const obj4 = { url: _modDef16588, style: null };
+        const obj4 = { url: _modDef16827, style: null };
         const size1 = { width: v150, height: v150 };
         obj4.style = size1;
-        tmp11Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16588, style: null });
+        tmp11Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16827, style: null });
         const tmp12Result = APNGDecorationNativeComponentDefault;
       } else {
         const obj5 = { source: null, resizeMode: "contain", style: null };
-        const obj6 = { uri: _modDef16588 };
+        const obj6 = { uri: _modDef16827 };
         obj5.source = obj6;
         const size2 = { width: v150, height: v150 };
         obj5.style = size2;
@@ -109,9 +109,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
     const _Symbol2 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
       const intl2 = util.intl;
-      const stringResult = intl2.string(_modDef3344.ublzTG);
+      const stringResult = intl2.string(_modDef3346.ublzTG);
       const intl3 = util.intl;
-      const stringResult1 = intl3.string(_modDef3344.JgM2xu);
+      const stringResult1 = intl3.string(_modDef3346.JgM2xu);
       cResult[7] = stringResult;
       cResult[8] = stringResult1;
       let tmp28 = stringResult1;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     let obj2 = { source: null, style: null };
-    const obj3 = { uri: _modDef16587 };
+    const obj3 = { uri: _modDef16826 };
     obj2.source = obj3;
     const size = { width: v150, height: v150 };
     obj2.style = size;
@@ -145,16 +145,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      const obj4 = { url: _modDef16588, style: null };
+      const obj4 = { url: _modDef16827, style: null };
       const size1 = { width: v150, height: v150 };
       obj4.style = size1;
-      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16588, style: null });
+      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16827, style: null });
       tmp8 = importDefault;
       tmp9 = jsx;
       const tmp4Result = APNGDecorationNativeComponentDefault;
     } else {
       const obj5 = { source: null, resizeMode: "contain", style: null };
-      const obj6 = { uri: _modDef16588 };
+      const obj6 = { uri: _modDef16827 };
       obj5.source = obj6;
       const size2 = { width: v150, height: v150 };
       obj5.style = size2;
@@ -178,9 +178,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
   const obj8 = { size: "sm", color: tmp8(587).colors.WHITE };
   const obj9 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
   const intl2 = util.intl;
-  obj9.title = intl2.string(tmp8(3344).ublzTG);
+  obj9.title = intl2.string(tmp8(3346).ublzTG);
   const intl3 = util.intl;
-  obj9.description = intl3.string(tmp8(3344).JgM2xu);
+  obj9.description = intl3.string(tmp8(3346).JgM2xu);
   obj9.actions = tmp9(components_Button_Button.Button, obj7);
   obj9.illustration = tmp3Result;
   obj9.onDismiss = function handleDismiss() {

@@ -1,20 +1,20 @@
-// === Module 6783: MemberVerificationAlertUpdate ===
+// === Module 6999: MemberVerificationAlertUpdate ===
 
-// Module 6783 (MemberVerificationAlertUpdate)
+// Module 6999 (MemberVerificationAlertUpdate)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import LinkingDefault from "Linking" /* 4808 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import common_AlertDefault from "common/Alert" /* 5403 */;
-import _modDef6784 from "module_6784" /* 6784 */;
+import LinkingDefault from "Linking" /* 4862 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import common_AlertDefault from "common/Alert" /* 5458 */;
+import _modDef7000 from "module_7000" /* 7000 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const DownloadLinks = fn(1085).DownloadLinks;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 }, header: { marginTop: 24, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     [tmp5, tmp6, tmp7] = cResult;
   }
   if (cResult[3] !== tmp4.headerImage) {
-    const obj2 = { source: _modDef6784, style: tmp4.headerImage };
+    const obj2 = { source: _modDef7000, style: tmp4.headerImage };
     const tmp14 = React4(FastImageDefault, obj2);
     cResult[3] = tmp4.headerImage;
     cResult[4] = tmp14;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   obj.onCancel = onClose.onClose;
   const obj2 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj2.source = _modDef6784;
+  obj2.source = _modDef7000;
   obj2.style = tmp.headerImage;
   const items = [React4(FastImageDefault, obj2), , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };

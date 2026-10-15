@@ -1,16 +1,16 @@
-// === Module 12795: useGuildPowerupsNewBadge ===
+// === Module 13092: useGuildPowerupsNewBadge ===
 
-// Module 12795 (useGuildPowerupsNewBadge)
+// Module 13092 (useGuildPowerupsNewBadge)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 2050 */;
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12790 */;
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 13087 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5009 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5063 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(5010).GuildPowerupNewPerkMarketingVersion;
+const constants = fn(5064).GuildPowerupNewPerkMarketingVersion;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 let closure_8 = fn(2049).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 let ReactCompilerGating = fn(558);

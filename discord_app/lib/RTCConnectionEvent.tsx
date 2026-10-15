@@ -1,6 +1,6 @@
-// === Module 5230: RTCConnectionEvent ===
+// === Module 5285: RTCConnectionEvent ===
 
-// Module 5230 (RTCConnectionEvent)
+// Module 5285 (RTCConnectionEvent)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/RTCConnectionEvent.tsx");

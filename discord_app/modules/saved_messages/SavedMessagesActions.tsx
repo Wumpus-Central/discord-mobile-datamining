@@ -1,9 +1,9 @@
-// === Module 13192: SavedMessagesActions ===
+// === Module 13488: SavedMessagesActions ===
 
-// Module 13192 (SavedMessagesActions)
+// Module 13488 (SavedMessagesActions)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 9691 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 9899 */;
 
 require = fn;
 let closure_6 = async function _upsertSavedMessage() {
@@ -78,7 +78,7 @@ let closure_11 = async function _fetchBookmarks() {
           let body;
           c6 = 1;
           c7 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {

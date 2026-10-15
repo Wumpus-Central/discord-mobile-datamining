@@ -1,8 +1,8 @@
-// === Module 5149: Camera ===
+// === Module 5204: Camera ===
 
-// Module 5149 (Camera)
+// Module 5204 (Camera)
 import c from "c" /* 576 */;
-import VideoDefault from "Video" /* 5145 */;
+import VideoDefault from "Video" /* 5200 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

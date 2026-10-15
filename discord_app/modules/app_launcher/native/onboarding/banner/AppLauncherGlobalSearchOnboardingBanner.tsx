@@ -1,8 +1,8 @@
-// === Module 11618: AppLauncherGlobalSearchOnboardingBanner ===
+// === Module 11843: AppLauncherGlobalSearchOnboardingBanner ===
 
-// Module 11618 (AppLauncherGlobalSearchOnboardingBanner)
+// Module 11843 (AppLauncherGlobalSearchOnboardingBanner)
 import nativeDefault from "native" /* 587 */;
-import AppsIcon from "AppsIcon" /* 8241 */;
+import AppsIcon from "AppsIcon" /* 8451 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1502).DEFAULT_CONTENT_PADDING;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { appsIcon: null, appsIconImage: null };
 let size = { height: 40, width: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj2.appsIcon = size;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalSe
               }
             }
           }
-          Coachmark = Coachmark(9461).Coachmark;
+          Coachmark = Coachmark(9672).Coachmark;
           const obj2 = { renderImgComponent: tmp9, title: tmp12, description: tmp13, onDismiss: tmp16, targetMeasurements: tmp17, surfaceMeasurements: tmp18, position: "bottom" };
           tmp = <Coachmark renderImgComponent={tmp9} title={tmp12} description={tmp13} onDismiss={tmp16} targetMeasurements={tmp17} surfaceMeasurements={tmp18} position="bottom" />;
           cResult[16] = tmp9;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalSe
     obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
     obj.surfaceMeasurements = size1;
-    tmp3 = jsx(markAsDismissed(9461).Coachmark, {
+    tmp3 = jsx(markAsDismissed(9672).Coachmark, {
       renderImgComponent: function appsIcon() {
           const obj = { style: closure_2.appsIcon, children: jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }) };
           return <View style={closure_2.appsIcon}>{jsx(AppsIcon.AppsIcon, { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE })}</View>;

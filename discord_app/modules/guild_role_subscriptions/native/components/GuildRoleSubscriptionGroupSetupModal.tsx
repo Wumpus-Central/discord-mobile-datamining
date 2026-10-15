@@ -1,10 +1,10 @@
-// === Module 18634: GuildRoleSubscriptionGroupSetupModal ===
+// === Module 18873: GuildRoleSubscriptionGroupSetupModal ===
 
-// Module 18634 (GuildRoleSubscriptionGroupSetupModal)
+// Module 18873 (GuildRoleSubscriptionGroupSetupModal)
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4810 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5111 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15872 */;
+import ToastUtils from "ToastUtils" /* 4864 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5166 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16168 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -106,8 +106,8 @@ let closure_15 = async function _createGroupFromStore(arg0) {
   }
 };
 let closure_4 = ["editStateId"];
-const useRoleTierEditStore = fn(18593).useRoleTierEditStore;
-const GuildRoleSubscriptionsConstants = fn(15850);
+const useRoleTierEditStore = fn(18832).useRoleTierEditStore;
+const GuildRoleSubscriptionsConstants = fn(16146);
 ({ GuildRoleSubscriptionsTierScenes: c10, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_11 } = GuildRoleSubscriptionsConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -141,7 +141,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleS
   first1 = tmp12[0];
   asyncGeneratorStep = tmp12[1];
   const tmpResult2 = require("GuildRoleSubscriptionsHooks");
-  const createOrUpdateListingFromEditState = first(15872).useCreateOrUpdateListingFromEditState();
+  const createOrUpdateListingFromEditState = first(16168).useCreateOrUpdateListingFromEditState();
   handleCreateOrUpdateFromEditState = createOrUpdateListingFromEditState.handleCreateOrUpdateFromEditState;
   if (error == null) {
     error = createOrUpdateListingFromEditState.error;
@@ -273,14 +273,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleS
                       }
                     }
                     let obj8 = { guildId, editStateId: first1, groupListingId: null, children: tmp36 };
-                    const tmp41 = jsx(tmp(18611).EditStateContextProvider, { guildId, editStateId: first1, groupListingId: null, children: tmp36 });
+                    const tmp41 = jsx(tmp(18850).EditStateContextProvider, { guildId, editStateId: first1, groupListingId: null, children: tmp36 });
                     cResult[25] = first1;
                     cResult[26] = guildId;
                     cResult[27] = tmp36;
                     cResult[28] = tmp41;
                   }
                   const obj9 = { guildId, children: tmp27 };
-                  const tmp38 = jsx(tmp(18588).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: tmp27 });
+                  const tmp38 = jsx(tmp(18827).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: tmp27 });
                   cResult[22] = guildId;
                   cResult[23] = tmp27;
                   cResult[24] = tmp38;
@@ -292,11 +292,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleS
                 obj10.steps = tmp21;
                 obj10.onClose = X;
                 obj10.stepScreenPropsMap = tmp24;
-                const tmp35 = jsx(guildId(18603), {});
+                const tmp35 = jsx(guildId(18842), {});
                 cResult[19] = tmp16;
                 cResult[20] = tmp5;
                 cResult[21] = tmp35;
-                const tmp30 = guildId(18603);
+                const tmp30 = guildId(18842);
               }
             }
           }
@@ -430,7 +430,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleS
   cResult[10] = updateSubscriptionsSettings;
   cResult[11] = handleCreateGroupAndTier;
   tmp16 = handleCreateGroupAndTier;
-  let obj5 = first(15872);
+  let obj5 = first(16168);
 }) : (function GuildRoleSubscriptionGroupSetupModal(editStateId) {
   let merged = Object.assign(editStateId, Object.assign({ editStateId: 0 }));
   importAll = undefined;
@@ -489,8 +489,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleS
                     const intl = merged(1126).intl;
                     closure_1 = intl.string(merged(1126).t.ZUEGFn);
                   }
-                  merged(4810).presentError(closure_1);
-                  const obj8 = merged(4810);
+                  merged(4864).presentError(closure_1);
+                  const obj8 = merged(4864);
                 }
                 const obj5 = {
                   guildId: closure_131_1,
@@ -540,12 +540,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleS
   const guildId = merged.guildId;
   [c2, c3] = noop.useState();
   const tmp2 = _slicedToArray(noop.useState(), 2);
-  closure_4 = merged(15857).useCreateSubscriptionGroupListing().createSubscriptionGroupListing;
-  let obj2 = merged(15857);
-  const updateSubscriptionsSettings = merged(15857).useUpdateSubscriptionsSettings();
+  closure_4 = merged(16153).useCreateSubscriptionGroupListing().createSubscriptionGroupListing;
+  let obj2 = merged(16153);
+  const updateSubscriptionsSettings = merged(16153).useUpdateSubscriptionsSettings();
   ({ updateSubscriptionsSettings: c5, error } = updateSubscriptionsSettings);
   [editStateId, closure_7] = noop.useState(editStateId.editStateId);
-  let obj3 = merged(15857);
+  let obj3 = merged(16153);
   const createOrUpdateListingFromEditState = GuildRoleSubscriptionListingEditStateUtilsAll.useCreateOrUpdateListingFromEditState();
   noop = createOrUpdateListingFromEditState.handleCreateOrUpdateFromEditState;
   if (error == null) {
@@ -599,9 +599,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRoleS
   obj7.steps = memo;
   obj7.onClose = callback;
   obj7.stepScreenPropsMap = memo1;
-  obj6.children = jsx(guildId(18603), {});
-  obj5.children = jsx(merged(18588).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: null });
-  return jsx(merged(18611).EditStateContextProvider, { guildId, editStateId, groupListingId: null, children: null });
+  obj6.children = jsx(guildId(18842), {});
+  obj5.children = jsx(merged(18827).RoleSubscriptionSettingsDisabledContextProvider, { guildId, children: null });
+  return jsx(merged(18850).EditStateContextProvider, { guildId, editStateId, groupListingId: null, children: null });
 });
 tmp3.modalConfig = { closable: false };
 const size = fn(2);

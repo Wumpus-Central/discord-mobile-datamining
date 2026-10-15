@@ -536,7 +536,7 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1388).isNotNullish);
+  found = items.filter(found(1386).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -595,7 +595,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                     return obj2;
                   }
                 });
-                found = mapped.filter(closure_0(1388).isNotNullish);
+                found = mapped.filter(closure_0(1386).isNotNullish);
                 closure_130_0 = found;
                 c5 = 1;
                 let _Promise = Promise;

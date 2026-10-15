@@ -1,6 +1,6 @@
-// === Module 7142: AppleProductIds ===
+// === Module 7357: AppleProductIds ===
 
-// Module 7142 (AppleProductIds)
+// Module 7357 (AppleProductIds)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AppleProductIds.tsx");

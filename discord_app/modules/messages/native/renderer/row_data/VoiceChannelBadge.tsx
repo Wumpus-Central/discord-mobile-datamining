@@ -1,15 +1,15 @@
-// === Module 13860: VoiceChannelBadge ===
+// === Module 14156: VoiceChannelBadge ===
 
-// Module 13860 (VoiceChannelBadge)
+// Module 14156 (VoiceChannelBadge)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 5913 */;
-import AgeGateUtils from "AgeGateUtils" /* 5929 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8166 */;
-import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 13861 */;
+import shouldAgeVerifyForAgeGate from "shouldAgeVerifyForAgeGate" /* 6124 */;
+import AgeGateUtils from "AgeGateUtils" /* 6140 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8376 */;
+import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 14157 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import VoiceStateStore from "VoiceStateStore" /* 5117 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import VoiceStateStore from "VoiceStateStore" /* 5172 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;

@@ -1,10 +1,10 @@
-// === Module 15093: commands/config ===
+// === Module 15389: commands/config ===
 
-// Module 15093 (commands/config)
+// Module 15389 (commands/config)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import RPCErrorDefault from "RPCError" /* 11010 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11013 */;
-import Constants_mod from "Constants" /* 5644 */;
+import RPCErrorDefault from "RPCError" /* 11234 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11237 */;
+import Constants_mod from "Constants" /* 5855 */;
 import Constants_mod from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

@@ -1,17 +1,17 @@
-// === Module 15480: SyncContactsSetting ===
+// === Module 15776: SyncContactsSetting ===
 
-// Module 15480 (SyncContactsSetting)
+// Module 15776 (SyncContactsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12949 */;
-import ContactSyncSettings from "ContactSyncSettings" /* 15481 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5766 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13245 */;
+import ContactSyncSettings from "ContactSyncSettings" /* 15777 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5977 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const PlatformTypes = fn(1085).PlatformTypes;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useContactSyncSettingValue() {
   const cResult = c.c(2);
   const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.uSvEy7);
   },
-  parent: fn(8000).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8210).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useContactSyncSettingValue() {
     const cResult = c.c(2);
     const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();

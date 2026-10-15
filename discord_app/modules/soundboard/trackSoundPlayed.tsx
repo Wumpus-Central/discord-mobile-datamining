@@ -1,15 +1,15 @@
-// === Module 7090: trackSoundPlayed ===
+// === Module 7305: trackSoundPlayed ===
 
-// Module 7090 (trackSoundPlayed)
+// Module 7305 (trackSoundPlayed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import SoundboardTypes from "SoundboardTypes" /* 7055 */;
+import SoundboardTypes from "SoundboardTypes" /* 7270 */;
 import RunningGameStore from "RunningGameStore" /* 2019 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5435).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5490).DEFAULT_SOUND_GUILD_ID;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const PremiumConstants = fn(1392);
 ({ AnalyticsPremiumFeatureNames: closure_9, AnalyticsPremiumFeatureTiers: c10 } = PremiumConstants);

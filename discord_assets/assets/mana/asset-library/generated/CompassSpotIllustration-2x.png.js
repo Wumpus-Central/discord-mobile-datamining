@@ -1,6 +1,6 @@
-// === Module 17569: ? ===
+// === Module 17809: ? ===
 
-// Module 17569
+// Module 17809
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CompassSpotIllustration-2x.png.js");

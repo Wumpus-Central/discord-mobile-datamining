@@ -277,11 +277,11 @@ class ApplicationRecord extends BasicApplicationRecord {
       application_account_link_benefit_config = global.application_account_link_benefit_config;
     }
     tmp2.applicationAccountLinkBenefitConfig = application_account_link_benefit_config;
-    vibegrations_project_id = global.vibegrationsProjectId;
-    if (vibegrations_project_id == null) {
-      vibegrations_project_id = global.vibegrations_project_id;
+    conjure_project_id = global.conjureProjectId;
+    if (conjure_project_id == null) {
+      conjure_project_id = global.conjure_project_id;
     }
-    tmp2.vibegrationsProjectId = vibegrations_project_id;
+    tmp2.conjureProjectId = conjure_project_id;
     parent_id = global.parentId;
     if (parent_id == null) {
       parent_id = global.parent_id;
@@ -362,7 +362,7 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
     });
   }
   obj.linkedGames = mapped2;
-  ({ deeplink_uri: obj.deepLinkUri, application_account_link_benefit_config: obj.applicationAccountLinkBenefitConfig, vibegrations_project_id: obj.vibegrationsProjectId, parent_id: obj.parentId } = bot);
+  ({ deeplink_uri: obj.deepLinkUri, application_account_link_benefit_config: obj.applicationAccountLinkBenefitConfig, conjure_project_id: obj.conjureProjectId, parent_id: obj.parentId } = bot);
   return new ApplicationRecord(obj);
 };
 prototype2["getCanonicalGameId"] = function getCanonicalGameId() {
@@ -397,7 +397,7 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
   if (id == null) {
     id = self.id;
   }
-  let obj = { id, name: null, icon: null, splash: null, overlay: null, overlayWarn: null, overlayCompatibilityHook: null, overlayMethods: null, hook: null, aliases: null, publishers: null, developers: null, primarySkuId: null, storeListingSkuId: null, thirdPartySkus: null, guildId: null, guild: null, executables: null, hashes: null, description: null, eulaId: null, slug: null, coverImage: null, bot: null, flags: null, maxParticipants: null, tags: null, embeddedActivityConfig: null, embeddedSurfaces: null, type: null, team: null, roleConnectionsVerificationUrl: null, _connectionEntrypointUrl: null, integrationTypesConfig: null, isMonetized: null, storefront_available: null, termsOfServiceUrl: null, privacyPolicyUrl: null, isVerified: null, customInstallUrl: null, installParams: null, isDiscoverable: null, directoryEntry: null, categories: null, linkedGames: null, deepLinkUri: null, applicationAccountLinkBenefitConfig: null, vibegrationsProjectId: null, contentClassification: null, parentId: null };
+  let obj = { id, name: null, icon: null, splash: null, overlay: null, overlayWarn: null, overlayCompatibilityHook: null, overlayMethods: null, hook: null, aliases: null, publishers: null, developers: null, primarySkuId: null, storeListingSkuId: null, thirdPartySkus: null, guildId: null, guild: null, executables: null, hashes: null, description: null, eulaId: null, slug: null, coverImage: null, bot: null, flags: null, maxParticipants: null, tags: null, embeddedActivityConfig: null, embeddedSurfaces: null, type: null, team: null, roleConnectionsVerificationUrl: null, _connectionEntrypointUrl: null, integrationTypesConfig: null, isMonetized: null, storefront_available: null, termsOfServiceUrl: null, privacyPolicyUrl: null, isVerified: null, customInstallUrl: null, installParams: null, isDiscoverable: null, directoryEntry: null, categories: null, linkedGames: null, deepLinkUri: null, applicationAccountLinkBenefitConfig: null, conjureProjectId: null, contentClassification: null, parentId: null };
   let name = id.name;
   if (name == null) {
     name = self.name;
@@ -658,11 +658,11 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     applicationAccountLinkBenefitConfig = self.applicationAccountLinkBenefitConfig;
   }
   obj.applicationAccountLinkBenefitConfig = applicationAccountLinkBenefitConfig;
-  let vibegrationsProjectId = id.vibegrationsProjectId;
-  if (vibegrationsProjectId == null) {
-    vibegrationsProjectId = self.vibegrationsProjectId;
+  let conjureProjectId = id.conjureProjectId;
+  if (conjureProjectId == null) {
+    conjureProjectId = self.conjureProjectId;
   }
-  obj.vibegrationsProjectId = vibegrationsProjectId;
+  obj.conjureProjectId = conjureProjectId;
   let contentClassification = id.contentClassification;
   if (contentClassification == null) {
     contentClassification = self.contentClassification;

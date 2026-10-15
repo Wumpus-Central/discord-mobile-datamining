@@ -1,20 +1,20 @@
-// === Module 5248: AudioActionCreators ===
+// === Module 5303: AudioActionCreators ===
 
-// Module 5248 (AudioActionCreators)
+// Module 5303 (AudioActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5229 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5254 */;
-import applyBackgroundOption from "applyBackgroundOption" /* 5258 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5275 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5284 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 5309 */;
+import applyBackgroundOption from "applyBackgroundOption" /* 5313 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 5330 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SpatialAudioStore from "SpatialAudioStore" /* 5249 */;
-import CertifiedDeviceStore from "CertifiedDeviceStore" /* 5252 */;
+import SpatialAudioStore from "SpatialAudioStore" /* 5304 */;
+import CertifiedDeviceStore from "CertifiedDeviceStore" /* 5307 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -56,8 +56,8 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
 }
 const Constants = fn(1085);
 ({ InputModes: closure_11, AnalyticEvents: closure_12 } = Constants);
-const SoundOutputChannel = fn(5253).SoundOutputChannel;
-const MediaEngineContextTypes = fn(5121).MediaEngineContextTypes;
+const SoundOutputChannel = fn(5308).SoundOutputChannel;
+const MediaEngineContextTypes = fn(5176).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
 let closure_16 = debounceDefault((target_user_id, context, volume) => {
@@ -242,8 +242,8 @@ export default {
     closure_16(userId, DEFAULT, snapVolumeToDefaultResult);
     const obj3 = { type: "AUDIO_SET_LOCAL_VOLUME", context: DEFAULT, userId, volume: snapVolumeToDefaultResult };
   },
-  setSpatialAudioOverrides(overrides) {
-    DispatcherDefault.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_OVERRIDES", overrides });
+  setSpatialAudioOverrides(mergeResult) {
+    DispatcherDefault.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_OVERRIDES", overrides: mergeResult });
   },
   setSpatialAudioEnabled(enabled) {
     DispatcherDefault.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_ENABLED", enabled });
@@ -617,7 +617,7 @@ export default {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: v1(5229)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
+              const obj4 = { value: v1(5284)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -698,7 +698,7 @@ export default {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: v1(5229)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
+              const obj4 = { value: v1(5284)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {

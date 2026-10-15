@@ -1,27 +1,27 @@
-// === Module 7236: AutomodMessageUtils ===
+// === Module 7446: AutomodMessageUtils ===
 
-// Module 7236 (AutomodMessageUtils)
+// Module 7446 (AutomodMessageUtils)
 import util from "util" /* 1126 */;
-import useChannelName from "useChannelName" /* 5426 */;
-import AutomodMessageEmbedKeys from "AutomodMessageEmbedKeys" /* 7237 */;
-import AutomodQuarantineUserActionMessageEmbedKeys from "AutomodQuarantineUserActionMessageEmbedKeys" /* 7238 */;
-import AutomodBlockProfileUpdateMessageEmbedKeys from "AutomodBlockProfileUpdateMessageEmbedKeys" /* 7239 */;
-import AutomodQuarantineEventMessageEmbedKeys from "AutomodQuarantineEventMessageEmbedKeys" /* 7240 */;
-import AutomodQuarantineUserMessageEmbedKeys from "AutomodQuarantineUserMessageEmbedKeys" /* 7243 */;
-import AutomodNotificationEmbedKeys from "AutomodNotificationEmbedKeys" /* 7244 */;
-import AutomodAlert from "AutomodAlert" /* 7245 */;
-import AutomodFeedback from "AutomodFeedback" /* 7246 */;
+import useChannelName from "useChannelName" /* 5481 */;
+import AutomodMessageEmbedKeys from "AutomodMessageEmbedKeys" /* 7447 */;
+import AutomodQuarantineUserActionMessageEmbedKeys from "AutomodQuarantineUserActionMessageEmbedKeys" /* 7448 */;
+import AutomodBlockProfileUpdateMessageEmbedKeys from "AutomodBlockProfileUpdateMessageEmbedKeys" /* 7449 */;
+import AutomodQuarantineEventMessageEmbedKeys from "AutomodQuarantineEventMessageEmbedKeys" /* 7450 */;
+import AutomodQuarantineUserMessageEmbedKeys from "AutomodQuarantineUserMessageEmbedKeys" /* 7453 */;
+import AutomodNotificationEmbedKeys from "AutomodNotificationEmbedKeys" /* 7454 */;
+import AutomodAlert from "AutomodAlert" /* 7455 */;
+import AutomodFeedback from "AutomodFeedback" /* 7456 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
-const AutomodInteractionCallbackTypeEmbedKeys = prop(7241);
-const AutomodDecisionOutcomeEmbedKeys = prop(7242);
+const AutomodInteractionCallbackTypeEmbedKeys = prop(7451);
+const AutomodDecisionOutcomeEmbedKeys = prop(7452);
 require = fn;
 function getDecisionOutcomeFromMessage(embeds) {
   const DECISION_OUTCOME = AutomodMessageEmbedKeys.AutomodMessageEmbedKeys.DECISION_OUTCOME;
@@ -737,7 +737,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
   const tmp10 = getQuarantineActionFromMessage(embeds);
   const tmp11 = getQuarantineEventFromMessage(embeds);
   const tmp13 = getDecisionOutcomeFromMessage(embeds);
-  let GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7237).AutomodMessageEmbedKeys.INTERACTION_CALLBACK_TYPE;
+  let GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7447).AutomodMessageEmbedKeys.INTERACTION_CALLBACK_TYPE;
   embeds = embeds.embeds;
   if (embeds == null) {
     embeds = [];
@@ -759,7 +759,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
     }
     const tmp16 = tmp18;
   }
-  GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7237).AutomodMessageEmbedKeys.APPLICATION_NAME;
+  GUILD_ROOM_NOTE_OUTCOME = v4xL9Sk(7447).AutomodMessageEmbedKeys.APPLICATION_NAME;
   let embeds1 = embeds.embeds;
   if (embeds1 == null) {
     embeds1 = [];
@@ -793,7 +793,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
       fn = collapsed;
     }
   }
-  GUILD_ROOM_NOTE_OUTCOME = format(7237).AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME;
+  GUILD_ROOM_NOTE_OUTCOME = format(7447).AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME;
   let embeds2 = embeds.embeds;
   if (embeds2 == null) {
     embeds2 = [];
@@ -820,7 +820,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
     if (null != null) {
       return null;
     } else {
-      GUILD_ROOM_NOTE_OUTCOME = format(7237).AutomodMessageEmbedKeys.GUILD_ROOM_NOTE_OUTCOME;
+      GUILD_ROOM_NOTE_OUTCOME = format(7447).AutomodMessageEmbedKeys.GUILD_ROOM_NOTE_OUTCOME;
       let embeds3 = embeds.embeds;
       if (embeds3 == null) {
         embeds3 = [];
@@ -848,7 +848,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
           return null;
         } else {
           if (null == tmp22) {
-            if (tmp13 !== v4xL9Sk(7242).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
+            if (tmp13 !== v4xL9Sk(7452).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
               intl = v4xL9Sk(1126).intl;
               const obj2 = { channelName, channelHook: fn };
               let formatResult = intl.format(v4xL9Sk(1126).t.IZg0VQ, obj2);
@@ -858,8 +858,8 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
               formatResult = intl5.format(v4xL9Sk(1126).t.lOIOSK, obj4);
             }
           }
-          if (tmp16 !== v4xL9Sk(7241).AutomodInteractionCallbackTypeEmbedKeys.MODAL) {
-            if (tmp13 !== v4xL9Sk(7242).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
+          if (tmp16 !== v4xL9Sk(7451).AutomodInteractionCallbackTypeEmbedKeys.MODAL) {
+            if (tmp13 !== v4xL9Sk(7452).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
               const intl7 = v4xL9Sk(1126).intl;
               const obj5 = { applicationName: tmp22, channelName, channelHook: fn, integrationOwnerHook };
               let formatResult1 = intl7.format(v4xL9Sk(1126).t.AXQufN, obj5);
@@ -871,7 +871,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel,
           } else {
             intl = arg4;
           }
-          if (tmp13 !== v4xL9Sk(7242).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
+          if (tmp13 !== v4xL9Sk(7452).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
             const intl9 = v4xL9Sk(1126).intl;
             v4xL9Sk = v4xL9Sk(1126).t["4xL9Sk"];
             obj7 = { applicationName: tmp22, interactionUserHook: intl, integrationOwnerHook };

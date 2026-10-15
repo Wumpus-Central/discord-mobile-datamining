@@ -1,27 +1,27 @@
-// === Module 16882: RedesignChannelList ===
+// === Module 17121: RedesignChannelList ===
 
-// Module 16882 (RedesignChannelList)
+// Module 17121 (RedesignChannelList)
 import c from "c" /* 576 */;
-import ChannelListState from "ChannelListState" /* 7257 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11583 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12296 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16801 */;
-import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 16912 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16958 */;
-import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 16959 */;
-import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 16967 */;
-import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 17051 */;
-import GuildsEmptyDefault from "GuildsEmpty" /* 17064 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 17077 */;
+import ChannelListState from "ChannelListState" /* 7467 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11808 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 12531 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17040 */;
+import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 17151 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 17197 */;
+import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 17198 */;
+import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 17206 */;
+import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 17291 */;
+import GuildsEmptyDefault from "GuildsEmpty" /* 17304 */;
+import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 17317 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5085 */;
-import ChannelListStore from "ChannelListStore" /* 7255 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16796 */;
+import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import ChannelListStore from "ChannelListStore" /* 7465 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17035 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5120 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5175 */;
 
 require = fn;
 let closure_3 = ["selectedGuildId", "selectedChannelId"];
@@ -47,7 +47,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDra
     c0 = -1;
     navigation = navigation.addListener("tabPress", (arg0) => {
       let timeout = arg0;
-      if (null != obj.coerceGuildsRoute(navigation(10636)())) {
+      if (null != obj.coerceGuildsRoute(navigation(10859)())) {
         if (-1 === timeout) {
           const _clearTimeout2 = clearTimeout;
           clearTimeout(timeout);
@@ -97,7 +97,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDra
     c0 = -1;
     navigation = navigation.addListener("tabPress", (arg0) => {
       let timeout = arg0;
-      if (null != obj.coerceGuildsRoute(navigation(10636)())) {
+      if (null != obj.coerceGuildsRoute(navigation(10859)())) {
         if (-1 === timeout) {
           const _clearTimeout2 = clearTimeout;
           clearTimeout(timeout);
@@ -640,7 +640,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         if (tmpResult6.isFavoritesGuildId(tmp6)) {
           const _Symbol = Symbol;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmpResult7 = tmp(17069);
+            const tmpResult7 = tmp(17309);
             cResult[14] = tmpResult7;
             let tmp30 = tmpResult7;
           } else {
@@ -701,7 +701,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             cResult[27] = tmp24;
             tmp18 = tmp24;
           }
-          tmpResult8 = tmp(9470);
+          tmpResult8 = tmp(9681);
         }
         tmpResult6 = tmp(2090);
       }
@@ -741,7 +741,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           obj4.guild = stateFromStores;
           obj4.selectedChannelId = selectedChannelId;
           obj4.selectedVoiceChannelId = stateFromStores1;
-          return closure_16(tmp2(17069).default, obj4);
+          return closure_16(tmp2(17309).default, obj4);
         } else {
           if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
             const obj5 = { style: merged.style, guildId: selectedGuildId };

@@ -1,9 +1,9 @@
-// === Module 8337: FramePreviewOverrideStore ===
+// === Module 8548: FramePreviewOverrideStore ===
 
-// Module 8337 (FramePreviewOverrideStore)
+// Module 8548 (FramePreviewOverrideStore)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1162 */;
-import FileManagerUtils from "FileManagerUtils" /* 8339 */;
+import FileManagerUtils from "FileManagerUtils" /* 8550 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -222,7 +222,7 @@ let closure_11 = async function _buildOverride(arg0) {
   })();
 };
 const Image = fn(17).Image;
-const FrameOverrideConstants = fn(8338);
+const FrameOverrideConstants = fn(8549);
 ({ MANIFEST_NAME: hasOwnProperty, OVERRIDE_DIR: metroRequire } = FrameOverrideConstants);
 let closure_7 = new LoggerDefault("FramePreviewOverrideStore");
 let closure_8 = 0;

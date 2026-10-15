@@ -1,23 +1,23 @@
-// === Module 13010: ChairIllocon ===
+// === Module 13306: ChairIllocon ===
 
-// Module 13010 (ChairIllocon)
+// Module 13306 (ChairIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import assetHelpers from "assetHelpers" /* 6277 */;
-import _modDef13011 from "module_13011" /* 13011 */;
-import _modDef13012 from "module_13012" /* 13012 */;
-import _modDef13013 from "module_13013" /* 13013 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import assetHelpers from "assetHelpers" /* 6493 */;
+import _modDef13307 from "module_13307" /* 13307 */;
+import _modDef13308 from "module_13308" /* 13308 */;
+import _modDef13309 from "module_13309" /* 13309 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13011 }, 3: null };
-const obj2 = { uri: _modDef13011 };
-obj[2] = { uri: _modDef13012 };
-const obj3 = { uri: _modDef13012 };
-obj[3] = { uri: _modDef13013 };
+let obj = { 1: null, 2: { uri: _modDef13307 }, 3: null };
+const obj2 = { uri: _modDef13307 };
+obj[2] = { uri: _modDef13308 };
+const obj3 = { uri: _modDef13308 };
+obj[3] = { uri: _modDef13309 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13013 };
+const obj4 = { uri: _modDef13309 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ChairIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const ChairIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6277).getAssetSource(obj);
+  obj.source = num(6493).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

@@ -1,7 +1,7 @@
-// === Module 12853: useGuildPowerupOnShowMore ===
+// === Module 13150: useGuildPowerupOnShowMore ===
 
-// Module 12853 (useGuildPowerupOnShowMore)
-import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 12802 */;
+// Module 13150 (useGuildPowerupOnShowMore)
+import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 13099 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

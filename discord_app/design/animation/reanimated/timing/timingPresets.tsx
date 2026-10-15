@@ -1,6 +1,6 @@
-// === Module 5100: timingPresets ===
+// === Module 5155: timingPresets ===
 
-// Module 5100 (timingPresets)
+// Module 5155 (timingPresets)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/animation/reanimated/timing/timingPresets.tsx");

@@ -1,21 +1,17 @@
-// === Module 11935: conjurePlanBot ===
+// === Module 12162: conjurePlanBot ===
 
-// Module 11935 (conjurePlanBot)
+// Module 12162 (conjurePlanBot)
 import Server from "Server" /* 1998 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6952 */;
-import conjurePlanTags from "conjurePlanTags" /* 11930 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7166 */;
+import conjurePlanTags from "conjurePlanTags" /* 12157 */;
 import size from "module_2" /* 2 */;
 
-function isAppCommand(kind) {
-  let hasItem = "launch" !== kind.kind;
-  if (hasItem) {
-    let CHAT = kind.type;
-    if (CHAT == null) {
-      CHAT = Server.ApplicationCommandType.CHAT;
-    }
-    hasItem = set.has(CHAT);
+function isAppCommand(type) {
+  let CHAT = type.type;
+  if (CHAT == null) {
+    CHAT = Server.ApplicationCommandType.CHAT;
   }
-  return hasItem;
+  return set.has(CHAT);
 }
 function isContextMenuExchange(kind) {
   let tmp = "user_command" === kind.kind;

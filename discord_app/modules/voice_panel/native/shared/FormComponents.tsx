@@ -1,29 +1,29 @@
-// === Module 8801: FormComponents ===
+// === Module 9014: FormComponents ===
 
-// Module 8801 (FormComponents)
+// Module 9014 (FormComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import UserUtils from "UserUtils" /* 4964 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import NativeViewDefault from "NativeView" /* 6166 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7023 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7432 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8311 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 8802 */;
-import GuildTagDefault from "GuildTag" /* 8863 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 13545 */;
+import UserUtils from "UserUtils" /* 5018 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import NativeViewDefault from "NativeView" /* 6382 */;
+import TableRowGroup from "TableRowGroup" /* 6485 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7236 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7642 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8522 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9015 */;
+import GuildTagDefault from "GuildTag" /* 9075 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 13841 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5112 */;
+import PresenceStore from "PresenceStore" /* 5167 */;
 
 require = fn;
 let closure_3 = ["style"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.icon = size;
@@ -191,43 +191,44 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   closure_3 = tmp5;
   closure_4 = tmp6;
-  const tmp7 = displayNameStylesFont();
-  const memberRow = tmp7;
+  const tmp8 = displayNameStylesFont();
+  const memberRow = tmp8;
   const analyticsLocations = channelId(nick[12])().analyticsLocations;
   let obj = user(nick[7]);
+  const tmp7 = undefined !== showGameActivity && showGameActivity;
   const muteDeafenIconState = user(nick[13]).useMuteDeafenIconState(user.id, guildId);
   const tmpResult = user(nick[13]);
   const videoIconState = user(nick[13]).useVideoIconState(user.id, guildId);
   const id = user.id;
   if (cResult[0] === channelId) {
     if (cResult[1] === id) {
-      let tmp11 = cResult[2];
+      let tmp12 = cResult[2];
     }
-    const isUserSecureFramesVerified = tmp(nick[14]).useIsUserSecureFramesVerified(tmp11);
+    const isUserSecureFramesVerified = tmp(nick[14]).useIsUserSecureFramesVerified(tmp12);
     tmp(nick[15]);
     if (cResult[3] === guildId) {
       if (cResult[4] === user.id) {
-        let tmp14 = cResult[5];
+        let tmp15 = cResult[5];
       }
-      const tmp15 = tmp8(nick[16])(tmp14);
-      if (cResult[6] !== tmp15) {
-        let obj2 = { displayNameStyles: tmp15 };
-        cResult[6] = tmp15;
+      const tmp16 = tmp9(nick[16])(tmp15);
+      if (cResult[6] !== tmp16) {
+        let obj2 = { displayNameStyles: tmp16 };
+        cResult[6] = tmp16;
         cResult[7] = obj2;
-        let tmp16 = obj2;
+        let tmp17 = obj2;
       } else {
-        tmp16 = cResult[7];
+        tmp17 = cResult[7];
       }
-      displayNameStylesFont = tmp(nick[17]).useDisplayNameStylesFont(tmp16);
+      displayNameStylesFont = tmp(nick[17]).useDisplayNameStylesFont(tmp17);
       if (cResult[8] === analyticsLocations) {
         if (cResult[9] === channelId) {
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
             let items = [analyticsLocations];
             cResult[12] = items;
-            let tmp20 = items;
+            let tmp21 = items;
           } else {
-            tmp20 = cResult[12];
+            tmp21 = cResult[12];
           }
           if (cResult[13] !== id) {
             class W {
@@ -246,10 +247,8 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
               }
             }
           }
-          const stateFromStores = tmp(nick[20]).useStateFromStores(tmp20, W);
-          const tmp24 = tmp8(nick[21])("voice_member_row");
-          const tmpResult10 = tmp(nick[20]);
-          if (tmp24) {
+          const stateFromStores = tmp(nick[20]).useStateFromStores(tmp21, W);
+          if (tmp9(nick[21])(id, guildId, tmp7)[0] != null) {
             class W {
               constructor() {
                 obj = closure_0(closure_2[19]);
@@ -257,15 +256,7 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
               }
             }
           }
-          if (tmp8Result(id, guildId, tmp24)[0] != null) {
-            class W {
-              constructor() {
-                obj = closure_0(closure_2[19]);
-                return obj.getStreamerActivityByUserId(id, closure_6);
-              }
-            }
-          }
-          const gameRecord = tmp8(nick[23])(tmp27).gameRecord;
+          const gameRecord = tmp9(nick[22])(tmp26).gameRecord;
           if (!tmp4) {
             class W {
               constructor() {
@@ -309,8 +300,8 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
             cResult[19] = nick;
             cResult[20] = tmp5;
             cResult[21] = tmp6;
-            cResult[22] = tmp7.icon;
-            cResult[23] = tmp7.memberRow;
+            cResult[22] = tmp8.icon;
+            cResult[23] = tmp8.memberRow;
             cResult[24] = user;
             cResult[25] = renderLabel;
           } else {
@@ -327,11 +318,11 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
                   return obj.getStreamerActivityByUserId(id, closure_6);
                 }
               }
-              const stringResult = obj10.string(tmp(nick[25]).t.eXan7B);
+              const stringResult = obj10.string(tmp(nick[24]).t.eXan7B);
               cResult[15] = stateFromStores;
               cResult[16] = stringResult;
             }
-            const intl = tmp(nick[25]).intl;
+            const intl = tmp(nick[24]).intl;
             if (null == stateFromStores.details) {
               class W {
                 constructor() {
@@ -341,8 +332,8 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
               }
               let obj3 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
               let obj4 = { name: stateFromStores.details };
-              obj3.children = intl.format(tmp31, obj4);
-              tmp30(tmp(nick[24]).Text, obj3);
+              obj3.children = intl.format(tmp30, obj4);
+              tmp29(tmp(nick[23]).Text, obj3);
             } else {
               class W {
                 constructor() {
@@ -351,9 +342,9 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
                 }
               }
             }
-            tmp30 = id;
+            tmp29 = id;
           }
-          tmp8Result = tmp8(nick[22]);
+          const tmpResult10 = tmp(nick[20]);
         }
       }
       const fn = function k() {
@@ -369,14 +360,14 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     cResult[3] = guildId;
     cResult[4] = user.id;
     cResult[5] = obj5;
-    tmp14 = obj5;
+    tmp15 = obj5;
     const tmpResult7 = tmp(nick[14]);
   }
   let obj6 = { userId: id, channelId };
   cResult[0] = channelId;
   cResult[1] = id;
   cResult[2] = obj6;
-  tmp11 = obj6;
+  tmp12 = obj6;
   const tmpResult6 = user(nick[13]);
 }) : (function MemberRowItem(user) {
   user = user.user;
@@ -420,19 +411,14 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const obj7 = stateFromStores;
   const items1 = [PresenceStore];
   stateFromStores = user(flag[20]).useStateFromStores(items1, () => StreamerApplicationSelectors.getStreamerActivityByUserId(id, PresenceStore));
-  let tmp13 = channelId(flag[21])("voice_member_row");
-  const obj8 = user(flag[20]);
-  if (tmp13) {
-    tmp13 = flag2;
-  }
-  const first = channelId(flag[22])(id, guildId, tmp13)[0];
+  const first = channelId(flag[21])(id, guildId, flag2)[0];
   let application_id;
   if (first != null) {
     application_id = first.application_id;
   }
-  const gameRecord = tmp2(tmp3[23])(application_id).gameRecord;
+  const gameRecord = tmp2(tmp3[22])(application_id).gameRecord;
   const items2 = [stateFromStores, flag];
-  let tmp18 = true === showRing;
+  let tmp16 = true === showRing;
   const memo = obj7.useMemo(() => {
     if (!flag) {
       return null;
@@ -452,8 +438,8 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
       const details = obj.details;
     }
   }, items2);
-  if (tmp18) {
-    tmp18 = canRing;
+  if (tmp16) {
+    tmp16 = canRing;
   }
   const obj9 = { onPress: callback, icon: null, subLabel: null, trailing: null, label: null };
   const obj10 = { user, guildId, size: user(flag[11]).AvatarSizes.REFRESH_MEDIUM_32, style: null };
@@ -464,11 +450,11 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   obj10.style = notConnectedAvatar;
   obj9.icon = closure_7(user(flag[11]).Avatar, obj10);
   obj9.subLabel = memo;
-  if (!tmp18) {
-    obj9.trailing = tmp23Result;
+  if (!tmp16) {
+    obj9.trailing = tmp21Result;
     if (nick == null) {
-      nick = tmp4(tmp3[26]).getName(user);
-      const tmp4Result = tmp4(tmp3[26]);
+      nick = tmp4(tmp3[25]).getName(user);
+      const tmp4Result = tmp4(tmp3[25]);
     }
     const obj11 = { style: tmp.memberRow, children: null };
     let str = "text-default";
@@ -476,33 +462,33 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
       str = "text-muted";
     }
     const obj12 = { variant: "text-md/semibold", color: str, style: null, children: null };
-    let tmp30 = null != displayNameStylesFont;
-    if (tmp30) {
+    let tmp28 = null != displayNameStylesFont;
+    if (tmp28) {
       const obj13 = { fontFamily: displayNameStylesFont };
-      tmp30 = obj13;
+      tmp28 = obj13;
     }
-    obj12.style = tmp30;
+    obj12.style = tmp28;
     obj12.children = nick;
-    const items3 = [closure_7(tmp4(tmp3[24]).Text, obj12), , ];
+    const items3 = [closure_7(tmp4(tmp3[23]).Text, obj12), , ];
     const obj14 = { userId: user.id };
-    items3[1] = closure_7(tmp2(tmp3[27]), obj14);
-    let tmp20Result = null;
+    items3[1] = closure_7(tmp2(tmp3[26]), obj14);
+    let tmp18Result = null;
     if (showSecureFramesUI) {
-      tmp20Result = null;
+      tmp18Result = null;
       if (isUserSecureFramesVerified) {
         const obj15 = { size: "xs", style: tmp.icon };
-        tmp20Result = closure_7(tmp4(tmp3[28]).ShieldLockIcon, obj15);
+        tmp18Result = closure_7(tmp4(tmp3[27]).ShieldLockIcon, obj15);
       }
     }
-    items3[2] = tmp20Result;
+    items3[2] = tmp18Result;
     obj11.children = items3;
     obj9.label = closure_8(tmp2(tmp3[9]), obj11);
-    return closure_7(tmp4(tmp3[32]).TableRow, obj9);
+    return closure_7(tmp4(tmp3[31]).TableRow, obj9);
   }
   const obj16 = { style: tmp.trailingContainer, children: null };
-  const tmp14 = channelId(flag[22]);
-  const tmp19 = null != muteDeafenIconState || null != videoIconState;
-  if (tmp18) {
+  const obj8 = user(flag[20]);
+  const tmp17 = null != muteDeafenIconState || null != videoIconState;
+  if (tmp16) {
     const obj17 = {
       size: "sm",
       variant: "secondary",
@@ -512,24 +498,24 @@ export const MemberRowItem = ReactCompilerGating.isReactCompilerEnabled() ? (fun
         },
       text: null
     };
-    let intl = tmp4(tmp3[25]).intl;
-    obj17.text = intl.string(tmp4(tmp3[25]).t.bHa9kN);
-    let tmp20Result3 = closure_7(tmp4(tmp3[29]).Button, obj17);
+    let intl = tmp4(tmp3[24]).intl;
+    obj17.text = intl.string(tmp4(tmp3[24]).t.bHa9kN);
+    let tmp18Result3 = closure_7(tmp4(tmp3[28]).Button, obj17);
   } else {
-    tmp20Result3 = null;
-    if (tmp19) {
+    tmp18Result3 = null;
+    if (tmp17) {
       const obj18 = { muteDeafenIconState, videoIconState };
-      tmp20Result3 = closure_7(closure_11, obj18);
+      tmp18Result3 = closure_7(closure_11, obj18);
     }
   }
-  const items4 = [tmp20Result3, ];
-  let tmp20Result4 = null;
+  const items4 = [tmp18Result3, ];
+  let tmp18Result4 = null;
   if (null != gameRecord) {
     const obj19 = { game: gameRecord, size: 24, fallback: "placeholder" };
-    tmp20Result4 = closure_7(tmp2(tmp3[31]), obj19);
+    tmp18Result4 = closure_7(tmp2(tmp3[30]), obj19);
   }
-  items4[1] = tmp20Result4;
+  items4[1] = tmp18Result4;
   obj16.children = items4;
   const tmp2Result2 = channelId(flag[9]);
-  tmp23Result = closure_8(channelId(flag[9]), obj16);
+  tmp21Result = closure_8(channelId(flag[9]), obj16);
 });

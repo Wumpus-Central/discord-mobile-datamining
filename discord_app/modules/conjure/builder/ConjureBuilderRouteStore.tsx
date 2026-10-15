@@ -1,6 +1,6 @@
-// === Module 6927: ConjureBuilderRouteStore ===
+// === Module 7141: ConjureBuilderRouteStore ===
 
-// Module 6927 (ConjureBuilderRouteStore)
+// Module 7141 (ConjureBuilderRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelConstants from "ChannelConstants" /* 2072 */;
@@ -43,7 +43,7 @@ prototype["getLastProjectId"] = function getLastProjectId(guildId) {
   return tmp;
 };
 ConjureBuilderRouteStore.displayName = "ConjureBuilderRouteStore";
-ConjureBuilderRouteStore.persistKey = "VibegrationsBuilderRoute";
+ConjureBuilderRouteStore.persistKey = "ConjureBuilderRoute";
 const conjureBuilderRouteStore = new ConjureBuilderRouteStore(DispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect(channelId) {
     ({ guildId, messageId } = channelId);

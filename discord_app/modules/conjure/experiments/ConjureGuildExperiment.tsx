@@ -1,6 +1,6 @@
-// === Module 6953: ConjureGuildExperiment ===
+// === Module 6283: ConjureGuildExperiment ===
 
-// Module 6953 (ConjureGuildExperiment)
+// Module 6283 (ConjureGuildExperiment)
 import c from "c" /* 576 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -16,11 +16,23 @@ function isConjureGuildEnabled(guildId) {
   }
   return enabled;
 }
-function hasConjureGuild(arg0, location) {
+function hasConjureGuild(arg0, DMAppChannel) {
   const obj = arg0[Symbol.iterator]();
   while (obj !== undefined) {
-    let obj2 = { guildId: tmp.id, location };
+    let obj2 = { guildId: tmp.id, location: DMAppChannel };
     if (isConjureGuildEnabled(obj2)) {
+      obj.return();
+      let flag = true;
+      return true;
+    }
+  }
+  return false;
+}
+function hasConjureGuildWithoutExposure(conjure_resume) {
+  const values = Object.values(GuildStore.getGuilds());
+  for (const item10012 of values) {
+    let obj2 = { guildId: item10012.id, location: arg0 };
+    if (closure_4.getConfig(obj2, { autoTrackExposure: false }).enabled) {
       obj.return();
       let flag = true;
       return true;
@@ -64,47 +76,73 @@ const result = size.fileFinishedImporting("modules/conjure/experiments/ConjureGu
 export const useIsConjureGuildEnabled = tmp2;
 export { isConjureGuildEnabled };
 export { hasConjureGuild };
-export const hasConjureGuildWithoutExposure = function hasConjureGuildWithoutExposure(conjure_resume) {
-  const values = Object.values(GuildStore.getGuilds());
-  for (const item10012 of values) {
-    let obj2 = { guildId: item10012.id, location: arg0 };
-    if (closure_4.getConfig(obj2, { autoTrackExposure: false }).enabled) {
-      obj.return();
-      let flag = true;
-      return true;
-    }
-  }
-  return false;
-};
-export const useHasConjureGuild = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasConjureGuild(arg0) {
+export { hasConjureGuildWithoutExposure };
+export const useHasConjureGuild = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasConjureGuild(arg0, arg1) {
   _require = arg0;
-  const cResult = require("c").c(4);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, tmp(1453).ApexExperimentStore];
-    cResult[0] = items;
-    let first = items;
+  const cResult = require("c").c(7);
+  if (cResult[0] !== arg1) {
+    let obj2 = arg1;
+    if (undefined === arg1) {
+      obj2 = {};
+    }
+    cResult[0] = arg1;
+    cResult[1] = obj2;
+    let tmp4 = obj2;
   } else {
-    first = cResult[0];
+    tmp4 = cResult[1];
   }
-  if (cResult[1] !== arg0) {
-    const fn = function l() {
-      return hasConjureGuild(Object.values(GuildStore.getGuilds()), closure_0);
-    };
-    const items1 = [arg0];
-    cResult[1] = arg0;
-    cResult[2] = fn;
-    cResult[3] = items1;
-    let tmp7 = items1;
-    let tmp6 = fn;
+  const autoTrackExposure = tmp4.autoTrackExposure;
+  dependencyMap = tmp5;
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [GuildStore, tmp(1453).ApexExperimentStore];
+    cResult[2] = items;
+    let tmp6 = items;
   } else {
     tmp6 = cResult[2];
-    tmp7 = cResult[3];
   }
+  if (cResult[3] === (undefined === autoTrackExposure || autoTrackExposure)) {
+    if (cResult[4] === arg0) {
+      let tmp8 = cResult[5];
+      let tmp9 = cResult[6];
+    }
+    return tmp(504).useStateFromStores(tmp6, tmp8, tmp9);
+  }
+  const fn = function c() {
+    if (closure_1) {
+      const _Object = Object;
+      let tmp3 = hasConjureGuild(Object.values(GuildStore.getGuilds()), closure_0);
+    } else {
+      tmp3 = hasConjureGuildWithoutExposure(closure_0);
+    }
+    return tmp3;
+  };
+  const items1 = [arg0, undefined === autoTrackExposure || autoTrackExposure];
+  cResult[3] = undefined === autoTrackExposure || autoTrackExposure;
+  cResult[4] = arg0;
+  cResult[5] = fn;
+  cResult[6] = items1;
+  tmp9 = items1;
+  tmp8 = fn;
   const obj = require("c");
-  return require("initialize").useStateFromStores(first, tmp6, tmp7);
 }) : (function useHasConjureGuild(arg0) {
   _require = arg0;
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  let flag = obj.autoTrackExposure;
+  if (flag === undefined) {
+    flag = true;
+  }
   const items = [GuildStore, require("ApexExperiment").ApexExperimentStore];
-  const items1 = [arg0];
-  return require("initialize").useStateFromStores(items, () => hasConjureGuild(Object.values(GuildStore.getGuilds()), closure_0), items1);
+  const items1 = [arg0, flag];
+  return require("initialize").useStateFromStores(items, () => {
+    if (flag) {
+      const _Object = Object;
+      let tmp3 = hasConjureGuild(Object.values(GuildStore.getGuilds()), closure_0);
+    } else {
+      tmp3 = hasConjureGuildWithoutExposure(closure_0);
+    }
+    return tmp3;
+  }, items1);
 });

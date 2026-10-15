@@ -1,6 +1,6 @@
-// === Module 9237: SamsungManager ===
+// === Module 9449: SamsungManager ===
 
-// Module 9237 (SamsungManager)
+// Module 9449 (SamsungManager)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

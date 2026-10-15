@@ -1,13 +1,13 @@
-// === Module 9034: SlayerStorefrontItemCard ===
+// === Module 9246: SlayerStorefrontItemCard ===
 
-// Module 9034 (SlayerStorefrontItemCard)
+// Module 9246 (SlayerStorefrontItemCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import LinearGradientDefault from "LinearGradient" /* 5396 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6936 */;
-import tinycolorDefault from "tinycolor" /* 7280 */;
-import DominantColorUtils from "DominantColorUtils" /* 9035 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import LinearGradientDefault from "LinearGradient" /* 5451 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7150 */;
+import tinycolorDefault from "tinycolor" /* 7490 */;
+import DominantColorUtils from "DominantColorUtils" /* 9247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { cardContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8 }, cardImageBackground: { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, backgroundImage: null, cardImage: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

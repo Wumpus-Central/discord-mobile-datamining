@@ -1,10 +1,10 @@
-// === Module 12204: GiftIntentGifModal ===
+// === Module 12437: GiftIntentGifModal ===
 
-// Module 12204 (GiftIntentGifModal)
+// Module 12437 (GiftIntentGifModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5939 */;
-import NavigatorHeader from "NavigatorHeader" /* 6205 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
+import NavigatorHeader from "NavigatorHeader" /* 6421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -67,14 +67,14 @@ let closure_14 = async function _sendGiftIntentGif(arg0) {
   await closure_130_1(closure_130_2[10]).sendMessage(id, closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_3.url), true, { location: closure_130_9.GIFTING });
   closure_1 = tmp2;
   ({ channel: closure_129_0, giftIntentType: closure_129_1, text: closure_129_2, gif: closure_129_3 } = closure_0);
-  return "Set";
+  return "test";
 };
 let View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const MessageSendLocation = fn(5089).MessageSendLocation;
+const MessageSendLocation = fn(5144).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, messageContainer: null, pickerContainer: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.messageContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };

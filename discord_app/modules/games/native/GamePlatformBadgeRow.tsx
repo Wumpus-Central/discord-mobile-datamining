@@ -1,19 +1,20 @@
-// === Module 12650: GamePlatformBadgeRow ===
+// === Module 12943: GamePlatformBadgeRow ===
 
-// Module 12650 (GamePlatformBadgeRow)
+// Module 12943 (GamePlatformBadgeRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Stack_Stack from "Stack/Stack" /* 5382 */;
-import GamePlatformBadges from "GamePlatformBadges" /* 12652 */;
+import Stack_Stack from "Stack/Stack" /* 5437 */;
+import GamePlatformBadges from "GamePlatformBadges" /* 12945 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(12651).GamePlatformAvailability.DESKTOP] = fn(9102).ScreenIcon;
-obj[fn(12651).GamePlatformAvailability.MOBILE] = fn(6646).MobilePhoneIcon;
-obj[fn(12651).GamePlatformAvailability.CONSOLE] = fn(9221).GameControllerIcon;
-const createStyles = fn(5096);
+obj[fn(12944).GamePlatformAvailability.DESKTOP] = fn(9314).ScreenIcon;
+obj[fn(12944).GamePlatformAvailability.MOBILE] = fn(6862).MobilePhoneIcon;
+obj[fn(12944).GamePlatformAvailability.CONSOLE] = fn(9433).GameControllerIcon;
+obj[fn(12944).GamePlatformAvailability.ROBLOX] = fn(9118).RobloxNeutralIcon;
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -66,14 +67,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items = [platforms];
   const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
   const tmp = closure_6();
-  return jsx(platforms(5382).Stack, {
+  return jsx(platforms(5437).Stack, {
     direction: "horizontal",
     align: "center",
     spacing: nativeDefault.space.PX_4,
     style: closure_6().row,
     children: memo.map((item) => {
-      obj = { size: "xs", color: "icon-muted", accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item) };
-      return jsx(obj[item], { size: "xs", color: "icon-muted", accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item) }, item);
+      obj = { size: "xs", color: "icon-muted", accessibilityLabel: platforms(dependencyMap[10]).getGamePlatformAvailabilityLabel(item) };
+      return jsx(obj[item], { size: "xs", color: "icon-muted", accessibilityLabel: platforms(dependencyMap[10]).getGamePlatformAvailabilityLabel(item) }, item);
     })
   });
 }));

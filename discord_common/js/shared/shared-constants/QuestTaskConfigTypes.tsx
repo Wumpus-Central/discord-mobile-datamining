@@ -1,6 +1,6 @@
-// === Module 7408: QuestTaskConfigTypes ===
+// === Module 7618: QuestTaskConfigTypes ===
 
-// Module 7408 (QuestTaskConfigTypes)
+// Module 7618 (QuestTaskConfigTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestTaskConfigTypes.tsx");

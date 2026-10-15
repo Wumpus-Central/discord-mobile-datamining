@@ -1,6 +1,6 @@
-// === Module 10481: AnimatedCounterUtils ===
+// === Module 10704: AnimatedCounterUtils ===
 
-// Module 10481 (AnimatedCounterUtils)
+// Module 10704 (AnimatedCounterUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/forums/native/posts/AnimatedCounterUtils.tsx");

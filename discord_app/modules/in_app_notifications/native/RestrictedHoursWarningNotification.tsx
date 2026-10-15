@@ -1,19 +1,19 @@
-// === Module 13224: RestrictedHoursWarningNotification ===
+// === Module 13520: RestrictedHoursWarningNotification ===
 
-// Module 13224 (RestrictedHoursWarningNotification)
+// Module 13520 (RestrictedHoursWarningNotification)
 import nativeDefault from "native" /* 587 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5939 */;
-import openUserSettings from "openUserSettings" /* 7100 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13124 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
+import openUserSettings from "openUserSettings" /* 7315 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13420 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const lineClamp = fn(13123).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const lineClamp = fn(13419).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const Constants = fn(1085);
 ({ InAppNotificationTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { iconContainer: null };
 let size = { width: 48, height: 48, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj.iconContainer = size;
@@ -29,7 +29,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   type = notification.type;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { size: "sm", color: nativeDefault.colors.WHITE };
-    const tmp8 = jsx(tmp(13225).ThemeDarkIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+    const tmp8 = jsx(tmp(13521).ThemeDarkIcon, { size: "sm", color: nativeDefault.colors.WHITE });
     cResult[0] = tmp8;
     let first = tmp8;
   } else {
@@ -107,7 +107,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     const obj5 = { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp, children: notification.subtitle };
-    const tmp17 = jsx(tmp(5092).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp, children: notification.subtitle });
+    const tmp17 = jsx(tmp(5147).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp, children: notification.subtitle });
     cResult[7] = notification.subtitle;
     cResult[8] = tmp17;
   } else {
@@ -152,12 +152,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[11] = notification;
   cResult[12] = N;
   cResult[13] = tmp15;
-  cResult[14] = jsx(type(13159).NotificationPressable, { icon: tmp9, header: tmp13, children: tmp15, onPress: N, notification });
-  const tmp18 = jsx(type(13159).NotificationPressable, { icon: tmp9, header: tmp13, children: tmp15, onPress: N, notification });
+  cResult[14] = jsx(type(13455).NotificationPressable, { icon: tmp9, header: tmp13, children: tmp15, onPress: N, notification });
+  const tmp18 = jsx(type(13455).NotificationPressable, { icon: tmp9, header: tmp13, children: tmp15, onPress: N, notification });
 }) : (function RestrictedHoursWarningNotification(notification) {
   notification = notification.notification;
   const type = notification.type;
-  let obj = { style: closure_9().iconContainer, children: jsx(notification(13225).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE }) };
+  let obj = { style: closure_9().iconContainer, children: jsx(notification(13521).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE }) };
   const items = [notification.title];
   let obj2 = { size: "sm", color: type(587).colors.WHITE };
   const items1 = [type];
@@ -170,6 +170,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     openUserSettings.openUserSettings({ screen: constants2.FAMILY_CENTER });
     const obj4 = { screen: constants2.FAMILY_CENTER };
   }, items1);
-  let obj3 = { icon: <View style={closure_9().iconContainer}>{jsx(notification(13225).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}</View>, header: memo, children: jsx(notification(5092).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification };
-  return jsx(notification(13159).NotificationPressable, { icon: <View style={closure_9().iconContainer}>{jsx(notification(13225).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}</View>, header: memo, children: jsx(notification(5092).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification });
+  let obj3 = { icon: <View style={closure_9().iconContainer}>{jsx(notification(13521).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}</View>, header: memo, children: jsx(notification(5147).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification };
+  return jsx(notification(13455).NotificationPressable, { icon: <View style={closure_9().iconContainer}>{jsx(notification(13521).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}</View>, header: memo, children: jsx(notification(5147).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp, children: notification.subtitle }), onPress: callback, notification });
 }));

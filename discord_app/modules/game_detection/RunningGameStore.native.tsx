@@ -3,11 +3,11 @@
 // Module 2019 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SocialSdkGameResolver from "SocialSdkGameResolver" /* 10759 */;
-import OverlayTypes from "OverlayTypes" /* 14663 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 10983 */;
+import OverlayTypes from "OverlayTypes" /* 14959 */;
 import GameStore from "GameStore" /* 2020 */;
 import DetectableGameStore from "DetectableGameStore" /* 2037 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7119 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7334 */;
 
 require = fn;
 const Store = initializeDefault.Store;

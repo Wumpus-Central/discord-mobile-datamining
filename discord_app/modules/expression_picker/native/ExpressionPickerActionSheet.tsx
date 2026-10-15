@@ -1,25 +1,25 @@
-// === Module 9737: ExpressionPickerActionSheet ===
+// === Module 9945: ExpressionPickerActionSheet ===
 
-// Module 9737 (ExpressionPickerActionSheet)
+// Module 9945 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import KeyboardTypes from "KeyboardTypes" /* 1629 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
-import useKeyboardType from "useKeyboardType" /* 4989 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
-import NavigatorConstants from "NavigatorConstants" /* 6263 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6845 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9464 */;
-import KeyboardUtils from "KeyboardUtils" /* 9739 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 9740 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import useKeyboardType from "useKeyboardType" /* 5043 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+import NavigatorConstants from "NavigatorConstants" /* 6479 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7061 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9675 */;
+import KeyboardUtils from "KeyboardUtils" /* 9947 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 9948 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
-let closure_5 = fn(6846).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(9738).STICKER_FORMATS;
+let closure_5 = fn(7062).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(9946).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);

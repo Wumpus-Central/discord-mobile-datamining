@@ -1,10 +1,10 @@
-// === Module 6819: common/SafeAreaView ===
+// === Module 7035: common/SafeAreaView ===
 
-// Module 6819 (common/SafeAreaView)
+// Module 7035 (common/SafeAreaView)
 import c from "c" /* 576 */;
 import _modDef1355 from "module_1355" /* 1355 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import useRefValueDefault from "useRefValue" /* 6165 */;
+import useRefValueDefault from "useRefValue" /* 6381 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

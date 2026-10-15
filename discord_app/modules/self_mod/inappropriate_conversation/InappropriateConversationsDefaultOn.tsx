@@ -1,6 +1,6 @@
-// === Module 10401: InappropriateConversationsDefaultOn ===
+// === Module 10624: InappropriateConversationsDefaultOn ===
 
-// Module 10401 (InappropriateConversationsDefaultOn)
+// Module 10624 (InappropriateConversationsDefaultOn)
 import c from "c" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 

@@ -1,31 +1,31 @@
-// === Module 12980: GuildTemplates ===
+// === Module 13276: GuildTemplates ===
 
-// Module 12980 (GuildTemplates)
+// Module 13276 (GuildTemplates)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import ListSelectionItemDefault from "ListSelectionItem" /* 12582 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12952 */;
-import CreateGuildIcons from "CreateGuildIcons" /* 12981 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import ListSelectionItemDefault from "ListSelectionItem" /* 12875 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13248 */;
+import CreateGuildIcons from "CreateGuildIcons" /* 13277 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(12977);
+let CreateGuildConstants = fn(13273);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(6666);
+CreateGuildConstants = fn(6882);
 ({ CreateGuildModalStates: closure_9, GuildTemplateTriggers: c10, NUXGuildTemplatesAnalytics: closure_11 } = CreateGuildConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5096);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6263).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
-let obj3 = { marginTop: fn(6263).NAV_BAR_HEIGHT };
+const createStyles = fn(5151);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6479).NAV_BAR_HEIGHT }, scrollContainer: null, sections: null, headerContainer: null, headerTitle: null, headerDescription: null, footerSafeAreaContainer: null, footerContainer: null, footerTitle: null };
+let obj3 = { marginTop: fn(6479).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };
@@ -292,8 +292,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
   const intl3 = tmp2(1126).intl;
   obj4.children = intl3.string(trigger(1126).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(5092).Text, obj4),
-    closure_14(trigger(5384).Button, {
+    closure_14(trigger(5147).Text, obj4),
+    closure_14(trigger(5439).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,

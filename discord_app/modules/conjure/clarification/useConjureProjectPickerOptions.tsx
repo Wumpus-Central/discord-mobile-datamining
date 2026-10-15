@@ -1,8 +1,8 @@
-// === Module 11960: useConjureProjectPickerOptions ===
+// === Module 12187: useConjureProjectPickerOptions ===
 
-// Module 11960 (useConjureProjectPickerOptions)
+// Module 12187 (useConjureProjectPickerOptions)
 import c from "c" /* 576 */;
-import useConjureProjects from "useConjureProjects" /* 11961 */;
+import useConjureProjects from "useConjureProjects" /* 12188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

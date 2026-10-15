@@ -1,7 +1,7 @@
-// === Module 13701: UserProfileEditNote ===
+// === Module 13997: UserProfileEditNote ===
 
-// Module 13701 (UserProfileEditNote)
-import NavigatorHeader from "NavigatorHeader" /* 6205 */;
+// Module 13997 (UserProfileEditNote)
+import NavigatorHeader from "NavigatorHeader" /* 6421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ const ScrollView = fn(17).ScrollView;
 const NOTE_MAX_LENGTH = fn(1085).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_9 = createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -203,10 +203,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         if (closure_5 == null) {
           str = "";
         }
-        const tmp2 = closure_1_1(9644);
+        const tmp2 = closure_1_1(9852);
         tmp2({
           hasEdits: str !== closure_6,
-          onHasEdits: closure_1_0(4987).dismissKeyboard,
+          onHasEdits: closure_1_0(5041).dismissKeyboard,
           resetPending() {
             let str = closure_1_5;
             if (closure_1_5 == null) {
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         });
         const obj = {
           hasEdits: str !== closure_6,
-          onHasEdits: closure_1_0(4987).dismissKeyboard,
+          onHasEdits: closure_1_0(5041).dismissKeyboard,
           resetPending() {
             let str = closure_1_5;
             if (closure_1_5 == null) {

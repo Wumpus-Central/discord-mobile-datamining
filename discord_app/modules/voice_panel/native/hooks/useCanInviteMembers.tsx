@@ -1,8 +1,8 @@
-// === Module 17847: useCanInviteMembers ===
+// === Module 18087: useCanInviteMembers ===
 
-// Module 17847 (useCanInviteMembers)
+// Module 18087 (useCanInviteMembers)
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
 
 const require = globalThis.__r;
 

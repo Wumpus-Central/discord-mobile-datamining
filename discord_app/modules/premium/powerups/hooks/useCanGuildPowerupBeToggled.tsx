@@ -1,14 +1,14 @@
-// === Module 12821: useCanGuildPowerupBeToggled ===
+// === Module 13118: useCanGuildPowerupBeToggled ===
 
-// Module 12821 (useCanGuildPowerupBeToggled)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12787 */;
+// Module 13118 (useCanGuildPowerupBeToggled)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 13084 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5009 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5063 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(5010).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5064).PowerupActiveStatusType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");

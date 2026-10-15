@@ -1,9 +1,9 @@
-// === Module 17388: useSortedMemberApplications ===
+// === Module 17628: useSortedMemberApplications ===
 
-// Module 17388 (useSortedMemberApplications)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4944 */;
+// Module 17628 (useSortedMemberApplications)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6124 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6340 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

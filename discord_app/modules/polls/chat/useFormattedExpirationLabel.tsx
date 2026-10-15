@@ -1,12 +1,12 @@
-// === Module 8963: useFormattedExpirationLabel ===
+// === Module 9175: useFormattedExpirationLabel ===
 
-// Module 8963 (useFormattedExpirationLabel)
+// Module 9175 (useFormattedExpirationLabel)
 import util from "util" /* 1126 */;
-import _modDef4704 from "module_4704" /* 4704 */;
+import _modDef4758 from "module_4758" /* 4758 */;
 import size from "module_2" /* 2 */;
 
 function formatExpirationLabel(expiry) {
-  const tmp2 = _modDef4704();
+  const tmp2 = _modDef4758();
   if (expiry > tmp2) {
     const diffResult = expiry.diff(tmp2, "days");
     if (diffResult > 1) {

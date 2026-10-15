@@ -1,17 +1,17 @@
-// === Module 8602: CardSection ===
+// === Module 8815: CardSection ===
 
-// Module 8602 (CardSection)
+// Module 8815 (CardSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8603 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8816 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5911 */;
+import TextStyles from "TextStyles" /* 6122 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: null, card: null };
 obj2.title = TextStyles(fn(1085).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, { uppercase: true, marginBottom: 6 });
 obj2.card = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

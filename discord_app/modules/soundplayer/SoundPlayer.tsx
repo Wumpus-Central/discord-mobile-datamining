@@ -1,35 +1,35 @@
-// === Module 17726: SoundPlayer ===
+// === Module 17966: SoundPlayer ===
 
-// Module 17726 (SoundPlayer)
+// Module 17966 (SoundPlayer)
 import c from "c" /* 576 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10716 */;
-import SoundUtils from "SoundUtils" /* 11054 */;
-import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 17015 */;
-import _modDef17727 from "module_17727" /* 17727 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10938 */;
+import SoundUtils from "SoundUtils" /* 11278 */;
+import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 17255 */;
+import _modDef17967 from "module_17967" /* 17967 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import ApplicationStore from "ApplicationStore" /* 5445 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
-import FramesStore from "FramesStore" /* 10713 */;
-import GameConsoleStore from "GameConsoleStore" /* 5115 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5902 */;
+import ApplicationStore from "ApplicationStore" /* 5500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
+import FramesStore from "FramesStore" /* 10935 */;
+import GameConsoleStore from "GameConsoleStore" /* 5170 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 13111 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 13407 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SpeakingStore from "SpeakingStore" /* 5952 */;
-import VoiceStateStore from "VoiceStateStore" /* 5117 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5120 */;
+import SpeakingStore from "SpeakingStore" /* 6163 */;
+import VoiceStateStore from "VoiceStateStore" /* 5172 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5175 */;
 
 require = fn;
 const NO_ACTIVITIES = fn(2064).NO_ACTIVITIES;
 let closure_10 = fn(2069).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
 const Constants = fn(1085);
 ({ InputModes: closure_22, ApplicationStreamStates: closure_23, ChannelTypes: closure_24, RTCConnectionStates: closure_25 } = Constants);
-const isLaunched = fn(10697).isLaunched;
+const isLaunched = fn(10919).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_27, Fragment: closure_28, jsxs: closure_29 } = jsxProd);
 let c30 = 25;
@@ -731,22 +731,22 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceC
       } else {
         keys = [];
       }
-      const tmp8 = _modDef17727(rtcUserIds, rtcConnected.rtcUserIds);
+      const tmp8 = _modDef17967(rtcUserIds, rtcConnected.rtcUserIds);
       let rtcConnected3 = rtcConnected.rtcConnected;
       if (rtcConnected3) {
         rtcConnected3 = rtcConnected.rtcUserIds.length <= c30;
       }
       if (rtcConnected3) {
-        rtcConnected3 = _modDef17727(tmp8, keys).length > 0;
+        rtcConnected3 = _modDef17967(tmp8, keys).length > 0;
       }
       let tmp10 = rtcConnected.rtcConnected && rtcConnected;
       if (tmp10) {
         tmp10 = rtcConnected.rtcUserIds.length <= c30;
       }
       if (tmp10) {
-        tmp10 = _modDef17727(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
+        tmp10 = _modDef17967(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
       }
-      streamingUserIds.current = _modDef17727(keys, tmp8);
+      streamingUserIds.current = _modDef17967(keys, tmp8);
       if (rtcConnected.voiceChannelId === voiceChannelId) {
         if (null != voiceChannelId) {
           channel = ChannelStore.getChannel(voiceChannelId);
@@ -939,22 +939,22 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceC
     } else {
       keys = [];
     }
-    const tmp8 = _modDef17727(rtcUserIds, rtcConnected.rtcUserIds);
+    const tmp8 = _modDef17967(rtcUserIds, rtcConnected.rtcUserIds);
     let rtcConnected3 = rtcConnected.rtcConnected;
     if (rtcConnected3) {
       rtcConnected3 = rtcConnected.rtcUserIds.length <= c30;
     }
     if (rtcConnected3) {
-      rtcConnected3 = _modDef17727(tmp8, keys).length > 0;
+      rtcConnected3 = _modDef17967(tmp8, keys).length > 0;
     }
     let tmp10 = rtcConnected.rtcConnected && rtcConnected;
     if (tmp10) {
       tmp10 = rtcConnected.rtcUserIds.length <= c30;
     }
     if (tmp10) {
-      tmp10 = _modDef17727(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
+      tmp10 = _modDef17967(rtcConnected.rtcUserIds, rtcUserIds).length > 0;
     }
-    streamingUserIds.current = _modDef17727(keys, tmp8);
+    streamingUserIds.current = _modDef17967(keys, tmp8);
     if (rtcConnected.voiceChannelId === voiceChannelId) {
       if (null != voiceChannelId) {
         channel = ChannelStore.getChannel(voiceChannelId);

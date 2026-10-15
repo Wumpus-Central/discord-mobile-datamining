@@ -1,10 +1,10 @@
-// === Module 8615: useAppChannelApplicationOptions ===
+// === Module 8828: useAppChannelApplicationOptions ===
 
-// Module 8615 (useAppChannelApplicationOptions)
+// Module 8828 (useAppChannelApplicationOptions)
 import c from "c" /* 576 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6858 */;
-import useGuildEmbeddedApplications from "useGuildEmbeddedApplications" /* 8616 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8617 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6284 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7259 */;
+import useGuildEmbeddedApplications from "useGuildEmbeddedApplications" /* 8829 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

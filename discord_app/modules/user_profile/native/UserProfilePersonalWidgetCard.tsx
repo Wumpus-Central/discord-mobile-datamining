@@ -1,24 +1,24 @@
-// === Module 13748: UserProfilePersonalWidgetCard ===
+// === Module 14044: UserProfilePersonalWidgetCard ===
 
-// Module 13748 (UserProfilePersonalWidgetCard)
+// Module 14044 (UserProfilePersonalWidgetCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import LinearGradientDefault from "LinearGradient" /* 5396 */;
-import UserProfileCardDefault from "UserProfileCard" /* 6909 */;
-import GifTagDefault from "GifTag" /* 8137 */;
-import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 13746 */;
-import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 13749 */;
-import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 13750 */;
-import WidgetAssetUtils from "WidgetAssetUtils" /* 13751 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import LinearGradientDefault from "LinearGradient" /* 5451 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7123 */;
+import GifTagDefault from "GifTag" /* 8347 */;
+import UserProfileWidgetReportButtonDefault from "UserProfileWidgetReportButton" /* 14042 */;
+import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 14045 */;
+import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 14046 */;
+import WidgetAssetUtils from "WidgetAssetUtils" /* 14047 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const native = ThemeContextProvider(4829);
+const native = ThemeContextProvider(4883);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.5)", "#000"];
 const locations = [0, 0.4, 1];
 const hitSlop = { top: 8, bottom: 8, left: 8, right: 8 };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { coverContainer: { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" }, coverContent: null, coverContentWithImage: null, sectionsContainer: null, fieldsContainer: null, fieldRow: null, fieldImage: null, fieldContent: null, gifTag: null, gifTagSmall: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", justifyContent: "flex-end" };
 obj2.coverContent = { gap: nativeDefault.space.PX_4 };
@@ -501,7 +501,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
     if (null != source) {
       if ("" !== section.title) {
         const obj9 = { colors, locations, style: tmp15.absoluteFill, pointerEvents: "none" };
-        tmp24Result4 = collapsed(tmp14(5396), obj9);
+        tmp24Result4 = collapsed(tmp14(5451), obj9);
       } else {
         tmp24Result4 = null;
       }
@@ -511,7 +511,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoverS
     let tmp24Result5 = null;
     if (showGifTag) {
       const obj10 = { style: tmp.gifTag };
-      tmp24Result5 = collapsed(tmp14(8137), obj10);
+      tmp24Result5 = collapsed(tmp14(8347), obj10);
     }
     items2[3] = tmp24Result5;
     obj5.children = items2;
@@ -778,7 +778,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
     }
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp13 = closure_10(tmp(9041).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+      const tmp13 = closure_10(tmp(9253).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
       cResult[6] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -893,7 +893,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
   let obj2 = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   let obj = userId(504);
   const tmp5 = disableInteraction;
-  obj2.titleLeadingIcon = closure_10(userId(9041).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj2.titleLeadingIcon = closure_10(userId(9253).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj2.title = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -901,7 +901,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
   }
   if (tmp4Result) {
     const obj3 = { userId, widget };
-    tmp4Result = closure_10(tmp5(13746), obj3);
+    tmp4Result = closure_10(tmp5(14042), obj3);
   }
   obj2.trailingAction = tmp4Result;
   const obj4 = { style: tmp.sectionsContainer, children: null };
@@ -928,7 +928,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
   items1[1] = tmp4Result2;
   obj4.children = items1;
   obj2.children = closure_11(closure_7, obj4);
-  return closure_10(disableInteraction(6909), obj2);
+  return closure_10(disableInteraction(7123), obj2);
 });
 ReactCompilerGating = fn(558);
 let obj8 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 };

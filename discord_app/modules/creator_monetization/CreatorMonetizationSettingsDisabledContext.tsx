@@ -1,8 +1,8 @@
-// === Module 18589: CreatorMonetizationSettingsDisabledContext ===
+// === Module 18828: CreatorMonetizationSettingsDisabledContext ===
 
-// Module 18589 (CreatorMonetizationSettingsDisabledContext)
+// Module 18828 (CreatorMonetizationSettingsDisabledContext)
 import c from "c" /* 576 */;
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 6961 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

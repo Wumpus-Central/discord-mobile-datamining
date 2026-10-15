@@ -3,7 +3,7 @@
 // Module 1415 (AvatarUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
-import Url from "Url" /* 1386 */;
+import Url from "Url" /* 1387 */;
 import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1416 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;

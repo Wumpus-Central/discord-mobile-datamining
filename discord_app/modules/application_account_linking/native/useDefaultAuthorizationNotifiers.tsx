@@ -1,9 +1,9 @@
-// === Module 17047: useDefaultAuthorizationNotifiers ===
+// === Module 17287: useDefaultAuthorizationNotifiers ===
 
-// Module 17047 (useDefaultAuthorizationNotifiers)
+// Module 17287 (useDefaultAuthorizationNotifiers)
 import util from "util" /* 1126 */;
-import _modDef3312 from "module_3312" /* 3312 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4811 */;
+import _modDef3314 from "module_3314" /* 3314 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4865 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
 
@@ -71,7 +71,7 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
     if (cResult[7] === value) {
       let tmp13 = cResult[8];
     }
-    const previousWhen = tmp(5927).usePreviousWhen(tmp13);
+    const previousWhen = tmp(6138).usePreviousWhen(tmp13);
     if (cResult[9] === tmp12) {
       if (cResult[10] === value) {
         if (cResult[11] === tmp5) {
@@ -93,7 +93,7 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
               if (closure_2) {
                 const obj2 = { text: null };
                 const intl = util.intl;
-                obj2.text = intl.string(_modDef3312.uG6teD);
+                obj2.text = intl.string(_modDef3314.uG6teD);
                 ToastActionCreatorsDefault.open("account-linked-toast", obj2);
               }
             }
@@ -110,7 +110,7 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
     cResult[14] = items1;
     tmp16 = items1;
     tmp15 = fn3;
-    const tmpResult4 = tmp(5927);
+    const tmpResult4 = tmp(6138);
   }
   const obj4 = { value, shouldUpdate: tmp12 };
   cResult[6] = tmp12;
@@ -159,7 +159,7 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
             if (flag) {
               const obj2 = { text: null };
               const intl = util.intl;
-              obj2.text = intl.string(_modDef3312.uG6teD);
+              obj2.text = intl.string(_modDef3314.uG6teD);
               ToastActionCreatorsDefault.open("account-linked-toast", obj2);
             }
           }

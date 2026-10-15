@@ -1,11 +1,11 @@
-// === Module 13188: ForLaterModal ===
+// === Module 13484: ForLaterModal ===
 
-// Module 13188 (ForLaterModal)
+// Module 13484 (ForLaterModal)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5939 */;
-import HeaderShared from "HeaderShared" /* 9307 */;
-import ForLaterScreenDefault from "ForLaterScreen" /* 13189 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6150 */;
+import HeaderShared from "HeaderShared" /* 9518 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 13485 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" }, headerLeftContainer: null, headerRightContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
 obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
   const top = useSafeAreaInsetsDefault().top;
   if (cResult[0] !== type) {
     const intl = tmp(1126).intl;
-    if (type === tmp(9692).SavedMessageSortTypes.REMINDER) {
+    if (type === tmp(9900).SavedMessageSortTypes.REMINDER) {
       let aUXxzT = tmp(1126).t.aUXxzT;
     } else {
       aUXxzT = tmp(1126).t["2pAkDA"];
@@ -68,10 +68,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
     const sum = tmp11 + nativeDefault.space.PX_8;
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const headerCloseButton = tmp(6205).getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+      const headerCloseButton = tmp(6421).getHeaderCloseButton(ModalActionCreatorsDefault.pop);
       cResult[6] = headerCloseButton;
       let tmp14 = headerCloseButton;
-      const tmpResult2 = tmp(6205);
+      const tmpResult2 = tmp(6421);
     } else {
       tmp14 = cResult[6];
     }
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
     }
     const obj5 = { title: cResult[1], headerTitle: tmp10, headerTitleAlign: "center", headerStatusBarHeight: sum, headerLeft: tmp14, headerLeftContainerStyle: null, headerRightContainerStyle: null };
     ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp4);
-    const tmp18 = closure_4(tmp(6214).Header, obj5);
+    const tmp18 = closure_4(tmp(6430).Header, obj5);
     cResult[7] = tmp4.headerLeftContainer;
     cResult[8] = tmp4.headerRightContainer;
     cResult[9] = tmp10;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
   tmp4Result = require("PlatformUtils");
   obj3.headerLeft = require("NavigatorHeader").getHeaderCloseButton(ModalActionCreatorsDefault.pop);
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
-  const items = [closure_4(require("module_6214").Header, obj3), ];
+  const items = [closure_4(require("module_6430").Header, obj3), ];
   const obj4 = { type, onClose: null };
   const tmp4Result2 = require("NavigatorHeader");
   obj4.onClose = ModalActionCreatorsDefault.pop;

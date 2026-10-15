@@ -1,9 +1,9 @@
-// === Module 16688: NotifSettingsActionCreators ===
+// === Module 16927: NotifSettingsActionCreators ===
 
-// Module 16688 (NotifSettingsActionCreators)
+// Module 16927 (NotifSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import notification_settings from "notification_settings" /* 14349 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 14348 */;
+import notification_settings from "notification_settings" /* 14646 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 14645 */;
 
 require = fn;
 function updateNotifSettingValue(GAMING_DEFAULT, createNew) {

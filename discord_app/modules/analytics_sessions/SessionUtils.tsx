@@ -1,6 +1,6 @@
-// === Module 7200: SessionUtils ===
+// === Module 7410: SessionUtils ===
 
-// Module 7200 (SessionUtils)
+// Module 7410 (SessionUtils)
 import DurationsDefault from "Durations" /* 1102 */;
 
 const result = 30 * DurationsDefault.Millis.MINUTE;

@@ -1,23 +1,23 @@
-// === Module 17777: FramePool ===
+// === Module 18017: FramePool ===
 
-// Module 17777 (FramePool)
+// Module 18017 (FramePool)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10727 */;
-import makeIframeIdDefault from "makeIframeId" /* 11004 */;
-import WebViewContext from "WebViewContext" /* 11027 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 11395 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10949 */;
+import makeIframeIdDefault from "makeIframeId" /* 11228 */;
+import WebViewContext from "WebViewContext" /* 11251 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 11619 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 10713 */;
+import FramesStore from "FramesStore" /* 10935 */;
 
 require = fn;
 const View = fn(17).View;
-const FramesConstants = fn(10697);
+const FramesConstants = fn(10919);
 ({ FrameLayoutModes: closure_7, isLaunched: closure_8 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_10 = createStyles.createStyles({ pool: { position: "absolute", opacity: 0 } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -27,7 +27,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
   id = frame.id;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
-      return first1(11004)();
+      return first1(11228)();
     };
     cResult[0] = fn;
     let first = fn;
@@ -101,7 +101,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
         }
       }
     }
-    const syncExternalStore = noop.useSyncExternalStore(first1(11395).subscribe, P);
+    const syncExternalStore = noop.useSyncExternalStore(first1(11619).subscribe, P);
     if (cResult[11] !== syncExternalStore) {
       class P {
         constructor() {
@@ -139,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
       }
     }
     const obj3 = { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 };
-    const tmp23 = jsx(first1(17778), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 }, first1);
+    const tmp23 = jsx(first1(18018), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 }, first1);
     cResult[13] = frame;
     cResult[14] = first1;
     cResult[15] = tmp17;
@@ -165,7 +165,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
   iframeId = undefined;
   dependencyMap = undefined;
   const id = frame.id;
-  [iframeId, dependencyMap] = noop.useState(() => first(11004)());
+  [iframeId, dependencyMap] = noop.useState(() => first(11228)());
   const items = [id, iframeId];
   const effect = noop.useEffect(() => {
     FramePoolManagerDefault.registerFrameEntry(id, first);
@@ -181,14 +181,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pooled
   const callback = noop.useCallback(() => {
     dependencyMap(makeIframeIdDefault());
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(iframeId(11395).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
+  let syncExternalStore = noop.useSyncExternalStore(iframeId(11619).subscribe, () => FramePoolManagerDefault.getWinningTargetState(id));
   let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
   if (syncExternalStore == null) {
     const obj2 = { layoutMode: constants.FOCUSED };
     syncExternalStore = obj2;
   }
   obj.presentation = syncExternalStore;
-  return jsx(iframeId(17778), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(iframeId(18018), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");

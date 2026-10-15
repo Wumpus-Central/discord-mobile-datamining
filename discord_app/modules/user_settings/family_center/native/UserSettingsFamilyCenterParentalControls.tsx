@@ -1,10 +1,10 @@
-// === Module 15568: UserSettingsFamilyCenterParentalControls ===
+// === Module 15864: UserSettingsFamilyCenterParentalControls ===
 
-// Module 15568 (UserSettingsFamilyCenterParentalControls)
+// Module 15864 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7267 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7477 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,10 +14,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const FamilyCenterSubPages = fn(7266).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7476).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                   }
                   return;
                 }
-                setOptionsResult1 = closure_0.setOptions({ title: "lineClamp", headerRight: "color" });
+                setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
                 return;
               }
             }
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "lineClamp", headerRight: "color" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
                   return;
                 }
               }
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "lineClamp", headerRight: "color" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
                   return;
                 }
               }
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "lineClamp", headerRight: "color" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
                   return;
                 }
               }
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "lineClamp", headerRight: "color" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
                   return;
                 }
               }
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "lineClamp", headerRight: "color" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
                   return;
                 }
               }
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
             }
             return;
           }
-          setOptionsResult1 = closure_0.setOptions({ title: "lineClamp", headerRight: "color" });
+          setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "test" });
           return;
         }
       }
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "lineClamp", headerRight: "color" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "test" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[16]).intl;

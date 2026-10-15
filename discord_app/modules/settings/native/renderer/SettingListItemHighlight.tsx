@@ -1,19 +1,19 @@
-// === Module 15330: SettingListItemHighlight ===
+// === Module 15626: SettingListItemHighlight ===
 
-// Module 15330 (SettingListItemHighlight)
+// Module 15626 (SettingListItemHighlight)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
-import timing from "timing" /* 5097 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import timing from "timing" /* 5152 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15325 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15621 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { background: { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_HOVER } };
 let closure_7 = createStyles.createStyles(obj);
 const __initData = { code: "function SettingListItemHighlightTsx1(){const{withSequence,withDelay,withTiming,Easing,runOnJS,clearSelectedSearchResult}=this.__closure;return{opacity:withSequence(withDelay(500,withTiming(0,{duration:0})),withTiming(0.2,{duration:300,easing:Easing.ease}),withTiming(0,{duration:300,easing:Easing.ease},\"respect-motion-settings\",function(finished){if(finished){runOnJS(clearSelectedSearchResult);}}))};}" };
@@ -81,11 +81,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return obj;
           }
         }
-        let obj2 = { withSequence: tmp(4852).withSequence, withDelay: tmp(4852).withDelay, withTiming: tmp(5097).withTiming, Easing: tmp(4852).Easing, runOnJS: tmp(4852).runOnJS, clearSelectedSearchResult };
+        let obj2 = { withSequence: tmp(4906).withSequence, withDelay: tmp(4906).withDelay, withTiming: tmp(5152).withTiming, Easing: tmp(4906).Easing, runOnJS: tmp(4906).runOnJS, clearSelectedSearchResult };
         O.__closure = obj2;
         O.__workletHash = 11780002409998;
         O.__initData = __initData;
-        const animatedStyle = tmp(4852).useAnimatedStyle(O);
+        const animatedStyle = tmp(4906).useAnimatedStyle(O);
         if (cResult[5] === animatedStyle) {
           if (cResult[6] === tmp13) {
             if (cResult[7] === style) {
@@ -106,7 +106,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         cResult[8] = tmp4.background;
         cResult[9] = tmp20;
         tmp16 = tmp20;
-        const tmpResult = tmp(4852);
+        const tmpResult = tmp(4906);
       }
     }
   }

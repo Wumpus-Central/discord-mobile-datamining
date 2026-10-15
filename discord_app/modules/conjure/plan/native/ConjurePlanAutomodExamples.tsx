@@ -1,29 +1,29 @@
-// === Module 11936: ConjurePlanAutomodExamples ===
+// === Module 12163: ConjurePlanAutomodExamples ===
 
-// Module 11936 (ConjurePlanAutomodExamples)
+// Module 12163 (ConjurePlanAutomodExamples)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
-import _modDef3849 from "module_3849" /* 3849 */;
-import Stack_Stack from "Stack/Stack" /* 5382 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 11937 */;
+import _modDef3862 from "module_3862" /* 3862 */;
+import Stack_Stack from "Stack/Stack" /* 5437 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 12164 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = Text(5092);
+const Text_Text = Text(5147);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { blocked: fn(10419).ShieldIcon, alert: fn(8777).BellIcon, allowed: fn(6873).CircleCheckIcon };
+let obj = { blocked: fn(10642).ShieldIcon, alert: fn(8990).BellIcon, allowed: fn(7087).CircleCheckIcon };
 let obj2 = { blurple: { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND }, red: null, green: null };
 let obj3 = { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND };
 obj2.red = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let obj4 = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj2.green = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj7 = { heading: null, examples: null, section: null, sectionHeader: null, sectionLabel: null, rows: null, row: null, blockedRow: null, blockedBar: null, rowBody: null };
 let obj5 = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj7.heading = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3849.z4ZKYG);
+    obj3.children = intl2.string(_modDef3862.z4ZKYG);
     const tmp13 = React4(Text_Text.Text, obj3);
     cResult[2] = tmp13;
     let tmp10 = tmp13;
@@ -502,7 +502,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const items = [React4(native.Avatar, obj3), ];
   const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj6.children = intl2.string(_modDef3849.z4ZKYG);
+  obj6.children = intl2.string(_modDef3862.z4ZKYG);
   items[1] = React4(Text_Text.Text, obj6);
   obj2.children = items;
   const items1 = [hasOwnProperty(View, obj2), ];

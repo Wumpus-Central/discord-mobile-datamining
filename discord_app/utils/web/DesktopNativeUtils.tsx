@@ -1,14 +1,14 @@
-// === Module 6146: DesktopNativeUtils ===
+// === Module 6362: DesktopNativeUtils ===
 
-// Module 6146 (DesktopNativeUtils)
+// Module 6362 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import Storage3 from "Storage" /* 510 */;
-import Client from "Client" /* 5029 */;
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 5122 */;
-import DomainMigrationUtils from "DomainMigrationUtils" /* 6147 */;
-import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 6148 */;
-import IPCEvents from "IPCEvents" /* 6149 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 6150 */;
+import Client from "Client" /* 5083 */;
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 5177 */;
+import DomainMigrationUtils from "DomainMigrationUtils" /* 6363 */;
+import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 6364 */;
+import IPCEvents from "IPCEvents" /* 6365 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 6366 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -903,7 +903,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(6150).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(6366).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -940,7 +940,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj11 = closure_0(6150);
+            const obj11 = closure_0(6366);
           }
         } else if (2 === tmp5) {
           if (arg0 === 1) {
@@ -1137,7 +1137,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(6150).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(6366).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -1145,7 +1145,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(6150);
+                const obj9 = unknown(6366);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;
@@ -2820,6 +2820,55 @@ obj2.debugLogDotaGsiPayload = function debugLogDotaGsiPayload(arg0) {
     let result;
     if (dotaGsi != null) {
       result = dotaGsi.debugLogDotaGsiPayload(arg0);
+    }
+    if (result == null) {
+      result = Promise.resolve();
+    }
+    let resolved = result;
+  } else {
+    resolved = Promise.resolve();
+  }
+  return resolved;
+};
+obj2.readRocketLeagueStatsApiConfig = function readRocketLeagueStatsApiConfig() {
+  const obj = { installed: false, config: {} };
+  if (obj2.isWindows()) {
+    const rocketLeagueStatsApi = DiscordNative.rocketLeagueStatsApi;
+    let rocketLeagueStatsApiConfig;
+    if (rocketLeagueStatsApi != null) {
+      rocketLeagueStatsApiConfig = rocketLeagueStatsApi.readRocketLeagueStatsApiConfig();
+    }
+    if (rocketLeagueStatsApiConfig == null) {
+      rocketLeagueStatsApiConfig = Promise.resolve(obj);
+    }
+    let resolved = rocketLeagueStatsApiConfig;
+  } else {
+    resolved = Promise.resolve(obj);
+  }
+  return resolved;
+};
+obj2.writeRocketLeagueStatsApiConfig = function writeRocketLeagueStatsApiConfig(arg0) {
+  if (obj.isWindows()) {
+    const rocketLeagueStatsApi = DiscordNative.rocketLeagueStatsApi;
+    let result;
+    if (rocketLeagueStatsApi != null) {
+      result = rocketLeagueStatsApi.writeRocketLeagueStatsApiConfig(arg0);
+    }
+    if (result == null) {
+      result = Promise.resolve(false);
+    }
+    let resolved = result;
+  } else {
+    resolved = Promise.resolve(false);
+  }
+  return resolved;
+};
+obj2.debugLogRocketLeagueStatsApiMessage = function debugLogRocketLeagueStatsApiMessage(arg0) {
+  if (obj.isWindows()) {
+    const rocketLeagueStatsApi = DiscordNative.rocketLeagueStatsApi;
+    let result;
+    if (rocketLeagueStatsApi != null) {
+      result = rocketLeagueStatsApi.debugLogRocketLeagueStatsApiMessage(arg0);
     }
     if (result == null) {
       result = Promise.resolve();

@@ -1,9 +1,9 @@
-// === Module 8347: useMaybeTrackProfileFrameViewed ===
+// === Module 8558: useMaybeTrackProfileFrameViewed ===
 
-// Module 8347 (useMaybeTrackProfileFrameViewed)
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8323 */;
+// Module 8558 (useMaybeTrackProfileFrameViewed)
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8534 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7270 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7480 */;
 import size from "module_2" /* 2 */;
 
 ({ useEffect: c2, useRef: c3 } = noop);

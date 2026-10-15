@@ -1,10 +1,10 @@
-// === Module 7906: MessageReactionsStore ===
+// === Module 8116: MessageReactionsStore ===
 
-// Module 7906 (MessageReactionsStore)
+// Module 8116 (MessageReactionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7907 */;
-import LurkingStore from "LurkingStore" /* 4753 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 8117 */;
+import LurkingStore from "LurkingStore" /* 4807 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import UserStore from "UserStore" /* 1390 */;

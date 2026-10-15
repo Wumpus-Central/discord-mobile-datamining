@@ -1,10 +1,10 @@
-// === Module 10596: useShowBadgePersonalizationNotice ===
+// === Module 10819: useShowBadgePersonalizationNotice ===
 
-// Module 10596 (useShowBadgePersonalizationNotice)
+// Module 10819 (useShowBadgePersonalizationNotice)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import BadgeUtils from "BadgeUtils" /* 10589 */;
-import ConsentStore from "ConsentStore" /* 5937 */;
+import BadgeUtils from "BadgeUtils" /* 10812 */;
+import ConsentStore from "ConsentStore" /* 6148 */;
 
 require = fn;
 const Consents = fn(1085).Consents;

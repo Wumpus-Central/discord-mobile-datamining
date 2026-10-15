@@ -1,10 +1,10 @@
-// === Module 18361: DefaultKeywordListTriggerFields ===
+// === Module 18600: DefaultKeywordListTriggerFields ===
 
-// Module 18361 (DefaultKeywordListTriggerFields)
+// Module 18600 (DefaultKeywordListTriggerFields)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let maxWordCount = fn(12252).MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE;
+let maxWordCount = fn(12487).MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const ReactCompilerGating = fn(558);

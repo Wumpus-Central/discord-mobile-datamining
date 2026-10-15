@@ -1,24 +1,24 @@
-// === Module 15792: QuestBottomSheetConsoleConnect ===
+// === Module 16088: QuestBottomSheetConsoleConnect ===
 
-// Module 15792 (QuestBottomSheetConsoleConnect)
+// Module 16088 (QuestBottomSheetConsoleConnect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
-import QuestTypes from "QuestTypes" /* 5980 */;
-import AdCreativeType from "AdCreativeType" /* 5984 */;
-import TableRow from "TableRow" /* 6184 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import openUserSettings from "openUserSettings" /* 7100 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7422 */;
-import XboxNeutralIcon from "XboxNeutralIcon" /* 8916 */;
-import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 9104 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9183 */;
-import captureAdUserAction from "captureAdUserAction" /* 9184 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9187 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9213 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9214 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+import QuestTypes from "QuestTypes" /* 6191 */;
+import AdCreativeType from "AdCreativeType" /* 6195 */;
+import TableRow from "TableRow" /* 6400 */;
+import TableRowGroup from "TableRowGroup" /* 6485 */;
+import openUserSettings from "openUserSettings" /* 7315 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7632 */;
+import XboxNeutralIcon from "XboxNeutralIcon" /* 9128 */;
+import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 9316 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 9395 */;
+import captureAdUserAction from "captureAdUserAction" /* 9396 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9399 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9425 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9426 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { platformButtonsContainer: { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_16, justifyContent: "space-between" }, platformButton: { flex: 1, display: "flex", justifyContent: "center", alignItems: "center" } };
 const styles = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -44,7 +44,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function NonInli
     if (cResult[1] === onConsoleSelect) {
       if (cResult[5] !== cResult[2]) {
         const obj2 = { hasIcons: true, children: tmp4 };
-        const tmp9 = closure_8(onConsoleSelect(6269).TableRowGroup, obj2);
+        const tmp9 = closure_8(onConsoleSelect(6485).TableRowGroup, obj2);
         cResult[5] = tmp4;
         cResult[6] = tmp9;
         let tmp7 = tmp9;
@@ -262,15 +262,15 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15750, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, initialStep, sourceQuestContent });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16046, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, initialStep, sourceQuestContent });
   }
-  const xboxAndPlaystationAccounts = quest(9180).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(9180);
-  closure_4 = quest(13510).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(13510);
-  noop = quest(9211).useGetQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(9392).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(9392);
+  closure_4 = quest(13806).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(13806);
+  noop = quest(9423).useGetQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  let obj3 = quest(9211);
+  let obj3 = quest(9423);
   return closure_8(closure_9, {
     consoles: noop.useMemo(() => QuestPlatformUtils.supportedConsoles(quest).map((type) => {
       closure_0 = type;

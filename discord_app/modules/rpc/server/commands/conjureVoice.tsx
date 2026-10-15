@@ -1,10 +1,10 @@
-// === Module 15131: conjureVoice ===
+// === Module 15427: conjureVoice ===
 
-// Module 15131 (conjureVoice)
+// Module 15427 (conjureVoice)
 import Constants2 from "Constants" /* 1085 */;
-import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15072 */;
-import Constants from "Constants" /* 5644 */;
-import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15095 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 15368 */;
+import Constants from "Constants" /* 5855 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 15391 */;
 import size from "module_2" /* 2 */;
 
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
@@ -73,6 +73,15 @@ obj2[RPCCommands.UPDATE_VOICE_SPATIAL] = CONTEXT_MENU_ICON_NAMES.createRPCComman
       return obj;
     });
     ConjureVoiceSessionCoordinatorDefault.update(socket, session_id, listener, mapped);
+    return { success: true };
+  }
+});
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj2[RPCCommands.SET_VOICE_SPATIAL_ACOUSTICS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SET_VOICE_SPATIAL_ACOUSTICS, {
+  scope: obj,
+  handler(args) {
+    ({ session_id, acoustics } = args.args);
+    ConjureVoiceSessionCoordinatorDefault.setAcoustics(args.socket, session_id, acoustics);
     return { success: true };
   }
 });

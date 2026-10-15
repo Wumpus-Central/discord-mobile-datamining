@@ -1,6 +1,6 @@
-// === Module 11914: ? ===
+// === Module 12141: ? ===
 
-// Module 11914
+// Module 12141
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BeeIllocon-3x.png.js");

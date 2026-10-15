@@ -1,37 +1,37 @@
-// === Module 14220: PremiumPlanSelectYearlyUpsellModal ===
+// === Module 14517: PremiumPlanSelectYearlyUpsellModal ===
 
-// Module 14220 (PremiumPlanSelectYearlyUpsellModal)
-import FastImageDefault from "FastImage" /* 5034 */;
-import common_AlertDefault from "common/Alert" /* 5403 */;
-import TextStylesDefault from "TextStyles" /* 5911 */;
-import _modDef14221 from "module_14221" /* 14221 */;
+// Module 14517 (PremiumPlanSelectYearlyUpsellModal)
+import FastImageDefault from "FastImage" /* 5088 */;
+import common_AlertDefault from "common/Alert" /* 5458 */;
+import TextStylesDefault from "TextStyles" /* 6122 */;
+import _modDef14518 from "module_14518" /* 14518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
-import IAPStore from "IAPStore" /* 7138 */;
+import IAPStore from "IAPStore" /* 7353 */;
 
 const require = fn;
 const View = fn(17).View;
-const usePremiumPlanSelectStore = fn(14207).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(14504).usePremiumPlanSelectStore;
 let closure_9 = fn(1392).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { marginHorizontal: 26 }, image: { alignSelf: "center", marginVertical: 32 }, header: null, description: null, upsellButton: null, continueButton: null, cancelButton: null };
 let obj3 = {};
 const merged = Object.assign(TextStylesDefault(fn(1096).Fonts.DISPLAY_EXTRABOLD, undefined, 24));
 obj3.alignSelf = "center";
 obj3.textAlign = "center";
 obj3.paddingBottom = 8;
-obj3.color = fn(5974).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(6185).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
-obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(6185).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.upsellButton = { marginBottom: 16 };
 obj2.continueButton = { marginBottom: 4 };
 obj2.cancelButton = { marginTop: 8, marginBottom: 4 };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj4 = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(6185).DARK_WHITE_500_LIGHT_BLACK_500 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx");
 
@@ -254,8 +254,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
   [tmp4, c3] = noop.useState(null);
   const obj = noop;
   const tmp3 = _slicedToArray(noop.useState(null), 2);
-  const premiumBundledItemsFromProductId = productId(7132).getPremiumBundledItemsFromProductId(productId);
-  const obj2 = productId(7132);
+  const premiumBundledItemsFromProductId = productId(7347).getPremiumBundledItemsFromProductId(productId);
+  const obj2 = productId(7347);
   let items = [LocaleStore];
   const stateFromStores = productId(504).useStateFromStores(items, () => locale.locale);
   const obj3 = productId(504);
@@ -292,12 +292,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
     const tmp5Result = productId(1901);
     const obj7 = { style: tmp.image, source: null };
     const tmp19 = common_AlertDefault;
-    obj7.source = _modDef14221;
+    obj7.source = _modDef14518;
     const items2 = [closure_10(FastImageDefault, obj7), , , , , ];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1126).intl;
     const obj9 = { discountPercentage: formatPercentResult, planName: null };
-    obj9.planName = productId(4771).getPremiumTypeDisplayName(premiumTier);
+    obj9.planName = productId(4825).getPremiumTypeDisplayName(premiumTier);
     obj8.children = intl.format(productId(1126).t.LQCVfK, obj9);
     items2[1] = closure_10(productId(1200).LegacyText, obj8);
     const obj10 = { style: tmp.description, children: null };
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
     };
     obj13.disabled = tmp11;
     obj13.loading = "upsell" === tmp4 && tmp2;
-    obj12.children = closure_10(productId(5384).Button, obj13);
+    obj12.children = closure_10(productId(5439).Button, obj13);
     items2[3] = closure_10(View, obj12);
     const obj15 = { style: tmp.continueButton, children: null };
     const obj16 = { variant: "secondary", text: null, onPress: null, disabled: null, loading: null };
@@ -328,14 +328,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumP
     };
     obj16.disabled = tmp11;
     obj16.loading = "default" === tmp4 && tmp2;
-    obj15.children = closure_10(productId(5384).Button, obj16);
+    obj15.children = closure_10(productId(5439).Button, obj16);
     items2[4] = closure_10(View, obj15);
     const obj17 = { style: tmp.cancelButton, children: null };
     const obj18 = { variant: "tertiary", text: null, onPress: null };
     const intl5 = productId(1126).intl;
     obj18.text = intl5.string(productId(1126).t.cpT0Cq);
     obj18.onPress = onClose;
-    obj17.children = closure_10(productId(5384).Button, obj18);
+    obj17.children = closure_10(productId(5439).Button, obj18);
     items2[5] = closure_10(View, obj17);
     obj6.children = items2;
     obj5.children = closure_11(View, obj6);

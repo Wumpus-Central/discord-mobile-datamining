@@ -7,17 +7,17 @@ import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import router_utils from "router_utils" /* 1112 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4978 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7038 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5032 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7251 */;
 import GatedChannelStore from "GatedChannelStore" /* 2117 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildChannelStore from "GuildChannelStore" /* 4750 */;
+import GuildChannelStore from "GuildChannelStore" /* 4804 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 require = fn;
 function handleConnectionOpen(sessionId) {
@@ -336,7 +336,7 @@ prototype["initialize"] = function initialize() {
     const _Set = Set;
     set = new Set(value.knownThreadIds);
   }
-  ({ selectedVoiceChannelId: c8, lastChannelFollowingDestination: closure_7, lastConnectedTime: closure_1_9, mostRecentSelectedTextChannelIds } = value);
+  ({ selectedVoiceChannelId: c8, lastChannelFollowingDestination: closure_7, lastConnectedTime: closure_9, mostRecentSelectedTextChannelIds } = value);
   if (mostRecentSelectedTextChannelIds == null) {
     mostRecentSelectedTextChannelIds = {};
   }
@@ -878,7 +878,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const values = closure_1_1(12)(selectedChannelIds).values();
             const obj2 = closure_1_1(12)(selectedChannelIds);
             const combined = values.concat(closure_1_1(12).values(mostRecentSelectedTextChannelIds));
-            const found = combined.filter(closure_1_0(1388).isNotNullish);
+            const found = combined.filter(closure_1_0(1386).isNotNullish);
             const obj4 = closure_1_1(12);
             const uniqResult = found.uniq();
             obj.knownThreadIds = found.uniq().filter((item) => {
@@ -1031,6 +1031,49 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
         return hasItem;
       });
     }
+  },
+  AUTO_UPDATER_QUIT_AND_INSTALL: function handleAutoUpdaterQuitAndInstall() {
+    let tmp = null == selectedVoiceChannelId;
+    if (!tmp) {
+      tmp = null == collapsed;
+    }
+    if (!tmp) {
+      const _Date = Date;
+      lastConnectedTime = Date.now();
+      const Storage = Storage3.Storage;
+      const obj = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
+      const values = _modDef12(selectedChannelIds).values();
+      const obj2 = _modDef12(selectedChannelIds);
+      const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+      const found = combined.filter(GlobalUtils.isNotNullish);
+      const uniqResult = found.uniq();
+      obj.knownThreadIds = found.uniq().filter((item) => {
+        basicChannel = basicChannel.getBasicChannel(item);
+        let hasItem = set2.has(item);
+        if (!hasItem) {
+          let hasItem1 = null != basicChannel;
+          if (hasItem1) {
+            hasItem1 = set.has(basicChannel.type);
+          }
+          hasItem = hasItem1;
+        }
+        return hasItem;
+      }).value();
+      const result = Storage.set(SelectedChannelStore, obj);
+      const iter = found.uniq().filter((item) => {
+        basicChannel = basicChannel.getBasicChannel(item);
+        let hasItem = set2.has(item);
+        if (!hasItem) {
+          let hasItem1 = null != basicChannel;
+          if (hasItem1) {
+            hasItem1 = set.has(basicChannel.type);
+          }
+          hasItem = hasItem1;
+        }
+        return hasItem;
+      });
+    }
+    return false;
   },
   LOGOUT: function handleLogout() {
     closure_27 = {};

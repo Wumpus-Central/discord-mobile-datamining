@@ -1,6 +1,6 @@
-// === Module 5570: CheckpointCharacterFace ===
+// === Module 5724: CheckpointCharacterFace ===
 
-// Module 5570 (CheckpointCharacterFace)
+// Module 5724 (CheckpointCharacterFace)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CheckpointCharacterFace.tsx");

@@ -1,8 +1,8 @@
-// === Module 13760: useIsGameFriends ===
+// === Module 14056: useIsGameFriends ===
 
-// Module 13760 (useIsGameFriends)
+// Module 14056 (useIsGameFriends)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7353 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7563 */;
 
 const require = globalThis.__r;
 

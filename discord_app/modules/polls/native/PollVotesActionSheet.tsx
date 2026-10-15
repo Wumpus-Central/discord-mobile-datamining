@@ -1,30 +1,30 @@
-// === Module 11735: PollVotesActionSheet ===
+// === Module 11960: PollVotesActionSheet ===
 
-// Module 11735 (PollVotesActionSheet)
+// Module 11960 (PollVotesActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import shared from "shared" /* 4971 */;
-import useThemeDefault from "useTheme" /* 5033 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import timing from "timing" /* 5097 */;
-import Pressables from "Pressables" /* 6189 */;
-import EmojiDefault from "Emoji" /* 6825 */;
-import PollsUtils from "PollsUtils" /* 7905 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8311 */;
-import formatPollMessageChatData from "formatPollMessageChatData" /* 11736 */;
-import _modDef11743 from "module_11743" /* 11743 */;
-import _modDef11744 from "module_11744" /* 11744 */;
+import shared from "shared" /* 5025 */;
+import useThemeDefault from "useTheme" /* 5087 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import timing from "timing" /* 5152 */;
+import Pressables from "Pressables" /* 6405 */;
+import EmojiDefault from "Emoji" /* 7041 */;
+import PollsUtils from "PollsUtils" /* 8115 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8522 */;
+import formatPollMessageChatData from "formatPollMessageChatData" /* 11961 */;
+import _modDef11968 from "module_11968" /* 11968 */;
+import _modDef11969 from "module_11969" /* 11969 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5085 */;
-import EmojiStore from "EmojiStore" /* 5992 */;
+import AccessibilityStore from "AccessibilityStore" /* 5140 */;
+import EmojiStore from "EmojiStore" /* 6203 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import MessageStore from "MessageStore" /* 5437 */;
+import MessageStore from "MessageStore" /* 5492 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -125,7 +125,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { headerText: { textAlign: "center", paddingHorizontal: 16 }, subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 }, answerScroll: { marginTop: 24 }, answerScrollContainer: { gap: 4, paddingHorizontal: 16 }, answerName: { marginTop: 16, marginHorizontal: 16, marginBottom: 8 }, list: { paddingHorizontal: 16 }, answerButton: { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xs, maxWidth: 200 }, answerSelected: null, answerEmoji: null, answerText: null, emojiText: null, emojiImage: null, noResultsContainer: null, noResultsImage: null, noResultsTitle: null, noResultsSubtitle: null };
 let obj3 = { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xs, maxWidth: 200 };
 obj2.answerSelected = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -447,7 +447,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F144609 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F145157 */ function() { ... }), 0);
         return;
       }
     }
@@ -455,7 +455,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   } else {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F144609 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F145157 */ function() { ... }), 0);
         return;
       }
     }
@@ -463,7 +463,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   if (cResult[3] !== selectedAnswerId) {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F144609 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F145157 */ function() { ... }), 0);
         return;
       }
     }
@@ -473,7 +473,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   } else {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F144609 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F145157 */ function() { ... }), 0);
         return;
       }
     }
@@ -482,7 +482,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F144609 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F145157 */ function() { ... }), 0);
         return;
       }
     }
@@ -490,7 +490,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   } else {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F144609 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F145157 */ function() { ... }), 0);
         return;
       }
     }
@@ -500,14 +500,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function PollVo
   if (null == message.poll) {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F144609 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F145157 */ function() { ... }), 0);
         return;
       }
     }
   } else {
     class T {
       constructor() {
-        timerId = setTimeout(closure_4(/* F144609 */ function() { ... }), 0);
+        timerId = setTimeout(closure_4(/* F145157 */ function() { ... }), 0);
         return;
       }
     }
@@ -688,9 +688,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function NoResu
   const tmp4 = closure_15();
   const tmp6 = useThemeDefault();
   if (obj2.isThemeDark(tmp6)) {
-    let tmp5Result = _modDef11743;
+    let tmp5Result = _modDef11968;
   } else {
-    tmp5Result = _modDef11744;
+    tmp5Result = _modDef11969;
   }
   if (cResult[0] === tmp4.noResultsImage) {
     if (cResult[1] === tmp5Result) {
@@ -767,9 +767,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function NoResu
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef11743;
+    let tmp2Result = _modDef11968;
   } else {
-    tmp2Result = _modDef11744;
+    tmp2Result = _modDef11969;
   }
   obj2.source = tmp2Result;
   const items = [map1(tmp8, obj2), , ];

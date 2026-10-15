@@ -1,8 +1,8 @@
-// === Module 17400: ThreadCreationTitleInput ===
+// === Module 17640: ThreadCreationTitleInput ===
 
-// Module 17400 (ThreadCreationTitleInput)
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6989 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7926 */;
+// Module 17640 (ThreadCreationTitleInput)
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7202 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8136 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 

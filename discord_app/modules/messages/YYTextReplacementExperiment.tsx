@@ -1,6 +1,6 @@
-// === Module 18679: YYTextReplacementExperiment ===
+// === Module 18918: YYTextReplacementExperiment ===
 
-// Module 18679 (YYTextReplacementExperiment)
+// Module 18918 (YYTextReplacementExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

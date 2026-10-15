@@ -1,9 +1,9 @@
-// === Module 6942: SKUPricesStore ===
+// === Module 7156: SKUPricesStore ===
 
-// Module 6942 (SKUPricesStore)
+// Module 7156 (SKUPricesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 
 require = fn;

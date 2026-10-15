@@ -1,6 +1,6 @@
-// === Module 17232: ForYouHoistedItemsHeader ===
+// === Module 17472: ForYouHoistedItemsHeader ===
 
-// Module 17232 (ForYouHoistedItemsHeader)
+// Module 17472 (ForYouHoistedItemsHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

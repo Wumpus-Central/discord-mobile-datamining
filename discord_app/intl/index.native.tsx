@@ -4,8 +4,8 @@
 import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1127 */;
 import intl_util from "intl/util" /* 1128 */;
 import native from "native" /* 1200 */;
-import migration from "migration" /* 10738 */;
-import _modDef14800 from "module_14800" /* 14800 */;
+import IntlLink from "IntlLink" /* 10960 */;
+import _modDef15096 from "module_15096" /* 15096 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,7 +50,7 @@ const reactFormatter = module_1165.makeReactFormatter({
   },
   $link(children, key, arg2) {
     [tmp] = arg2;
-    return jsx(migration.IntlLink, { target: tmp, children }, key);
+    return jsx(IntlLink.IntlLink, { target: tmp, children }, key);
   }
 });
 const intlManager = new fn(1165).IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
@@ -67,7 +67,7 @@ export const getLanguages = fn(1128).getLanguages;
 export const useSyncMessages = function useSyncMessages(arg0) {
   return intl_util.useSyncMessages(arg0, withFormattersResult);
 };
-export const t = fn(14797)._defaultMessages;
-export const international = _modDef14800;
+export const t = fn(15093)._defaultMessages;
+export const international = _modDef15096;
 export const systemLocale = str;
 export const initialLocale = normalizedLocale;

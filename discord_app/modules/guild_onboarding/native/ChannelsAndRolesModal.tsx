@@ -1,21 +1,21 @@
-// === Module 10801: ChannelsAndRolesModal ===
+// === Module 11025: ChannelsAndRolesModal ===
 
-// Module 10801 (ChannelsAndRolesModal)
+// Module 11025 (ChannelsAndRolesModal)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7051 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9646 */;
+import useGuildOnboardingAvailableDefault from "useGuildOnboardingAvailable" /* 7266 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9854 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildOnboardingTab = fn(6794).GuildOnboardingTab;
+const GuildOnboardingTab = fn(7010).GuildOnboardingTab;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { screen: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, tabBar: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tabBar = { paddingHorizontal: nativeDefault.space.PX_12, paddingTop: nativeDefault.space.PX_16 };
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Channels
   }
   const obj = guildId(576);
   const stateFromStores = guildId(573).useStateFromStores(first, tmp6);
-  const tmp9 = defaultTab(7051)(stateFromStores);
+  const tmp9 = defaultTab(7266)(stateFromStores);
   if (cResult[3] !== tmp9) {
     const intl = tmp(1126).intl;
     const string = intl.string;
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Channels
         }
       }
       const obj2 = { screenKey: "channelAndRolesModal", title: tmp10, render: tmp13 };
-      const tmp15 = closure_8(tmp8(9646), obj2);
+      const tmp15 = closure_8(tmp8(9854), obj2);
       cResult[8] = tmp10;
       cResult[9] = tmp13;
       cResult[10] = tmp15;

@@ -1,9 +1,9 @@
-// === Module 15111: logs ===
+// === Module 15407: logs ===
 
-// Module 15111 (logs)
+// Module 15407 (logs)
 import LoggerDefault from "Logger" /* 3 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11013 */;
-import RPCHelpers from "RPCHelpers" /* 11019 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11237 */;
+import RPCHelpers from "RPCHelpers" /* 11243 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 12399: joinOrStartActivityInChannel ===
+// === Module 12692: joinOrStartActivityInChannel ===
 
-// Module 12399 (joinOrStartActivityInChannel)
+// Module 12692 (joinOrStartActivityInChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -48,7 +48,7 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
           closure_130_10 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {

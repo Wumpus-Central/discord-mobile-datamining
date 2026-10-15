@@ -1,14 +1,14 @@
-// === Module 18001: calculatePIPState ===
+// === Module 18241: calculatePIPState ===
 
-// Module 18001 (calculatePIPState)
-import StreamKeyUtils from "StreamKeyUtils" /* 5905 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17836 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5902 */;
+// Module 18241 (calculatePIPState)
+import StreamKeyUtils from "StreamKeyUtils" /* 6116 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18076 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6252 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
 
 require = fn;
-const VoicePanelModes = fn(12524).VoicePanelModes;
-const ParticipantTypes = fn(5119).ParticipantTypes;
+const VoicePanelModes = fn(12817).VoicePanelModes;
+const ParticipantTypes = fn(5174).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 

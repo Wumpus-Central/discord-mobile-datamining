@@ -1,9 +1,9 @@
-// === Module 5297: VideoQualityStats ===
+// === Module 5352: VideoQualityStats ===
 
-// Module 5297 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 5125 */;
-import Histogram from "Histogram" /* 5280 */;
-import SystemResourcesDefault from "SystemResources" /* 5288 */;
+// Module 5352 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 5180 */;
+import Histogram from "Histogram" /* 5335 */;
+import SystemResourcesDefault from "SystemResources" /* 5343 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -656,11 +656,11 @@ prototype["addSystemResources"] = function addSystemResources() {
   const systemResources = this.systemResources;
   systemResources.takeSample();
 };
-prototype["appendTransportStats"] = function appendTransportStats(transport) {
-  if (null != transport.inboundBitrateEstimate) {
+prototype["appendTransportStats"] = function appendTransportStats(receiverReports) {
+  if (null != receiverReports.inboundBitrateEstimate) {
     const self = this;
     const inboundBitrateEstimateHistogram = this.inboundBitrateEstimateHistogram;
-    inboundBitrateEstimateHistogram.addSample(transport.inboundBitrateEstimate);
+    inboundBitrateEstimateHistogram.addSample(receiverReports.inboundBitrateEstimate);
   }
 };
 prototype["getCodecsUsed"] = function getCodecsUsed() {

@@ -1,11 +1,11 @@
-// === Module 17147: GuildsBarItemEmptyNUX ===
+// === Module 17387: GuildsBarItemEmptyNUX ===
 
-// Module 17147 (GuildsBarItemEmptyNUX)
+// Module 17387 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5383 */;
-import transitionToGuild from "transitionToGuild" /* 7059 */;
+import spring from "spring" /* 5438 */;
+import transitionToGuild from "transitionToGuild" /* 7274 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 require = fn;
 function handlePress() {
@@ -13,13 +13,13 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(17080);
+const GuildsBarConstants = fn(17320);
 ({ GUILD_ITEM_HIT_SLOP: closure_7, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1085).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(10647).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(10870).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_13 = createStyles.createStyles((width, arg1) => {
   const diff = width - 10;
   const obj = { root: { alignSelf: "stretch", paddingLeft: hitSlop.left, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING }, container: { position: "relative", flexDirection: "row", alignItems: "center", height: 55, width }, guildIndicator: null, icon: null, backdrop: null, expandedChildren: null };

@@ -1,11 +1,11 @@
-// === Module 15174: CollectiblesMarketingManager ===
+// === Module 15470: CollectiblesMarketingManager ===
 
-// Module 15174 (CollectiblesMarketingManager)
+// Module 15470 (CollectiblesMarketingManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7269 */;
-import CollectiblesMarketingReleaseType2 from "CollectiblesMarketingReleaseType" /* 7317 */;
-import CollectiblesMarketingCacheExperiment from "CollectiblesMarketingCacheExperiment" /* 15175 */;
-import DevSettingsStore from "DevSettingsStore" /* 5095 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7479 */;
+import CollectiblesMarketingReleaseType2 from "CollectiblesMarketingReleaseType" /* 7527 */;
+import CollectiblesMarketingCacheExperiment from "CollectiblesMarketingCacheExperiment" /* 15471 */;
+import DevSettingsStore from "DevSettingsStore" /* 5150 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;
 
 require = fn;

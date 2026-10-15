@@ -1,6 +1,6 @@
-// === Module 5081: CodedLink ===
+// === Module 5136: CodedLink ===
 
-// Module 5081 (CodedLink)
+// Module 5136 (CodedLink)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/coded_links/CodedLink.tsx");

@@ -1,6 +1,6 @@
-// === Module 14742: KrispNCModels ===
+// === Module 15038: KrispNCModels ===
 
-// Module 14742 (KrispNCModels)
+// Module 15038 (KrispNCModels)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_engine/KrispNCModels.tsx");

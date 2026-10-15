@@ -1,13 +1,13 @@
-// === Module 8711: useGameAutocomplete ===
+// === Module 8923: useGameAutocomplete ===
 
-// Module 8711 (useGameAutocomplete)
+// Module 8923 (useGameAutocomplete)
 import c from "c" /* 576 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8244 */;
-import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8712 */;
-import GameSearchSession from "GameSearchSession" /* 8713 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8454 */;
+import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8924 */;
+import GameSearchSession from "GameSearchSession" /* 8925 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8243 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8453 */;
 
 const require = globalThis.__r;
 

@@ -1,26 +1,26 @@
-// === Module 11227: StageChannelCallList ===
+// === Module 11451: StageChannelCallList ===
 
-// Module 11227 (StageChannelCallList)
+// Module 11451 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8334 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10826 */;
-import SpeakerTile from "SpeakerTile" /* 11229 */;
-import StageSectionHeaderDefault from "StageSectionHeader" /* 11236 */;
-import StageGridRowDefault from "StageGridRow" /* 11237 */;
-import AudienceGridRowDefault from "AudienceGridRow" /* 11251 */;
-import useStageChannelGridParticipants from "useStageChannelGridParticipants" /* 11255 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 6166 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8545 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11050 */;
+import SpeakerTile from "SpeakerTile" /* 11453 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 11460 */;
+import StageGridRowDefault from "StageGridRow" /* 11461 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 11475 */;
+import useStageChannelGridParticipants from "useStageChannelGridParticipants" /* 11479 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StageChannelListStore = fn(11228);
+const StageChannelListStore = fn(11452);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } = StageChannelListStore);
-const MAX_AUDIENCE_ROW_LIMIT = fn(5897).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(6108).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = { direction: fn(1200).CutoutDirection.RIGHT, radius: 13, inset: -6 };
@@ -857,10 +857,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageCha
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  const throttleDurationForChannel = width(11255).useThrottleDurationForChannel(channel.id);
+  const throttleDurationForChannel = width(11479).useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1497)().width;
-  let obj = width(11255);
-  isScreenLandscape = width(8334).useIsScreenLandscape();
+  let obj = width(11479);
+  isScreenLandscape = width(8545).useIsScreenLandscape();
   const items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
     let num = 3;
@@ -874,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageCha
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj2 = width(8334);
-  const tmp4 = _slicedToArray(width(11255).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const obj2 = width(8545);
+  const tmp4 = _slicedToArray(width(11479).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
 });

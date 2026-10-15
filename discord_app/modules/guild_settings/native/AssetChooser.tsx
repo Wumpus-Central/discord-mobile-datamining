@@ -1,13 +1,13 @@
-// === Module 18335: AssetChooser ===
+// === Module 18574: AssetChooser ===
 
-// Module 18335 (AssetChooser)
+// Module 18574 (AssetChooser)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import Pressables from "Pressables" /* 6189 */;
-import _modDef18336 from "module_18336" /* 18336 */;
-import _modDef18337 from "module_18337" /* 18337 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import Pressables from "Pressables" /* 6405 */;
+import _modDef18575 from "module_18575" /* 18575 */;
+import _modDef18576 from "module_18576" /* 18576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, assetImage: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
 let size = { width: "100%", height: 192, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.asset = size;
@@ -137,13 +137,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef18336;
+    tmp9Result = _modDef18575;
   }
   const items = [React5(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef18337 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef18576 };
     obj4.children = React5(FastImageDefault, obj5);
     tmp5Result = React5(React4, obj4);
     const tmp9Result2 = FastImageDefault;
@@ -167,7 +167,7 @@ prototype["render"] = function render() {
   children[1] = tmp5Result2;
   return closure_1_8(React6, { children });
 };
-AssetChooser.contextType = fn(4829).ThemeContext;
+AssetChooser.contextType = fn(4883).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 

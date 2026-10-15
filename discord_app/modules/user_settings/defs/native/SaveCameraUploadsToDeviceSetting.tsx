@@ -1,15 +1,15 @@
-// === Module 16115: SaveCameraUploadsToDeviceSetting ===
+// === Module 16411: SaveCameraUploadsToDeviceSetting ===
 
-// Module 16115 (SaveCameraUploadsToDeviceSetting)
+// Module 16411 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5265 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5320 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSaveCameraUploadsToDeviceValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["99tBAC"]);
   },
-  parent: fn(8000).MobileUserSettings.CHAT,
+  parent: fn(8210).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useSaveCameraUploadsToDeviceValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

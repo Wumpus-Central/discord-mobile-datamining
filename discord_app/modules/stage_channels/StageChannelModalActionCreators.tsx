@@ -1,13 +1,13 @@
-// === Module 7499: StageChannelModalActionCreators ===
+// === Module 7709: StageChannelModalActionCreators ===
 
-// Module 7499 (StageChannelModalActionCreators)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5894 */;
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 7490 */;
+// Module 7709 (StageChannelModalActionCreators)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6105 */;
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 7700 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5902 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 const require = fn;
@@ -69,15 +69,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(7490).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(7700).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(7490);
+    const obj2 = flag2(7700);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(7490).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(7490);
+      flag2(7700).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(7700);
     }
   }
 }
@@ -128,7 +128,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
               const items = [closure_0];
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: closure_0(7045).stopLurkingAll(items), done: false };
+              const obj7 = { value: closure_0(7260).stopLurkingAll(items), done: false };
               return obj7;
             }
           }
@@ -143,7 +143,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
           } else {
             c3 = 2;
             c4 = 1;
-            const obj9 = { value: tmp2(6104).joinGuild(closure_0, { lurker: true }), done: false };
+            const obj9 = { value: tmp2(6320).joinGuild(closure_0, { lurker: true }), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -159,10 +159,10 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             flag = null == channel;
             if (!flag) {
               connectToStage(channel);
-              closure_1(7500).initialize();
+              closure_1(7710).initialize();
               closure_1_0(channel);
               flag = false;
-              const obj = closure_1(7500);
+              const obj = closure_1(7710);
             }
             return flag;
           });

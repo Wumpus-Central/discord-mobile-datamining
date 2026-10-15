@@ -1,12 +1,12 @@
-// === Module 11939: ConjurePlanBotPreview ===
+// === Module 12166: ConjurePlanBotPreview ===
 
-// Module 11939 (ConjurePlanBotPreview)
+// Module 12166 (ConjurePlanBotPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef3849 from "module_3849" /* 3849 */;
-import RowGeneratorDefault from "RowGenerator" /* 7753 */;
-import ChatItemDefault from "ChatItem" /* 9383 */;
-import ConjurePlanCommandMenuPreviewDefault from "ConjurePlanCommandMenuPreview" /* 11940 */;
+import _modDef3862 from "module_3862" /* 3862 */;
+import RowGeneratorDefault from "RowGenerator" /* 7963 */;
+import ChatItemDefault from "ChatItem" /* 9594 */;
+import ConjurePlanCommandMenuPreviewDefault from "ConjurePlanCommandMenuPreview" /* 12167 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,12 +16,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { chat: null, menu: null };
 let tmp3 = new RowGeneratorDefault();
 obj2.chat = { paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
-obj2.menu = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(11832).MESSAGE_CONTENT_INSET, paddingRight: fn(11832).MESSAGE_EDGE_INSET };
+obj2.menu = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(12057).MESSAGE_CONTENT_INSET, paddingRight: fn(12057).MESSAGE_EDGE_INSET };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SampleMessage(record) {
@@ -80,7 +80,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SampleM
   return hasOwnProperty(ChatItemDefault, { rowGenerator, message: record, modifyRow: callback, pointerEvents: "none" });
 });
 ReactCompilerGating = fn(558);
-let obj4 = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(11832).MESSAGE_CONTENT_INSET, paddingRight: fn(11832).MESSAGE_EDGE_INSET };
+let obj4 = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(12057).MESSAGE_CONTENT_INSET, paddingRight: fn(12057).MESSAGE_EDGE_INSET };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanBotPreview.tsx");
 
@@ -272,8 +272,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     let obj2 = { direction: "vertical", spacing: 4, children: null };
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl = tmp2(1126).intl;
-    obj3.children = intl.string(_modDef3849.sA1lTv);
-    const items1 = [closure_5(tmp2(5092).Text, obj3), ];
+    obj3.children = intl.string(_modDef3862.sA1lTv);
+    const items1 = [closure_5(tmp2(5147).Text, obj3), ];
     const obj4 = {
       style: tmp.chat,
       children: items.map((menu) => {
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     };
     items1[1] = closure_5(View, obj4);
     obj2.children = items1;
-    tmp5 = closure_6(tmp2(5382).Stack, obj2);
+    tmp5 = closure_6(tmp2(5437).Stack, obj2);
   }
   return tmp5;
 });

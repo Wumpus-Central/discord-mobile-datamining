@@ -1,7 +1,7 @@
-// === Module 6971: useGuildShopPreviewVisible ===
+// === Module 7184: useGuildShopPreviewVisible ===
 
-// Module 6971 (useGuildShopPreviewVisible)
-import PermissionStore from "PermissionStore" /* 4752 */;
+// Module 7184 (useGuildShopPreviewVisible)
+import PermissionStore from "PermissionStore" /* 4806 */;
 
 const require = globalThis.__r;
 
@@ -123,9 +123,9 @@ export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEna
   }
   const items1 = [, , ];
   ({ CREATOR_MONETIZABLE: arr2[0], CREATOR_MONETIZABLE_PROVISIONAL: arr2[1], ROLE_SUBSCRIPTIONS_ENABLED: arr2[2] } = constants2);
-  const guildEligibleForGuildProducts = tmp(6966).useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = tmp(7179).useGuildEligibleForGuildProducts(id);
   let tmp9 = null != features;
-  const tmpResult = tmp(6966);
+  const tmpResult = tmp(7179);
   if (tmp9) {
     tmp9 = stateFromStores;
   }

@@ -1,10 +1,10 @@
-// === Module 15916: ThemeMidnightIcon ===
+// === Module 16212: ThemeMidnightIcon ===
 
-// Module 15916 (ThemeMidnightIcon)
+// Module 16212 (ThemeMidnightIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4819 */;
-import _mod15917 from "module_15917" /* 15917 */;
+import BaseIconImage from "BaseIconImage" /* 4873 */;
+import _mod16213 from "module_16213" /* 16213 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ThemeMidnightIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15917;
+    const tmpResult = _mod16213;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ThemeMidnightIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15917, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16213, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

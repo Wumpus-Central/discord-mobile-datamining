@@ -1,20 +1,20 @@
-// === Module 17861: useSoundGrid ===
+// === Module 18101: useSoundGrid ===
 
-// Module 17861 (useSoundGrid)
+// Module 18101 (useSoundGrid)
 import c from "c" /* 576 */;
-import SoundboardTypes from "SoundboardTypes" /* 7055 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8032 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8580 */;
-import useSoundOrganizer from "useSoundOrganizer" /* 17862 */;
-import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17865 */;
+import SoundboardTypes from "SoundboardTypes" /* 7270 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8242 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8793 */;
+import useSoundOrganizer from "useSoundOrganizer" /* 18102 */;
+import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 18105 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
-import SoundboardStore from "SoundboardStore" /* 5433 */;
+import SoundboardStore from "SoundboardStore" /* 5488 */;
 
 require = fn;
 function createSoundItems(items, sortSoundsFn) {
@@ -152,7 +152,7 @@ function addCurrentGuildSection(items, stateFromStores1, arg2) {
     items.push(obj3);
   }
 }
-const SoundboardConstants = fn(5435);
+const SoundboardConstants = fn(5490);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
 const PremiumTypes = fn(1392).PremiumTypes;
 fn(558);
@@ -640,7 +640,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSoundGrid
       const obj6 = { sections: items, guildIds: sortedGuildIdsForSoundboard, allSounds, potentialSoundIdsForSection: null, sectionType: null, sortSoundsFn: null };
       const _Array = Array;
       obj6.potentialSoundIdsForSection = Array.from(size);
-      obj6.sectionType = tmp13(7055).SoundboardSoundGridSectionType.FAVORITES;
+      obj6.sectionType = tmp13(7270).SoundboardSoundGridSectionType.FAVORITES;
       obj6.sortSoundsFn = sortSoundsOldestToNewestCreationDate;
       _addSectionForPotentialSoundIds(obj6);
       if (tmp) {
@@ -662,10 +662,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSoundGrid
         if (value5 == null) {
           value5 = __initData;
         }
-        const obj9 = { key: tmp13(7055).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-        const obj10 = { type: tmp13(7055).SoundboardSoundGridSectionType.DEFAULTS };
+        const obj9 = { key: tmp13(7270).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+        const obj10 = { type: tmp13(7270).SoundboardSoundGridSectionType.DEFAULTS };
         obj9.categoryInfo = obj10;
-        const sortSoundsOldestToNewestCreationDate2 = tmp13(17862).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate2 = tmp13(18102).sortSoundsOldestToNewestCreationDate;
         let result1 = value5;
         if (null != sortSoundsOldestToNewestCreationDate2) {
           result1 = sortSoundsOldestToNewestCreationDate2(value5);
@@ -688,10 +688,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSoundGrid
         if (value6 == null) {
           value6 = __initData;
         }
-        const obj12 = { key: tmp13(7055).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
-        const obj13 = { type: tmp13(7055).SoundboardSoundGridSectionType.DEFAULTS };
+        const obj12 = { key: tmp13(7270).SoundboardSoundGridSectionType.DEFAULTS, categoryInfo: null, items: null };
+        const obj13 = { type: tmp13(7270).SoundboardSoundGridSectionType.DEFAULTS };
         obj12.categoryInfo = obj13;
-        const sortSoundsOldestToNewestCreationDate3 = tmp13(17862).sortSoundsOldestToNewestCreationDate;
+        const sortSoundsOldestToNewestCreationDate3 = tmp13(18102).sortSoundsOldestToNewestCreationDate;
         let result2 = value6;
         if (null != sortSoundsOldestToNewestCreationDate3) {
           result2 = sortSoundsOldestToNewestCreationDate3(value6);

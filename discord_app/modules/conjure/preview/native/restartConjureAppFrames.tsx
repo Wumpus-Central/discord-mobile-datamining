@@ -1,12 +1,12 @@
-// === Module 10725: restartConjureAppFrames ===
+// === Module 10947: restartConjureAppFrames ===
 
-// Module 10725 (restartConjureAppFrames)
-import leaveFrame from "leaveFrame" /* 10726 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10727 */;
-import FramesStore from "FramesStore" /* 10713 */;
+// Module 10947 (restartConjureAppFrames)
+import leaveFrame from "leaveFrame" /* 10948 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10949 */;
+import FramesStore from "FramesStore" /* 10935 */;
 
 require = fn;
-const isLaunched = fn(10697).isLaunched;
+const isLaunched = fn(10919).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/native/restartConjureAppFrames.tsx");
 

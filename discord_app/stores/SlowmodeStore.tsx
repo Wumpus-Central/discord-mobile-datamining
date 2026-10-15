@@ -1,11 +1,11 @@
-// === Module 7381: SlowmodeStore ===
+// === Module 7591: SlowmodeStore ===
 
-// Module 7381 (SlowmodeStore)
+// Module 7591 (SlowmodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
 
 const require = fn;
 function setCooldown(channel, SendMessage, cooldownMs) {

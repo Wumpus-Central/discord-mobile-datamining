@@ -1,23 +1,23 @@
-// === Module 13005: LeafIllocon ===
+// === Module 13301: LeafIllocon ===
 
-// Module 13005 (LeafIllocon)
+// Module 13301 (LeafIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import assetHelpers from "assetHelpers" /* 6277 */;
-import _modDef13006 from "module_13006" /* 13006 */;
-import _modDef13007 from "module_13007" /* 13007 */;
-import _modDef13008 from "module_13008" /* 13008 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import assetHelpers from "assetHelpers" /* 6493 */;
+import _modDef13302 from "module_13302" /* 13302 */;
+import _modDef13303 from "module_13303" /* 13303 */;
+import _modDef13304 from "module_13304" /* 13304 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13006 }, 3: null };
-const obj2 = { uri: _modDef13006 };
-obj[2] = { uri: _modDef13007 };
-const obj3 = { uri: _modDef13007 };
-obj[3] = { uri: _modDef13008 };
+let obj = { 1: null, 2: { uri: _modDef13302 }, 3: null };
+const obj2 = { uri: _modDef13302 };
+obj[2] = { uri: _modDef13303 };
+const obj3 = { uri: _modDef13303 };
+obj[3] = { uri: _modDef13304 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13008 };
+const obj4 = { uri: _modDef13304 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/LeafIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const LeafIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6277).getAssetSource(obj);
+  obj.source = num(6493).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

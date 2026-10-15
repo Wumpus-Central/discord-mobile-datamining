@@ -1,10 +1,10 @@
-// === Module 17640: ChannelsFollowedIcon ===
+// === Module 17880: ChannelsFollowedIcon ===
 
-// Module 17640 (ChannelsFollowedIcon)
+// Module 17880 (ChannelsFollowedIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4819 */;
-import _mod17641 from "module_17641" /* 17641 */;
+import BaseIconImage from "BaseIconImage" /* 4873 */;
+import _mod17881 from "module_17881" /* 17881 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChannelsFollowedIcon = ReactCompilerGating.isReactCompilerEnabled()
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod17641;
+    const tmpResult = _mod17881;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChannelsFollowedIcon = ReactCompilerGating.isReactCompilerEnabled()
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17641, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17881, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

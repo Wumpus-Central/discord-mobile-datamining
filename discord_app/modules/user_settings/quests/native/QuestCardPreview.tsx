@@ -1,12 +1,12 @@
-// === Module 15801: QuestCardPreview ===
+// === Module 16097: QuestCardPreview ===
 
-// Module 15801 (QuestCardPreview)
+// Module 16097 (QuestCardPreview)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import QuestTypes from "QuestTypes" /* 5980 */;
-import QuestCard from "QuestCard" /* 15719 */;
-import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 15802 */;
+import QuestTypes from "QuestTypes" /* 6191 */;
+import QuestCard from "QuestCard" /* 16015 */;
+import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 16098 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -37,18 +37,18 @@ export const QuestCardPreview = ReactCompilerGating.isReactCompilerEnabled() ? (
     return tmp5;
   }
   let obj = quest(576);
-  const tmp6 = jsx(quest(13514).QuestContentImpressionTrackerNative, { questOrQuests: quest, questContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL, sourceQuestContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL, trackGuildAndChannelMetadata: false, children: tmp4 });
+  const tmp6 = jsx(quest(13810).QuestContentImpressionTrackerNative, { questOrQuests: quest, questContent: quest(6191).QuestContent.INTERNAL_PREVIEW_TOOL, sourceQuestContent: quest(6191).QuestContent.INTERNAL_PREVIEW_TOOL, trackGuildAndChannelMetadata: false, children: tmp4 });
   cResult[2] = quest;
   cResult[3] = tmp4;
   cResult[4] = tmp6;
   tmp5 = tmp6;
-  const obj2 = { questOrQuests: quest, questContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL, sourceQuestContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL, trackGuildAndChannelMetadata: false, children: tmp4 };
+  const obj2 = { questOrQuests: quest, questContent: quest(6191).QuestContent.INTERNAL_PREVIEW_TOOL, sourceQuestContent: quest(6191).QuestContent.INTERNAL_PREVIEW_TOOL, trackGuildAndChannelMetadata: false, children: tmp4 };
 }) : (function QuestCardPreview(quest) {
   quest = quest.quest;
-  return jsx(quest(13514).QuestContentImpressionTrackerNative, {
+  return jsx(quest(13810).QuestContentImpressionTrackerNative, {
     questOrQuests: quest,
-    questContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL,
-    sourceQuestContent: quest(5980).QuestContent.INTERNAL_PREVIEW_TOOL,
+    questContent: quest(6191).QuestContent.INTERNAL_PREVIEW_TOOL,
+    sourceQuestContent: quest(6191).QuestContent.INTERNAL_PREVIEW_TOOL,
     trackGuildAndChannelMetadata: false,
     children() {
       const obj = { title: null, children: null };

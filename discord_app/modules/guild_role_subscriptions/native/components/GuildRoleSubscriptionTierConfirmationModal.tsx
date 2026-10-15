@@ -1,25 +1,25 @@
-// === Module 18626: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 18865: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 18626 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 18865 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import FormHeaderDefault from "FormHeader" /* 8682 */;
-import FormStylesDefault from "FormStyles" /* 14499 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18595 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 18611 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 18627 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import FormHeaderDefault from "FormHeader" /* 8894 */;
+import FormStylesDefault from "FormStyles" /* 14796 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18834 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 18850 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 18866 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 18593 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 18832 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.coverPhoto = size;

@@ -1,19 +1,19 @@
-// === Module 15501: FamilyCenterSetting ===
+// === Module 15797: FamilyCenterSetting ===
 
-// Module 15501 (FamilyCenterSetting)
+// Module 15797 (FamilyCenterSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2568 from "module_2568" /* 2568 */;
-import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 15502 */;
-import useParentalConsentWarning from "useParentalConsentWarning" /* 15503 */;
+import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 15798 */;
+import useParentalConsentWarning from "useParentalConsentWarning" /* 15799 */;
 import noop from "module_19" /* 19 */;
 
 const util = intl(1126);
-const WarningIcon = intl(7578);
+const WarningIcon = intl(7788);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyCenterTrailing() {
   let intl = require;
   let stringResult = dependencyMap;
@@ -80,7 +80,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(_modDef2568.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(8224).GroupIcon,
+  IconComponent: fn(8434).GroupIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useFamilyCenterTrailing() {
     let intl = require;
     let stringResult = dependencyMap;

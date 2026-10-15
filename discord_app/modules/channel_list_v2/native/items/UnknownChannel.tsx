@@ -1,13 +1,13 @@
-// === Module 17019: UnknownChannel ===
+// === Module 17259: UnknownChannel ===
 
-// Module 17019 (UnknownChannel)
+// Module 17259 (UnknownChannel)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4811 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5050 */;
-import useChannelNameDefault from "useChannelName" /* 5426 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10293 */;
-import ChannelItemDefault from "ChannelItem" /* 16907 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4865 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5105 */;
+import useChannelNameDefault from "useChannelName" /* 5481 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10516 */;
+import ChannelItemDefault from "ChannelItem" /* 17146 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,13 +18,13 @@ function handlePress() {
   obj2.icon = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open("UNKNOWN_CHANNEL_UPDATE_DISCORD", obj2);
 }
-const UnreadSetting = fn(5972).UnreadSetting;
+const UnreadSetting = fn(6183).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
-let obj = { container: { marginVertical: fn(11572).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5151);
+let obj = { container: { marginVertical: fn(11797).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11572).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11797).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 

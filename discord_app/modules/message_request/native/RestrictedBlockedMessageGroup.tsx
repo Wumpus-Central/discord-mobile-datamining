@@ -1,10 +1,10 @@
-// === Module 17703: RestrictedBlockedMessageGroup ===
+// === Module 17943: RestrictedBlockedMessageGroup ===
 
-// Module 17703 (RestrictedBlockedMessageGroup)
+// Module 17943 (RestrictedBlockedMessageGroup)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import Pressables from "Pressables" /* 6189 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import Pressables from "Pressables" /* 6405 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,11 +14,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
-let obj2 = { toggle: { marginLeft: fn(17701).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
+const createStyles = fn(5151);
+let obj2 = { toggle: { marginLeft: fn(17941).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginLeft: fn(17701).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
+let obj3 = { marginLeft: fn(17941).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");
 
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
   }
   if (cResult[5] !== tmp9) {
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: tmp9 };
-    const tmp13 = closure_5(renderMessage(5092).Text, obj4);
+    const tmp13 = closure_5(renderMessage(5147).Text, obj4);
     cResult[5] = tmp9;
     cResult[6] = tmp13;
     let tmp11 = tmp13;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
       tmp16 = mapped;
     }
   }
-  const tmp15 = closure_5(renderMessage(6189).PressableOpacity, { style: tmp4.toggle, accessibilityRole: "button", accessibilityState: tmp8, onPress: first, children: tmp11 });
+  const tmp15 = closure_5(renderMessage(6405).PressableOpacity, { style: tmp4.toggle, accessibilityRole: "button", accessibilityState: tmp8, onPress: first, children: tmp11 });
   cResult[7] = tmp4.toggle;
   cResult[8] = tmp8;
   cResult[9] = tmp11;

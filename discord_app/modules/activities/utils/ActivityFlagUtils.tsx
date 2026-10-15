@@ -1,10 +1,10 @@
-// === Module 10761: ActivityFlagUtils ===
+// === Module 10985: ActivityFlagUtils ===
 
-// Module 10761 (ActivityFlagUtils)
+// Module 10985 (ActivityFlagUtils)
 import Storage2 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7433 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7643 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -19,8 +19,8 @@ export const computeActivityFlags = function computeActivityFlags(activity) {
   if (arg2 === undefined) {
     flag2 = false;
   }
-  let flag3 = tmp13Result;
-  if (tmp13Result === undefined) {
+  let flag3 = result1;
+  if (result1 === undefined) {
     flag3 = false;
   }
   let PRIVATE = privacy;

@@ -1,12 +1,12 @@
-// === Module 11278: ConjureCreateSheet ===
+// === Module 11502: ConjureCreateSheet ===
 
-// Module 11278 (ConjureCreateSheet)
+// Module 11502 (ConjureCreateSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5060 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6897 */;
-import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 11279 */;
-import ConjureEffortPicker from "ConjureEffortPicker" /* 11296 */;
-import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 11301 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5115 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7111 */;
+import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 11503 */;
+import ConjureEffortPicker from "ConjureEffortPicker" /* 11520 */;
+import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 11525 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,12 +17,12 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10663);
+const ConjureConnectionStore = fn(10886);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8, stageModelSettings: closure_9 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -414,7 +414,7 @@ export default function ConjureCreateSheet(guildId) {
   }, []);
   const items3 = [stringResult, memo];
   const callback1 = obj.useCallback(() => {
-    const obj2 = { key: "VibegrationsInstallScope", stackingBehavior: "stack", header: { title }, hasIcons: false, options: null };
+    const obj2 = { key: "ConjureInstallScope", stackingBehavior: "stack", header: { title }, hasIcons: false, options: null };
     const items = ["guild", "user"];
     obj2.options = items.map((item) => {
       closure_0 = item;

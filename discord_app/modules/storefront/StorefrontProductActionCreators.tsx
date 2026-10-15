@@ -1,11 +1,11 @@
-// === Module 8351: StorefrontProductActionCreators ===
+// === Module 8562: StorefrontProductActionCreators ===
 
-// Module 8351 (StorefrontProductActionCreators)
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8353 */;
+// Module 8562 (StorefrontProductActionCreators)
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8564 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8352 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7291 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8563 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7501 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -46,7 +46,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -181,7 +181,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp7) {

@@ -1,33 +1,33 @@
-// === Module 17808: ActivityPanelHeader ===
+// === Module 18048: ActivityPanelHeader ===
 
-// Module 17808 (ActivityPanelHeader)
+// Module 18048 (ActivityPanelHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6863 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17799 */;
-import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17809 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 17810 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17814 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 17815 */;
-import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17820 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7077 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18039 */;
+import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 18049 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 18050 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 18054 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 18055 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 18060 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
-const native = GestureDetector(4829);
-const LegacyBaseButton = GestureDetector(6339);
+const native = GestureDetector(4883);
+const LegacyBaseButton = GestureDetector(6555);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(6073);
+const ActivityPanelConstants = fn(6289);
 ({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(5096);
+let createStyles = fn(5151);
 let obj = { panelHeader: null, panelLandscape: null, headerContainer: null, pullIndicator: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -102,7 +102,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
                   return;
                 }
               }
-              const obj3 = { runOnJS: setMode(4852).runOnJS, setMode, ActivityPanelModes };
+              const obj3 = { runOnJS: setMode(4906).runOnJS, setMode, ActivityPanelModes };
               T.__closure = obj3;
               T.__workletHash = 14504167937928;
               T.__initData = __initData;
@@ -126,7 +126,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
                 }
               }
             }
-            const obj4 = { mode: setMode(17805).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
+            const obj4 = { mode: setMode(18045).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
             cResult[15] = T;
             cResult[16] = pipState;
             cResult[17] = wrapperOffset;
@@ -202,7 +202,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
     items[2] = obj;
     return items;
   }, items1);
-  obj.runOnJS = landscape(4852).runOnJS;
+  obj.runOnJS = landscape(4906).runOnJS;
   obj.setMode = setMode;
   obj.ActivityPanelModes = ActivityPanelModes;
   fn.__closure = obj;
@@ -211,8 +211,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
   const items2 = [setMode];
   const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
   const callback = noop.useCallback(fn, items2);
-  const obj3 = { mode: landscape(17805).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
-  obj2.gesture = setMode(17805)(obj3);
+  const obj3 = { mode: landscape(18045).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
+  obj2.gesture = setMode(18045)(obj3);
   obj2.headerWrapperStyles = memo;
   obj2.headerStyles = memo1;
   obj2.styles = tmp;
@@ -315,7 +315,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseActivity
   return tmp3Result2;
 });
 let closure_18 = tmp7;
-createStyles = fn(5096);
+createStyles = fn(5151);
 let obj4 = { buttonContainer: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 }, buttonContainerLandscape: { flexDirection: "column-reverse" } };
 const styles = createStyles.createStyles(obj4);
 ReactCompilerGating = fn(558);

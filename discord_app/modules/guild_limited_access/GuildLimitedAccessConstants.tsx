@@ -1,6 +1,6 @@
-// === Module 5910: GuildLimitedAccessConstants ===
+// === Module 6121: GuildLimitedAccessConstants ===
 
-// Module 5910 (GuildLimitedAccessConstants)
+// Module 6121 (GuildLimitedAccessConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_limited_access/GuildLimitedAccessConstants.tsx");

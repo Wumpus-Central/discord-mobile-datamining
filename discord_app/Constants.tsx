@@ -2027,6 +2027,9 @@ const frozen2 = Object.freeze({
   GAME_ORGANIZATION_INVITES(arg0, arg1) {
     return "/game-organizations/" + arg0 + "/" + arg1 + "/invites";
   },
+  GAME_ORGANIZATION_INVITE(arg0) {
+    return "/game-organization-invites/" + arg0;
+  },
   GUILD_ROOM(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1;
   },
@@ -2045,25 +2048,25 @@ const frozen2 = Object.freeze({
   GUILD_ROOM_OBJECT_DELETE(arg0, arg1, arg2) {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2;
   },
-  CONJURE_PROJECTS: "/vibegrations/projects",
+  CONJURE_PROJECTS: "/conjure/projects",
   CONJURE_PROJECT(projectId) {
-    return "/vibegrations/projects/" + projectId;
+    return "/conjure/projects/" + projectId;
   },
   CONJURE_PROJECT_UNPUBLISH(arg0) {
-    return "/vibegrations/projects/" + arg0 + "/unpublish";
+    return "/conjure/projects/" + arg0 + "/unpublish";
   },
-  CONJURE_PROJECT_LIMIT: "/vibegrations/project-limit",
+  CONJURE_PROJECT_LIMIT: "/conjure/project-limit",
   CONJURE_PROJECT_WS_TICKET(projectId) {
-    return "/vibegrations/projects/" + projectId + "/ws-ticket";
+    return "/conjure/projects/" + projectId + "/ws-ticket";
   },
   CONJURE_PROJECT_REMIX_TICKET(arg0) {
-    return "/vibegrations/projects/" + arg0 + "/remix-ticket";
+    return "/conjure/projects/" + arg0 + "/remix-ticket";
   },
   CONJURE_PROJECT_PUBLISH(arg0) {
-    return "/vibegrations/projects/" + arg0 + "/publish";
+    return "/conjure/projects/" + arg0 + "/publish";
   },
   CONJURE_PROJECT_PUBLISH_PREVIEW(arg0) {
-    return "/vibegrations/projects/" + arg0 + "/publish-preview";
+    return "/conjure/projects/" + arg0 + "/publish-preview";
   },
   GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(arg0, arg1, arg2, arg3) {
     return "/guild-space/" + arg0 + "/image-text-widget/" + arg1 + "/" + arg2 + "." + arg3;
@@ -4074,6 +4077,9 @@ const obj2 = {
   GAME_ORGANIZATION_INVITES(arg0, arg1) {
     return "/game-organizations/" + arg0 + "/" + arg1 + "/invites";
   },
+  GAME_ORGANIZATION_INVITE(arg0) {
+    return "/game-organization-invites/" + arg0;
+  },
   GUILD_ROOM(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1;
   },
@@ -4092,25 +4098,25 @@ const obj2 = {
   GUILD_ROOM_OBJECT_DELETE(arg0, arg1, arg2) {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2;
   },
-  CONJURE_PROJECTS: "/vibegrations/projects",
+  CONJURE_PROJECTS: "/conjure/projects",
   CONJURE_PROJECT(projectId) {
-    return "/vibegrations/projects/" + projectId;
+    return "/conjure/projects/" + projectId;
   },
   CONJURE_PROJECT_UNPUBLISH(arg0) {
-    return "/vibegrations/projects/" + arg0 + "/unpublish";
+    return "/conjure/projects/" + arg0 + "/unpublish";
   },
-  CONJURE_PROJECT_LIMIT: "/vibegrations/project-limit",
+  CONJURE_PROJECT_LIMIT: "/conjure/project-limit",
   CONJURE_PROJECT_WS_TICKET(projectId) {
-    return "/vibegrations/projects/" + projectId + "/ws-ticket";
+    return "/conjure/projects/" + projectId + "/ws-ticket";
   },
   CONJURE_PROJECT_REMIX_TICKET(arg0) {
-    return "/vibegrations/projects/" + arg0 + "/remix-ticket";
+    return "/conjure/projects/" + arg0 + "/remix-ticket";
   },
   CONJURE_PROJECT_PUBLISH(arg0) {
-    return "/vibegrations/projects/" + arg0 + "/publish";
+    return "/conjure/projects/" + arg0 + "/publish";
   },
   CONJURE_PROJECT_PUBLISH_PREVIEW(arg0) {
-    return "/vibegrations/projects/" + arg0 + "/publish-preview";
+    return "/conjure/projects/" + arg0 + "/publish-preview";
   },
   GUILD_SPACE_IMAGE_TEXT_WIDGET_IMAGE(arg0, arg1, arg2, arg3) {
     return "/guild-space/" + arg0 + "/image-text-widget/" + arg1 + "/" + arg2 + "." + arg3;
@@ -4335,7 +4341,7 @@ obj17[8192] = "HAS_UNREAD_URGENT_MESSAGES";
 const powResult2 = Math.pow(2, 44);
 obj17.QUARANTINED = powResult2;
 obj17[powResult2] = "QUARANTINED";
-const obj18 = { EMBEDDED_RELEASED: null, EMBEDDED_IAP: null, APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE: null, GAME_DISABLED: null, CONTEXTLESS_ACTIVITY: null, SOCIAL_LAYER_INTEGRATION_LIMITED: null, CLOUD_GAMING_DEMO: null, GATEWAY_PRESENCE: null, GATEWAY_PRESENCE_LIMITED: null, GATEWAY_GUILD_MEMBERS: null, GATEWAY_GUILD_MEMBERS_LIMITED: null, GATEWAY_MESSAGE_CONTENT: null, GATEWAY_MESSAGE_CONTENT_LIMITED: null, EMBEDDED_FIRST_PARTY: null, APPLICATION_COMMAND_BADGE: null, SOCIAL_LAYER_INTEGRATION: null, PROMOTED: null, PARTNER: null, PARENT: null, DISABLE_RELATIONSHIPS_ACCESS: null, QUEST: null };
+const obj18 = { EMBEDDED_RELEASED: null, EMBEDDED_IAP: null, APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE: null, GAME_DISABLED: null, CONTEXTLESS_ACTIVITY: null, SOCIAL_LAYER_INTEGRATION_LIMITED: null, CLOUD_GAMING_DEMO: null, GATEWAY_PRESENCE: null, GATEWAY_PRESENCE_LIMITED: null, GATEWAY_GUILD_MEMBERS: null, GATEWAY_GUILD_MEMBERS_LIMITED: null, GATEWAY_MESSAGE_CONTENT: null, GATEWAY_MESSAGE_CONTENT_LIMITED: null, EMBEDDED_FIRST_PARTY: null, APPLICATION_COMMAND_BADGE: null, SOCIAL_LAYER_INTEGRATION: null, PROMOTED: null, PARTNER: null, PARENT: null, DISABLE_RELATIONSHIPS_ACCESS: null, QUEST: null, DM_OPENS_ACTIVITY: null };
 let BigFlagUtils = BigFlagUtils_mod;
 obj18.EMBEDDED_RELEASED = BigFlagUtils.getFlag(1);
 let BigFlagUtils = BigFlagUtils_mod;
@@ -4378,6 +4384,8 @@ let BigFlagUtils = BigFlagUtils_mod;
 obj18.DISABLE_RELATIONSHIPS_ACCESS = BigFlagUtils.getFlag(34);
 let BigFlagUtils = BigFlagUtils_mod;
 obj18.QUEST = BigFlagUtils.getFlag(38);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.DM_OPENS_ACTIVITY = BigFlagUtils.getFlag(42);
 const frozen11 = Object.freeze(obj18);
 const frozen12 = Object.freeze({
   STORAGE_MANIFEST(arg0, arg1) {

@@ -1,38 +1,38 @@
-// === Module 11239: CallTile ===
+// === Module 11463: CallTile ===
 
-// Module 11239 (CallTile)
+// Module 11463 (CallTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4852 */;
-import timing from "timing" /* 5097 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5110 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8311 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11240 */;
-import _modDef11245 from "module_11245" /* 11245 */;
-import _modDef11246 from "module_11246" /* 11246 */;
-import _modDef11247 from "module_11247" /* 11247 */;
-import _modDef11248 from "module_11248" /* 11248 */;
-import _modDef11249 from "module_11249" /* 11249 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 11250 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4906 */;
+import timing from "timing" /* 5152 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5165 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8522 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 11464 */;
+import _modDef11469 from "module_11469" /* 11469 */;
+import _modDef11470 from "module_11470" /* 11470 */;
+import _modDef11471 from "module_11471" /* 11471 */;
+import _modDef11472 from "module_11472" /* 11472 */;
+import _modDef11473 from "module_11473" /* 11473 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 11474 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5902 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10364);
+const ChannelCallStore = fn(10587);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5119);
+const CallConstants = fn(5174);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-const ColorUtils = fn(4969);
+const ColorUtils = fn(5023);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;
@@ -58,7 +58,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function StreamPrevie
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { aspectRatio: "emoji", borderRadius: false };
+      const obj2 = { aspectRatio: "done", borderRadius: false };
       cResult[3] = obj2;
       let tmp6 = obj2;
     } else {
@@ -111,7 +111,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function StreamPrevie
   obj.children = map1(TouchableStreamPreviewDefault, {
     guildId: participant.stream.guildId,
     userId: participant.user.id,
-    style: { aspectRatio: "emoji", borderRadius: false },
+    style: { aspectRatio: "done", borderRadius: false },
     disableTransition: true,
     onPress() {
       return closure_1_8();
@@ -127,17 +127,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
   participant = participant.participant;
   let titleIcon2 = closure_16();
   if (participant.type === constants.STREAM) {
-    let tmp4 = _modDef11245;
+    let tmp4 = _modDef11469;
   } else if (participant.type === tmp3.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp4 = _modDef11246;
+      tmp4 = _modDef11470;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp4 = _modDef11247;
+      tmp4 = _modDef11471;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp4 = _modDef11248;
+      tmp4 = _modDef11472;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp4 = _modDef11249;
+      tmp4 = _modDef11473;
     }
   }
   if (null == tmp4) {
@@ -157,17 +157,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Partic
 }) : (function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef11245;
+    let tmp3 = _modDef11469;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef11246;
+      tmp3 = _modDef11470;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef11247;
+      tmp3 = _modDef11471;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef11248;
+      tmp3 = _modDef11472;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef11249;
+      tmp3 = _modDef11473;
     }
   }
   let tmp14 = null;
@@ -188,7 +188,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   let obj = reveal(576);
   const tmp = reveal;
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(10907).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11131).RevealContext).reveal;
   const tmp6 = useSafeAreaInsetsDefault();
   const fn = function l() {
     let num = 0;
@@ -200,8 +200,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
     obj2.opacity = obj.withTiming(num, { easing: native.STANDARD_EASING, duration: 250 });
     return obj2;
   };
-  let obj2 = reveal(4852);
-  fn.__closure = { withTiming: reveal(5097).withTiming, reveal, STANDARD_EASING: reveal(1200).STANDARD_EASING };
+  let obj2 = reveal(4906);
+  fn.__closure = { withTiming: reveal(5152).withTiming, reveal, STANDARD_EASING: reveal(1200).STANDARD_EASING };
   fn.__workletHash = 15640123774063;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -325,14 +325,14 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
   cResult[3] = num4;
   cResult[4] = rect;
   tmp8 = rect;
-  const obj3 = { withTiming: reveal(5097).withTiming, reveal, STANDARD_EASING: reveal(1200).STANDARD_EASING };
+  const obj3 = { withTiming: reveal(5152).withTiming, reveal, STANDARD_EASING: reveal(1200).STANDARD_EASING };
 }) : (function TileOverlay(arg0) {
   ({ participant, isActiveStream } = arg0);
   let reveal;
   ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = arg0);
   const tmp = closure_16();
   ({ bottom, left, top, right } = useSafeAreaInsetsDefault());
-  reveal = noop.useContext(reveal(10907).RevealContext).reveal;
+  reveal = noop.useContext(reveal(11131).RevealContext).reveal;
   const tmp4 = useSafeAreaInsetsDefault();
   const tmp5 = reveal;
   class A {
@@ -350,8 +350,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function TileOverlay(
       return obj1;
     }
   }
-  let obj = reveal(4852);
-  A.__closure = { withTiming: reveal(5097).withTiming, reveal, STANDARD_EASING: reveal(1200).STANDARD_EASING };
+  let obj = reveal(4906);
+  A.__closure = { withTiming: reveal(5152).withTiming, reveal, STANDARD_EASING: reveal(1200).STANDARD_EASING };
   A.__workletHash = 1463196379948;
   A.__initData = __initData2;
   let num = 0;

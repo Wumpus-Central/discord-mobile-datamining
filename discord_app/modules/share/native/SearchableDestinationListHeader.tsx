@@ -1,18 +1,18 @@
-// === Module 12357: SearchableDestinationListHeader ===
+// === Module 12592: SearchableDestinationListHeader ===
 
-// Module 12357 (SearchableDestinationListHeader)
+// Module 12592 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import NavigatorHeader from "NavigatorHeader" /* 6205 */;
-import _mod6214 from "module_6214" /* 6214 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6631 */;
-import HeaderShared from "HeaderShared" /* 9307 */;
+import NavigatorHeader from "NavigatorHeader" /* 6421 */;
+import _mod6430 from "module_6430" /* 6430 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 6847 */;
+import HeaderShared from "HeaderShared" /* 9518 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
 const obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -38,8 +38,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     if (cResult[3] !== onClose) {
       let headerCloseButton;
       if (null != onClose) {
-        headerCloseButton = subtitle(6205).getHeaderCloseButton(onClose);
-        const tmpResult = subtitle(6205);
+        headerCloseButton = subtitle(6421).getHeaderCloseButton(onClose);
+        const tmpResult = subtitle(6421);
       }
       cResult[3] = onClose;
       cResult[4] = headerCloseButton;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
       const obj2 = { headerStyle: tmp4.header, title, headerTitle: tmp6, headerTitleAlign: "center", headerLeft: tmp7, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
       ({ headerLeftContainer: obj5.headerLeftContainerStyle, headerRightContainer: obj5.headerRightContainerStyle } = tmp4);
       obj2.headerStatusBarHeight = tmp10;
-      const tmp15 = jsx(subtitle(6214).Header, { headerStyle: tmp4.header, title, headerTitle: tmp6, headerTitleAlign: "center", headerLeft: tmp7, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
+      const tmp15 = jsx(subtitle(6430).Header, { headerStyle: tmp4.header, title, headerTitle: tmp6, headerTitleAlign: "center", headerLeft: tmp7, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
       cResult[8] = headerRight;
       cResult[9] = tmp4.header;
       cResult[10] = tmp4.headerLeftContainer;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
       if (!tmpResult3.isIOS()) {
         let num3 = top;
       } else {
-        subtitle(6631);
+        subtitle(6847);
         num3 = 0;
       }
       sum = num3 + tmp5(587).space.PX_8;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     tmp5Result3 = PlatformUtils;
   }
   obj.headerStatusBarHeight = headerStatusBarHeight;
-  return jsx(_mod6214.Header, {
+  return jsx(_mod6430.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

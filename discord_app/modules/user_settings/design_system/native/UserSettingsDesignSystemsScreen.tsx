@@ -1,9 +1,9 @@
-// === Module 16270: UserSettingsDesignSystemsScreen ===
+// === Module 16566: UserSettingsDesignSystemsScreen ===
 
-// Module 16270 (UserSettingsDesignSystemsScreen)
+// Module 16566 (UserSettingsDesignSystemsScreen)
 import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 10767 */;
-import SettingLayoutDefault from "SettingLayout" /* 15323 */;
+import SettingBuilders from "SettingBuilders" /* 10991 */;
+import SettingLayoutDefault from "SettingLayout" /* 15619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ function getDesignSystemsSettings() {
   items1[4] = obj5;
   return items1;
 }
-const MobileUserSettings = fn(8000).MobileUserSettings;
+const MobileUserSettings = fn(8210).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,11 +1,22 @@
-// === Module 9077: OrderSigningDeferral ===
+// === Module 9289: OrderSigningDeferral ===
 
-// Module 9077 (OrderSigningDeferral)
-import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9078 */;
+// Module 9289 (OrderSigningDeferral)
+import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9290 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_3 = async function _performSigningDeferralAction(arg0) {
+function openPaymentRedirect(redirect_url) {
+  redirect_url = redirect_url.redirect_url;
+  if (null == redirect_url) {
+    const _Error = Error;
+    const error = new Error("Payment redirect context has no redirect url");
+    throw error;
+  } else {
+    const _window = window;
+    window.open(redirect_url);
+  }
+}
+let closure_4 = async function _performSigningDeferralAction(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -31,13 +42,13 @@ let closure_3 = async function _performSigningDeferralAction(arg0) {
           return obj4;
         } else if (null == closure_0) {
           const _Error2 = Error;
-          let error = new Error("Order signing was deferred without a deferral context");
+          const error = new Error("Order signing was deferred without a deferral context");
           throw error;
         } else {
           ({ payment_redirect_context, stripe_3ds_context } = closure_0);
           if (null == payment_redirect_context) {
             if (null == stripe_3ds_context) {
-              let _Error = Error;
+              const _Error = Error;
               const error1 = new Error("Order signing deferral context has no action the client can complete");
               throw error1;
             } else {
@@ -47,17 +58,7 @@ let closure_3 = async function _performSigningDeferralAction(arg0) {
               return obj5;
             }
           } else {
-            (function openPaymentRedirect(payment_redirect_context) {
-              const redirect_url = payment_redirect_context.redirect_url;
-              if (null == redirect_url) {
-                const _Error = Error;
-                const error = new Error("Payment redirect context has no redirect url");
-                throw error;
-              } else {
-                const _window = window;
-                window.open(redirect_url);
-              }
-            })(payment_redirect_context);
+            openPaymentRedirect(payment_redirect_context);
           }
         }
       } else if (arg0 === 1) {
@@ -70,18 +71,34 @@ let closure_3 = async function _performSigningDeferralAction(arg0) {
       }
       c1 = 3;
       return { value: "IconComponent", done: null };
-    } catch (tmp18) {
+    } catch (tmp19) {
       c1 = tmp;
-      throw tmp18;
+      throw tmp19;
     }
   }
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/OrderSigningDeferral.tsx");
 
+export const getPaymentRedirectContext = function getPaymentRedirectContext(billing_facet) {
+  billing_facet = null;
+  if (null != billing_facet) {
+    billing_facet = billing_facet.billing_facet;
+  }
+  let prop = null;
+  if (null != billing_facet) {
+    prop = billing_facet.order_signing_deferral_context;
+  }
+  let prop1 = null;
+  if (null != prop) {
+    prop1 = prop.payment_redirect_context;
+  }
+  return prop1;
+};
+export { openPaymentRedirect };
 export const performSigningDeferralAction = function performSigningDeferralAction() {
   const self = this;
-  const apply = closure_3.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

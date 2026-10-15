@@ -1,31 +1,31 @@
-// === Module 17956: VoicePanelMicButton ===
+// === Module 18196: VoicePanelMicButton ===
 
-// Module 17956 (VoicePanelMicButton)
+// Module 18196 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
-import HapticUtils from "HapticUtils" /* 5061 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6339 */;
-import useMuteStates from "useMuteStates" /* 7063 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 8808 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11109 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11172 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11173 */;
-import useDeafStates from "useDeafStates" /* 11205 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12523 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17957 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17958 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import HapticUtils from "HapticUtils" /* 5116 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6555 */;
+import useMuteStates from "useMuteStates" /* 7278 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9021 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11333 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11396 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11397 */;
+import useDeafStates from "useDeafStates" /* 11429 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12816 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 18197 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 18198 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5115 */;
+import GameConsoleStore from "GameConsoleStore" /* 5170 */;
 import ImpersonateStore from "ImpersonateStore" /* 2118 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
 import UserStore from "UserStore" /* 1390 */;
-import VoiceStateStore from "VoiceStateStore" /* 5117 */;
+import VoiceStateStore from "VoiceStateStore" /* 5172 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_17 = createStyles.createStyles({ text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 } });
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMuteHandlers(arg0) {

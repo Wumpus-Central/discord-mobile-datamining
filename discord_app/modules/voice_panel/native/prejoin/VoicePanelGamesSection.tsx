@@ -1,18 +1,17 @@
-// === Module 17933: VoicePanelGamesSection ===
+// === Module 18173: VoicePanelGamesSection ===
 
-// Module 17933 (VoicePanelGamesSection)
+// Module 18173 (VoicePanelGamesSection)
 import c from "c" /* 576 */;
-import useGame from "useGame" /* 7016 */;
-import FormComponents from "FormComponents" /* 8801 */;
-import VoiceChannelGamesExperimentDefault from "VoiceChannelGamesExperiment" /* 8859 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8884 */;
-import GameActivityIconDefault from "GameActivityIcon" /* 13547 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17934 */;
+import useGame from "useGame" /* 7229 */;
+import FormComponents from "FormComponents" /* 9014 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9096 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 13843 */;
+import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 18174 */;
 import noop from "module_19" /* 19 */;
 
 const util = v9sZWVp(1126);
-const TableRow = v9sZWVp(6184);
-const GameProfileAnalyticUtils = v9sZWVp(8883);
+const TableRow = v9sZWVp(6400);
+const GameProfileAnalyticUtils = v9sZWVp(9095);
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -31,7 +30,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameRow
     tmp4 = cResult[1];
   }
   const tmp6 = useOpenGameProfileModalDefault(tmp4);
-  _require = tmp6;
+  closure_0 = tmp6;
   if (null == data) {
     return null;
   } else {
@@ -70,27 +69,22 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GameRow
       cResult[5] = tmp14;
     }
     if (cResult[8] !== tmp6) {
-      class G {
-        constructor() {
-          return closure_0();
-        }
-      }
+      const fn = function h() {
+        return closure_0();
+      };
       cResult[8] = tmp6;
-      cResult[9] = G;
+      cResult[9] = fn;
+      let tmp15 = fn;
     } else {
-      class G {
-        constructor() {
-          return closure_0();
-        }
-      }
+      tmp15 = cResult[9];
     }
-    const obj6 = { icon: intl2, label: name, arrow: true, onPress: G, accessibilityRole: "button", accessibilityLabel: null };
+    const obj6 = { icon: intl2, label: name, arrow: true, onPress: tmp15, accessibilityRole: "button", accessibilityLabel: null };
     intl2 = util.intl;
     v9sZWVp = util.t["9sZWVp"];
     const obj7 = { gameName: name };
     formatToPlainStringResult = intl2.formatToPlainString(v9sZWVp, obj7);
     obj6.accessibilityLabel = formatToPlainStringResult;
-    jsx(TableRow.TableRow, { icon: intl2, label: name, arrow: true, onPress: G, accessibilityRole: "button", accessibilityLabel: null });
+    jsx(TableRow.TableRow, { icon: intl2, label: name, arrow: true, onPress: tmp15, accessibilityRole: "button", accessibilityLabel: null });
     const forResult = Symbol.for("react.early_return_sentinel");
   }
 }) : (function GameRow(gameId) {
@@ -139,62 +133,56 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/Vo
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelGamesSection(arg0) {
   const cResult = c.c(6);
   ({ members, guildId } = arg0);
-  const tmp4 = VoiceChannelGamesExperimentDefault("voice_pre_join_games_section");
-  const arr = useVoiceChannelGamesDefault(members, guildId, tmp4);
-  if (tmp4) {
-    if (0 !== arr.length) {
-      const _Symbol2 = Symbol;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = util.intl;
-        const stringResult = intl.string(util.t.crRMpG);
-        cResult[0] = stringResult;
-        let first = stringResult;
+  const arr = useVoiceChannelGamesDefault(members, guildId);
+  if (0 === arr.length) {
+    return null;
+  } else {
+    const _Symbol2 = Symbol;
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl = util.intl;
+      const stringResult = intl.string(util.t.crRMpG);
+      cResult[0] = stringResult;
+      let first = stringResult;
+    } else {
+      first = cResult[0];
+    }
+    if (cResult[1] !== arr) {
+      const _Symbol = Symbol;
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function s(gameId) {
+          return <closure_1_4 key={gameId} gameId={gameId} />;
+        };
+        cResult[3] = fn;
+        let tmp7 = fn;
       } else {
-        first = cResult[0];
+        tmp7 = cResult[3];
       }
-      if (cResult[1] !== arr) {
-        const _Symbol = Symbol;
-        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function s(gameId) {
-            return <closure_1_4 key={gameId} gameId={gameId} />;
-          };
-          cResult[3] = fn;
-          let tmp8 = fn;
-        } else {
-          tmp8 = cResult[3];
-        }
-        const mapped = arr.map(tmp8);
-        cResult[1] = arr;
-        cResult[2] = mapped;
+      const mapped = arr.map(tmp7);
+      cResult[1] = arr;
+      cResult[2] = mapped;
+    } else {
+      if (cResult[4] !== cResult[2]) {
+        const obj2 = { title: first, hasIcons: true, children: tmp6 };
+        const tmp12 = jsx(FormComponents.VoicePanelFormSection, { title: first, hasIcons: true, children: tmp6 });
+        cResult[4] = tmp6;
+        cResult[5] = tmp12;
+        let tmp10 = tmp12;
       } else {
-        if (cResult[4] !== cResult[2]) {
-          const obj2 = { title: first, hasIcons: true, children: tmp7 };
-          const tmp13 = jsx(FormComponents.VoicePanelFormSection, { title: first, hasIcons: true, children: tmp7 });
-          cResult[4] = tmp7;
-          cResult[5] = tmp13;
-          let tmp11 = tmp13;
-        } else {
-          tmp11 = cResult[5];
-        }
-        return tmp11;
+        tmp10 = cResult[5];
       }
+      return tmp10;
     }
   }
-  return null;
 }) : (function VoicePanelGamesSection(arg0) {
   ({ members, guildId } = arg0);
-  const tmp2 = VoiceChannelGamesExperimentDefault("voice_pre_join_games_section");
-  const arr = useVoiceChannelGamesDefault(members, guildId, tmp2);
-  let tmp3 = null;
-  if (tmp2) {
-    tmp3 = null;
-    if (0 !== arr.length) {
-      const obj = { title: null, hasIcons: true, children: null };
-      const intl = util.intl;
-      obj.title = intl.string(util.t.crRMpG);
-      obj.children = arr.map((gameId) => <closure_1_4 key={gameId} gameId={gameId} />);
-      tmp3 = jsx(FormComponents.VoicePanelFormSection, { title: null, hasIcons: true, children: null });
-    }
+  const arr = useVoiceChannelGamesDefault(members, guildId);
+  let tmp2 = null;
+  if (0 !== arr.length) {
+    const obj = { title: null, hasIcons: true, children: null };
+    const intl = util.intl;
+    obj.title = intl.string(util.t.crRMpG);
+    obj.children = arr.map((gameId) => <closure_1_4 key={gameId} gameId={gameId} />);
+    tmp2 = jsx(FormComponents.VoicePanelFormSection, { title: null, hasIcons: true, children: null });
   }
-  return tmp3;
+  return tmp2;
 }));

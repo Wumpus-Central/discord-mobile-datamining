@@ -1,20 +1,20 @@
-// === Module 8397: useVideoControls ===
+// === Module 8608: useVideoControls ===
 
-// Module 8397 (useVideoControls)
+// Module 8608 (useVideoControls)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8395 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8398 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8606 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5085 */;
+import AccessibilityStore from "AccessibilityStore" /* 5140 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
 const module_570 = fn(570);
-const obj5 = module_570.create(() => ({ controls: "Set", paused: true }));
-const createStyles = fn(5096);
+const obj5 = module_570.create(() => ({ controls: "test", paused: true }));
+const createStyles = fn(5151);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideo
 export const useVideoStateStore = obj5;
 export const initVideoStateStore = function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
-    state.setState({ controls: "Set", paused: true });
+    state.setState({ controls: "test", paused: true });
   });
 };
 export const setMuted = function setMuted(isMuted) {

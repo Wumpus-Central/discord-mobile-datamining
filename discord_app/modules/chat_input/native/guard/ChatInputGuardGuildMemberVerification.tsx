@@ -1,24 +1,24 @@
-// === Module 12740: ChatInputGuardGuildMemberVerification ===
+// === Module 13037: ChatInputGuardGuildMemberVerification ===
 
-// Module 12740 (ChatInputGuardGuildMemberVerification)
+// Module 13037 (ChatInputGuardGuildMemberVerification)
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5111 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6109 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 6112 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6151 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12719 */;
-import _modDef12741 from "module_12741" /* 12741 */;
-import _modDef12742 from "module_12742" /* 12742 */;
-import _mod12743 from "module_12743" /* 12743 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5166 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6325 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 6328 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6367 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13016 */;
+import _modDef13038 from "module_13038" /* 13038 */;
+import _modDef13039 from "module_13039" /* 13039 */;
+import _mod13040 from "module_13040" /* 13040 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5085 */;
+import AccessibilityStore from "AccessibilityStore" /* 5140 */;
 
 require = fn;
-const TextAreaCta = fn(11996).TextAreaCta;
+const TextAreaCta = fn(12228).TextAreaCta;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_7 = createStyles.createStyles({ noticeIcon: { height: 36, width: 36, resizeMode: "contain" }, lottieAnimation: { height: 36, width: 36 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -298,8 +298,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[18] = tmp34;
     }
     function renderAnimation() {
-      const obj = { style: noticeIcon.lottieAnimation, source: _mod12743, autoPlay: !stateFromStores };
-      return jsx(LottieAnimationViewDefault, { style: noticeIcon.lottieAnimation, source: _mod12743, autoPlay: !stateFromStores });
+      const obj = { style: noticeIcon.lottieAnimation, source: _mod13040, autoPlay: !stateFromStores };
+      return jsx(LottieAnimationViewDefault, { style: noticeIcon.lottieAnimation, source: _mod13040, autoPlay: !stateFromStores });
     }
     cResult[12] = noticeIcon.lottieAnimation;
     cResult[13] = stateFromStores;
@@ -311,13 +311,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
 }) : (function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_7();
-  const currentUserGuildJoinRequest = guildId(6127).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(6343).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  if (guildId(4944).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = _modDef12741;
+  if (guildId(4998).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+    let tmp8 = _modDef13038;
     const intl3 = tmp2(1126).intl;
     let stringResult = intl3.string(tmp2(1126).t.lk30cY);
     let fn = function _() {
@@ -325,8 +325,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj2 = { cta_type: TextAreaCta.MEMBER_VERIFICATION_REJECTED };
       const result = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert({ guildId, canWithdraw: false });
     };
-  } else if (tmp2(4944).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = _modDef12742;
+  } else if (tmp2(4998).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+    tmp8 = _modDef13039;
     const intl2 = tmp2(1126).intl;
     stringResult = intl2.string(tmp2(1126).t["5iLvSx"]);
     fn = function _() {
@@ -337,7 +337,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj4.subtitleText = intl.string(util.t["13tjTU"]);
       const result = MemberVerificationAlertActionCreators.openMemberVerificationCancelPendingAlert(obj4);
     };
-    const tmp7 = jsx(tmp2(6212).XSmallIcon, {});
+    const tmp7 = jsx(tmp2(6428).XSmallIcon, {});
   } else {
     let intl = tmp2(1126).intl;
     stringResult = intl.string(tmp2(1126).t.rEBKvg);
@@ -347,7 +347,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const result = MemberVerificationModalActionCreators.openMemberVerificationModal(guildId);
     };
   }
-  let obj = guildId(6127);
+  let obj = guildId(6343);
   const items = [AccessibilityStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp2Result = guildId(504);
@@ -355,8 +355,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let obj2 = { style: tmp.noticeIcon, source: tmp8 };
     let tmp13Result = jsx(FastImageDefault, { style: tmp.noticeIcon, source: tmp8 });
   } else {
-    const obj3 = { style: tmp.lottieAnimation, source: tmp2(12743), autoPlay: !stateFromStores };
-    tmp13Result = jsx(LottieAnimationViewDefault, { style: tmp.lottieAnimation, source: tmp2(12743), autoPlay: !stateFromStores });
+    const obj3 = { style: tmp.lottieAnimation, source: tmp2(13040), autoPlay: !stateFromStores };
+    tmp13Result = jsx(LottieAnimationViewDefault, { style: tmp.lottieAnimation, source: tmp2(13040), autoPlay: !stateFromStores });
     const tmp14Result = LottieAnimationViewDefault;
   }
   let obj4 = { type: "simple-action", icon: tmp13Result, message: stringResult, actionIcon: tmp7, actionLabel: null, actionOnPress: null };

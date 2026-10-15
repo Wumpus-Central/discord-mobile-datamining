@@ -1,13 +1,13 @@
-// === Module 8700: HubProgressActionCreators ===
+// === Module 8912: HubProgressActionCreators ===
 
-// Module 8700 (HubProgressActionCreators)
+// Module 8912 (HubProgressActionCreators)
 import FlagUtils from "FlagUtils" /* 1403 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(8701).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(8913).HUB_PROGRESS_STEP_ORDER;
 const GuildFeatures = fn(1085).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");

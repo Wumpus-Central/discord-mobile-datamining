@@ -1,10 +1,11 @@
-// === Module 8721: UserAffinitiesActionCreators ===
+// === Module 8933: UserAffinitiesActionCreators ===
 
-// Module 8721 (UserAffinitiesActionCreators)
+// Module 8933 (UserAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import ConsentStore from "ConsentStore" /* 5937 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7354 */;
+import UserAffinitiesTypes from "UserAffinitiesTypes" /* 8934 */;
+import ConsentStore from "ConsentStore" /* 6148 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7564 */;
 
 require = fn;
 const Constants = fn(1085);
@@ -83,4 +84,13 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
     return nextPromise;
   }
   nextPromise = Promise.resolve();
+};
+export const setDevToolsUserAffinityOverride = function setDevToolsUserAffinityOverride(userId) {
+  let tmp2 = null;
+  if (null != userId) {
+    const obj3 = { otherUserId: userId.userId, userSegment: UserAffinitiesTypes.AffineUserSegment.HFU_MAU, otherUserSegment: UserAffinitiesTypes.AffineUserSegment.HFU_MAU, isFriend: false, dmProbability: null, dmRank: 1, vcProbability: null, vcRank: 1, serverMessageProbability: 0, serverMessageRank: 1, communicationProbability: null, communicationRank: 1 };
+    ({ communicationProbability: obj2.dmProbability, vcProbability: obj2.vcProbability, communicationProbability: obj2.communicationProbability } = userId);
+    tmp2 = obj3;
+  }
+  DispatcherDefault.dispatch({ type: "DEV_TOOLS_SET_USER_AFFINITY_OVERRIDE", override: tmp2 });
 };

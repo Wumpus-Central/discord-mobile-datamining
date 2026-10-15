@@ -1,6 +1,6 @@
-// === Module 11409: ApplicationWidgetLayoutName ===
+// === Module 11634: ApplicationWidgetLayoutName ===
 
-// Module 11409 (ApplicationWidgetLayoutName)
+// Module 11634 (ApplicationWidgetLayoutName)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetLayoutName.tsx");

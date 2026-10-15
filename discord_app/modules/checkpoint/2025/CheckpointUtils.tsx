@@ -1,19 +1,19 @@
-// === Module 5452: CheckpointUtils ===
+// === Module 5507: CheckpointUtils ===
 
-// Module 5452 (CheckpointUtils)
+// Module 5507 (CheckpointUtils)
 import util from "util" /* 1126 */;
-import TimeUtils from "TimeUtils" /* 5125 */;
-import getTimestampString from "getTimestampString" /* 5453 */;
-import _modDef5454 from "module_5454" /* 5454 */;
-import _modDef5455 from "module_5455" /* 5455 */;
-import _modDef5456 from "module_5456" /* 5456 */;
-import _modDef5457 from "module_5457" /* 5457 */;
-import _modDef5458 from "module_5458" /* 5458 */;
-import _modDef5459 from "module_5459" /* 5459 */;
-import _modDef5460 from "module_5460" /* 5460 */;
-import _modDef5461 from "module_5461" /* 5461 */;
-import _modDef5462 from "module_5462" /* 5462 */;
-import _modDef5463 from "module_5463" /* 5463 */;
+import TimeUtils from "TimeUtils" /* 5180 */;
+import getTimestampString from "getTimestampString" /* 5508 */;
+import _modDef5509 from "module_5509" /* 5509 */;
+import _modDef5510 from "module_5510" /* 5510 */;
+import _modDef5511 from "module_5511" /* 5511 */;
+import _modDef5512 from "module_5512" /* 5512 */;
+import _modDef5513 from "module_5513" /* 5513 */;
+import _modDef5514 from "module_5514" /* 5514 */;
+import _modDef5515 from "module_5515" /* 5515 */;
+import _modDef5516 from "module_5516" /* 5516 */;
+import _modDef5517 from "module_5517" /* 5517 */;
+import _modDef5518 from "module_5518" /* 5518 */;
 import size from "module_2" /* 2 */;
 
 const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
@@ -43,27 +43,27 @@ export const getVoiceDurationString = function getVoiceDurationString(rounded) {
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return _modDef5454;
+    return _modDef5509;
   } else if (1 === cardId) {
-    return _modDef5455;
+    return _modDef5510;
   } else if (2 === cardId) {
-    return _modDef5456;
+    return _modDef5511;
   } else if (3 === cardId) {
-    return _modDef5457;
+    return _modDef5512;
   } else if (4 === cardId) {
-    return _modDef5458;
+    return _modDef5513;
   } else if (5 === cardId) {
-    return _modDef5459;
+    return _modDef5514;
   } else if (6 === cardId) {
-    return _modDef5460;
+    return _modDef5515;
   } else if (7 === cardId) {
-    return _modDef5461;
+    return _modDef5516;
   } else if (8 === cardId) {
-    return _modDef5462;
+    return _modDef5517;
   } else {
-    return _modDef5463;
+    return _modDef5518;
   }
 };
-export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(powerLevelPercentile) {
-  return Math.min(Math.max(Math.round(powerLevelPercentile / 10), 1), 9);
+export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(checkpointData) {
+  return Math.min(Math.max(Math.round(checkpointData / 10), 1), 9);
 };

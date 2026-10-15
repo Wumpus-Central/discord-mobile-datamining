@@ -1,12 +1,12 @@
-// === Module 10992: ActivityTile ===
+// === Module 11216: ActivityTile ===
 
-// Module 10992 (ActivityTile)
+// Module 11216 (ActivityTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import native2 from "native" /* 4829 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 10998 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
+import native2 from "native" /* 4883 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11222 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1200).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1204).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { pressableOpacity: null, activityPreview: null, activityViewContainer: null, titleText: null, subtitleText: null, overflow: null, buttonWrapper: null, buttonPill: null };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
 obj2.pressableOpacity = size;
@@ -500,7 +500,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
               const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(10902)(obj4), done: false };
+              const obj5 = { value: v1(11126)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -510,8 +510,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(10997).setOrientationLockState(closure_128_3);
-          const obj = tmp2(10997);
+          const result = tmp2(11221).setOrientationLockState(closure_128_3);
+          const obj = tmp2(11221);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

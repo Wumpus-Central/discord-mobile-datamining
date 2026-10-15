@@ -1,15 +1,15 @@
-// === Module 13108: ChannelContainer ===
+// === Module 13404: ChannelContainer ===
 
-// Module 13108 (ChannelContainer)
+// Module 13404 (ChannelContainer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4940 */;
-import useChatLayoutDefault from "useChatLayout" /* 4981 */;
-import common_NotificationsDefault from "common/Notifications" /* 13109 */;
-import useChannelStylesShared from "useChannelStylesShared" /* 13228 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
+import useChatLayoutDefault from "useChatLayout" /* 5035 */;
+import common_NotificationsDefault from "common/Notifications" /* 13405 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 13524 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4753 */;
+import LurkingStore from "LurkingStore" /* 4807 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
@@ -19,7 +19,7 @@ const ChannelTypes = fn(1085).ChannelTypes;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_12 = createStyles.createStyles({ container: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationsContainer() {
@@ -91,7 +91,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp10 = !isStageChannel;
   if (isStageChannel) {
-    tmp10 = channelId(10929)(stateFromStoresObject.voiceChannelId);
+    tmp10 = channelId(11153)(stateFromStoresObject.voiceChannelId);
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [LurkingStore];
@@ -125,9 +125,9 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
     tmp15 = cResult[7];
   }
   dependencyMap = tmp15;
-  const tmp18 = channelId(5927)(tmp15);
+  const tmp18 = channelId(6138)(tmp15);
   noop = tmp18;
-  const tmp19 = channelId(5927)(channelId);
+  const tmp19 = channelId(6138)(channelId);
   closure_4 = tmp19;
   if (cResult[8] === channelId) {
     if (cResult[9] === tmp15) {
@@ -137,7 +137,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
           let tmp21 = cResult[13];
         }
         const effect = noop.useEffect(tmp20, tmp21);
-        const channelStyles = tmp(13228).useChannelStyles();
+        const channelStyles = tmp(13524).useChannelStyles();
         if (cResult[14] === channel) {
           if (cResult[15] === stateFromStores) {
             let tmp25 = cResult[16];
@@ -191,7 +191,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
           let tmp32 = tmp10;
           if (tmp10) {
             const obj4 = { style: channelStyles.callPTTButton };
-            tmp32 = closure_10(tmp9(11108), obj4);
+            tmp32 = closure_10(tmp9(11332), obj4);
           }
           cResult[17] = channelStyles.callPTTButton;
           cResult[18] = tmp10;
@@ -207,14 +207,14 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
           tmp29 = null;
           if (stateFromStores) {
             const obj5 = { channel };
-            tmp29 = closure_10(tmp9(13229), obj5);
+            tmp29 = closure_10(tmp9(13525), obj5);
           }
         }
         cResult[14] = channel;
         cResult[15] = stateFromStores;
         cResult[16] = tmp29;
         tmp25 = tmp29;
-        const tmpResult4 = tmp(13228);
+        const tmpResult4 = tmp(13524);
       }
     }
   }
@@ -268,7 +268,7 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(10929)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(11153)(stateFromStoresObject.voiceChannelId);
   }
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
@@ -283,9 +283,9 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
     isPrivateResult = channel.isPrivate();
   }
   dependencyMap = isPrivateResult;
-  const tmp8 = channelId(5927)(isPrivateResult);
+  const tmp8 = channelId(6138)(isPrivateResult);
   noop = tmp8;
-  const tmp9 = channelId(5927)(channelId);
+  const tmp9 = channelId(6138)(channelId);
   closure_4 = tmp9;
   const items2 = [channelId, tmp9, isPrivateResult, tmp8];
   const effect = noop.useEffect(() => {
@@ -321,13 +321,13 @@ export const ChannelContainer = ReactCompilerGating.isReactCompilerEnabled() ? (
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(channelId(13229), obj4);
+      tmp15 = closure_10(channelId(13525), obj4);
     }
   }
   const items3 = [tmp15, children.children, ];
   if (tmp5) {
     const obj5 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(11108), obj5);
+    tmp5 = closure_10(channelId(11332), obj5);
   }
   items3[2] = tmp5;
   obj3.children = items3;

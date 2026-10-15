@@ -1,6 +1,6 @@
-// === Module 11980: waveTransition ===
+// === Module 12209: waveTransition ===
 
-// Module 11980 (waveTransition)
+// Module 12209 (waveTransition)
 import size from "module_2" /* 2 */;
 
 function shiftChar(str, arg1) {

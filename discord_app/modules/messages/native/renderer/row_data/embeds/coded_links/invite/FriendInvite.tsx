@@ -1,13 +1,13 @@
-// === Module 13890: FriendInvite ===
+// === Module 14186: FriendInvite ===
 
-// Module 13890 (FriendInvite)
+// Module 14186 (FriendInvite)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import UserUtilsDefault from "UserUtils" /* 4964 */;
-import Constants from "Constants" /* 7430 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7896 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
+import Constants from "Constants" /* 7640 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8106 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;

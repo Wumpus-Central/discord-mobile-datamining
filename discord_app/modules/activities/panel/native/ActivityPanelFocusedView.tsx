@@ -1,19 +1,19 @@
-// === Module 17807: ActivityPanelFocusedView ===
+// === Module 18047: ActivityPanelFocusedView ===
 
-// Module 17807 (ActivityPanelFocusedView)
+// Module 18047 (ActivityPanelFocusedView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import native from "native" /* 4829 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
-import timing from "timing" /* 5097 */;
-import spring from "spring" /* 5383 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 10999 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17799 */;
-import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 17808 */;
+import native from "native" /* 4883 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import timing from "timing" /* 5152 */;
+import spring from "spring" /* 5438 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 11223 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 18039 */;
+import ActivityPanelHeaderDefault from "ActivityPanelHeader" /* 18048 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5085 */;
+import AccessibilityStore from "AccessibilityStore" /* 5140 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
@@ -21,16 +21,16 @@ const require = globalThis.__r;
 
 require = fn;
 const ActivityLayoutMode = fn(2024).ActivityLayoutMode;
-const ActivityPanelConstants = fn(6073);
+const ActivityPanelConstants = fn(6289);
 ({ ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17802);
+const ActivityPanelNativeConstants = fn(18042);
 ({ DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11, DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12, DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
-const IS_IOS = fn(12524).IS_IOS;
+const IS_IOS = fn(12817).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const REDUCED_MOTION_TIMING = { duration: 300 };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { wrapper: { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, shade: null };
 let obj4 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

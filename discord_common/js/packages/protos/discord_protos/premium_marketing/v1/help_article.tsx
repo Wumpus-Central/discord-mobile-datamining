@@ -1,8 +1,8 @@
-// === Module 9137: help_article ===
+// === Module 9349: help_article ===
 
-// Module 9137 (help_article)
+// Module 9349 (help_article)
 import _mod1210 from "module_1210" /* 1210 */;
-import localized_string from "localized_string" /* 9136 */;
+import localized_string from "localized_string" /* 9348 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

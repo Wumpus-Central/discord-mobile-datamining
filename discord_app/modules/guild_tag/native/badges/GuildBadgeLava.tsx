@@ -1,9 +1,9 @@
-// === Module 14534: GuildBadgeLava ===
+// === Module 14831: GuildBadgeLava ===
 
-// Module 14534 (GuildBadgeLava)
+// Module 14831 (GuildBadgeLava)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7583 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14519 */;
+import inlineStyles from "inlineStyles" /* 7793 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14816 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

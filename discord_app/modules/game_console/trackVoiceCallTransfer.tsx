@@ -1,10 +1,10 @@
-// === Module 11188: trackVoiceCallTransfer ===
+// === Module 11412: trackVoiceCallTransfer ===
 
-// Module 11188 (trackVoiceCallTransfer)
+// Module 11412 (trackVoiceCallTransfer)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
-import SessionsStore from "SessionsStore" /* 5116 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
+import SessionsStore from "SessionsStore" /* 5171 */;
 
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);

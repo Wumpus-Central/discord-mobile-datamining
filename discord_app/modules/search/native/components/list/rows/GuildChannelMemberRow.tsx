@@ -1,8 +1,8 @@
-// === Module 17469: GuildChannelMemberRow ===
+// === Module 17709: GuildChannelMemberRow ===
 
-// Module 17469 (GuildChannelMemberRow)
+// Module 17709 (GuildChannelMemberRow)
 import c from "c" /* 576 */;
-import UserRowDefault from "UserRow" /* 10238 */;
+import UserRowDefault from "UserRow" /* 10451 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 7981: BasicGuildStore ===
+// === Module 8191: BasicGuildStore ===
 
-// Module 7981 (BasicGuildStore)
+// Module 8191 (BasicGuildStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

@@ -1,8 +1,8 @@
-// === Module 10871: handleMessagesTapGameMention ===
+// === Module 11095: handleMessagesTapGameMention ===
 
-// Module 10871 (handleMessagesTapGameMention)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8883 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8889 */;
+// Module 11095 (handleMessagesTapGameMention)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9095 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9101 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapGameMention.tsx");

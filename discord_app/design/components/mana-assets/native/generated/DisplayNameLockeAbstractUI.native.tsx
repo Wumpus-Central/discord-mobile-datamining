@@ -1,23 +1,23 @@
-// === Module 17592: DisplayNameLockeAbstractUI ===
+// === Module 17832: DisplayNameLockeAbstractUI ===
 
-// Module 17592 (DisplayNameLockeAbstractUI)
+// Module 17832 (DisplayNameLockeAbstractUI)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import assetHelpers from "assetHelpers" /* 6277 */;
-import _modDef17593 from "module_17593" /* 17593 */;
-import _modDef17594 from "module_17594" /* 17594 */;
-import _modDef17595 from "module_17595" /* 17595 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import assetHelpers from "assetHelpers" /* 6493 */;
+import _modDef17833 from "module_17833" /* 17833 */;
+import _modDef17834 from "module_17834" /* 17834 */;
+import _modDef17835 from "module_17835" /* 17835 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17593 }, 3: null };
-let obj2 = { uri: _modDef17593 };
-obj[2] = { uri: _modDef17594 };
-const obj3 = { uri: _modDef17594 };
-obj[3] = { uri: _modDef17595 };
+let obj = { 1: null, 2: { uri: _modDef17833 }, 3: null };
+let obj2 = { uri: _modDef17833 };
+obj[2] = { uri: _modDef17834 };
+const obj3 = { uri: _modDef17834 };
+obj[3] = { uri: _modDef17835 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17595 };
+const obj4 = { uri: _modDef17835 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx");
 

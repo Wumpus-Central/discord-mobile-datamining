@@ -1,29 +1,29 @@
-// === Module 11862: ConjurePublishNotesSheet ===
+// === Module 12089: ConjurePublishNotesSheet ===
 
-// Module 11862 (ConjurePublishNotesSheet)
+// Module 12089 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3849 from "module_3849" /* 3849 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5060 */;
-import ConjureUtils from "ConjureUtils" /* 6951 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11345 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 11863 */;
+import _modDef3862 from "module_3862" /* 3862 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5115 */;
+import ConjureUtils from "ConjureUtils" /* 7165 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11569 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 12090 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4750 */;
+import GuildChannelStore from "GuildChannelStore" /* 4804 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4750).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5089).MessageSendLocation;
+let closure_8 = fn(4804).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5144).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const ConjurePublishNotesSheet = "ConjurePublishNotesSheet";
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_16 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, notesSection: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -51,7 +51,8 @@ export default function ConjurePublishNotesSheet(projectName) {
   let callback2;
   const tmp3 = closure_16(guildId(applicationId[12])({ includeKeyboardHeight: true }).insets.bottom);
   const items = [first];
-  const stateFromStores = projectId(applicationId[13]).useStateFromStores(items, () => {
+  const items1 = [guildId];
+  const stateFromStoresArray = projectId(applicationId[13]).useStateFromStoresArray(items, () => {
     found = GuildChannelStore.getChannels(guildId)[closure_8].filter((channel) => {
       channel = channel.channel;
       const isGuildVocalResult = channel.isGuildVocal();
@@ -65,23 +66,23 @@ export default function ConjurePublishNotesSheet(projectName) {
       return tmp2;
     });
     return found.map((channel) => channel.channel);
-  });
+  }, items1);
   let obj = projectId(applicationId[13]);
-  const items1 = [first];
-  const items2 = [guildId, applicationId];
-  const stateFromStores1 = projectId(applicationId[13]).useStateFromStores(items1, () => ConjureUtils.findConjureChannelId(guildId, applicationId), items2);
+  const items2 = [first];
+  const items3 = [guildId, applicationId];
+  const stateFromStores = projectId(applicationId[13]).useStateFromStores(items2, () => ConjureUtils.findConjureChannelId(guildId, applicationId), items3);
   let obj2 = projectId(applicationId[13]);
   const tmp6 = guildId(applicationId[15])();
   const diff = tmp6 - projectId(applicationId[16]).formatPlaySuffix(projectId(applicationId[16]).PLAY_LINE_CHANNEL_PLACEHOLDER).length;
-  let ref = stateFromStores1.useRef(diff);
+  let ref = stateFromStores.useRef(diff);
   ref.current = diff;
-  const tmp9 = stateFromStores(stateFromStores1.useState(() => {
+  const tmp9 = stateFromStoresArray(stateFromStores.useState(() => {
     const result = ConjurePatchNotesChannel.lastPatchNotesChannel(applicationId);
     projectId = result;
     let tmp2 = null;
     if (null != result) {
       tmp2 = null;
-      if (stateFromStores.some((id) => id.id === result)) {
+      if (stateFromStoresArray.some((id) => id.id === result)) {
         tmp2 = result;
       }
     }
@@ -90,32 +91,32 @@ export default function ConjurePublishNotesSheet(projectName) {
   first = tmp9[0];
   closure_8 = tmp9[1];
   let obj3 = projectId(applicationId[16]);
-  [str, c9] = stateFromStores(stateFromStores1.useState(""), 2);
-  const tmp12 = stateFromStores(stateFromStores1.useState(true), 2);
+  [str, c9] = stateFromStoresArray(stateFromStores.useState(""), 2);
+  const tmp12 = stateFromStoresArray(stateFromStores.useState(true), 2);
   closure_10 = tmp12[1];
-  const tmp11 = stateFromStores(stateFromStores1.useState(""), 2);
-  [tmp14, c11] = stateFromStores(stateFromStores1.useState(false), 2);
-  const tmp15 = stateFromStores(stateFromStores1.useState(undefined), 2);
+  const tmp11 = stateFromStoresArray(stateFromStores.useState(""), 2);
+  [tmp14, c11] = stateFromStoresArray(stateFromStores.useState(false), 2);
+  const tmp15 = stateFromStoresArray(stateFromStores.useState(undefined), 2);
   const first1 = tmp15[0];
   closure_13 = tmp15[1];
-  const tmp13 = stateFromStores(stateFromStores1.useState(false), 2);
-  [tmp18, c14] = stateFromStores(stateFromStores1.useState(false), 2);
-  const tmp17 = stateFromStores(stateFromStores1.useState(false), 2);
-  [tmp20, c15] = stateFromStores(stateFromStores1.useState(false), 2);
-  closure_16 = stateFromStores1.useRef(false);
-  ref = stateFromStores1.useRef(null != first);
-  const items3 = [stateFromStores1];
-  const effect = stateFromStores1.useEffect(() => {
-    let current = null == stateFromStores1;
+  const tmp13 = stateFromStoresArray(stateFromStores.useState(false), 2);
+  [tmp18, c14] = stateFromStoresArray(stateFromStores.useState(false), 2);
+  const tmp17 = stateFromStoresArray(stateFromStores.useState(false), 2);
+  [tmp20, c15] = stateFromStoresArray(stateFromStores.useState(false), 2);
+  closure_16 = stateFromStores.useRef(false);
+  ref = stateFromStores.useRef(null != first);
+  const items4 = [stateFromStores];
+  const effect = stateFromStores.useEffect(() => {
+    let current = null == stateFromStores;
     if (!current) {
       current = ref.current;
     }
     if (!current) {
-      closure_8(stateFromStores1);
+      closure_8(stateFromStores);
     }
-  }, items3);
-  const items4 = [projectId];
-  const effect1 = stateFromStores1.useEffect(() => {
+  }, items4);
+  const items5 = [projectId];
+  const effect1 = stateFromStores.useEffect(() => {
     c0 = false;
     const obj = projectId(applicationId[17]);
     projectId(applicationId[17]).draftPatchNotes(c0).then((source_sha) => {
@@ -147,38 +148,38 @@ export default function ConjurePublishNotesSheet(projectName) {
     return () => {
       c0 = true;
     };
-  }, items4);
+  }, items5);
   let found = null;
-  const callback = stateFromStores1.useCallback((arg0) => {
+  const callback = stateFromStores.useCallback((arg0) => {
     closure_16.current = true;
     _undefined2(false);
     _undefined(arg0);
   }, []);
   if (null != first) {
-    found = stateFromStores.find((id) => id.id === first);
+    found = stateFromStoresArray.find((id) => id.id === first);
   }
   if (found == null) {
     found = null;
   }
   trimmed = str.trim();
   let formatPlaySuffixResult = null;
-  if (null != stateFromStores1) {
+  if (null != stateFromStores) {
     let _HermesInternal = HermesInternal;
-    formatPlaySuffixResult = tmp4(tmp2[16]).formatPlaySuffix("<#" + stateFromStores1 + ">");
+    formatPlaySuffixResult = tmp4(tmp2[16]).formatPlaySuffix("<#" + stateFromStores + ">");
     const tmp4Result = tmp4(tmp2[16]);
   }
   c20 = formatPlaySuffixResult;
-  const items5 = [stateFromStores, guildId, found];
+  const items6 = [stateFromStoresArray, guildId, found];
   const callback1 = obj4.useCallback(() => {
     const obj2 = { content: null, key: "ConjurePatchNotesChannelSheet", stackingBehavior: "stack" };
     const obj3 = { header: null, guild: null, channels: null, selectedChannel: null, onSelect: null };
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3849.Gd63Fl);
+    obj4.title = intl.string(_modDef3862.Gd63Fl);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
-    obj3.channels = stateFromStores;
+    obj3.channels = stateFromStoresArray;
     obj3.selectedChannel = found;
     obj3.onSelect = function onSelect(id) {
       ref.current = true;
@@ -186,11 +187,11 @@ export default function ConjurePublishNotesSheet(projectName) {
     };
     obj2.content = map1(ChannelPickerActionSheetDefault, obj3);
     obj.showActionSheet(obj2);
-  }, items5);
+  }, items6);
   callback2 = obj4.useCallback(() => {
     guildId(applicationId[18]).hideActionSheet(c15);
   }, []);
-  const items6 = [found, trimmed, formatPlaySuffixResult, applicationId, projectId, publishedRevision, guildId, first1, callback2];
+  const items7 = [found, trimmed, formatPlaySuffixResult, applicationId, projectId, publishedRevision, guildId, first1, callback2];
   const callback3 = obj4.useCallback(publishedRevision(function*() {
     if (c4 === 2) {
       c4 = 3;
@@ -229,8 +230,8 @@ export default function ConjurePublishNotesSheet(projectName) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + trimmed + tmp43;
                 }
-                const parsed = tmp3(7376).parse(found, combined);
-                const tmp40Result = tmp3(7185);
+                const parsed = tmp3(7586).parse(found, combined);
+                const tmp40Result = tmp3(7395);
                 const obj5 = { location: constants.CONJURE_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;
@@ -259,7 +260,7 @@ export default function ConjurePublishNotesSheet(projectName) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = projectId(11863).rememberPatchNotesChannel(closure_129_2, closure_129_18.id);
+              const result = projectId(12090).rememberPatchNotesChannel(closure_129_2, closure_129_18.id);
               let id;
               if (closure_128_0 != null) {
                 const body = closure_128_0.body;
@@ -270,12 +271,12 @@ export default function ConjurePublishNotesSheet(projectName) {
               closure_128_1 = id;
               if (null != closure_128_1) {
                 const obj8 = { publishedRevision: closure_129_3, guildId: closure_129_1, channelId: closure_129_18.id, messageId: closure_128_1 };
-                projectId(10751).recordPatchNotesSent(closure_129_0, obj8, closure_129_12);
-                const obj = projectId(10751);
+                projectId(10974).recordPatchNotesSent(closure_129_0, obj8, closure_129_12);
+                const obj = projectId(10974);
               }
               closure_129_21();
               dependencyMap = 0;
-              const obj10 = projectId(11863);
+              const obj10 = projectId(12090);
             }
           }
           const _Error = Error;
@@ -292,7 +293,7 @@ export default function ConjurePublishNotesSheet(projectName) {
         }
       }
     }
-  }), items6);
+  }), items7);
   let obj5 = { startExpanded: true, header: null, children: null };
   let obj6 = { title: null };
   let intl = tmp4(tmp2[20]).intl;
@@ -300,7 +301,7 @@ export default function ConjurePublishNotesSheet(projectName) {
   obj5.header = closure_13(projectId(applicationId[25]).BottomSheetTitleHeader, obj6);
   let obj7 = { style: tmp3.container, children: null };
   let tmp31Result = null;
-  if (stateFromStores.length > 0) {
+  if (stateFromStoresArray.length > 0) {
     let obj8 = { style: tmp3.notesSection, children: null };
     const obj9 = { label: null, placeholder: null, description: null, errorMessage: null, maxLength: null, value: null, onChange: null, disabled: null };
     const intl2 = tmp4(tmp2[20]).intl;
@@ -324,7 +325,7 @@ export default function ConjurePublishNotesSheet(projectName) {
     obj9.value = str;
     obj9.onChange = callback;
     obj9.disabled = tmp18;
-    const items7 = [tmp30(tmp4(tmp2[26]).TextArea, obj9), ];
+    const items8 = [tmp30(tmp4(tmp2[26]).TextArea, obj9), ];
     const intl6 = tmp4(tmp2[20]).intl;
     if (null != found) {
       const _HermesInternal2 = HermesInternal;
@@ -344,27 +345,27 @@ export default function ConjurePublishNotesSheet(projectName) {
     const obj11 = { variant: "text-md/medium", color: "text-subtle", children: null };
     obj10.onPick = fn;
     obj11.children = intl6.format(tmp(tmp2[21])["1lVhj/"], obj10);
-    items7[1] = tmp30(tmp4(tmp2[27]).Text, obj11);
-    obj8.children = items7;
+    items8[1] = tmp30(tmp4(tmp2[27]).Text, obj11);
+    obj8.children = items8;
     tmp31Result = tmp31(tmp32, obj8);
   }
-  const items8 = [tmp31Result, ];
+  const items9 = [tmp31Result, ];
   const obj12 = { style: tmp3.actions, children: null };
   const obj13 = { variant: "tertiary", grow: true, text: null, onPress: null };
   const intl8 = tmp4(tmp2[20]).intl;
   obj13.text = intl8.string(projectId(applicationId[20]).t["ETE/oC"]);
   obj13.onPress = callback2;
-  const items9 = [closure_13(projectId(applicationId[29]).Button, obj13), ];
+  const items10 = [closure_13(projectId(applicationId[29]).Button, obj13), ];
   const obj14 = { variant: "primary", grow: true, text: null, loading: null, disabled: null, onPress: null };
   const intl9 = tmp4(tmp2[20]).intl;
   obj14.text = intl9.string(guildId(applicationId[21])["69aIG4"]);
   obj14.loading = tmp18;
   obj14.disabled = "" === trimmed || trimmed.length > diff || null == found || tmp18;
   obj14.onPress = callback3;
-  items9[1] = closure_13(projectId(applicationId[29]).Button, obj14);
-  obj12.children = items9;
-  items8[1] = c14(ref, obj12);
-  obj7.children = items8;
+  items10[1] = closure_13(projectId(applicationId[29]).Button, obj14);
+  obj12.children = items10;
+  items9[1] = c14(ref, obj12);
+  obj7.children = items9;
   obj5.children = c14(ref, obj7);
   return closure_13(projectId(applicationId[24]).ActionSheet, obj5);
 };

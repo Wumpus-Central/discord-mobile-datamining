@@ -1,8 +1,8 @@
-// === Module 9343: useHandleJoinThreadVoice ===
+// === Module 9554: useHandleJoinThreadVoice ===
 
-// Module 9343 (useHandleJoinThreadVoice)
+// Module 9554 (useHandleJoinThreadVoice)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4754 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4808 */;
 
 const require = fn;
 const size = fn(2);

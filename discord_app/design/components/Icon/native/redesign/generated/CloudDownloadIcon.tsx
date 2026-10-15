@@ -1,10 +1,10 @@
-// === Module 12030: CloudDownloadIcon ===
+// === Module 12263: CloudDownloadIcon ===
 
-// Module 12030 (CloudDownloadIcon)
+// Module 12263 (CloudDownloadIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4819 */;
-import _mod12031 from "module_12031" /* 12031 */;
+import BaseIconImage from "BaseIconImage" /* 4873 */;
+import _mod12264 from "module_12264" /* 12264 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const CloudDownloadIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12031;
+    const tmpResult = _mod12264;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const CloudDownloadIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12031, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12264, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

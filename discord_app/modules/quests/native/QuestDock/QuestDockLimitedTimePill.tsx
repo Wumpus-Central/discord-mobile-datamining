@@ -1,18 +1,18 @@
-// === Module 15844: QuestDockLimitedTimePill ===
+// === Module 16140: QuestDockLimitedTimePill ===
 
-// Module 15844 (QuestDockLimitedTimePill)
+// Module 16140 (QuestDockLimitedTimePill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import TimerIcon from "TimerIcon" /* 10862 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import TimerIcon from "TimerIcon" /* 11086 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { pill: { alignItems: "center", alignSelf: "flex-start", backgroundColor: nativeDefault.unsafe_rawColors.NEUTRAL_79, borderRadius: nativeDefault.radii.round, flexDirection: "row", gap: nativeDefault.space.PX_4, paddingHorizontal: 6, paddingVertical: 2 }, text: { textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

@@ -1,10 +1,10 @@
-// === Module 11344: conjureGuildPickerSources ===
+// === Module 11568: conjureGuildPickerSources ===
 
-// Module 11344 (conjureGuildPickerSources)
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import UserUtils from "UserUtils" /* 4964 */;
-import GuildUtilsDefault from "GuildUtils" /* 6103 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6104 */;
+// Module 11568 (conjureGuildPickerSources)
+import GlobalUtils from "GlobalUtils" /* 1386 */;
+import UserUtils from "UserUtils" /* 5018 */;
+import GuildUtilsDefault from "GuildUtils" /* 6319 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6320 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
@@ -113,21 +113,12 @@ const result = size.fileFinishedImporting("modules/conjure/guild_pickers/conjure
 
 export const useConjureGuildRoles = tmp2;
 export const useConjureGuildMemberUsers = tmp3;
-export const conjureMemberUsername = function conjureMemberUsername(hasUniqueUsername, stateFromStores1) {
-  let str = "always";
+export const conjureMemberUsername = function conjureMemberUsername(id, stateFromStores1) {
+  let identifiable = "always";
   if (stateFromStores1) {
-    str = "never";
+    identifiable = "never";
   }
-  let str2 = "";
-  const userTag = UserUtils.getUserTag(hasUniqueUsername, { mode: "username", identifiable: str });
-  if (!stateFromStores1) {
-    str2 = "";
-    if (!hasUniqueUsername.hasUniqueUsername()) {
-      const _HermesInternal = HermesInternal;
-      str2 = "#" + hasUniqueUsername.discriminator;
-    }
-  }
-  return "" + userTag + str2;
+  return UserUtils.getUserTag(id, { identifiable });
 };
 export const useConjureMemberRequests = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureMemberRequests(arg0, arg1) {
   _require = arg0;

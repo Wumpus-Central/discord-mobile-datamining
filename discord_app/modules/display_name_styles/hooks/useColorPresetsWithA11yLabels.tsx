@@ -1,10 +1,10 @@
-// === Module 15993: useColorPresetsWithA11yLabels ===
+// === Module 16289: useColorPresetsWithA11yLabels ===
 
-// Module 15993 (useColorPresetsWithA11yLabels)
+// Module 16289 (useColorPresetsWithA11yLabels)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import util from "util" /* 1126 */;
-import _modDef2958 from "module_2958" /* 2958 */;
+import _modDef2960 from "module_2960" /* 2960 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useColor
         const obj2 = { number: arg1 + 1, hexList: null };
         const mapped = colors.map(utils_ColorUtils.int2hex);
         obj2.hexList = mapped.join(", ");
-        obj.a11yLabel = intl.formatToPlainString(_modDef2958.FHfTsV, obj2);
+        obj.a11yLabel = intl.formatToPlainString(_modDef2960.FHfTsV, obj2);
         return obj;
       };
       cResult[2] = fn;
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useColor
     const obj2 = { number: index + 1, hexList: null };
     const mapped = colors.map(closure_1_0(1103).int2hex);
     obj2.hexList = mapped.join(", ");
-    obj.a11yLabel = intl.formatToPlainString(closure_1_1(2958).FHfTsV, obj2);
+    obj.a11yLabel = intl.formatToPlainString(closure_1_1(2960).FHfTsV, obj2);
     return obj;
   }), items);
 });

@@ -1,17 +1,17 @@
-// === Module 7249: ApplicationCommandUtils ===
+// === Module 7459: ApplicationCommandUtils ===
 
-// Module 7249 (ApplicationCommandUtils)
+// Module 7459 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants2 from "Constants" /* 1096 */;
 import Server from "Server" /* 1998 */;
 import ChannelRecord from "ChannelRecord" /* 2069 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5111 */;
-import DraftStore from "DraftStore" /* 7250 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7252 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7253 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5408 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5166 */;
+import DraftStore from "DraftStore" /* 7460 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7462 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7463 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5463 */;
 import Constants from "Constants" /* 1085 */;
 import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;
@@ -433,8 +433,8 @@ let deserializeResult = BigFlagUtils.deserialize(0);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandUtils.tsx");
 
 export { buildCommand };
-export const buildApplicationCommands = function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
-  return _modDef12.flatMap(uniqByResult, (id) => {
+export const buildApplicationCommands = function buildApplicationCommands(cResult, useKeyedPermissions) {
+  return _modDef12.flatMap(cResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
     const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
     return buildSubCommands(obj);

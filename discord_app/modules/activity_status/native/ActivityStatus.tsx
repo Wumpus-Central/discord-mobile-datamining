@@ -1,24 +1,24 @@
-// === Module 10245: ActivityStatus ===
+// === Module 10458: ActivityStatus ===
 
-// Module 10245 (ActivityStatus)
-import ApplicationStreamActivityStatusDefault from "ApplicationStreamActivityStatus" /* 10250 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10254 */;
-import isGameActivityDefault from "isGameActivity" /* 10255 */;
-import PresenceActivityStatusDefault from "PresenceActivityStatus" /* 10256 */;
-import VoiceActivityStatusDefault from "VoiceActivityStatus" /* 10265 */;
-import ActivityEmojiDefault from "ActivityEmoji" /* 10267 */;
+// Module 10458 (ActivityStatus)
+import ApplicationStreamActivityStatusDefault from "ApplicationStreamActivityStatus" /* 10463 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10467 */;
+import isGameActivityDefault from "isGameActivity" /* 10468 */;
+import PresenceActivityStatusDefault from "PresenceActivityStatus" /* 10469 */;
+import VoiceActivityStatusDefault from "VoiceActivityStatus" /* 10478 */;
+import ActivityEmojiDefault from "ActivityEmoji" /* 10480 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5112 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import PresenceStore from "PresenceStore" /* 5167 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = fn;
 const View = fn(17).View;
-const DOT_UNICODE = fn(10246).DOT_UNICODE;
+const DOT_UNICODE = fn(10459).DOT_UNICODE;
 const ActivityTypes = fn(1085).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_13 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
   const items1 = [PresenceStore];
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => PresenceStore.getActivities(userId));
   const obj2 = userId(504);
-  const voiceChannel = stateFromStores1(10248)({ userId, guildId: guildId.guildId }).voiceChannel;
+  const voiceChannel = stateFromStores1(10461)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
   const memo = noop.useMemo(() => {
     let found;
@@ -345,13 +345,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       return tmp4;
     }
   }, items2);
-  const tmp6 = stateFromStores1(10247)(userId);
+  const tmp6 = stateFromStores1(10460)(userId);
   let state;
   if (memo != null) {
     state = memo.state;
   }
-  const gameMentionsAsPlainText = userId(10249).useGameMentionsAsPlainText(state);
-  const obj3 = userId(10249);
+  const gameMentionsAsPlainText = userId(10462).useGameMentionsAsPlainText(state);
+  const obj3 = userId(10462);
   const items3 = [RelationshipStore];
   if (tmp2Result.useStateFromStores(items3, () => RelationshipStore.isBlockedOrIgnored(userId))) {
     return null;
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     if (null != tmp6) {
       let found;
       if (stateFromStores1 != null) {
-        found = stateFromStores1.find(tmp5(10255));
+        found = stateFromStores1.find(tmp5(10468));
       }
       const obj4 = { game: found, iconStyle: null, textStyle: null, maxFontSizeMultiplier: null, hideIcon: null, hideText: null };
       const items4 = [tmp.icon, iconStyle];
@@ -376,8 +376,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
       obj4.maxFontSizeMultiplier = maxFontSizeMultiplier;
       obj4.hideIcon = tmp12;
       obj4.hideText = tmp13;
-      let tmp18Result = closure_10(tmp5(10250), obj4);
-      const tmp5Result = tmp5(10250);
+      let tmp18Result = closure_10(tmp5(10463), obj4);
+      const tmp5Result = tmp5(10463);
     } else {
       let found1;
       if (stateFromStores1 != null) {
@@ -394,7 +394,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
         obj5.maxFontSizeMultiplier = maxFontSizeMultiplier;
         obj5.hideIcon = tmp12;
         obj5.hideText = tmp13;
-        tmp18Result = closure_10(tmp5(10256), obj5);
+        tmp18Result = closure_10(tmp5(10469), obj5);
       } else {
         tmp18Result = null;
         if (null != voiceChannel) {
@@ -405,7 +405,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
           obj6.maxFontSizeMultiplier = maxFontSizeMultiplier;
           obj6.hideIcon = tmp12;
           obj6.hideText = tmp13;
-          tmp18Result = closure_10(tmp5(10265), obj6);
+          tmp18Result = closure_10(tmp5(10478), obj6);
         }
       }
     }
@@ -419,13 +419,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
         }
         if (tmp25) {
           const obj7 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
-          tmp25 = closure_10(tmp5(10267), obj7);
+          tmp25 = closure_10(tmp5(10480), obj7);
         }
         const items7 = [tmp25, ];
         let tmp27 = null != memo.state;
         if (tmp27) {
           const obj8 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, children: gameMentionsAsPlainText };
-          tmp27 = closure_10(tmp5(10254), obj8);
+          tmp27 = closure_10(tmp5(10467), obj8);
         }
         const obj9 = { children: null };
         items7[1] = tmp27;
@@ -442,7 +442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     }
     if (tmp31) {
       const obj11 = { variant: "text-xs/normal", style: textStyle, maxFontSizeMultiplier, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: DOT_UNICODE };
-      tmp31 = closure_10(tmp5(10254), obj11);
+      tmp31 = closure_10(tmp5(10467), obj11);
     }
     items8[1] = tmp31;
     items8[2] = tmp21;

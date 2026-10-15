@@ -1,13 +1,13 @@
-// === Module 18688: GlobalDiscoveryServersFeaturedSearchManager ===
+// === Module 18927: GlobalDiscoveryServersFeaturedSearchManager ===
 
-// Module 18688 (GlobalDiscoveryServersFeaturedSearchManager)
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 14374 */;
+// Module 18927 (GlobalDiscoveryServersFeaturedSearchManager)
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 14671 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6812 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
 
 let require = fn;
 GlobalDiscoveryServersSearchResultsStoreDefault;
-let closure_6 = fn(8645).DISCOVERY_ALL_CATEGORIES_ID;
+let closure_6 = fn(8857).DISCOVERY_ALL_CATEGORIES_ID;
 const Endpoints = fn(1085).Endpoints;
 const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -184,7 +184,7 @@ const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
             closure_129_5 = undefined;
             lastFetchTimestamp = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "test", done: true };
           }
         } else {
           if (1 === tmp7) {

@@ -1,6 +1,6 @@
-// === Module 8501: MaskedLinkStoreMethodsAdditional ===
+// === Module 8712: MaskedLinkStoreMethodsAdditional ===
 
-// Module 8501 (MaskedLinkStoreMethodsAdditional)
+// Module 8712 (MaskedLinkStoreMethodsAdditional)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("stores/MaskedLinkStoreMethodsAdditional.native.tsx");

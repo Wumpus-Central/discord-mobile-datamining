@@ -9,7 +9,7 @@ import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import ApplicationConstants from "ApplicationConstants" /* 1373 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
 import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 import CachedEntriesMapDefault from "CachedEntriesMap" /* 2038 */;
 import GameDetectionTypes from "GameDetectionTypes" /* 2040 */;

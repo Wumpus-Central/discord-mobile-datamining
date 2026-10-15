@@ -1,11 +1,11 @@
-// === Module 8664: GuildEventsNoContent ===
+// === Module 8876: GuildEventsNoContent ===
 
-// Module 8664 (GuildEventsNoContent)
+// Module 8876 (GuildEventsNoContent)
 import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8643 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8855 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import TextStyles from "TextStyles" /* 5911 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import TextStyles from "TextStyles" /* 6122 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -14,7 +14,7 @@ const Constants = fn(1096);
 ({ Permissions: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_80 }, title: null, subtitle: null };
 let obj4 = {};
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24, { marginBottom: 8 }));
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   }
   if (cResult[5] !== tmp4.title) {
     const obj2 = { style: title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp10 };
-    const tmp14 = closure_7(tmp(5092).Text, obj2);
+    const tmp14 = closure_7(tmp(5147).Text, obj2);
     cResult[5] = tmp4.title;
     cResult[6] = tmp14;
     let tmp12 = tmp14;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   }
   if (cResult[8] !== tmp4.subtitle) {
     const obj3 = { style: tmp4.subtitle, variant: "text-sm/normal", color: "text-default", children: tmp15 };
-    const tmp19 = closure_7(tmp(5092).Text, obj3);
+    const tmp19 = closure_7(tmp(5147).Text, obj3);
     cResult[8] = tmp4.subtitle;
     cResult[9] = tmp19;
     let tmp17 = tmp19;
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
         }
     };
     obj5.children = intl3.format(tmp(1126).t["K+DH2o"], obj6);
-    tmp21 = closure_7(tmp(5092).Text, obj5);
+    tmp21 = closure_7(tmp(5147).Text, obj5);
   }
   cResult[10] = stateFromStores;
   cResult[11] = guild;
@@ -150,11 +150,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guild(1126).intl;
   obj3.children = intl.string(guild(1126).t["WgZ+3D"]);
-  const items2 = [closure_7(guild(5092).Text, obj3), , ];
+  const items2 = [closure_7(guild(5147).Text, obj3), , ];
   const obj4 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = guild(1126).intl;
   obj4.children = intl2.string(guild(1126).t["v/S/PG"]);
-  items2[1] = closure_7(guild(5092).Text, obj4);
+  items2[1] = closure_7(guild(5147).Text, obj4);
   if (stateFromStores) {
     const obj5 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
     const intl3 = tmp2(1126).intl;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEve
         }
     };
     obj5.children = intl3.format(tmp2(1126).t["K+DH2o"], obj6);
-    stateFromStores = closure_7(tmp2(5092).Text, obj5);
+    stateFromStores = closure_7(tmp2(5147).Text, obj5);
   }
   items2[2] = stateFromStores;
   obj2.children = items2;

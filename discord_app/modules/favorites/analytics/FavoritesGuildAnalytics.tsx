@@ -1,8 +1,8 @@
-// === Module 10333: FavoritesGuildAnalytics ===
+// === Module 10556: FavoritesGuildAnalytics ===
 
-// Module 10333 (FavoritesGuildAnalytics)
+// Module 10556 (FavoritesGuildAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 const require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;

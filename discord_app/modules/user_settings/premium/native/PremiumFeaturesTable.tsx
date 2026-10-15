@@ -1,15 +1,15 @@
-// === Module 14140: PremiumFeaturesTable ===
+// === Module 14437: PremiumFeaturesTable ===
 
-// Module 14140 (PremiumFeaturesTable)
+// Module 14437 (PremiumFeaturesTable)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import shared from "shared" /* 4971 */;
-import useThemeDefault from "useTheme" /* 5033 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import LinearGradientDefault from "LinearGradient" /* 5396 */;
-import _modDef14141 from "module_14141" /* 14141 */;
-import _modDef14142 from "module_14142" /* 14142 */;
+import shared from "shared" /* 5025 */;
+import useThemeDefault from "useTheme" /* 5087 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import LinearGradientDefault from "LinearGradient" /* 5451 */;
+import _modDef14438 from "module_14438" /* 14438 */;
+import _modDef14439 from "module_14439" /* 14439 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ const PremiumConstants = fn(1392);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
-let createStyles = fn(5096);
+let createStyles = fn(5151);
 let obj2 = { container: { display: "flex", flex: 1, width: "100%" }, headerText: { textAlign: "center" }, logo: { marginTop: 8, marginBottom: -6 }, table: { marginTop: 16 }, row: { display: "flex", flexDirection: "row" }, bottomBorder: { borderBottomColor: "rgba(106, 116, 128, 0.24)", borderBottomWidth: 1 }, topBorderRadius: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, bottomBorderRadius: null, cell: null, labelCell: null, dataCell: null, themedHighlightedCell: null, nitroHomeHightlightedBorderLeftRight: null, premiumGroupCard: null, priceContainer: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
 obj2.bottomBorderRadius = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
@@ -32,7 +32,7 @@ obj2.cell = { paddingVertical: 12 };
 obj2.labelCell = { flex: 1, justifyContent: "flex-start" };
 obj2.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-obj2.themedHighlightedCell = { backgroundColor: fn(5974).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj2.themedHighlightedCell = { backgroundColor: fn(6185).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj2.nitroHomeHightlightedBorderLeftRight = { borderLeftColor: "rgba(184, 69, 193, 0.5)", borderLeftWidth: 2, borderRightColor: "rgba(184, 69, 193, 0.5)", borderRightWidth: 2 };
 obj2.premiumGroupCard = { marginTop: 16 };
 obj2.priceContainer = { alignItems: "center" };
@@ -44,7 +44,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CheckI
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const tmp7 = shared.isThemeDark(tmp5) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   if (cResult[0] !== tmp7) {
-    const obj3 = { source: _modDef14141, color: tmp7, size: native.IconSizes.SMALL };
+    const obj3 = { source: _modDef14438, color: tmp7, size: native.IconSizes.SMALL };
     const tmp10 = closure_1_11(native.Icon, obj3);
     cResult[0] = tmp7;
     cResult[1] = tmp10;
@@ -58,11 +58,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CheckI
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-  return closure_1_11(native.Icon, { source: _modDef14141, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef14438, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
 });
-createStyles = fn(5096);
+createStyles = fn(5151);
 let obj8 = { icon: null };
-let obj5 = { backgroundColor: fn(5974).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj5 = { backgroundColor: fn(6185).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj8.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj8);
 ReactCompilerGating = fn(558);
@@ -70,7 +70,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseI
   const cResult = c.c(2);
   const tmp4 = closure_16();
   if (cResult[0] !== tmp4.icon) {
-    const obj2 = { source: _modDef14142, style: tmp4.icon, size: native.IconSizes.SMALL };
+    const obj2 = { source: _modDef14439, style: tmp4.icon, size: native.IconSizes.SMALL };
     const tmp8 = closure_1_11(native.Icon, obj2);
     cResult[0] = tmp4.icon;
     cResult[1] = tmp8;
@@ -81,7 +81,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseI
   return tmp5;
 }) : (function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef14142, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef14439, style: closure_16().icon, size: native.IconSizes.SMALL });
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function CellText(text) {
@@ -603,9 +603,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   }
   dependencyMap = tmp5;
   const tmp6 = closure_14();
-  const tmp8 = str(5033)();
-  const tmp9 = str(9406)(closure_10.PREMIUM_MONTH_TIER_0);
-  const tmp10 = str(9406)(closure_10.PREMIUM_MONTH_TIER_2);
+  const tmp8 = str(5087)();
+  const tmp9 = str(9617)(closure_10.PREMIUM_MONTH_TIER_0);
+  const tmp10 = str(9617)(closure_10.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp9 != null) {
     priceString = tmp9.priceString;
@@ -621,26 +621,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
     priceString1 = closure_8;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const maxFileSizeForPremiumType = tmp(4771).getMaxFileSizeForPremiumType(closure_9.TIER_0);
+    const maxFileSizeForPremiumType = tmp(4825).getMaxFileSizeForPremiumType(closure_9.TIER_0);
     cResult[0] = maxFileSizeForPremiumType;
     let first = maxFileSizeForPremiumType;
-    const tmpResult = tmp(4771);
+    const tmpResult = tmp(4825);
   } else {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const maxFileSizeForPremiumType1 = tmp(4771).getMaxFileSizeForPremiumType(closure_9.TIER_2);
+    const maxFileSizeForPremiumType1 = tmp(4825).getMaxFileSizeForPremiumType(closure_9.TIER_2);
     cResult[1] = maxFileSizeForPremiumType1;
     let tmp16 = maxFileSizeForPremiumType1;
-    const tmpResult4 = tmp(4771);
+    const tmpResult4 = tmp(4825);
   } else {
     tmp16 = cResult[1];
   }
   if (cResult[2] !== tmp6.logo) {
     const size = { style: tmp6.logo, width: 48, height: 9 };
-    const tmp22 = closure_11(tmp7(14143), size);
+    const tmp22 = closure_11(tmp7(14440), size);
     const size1 = { style: tmp6.logo, width: 50, height: 9 };
-    const tmp23 = closure_11(tmp7(14144), size1);
+    const tmp23 = closure_11(tmp7(14441), size1);
     cResult[2] = tmp6.logo;
     cResult[3] = tmp22;
     cResult[4] = tmp23;
@@ -665,9 +665,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
         tmp26 = cResult[9];
       }
       if (tmpResult5.isThemeDark(tmp8)) {
-        let tmp7Result = tmp7(14145);
+        let tmp7Result = tmp7(14442);
       } else {
-        tmp7Result = tmp7(14146);
+        tmp7Result = tmp7(14443);
       }
       if (cResult[10] === tmp6.logo) {
         if (cResult[11] === tmp7Result) {
@@ -683,9 +683,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
           tmp32 = cResult[13];
         }
         if (tmpResult6.isThemeDark(tmp8)) {
-          let tmp7Result2 = tmp7(14147);
+          let tmp7Result2 = tmp7(14444);
         } else {
-          tmp7Result2 = tmp7(14148);
+          tmp7Result2 = tmp7(14445);
         }
         if (cResult[14] === tmp6.logo) {
           if (cResult[15] === tmp7Result2) {
@@ -787,7 +787,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                               const intl10 = tmp(1126).intl;
                               const stringResult3 = intl10.string(tmp(1126).t["ufhQC+"]);
                               const obj6 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: first };
-                              const tmp75 = closure_11(tmp(5092).Text, obj6);
+                              const tmp75 = closure_11(tmp(5147).Text, obj6);
                               cResult[41] = tmp73;
                               cResult[42] = stringResult3;
                               cResult[43] = tmp75;
@@ -803,7 +803,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                             if (cResult[44] === Symbol.for("react.memo_cache_sentinel")) {
                               const obj7 = { label: tmp68, rowName: tmp69, column1: tmp70, column1AccessibilityLabel: first, column2: null, column2AccessibilityLabel: null };
                               const obj8 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp16 };
-                              obj7.column2 = closure_11(tmp(5092).Text, obj8);
+                              obj7.column2 = closure_11(tmp(5147).Text, obj8);
                               obj7.column2AccessibilityLabel = tmp16;
                               cResult[44] = obj7;
                               let tmp76 = obj7;
@@ -1055,7 +1055,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                                         }
                                         if (tmp136) {
                                           const obj24 = { style: tmp6.premiumGroupCard, premiumGroupRole };
-                                          tmp136 = closure_11(tmp7(14149), obj24);
+                                          tmp136 = closure_11(tmp7(14446), obj24);
                                         }
                                         cResult[79] = tmp5;
                                         cResult[80] = premiumGroupRole;
@@ -1064,7 +1064,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
                                         tmp135 = tmp136;
                                       }
                                       const obj25 = { style: tmp6.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: tmp130 };
-                                      const tmp134 = closure_11(tmp(5092).Text, obj25);
+                                      const tmp134 = closure_11(tmp(5147).Text, obj25);
                                       cResult[76] = tmp6.headerText;
                                       cResult[77] = tmp130;
                                       cResult[78] = tmp134;
@@ -1124,20 +1124,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
           tmp38 = obj29;
         }
         const obj30 = { accessible: true, accessibilityLabel: tmp32, style: tmp6.logo, source: tmp7Result2 };
-        const tmp37 = closure_11(tmp7(5034), obj30);
+        const tmp37 = closure_11(tmp7(5088), obj30);
         cResult[14] = tmp6.logo;
         cResult[15] = tmp7Result2;
         cResult[16] = tmp37;
         tmp35 = tmp37;
-        tmpResult6 = tmp(4971);
+        tmpResult6 = tmp(5025);
       }
       const obj31 = { accessible: true, accessibilityLabel: tmp26, style: tmp6.logo, source: tmp7Result };
-      const tmp31 = closure_11(tmp7(5034), obj31);
+      const tmp31 = closure_11(tmp7(5088), obj31);
       cResult[10] = tmp6.logo;
       cResult[11] = tmp7Result;
       cResult[12] = tmp31;
       tmp29 = tmp31;
-      tmpResult5 = tmp(4971);
+      tmpResult5 = tmp(5025);
     }
   }
   const obj32 = { column1: tmp19, column2: tmp20, withBottomBorder: false, disableAccessibility: true, hidden: !(undefined !== isPremiumGroup && isPremiumGroup) };

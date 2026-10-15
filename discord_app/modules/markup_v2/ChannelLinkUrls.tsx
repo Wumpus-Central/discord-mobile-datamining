@@ -1,7 +1,7 @@
-// === Module 8248: ChannelLinkUrls ===
+// === Module 8458: ChannelLinkUrls ===
 
-// Module 8248 (ChannelLinkUrls)
-import LinkUtils from "LinkUtils" /* 5427 */;
+// Module 8458 (ChannelLinkUrls)
+import LinkUtils from "LinkUtils" /* 5482 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

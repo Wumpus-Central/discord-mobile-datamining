@@ -1,24 +1,24 @@
-// === Module 6979: GuildSubscriptionsStore ===
+// === Module 7192: GuildSubscriptionsStore ===
 
-// Module 6979 (GuildSubscriptionsStore)
+// Module 7192 (GuildSubscriptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FavoritesUtils from "FavoritesUtils" /* 2090 */;
-import GuildSubscriptionsDefault from "GuildSubscriptions" /* 6981 */;
+import GuildSubscriptionsDefault from "GuildSubscriptions" /* 7194 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5018 */;
-import LurkingStore from "LurkingStore" /* 4753 */;
-import SpotifyStore from "SpotifyStore" /* 5765 */;
+import ExperimentStore from "ExperimentStore" /* 5072 */;
+import LurkingStore from "LurkingStore" /* 4807 */;
+import SpotifyStore from "SpotifyStore" /* 5976 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6066 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6277 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5970 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6181 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
 
 require = fn;
 function handleConnectionOpenOrResumed(type) {
@@ -186,7 +186,7 @@ function handleSpotifyUpdate() {
   }
   return false;
 }
-const EVERYONE_CHANNEL_ID = fn(6980).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(7193).EVERYONE_CHANNEL_ID;
 const Constants = fn(1085);
 ({ ChannelSections, ChannelTypes: closure_19 } = Constants);
 let closure_20 = new GuildSubscriptionsDefault((subscriptions) => {

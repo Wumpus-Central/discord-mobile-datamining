@@ -1,10 +1,10 @@
-// === Module 11547: useEmbeddedAppsForChannel ===
+// === Module 11772: useEmbeddedAppsForChannel ===
 
-// Module 11547 (useEmbeddedAppsForChannel)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4741 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6863 */;
+// Module 11772 (useEmbeddedAppsForChannel)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4795 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7077 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5112 */;
+import PresenceStore from "PresenceStore" /* 5167 */;
 import UserStore from "UserStore" /* 1390 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
@@ -173,7 +173,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbeddedA
       }
       return tmp13;
     });
-    const found = mapped1.filter(tmp26(1388).isNotNullish);
+    const found = mapped1.filter(tmp26(1386).isNotNullish);
     cResult[10] = tmp8;
     cResult[11] = stateFromStoresArray;
     cResult[12] = arr;

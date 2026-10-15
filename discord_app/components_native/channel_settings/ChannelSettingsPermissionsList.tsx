@@ -1,11 +1,11 @@
-// === Module 17629: ChannelSettingsPermissionsList ===
+// === Module 17869: ChannelSettingsPermissionsList ===
 
-// Module 17629 (ChannelSettingsPermissionsList)
+// Module 17869 (ChannelSettingsPermissionsList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 1998 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6101 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6317 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
@@ -20,7 +20,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, containerSearchBar: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.containerSearchBar = { paddingVertical: nativeDefault.space.PX_8 };

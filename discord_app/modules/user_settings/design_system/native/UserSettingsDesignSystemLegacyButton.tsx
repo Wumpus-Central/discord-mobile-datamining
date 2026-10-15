@@ -1,13 +1,13 @@
-// === Module 16483: UserSettingsDesignSystemLegacyButton ===
+// === Module 16722: UserSettingsDesignSystemLegacyButton ===
 
-// Module 16483 (UserSettingsDesignSystemLegacyButton)
+// Module 16722 (UserSettingsDesignSystemLegacyButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import Stack_Stack from "Stack/Stack" /* 5382 */;
-import components_Button_Button from "components/Button/Button" /* 5384 */;
-import Form from "Form" /* 8587 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import Stack_Stack from "Stack/Stack" /* 5437 */;
+import components_Button_Button from "components/Button/Button" /* 5439 */;
+import Form from "Form" /* 8800 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -472,7 +472,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ComboR
   obj.children = items2;
   return hasOwnProperty(React4, obj);
 });
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 const obj45 = { comboRow: null, darkText: null, darkBg: null, comparisonRow: null, comparisonButtons: null, comparisonSide: null, container: null, header: null };
 const obj41 = { look: fn(1200).ButtonLooks.OUTLINED, color: fn(1200).ButtonColors.WHITE, size: fn(1200).ButtonSizes.SMALL, shrink: false, count: 1 };
 obj45.comboRow = { gap: 4, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_4 };

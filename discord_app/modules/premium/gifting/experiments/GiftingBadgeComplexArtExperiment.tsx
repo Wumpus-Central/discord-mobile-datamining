@@ -1,6 +1,6 @@
-// === Module 10112: GiftingBadgeComplexArtExperiment ===
+// === Module 10325: GiftingBadgeComplexArtExperiment ===
 
-// Module 10112 (GiftingBadgeComplexArtExperiment)
+// Module 10325 (GiftingBadgeComplexArtExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

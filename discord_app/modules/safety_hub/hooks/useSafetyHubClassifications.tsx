@@ -1,15 +1,15 @@
-// === Module 12275: useSafetyHubClassifications ===
+// === Module 12510: useSafetyHubClassifications ===
 
-// Module 12275 (useSafetyHubClassifications)
+// Module 12510 (useSafetyHubClassifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12276 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12511 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 7543 */;
+import SafetyHubStore from "SafetyHubStore" /* 7753 */;
 
 require = fn;
-const ViolationType = fn(7519).ViolationType;
+const ViolationType = fn(7729).ViolationType;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSafetyHubClassifications() {
   const cResult = c.c(5);
@@ -137,7 +137,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSafetyH
         return closure_1_5.getIsAppealEligible();
       }
     }
-    if (undefined === tmp(7520).MemberType.OWNER) {
+    if (undefined === tmp(7730).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;
@@ -246,7 +246,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSafetyH
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(7520).MemberType.OWNER) {
+    if (member_type === tmp(7730).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;

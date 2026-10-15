@@ -1,9 +1,9 @@
-// === Module 10377: ChatViewWrapper ===
+// === Module 10600: ChatViewWrapper ===
 
-// Module 10377 (ChatViewWrapper)
-import ChatViewWrapperAnimatedKeyboardDefault from "ChatViewWrapperAnimatedKeyboard" /* 10379 */;
-import ChatViewWrapperBaseDefault from "ChatViewWrapperBase" /* 10390 */;
-import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 10378 */;
+// Module 10600 (ChatViewWrapper)
+import ChatViewWrapperAnimatedKeyboardDefault from "ChatViewWrapperAnimatedKeyboard" /* 10602 */;
+import ChatViewWrapperBaseDefault from "ChatViewWrapperBase" /* 10613 */;
+import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 10601 */;
 import size from "module_2" /* 2 */;
 
 if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {

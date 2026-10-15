@@ -1,13 +1,13 @@
-// === Module 17050: useShouldRenderChannelList ===
+// === Module 17290: useShouldRenderChannelList ===
 
-// Module 17050 (useShouldRenderChannelList)
+// Module 17290 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4978 */;
-import RootNavigationRef from "RootNavigationRef" /* 4979 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5032 */;
+import RootNavigationRef from "RootNavigationRef" /* 5033 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7204 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5762 */;
+import CacheStore from "CacheStore" /* 7414 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5973 */;
 
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
@@ -66,13 +66,13 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
         let result1 = CacheStore.addReactChangeListener(handleCacheChange);
         let ComponentDispatch = first(1121).ComponentDispatch;
         const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-        let rootNavigationRef = first(4979).getRootNavigationRef();
+        let rootNavigationRef = first(5033).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.addListener("state", handleNavigationChange);
         }
         return () => {
           const result = GatewayConnectionStore.removeReactChangeListener(handleGatewayChange);
-          const result1 = CacheStore.addReactChangeListener(handleCacheChange);
+          const result1 = CacheStore.removeReactChangeListener(handleCacheChange);
           const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
           ComponentDispatch.unsubscribe(ComponentActions.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
           const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
@@ -132,13 +132,13 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
       let result1 = CacheStore.addReactChangeListener(handleCacheChange);
       let ComponentDispatch = first(1121).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(4979).getRootNavigationRef();
+      let rootNavigationRef = first(5033).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }
       return () => {
         const result = GatewayConnectionStore.removeReactChangeListener(handleGatewayChange);
-        const result1 = CacheStore.addReactChangeListener(handleCacheChange);
+        const result1 = CacheStore.removeReactChangeListener(handleCacheChange);
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
         ComponentDispatch.unsubscribe(ComponentActions.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
         const rootNavigationRef = RootNavigationRef.getRootNavigationRef();

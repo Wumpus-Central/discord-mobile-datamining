@@ -1,6 +1,6 @@
-// === Module 12391: ContentInventoryPersistedStore ===
+// === Module 12626: ContentInventoryPersistedStore ===
 
-// Module 12391 (ContentInventoryPersistedStore)
+// Module 12626 (ContentInventoryPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;

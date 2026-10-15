@@ -1,6 +1,6 @@
-// === Module 5911: TextStyles ===
+// === Module 6122: TextStyles ===
 
-// Module 5911 (TextStyles)
+// Module 6122 (TextStyles)
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

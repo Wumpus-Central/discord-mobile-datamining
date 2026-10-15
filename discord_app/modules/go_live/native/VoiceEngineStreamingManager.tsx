@@ -1,6 +1,6 @@
-// === Module 7449: VoiceEngineStreamingManager ===
+// === Module 7659: VoiceEngineStreamingManager ===
 
-// Module 7449 (VoiceEngineStreamingManager)
+// Module 7659 (VoiceEngineStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -9,12 +9,12 @@ import HTTPUtils from "HTTPUtils" /* 1295 */;
 import useWindowDimensions from "useWindowDimensions" /* 1497 */;
 import inject from "inject" /* 2014 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 5905 */;
-import StreamActionCreators from "StreamActionCreators" /* 7450 */;
-import PushNotificationDefault from "PushNotification" /* 10708 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 11122 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6116 */;
+import StreamActionCreators from "StreamActionCreators" /* 7660 */;
+import PushNotificationDefault from "PushNotification" /* 10930 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 11346 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5902 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;
@@ -159,11 +159,11 @@ prototype["_initialize"] = function _initialize() {
     currentAppIntent = currentAppIntent.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(7450).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(7660).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = obj2.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = closure_1(5110);
-        const participant = tmp2Result.selectParticipant(channel.id, tmp9(5905).encodeStreamKey(currentUserActiveStream));
+        const tmp2Result = closure_1(5165);
+        const participant = tmp2Result.selectParticipant(channel.id, tmp9(6116).encodeStreamKey(currentUserActiveStream));
         if ("android" === closure_19.platform) {
           closure_15.start(15000, () => {
             _modDef38(null != voiceEngine, "Voice Engine should be initialized in callback");
@@ -178,9 +178,9 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(closure_12(currentAppIntent));
         }
-        const tmp9Result = tmp9(5905);
+        const tmp9Result = tmp9(6116);
       }
-      const obj3 = currentUserActiveStream(7450);
+      const obj3 = currentUserActiveStream(7660);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");

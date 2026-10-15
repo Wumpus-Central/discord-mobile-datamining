@@ -1,7 +1,7 @@
-// === Module 11362: conjureDesignFeedbackStore ===
+// === Module 11586: conjureDesignFeedbackStore ===
 
-// Module 11362 (conjureDesignFeedbackStore)
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11363 */;
+// Module 11586 (conjureDesignFeedbackStore)
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 11587 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -47,6 +47,33 @@ export const enterConjureDesignFeedback = function enterConjureDesignFeedback(ar
     const obj2 = {};
     const merged = Object.assign(value);
     obj2.active = true;
+    if (!obj2.active) {
+      if (0 === obj2.annotations.length) {
+        map.delete(arg0);
+      }
+      (function emit() {
+        const items = [...closure_1_5];
+        const iter = items[Symbol.iterator]();
+        if (iter !== undefined) {
+          try {
+            tmp2();
+          } catch (err) {
+          }
+        }
+      })();
+    }
+    const result = map.set(arg0, obj2);
+  }
+};
+export const pauseConjureDesignFeedback = function pauseConjureDesignFeedback(arg0) {
+  value = map.get(arg0);
+  if (value == null) {
+    value = closure_3;
+  }
+  if (value.active) {
+    const obj2 = {};
+    const merged = Object.assign(value);
+    obj2.active = false;
     if (!obj2.active) {
       if (0 === obj2.annotations.length) {
         map.delete(arg0);

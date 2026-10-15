@@ -1,14 +1,14 @@
-// === Module 10785: useLoadMessageContentEntries ===
+// === Module 11009: useLoadMessageContentEntries ===
 
-// Module 10785 (useLoadMessageContentEntries)
+// Module 11009 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1998 */;
-import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8274 */;
-import useAvatarColor from "useAvatarColor" /* 8276 */;
+import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8484 */;
+import useAvatarColor from "useAvatarColor" /* 8486 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5445 */;
+import ApplicationStore from "ApplicationStore" /* 5500 */;
 
 const require = globalThis.__r;
 
@@ -698,9 +698,9 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(2024).ImageSizes;
-const promiseDeduper = new fn(10744).PromiseDeduper();
-const promiseDeduper3 = new fn(10744).PromiseDeduper();
-const promiseDeduper4 = new fn(10744).PromiseDeduper();
+const promiseDeduper = new fn(10966).PromiseDeduper();
+const promiseDeduper3 = new fn(10966).PromiseDeduper();
+const promiseDeduper4 = new fn(10966).PromiseDeduper();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx");
@@ -757,7 +757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
     tmp27 = cResult[4];
   }
   const tmp19Result = _slicedToArray(set2.useState(tmp21), 2);
-  const colorStore = tmp(8276).useColorStore(tmp27);
+  const colorStore = tmp(8486).useColorStore(tmp27);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     _require = asyncGeneratorStep(async (arg0, arg1) => {
       if (c7 === 2) {
@@ -1075,7 +1075,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadM
   cResult[12] = arr2;
   cResult[13] = arr;
   cResult[14] = set2;
-  const tmpResult = tmp(8276);
+  const tmpResult = tmp(8486);
 }) : (function useLoadMessageContentEntries(arg0) {
   closure_1 = first1.useRef(new Map());
   const map = new Map();

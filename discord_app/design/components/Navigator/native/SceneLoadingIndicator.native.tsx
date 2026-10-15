@@ -1,16 +1,16 @@
-// === Module 6731: SceneLoadingIndicator ===
+// === Module 6947: SceneLoadingIndicator ===
 
-// Module 6731 (SceneLoadingIndicator)
+// Module 6947 (SceneLoadingIndicator)
 import c from "c" /* 576 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6160 */;
-import NavScrim from "NavScrim" /* 6732 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6376 */;
+import NavScrim from "NavScrim" /* 6948 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_5 = createStyles.createStyles({ loadingContainer: { flex: 1, paddingTop: 40 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

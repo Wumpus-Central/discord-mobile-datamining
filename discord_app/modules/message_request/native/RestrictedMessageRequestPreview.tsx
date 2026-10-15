@@ -1,11 +1,11 @@
-// === Module 17697: RestrictedMessageRequestPreview ===
+// === Module 17937: RestrictedMessageRequestPreview ===
 
-// Module 17697 (RestrictedMessageRequestPreview)
+// Module 17937 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import MessageStore from "MessageStore" /* 5437 */;
+import MessageStore from "MessageStore" /* 5492 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, hidden: { opacity: 0 }, scrollContent: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
@@ -257,9 +257,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items8 = [closure_10(tmp2(17698), obj6), ];
+      const items8 = [closure_10(tmp2(17938), obj6), ];
       const obj7 = { channelId };
-      items8[1] = closure_10(tmp2(17700), obj7);
+      items8[1] = closure_10(tmp2(17940), obj7);
       obj5.children = items8;
       const items9 = [closure_11(closure_5, obj5), ];
       const obj8 = { style: null, children: null };
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
       items10[1] = obj9;
       obj8.style = items10;
       const obj10 = { channel: stateFromStores };
-      obj8.children = closure_10(tmp2(12711), obj10);
+      obj8.children = closure_10(tmp2(13008), obj10);
       items9[1] = closure_10(first1, obj8);
       obj4.children = items9;
       tmp13Result = closure_11(tmp14, obj4);

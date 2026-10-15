@@ -1,6 +1,6 @@
-// === Module 4898: ? ===
+// === Module 4952: ? ===
 
-// Module 4898
+// Module 4952
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/BadgesCoachmark.riv.js");

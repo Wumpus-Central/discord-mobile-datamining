@@ -1,6 +1,6 @@
-// === Module 10105: MarketingComponentType ===
+// === Module 10318: MarketingComponentType ===
 
-// Module 10105 (MarketingComponentType)
+// Module 10318 (MarketingComponentType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingComponentType.tsx");

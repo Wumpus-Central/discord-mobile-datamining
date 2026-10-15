@@ -1,14 +1,14 @@
-// === Module 7434: ClipAnalyticsUtils ===
+// === Module 7644: ClipAnalyticsUtils ===
 
-// Module 7434 (ClipAnalyticsUtils)
+// Module 7644 (ClipAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import _modDef5206 from "module_5206" /* 5206 */;
-import VideoQualityStats from "VideoQualityStats" /* 5297 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 5905 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5276 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5902 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7435 */;
+import _modDef5261 from "module_5261" /* 5261 */;
+import VideoQualityStats from "VideoQualityStats" /* 5352 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6116 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5331 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6113 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7645 */;
 import ClipsStore from "ClipsStore" /* 2018 */;
 
 require = fn;
@@ -139,7 +139,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(7769);
+const ClipsConstants = fn(7979);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
@@ -274,7 +274,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!_modDef5206(isFavorite, tmp)) {
+    if (!_modDef5261(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -282,7 +282,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!_modDef5206(name, tmp5)) {
+    if (!_modDef5261(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -302,7 +302,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp11;
   if (null != start1) {
-    if (!_modDef5206(start1, start)) {
+    if (!_modDef5261(start1, start)) {
       tmp11 = start1;
     }
   }
@@ -318,7 +318,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp15;
   if (null != end1) {
-    if (!_modDef5206(end1, end)) {
+    if (!_modDef5261(end1, end)) {
       tmp15 = end1;
     }
   }
@@ -334,7 +334,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp19;
   if (null != applicationAudio1) {
-    if (!_modDef5206(applicationAudio1, applicationAudio)) {
+    if (!_modDef5261(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
@@ -350,7 +350,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp23;
   if (null != voiceAudio1) {
-    if (!_modDef5206(voiceAudio1, voiceAudio)) {
+    if (!_modDef5261(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
@@ -366,7 +366,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp27;
   if (null != soundboardAudio1) {
-    if (!_modDef5206(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef5261(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
@@ -388,7 +388,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp31;
   if (null != preset1) {
-    if (!_modDef5206(preset1, preset)) {
+    if (!_modDef5261(preset1, preset)) {
       tmp31 = preset1;
     }
   }

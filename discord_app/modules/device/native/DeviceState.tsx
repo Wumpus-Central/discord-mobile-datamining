@@ -1,6 +1,6 @@
-// === Module 5290: device/DeviceState ===
+// === Module 5345: device/DeviceState ===
 
-// Module 5290 (device/DeviceState)
+// Module 5345 (device/DeviceState)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -40,7 +40,7 @@ let closure_5 = async function _getDeviceState() {
           fallback = obj5.fallback;
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

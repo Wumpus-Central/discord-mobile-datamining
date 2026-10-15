@@ -1,9 +1,9 @@
-// === Module 9067: useFetchVirtualCurrencyBalance ===
+// === Module 9279: useFetchVirtualCurrencyBalance ===
 
-// Module 9067 (useFetchVirtualCurrencyBalance)
+// Module 9279 (useFetchVirtualCurrencyBalance)
 import _mod19 from "module_19" /* 19 */;
-import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9069 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9068 */;
+import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9281 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9280 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

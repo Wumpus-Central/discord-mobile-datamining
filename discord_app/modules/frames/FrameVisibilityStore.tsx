@@ -1,6 +1,6 @@
-// === Module 15073: FrameVisibilityStore ===
+// === Module 11620: FrameVisibilityStore ===
 
-// Module 15073 (FrameVisibilityStore)
+// Module 11620 (FrameVisibilityStore)
 import size from "module_2" /* 2 */;
 
 class FrameVisibilityStore {
@@ -32,12 +32,12 @@ prototype["subscribe"] = function subscribe(arg0) {
     listeners.delete(closure_0);
   };
 };
-prototype["setFrameVisible"] = function setFrameVisible(arg0, arg1) {
+prototype["setFrameVisible"] = function setFrameVisible(id, arg1) {
   const self = this;
   const visibility = this.visibility;
-  if (visibility.get(arg0) !== arg1) {
+  if (visibility.get(id) !== arg1) {
     const visibility2 = self.visibility;
-    const result = visibility2.set(arg0, arg1);
+    const result = visibility2.set(id, arg1);
     self.emit();
   }
 };

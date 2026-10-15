@@ -1,22 +1,22 @@
-// === Module 7021: ChannelActionCreators ===
+// === Module 7234: ChannelActionCreators ===
 
-// Module 7021 (ChannelActionCreators)
+// Module 7234 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import shared from "shared" /* 4971 */;
-import RootNavigationRef from "RootNavigationRef" /* 4979 */;
-import transitionToChannel from "transitionToChannel" /* 5107 */;
-import preloadChannelDefault from "preloadChannel" /* 5109 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5894 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6091 */;
+import shared from "shared" /* 5025 */;
+import RootNavigationRef from "RootNavigationRef" /* 5033 */;
+import transitionToChannel from "transitionToChannel" /* 5162 */;
+import preloadChannelDefault from "preloadChannel" /* 5164 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6105 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6307 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7022 */;
+import ChangelogStore from "ChangelogStore" /* 7235 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import ReadStateStore from "ReadStateStore" /* 6040 */;
+import ReadStateStore from "ReadStateStore" /* 6251 */;
 
 const require = globalThis.__r;
 
@@ -400,13 +400,13 @@ export default {
       AnalyticsUtilsDefault.track(constants.CHANGE_LOG_DM_REMOVED, obj);
       const tmpResult = AnalyticsUtilsDefault;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "parent" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 });
     if (flag) {
       router_utils.transitionTo(constants2.FRIENDS);
     }
     const HTTP = HTTPUtils.HTTP;
     const request = { url: closure_1_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "parent" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     const delResult = HTTP.del(request);
@@ -519,8 +519,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7034).checkGuildTemplateDirty(closure_128_2);
-        name(7034);
+        const result = name(7247).checkGuildTemplateDirty(closure_128_2);
+        name(7247);
       }
       return closure_128_1;
     })();

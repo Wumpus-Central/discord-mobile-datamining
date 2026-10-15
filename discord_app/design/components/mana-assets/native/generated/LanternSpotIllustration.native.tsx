@@ -1,23 +1,23 @@
-// === Module 18246: LanternSpotIllustration ===
+// === Module 18485: LanternSpotIllustration ===
 
-// Module 18246 (LanternSpotIllustration)
+// Module 18485 (LanternSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import assetHelpers from "assetHelpers" /* 6277 */;
-import _modDef18247 from "module_18247" /* 18247 */;
-import _modDef18248 from "module_18248" /* 18248 */;
-import _modDef18249 from "module_18249" /* 18249 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import assetHelpers from "assetHelpers" /* 6493 */;
+import _modDef18486 from "module_18486" /* 18486 */;
+import _modDef18487 from "module_18487" /* 18487 */;
+import _modDef18488 from "module_18488" /* 18488 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18247 }, 3: null };
-let obj2 = { uri: _modDef18247 };
-obj[2] = { uri: _modDef18248 };
-const obj3 = { uri: _modDef18248 };
-obj[3] = { uri: _modDef18249 };
+let obj = { 1: null, 2: { uri: _modDef18486 }, 3: null };
+let obj2 = { uri: _modDef18486 };
+obj[2] = { uri: _modDef18487 };
+const obj3 = { uri: _modDef18487 };
+obj[3] = { uri: _modDef18488 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18249 };
+const obj4 = { uri: _modDef18488 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/LanternSpotIllustration.native.tsx");
 

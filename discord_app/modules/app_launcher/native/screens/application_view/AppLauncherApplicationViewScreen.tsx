@@ -1,10 +1,10 @@
-// === Module 11630: AppLauncherApplicationViewScreen ===
+// === Module 11855: AppLauncherApplicationViewScreen ===
 
-// Module 11630 (AppLauncherApplicationViewScreen)
+// Module 11855 (AppLauncherApplicationViewScreen)
 import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import AppLauncherContext from "AppLauncherContext" /* 10632 */;
+import AppLauncherContext from "AppLauncherContext" /* 10855 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9257 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9468 */;
 
 const require = globalThis.__r;
 
@@ -13,9 +13,9 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const AppLauncherNativeConstants = fn(1502);
 ({ AppLauncherRouteName: closure_7, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
-const BuiltInSectionId = fn(5408).BuiltInSectionId;
+const BuiltInSectionId = fn(5463).BuiltInSectionId;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_10 = createStyles.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherApplicationViewScreenInner(onCommandExecuted) {

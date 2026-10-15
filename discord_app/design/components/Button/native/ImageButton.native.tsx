@@ -1,10 +1,10 @@
-// === Module 8764: ImageButton ===
+// === Module 8977: ImageButton ===
 
-// Module 8764 (ImageButton)
+// Module 8977 (ImageButton)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5383 */;
-import springPresets from "springPresets" /* 5387 */;
-import ButtonConstants from "ButtonConstants" /* 5389 */;
+import spring from "spring" /* 5438 */;
+import springPresets from "springPresets" /* 5442 */;
+import ButtonConstants from "ButtonConstants" /* 5444 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ let closure_3 = ["size", "label", "grow", "image", "accessibilityLabel", "maxFon
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_9 = createStyles.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = ButtonConstants.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {

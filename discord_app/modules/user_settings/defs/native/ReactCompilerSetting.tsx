@@ -1,10 +1,10 @@
-// === Module 16641: ReactCompilerSetting ===
+// === Module 16880: ReactCompilerSetting ===
 
-// Module 16641 (ReactCompilerSetting)
+// Module 16880 (ReactCompilerSetting)
 import UserSettings from "UserSettings" /* 2041 */;
-import WrenchIcon from "WrenchIcon" /* 16214 */;
+import WrenchIcon from "WrenchIcon" /* 16510 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 10767 */;
+import SettingBuilders from "SettingBuilders" /* 10991 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;

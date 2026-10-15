@@ -1,11 +1,11 @@
-// === Module 14508: MobileNativeUpdateUtils ===
+// === Module 14805: MobileNativeUpdateUtils ===
 
-// Module 14508 (MobileNativeUpdateUtils)
+// Module 14805 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import Linking from "Linking" /* 4808 */;
+import Linking from "Linking" /* 4862 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -104,7 +104,7 @@ function openBuildInstallerUrl(install) {
   } catch (err) {
   }
 }
-const UPDATE_CONFIG = fn(5074).UPDATE_CONFIG;
+const UPDATE_CONFIG = fn(5129).UPDATE_CONFIG;
 const logger = new LoggerDefault("MobileNativeUpdateUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");

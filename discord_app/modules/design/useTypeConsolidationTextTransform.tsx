@@ -1,8 +1,8 @@
-// === Module 6667: useTypeConsolidationTextTransform ===
+// === Module 6883: useTypeConsolidationTextTransform ===
 
-// Module 6667 (useTypeConsolidationTextTransform)
+// Module 6883 (useTypeConsolidationTextTransform)
 import c from "c" /* 576 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6668 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6884 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

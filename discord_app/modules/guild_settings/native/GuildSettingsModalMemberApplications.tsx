@@ -1,15 +1,15 @@
-// === Module 17382: GuildSettingsModalMemberApplications ===
+// === Module 17622: GuildSettingsModalMemberApplications ===
 
-// Module 17382 (GuildSettingsModalMemberApplications)
+// Module 17622 (GuildSettingsModalMemberApplications)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4944 */;
-import UserUtilsDefault from "UserUtils" /* 4964 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 17383 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4998 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 17623 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6124 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6340 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 }, spinnerContainer: { padding: 32 }, footerSpinner: { paddingVertical: 16 }, spinner: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 };
 obj.spinner = { color: nativeDefault.colors.TEXT_BRAND };
@@ -156,7 +156,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }
       const obj5 = { arrow: true, icon: tmp8, label: tmp11, onPress: tmp4, start, end };
-      const tmp17 = closure_7(tmp(6184).TableRow, obj5);
+      const tmp17 = closure_7(tmp(6400).TableRow, obj5);
       cResult[8] = end;
       cResult[9] = tmp4;
       cResult[10] = start;
@@ -190,7 +190,7 @@ let closure_12 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(6184).TableRow, obj2);
+      return closure_7(joinRequest(6400).TableRow, obj2);
     }
   }
 }));

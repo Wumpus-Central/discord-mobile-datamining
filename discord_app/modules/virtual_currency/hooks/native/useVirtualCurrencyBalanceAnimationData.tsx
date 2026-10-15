@@ -1,9 +1,9 @@
-// === Module 13325: useVirtualCurrencyBalanceAnimationData ===
+// === Module 13621: useVirtualCurrencyBalanceAnimationData ===
 
-// Module 13325 (useVirtualCurrencyBalanceAnimationData)
+// Module 13621 (useVirtualCurrencyBalanceAnimationData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5085 */;
+import AccessibilityStore from "AccessibilityStore" /* 5140 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

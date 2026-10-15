@@ -1,12 +1,12 @@
-// === Module 12836: usePowerupGroupConfig ===
+// === Module 13133: usePowerupGroupConfig ===
 
-// Module 12836 (usePowerupGroupConfig)
+// Module 13133 (usePowerupGroupConfig)
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
 import _modDef2600 from "module_2600" /* 2600 */;
-import GuildTagUtils from "GuildTagUtils" /* 8297 */;
-import _modDef12837 from "module_12837" /* 12837 */;
-import _modDef12838 from "module_12838" /* 12838 */;
+import GuildTagUtils from "GuildTagUtils" /* 8508 */;
+import _modDef13134 from "module_13134" /* 13134 */;
+import _modDef13135 from "module_13135" /* 13135 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
 
@@ -45,8 +45,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   if ("guildTagsBadgePacks" !== group.group) {
-    tmp(1388).assertNever(group.group);
-    const tmpResult2 = tmp(1388);
+    tmp(1386).assertNever(group.group);
+    const tmpResult2 = tmp(1386);
   } else {
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       const stringResult = intl.string(_modDef2600.KC9HRW);
       const intl2 = tmp(1126).intl;
       const stringResult1 = intl2.string(_modDef2600.GJiSmP);
-      const obj2 = { staticUrl: _modDef12837, animatedUrl: _modDef12838 };
+      const obj2 = { staticUrl: _modDef13134, animatedUrl: _modDef13135 };
       cResult[3] = stringResult;
       cResult[4] = stringResult1;
       cResult[5] = obj2;
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePower
       obj2.title = intl.string(_modDef2600.KC9HRW);
       const intl2 = util.intl;
       obj2.description = intl2.string(_modDef2600.GJiSmP);
-      const obj3 = { staticUrl: _modDef12837, animatedUrl: _modDef12838 };
+      const obj3 = { staticUrl: _modDef13134, animatedUrl: _modDef13135 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {

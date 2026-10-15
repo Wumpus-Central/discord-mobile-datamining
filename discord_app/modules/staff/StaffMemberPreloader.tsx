@@ -1,11 +1,11 @@
-// === Module 18294: StaffMemberPreloader ===
+// === Module 18533: StaffMemberPreloader ===
 
-// Module 18294 (StaffMemberPreloader)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6104 */;
+// Module 18533 (StaffMemberPreloader)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6320 */;
 import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
 
-const PRELOAD_SERVER_ID = fn(18295).PRELOAD_SERVER_ID;
+const PRELOAD_SERVER_ID = fn(18534).PRELOAD_SERVER_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/staff/StaffMemberPreloader.tsx");
 

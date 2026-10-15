@@ -1,16 +1,16 @@
-// === Module 9784: Sticker ===
+// === Module 9992: Sticker ===
 
-// Module 9784 (Sticker)
+// Module 9992 (Sticker)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4971 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import StickersUtils from "StickersUtils" /* 5754 */;
-import StickersTypes from "StickersTypes" /* 5755 */;
-import _modDef6826 from "module_6826" /* 6826 */;
-import _modDef6827 from "module_6827" /* 6827 */;
-import NativeLottieView from "NativeLottieView" /* 8025 */;
-import NativeAPNGViewDefault from "NativeAPNGView" /* 9785 */;
+import shared from "shared" /* 5025 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import StickersUtils from "StickersUtils" /* 5965 */;
+import StickersTypes from "StickersTypes" /* 5966 */;
+import _modDef7042 from "module_7042" /* 7042 */;
+import _modDef7043 from "module_7043" /* 7043 */;
+import NativeLottieView from "NativeLottieView" /* 8235 */;
+import NativeAPNGViewDefault from "NativeAPNGView" /* 9993 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
@@ -42,7 +42,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/Sticker.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(arg0) {
-  const cResult = c.c(32);
+  const cResult = c.c(33);
   ({ sticker, size, animated, opaque } = arg0);
   if (undefined === opaque) {
     let num = 1;
@@ -155,26 +155,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(
             tmp23 = cResult[27];
           }
           if (cResult[28] === tmp7) {
-            if (cResult[29] === tmp22) {
-              if (cResult[30] === tmp23) {
-                return cResult[31];
+            if (cResult[29] === tmp4) {
+              if (cResult[30] === tmp22) {
+                if (cResult[31] === tmp23) {
+                  return cResult[32];
+                }
               }
             }
           }
-          let obj6 = { resizeMode: "contain", style: tmp22, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
+          let obj6 = { enableAnimation: tmp4, resizeMode: "contain", style: tmp22, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
           if (tmpResult7.isThemeDark(ThemeStore.theme)) {
-            let tmp25Result = _modDef6826;
+            let tmp25Result = _modDef7042;
           } else {
-            tmp25Result = _modDef6827;
+            tmp25Result = _modDef7043;
           }
           obj6.placeholder = tmp25Result;
           obj6.source = tmp23;
           obj6.accessibilityLabel = tmp7;
-          obj6 = <tmp26 resizeMode="contain" style={tmp22} placeholder={null} source={null} accessible accessibilityLabel={null} />;
+          obj6 = <tmp26 enableAnimation={tmp4} resizeMode="contain" style={tmp22} placeholder={null} source={null} accessible accessibilityLabel={null} />;
           cResult[28] = tmp7;
-          cResult[29] = tmp22;
-          cResult[30] = tmp23;
-          cResult[31] = obj6;
+          cResult[29] = tmp4;
+          cResult[30] = tmp22;
+          cResult[31] = tmp23;
+          cResult[32] = obj6;
           tmpResult7 = shared;
         }
         const size3 = { height: size, width: size, opacity: num };
@@ -266,19 +269,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Sticker(
       const merged = Object.assign(obj4);
       return jsx(NativeAPNGViewDefault, {});
     }
-    const obj6 = { resizeMode: "contain", style: null, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
+    const obj6 = { enableAnimation: animated, resizeMode: "contain", style: null, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
     const size3 = { height: size, width: size, opacity: num };
     obj6.style = size3;
     if (tmpResult10.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef6826;
+      let tmp13Result = _modDef7042;
     } else {
-      tmp13Result = _modDef6827;
+      tmp13Result = _modDef7043;
     }
     obj6.placeholder = tmp13Result;
     const obj7 = { uri: str };
     obj6.source = obj7;
     obj6.accessibilityLabel = formatToPlainStringResult;
-    return <tmp14 resizeMode="contain" style={null} placeholder={null} source={null} accessible accessibilityLabel={null} />;
+    return <tmp14 enableAnimation={animated} resizeMode="contain" style={null} placeholder={null} source={null} accessible accessibilityLabel={null} />;
   }
   const obj3 = { stickerName: sticker.name };
 });

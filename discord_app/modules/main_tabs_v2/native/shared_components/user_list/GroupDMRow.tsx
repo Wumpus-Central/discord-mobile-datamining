@@ -1,20 +1,20 @@
-// === Module 10289: GroupDMRow ===
+// === Module 10512: GroupDMRow ===
 
-// Module 10289 (GroupDMRow)
+// Module 10512 (GroupDMRow)
 import c from "c" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 5426 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10290 */;
+import useChannelNameDefault from "useChannelName" /* 5481 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10513 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const native = TableCheckboxRow(1200);
-const Text_Text = TableCheckboxRow(5092);
-const TableCheckboxRow2 = TableCheckboxRow(6181);
-const TableRow = TableCheckboxRow(6184);
-const useRecipientsLabel = TableCheckboxRow(10291);
+const Text_Text = TableCheckboxRow(5147);
+const TableCheckboxRow2 = TableCheckboxRow(6397);
+const TableRow = TableCheckboxRow(6400);
+const useRecipientsLabel = TableCheckboxRow(10514);
 require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress"];
-const UserRowModes = fn(10227).UserRowModes;
+const UserRowModes = fn(10440).UserRowModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

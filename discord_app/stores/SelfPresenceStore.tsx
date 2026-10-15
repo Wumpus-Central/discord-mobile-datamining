@@ -1,22 +1,22 @@
-// === Module 5764: SelfPresenceStore ===
+// === Module 5975: SelfPresenceStore ===
 
-// Module 5764 (SelfPresenceStore)
+// Module 5975 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1355 from "module_1355" /* 1355 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7121 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10263 */;
-import SpotifyStore from "SpotifyStore" /* 5765 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7336 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10476 */;
+import SpotifyStore from "SpotifyStore" /* 5976 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 import DetectableGameStore from "DetectableGameStore" /* 2037 */;
-import IdleStore from "IdleStore" /* 5893 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7119 */;
-import LocalActivityStore from "LocalActivityStore" /* 10658 */;
-import PresenceStore from "PresenceStore" /* 5112 */;
-import SessionsStore from "SessionsStore" /* 5116 */;
+import IdleStore from "IdleStore" /* 6104 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7334 */;
+import LocalActivityStore from "LocalActivityStore" /* 10881 */;
+import PresenceStore from "PresenceStore" /* 5167 */;
+import SessionsStore from "SessionsStore" /* 5171 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -160,7 +160,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5112).sortActivity;
+const sortActivity = fn(5167).sortActivity;
 const Constants = fn(1085);
 const StatusTypes = Constants.StatusTypes;
 ({ ActivityFlags: map1, ActivityTypes: closure_14, AppStates: closure_15 } = Constants);

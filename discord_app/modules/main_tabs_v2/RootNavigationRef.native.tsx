@@ -1,6 +1,6 @@
-// === Module 4979: RootNavigationRef ===
+// === Module 5033: RootNavigationRef ===
 
-// Module 4979 (RootNavigationRef)
+// Module 5033 (RootNavigationRef)
 import Link from "Link" /* 1504 */;
 import size from "module_2" /* 2 */;
 

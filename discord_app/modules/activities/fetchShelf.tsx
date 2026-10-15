@@ -1,8 +1,8 @@
-// === Module 10928: fetchShelf ===
+// === Module 11152: fetchShelf ===
 
-// Module 10928 (fetchShelf)
+// Module 11152 (fetchShelf)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5445 */;
+import ApplicationStore from "ApplicationStore" /* 5500 */;
 import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
@@ -65,7 +65,7 @@ let closure_9 = async function _fetchShelf(arg0) {
           closure_132_12 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp7) {

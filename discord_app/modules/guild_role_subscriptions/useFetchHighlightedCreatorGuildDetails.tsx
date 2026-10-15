@@ -1,6 +1,6 @@
-// === Module 18573: useFetchHighlightedCreatorGuildDetails ===
+// === Module 18812: useFetchHighlightedCreatorGuildDetails ===
 
-// Module 18573 (useFetchHighlightedCreatorGuildDetails)
+// Module 18812 (useFetchHighlightedCreatorGuildDetails)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

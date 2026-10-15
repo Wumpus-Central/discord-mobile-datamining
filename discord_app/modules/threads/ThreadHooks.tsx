@@ -1,25 +1,25 @@
-// === Module 6977: ThreadHooks ===
+// === Module 7190: ThreadHooks ===
 
-// Module 6977 (ThreadHooks)
+// Module 7190 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 5913 */;
-import AgeGateUtils from "AgeGateUtils" /* 5929 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6086 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6983 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 6985 */;
-import useIsRemoteDefault from "useIsRemote" /* 6986 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6987 */;
+import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 6124 */;
+import AgeGateUtils from "AgeGateUtils" /* 6140 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6302 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7196 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7198 */;
+import useIsRemoteDefault from "useIsRemote" /* 7199 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7200 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import createExperiment from "createExperiment" /* 5017 */;
+import createExperiment from "createExperiment" /* 5071 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6039 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 6978 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6250 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 7191 */;
 
 require = fn;
 function canUnarchiveThread(stateFromStores) {

@@ -1,6 +1,6 @@
-// === Module 7210: Iterable ===
+// === Module 7420: Iterable ===
 
-// Module 7210 (Iterable)
+// Module 7420 (Iterable)
 import size from "module_2" /* 2 */;
 
 class Chained {

@@ -1,18 +1,18 @@
-// === Module 8929: GameProfileRankPill ===
+// === Module 9141: GameProfileRankPill ===
 
-// Module 8929 (GameProfileRankPill)
+// Module 9141 (GameProfileRankPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import TrophyIcon from "TrophyIcon" /* 8930 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import TrophyIcon from "TrophyIcon" /* 9142 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.gameRankPill = { flexDirection: "row", backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, alignItems: "center", gap: nativeDefault.space.PX_4 };

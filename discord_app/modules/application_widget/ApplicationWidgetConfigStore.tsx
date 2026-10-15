@@ -1,6 +1,6 @@
-// === Module 10743: ApplicationWidgetConfigStore ===
+// === Module 10965: ApplicationWidgetConfigStore ===
 
-// Module 10743 (ApplicationWidgetConfigStore)
+// Module 10965 (ApplicationWidgetConfigStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;

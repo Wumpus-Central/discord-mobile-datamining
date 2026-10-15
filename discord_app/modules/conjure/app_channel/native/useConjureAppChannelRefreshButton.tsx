@@ -1,8 +1,8 @@
-// === Module 13374: useConjureAppChannelRefreshButton ===
+// === Module 13670: useConjureAppChannelRefreshButton ===
 
-// Module 13374 (useConjureAppChannelRefreshButton)
-import _modDef3849 from "module_3849" /* 3849 */;
-import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 10725 */;
+// Module 13670 (useConjureAppChannelRefreshButton)
+import _modDef3862 from "module_3862" /* 3862 */;
+import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 10947 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       const _Symbol = Symbol;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(_modDef3849["p4B/7M"]);
+        const stringResult = intl.string(_modDef3862["p4B/7M"]);
         cResult[2] = stringResult;
         let tmp9 = stringResult;
       } else {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       }
       if (cResult[3] !== tmp7) {
         const obj3 = { source: null, IconComponent: null, onPress: null, accessibilityLabel: null };
-        RetryIcon = tmp(11313).RetryIcon;
+        RetryIcon = tmp(11537).RetryIcon;
         obj3.IconComponent = RetryIcon;
         obj3.onPress = tmp7;
         obj3.accessibilityLabel = tmp9;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if (!tmp5) {
       const obj2 = {
         source: null,
-        IconComponent: tmp(11313).RetryIcon,
+        IconComponent: tmp(11537).RetryIcon,
         onPress() {
               application_id = application_id.application_id;
               if (application_id == null) {
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
         accessibilityLabel: null
       };
       const intl = tmp(1126).intl;
-      obj2.accessibilityLabel = intl.string(_modDef3849["p4B/7M"]);
+      obj2.accessibilityLabel = intl.string(_modDef3862["p4B/7M"]);
       tmp6 = obj2;
     }
   }

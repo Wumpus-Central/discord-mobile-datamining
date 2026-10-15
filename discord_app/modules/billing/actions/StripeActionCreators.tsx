@@ -1,6 +1,6 @@
-// === Module 5743: StripeActionCreators ===
+// === Module 5954: StripeActionCreators ===
 
-// Module 5743 (StripeActionCreators)
+// Module 5954 (StripeActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -39,7 +39,7 @@ let closure_4 = async function _createStripeSetupIntent() {
           closure_129_0 = obj4;
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -111,7 +111,7 @@ let closure_5 = async function _createSetupIntentForPaymentElements() {
           closure_129_0 = obj4;
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

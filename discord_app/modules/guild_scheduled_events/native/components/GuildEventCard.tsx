@@ -1,22 +1,22 @@
-// === Module 8665: GuildEventCard ===
+// === Module 8877: GuildEventCard ===
 
-// Module 8665 (GuildEventCard)
+// Module 8877 (GuildEventCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ButtonGroup from "ButtonGroup" /* 5963 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 8538 */;
+import ButtonGroup from "ButtonGroup" /* 6174 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 8751 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(6059).isGuildScheduledEventActive;
+let closure_5 = fn(6270).isGuildScheduledEventActive;
 fn(2071).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { actionContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 } };
 const styles = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

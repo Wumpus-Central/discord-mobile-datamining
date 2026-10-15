@@ -1,9 +1,9 @@
-// === Module 7517: AgeVerificationURLActionCreators ===
+// === Module 7727: AgeVerificationURLActionCreators ===
 
-// Module 7517 (AgeVerificationURLActionCreators)
+// Module 7727 (AgeVerificationURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 7518 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7728 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -51,7 +51,7 @@ let closure_8 = async function _requestAgeVerification(arg0) {
           ({ method: closure_129_0, classificationId: closure_129_1, vendor: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -306,7 +306,7 @@ let closure_18 = async function _initiateSuspendedUserAgeVerification(arg0) {
           let suspendedUserToken;
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -435,7 +435,7 @@ let closure_20 = async function _requestIncodeSessionBootstrap() {
           closure_129_0 = obj4;
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -507,7 +507,7 @@ function fetchAgeVerificationMethodsSuspendedUser() {
   const request = { url: Endpoints.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS, rejectWithError: true, body: { token: suspendedUserToken } };
   return HTTP.post(request);
 }
-const VerificationVendorName = fn(5922).VerificationVendorName;
+const VerificationVendorName = fn(6133).VerificationVendorName;
 const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationURLActionCreators.tsx");

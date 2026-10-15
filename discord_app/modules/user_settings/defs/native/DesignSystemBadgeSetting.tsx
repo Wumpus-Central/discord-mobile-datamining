@@ -1,9 +1,9 @@
-// === Module 16523: DesignSystemBadgeSetting ===
+// === Module 16762: DesignSystemBadgeSetting ===
 
-// Module 16523 (DesignSystemBadgeSetting)
+// Module 16762 (DesignSystemBadgeSetting)
 import Constants from "Constants" /* 1085 */;
-import SettingsConstants from "SettingsConstants" /* 8000 */;
-import SettingBuilders from "SettingBuilders" /* 10767 */;
+import SettingsConstants from "SettingsConstants" /* 8210 */;
+import SettingBuilders from "SettingBuilders" /* 10991 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

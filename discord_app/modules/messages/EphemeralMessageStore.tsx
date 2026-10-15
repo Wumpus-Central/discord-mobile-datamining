@@ -1,10 +1,10 @@
-// === Module 5438: EphemeralMessageStore ===
+// === Module 5493: EphemeralMessageStore ===
 
-// Module 5438 (EphemeralMessageStore)
+// Module 5493 (EphemeralMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5439 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5494 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;

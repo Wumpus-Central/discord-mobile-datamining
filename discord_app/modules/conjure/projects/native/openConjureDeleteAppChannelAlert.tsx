@@ -1,7 +1,7 @@
-// === Module 17609: openConjureDeleteAppChannelAlert ===
+// === Module 17849: openConjureDeleteAppChannelAlert ===
 
-// Module 17609 (openConjureDeleteAppChannelAlert)
-import useAlertStore from "useAlertStore" /* 5306 */;
+// Module 17849 (openConjureDeleteAppChannelAlert)
+import useAlertStore from "useAlertStore" /* 5361 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -268,7 +268,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
                 noop(null);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(12239)(conjureServerApp), done: false };
+                const obj4 = { value: tmp2(12474)(conjureServerApp), done: false };
                 return obj4;
               }
             }
@@ -283,7 +283,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
             closure_129_1();
           } else {
             const intl = tmp3(1126).intl;
-            closure_128_0 = intl.string(tmp2(3849).PJ2Fkn);
+            closure_128_0 = intl.string(tmp2(3862).PJ2Fkn);
             closure_129_5(closure_128_0);
             const _Error = Error;
             const error = new Error(closure_128_0);
@@ -318,7 +318,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjure
   let intl = require("util").intl;
   obj2.title = intl.string(require("util").t["8D8Rsb"]);
   const tmp6 = checked(noop.useState(null), 2);
-  obj2.content = require("ConjureRemovedItems").formatWithAppTag(require("module_3849")["HmNT/r"], conjureServerApp.targetAppName);
+  obj2.content = require("ConjureRemovedItems").formatWithAppTag(require("module_3862")["HmNT/r"], conjureServerApp.targetAppName);
   if (items.length > 0) {
     let tmp8Result = null;
     if (items.length > 0) {

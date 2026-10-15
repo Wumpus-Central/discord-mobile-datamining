@@ -1,16 +1,16 @@
-// === Module 15953: DarkModeThemeSetting ===
+// === Module 16249: DarkModeThemeSetting ===
 
-// Module 15953 (DarkModeThemeSetting)
+// Module 16249 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15951 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 16247 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 const SystemTheme = fn(1208).SystemTheme;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModePickerVisible() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -35,7 +35,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(8000).MobileUserSettings.APPEARANCE,
+  parent: fn(8210).MobileUserSettings.APPEARANCE,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useSyncedModePickerVisible() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

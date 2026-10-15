@@ -1,12 +1,12 @@
-// === Module 15074: validateConjureAppFrame ===
+// === Module 15369: validateConjureAppFrame ===
 
-// Module 15074 (validateConjureAppFrame)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8617 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9244 */;
-import RPCErrorDefault from "RPCError" /* 11010 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15075 */;
-import ApplicationStore from "ApplicationStore" /* 5445 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
+// Module 15369 (validateConjureAppFrame)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 7259 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9455 */;
+import RPCErrorDefault from "RPCError" /* 11234 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15370 */;
+import ApplicationStore from "ApplicationStore" /* 5500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
@@ -18,11 +18,11 @@ export default function validateConjureAppFrame(arg0) {
   const tmp3 = validateEmbeddedAppFrameDefault(arg0);
   const applicationId = tmp3.frame.applicationId;
   const application = ApplicationStore.getApplication(applicationId);
-  let prop;
+  let conjureProjectId;
   if (application != null) {
-    prop = application.vibegrationsProjectId;
+    conjureProjectId = application.conjureProjectId;
   }
-  let result = null != prop;
+  let result = null != conjureProjectId;
   if (!result) {
     result = ConjureProjectStore.isConjureProjectApplication(applicationId);
   }
@@ -36,11 +36,11 @@ export default function validateConjureAppFrame(arg0) {
 };
 export const isConjureApplication = function isConjureApplication(applicationId) {
   const application = ApplicationStore.getApplication(applicationId);
-  let prop;
+  let conjureProjectId;
   if (application != null) {
-    prop = application.vibegrationsProjectId;
+    conjureProjectId = application.conjureProjectId;
   }
-  let result = null != prop;
+  let result = null != conjureProjectId;
   if (!result) {
     result = ConjureProjectStore.isConjureProjectApplication(applicationId);
   }

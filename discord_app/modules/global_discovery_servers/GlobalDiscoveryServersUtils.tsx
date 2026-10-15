@@ -1,9 +1,9 @@
-// === Module 18689: GlobalDiscoveryServersUtils ===
+// === Module 18928: GlobalDiscoveryServersUtils ===
 
-// Module 18689 (GlobalDiscoveryServersUtils)
+// Module 18928 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1126 */;
 import v1 from "v1" /* 1279 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
 
@@ -18,9 +18,9 @@ let closure_13 = async function _navigateToGuild() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ loadId: closure_129_0, guildId: closure_129_1, index: closure_129_2, categoryId: closure_129_3, analyticsLocation: closure_129_4, options: closure_129_5 } = closure_0);
-  return "Set";
+  return "test";
 };
-const GlobalDiscoveryServersConstants = fn(8645);
+const GlobalDiscoveryServersConstants = fn(8857);
 ({ GlobalDiscoveryServerTab: metroRequire, FEATURED_GUILDS_CACHE_DURATION: closure_7, CategoryId: closure_8, DISCOVERY_ALL_CATEGORIES_ID: closure_9, getLanguageOptions: c10, HUBS_CATEGORY_ID: closure_11 } = GlobalDiscoveryServersConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
@@ -164,7 +164,7 @@ export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(
   return obj;
 };
 export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "toCharArray$esjava$1", discoverySplash: false, emojis: false };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "toCharArray$esjava$1", discoverySplash: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003046024251525493, emojis: -0.000000000000000000000049630905710433764 };
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, discovery_splash: obj.discoverySplash } = id);
   obj.emojis = [];
   return obj;

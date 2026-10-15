@@ -1,11 +1,11 @@
-// === Module 10799: handleMessagesTapChannel ===
+// === Module 11023: handleMessagesTapChannel ===
 
-// Module 10799 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7058 */;
+// Module 11023 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7273 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
 
 const require = fn;
 function maybeStartLurking() {
@@ -134,7 +134,7 @@ let closure_15 = async function _handleMessagesTapChannel(arg0) {
           guild = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp5) {

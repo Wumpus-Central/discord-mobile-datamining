@@ -1,6 +1,6 @@
-// === Module 5032: useCustomThemeDisplaySettings ===
+// === Module 5086: useCustomThemeDisplaySettings ===
 
-// Module 5032 (useCustomThemeDisplaySettings)
+// Module 5086 (useCustomThemeDisplaySettings)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1252 */;

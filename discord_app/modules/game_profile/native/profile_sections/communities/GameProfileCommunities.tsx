@@ -1,11 +1,11 @@
-// === Module 9123: GameProfileCommunities ===
+// === Module 9335: GameProfileCommunities ===
 
-// Module 9123 (GameProfileCommunities)
+// Module 9335 (GameProfileCommunities)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
-import GameProfileSectionDefault from "GameProfileSection" /* 8953 */;
-import useGameProfileCommunitiesDefault from "useGameProfileCommunities" /* 9124 */;
+import GameProfileSectionDefault from "GameProfileSection" /* 9165 */;
+import useGameProfileCommunitiesDefault from "useGameProfileCommunities" /* 9336 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -15,9 +15,9 @@ require = fn;
 const View = fn(17).View;
 const JoinGuildSources = fn(1085).JoinGuildSources;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
-let obj = { container: { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(8924).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" }, list: null };
-let obj3 = { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(8924).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+const createStyles = fn(5151);
+let obj = { container: { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(9136).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" }, list: null };
+let obj3 = { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(9136).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
 obj.list = { gap: nativeDefault.space.PX_12 };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

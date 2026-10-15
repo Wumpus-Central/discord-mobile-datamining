@@ -1,10 +1,10 @@
-// === Module 14532: GuildBadgeForce ===
+// === Module 14829: GuildBadgeForce ===
 
-// Module 14532 (GuildBadgeForce)
+// Module 14829 (GuildBadgeForce)
 import c from "c" /* 576 */;
 import v1 from "v1" /* 1279 */;
-import inlineStyles from "inlineStyles" /* 7583 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14519 */;
+import inlineStyles from "inlineStyles" /* 7793 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14816 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

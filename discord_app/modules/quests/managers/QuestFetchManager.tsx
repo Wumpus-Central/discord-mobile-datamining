@@ -1,15 +1,15 @@
-// === Module 18674: QuestFetchManager ===
+// === Module 18913: QuestFetchManager ===
 
-// Module 18674 (QuestFetchManager)
+// Module 18913 (QuestFetchManager)
 import DurationsDefault from "Durations" /* 1102 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6077 */;
-import QuestsEligibility from "QuestsEligibility" /* 9175 */;
-import QuestActionCreators from "QuestActionCreators" /* 9181 */;
-import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 18675 */;
-import QuestStore from "QuestStore" /* 7397 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6812 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6293 */;
+import QuestsEligibility from "QuestsEligibility" /* 9387 */;
+import QuestActionCreators from "QuestActionCreators" /* 9393 */;
+import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 18914 */;
+import QuestStore from "QuestStore" /* 7607 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;
@@ -108,14 +108,14 @@ class QuestFetchManager extends tmp2 {
     return applyArgumentsResult;
   }
 }
-QuestFetchManager.prototype["_fetch"] = function _fetch(post_connect_initial) {
+QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
   let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     isEligibleForQuests = !QuestStore.isFetchingCurrentQuests;
   }
   if (isEligibleForQuests) {
     const obj3 = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
-    const obj4 = { callerSource: post_connect_initial, storeSize: QuestStore.quests.size, lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests, msSinceLastFetch: null, isFetchingCurrentQuests: null };
+    const obj4 = { callerSource, storeSize: QuestStore.quests.size, lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests, msSinceLastFetch: null, isFetchingCurrentQuests: null };
     const _Date = Date;
     obj4.msSinceLastFetch = Date.now() - QuestStore.lastFetchedCurrentQuests;
     obj4.isFetchingCurrentQuests = QuestStore.isFetchingCurrentQuests;

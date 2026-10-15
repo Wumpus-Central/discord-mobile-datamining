@@ -1,6 +1,6 @@
-// === Module 10723: RpcCommandInterception ===
+// === Module 10945: RpcCommandInterception ===
 
-// Module 10723 (RpcCommandInterception)
+// Module 10945 (RpcCommandInterception)
 import size from "module_2" /* 2 */;
 
 let global = null;

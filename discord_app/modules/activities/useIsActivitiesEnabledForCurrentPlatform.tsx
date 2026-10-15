@@ -1,7 +1,7 @@
-// === Module 10926: useIsActivitiesEnabledForCurrentPlatform ===
+// === Module 11150: useIsActivitiesEnabledForCurrentPlatform ===
 
-// Module 10926 (useIsActivitiesEnabledForCurrentPlatform)
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5299 */;
+// Module 11150 (useIsActivitiesEnabledForCurrentPlatform)
+import shared_PlatformUtils from "shared/PlatformUtils" /* 5354 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx");

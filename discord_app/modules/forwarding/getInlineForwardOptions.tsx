@@ -1,8 +1,8 @@
-// === Module 12341: getInlineForwardOptions ===
+// === Module 12576: getInlineForwardOptions ===
 
-// Module 12341 (getInlineForwardOptions)
+// Module 12576 (getInlineForwardOptions)
 import Constants from "Constants" /* 1085 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5424 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5479 */;
 import size from "module_2" /* 2 */;
 
 const MessageReferenceTypes = Constants.MessageReferenceTypes;

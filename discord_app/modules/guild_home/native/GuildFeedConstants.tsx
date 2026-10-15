@@ -1,6 +1,6 @@
-// === Module 17356: GuildFeedConstants ===
+// === Module 17596: GuildFeedConstants ===
 
-// Module 17356 (GuildFeedConstants)
+// Module 17596 (GuildFeedConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_home/native/GuildFeedConstants.tsx");

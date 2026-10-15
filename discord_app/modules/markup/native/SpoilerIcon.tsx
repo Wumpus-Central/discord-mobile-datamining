@@ -1,8 +1,8 @@
-// === Module 12466: SpoilerIcon ===
+// === Module 12759: SpoilerIcon ===
 
-// Module 12466 (SpoilerIcon)
+// Module 12759 (SpoilerIcon)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7583 */;
+import inlineStyles from "inlineStyles" /* 7793 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

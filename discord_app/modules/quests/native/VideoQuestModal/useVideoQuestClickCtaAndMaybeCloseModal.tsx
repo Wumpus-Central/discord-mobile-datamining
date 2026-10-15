@@ -1,10 +1,10 @@
-// === Module 15786: useVideoQuestClickCtaAndMaybeCloseModal ===
+// === Module 16082: useVideoQuestClickCtaAndMaybeCloseModal ===
 
-// Module 15786 (useVideoQuestClickCtaAndMaybeCloseModal)
+// Module 16082 (useVideoQuestClickCtaAndMaybeCloseModal)
 import URLUtilsDefault from "URLUtils" /* 1384 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7422 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9202 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9213 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7632 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9414 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9425 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,22 +1,22 @@
-// === Module 13214: ForLaterIntro ===
+// === Module 13510: ForLaterIntro ===
 
-// Module 13214 (ForLaterIntro)
+// Module 13510 (ForLaterIntro)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import ClockIcon from "ClockIcon" /* 5055 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6846 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6911 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 9692 */;
-import BookmarkIcon from "BookmarkIcon" /* 13197 */;
-import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 13215 */;
-import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 13219 */;
-import _modDef13223 from "module_13223" /* 13223 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import ClockIcon from "ClockIcon" /* 5110 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7062 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7125 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 9900 */;
+import BookmarkIcon from "BookmarkIcon" /* 13493 */;
+import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 13511 */;
+import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 13515 */;
+import _modDef13519 from "module_13519" /* 13519 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5096 */;
+import createStyles from "createStyles" /* 5151 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
@@ -55,7 +55,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IntroDe
   isReminder = isReminder.isReminder;
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13223 };
+    const obj2 = { uri: _modDef13519 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -224,7 +224,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IntroDe
   const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef13223 };
+  const obj4 = { uri: _modDef13519 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
   const items = [hasOwnProperty(FastImageDefault, obj3), ];

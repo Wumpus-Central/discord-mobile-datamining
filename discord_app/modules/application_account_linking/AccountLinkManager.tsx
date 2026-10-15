@@ -1,12 +1,12 @@
-// === Module 17749: AccountLinkManager ===
+// === Module 17989: AccountLinkManager ===
 
-// Module 17749 (AccountLinkManager)
+// Module 17989 (AccountLinkManager)
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6801 */;
-import AccountLinkStore from "AccountLinkStore" /* 17750 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6812 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7017 */;
+import AccountLinkStore from "AccountLinkStore" /* 17990 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
 
 let require = fn;
 let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
@@ -42,7 +42,7 @@ let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
           ({ applicationId: closure_129_0, onSuccess: closure_129_1, onError: closure_129_2 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

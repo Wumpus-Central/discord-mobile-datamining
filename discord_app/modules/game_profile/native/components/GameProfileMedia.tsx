@@ -1,14 +1,14 @@
-// === Module 8932: GameProfileMedia ===
+// === Module 9144: GameProfileMedia ===
 
-// Module 8932 (GameProfileMedia)
+// Module 9144 (GameProfileMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import openMediaModal from "openMediaModal" /* 8394 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8883 */;
-import GameProfileMediaSources from "GameProfileMediaSources" /* 8933 */;
+import openMediaModal from "openMediaModal" /* 8605 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9095 */;
+import GameProfileMediaSources from "GameProfileMediaSources" /* 9145 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5085 */;
+import AccessibilityStore from "AccessibilityStore" /* 5140 */;
 
 require = fn;
 function keyExtractor(originalUrl, arg1) {
@@ -30,12 +30,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_14 = 2 * (fn(8933).MEDIA_ITEM_MAX_WIDTH + PX_12);
-const createStyles = fn(5096);
+let closure_14 = 2 * (fn(9145).MEDIA_ITEM_MAX_WIDTH + PX_12);
+const createStyles = fn(5151);
 let obj = { container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 }, list: { overflow: "visible" }, separator: { width: PX_12 }, listPadding: { width: PX_16 }, mediaItem: null, mediaImage: null, mediaVideo: null, reducedMotionPoster: null, playIconWrapper: null };
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj.mediaItem = { maxWidth: fn(8933).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8933).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+obj.mediaItem = { maxWidth: fn(9145).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(9145).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj.mediaImage = { width: "100%", height: "100%", resizeMode: "cover" };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 obj.mediaVideo = size;
@@ -295,7 +295,7 @@ let closure_21 = noop.memo(function TrailerItem(sources) {
   return closure_9(ref, obj2);
 });
 ReactCompilerGating = fn(558);
-let obj4 = { maxWidth: fn(8933).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8933).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+let obj4 = { maxWidth: fn(9145).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(9145).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileMedia.tsx");
 
@@ -304,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   ({ game, trackAction } = arg0);
   closure_15();
   let obj = trackAction(576);
-  const obscured = trackAction(8922).useObscuredSurface().obscured;
+  const obscured = trackAction(9134).useObscuredSurface().obscured;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [bound1];
     const fn = function s() {
@@ -317,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const obj2 = trackAction(8922);
+  const obj2 = trackAction(9134);
   const stateFromStores = trackAction(504).useStateFromStores(tmp5, tmp6);
   const tmpResult = trackAction(504);
   [tmp10, dependencyMap] = noop.useState(0);
@@ -327,10 +327,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   noop = _slicedToArray(noop.useState(false), 2)[1];
   noop.useRef(null);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const carouselPreviewPixelSize = trackAction(8933).getCarouselPreviewPixelSize();
+    const carouselPreviewPixelSize = trackAction(9145).getCarouselPreviewPixelSize();
     cResult[2] = carouselPreviewPixelSize;
     let tmp14 = carouselPreviewPixelSize;
-    const tmpResult2 = trackAction(8933);
+    const tmpResult2 = trackAction(9145);
   } else {
     tmp14 = cResult[2];
   }
@@ -368,8 +368,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       }
     }
   }
-  const bound = Math.max(0, Math.min(trackAction(8933).MEDIA_ITEM_MAX_WIDTH, tmp10 - PX_12 - 2 * PX_16));
-  bound1 = Math.min(trackAction(8933).MEDIA_ITEM_MAX_HEIGHT, bound / trackAction(8933).MEDIA_ITEM_ASPECT_RATIO);
+  const bound = Math.max(0, Math.min(trackAction(9145).MEDIA_ITEM_MAX_WIDTH, tmp10 - PX_12 - 2 * PX_16));
+  bound1 = Math.min(trackAction(9145).MEDIA_ITEM_MAX_HEIGHT, bound / trackAction(9145).MEDIA_ITEM_ASPECT_RATIO);
   if (cResult[6] !== arr2) {
     class F {
       constructor(arg0) {

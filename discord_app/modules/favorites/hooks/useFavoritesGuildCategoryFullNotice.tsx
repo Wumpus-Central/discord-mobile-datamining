@@ -1,14 +1,14 @@
-// === Module 16886: useFavoritesGuildCategoryFullNotice ===
+// === Module 17125: useFavoritesGuildCategoryFullNotice ===
 
-// Module 16886 (useFavoritesGuildCategoryFullNotice)
+// Module 17125 (useFavoritesGuildCategoryFullNotice)
 import c from "c" /* 576 */;
-import _modDef3442 from "module_3442" /* 3442 */;
+import _modDef3444 from "module_3444" /* 3444 */;
 import FavoriteStore from "FavoriteStore" /* 2068 */;
 
 const initialize = intl(504);
 const util = intl(1126);
 const FavoritesUtils = intl(2090);
-const FavoritesHooks = intl(10323);
+const FavoritesHooks = intl(10546);
 require = fn;
 let closure_4 = fn(2078).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
 const ChannelTypes = fn(1085).ChannelTypes;
@@ -52,9 +52,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
               if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj2 = { label: null, tooltip: null };
                 const intl2 = util.intl;
-                obj2.label = intl2.string(_modDef3442.WsUrMD);
+                obj2.label = intl2.string(_modDef3444.WsUrMD);
                 intl = util.intl;
-                stringResult = intl.string(_modDef3442.dW9Kov);
+                stringResult = intl.string(_modDef3444.dW9Kov);
                 obj2.tooltip = stringResult;
                 cResult[2] = obj2;
               }
@@ -86,9 +86,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
             if (formatted === closure_4.toLowerCase()) {
               const obj2 = { label: null, tooltip: null };
               const intl = util.intl;
-              obj2.label = intl.string(_modDef3442.WsUrMD);
+              obj2.label = intl.string(_modDef3444.WsUrMD);
               const intl2 = util.intl;
-              obj2.tooltip = intl2.string(_modDef3442.dW9Kov);
+              obj2.tooltip = intl2.string(_modDef3444.dW9Kov);
               tmp6 = obj2;
             }
           }

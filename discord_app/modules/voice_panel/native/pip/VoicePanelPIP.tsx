@@ -1,27 +1,27 @@
-// === Module 17936: VoicePanelPIP ===
+// === Module 18176: VoicePanelPIP ===
 
-// Module 17936 (VoicePanelPIP)
+// Module 18176 (VoicePanelPIP)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4741 */;
-import native from "native" /* 4829 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4852 */;
-import ExternalPipDefault from "ExternalPip" /* 5225 */;
-import spring from "spring" /* 5383 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6339 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10383 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10727 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10933 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12523 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 12530 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17835 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17836 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17838 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17937 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4795 */;
+import native from "native" /* 4883 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4906 */;
+import ExternalPipDefault from "ExternalPip" /* 5280 */;
+import spring from "spring" /* 5438 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6555 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10606 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10949 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11157 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12816 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 12823 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 18075 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18076 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18078 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 18177 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import FramesStore from "FramesStore" /* 10713 */;
-import VoicePanelStore from "VoicePanelStore" /* 6080 */;
+import FramesStore from "FramesStore" /* 10935 */;
+import VoicePanelStore from "VoicePanelStore" /* 6296 */;
 
 require = fn;
 function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
@@ -29,15 +29,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12524);
+const VoicePanelConstants = fn(12817);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12522).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17837).VoicePanelPIPModes;
-const ActivityPanelModes = fn(6073).ActivityPanelModes;
-const isLaunched = fn(10697).isLaunched;
+const VoicePanelControlsModes = fn(12815).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18077).VoicePanelPIPModes;
+const ActivityPanelModes = fn(6289).ActivityPanelModes;
+const isLaunched = fn(10919).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

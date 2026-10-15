@@ -1,9 +1,9 @@
-// === Module 18256: AppStoreAgeSignalReport ===
+// === Module 18495: AppStoreAgeSignalReport ===
 
-// Module 18256 (AppStoreAgeSignalReport)
+// Module 18495 (AppStoreAgeSignalReport)
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5926 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7552 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6137 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 7762 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -240,8 +240,8 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
   if (tmp3) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp4(5926).shouldCollectAppStoreSignal();
-      const tmp4Result = tmp4(5926);
+      result = tmp4(6137).shouldCollectAppStoreSignal();
+      const tmp4Result = tmp4(6137);
     }
     tmp3 = result;
     const obj = require("AppStoreAgeSignalSupport");

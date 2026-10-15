@@ -1,29 +1,29 @@
-// === Module 17889: VoicePanelHeaderSpeaker ===
+// === Module 18129: VoicePanelHeaderSpeaker ===
 
-// Module 17889 (VoicePanelHeaderSpeaker)
+// Module 18129 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4940 */;
-import NativeViewDefault from "NativeView" /* 6166 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 8797 */;
-import useOnConnectToConsole from "useOnConnectToConsole" /* 13548 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 13549 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17819 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17892 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4994 */;
+import NativeViewDefault from "NativeView" /* 6382 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 9010 */;
+import useOnConnectToConsole from "useOnConnectToConsole" /* 13844 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 13845 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 18059 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 18132 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5115 */;
-import AudioRouteStore from "AudioRouteStore" /* 5136 */;
-import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 17891 */;
+import GameConsoleStore from "GameConsoleStore" /* 5170 */;
+import AudioRouteStore from "AudioRouteStore" /* 5191 */;
+import AudioRouteSwitchingStore from "AudioRouteSwitchingStore" /* 18131 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import SessionsStore from "SessionsStore" /* 5116 */;
+import SessionsStore from "SessionsStore" /* 5171 */;
 
 require = fn;
 let closure_3 = ["ref"];
 let closure_4 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(17890).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(18130).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1085).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);

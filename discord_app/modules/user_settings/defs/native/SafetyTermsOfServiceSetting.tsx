@@ -1,11 +1,11 @@
-// === Module 16632: SafetyTermsOfServiceSetting ===
+// === Module 16871: SafetyTermsOfServiceSetting ===
 
-// Module 16632 (SafetyTermsOfServiceSetting)
+// Module 16871 (SafetyTermsOfServiceSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import LinkingDefault from "Linking" /* 4808 */;
-import SettingsConstants from "SettingsConstants" /* 8000 */;
-import SettingBuilders from "SettingBuilders" /* 10767 */;
+import LinkingDefault from "Linking" /* 4862 */;
+import SettingsConstants from "SettingsConstants" /* 8210 */;
+import SettingBuilders from "SettingBuilders" /* 10991 */;
 import size from "module_2" /* 2 */;
 
 const MarketingURLs = Constants.MarketingURLs;

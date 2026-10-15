@@ -1,7 +1,7 @@
-// === Module 5751: transformMessagPoll ===
+// === Module 5962: transformMessagPoll ===
 
-// Module 5751 (transformMessagPoll)
-import _modDef4704 from "module_4704" /* 4704 */;
+// Module 5962 (transformMessagPoll)
+import _modDef4758 from "module_4758" /* 4758 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
@@ -9,6 +9,6 @@ const result = size.fileFinishedImporting("modules/polls/transformMessagPoll.tsx
 export default function transformMessagePoll(expiry) {
   const obj = {};
   const merged = Object.assign(expiry);
-  obj.expiry = _modDef4704(expiry.expiry);
+  obj.expiry = _modDef4758(expiry.expiry);
   return obj;
 };

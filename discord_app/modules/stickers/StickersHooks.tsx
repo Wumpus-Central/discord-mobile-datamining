@@ -1,25 +1,25 @@
-// === Module 9768: StickersHooks ===
+// === Module 9976: StickersHooks ===
 
-// Module 9768 (StickersHooks)
+// Module 9976 (StickersHooks)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4757 */;
-import StickersUtils from "StickersUtils" /* 5754 */;
-import StickersTypes from "StickersTypes" /* 5755 */;
-import StickerSendability from "StickerSendability" /* 7053 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8580 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 9751 */;
-import StickersActionCreators from "StickersActionCreators" /* 9769 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4811 */;
+import StickersUtils from "StickersUtils" /* 5965 */;
+import StickersTypes from "StickersTypes" /* 5966 */;
+import StickerSendability from "StickerSendability" /* 7268 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8793 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 9959 */;
+import StickersActionCreators from "StickersActionCreators" /* 9977 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
-import SortedGuildStore from "SortedGuildStore" /* 5968 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import SortedGuildStore from "SortedGuildStore" /* 6179 */;
 import UserStore from "UserStore" /* 1390 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6034 */;
-import StickersStore from "StickersStore" /* 6035 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6245 */;
+import StickersStore from "StickersStore" /* 6246 */;
 
 const require = globalThis.__r;
 
@@ -230,7 +230,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGui
             return closure_1_9.getCurrentUser();
           }
         }
-        obj3.type = tmp45(5755).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
+        obj3.type = tmp45(5966).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
         ({ id: obj6.id, name: obj6.name } = guild);
         obj3.stickers = [];
         tmp35(obj3);
@@ -779,15 +779,15 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
   const tmp9 = current(noop.useState(true), 2);
   [tmp12, asyncGeneratorStep] = current(noop.useState(false), 2);
   if (cResult[3] !== id) {
-    let isGuildStickerResult = tmp(5754).isGuildSticker(id);
+    let isGuildStickerResult = tmp(5965).isGuildSticker(id);
     if (!isGuildStickerResult) {
-      isGuildStickerResult = tmp(5754).isStandardSticker(id);
-      const tmpResult4 = tmp(5754);
+      isGuildStickerResult = tmp(5965).isStandardSticker(id);
+      const tmpResult4 = tmp(5965);
     }
     cResult[3] = id;
     cResult[4] = isGuildStickerResult;
     let tmp13 = isGuildStickerResult;
-    const tmpResult3 = tmp(5754);
+    const tmpResult3 = tmp(5965);
   } else {
     tmp13 = cResult[4];
   }
@@ -1327,8 +1327,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
   const tmp5 = obj4(noop.useState(false), 2);
   let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
   if (!isGuildStickerResult) {
-    isGuildStickerResult = tmp(5754).isStandardSticker(renderableSticker);
-    const tmpResult = tmp(5754);
+    isGuildStickerResult = tmp(5965).isStandardSticker(renderableSticker);
+    const tmpResult = tmp(5965);
   }
   obj4 = { hasFetched: tmp6, isReturnable: isGuildStickerResult, renderableSticker, shouldFetch: tmp4[0], stickersStoreDefinition: stateFromStores };
   noop = obj2.useRef(obj4);
@@ -1470,7 +1470,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         const guildId = flag.getGuildId();
         const tmpResult = collapsedStickersCategories(num[16]);
         let canCreateExpressions = null != guild;
-        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(5755).StickerCategoryTypes.FAVORITE);
+        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(5966).StickerCategoryTypes.FAVORITE);
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
         }
@@ -1538,7 +1538,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
           rowIndex = rowIndex + 1;
         }
         gridSectionIndex = gridSectionIndex + 1;
-        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(5755).StickerCategoryTypes.RECENT);
+        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(5966).StickerCategoryTypes.RECENT);
       }
       if (null == items) {
         const iter = stickersCategories[Symbol.iterator]();

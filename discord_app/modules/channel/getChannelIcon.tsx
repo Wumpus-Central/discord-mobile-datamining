@@ -1,7 +1,7 @@
-// === Module 13675: getChannelIcon ===
+// === Module 13971: getChannelIcon ===
 
-// Module 13675 (getChannelIcon)
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+// Module 13971 (getChannelIcon)
+import GlobalUtils from "GlobalUtils" /* 1386 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1390 */;

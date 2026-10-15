@@ -1,10 +1,10 @@
-// === Module 10963: StreamEnded ===
+// === Module 11187: StreamEnded ===
 
-// Module 10963 (StreamEnded)
+// Module 11187 (StreamEnded)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4971 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import _mod8367 from "module_8367" /* 8367 */;
+import shared from "shared" /* 5025 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import _mod8578 from "module_8578" /* 8578 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,41 +16,41 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStreamEnd
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_10964");
+          return require("module_11188");
         },
       darker() {
-          return require("module_10965");
+          return require("module_11189");
         }
     };
-    const illustrationSource = _mod8367.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8578.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod8367;
+    const tmpResult = _mod8578;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function useStreamEndedSource() {
   const obj = shared;
-  return _mod8367.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8578.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_10964");
+      return require("module_11188");
     },
     darker() {
-      return require("module_10965");
+      return require("module_11189");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getStreamEndedSource(theme) {
-  return _mod8367.getIllustrationSource(theme, {
+  return _mod8578.getIllustrationSource(theme, {
     dark() {
-      return require("module_10964");
+      return require("module_11188");
     },
     darker() {
-      return require("module_10965");
+      return require("module_11189");
     }
   });
 }

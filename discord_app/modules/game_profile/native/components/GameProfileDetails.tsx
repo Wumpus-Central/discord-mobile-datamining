@@ -1,22 +1,22 @@
-// === Module 9100: GameProfileDetails ===
+// === Module 9312: GameProfileDetails ===
 
-// Module 9100 (GameProfileDetails)
+// Module 9312 (GameProfileDetails)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import Server from "Server" /* 1998 */;
-import DateUtilsAll from "DateUtils" /* 4795 */;
-import LinkingDefault from "Linking" /* 4808 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import SKUUtils from "SKUUtils" /* 8927 */;
+import DateUtilsAll from "DateUtils" /* 4849 */;
+import LinkingDefault from "Linking" /* 4862 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import SKUUtils from "SKUUtils" /* 9139 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8477).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8688).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       let joined;
       if (platformsContainer != null) {
         const genres1 = platformsContainer.genres;
-        const mapped = genres1.map(trackAction(8927).getGenreText);
+        const mapped = genres1.map(trackAction(9139).getGenreText);
         joined = mapped.join(", ");
       }
       let genres2;
@@ -297,10 +297,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               }
               const _Date = Date;
               const date = new Date(tmp30);
-              const dateFormatResult = tmp5(4795).dateFormat(date, "LL");
+              const dateFormatResult = tmp5(4849).dateFormat(date, "LL");
               cResult[32] = tmp30;
               cResult[33] = dateFormatResult;
-              const obj7 = tmp5(4795);
+              const obj7 = tmp5(4849);
             } else {
               class S {
                 constructor(arg0) {
@@ -593,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           }
         }
         const obj5 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: headerText, children: tmp64 };
-        const tmp67 = closure_8(trackAction(5092).Text, obj5);
+        const tmp67 = closure_8(trackAction(5147).Text, obj5);
         cResult[57] = tmp4.headerText;
         cResult[58] = tmp67;
       } else {
@@ -721,7 +721,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               if (game != null) {
                 const websites = game.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(9108)(item, trackAction(587).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((item) => trackAction(9320)(item, trackAction(587).colors.ICON_SUBTLE));
                   found = mapped3.filter((item) => null != item);
                 }
               }
@@ -765,7 +765,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                 stringResult = intl8.string(util.t["UxAag+"]);
               }
               const obj7 = { label: stringResult, value: null };
-              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9101).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE }, platform)) };
+              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9313).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE }, platform)) };
               obj7.value = closure_2_8(hasOwnProperty, obj8);
               items.push(obj7);
             }

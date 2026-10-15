@@ -1,13 +1,13 @@
-// === Module 7272: CollectiblesProductRecord ===
+// === Module 7482: CollectiblesProductRecord ===
 
-// Module 7272 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 6097 */;
+// Module 7482 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 6313 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7273 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7279 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7483 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7489 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7274);
+const CollectiblesItemRecord = fn(7484);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1087).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1085);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "code", items: 1717973305, categorySkuId: 1717986918, isCategoryReward: 7421926, prices: 822083584, previewAssets: -1374389535, googleSkuIds: 1072357703, eligibleOffers: 113, variants: -1709985792, bundledProducts: -1717986919, isFirstParty: true };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "applicationId", items: false, categorySkuId: false, isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: false, bundledProducts: false, isFirstParty: false };
               let str;
               if (first != null) {
                 str = first.optionValue;

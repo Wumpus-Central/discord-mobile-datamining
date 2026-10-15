@@ -1,6 +1,6 @@
-// === Module 7421: QuestType ===
+// === Module 7631: QuestType ===
 
-// Module 7421 (QuestType)
+// Module 7631 (QuestType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestType.tsx");

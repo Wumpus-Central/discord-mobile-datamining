@@ -1,6 +1,6 @@
-// === Module 5950: ChannelSpoilerAgreeStore ===
+// === Module 6161: ChannelSpoilerAgreeStore ===
 
-// Module 5950 (ChannelSpoilerAgreeStore)
+// Module 6161 (ChannelSpoilerAgreeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

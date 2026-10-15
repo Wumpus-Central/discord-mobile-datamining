@@ -1,10 +1,10 @@
-// === Module 16182: SettingsAdvancedScreen ===
+// === Module 16478: SettingsAdvancedScreen ===
 
-// Module 16182 (SettingsAdvancedScreen)
+// Module 16478 (SettingsAdvancedScreen)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import SettingBuilders from "SettingBuilders" /* 10767 */;
-import SettingLayoutDefault from "SettingLayout" /* 15323 */;
+import SettingBuilders from "SettingBuilders" /* 10991 */;
+import SettingLayoutDefault from "SettingLayout" /* 15619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function getAdvancedSettings() {
   items1[3] = obj5;
   return items1;
 }
-const MobileUserSettings = fn(8000).MobileUserSettings;
+const MobileUserSettings = fn(8210).MobileUserSettings;
 const MarketingURLs = fn(1085).MarketingURLs;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

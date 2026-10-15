@@ -1,9 +1,9 @@
-// === Module 9073: useFetchVirtualCurrencyTotalRedeemed ===
+// === Module 9285: useFetchVirtualCurrencyTotalRedeemed ===
 
-// Module 9073 (useFetchVirtualCurrencyTotalRedeemed)
+// Module 9285 (useFetchVirtualCurrencyTotalRedeemed)
 import _mod19 from "module_19" /* 19 */;
-import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9069 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9068 */;
+import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 9281 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9280 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

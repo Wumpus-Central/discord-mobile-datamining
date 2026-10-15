@@ -1,15 +1,15 @@
-// === Module 15333: useSettingSearchResults ===
+// === Module 15629: useSettingSearchResults ===
 
-// Module 15333 (useSettingSearchResults)
+// Module 15629 (useSettingSearchResults)
 import debounceDefault from "debounce" /* 551 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 15327 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 15328 */;
-import UserSettingSearchManagerDefault from "UserSettingSearchManager" /* 15334 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 15623 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 15624 */;
+import UserSettingSearchManagerDefault from "UserSettingSearchManager" /* 15630 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 15325 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 15192 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 15621 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 15488 */;
 
 const require = globalThis.__r;
 
@@ -37,11 +37,11 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
     const tmp10 = UserSettingSearchManagerDefault;
-    const tmp102 = new tmp10(tmp(15327).getSettingSearchableTitles(), stateFromStores);
+    const tmp102 = new tmp10(tmp(15623).getSettingSearchableTitles(), stateFromStores);
     cResult[2] = stateFromStores;
     cResult[3] = tmp102;
     let tmp8 = tmp102;
-    const tmpResult2 = tmp(15327);
+    const tmpResult2 = tmp(15623);
   } else {
     tmp8 = cResult[3];
   }
@@ -62,7 +62,7 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
         const isBlockedResult = SettingTreeManagerDefault.isBlocked(setting, closure_0);
         let tmp3 = !isBlockedResult;
         if (!isBlockedResult) {
-          tmp3 = !closure_0(15193).SETTING_RENDERER_CONFIG[setting].unsearchable;
+          tmp3 = !closure_0(15489).SETTING_RENDERER_CONFIG[setting].unsearchable;
         }
         return tmp3;
       });
@@ -151,10 +151,10 @@ export const useSettingSearchResults = ReactCompilerGating.isReactCompilerEnable
     scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
     const found = scoredSearchResults.filter((setting) => {
       setting = setting.setting;
-      const isBlockedResult = scoredSearchResults(15328).isBlocked(setting, closure_0);
+      const isBlockedResult = scoredSearchResults(15624).isBlocked(setting, closure_0);
       let tmp3 = !isBlockedResult;
       if (!isBlockedResult) {
-        tmp3 = !stateFromStores(15193).SETTING_RENDERER_CONFIG[setting].unsearchable;
+        tmp3 = !stateFromStores(15489).SETTING_RENDERER_CONFIG[setting].unsearchable;
       }
       return tmp3;
     });

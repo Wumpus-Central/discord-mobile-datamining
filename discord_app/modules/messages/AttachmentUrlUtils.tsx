@@ -1,6 +1,6 @@
-// === Module 9327: AttachmentUrlUtils ===
+// === Module 9538: AttachmentUrlUtils ===
 
-// Module 9327 (AttachmentUrlUtils)
+// Module 9538 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import URLUtilsDefault from "URLUtils" /* 1384 */;
@@ -302,7 +302,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(5431).ATTACHMENT_PATH_PREFIXES;
+const ATTACHMENT_PATH_PREFIXES = fn(5486).ATTACHMENT_PATH_PREFIXES;
 const Endpoints = fn(1085).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];

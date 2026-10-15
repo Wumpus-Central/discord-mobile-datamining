@@ -1,18 +1,18 @@
-// === Module 11970: ConjureTipInlineCallout ===
+// === Module 12199: ConjureTipInlineCallout ===
 
-// Module 11970 (ConjureTipInlineCallout)
+// Module 12199 (ConjureTipInlineCallout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import XSmallIcon from "XSmallIcon" /* 6212 */;
-import IconButton from "IconButton" /* 7580 */;
+import XSmallIcon from "XSmallIcon" /* 6428 */;
+import IconButton from "IconButton" /* 7790 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { dismissible: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

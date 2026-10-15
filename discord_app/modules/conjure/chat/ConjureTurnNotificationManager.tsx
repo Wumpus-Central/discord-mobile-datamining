@@ -1,21 +1,20 @@
-// === Module 18114: ConjureTurnNotificationManager ===
+// === Module 18354: ConjureTurnNotificationManager ===
 
-// Module 18114 (ConjureTurnNotificationManager)
+// Module 18354 (ConjureTurnNotificationManager)
 import UserSettings from "UserSettings" /* 2041 */;
-import UserUtilsDefault from "UserUtils" /* 4964 */;
-import ConjureUtils from "ConjureUtils" /* 6951 */;
-import conjureProjectMute from "conjureProjectMute" /* 10686 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10696 */;
-import SoundUtils from "SoundUtils" /* 11054 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7265 */;
+import ConjureUtils from "ConjureUtils" /* 7165 */;
+import conjureProjectMute from "conjureProjectMute" /* 10909 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10918 */;
+import SoundUtils from "SoundUtils" /* 11278 */;
+import conjureMentions from "conjureMentions" /* 12070 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7475 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 13111 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 13407 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5764 */;
-import UserStore from "UserStore" /* 1390 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6812 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5975 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7028 */;
 
 require = fn;
 function handleConjureTurnSettled(projectId) {
@@ -79,44 +78,30 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
       let conjureWorkspaceGuildId = guildId;
       if (guildId == null) {
         conjureWorkspaceGuildId = ConjureUtils.resolveConjureWorkspaceGuildId(VibegrationsChatStore);
-        const tmp8Result2 = ConjureUtils;
+        const tmp8Result3 = ConjureUtils;
       }
-      const obj4 = {
-        projectId,
-        guildId: conjureWorkspaceGuildId,
-        title,
-        body: body.replace(re22, (arg0, arg1) => {
-              let combined = arg0;
-              user = user.getUser(arg1);
-              if (null != user) {
-                const _HermesInternal = HermesInternal;
-                combined = "@" + UserUtilsDefault.getName(user);
-              }
-              return combined;
-            }),
-        route: null,
-        sound: null,
-        volume: null
-      };
+      const obj4 = { projectId, guildId: conjureWorkspaceGuildId, title, body: null, route: null, sound: null, volume: null };
+      const tmpResult2 = ConjurePlatformUtilsDefault;
+      obj4.body = conjureMentions.withConjureMentionNames(body);
       let CHANNELResult = null;
       if (null != conjureWorkspaceGuildId) {
-        CHANNELResult = closure_1_11.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
+        CHANNELResult = collapsed.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
       }
       obj4.route = CHANNELResult;
-      let tmp27;
+      let tmp26;
       if (!isSoundDisabledResult) {
-        tmp27 = bit_message1;
+        tmp26 = bit_message1;
       }
-      obj4.sound = tmp27;
+      obj4.sound = tmp26;
       obj4.volume = volume;
-      const result1 = ConjurePlatformUtilsDefault.presentTurnNotification(obj4);
-      const tmpResult2 = ConjurePlatformUtilsDefault;
+      const result1 = tmpResult2.presentTurnNotification(obj4);
+      const tmp8Result4 = conjureMentions;
     }
     obj3 = conjureProjectMute;
   }
 }
 const Constants = fn(1085);
-({ Routes: closure_11, StatusTypes: closure_12 } = Constants);
+({ Routes: c10, StatusTypes: closure_11 } = Constants);
 const StaticChannelRoute = fn(2072).StaticChannelRoute;
 const prototype = function ConjureTurnNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -128,8 +113,7 @@ class prototype extends tmp3 {
 const bit_message1 = "bit_message1";
 const message1 = "message1";
 const VibegrationsChatStore = "VibegrationsChatStore";
-let c21 = 0.4;
-const re22 = /<@!?(\d+)>/g;
+let c20 = 0.4;
 const prototype1 = new prototype();
 const map = new Map();
 const size = fn(2);

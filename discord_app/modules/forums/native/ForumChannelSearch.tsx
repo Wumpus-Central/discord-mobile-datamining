@@ -1,16 +1,16 @@
-// === Module 13378: ForumChannelSearch ===
+// === Module 13674: ForumChannelSearch ===
 
-// Module 13378 (ForumChannelSearch)
-import Tracking from "Tracking" /* 7911 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9338 */;
+// Module 13674 (ForumChannelSearch)
+import Tracking from "Tracking" /* 8121 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9549 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import ForumSearchStore from "ForumSearchStore" /* 7912 */;
+import ForumSearchStore from "ForumSearchStore" /* 8122 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_8 = createStyles.createStyles({ inputContainer: { flexGrow: 1, marginLeft: 8 }, cancelButtonContainer: { paddingLeft: 8 } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -134,7 +134,7 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
   const guildId = channelId.guildId;
   closure_8();
   let obj = channelId(576);
-  const canSearchForumPostsByChannelId = channelId(13379).useCanSearchForumPostsByChannelId(channelId);
+  const canSearchForumPostsByChannelId = channelId(13675).useCanSearchForumPostsByChannelId(channelId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ForumSearchStore];
     cResult[0] = items;
@@ -160,7 +160,7 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  let obj2 = channelId(13379);
+  let obj2 = channelId(13675);
   const stateFromStores = channelId(504).useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ChannelStore];
@@ -277,8 +277,8 @@ export const ForumChannelSearchInput = noop.memo(ReactCompilerGating.isReactComp
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(13379).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(13379);
+  const canSearchForumPostsByChannelId = channelId(13675).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(13675);
   const items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => {

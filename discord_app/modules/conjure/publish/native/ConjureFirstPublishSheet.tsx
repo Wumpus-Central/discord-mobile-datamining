@@ -1,8 +1,8 @@
-// === Module 11366: ConjureFirstPublishSheet ===
+// === Module 11590: ConjureFirstPublishSheet ===
 
-// Module 11366 (ConjureFirstPublishSheet)
+// Module 11590 (ConjureFirstPublishSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5060 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5115 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureFirstPublishSheet = "ConjureFirstPublishSheet";
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, actions: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -230,7 +230,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                 const obj6 = { name, description };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj7 = { value: tmp5(11367).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
+                const obj7 = { value: tmp5(11591).saveConjureFirstPublishDetails(projectId, obj4, obj6), done: false };
                 return obj7;
               }
             }
@@ -248,7 +248,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
           closure_129_9(false);
           if (!closure_128_0) {
             const intl = tmp5(1126).intl;
-            closure_129_7(intl.string(tmp2(3849).Fi7boI));
+            closure_129_7(intl.string(tmp2(3862).Fi7boI));
           }
         }
         closure_129_12();

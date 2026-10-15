@@ -1,6 +1,6 @@
-// === Module 7803: webpConversion ===
+// === Module 8013: webpConversion ===
 
-// Module 7803 (webpConversion)
+// Module 8013 (webpConversion)
 import LoggerDefault from "Logger" /* 3 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

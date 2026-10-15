@@ -1,6 +1,6 @@
-// === Module 7916: ForumSessionAnalyticsManager ===
+// === Module 8126: ForumSessionAnalyticsManager ===
 
-// Module 7916 (ForumSessionAnalyticsManager)
+// Module 8126 (ForumSessionAnalyticsManager)
 import v1 from "v1" /* 1279 */;
 import size from "module_2" /* 2 */;
 

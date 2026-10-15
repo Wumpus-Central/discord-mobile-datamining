@@ -1,8 +1,8 @@
-// === Module 10737: ActivityLaunchErrorLink ===
+// === Module 10959: ActivityLaunchErrorLink ===
 
-// Module 10737 (ActivityLaunchErrorLink)
+// Module 10959 (ActivityLaunchErrorLink)
 import c from "c" /* 576 */;
-import migration from "migration" /* 10738 */;
+import IntlLink from "IntlLink" /* 10960 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,12 +20,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activity
     }
     return tmp4;
   }
-  const tmp5 = jsx(migration.IntlLink, { target: href, children });
+  const tmp5 = jsx(IntlLink.IntlLink, { target: href, children });
   cResult[0] = children;
   cResult[1] = href;
   cResult[2] = tmp5;
   tmp4 = tmp5;
 }) : (function ActivityLaunchErrorLink(arg0) {
   ({ href, children } = arg0);
-  return jsx(migration.IntlLink, { target, children });
+  return jsx(IntlLink.IntlLink, { target, children });
 });

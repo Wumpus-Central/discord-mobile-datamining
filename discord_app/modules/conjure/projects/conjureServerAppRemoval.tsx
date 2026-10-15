@@ -1,18 +1,18 @@
-// === Module 12238: conjureServerAppRemoval ===
+// === Module 12473: conjureServerAppRemoval ===
 
-// Module 12238 (conjureServerAppRemoval)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6104 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6858 */;
-import ConjureUtils from "ConjureUtils" /* 6951 */;
-import conjureAppInServer from "conjureAppInServer" /* 10689 */;
+// Module 12473 (conjureServerAppRemoval)
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6284 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6320 */;
+import ConjureUtils from "ConjureUtils" /* 7165 */;
+import conjureAppInServer from "conjureAppInServer" /* 10911 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5445 */;
-import GuildChannelStore from "GuildChannelStore" /* 4750 */;
+import ApplicationStore from "ApplicationStore" /* 5500 */;
+import GuildChannelStore from "GuildChannelStore" /* 4804 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -34,26 +34,26 @@ function readConjureServerApp(arg0, arg1) {
   if (null != arg1) {
     application = ApplicationStore.getApplication(arg1);
   }
-  let prop;
+  let conjureProjectId;
   if (application != null) {
-    prop = application.vibegrationsProjectId;
+    conjureProjectId = application.conjureProjectId;
   }
   if (null != guild) {
     if (null != application) {
-      if (null != prop) {
+      if (null != conjureProjectId) {
         const mapped = appChannelApplicationIds(guild.id).map((item) => application.getApplication(item));
-        let id = mapped.find((vibegrationsProjectId) => {
-          prop = undefined;
-          if (vibegrationsProjectId != null) {
-            prop = vibegrationsProjectId.vibegrationsProjectId;
+        let id = mapped.find((conjureProjectId) => {
+          conjureProjectId = undefined;
+          if (conjureProjectId != null) {
+            conjureProjectId = conjureProjectId.conjureProjectId;
           }
-          return prop === prop;
+          return conjureProjectId === conjureProjectId;
         });
         if (null == id) {
           let items = [];
         } else {
-          items = guild(10689).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(10689);
+          items = guild(10911).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(10911);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -62,8 +62,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(10689).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(10689);
+          canRemoveConjureBotResult = guild(10911).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(10911);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -71,11 +71,11 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(10689).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(10689);
+          canRemoveConjureBotResult = guild(10911).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(10911);
         }
         if (canRemoveConjureBotResult) {
-          closure_129_0 = prop;
+          closure_129_0 = conjureProjectId;
           const memberIds = GuildMemberStore.getMemberIds(guild.id);
           const found = memberIds.filter((item) => {
             const user = UserStore.getUser(item);
@@ -90,11 +90,11 @@ function readConjureServerApp(arg0, arg1) {
                 appIdForBotUserId = item;
               }
               application = ApplicationStore.getApplication(appIdForBotUserId);
-              prop = undefined;
+              conjureProjectId = undefined;
               if (application != null) {
-                prop = application.vibegrationsProjectId;
+                conjureProjectId = application.conjureProjectId;
               }
-              tmp3 = prop === guild;
+              tmp3 = conjureProjectId === guild;
             }
             return tmp3;
           });
@@ -103,7 +103,7 @@ function readConjureServerApp(arg0, arg1) {
         if (canRemoveConjureBotResult) {
           canRemoveConjureBotResult = items.every((item) => PermissionStore.can(constants.MANAGE_CHANNELS, item));
         }
-        const obj4 = { projectId: prop, guildId: null, guildName: null, targetAppName: null, rest: null };
+        const obj4 = { projectId: conjureProjectId, guildId: null, guildName: null, targetAppName: null, rest: null };
         ({ id: obj5.guildId, name: obj5.guildName } = guild);
         obj4.targetAppName = application.name;
         let tmp16 = null;
@@ -151,11 +151,11 @@ let closure_17 = async function _loadConjureServerApp(arg0) {
       return { value, done: true };
     } else {
       const application = closure_131_5.getApplication(closure_130_1);
-      let prop;
+      let conjureProjectId;
       if (application != null) {
-        prop = application.vibegrationsProjectId;
+        conjureProjectId = application.conjureProjectId;
       }
-      if (null == prop) {
+      if (null == conjureProjectId) {
         c5 = 3;
       } else {
         c4 = 2;
@@ -256,7 +256,7 @@ let closure_22 = async function _loadMissingApplication(arg0) {
     }
   }
 };
-let closure_7 = fn(4750).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4804).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1085).Permissions;
 let c14 = " (Preview)";
 fn(558);
@@ -278,11 +278,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
       if (null != closure_1) {
         application = ApplicationStore.getApplication(tmp);
       }
-      let prop;
+      let conjureProjectId;
       if (application != null) {
-        prop = application.vibegrationsProjectId;
+        conjureProjectId = application.conjureProjectId;
       }
-      if (null == prop) {
+      if (null == conjureProjectId) {
         return null;
       } else {
         const bot = application.bot;
@@ -512,11 +512,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
     if (null != closure_1) {
       application = ApplicationStore.getApplication(tmp);
     }
-    let prop;
+    let conjureProjectId;
     if (application != null) {
-      prop = application.vibegrationsProjectId;
+      conjureProjectId = application.conjureProjectId;
     }
-    if (null == prop) {
+    if (null == conjureProjectId) {
       return null;
     } else {
       const bot = application.bot;
@@ -597,15 +597,15 @@ export const useConjureServerApp = ReactCompilerGating.isReactCompilerEnabled() 
     first = cResult[0];
   }
   if (cResult[1] !== arg1) {
-    const fn = function h() {
+    const fn = function j() {
       let tmp2 = null != closure_1;
       if (tmp2) {
         const application = ApplicationStore.getApplication(tmp);
-        let prop;
+        let conjureProjectId;
         if (application != null) {
-          prop = application.vibegrationsProjectId;
+          conjureProjectId = application.conjureProjectId;
         }
-        tmp2 = null != prop;
+        tmp2 = null != conjureProjectId;
       }
       return tmp2;
     };
@@ -802,11 +802,11 @@ export const useConjureServerApp = ReactCompilerGating.isReactCompilerEnabled() 
     let tmp2 = null != closure_1;
     if (tmp2) {
       const application = ApplicationStore.getApplication(tmp);
-      let prop;
+      let conjureProjectId;
       if (application != null) {
-        prop = application.vibegrationsProjectId;
+        conjureProjectId = application.conjureProjectId;
       }
-      tmp2 = null != prop;
+      tmp2 = null != conjureProjectId;
     }
     return tmp2;
   }, items1);

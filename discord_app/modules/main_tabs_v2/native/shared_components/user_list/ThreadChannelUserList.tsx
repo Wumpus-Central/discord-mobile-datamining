@@ -1,8 +1,8 @@
-// === Module 17496: ThreadChannelUserList ===
+// === Module 17736: ThreadChannelUserList ===
 
-// Module 17496 (ThreadChannelUserList)
+// Module 17736 (ThreadChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
-import UserUtilsDefault from "UserUtils" /* 4964 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;

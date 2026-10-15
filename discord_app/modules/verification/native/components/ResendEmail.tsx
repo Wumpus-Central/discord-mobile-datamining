@@ -1,10 +1,10 @@
-// === Module 6278: ResendEmail ===
+// === Module 6494: ResendEmail ===
 
-// Module 6278 (ResendEmail)
+// Module 6494 (ResendEmail)
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4811 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5935 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6202 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4865 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6146 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6418 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2059 */;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const VerificationModalScenes = fn(1085).VerificationModalScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_11 = createStyles.createStyles({ container: { flex: 1, padding: 16, justifyContent: "center", alignItems: "center" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, resend: { marginTop: 16, width: "100%" }, change: { marginTop: 8, width: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const tmpResult = navigation(504);
   const stateFromStores1 = navigation(504).useStateFromStores(tmp10, tmp11);
   if (cResult[4] !== stateFromStores1) {
-    const result = verified(6279).isEmailReverification(stateFromStores1);
+    const result = verified(6495).isEmailReverification(stateFromStores1);
     class E {
       constructor() {
         currentUser = closure_1_7.getCurrentUser();
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
     }
     cResult[4] = stateFromStores1;
     cResult[5] = result;
-    const obj5 = verified(6279);
+    const obj5 = verified(6495);
   }
   const tmpResult2 = navigation(504);
   [tmp19, dependencyMap] = ref(noop.useState(false), 2);
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
         return currentUser;
       }
     }
-    const tmp28 = closure_9(tmp(6280).EnvelopeOpenSpotIllustration, { scale: 0.75 });
+    const tmp28 = closure_9(tmp(6496).EnvelopeOpenSpotIllustration, { scale: 0.75 });
   } else {
     class P {
       constructor() {
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
         return currentUser;
       }
     }
-    const tmp32 = closure_9(tmp(5092).Text, obj3);
+    const tmp32 = closure_9(tmp(5147).Text, obj3);
     cResult[16] = tmp4.title;
     cResult[17] = tmp32;
   } else {
@@ -327,9 +327,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const items1 = [UserRequiredActionStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items1, () => action.getAction());
   let obj3 = navigation(504);
-  const result = verified(6279).isEmailReverification(stateFromStores1);
+  const result = verified(6495).isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
-  const obj4 = verified(6279);
+  const obj4 = verified(6495);
   [tmp10, dependencyMap] = ref(noop.useState(false), 2);
   const tmp9 = ref(noop.useState(false), 2);
   const items2 = [verified];
@@ -350,11 +350,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const callback = noop.useCallback(() => {
     navigation.push(VerificationModalScenes.ENTER_EMAIL);
   }, items3);
-  const items4 = [closure_9(navigation(6280).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [closure_9(navigation(6496).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1126).intl;
   obj6.children = intl.string(navigation(1126).t.fUtddV);
-  items4[1] = closure_9(navigation(5092).Text, obj6);
+  items4[1] = closure_9(navigation(5147).Text, obj6);
   const obj7 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1126).intl;
   if (tmp10) {
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
     formatResult = intl2.string(tmp2(1126).t.tSXg8O);
   }
   obj7.children = formatResult;
-  items4[2] = closure_9(navigation(5092).Text, obj7);
+  items4[2] = closure_9(navigation(5147).Text, obj7);
   const obj9 = { style: tmp.resend, children: null };
   const obj10 = { text: null, variant: "primary", onPress: null, grow: true };
   const intl3 = tmp2(1126).intl;
@@ -377,7 +377,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
     obj3.text = intl.string(util.t["84yeoz"]);
     ToastActionCreatorsDefault.open("USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", obj3);
   };
-  obj9.children = closure_9(navigation(5384).Button, obj10);
+  obj9.children = closure_9(navigation(5439).Button, obj10);
   items4[3] = closure_9(View, obj9);
   if (!result) {
     const obj11 = { style: tmp.change, children: null };
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
     const intl4 = tmp2(1126).intl;
     obj12.text = intl4.string(tmp2(1126).t.Vm8akB);
     obj12.onPress = callback;
-    obj11.children = closure_9(tmp2(5384).Button, obj12);
+    obj11.children = closure_9(tmp2(5439).Button, obj12);
     tmp16Result = closure_9(View, obj11);
   }
   items4[4] = tmp16Result;

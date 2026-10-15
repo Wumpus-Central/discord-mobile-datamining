@@ -1,8 +1,8 @@
-// === Module 11858: useConjurePublishedAppName ===
+// === Module 12085: useConjurePublishedAppName ===
 
-// Module 11858 (useConjurePublishedAppName)
-import ApplicationStore from "ApplicationStore" /* 5445 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10662 */;
+// Module 12085 (useConjurePublishedAppName)
+import ApplicationStore from "ApplicationStore" /* 5500 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10885 */;
 
 const require = globalThis.__r;
 

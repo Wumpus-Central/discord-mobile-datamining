@@ -1,15 +1,15 @@
-// === Module 11927: ConjurePlanProposalCard ===
+// === Module 12154: ConjurePlanProposalCard ===
 
-// Module 11927 (ConjurePlanProposalCard)
+// Module 12154 (ConjurePlanProposalCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5083 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import Stack_Stack from "Stack/Stack" /* 5382 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 11868 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 11923 */;
-import ConjurePlanCommandText from "ConjurePlanCommandText" /* 11945 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5138 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import Stack_Stack from "Stack/Stack" /* 5437 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12095 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12150 */;
+import ConjurePlanCommandText from "ConjurePlanCommandText" /* 12172 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { planActions: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", rowGap: nativeDefault.space.PX_8, columnGap: nativeDefault.space.PX_12 }, planReplyHint: { flexShrink: 1 }, designImage: null, designPlaceholder: null };
 let obj3 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", rowGap: nativeDefault.space.PX_8, columnGap: nativeDefault.space.PX_12 };
 obj2.designImage = { width: "100%", aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -121,38 +121,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     tmp9 = cResult[3];
   }
   if (cResult[4] !== tmp7) {
-    const parsed = obj31(5083).parse(tmp7, true, tmp(11868).CONJURE_MARKUP_OPTIONS);
+    const parsed = obj31(5138).parse(tmp7, true, tmp(12095).CONJURE_MARKUP_OPTIONS);
     cResult[4] = tmp7;
     cResult[5] = parsed;
     let tmp11 = parsed;
-    let obj2 = obj31(5083);
+    let obj2 = obj31(5138);
   } else {
     tmp11 = cResult[5];
   }
   let obj = conjurePlanSlashCommandNames(576);
-  conjurePlanSlashCommandNames = tmp(11928).useConjurePlanSlashCommandNames(proposal.commands);
+  conjurePlanSlashCommandNames = tmp(12155).useConjurePlanSlashCommandNames(proposal.commands);
   let bot_permissions = proposal.bot_permissions;
   if (bot_permissions == null) {
     bot_permissions = [];
   }
-  const mapped = bot_permissions.map(tmp(11929).formatConjurePlanRequirementName);
+  const mapped = bot_permissions.map(tmp(12156).formatConjurePlanRequirementName);
   let privileged_intents = proposal.privileged_intents;
   if (privileged_intents == null) {
     privileged_intents = [];
   }
-  const mapped1 = privileged_intents.map(tmp(11929).formatConjurePlanRequirementName);
-  const tmpResult = tmp(11928);
+  const mapped1 = privileged_intents.map(tmp(12156).formatConjurePlanRequirementName);
+  const tmpResult = tmp(12155);
   let automod = null;
-  if (tmpResult7.planDeclaresSurface(proposal, tmp(6952).ConjureSupportedSurface.AUTOMOD)) {
+  if (tmpResult7.planDeclaresSurface(proposal, tmp(7166).ConjureSupportedSurface.AUTOMOD)) {
     automod = proposal.automod;
   }
-  tmpResult7 = tmp(11930);
-  const conjurePlanWidget = tmp(11931).useConjurePlanWidget(projectId, proposal);
+  tmpResult7 = tmp(12157);
+  const conjurePlanWidget = tmp(12158).useConjurePlanWidget(projectId, proposal);
   if (cResult[6] === proposal) {
     if (cResult[7] === conjurePlanWidget) {
       let tmp17 = cResult[8];
     }
-    const botExchanges = tmp(11934).useConjurePlanBotExchanges(proposal).botExchanges;
+    const botExchanges = tmp(12161).useConjurePlanBotExchanges(proposal).botExchanges;
     if (cResult[9] === automod) {
       if (cResult[10] === botExchanges) {
         if (cResult[11] === projectId) {
@@ -165,8 +165,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                 dependencyMap = cResult[34];
                 let arr7 = cResult[35];
               }
-              const tmp53 = obj31(11838);
-              const tmp54 = obj31(11926);
+              const tmp53 = obj31(12063);
+              const tmp54 = obj31(12153);
               if (cResult[36] === tmp4) {
                 if (cResult[37] === version) {
                   if (cResult[39] !== tmp4) {
@@ -174,8 +174,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     if (tmp4) {
                       let obj3 = { children: null };
                       const intl8 = tmp(1126).intl;
-                      obj3.children = intl8.string(tmp52(3849).hF2c41);
-                      tmp59 = closure_6(tmp(11926).ConjureNativeCollapsibleMeta, obj3);
+                      obj3.children = intl8.string(tmp52(3862).hF2c41);
+                      tmp59 = closure_6(tmp(12153).ConjureNativeCollapsibleMeta, obj3);
                     }
                     cResult[39] = tmp4;
                     cResult[40] = tmp59;
@@ -186,9 +186,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                   const _Symbol = Symbol;
                   if (cResult[41] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl9 = tmp(1126).intl;
-                    const stringResult = intl9.string(tmp52(3849).yD8EJS);
+                    const stringResult = intl9.string(tmp52(3862).yD8EJS);
                     const intl10 = tmp(1126).intl;
-                    const stringResult1 = intl10.string(tmp52(3849).nSPGNb);
+                    const stringResult1 = intl10.string(tmp52(3862).nSPGNb);
                     cResult[41] = stringResult;
                     cResult[42] = stringResult1;
                     let tmp63 = stringResult1;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     tmp62 = cResult[41];
                     tmp63 = cResult[42];
                   }
-                  const Stack = tmp(5382).Stack;
+                  const Stack = tmp(5437).Stack;
                   if (cResult[43] === conjurePlanSlashCommandNames) {
                     if (cResult[44] === tmp9) {
                       let tmp66 = cResult[45];
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                         if (cResult[48] === tmp11) {
                           if (cResult[50] !== cResult[49]) {
                             const obj4 = { variant: "text-md/normal", color: "text-default", children: tmp68 };
-                            const tmp74 = closure_6(tmp(5092).Text, obj4);
+                            const tmp74 = closure_6(tmp(5147).Text, obj4);
                             cResult[50] = tmp68;
                             cResult[51] = tmp74;
                             let tmp72 = tmp74;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                                           const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
                                           const intl14 = tmp(1126).intl;
                                           obj6.children = intl14.string(tmp(1126).t["0hKkS+"]);
-                                          let items = [closure_6(tmp(5092).Text, obj6), ];
+                                          let items = [closure_6(tmp(5147).Text, obj6), ];
                                           const commands = proposal.commands;
                                           items[1] = commands.map((name, index) => {
                                             if ("/" === obj.conjurePlanCommandPrefix(name)) {
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                                             return closure_1_7(closure_1_5, { children }, index);
                                           });
                                           obj5.children = items;
-                                          tmp89 = closure_7(tmp(5382).Stack, obj5);
+                                          tmp89 = closure_7(tmp(5437).Stack, obj5);
                                         }
                                         cResult[64] = proposal.commands;
                                         cResult[65] = tmp89;
@@ -273,24 +273,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                                         const obj7 = { direction: "vertical", spacing: 4, children: null };
                                         const obj8 = { variant: "text-sm/semibold", color: "text-muted", children: null };
                                         const intl15 = tmp(1126).intl;
-                                        obj8.children = intl15.string(tmp52(3849)["2UbW6r"]);
-                                        const items1 = [closure_6(tmp(5092).Text, obj8), ];
+                                        obj8.children = intl15.string(tmp52(3862)["2UbW6r"]);
+                                        const items1 = [closure_6(tmp(5147).Text, obj8), ];
                                         const obj9 = { variant: "text-sm/normal", color: "text-default", children: mapped.join(", ") };
-                                        items1[1] = closure_6(tmp(5092).Text, obj9);
+                                        items1[1] = closure_6(tmp(5147).Text, obj9);
                                         obj7.children = items1;
-                                        tmp92 = closure_7(tmp(5382).Stack, obj7);
+                                        tmp92 = closure_7(tmp(5437).Stack, obj7);
                                       }
                                       let tmp95 = null;
                                       if (mapped1.length > 0) {
                                         const obj10 = { direction: "vertical", spacing: 4, children: null };
                                         const obj11 = { variant: "text-sm/semibold", color: "text-muted", children: null };
                                         const intl16 = tmp(1126).intl;
-                                        obj11.children = intl16.string(tmp52(3849)["7TKfpj"]);
-                                        const items2 = [closure_6(tmp(5092).Text, obj11), ];
+                                        obj11.children = intl16.string(tmp52(3862)["7TKfpj"]);
+                                        const items2 = [closure_6(tmp(5147).Text, obj11), ];
                                         const obj12 = { variant: "text-sm/normal", color: "text-default", children: mapped1.join(", ") };
-                                        items2[1] = closure_6(tmp(5092).Text, obj12);
+                                        items2[1] = closure_6(tmp(5147).Text, obj12);
                                         obj10.children = items2;
-                                        tmp95 = closure_7(tmp(5382).Stack, obj10);
+                                        tmp95 = closure_7(tmp(5437).Stack, obj10);
                                       }
                                       if (cResult[66] === onApprove) {
                                         if (cResult[67] === tmp6) {
@@ -387,13 +387,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                                           const obj16 = { style: tmp6.planActions, children: null };
                                           const obj17 = { text: null, variant: "primary", onPress: null };
                                           const intl17 = tmp(1126).intl;
-                                          obj17.text = intl17.string(tmp52(3849)["6S+wRM"]);
+                                          obj17.text = intl17.string(tmp52(3862)["6S+wRM"]);
                                           obj17.onPress = onApprove;
-                                          const items4 = [closure_6(tmp(5384).Button, obj17), ];
+                                          const items4 = [closure_6(tmp(5439).Button, obj17), ];
                                           const obj18 = { variant: "text-sm/normal", color: "text-muted", style: tmp6.planReplyHint, children: null };
                                           const intl18 = tmp(1126).intl;
-                                          obj18.children = intl18.string(tmp52(3849).IZoqbR);
-                                          items4[1] = closure_6(tmp(5092).Text, obj18);
+                                          obj18.children = intl18.string(tmp52(3862).IZoqbR);
+                                          items4[1] = closure_6(tmp(5147).Text, obj18);
                                           obj16.children = items4;
                                           tmp99 = closure_7(closure_5, obj16);
                                         }
@@ -409,8 +409,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                                       const obj19 = { direction: "vertical", spacing: 4, children: null };
                                       const obj20 = { variant: "text-sm/semibold", color: "text-muted", children: null };
                                       const intl13 = tmp(1126).intl;
-                                      obj20.children = intl13.string(tmp52(3849)["5+mG1z"]);
-                                      const items5 = [closure_6(tmp(5092).Text, obj20), ];
+                                      obj20.children = intl13.string(tmp52(3862)["5+mG1z"]);
+                                      const items5 = [closure_6(tmp(5147).Text, obj20), ];
                                       const changes = proposal.changes;
                                       items5[1] = changes.map((text, index) => {
                                         const obj = { variant: "text-sm/normal", color: "text-default", children: null };
@@ -419,7 +419,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                                         return React5(Text_Text.Text, obj, index);
                                       });
                                       obj19.children = items5;
-                                      tmp85 = closure_7(tmp(5382).Stack, obj19);
+                                      tmp85 = closure_7(tmp(5437).Stack, obj19);
                                     }
                                     cResult[61] = proposal.changes;
                                     cResult[62] = conjurePlanSlashCommandNames;
@@ -456,11 +456,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                           } else {
                             const obj21 = { variant: "text-sm/semibold", color: "text-muted", children: null };
                             const intl12 = tmp(1126).intl;
-                            obj21.children = intl12.string(tmp52(3849).mrMYrN);
-                            const items6 = [closure_6(tmp(5092).Text, obj21), ];
+                            obj21.children = intl12.string(tmp52(3862).mrMYrN);
+                            const items6 = [closure_6(tmp(5147).Text, obj21), ];
                             if (1 === arr6.length) {
                               const obj22 = { row: arr6[0], previews: tmp19, commandNames: conjurePlanSlashCommandNames };
-                              let tmp78Result = closure_6(tmp(11946).ConjurePlanSingleSurface, obj22);
+                              let tmp78Result = closure_6(tmp(12173).ConjurePlanSingleSurface, obj22);
                             } else {
                               const obj23 = { rows: arr6, previews: tmp19, cycling: null, commandNames: null };
                               let tmp79 = !tmp4;
@@ -469,22 +469,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                               }
                               obj23.cycling = tmp79;
                               obj23.commandNames = conjurePlanSlashCommandNames;
-                              tmp78Result = closure_6(tmp(11946).ConjurePlanSurfaceNav, obj23);
+                              tmp78Result = closure_6(tmp(12173).ConjurePlanSurfaceNav, obj23);
                             }
                             const obj24 = { direction: "vertical", spacing: 12, children: null };
                             items6[1] = tmp78Result;
                             obj24.children = items6;
-                            closure_7(tmp(5382).Stack, obj24);
+                            closure_7(tmp(5437).Stack, obj24);
                           }
                         }
                       }
                     }
                     if ("" === tmp7) {
                       const intl11 = tmp(1126).intl;
-                      let stringResult2 = intl11.string(tmp52(3849)["0+RUWx"]);
+                      let stringResult2 = intl11.string(tmp52(3862)["0+RUWx"]);
                     } else {
                       const obj25 = { markup: tmp11, commandNames: conjurePlanSlashCommandNames, size: "text-md" };
-                      stringResult2 = closure_6(tmp(11945).ConjurePlanCommandMarkup, obj25);
+                      stringResult2 = closure_6(tmp(12172).ConjurePlanCommandMarkup, obj25);
                     }
                     cResult[46] = conjurePlanSlashCommandNames;
                     cResult[47] = tmp7;
@@ -496,14 +496,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
                     const obj26 = { direction: "vertical", spacing: 4, children: null };
                     const obj27 = { variant: "text-sm/semibold", color: "text-muted", children: null };
                     const intl19 = tmp(1126).intl;
-                    obj27.children = intl19.string(tmp52(3849).iNS4dl);
-                    const items7 = [closure_6(tmp(5092).Text, obj27), ];
+                    obj27.children = intl19.string(tmp52(3862).iNS4dl);
+                    const items7 = [closure_6(tmp(5147).Text, obj27), ];
                     const obj28 = { variant: "text-md/normal", color: "text-default", children: null };
                     const obj29 = { text: tmp9, commandNames: conjurePlanSlashCommandNames, size: "text-md" };
-                    obj28.children = closure_6(tmp(11945).ConjurePlanCommandText, obj29);
-                    items7[1] = closure_6(tmp(5092).Text, obj28);
+                    obj28.children = closure_6(tmp(12172).ConjurePlanCommandText, obj29);
+                    items7[1] = closure_6(tmp(5147).Text, obj28);
                     obj26.children = items7;
-                    tmp67 = closure_7(tmp(5382).Stack, obj26);
+                    tmp67 = closure_7(tmp(5437).Stack, obj26);
                   }
                   cResult[43] = conjurePlanSlashCommandNames;
                   cResult[44] = tmp9;
@@ -513,18 +513,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
               }
               if (!tmp4) {
                 const intl6 = tmp(1126).intl;
-                let stringResult3 = intl6.string(tmp52(3849)["3b6e7o"]);
+                let stringResult3 = intl6.string(tmp52(3862)["3b6e7o"]);
                 cResult[36] = tmp4;
                 cResult[37] = version;
                 cResult[38] = stringResult3;
               }
               const intl7 = tmp(1126).intl;
               const obj30 = { version };
-              stringResult3 = intl7.formatToPlainString(tmp52(3849).YZ3qJs, obj30);
+              stringResult3 = intl7.formatToPlainString(tmp52(3862).YZ3qJs, obj30);
             }
             const _Object = Object;
             const keys = Object.keys(tmp19);
-            const result = tmp(11944).conjurePlanSurfaceRows(proposal, keys);
+            const result = tmp(12171).conjurePlanSurfaceRows(proposal, keys);
             dependencyMap = result;
             const found = keys.filter((item) => {
               closure_0 = item;
@@ -535,7 +535,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
             cResult[34] = result;
             cResult[35] = found;
             arr7 = found;
-            const tmpResult10 = tmp(11944);
+            const tmpResult10 = tmp(12171);
           }
         }
       }
@@ -546,7 +546,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         const _Symbol2 = Symbol;
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1126).intl;
-          const stringResult4 = intl.string(obj31(3849).z4ZKYG);
+          const stringResult4 = intl.string(obj31(3862).z4ZKYG);
           cResult[15] = stringResult4;
           let tmp20 = stringResult4;
         } else {
@@ -555,7 +555,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         if (cResult[16] !== automod) {
           const obj32 = { label: tmp20, content: null };
           const obj33 = { automod };
-          tmp20 = closure_6(obj31(11936), obj33);
+          tmp20 = closure_6(obj31(12163), obj33);
           obj32.content = tmp20;
           cResult[16] = automod;
           cResult[17] = obj32;
@@ -579,7 +579,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           const _Symbol5 = Symbol;
           if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
             const intl5 = tmp(1126).intl;
-            const stringResult5 = intl5.string(obj31(3849).ove4zH);
+            const stringResult5 = intl5.string(obj31(3862).ove4zH);
             cResult[29] = stringResult5;
             let tmp39 = stringResult5;
           } else {
@@ -589,12 +589,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
             const obj34 = { label: tmp39, content: null };
             const obj35 = {};
             const merged = Object.assign(tmp17);
-            tmp39 = closure_6(obj31(11943), obj35);
+            tmp39 = closure_6(obj31(12170), obj35);
             obj34.content = tmp39;
             cResult[30] = tmp17;
             cResult[31] = obj34;
             let tmp42 = obj34;
-            const tmp45 = obj31(11943);
+            const tmp45 = obj31(12170);
           } else {
             tmp42 = cResult[31];
           }
@@ -604,7 +604,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         const _Symbol4 = Symbol;
         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
           const intl4 = tmp(1126).intl;
-          const stringResult6 = intl4.string(obj31(3849).sA1lTv);
+          const stringResult6 = intl4.string(obj31(3862).sA1lTv);
           cResult[25] = stringResult6;
           let tmp33 = stringResult6;
         } else {
@@ -618,7 +618,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         }
         const obj36 = { label: tmp33, content: null };
         const obj37 = { projectId, exchanges: botExchanges };
-        tmp33 = closure_6(obj31(11939), obj37);
+        tmp33 = closure_6(obj31(12166), obj37);
         obj36.content = tmp33;
         cResult[26] = botExchanges;
         cResult[27] = projectId;
@@ -629,7 +629,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
       const _Symbol3 = Symbol;
       if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = tmp(1126).intl;
-        const stringResult7 = intl2.string(obj31(3849).X15LLY);
+        const stringResult7 = intl2.string(obj31(3862).X15LLY);
         cResult[18] = stringResult7;
         let design_image = stringResult7;
       } else {
@@ -637,11 +637,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
       }
       if (cResult[19] !== proposal) {
         const intl3 = tmp(1126).intl;
-        const stringResult8 = intl3.string(tmp(11938).conjurePlanDesignAlt(proposal));
+        const stringResult8 = intl3.string(tmp(12165).conjurePlanDesignAlt(proposal));
         cResult[19] = proposal;
         cResult[20] = stringResult8;
         let tmp28 = stringResult8;
-        const tmpResult11 = tmp(11938);
+        const tmpResult11 = tmp(12165);
       } else {
         tmp28 = cResult[20];
       }
@@ -663,18 +663,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
       cResult[24] = obj38;
       tmp30 = obj38;
     }
-    const tmpResult9 = tmp(11934);
+    const tmpResult9 = tmp(12161);
   }
-  const tmpResult8 = tmp(11931);
+  const tmpResult8 = tmp(12158);
   let tmp18 = null;
-  if (tmpResult12.planDeclaresSurface(proposal, tmp(6952).ConjureSupportedSurface.PROFILE_WIDGET)) {
+  if (tmpResult12.planDeclaresSurface(proposal, tmp(7166).ConjureSupportedSurface.PROFILE_WIDGET)) {
     tmp18 = conjurePlanWidget;
   }
   cResult[6] = proposal;
   cResult[7] = conjurePlanWidget;
   cResult[8] = tmp18;
   tmp17 = tmp18;
-  tmpResult12 = tmp(11930);
+  tmpResult12 = tmp(12157);
 }) : (function ConjurePlanProposalCard(expanded) {
   ({ projectId, proposal, version, superseded } = expanded);
   if (superseded === undefined) {

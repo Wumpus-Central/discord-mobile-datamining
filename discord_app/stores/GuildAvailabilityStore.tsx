@@ -1,6 +1,6 @@
-// === Module 5970: GuildAvailabilityStore ===
+// === Module 6181: GuildAvailabilityStore ===
 
-// Module 5970 (GuildAvailabilityStore)
+// Module 6181 (GuildAvailabilityStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

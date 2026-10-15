@@ -1,21 +1,21 @@
-// === Module 5914: AgeVerificationUtils ===
+// === Module 6125: AgeVerificationUtils ===
 
-// Module 5914 (AgeVerificationUtils)
+// Module 6125 (AgeVerificationUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import Server from "Server" /* 1998 */;
-import _modDef3120 from "module_3120" /* 3120 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5925 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5926 */;
-import usePreviousDefault from "usePrevious" /* 5927 */;
-import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 5928 */;
+import _modDef3122 from "module_3122" /* 3122 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6136 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 6137 */;
+import usePreviousDefault from "usePrevious" /* 6138 */;
+import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 6139 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5915 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 6126 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1390 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 5921 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 6132 */;
 
 const require = globalThis.__r;
 
@@ -97,10 +97,10 @@ let closure_18 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(5922).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(6133).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const AgeGateConstants = fn(1110);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: c10 } = AgeGateConstants);
-let items = [fn(5923).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(5923).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(5923).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
+let items = [fn(6134).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(6134).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(6134).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
 const set = new Set(items);
 let items1 = [, , , , , ];
 ({ NSFW_SERVER: arr2[0], NSFW_SERVER_INVITE: arr2[1], NSFW_SERVER_INVITE_EMBED: arr2[2], LARGE_GUILD: arr2[3], JOIN_LARGE_GUILD_UNDERAGE: arr2[4], ACCESS_LARGE_GUILD_UNDERAGE: arr2[5] } = AgeGateSource);
@@ -563,7 +563,7 @@ export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetS
   if (hasItem) {
     let stringResult = string(util.t.lSWVTM);
   } else if (flag) {
-    stringResult = string(_modDef3120["/kgWIg"]);
+    stringResult = string(_modDef3122["/kgWIg"]);
   } else {
     stringResult = string(util.t.xYXsr6);
   }
@@ -583,14 +583,14 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
     let stringResult = intl6.string(util.t["S/xS/w"]);
   } else if (flag) {
     const intl5 = util.intl;
-    stringResult = intl5.string(_modDef3120.h7qzoa);
+    stringResult = intl5.string(_modDef3122.h7qzoa);
   } else {
     if (flag2) {
       if (null != handleOnHelpUrlHook) {
         if (null != fn) {
           const intl4 = util.intl;
           const obj2 = { handleOnHelpUrlHook, handleOnTrustedProvidersHook: fn };
-          stringResult = intl4.format(_modDef3120["+Ft5ch"], obj2);
+          stringResult = intl4.format(_modDef3122["+Ft5ch"], obj2);
         }
       }
     }
@@ -598,13 +598,13 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
       if (null != handleOnHelpUrlHook) {
         const intl3 = util.intl;
         const obj3 = { handleOnHelpUrlHook };
-        stringResult = intl3.format(_modDef3120["22HSSI"], obj3);
+        stringResult = intl3.format(_modDef3122["22HSSI"], obj3);
       }
     }
     if (null != handleOnHelpUrlHook) {
       const intl2 = util.intl;
       const obj = { handleOnHelpUrlHook };
-      stringResult = intl2.format(_modDef3120.RpMIT0, obj);
+      stringResult = intl2.format(_modDef3122.RpMIT0, obj);
     } else {
       const intl = util.intl;
       stringResult = intl.string(util.t.HxS3oQ);

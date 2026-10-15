@@ -1,21 +1,22 @@
-// === Module 15072: ConjureVoiceSessionCoordinator ===
+// === Module 15368: ConjureVoiceSessionCoordinator ===
 
-// Module 15072 (ConjureVoiceSessionCoordinator)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5248 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5251 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10716 */;
-import RPCErrorDefault from "RPCError" /* 11010 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15075 */;
-import FrameVisibilityStore from "FrameVisibilityStore" /* 15073 */;
+// Module 15368 (ConjureVoiceSessionCoordinator)
+import _modDef12 from "module_12" /* 12 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5303 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 5306 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10938 */;
+import RPCErrorDefault from "RPCError" /* 11234 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 15370 */;
+import FrameVisibilityStore from "FrameVisibilityStore" /* 11620 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
 import UserStore from "UserStore" /* 1390 */;
-import VoiceStateStore from "VoiceStateStore" /* 5117 */;
+import VoiceStateStore from "VoiceStateStore" /* 5172 */;
 
 let obj2 = fn;
 const RPCErrors = fn(1085).RPCErrors;
-const Constants = fn(5121);
+const Constants = fn(5176);
 ({ Features: c10, MediaEngineContextTypes: closure_11 } = Constants);
 let closure_12 = { x: 0, y: 0, z: -1 };
 let closure_13 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
@@ -26,7 +27,7 @@ class ConjureVoiceSessionCoordinator {
     map = new Map();
     obj.sessions = map;
     obj.spatialHolder = null;
-    obj.spatialRequested = false;
+    obj.spatialAudioOverrides = {};
     obj.focusSequence = 0;
     obj.unsubscribeFrameLifecycle = null;
     obj.handleFrameLifecycleChange = function handleFrameLifecycleChange() {
@@ -78,7 +79,7 @@ prototype["getSpatialCapabilities"] = function getSpatialCapabilities() {
   if (available) {
     available = MediaEngineStore.supports(constants.SPATIAL_AUDIO);
   }
-  return { available, source_positioning: available, source_gain: false, source_spatial_blend: false, listener_pose: available, room_size: false, reflections: false, max_sources: 50, max_updates_per_second: 20 };
+  return { available, source_positioning: available, source_gain: false, source_spatial_blend: false, listener_pose: available, room_size: available, reflections: available, acoustics: available, max_sources: 50, max_updates_per_second: 20 };
 };
 prototype["getConnectedRTCConnection"] = function getConnectedRTCConnection() {
   const rTCConnection = RTCConnectionStore.getRTCConnection();
@@ -135,15 +136,15 @@ prototype["start"] = function start(id) {
               const tmp15 = new RPCErrorDefault(obj, "This app can only start a voice session in a voice channel in the server it is installed in");
               throw tmp15;
             }
-            tmp38Result2 = tmp38(15074);
+            tmp38Result2 = tmp38(15369);
           }
-          tmp38Result = tmp38(15074);
+          tmp38Result = tmp38(15369);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj11 = obj2(15074);
+        obj11 = obj2(15369);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -163,7 +164,7 @@ prototype["start"] = function start(id) {
         }
         focusSequence = num;
       }
-      const obj3 = { id: obj2(1279).v4(), socketId: id.id, frameId, applicationId, channelId: connectedRTCConnection.channelId, rtcConnectionId: connectedRTCConnection.getRTCConnectionId(), mediaEngineConnectionId, spatialEnabled: false, focusSequence, backgrounded: !FrameVisibilityStore.isFrameVisible(frameId), pooled: FrameVisibilityStore.isFramePooled(frameId), sources: [], appliedUserIds: null, updateTimer: null };
+      const obj3 = { id: obj2(1279).v4(), socketId: id.id, frameId, applicationId, channelId: connectedRTCConnection.channelId, rtcConnectionId: connectedRTCConnection.getRTCConnectionId(), mediaEngineConnectionId, spatialEnabled: false, acoustics: {}, focusSequence, backgrounded: !FrameVisibilityStore.isFrameVisible(frameId), pooled: FrameVisibilityStore.isFramePooled(frameId), sources: [], appliedUserIds: null, updateTimer: null };
       const _Set = Set;
       const set = new Set();
       obj3.appliedUserIds = set;
@@ -206,6 +207,28 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
     const tmp8 = new RPCErrorDefault(obj, "Spatial voice is not supported by this client");
     throw tmp8;
   }
+};
+prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
+  const self = this;
+  if (this.getSpatialCapabilities().available) {
+    obj2 = obj2(15374);
+    const roomError = obj2.getRoomError(acoustics);
+    if (null != roomError) {
+      const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
+      const tmp22 = new RPCErrorDefault(obj3, roomError);
+      throw tmp22;
+    } else {
+      validateSessionResult.acoustics = tmp11(15374).toSpatialAudioOverrides(acoustics);
+      const result = self.syncSpatialAudioOverrides();
+      const tmp11Result = tmp11(15374);
+    }
+    tmp11 = obj2;
+  } else {
+    const obj = { errorCode: RPCErrors.INVALID_COMMAND };
+    const tmp8 = new RPCErrorDefault(obj, "Spatial voice is not supported by this client");
+    throw tmp8;
+  }
+  validateSessionResult = this.validateSession(socket, session_id);
 };
 prototype["disableSpatial"] = function disableSpatial(socket, session_id) {
   const validateSessionResult = this.validateSession(socket, session_id);
@@ -261,13 +284,25 @@ prototype["handOverSpatialHolder"] = function handOverSpatialHolder(validateSess
   }
 };
 prototype["syncSpatialAudioOverrides"] = function syncSpatialAudioOverrides() {
+  const self = this;
   const sessions = this.sessions;
   const items = [...sessions.values()];
-  const someResult = items.some((spatialEnabled) => spatialEnabled.spatialEnabled);
-  if (someResult !== this.spatialRequested) {
-    this.spatialRequested = someResult;
-    const result = AudioActionCreatorsDefault.setSpatialAudioOverrides(someResult ? closure_13 : {});
+  if (items.some((spatialEnabled) => spatialEnabled.spatialEnabled)) {
+    const spatialHolder = self.spatialHolder;
+    let acoustics;
+    if (spatialHolder != null) {
+      acoustics = spatialHolder.acoustics;
+    }
+    let mergeResult = _modDef12.merge({}, closure_13, acoustics);
+  } else {
+    mergeResult = {};
   }
+  if (!obj3.isEqual(mergeResult, self.spatialAudioOverrides)) {
+    self.spatialAudioOverrides = mergeResult;
+    const result = AudioActionCreatorsDefault.setSpatialAudioOverrides(mergeResult);
+    const tmp6Result = AudioActionCreatorsDefault;
+  }
+  obj3 = _modDef12;
 };
 prototype["pickFocusedSpatialSession"] = function pickFocusedSpatialSession() {
   let tmp = null;
@@ -312,7 +347,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(15079).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(15375).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }
@@ -616,7 +651,7 @@ prototype["validateSession"] = function validateSession(id, id) {
 obj2 = Object.create(ConjureVoiceSessionCoordinator.prototype);
 obj2.sessions = new Map();
 obj2.spatialHolder = null;
-obj2.spatialRequested = false;
+obj2.spatialAudioOverrides = {};
 obj2.focusSequence = 0;
 obj2.unsubscribeFrameLifecycle = null;
 obj2.handleFrameLifecycleChange = function handleFrameLifecycleChange() {

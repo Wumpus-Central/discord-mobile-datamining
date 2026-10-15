@@ -1,10 +1,10 @@
-// === Module 8389: UserProfileAvatar ===
+// === Module 8600: UserProfileAvatar ===
 
-// Module 8389 (UserProfileAvatar)
+// Module 8600 (UserProfileAvatar)
 import c from "c" /* 576 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8375 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 8390 */;
-import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8393 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8586 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8601 */;
+import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8604 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,8 @@ require = fn;
 let closure_3 = ["backgroundColor", "size", "ref"];
 let closure_4 = ["animate", "user", "guildId"];
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8315).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(6910).AVATAR_SIZE_VARIANT;
+const TrackUserProfileActions = fn(8526).TrackUserProfileActions;
+const AVATAR_SIZE_VARIANT = fn(7124).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let ReactCompilerGating = fn(558);

@@ -1,8 +1,8 @@
-// === Module 9553: useSharedMessageEmojiStyles ===
+// === Module 9762: useSharedMessageEmojiStyles ===
 
-// Module 9553 (useSharedMessageEmojiStyles)
+// Module 9762 (useSharedMessageEmojiStyles)
 import nativeDefault from "native" /* 587 */;
-import createStyles from "createStyles" /* 5096 */;
+import createStyles from "createStyles" /* 5151 */;
 import size_mod from "module_2" /* 2 */;
 
 const obj = { emojiContainer: { flexDirection: "row", alignItems: "center" }, emojiDescriptionWrapper: { flexDirection: "column", flex: 1 }, emojiWrapper: { marginLeft: -8, marginRight: 8 }, emojiIcon: null, divider: null, ctaButton: null };

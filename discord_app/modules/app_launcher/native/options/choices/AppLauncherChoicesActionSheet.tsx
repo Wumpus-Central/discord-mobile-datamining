@@ -1,12 +1,12 @@
-// === Module 11667: AppLauncherChoicesActionSheet ===
+// === Module 11892: AppLauncherChoicesActionSheet ===
 
-// Module 11667 (AppLauncherChoicesActionSheet)
+// Module 11892 (AppLauncherChoicesActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5975 */;
-import _mod6818 from "module_6818" /* 6818 */;
-import Form from "Form" /* 8587 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6186 */;
+import _mod7034 from "module_7034" /* 7034 */;
+import Form from "Form" /* 8800 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1502).DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { listItemContainer: { overflow: "hidden" }, listItem: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, divider: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.xl, borderTopRightRadius: nativeDefault.radii.xl };
@@ -45,7 +45,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function FlashL
       return cResult[5];
     }
   }
-  let obj2 = _mod6818;
+  let obj2 = _mod7034;
   if (tmp5) {
     obj2 = { preserveScrollMomentum: true };
     const merged = Object.assign(tmp4);
@@ -60,7 +60,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function FlashL
   cResult[5] = tmp9Result;
 }) : (function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod6818;
+  const tmp3 = _mod7034;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
         if (choices == null) {
           choices = [];
         }
-        return choices.map(/* F110189 */ function() { ... });
+        return choices.map(/* F110646 */ function() { ... });
       }
     }
     cResult[2] = option.choices;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
         if (choices == null) {
           choices = [];
         }
-        return choices.map(/* F110189 */ function() { ... });
+        return choices.map(/* F110646 */ function() { ... });
       }
     }
   }
@@ -291,11 +291,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   let tmp16 = tmp13;
   if (tmp13) {
     const obj3 = { onChange: callback };
-    tmp16 = closure_9(tmp3(11668).AppLauncherListSearchBar, obj3);
+    tmp16 = closure_9(tmp3(11893).AppLauncherListSearchBar, obj3);
   }
   const items3 = [tmp16, ];
   if (0 === data.length) {
-    let tmp20 = closure_9(tmp3(11668).AppLauncherListEmptyState, {});
+    let tmp20 = closure_9(tmp3(11893).AppLauncherListEmptyState, {});
   } else {
     const obj4 = { scrollable: tmp13, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     const obj5 = { paddingBottom: sum };
@@ -312,5 +312,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   }
   items3[1] = tmp20;
   obj2.children = items3;
-  return closure_10(option(11670).AppLauncherCommandOptionActionSheet, obj2);
+  return closure_10(option(11895).AppLauncherCommandOptionActionSheet, obj2);
 });

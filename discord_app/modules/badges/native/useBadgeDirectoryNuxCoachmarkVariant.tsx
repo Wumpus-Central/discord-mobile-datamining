@@ -1,9 +1,9 @@
-// === Module 13709: useBadgeDirectoryNuxCoachmarkVariant ===
+// === Module 14005: useBadgeDirectoryNuxCoachmarkVariant ===
 
-// Module 13709 (useBadgeDirectoryNuxCoachmarkVariant)
+// Module 14005 (useBadgeDirectoryNuxCoachmarkVariant)
 import c from "c" /* 576 */;
-import useCanOpenBadgeDirectoryFromProfile from "useCanOpenBadgeDirectoryFromProfile" /* 10583 */;
-import useBadgeDirectoryNuxPopoverVariant from "useBadgeDirectoryNuxPopoverVariant" /* 13710 */;
+import useCanOpenBadgeDirectoryFromProfile from "useCanOpenBadgeDirectoryFromProfile" /* 10806 */;
+import useBadgeDirectoryNuxPopoverVariant from "useBadgeDirectoryNuxPopoverVariant" /* 14006 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

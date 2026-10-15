@@ -1,13 +1,13 @@
-// === Module 8099: UserOfferActionCreators ===
+// === Module 8309: UserOfferActionCreators ===
 
-// Module 8099 (UserOfferActionCreators)
+// Module 8309 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8100 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7183 */;
-import UserOfferStore from "UserOfferStore" /* 7179 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8310 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7393 */;
+import UserOfferStore from "UserOfferStore" /* 7389 */;
 
 const require = globalThis.__r;
 
@@ -63,7 +63,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj8 = closure_2;
           if (closure_2 === undefined) {
-            obj8 = { offerId: "lineClamp", paymentGatewayOverride: "color" };
+            obj8 = { offerId: "Array", paymentGatewayOverride: "test" };
           }
           closure_136_2 = obj8;
           closure_136_3 = closure_3;
@@ -79,7 +79,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_13 = undefined;
           c12 = 1;
           c13 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

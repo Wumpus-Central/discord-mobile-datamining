@@ -1,6 +1,6 @@
-// === Module 16816: usePrivateChannelWave ===
+// === Module 17055: usePrivateChannelWave ===
 
-// Module 16816 (usePrivateChannelWave)
+// Module 17055 (usePrivateChannelWave)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1085);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
-const MessageSendLocation = fn(5089).MessageSendLocation;
+const MessageSendLocation = fn(5144).MessageSendLocation;
 let c9 = "749054660769218631";
 const ReactCompilerGating = fn(558);
 const size = fn(2);

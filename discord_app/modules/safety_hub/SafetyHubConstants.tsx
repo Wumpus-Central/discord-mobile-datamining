@@ -1,6 +1,6 @@
-// === Module 7519: SafetyHubConstants ===
+// === Module 7729: SafetyHubConstants ===
 
-// Module 7519 (SafetyHubConstants)
+// Module 7729 (SafetyHubConstants)
 import Constants from "Constants" /* 1085 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import size from "module_2" /* 2 */;

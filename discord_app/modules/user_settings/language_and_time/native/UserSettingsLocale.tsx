@@ -1,11 +1,11 @@
-// === Module 16072: UserSettingsLocale ===
+// === Module 16368: UserSettingsLocale ===
 
-// Module 16072 (UserSettingsLocale)
+// Module 16368 (UserSettingsLocale)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import TableRadioRow from "TableRadioRow" /* 6266 */;
-import flags from "flags" /* 16073 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import TableRadioRow from "TableRadioRow" /* 6482 */;
+import flags from "flags" /* 16369 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
@@ -77,7 +77,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
 const ScrollView = fn(17).ScrollView;
 const setAppLocale = fn(2130).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

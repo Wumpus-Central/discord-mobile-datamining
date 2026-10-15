@@ -1,15 +1,15 @@
-// === Module 10956: ScreenshareTile ===
+// === Module 11180: ScreenshareTile ===
 
-// Module 10956 (ScreenshareTile)
+// Module 11180 (ScreenshareTile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import FastImageDefault from "FastImage" /* 5034 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6339 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 10957 */;
-import _modDef10958 from "module_10958" /* 10958 */;
+import FastImageDefault from "FastImage" /* 5088 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6555 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 11181 */;
+import _modDef11182 from "module_11182" /* 11182 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BLACK, overflow: "hidden", flex: 1 }, image: { marginBottom: 8, width: 60, height: 40 }, label: { lineHeight: 18, textAlign: "center" }, liveContainer: { position: "absolute", top: 8, right: 8, zIndex: 2 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ScreenSh
       tmp12 = cResult[5];
     }
     if (cResult[6] !== tmp4.image) {
-      const obj3 = { source: _modDef10958, style: tmp4.image, resizeMode: "contain" };
+      const obj3 = { source: _modDef11182, style: tmp4.image, resizeMode: "contain" };
       const tmp19 = hasOwnProperty(FastImageDefault, obj3);
       cResult[6] = tmp4.image;
       cResult[7] = tmp19;
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ScreenSh
   const items = [hasOwnProperty(View, { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) }), , ];
   const obj4 = { source: null, style: null, resizeMode: "contain" };
   const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
-  obj4.source = _modDef10958;
+  obj4.source = _modDef11182;
   obj4.style = tmp.image;
   items[1] = hasOwnProperty(FastImageDefault, obj4);
   const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };

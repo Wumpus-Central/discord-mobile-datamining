@@ -1,23 +1,23 @@
-// === Module 16271: DevToolsDismissableContentsScreen ===
+// === Module 16567: DevToolsDismissableContentsScreen ===
 
-// Module 16271 (DevToolsDismissableContentsScreen)
+// Module 16567 (DevToolsDismissableContentsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2046 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import TrashIcon from "TrashIcon" /* 5053 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6101 */;
-import TableRow from "TableRow" /* 6184 */;
-import TableRowArrow from "TableRowArrow" /* 6193 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import SearchField from "SearchField" /* 6743 */;
-import TableSwitchRow from "TableSwitchRow" /* 6901 */;
-import SearchEmpty from "SearchEmpty" /* 9534 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10336 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 16272 */;
-import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 16273 */;
+import TrashIcon from "TrashIcon" /* 5108 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6317 */;
+import TableRow from "TableRow" /* 6400 */;
+import TableRowArrow from "TableRowArrow" /* 6409 */;
+import TableRowGroup from "TableRowGroup" /* 6485 */;
+import SearchField from "SearchField" /* 6959 */;
+import TableSwitchRow from "TableSwitchRow" /* 7115 */;
+import SearchEmpty from "SearchEmpty" /* 9743 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10559 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 16568 */;
+import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 16569 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2052 */;
@@ -28,7 +28,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null, headerSection: null, search: null, sectionHeader: null, emptyState: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -679,8 +679,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
   const tmp2 = useSafeAreaInsetsDefault();
-  let obj = ref(11083);
-  [dependencyMap, tmp5] = ref(11083).useLocalStorageState("devtools-dc-search", "");
+  let obj = ref(11307);
+  [dependencyMap, tmp5] = ref(11307).useLocalStorageState("devtools-dc-search", "");
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(initialSearchQuery.useState(() => {
     let str = dependencyMap;
@@ -718,7 +718,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     return items;
   });
-  let tmp4 = _slicedToArray(ref(11083).useLocalStorageState("devtools-dc-search", ""), 2);
+  let tmp4 = _slicedToArray(ref(11307).useLocalStorageState("devtools-dc-search", ""), 2);
   let items = [closure_6];
   const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({ dailyCapOverridden: closure_6.dailyCapOverridden, newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden }));
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
@@ -784,6 +784,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   };
   obj4.renderItem = callback3;
   obj4.onScroll = callback2;
-  obj3.children = dailyCapOverridden(ref(6818).FlashList, obj4);
+  obj3.children = dailyCapOverridden(ref(7034).FlashList, obj4);
   return dailyCapOverridden(first1, obj3);
 });

@@ -1,26 +1,26 @@
-// === Module 7727: StageSettingsActionSheet ===
+// === Module 7937: StageSettingsActionSheet ===
 
-// Module 7727 (StageSettingsActionSheet)
+// Module 7937 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2073 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5060 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7490 */;
-import ReportModals from "ReportModals" /* 7728 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9707 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5115 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7700 */;
+import ReportModals from "ReportModals" /* 7938 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9915 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6252 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
 import StageInstanceStore from "StageInstanceStore" /* 2070 */;
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(5897).STAGE_SETTINGS_SHEET_KEY;
+const STAGE_SETTINGS_SHEET_KEY = fn(6108).STAGE_SETTINGS_SHEET_KEY;
 const Constants = fn(1085);
 ({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { marginTop: 8 }, icon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, warning: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.warning = { color: nativeDefault.unsafe_rawColors.RED_400 };

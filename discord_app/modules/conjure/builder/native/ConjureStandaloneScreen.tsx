@@ -1,17 +1,17 @@
-// === Module 11275: ConjureStandaloneScreen ===
+// === Module 11499: ConjureStandaloneScreen ===
 
-// Module 11275 (ConjureStandaloneScreen)
-import ConjureActionCreators from "ConjureActionCreators" /* 10684 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11276 */;
-import ConjureProjectListDefault from "ConjureProjectList" /* 11277 */;
-import ConjureChatSceneDefault from "ConjureChatScene" /* 11361 */;
-import ConjureDebugSceneDefault from "ConjureDebugScene" /* 12003 */;
+// Module 11499 (ConjureStandaloneScreen)
+import ConjureActionCreators from "ConjureActionCreators" /* 10907 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 11500 */;
+import ConjureProjectListDefault from "ConjureProjectList" /* 11501 */;
+import ConjureChatSceneDefault from "ConjureChatScene" /* 11585 */;
+import ConjureDebugSceneDefault from "ConjureDebugScene" /* 12236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import PermissionStore from "PermissionStore" /* 4752 */;
-import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 6927 */;
+import PermissionStore from "PermissionStore" /* 4806 */;
+import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7141 */;
 
 require = fn;
 const Permissions = fn(1085).Permissions;
@@ -463,8 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   };
   obj4.render = function render() {
     const obj = { children: null };
-    const obj2 = { projectId: stateFromStores, sceneProjectId: "Array", openedProjectIdRef };
-    const items = [collapsed(closure_13, obj2), collapsed(ConjureProjectListDefault, { guildId })];
+    const items = [collapsed(closure_13, { projectId: stateFromStores, sceneProjectId: "Array", openedProjectIdRef }), collapsed(ConjureProjectListDefault, { guildId })];
     obj.children = items;
     return __initData(closure_2_11, obj);
   };

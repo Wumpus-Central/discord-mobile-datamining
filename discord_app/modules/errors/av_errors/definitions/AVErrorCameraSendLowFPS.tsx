@@ -1,13 +1,13 @@
-// === Module 18712: AVErrorCameraSendLowFPS ===
+// === Module 18951: AVErrorCameraSendLowFPS ===
 
-// Module 18712 (AVErrorCameraSendLowFPS)
+// Module 18951 (AVErrorCameraSendLowFPS)
 import DurationsDefault from "Durations" /* 1102 */;
-import AVError from "AVError" /* 5294 */;
-import AVErrorContext from "AVErrorContext" /* 18695 */;
-import AVErrorUtils from "AVErrorUtils" /* 18698 */;
+import AVError from "AVError" /* 5349 */;
+import AVErrorContext from "AVErrorContext" /* 18934 */;
+import AVErrorUtils from "AVErrorUtils" /* 18937 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
 
 require = fn;
 let closure_5 = 20 * DurationsDefault.Millis.SECOND;

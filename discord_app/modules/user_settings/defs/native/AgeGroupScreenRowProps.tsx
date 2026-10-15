@@ -1,12 +1,12 @@
-// === Module 15365: AgeGroupScreenRowProps ===
+// === Module 15661: AgeGroupScreenRowProps ===
 
-// Module 15365 (AgeGroupScreenRowProps)
+// Module 15661 (AgeGroupScreenRowProps)
 import util from "util" /* 1126 */;
-import _modDef3120 from "module_3120" /* 3120 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5914 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5923 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7504 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 15319 */;
+import _modDef3122 from "module_3122" /* 3122 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6125 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6134 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7714 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 15615 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -35,11 +35,11 @@ const result2 = size.fileFinishedImporting("modules/user_settings/defs/native/Ag
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3120.SH6Tcv);
+    return intl.string(_modDef3122.SH6Tcv);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3120.rJiO86);
+    return intl.string(_modDef3122.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     const obj = AgeVerificationActionCreatorsDefault;

@@ -1,6 +1,6 @@
-// === Module 16334: MFA ===
+// === Module 16630: MFA ===
 
-// Module 16334 (MFA)
+// Module 16630 (MFA)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -53,7 +53,7 @@ let closure_4 = async function _finishMFACheck(arg0) {
           closure_130_3 = num7;
           c6 = 1;
           c7 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

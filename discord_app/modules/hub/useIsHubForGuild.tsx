@@ -1,6 +1,6 @@
-// === Module 12633: useIsHubForGuild ===
+// === Module 12926: useIsHubForGuild ===
 
-// Module 12633 (useIsHubForGuild)
+// Module 12926 (useIsHubForGuild)
 import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;

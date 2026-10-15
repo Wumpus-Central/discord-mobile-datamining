@@ -1,8 +1,8 @@
-// === Module 4962: NewUserDismissibleContentRegistry ===
+// === Module 5016: NewUserDismissibleContentRegistry ===
 
-// Module 4962 (NewUserDismissibleContentRegistry)
+// Module 5016 (NewUserDismissibleContentRegistry)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 4963 */;
+import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 5017 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2052 */;
 
@@ -30,7 +30,7 @@ export const useNewUserDismissibleContent = ReactCompilerGating.isReactCompilerE
   const cResult = dcfNewUserCooldown(576).c(9);
   let obj = dcfNewUserCooldown(576);
   const tmp = dcfNewUserCooldown;
-  dcfNewUserCooldown = dcfNewUserCooldown(4963).useDcfNewUserCooldown();
+  dcfNewUserCooldown = dcfNewUserCooldown(5017).useDcfNewUserCooldown();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore, DismissibleContentFrameworkStore];
     class E {
@@ -45,7 +45,7 @@ export const useNewUserDismissibleContent = ReactCompilerGating.isReactCompilerE
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const obj2 = dcfNewUserCooldown(4963);
+  const obj2 = dcfNewUserCooldown(5017);
   const stateFromStoresObject = tmp(573).useStateFromStoresObject(tmp5, E);
   const userId = stateFromStoresObject.userId;
   if (stateFromStoresObject.newUserMinAgeRequiredOverridden) {

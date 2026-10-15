@@ -1,18 +1,18 @@
-// === Module 15909: SettingsAppearanceScreen ===
+// === Module 16205: SettingsAppearanceScreen ===
 
-// Module 15909 (SettingsAppearanceScreen)
+// Module 16205 (SettingsAppearanceScreen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
-import _modDef3442 from "module_3442" /* 3442 */;
-import useMountEffectDefault from "useMountEffect" /* 5401 */;
-import HeaderShared from "HeaderShared" /* 9307 */;
-import SettingBuilders from "SettingBuilders" /* 10767 */;
-import SettingLayoutDefault from "SettingLayout" /* 15323 */;
+import _modDef3444 from "module_3444" /* 3444 */;
+import useMountEffectDefault from "useMountEffect" /* 5456 */;
+import HeaderShared from "HeaderShared" /* 9518 */;
+import SettingBuilders from "SettingBuilders" /* 10991 */;
+import SettingLayoutDefault from "SettingLayout" /* 15619 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4939 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4993 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
@@ -51,7 +51,7 @@ function getAppearanceSettings() {
   obj6.settings = items6;
   const intl3 = util.intl;
   const obj7 = { helpCenterLink: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.FAVORITES_GUILD) };
-  obj6.subLabel = intl3.format(_modDef3442.GR2KOG, obj7);
+  obj6.subLabel = intl3.format(_modDef3444.GR2KOG, obj7);
   items1[5] = obj6;
   const obj9 = { label: null, settings: null };
   const intl4 = util.intl;
@@ -71,9 +71,9 @@ function getAppearanceSettings() {
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(15910);
+const FontScaleStore = fn(16206);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(8000).MobileUserSettings;
+const MobileUserSettings = fn(8210).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -117,7 +117,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFon
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "keys" });
+          nativeStackNavigation.setOptions({ headerRight: "r" });
         }
       }
       const obj2 = { headerRight: null };
@@ -150,7 +150,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFon
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "keys" });
+          nativeStackNavigation.setOptions({ headerRight: "r" });
         }
       }
       const obj2 = { headerRight: null };

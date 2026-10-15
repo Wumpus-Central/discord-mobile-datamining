@@ -1,6 +1,6 @@
-// === Module 10719: getPostMessageJavaScript ===
+// === Module 10941: getPostMessageJavaScript ===
 
-// Module 10719 (getPostMessageJavaScript)
+// Module 10941 (getPostMessageJavaScript)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/native/utils/getPostMessageJavaScript.tsx");

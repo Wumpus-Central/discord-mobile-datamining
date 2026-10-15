@@ -1,6 +1,6 @@
-// === Module 6164: ExpressionSourceRecord ===
+// === Module 6380: ExpressionSourceRecord ===
 
-// Module 6164 (ExpressionSourceRecord)
+// Module 6380 (ExpressionSourceRecord)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
@@ -53,7 +53,16 @@ let closure_8 = async function _getEmojiSourceData(arg0) {
           type2 = body.type;
         }
         if (type2 === closure_130_6.PACK) {
-          closure_129_0 = { type: body.type };
+          const obj8 = { type: body.type, pack: null };
+          let tmp21 = null;
+          if (null != body.pack) {
+            const obj = { id: body.pack.id, name: body.pack.name, previewEmojis: null };
+            const preview_emojis = body.pack.preview_emojis;
+            obj.previewEmojis = preview_emojis.map((id) => ({ id: id.id, name: id.name, animated: id.animated }));
+            tmp21 = obj;
+          }
+          obj8.pack = tmp21;
+          closure_129_0 = obj8;
         }
       }
     }

@@ -1,22 +1,22 @@
-// === Module 15158: EmbeddedActivitiesNativeManager ===
+// === Module 15454: EmbeddedActivitiesNativeManager ===
 
-// Module 15158 (EmbeddedActivitiesNativeManager)
+// Module 15454 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4811 */;
-import ChatInputUtils from "ChatInputUtils" /* 4987 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5301 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5305 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10933 */;
-import activityWebViewController from "activityWebViewController" /* 11003 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15159 */;
+import GlobalUtils from "GlobalUtils" /* 1386 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4865 */;
+import ChatInputUtils from "ChatInputUtils" /* 5041 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5356 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5360 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11157 */;
+import activityWebViewController from "activityWebViewController" /* 11227 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 15455 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5114 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5169 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15160 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 15456 */;
 
 require = fn;
 const Constants = fn(1085);

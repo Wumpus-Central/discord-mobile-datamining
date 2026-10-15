@@ -1,14 +1,14 @@
-// === Module 10339: FavoritesDismissibleContent ===
+// === Module 10562: FavoritesDismissibleContent ===
 
-// Module 10339 (FavoritesDismissibleContent)
+// Module 10562 (FavoritesDismissibleContent)
 import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7106 */;
-import useGetDismissibleContent from "useGetDismissibleContent" /* 7107 */;
-import FavoritesHooks from "FavoritesHooks" /* 10323 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10325 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10337 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10338 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7321 */;
+import useGetDismissibleContent from "useGetDismissibleContent" /* 7322 */;
+import FavoritesHooks from "FavoritesHooks" /* 10546 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10548 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10560 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10561 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -189,7 +189,7 @@ export const useFavoritesBetaTagDismissibleContent = ReactCompilerGating.isReact
   const isFreemium = require("FavoritesGuildExperiment").useFavoritesGuildConfig(first).isFreemium;
   if (cResult[1] === arg0) {
     if (cResult[2] === isFreemium) {
-      const tmp7 = _slicedToArray(tmp(7106).useSelectedDismissibleContent(cResult[3]), 2);
+      const tmp7 = _slicedToArray(tmp(7321).useSelectedDismissibleContent(cResult[3]), 2);
       _require = tmp8;
       const tmp9 = tmp7[0] === tmp(2049).DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
       closure_1 = tmp9;
@@ -218,7 +218,7 @@ export const useFavoritesBetaTagDismissibleContent = ReactCompilerGating.isReact
       cResult[5] = tmp9;
       cResult[6] = fn;
       tmp10 = fn;
-      const tmpResult2 = tmp(7106);
+      const tmpResult2 = tmp(7321);
     }
   }
   if (!isFreemium) {

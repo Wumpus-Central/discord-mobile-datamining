@@ -1,9 +1,9 @@
-// === Module 7974: BurstReactionAnimationPreview ===
+// === Module 8184: BurstReactionAnimationPreview ===
 
-// Module 7974 (BurstReactionAnimationPreview)
+// Module 8184 (BurstReactionAnimationPreview)
 import c from "c" /* 576 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7908 */;
-import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7975 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8118 */;
+import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 8185 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

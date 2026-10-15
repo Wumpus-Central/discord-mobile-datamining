@@ -1,17 +1,17 @@
-// === Module 5005: GuildThemeResolver ===
+// === Module 5059: GuildThemeResolver ===
 
-// Module 5005 (GuildThemeResolver)
+// Module 5059 (GuildThemeResolver)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildThemePresets from "GuildThemePresets" /* 4975 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5014 */;
-import Client from "Client" /* 5029 */;
+import GuildThemePresets from "GuildThemePresets" /* 5029 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5068 */;
+import Client from "Client" /* 5083 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
-import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5006 */;
-import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5008 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5060 */;
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5062 */;
 
 require = fn;
 function resolveSavedActiveGuildTheme(stateFromStores) {

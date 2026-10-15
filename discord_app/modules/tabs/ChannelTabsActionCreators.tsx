@@ -1,14 +1,14 @@
-// === Module 12362: ChannelTabsActionCreators ===
+// === Module 12597: ChannelTabsActionCreators ===
 
-// Module 12362 (ChannelTabsActionCreators)
+// Module 12597 (ChannelTabsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
-import transitionToChannel from "transitionToChannel" /* 5107 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5110 */;
+import transitionToChannel from "transitionToChannel" /* 5162 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5165 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4941 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 12363 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4995 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 12598 */;
 
 require = fn;
 function navigateToTabLocation(found) {

@@ -1,9 +1,9 @@
-// === Module 5034: FastImage ===
+// === Module 5088: FastImage ===
 
-// Module 5034 (FastImage)
+// Module 5088 (FastImage)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5035 */;
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5090 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,11 @@ let closure_3 = ["accessible", "accessibilityLabel", "autoPlay", "enableAnimatio
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
+let FastImageApngExperiment = fn(5089);
+FastImageApngExperiment = FastImageApngExperiment.initializeFastImageApngExperiment();
 const ReactCompilerGating = fn(558);
 let size = fn(2);
-const result = size.fileFinishedImporting("components_native/common/FastImage.tsx");
+const result1 = size.fileFinishedImporting("components_native/common/FastImage.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FastImage(arg0) {
   const cResult = c.c(56);

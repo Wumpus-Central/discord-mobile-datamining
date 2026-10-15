@@ -1,8 +1,8 @@
-// === Module 13761: useUserProfileGameFriendApplicationIds ===
+// === Module 14057: useUserProfileGameFriendApplicationIds ===
 
-// Module 13761 (useUserProfileGameFriendApplicationIds)
+// Module 14057 (useUserProfileGameFriendApplicationIds)
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = fn;
@@ -43,7 +43,7 @@ export const useUserProfileGameFriendApplicationIds = ReactCompilerGating.isReac
   const obj = userId(576);
   const stateFromStores = userId(504).useStateFromStores(first, tmp7);
   const tmpResult = userId(504);
-  const gameFriendsForUser = userId(13708).useGameFriendsForUser(userId);
+  const gameFriendsForUser = userId(14004).useGameFriendsForUser(userId);
   if (stateFromStores) {
     let tmp9 = closure_5;
   } else if (cResult[3] !== gameFriendsForUser) {

@@ -1,16 +1,16 @@
-// === Module 9325: SidebarActionCreators ===
+// === Module 9536: SidebarActionCreators ===
 
-// Module 9325 (SidebarActionCreators)
+// Module 9536 (SidebarActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import ChannelRecord from "ChannelRecord" /* 2069 */;
 import ChannelConstants from "ChannelConstants" /* 2072 */;
-import Client from "Client" /* 5029 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6068 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7185 */;
-import MessageManagerDefault from "MessageManager" /* 9326 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9329 */;
+import Client from "Client" /* 5083 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6279 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7395 */;
+import MessageManagerDefault from "MessageManager" /* 9537 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 9540 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import size from "module_2" /* 2 */;
 
@@ -115,8 +115,8 @@ export default {
     }
     const obj2 = { type: "SIDEBAR_VIEW_CHANNEL", sidebarType: SidebarActionTypes.SidebarType.VIEW_CHANNEL, baseChannelId, channelId, details };
   },
-  closeChannelSidebar(baseChannelId) {
-    DispatcherDefault.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId });
+  closeChannelSidebar(handleFrameDeepLinkQueued) {
+    DispatcherDefault.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: handleFrameDeepLinkQueued });
   },
   openGuildSidebar(arg0) {
     ({ guildId, baseChannelId, sidebarType, details } = arg0);

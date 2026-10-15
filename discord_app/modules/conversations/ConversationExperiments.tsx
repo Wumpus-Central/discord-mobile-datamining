@@ -1,6 +1,6 @@
-// === Module 9345: ConversationExperiments ===
+// === Module 9556: ConversationExperiments ===
 
-// Module 9345 (ConversationExperiments)
+// Module 9556 (ConversationExperiments)
 import c from "c" /* 576 */;
 import GuildStore from "GuildStore" /* 2087 */;
 

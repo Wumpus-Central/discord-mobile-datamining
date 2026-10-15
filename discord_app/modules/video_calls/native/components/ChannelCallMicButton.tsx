@@ -1,16 +1,16 @@
-// === Module 11171: ChannelCallMicButton ===
+// === Module 11395: ChannelCallMicButton ===
 
-// Module 11171 (ChannelCallMicButton)
+// Module 11395 (ChannelCallMicButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useMuteStatesDefault from "useMuteStates" /* 7063 */;
-import CallBarActionAll from "CallBarAction" /* 10921 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 11172 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11173 */;
+import useMuteStatesDefault from "useMuteStates" /* 7278 */;
+import CallBarActionAll from "CallBarAction" /* 11145 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11396 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 11397 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 5115 */;
+import GameConsoleStore from "GameConsoleStore" /* 5170 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -62,7 +62,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
     } else {
       tmp16 = cResult[7];
     }
-    const tmp5Result = importDefault(mute ? 11176 : 11177);
+    const tmp5Result = importDefault(mute ? 11400 : 11401);
     if (!tmp4) {
       tmp4 = mute;
     }
@@ -116,7 +116,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
   const items = [GameConsoleStore];
   const stateFromStores = mute(504).useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const obj = mute(504);
-  const muteHandler = mute(11172).createMuteHandler(tmp3, stateFromStores);
+  const muteHandler = mute(11396).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];
   const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
@@ -124,7 +124,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
   const intl = mute(1126).intl;
   obj3.accessibilityLabel = intl.string(mute(1126).t.B3zz0G);
   obj3.onPress = muteHandler.onPress;
-  obj3.source = importDefault(mute ? 11176 : 11177);
+  obj3.source = importDefault(mute ? 11400 : 11401);
   if (!flag) {
     flag = mute;
   }

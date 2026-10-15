@@ -1,13 +1,13 @@
-// === Module 5752: EmbedUtils ===
+// === Module 5963: EmbedUtils ===
 
-// Module 5752 (EmbedUtils)
+// Module 5963 (EmbedUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import _modDef4704 from "module_4704" /* 4704 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5441 */;
-import EmbedConstants from "EmbedConstants" /* 5753 */;
+import _modDef4758 from "module_4758" /* 4758 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5496 */;
+import EmbedConstants from "EmbedConstants" /* 5964 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -66,8 +66,8 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   if (null != footer.timestamp) {
     const _Date = Date;
     const date = new Date(footer.timestamp);
-    obj.timestamp = _modDef4704(date);
-    const tmpResult = _modDef4704;
+    obj.timestamp = _modDef4758(date);
+    const tmpResult = _modDef4758;
   }
   if (null != footer.color) {
     obj.color = utils_ColorUtils.int2hsl(footer.color, false);

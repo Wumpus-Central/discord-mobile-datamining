@@ -1,8 +1,8 @@
-// === Module 18165: HolidayEventsUtils ===
+// === Module 18405: HolidayEventsUtils ===
 
-// Module 18165 (HolidayEventsUtils)
+// Module 18405 (HolidayEventsUtils)
 import c from "c" /* 576 */;
-import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 18161 */;
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 18401 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

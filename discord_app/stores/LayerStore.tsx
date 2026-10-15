@@ -1,6 +1,6 @@
-// === Module 12757: LayerStore ===
+// === Module 13054: LayerStore ===
 
-// Module 12757 (LayerStore)
+// Module 13054 (LayerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

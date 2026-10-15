@@ -1,8 +1,8 @@
-// === Module 6957: isAccessibleChannelOrThreadPath ===
+// === Module 7170: isAccessibleChannelOrThreadPath ===
 
-// Module 6957 (isAccessibleChannelOrThreadPath)
+// Module 7170 (isAccessibleChannelOrThreadPath)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 6789 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7005 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
 import GuildStore from "GuildStore" /* 2087 */;
@@ -43,7 +43,7 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
           let channel2;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp5) {

@@ -1,8 +1,8 @@
-// === Module 11671: useAnimationDelayedAutoFocus ===
+// === Module 11896: useAnimationDelayedAutoFocus ===
 
-// Module 11671 (useAnimationDelayedAutoFocus)
+// Module 11896 (useAnimationDelayedAutoFocus)
 import c from "c" /* 576 */;
-import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 11672 */;
+import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 11897 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

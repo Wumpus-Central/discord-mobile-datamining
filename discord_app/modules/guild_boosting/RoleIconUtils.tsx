@@ -1,9 +1,9 @@
-// === Module 6889: RoleIconUtils ===
+// === Module 7103: RoleIconUtils ===
 
-// Module 6889 (RoleIconUtils)
+// Module 7103 (RoleIconUtils)
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4766 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4820 */;
 import Constants from "Constants" /* 1085 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import size from "module_2" /* 2 */;

@@ -1,10 +1,10 @@
-// === Module 15733: WreathIcon ===
+// === Module 16029: WreathIcon ===
 
-// Module 15733 (WreathIcon)
+// Module 16029 (WreathIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4819 */;
-import _mod15734 from "module_15734" /* 15734 */;
+import BaseIconImage from "BaseIconImage" /* 4873 */;
+import _mod16030 from "module_16030" /* 16030 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WreathIc
     INTERACTIVE_TEXT_DEFAULT = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15734;
+    const tmpResult = _mod16030;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WreathIc
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15734, color: INTERACTIVE_TEXT_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16030, color: INTERACTIVE_TEXT_DEFAULT, style: color.style });
 });

@@ -1,19 +1,19 @@
-// === Module 17241: ForYouUnreadClearedState ===
+// === Module 17481: ForYouUnreadClearedState ===
 
-// Module 17241 (ForYouUnreadClearedState)
+// Module 17481 (ForYouUnreadClearedState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import _modDef10052 from "module_10052" /* 10052 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import _modDef10260 from "module_10260" /* 10260 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" }, imageContainer: null, icon: null, headerText: null };
 let size = { width: 48, height: 48, backgroundColor: nativeDefault.unsafe_rawColors.GREEN_400, opacity: 0.16, borderRadius: nativeDefault.radii.xl, marginRight: 16, justifyContent: "center", alignItems: "center" };
 obj2.imageContainer = size;
@@ -38,7 +38,7 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp4.icon) {
-    const obj3 = { source: _modDef10052, style: tmp4.icon, color: tmp4.icon.color };
+    const obj3 = { source: _modDef10260, style: tmp4.icon, color: tmp4.icon.color };
     const tmp12 = React4(native.Icon, obj3);
     cResult[2] = tmp4.icon;
     cResult[3] = tmp12;
@@ -107,7 +107,7 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
 }) : (function ForYouUnreadClearedState() {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef10052, style: tmp.icon, color: tmp.icon.color }), ];
+  const items = [React4(View, { style: tmp.imageContainer }), React4(native.Icon, { source: _modDef10260, style: tmp.icon, color: tmp.icon.color }), ];
   const obj4 = { children: null };
   const obj5 = { color: "mobile-text-heading-primary", variant: "text-md/semibold", style: tmp.headerText, children: null };
   const intl = util.intl;

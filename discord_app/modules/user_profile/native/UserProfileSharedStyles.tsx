@@ -1,15 +1,15 @@
-// === Module 8375: UserProfileSharedStyles ===
+// === Module 8586: UserProfileSharedStyles ===
 
-// Module 8375 (UserProfileSharedStyles)
+// Module 8586 (UserProfileSharedStyles)
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 6910 */;
-import createStyles from "createStyles" /* 5096 */;
+import Constants from "Constants" /* 7124 */;
+import createStyles from "createStyles" /* 5151 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 ({ AVATAR_CONTAINER_SIZE: c2, AVATAR_CUSTOM_STATUS_GAP: c3, AVATAR_PADDING: closure_4, CARD_PADDING: hasOwnProperty, PROFILE_CONTENT_BOTTOM_PADDING: metroRequire, PROFILE_SIDE_PADDING: closure_7, PROFILE_TOP_LAYER_Z_INDEX: closure_8 } = Constants);
 let closure_9 = createStyles.createStyles(() => {
-  const obj = { avatarPosition: null, avatarBackground: { width: borderRadius, height: borderRadius, borderRadius, padding: margin, zIndex: 0 }, avatar: { margin, zIndex: 1 }, profileContentWrapper: { flexGrow: 1, paddingBottom, overflow: "visible" }, profileContent: { paddingHorizontal }, customStatusBubble: { marginTop: 6, marginBottom: 12, marginLeft: borderRadius - margin + React3 }, customStatusBubbleInset: { marginLeft: paddingHorizontal + borderRadius - margin + React3, marginRight: paddingHorizontal }, emojiOnlyCustomStatusBubble: { marginBottom: 4 }, primaryInfo: { rowGap: 12, paddingBottom: 12 }, primaryButtons: { paddingVertical: 12 }, bannerButtons: null, bannerButtonsWithPrivateBanner: { top: 54 }, profileTablist: { paddingHorizontal, marginBottom: nativeDefault.space.PX_16 }, cards: { rowGap: 16 }, card: null };
+  const obj = { avatarPosition: null, avatarBackground: { width: borderRadius, height: borderRadius, borderRadius, padding: margin, zIndex: 0 }, avatar: { margin, zIndex: 1 }, profileContentWrapper: { flexGrow: 1, paddingBottom, overflow: "visible" }, profileContent: { paddingHorizontal }, customStatusBubble: { marginTop: 6, marginBottom: 12, marginLeft: borderRadius - margin + React3 }, customStatusBubbleInset: { marginLeft: paddingHorizontal + borderRadius - margin + React3, marginRight: paddingHorizontal }, emojiOnlyCustomStatusBubble: { marginBottom: 4 }, primaryInfo: { rowGap: 12, paddingBottom: 12 }, primaryButtons: { paddingVertical: 12 }, bannerButtons: null, privateBanner: { zIndex }, bannerButtonsWithPrivateBanner: { top: 54 }, profileTablist: { paddingHorizontal, marginBottom: nativeDefault.space.PX_16 }, cards: { rowGap: 16 }, card: null };
   const rect = { position: "absolute", top: -borderRadius / 2, left: paddingHorizontal - margin };
   obj.avatarPosition = rect;
   const rect1 = { flexDirection: "row", position: "absolute", top: 16, right: 16, gap: 8, zIndex };

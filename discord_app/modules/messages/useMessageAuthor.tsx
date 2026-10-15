@@ -1,15 +1,15 @@
-// === Module 5632: useMessageAuthor ===
+// === Module 5843: useMessageAuthor ===
 
-// Module 5632 (useMessageAuthor)
+// Module 5843 (useMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 4964 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
 import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import GuildRoleStore from "GuildRoleStore" /* 2119 */;
 import GuildStore from "GuildStore" /* 2087 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -121,7 +121,7 @@ function useNullableMessageAuthor(message) {
         }
         stateFromStores2 = tmp47;
       }
-      const name = stateFromStores6(4964).useName(stateFromStores2);
+      const name = stateFromStores6(5018).useName(stateFromStores2);
       const _Symbol4 = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
@@ -158,7 +158,7 @@ function useNullableMessageAuthor(message) {
         }
         tmp51 = cResult[14];
       }
-      const obj14 = stateFromStores6(4964);
+      const obj14 = stateFromStores6(5018);
       const stateFromStores3 = initialize.useStateFromStores(tmp49, F, tmp51);
       if (stateFromStores1 != null) {
         class F {
@@ -222,7 +222,7 @@ function useNullableMessageAuthor(message) {
                 return closure_6.getGuild(guild_id);
               }
             }
-            const tmp62 = tmp45(5633)(tmp61);
+            const tmp62 = tmp45(5844)(tmp61);
             if (null == author) {
               class F {
                 constructor() {
@@ -408,8 +408,8 @@ function useNullableMessageAuthor(message) {
       }
       stateFromStores8 = tmp14;
     }
-    const name1 = stateFromStores6(4964).useName(stateFromStores8);
-    const obj4 = stateFromStores6(4964);
+    const name1 = stateFromStores6(5018).useName(stateFromStores8);
+    const obj4 = stateFromStores6(5018);
     const items13 = [GuildStore];
     const items14 = [undefined];
     const stateFromStores9 = initialize.useStateFromStores(items13, () => GuildStore.getGuild(c3), items14);

@@ -1,6 +1,6 @@
-// === Module 15983: useDisplayNameStylesHandleApply ===
+// === Module 16279: useDisplayNameStylesHandleApply ===
 
-// Module 15983 (useDisplayNameStylesHandleApply)
+// Module 16279 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

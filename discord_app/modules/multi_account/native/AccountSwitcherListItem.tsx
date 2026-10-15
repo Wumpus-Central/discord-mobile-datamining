@@ -1,29 +1,29 @@
-// === Module 16721: AccountSwitcherListItem ===
+// === Module 16960: AccountSwitcherListItem ===
 
-// Module 16721 (AccountSwitcherListItem)
+// Module 16960 (AccountSwitcherListItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4834 */;
-import UserUtilsDefault from "UserUtils" /* 4964 */;
-import Text_Text from "Text/Text" /* 5092 */;
-import Pressables from "Pressables" /* 6189 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4888 */;
+import UserUtilsDefault from "UserUtils" /* 5018 */;
+import Text_Text from "Text/Text" /* 5147 */;
+import Pressables from "Pressables" /* 6405 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1404 */;
-import StreamerModeStore from "StreamerModeStore" /* 4965 */;
+import StreamerModeStore from "StreamerModeStore" /* 5019 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const initialize = CircleCheckIcon(504);
-const CircleInformationIcon = CircleCheckIcon(5050);
-const CircleCheckIcon2 = CircleCheckIcon(6873);
+const CircleInformationIcon = CircleCheckIcon(5105);
+const CircleCheckIcon2 = CircleCheckIcon(7087);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12679).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12972).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatusIcon(user) {

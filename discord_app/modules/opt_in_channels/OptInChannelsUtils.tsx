@@ -1,20 +1,20 @@
-// === Module 10811: OptInChannelsUtils ===
+// === Module 11035: OptInChannelsUtils ===
 
-// Module 10811 (OptInChannelsUtils)
+// Module 11035 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
-import _modDef4704 from "module_4704" /* 4704 */;
-import useChannelName from "useChannelName" /* 5426 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6101 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6804 */;
-import ChannelListState from "ChannelListState" /* 7257 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 10812 */;
+import _modDef4758 from "module_4758" /* 4758 */;
+import useChannelName from "useChannelName" /* 5481 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6317 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7020 */;
+import ChannelListState from "ChannelListState" /* 7467 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11036 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2065 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 6805 */;
-import ReadStateStore from "ReadStateStore" /* 6040 */;
-import RelationshipStore from "RelationshipStore" /* 4762 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7021 */;
+import ReadStateStore from "ReadStateStore" /* 6251 */;
+import RelationshipStore from "RelationshipStore" /* 4816 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -27,8 +27,8 @@ const Constants = fn(1085);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
 const ChannelConstants = fn(2072);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7263).ChannelListGuildActionRow;
-const ReadStateTypes = fn(5972).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7473).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6183).ReadStateTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelBrowserSections(arg0, _categories, arg2, rowHeight) {
@@ -368,7 +368,7 @@ export const useChannelBrowserChannelCount = ReactCompilerGating.isReactCompiler
 });
 export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
   const intl = util.intl;
-  const tmp = _modDef4704;
+  const tmp = _modDef4758;
   let lastMessageIdResult = ReadStateStore.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;

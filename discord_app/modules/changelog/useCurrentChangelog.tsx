@@ -1,12 +1,12 @@
-// === Module 8130: useCurrentChangelog ===
+// === Module 8340: useCurrentChangelog ===
 
-// Module 8130 (useCurrentChangelog)
+// Module 8340 (useCurrentChangelog)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8131 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8341 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2129 */;
-import ChangelogStore from "ChangelogStore" /* 7022 */;
+import ChangelogStore from "ChangelogStore" /* 7235 */;
 
 require = fn;
 const ChangelogLoadState = fn(2115).ChangelogLoadState;

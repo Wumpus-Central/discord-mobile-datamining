@@ -1,6 +1,6 @@
-// === Module 6761: getFastestListVisibleItemsDefault ===
+// === Module 6977: getFastestListVisibleItemsDefault ===
 
-// Module 6761 (getFastestListVisibleItemsDefault)
+// Module 6977 (getFastestListVisibleItemsDefault)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/fastest_list/getFastestListVisibleItemsDefault.tsx");
