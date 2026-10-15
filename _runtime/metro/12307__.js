@@ -1,13 +1,34 @@
 // _runtime/metro/12307__.js
-import registerAsset from "01132__.js";
+import _mod12302 from "12302__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/safety_hub/images",
-  width: 258,
-  height: 235,
-  scales: [1],
-  hash: "67aa3a4595e9ab08ffca5da7eba4c713",
-  name: "check-with-stars",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
+  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
+    if (!globalThis.__SENTRY_TRACING__) {
+      return false;
+    }
+  }
+  let tmp = tracesSampler;
+  const client = _mod12302.getClient();
+  if (!tracesSampler) {
+    let options = client;
+    if (client) {
+      options = client.getOptions();
+    }
+    tmp = options;
+  }
+  let tmp3 = tmp;
+  if (tmp3) {
+    let enableTracing = tmp.enableTracing;
+    if (!enableTracing) {
+      enableTracing = "tracesSampleRate" in tmp;
+    }
+    if (!enableTracing) {
+      enableTracing = "tracesSampler" in tmp;
+    }
+    tmp3 = enableTracing;
+  }
+  return tmp3;
+};

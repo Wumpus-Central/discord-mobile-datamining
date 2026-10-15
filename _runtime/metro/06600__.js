@@ -1,7 +1,51 @@
 // _runtime/metro/06600__.js
-import _mod17 from "00017__.js";
-import FlashList from "../06539_FlashList.js";
+import _mod19 from "00019__.js";
+import _modDef6590 from "06590__.js";
+import needsToReattach from "../06601_needsToReattach.js";
+import dropHandlers from "../06602_dropHandlers.js";
+import attachHandlers from "../06603_attachHandlers.js";
+import _mod6604 from "06604__.js";
 
-const Animated = _mod17.Animated;
+const require = globalThis.__r;
 
-export default Animated.createAnimatedComponent(FlashList.FlashList);
+_mod19.useCallback;
+
+export const useDetectorUpdater = function useDetectorUpdater(
+  current,
+  current2,
+  gesturesToAttach,
+  gesture,
+  webEventHandlers,
+) {
+  _require = current;
+  const preparedGesture = current2;
+  dependencyMap = gesturesToAttach;
+  const forceRender = require("convertToHandlerTag").useForceRender();
+  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
+  return gesture((arg0) => {
+    const tmp3 = _modDef6590(current.viewRef);
+    if (tmp3 === current.previousViewTag) {
+      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
+        if (!arg0) {
+          _mod6604.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
+          const tmp5Result = _mod6604;
+        }
+      }
+      obj = needsToReattach;
+    }
+    dropHandlers.dropHandlers(preparedGesture);
+    attachHandlers.attachHandlers({
+      preparedGesture,
+      gestureConfig,
+      gesturesToAttach,
+      webEventHandlersRef,
+      viewTag: tmp3,
+    });
+    if (tmp3 !== current.previousViewTag) {
+      current.previousViewTag = tmp3;
+      current.forceRebuildReanimatedEvent = true;
+      forceRender();
+    }
+    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
+  }, items);
+};

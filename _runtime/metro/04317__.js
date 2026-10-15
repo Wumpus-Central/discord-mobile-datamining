@@ -9,19 +9,21 @@ if (!module_2137) {
 }
 const date = {
   ordinalNumber(arg0, arg1) {
-    return String(arg0);
+    return Number(arg0) + ".";
   },
-  era: obj.default({ values: { narrow: ["\u00CE", "D"], abbreviated: ["\u00CE.d.C.", "D.C."], wide: ["\u00CEnainte de Cristos", "Dup\u0103 Cristos"] }, defaultWidth: "wide" }),
+  era: obj.default({ values: { narrow: ["ie.", "isz."], abbreviated: ["i. e.", "i. sz."], wide: ["Krisztus el\u0151tt", "id\u0151sz\u00E1m\u00EDt\u00E1sunk szerint"] }, defaultWidth: "wide" }),
   quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["T1", "T2", "T3", "T4"], wide: ["primul trimestru", "al doilea trimestru", "al treilea trimestru", "al patrulea trimestru"] },
+    values: { narrow: ["1.", "2.", "3.", "4."], abbreviated: ["1. n.\u00E9v", "2. n.\u00E9v", "3. n.\u00E9v", "4. n.\u00E9v"], wide: ["1. negyed\u00E9v", "2. negyed\u00E9v", "3. negyed\u00E9v", "4. negyed\u00E9v"] },
     defaultWidth: "wide",
     argumentCallback(arg0) {
       return arg0 - 1;
-    }
+    },
+    formattingValues: { narrow: ["I.", "II.", "III.", "IV."], abbreviated: ["I. n.\u00E9v", "II. n.\u00E9v", "III. n.\u00E9v", "IV. n.\u00E9v"], wide: ["I. negyed\u00E9v", "II. negyed\u00E9v", "III. negyed\u00E9v", "IV. negyed\u00E9v"] },
+    defaultFormattingWidth: "wide"
   }),
-  month: obj.default({ values: { narrow: ["I", "F", "M", "A", "M", "I", "I", "A", "S", "O", "N", "D"], abbreviated: ["ian", "feb", "mar", "apr", "mai", "iun", "iul", "aug", "sep", "oct", "noi", "dec"], wide: ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["d", "l", "m", "m", "j", "v", "s"], short: ["du", "lu", "ma", "mi", "jo", "vi", "s\u00E2"], abbreviated: ["dum", "lun", "mar", "mie", "joi", "vin", "s\u00E2m"], wide: ["duminic\u0103", "luni", "mar\u021Bi", "miercuri", "joi", "vineri", "s\u00E2mb\u0103t\u0103"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "ami", morning: "dim", afternoon: "da", evening: "s", night: "n" }, abbreviated: { am: "AM", pm: "PM", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" }, wide: { am: "a.m.", pm: "p.m.", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mn", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" }, abbreviated: { am: "AM", pm: "PM", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" }, wide: { am: "a.m.", pm: "p.m.", midnight: "miezul nop\u021Bii", noon: "amiaz\u0103", morning: "diminea\u021B\u0103", afternoon: "dup\u0103-amiaz\u0103", evening: "sear\u0103", night: "noapte" } }, defaultFormattingWidth: "wide" })
+  month: obj.default({ values: { narrow: ["J", "F", "M", "\u00C1", "M", "J", "J", "A", "Sz", "O", "N", "D"], abbreviated: ["jan.", "febr.", "m\u00E1rc.", "\u00E1pr.", "m\u00E1j.", "j\u00FAn.", "j\u00FAl.", "aug.", "szept.", "okt.", "nov.", "dec."], wide: ["janu\u00E1r", "febru\u00E1r", "m\u00E1rcius", "\u00E1prilis", "m\u00E1jus", "j\u00FAnius", "j\u00FAlius", "augusztus", "szeptember", "okt\u00F3ber", "november", "december"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["V", "H", "K", "Sz", "Cs", "P", "Sz"], short: ["V", "H", "K", "Sze", "Cs", "P", "Szo"], abbreviated: ["V", "H", "K", "Sze", "Cs", "P", "Szo"], wide: ["vas\u00E1rnap", "h\u00E9tf\u0151", "kedd", "szerda", "cs\u00FCt\u00F6rt\u00F6k", "p\u00E9ntek", "szombat"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "de.", pm: "du.", midnight: "\u00E9jf\u00E9l", noon: "d\u00E9l", morning: "reggel", afternoon: "du.", evening: "este", night: "\u00E9jjel" }, abbreviated: { am: "de.", pm: "du.", midnight: "\u00E9jf\u00E9l", noon: "d\u00E9l", morning: "reggel", afternoon: "du.", evening: "este", night: "\u00E9jjel" }, wide: { am: "de.", pm: "du.", midnight: "\u00E9jf\u00E9l", noon: "d\u00E9l", morning: "reggel", afternoon: "d\u00E9lut\u00E1n", evening: "este", night: "\u00E9jjel" } }, defaultWidth: "wide" })
 };
 
 export default date;

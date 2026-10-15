@@ -1,13 +1,11 @@
 // _runtime/metro/06747__.js
-import registerAsset from "01132__.js";
+import cancelAnimation from "../01656_cancelAnimation.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 160,
-  height: 160,
-  scales: [2, 3],
-  hash: "b7eca7761481c5ff3cc170b16fbdff57",
-  name: "img_no_results",
-  type: "png",
-});
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
+const module_6740 = fn(6740);
+const memoResult = fn(19).memo(
+  module_6740.createBottomSheetScrollableComponent(fn(6528).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent),
+);
+memoResult.displayName = "BottomSheetSectionList";
+
+export default memoResult;

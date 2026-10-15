@@ -1,15 +1,15 @@
 // _runtime/metro/04436__.js
-import _typeof_mod from "04201__.js";
-import requiredArgs_mod from "../04202_requiredArgs.js";
+import startOfDay_mod from "../04419_startOfDay.js";
+import requiredArgs_mod from "../04256_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfDay = startOfDay_mod;
+if (!startOfDay) {
+  const obj = { default: startOfDay };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfDay;
 }
-_typeof = tmp3;
+startOfDay = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -18,14 +18,11 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let c2 = 86400000;
 
-export default function getUTCDayOfYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
+export default function isSameDay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfDay.default(arg0);
   const time = defaultResult1.getTime();
-  defaultResult1.setUTCMonth(0, 1);
-  defaultResult1.setUTCHours(0, 0, 0, 0);
-  return Math.floor((time - defaultResult1.getTime()) / c2) + 1;
+  return time === startOfDay.default(arg1).getTime();
 };
 export default exports.default;

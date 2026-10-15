@@ -1,43 +1,11 @@
 // _runtime/metro/07822__.js
-import _mod7823 from "07823__.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-        }
-      }
-    };
-  }
-  const _Object2 = Object;
-  fn(_mod7823, exports);
-} else {
-  let _Object = Object;
-}
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGCircle", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, cx: true, cy: true, r: true };
+
+export default module_65.get("RNSVGCircle", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

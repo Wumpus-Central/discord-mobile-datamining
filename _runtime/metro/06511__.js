@@ -1,67 +1,13 @@
 // _runtime/metro/06511__.js
-import _mod6513 from "06513__.js";
-import noop_mod from "00019__.js";
-import get_ActivityIndicator from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
+import registerAsset from "01132__.js";
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
-  style = style.style;
-  const indicatorStyle = style.indicatorStyle;
-  let DEFAULT_ACCESSIBLE = style.accessible;
-  if (DEFAULT_ACCESSIBLE === undefined) {
-    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
-  }
-  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
-  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
-    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
-  }
-  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
-  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
-    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
-  }
-  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
-  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
-    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
-  }
-  let items = [style];
-  const items1 = [indicatorStyle];
-  const obj = {
-    style: useMemo(() => {
-      const items = [_mod6513.styles.container, React3.flatten(style)];
-      return items;
-    }, items),
-    accessible: null,
-    accessibilityRole: null,
-    accessibilityLabel: null,
-    accessibilityHint: null,
-    collapsable: true,
-    children: null,
-  };
-  const tmp9 = useMemo(() => {
-    const items = [_mod6513.styles.container, React3.flatten(style)];
-    return items;
-  }, items);
-  obj.accessible = DEFAULT_ACCESSIBLE;
-  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
-  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
-  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
-  const items2 = [
-    closure_5(closure_4, {
-      style: useMemo(() => {
-        const items = [_mod6513.styles.indicator, React3.flatten(indicatorStyle)];
-        return items;
-      }, items1),
-    }),
-    style.children,
-  ];
-  obj.children = items2;
-  return closure_6(closure_4, obj);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CircleErrorIcon-secondary",
+  type: "png",
 });
-memoResult.displayName = "BottomSheetHandle";
-
-export default memoResult;

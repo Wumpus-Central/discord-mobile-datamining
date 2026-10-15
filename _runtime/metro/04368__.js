@@ -1,35 +1,24 @@
 // _runtime/metro/04368__.js
-import module_4205_mod from "04205__.js";
-import module_4356_mod from "04356__.js";
-import requiredArgs_mod from "../04202_requiredArgs.js";
+let closure_0 = { lessThanXSeconds: { one: "mai pu\u021Bin de o secund\u0103", other: "mai pu\u021Bin de {{count}} secunde" }, xSeconds: { one: "1 secund\u0103", other: "{{count}} secunde" }, halfAMinute: "jum\u0103tate de minut", lessThanXMinutes: { one: "mai pu\u021Bin de un minut", other: "mai pu\u021Bin de {{count}} minute" }, xMinutes: { one: "1 minut", other: "{{count}} minute" }, aboutXHours: { one: "circa 1 or\u0103", other: "circa {{count}} ore" }, xHours: { one: "1 or\u0103", other: "{{count}} ore" }, xDays: { one: "1 zi", other: "{{count}} zile" }, aboutXWeeks: { one: "circa o s\u0103pt\u0103m\u00E2n\u0103", other: "circa {{count}} s\u0103pt\u0103m\u00E2ni" }, xWeeks: { one: "1 s\u0103pt\u0103m\u00E2n\u0103", other: "{{count}} s\u0103pt\u0103m\u00E2ni" }, aboutXMonths: { one: "circa 1 lun\u0103", other: "circa {{count}} luni" }, xMonths: { one: "1 lun\u0103", other: "{{count}} luni" }, aboutXYears: { one: "circa 1 an", other: "circa {{count}} ani" }, xYears: { one: "1 an", other: "{{count}} ani" }, overXYears: { one: "peste 1 an", other: "peste {{count}} ani" }, almostXYears: { one: "aproape 1 an", other: "aproape {{count}} ani" } };
 
-let module_4205 = module_4205_mod;
-if (!module_4205) {
-  const obj = { default: module_4205 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4205;
-}
-module_4205 = tmp3;
-let module_4356 = module_4356_mod;
-if (!module_4356) {
-  const obj2 = { default: module_4356 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4356;
-}
-module_4356 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function addSeconds(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4356.default(interval, 1000 * module_4205.default(arg1));
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} în urmă`;
+        }
+        text = `în ${tmp}`;
+      }
+    }
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
+  }
 };
 export default exports.default;

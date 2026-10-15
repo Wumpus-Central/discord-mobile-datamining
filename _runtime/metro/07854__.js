@@ -1,69 +1,62 @@
 // _runtime/metro/07854__.js
-import _mod7835 from "07835__.js";
-import _modDef7840 from "07840__.js";
-import get0thIfdOffset from "../07855_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../07856_IFD_TYPE_0TH.js";
+import _modDef7832 from "07832__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-let c3 = "Exif IFD Pointer";
-let c4 = "GPS Info IFD Pointer";
-let c5 = "Interoperability IFD Pointer";
-
-export default {
-  read(getUint16, c5, arg2) {
-    const byteOrder = _modDef7840.getByteOrder(getUint16, c5);
-    const obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(
-      getUint16,
-      IFD_TYPE_0TH.IFD_TYPE_0TH,
-      c5,
-      get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder),
-      byteOrder,
-      arg2,
-    );
-    let objectAssignResult = ifd;
-    if (undefined !== ifd[c3]) {
-      const tmp3Result6 = get0thIfdOffset;
-      objectAssignResult = _mod7835.objectAssign(
-        ifd,
-        tmp3Result6.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
-      );
-      const tmp3Result = _mod7835;
+const FeMorphology = arg1;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    let objectAssignResult3 = objectAssignResult;
-    if (undefined !== objectAssignResult[c4]) {
-      const tmp3Result8 = get0thIfdOffset;
-      objectAssignResult3 = _mod7835.objectAssign(
-        objectAssignResult,
-        tmp3Result8.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_GPS,
-          c5,
-          c5 + objectAssignResult[tmp12].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result7 = _mod7835;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class FeMorphology {
+  constructor() {
+    self = this;
+    tmp = c2(this, FeMorphology);
+    tmp2 = closure_4;
+    obj = closure_4(FeMorphology);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    let objectAssignResult4 = objectAssignResult3;
-    if (undefined !== objectAssignResult3[c5]) {
-      const tmp3Result10 = get0thIfdOffset;
-      objectAssignResult4 = _mod7835.objectAssign(
-        objectAssignResult3,
-        tmp3Result10.readIfd(
-          getUint16,
-          IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY,
-          c5,
-          c5 + objectAssignResult3[tmp19].value,
-          byteOrder,
-          arg2,
-        ),
-      );
-      const tmp3Result9 = _mod7835;
-    }
-    return { tags: objectAssignResult4, byteOrder };
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(FeMorphology, _modDef7832);
+const entry = {
+  key: "render",
+  value: function render() {
+    const result = FeMorphology(7809).warnUnimplementedFilter();
+    return null;
   },
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(FeMorphology, items);
+importDefaultResultResult.displayName = "FeMorphology";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
+
+export default importDefaultResultResult;

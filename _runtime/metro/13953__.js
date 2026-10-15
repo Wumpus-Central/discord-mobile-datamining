@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/chat_sidebar",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f15a8eea867ca31909b0a1cf49c6c7d8",
-  name: "ic_notif",
+  hash: "ad50b5e2cb199dc282a7ce82f2fb5245",
+  name: "FlashIcon",
   type: "png",
 });

@@ -1,70 +1,42 @@
 // _runtime/metro/04322__.js
-import module_4203_mod from "04203__.js";
+import module_4257_mod from "04257__.js";
 
-let module_4203 = module_4203_mod;
-if (!module_4203) {
-  const obj = { default: module_4203 };
+let module_4257 = module_4257_mod;
+if (!module_4257) {
+  const obj = { default: module_4257 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4203;
+  tmp3 = module_4257;
 }
-module_4203 = tmp3;
-const dependencyMap = ["\u0432\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440\u0433", "\u043F\u044F\u0442\u043D\u0438\u0446\u0443", "\u0441\u0443\u0431\u0431\u043E\u0442\u0443"];
+module_4257 = tmp3;
+const dependencyMap = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
 let closure_2 = {
   lastWeek(getUTCDay, arg1, arg2) {
     const uTCDay = getUTCDay.getUTCDay();
-    let text = dependencyMap[uTCDay];
-    if (module_4203.default(getUTCDay, arg1, arg2)) {
-      if (2 === uTCDay) {
-        text = `'во ${tmp2}`;
-        let text1 = `'во ${tmp2} в' p`;
-      } else {
-        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
-      }
+    if (module_4257.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
     } else {
-      if (0 === uTCDay) {
-        let text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u0435 " + tmp2} в' p`;
-      } else {
-        if (1 !== uTCDay) {
-          if (2 !== uTCDay) {
-            if (4 !== uTCDay) {
-              text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u0443\u044E " + tmp2} в' p`;
-            }
-          }
-        }
-        text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u044B\u0439 " + tmp2} в' p`;
+      str = "'domenica scorsa alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} scorso alle' p`;
       }
-      return text2;
     }
+    return str;
   },
-  yesterday: "'\u0432\u0447\u0435\u0440\u0430 \u0432' p",
-  today: "'\u0441\u0435\u0433\u043E\u0434\u043D\u044F \u0432' p",
-  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u0432' p",
+  yesterday: "'ieri alle' p",
+  today: "'oggi alle' p",
+  tomorrow: "'domani alle' p",
   nextWeek(getUTCDay, arg1, arg2) {
     const uTCDay = getUTCDay.getUTCDay();
-    let text = dependencyMap[uTCDay];
-    if (module_4203.default(getUTCDay, arg1, arg2)) {
-      if (2 === uTCDay) {
-        text = `'во ${tmp2}`;
-        let text1 = `'во ${tmp2} в' p`;
-      } else {
-        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
-      }
+    if (module_4257.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
     } else {
-      if (0 === uTCDay) {
-        let text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0435 " + tmp2} в' p`;
-      } else {
-        if (1 !== uTCDay) {
-          if (2 !== uTCDay) {
-            if (4 !== uTCDay) {
-              text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E " + tmp2} в' p`;
-            }
-          }
-        }
-        text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 " + tmp2} в' p`;
+      str = "'domenica prossima alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
       }
-      return text2;
     }
+    return str;
   },
   other: "P"
 };

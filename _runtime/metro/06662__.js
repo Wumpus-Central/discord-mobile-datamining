@@ -1,13 +1,12 @@
 // _runtime/metro/06662__.js
-import registerAsset from "01132__.js";
+import ComposedGestureName from "../06614_ComposedGestureName.js";
+import _mod6663 from "06663__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/auth/native/images",
-  width: 480,
-  height: 413,
-  scales: [2, 3],
-  hash: "b25b2e24db6c14f15201cb7533aed65e",
-  name: "register-background-dark",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export const useCompetingGestures = function useCompetingGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod6663.useComposedGesture.apply(items1);
+};

@@ -90,9 +90,9 @@ fn = function n(userConfig, fn) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "enabled",
+      current: "duration",
       lastTimestamp: null,
-      startTimestamp: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET",
+      startTimestamp: "LongPressCommandMention",
       reduceMotion: null,
     };
     let num = obj.velocity;

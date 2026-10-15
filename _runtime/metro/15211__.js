@@ -1,13 +1,5 @@
 // _runtime/metro/15211__.js
-import registerAsset from "01132__.js";
+import _mod15212 from "15212__.js";
+import _mod15216 from "15216__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 8,
-  height: 13,
-  scales: [2, 3],
-  hash: "f22850e4ccd7b23bc996d7a6a44cbe21",
-  name: "ic_table_arrow_right",
-  type: "png",
-});
+export default (arg0) => _mod15212(_mod15216(arg0));

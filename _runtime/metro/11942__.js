@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 128,
+  height: 128,
   scales: [2, 3],
-  hash: "4efa5140d546996fe7cb2ba013410d48",
-  name: "ArrowAngleLeftUpIcon",
+  hash: "153e24032a5a8790888aef41caaf4b2c",
+  name: "app_dock_not_found_dark",
   type: "png",
 });

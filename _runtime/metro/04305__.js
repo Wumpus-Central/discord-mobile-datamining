@@ -8,20 +8,40 @@ if (!module_2137) {
   obj = module_2137;
 }
 const date = {
-  ordinalNumber(arg0, arg1) {
-    return String(arg0);
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    if (0 === NumberResult) {
+      return "0";
+    } else {
+      let str = "\u00E8me";
+      if (1 === NumberResult) {
+        let str3 = "er";
+        if (unit) {
+          const items = ["year", "week", "hour", "minute", "second"];
+          str3 = "er";
+          if (items.includes(unit)) {
+            str3 = "\u00E8re";
+          }
+        }
+        str = str3;
+      }
+      return NumberResult + str;
+    }
   },
-  era: obj.default({ values: { narrow: ["p.n.e.", "n.e."], abbreviated: ["p.n.e.", "n.e."], wide: ["przed nasz\u0105 er\u0105", "naszej ery"] }, defaultWidth: "wide" }),
+  era: obj.default({ values: { narrow: ["av. J.-C", "ap. J.-C"], abbreviated: ["av. J.-C", "ap. J.-C"], wide: ["avant J\u00E9sus-Christ", "apr\u00E8s J\u00E9sus-Christ"] }, defaultWidth: "wide" }),
   quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["I kw.", "II kw.", "III kw.", "IV kw."], wide: ["I kwarta\u0142", "II kwarta\u0142", "III kwarta\u0142", "IV kwarta\u0142"] },
+    values: { narrow: ["T1", "T2", "T3", "T4"], abbreviated: ["1er trim.", "2\u00E8me trim.", "3\u00E8me trim.", "4\u00E8me trim."], wide: ["1er trimestre", "2\u00E8me trimestre", "3\u00E8me trimestre", "4\u00E8me trimestre"] },
     defaultWidth: "wide",
     argumentCallback(arg0) {
       return arg0 - 1;
     }
   }),
-  month: obj.default({ values: { narrow: ["S", "L", "M", "K", "M", "C", "L", "S", "W", "P", "L", "G"], abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"], wide: ["stycze\u0144", "luty", "marzec", "kwiecie\u0144", "maj", "czerwiec", "lipiec", "sierpie\u0144", "wrzesie\u0144", "pa\u017Adziernik", "listopad", "grudzie\u0144"] }, defaultWidth: "wide", formattingValues: { narrow: ["s", "l", "m", "k", "m", "c", "l", "s", "w", "p", "l", "g"], abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"], wide: ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "wrze\u015Bnia", "pa\u017Adziernika", "listopada", "grudnia"] }, defaultFormattingWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["N", "P", "W", "\u015A", "C", "P", "S"], short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"], abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."], wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"] }, defaultWidth: "wide", formattingValues: { narrow: ["n", "p", "w", "\u015B", "c", "p", "s"], short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"], abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."], wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"] }, defaultFormattingWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "p\u00F3\u0142n.", noon: "po\u0142", morning: "rano", afternoon: "popo\u0142.", evening: "wiecz.", night: "noc" }, abbreviated: { am: "AM", pm: "PM", midnight: "p\u00F3\u0142noc", noon: "po\u0142udnie", morning: "rano", afternoon: "popo\u0142udnie", evening: "wiecz\u00F3r", night: "noc" }, wide: { am: "AM", pm: "PM", midnight: "p\u00F3\u0142noc", noon: "po\u0142udnie", morning: "rano", afternoon: "popo\u0142udnie", evening: "wiecz\u00F3r", night: "noc" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "o p\u00F3\u0142n.", noon: "w po\u0142.", morning: "rano", afternoon: "po po\u0142.", evening: "wiecz.", night: "w nocy" }, abbreviated: { am: "AM", pm: "PM", midnight: "o p\u00F3\u0142nocy", noon: "w po\u0142udnie", morning: "rano", afternoon: "po po\u0142udniu", evening: "wieczorem", night: "w nocy" }, wide: { am: "AM", pm: "PM", midnight: "o p\u00F3\u0142nocy", noon: "w po\u0142udnie", morning: "rano", afternoon: "po po\u0142udniu", evening: "wieczorem", night: "w nocy" } }, defaultFormattingWidth: "wide" })
+  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["janv.", "f\u00E9vr.", "mars", "avr.", "mai", "juin", "juil.", "ao\u00FBt", "sept.", "oct.", "nov.", "d\u00E9c."], wide: ["janvier", "f\u00E9vrier", "mars", "avril", "mai", "juin", "juillet", "ao\u00FBt", "septembre", "octobre", "novembre", "d\u00E9cembre"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["D", "L", "M", "M", "J", "V", "S"], short: ["di", "lu", "ma", "me", "je", "ve", "sa"], abbreviated: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."], wide: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "mat.", afternoon: "ap.m.", evening: "soir", night: "mat." }, abbreviated: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "matin", afternoon: "apr\u00E8s-midi", evening: "soir", night: "matin" }, wide: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "du matin", afternoon: "de l\u2019apr\u00E8s-midi", evening: "du soir", night: "du matin" } }, defaultWidth: "wide" })
 };
 
 export default date;

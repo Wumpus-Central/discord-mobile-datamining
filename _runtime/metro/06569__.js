@@ -1,17 +1,17 @@
 // _runtime/metro/06569__.js
-import _mod6554 from "06554__.js";
-import _mod6570 from "06570__.js";
+import _modDef6570 from "06570__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default function _possibleConstructorReturn(arg0, fn) {
-  if (fn) {
-    _mod6554;
-    return fn;
-  }
-  if (undefined !== fn) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Derived constructors may only return object or undefined");
-    throw typeError;
-  } else {
-    return _mod6570(arg0);
-  }
-}
+({ Animated, StyleSheet } = get_ActivityIndicator);
+const animatedComponent = Animated.createAnimatedComponent(_modDef6570);
+
+export const GestureDetectorType = {
+  Native: 0,
+  [0]: "Native",
+  Virtual: 1,
+  [1]: "Virtual",
+  Intercepting: 2,
+  [2]: "Intercepting",
+};
+export const AnimatedNativeDetector = animatedComponent;
+export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });

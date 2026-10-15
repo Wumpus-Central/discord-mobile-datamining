@@ -1,39 +1,4 @@
 // _runtime/metro/05001__.js
-import _mod4997 from "04997__.js";
-import ACTIONS from "../04998_ACTIONS.js";
-import PortalHost from "../04999_PortalHost.js";
-import registerHost from "../05002_registerHost.js";
-import _slicedToArray from "00032__.js";
-import noop_mod from "00019__.js";
+import _mod5002 from "05002__.js";
 
-require = fn;
-let noop = fn(19);
-({ useReducer: c3, memo } = noop);
-let noop = noop_mod;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const memoResult = memo((rootHostName) => {
-  let str = rootHostName.rootHostName;
-  if (str === undefined) {
-    str = "root";
-  }
-  let flag = rootHostName.shouldAddRootHost;
-  if (flag === undefined) {
-    flag = true;
-  }
-  [tmp4, tmp5] = React3(registerHost.reducer, ACTIONS.INITIAL_STATE);
-  const obj = { value: tmp5, children: null };
-  const obj2 = { value: tmp4, children: null };
-  const items = [rootHostName.children];
-  if (flag) {
-    const obj3 = { name: str };
-    flag = React4(PortalHost.PortalHost, obj3);
-  }
-  items[1] = flag;
-  obj2.children = items;
-  obj.children = hasOwnProperty(_mod4997.PortalStateContext.Provider, obj2);
-  return React4(_mod4997.PortalDispatchContext.Provider, obj);
-});
-memoResult.displayName = "PortalProvider";
-
-export const PortalProvider = memoResult;
+export default _mod5002;

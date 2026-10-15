@@ -1,42 +1,12 @@
 // _runtime/metro/04277__.js
-import 04278__ from "04278__.js";
-import 04279__ from "04279__.js";
-import 04280__ from "04280__.js";
-import date_mod from "04281__.js";
-import date_mod from "04282__.js";
+import 02134__ from "02134__.js";
 
-if (!module_4278) {
-  const obj = { default: module_4278 };
-  let tmp3 = obj;
+if (!module_2134) {
+  const obj2 = { default: module_2134 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4278;
-}
-if (!module_4279) {
-  const obj2 = { default: module_4279 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4279;
-}
-if (!module_4280) {
-  const obj3 = { default: module_4280 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4280;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
+  obj = module_2134;
 }
 
-export default { code: "ko", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
+export default { date: obj.default({ formats: { full: "EEEE, do MMMM y", long: "do MMMM y", medium: "do MMM y", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'um' {{time}}", long: "{{date}} 'um' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

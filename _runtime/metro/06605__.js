@@ -1,22 +1,21 @@
 // _runtime/metro/06605__.js
+import _mod19 from "00019__.js";
+import _modDef6590 from "06590__.js";
 
-export const useDataMultiplier = function useDataMultiplier(arg0, arg1) {
-  const array = new Array(arg1);
-  let flag = false;
-  if (typeof arg0[0] === "object") {
-    flag = true;
-  }
-  for (let num = 0; num < arg1; num = num + 1) {
-    let tmp3 = arg0[num % tmp];
-    if (flag) {
-      let obj = {};
-      let merged = Object.assign(tmp3);
-      let tmp5 = obj;
-    } else {
-      tmp5 = tmp3;
+_mod19.useCallback;
+
+export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  const items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        previousViewTag.previousViewTag = _modDef6590(previousViewTag.viewRef);
+      }
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
+      }
     }
-    array[num] = tmp5;
-  }
-  const items = [array];
-  return items;
+  }, items);
 };

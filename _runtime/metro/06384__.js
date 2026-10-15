@@ -1,51 +1,13 @@
 // _runtime/metro/06384__.js
-import _mod19 from "00019__.js";
-import _modDef6374 from "06374__.js";
-import needsToReattach from "../06385_needsToReattach.js";
-import dropHandlers from "../06386_dropHandlers.js";
-import attachHandlers from "../06387_attachHandlers.js";
-import _mod6388 from "06388__.js";
+import registerAsset from "01132__.js";
 
-const require = globalThis.__r;
-
-_mod19.useCallback;
-
-export const useDetectorUpdater = function useDetectorUpdater(
-  current,
-  current2,
-  gesturesToAttach,
-  gesture,
-  webEventHandlers,
-) {
-  _require = current;
-  const preparedGesture = current2;
-  dependencyMap = gesturesToAttach;
-  const forceRender = require("convertToHandlerTag").useForceRender();
-  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
-  return gesture((arg0) => {
-    const tmp3 = _modDef6374(current.viewRef);
-    if (tmp3 === current.previousViewTag) {
-      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
-        if (!arg0) {
-          _mod6388.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
-          const tmp5Result = _mod6388;
-        }
-      }
-      obj = needsToReattach;
-    }
-    dropHandlers.dropHandlers(preparedGesture);
-    attachHandlers.attachHandlers({
-      preparedGesture,
-      gestureConfig,
-      gesturesToAttach,
-      webEventHandlersRef,
-      viewTag: tmp3,
-    });
-    if (tmp3 !== current.previousViewTag) {
-      current.previousViewTag = tmp3;
-      current.forceRebuildReanimatedEvent = true;
-      forceRender();
-    }
-    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
-  }, items);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e4080f713973c251e1438e7043339acb",
+  name: "ic_verified_guild_icon_green_24px",
+  type: "png",
+});

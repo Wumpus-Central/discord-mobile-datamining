@@ -1,19 +1,11 @@
 // _runtime/metro/06698__.js
-import LegacyBaseButton from "../06339_LegacyBaseButton.js";
-import GestureHandlerRefContext from "../06699_GestureHandlerRefContext.js";
-import noop from "00019__.js";
-
-require = fn;
-const jsx = fn(21).jsx;
-
-export const PanGestureHandler = function PanGestureHandler(arg0) {
-  const ref = noop.useRef(null);
-  const obj = { value: ref, children: null };
-  const obj2 = {};
-  const merged = Object.assign(arg0);
-  obj2.ref = ref;
-  obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
-  return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, { value: ref, children: null });
+const fn = function n(sum1, initialPosition, value3) {
+  return Math.min(Math.max(initialPosition, sum1), value3);
 };
-export const GestureHandlerRootView = fn(6339).GestureHandlerRootView;
-export const GestureState = fn(6339).State;
+fn.__closure = {};
+fn.__workletHash = 4405247003092;
+fn.__initData = {
+  code: "function pnpm_clampTs1(value,lowerBound,upperBound){return Math.min(Math.max(lowerBound,value),upperBound);}",
+};
+
+export const clamp = fn;

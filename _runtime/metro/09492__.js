@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/SunsetIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "9f9f6665c181624b81b98f40c0532d57",
-  name: "SunsetIcon",
+  hash: "8c6e7658ce5157dd6c415ee437c71c87",
+  name: "img_nitro_animated_emoji",
   type: "png",
 });

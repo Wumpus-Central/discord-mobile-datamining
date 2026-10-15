@@ -1,27 +1,85 @@
 // _runtime/metro/07843__.js
-import findOffsets from "../07844_findOffsets.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7832 from "07832__.js";
+import _modDef7844 from "07844__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export default {
-  isHeicFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
-          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
+const FeGaussianBlur = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      return false;
+      callResult = call(constructResult);
     }
-  },
-  findHeicOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeGaussianBlur {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, FeGaussianBlur);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeGaussianBlur);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(FeGaussianBlur, _modDef7832);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(FeGaussianBlur(7831).extractFilter(this.props));
+    const obj2 = FeGaussianBlur(7831);
+    const merged1 = Object.assign(FeGaussianBlur(7831).extractIn(this.props));
+    const obj3 = FeGaussianBlur(7831);
+    const merged2 = Object.assign(FeGaussianBlur(7831).extractFeGaussianBlur(this.props));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
+importDefaultResultResult.defaultProps = obj;
+
+export default importDefaultResultResult;

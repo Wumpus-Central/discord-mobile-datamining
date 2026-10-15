@@ -1,13 +1,12 @@
 // _runtime/metro/05863__.js
-import registerAsset from "01132__.js";
+import requirePromise from "../05862_requirePromise.js";
+import _mod5864 from "05864__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "447c7f6f73d6eb74cf002340a994c38c",
-  name: "img_account_sync_ebay_light_and_dark",
-  type: "svg",
-});
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
+  } else {
+    allSettled = _mod5864;
+  }
+  return allSettled;
+}

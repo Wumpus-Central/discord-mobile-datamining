@@ -20,8 +20,8 @@ const NativePerformanceCxx = nullthrows(_modDef154);
   clearMarks: closure_11,
   clearMeasures: closure_12,
 } = NativePerformanceCxx);
-let closure_13 = { startTime: 0, detail: "code" };
-let closure_14 = { name: "", startTime: 0, duration: 0, detail: "emoji" };
+let closure_13 = { startTime: 0, detail: "ix" };
+let closure_14 = { name: "", startTime: 0, duration: 0, detail: "duration" };
 function getMarkTimeForMeasure(arg0) {}
 let closure_16 = _classPrivateFieldKey("eventCounts");
 class Performance {

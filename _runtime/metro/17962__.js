@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "e0e70b148b33d67bf7c7b1d0419e39c9",
-  name: "ic_lock",
+  httpServerLocation: "/assets/images/native",
+  width: 60,
+  height: 60,
+  scales: [2, 3],
+  hash: "ed431a42081d7323282ce4207b41689a",
+  name: "icon-afk",
   type: "png",
 });

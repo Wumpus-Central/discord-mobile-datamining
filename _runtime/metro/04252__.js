@@ -1,71 +1,24 @@
 // _runtime/metro/04252__.js
-import 02139__ from "02139__.js";
-import 02140__ from "02140__.js";
+let closure_0 = { lessThanXSeconds: { one: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 \u0441\u0435\u043A\u0443\u043D\u0434\u0430", other: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438" }, xSeconds: { one: "1 \u0441\u0435\u043A\u0443\u043D\u0434\u0430", other: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438" }, halfAMinute: "\u043F\u043E\u043B\u043E\u0432\u0438\u043D \u043C\u0438\u043D\u0443\u0442\u0430", lessThanXMinutes: { one: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 \u043C\u0438\u043D\u0443\u0442\u0430", other: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 {{count}} \u043C\u0438\u043D\u0443\u0442\u0438" }, xMinutes: { one: "1 \u043C\u0438\u043D\u0443\u0442\u0430", other: "{{count}} \u043C\u0438\u043D\u0443\u0442\u0438" }, aboutXHours: { one: "\u043E\u043A\u043E\u043B\u043E \u0447\u0430\u0441", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0447\u0430\u0441\u0430" }, xHours: { one: "1 \u0447\u0430\u0441", other: "{{count}} \u0447\u0430\u0441\u0430" }, xDays: { one: "1 \u0434\u0435\u043D", other: "{{count}} \u0434\u043D\u0438" }, aboutXWeeks: { one: "\u043E\u043A\u043E\u043B\u043E \u0441\u0435\u0434\u043C\u0438\u0446\u0430", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0441\u0435\u0434\u043C\u0438\u0446\u0438" }, xWeeks: { one: "1 \u0441\u0435\u0434\u043C\u0438\u0446\u0430", other: "{{count}} \u0441\u0435\u0434\u043C\u0438\u0446\u0438" }, aboutXMonths: { one: "\u043E\u043A\u043E\u043B\u043E \u043C\u0435\u0441\u0435\u0446", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u043C\u0435\u0441\u0435\u0446\u0430" }, xMonths: { one: "1 \u043C\u0435\u0441\u0435\u0446", other: "{{count}} \u043C\u0435\u0441\u0435\u0446\u0430" }, aboutXYears: { one: "\u043E\u043A\u043E\u043B\u043E \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, xYears: { one: "1 \u0433\u043E\u0434\u0438\u043D\u0430", other: "{{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, overXYears: { one: "\u043D\u0430\u0434 \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043D\u0430\u0434 {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, almostXYears: { one: "\u043F\u043E\u0447\u0442\u0438 \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043F\u043E\u0447\u0442\u0438 {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" } };
 
-if (!module_2139) {
-  const obj2 = { default: module_2139 };
-  let obj = obj2;
-} else {
-  obj = module_2139;
-}
-if (!module_2140) {
-  const obj4 = { default: module_2140 };
-  let obj3 = obj4;
-} else {
-  obj3 = module_2140;
-}
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)(ième|ère|ème|er|e)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match);
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `преди ${tmp}`;
+        }
+        text = `след ${tmp}`;
+      }
     }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
-};
-const obj6 = { matchPatterns: { narrow: /^(av\.J\.C|ap\.J\.C|ap\.J\.-C)/i, abbreviated: /^(av\.J\.-C|av\.J-C|apr\.J\.-C|apr\.J-C|ap\.J-C)/i, wide: /^(avant Jésus-Christ|après Jésus-Christ)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^av/i, /^ap/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^T?[1234]/i, abbreviated: /^[1234](er|ème|e)? trim\.?/i, wide: /^[1234](er|ème|e)? trimestre/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
   }
 };
-const obj9 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(janv|févr|mars|avr|mai|juin|juill|juil|août|sept|oct|nov|déc)\.?/i, wide: /^(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { narrow: null, any: null };
-const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj11.narrow = items2;
-const items3 = [/^ja/i, /^f/i, /^mar/i, /^av/i, /^ma/i, /^juin/i, /^juil/i, /^ao/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj11.any = items3;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[lmjvsd]/i, short: /^(di|lu|ma|me|je|ve|sa)/i, abbreviated: /^(dim|lun|mar|mer|jeu|ven|sam)\.?/i, wide: /^(dimanche|lundi|mardi|mercredi|jeudi|vendredi|samedi)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { narrow: null, any: null };
-const items4 = [/^d/i, /^l/i, /^m/i, /^m/i, /^j/i, /^v/i, /^s/i];
-obj13.narrow = items4;
-const items5 = [/^di/i, /^lu/i, /^ma/i, /^me/i, /^je/i, /^ve/i, /^sa/i];
-obj13.any = items5;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { narrow: /^(a|p|minuit|midi|mat\.?|ap\.?m\.?|soir|nuit)/i, any: /^([ap]\.?\s?m\.?|du matin|de l'après[-\s]midi|du soir|de la nuit)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^a/i, pm: /^p/i, midnight: /^min/i, noon: /^mid/i, morning: /mat/i, afternoon: /ap/i, evening: /soir/i, night: /nuit/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
-
-export default date;
 export default exports.default;

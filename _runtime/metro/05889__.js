@@ -1,13 +1,17 @@
 // _runtime/metro/05889__.js
-import registerAsset from "01132__.js";
+import callBoundIntrinsic from "../01339_callBoundIntrinsic.js";
+import RequireObjectCoercible from "../05876_RequireObjectCoercible.js";
+import ToString from "../05890_ToString.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
-  scales: [1],
-  hash: "fe74ca7646b268434faf18f4ad85990b",
-  name: "img_meta_quest_light",
-  type: "svg",
-});
+let closure_2 = callBoundIntrinsic("String.prototype.replace");
+const isMatch = /^\s$/.test("\u180E");
+let closure_3 = isMatch
+  ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/
+  : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
+let closure_4 = isMatch
+  ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/
+  : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
+
+export default function trim() {
+  return closure_2(closure_2(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
+}

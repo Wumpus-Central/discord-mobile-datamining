@@ -38,11 +38,11 @@ stopObservingProgress.__initData = {
 function createLayoutAnimationManager() {
   let map = new Map();
   map1 = new Map();
-  function startActually(arg0, arg1, arg2, fn) {
+  function startActually(arg0, arg1, value, fn) {
     map = arg0;
     value2 = arg1;
     if (arg1 !== map1(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS) {
-      const tmp6 = fn(arg2);
+      const tmp6 = fn(value);
       closure_2 = tmp6;
       let animations = tmp6.animations;
       value = map.get(arg0);
@@ -102,7 +102,7 @@ function createLayoutAnimationManager() {
       const tmpResult2 = map1(startActually[3]);
     } else {
       const ProgressTransitionRegister = map.ProgressTransitionRegister;
-      ProgressTransitionRegister.onTransitionStart(arg0, arg2);
+      ProgressTransitionRegister.onTransitionStart(arg0, value);
     }
   }
   if (module_1659) {
@@ -149,11 +149,11 @@ const fn = function t() {
     const _Map = Map;
     const _Map2 = Map;
     const map = new Map();
-    function startActually(arg0, arg1, arg2, fn) {
+    function startActually(arg0, arg1, value, fn) {
       map = arg0;
       value2 = arg1;
       if (arg1 !== map1(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS) {
-        const tmp6 = fn(arg2);
+        const tmp6 = fn(value);
         closure_2 = tmp6;
         let animations = tmp6.animations;
         value = map.get(arg0);
@@ -213,7 +213,7 @@ const fn = function t() {
         const tmpResult2 = map1(startActually[3]);
       } else {
         const ProgressTransitionRegister = map.ProgressTransitionRegister;
-        ProgressTransitionRegister.onTransitionStart(arg0, arg2);
+        ProgressTransitionRegister.onTransitionStart(arg0, value);
       }
     }
     if (module_1659) {

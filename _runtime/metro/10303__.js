@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 279,
+  height: 48,
   scales: [2, 3],
-  hash: "1cda1329ef5dd669ec53160c74e5d945",
-  name: "ArrowSmallRightIcon",
+  hash: "03a20a682965583c41d600bd770a621d",
+  name: "img_nitro_tier_1_activated_dark",
   type: "png",
 });

@@ -1,29 +1,11 @@
 // _runtime/metro/06573__.js
-import _mod6571 from "06571__.js";
+import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import _modDef6574 from "06574__.js";
 
-export default function _superPropBase(arg0, key10009) {
-  hasOwnProperty = {}.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  let tmp = arg0;
-  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
-    let tmp4 = _mod6571(arg0);
-    tmp = tmp4;
-    if (null !== tmp4) {
-      while (true) {
-        let hasOwnProperty2 = {}.hasOwnProperty;
-        let call2 = hasOwnProperty2.call;
-        tmp = tmp4;
-        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
-          break;
-        } else {
-          tmp4 = _mod6571(tmp4);
-          tmp = tmp4;
-          if (null === tmp4) {
-            break;
-          }
-        }
-      }
-    }
-  }
-  return tmp;
-}
+const use = _mod19.use;
+const Platform = _mod17.Platform;
+
+export const useEnsureGestureHandlerRootView = function useEnsureGestureHandlerRootView() {
+  use(_modDef6574);
+};

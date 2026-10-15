@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 189,
-  height: 163,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "b5d60c4f52c2e5640ed435ba1b0b3fc3",
-  name: "img_tier_2_clouds",
+  hash: "80139ae0e2b501617462c705b80c97d5",
+  name: "ScreenStreamIcon",
   type: "png",
 });

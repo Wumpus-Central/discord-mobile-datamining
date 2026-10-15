@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aa6654f8bc64e9c09fd740f0157dd47b",
-  name: "ClipboardCheckIcon",
+  hash: "0450d9d5bb66be25511dd04ee055abfd",
+  name: "EmojiDisguisedFaceIcon",
   type: "png",
 });

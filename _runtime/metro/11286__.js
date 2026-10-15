@@ -1,10 +1,13 @@
 // _runtime/metro/11286__.js
-import _mod11285 from "11285__.js";
+import registerAsset from "01132__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const keepLocalCopy = function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11285.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "44d2aa5379438547523c3d419e9ade52",
+  name: "MusicSlashIcon",
+  type: "png",
+});

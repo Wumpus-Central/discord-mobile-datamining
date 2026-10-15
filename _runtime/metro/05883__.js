@@ -1,13 +1,13 @@
 // _runtime/metro/05883__.js
-import registerAsset from "01132__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "79308515b9134f67f900ad544808aa3a",
-  name: "img_domain_dark",
-  type: "svg",
-});
+export default function isPrimitive(fn) {
+  let tmp = null === fn;
+  if (!tmp) {
+    let tmp2 = typeof fn !== "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn !== "object";
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+}

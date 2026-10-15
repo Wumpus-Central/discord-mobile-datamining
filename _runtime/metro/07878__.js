@@ -1,45 +1,11 @@
 // _runtime/metro/07878__.js
-import _mod7835 from "07835__.js";
-import get0thIfdOffset from "../07855_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../07856_IFD_TYPE_0TH.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGPath", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, d: true };
 
-export default {
-  read(byteLength, sum, arg2, byteOrder, arg4) {
-    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
-    let tmp6 = ifd;
-    if (ifd.ShotInfo) {
-      value = ifd.ShotInfo.value;
-      const obj2 = {};
-      if (undefined !== value[27]) {
-        const obj3 = { value: value[27], description: null };
-        let str = "None";
-        if (0 !== value[27]) {
-          let str2 = "Rotate 90 CW";
-          if (1 !== tmp7) {
-            let str3 = "Rotate 180";
-            if (2 !== tmp7) {
-              let str4 = "Unknown";
-              if (3 === tmp7) {
-                str4 = "Rotate 270 CW";
-              }
-              str3 = str4;
-            }
-            str2 = str3;
-          }
-          str = str2;
-        }
-        obj3.description = str;
-        obj2.AutoRotate = obj3;
-      }
-      const tmp3Result = _mod7835;
-      delete tmp[tmp2];
-      tmp6 = _mod7835.objectAssign({}, ifd, obj2);
-      const objectAssignResult = _mod7835.objectAssign({}, ifd, obj2);
-    }
-    return tmp6;
-  },
-  SHOT_INFO_AUTO_ROTATE: 27,
-};
+export default module_65.get("RNSVGPath", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,13 +1,30 @@
 // _runtime/metro/05866__.js
-import registerAsset from "01132__.js";
+import _mod5867 from "05867__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "c79a547370020e3c89b0c02086f0c3fe",
-  name: "img_account_sync_tiktok_dark",
-  type: "png",
-});
+export default function Type(num) {
+  let str = "Null";
+  if (null !== num) {
+    let str2 = "Undefined";
+    if (undefined !== num) {
+      let str3 = "Object";
+      if (!_mod5867(num)) {
+        let str4 = "Number";
+        if (typeof num !== "number") {
+          let str5 = "Boolean";
+          if (typeof num !== "boolean") {
+            let str6;
+            if (typeof num === "string") {
+              str6 = "String";
+            }
+            str5 = str6;
+          }
+          str4 = str5;
+        }
+        str3 = str4;
+      }
+      str2 = str3;
+    }
+    str = str2;
+  }
+  return str;
+}

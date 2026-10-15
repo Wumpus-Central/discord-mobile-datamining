@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 6,
-  height: 6,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "96f4f50193c5df13e000233d90f42a59",
-  name: "ic_sparkle2",
+  hash: "a2b44ab2faf9e7aa1dac11a1e1d9c4d6",
+  name: "fullscreen",
   type: "png",
 });

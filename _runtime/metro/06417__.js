@@ -1,18 +1,13 @@
 // _runtime/metro/06417__.js
-import noop from "00019__.js";
+import registerAsset from "01132__.js";
 
-const use = noop.use;
-const context = noop.createContext(null);
-
-export const InterceptingDetectorMode = {
-  DEFAULT: 0,
-  [0]: "DEFAULT",
-  ANIMATED: 1,
-  [1]: "ANIMATED",
-  REANIMATED: 2,
-  [2]: "REANIMATED",
-};
-export const InterceptingDetectorContext = context;
-export const useInterceptingDetectorContext = function useInterceptingDetectorContext() {
-  return use(context);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "5a0d5d16e378eea1c4baa447014a7b8d",
+  name: "CheckmarkLargeIcon",
+  type: "png",
+});

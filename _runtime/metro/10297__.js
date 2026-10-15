@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 140.5,
+  height: 89.5,
   scales: [2, 3],
-  hash: "aeb97360fc8a478ac4fc8b1c1de862ea",
-  name: "UserCircleIcon",
+  hash: "26fec1ac0e2aea05499090830fe99884",
+  name: "img_boost_hands",
   type: "png",
 });

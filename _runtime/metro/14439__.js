@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 18,
+  height: 18,
   scales: [2, 3],
-  hash: "b3429e38ab32663de7a271eafbda6e13",
-  name: "ChannelListMagnifyingGlassIcon",
+  hash: "5df78f325bc8d637c2d3b01b683e170b",
+  name: "ic_close_18px",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 160,
-  scales: [1],
-  hash: "b002cec8fdbd5414b4068fe272d35071",
-  name: "phibi_1",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 30,
+  height: 30,
+  scales: [2, 3],
+  hash: "565bfab9e414d3cdf97ad89eaffbf2b3",
+  name: "member_list_icon",
   type: "png",
 });

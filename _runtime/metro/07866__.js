@@ -1,189 +1,84 @@
 // _runtime/metro/07866__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7817 from "07817__.js";
 import _modDef7867 from "07867__.js";
-import _modDef7868 from "07868__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-function parseTags(byteLength, size, sum, arg3) {
-  let items;
-  let obj4;
-  let tmp = sum;
-  const obj = {};
-  sum = sum + size.size;
-  if (sum < sum) {
-    if (tmp < byteLength.byteLength) {
-      while (true) {
-        let encoding = tmp23;
-        if (byteLength.getUint8(tmp) !== 28) {
-          let obj2 = { tag: null, tagSize: 0 };
-        } else {
-          let uint16 = byteLength.getUint16(tmp + 1);
-          let uint161 = byteLength.getUint16(tmp + 3);
-          if (!arg3) {
-            if (!_modDef7867.iptc[uint16]) {
-              obj2 = { tag: "Array", tagSize: uint161 };
-            }
-          }
-          items = [];
-          for (let num = 0; num < uint161; num = num + 1) {
-            let arr = items.push(byteLength.getUint8(tmp6 + num));
-          }
-          let obj3 = { id: uint16, name: null, value: null, description: null };
-          obj4 = _modDef7867.iptc[uint16];
-          if (obj4) {
-            if (typeof obj4 !== "string") {
-              break;
-            } else {
-              let combined = obj4;
-            }
-          } else {
-            let _HermesInternal = HermesInternal;
-            combined = "undefined-" + uint16;
-          }
-          obj3.name = combined;
-          obj3.value = items;
-          obj3.description = getTagDescription(_modDef7867.iptc[uint16], items, obj, encoding);
-          let tmp17 = _modDef7867.iptc[uint16] && _modDef7867.iptc[uint16].repeatable;
-          if (tmp17) {
-            obj3.repeatable = true;
-          }
-          let tmp18 = _modDef7867.iptc[uint16] && undefined !== _modDef7867.iptc[uint16].encoding_name;
-          if (tmp18) {
-            let obj5 = _modDef7867.iptc[uint16];
-            obj3.encoding = obj5.encoding_name(items);
-          }
-          let obj6 = { tag: obj3, tagSize: uint161 };
-          obj2 = obj6;
-        }
-        let tag = obj2.tag;
-        if (null !== tag) {
-          let tmp21 = encoding;
-          if (tag) {
-            if ("encoding" in tag) {
-              encoding = tag.encoding;
-            }
-            if (undefined !== obj[tag.name]) {
-              if (undefined !== tag.repeatable) {
-                let _Array = Array;
-                if (!(obj[tag.name] instanceof Array)) {
-                  let obj7 = {
-                    id: obj[tag.name].id,
-                    value: obj[tag.name].value,
-                    description: obj[tag.name].description,
-                  };
-                  let items1 = [obj7];
-                  obj[tag.name] = items1;
-                }
-                let arr3 = obj[tag.name];
-                let obj15 = { id: null, value: null, description: null };
-                ({ id: obj8.id, value: obj8.value, description: obj8.description } = tag);
-                let arr2 = arr3.push(obj15);
-                tmp21 = encoding;
-              }
-            }
-            let obj16 = { id: null, value: null, description: null };
-            ({ id: obj9.id, value: obj9.value, description: obj9.description } = tag);
-            obj[tag.name] = obj16;
-            tmp21 = encoding;
-          }
-          let sum1 = tmp + (5 + tmp19);
-          if (sum1 < sum) {
-            tmp23 = tmp21;
-            tmp = sum1;
-          }
-        }
-      }
-      if (typeof obj4.name === "function") {
-        let name = obj4.name(items);
-      } else {
-        name = obj4.name;
-      }
+const Line = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  }
-  return obj;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
-function getTagDescription(description, items, arg2, encoding) {
-  if (
-    !(function hasDescriptionProperty(description) {
-      let tmp = description;
-      if (description) {
-        tmp = undefined !== description.description;
-      }
-      return tmp;
-    })(description)
-  ) {
-    let decodeResult = items;
-    if (
-      (function tagValueIsText(description, items) {
-        let tmp = description;
-        if (description) {
-          const _Array = Array;
-          tmp = items instanceof Array;
-        }
-        return tmp;
-      })(description, items)
-    ) {
-      const decoder = _modDef7868;
-      decodeResult = decoder.decode(encoding, items);
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class Line {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, Line);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Line);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    return decodeResult;
-  } else {
-    try {
-      return description.description(items, arg2);
-    } catch (err) {}
+    return tmp3(self, constructResult);
   }
 }
-
-export default {
-  read(byteLength, sum, arg2) {
-    try {
-      const _Array = Array;
-      if (Array.isArray(byteLength)) {
-        const _DataView = DataView;
-        const _Uint8Array = Uint8Array;
-        const dataView = new DataView(Uint8Array.from(byteLength).buffer);
-        let obj = { size: byteLength.length };
-        return parseTags(dataView, obj, 0, arg2);
-      } else {
-        const tmp5 = (function getNaaResourceBlock(byteLength, sum) {
-          let tmp = sum;
-          if (sum + 12 <= byteLength.byteLength) {
-            while (943868237 === byteLength.getUint32(tmp, false)) {
-              let uint8 = byteLength.getUint8(tmp + 4 + 2);
-              sum = uint8;
-              if (uint8 % 2 === 0) {
-                sum = uint8 + 1;
-              }
-              let sum1 = sum + 1;
-              let obj = {
-                headerSize: 6 + sum1 + 4,
-                type: byteLength.getUint16(tmp + 4),
-                size: byteLength.getUint32(tmp + 4 + 2 + sum1),
-              };
-              if (1028 === obj.type) {
-                let obj2 = { naaBlock: obj, dataOffset: tmp + obj.headerSize };
-                return obj2;
-              } else {
-                let num = 0;
-                let sum2 = obj.headerSize + obj.size;
-                if (obj.size % 2 !== 0) {
-                  num = 1;
-                }
-                let sum3 = tmp + (sum2 + num);
-                tmp = sum3;
-              }
-            }
-            const _Error = Error;
-            const error = new Error("Not an IPTC resource block.");
-            throw error;
-          }
-          const error1 = new Error("No IPTC NAA resource block.");
-          throw error1;
-        })(byteLength, sum);
-        return parseTags(byteLength, tmp5.naaBlock, tmp5.dataOffset, arg2);
-      }
-    } catch (err) {
-      return {};
-    }
+_inherits(Line, _modDef7817);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    const obj = {};
+    ({ x1, y1, x2, y2 } = props);
+    const merged = Object.assign(Line(7808).extract(this, props));
+    obj.x1 = x1;
+    obj.y1 = y1;
+    obj.x2 = x2;
+    obj.y2 = y2;
+    const obj2 = Line(7808);
+    const obj3 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef7867, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(Line, items);
+importDefaultResultResult.displayName = "Line";
+importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+
+export default importDefaultResultResult;

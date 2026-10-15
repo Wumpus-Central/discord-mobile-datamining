@@ -1,13 +1,84 @@
 // _runtime/metro/10082__.js
-import registerAsset from "01132__.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import AbstractTimeExpressionParser from "../10052_AbstractTimeExpressionParser.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 106,
-  height: 80,
-  scales: [2, 3],
-  hash: "f9a535d371ee710b8f1909e45896c667",
-  name: "img_wumpus_nitro_rev",
-  type: "png",
-});
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class DETimeExpressionParser {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, DETimeExpressionParser);
+    tmp2 = c2;
+    obj = c2(DETimeExpressionParser);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_classCallCheck = DETimeExpressionParser;
+_inherits(DETimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+const entry = {
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:um|von)\\s*)?";
+  },
+};
+let items = [
+  entry,
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|bis)\\s*";
+    },
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        const self = this;
+        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
+        }
+        const items = [arg0, arg1];
+        fnResult = fn(items);
+      }
+      return fnResult;
+    },
+  },
+];
+
+export default _createClass(DETimeExpressionParser, items);

@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 88.5,
-  height: 72.5,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "676cd159b1913e0ab2a481c3bd4a0b5c",
-  name: "role_subscription_earning_illo",
+  hash: "0ad684cb154c8b73e2d19dd6933251ad",
+  name: "ic_premium_perk_money_24px",
   type: "png",
 });

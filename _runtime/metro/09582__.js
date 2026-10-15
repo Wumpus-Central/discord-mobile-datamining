@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "24c4788690396bae9cc4c1af395a6a87",
-  name: "BicycleIcon",
+  hash: "dc76a43601a93031b91e3ad463d63b85",
+  name: "ThumbsDownIcon",
   type: "png",
 });

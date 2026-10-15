@@ -1,25 +1,11 @@
 // _runtime/metro/14900__.js
-const require = globalThis.__r;
+import registerAsset from "01132__.js";
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
-  _require = locale;
-  const timezones = require("14901__.js").timezones;
-  return timezones.filter((item) =>
-    (function isSupported(timeZone, arg1) {
-      let str = arg1;
-      if (undefined === arg1) {
-        str = "en";
-      }
-      try {
-        const obj = { timeZone };
-        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
-        return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
-      } catch (err) {
-        return false;
-      }
-    })(item, closure_0),
-  );
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "99f159454017c9a8930c299b70fe8f24",
+  name: "MessagesTab",
+  type: "lottie",
+});

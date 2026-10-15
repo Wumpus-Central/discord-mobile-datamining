@@ -1,48 +1,36 @@
 // _runtime/metro/04437__.js
-import _typeof_mod from "04201__.js";
-import startOfUTCISOWeek_mod from "../04438_startOfUTCISOWeek.js";
-import startOfUTCISOWeekYear_mod from "../04439_startOfUTCISOWeekYear.js";
-import requiredArgs_mod from "../04202_requiredArgs.js";
+import _typeof_mod from "04438__.js";
+import _typeof_mod from "04255__.js";
+import requiredArgs_mod from "../04256_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
 }
-_typeof = tmp3;
-let startOfUTCISOWeek = startOfUTCISOWeek_mod;
-if (!startOfUTCISOWeek) {
-  const obj2 = { default: startOfUTCISOWeek };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfUTCISOWeek;
+  tmp5 = _typeof;
 }
-startOfUTCISOWeek = tmp5;
-let startOfUTCISOWeekYear = startOfUTCISOWeekYear_mod;
-if (!startOfUTCISOWeekYear) {
-  const obj3 = { default: startOfUTCISOWeekYear };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfUTCISOWeekYear;
-}
-startOfUTCISOWeekYear = tmp7;
+_typeof = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+requiredArgs = tmp7;
 
-export default function getUTCISOWeek(arg0) {
+export default function isValid(num) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = startOfUTCISOWeek.default(defaultResult1).getTime();
-  const defaultResult2 = startOfUTCISOWeek.default(defaultResult1);
-  return Math.round((time - startOfUTCISOWeekYear.default(defaultResult1).getTime()) / c4) + 1;
+  if (!_typeof.default(num)) {
+    if (typeof num !== "number") {
+      return false;
+    }
+  }
+  return !isNaN(Number(_typeof.default(num)));
 };
 export default exports.default;

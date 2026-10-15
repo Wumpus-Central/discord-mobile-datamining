@@ -1,13 +1,14 @@
 // _runtime/metro/15317__.js
-import registerAsset from "01132__.js";
+import _mod15318 from "15318__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/mfa/native/images",
-  width: 380,
-  height: 290,
-  scales: [1],
-  hash: "e8d550faf4e256dff3cc4faddf07f107",
-  name: "img_keychain",
-  type: "png",
-});
+export default function getReactNativeDimensions() {
+  try {
+    const Dimensions = get_ActivityIndicator.Dimensions;
+    try {
+      const Dimensions2 = get_ActivityIndicator.Dimensions;
+      value = Dimensions2.get("window");
+      return _mod15318.getReactNativeDimensionsWithDimensions(tmp2, value);
+    } catch (err) {}
+  } catch (err) {}
+}

@@ -1,13 +1,10 @@
 // _runtime/metro/08074__.js
-import registerAsset from "01132__.js";
+const obj = { 4: null };
+obj[4] = {
+  name: "ShotInfo",
+  description(arg0) {
+    return arg0;
+  },
+};
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/public_guilds",
-  width: 240,
-  height: 240,
-  scales: [1],
-  hash: "409ea8be644aaa2b6a1519af84a7b604",
-  name: "system-user-avatar",
-  type: "png",
-});
+export default obj;

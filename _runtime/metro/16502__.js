@@ -1,13 +1,7 @@
 // _runtime/metro/16502__.js
-import registerAsset from "01132__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "74d1abdb8a51df8677242205d5859ee7",
-  name: "GridSquareIcon",
-  type: "png",
-});
+const require = arg1;
+const dependencyMap = arg6;
+
+export const WebView = require("WebView").WebView;

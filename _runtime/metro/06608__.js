@@ -1,19 +1,45 @@
 // _runtime/metro/06608__.js
 import _mod19 from "00019__.js";
-import _mod6560 from "06560__.js";
+import transformIntoHandlerTags from "../06586_transformIntoHandlerTags.js";
+import MountRegistry2 from "../06589_MountRegistry.js";
 
-_mod19.useCallback;
-
-export const useMappingHelper = () => {
-  const recyclerViewContext = _mod6560.useRecyclerViewContext();
-  const obj2 = { getMappingKey: null };
-  const items = [recyclerViewContext];
-  obj2.getMappingKey = useCallback((arg0, arg1) => {
-    let tmp = arg0;
-    if (recyclerViewContext) {
-      tmp = arg1;
+function shouldUpdateDetector(blocksHandlers, handlerTag) {
+  if (undefined === blocksHandlers) {
+    return false;
+  } else {
+    const result = transformIntoHandlerTags.transformIntoHandlerTags(blocksHandlers);
+    for (const item10012 of result) {
+      if (item10012 === arg1.handlerTag) {
+        obj2.return();
+        let flag = true;
+        return true;
+      }
     }
-    return tmp;
+    return false;
+  }
+}
+const useEffect = _mod19.useEffect;
+
+export const useMountReactions = function useMountReactions(detectorUpdater, current2) {
+  closure_0 = detectorUpdater;
+  closure_1 = current2;
+  const items = [detectorUpdater, current2];
+  useEffect(() => {
+    const MountRegistry = MountRegistry2.MountRegistry;
+    return MountRegistry.addMountListener((handlerTag) => {
+      if (current2.isMounted) {
+        const attachedGestures = current2.attachedGestures;
+        const iter = attachedGestures[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let requireToFail = nextResult.config.requireToFail;
+          let simultaneousWith = nextResult.config.simultaneousWith;
+          if (!shouldUpdateDetector(nextResult.config.blocksHandlers, handlerTag)) {
+          }
+          let tmp9 = detectorUpdater();
+          iter.return();
+        }
+      }
+    });
   }, items);
-  return obj2;
 };

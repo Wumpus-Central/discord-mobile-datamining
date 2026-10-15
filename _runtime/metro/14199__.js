@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 177,
-  height: 112,
+  httpServerLocation: "/assets/modules/quests/images",
+  width: 608,
+  height: 608,
   scales: [2, 3],
-  hash: "ca47b5bc4b94bd1dd969b5ea6e31ef36",
-  name: "guild_subscription_no_guilds_darker",
+  hash: "6936c050862daceed7175a327466cd4a",
+  name: "quests_embed_mobile_missing",
   type: "png",
 });

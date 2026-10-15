@@ -1,27 +1,74 @@
 // _runtime/metro/10127__.js
-import _mod10128 from "10128__.js";
-import _mod10131 from "10131__.js";
-import _mod10135 from "10135__.js";
-import _mod10136 from "10136__.js";
-import CarouselLayout from "../10137_CarouselLayout.js";
-import noop from "00019__.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod10056 from "10056__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-
-export default noop.forwardRef((defaultIndex, ref) => {
-  const initProps = _mod10128.useInitProps(defaultIndex);
-  const commonVariables = _mod10131.useCommonVariables(initProps);
-  const obj4 = {};
-  const merged = Object.assign(initProps);
-  obj4.dataLength = initProps.dataLength;
-  const propsErrorBoundary = _mod10135.usePropsErrorBoundary(obj4);
-  const obj5 = {
-    value: { props: initProps, common: commonVariables },
-    children: jsx(CarouselLayout.CarouselLayout, { ref }),
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
   };
-  return jsx(_mod10136.GlobalStateProvider, {
-    value: { props: initProps, common: commonVariables },
-    children: jsx(CarouselLayout.CarouselLayout, { ref }),
-  });
-});
+}
+class NLMergeDateRangeRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, NLMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(NLMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_classCallCheck = NLMergeDateRangeRefiner;
+_inherits(NLMergeDateRangeRefiner, fn(_mod10056).default);
+const entry = {
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(tot|-)\s*$/i;
+  },
+};
+const items = [entry];
+
+export default _createClass(NLMergeDateRangeRefiner, items);

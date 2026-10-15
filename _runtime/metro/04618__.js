@@ -1,59 +1,26 @@
 // _runtime/metro/04618__.js
-import _mod4206 from "04206__.js";
-import requiredArgs_mod from "../04202_requiredArgs.js";
+import module_4610_mod from "04610__.js";
+import requiredArgs_mod from "../04256_requiredArgs.js";
 
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  let obj = { default: requiredArgs };
+let module_4610 = module_4610_mod;
+if (!module_4610) {
+  const obj = { default: module_4610 };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = module_4610;
 }
-requiredArgs = tmp3;
+module_4610 = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default function setDefaultOptions(obj) {
+export default function isThisYear(arg0) {
   requiredArgs.default(1, arguments);
-  obj = {};
-  const defaultOptions = _mod4206.getDefaultOptions();
-  for (const key10017 in defaultOptions) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10017);
-    } else {
-      hasOwnPropertyResult = call(defaultOptions, key10017);
-    }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      obj[key10017] = defaultOptions[key10017];
-      continue;
-    }
-    continue;
-  }
-  for (const key10023 in arg0) {
-    let _Object2 = Object;
-    let call2 = hasOwnProperty2.call;
-    if (typeof call2 === "unknown") {
-      let hasOwnProperty2Result = hasOwnProperty2(key10023);
-    } else {
-      hasOwnProperty2Result = call2(arg0, key10023);
-    }
-    if (!hasOwnProperty2Result) {
-      continue;
-    } else {
-      if (undefined === arg0[key10023]) {
-        delete tmp[tmp2];
-        continue;
-      } else {
-        obj[key10023] = arg0[key10023];
-        continue;
-      }
-      continue;
-    }
-    continue;
-  }
-  _mod4206.setDefaultOptions(obj);
+  return module_4610.default(arg0, Date.now());
 };
 export default exports.default;

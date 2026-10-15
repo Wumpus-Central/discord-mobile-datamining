@@ -16,7 +16,7 @@ if (!module_2140) {
 }
 const date = {
   ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)\.?/i,
+    matchPattern: /^(\d+)(\.)/i,
     parsePattern: /\d+/i,
     valueCallback(match) {
       return parseInt(match, 10);
@@ -28,14 +28,14 @@ const date = {
   day: null,
   dayPeriod: null
 };
-const obj6 = { matchPatterns: { narrow: /^(f\.? ?Kr\.?|fvt\.?|e\.? ?Kr\.?|evt\.?)/i, abbreviated: /^(f\.? ?Kr\.?|fvt\.?|e\.? ?Kr\.?|evt\.?)/i, wide: /^(før Kristus|før vår tid|etter Kristus|vår tid)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj6 = { matchPatterns: { narrow: /^(e|j)/i, abbreviated: /^(eaa.|jaa.)/i, wide: /^(ennen ajanlaskun alkua|jälkeen ajanlaskun alun)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
 const obj7 = { any: null };
-const items = [/^f/i, /^e/i];
+const items = [/^e/i, /^j/i];
 obj7.any = items;
 obj6.parsePatterns = obj7;
 date.era = obj.default(obj6);
 const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](\.)? kvartal/i },
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234]\.? kvartaali/i },
   defaultMatchWidth: "wide",
   parsePatterns: null,
   defaultParseWidth: "any",
@@ -48,21 +48,23 @@ const items1 = [/1/i, /2/i, /3/i, /4/i];
 obj9.any = items1;
 obj8.parsePatterns = obj9;
 date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(jan|feb|mars?|apr|mai|juni?|juli?|aug|sep|okt|nov|des)\.?/i, wide: /^(januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj10 = { matchPatterns: { narrow: /^[thmkeslj]/i, abbreviated: /^(tammi|helmi|maalis|huhti|touko|kesä|heinä|elo|syys|loka|marras|joulu)/i, wide: /^(tammikuu|helmikuu|maaliskuu|huhtikuu|toukokuu|kesäkuu|heinäkuu|elokuu|syyskuu|lokakuu|marraskuu|joulukuu)(ta)?/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
 const obj11 = { narrow: null, any: null };
-const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+const items2 = [/^t/i, /^h/i, /^m/i, /^h/i, /^t/i, /^k/i, /^h/i, /^e/i, /^s/i, /^l/i, /^m/i, /^j/i];
 obj11.narrow = items2;
-const items3 = [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^mai/i, /^jun/i, /^jul/i, /^aug/i, /^s/i, /^o/i, /^n/i, /^d/i];
+const items3 = [/^ta/i, /^hel/i, /^maa/i, /^hu/i, /^to/i, /^k/i, /^hei/i, /^e/i, /^s/i, /^l/i, /^mar/i, /^j/i];
 obj11.any = items3;
 obj10.parsePatterns = obj11;
 date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[smtofl]/i, short: /^(sø|ma|ti|on|to|fr|lø)/i, abbreviated: /^(søn|man|tir|ons|tor|fre|lør)/i, wide: /^(søndag|mandag|tirsdag|onsdag|torsdag|fredag|lørdag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { any: null };
-const items4 = [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i];
-obj13.any = items4;
+const obj12 = { matchPatterns: { narrow: /^[smtkpl]/i, short: /^(su|ma|ti|ke|to|pe|la)/i, abbreviated: /^(sunn.|maan.|tiis.|kesk.|torst.|perj.|la)/i, wide: /^(sunnuntai|maanantai|tiistai|keskiviikko|torstai|perjantai|lauantai)(na)?/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { narrow: null, any: null };
+const items4 = [/^s/i, /^m/i, /^t/i, /^k/i, /^t/i, /^p/i, /^l/i];
+obj13.narrow = items4;
+const items5 = [/^s/i, /^m/i, /^ti/i, /^k/i, /^to/i, /^p/i, /^l/i];
+obj13.any = items5;
 obj12.parsePatterns = obj13;
 date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { narrow: /^(midnatt|middag|(på) (morgenen|ettermiddagen|kvelden|natten)|[ap])/i, any: /^([ap]\.?\s?m\.?|midnatt|middag|(på) (morgenen|ettermiddagen|kvelden|natten))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^a(\.?\s?m\.?)?$/i, pm: /^p(\.?\s?m\.?)?$/i, midnight: /^midn/i, noon: /^midd/i, morning: /morgen/i, afternoon: /ettermiddag/i, evening: /kveld/i, night: /natt/i } }, defaultParseWidth: "any" };
+const obj14 = { matchPatterns: { narrow: /^(ap|ip|keskiyö|keskipäivä|aamupäivällä|iltapäivällä|illalla|yöllä)/i, any: /^(ap|ip|keskiyöllä|keskipäivällä|aamupäivällä|iltapäivällä|illalla|yöllä)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^ap/i, pm: /^ip/i, midnight: /^keskiyö/i, noon: /^keskipäivä/i, morning: /aamupäivällä/i, afternoon: /iltapäivällä/i, evening: /illalla/i, night: /yöllä/i } }, defaultParseWidth: "any" };
 date.dayPeriod = obj.default(obj14);
 
 export default date;

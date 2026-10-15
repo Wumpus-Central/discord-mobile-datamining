@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9efbede8b87c94f401364acf34876922",
-  name: "HammerIcon",
+  hash: "2b05b694fba9643d8f0981005b85363f",
+  name: "HandRequestSpeakListIcon",
   type: "png",
 });

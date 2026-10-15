@@ -1,27 +1,62 @@
 // _runtime/metro/07839__.js
-import _modDef7838 from "07838__.js";
-import _modDef7840 from "07840__.js";
+import _modDef7832 from "07832__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  isTiffFile(byteLength) {
-    let tmp = byteLength;
-    if (tmp) {
-      tmp = byteLength.byteLength >= 4;
-    }
-    if (tmp) {
-      const uint16 = byteLength.getUint16(0);
-      tmp = byteLength.getUint16(2, uint16 === _modDef7840.LITTLE_ENDIAN) === 42;
-    }
-    return tmp;
-  },
-  findTiffOffsets() {
-    if (_modDef7838.USE_EXIF) {
-      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
+const FeDiffuseLighting = arg1;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      return {};
+      callResult = call(constructResult);
     }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class FeDiffuseLighting {
+  constructor() {
+    self = this;
+    tmp = c2(this, FeDiffuseLighting);
+    tmp2 = closure_4;
+    obj = closure_4(FeDiffuseLighting);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(FeDiffuseLighting, _modDef7832);
+const entry = {
+  key: "render",
+  value: function render() {
+    const result = FeDiffuseLighting(7809).warnUnimplementedFilter();
+    return null;
   },
 };
+const items = [entry];
+const importDefaultResultResult = _createClass(FeDiffuseLighting, items);
+importDefaultResultResult.displayName = "FeDiffuseLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
+
+export default importDefaultResultResult;

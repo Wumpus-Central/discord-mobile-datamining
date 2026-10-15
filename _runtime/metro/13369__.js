@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/directory_channels/native/images",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "4ca3f49624db00fa92c0d848adcbd326",
-  name: "StampIcon",
+  hash: "cf9fbd33b5f8251873e494b446828ceb",
+  name: "invite",
   type: "png",
 });

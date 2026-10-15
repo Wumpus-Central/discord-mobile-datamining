@@ -1,12 +1,8 @@
 // _runtime/metro/06724__.js
+import _mod17 from "00017__.js";
 
-export const findLastIndex = function findLastIndex(arg0, fn) {
-  let diff = arg0.length - 1;
-  if (0 <= diff) {
-    while (!fn(arg0[diff])) {
-      diff = diff - 1;
-    }
-    return diff;
-  }
-  return -1;
-};
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({
+  container: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 9999, pointerEvents: "box-none" },
+});

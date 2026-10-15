@@ -3,9 +3,9 @@ import _mod703 from "metro/00703__.js";
 
 require = arg1;
 let dependencyMap = arg6;
-function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mechanism, exception_id) {
+function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mechanism, exception_id) {
   _require = fn;
-  dependencyMap = arg1;
+  dependencyMap = value;
   aggregateExceptionsFromError = arg2;
   closure_3 = source;
   if (arg5.length >= arg2 + 1) {
@@ -22,7 +22,7 @@ function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mech
       let merged1 = Object.assign(tmp3);
       obj.exception_id = exception_id;
       mechanism.mechanism = obj;
-      const tmp7 = fn(arg1, errors[source]);
+      const tmp7 = fn(value, errors[source]);
       length = length.length;
       let obj2 = { handled: true };
       let merged2 = Object.assign(tmp7.mechanism);
@@ -33,7 +33,7 @@ function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mech
       tmp7.mechanism = obj2;
       const items1 = [tmp7];
       HermesBuiltin.arraySpread(length, 1);
-      length = aggregateExceptionsFromError(fn, arg1, arg2, errors[source], source, items1, tmp7, length);
+      length = aggregateExceptionsFromError(fn, value, arg2, errors[source], source, items1, tmp7, length);
     }
     const _Array = Array;
     if (Array.isArray(errors.errors)) {

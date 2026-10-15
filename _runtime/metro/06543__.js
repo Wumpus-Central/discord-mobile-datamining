@@ -1,139 +1,78 @@
 // _runtime/metro/06543__.js
+import normalizeSnapPoint from "../06544_normalizeSnapPoint.js";
+import noop from "00019__.js";
 
-export default function _iterableToArrayLimit(iterable, arg1) {
-  let tmp7 = null;
-  if (null != iterable) {
-    const _Symbol = Symbol;
-    let prop = typeof Symbol !== "undefined";
-    if (typeof Symbol !== "undefined") {
-      const _Symbol2 = Symbol;
-      prop = iterable[Symbol.iterator];
+const require = globalThis.__r;
+
+({ useCallback: c2, useRef: c3 } = noop);
+
+export const useScrollable = () => {
+  const tmp = closure_3(null);
+  _require = tmp;
+  dependencyMap = closure_3(null);
+  const sharedValue = require("cancelAnimation").useSharedValue(require("value2").SCROLLABLE_TYPE.UNDETERMINED);
+  let obj = require("cancelAnimation");
+  const sharedValue1 = require("cancelAnimation").useSharedValue(0);
+  const obj2 = require("cancelAnimation");
+  const sharedValue2 = require("cancelAnimation").useSharedValue(require("value2").SCROLLABLE_STATE.UNDETERMINED);
+  const obj3 = require("cancelAnimation");
+  const sharedValue3 = require("cancelAnimation").useSharedValue(false);
+  const obj4 = require("cancelAnimation");
+  const tmp6 = closure_2((id) => {
+    const current = ref.current;
+    id = undefined;
+    if (current != null) {
+      id = current.id;
     }
-    if (!prop) {
-      prop = iterable[Symbol.iterator];
+    if (id == null) {
+      id = null;
     }
-    tmp7 = prop;
-  }
-  if (null != tmp7) {
-    let flag2 = false;
-    try {
-      const items = [];
-      try {
-        const call = tmp10.call;
-        if (typeof call === "unknown") {
-          let iter = tmp10();
-        } else {
-          iter = call(iterable);
-        }
-        const next = iter.next;
-        if (0 === arg1) {
-          const _Object = Object;
-          if (Object(obj2) !== obj2) {
-            try {
-              if (flag2) {
-                throw tmp6;
-              }
-            } catch (tmp23) {
-              if (tmp2) {
-                throw tmp;
-              } else {
-                throw tmp23;
-              }
-            }
-          } else {
-            let flag3 = false;
-          }
-        } else {
-          const call3 = next.call;
-          if (typeof call3 === "unknown") {
-            let iter2 = next();
-          } else {
-            iter2 = call3(obj2);
-          }
-          const done = iter2.done;
-          flag3 = done;
-          if (!done) {
-            items.push(iter3.value);
-            if (items.length !== arg1) {
-              while (true) {
-                let flag4 = true;
-                let call2 = next.call;
-                if (typeof call2 === "unknown") {
-                  let iter4 = next();
-                } else {
-                  iter4 = call2(obj2);
-                }
-                let done2 = iter4.done;
-                flag3 = done2;
-                if (done2) {
-                  break;
-                } else {
-                  let arr3 = items.push(iter5.value);
-                  if (items.length !== arg1) {
-                    continue;
-                  } else {
-                    break;
-                  }
-                  break;
-                }
-              }
-            }
-          }
-        }
-        try {
-          if (!flag3) {
-            if (null != obj2.return) {
-              const returnResult = obj2.return();
-              const _Object2 = Object;
-              if (Object(returnResult) !== returnResult) {
-                if (flag2) {
-                  throw tmp6;
-                }
-              }
-            }
-          }
-          if (flag2) {
-            throw tmp6;
-          } else {
-            return items;
-          }
-        } catch (tmp35) {
-          if (tmp2) {
-            throw tmp;
-          } else {
-            throw tmp35;
-          }
-        }
-      } catch (tmp6) {
-        flag2 = true;
+    if (id !== id.id) {
+      if (ref.current) {
+        closure_1.current = ref.current;
       }
-    } catch (tmp38) {
-      try {
-        if (!tmp4) {
-          if (tmp5 != obj.return) {
-            const returnResult1 = obj.return();
-            const _Object3 = Object;
-            if (Object(returnResult1) !== returnResult1) {
-              if (tmp2) {
-                throw tmp;
-              } else {
-                return tmp3;
-              }
-            }
-          }
-        }
-        if (tmp2) {
-          throw tmp;
-        } else {
-          throw tmp38;
-        }
-      } catch (tmp47) {
-        if (tmp2) {
-          throw tmp;
-        } else {
-          throw tmp47;
-        }
-      }
+      ref.current = id;
     }
-  }
-}
+  }, []);
+  return {
+    scrollableRef: tmp,
+    animatedScrollableType: sharedValue,
+    animatedScrollableContentOffsetY: sharedValue1,
+    animatedScrollableOverrideState: sharedValue2,
+    isScrollableRefreshable: sharedValue3,
+    setScrollableRef: closure_2((id) => {
+      const current = ref.current;
+      id = undefined;
+      if (current != null) {
+        id = current.id;
+      }
+      if (id == null) {
+        id = null;
+      }
+      if (id !== id.id) {
+        if (ref.current) {
+          closure_1.current = ref.current;
+        }
+        ref.current = id;
+      }
+    }, []),
+    removeScrollableRef: closure_2((current) => {
+      try {
+        const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(current.current);
+        current = ref.current;
+        let id;
+        if (current != null) {
+          id = current.id;
+        }
+        if (id == null) {
+          id = null;
+        }
+        if (findNodeHandleResult === id) {
+          ref.current = ref2.current;
+        }
+      } catch (err) {
+        return tmp;
+      }
+    }, []),
+  };
+};

@@ -1,71 +1,24 @@
 // _runtime/metro/04270__.js
-import 02139__ from "02139__.js";
-import 02140__ from "02140__.js";
+let closure_0 = { lessThanXSeconds: { one: "mindre end \u00E9t sekund", other: "mindre end {{count}} sekunder" }, xSeconds: { one: "1 sekund", other: "{{count}} sekunder" }, halfAMinute: "\u00E9t halvt minut", lessThanXMinutes: { one: "mindre end \u00E9t minut", other: "mindre end {{count}} minutter" }, xMinutes: { one: "1 minut", other: "{{count}} minutter" }, aboutXHours: { one: "cirka 1 time", other: "cirka {{count}} timer" }, xHours: { one: "1 time", other: "{{count}} timer" }, xDays: { one: "1 dag", other: "{{count}} dage" }, aboutXWeeks: { one: "cirka 1 uge", other: "cirka {{count}} uger" }, xWeeks: { one: "1 uge", other: "{{count}} uger" }, aboutXMonths: { one: "cirka 1 m\u00E5ned", other: "cirka {{count}} m\u00E5neder" }, xMonths: { one: "1 m\u00E5ned", other: "{{count}} m\u00E5neder" }, aboutXYears: { one: "cirka 1 \u00E5r", other: "cirka {{count}} \u00E5r" }, xYears: { one: "1 \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "over 1 \u00E5r", other: "over {{count}} \u00E5r" }, almostXYears: { one: "n\u00E6sten 1 \u00E5r", other: "n\u00E6sten {{count}} \u00E5r" } };
 
-if (!module_2139) {
-  const obj2 = { default: module_2139 };
-  let obj = obj2;
-} else {
-  obj = module_2139;
-}
-if (!module_2140) {
-  const obj4 = { default: module_2140 };
-  let obj3 = obj4;
-} else {
-  obj3 = module_2140;
-}
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)(º)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} siden`;
+        }
+        text = `om ${tmp}`;
+      }
     }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
-};
-const obj6 = { matchPatterns: { narrow: /^(aC|dC)/i, abbreviated: /^(a\.?\s?C\.?|a\.?\s?e\.?\s?v\.?|d\.?\s?C\.?|e\.?\s?v\.?)/i, wide: /^(avanti Cristo|avanti Era Volgare|dopo Cristo|Era Volgare)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^a/i, /^(d|e)/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^t[1234]/i, wide: /^[1234](º)? trimestre/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
   }
 };
-const obj9 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^[gfmalsond]/i, abbreviated: /^(gen|feb|mar|apr|mag|giu|lug|ago|set|ott|nov|dic)/i, wide: /^(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { narrow: null, any: null };
-const items2 = [/^g/i, /^f/i, /^m/i, /^a/i, /^m/i, /^g/i, /^l/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj11.narrow = items2;
-const items3 = [/^ge/i, /^f/i, /^mar/i, /^ap/i, /^mag/i, /^gi/i, /^l/i, /^ag/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj11.any = items3;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[dlmgvs]/i, short: /^(do|lu|ma|me|gi|ve|sa)/i, abbreviated: /^(dom|lun|mar|mer|gio|ven|sab)/i, wide: /^(domenica|luned[i|ì]|marted[i|ì]|mercoled[i|ì]|gioved[i|ì]|venerd[i|ì]|sabato)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { narrow: null, any: null };
-const items4 = [/^d/i, /^l/i, /^m/i, /^m/i, /^g/i, /^v/i, /^s/i];
-obj13.narrow = items4;
-const items5 = [/^d/i, /^l/i, /^ma/i, /^me/i, /^g/i, /^v/i, /^s/i];
-obj13.any = items5;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { narrow: /^(a|m\.|p|mezzanotte|mezzogiorno|(di|del) (mattina|pomeriggio|sera|notte))/i, any: /^([ap]\.?\s?m\.?|mezzanotte|mezzogiorno|(di|del) (mattina|pomeriggio|sera|notte))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^a/i, pm: /^p/i, midnight: /^mezza/i, noon: /^mezzo/i, morning: /mattina/i, afternoon: /pomeriggio/i, evening: /sera/i, night: /notte/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
-
-export default date;
 export default exports.default;

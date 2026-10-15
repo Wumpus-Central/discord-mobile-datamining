@@ -3,9 +3,9 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3J1c3RfM3Bw",
+  httpServerLocation: "/assets/modules/premium/youtube_3pp",
   scales: [1],
-  hash: "77edb3dbdfddfd5e69e54a36d1a68113",
-  name: "da.messages.77edb3dbdfddfd5e69e54a36d1a68113.compiled.messages",
+  hash: "52c2982d538f4cadc6393d3f651b1a67",
+  name: "Youtube3PP.compiled.messages",
   type: "jsona",
 });

@@ -1,36 +1,35 @@
 // _runtime/metro/04326__.js
-let closure_0 = { lessThanXSeconds: { one: "mindre \u00E4n en sekund", other: "mindre \u00E4n {{count}} sekunder" }, xSeconds: { one: "en sekund", other: "{{count}} sekunder" }, halfAMinute: "en halv minut", lessThanXMinutes: { one: "mindre \u00E4n en minut", other: "mindre \u00E4n {{count}} minuter" }, xMinutes: { one: "en minut", other: "{{count}} minuter" }, aboutXHours: { one: "ungef\u00E4r en timme", other: "ungef\u00E4r {{count}} timmar" }, xHours: { one: "en timme", other: "{{count}} timmar" }, xDays: { one: "en dag", other: "{{count}} dagar" }, aboutXWeeks: { one: "ungef\u00E4r en vecka", other: "ungef\u00E4r {{count}} vecka" }, xWeeks: { one: "en vecka", other: "{{count}} vecka" }, aboutXMonths: { one: "ungef\u00E4r en m\u00E5nad", other: "ungef\u00E4r {{count}} m\u00E5nader" }, xMonths: { one: "en m\u00E5nad", other: "{{count}} m\u00E5nader" }, aboutXYears: { one: "ungef\u00E4r ett \u00E5r", other: "ungef\u00E4r {{count}} \u00E5r" }, xYears: { one: "ett \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "\u00F6ver ett \u00E5r", other: "\u00F6ver {{count}} \u00E5r" }, almostXYears: { one: "n\u00E4stan ett \u00E5r", other: "n\u00E4stan {{count}} \u00E5r" } };
-let closure_1 = ["noll", "en", "tv\u00E5", "tre", "fyra", "fem", "sex", "sju", "\u00E5tta", "nio", "tio", "elva", "tolv"];
+let closure_0 = { lessThanXSeconds: { one: "1\u79D2\u672A\u6E80", other: "{{count}}\u79D2\u672A\u6E80", oneWithSuffix: "\u7D041\u79D2", otherWithSuffix: "\u7D04{{count}}\u79D2" }, xSeconds: { one: "1\u79D2", other: "{{count}}\u79D2" }, halfAMinute: "30\u79D2", lessThanXMinutes: { one: "1\u5206\u672A\u6E80", other: "{{count}}\u5206\u672A\u6E80", oneWithSuffix: "\u7D041\u5206", otherWithSuffix: "\u7D04{{count}}\u5206" }, xMinutes: { one: "1\u5206", other: "{{count}}\u5206" }, aboutXHours: { one: "\u7D041\u6642\u9593", other: "\u7D04{{count}}\u6642\u9593" }, xHours: { one: "1\u6642\u9593", other: "{{count}}\u6642\u9593" }, xDays: { one: "1\u65E5", other: "{{count}}\u65E5" }, aboutXWeeks: { one: "\u7D041\u9031\u9593", other: "\u7D04{{count}}\u9031\u9593" }, xWeeks: { one: "1\u9031\u9593", other: "{{count}}\u9031\u9593" }, aboutXMonths: { one: "\u7D041\u304B\u6708", other: "\u7D04{{count}}\u304B\u6708" }, xMonths: { one: "1\u304B\u6708", other: "{{count}}\u304B\u6708" }, aboutXYears: { one: "\u7D041\u5E74", other: "\u7D04{{count}}\u5E74" }, xYears: { one: "1\u5E74", other: "{{count}}\u5E74" }, overXYears: { one: "1\u5E74\u4EE5\u4E0A", other: "{{count}}\u5E74\u4EE5\u4E0A" }, almostXYears: { one: "1\u5E74\u8FD1\u304F", other: "{{count}}\u5E74\u8FD1\u304F" } };
 
-export default function formatDistance(arg0, arg1, addSuffix) {
+export default function formatDistance(arg0, arg1, arg2) {
+  let obj = arg2;
+  if (!arg2) {
+    obj = {};
+  }
   if (typeof closure_0[arg0] === "string") {
-    let tmp8 = tmp;
-    if (null != addSuffix) {
-      tmp8 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} sedan`;
-        }
-        text = `om ${tmp}`;
-      }
-    }
-    return tmp8;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    if (addSuffix) {
-      if (addSuffix.onlyNumeric) {
-        const _String2 = String;
-        one = tmp.other.replace("{{count}}", String(arg1));
-      }
-    }
-    if (arg1 < 13) {
-      let StringResult = closure_1[arg1];
+    if (!obj.addSuffix) {
+      return tmp2;
     } else {
-      const _String = String;
-      StringResult = String(arg1);
+      if (!obj.comparison) {
+        let text = `${tmp}前`;
+      }
+      text = `${tmp}後`;
     }
-    one = tmp.other.replace("{{count}}", StringResult);
+  } else {
+    if (1 !== arg1) {
+      if (obj.addSuffix) {
+        if (tmp.otherWithSuffix) {
+          const _String2 = String;
+          let replaced = tmp.otherWithSuffix.replace("{{count}}", String(arg1));
+        }
+      }
+      const _String = String;
+      replaced = tmp.other.replace("{{count}}", String(arg1));
+    }
+    if (!obj.addSuffix) {
+      const one = tmp.one;
+    }
+    const oneWithSuffix = tmp.oneWithSuffix;
   }
 };
 export default exports.default;

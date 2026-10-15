@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "17f53f43d68e8a19fbcd8776cb4d1537",
-  name: "RefreshIcon",
+  hash: "f9f36b748bcc7c6393cf056bc860ba1e",
+  name: "HandRequestSpeakIcon",
   type: "png",
 });

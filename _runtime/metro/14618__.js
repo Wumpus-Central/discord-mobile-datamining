@@ -1,11 +1,10 @@
 // _runtime/metro/14618__.js
-import registerAsset from "01132__.js";
+import _mod14632 from "14632__.js";
+import assign from "14619__.js";
+import Deflate from "../14620_Deflate.js";
+import Inflate from "../14628_Inflate.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "42a20b8c34f5da51714fe4afb6b4ab7f",
-  name: "NitroGem6",
-  type: "lottie",
-});
+const obj = {};
+assign.assign(obj, Deflate, Inflate, _mod14632);
+
+export default obj;

@@ -1,13 +1,6 @@
 // _runtime/metro/06829__.js
-import registerAsset from "01132__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "166185917b52ede00e3e20d3f1f7faeb",
-  name: "CheckmarkSmallIcon",
-  type: "png",
-});
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({ container: {} });

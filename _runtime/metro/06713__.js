@@ -1,35 +1,58 @@
 // _runtime/metro/06713__.js
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import _mod6714 from "06714__.js";
+import noop_mod from "00019__.js";
 
-const View = fn(17).View;
-const jsx = fn(21).jsx;
-try {
-  let closure_0 = fn(5312);
-  exports.MaybeScreenContainer = (enabled) => {
-    const merged = Object.assign(enabled, Object.assign({ enabled: 0 }));
-    if (null != closure_0) {
-      const obj2 = { enabled: enabled.enabled };
-      const merged1 = Object.assign(merged);
-      let tmp8 = <tmp2.ScreenContainer enabled={enabled.enabled} />;
-    } else {
-      const obj = {};
-      const merged2 = Object.assign(merged);
-      tmp8 = <View />;
+let noop = noop_mod;
+({ useMemo: c3, memo } = noop);
+let noop = noop_mod;
+const Platform = _mod17.Platform;
+const jsx = jsxProd.jsx;
+const __initData = {
+  code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}",
+};
+const memoResult = memo(function BottomSheetBodyComponent(children) {
+  const style = children.style;
+  let View = children.BodyComponent;
+  if (View === undefined) {
+    View = animatedIndex(animatedPosition[3]).View;
+  }
+  animatedPosition = undefined;
+  const bottomSheetInternal = style(animatedPosition[4]).useBottomSheetInternal();
+  animatedIndex = bottomSheetInternal.animatedIndex;
+  animatedPosition = bottomSheetInternal.animatedPosition;
+  let obj = style(animatedPosition[4]);
+  const fn = function y() {
+    let num = 1;
+    if (-1 === animatedIndex.get()) {
+      num = 0;
     }
-    return tmp8;
+    const obj = { opacity: num, transform: null };
+    const items = [{ translateY: animatedPosition.get() }];
+    obj.transform = items;
+    return obj;
   };
-  exports.MaybeScreen = (arg0) => {
-    ({ enabled, active } = arg0);
-    const merged = Object.assign(arg0, Object.assign({ enabled: 0, active: 0 }));
-    if (null != closure_0) {
-      const obj2 = { enabled, activityState: active };
-      const merged1 = Object.assign(merged);
-      let tmp8 = <tmp2.Screen enabled={enabled} activityState={active} />;
-    } else {
-      const obj = {};
-      const merged2 = Object.assign(merged);
-      tmp8 = <View />;
-    }
-    return tmp8;
-  };
-} catch (err) {}
+  fn.__closure = { Platform, animatedIndex, animatedPosition };
+  fn.__workletHash = 5915282482182;
+  fn.__initData = __initData;
+  let items = [animatedPosition, animatedIndex];
+  const animatedStyle = style(animatedPosition[3]).useAnimatedStyle(fn, items);
+  const items1 = [style, animatedStyle];
+  const obj2 = style(animatedPosition[3]);
+  const obj3 = { Platform, animatedIndex, animatedPosition };
+  return (
+    <View
+      style={animatedStyle(() => {
+        const items = [style, _mod6714.styles.container, animatedStyle];
+        return items;
+      }, items1)}
+      collapsable
+    >
+      {children.children}
+    </View>
+  );
+});
+memoResult.displayName = "BottomSheetBody";
+
+export const BottomSheetBody = memoResult;

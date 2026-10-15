@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1a98a09be102b24c083fe11e00ab3c2d",
-  name: "PlayIcon",
+  hash: "0e8c9cd01e5a3da643cc71e6763376dc",
+  name: "ExperimentalLfgLockIcon",
   type: "png",
 });

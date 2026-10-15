@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/icymi/native/images",
-  width: 24.5,
-  height: 24,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 311,
+  height: 205.5,
   scales: [2, 3],
-  hash: "17237a5c49ea745b655cbec7c093406d",
-  name: "emoji-positive",
+  hash: "020c495593a12ad5f00af9becbc3507d",
+  name: "premium_role_unavailable",
   type: "png",
 });

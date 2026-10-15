@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 192.33333333333334,
-  height: 416,
-  scales: [3],
-  hash: "313fd6dabf823cbd5c0b9608bb8b54d4",
-  name: "invite-bg",
+  httpServerLocation: "/assets/images/channel_following/dark",
+  width: 280,
+  height: 120,
+  scales: [2, 3],
+  hash: "9c2cfd53ed0ab3abd70ee33b26a982e5",
+  name: "channel_following_success_2",
   type: "png",
 });

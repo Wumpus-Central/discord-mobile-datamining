@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 240,
-  height: 152,
-  scales: [2, 3],
-  hash: "99a0c83db7ec93ecc4f9138bd68cba05",
-  name: "img_guild_cap_upsell_dark",
+  httpServerLocation: "/assets/modules/premium/roadblocks/images",
+  width: 552,
+  height: 336,
+  scales: [1],
+  hash: "f59c66d6f542b08761b44d6d5de547c8",
+  name: "client_themes_upsell",
   type: "png",
 });

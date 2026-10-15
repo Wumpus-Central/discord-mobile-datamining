@@ -1,13 +1,16 @@
 // _runtime/metro/05185__.js
-import _process from "../00539__process.js";
-import baseUnary from "../00540_baseUnary.js";
-import baseIsMap from "../05186_baseIsMap.js";
+import _mod5186 from "05186__.js";
 
-const tmp = _process && _process.isMap;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsMap;
+export default function toInteger(arg0) {
+  const tmp = _mod5186(arg0);
+  const result = tmp % 1;
+  let num = 0;
+  if (tmp == tmp) {
+    let diff = tmp;
+    if (result) {
+      diff = tmp - result;
+    }
+    num = diff;
+  }
+  return num;
 }
-
-export default _module;

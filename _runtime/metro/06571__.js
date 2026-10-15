@@ -1,21 +1,10 @@
 // _runtime/metro/06571__.js
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    exports = getPrototypeOf.bind();
-  } else {
-    exports = (arg0) => {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0);
-}
-let exports = _getPrototypeOf;
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-export default _getPrototypeOf;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerDetector", directEventTypes: { topGestureHandlerEvent: { registrationName: "onGestureHandlerEvent" }, topGestureHandlerStateChange: { registrationName: "onGestureHandlerStateChange" }, topGestureHandlerTouchEvent: { registrationName: "onGestureHandlerTouchEvent" }, topGestureHandlerReanimatedEvent: { registrationName: "onGestureHandlerReanimatedEvent" }, topGestureHandlerReanimatedStateChange: { registrationName: "onGestureHandlerReanimatedStateChange" }, topGestureHandlerReanimatedTouchEvent: { registrationName: "onGestureHandlerReanimatedTouchEvent" }, topGestureHandlerAnimatedEvent: { registrationName: "onGestureHandlerAnimatedEvent" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onGestureHandlerEvent: true, onGestureHandlerStateChange: true, onGestureHandlerTouchEvent: true, onGestureHandlerReanimatedEvent: true, onGestureHandlerReanimatedStateChange: true, onGestureHandlerReanimatedTouchEvent: true, onGestureHandlerAnimatedEvent: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { handlerTags: true, moduleId: true, virtualChildren: true, pointerEvents: true };
+
+export default module_65.get("RNGestureHandlerDetector", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

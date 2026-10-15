@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9dbd634929394ed3a7c5482d60abf290",
-  name: "StopIcon",
+  hash: "fb5649f1f88852917c191effae556b38",
+  name: "BillIcon",
   type: "png",
 });

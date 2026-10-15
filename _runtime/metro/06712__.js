@@ -1,21 +1,11 @@
 // _runtime/metro/06712__.js
+import _mod17 from "00017__.js";
 
-export function getInvertedMultiplier(gestureDirection, arg1) {
-  if ("vertical" === gestureDirection) {
-    return 1;
-  } else if ("vertical-inverted" === gestureDirection) {
-    return -1;
-  } else if ("horizontal" === gestureDirection) {
-    let num2 = 1;
-    if (arg1) {
-      num2 = -1;
-    }
-    return num2;
-  } else if ("horizontal-inverted" === gestureDirection) {
-    let num = -1;
-    if (arg1) {
-      num = 1;
-    }
-    return num;
-  }
-}
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: null };
+const obj2 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.pointerEvents = "box-none";
+obj.container = obj2;
+
+export const styles = StyleSheet.create(obj);

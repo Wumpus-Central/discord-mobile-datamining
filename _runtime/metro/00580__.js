@@ -365,7 +365,13 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: 838861187, type: 2030043573, listener: -1006632606 };
+          obj = {
+            fired: false,
+            wrapFn: "a",
+            target: "_enabledPaymentMethods",
+            type: "palms_up_together_tone1",
+            listener: "writeInt32LE",
+          };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -392,7 +398,13 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: 838861187, type: 2030043573, listener: -1006632606 };
+          obj = {
+            fired: false,
+            wrapFn: "a",
+            target: "_enabledPaymentMethods",
+            type: "palms_up_together_tone1",
+            listener: "writeInt32LE",
+          };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

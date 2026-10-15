@@ -1,13 +1,26 @@
 // _runtime/metro/08057__.js
-import registerAsset from "01132__.js";
+import findOffsets from "../08054_findOffsets.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/auto_moderation",
-  width: 12,
-  height: 12,
-  scales: [2, 3],
-  hash: "78a34aca822219efd275dbb2e470061d",
-  name: "ic_closed_lock",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export default {
+  isAvifFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          parseBoxResult = "avif" === parseBoxResult.majorBrand;
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  },
+  findAvifOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
+  },
+};

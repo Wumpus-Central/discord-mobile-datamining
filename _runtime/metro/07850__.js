@@ -1,22 +1,7 @@
 // _runtime/metro/07850__.js
-import _mod7835 from "07835__.js";
+import 00065__ from "00065__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let c2 = 0;
-let c3 = "<?xpacket begin";
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeMerge", validAttributes: { x: true, y: true, width: true, height: true, result: true, nodes: true } };
 
-export default {
-  isXMLFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod7835.getStringFromDataView(dataView, c2, length.length) === length;
-    }
-    return tmp;
-  },
-  findOffsets(byteLength) {
-    const xmpChunks = [];
-    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
-    return { xmpChunks };
-  },
-};
+export default module_65.get("RNSVGFeMerge", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

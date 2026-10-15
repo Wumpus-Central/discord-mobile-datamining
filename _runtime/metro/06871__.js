@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 38,
-  height: 38,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "396b5aebc51e5c35836ff2654ee02ebc",
-  name: "game_icon_placeholder",
+  hash: "14a4fdad987e2761599ba055042fdafa",
+  name: "EyeSlashIcon",
   type: "png",
 });

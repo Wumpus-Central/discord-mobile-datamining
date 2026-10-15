@@ -1,10 +1,13 @@
 // _runtime/metro/14321__.js
-import _mod14335 from "14335__.js";
-import assign from "14322__.js";
-import Deflate from "../14323_Deflate.js";
-import Inflate from "../14331_Inflate.js";
+import registerAsset from "01132__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14335);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 51,
+  height: 36,
+  scales: [2, 3],
+  hash: "6a44051f0a6b82f14b7f681cb1af8576",
+  name: "img_classic_mobile",
+  type: "png",
+});

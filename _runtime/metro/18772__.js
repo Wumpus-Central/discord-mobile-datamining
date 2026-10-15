@@ -1,13 +1,28 @@
 // _runtime/metro/18772__.js
-import registerAsset from "01132__.js";
+import _mod637 from "00637__.js";
+import _mod18773 from "18773__.js";
+import stringToArray from "../18774_stringToArray.js";
+import castSlice from "../18777_castSlice.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "f1884e5c4915e02981c5e72330110f57",
-  name: "CircleErrorIcon",
-  type: "png",
-});
+export default function createCaseFirst(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const str = _mod637(arg0);
+    let tmp3;
+    if (_mod18773(str)) {
+      tmp3 = stringToArray(str);
+    }
+    if (tmp3) {
+      let first = tmp3[0];
+    } else {
+      first = str.charAt(0);
+    }
+    if (tmp3) {
+      let joined = castSlice(tmp3, 1).join("");
+      const obj = castSlice(tmp3, 1);
+    } else {
+      joined = str.slice(1);
+    }
+    return first[closure_0]() + joined;
+  };
+}

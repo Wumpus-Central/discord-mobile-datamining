@@ -1,16 +1,6 @@
 // _runtime/metro/06585__.js
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export const useUnmountFlag = () => {
-  const tmp = React(false);
-  closure_0 = tmp;
-  framebus(() => {
-    closure_0.current = false;
-    return () => {
-      closure_1_0.current = true;
-    };
-  }, []);
-  return tmp;
-};
+export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");

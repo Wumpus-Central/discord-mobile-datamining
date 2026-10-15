@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_automod/images",
-  width: 32,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "c1e94f3a9063956a896dc2a0d96e8ae1",
-  name: "ic_blocked_chat_bubble_icon",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e605304dde4d78202fb1f94d6df2847d",
+  name: "ListNumberedIcon",
   type: "png",
 });

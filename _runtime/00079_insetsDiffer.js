@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "code", left: "guild", right: "size", bottom: "Array" };
+let closure_0 = { top: "ix", left: "isReactCompilerEnabled", right: "section", bottom: "Array" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

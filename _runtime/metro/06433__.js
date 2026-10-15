@@ -1,17 +1,14 @@
 // _runtime/metro/06433__.js
-import ComposedGestureName from "../06398_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06407_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod6422 from "06422__.js";
+import registerAsset from "01132__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
-
-export const useNativeGesture = function useNativeGesture() {
-  let tmp = cResult;
-  if (cResult === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod6422.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation:
+    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_ogrwmflqwrxbxbb3hpokpwnsgq/node_modules/@react-navigation/elements/lib/module/assets",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3, 4],
+  hash: "940453dc5cbfaa96cf907b3aa7791ece",
+  name: "search-icon",
+  type: "png",
+});
