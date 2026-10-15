@@ -116,7 +116,6 @@ obj.PRIVATE = new Set([
   "relationships.write",
   "sdk.social_layer",
   "sdk.social_layer_presence",
-  "vibegrations.projects",
   "voice",
 ]);
 const set1 = new Set([
@@ -150,7 +149,6 @@ const set1 = new Set([
   "relationships.write",
   "sdk.social_layer",
   "sdk.social_layer_presence",
-  "vibegrations.projects",
   "voice",
 ]);
 obj.TEAM_USER = new Set([
@@ -433,7 +431,6 @@ obj.ALL = new Set([
   "rpc.voice.write",
   "sdk.social_layer",
   "sdk.social_layer_presence",
-  "vibegrations.projects",
   "voice",
   "webhook.incoming",
 ]);
@@ -489,7 +486,6 @@ export const OAuth2Scopes = {
   LOBBIES_WRITE: "lobbies.write",
   APPLICATION_IDENTITIES_WRITE: "application_identities.write",
   MANAGED_PLATFORM_APPLICATION_IDENTITIES_WRITE: "managed_platform.application_identities.write",
-  VIBEGRATIONS_PROJECTS: "vibegrations.projects",
   ORBS_ARCADE_PLAY: "orbs_arcade.play",
   PERSONAL_RELATIONSHIPS_READ: "personal.relationships.read",
   PERSONAL_DM_CHANNELS_READ: "personal.dm_channels.read",

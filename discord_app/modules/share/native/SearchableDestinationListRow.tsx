@@ -41,13 +41,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[5] === tmp6) {
             let tmp10 = cResult[6];
           }
-          if (tmp(8705).AutocompleterResultTypes.USER === type) {
+          if (tmp(8917).AutocompleterResultTypes.USER === type) {
             if (cResult[7] !== record.id) {
-              const relationshipType = tmp(7356).getRelationshipType(record.id);
+              const relationshipType = tmp(7566).getRelationshipType(record.id);
               cResult[7] = record.id;
               cResult[8] = relationshipType;
               let tmp30 = relationshipType;
-              const tmpResult = tmp(7356);
+              const tmpResult = tmp(7566);
             } else {
               tmp30 = cResult[8];
             }
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[12] = tmp30;
             cResult[13] = tmp39;
             tmp32 = tmp39;
-          } else if (tmp(8705).AutocompleterResultTypes.GROUP_DM === type) {
+          } else if (tmp(8917).AutocompleterResultTypes.GROUP_DM === type) {
             if (cResult[14] === tmp10) {
               if (cResult[15] === tmp5) {
                 if (cResult[16] === record) {
@@ -93,14 +93,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[17] = tmp29;
             tmp22 = tmp29;
           } else {
-            if (tmp(8705).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-              if (tmp(8705).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+            if (tmp(8917).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+              if (tmp(8917).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
                 if (cResult[22] !== type) {
-                  const assertNeverResult = tmp(1388).assertNever(type);
+                  const assertNeverResult = tmp(1386).assertNever(type);
                   cResult[22] = type;
                   cResult[23] = assertNeverResult;
                   let tmp12 = assertNeverResult;
-                  const tmpResult2 = tmp(1388);
+                  const tmpResult2 = tmp(1386);
                 } else {
                   tmp12 = cResult[23];
                 }
@@ -150,31 +150,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != onPressDestination) {
           const fn = () => onPressDestination(formatResults.getDestinationIdFromResult(result));
         }
-        if (tmp2(8705).AutocompleterResultTypes.USER === type) {
+        if (tmp2(8917).AutocompleterResultTypes.USER === type) {
           const obj = {};
           const merged1 = Object.assign(merged);
           obj.user = record;
-          const tmp18 = onPressDestination(10238);
-          obj.type = tmp2(7356).getRelationshipType(record.id);
+          const tmp18 = onPressDestination(10451);
+          obj.type = tmp2(7566).getRelationshipType(record.id);
           obj.onPress = fn;
           return <tmp18 />;
-        } else if (tmp2(8705).AutocompleterResultTypes.GROUP_DM === type) {
+        } else if (tmp2(8917).AutocompleterResultTypes.GROUP_DM === type) {
           const obj2 = {};
           const merged2 = Object.assign(merged);
           obj2.channel = record;
           obj2.onPress = fn;
-          return jsx(onPressDestination(10289), {});
+          return jsx(onPressDestination(10512), {});
         } else {
-          if (tmp2(8705).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-            if (tmp2(8705).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-              return tmp2(1388).assertNever(type);
+          if (tmp2(8917).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+            if (tmp2(8917).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+              return tmp2(1386).assertNever(type);
             }
           }
           const obj3 = {};
           const merged3 = Object.assign(merged);
           obj3.channel = record;
           obj3.onPress = fn;
-          return jsx(onPressDestination(10292), {});
+          return jsx(onPressDestination(10515), {});
         }
       }
     };

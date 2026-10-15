@@ -288,7 +288,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
           closure_132_5 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -378,7 +378,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
                       let tmp43 = closure_2_18(favoriteChannels.favoriteChannels);
                       let tmp46 = closure_2_19(favoriteChannels.favoriteChannels, tmp7);
                       flag = true;
-                      let obj3 = closure_0(10333);
+                      let obj3 = closure_0(10556);
                       let type;
                       if (tmp31 != null) {
                         type = tmp31.type;
@@ -402,7 +402,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
                     if (flag) {
                       let BoolValue = closure_0(1240).BoolValue;
                       favoriteChannels.guildVisible = BoolValue.create({ value: true });
-                      let obj4 = closure_0(10333);
+                      let obj4 = closure_0(10556);
                       let str = "auto";
                       let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                     }
@@ -448,7 +448,7 @@ let closure_29 = async function _addFavoriteChannels() {
   await "IconComponent";
   closure_2 = tmp2;
   ({ channelIds: closure_130_0, parentId: closure_130_1, source: closure_130_2 } = closure_0);
-  return "Set";
+  return "test";
 };
 function removeFavoriteChannel(id, arg1) {
   _require = id;
@@ -562,7 +562,7 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                   const obj2 = { limit: tmp5, canUpsell: false };
                   let tmp6 = obj2;
                 } else {
-                  const favoritesAccess = closure_0(10323).getFavoritesAccess();
+                  const favoritesAccess = closure_0(10546).getFavoritesAccess();
                   const favoriteLimit = favoritesAccess.favoriteLimit;
                   tmp6 = null;
                   if (favoriteLimit > 0) {
@@ -581,12 +581,12 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                       tmp4Result = closure_1(12);
                     }
                   }
-                  const tmpResult = closure_0(10323);
+                  const tmpResult = closure_0(10546);
                 }
                 if (null != tmp6) {
                   const limit = tmp6.limit;
                   if (tmp6.canUpsell) {
-                    closure_1(10326)(limit);
+                    closure_1(10549)(limit);
                   } else {
                     const obj4 = { title: null, body: null };
                     const intl = closure_0(1126).intl;
@@ -594,8 +594,8 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                     const intl2 = closure_0(1126).intl;
                     const obj5 = { count: limit };
                     obj4.body = intl2.formatToPlainString(closure_0(1126).t.JaIyFi, obj5);
-                    closure_1(5304).show(obj4);
-                    const tmp4Result2 = closure_1(5304);
+                    closure_1(5359).show(obj4);
+                    const tmp4Result2 = closure_1(5359);
                   }
                   return false;
                 } else {
@@ -641,7 +641,7 @@ let closure_32 = async function _addFavoriteChannelsToCategory() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ channelIds: closure_129_0, categoryName: closure_129_1, source: closure_129_2 } = closure_0);
-  return "Set";
+  return "test";
 };
 let closure_33 = async function _autoAddJoinedThreadToFavorites(arg0) {
   if (c1 === 2) {
@@ -867,10 +867,10 @@ export const setFavoritesAutoAddJoinedThreads = function setFavoritesAutoAddJoin
               const intl2 = util.intl;
               const obj2 = { count: tmp11.limit };
               obj.body = intl2.formatToPlainString(util.t.JaIyFi, obj2);
-              tmp7(5304).show(obj);
-              const tmp7Result2 = tmp7(5304);
+              tmp7(5359).show(obj);
+              const tmp7Result2 = tmp7(5359);
             }
-            str = tmp7(10326)(favoritesAccess);
+            str = tmp7(10549)(favoritesAccess);
             obj5 = _modDef12;
           }
         }

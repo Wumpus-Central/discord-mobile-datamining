@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06339_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06555_LegacyBaseButton.js";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils.tsx";
@@ -64,7 +64,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   carousel: { marginHorizontal: -nativeDefault.space.PX_16 },
   carouselContent: null,
@@ -357,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       let obj = onRatingPress(576);
-      const nativeGesture = onRatingPress(6339).useNativeGesture(first);
+      const nativeGesture = onRatingPress(6555).useNativeGesture(first);
       dependencyMap = length.useRef(0);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function h() {
@@ -626,7 +626,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = R;
       tmp11 = R;
       tmp7 = stats.length <= 2;
-      const tmpResult = onRatingPress(6339);
+      const tmpResult = onRatingPress(6555);
     }
   : function AppStoreOverlayStatsCarousel(arg0) {
       ({ stats, onRatingPress: require, onCarouselScroll } = arg0);

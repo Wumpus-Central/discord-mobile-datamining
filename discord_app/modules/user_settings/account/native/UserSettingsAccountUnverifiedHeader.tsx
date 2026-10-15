@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const initialize = PressableOpacity(504);
-const Text_Text = PressableOpacity(5092);
-const Pressables = PressableOpacity(6189);
+const Text_Text = PressableOpacity(5147);
+const Pressables = PressableOpacity(6405);
 require = fn;
 function handleOpenEmailVerification() {
   EmailVerificationModalActionCreatorsDefault.open();
@@ -32,7 +32,7 @@ function getBannerText(stateFromStores) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   accountWarning: {
     backgroundColor: nativeDefault.unsafe_rawColors.RED_400,

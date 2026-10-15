@@ -1,125 +1,104 @@
 // discord_app/modules/conjure/chat/conjureAttachmentRequests.tsx
-import ConjureWorkerTickets from "../connection/ConjureWorkerTickets.tsx";
+import conjureWorkerFetch from "../connection/conjureWorkerFetch.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
 let closure_3 = async function _importAttachmentFromUrl(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
     } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp2;
+            closure_130_0 = undefined;
+            closure_130_1 = undefined;
+            const obj4 = { method: "POST", json: null };
+            const obj5 = { url };
+            obj4.json = obj5;
+            c3 = 1;
+            c4 = 1;
+            const obj6 = {
+              value: conjureWorkerFetch.fetchConjureWorker(closure_0, attachmentPath("from-url"), obj4),
+              done: false,
+            };
+            return obj6;
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            closure_130_0 = value;
+            const data = closure_130_0.json();
+            c3 = 2;
+            c4 = 1;
+            const obj9 = { value: data.catch(() => null), done: false };
+            return obj9;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_0 = closure_1;
-          closure_130_1 = undefined;
-          let ticket;
-          let baseUrl;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
-          c4 = 1;
-          c5 = 1;
-          const obj4 = { value: ConjureWorkerTickets.mintWorkerTicket(closure_0), done: false };
-          return obj4;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          closure_130_1 = value;
-          ticket = closure_130_1.ticket;
-          baseUrl = closure_130_1.baseUrl;
-          const _fetch = fetch;
-          const _URLSearchParams = URLSearchParams;
-          const obj6 = { ticket };
-          const uRLSearchParams = new URLSearchParams(obj6);
-          const _HermesInternal = HermesInternal;
-          const request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
-          const _JSON = JSON;
-          const obj8 = { url: closure_130_0 };
-          const combined = "" + closure_131_10(baseUrl, "from-url") + "?" + uRLSearchParams;
-          request.body = JSON.stringify(obj8);
-          c4 = 2;
-          c5 = 1;
-          const obj9 = { value: fetch(combined, request), done: false };
-          return obj9;
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
+          c4 = 3;
           const obj10 = { value, done: true };
           return obj10;
         } else {
-          closure_130_4 = value;
-          const data = closure_130_4.json();
-          c4 = 3;
-          c5 = 1;
-          const obj11 = { value: data.catch(() => null), done: false };
-          return obj11;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj12 = { value, done: true };
-        return obj12;
-      } else {
-        closure_130_5 = value;
-        if (closure_130_4.ok) {
-          if (null != closure_130_5) {
-            if ("id" in closure_130_5) {
-              c5 = 3;
-              const obj = { value: closure_130_5, done: true };
-              return obj;
+          closure_130_1 = value;
+          if (closure_130_0.ok) {
+            if (null != closure_130_1) {
+              if ("id" in closure_130_1) {
+                c4 = 3;
+                const obj = { value: closure_130_1, done: true };
+                return obj;
+              }
             }
           }
-        }
-        let str3 = "";
-        if (null != closure_130_5) {
-          str3 = "";
-          if ("error" in closure_130_5) {
+          let str3 = "";
+          if (null != closure_130_1) {
             str3 = "";
-            if (typeof closure_130_5.error === "string") {
-              str3 = closure_130_5.error;
+            if ("error" in closure_130_1) {
+              str3 = "";
+              if (typeof closure_130_1.error === "string") {
+                str3 = closure_130_1.error;
+              }
             }
           }
+          const error = new Error(str3);
+          throw error;
         }
-        const error = new Error(str3);
-        throw error;
+      } catch (tmp27) {
+        c4 = tmp;
+        throw tmp27;
       }
-    } catch (tmp31) {
-      c5 = tmp;
-      throw tmp31;
     }
-  }
+  })();
 };
 function uploadAttachmentBytes() {
   const self = this;
@@ -131,125 +110,92 @@ function uploadAttachmentBytes() {
   }
   return applyArgumentsResult;
 }
-let closure_5 = async function _uploadAttachmentBytes() {
-  closure_4 = tmp2;
-  closure_132_0 = closure_1;
-  closure_132_1 = closure_2;
-  closure_132_2 = closure_3;
-  await ConjureWorkerTickets.mintWorkerTicket(closure_0);
-  closure_132_3 = value;
-  const ticket = closure_132_3.ticket;
-  const baseUrl = closure_132_3.baseUrl;
-  const _URLSearchParams = URLSearchParams;
-  const uRLSearchParams = new URLSearchParams({ ticket, name: closure_132_1 });
-  closure_132_6 = uRLSearchParams;
-  const _HermesInternal2 = HermesInternal;
-  let str3 = "application/octet-stream";
-  const combined = "" + closure_133_10(baseUrl) + "?" + closure_132_6;
-  if ("" !== closure_132_2) {
-    str3 = closure_132_2;
-  }
-  const request = { method: "POST", headers: { "content-type": str3 }, body: closure_132_0 };
-  await fetch(combined, request);
-  closure_132_7 = value;
-  if (!closure_132_7.ok) {
-    const _Error = Error;
-    const _HermesInternal = HermesInternal;
-    const error = new Error("attachment upload failed (" + closure_132_7.status + ")");
-    throw error;
-  }
-  await closure_132_7.json();
-  return value;
+let closure_5 = async function _uploadAttachmentBytes(arg0) {
+  closure_0 = arg0;
+  closure_3 = arg3;
+  c5 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    closure_4 = tmp2;
+    const request = { method: "POST", query: { name }, headers: null, body: null };
+    let str3 = "application/octet-stream";
+    if ("" !== closure_3) {
+      str3 = closure_3;
+    }
+    request.headers = { "content-type": str3 };
+    request.body = body;
+    await conjureWorkerFetch.fetchConjureWorker(closure_0, attachmentPath(), request);
+    closure_132_0 = value;
+    if (!closure_132_0.ok) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error("attachment upload failed (" + closure_132_0.status + ")");
+      throw error;
+    }
+    await closure_132_0.json();
+    return value;
+  })();
 };
 let closure_6 = async function _deleteStagedAttachment(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
+  if (c4 === 2) {
+    c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp4 === 3) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "IconComponent", done: null };
     }
   } else {
     try {
-      c5 = 2;
-      if (0 === c4) {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          c5 = 3;
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          closure_3 = tmp5;
           closure_2 = tmp2;
-          closure_130_0 = closure_1;
-          closure_130_1 = undefined;
-          let ticket;
-          let baseUrl;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
+          closure_130_0 = undefined;
+          c3 = 1;
           c4 = 1;
-          c5 = 1;
-          const obj5 = { value: ConjureWorkerTickets.mintWorkerTicket(closure_0), done: false };
-          return obj5;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_130_1 = value;
-          ticket = closure_130_1.ticket;
-          baseUrl = closure_130_1.baseUrl;
-          const _URLSearchParams = URLSearchParams;
-          const obj7 = { ticket };
-          const uRLSearchParams = new URLSearchParams(obj7);
-          closure_130_4 = uRLSearchParams;
-          const _fetch = fetch;
-          const _HermesInternal2 = HermesInternal;
-          c4 = 2;
-          c5 = 1;
-          const obj8 = {
-            value: fetch("" + closure_131_10(baseUrl, closure_130_0) + "?" + closure_130_4, {
+          const obj5 = {
+            value: conjureWorkerFetch.fetchConjureWorker(closure_0, attachmentPath(closure_1), {
               method: "DELETE",
               keepalive: true,
             }),
             done: false,
           };
-          return obj8;
+          return obj5;
         }
       } else if (arg0 === 1) {
-        c5 = 3;
+        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c5 = 3;
+        c4 = 3;
         const obj = { value, done: true };
         return obj;
       } else {
-        closure_130_5 = value;
-        if (closure_130_5.ok) {
-          c5 = 3;
+        closure_130_0 = value;
+        if (closure_130_0.ok) {
+          c4 = 3;
           return { value: "IconComponent", done: null };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const error = new Error("attachment cleanup failed (" + closure_130_5.status + ")");
+          const error = new Error("attachment cleanup failed (" + closure_130_0.status + ")");
           throw error;
         }
       }
-    } catch (tmp19) {
-      c5 = tmp;
-      throw tmp19;
+    } catch (tmp20) {
+      c4 = tmp;
+      throw tmp20;
     }
   }
 };
@@ -308,7 +254,7 @@ let closure_8 = async function _getAttachmentUrl(arg0) {
           closure_131_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -344,12 +290,12 @@ let closure_8 = async function _getAttachmentUrl(arg0) {
         }
         const _HermesInternal = HermesInternal;
         c6 = 3;
-        const obj = { value: "" + closure_132_10(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
+        const obj = { value: "" + baseUrl + closure_132_10(closure_131_1) + "?" + closure_131_6, done: true };
         return obj;
       }
-    } catch (tmp22) {
+    } catch (tmp23) {
       c6 = tmp;
-      throw tmp22;
+      throw tmp23;
     }
   }
 };
@@ -463,16 +409,14 @@ let closure_9 = async function _isAttachmentAvailable(arg0) {
     }
   }
 };
-function attachmentEndpoint(arg0, arg1) {
-  if (null == arg1) {
-    const _HermesInternal2 = HermesInternal;
-    let combined = "" + arg0 + "/agent/attachments";
-  } else {
+function attachmentPath(arg0) {
+  let str = "/agent/attachments";
+  if (null != arg0) {
     const _encodeURIComponent = encodeURIComponent;
     const _HermesInternal = HermesInternal;
-    combined = "" + arg0 + "/agent/attachments/" + encodeURIComponent(arg1);
+    str = "/agent/attachments/" + encodeURIComponent(arg0);
   }
-  return combined;
+  return str;
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/conjureAttachmentRequests.tsx");

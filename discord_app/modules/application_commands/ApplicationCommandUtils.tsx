@@ -431,8 +431,8 @@ let deserializeResult = BigFlagUtils.deserialize(0);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandUtils.tsx");
 
 export { buildCommand };
-export const buildApplicationCommands = function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
-  return _modDef12.flatMap(uniqByResult, (id) => {
+export const buildApplicationCommands = function buildApplicationCommands(cResult, useKeyedPermissions) {
+  return _modDef12.flatMap(cResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
     const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
     return buildSubCommands(obj);

@@ -162,7 +162,7 @@ let closure_9 = async function _stopLurking() {
     tmp19 = null;
   }
   closure_129_0 = tmp19;
-  return "Set";
+  return "test";
 };
 const Endpoints = fn(1085).Endpoints;
 const size = fn(2);

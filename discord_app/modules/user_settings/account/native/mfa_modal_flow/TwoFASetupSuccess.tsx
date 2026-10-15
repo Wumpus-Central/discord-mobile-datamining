@@ -7,7 +7,7 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod15403 from "../../../../../../_runtime/metro/15403__.js";
+import _mod15699 from "../../../../../../_runtime/metro/15699__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: {
     alignSelf: "stretch",
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           setRegistering = asyncGeneratorStep(async (arg0) => {
             ({ ticket, credential } = closure_0);
             const intl = closure_0(1126).intl;
-            await closure_0(5944).finishRegisterWebAuthnCredential(
+            await closure_0(6155).finishRegisterWebAuthnCredential(
               intl.string(closure_0(1126).t["8H5RmH"]),
               ticket,
               credential,
@@ -109,9 +109,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(15391).close();
+              setError(15687).close();
               c4 = 0;
-              setError(15391);
+              setError(15687);
             }
             return value;
           });
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[2];
       }
       if (cResult[3] !== tmp4.image) {
-        const obj3 = { source: _mod15403, style: tmp4.image };
+        const obj3 = { source: _mod15699, style: tmp4.image };
         const tmp18 = closure_7(FastImageDefault, obj3);
         cResult[3] = tmp4.image;
         cResult[4] = tmp18;
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
                   c5 = 1;
                   c6 = 1;
-                  return { value: "Set", done: true };
+                  return { value: "test", done: true };
                 }
               } else if (1 === tmp8) {
                 if (arg0 === 1) {
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c5 = 3;
                   c6 = 1;
                   const obj5 = {
-                    value: setRegistering(5944).finishRegisterWebAuthnCredential(
+                    value: setRegistering(6155).finishRegisterWebAuthnCredential(
                       intl.string(setRegistering(1126).t["8H5RmH"]),
                       closure_129_0,
                       closure_129_1,
@@ -392,9 +392,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c6 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
-                  setError(15391).close();
+                  setError(15687).close();
                   c4 = 0;
-                  const obj = setError(15391);
+                  const obj = setError(15687);
                 }
                 c4 = 0;
                 c6 = 3;
@@ -432,7 +432,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj3 = { source: null, style: null };
       let obj2 = { style: tmp.flex };
       const tmp4 = _slicedToArray(noop.useState(""), 2);
-      obj3.source = _mod15403;
+      obj3.source = _mod15699;
       obj3.style = tmp.image;
       items[1] = closure_7(FastImageDefault, obj3);
       let obj4 = {

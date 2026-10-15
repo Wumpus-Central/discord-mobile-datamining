@@ -13,7 +13,7 @@ require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const EmojiIntention = fn(1393).EmojiIntention;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
 fn(558);
@@ -179,7 +179,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDoubleTapEmojiDescription() {
       const cResult = c.c(2);
@@ -217,7 +217,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(8000).MobileUserSettings.CHAT,
+  parent: fn(8210).MobileUserSettings.CHAT,
   useTrailing: tmp3,
   onPress: function onPressSetting() {
     let obj2 = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };

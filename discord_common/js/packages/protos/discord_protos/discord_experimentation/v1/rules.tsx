@@ -42,7 +42,7 @@ class Rule$Type extends MessageType {
         return items;
       },
     };
-    items = [, , , , , ,];
+    items = [, , , , ,];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -61,7 +61,6 @@ class Rule$Type extends MessageType {
         return ruleType;
       },
     };
-    items[3] = { no: 4, name: "is_sunset_rule", kind: "scalar", T: 8 };
     obj1 = { no: 5, name: "subtype", kind: "enum", T: null };
     class T {
       constructor() {
@@ -71,9 +70,9 @@ class Rule$Type extends MessageType {
       }
     }
     obj1.T = T;
-    items[4] = obj1;
-    items[5] = { no: 6, name: "hash", kind: "scalar", T: 9 };
-    items[6] = {
+    items[3] = obj1;
+    items[4] = { no: 6, name: "hash", kind: "scalar", T: 9 };
+    items[5] = {
       no: 7,
       name: "title",
       kind: "message",
@@ -87,7 +86,7 @@ class Rule$Type extends MessageType {
 }
 const prototype = Rule$Type.prototype;
 prototype["create"] = function create(arr) {
-  obj = { type: 0, filters: [], isSunsetRule: false, subtype: 0, hash: "" };
+  obj = { type: 0, filters: [], subtype: 0, hash: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -114,8 +113,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
         let arr = filters.push(filterType.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else if (3 === tmp5) {
         obj.override = ruleType.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.override);
-      } else if (4 === tmp5) {
-        obj.isSunsetRule = pos.bool();
       } else if (5 === tmp5) {
         obj.subtype = pos.int32();
       } else if (6 === tmp5) {
@@ -181,21 +178,17 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(type, tag, write
       writeUnknownFields,
     );
   }
-  if (false !== type.isSunsetRule) {
-    tag.tag(4, _mod1210.WireType.Varint).bool(type.isSunsetRule);
-    const tagResult3 = tag.tag(4, _mod1210.WireType.Varint);
-  }
   if (0 !== type.subtype) {
     tag.tag(5, _mod1210.WireType.Varint).int32(type.subtype);
-    const tagResult4 = tag.tag(5, _mod1210.WireType.Varint);
+    const tagResult3 = tag.tag(5, _mod1210.WireType.Varint);
   }
   if ("" !== type.hash) {
     tag.tag(6, _mod1210.WireType.LengthDelimited).string(type.hash);
-    const tagResult5 = tag.tag(6, _mod1210.WireType.LengthDelimited);
+    const tagResult4 = tag.tag(6, _mod1210.WireType.LengthDelimited);
   }
   if (type.title) {
     const StringValue = wrappers.StringValue;
-    const tagResult6 = tag.tag(7, _mod1210.WireType.LengthDelimited);
+    const tagResult5 = tag.tag(7, _mod1210.WireType.LengthDelimited);
     const joined2 = StringValue.internalBinaryWrite(
       type.title,
       tag.tag(7, _mod1210.WireType.LengthDelimited).fork(),
@@ -244,7 +237,6 @@ let items = [
       return ruleType;
     },
   },
-  { no: 4, name: "is_sunset_rule", kind: "scalar", T: 8 },
   {
     no: 5,
     name: "subtype",
@@ -626,7 +618,7 @@ class Filter$Type extends MessageType3 {
 }
 const prototype3 = Filter$Type.prototype;
 prototype3["create"] = function create(arr) {
-  obj = { filter: { oneofKind: "keys" }, negate: false };
+  obj = { filter: { oneofKind: "r" }, negate: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -2082,7 +2074,7 @@ class ClientLocation_Location$Type extends MessageType13 {
 }
 const prototype13 = ClientLocation_Location$Type.prototype;
 prototype13["create"] = function create(arr) {
-  obj = { location: { oneofKind: "keys" } };
+  obj = { location: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {

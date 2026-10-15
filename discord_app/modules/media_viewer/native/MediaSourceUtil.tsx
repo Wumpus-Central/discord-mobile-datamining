@@ -1058,7 +1058,7 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
         }
         return tmp;
       });
-      obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1388).isNotNullish) };
+      obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1386).isNotNullish) };
       return obj2;
     } else if (tmp(1998).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);

@@ -64,8 +64,8 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
 }
 const Constants = fn(1085);
 ({ InputModes: closure_11, AnalyticEvents: closure_12 } = Constants);
-const SoundOutputChannel = fn(5253).SoundOutputChannel;
-const MediaEngineContextTypes = fn(5121).MediaEngineContextTypes;
+const SoundOutputChannel = fn(5308).SoundOutputChannel;
+const MediaEngineContextTypes = fn(5176).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
 let closure_16 = debounceDefault((target_user_id, context, volume) => {
@@ -264,8 +264,8 @@ export default {
     closure_16(userId, DEFAULT, snapVolumeToDefaultResult);
     const obj3 = { type: "AUDIO_SET_LOCAL_VOLUME", context: DEFAULT, userId, volume: snapVolumeToDefaultResult };
   },
-  setSpatialAudioOverrides(overrides) {
-    DispatcherDefault.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_OVERRIDES", overrides });
+  setSpatialAudioOverrides(mergeResult) {
+    DispatcherDefault.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_OVERRIDES", overrides: mergeResult });
   },
   setSpatialAudioEnabled(enabled) {
     DispatcherDefault.dispatch({ type: "AUDIO_SET_SPATIAL_AUDIO_ENABLED", enabled });
@@ -689,7 +689,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(5229)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
+                value: v1(5284)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
                 done: false,
               };
               return obj4;
@@ -781,7 +781,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(5229)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
+                value: v1(5284)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
                 done: false,
               };
               return obj4;

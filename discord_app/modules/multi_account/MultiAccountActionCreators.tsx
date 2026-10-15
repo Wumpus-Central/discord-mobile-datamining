@@ -54,7 +54,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
             closure_130_5 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "test", done: true };
           }
         } else {
           if (1 === tmp7) {

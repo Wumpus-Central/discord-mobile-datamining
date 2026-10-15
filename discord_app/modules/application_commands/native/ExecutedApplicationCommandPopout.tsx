@@ -63,7 +63,7 @@ function getCommandOptionComponents(option) {
             },
             children: null,
           };
-          const items = [closure_1_21, channel(4964).getUserTag(user, { decoration: "never" })];
+          const items = [closure_1_21, channel(5018).getUserTag(user, { decoration: "never" })];
           obj.children = items;
           return closure_1_23(user(1200).LegacyText, obj, "optionValue-" + user.name);
         }
@@ -86,11 +86,11 @@ function getCommandOptionComponents(option) {
           userComponent = null;
           if (null != channel1) {
             let obj = { style: styles.commandOptionMentionText, children: null };
-            const items1 = [closure_19, tmp6(5426).computeChannelName(channel1, UserStore, RelationshipStore)];
+            const items1 = [closure_19, tmp6(5481).computeChannelName(channel1, UserStore, RelationshipStore)];
             obj.children = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = closure_23(tmp6(1200).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(5426);
+            const tmp6Result = tmp6(5481);
           }
         } else {
           function getRoleComponent(role) {
@@ -320,11 +320,11 @@ function getCommandCopyText(item10021, channel, guild, name_localized) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5408).SUB_COMMAND_KEY_SEPARATOR;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5463).SUB_COMMAND_KEY_SEPARATOR;
 const Constants = fn(1085);
 ({ MessageTypes: closure_16, WHITESPACE_RE: closure_17 } = Constants);
 const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
-const ChannelAutocompleteConstants = fn(5409);
+const ChannelAutocompleteConstants = fn(5464);
 ({
   CHANNEL_SENTINEL: closure_19,
   COMMAND_SENTINEL: closure_20,
@@ -332,7 +332,7 @@ const ChannelAutocompleteConstants = fn(5409);
 } = ChannelAutocompleteConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: { paddingVertical: 8, paddingHorizontal: 16, gap: 16 },
   activityIndicator: { padding: 16 },
@@ -1314,7 +1314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores = channelId(504).useStateFromStores(first, tmp7);
         const tmpResult = channelId(504);
-        const analyticsLocations = messageId(6857)(messageId(6884).EXECUTED_COMMAND).analyticsLocations;
+        const analyticsLocations = messageId(7073)(messageId(7098).EXECUTED_COMMAND).analyticsLocations;
         if (cResult[4] === channelId) {
           let interactionData1;
           if (stateFromStores != null) {
@@ -1360,7 +1360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     const obj2 = { value: analyticsLocations, children: tmp34 };
                                     cResult[26] = analyticsLocations;
                                     cResult[27] = tmp34;
-                                    cResult[28] = closure_22(channelId(6857).AnalyticsLocationProvider, obj2);
+                                    cResult[28] = closure_22(channelId(7073).AnalyticsLocationProvider, obj2);
                                     class S {
                                       constructor() {
                                         tmp = closure_2;
@@ -1400,12 +1400,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         return;
                                       }
                                     }
-                                    const tmp39 = closure_22(channelId(6857).AnalyticsLocationProvider, obj2);
+                                    const tmp39 = closure_22(channelId(7073).AnalyticsLocationProvider, obj2);
                                   }
                                   const obj3 = { startExpanded: true, bodyStyles: tmp4.container, children: tmp22 };
                                   cResult[23] = tmp4.container;
                                   cResult[24] = tmp22;
-                                  cResult[25] = closure_22(channelId(6845).BottomSheet, obj3);
+                                  cResult[25] = closure_22(channelId(7061).BottomSheet, obj3);
                                   class S {
                                     constructor() {
                                       tmp = closure_2;
@@ -1442,7 +1442,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       return;
                                     }
                                   }
-                                  const tmp36 = closure_22(channelId(6845).BottomSheet, obj3);
+                                  const tmp36 = closure_22(channelId(7061).BottomSheet, obj3);
                                 }
                               }
                             }
@@ -1665,7 +1665,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = messageId;
         cResult[7] = S;
         tmp13 = S;
-        const tmp10 = messageId(6857);
+        const tmp10 = messageId(7073);
       }
       const fn = function l() {
         return MessageStore.getMessage(channelId, messageId);
@@ -1717,7 +1717,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
         }
       }, items1);
-      const obj2 = { value: messageId(6857)(messageId(6884).EXECUTED_COMMAND).analyticsLocations, children: null };
+      const obj2 = { value: messageId(7073)(messageId(7098).EXECUTED_COMMAND).analyticsLocations, children: null };
       const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
       let interactionData1;
       if (stateFromStores != null) {
@@ -1747,6 +1747,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9Result = closure_22(closure_5, obj7);
       }
       obj3.children = tmp9Result;
-      obj2.children = closure_22(channelId(6845).BottomSheet, obj3);
-      return closure_22(channelId(6857).AnalyticsLocationProvider, obj2);
+      obj2.children = closure_22(channelId(7061).BottomSheet, obj3);
+      return closure_22(channelId(7073).AnalyticsLocationProvider, obj2);
     };

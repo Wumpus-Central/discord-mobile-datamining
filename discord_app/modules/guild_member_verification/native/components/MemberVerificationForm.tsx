@@ -10,11 +10,11 @@ const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let closure_8 = fn(6155).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6371).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1085).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_12 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 },
   submitButton: { marginTop: 12, marginBottom: 12 },
@@ -35,7 +35,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === phone) {
           let tmp6 = cResult[2];
         }
-        return initialVerification(6174)(tmp6);
+        return initialVerification(6390)(tmp6);
       }
       cResult[0] = id.verificationLevel;
       let phone1;
@@ -407,7 +407,7 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { text: null, variant: "critical" };
                   const intl = closure_1_0(1126).intl;
                   obj2.text = intl.string(closure_1_0(1126).t.StC497);
-                  closure_1_1(4811).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
+                  closure_1_1(4865).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
                 return { value: "IconComponent", done: null };

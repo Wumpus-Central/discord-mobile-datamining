@@ -11,18 +11,18 @@ import SlayerStorefrontItemCardDefault from "../../modules/slayer_storefront/nat
 import GiftCodeActionCreatorsDefault from "../../actions/GiftCodeActionCreators.tsx";
 import SubscriptionUtils from "../../utils/SubscriptionUtils.tsx";
 import ChevronSmallDownIcon from "../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
-import _modDef13264 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import _modDef13871 from "../../../_runtime/metro/13871__.js";
-import _modDef13872 from "../../../_runtime/metro/13872__.js";
-import _modDef13873 from "../../../_runtime/metro/13873__.js";
-import _modDef13874 from "../../../_runtime/metro/13874__.js";
-import _modDef13875 from "../../../_runtime/metro/13875__.js";
-import _modDef13876 from "../../../_runtime/metro/13876__.js";
-import _modDef13877 from "../../../_runtime/metro/13877__.js";
-import _modDef13878 from "../../../_runtime/metro/13878__.js";
-import _modDef13879 from "../../../_runtime/metro/13879__.js";
-import _modDef13882 from "../../../_runtime/metro/13882__.js";
-import _modDef13883 from "../../../_runtime/metro/13883__.js";
+import _modDef13560 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef14167 from "../../../_runtime/metro/14167__.js";
+import _modDef14168 from "../../../_runtime/metro/14168__.js";
+import _modDef14169 from "../../../_runtime/metro/14169__.js";
+import _modDef14170 from "../../../_runtime/metro/14170__.js";
+import _modDef14171 from "../../../_runtime/metro/14171__.js";
+import _modDef14172 from "../../../_runtime/metro/14172__.js";
+import _modDef14173 from "../../../_runtime/metro/14173__.js";
+import _modDef14174 from "../../../_runtime/metro/14174__.js";
+import _modDef14175 from "../../../_runtime/metro/14175__.js";
+import _modDef14178 from "../../../_runtime/metro/14178__.js";
+import _modDef14179 from "../../../_runtime/metro/14179__.js";
 import GiftCodeRowDefault from "GiftCodeRow.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../modules/applications/ApplicationStore.tsx";
@@ -47,7 +47,7 @@ const PremiumConstants = fn(1392);
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   giftGroupCard: { overflow: "hidden", marginTop: 8 },
   giftGroupCardRefresh: {
@@ -261,35 +261,35 @@ prototype["renderHeader"] = function renderHeader(source, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return _modDef13871;
+    return _modDef14167;
   } else if (constants2.CAKE === giftStyle) {
-    return _modDef13873;
+    return _modDef14169;
   } else if (constants2.CHEST === giftStyle) {
-    return _modDef13874;
+    return _modDef14170;
   } else if (constants2.COFFEE === giftStyle) {
-    return _modDef13872;
+    return _modDef14168;
   } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
-    return _modDef13875;
+    return _modDef14171;
   } else if (constants2.SEASONAL_CAKE === giftStyle) {
-    return _modDef13876;
+    return _modDef14172;
   } else if (constants2.SEASONAL_CHEST === giftStyle) {
-    return _modDef13877;
+    return _modDef14173;
   } else if (constants2.SEASONAL_COFFEE === giftStyle) {
-    return _modDef13878;
+    return _modDef14174;
   } else if (constants2.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef13264 };
+    const obj = { uri: _modDef13560 };
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return _modDef13879;
+    return _modDef14175;
   } else if (TIER_0.TIER_1 === id) {
-    return _modDef13882;
+    return _modDef14178;
   } else {
     if (TIER_0.TIER_2 !== id) {
       if (TIER_0.LEGACY !== id) {
         return null;
       }
     }
-    return _modDef13883;
+    return _modDef14179;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {
@@ -364,7 +364,7 @@ prototype["render"] = function render() {
     closure_14(closure_4, obj4);
   }
 };
-EntitlementGiftGroupCard.contextType = fn(4829).ThemeContext;
+EntitlementGiftGroupCard.contextType = fn(4883).ThemeContext;
 let items = [AuthenticationStore, SKUStore, ApplicationStore, GiftCodeStore, SubscriptionPlanStore];
 let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const size = fn(2);

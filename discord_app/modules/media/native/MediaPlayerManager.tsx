@@ -33,18 +33,18 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
   closure_0 = arg0;
   const obj = {
     activeMediaPlayerSource: "IconComponent",
-    mediaSourceMessage: "Symbol",
-    canAccessMedia: "emoji",
+    mediaSourceMessage: "Set",
+    canAccessMedia: "done",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
-    rate: "Set",
-    showPip: "DEVELOPER_OPTIONS_SET_ROUTING_KEY",
+    rate: "test",
+    showPip: "validate",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: null
+    currentlyDisplayedChannelId: 12
   };
   return obj;
 });
@@ -284,7 +284,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "emoji", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "done", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/conjurePlanCommandText.tsx
 import c from "../../../../_runtime/00576_c.js";
-import escapeRegExpDefault from "../../../../_runtime/04961_escapeRegExp.js";
+import escapeRegExpDefault from "../../../../_runtime/05015_escapeRegExp.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
-import _modDef3184 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3186 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
@@ -21,7 +21,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 const require = globalThis.__r;
 
-const useShouldShowInitialGoogleWalletBanner = hyh4ls(15378);
+const useShouldShowInitialGoogleWalletBanner = hyh4ls(15674);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -34,7 +34,7 @@ function handleManualReviewClick() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(7519).AgeCheckStatus;
+const AgeCheckStatus = fn(7729).AgeCheckStatus;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -150,7 +150,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             );
           },
         };
-        const formatResult = intl.format(_modDef3184.vPoM8y, obj2);
+        const formatResult = intl.format(_modDef3186.vPoM8y, obj2);
         cResult[0] = tmp4;
         cResult[1] = formatResult;
         let tmp5 = formatResult;
@@ -169,7 +169,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp5) {
         const obj4 = { type: "critical", message: tmp5, role: "alert", action: tmp8 };
-        const tmp12 = closure_12(tmp(7574).InlineNotice, obj4);
+        const tmp12 = closure_12(tmp(7784).InlineNotice, obj4);
         cResult[3] = tmp5;
         cResult[4] = tmp12;
         let tmp10 = tmp12;
@@ -182,7 +182,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       _require = closure_22();
       const obj = { type: "critical", message: null, role: "alert", action: null };
       const intl = require("util").intl;
-      obj.message = intl.format(_modDef3184.vPoM8y, {
+      obj.message = intl.format(_modDef3186.vPoM8y, {
         manualReviewHook(children, arg1) {
           return __initData(
             Text_Text.Text,
@@ -478,7 +478,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj7 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -519,7 +519,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15380, dependencyMap.paths),
+          asyncRequireImpl(15676, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

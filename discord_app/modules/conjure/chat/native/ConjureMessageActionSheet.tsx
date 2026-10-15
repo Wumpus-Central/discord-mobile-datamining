@@ -30,7 +30,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           const intl = util.intl;
           obj4.text = intl.string(util.t.mGZ66D);
           obj4.icon = CopyIcon.CopyIcon;
-          ToastActionCreatorsDefault.open("VIBEGRATIONS_MESSAGE_COPIED", obj4);
+          ToastActionCreatorsDefault.open("CONJURE_MESSAGE_COPIED", obj4);
         };
         cResult[0] = content;
         cResult[1] = fn;
@@ -39,7 +39,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] !== userId) {
-        class R {
+        class C {
           constructor() {
             if (null != userId) {
               tmp2 = closure_1;
@@ -52,9 +52,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[2] = userId;
-        cResult[3] = R;
+        cResult[3] = C;
       } else {
-        class R {
+        class C {
           constructor() {
             if (null != userId) {
               tmp2 = closure_1;
@@ -68,7 +68,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[4] !== onQueuedAction) {
-        class R {
+        class C {
           constructor() {
             if (null != userId) {
               tmp2 = closure_1;
@@ -83,7 +83,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = onQueuedAction;
         cResult[5] = tmp7;
       } else {
-        class R {
+        class C {
           constructor() {
             if (null != userId) {
               tmp2 = closure_1;
@@ -168,7 +168,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          if (cResult[16] === R) {
+          if (cResult[16] === C) {
             class P {
               constructor() {
                 obj = closure_1(closure_2[3]);
@@ -289,10 +289,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             obj8.label = intl3.string(tmp(tmp2[8]).t.iXAna6);
             const obj9 = { IconComponent: tmp(tmp2[14]).UserIcon };
             obj8.icon = onViewTrace(tmp(tmp2[10]).ActionSheetRow.Icon, obj9);
-            obj8.onPress = R;
+            obj8.onPress = C;
             tmp19 = onViewTrace(tmp(tmp2[10]).ActionSheetRow, obj8);
           }
-          cResult[16] = R;
+          cResult[16] = C;
           cResult[17] = userId;
           cResult[18] = tmp19;
         }
@@ -374,7 +374,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         obj4.text = intl.string(util.t.mGZ66D);
         obj4.icon = CopyIcon.CopyIcon;
-        ToastActionCreatorsDefault.open("VIBEGRATIONS_MESSAGE_COPIED", obj4);
+        ToastActionCreatorsDefault.open("CONJURE_MESSAGE_COPIED", obj4);
       }, items);
       const items2 = [onRestoreVersion];
       const callback1 = onRestoreVersion.useCallback(() => {

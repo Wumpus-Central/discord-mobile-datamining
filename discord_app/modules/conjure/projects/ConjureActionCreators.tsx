@@ -560,16 +560,16 @@ let closure_28 = async function _createProject(arg0) {
             closure_2 = tmp7;
             let body;
             flags = flags.flags;
-            PUBLIC = flags;
+            GUILD_COLLABORATION = flags;
             if (flags == null) {
-              PUBLIC = ConjureProjectTypes.ConjureProjectFlags.PUBLIC;
+              GUILD_COLLABORATION = ConjureProjectTypes.ConjureProjectFlags.GUILD_COLLABORATION;
             }
             c5 = 1;
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.CONJURE_PROJECTS, body: null, rejectWithError: false };
             const obj4 = {};
             const merged = Object.assign(tmp51);
-            obj4.flags = PUBLIC;
+            obj4.flags = GUILD_COLLABORATION;
             request.body = obj4;
             c6 = 2;
             c7 = 1;
@@ -831,7 +831,7 @@ let closure_34 = async function _deleteProject() {
   })();
 };
 const Endpoints = fn(1085).Endpoints;
-const ReadStateTypes = fn(5972).ReadStateTypes;
+const ReadStateTypes = fn(6183).ReadStateTypes;
 let c9 = null;
 let c10 = null;
 let c11 = false;

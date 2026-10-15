@@ -7,9 +7,9 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05396_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05451_LinearGradient.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef15694 from "../../../../_runtime/metro/15694__.js";
+import _modDef15990 from "../../../../_runtime/metro/15990__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: { flex: 1 },
   emptyStateContainer: { justifyContent: "center", alignItems: "center", flex: 1 },
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (!isChatLockedOpen) {
                     const obj5 = { children: null };
                     const obj6 = { style: tmp8.emptyImage, children: null };
-                    const obj7 = { style: tmp8.backgroundImage, source: _modDef15694, resizeMode: "cover" };
+                    const obj7 = { style: tmp8.backgroundImage, source: _modDef15990, resizeMode: "cover" };
                     obj6.children = hasOwnProperty(FastImageDefault, obj7);
                     const items1 = [hasOwnProperty(React3, obj6)];
                     const obj8 = { style: tmp8.gradient, end: null, start: null, colors: null };
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!useChatLayoutDefault().isChatLockedOpen) {
         const obj10 = { children: null };
         const obj11 = { style: tmp5.emptyImage, children: null };
-        const obj12 = { style: tmp5.backgroundImage, source: _modDef15694, resizeMode: "cover" };
+        const obj12 = { style: tmp5.backgroundImage, source: _modDef15990, resizeMode: "cover" };
         obj11.children = hasOwnProperty(FastImageDefault, obj12);
         const items2 = [hasOwnProperty(React3, obj11)];
         const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

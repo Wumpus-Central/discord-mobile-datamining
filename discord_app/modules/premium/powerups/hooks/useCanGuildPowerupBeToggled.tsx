@@ -6,7 +6,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(5010).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(5064).PowerupActiveStatusType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");

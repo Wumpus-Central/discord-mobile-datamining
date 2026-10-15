@@ -6,14 +6,14 @@ import getSoundboardEmojiUrlDefault from "../../../../../soundboard/native/utils
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const util = BottomSheet(1126);
-const Text_Text = BottomSheet(5092);
-const getSoundmojiASTFromString = BottomSheet(5432);
-const Sheet_BottomSheet = BottomSheet(6845);
+const Text_Text = BottomSheet(5147);
+const getSoundmojiASTFromString = BottomSheet(5487);
+const Sheet_BottomSheet = BottomSheet(7061);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 },
   soundmojiContainer: { flexDirection: "row", alignItems: "center" },

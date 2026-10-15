@@ -640,7 +640,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         gifAutoPlay = false;
       }
       ({ textColor, gradientStyles, gradientColors } = arg0);
-      const tmp = gifAutoPlay(5033)();
+      const tmp = gifAutoPlay(5087)();
       let obj = createStyles;
       dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT })(tmp);
       const obj2 = { seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT };
@@ -674,7 +674,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return obj;
       }, items);
-      return closure_8(gifAutoPlay(9383), {
+      return closure_8(gifAutoPlay(9594), {
         pointerEvents: "none",
         horizontalOffset: 0,
         modifyRow(message) {

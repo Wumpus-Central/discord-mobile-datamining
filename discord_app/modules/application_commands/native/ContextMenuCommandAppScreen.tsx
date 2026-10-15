@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { list: { marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -4,7 +4,7 @@ import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 import SortedVoiceStateStore from "../stores/views/SortedVoiceStateStore.tsx";
 
 require = fn;
-const SpeakingFlags = fn(5121).SpeakingFlags;
+const SpeakingFlags = fn(5176).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {

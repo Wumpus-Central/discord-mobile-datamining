@@ -10,18 +10,18 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isProfileFrameRecord = fn(7277).isProfileFrameRecord;
-let closure_6 = fn(8355).PROFILE_FRAME_ASPECT_RATIO;
+const isProfileFrameRecord = fn(7487).isProfileFrameRecord;
+let closure_6 = fn(8566).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(13848).GUTTER_SIZE,
+    paddingHorizontal: fn(14144).GUTTER_SIZE,
   },
   rowSpacer: null,
   previewContainer: null,
@@ -30,9 +30,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(13848).GUTTER_SIZE,
+  paddingHorizontal: fn(14144).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(13848).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14144).GUTTER_SIZE };
 obj.previewContainer = {
   width: "100%",
   height: "100%",

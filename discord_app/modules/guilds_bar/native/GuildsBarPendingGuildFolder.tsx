@@ -187,9 +187,9 @@ export default noop.memo(
     : function GuildsBarPendingGuildFolder(id) {
         id = id.id;
         ({ expanded, childNodes } = id);
-        let obj = id(17092);
+        let obj = id(17332);
         importDefault = usePendingFolderGuildIdsDefault();
-        const guildsBarAnimatedWrapperStyles = id(17092).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = id(17332).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: false,
         });
@@ -221,13 +221,13 @@ export default noop.memo(
         ({ accessibilityActions, onAccessibilityAction } = memo);
         const obj2 = id(504);
         const items2 = [id];
-        const sharedValue = id(4852).useSharedValue("" + id);
+        const sharedValue = id(4906).useSharedValue("" + id);
         const memo1 = noop.useMemo(
           () => ({
             onPress() {
-              const result = id(5061).triggerHapticFeedback(id(5061).HapticFeedbackTypes.IMPACT_LIGHT);
-              const obj = id(5061);
-              const result1 = closure_1(6104).toggleGuildFolderExpand(closure_1_0);
+              const result = id(5116).triggerHapticFeedback(id(5116).HapticFeedbackTypes.IMPACT_LIGHT);
+              const obj = id(5116);
+              const result1 = closure_1(6320).toggleGuildFolderExpand(closure_1_0);
             },
           }),
           items2,
@@ -244,12 +244,12 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "row",
-          config: "flex-end",
-          externalChildren: "center",
+          preventClipping: "Comoros",
+          config: "KM",
+          externalChildren: "+269",
           children: null,
         };
-        const obj3 = id(4852);
+        const obj3 = id(4906);
         obj4.id = "" + id;
         obj4.accessibilityActions = accessibilityActions;
         obj4.onAccessibilityAction = onAccessibilityAction;
@@ -262,10 +262,10 @@ export default noop.memo(
         let tmp8Result = null;
         if (expanded) {
           const obj5 = { folderId: id, totalItems: childNodes.length };
-          tmp8Result = jsx(tmp(17091).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+          tmp8Result = jsx(tmp(17331).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
         }
         obj4.externalChildren = tmp8Result;
-        obj4.children = jsx(id(11518).HourglassIcon, {});
+        obj4.children = jsx(id(11743).HourglassIcon, {});
         return jsx(GuildsBarAnimatedItemWrapperDefault, {
           id: null,
           accessibilityActions: null,
@@ -278,9 +278,9 @@ export default noop.memo(
           sharedId: null,
           cutouts: "IconComponent",
           overState: "a",
-          preventClipping: "row",
-          config: "flex-end",
-          externalChildren: "center",
+          preventClipping: "Comoros",
+          config: "KM",
+          externalChildren: "+269",
           children: null,
         });
       },

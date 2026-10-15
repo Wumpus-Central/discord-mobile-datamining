@@ -4,7 +4,7 @@ import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.na
 import FramesStore from "../../../frames/FramesStore.tsx";
 
 require = fn;
-const isLaunched = fn(10697).isLaunched;
+const isLaunched = fn(10919).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/native/restartConjureAppFrames.tsx");
 

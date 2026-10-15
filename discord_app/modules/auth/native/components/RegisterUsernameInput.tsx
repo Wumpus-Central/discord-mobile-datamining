@@ -14,21 +14,21 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["username"];
 let closure_4 = ["username"];
-const RegistrationUIStore = fn(16715);
+const RegistrationUIStore = fn(16954);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_13 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 let obj2 = { entering: null, exiting: null };
-const FadeIn = fn(4852).FadeIn;
+const FadeIn = fn(4906).FadeIn;
 obj2.entering = FadeIn.duration(300);
-const FadeOut = fn(4852).FadeOut;
+const FadeOut = fn(4906).FadeOut;
 obj2.exiting = FadeOut.duration(300);
 let obj3 = { layout: null };
-const LinearTransition = fn(4852).LinearTransition;
-const Easing = fn(4852).Easing;
-obj3.layout = LinearTransition.easing(Easing.inOut(fn(4852).Easing.quad)).duration(300);
+const LinearTransition = fn(4906).LinearTransition;
+const Easing = fn(4906).Easing;
+obj3.layout = LinearTransition.easing(Easing.inOut(fn(4906).Easing.quad)).duration(300);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? function UsernameStatusMessage(arg0) {
@@ -199,7 +199,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp6;
     };
 ReactCompilerGating = fn(558);
-const easingResult = LinearTransition.easing(Easing.inOut(fn(4852).Easing.quad));
+const easingResult = LinearTransition.easing(Easing.inOut(fn(4906).Easing.quad));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
@@ -330,7 +330,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
             }
           }
         }
-        if (undefined === setUsername(15341).NameValidationState.ERROR) {
+        if (undefined === setUsername(15637).NameValidationState.ERROR) {
           class H {
             constructor() {
               tmp = closure_1(true);
@@ -366,7 +366,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
           status: null,
           submitBehavior: null,
         };
-        const TextInput = setUsername(6290).TextInput;
+        const TextInput = setUsername(6506).TextInput;
         if (tmpResult.isAndroid()) {
           class H {
             constructor() {
@@ -498,14 +498,14 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
         type = usernameStatus.type;
       }
       let str2;
-      if (type === tmp14(15341).NameValidationState.ERROR) {
+      if (type === tmp14(15637).NameValidationState.ERROR) {
         str2 = "error";
       }
       const obj6 = { children: null };
       obj3.status = str2;
       obj3.submitBehavior = submitBehavior;
       const items3 = [
-        closure_10(setUsername(6290).TextInput, obj3),
+        closure_10(setUsername(6506).TextInput, obj3),
         closure_10(closure_16, { usernameStatus, isUsernameFocused: tmp5[0] }),
       ];
       obj6.children = items3;

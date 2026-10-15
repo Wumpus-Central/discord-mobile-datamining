@@ -184,7 +184,7 @@ let closure_9 = async function _saveChannel(arg0) {
           let channel;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -318,8 +318,8 @@ let closure_9 = async function _saveChannel(arg0) {
               tmp5 = isThreadResult;
             }
             if (!tmp5) {
-              const result = closure_1(7034).checkGuildTemplateDirty(guildId);
-              const tmpResult = closure_1(7034);
+              const result = closure_1(7247).checkGuildTemplateDirty(guildId);
+              const tmpResult = closure_1(7247);
             }
             return arg0;
           },

@@ -9,14 +9,14 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16626);
+const UserSettingsSafetySelectedGuildStore = fn(16865);
 ({
   getSelectedGuildId: metroRequire,
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
   setSelectedGuildId: closure_8,
   useUserSafetySettingsSelectedGuildStore: closure_9,
 } = UserSettingsSafetySelectedGuildStore);
-const MobileUserSettings = fn(8000).MobileUserSettings;
+const MobileUserSettings = fn(8210).MobileUserSettings;
 let items = [,];
 ({ GUILD_SETTING_ACTIVITY_STATUS: arr[0], GUILD_SETTING_ACTIVITY_JOINING: arr[1] } = MobileUserSettings);
 fn(558);
@@ -70,7 +70,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       return closure_9().selectedGuildId;
     };
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDescription() {
       const cResult = c.c(2);
@@ -137,7 +137,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16627, dependencyMap.paths),
+      asyncRequireImpl(16866, dependencyMap.paths),
       "SettingsPrivacyAndSafetyGuildSelectActionSheet",
     );
   },

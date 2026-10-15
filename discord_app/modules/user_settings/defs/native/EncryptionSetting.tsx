@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [SecureFramesPersistedStore];
       return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
     };
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSecureFramesEncryptionDescription() {
       const cResult = c.c(2);
@@ -77,7 +77,7 @@ const route = SettingBuilders.createRoute({
         const intl = util.intl;
         return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
       },
-  parent: fn(8000).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8210).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: tmp2,
   screen: {
     route: fn(1085).UserSettingsSections.SECURE_FRAMES,

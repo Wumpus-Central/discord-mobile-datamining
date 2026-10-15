@@ -17,8 +17,8 @@ export const computeActivityFlags = function computeActivityFlags(activity) {
   if (arg2 === undefined) {
     flag2 = false;
   }
-  let flag3 = tmp13Result;
-  if (tmp13Result === undefined) {
+  let flag3 = result1;
+  if (result1 === undefined) {
     flag3 = false;
   }
   let PRIVATE = privacy;

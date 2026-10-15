@@ -5,7 +5,7 @@ const obj = { USER_SENDABLE: new Set([2, 3, 4, 5]), FOLLOWUP: null, SILENT: null
 const set = new Set([2, 3, 4, 5]);
 obj.FOLLOWUP = new Set([2, 3, 5]);
 const set1 = new Set([2, 3, 5]);
-obj.SILENT = new Set([8, 9, 10, 11]);
+obj.SILENT = new Set([8, 9, 10, 11, 12]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/InteractionTypes.tsx");
 
 export const InteractionTypes = {
@@ -31,5 +31,7 @@ export const InteractionTypes = {
   [10]: "GAME_ORGANIZATION_FETCH_ORGANIZATIONS_FOR_USER",
   GAME_ORGANIZATION_USER_INVITE_ACCEPT: 11,
   [11]: "GAME_ORGANIZATION_USER_INVITE_ACCEPT",
+  GAME_ORGANIZATION_FETCH_CHARACTER_ELIGIBILITY_FOR_USER: 12,
+  [12]: "GAME_ORGANIZATION_FETCH_CHARACTER_ELIGIBILITY_FOR_USER",
 };
 export const InteractionTypesSets = obj;

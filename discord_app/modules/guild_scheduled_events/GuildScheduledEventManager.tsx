@@ -5,9 +5,10 @@ import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
+let require = fn;
 function getGuildEventsForCurrentUser() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -15,7 +16,7 @@ function getGuildEventsForCurrentUser() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
+let closure_12 = async function _getGuildEventsForCurrentUser(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -62,12 +63,12 @@ let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
       } else {
         if (1 === tmp7) {
           c4 = 0;
-          closure_130_6.delete(closure_129_0);
+          closure_130_7.delete(closure_129_0);
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          closure_130_7.add(closure_129_0);
+          closure_130_8.add(closure_129_0);
           c4 = 0;
         }
         c4 = 0;
@@ -87,11 +88,12 @@ let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
     }
   }
 };
-let closure_5 = {};
-const set = new Set();
+let closure_6 = {};
+let set = new Set();
 const set1 = new Set();
-let c8 = 1800000;
-class GuildScheduledEventManager extends tmp4 {
+let c9 = 1800000;
+const map = new Map();
+class GuildScheduledEventManager extends tmp5 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
@@ -117,43 +119,309 @@ class GuildScheduledEventManager extends tmp4 {
 }
 const prototype = GuildScheduledEventManager.prototype;
 prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id, id, items1) {
-  closure_0 = guild_id;
-  closure_1 = id;
-  asyncGeneratorStep = items1;
-  return (async () => {
-    const found = tmp13.filter((item) => {
-      let tmp3 = null == dependencyMap["" + v3 + "-" + closure_1_1 + "-" + item];
-      if (!tmp3) {
-        const _Date = Date;
-        const _HermesInternal = HermesInternal;
-        const timestamp = Date.now();
-        tmp3 = timestamp - dependencyMap["" + v3 + "-" + closure_1_1 + "-" + item] > closure_2_8;
-      }
-      return tmp3;
-    });
-    const _Date2 = Date;
-    const _HermesInternal2 = HermesInternal;
-    let timestamp = Date.now();
-    let _HermesInternal = HermesInternal;
-    let _Date = Date;
-    let combined = "" + closure_0 + "-" + closure_1;
-    dependencyMap[combined] = Date.now();
-    const item = found.forEach((item) => {
-      const combined = "" + v3 + "-" + closure_1_1 + "-" + item;
-      const timestamp = Date.now();
-      dependencyMap[combined] = timestamp;
-      return timestamp;
-    });
-    await v3(c1[3]).fetchGuildEventUserCounts(closure_0, closure_1, found);
-    if (1 === tmp6) {
-      c3 = 0;
-    } else if (arg0 === 1) {
-      v3 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      c3 = 0;
+  return this.fetchGuildEventUserCounts(guild_id, id, items1, false);
+};
+prototype["getGuildEventUserCountsForEmbed"] = function getGuildEventUserCountsForEmbed(guild_id, id, items1) {
+  if (null == GuildScheduledEventStore.getGuildScheduledEvent(id)) {
+    return Promise.resolve();
+  } else {
+    const _HermesInternal = HermesInternal;
+    const combined = "" + guild_id + "-" + id;
+    value2 = map.get(combined);
+    if (null == value2) {
+      const obj = { startedAt: null, ids: null };
+      const _Date2 = Date;
+      obj.startedAt = Date.now();
+      const _Set = Set;
+      set = new Set();
+      obj.ids = set;
+      let tmp2 = obj;
+    } else {
+      const _Date = Date;
+      tmp2 = value2;
     }
-    return value;
+    value2 = tmp2;
+    const found = items1.filter((item) => {
+      const ids = value2.ids;
+      let hasItem = ids.has(item);
+      if (!hasItem) {
+        let flag = value2.ids.size < 8;
+        if (flag) {
+          const ids2 = value2.ids;
+          ids2.add(item);
+          flag = true;
+        }
+        hasItem = flag;
+      }
+      return hasItem;
+    });
+    map.delete(combined);
+    const result = map.set(combined, tmp2);
+    if (map.size > 1024) {
+      value = map.keys().next().value;
+      while (null != value) {
+        let deleteResult1 = map.delete(value);
+        if (map.size <= 1024) {
+          break;
+        }
+      }
+      const iter = map.keys();
+    }
+    if (items1.length > 0) {
+      if (0 === found.length) {
+        let resolved = Promise.resolve();
+      }
+      return resolved;
+    }
+    const self = this;
+    const self2 = this;
+    resolved = this.fetchGuildEventUserCounts(guild_id, id, found, true);
+  }
+};
+prototype["fetchGuildEventUserCounts"] = function fetchGuildEventUserCounts(arg0, arg1, arg2, arg3) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  asyncGeneratorStep = arg3;
+  return (async () => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 !== v2) {
+          if (1 === v2) {
+            c2 = 0;
+            c4 = 3;
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            if (null != dependencyMap[closure_128_0]) {
+              let _Date2 = Date;
+              if (Date.now() - dependencyMap[closure_128_0] < closure_1_9) {
+                if (closure_128_1().length <= 0) {
+                  c2 = 0;
+                }
+              }
+            }
+            v2 = 2;
+            c4 = 1;
+            let obj4 = {
+              value: tmp21(c2[5]).guardGuildEventUserCountFetch(
+                closure_129_0,
+                closure_129_1,
+                v2(async () => {
+                  if (c0 === 2) {
+                    c0 = 3;
+                    throw new TypeError("Generator functions may not be called on executing generators");
+                  } else if (tmp3 === 3) {
+                    if (arg0 === 1) {
+                      throw value;
+                    } else if (arg0 === 2) {
+                      let obj3 = { value, done: true };
+                      return obj3;
+                    } else {
+                      return { value: "IconComponent", done: null };
+                    }
+                  } else {
+                    try {
+                      c0 = 2;
+                      if (0 === c1) {
+                        if (arg0 === 1) {
+                          c0 = 3;
+                          throw value;
+                        } else if (arg0 === 2) {
+                          c0 = 3;
+                          let obj4 = { value, done: true };
+                          return obj4;
+                        } else {
+                          closure_1 = function _fetch() {
+                            const self = this;
+                            const tmp = c3(function* () {
+                              if (c7 === 2) {
+                                c7 = 3;
+                                throw new TypeError("Generator functions may not be called on executing generators");
+                              } else if (tmp3 === 3) {
+                                if (arg0 === 1) {
+                                  throw value;
+                                } else if (arg0 === 2) {
+                                  const obj3 = { value, done: true };
+                                  return obj3;
+                                } else {
+                                  return { value: "IconComponent", done: null };
+                                }
+                              } else {
+                                while (true) {
+                                  c7 = 2;
+                                  let tmp4 = c6;
+                                  if (0 === c6) {
+                                    if (arg0 === 1) {
+                                      c7 = 3;
+                                      throw value;
+                                    } else if (arg0 === 2) {
+                                      c7 = 3;
+                                      let obj4 = { value, done: true };
+                                      return obj4;
+                                    } else {
+                                      closure_3 = tmp;
+                                      closure_2 = tmp4;
+                                      closure_130_0 = undefined;
+                                      if (closure_2_3) {
+                                        if (null == guildScheduledEvent.getGuildScheduledEvent(closure_2_1)) {
+                                          let _Error = Error;
+                                          let tmp24 = new.target;
+                                          let tmp25 = new.target;
+                                          let str = "guild event not found";
+                                          let error = new Error("guild event not found");
+                                          throw error;
+                                        }
+                                      }
+                                      let obj2 = closure_1(closure_3_2[3]);
+                                      c6 = 1;
+                                      c7 = 1;
+                                      let obj5 = {
+                                        value: obj2.fetchGuildEventUserCounts(closure_2_0, closure_2_1, closure_2_0),
+                                        done: false,
+                                      };
+                                      return obj5;
+                                    }
+                                  } else if (1 === tmp4) {
+                                    if (arg0 === 1) {
+                                      c7 = 3;
+                                      throw value;
+                                    } else if (arg0 === 2) {
+                                      c7 = 3;
+                                      let obj = { value, done: true };
+                                      return obj;
+                                    } else {
+                                      let _Date2 = Date;
+                                      closure_3_6[closure_0] = Date.now();
+                                      closure_1 = closure_131_0;
+                                      closure_0 = closure_131_0[Symbol.iterator]();
+                                      while (closure_0 !== undefined) {
+                                        closure_130_0 = tmp10;
+                                        let _HermesInternal = HermesInternal;
+                                        let _Date = Date;
+                                        let combined = "" + closure_0 + "-" + closure_130_0;
+                                        closure_3_6[combined] = Date.now();
+                                        c5 = 0;
+                                        continue;
+                                      }
+                                      c7 = 3;
+                                      return { value: "IconComponent", done: null };
+                                    }
+                                  } else {
+                                    c5 = 0;
+                                    closure_0.return();
+                                    throw closure_1_4;
+                                  }
+                                }
+                              }
+                            });
+                            closure_1 = tmp;
+                            const apply = tmp.apply;
+                            if (typeof apply === "unknown") {
+                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                            } else {
+                              applyArgumentsResult = apply(self, arguments);
+                            }
+                            return applyArgumentsResult;
+                          };
+                          closure_0 = tmp3();
+                          c1 = 1;
+                          c0 = 1;
+                          let obj5 = {
+                            value: tmp21(closure_2_2[6]).scheduleGuildEventEmbedFetch(function fetch() {
+                              const self = this;
+                              const apply = closure_1.apply;
+                              if (typeof apply === "unknown") {
+                                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                              } else {
+                                applyArgumentsResult = apply(self, arguments);
+                              }
+                              return applyArgumentsResult;
+                            }),
+                            done: false,
+                          };
+                          return obj5;
+                        }
+                      } else if (arg0 === 1) {
+                        c0 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c0 = 3;
+                        let obj = { value, done: true };
+                        return obj;
+                      } else {
+                        c0 = 3;
+                        return { value: "IconComponent", done: null };
+                      }
+                    } catch (tmp8) {
+                      c0 = tmp;
+                      throw tmp8;
+                    }
+                  }
+                }),
+              ),
+              done: false,
+            };
+            return obj4;
+          }
+          c2 = 0;
+          c4 = 3;
+          let obj = { value, done: true };
+          return obj;
+        }
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          let obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_128_0 = undefined;
+          function neededIds() {
+            return c2.filter((item) => {
+              let tmp2 = null == dependencyMap["" + closure_1_0 + "-" + item];
+              if (!tmp2) {
+                const _Date = Date;
+                const _HermesInternal = HermesInternal;
+                const timestamp = Date.now();
+                tmp2 = timestamp - dependencyMap["" + closure_1_0 + "-" + item] >= closure_3_9;
+              }
+              return tmp2;
+            });
+          }
+          closure_128_1 = neededIds;
+          let _HermesInternal = HermesInternal;
+          let combined = "" + tmp21 + "-" + tmp3;
+          closure_128_0 = combined;
+          c2 = 1;
+          if (null != dependencyMap[combined]) {
+            let _Date = Date;
+          }
+        }
+      } catch (tmp20) {
+        if (tmp4 === c2) {
+          c4 = tmp2;
+          throw tmp20;
+        } else {
+          v2 = tmp;
+        }
+      }
+    }
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
@@ -190,12 +458,16 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             let obj3 = { value, done: true };
             return obj3;
           } else {
+            closure_3 = tmp;
             closure_2 = tmp4;
             closure_130_1 = undefined;
-            let clearResult = c6.clear();
-            let clearResult1 = c7.clear();
-            c5 = {};
-            let lastSelectedGuildId = tmp.getLastSelectedGuildId();
+            let clearResult = c7.clear();
+            let clearResult1 = set1.clear();
+            c6 = {};
+            let clearResult2 = map.clear();
+            let obj7 = _self(closure_2[5]);
+            let result = obj7.forgetTransientGuildEventFetchFailures();
+            lastSelectedGuildId = lastSelectedGuildId.getLastSelectedGuildId();
             closure_130_0 = lastSelectedGuildId;
             if (null != lastSelectedGuildId) {
               guildScheduledEventsForGuild =
@@ -206,15 +478,15 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             return { value: "IconComponent", done: null };
           }
         } else if (1 === tmp4) {
-          c5 = 0;
+          guildScheduledEventsForGuild = 0;
           _self.return();
-          throw guildScheduledEventsForGuild;
+          throw lastSelectedGuildId;
         } else if (2 === tmp4) {
           if (arg0 === 1) {
             c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c5 = 0;
+            guildScheduledEventsForGuild = 0;
             _self.return();
             c7 = 3;
             let obj4 = { value, done: true };
@@ -233,16 +505,16 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
           c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 0;
+          guildScheduledEventsForGuild = 0;
           _self.return();
           c7 = 3;
           let obj = { value, done: true };
           return obj;
         } else {
-          c5 = 0;
+          guildScheduledEventsForGuild = 0;
         }
         if (_self !== undefined) {
-          c5 = 1;
+          guildScheduledEventsForGuild = 1;
           closure_130_1 = tmp16;
           c6 = 2;
           c7 = 1;
@@ -306,11 +578,10 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             let obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_5 = tmp;
-            let guildScheduledEventsForGuild = tmp4;
+            closure_4 = tmp4;
             closure_132_0 = undefined;
             if (null != guildId) {
-              guildScheduledEventsForGuild = guildScheduledEventsForGuild.getGuildScheduledEventsForGuild(guildId);
+              let guildScheduledEventsForGuild = tmp.getGuildScheduledEventsForGuild(guildId);
               guildId = guildScheduledEventsForGuild[Symbol.iterator]();
             }
             c9 = 3;
@@ -319,9 +590,9 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
         } else if (1 === tmp4) {
           c6 = 0;
           guildId.return();
-          throw set1;
+          throw set;
         } else if (2 === tmp4) {
-          closure_3 = set1;
+          closure_3 = set;
           c6 = 1;
           let _Promise3 = Promise;
           let tmp21 = new.target;
@@ -415,6 +686,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
 };
 const guildScheduledEventManager = new GuildScheduledEventManager();
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventManager.tsx");
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventManager.tsx");
 
 export default guildScheduledEventManager;
+export const MAX_EMBED_COUNT_RECURRENCES = 8;

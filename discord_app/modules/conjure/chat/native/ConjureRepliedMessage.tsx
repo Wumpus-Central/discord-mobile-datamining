@@ -3,10 +3,12 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ConjureDesignFeedback from "../../design_feedback/ConjureDesignFeedback.tsx";
+import conjureMessageAuthors from "../conjureMessageAuthors.tsx";
+import conjureMentions from "../conjureMentions.tsx";
 import ConjureMessageAuthor from "ConjureMessageAuthor.tsx";
 import ConjureSelectedMentionDefault from "ConjureSelectedMention.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -16,12 +18,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(11832).MESSAGE_EDGE_INSET + fn(11832).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(11832).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(5096);
+const diff = fn(12057).MESSAGE_EDGE_INSET + fn(12057).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(12057).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(5151);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(11832).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(12057).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -50,7 +52,7 @@ obj2.content = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginLeft: diff - fn(11832).MESSAGE_CONTENT_INSET,
+  marginLeft: diff - fn(12057).MESSAGE_CONTENT_INSET,
   paddingLeft: diff1 + 4,
   height: 20,
   flexDirection: "row",
@@ -61,10 +63,10 @@ let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureRepl
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjureRepliedMessage(arg0) {
-      const cResult = c.c(40);
+      const cResult = c.c(32);
       ({ replied, onJump } = arg0);
       const tmp4 = closure_8();
-      const messageAuthorUser = ConjureMessageAuthor.useMessageAuthorUser(replied.userId);
+      const messageAuthorUser = conjureMessageAuthors.useMessageAuthorUser(replied.userId);
       let str = UserUtils.useName(messageAuthorUser);
       if (str == null) {
         str = "";
@@ -85,191 +87,173 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (body == null) {
         body = replied.content;
       }
-      if (cResult[2] === str) {
-        if (cResult[3] === onJump) {
-          if (cResult[4] === tmp4.root) {
-            if (cResult[5] === body) {
-              let tmp9 = cResult[6];
-              let tmp10 = cResult[7];
-              let tmp11 = cResult[8];
-              let tmp12 = cResult[9];
-              let tmp13 = cResult[10];
-              let str2 = cResult[11];
-              let tmp14 = cResult[12];
+      if (cResult[2] !== body) {
+        const trimmed = body.replace(/\s+/g, " ").trim();
+        cResult[2] = body;
+        cResult[3] = trimmed;
+        let tmp9 = trimmed;
+        const str3 = body.replace(/\s+/g, " ");
+      } else {
+        tmp9 = cResult[3];
+      }
+      const conjureMentionNames = conjureMentions.useConjureMentionNames(tmp9);
+      if (cResult[4] === conjureMentionNames) {
+        if (cResult[5] === str) {
+          let tmp14 = cResult[6];
+        }
+        if (cResult[7] !== tmp4.spine) {
+          const obj4 = { style: tmp4.spine };
+          const tmp19 = timestampProducer(hasOwnProperty, obj4);
+          cResult[7] = tmp4.spine;
+          cResult[8] = tmp19;
+          let tmp16 = tmp19;
+        } else {
+          tmp16 = cResult[8];
+        }
+        if (cResult[9] === replied.userId) {
+          if (cResult[10] === tmp4.avatar) {
+            if (cResult[11] === messageAuthorUser) {
+              let tmp20 = cResult[12];
             }
-            if (cResult[13] !== tmp4.spine) {
-              const obj4 = { style: tmp4.spine };
-              const tmp21 = timestampProducer(hasOwnProperty, obj4);
-              cResult[13] = tmp4.spine;
-              cResult[14] = tmp21;
-              let tmp18 = tmp21;
-            } else {
-              tmp18 = cResult[14];
-            }
-            if (cResult[15] === replied.userId) {
-              if (cResult[16] === tmp4.avatar) {
-                if (cResult[17] === messageAuthorUser) {
-                  let tmp22 = cResult[18];
+            if (cResult[13] === str) {
+              if (cResult[14] === tmp4.name) {
+                let tmp24 = cResult[15];
+              }
+              if (cResult[16] !== tmp6) {
+                let tmp28 = null;
+                if (null != tmp6) {
+                  const obj5 = { label: tmp6.label, variant: "text-xs/medium" };
+                  tmp28 = timestampProducer(ConjureSelectedMentionDefault, obj5);
                 }
-                if (cResult[19] === str) {
-                  if (cResult[20] === tmp4.name) {
-                    let tmp26 = cResult[21];
-                  }
-                  if (cResult[22] !== tmp6) {
-                    let tmp30 = null;
-                    if (null != tmp6) {
-                      const obj5 = { label: tmp6.label, variant: "text-xs/medium" };
-                      tmp30 = timestampProducer(ConjureSelectedMentionDefault, obj5);
+                cResult[16] = tmp6;
+                cResult[17] = tmp28;
+                let tmp27 = tmp28;
+              } else {
+                tmp27 = cResult[17];
+              }
+              let str4 = null;
+              if (null != tmp6) {
+                str4 = null;
+                if ("" !== conjureMentionNames) {
+                  str4 = " ";
+                }
+              }
+              if (cResult[18] === conjureMentionNames) {
+                if (cResult[19] === tmp4.content) {
+                  if (cResult[20] === tmp27) {
+                    if (cResult[21] === str4) {
+                      let tmp31 = cResult[22];
                     }
-                    cResult[22] = tmp6;
-                    cResult[23] = tmp30;
-                    let tmp29 = tmp30;
-                  } else {
-                    tmp29 = cResult[23];
-                  }
-                  let str4 = null;
-                  if (null != tmp6) {
-                    str4 = null;
-                    if ("" !== tmp10) {
-                      str4 = " ";
-                    }
-                  }
-                  if (cResult[24] === tmp10) {
-                    if (cResult[25] === tmp4.content) {
-                      if (cResult[26] === tmp29) {
-                        if (cResult[27] === str4) {
-                          let tmp33 = cResult[28];
-                        }
-                        if (cResult[29] === tmp9) {
-                          if (cResult[30] === tmp26) {
-                            if (cResult[31] === tmp33) {
-                              if (cResult[32] === tmp11) {
-                                if (cResult[33] === tmp12) {
-                                  if (cResult[34] === tmp13) {
-                                    if (cResult[35] === str2) {
-                                      if (cResult[36] === tmp14) {
-                                        if (cResult[37] === tmp18) {
-                                          if (cResult[38] === tmp22) {
-                                            let tmp36 = cResult[39];
-                                          }
-                                          return tmp36;
-                                        }
-                                      }
-                                    }
+                    if (cResult[23] === onJump) {
+                      if (cResult[24] === tmp4.root) {
+                        if (cResult[25] === tmp31) {
+                          if (cResult[26] === tmp13) {
+                            if (cResult[27] === tmp14) {
+                              if (cResult[28] === tmp16) {
+                                if (cResult[29] === tmp20) {
+                                  if (cResult[30] === tmp24) {
+                                    let tmp34 = cResult[31];
                                   }
+                                  return tmp34;
                                 }
                               }
                             }
                           }
                         }
-                        const obj6 = {
-                          style: tmp11,
-                          onPress: tmp12,
-                          disabled: tmp13,
-                          accessibilityRole: str2,
-                          accessibilityLabel: tmp14,
-                          children: null,
-                        };
-                        const items = [tmp18, tmp22, tmp26, tmp33];
-                        obj6.children = items;
-                        const tmp38 = React5(tmp9, obj6);
-                        cResult[29] = tmp9;
-                        cResult[30] = tmp26;
-                        cResult[31] = tmp33;
-                        cResult[32] = tmp11;
-                        cResult[33] = tmp12;
-                        cResult[34] = tmp13;
-                        cResult[35] = str2;
-                        cResult[36] = tmp14;
-                        cResult[37] = tmp18;
-                        cResult[38] = tmp22;
-                        cResult[39] = tmp38;
-                        tmp36 = tmp38;
                       }
                     }
+                    const obj6 = {
+                      style: tmp12,
+                      onPress: onJump,
+                      disabled: tmp13,
+                      accessibilityRole: "button",
+                      accessibilityLabel: tmp14,
+                      children: null,
+                    };
+                    const items = [tmp16, tmp20, tmp24, tmp31];
+                    obj6.children = items;
+                    const tmp37 = React5(React4, obj6);
+                    cResult[23] = onJump;
+                    cResult[24] = tmp4.root;
+                    cResult[25] = tmp31;
+                    cResult[26] = tmp13;
+                    cResult[27] = tmp14;
+                    cResult[28] = tmp16;
+                    cResult[29] = tmp20;
+                    cResult[30] = tmp24;
+                    cResult[31] = tmp37;
+                    tmp34 = tmp37;
                   }
-                  const obj7 = {
-                    variant: "text-xs/medium",
-                    color: "interactive-text-default",
-                    style: tmp4.content,
-                    lineClamp: 1,
-                    children: null,
-                  };
-                  const items1 = [tmp29, str4, tmp10];
-                  obj7.children = items1;
-                  const tmp35 = React5(Text_Text.Text, obj7);
-                  cResult[24] = tmp10;
-                  cResult[25] = tmp4.content;
-                  cResult[26] = tmp29;
-                  cResult[27] = str4;
-                  cResult[28] = tmp35;
-                  tmp33 = tmp35;
                 }
-                const obj8 = {
-                  variant: "text-xs/semibold",
-                  color: "text-default",
-                  style: tmp4.name,
-                  lineClamp: 1,
-                  children: str,
-                };
-                const tmp28 = timestampProducer(Text_Text.Text, obj8);
-                cResult[19] = str;
-                cResult[20] = tmp4.name;
-                cResult[21] = tmp28;
-                tmp26 = tmp28;
               }
+              const obj7 = {
+                variant: "text-xs/medium",
+                color: "interactive-text-default",
+                style: tmp4.content,
+                lineClamp: 1,
+                children: null,
+              };
+              const items1 = [tmp27, str4, conjureMentionNames];
+              obj7.children = items1;
+              const tmp33 = React5(Text_Text.Text, obj7);
+              cResult[18] = conjureMentionNames;
+              cResult[19] = tmp4.content;
+              cResult[20] = tmp27;
+              cResult[21] = str4;
+              cResult[22] = tmp33;
+              tmp31 = tmp33;
             }
-            let tmp23 = null;
-            if (null != messageAuthorUser) {
-              const obj9 = { style: tmp4.avatar, children: null };
-              const obj10 = { userId: replied.userId, size: native.AvatarSizes.SIZE_16 };
-              obj9.children = timestampProducer(ConjureMessageAuthor.ConjureUserAvatar, obj10);
-              tmp23 = timestampProducer(hasOwnProperty, obj9);
-            }
-            cResult[15] = replied.userId;
-            cResult[16] = tmp4.avatar;
-            cResult[17] = messageAuthorUser;
-            cResult[18] = tmp23;
-            tmp22 = tmp23;
+            const obj8 = {
+              variant: "text-xs/semibold",
+              color: "text-default",
+              style: tmp4.name,
+              lineClamp: 1,
+              children: str,
+            };
+            const tmp26 = timestampProducer(Text_Text.Text, obj8);
+            cResult[13] = str;
+            cResult[14] = tmp4.name;
+            cResult[15] = tmp26;
+            tmp24 = tmp26;
           }
         }
+        let tmp21 = null;
+        if (null != messageAuthorUser) {
+          const obj9 = { style: tmp4.avatar, children: null };
+          const obj10 = { userId: replied.userId, size: native.AvatarSizes.SIZE_16 };
+          obj9.children = timestampProducer(ConjureMessageAuthor.ConjureUserAvatar, obj10);
+          tmp21 = timestampProducer(hasOwnProperty, obj9);
+        }
+        cResult[9] = replied.userId;
+        cResult[10] = tmp4.avatar;
+        cResult[11] = messageAuthorUser;
+        cResult[12] = tmp21;
+        tmp20 = tmp21;
       }
-      const trimmed = body.replace(/\s+/g, " ").trim();
-      const root = tmp4.root;
       const intl = util.intl;
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef3849.K0046m, { name: str, content: trimmed });
-      cResult[2] = str;
-      cResult[3] = onJump;
-      cResult[4] = tmp4.root;
-      cResult[5] = body;
-      cResult[6] = React4;
-      cResult[7] = trimmed;
-      cResult[8] = root;
-      cResult[9] = onJump;
-      cResult[10] = null == onJump;
-      cResult[11] = "button";
-      cResult[12] = formatToPlainStringResult;
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef3862.K0046m, {
+        name: str,
+        content: conjureMentionNames,
+      });
+      cResult[4] = conjureMentionNames;
+      cResult[5] = str;
+      cResult[6] = formatToPlainStringResult;
       tmp14 = formatToPlainStringResult;
-      str2 = "button";
-      tmp13 = tmp16;
-      tmp12 = onJump;
-      tmp11 = root;
-      tmp10 = trimmed;
-      tmp9 = React4;
-      const str3 = body.replace(/\s+/g, " ");
+      const tmpResult2 = conjureMentions;
     }
   : function ConjureRepliedMessage(replied) {
       replied = replied.replied;
       const onJump = replied.onJump;
       const tmp = closure_8();
-      const messageAuthorUser = replied(11844).useMessageAuthorUser(replied.userId);
-      const obj = replied(11844);
-      let str = replied(4964).useName(messageAuthorUser);
+      const messageAuthorUser = replied(12069).useMessageAuthorUser(replied.userId);
+      const obj = replied(12069);
+      let str = replied(5018).useName(messageAuthorUser);
       if (str == null) {
         str = "";
       }
       const items = [replied.content];
       const memo = noop.useMemo(() => ConjureDesignFeedback.parseConjureDesignRemark(replied.content), items);
+      const obj2 = replied(5018);
       let body;
       if (memo != null) {
         body = memo.body;
@@ -277,8 +261,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (body == null) {
         body = replied.content;
       }
-      const obj2 = replied(4964);
-      const trimmed = body.replace(/\s+/g, " ").trim();
+      const tmp2Result = replied(12070);
+      const conjureMentionNames = tmp2Result.useConjureMentionNames(body.replace(/\s+/g, " ").trim());
       const obj3 = {
         style: tmp.root,
         onPress: onJump,
@@ -288,17 +272,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl = tmp2(1126).intl;
-      obj3.accessibilityLabel = intl.formatToPlainString(_modDef3849.K0046m, { name: str, content: trimmed });
+      obj3.accessibilityLabel = intl.formatToPlainString(_modDef3862.K0046m, {
+        name: str,
+        content: conjureMentionNames,
+      });
       const items1 = [closure_6(closure_5, { style: tmp.spine }), , ,];
       let tmp11Result = null;
       if (null != messageAuthorUser) {
         const obj5 = { style: tmp.avatar, children: null };
         const obj6 = { userId: replied.userId, size: tmp2(1200).AvatarSizes.SIZE_16 };
-        obj5.children = closure_6(tmp2(11844).ConjureUserAvatar, obj6);
+        obj5.children = closure_6(tmp2(12071).ConjureUserAvatar, obj6);
         tmp11Result = closure_6(closure_5, obj5);
       }
       items1[1] = tmp11Result;
-      items1[2] = closure_6(replied(5092).Text, {
+      items1[2] = closure_6(replied(5147).Text, {
         variant: "text-xs/semibold",
         color: "text-default",
         style: tmp.name,
@@ -321,14 +308,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let str3 = null;
       if (null != memo) {
         str3 = null;
-        if ("" !== trimmed) {
+        if ("" !== conjureMentionNames) {
           str3 = " ";
         }
       }
       items2[1] = str3;
-      items2[2] = trimmed;
+      items2[2] = conjureMentionNames;
       obj8.children = items2;
-      items1[3] = closure_7(replied(5092).Text, obj8);
+      items1[3] = closure_7(replied(5147).Text, obj8);
       obj3.children = items1;
       return closure_7(closure_4, obj3);
     };

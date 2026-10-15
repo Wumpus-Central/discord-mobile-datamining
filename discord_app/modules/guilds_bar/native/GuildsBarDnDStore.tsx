@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4735 from "../../../../_runtime/metro/04735__.js";
+import _mod4789 from "../../../../_runtime/metro/04789__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import identity from "../../../../_runtime/metro/01267__.js";
 import "ReactCompilerGating";
@@ -19,17 +19,17 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_1 = arg1;
   let obj = {
     dragSpecs: "Boolean",
-    overSpecs: "emoji",
+    overSpecs: "done",
     dropSpecs: "toCharArray$esjava$1",
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "VOICE_CHANNEL_START_TIME_UPDATE",
-    scrollPosition: "CHANNEL_MEMBER_COUNT_UPDATE",
-    windowSize: "THREAD_CREATE",
-    setStateShallow: "THREAD_UPDATE",
-    dropStart: "THREAD_DELETE",
-    dropComplete: true,
+    listInsets: 12,
+    scrollPosition: 12,
+    windowSize: null,
+    setStateShallow: null,
+    dropStart: 0,
+    dropComplete: "No Output Devices",
   };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
@@ -71,7 +71,9 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1272).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "parent" }));
+      dropSpecs(1272).batchUpdates(() =>
+        dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "toCharArray$esjava$1" }),
+      );
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -96,7 +98,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "keys" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -123,7 +125,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === arg1) {
           let tmp4 = cResult[2];
         }
-        return withEqualityFn(tmp4, _mod4735.shallow);
+        return withEqualityFn(tmp4, _mod4789.shallow);
       }
       const fn = function s(arg0) {
         ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
@@ -131,7 +133,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (null == dropSpecs) {
             const obj2 = {
               isDragTarget: false,
-              dragState: "emoji",
+              dragState: "done",
               overState: "toCharArray$esjava$1",
               itemSize: null,
               dragDropInProgress,
@@ -239,7 +241,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (null == dropSpecs) {
             const obj2 = {
               isDragTarget: false,
-              dragState: "emoji",
+              dragState: "done",
               overState: "toCharArray$esjava$1",
               itemSize: null,
               dragDropInProgress,
@@ -332,7 +334,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj.itemSize = num;
         obj.dragDropInProgress = dragDropInProgress;
         return obj;
-      }, _mod4735.shallow);
+      }, _mod4789.shallow);
     };
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 

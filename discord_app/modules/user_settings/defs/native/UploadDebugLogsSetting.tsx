@@ -128,7 +128,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadDebugLogsDisabled() {
   return closure_7().isDisabled;
 }
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useUploadDebugLogsTrailing() {
       const cResult = c.c(2);
@@ -167,7 +167,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.aY1OH2);
   },
   parent: null,
-  IconComponent: fn(5050).CircleInformationIcon,
+  IconComponent: fn(5105).CircleInformationIcon,
   onPress: function handleUploadDebugLogSettingPress() {
     const self = this;
     const apply = closure_9.apply;

@@ -10,14 +10,14 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelsConstants = fn(5897);
+const StageChannelsConstants = fn(6108);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = StageChannelsConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
 let closure_12 = fn(2071).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingBottom: 24 },
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === id) {
           let tmp16 = cResult[5];
         }
-        stateFromStores(5401)(tmp16);
+        stateFromStores(5456)(tmp16);
         if (cResult[6] === channel) {
           if (cResult[7] === stateFromStores) {
             if (cResult[8] === first1) {
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   loading: tmp12,
                                   accessibilityHint: tmp37,
                                 };
-                                const tmp59 = closure_13(tmp(5384).Button, obj2);
+                                const tmp59 = closure_13(tmp(5439).Button, obj2);
                                 cResult[40] = tmp19;
                                 cResult[41] = tmp37;
                                 cResult[42] = tmp12;
@@ -250,14 +250,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 color: "text-feedback-critical",
                                 children: obj4.getAnyErrorMessage(),
                               };
-                              tmp52 = closure_13(tmp(5092).Text, obj5);
+                              tmp52 = closure_13(tmp(5147).Text, obj5);
                             }
                             cResult[35] = obj4;
                             cResult[36] = tmp4.error;
                             cResult[37] = tmp52;
                           }
                           let obj6 = { onConfirmPress: Z, style: tmp4.ageVerificationNotice, channelId: channel.id };
-                          const tmp50 = closure_13(tmp17(7503), obj6);
+                          const tmp50 = closure_13(tmp17(7713), obj6);
                           cResult[32] = channel.id;
                           cResult[33] = tmp4.ageVerificationNotice;
                           cResult[34] = tmp50;
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           clearable: true,
                           onSubmitEditing: tmp19,
                         };
-                        const tmp46 = closure_13(tmp(6290).TextInput, obj7);
+                        const tmp46 = closure_13(tmp(6506).TextInput, obj7);
                         cResult[28] = tmp19;
                         cResult[29] = first1;
                         cResult[30] = tmp46;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     color: "text-default",
                     children: cResult[16],
                   };
-                  const tmp32 = closure_13(tmp(5092).Text, obj9);
+                  const tmp32 = closure_13(tmp(5147).Text, obj9);
                   cResult[17] = tmp4.headerSubtitle;
                   cResult[18] = cResult[16];
                   cResult[19] = tmp32;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 color: "mobile-text-heading-primary",
                 children: cResult[11],
               };
-              const tmp26 = closure_13(tmp(5092).Text, obj10);
+              const tmp26 = closure_13(tmp(5147).Text, obj10);
               cResult[12] = tmp4.headerTitle;
               cResult[13] = cResult[11];
               cResult[14] = tmp26;
@@ -354,12 +354,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       v2 = 3;
                       c5 = 1;
                       const obj6 = {
-                        value: first1(7494).editStage(closure_0, tmp45, constants.GUILD_ONLY),
+                        value: first1(7704).editStage(closure_0, tmp45, constants.GUILD_ONLY),
                         done: false,
                       };
                       return obj6;
                     } else {
-                      const tmp33Result2 = first1(7494);
+                      const tmp33Result2 = first1(7704);
                       v2 = 2;
                       c5 = 1;
                       const obj7 = {
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (1 === tmp7) {
                   v0 = 0;
                   closure_128_0 = tmp45;
-                  const aPIError = new closure_0(5640).APIError(closure_128_0);
+                  const aPIError = new closure_0(5851).APIError(closure_128_0);
                   closure_128_1 = aPIError;
                   v2(closure_128_1);
                   v0(false);
@@ -394,9 +394,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj = { value, done: true };
                     return obj;
                   }
-                  stateFromStores(5060).hideActionSheet(collapsed);
+                  stateFromStores(5115).hideActionSheet(collapsed);
                   v0 = 0;
-                  const obj2 = stateFromStores(5060);
+                  const obj2 = stateFromStores(5115);
                 }
                 v0 = 0;
                 c5 = 3;
@@ -498,12 +498,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     c4 = 3;
                     c5 = 1;
                     const obj6 = {
-                      value: tmp45(7494).editStage(channel, importAll, constants.GUILD_ONLY),
+                      value: tmp45(7704).editStage(channel, importAll, constants.GUILD_ONLY),
                       done: false,
                     };
                     return obj6;
                   } else {
-                    const tmp33Result2 = tmp45(7494);
+                    const tmp33Result2 = tmp45(7704);
                     c4 = 2;
                     c5 = 1;
                     const obj7 = {
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (1 === tmp7) {
                 dependencyMap = 0;
                 closure_128_1 = tmp45;
-                const aPIError = new channel(5640).APIError(closure_128_1);
+                const aPIError = new channel(5851).APIError(closure_128_1);
                 closure_128_0 = aPIError;
                 closure_129_4(closure_128_0);
                 closure_129_3(false);
@@ -538,9 +538,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { value, done: true };
                   return obj;
                 }
-                tmp3(5060).hideActionSheet(closure_1_10);
+                tmp3(5115).hideActionSheet(closure_1_10);
                 dependencyMap = 0;
-                const obj2 = tmp3(5060);
+                const obj2 = tmp3(5115);
               }
               dependencyMap = 0;
               c5 = 3;
@@ -576,8 +576,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = _slicedToArray(noop.useState(false), 2);
       [obj3, c4] = _slicedToArray(noop.useState(null), 2);
       const tmp9 = _slicedToArray(noop.useState(null), 2);
-      const shouldAgeVerifyToSpeakForCurrentUser = channel(5954).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-      stateFromStores(5401)(() => {
+      const shouldAgeVerifyToSpeakForCurrentUser = channel(6165).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+      stateFromStores(5456)(() => {
         let id;
         if (stateFromStores != null) {
           id = stateFromStores.id;
@@ -604,7 +604,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = intl.string(tmp2(1126).t["5BKP4y"]);
       }
       obj5.children = stringResult;
-      const items1 = [closure_13(channel(5092).Text, obj5)];
+      const items1 = [closure_13(channel(5147).Text, obj5)];
       let obj6 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
       if (null == stateFromStores) {
         const intl4 = tmp2(1126).intl;
@@ -614,11 +614,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult1 = intl3.string(tmp2(1126).t["I+9bLx"]);
       }
       obj6.children = stringResult1;
-      items1[1] = closure_13(channel(5092).Text, obj6);
+      items1[1] = closure_13(channel(5147).Text, obj6);
       obj4.children = items1;
       let stringResult2;
       const tmp11 = stateFromStores;
-      const tmp2Result = channel(5954);
+      const tmp2Result = channel(6165);
       if (null == stateFromStores) {
         const intl5 = tmp2(1126).intl;
         stringResult2 = intl5.string(tmp2(1126).t.gR66jX);
@@ -653,8 +653,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl7 = tmp2(1126).intl;
       obj8.placeholder = intl7.string(channel(1126).t.ZwWruY);
       obj8.onSubmitEditing = handleSave;
-      items2[1] = closure_13(channel(6290).TextInput, obj8);
-      items2[2] = closure_13(tmp11(7503), {
+      items2[1] = closure_13(channel(6506).TextInput, obj8);
+      items2[2] = closure_13(tmp11(7713), {
         onConfirmPress() {
           return stateFromStores(_undefined[19]).hideActionSheet(closure_1_10);
         },
@@ -669,7 +669,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-feedback-critical",
           children: obj3.getAnyErrorMessage(),
         };
-        tmp15Result = closure_13(tmp2(5092).Text, obj10);
+        tmp15Result = closure_13(tmp2(5147).Text, obj10);
       }
       items2[3] = tmp15Result;
       const obj11 = { style: tmp.startButton, children: null };
@@ -680,7 +680,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl8 = tmp2(1126).intl;
         stringResult3 = intl8.string(tmp2(1126).t.K344S7);
       }
-      obj11.children = closure_13(channel(5384).Button, {
+      obj11.children = closure_13(channel(5439).Button, {
         text: stringResult3,
         onPress: handleSave,
         disabled: "" === value,
@@ -699,7 +699,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl10 = tmp2(1126).intl;
         obj13.children = intl10.string(tmp2(1126).t.gR66jX);
-        tmp15Result2 = closure_13(tmp2(5092).Text, obj13);
+        tmp15Result2 = closure_13(tmp2(5147).Text, obj13);
       }
       const obj12 = {
         text: stringResult3,
@@ -718,8 +718,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp13Result = closure_14(View, obj4);
       items2[5] = tmp15Result2;
       obj7.children = items2;
-      return closure_13(channel(6845).BottomSheet, {
+      return closure_13(channel(7061).BottomSheet, {
         keyboardShouldPersistTaps: "always",
-        children: closure_14(channel(6819).SafeAreaPaddingView, obj7),
+        children: closure_14(channel(7035).SafeAreaPaddingView, obj7),
       });
     };

@@ -36,7 +36,7 @@ let closure_7 = async function _addDirectoryGuildEntry() {
     UNCATEGORIZED = constants.UNCATEGORIZED;
   }
   closure_132_3 = UNCATEGORIZED;
-  return "Set";
+  return "test";
 };
 let closure_8 = async function _updateDirectoryEntry() {
   const HTTP = closure_133_0(closure_133_2[6]).HTTP;
@@ -63,7 +63,7 @@ let closure_8 = async function _updateDirectoryEntry() {
     UNCATEGORIZED = constants.UNCATEGORIZED;
   }
   closure_132_3 = UNCATEGORIZED;
-  return "Set";
+  return "test";
 };
 let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
   closure_0 = arg0;
@@ -99,7 +99,7 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(12555).DirectoryEntryCategories;
+const DirectoryEntryCategories = fn(12848).DirectoryEntryCategories;
 let Endpoints = fn(1085).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;

@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import UserProfileApplicationWidgetTypes from "../../../user_profile/UserProfileApplicationWidgetTypes.tsx";
@@ -15,7 +15,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
         const intl = util.intl;
-        obj3.children = intl.string(_modDef3849.ove4zH);
+        obj3.children = intl.string(_modDef3862.ove4zH);
         const tmp19 = hasOwnProperty(Text_Text.Text, obj3);
         cResult[4] = tmp19;
         let tmp17 = tmp19;
@@ -109,8 +109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { direction: "vertical", spacing: 4, children: null };
       const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
       const intl = applicationId(1126).intl;
-      obj3.children = intl.string(_modDef3849.ove4zH);
-      const items2 = [closure_5(applicationId(5092).Text, obj3)];
+      obj3.children = intl.string(_modDef3862.ove4zH);
+      const items2 = [closure_5(applicationId(5147).Text, obj3)];
       const obj4 = {
         userId: stateFromStores,
         widget: memo,
@@ -121,5 +121,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.cardStyle = items3;
       items2[1] = closure_5(UserProfileApplicationWidgetCardDefault, obj4);
       obj2.children = items2;
-      return closure_6(applicationId(5382).Stack, obj2);
+      return closure_6(applicationId(5437).Stack, obj2);
     };

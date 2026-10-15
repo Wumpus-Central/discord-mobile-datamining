@@ -141,7 +141,7 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled()
                   closure_129_0 = flag;
                   c3 = 1;
                   c4 = 1;
-                  return { value: "Set", done: true };
+                  return { value: "test", done: true };
                 }
               } else if (1 === tmp5) {
                 if (arg0 === 1) {

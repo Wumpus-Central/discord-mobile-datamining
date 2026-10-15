@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/chat/conjureAttachmentDrafts.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3862 from "../intl/ConjureUntranslated.messages.js";
 import ConjureAttachmentTypes from "ConjureAttachmentTypes.tsx";
 import conjureAttachmentRequests from "conjureAttachmentRequests.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -127,17 +127,17 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const sendUserMessage = fn(10663).sendUserMessage;
+const sendUserMessage = fn(10886).sendUserMessage;
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(4991).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(5045).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;
   const obj = { size: null };
   const obj2 = ConjureAttachmentTypes;
   obj.size = obj2.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3849.JZ59Bo, obj);
+  return intl.formatToPlainString(_modDef3862.JZ59Bo, obj);
 }
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
@@ -168,7 +168,7 @@ export const uploadConjureAttachment = function uploadConjureAttachment(arg0, si
     const obj3 = { size: null };
     const tmpResult3 = ConjureAttachmentTypes;
     obj3.size = tmpResult3.formatConjureAttachmentLimit(ConjureAttachmentTypes.conjureAttachmentLimit(contentType));
-    obj2.errorText = intl.formatToPlainString(_modDef3849.JZ59Bo, obj3);
+    obj2.errorText = intl.formatToPlainString(_modDef3862.JZ59Bo, obj3);
     result = Promise.resolve(obj2);
     const tmpResult4 = ConjureAttachmentTypes;
   }
@@ -243,9 +243,9 @@ export const addConjureAttachmentDrafts = function addConjureAttachmentDrafts(pr
     const arraySpreadResult = HermesBuiltin.arraySpread(getConjureAttachmentDrafts(projectId, chat), 0);
   }
 };
-export const removeConjureAttachmentDraft = function removeConjureAttachmentDraft(id, chat, arg2) {
+export const removeConjureAttachmentDraft = function removeConjureAttachmentDraft(projectId, chat, arg2) {
   closure_0 = arg2;
-  const tmp = zustandStore.getState().draftsByProject[id];
+  const tmp = zustandStore.getState().draftsByProject[projectId];
   let tmp2;
   if (tmp != null) {
     tmp2 = tmp[chat];
@@ -260,7 +260,7 @@ export const removeConjureAttachmentDraft = function removeConjureAttachmentDraf
       URL.revokeObjectURL(found.previewUrl);
     }
     if (null != found.ref) {
-      const result = conjureAttachmentRequests.deleteStagedAttachment(id, found.ref.id);
+      const result = conjureAttachmentRequests.deleteStagedAttachment(projectId, found.ref.id);
       result.catch(() => {});
     }
     const found1 = tmp2.filter((localId) => localId.localId !== closure_0);
@@ -269,9 +269,9 @@ export const removeConjureAttachmentDraft = function removeConjureAttachmentDraf
     const obj4 = {};
     const merged = Object.assign(draftsByProject);
     const obj5 = {};
-    const merged1 = Object.assign(draftsByProject[id]);
+    const merged1 = Object.assign(draftsByProject[projectId]);
     obj5[chat] = found1;
-    obj4[id] = obj5;
+    obj4[projectId] = obj5;
     obj3.draftsByProject = obj4;
     zustandStore.setState(obj3);
   }

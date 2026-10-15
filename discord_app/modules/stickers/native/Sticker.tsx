@@ -5,8 +5,8 @@ import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import StickersUtils from "../StickersUtils.tsx";
 import StickersTypes from "../StickersTypes.tsx";
-import _modDef6826 from "../../../../_runtime/metro/06826__.js";
-import _modDef6827 from "../../../../_runtime/metro/06827__.js";
+import _modDef7042 from "../../../../_runtime/metro/07042__.js";
+import _modDef7043 from "../../../../_runtime/metro/07043__.js";
 import NativeLottieView from "NativeLottieView.tsx";
 import NativeAPNGViewDefault from "../../../components_native/common/NativeAPNGView.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -41,7 +41,7 @@ const result = size.fileFinishedImporting("modules/stickers/native/Sticker.tsx")
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function Sticker(arg0) {
-      const cResult = c.c(32);
+      const cResult = c.c(33);
       ({ sticker, size, animated, opaque } = arg0);
       if (undefined === opaque) {
         let num = 1;
@@ -172,13 +172,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp23 = cResult[27];
               }
               if (cResult[28] === tmp7) {
-                if (cResult[29] === tmp22) {
-                  if (cResult[30] === tmp23) {
-                    return cResult[31];
+                if (cResult[29] === tmp4) {
+                  if (cResult[30] === tmp22) {
+                    if (cResult[31] === tmp23) {
+                      return cResult[32];
+                    }
                   }
                 }
               }
               let obj6 = {
+                enableAnimation: tmp4,
                 resizeMode: "contain",
                 style: tmp22,
                 placeholder: null,
@@ -187,15 +190,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 accessibilityLabel: null,
               };
               if (tmpResult7.isThemeDark(ThemeStore.theme)) {
-                let tmp25Result = _modDef6826;
+                let tmp25Result = _modDef7042;
               } else {
-                tmp25Result = _modDef6827;
+                tmp25Result = _modDef7043;
               }
               obj6.placeholder = tmp25Result;
               obj6.source = tmp23;
               obj6.accessibilityLabel = tmp7;
               obj6 = (
                 <tmp26
+                  enableAnimation={tmp4}
                   resizeMode="contain"
                   style={tmp22}
                   placeholder={null}
@@ -205,9 +209,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 />
               );
               cResult[28] = tmp7;
-              cResult[29] = tmp22;
-              cResult[30] = tmp23;
-              cResult[31] = obj6;
+              cResult[29] = tmp4;
+              cResult[30] = tmp22;
+              cResult[31] = tmp23;
+              cResult[32] = obj6;
               tmpResult7 = shared;
             }
             const size3 = { height: size, width: size, opacity: num };
@@ -317,6 +322,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return jsx(NativeAPNGViewDefault, {});
         }
         const obj6 = {
+          enableAnimation: animated,
           resizeMode: "contain",
           style: null,
           placeholder: null,
@@ -327,9 +333,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const size3 = { height: size, width: size, opacity: num };
         obj6.style = size3;
         if (tmpResult10.isThemeDark(ThemeStore.theme)) {
-          let tmp13Result = _modDef6826;
+          let tmp13Result = _modDef7042;
         } else {
-          tmp13Result = _modDef6827;
+          tmp13Result = _modDef7043;
         }
         obj6.placeholder = tmp13Result;
         const obj7 = { uri: str };
@@ -337,6 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj6.accessibilityLabel = formatToPlainStringResult;
         return (
           <tmp14
+            enableAnimation={animated}
             resizeMode="contain"
             style={null}
             placeholder={null}

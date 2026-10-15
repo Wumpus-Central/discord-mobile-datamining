@@ -45,7 +45,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
           let customId;
           c7 = 1;
           c8 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

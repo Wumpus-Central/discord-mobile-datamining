@@ -244,7 +244,7 @@ let closure_10 = async function _fetchTestSKUsForApplication(arg0) {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -340,7 +340,7 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -570,6 +570,7 @@ let closure_14 = async function _orderSKU() {
             if (closure_3) {
               const obj11 = { is_gift: true, gift_customization: null };
               ({
+                is_recurring: obj7.is_recurring,
                 recipient_id: obj7.recipient_id,
                 gift_style: obj7.gift_style,
                 emoji_id: obj7.emoji_id,
@@ -579,6 +580,7 @@ let closure_14 = async function _orderSKU() {
                 custom_message: obj7.custom_message_contents,
               } = closure_4);
               obj11.gift_customization = {
+                is_recurring: null,
                 recipient_id: null,
                 gift_style: null,
                 emoji_id: null,
@@ -589,6 +591,7 @@ let closure_14 = async function _orderSKU() {
               };
               obj4.gifting_facet = obj11;
               const obj12 = {
+                is_recurring: null,
                 recipient_id: null,
                 gift_style: null,
                 emoji_id: null,

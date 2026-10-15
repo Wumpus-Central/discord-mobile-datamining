@@ -18,8 +18,8 @@ const fn = function u(get, arg1) {
       break;
     }
   } else {
-    fn2(4852).runOnUI(fn)(get, arg1);
-    const obj = fn2(4852);
+    fn2(4906).runOnUI(fn)(get, arg1);
+    const obj = fn2(4906);
   }
 };
 fn.__closure = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueIfChanged: "r" };
@@ -45,8 +45,8 @@ const fn2 = function u(get, arg1) {
       }
     }
   } else {
-    closure_0(4852).runOnUI(fn2)(get, arg1);
-    const obj = closure_0(4852);
+    closure_0(4906).runOnUI(fn2)(get, arg1);
+    const obj = closure_0(4906);
   }
 };
 let obj2 = { runOnUI: ReanimatedRexport.runOnUI };

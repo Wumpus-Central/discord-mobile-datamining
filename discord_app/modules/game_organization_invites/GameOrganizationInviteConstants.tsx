@@ -5,3 +5,4 @@ const result = size.fileFinishedImporting("modules/game_organization_invites/Gam
 
 export const GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES_ERROR_CODE = 820007;
 export const GameOrganizationInviteStates = { RESOLVING: "RESOLVING", RESOLVED: "RESOLVED", ERROR: "ERROR" };
+export const GameOrganizationDisplayNouns = { GUILD: "GUILD" };

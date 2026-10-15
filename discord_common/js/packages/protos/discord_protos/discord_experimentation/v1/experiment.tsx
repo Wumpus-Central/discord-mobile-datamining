@@ -46,6 +46,8 @@ const obj3 = {
   [7]: "SEO",
   MARKETING: 8,
   [8]: "MARKETING",
+  DESIGN_DOCS: 9,
+  [9]: "DESIGN_DOCS",
 };
 const obj4 = { ENABLED: 0, [0]: "ENABLED", DISABLED: 1, [1]: "DISABLED" };
 const obj5 = {
@@ -928,6 +930,7 @@ const tmp9 = new "AWAITING_MANUAL_APPROVAL"(
   fn,
   dependencyMap,
   Experiment_NumberLineSettings_Mode,
+  obj2,
 );
 let closure_19 = tmp9;
 const MessageType3 = fn(1210).MessageType;
@@ -1150,6 +1153,7 @@ let tmp10 = new "AWAITING_MANUAL_APPROVAL"(
   fn,
   dependencyMap,
   Experiment_NumberLineSettings_Mode,
+  obj2,
 );
 let closure_20 = tmp10;
 const MessageType4 = fn(1210).MessageType;
@@ -1326,6 +1330,7 @@ const tmp11 = new "AWAITING_MANUAL_APPROVAL"(
   fn,
   dependencyMap,
   Experiment_NumberLineSettings_Mode,
+  obj2,
 );
 let closure_21 = tmp11;
 const MessageType5 = fn(1210).MessageType;
@@ -1379,6 +1384,7 @@ const items21 = new items2(
   tmp,
   fn,
   dependencyMap,
+  Experiment_NumberLineSettings_Mode,
 );
 const MessageType6 = fn(1210).MessageType;
 class Bucket_AllocationExposureMode$Type extends MessageType6 {
@@ -1431,6 +1437,7 @@ const items22 = new items2(
   tmp,
   fn,
   dependencyMap,
+  Experiment_NumberLineSettings_Mode,
 );
 const MessageType7 = fn(1210).MessageType;
 class DebugConfig$Type extends MessageType7 {
@@ -1572,6 +1579,7 @@ const bucket_AllocationExposureModeType = new Bucket_AllocationExposureMode$Type
   fn,
   dependencyMap,
   Experiment_NumberLineSettings_Mode,
+  obj2,
 );
 const MessageType8 = fn(1210).MessageType;
 class LifecyclePlan$Type extends MessageType8 {
@@ -1735,6 +1743,7 @@ const bucket_AllocationExposureModeType1 = new Bucket_AllocationExposureMode$Typ
   fn,
   dependencyMap,
   Experiment_NumberLineSettings_Mode,
+  obj2,
 );
 const MessageType9 = fn(1210).MessageType;
 class LifecyclePlan_MeasurementPlan$Type extends MessageType9 {
@@ -1913,6 +1922,7 @@ const bucket_AllocationExposureModeType2 = new Bucket_AllocationExposureMode$Typ
   new.target,
   exports,
   obj20,
+  undefined,
 );
 const MessageType10 = fn(1210).MessageType;
 class LifecyclePlan_RolloutPlan$Type extends MessageType10 {
@@ -2094,6 +2104,7 @@ const lifecyclePlan_MeasurementPlanType = new LifecyclePlan_MeasurementPlan$Type
   undefined,
   8,
   7,
+  6,
 );
 const MessageType11 = fn(1210).MessageType;
 class LifecyclePlan_RampStep$Type extends MessageType11 {
@@ -2351,6 +2362,7 @@ const lifecyclePlan_RolloutPlanType = new LifecyclePlan_RolloutPlan$Type(
   7,
   6,
   4,
+  2,
 );
 const MessageType12 = fn(1210).MessageType;
 class LifecyclePlan_VariationBuckets$Type extends MessageType12 {
@@ -2513,6 +2525,7 @@ let tmp19 = new "internalBinaryRead"(
   undefined,
   8,
   7,
+  6,
 );
 let closure_27 = tmp19;
 const size = fn(2);

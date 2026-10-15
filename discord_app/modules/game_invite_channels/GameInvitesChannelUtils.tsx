@@ -1,8 +1,8 @@
 // discord_app/modules/game_invite_channels/GameInvitesChannelUtils.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import c from "../../../_runtime/00576_c.js";
-import getThreadAutoArchiveTimeOnceDefault from "../threads/getThreadAutoArchiveTimeOnce.tsx";
 import ApplicationActionCreators from "../applications/ApplicationActionCreators.tsx";
+import getThreadAutoArchiveTimeOnceDefault from "../threads/getThreadAutoArchiveTimeOnce.tsx";
 import sanitizeThreadNameDefault from "../threads/sanitizeThreadName.tsx";
 import ForumTagHooks from "../forums/ForumTagHooks.tsx";
 import ForumPostDataLoader from "../forums/ForumPostDataLoader.tsx";
@@ -17,7 +17,7 @@ const useMemo = fn(19).useMemo;
 const Constants = fn(1085);
 ({ ActivityFlags: closure_8, ActivityTypes: closure_9, MAX_CHANNEL_NAME_LENGTH: c10 } = Constants);
 const ChannelFlags = fn(2072).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(6988).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(7201).MAX_FORUM_POST_TAGS;
 let c13 = "No Mic";
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -189,7 +189,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         gameId = stateFromStores.gameId;
       }
-      const data = tmp(7016).useGame(gameId).data;
+      const data = tmp(7229).useGame(gameId).data;
       let officialApplicationId;
       if (data != null) {
         officialApplicationId = data.getOfficialApplicationId();
@@ -246,7 +246,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useGameInvitesChannelOfficialApplication(arg0) {
       const tmp = closure_15(arg0);
-      application = application(6858).useApplication(tmp);
+      application = application(6284).useApplication(tmp);
       const items = [application];
       return useMemo(() => {
         const merged = Object.assign(_objectWithoutProperties(application, closure_4));
@@ -299,8 +299,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp11 = cResult[7];
           }
-          const subscribeGuildMembers = tmp(7018).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
-          const tmpResult2 = tmp(7018);
+          const subscribeGuildMembers = tmp(7231).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
+          const tmpResult2 = tmp(7231);
         }
         const tmpResult = tmp(504);
       }

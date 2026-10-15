@@ -73,13 +73,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 function onRoleColorSettingValueChange(roleStyle) {
   AccessibilityActionCreators.setRoleStyle(roleStyle);
 }
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSOPWm);
   },
-  parent: fn(8000).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8210).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: tmp3,

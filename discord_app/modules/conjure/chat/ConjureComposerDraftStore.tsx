@@ -8,13 +8,13 @@ import apply from "../../../../_runtime/metro/00012__.js";
 require = fn;
 function readStoredDrafts() {
   const Storage = Storage2.Storage;
-  let obj = Storage.get(VibegrationsComposerDrafts);
+  let obj = Storage.get(ConjureComposerDrafts);
   if (obj == null) {
     obj = {};
   }
   return obj;
 }
-const VibegrationsComposerDrafts = "VibegrationsComposerDrafts";
+const ConjureComposerDrafts = "ConjureComposerDrafts";
 const map = new Map();
 let closure_6 = apply.throttle(() => {
   if (0 !== map.size) {
@@ -32,7 +32,7 @@ let closure_6 = apply.throttle(() => {
     }
     map.clear();
     const Storage = Storage2.Storage;
-    const result = Storage.set(VibegrationsComposerDrafts, tmp22);
+    const result = Storage.set(ConjureComposerDrafts, tmp22);
   }
 }, 1000);
 const Store = initializeDefault.Store;
@@ -41,7 +41,7 @@ ConjureComposerDraftStore.prototype["getDraft"] = function getDraft(arg0) {
   value = map.get(arg0);
   if (null == value) {
     const Storage = Storage2.Storage;
-    value2 = Storage.get(VibegrationsComposerDrafts);
+    value2 = Storage.get(ConjureComposerDrafts);
     if (value2 == null) {
       value2 = {};
     }
@@ -58,7 +58,7 @@ const conjureComposerDraftStore = new ConjureComposerDraftStore(DispatcherDefaul
     map.clear();
     closure_6.cancel();
     const Storage = Storage2.Storage;
-    Storage.remove(VibegrationsComposerDrafts);
+    Storage.remove(ConjureComposerDrafts);
     return false;
   },
   CONJURE_COMPOSER_DRAFT_SET: function handleDraftSet(draft) {

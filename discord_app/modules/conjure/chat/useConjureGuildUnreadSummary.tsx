@@ -5,14 +5,14 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const ReadStateTypes = fn(5972).ReadStateTypes;
+const ReadStateTypes = fn(6183).ReadStateTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/useConjureGuildUnreadSummary.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureGuildUnreadSummary(arg0) {
-      const cResult = stateFromStores(576).c(6);
+      const cResult = stateFromStoresArray(576).c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore, ConjureProjectStore];
         const fn = function l() {
@@ -20,13 +20,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const found = resourceIds.filter((item) => {
             let result = null == project.getProject(item);
             if (result) {
-              result = stateFromStores(dependencyMap[6]).isConjureProjectUnread(item);
-              const obj = stateFromStores(dependencyMap[6]);
+              result = stateFromStoresArray(dependencyMap[6]).isConjureProjectUnread(item);
+              const obj = stateFromStoresArray(dependencyMap[6]);
             }
             return result;
           });
-          const sorted = found.sort();
-          return sorted.join(",");
+          return found.sort();
         };
         const items1 = [];
         cResult[0] = items;
@@ -38,16 +37,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5, tmp6] = cResult;
       }
-      let obj = stateFromStores(576);
-      stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5, tmp6);
-      if (cResult[3] !== stateFromStores) {
+      let obj = stateFromStoresArray(576);
+      stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(tmp4, tmp5, tmp6);
+      if (cResult[3] !== stateFromStoresArray) {
         const fn2 = function f() {
-          if ("" !== stateFromStores) {
-            const missingConjureProjects = ConjureActionCreators.loadMissingConjureProjects(stateFromStores.split(","));
+          if (stateFromStoresArray.length > 0) {
+            const missingConjureProjects = ConjureActionCreators.loadMissingConjureProjects(tmp);
           }
         };
-        const items2 = [stateFromStores];
-        cResult[3] = stateFromStores;
+        const items2 = [stateFromStoresArray];
+        cResult[3] = stateFromStoresArray;
         cResult[4] = fn2;
         cResult[5] = items2;
         let tmp11 = items2;
@@ -57,30 +56,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[5];
       }
       const effect = noop.useEffect(tmp10, tmp11);
-      const tmpResult = stateFromStores(504);
-      return stateFromStores(10685).useConjureUnreadSummary(arg0);
+      const tmpResult = stateFromStoresArray(504);
+      return stateFromStoresArray(10908).useConjureUnreadSummary(arg0);
     }
   : function useConjureGuildUnreadSummary(arg0) {
       const items = [ReadStateStore, ConjureProjectStore];
-      stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
+      stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
         resourceIds = resourceIds.getResourceIds(constants.CONJURING_PROJECT);
         const found = resourceIds.filter((item) => {
           let result = null == project.getProject(item);
           if (result) {
-            result = stateFromStores(dependencyMap[6]).isConjureProjectUnread(item);
-            const obj = stateFromStores(dependencyMap[6]);
+            result = stateFromStoresArray(dependencyMap[6]).isConjureProjectUnread(item);
+            const obj = stateFromStoresArray(dependencyMap[6]);
           }
           return result;
         });
-        const sorted = found.sort();
-        return sorted.join(",");
+        return found.sort();
       }, []);
-      const items1 = [stateFromStores];
+      const items1 = [stateFromStoresArray];
       const effect = noop.useEffect(() => {
-        if ("" !== stateFromStores) {
-          const missingConjureProjects = ConjureActionCreators.loadMissingConjureProjects(stateFromStores.split(","));
+        if (stateFromStoresArray.length > 0) {
+          const missingConjureProjects = ConjureActionCreators.loadMissingConjureProjects(tmp);
         }
       }, items1);
-      let obj = stateFromStores(504);
-      return stateFromStores(10685).useConjureUnreadSummary(arg0);
+      let obj = stateFromStoresArray(504);
+      return stateFromStoresArray(10908).useConjureUnreadSummary(arg0);
     };

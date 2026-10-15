@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -868,17 +868,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let data;
       const tmp = closure_9();
       const bottom = data(1631)().bottom;
-      data = data(17683)();
-      dependencyMap = goToMessageRequestPreview(17685).useListHasSingleMessageRequest();
-      let obj = goToMessageRequestPreview(17685);
+      data = data(17923)();
+      dependencyMap = goToMessageRequestPreview(17925).useListHasSingleMessageRequest();
+      let obj = goToMessageRequestPreview(17925);
       const tmp2 = data;
-      const isRestricted = goToMessageRequestPreview(12712).useIsMessageRequestRestrictedViewer();
+      const isRestricted = goToMessageRequestPreview(13009).useIsMessageRequestRestrictedViewer();
       if (0 === data.length) {
         const obj3 = { bodyText: null };
         const intl2 = tmp4(1126).intl;
         obj3.bodyText = intl2.string(tmp4(1126).t.SXrqTf);
-        let tmp9Result = closure_7(tmp2(17688), obj3);
-        const tmp2Result = tmp2(17688);
+        let tmp9Result = closure_7(tmp2(17928), obj3);
+        const tmp2Result = tmp2(17928);
       } else {
         const items = [tmp.list];
         let num = 0;
@@ -929,9 +929,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp4(1126).intl;
         const obj9 = { pendingRequestNumber: data.length };
         obj8.children = intl.format(tmp4(1126).t.evH4Yb, obj9);
-        obj7.children = closure_7(tmp4(5092).Text, obj8);
+        obj7.children = closure_7(tmp4(5147).Text, obj8);
         obj4.ListHeaderComponent = closure_7(closure_5, obj7);
-        tmp9Result = closure_7(tmp4(6818).FlashList, obj4);
+        tmp9Result = closure_7(tmp4(7034).FlashList, obj4);
         tmp4Result = tmp4(1382);
       }
       return tmp9Result;

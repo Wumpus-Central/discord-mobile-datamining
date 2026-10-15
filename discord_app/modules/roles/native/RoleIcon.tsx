@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5092);
+const Text_Text = Text(5147);
 require = fn;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1382);
@@ -99,10 +99,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = {
         fontFamily: "System",
         fontSize: result,
-        lineHeight: "code",
-        textAlign: "alignItems",
+        lineHeight: "ix",
+        textAlign: "setClientId",
         width: num,
-        marginBottom: "emoji",
+        marginBottom: "caboose",
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -118,10 +118,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         fontFamily: "System",
         fontSize: size * num,
-        lineHeight: "code",
-        textAlign: "alignItems",
+        lineHeight: "ix",
+        textAlign: "setClientId",
         width: size,
-        marginBottom: "emoji",
+        marginBottom: "caboose",
       };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };

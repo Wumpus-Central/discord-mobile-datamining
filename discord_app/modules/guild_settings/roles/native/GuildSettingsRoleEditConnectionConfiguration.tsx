@@ -112,7 +112,7 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1085).PlatformTypes;
-const Constants = fn(6882);
+const Constants = fn(7096);
 ({
   MetadataFields: closure_7,
   OperatorTypes: closure_8,
@@ -122,7 +122,7 @@ const Constants = fn(6882);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   numericalInputContainerIOSInline: { marginTop: -2 },
   numericalInputContainerAndroidInline: null,
@@ -196,7 +196,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[0] !== bot) {
-          const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "r" };
+          const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "Array" };
           const tmp26 = onChangeText(native.Avatar, obj3);
           cResult[0] = bot;
           cResult[1] = tmp26;
@@ -217,7 +217,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 name1 = getOrFetchApplicationBatched.name;
               }
             } else if (cResult[2] !== getOrFetchApplicationBatched.bot) {
-              const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+              const obj4 = {
+                size: native.AvatarSizes.XSMALL,
+                user: getOrFetchApplicationBatched.bot,
+                guildId: "Array",
+              };
               const tmp20 = onChangeText(native.Avatar, obj4);
               cResult[2] = getOrFetchApplicationBatched.bot;
               cResult[3] = tmp20;
@@ -333,7 +337,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         application2 = integration.application;
       }
       if (null != application2) {
-        const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
+        const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
         let bot;
         if (integration != null) {
           const application = integration.application;
@@ -354,7 +358,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp11;
           if (null != bot1) {
-            const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+            const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
             tmp11 = onChangeText(native.Avatar, obj3);
           }
           let name1;
@@ -547,7 +551,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         }
         _slicedToArray(tmp, num);
       };
-      return onChangeText(metadataField(6901).TableSwitchRow, obj, metadataField);
+      return onChangeText(metadataField(7115).TableSwitchRow, obj, metadataField);
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1497,7 +1501,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       if (num == null) {
         num = -1;
       }
-      const realizedOperatorForResult = metadataField(18475).realizedOperatorFor(existingPendingConfiguration.operator);
+      const realizedOperatorForResult = metadataField(18714).realizedOperatorFor(existingPendingConfiguration.operator);
       c7 = realizedOperatorForResult;
       value = undefined;
       if (existingPendingConfiguration != null) {
@@ -1505,9 +1509,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           value = iter.value;
         }
       }
-      let obj = metadataField(18475);
-      const tmpResult = metadataField(18475);
-      str1 = metadataField(18475).displayedValueFor(value, realizedOperatorForResult).toString();
+      let obj = metadataField(18714);
+      const tmpResult = metadataField(18714);
+      str1 = metadataField(18714).displayedValueFor(value, realizedOperatorForResult).toString();
       let mapped = noop;
       [value] = noop.useState(str1);
       closure_10 = tmp9;
@@ -1596,7 +1600,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.children = onInputValueChange(metadataField(1200).TextInput, obj6, metadataField);
           let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer")];
           const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-          items1[1] = onInputValueChange(metadataField(5092).Text, obj7);
+          items1[1] = onInputValueChange(metadataField(5147).Text, obj7);
           obj4.children = items1;
           tmp21Result = closure_13(tmp22, obj4);
         }
@@ -1638,9 +1642,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             _slicedToArray(tmp3, num);
           },
         };
-        return onInputValueChange(metadataField(6901).TableSwitchRow, obj8, metadataField);
+        return onInputValueChange(metadataField(7115).TableSwitchRow, obj8, metadataField);
       }
-      const str = metadataField(18475).displayedValueFor(value, realizedOperatorForResult);
+      const str = metadataField(18714).displayedValueFor(value, realizedOperatorForResult);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()

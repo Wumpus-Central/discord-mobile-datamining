@@ -15,7 +15,7 @@ import TableRowTrailingText from "../../../design/components/TableRow/native/Tab
 import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import TimestampUtils from "../../markup/TimestampUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
-import _modDef8269 from "../../../../_runtime/metro/08269__.js";
+import _modDef8479 from "../../../../_runtime/metro/08479__.js";
 import Form from "../../../design/void/Form/native/index.tsx";
 import StickersHooks from "../../stickers/StickersHooks.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
@@ -33,10 +33,10 @@ const Constants = fn(1085);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   row: {
-    height: fn(9727).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(9935).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -54,7 +54,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(9727).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(9935).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -192,7 +192,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                         leading: tmp17,
                         trailing: tmp21,
                       };
-                      const tmp27 = closure_9(tmp(8587).FormRow, obj4);
+                      const tmp27 = closure_9(tmp(8800).FormRow, obj4);
                       cResult[21] = onPress;
                       cResult[22] = tmp4.row;
                       cResult[23] = tmp13;
@@ -203,7 +203,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { user, usernameStyle: tmp20, discriminatorStyle: tmp4.trailing };
-                  const tmp24 = closure_9(guildId(8770), obj5);
+                  const tmp24 = closure_9(guildId(8983), obj5);
                   cResult[17] = tmp4.trailing;
                   cResult[18] = tmp20;
                   cResult[19] = user;
@@ -232,8 +232,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           name = stateFromStores;
         }
         if (name == null) {
-          name = guildId(4964).getName(user);
-          const obj3 = guildId(4964);
+          name = guildId(5018).getName(user);
+          const obj3 = guildId(5018);
         }
         cResult[4] = stateFromStores;
         cResult[5] = nick;
@@ -280,8 +280,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         nick = stateFromStores;
       }
       if (nick == null) {
-        nick = guildId(4964).getName(user);
-        const obj3 = guildId(4964);
+        nick = guildId(5018).getName(user);
+        const obj3 = guildId(5018);
       }
       obj2.label = closure_9(closure_12, { text: nick });
       const obj = user(504);
@@ -296,8 +296,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [,];
       ({ trailing: arr2[0], username: arr2[1] } = tmp);
       obj5.usernameStyle = items1;
-      obj2.trailing = closure_9(guildId(8770), obj5);
-      return closure_9(user(8587).FormRow, obj2);
+      obj2.trailing = closure_9(guildId(8983), obj5);
+      return closure_9(user(8800).FormRow, obj2);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -476,7 +476,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== channel) {
         const getGuild = GuildStore.getGuild;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef8269;
+          let channelIconWithGuild = _modDef8479;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp7);
           const tmpResult = utils_ChannelUtils;
@@ -553,7 +553,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channel, category } = onPress);
       const tmp = closure_11();
       if (channel.type === constants.GUILD_CATEGORY) {
-        let channelIconWithGuild = _modDef8269;
+        let channelIconWithGuild = _modDef8479;
       } else {
         channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
       }

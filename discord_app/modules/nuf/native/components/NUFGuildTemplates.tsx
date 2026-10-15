@@ -213,7 +213,7 @@ function getScreens() {
       };
       const intl = guildTemplate(1126).intl;
       obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12583), obj);
+      return closure_14(closure_1(12876), obj);
     },
   };
   const obj5 = {
@@ -242,7 +242,7 @@ function getScreens() {
       };
       const intl = guildTemplate(1126).intl;
       obj.customTitle = intl.string(guildTemplate(1126).t["5HZu07"]);
-      return closure_14(closure_1(12583), obj);
+      return closure_14(closure_1(12876), obj);
     },
   };
   impressionProperties[constants.JOIN_SERVER] = {
@@ -338,7 +338,7 @@ function getScreens() {
       };
       const intl = guildId(1126).intl;
       obj.buttonText = intl.string(guildId(1126).t["uHXB+F"]);
-      return closure_14(closure_1(13058), obj);
+      return closure_14(closure_1(13354), obj);
     },
   };
   const obj9 = {
@@ -362,8 +362,8 @@ function getScreens() {
 const Keyboard = fn(17).Keyboard;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, AnalyticsSections: closure_8, NOOP: closure_9 } = Constants);
-const GuildTemplateId = fn(12977).GuildTemplateId;
-const CreateGuildConstants = fn(6666);
+const GuildTemplateId = fn(13273).GuildTemplateId;
+const CreateGuildConstants = fn(6882);
 ({
   CreateGuildModalStates: closure_11,
   GuildTemplateTriggers: closure_12,

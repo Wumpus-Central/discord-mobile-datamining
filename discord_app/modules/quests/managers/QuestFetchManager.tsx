@@ -115,7 +115,7 @@ class QuestFetchManager extends tmp2 {
     return applyArgumentsResult;
   }
 }
-QuestFetchManager.prototype["_fetch"] = function _fetch(post_connect_initial) {
+QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
   let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     isEligibleForQuests = !QuestStore.isFetchingCurrentQuests;
@@ -123,7 +123,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(post_connect_initial) {
   if (isEligibleForQuests) {
     const obj3 = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
     const obj4 = {
-      callerSource: post_connect_initial,
+      callerSource,
       storeSize: QuestStore.quests.size,
       lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
       msSinceLastFetch: null,

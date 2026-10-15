@@ -1,6 +1,6 @@
 // discord_common/js/packages/rpc-schema/definitions.tsx
-import OAuth2Scopes from "../../shared/shared-constants/OAuth2Scopes.tsx";
 import EmbeddedSurfaceType from "../../shared/shared-constants/EmbeddedSurfaceType.tsx";
+import OAuth2Scopes from "../../shared/shared-constants/OAuth2Scopes.tsx";
 import ActivityPlatform from "../../shared/constants/ActivityPlatform.tsx";
 import helpers from "helpers.tsx";
 import contextMenuIcons from "contextMenuIcons.tsx";
@@ -28,6 +28,7 @@ function VoiceCapabilities(boolean) {
     listener_pose: null,
     room_size: null,
     reflections: null,
+    acoustics: null,
     max_sources: null,
     max_updates_per_second: null,
   };
@@ -46,6 +47,8 @@ function VoiceCapabilities(boolean) {
   const booleanResult9 = boolean.boolean();
   obj2.reflections = boolean.boolean().required();
   const booleanResult10 = boolean.boolean();
+  obj2.acoustics = boolean.boolean().required();
+  const booleanResult11 = boolean.boolean();
   const numberResult = boolean.number();
   obj2.max_sources = boolean.number().integer().required();
   const integerResult = boolean.number().integer();
@@ -110,46 +113,13 @@ let obj3 = {
     return obj;
   },
 };
-let obj4 = {
-  embeddedAppSDK: true,
-  request: "Array",
-  response(string) {
-    const obj = { image_url: string.string().required() };
-    return obj;
-  },
-};
-let obj5 = {
-  embeddedAppSDK: true,
-  response: "Array",
-  request(string) {
-    const obj = { mediaUrl: null };
-    const stringResult = string.string();
-    obj.mediaUrl = string.string().required().max(1024);
-    return obj;
-  },
-};
-let obj7 = {
-  embeddedAppSDK: true,
-  request: "Array",
-  response(array) {
-    const obj = { participants: null };
-    const arrayResult = array.array();
-    const obj2 = { nickname: null };
-    const obj3 = User(array);
-    obj2.nickname = array.string().description("Server nickname. Not unique.");
-    const keys = obj3.keys(obj2);
-    const stringResult = array.string();
-    obj.participants = arrayResult.items(keys.required()).required();
-    return obj;
-  },
-};
 let obj9 = {
   request: "Array",
   response(boolean) {
     return VoiceCapabilities(boolean);
   },
 };
-const obj11 = {
+let obj11 = {
   request: "Array",
   response(string) {
     const obj = { session_id: string.string().required(), channel_id: null, capabilities: null, participants: null };
@@ -192,7 +162,7 @@ const obj11 = {
     return obj;
   },
 };
-const obj13 = {
+let obj14 = {
   request: "Array",
   response(boolean) {
     const obj = { available: boolean.boolean().required(), transport: null, requires_existing_watch: null };
@@ -204,7 +174,7 @@ const obj13 = {
     return obj;
   },
 };
-const obj14 = {
+const obj15 = {
   request: "Array",
   response(boolean) {
     const obj = { available: boolean.boolean().required(), transport: null };
@@ -214,164 +184,14 @@ const obj14 = {
     return obj;
   },
 };
-const obj24 = {
+const obj25 = {
   request: "Array",
   response(boolean) {
     const obj = { hidden: boolean.boolean().required() };
     return obj;
   },
 };
-const obj27 = {
-  embeddedAppSDK: true,
-  request: "Array",
-  response(array) {
-    const arrayResult = array.array();
-    const obj = { type: null, user: null, presence: null };
-    const requiredResult = array.array().required();
-    obj.type = array.number().required();
-    const numberResult = array.number();
-    obj.user = User(array).required();
-    const obj2 = { status: null, activity: null };
-    const obj5 = User(array);
-    obj2.status = array.string().required();
-    if (typeof Activity === "function") {
-      const obj3 = { relationships: null };
-      const obj4 = {
-        session_id: array.string().optional(),
-        type: null,
-        name: null,
-        url: null,
-        application_id: null,
-        status_display_type: null,
-        state: null,
-        state_url: null,
-        details: null,
-        details_url: null,
-        emoji: null,
-        assets: null,
-        timestamps: null,
-        party: null,
-        secrets: null,
-        sync_id: null,
-        created_at: null,
-        instance: null,
-        flags: null,
-        metadata: null,
-        platform: null,
-        supported_platforms: null,
-        buttons: null,
-        hangStatus: null,
-      };
-      const stringResult1 = array.string();
-      obj4.type = array.number().optional();
-      const numberResult1 = array.number();
-      obj4.name = array.string().required();
-      const stringResult2 = array.string();
-      const stringResult3 = array.string();
-      obj4.url = array.string().allow(null).optional();
-      const allowResult = array.string().allow(null);
-      obj4.application_id = array.string().optional();
-      const stringResult4 = array.string();
-      obj4.status_display_type = array.number().optional();
-      const numberResult2 = array.number();
-      obj4.state = array.string().optional();
-      const stringResult5 = array.string();
-      obj4.state_url = array.string().optional();
-      const stringResult6 = array.string();
-      obj4.details = array.string().optional();
-      const stringResult7 = array.string();
-      obj4.details_url = array.string().optional();
-      const obj6 = { name: null, id: null, animated: null };
-      const stringResult8 = array.string();
-      obj6.name = array.string().required();
-      const stringResult9 = array.string();
-      const stringResult10 = array.string();
-      obj6.id = array.string().allow(null).optional();
-      const allowResult1 = array.string().allow(null);
-      const boolResult = array.bool();
-      obj6.animated = array.bool().optional().allow(null);
-      const optionalResult = array.bool().optional();
-      const objectResult = array.object(obj6);
-      obj4.emoji = array.object(obj6).allow(null).optional();
-      const obj7 = {
-        large_image: null,
-        large_text: null,
-        large_url: null,
-        small_image: null,
-        small_text: null,
-        small_url: null,
-      };
-      const allowResult2 = array.object(obj6).allow(null);
-      obj7.large_image = array.string().optional();
-      const stringResult11 = array.string();
-      obj7.large_text = array.string().optional();
-      const stringResult12 = array.string();
-      obj7.large_url = array.string().optional();
-      const stringResult13 = array.string();
-      obj7.small_image = array.string().optional();
-      const stringResult14 = array.string();
-      obj7.small_text = array.string().optional();
-      const stringResult15 = array.string();
-      obj7.small_url = array.string().optional();
-      const stringResult16 = array.string();
-      obj4.assets = array.object(obj7).optional();
-      const obj8 = { start: null, end: null };
-      const objectResult7 = array.object(obj7);
-      obj8.start = array.number().optional();
-      const numberResult3 = array.number();
-      obj8.end = array.number().optional();
-      const numberResult4 = array.number();
-      obj4.timestamps = array.object(obj8).optional();
-      const obj9 = { id: null, size: null, privacy: null };
-      const objectResult8 = array.object(obj8);
-      obj9.id = array.string().optional();
-      const stringResult17 = array.string();
-      const arrayResult4 = array.array();
-      const itemsResult = array.array().items(array.number());
-      obj9.size = array.array().items(array.number()).length(2).optional();
-      const lengthResult = array.array().items(array.number()).length(2);
-      obj9.privacy = array.number().optional();
-      const numberResult5 = array.number();
-      obj4.party = array.object(obj9).optional();
-      const obj10 = { match: null, join: null };
-      const objectResult9 = array.object(obj9);
-      obj10.match = array.string().optional();
-      const stringResult18 = array.string();
-      obj10.join = array.string().optional();
-      const stringResult19 = array.string();
-      obj4.secrets = array.object(obj10).optional();
-      const objectResult10 = array.object(obj10);
-      obj4.sync_id = array.string().optional();
-      const stringResult20 = array.string();
-      obj4.created_at = array.number().optional();
-      const numberResult6 = array.number();
-      obj4.instance = array.bool().optional();
-      const boolResult1 = array.bool();
-      obj4.flags = array.number().optional();
-      const numberResult7 = array.number();
-      obj4.metadata = array.object().optional();
-      const objectResult11 = array.object();
-      obj4.platform = array.string().optional();
-      const stringResult21 = array.string();
-      const arrayResult5 = array.array();
-      obj4.supported_platforms = array.array().items(array.string()).optional();
-      const itemsResult1 = array.array().items(array.string());
-      const arrayResult6 = array.array();
-      obj4.buttons = array.array().items(array.string()).optional();
-      const itemsResult2 = array.array().items(array.string());
-      obj4.hangStatus = array.string().optional();
-      const stringResult22 = array.string();
-      obj2.activity = array.object(obj4).allow(null);
-      obj.presence = array.object(obj2);
-      obj3.relationships = requiredResult.items(array.object(obj));
-      return obj3;
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-    const stringResult = array.string();
-  },
-};
-const obj29 = {
+const obj30 = {
   request: "Array",
   response(string) {
     const obj = { surface: EmbeddedSurface(string).required(), launch: null, platform: null };
@@ -389,30 +209,6 @@ const obj29 = {
     const items = [...helpers.joiEnum(ActivityPlatform.ActivityPlatform)];
     const applyResult = stringResult3.valid.apply(items);
     obj.platform = stringResult3.valid.apply(items).meta({ className: "ActivityPlatform" }).required();
-    return obj;
-  },
-};
-const obj33 = {
-  embeddedAppSDK: true,
-  request: "Array",
-  response(string) {
-    const obj = { quest_id: string.string().required(), enrolled_at: null, completed_at: null, external_cta_url: null };
-    const stringResult = string.string();
-    const stringResult1 = string.string();
-    obj.enrolled_at = string.string().allow(null).optional();
-    const allowResult = string.string().allow(null);
-    const stringResult2 = string.string();
-    obj.completed_at = string.string().allow(null).optional();
-    const allowResult1 = string.string().allow(null);
-    obj.external_cta_url = string.string().required();
-    return obj;
-  },
-};
-const obj34 = {
-  embeddedAppSDK: true,
-  request: "Array",
-  response(string) {
-    const obj = { ticket: string.string().required() };
     return obj;
   },
 };
@@ -586,8 +382,24 @@ let items = [EmbeddedSurface];
 const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/definitions.tsx");
 
 export const RPCCommandSchemas = {
-  [helpers.RPCCommand.INITIATE_IMAGE_UPLOAD]: obj4,
-  [helpers.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: obj5,
+  [helpers.RPCCommand.INITIATE_IMAGE_UPLOAD]: {
+    embeddedAppSDK: true,
+    request: "Array",
+    response(string) {
+      const obj = { image_url: string.string().required() };
+      return obj;
+    },
+  },
+  [helpers.RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: {
+    embeddedAppSDK: true,
+    response: "Array",
+    request(string) {
+      const obj = { mediaUrl: null };
+      const stringResult = string.string();
+      obj.mediaUrl = string.string().required().max(1024);
+      return obj;
+    },
+  },
   [helpers.RPCCommand.AUTHENTICATE]: {
     embeddedAppSDK: true,
     request(string) {
@@ -650,7 +462,21 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj7,
+  [helpers.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
+    embeddedAppSDK: true,
+    request: "Array",
+    response(array) {
+      const obj = { participants: null };
+      const arrayResult = array.array();
+      const obj2 = { nickname: null };
+      const obj3 = User(array);
+      obj2.nickname = array.string().description("Server nickname. Not unique.");
+      const keys = obj3.keys(obj2);
+      const stringResult = array.string();
+      obj.participants = arrayResult.items(keys.required()).required();
+      return obj;
+    },
+  },
   [helpers.RPCCommand.RELAUNCH_FRAME]: {
     request(string) {
       const obj = { build: null };
@@ -777,17 +603,216 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
+  [helpers.RPCCommand.SET_VOICE_SPATIAL_ACOUSTICS]: {
+    request(string) {
+      const obj = { session_id: string.string().required(), acoustics: null };
+      const obj2 = { binaural: null, distance_attenuation: null, air_absorption: null, reflections: null };
+      const obj3 = { spatial_blend: null, bilinear_interpolation: null, hrtf_volume: null, hrtf_normalization: null };
+      ({ object, object: object2 } = string);
+      const stringResult = string.string();
+      const numberResult = string.number();
+      const minResult = string.number().min(0);
+      obj3.spatial_blend = string.number().min(0).max(1).optional();
+      const maxResult = string.number().min(0).max(1);
+      obj3.bilinear_interpolation = string.boolean().optional();
+      const booleanResult = string.boolean();
+      const numberResult1 = string.number();
+      const minResult1 = string.number().min(0);
+      obj3.hrtf_volume = string.number().min(0).max(2).optional();
+      const maxResult1 = string.number().min(0).max(2);
+      obj3.hrtf_normalization = string.boolean().optional();
+      const booleanResult1 = string.boolean();
+      obj2.binaural = object2(obj3).optional();
+      const obj4 = { enabled: null, min_distance: null };
+      const object2Result = object2(obj3);
+      obj4.enabled = string.boolean().optional();
+      const booleanResult2 = string.boolean();
+      const numberResult2 = string.number();
+      const minResult2 = string.number().min(0.1);
+      obj4.min_distance = string.number().min(0.1).max(100).optional();
+      const maxResult2 = string.number().min(0.1).max(100);
+      obj2.distance_attenuation = string.object(obj4).optional();
+      const obj5 = { enabled: null, coefficients: null };
+      const objectResult = string.object(obj4);
+      obj5.enabled = string.boolean().optional();
+      const obj6 = { low: null, mid: null, high: null };
+      const booleanResult3 = string.boolean();
+      const numberResult3 = string.number();
+      const minResult3 = string.number().min(0);
+      obj6.low = string.number().min(0).max(1).required();
+      const maxResult3 = string.number().min(0).max(1);
+      const numberResult4 = string.number();
+      const minResult4 = string.number().min(0);
+      obj6.mid = string.number().min(0).max(1).required();
+      const maxResult4 = string.number().min(0).max(1);
+      const numberResult5 = string.number();
+      const minResult5 = string.number().min(0);
+      obj6.high = string.number().min(0).max(1).required();
+      const maxResult5 = string.number().min(0).max(1);
+      obj5.coefficients = string.object(obj6).optional();
+      const objectResult6 = string.object(obj6);
+      obj2.air_absorption = string.object(obj5).optional();
+      const obj7 = {
+        enabled: null,
+        duration_seconds: null,
+        num_rays: null,
+        num_bounces: null,
+        irradiance_min_distance: null,
+        binaural_decode: null,
+        mix_level: null,
+        room: null,
+      };
+      const objectResult7 = string.object(obj5);
+      obj7.enabled = string.boolean().optional();
+      const booleanResult4 = string.boolean();
+      const numberResult6 = string.number();
+      const minResult6 = string.number().min(0.1);
+      obj7.duration_seconds = string.number().min(0.1).max(2).optional();
+      const maxResult6 = string.number().min(0.1).max(2);
+      const numberResult7 = string.number();
+      const integerResult = string.number().integer();
+      const minResult7 = string.number().integer().min(64);
+      obj7.num_rays = string.number().integer().min(64).max(4096).optional();
+      const maxResult7 = string.number().integer().min(64).max(4096);
+      const numberResult8 = string.number();
+      const integerResult1 = string.number().integer();
+      const minResult8 = string.number().integer().min(1);
+      obj7.num_bounces = string.number().integer().min(1).max(64).optional();
+      const maxResult8 = string.number().integer().min(1).max(64);
+      const numberResult9 = string.number();
+      const minResult9 = string.number().min(0.1);
+      obj7.irradiance_min_distance = string.number().min(0.1).max(10).optional();
+      const maxResult9 = string.number().min(0.1).max(10);
+      obj7.binaural_decode = string.boolean().optional();
+      const booleanResult5 = string.boolean();
+      const numberResult10 = string.number();
+      const minResult10 = string.number().min(0);
+      obj7.mix_level = string.number().min(0).max(2).optional();
+      const obj8 = { min_corner: null, max_corner: null, floor: null, ceiling: null, walls: null };
+      const point = { x: null, y: null, z: null };
+      ({ object: object3, object: object4 } = string);
+      const maxResult10 = string.number().min(0).max(2);
+      const numberResult11 = string.number();
+      const minResult11 = string.number().min(-1000);
+      point.x = string.number().min(-1000).max(1000).required();
+      const maxResult11 = string.number().min(-1000).max(1000);
+      const numberResult12 = string.number();
+      const minResult12 = string.number().min(-1000);
+      point.y = string.number().min(-1000).max(1000).required();
+      const maxResult12 = string.number().min(-1000).max(1000);
+      const numberResult13 = string.number();
+      const minResult13 = string.number().min(-1000);
+      point.z = string.number().min(-1000).max(1000).required();
+      const maxResult13 = string.number().min(-1000).max(1000);
+      obj8.min_corner = object4(point).optional();
+      const point1 = { x: null, y: null, z: null };
+      const object4Result = object4(point);
+      const numberResult14 = string.number();
+      const minResult14 = string.number().min(-1000);
+      point1.x = string.number().min(-1000).max(1000).required();
+      const maxResult14 = string.number().min(-1000).max(1000);
+      const numberResult15 = string.number();
+      const minResult15 = string.number().min(-1000);
+      point1.y = string.number().min(-1000).max(1000).required();
+      const maxResult15 = string.number().min(-1000).max(1000);
+      const numberResult16 = string.number();
+      const minResult16 = string.number().min(-1000);
+      point1.z = string.number().min(-1000).max(1000).required();
+      const maxResult16 = string.number().min(-1000).max(1000);
+      obj8.max_corner = string.object(point1).optional();
+      const obj9 = { absorption: null, scattering: null };
+      const obj10 = { low: null, mid: null, high: null };
+      ({ object: object5, object: object6 } = string);
+      const objectResult8 = string.object(point1);
+      const numberResult17 = string.number();
+      const minResult17 = string.number().min(0);
+      obj10.low = string.number().min(0).max(1).required();
+      const maxResult17 = string.number().min(0).max(1);
+      const numberResult18 = string.number();
+      const minResult18 = string.number().min(0);
+      obj10.mid = string.number().min(0).max(1).required();
+      const maxResult18 = string.number().min(0).max(1);
+      const numberResult19 = string.number();
+      const minResult19 = string.number().min(0);
+      obj10.high = string.number().min(0).max(1).required();
+      const maxResult19 = string.number().min(0).max(1);
+      obj9.absorption = object6(obj10).required();
+      const object6Result = object6(obj10);
+      const numberResult20 = string.number();
+      const minResult20 = string.number().min(0);
+      obj9.scattering = string.number().min(0).max(1).required();
+      const maxResult20 = string.number().min(0).max(1);
+      obj8.floor = object5(obj9).optional();
+      const obj11 = { absorption: null, scattering: null };
+      const obj12 = { low: null, mid: null, high: null };
+      ({ object: object7, object: object8 } = string);
+      const object5Result = object5(obj9);
+      const numberResult21 = string.number();
+      const minResult21 = string.number().min(0);
+      obj12.low = string.number().min(0).max(1).required();
+      const maxResult21 = string.number().min(0).max(1);
+      const numberResult22 = string.number();
+      const minResult22 = string.number().min(0);
+      obj12.mid = string.number().min(0).max(1).required();
+      const maxResult22 = string.number().min(0).max(1);
+      const numberResult23 = string.number();
+      const minResult23 = string.number().min(0);
+      obj12.high = string.number().min(0).max(1).required();
+      const maxResult23 = string.number().min(0).max(1);
+      obj11.absorption = object8(obj12).required();
+      const object8Result = object8(obj12);
+      const numberResult24 = string.number();
+      const minResult24 = string.number().min(0);
+      obj11.scattering = string.number().min(0).max(1).required();
+      const maxResult24 = string.number().min(0).max(1);
+      obj8.ceiling = object7(obj11).optional();
+      const obj13 = { absorption: null, scattering: null };
+      const obj14 = { low: null, mid: null, high: null };
+      ({ object: object9, object: object10 } = string);
+      const object7Result = object7(obj11);
+      const numberResult25 = string.number();
+      const minResult25 = string.number().min(0);
+      obj14.low = string.number().min(0).max(1).required();
+      const maxResult25 = string.number().min(0).max(1);
+      const numberResult26 = string.number();
+      const minResult26 = string.number().min(0);
+      obj14.mid = string.number().min(0).max(1).required();
+      const maxResult26 = string.number().min(0).max(1);
+      const numberResult27 = string.number();
+      const minResult27 = string.number().min(0);
+      obj14.high = string.number().min(0).max(1).required();
+      const maxResult27 = string.number().min(0).max(1);
+      obj13.absorption = object10(obj14).required();
+      const object10Result = object10(obj14);
+      const numberResult28 = string.number();
+      const minResult28 = string.number().min(0);
+      obj13.scattering = string.number().min(0).max(1).required();
+      const maxResult28 = string.number().min(0).max(1);
+      obj8.walls = object9(obj13).optional();
+      const object9Result = object9(obj13);
+      obj7.room = object3(obj8).optional();
+      const object3Result = object3(obj8);
+      obj2.reflections = string.object(obj7).optional();
+      const objectResult9 = string.object(obj7);
+      obj.acoustics = object(obj2).required();
+      return obj;
+    },
+    response(boolean) {
+      const obj = { success: boolean.boolean().required() };
+      return obj;
+    },
+  },
   [helpers.RPCCommand.ENABLE_VOICE_SPATIAL]: obj,
   [helpers.RPCCommand.DISABLE_VOICE_SPATIAL]: obj,
   [helpers.RPCCommand.STOP_VOICE_SESSION]: obj,
-  [helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: obj13,
+  [helpers.RPCCommand.GET_APPLICATION_STREAMING_VIEW_CAPABILITIES]: obj14,
   [helpers.RPCCommand.START_APPLICATION_STREAMING_VIEW]: obj3,
   [helpers.RPCCommand.SUSPEND_APPLICATION_STREAMING_VIEW]: obj,
   [helpers.RPCCommand.RESUME_APPLICATION_STREAMING_VIEW]: obj,
   [helpers.RPCCommand.SET_APPLICATION_STREAMING_VIEW_FIT]: obj2,
   [helpers.RPCCommand.WATCH_APPLICATION_STREAMING_VIEW_ON_DISCORD]: obj,
   [helpers.RPCCommand.STOP_APPLICATION_STREAMING_VIEW]: obj,
-  [helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: obj14,
+  [helpers.RPCCommand.GET_CAMERA_VIEW_CAPABILITIES]: obj15,
   [helpers.RPCCommand.START_CAMERA_VIEW]: obj3,
   [helpers.RPCCommand.SUSPEND_CAMERA_VIEW]: obj,
   [helpers.RPCCommand.RESUME_CAMERA_VIEW]: obj,
@@ -1072,7 +1097,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.HIDE_TOOLTIP]: obj24,
+  [helpers.RPCCommand.HIDE_TOOLTIP]: obj25,
   [helpers.RPCCommand.SHOW_TOAST]: {
     request(string) {
       const obj = { message: null, type: null };
@@ -1109,7 +1134,156 @@ export const RPCCommandSchemas = {
       return { confirmed: boolean.boolean(), acknowledged: boolean.boolean() };
     },
   },
-  [helpers.RPCCommand.GET_RELATIONSHIPS]: obj27,
+  [helpers.RPCCommand.GET_RELATIONSHIPS]: {
+    embeddedAppSDK: true,
+    request: "Array",
+    response(array) {
+      const arrayResult = array.array();
+      const obj = { type: null, user: null, presence: null };
+      const requiredResult = array.array().required();
+      obj.type = array.number().required();
+      const numberResult = array.number();
+      obj.user = User(array).required();
+      const obj2 = { status: null, activity: null };
+      const obj5 = User(array);
+      obj2.status = array.string().required();
+      if (typeof Activity === "function") {
+        const obj3 = { relationships: null };
+        const obj4 = {
+          session_id: array.string().optional(),
+          type: null,
+          name: null,
+          url: null,
+          application_id: null,
+          status_display_type: null,
+          state: null,
+          state_url: null,
+          details: null,
+          details_url: null,
+          emoji: null,
+          assets: null,
+          timestamps: null,
+          party: null,
+          secrets: null,
+          sync_id: null,
+          created_at: null,
+          instance: null,
+          flags: null,
+          metadata: null,
+          platform: null,
+          supported_platforms: null,
+          buttons: null,
+          hangStatus: null,
+        };
+        const stringResult1 = array.string();
+        obj4.type = array.number().optional();
+        const numberResult1 = array.number();
+        obj4.name = array.string().required();
+        const stringResult2 = array.string();
+        const stringResult3 = array.string();
+        obj4.url = array.string().allow(null).optional();
+        const allowResult = array.string().allow(null);
+        obj4.application_id = array.string().optional();
+        const stringResult4 = array.string();
+        obj4.status_display_type = array.number().optional();
+        const numberResult2 = array.number();
+        obj4.state = array.string().optional();
+        const stringResult5 = array.string();
+        obj4.state_url = array.string().optional();
+        const stringResult6 = array.string();
+        obj4.details = array.string().optional();
+        const stringResult7 = array.string();
+        obj4.details_url = array.string().optional();
+        const obj6 = { name: null, id: null, animated: null };
+        const stringResult8 = array.string();
+        obj6.name = array.string().required();
+        const stringResult9 = array.string();
+        const stringResult10 = array.string();
+        obj6.id = array.string().allow(null).optional();
+        const allowResult1 = array.string().allow(null);
+        const boolResult = array.bool();
+        obj6.animated = array.bool().optional().allow(null);
+        const optionalResult = array.bool().optional();
+        const objectResult = array.object(obj6);
+        obj4.emoji = array.object(obj6).allow(null).optional();
+        const obj7 = {
+          large_image: null,
+          large_text: null,
+          large_url: null,
+          small_image: null,
+          small_text: null,
+          small_url: null,
+        };
+        const allowResult2 = array.object(obj6).allow(null);
+        obj7.large_image = array.string().optional();
+        const stringResult11 = array.string();
+        obj7.large_text = array.string().optional();
+        const stringResult12 = array.string();
+        obj7.large_url = array.string().optional();
+        const stringResult13 = array.string();
+        obj7.small_image = array.string().optional();
+        const stringResult14 = array.string();
+        obj7.small_text = array.string().optional();
+        const stringResult15 = array.string();
+        obj7.small_url = array.string().optional();
+        const stringResult16 = array.string();
+        obj4.assets = array.object(obj7).optional();
+        const obj8 = { start: null, end: null };
+        const objectResult7 = array.object(obj7);
+        obj8.start = array.number().optional();
+        const numberResult3 = array.number();
+        obj8.end = array.number().optional();
+        const numberResult4 = array.number();
+        obj4.timestamps = array.object(obj8).optional();
+        const obj9 = { id: null, size: null, privacy: null };
+        const objectResult8 = array.object(obj8);
+        obj9.id = array.string().optional();
+        const stringResult17 = array.string();
+        const arrayResult4 = array.array();
+        const itemsResult = array.array().items(array.number());
+        obj9.size = array.array().items(array.number()).length(2).optional();
+        const lengthResult = array.array().items(array.number()).length(2);
+        obj9.privacy = array.number().optional();
+        const numberResult5 = array.number();
+        obj4.party = array.object(obj9).optional();
+        const obj10 = { match: null, join: null };
+        const objectResult9 = array.object(obj9);
+        obj10.match = array.string().optional();
+        const stringResult18 = array.string();
+        obj10.join = array.string().optional();
+        const stringResult19 = array.string();
+        obj4.secrets = array.object(obj10).optional();
+        const objectResult10 = array.object(obj10);
+        obj4.sync_id = array.string().optional();
+        const stringResult20 = array.string();
+        obj4.created_at = array.number().optional();
+        const numberResult6 = array.number();
+        obj4.instance = array.bool().optional();
+        const boolResult1 = array.bool();
+        obj4.flags = array.number().optional();
+        const numberResult7 = array.number();
+        obj4.metadata = array.object().optional();
+        const objectResult11 = array.object();
+        obj4.platform = array.string().optional();
+        const stringResult21 = array.string();
+        const arrayResult5 = array.array();
+        obj4.supported_platforms = array.array().items(array.string()).optional();
+        const itemsResult1 = array.array().items(array.string());
+        const arrayResult6 = array.array();
+        obj4.buttons = array.array().items(array.string()).optional();
+        const itemsResult2 = array.array().items(array.string());
+        obj4.hangStatus = array.string().optional();
+        const stringResult22 = array.string();
+        obj2.activity = array.object(obj4).allow(null);
+        obj.presence = array.object(obj2);
+        obj3.relationships = requiredResult.items(array.object(obj));
+        return obj3;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+      const stringResult = array.string();
+    },
+  },
   [helpers.RPCCommand.INVITE_USER_EMBEDDED]: {
     embeddedAppSDK: true,
     request(string) {
@@ -1119,9 +1293,9 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "Set",
+    response: "test",
   },
-  [helpers.RPCCommand.GET_CONTEXT]: obj29,
+  [helpers.RPCCommand.GET_CONTEXT]: obj30,
   [helpers.RPCCommand.GET_USER]: {
     embeddedAppSDK: true,
     request(string) {
@@ -1165,8 +1339,35 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.GET_QUEST]: obj33,
-  [helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj34,
+  [helpers.RPCCommand.GET_QUEST]: {
+    embeddedAppSDK: true,
+    request: "Array",
+    response(string) {
+      const obj = {
+        quest_id: string.string().required(),
+        enrolled_at: null,
+        completed_at: null,
+        external_cta_url: null,
+      };
+      const stringResult = string.string();
+      const stringResult1 = string.string();
+      obj.enrolled_at = string.string().allow(null).optional();
+      const allowResult = string.string().allow(null);
+      const stringResult2 = string.string();
+      obj.completed_at = string.string().allow(null).optional();
+      const allowResult1 = string.string().allow(null);
+      obj.external_cta_url = string.string().required();
+      return obj;
+    },
+  },
+  [helpers.RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: {
+    embeddedAppSDK: true,
+    request: "Array",
+    response(string) {
+      const obj = { ticket: string.string().required() };
+      return obj;
+    },
+  },
   [helpers.RPCCommand.SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY]: {
     request(boolean) {
       const obj = { enabled: boolean.boolean().required() };

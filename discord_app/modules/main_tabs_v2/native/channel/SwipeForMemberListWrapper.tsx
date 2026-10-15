@@ -22,18 +22,17 @@ require = fn;
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9320);
+const ChannelDetailsStore = fn(9531);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9308).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9519).ONYX_BORDER_WIDTH;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let c16 = 150;
-let context = noop.createContext(undefined);
-const createStyles = fn(5096);
-let obj = {
+const createStyles = fn(5151);
+let obj2 = {
   memberListPreview: null,
   content: null,
   memberListContainer: null,
@@ -41,7 +40,7 @@ let obj = {
   onyxRightOverflow: null,
 };
 let tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
-obj.memberListPreview = {
+obj2.memberListPreview = {
   flex: 1,
   justifyContent: "center",
   alignItems: "flex-start",
@@ -51,7 +50,7 @@ obj.memberListPreview = {
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj4.overflow = "hidden";
-obj.content = obj4;
+obj2.content = obj4;
 let obj3 = {
   flex: 1,
   justifyContent: "center",
@@ -59,13 +58,13 @@ let obj3 = {
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj.memberListContainer = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MODAL_BACKGROUND };
+obj2.memberListContainer = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MODAL_BACKGROUND };
 let obj5 = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MODAL_BACKGROUND };
-obj.onyxBorder = { borderLeftColor: nativeDefault.colors.BORDER_STRONG, borderLeftWidth: ONYX_BORDER_WIDTH };
-obj.onyxRightOverflow = { right: -ONYX_BORDER_WIDTH };
-let closure_18 = createStyles.createStyles(obj);
+obj2.onyxBorder = { borderLeftColor: nativeDefault.colors.BORDER_STRONG, borderLeftWidth: ONYX_BORDER_WIDTH };
+obj2.onyxRightOverflow = { right: -ONYX_BORDER_WIDTH };
+let closure_17 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAnalyticsEffect(channel_id, arg1, arg2, member_list_open) {
       _require = channel_id;
       closure_1 = arg1;
@@ -181,11 +180,11 @@ const __initData8 = {
   code: "function SwipeForMemberListWrapperTsx8(isInactive,wasInactive){const{panelDisallowGesture}=this.__closure;if(isInactive===wasInactive)return;panelDisallowGesture.set(isInactive);}",
 };
 ReactCompilerGating = fn(558);
-let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGestureCompositionEffect(simultaneousWithExternalGesture, shownPixels, disallowGesture) {
       _require = shownPixels;
       const cResult = c.c(11);
-      context = noop.useContext(MainTabsNavigatorPanelContextDefault);
+      const context = noop.useContext(MainTabsNavigatorPanelContextDefault);
       ({ gesture, disallowGesture } = context);
       const translateX = context.translateX;
       let context1 = noop.useContext(MainTabsNavigatorPanelContext.MainTabsChannelScreenStackContext);
@@ -272,20 +271,16 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
             P.__closure = obj4;
             P.__workletHash = 11938850302839;
             P.__initData = __initData3;
-            class I {
-              constructor(arg0, arg1) {
-                if (simultaneousWithExternalGesture !== shownPixels) {
-                  tmp = disallowGesture;
-                  result = disallowGesture.set(simultaneousWithExternalGesture);
-                }
-                return;
+            const fn = function y(arg0, arg1) {
+              if (arg0 !== arg1) {
+                const result = disallowGesture3.set(arg0);
               }
-            }
+            };
             const obj5 = { panelDisallowGesture: disallowGesture3 };
-            I.__closure = obj5;
-            I.__workletHash = 10319768602360;
-            I.__initData = __initData4;
-            const animatedReaction1 = ReanimatedRexport.useAnimatedReaction(P, I);
+            fn.__closure = obj5;
+            fn.__workletHash = 10319768602360;
+            fn.__initData = __initData4;
+            const animatedReaction1 = ReanimatedRexport.useAnimatedReaction(P, fn);
             if (cResult[7] === disallowGesture) {
               if (cResult[8] === disallowGesture3) {
                 useMountEffect;
@@ -324,7 +319,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useGestureCompositionEffect(arg0, shownPixels, disallowGesture) {
       closure_0 = arg0;
-      context = noop.useContext(MainTabsNavigatorPanelContextDefault);
+      const context = noop.useContext(MainTabsNavigatorPanelContextDefault);
       const gesture = context.gesture;
       disallowGesture = context.disallowGesture;
       const translateX = context.translateX;
@@ -411,10 +406,10 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
 const __initData9 = {
   code: "function SwipeForMemberListWrapperTsx9(){const{maxWidth,translateX}=this.__closure;return maxWidth-translateX.get();}",
 };
-let closure_30 = {
+let closure_29 = {
   code: "function SwipeForMemberListWrapperTsx10(){const{theme,ThemeTypes,isChatBesideChannelList,translateX,ONYX_BORDER_WIDTH}=this.__closure;if(theme!==ThemeTypes.ONYX||isChatBesideChannelList){return translateX.get();}return translateX.get()-ONYX_BORDER_WIDTH;}",
 };
-let closure_31 = {
+let closure_30 = {
   code: 'function SwipeForMemberListWrapperTsx11(){const{shownPixels,PEEK_PIXEL_THRESHOLD}=this.__closure;const exceedsPeekThreshold=shownPixels.get()>PEEK_PIXEL_THRESHOLD*2;return{display:exceedsPeekThreshold?"none":"flex",opacity:exceedsPeekThreshold?0:1-shownPixels.get()/PEEK_PIXEL_THRESHOLD};}',
 };
 const __initData10 = {
@@ -438,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ isNavigationTTIVisible, screenIndex } = channelId);
       isBackEnabled = channelId.isBackEnabled;
       ({ children, style } = channelId);
-      closure_18();
+      closure_17();
       const tmp6 = screenIndex(isBackEnabled[17])();
       _slicedToArray = tmp6;
       const isChatBesideChannelList = screenIndex(isBackEnabled[14])().isChatBesideChannelList;
@@ -485,48 +480,46 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[7] === sum) {
           if (cResult[8] === tmp15) {
-            const tmp16 = cResult[9];
+            let tmp16 = cResult[9];
           }
           const tmp17 = screenIndex(tmp2[22])(tmp16);
           ({ panelGestureContext, isDragging, translateX } = tmp17);
           const movePanel = tmp17.movePanel;
           const maxWidth = tmp17.maxWidth;
           const gesture = tmp17.gesture;
-          class Q {
-            constructor() {
-              return maxWidth - translateX.get();
-            }
-          }
+          const fn3 = function z() {
+            return maxWidth - translateX.get();
+          };
           let obj3 = { maxWidth, translateX };
-          Q.__closure = obj3;
-          Q.__workletHash = 10342354997299;
-          Q.__initData = __initData9;
-          derivedValue = tmp(tmp2[15]).useDerivedValue(Q);
+          fn3.__closure = obj3;
+          fn3.__workletHash = 10342354997299;
+          fn3.__initData = __initData9;
+          derivedValue = tmp(tmp2[15]).useDerivedValue(fn3);
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            class Z {
+            class Q {
               constructor(arg0) {
                 return channelId > 0;
               }
             }
-            cResult[10] = Z;
+            cResult[10] = Q;
           } else {
-            class Z {
+            class Q {
               constructor(arg0) {
                 return channelId > 0;
               }
             }
           }
           const tmpResult = tmp(tmp2[15]);
-          const derivedStateFromSharedValue = tmp(tmp2[23]).useDerivedStateFromSharedValue(derivedValue, Z);
+          const derivedStateFromSharedValue = tmp(tmp2[23]).useDerivedStateFromSharedValue(derivedValue, Q);
           if (cResult[11] === channelId) {
-            class Z {
+            class Q {
               constructor(arg0) {
                 return channelId > 0;
               }
             }
           }
-          function le() {
+          function re() {
             if (derivedStateFromSharedValue) {
               const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
               const obj = { channelId, screenIndex };
@@ -537,7 +530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = channelId;
           cResult[12] = derivedStateFromSharedValue;
           cResult[13] = screenIndex;
-          class Y {
+          class K {
             constructor(arg0) {
               if (!channelId) {
                 tmp = closure_8;
@@ -558,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          cResult[14] = le;
+          cResult[14] = re;
           cResult[15] = items1;
           const tmpResult2 = tmp(tmp2[23]);
         }
@@ -573,8 +566,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = sum;
         cResult[8] = tmp15;
         cResult[9] = obj4;
+        tmp16 = obj4;
       }
-      class Y {
+      class K {
         constructor(arg0) {
           if (!channelId) {
             tmp = closure_8;
@@ -597,8 +591,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[4] = channelId;
       cResult[5] = screenIndex;
-      cResult[6] = Y;
-      tmp15 = Y;
+      cResult[6] = K;
+      tmp15 = K;
       const tmp7 = _slicedToArray(isChatBesideChannelList.useState(channelId), 2);
     }
   : (channelId) => {
@@ -613,7 +607,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let callback4;
       PEEK_PIXEL_THRESHOLD = undefined;
       ({ isNavigationTTIVisible, children, style } = channelId);
-      let tmp = closure_18();
+      let tmp = closure_17();
       const tmp4 = screenIndex(isBackEnabled[17])();
       _slicedToArray = tmp4;
       const isChatBesideChannelList = screenIndex(isBackEnabled[14])().isChatBesideChannelList;
@@ -663,15 +657,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ isDragging, translateX } = tmp11);
       const movePanel = tmp11.movePanel;
       const maxWidth = tmp11.maxWidth;
-      class A {
+      class X {
         constructor() {
           return maxWidth - translateX.get();
         }
       }
-      A.__closure = { maxWidth, translateX };
-      A.__workletHash = 9011132542505;
-      A.__initData = __initData10;
-      derivedValue = channelId(isBackEnabled[15]).useDerivedValue(A);
+      X.__closure = { maxWidth, translateX };
+      X.__workletHash = 9011132542505;
+      X.__initData = __initData10;
+      derivedValue = channelId(isBackEnabled[15]).useDerivedValue(X);
       let obj = channelId(isBackEnabled[15]);
       derivedStateFromSharedValue = channelId(isBackEnabled[23]).useDerivedStateFromSharedValue(
         derivedValue,
@@ -698,7 +692,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items5,
       );
       let obj2 = channelId(isBackEnabled[23]);
-      function se() {
+      function te() {
         if (closure_3 === constants3.ONYX) {
           if (!isChatBesideChannelList) {
             let diff = translateX.get() - ONYX_BORDER_WIDTH;
@@ -707,16 +701,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         diff = translateX.get();
       }
-      se.__closure = {
+      te.__closure = {
         theme: tmp4,
         ThemeTypes: derivedStateFromSharedValue,
         isChatBesideChannelList,
         translateX,
         ONYX_BORDER_WIDTH: movePanel,
       };
-      se.__workletHash = 10513387909491;
-      se.__initData = __initData11;
-      const derivedValue1 = channelId(isBackEnabled[15]).useDerivedValue(se);
+      te.__workletHash = 10513387909491;
+      te.__initData = __initData11;
+      const derivedValue1 = channelId(isBackEnabled[15]).useDerivedValue(te);
       const items6 = [channelId, screenIndex, movePanel];
       callback3 = isChatBesideChannelList.useCallback((channelId) => {
         let tmp = channelId.channelId === channelId;
@@ -834,7 +828,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ONYX_BORDER_WIDTH: movePanel,
       };
       PEEK_PIXEL_THRESHOLD = channelId(isBackEnabled[29]).useNavigation();
-      closure_19(channelId, screenIndex, isDragging, derivedStateFromSharedValue);
+      closure_18(channelId, screenIndex, isDragging, derivedStateFromSharedValue);
       const items12 = [panelGestureContext, channelId, screenIndex, derivedStateFromSharedValue];
       let obj5 = channelId(isBackEnabled[29]);
       const memo2 = isChatBesideChannelList.useMemo(() => {
@@ -845,14 +839,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.isPanelActive = derivedStateFromSharedValue;
         return obj;
       }, items12);
-      const tmp29 = closure_28(tmp11.gesture, derivedValue, panelGestureContext);
+      const tmp29 = closure_27(tmp11.gesture, derivedValue, panelGestureContext);
       const mainTabsChannelScreenStyles = channelId(isBackEnabled[30]).useMainTabsChannelScreenStyles(
         isDragging,
         derivedValue1,
         maxWidth,
       );
       const obj6 = channelId(isBackEnabled[30]);
-      function oe() {
+      function le() {
         const tmp = derivedValue.get() > 300;
         let str = "flex";
         if (tmp) {
@@ -866,11 +860,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.opacity = num;
         return obj2;
       }
-      oe.__closure = { shownPixels: derivedValue, PEEK_PIXEL_THRESHOLD };
-      oe.__workletHash = 12503395344894;
-      oe.__initData = __initData12;
+      le.__closure = { shownPixels: derivedValue, PEEK_PIXEL_THRESHOLD };
+      le.__workletHash = 12503395344894;
+      le.__initData = __initData12;
+      const animatedStyle = channelId(isBackEnabled[15]).useAnimatedStyle(le);
       let obj9 = { value: memo2, children: null };
-      const animatedStyle = channelId(isBackEnabled[15]).useAnimatedStyle(oe);
       const obj7 = channelId(isBackEnabled[15]);
       const obj8 = { shownPixels: derivedValue, PEEK_PIXEL_THRESHOLD };
       let tmp34 = null;
@@ -966,6 +960,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj12.children = callback3(closure_6, obj13);
       items13[1] = memo1(channelId(isBackEnabled[40]).GestureDetector, obj12);
       obj9.children = items13;
-      return callback3(context.Provider, obj9);
+      return callback3(channelId(isBackEnabled[41]).SwipeForMemberListContext.Provider, obj9);
     };
-export const SwipeForMemberListContext = context;

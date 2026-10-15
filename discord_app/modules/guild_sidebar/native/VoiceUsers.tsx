@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "text-sm/medium";
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_11 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
@@ -172,7 +172,7 @@ let closure_12 = noop.memo(
           obj4.sessionId = voiceState2.sessionId;
           obj4.channel = channel;
           obj4.isGuest = isGuest;
-          const tmp15 = closure_6(tmp4(16898), obj4, user.id);
+          const tmp15 = closure_6(tmp4(17137), obj4, user.id);
           cResult[5] = channel;
           cResult[6] = collapsed;
           cResult[7] = isGuest;
@@ -202,7 +202,7 @@ let closure_12 = noop.memo(
         cResult[4] = items1;
         tmp9 = items1;
         tmp8 = fn;
-        tmp5 = closure_11(user(9317)());
+        tmp5 = closure_11(user(9528)());
       }
     : function VoiceStateUserItem(voiceState) {
         voiceState = voiceState.voiceState;
@@ -211,7 +211,7 @@ let closure_12 = noop.memo(
         const channel = voiceState.channel;
         collapsed = voiceState.collapsed;
         const tmp = channel;
-        const tmp3 = closure_11(channel(9317)());
+        const tmp3 = closure_11(channel(9528)());
         const items = [GuildMemberStore];
         const items1 = [channel.guild_id, user.id];
         const stateFromStoresObject = user(504).useStateFromStoresObject(
@@ -262,7 +262,7 @@ let closure_12 = noop.memo(
         obj5.sessionId = voiceState2.sessionId;
         obj5.channel = channel;
         obj5.isGuest = isGuest;
-        obj2.children = closure_6(tmp(16898), obj5, user.id);
+        obj2.children = closure_6(tmp(17137), obj5, user.id);
         return closure_6(View, obj2);
       },
 );
@@ -379,101 +379,98 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUse
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function VoiceUsers(collapsed) {
       let tmp2 = dependencyMap;
-      const cResult = collapsed(576).c(20);
+      const cResult = collapsed(576).c(19);
       collapsed = collapsed.collapsed;
       const channel = collapsed.channel;
       ({ voiceStates, audienceCount } = collapsed);
-      let tmp4 = channel;
-      const tmp5 = channel(8859)("channel_list");
       const guild_id = channel.guild_id;
-      if (cResult[0] === tmp5) {
-        if (cResult[1] === guild_id) {
-          if (cResult[2] === voiceStates) {
-            const arr2 = tmp4(16902)(cResult[3]);
-            if (cResult[4] === guild_id) {
-              if (cResult[5] === arr2) {
-                const subscribeGuildMembers = tmp(7018).useSubscribeGuildMembers(cResult[6], "voice_channel_games");
-                if (cResult[7] === channel) {
-                  if (cResult[8] === collapsed) {
-                    let tmp13 = cResult[9];
-                  }
-                  if (0 === voiceStates.length) {
-                    return null;
-                  } else {
-                    if (cResult[10] === tmp13) {
-                      if (cResult[11] === voiceStates) {
-                        let tmp16 = cResult[12];
-                      }
-                      if (cResult[13] === audienceCount) {
-                        if (cResult[14] === collapsed) {
-                          let tmp18 = cResult[15];
-                        }
-                        if (cResult[16] === collapsed) {
-                          if (cResult[17] === tmp16) {
-                          }
-                        }
-                        tmp4 = tmp4(16905);
-                        const obj2 = { collapsed, children: null };
-                        const items = [tmp16, tmp18];
-                        obj2.children = items;
-                        tmp2 = closure_7(tmp4, obj2);
-                        cResult[16] = collapsed;
-                        cResult[17] = tmp16;
-                        cResult[18] = tmp18;
-                        cResult[19] = tmp2;
-                      }
-                      let tmp19 = null != audienceCount && audienceCount > 0;
-                      if (tmp19) {
-                        const obj3 = { audienceCount, collapsed };
-                        tmp19 = closure_6(closure_13, obj3);
-                      }
-                      cResult[13] = audienceCount;
-                      cResult[14] = collapsed;
-                      cResult[15] = tmp19;
-                      tmp18 = tmp19;
+      if (cResult[0] === guild_id) {
+        if (cResult[1] === voiceStates) {
+          let tmp5 = channel;
+          const arr2 = channel(17141)(cResult[2]);
+          if (cResult[3] === guild_id) {
+            if (cResult[4] === arr2) {
+              const subscribeGuildMembers = tmp(7231).useSubscribeGuildMembers(cResult[5], "voice_channel_games");
+              if (cResult[6] === channel) {
+                if (cResult[7] === collapsed) {
+                  let tmp10 = cResult[8];
+                }
+                if (0 === voiceStates.length) {
+                  return null;
+                } else {
+                  if (cResult[9] === tmp10) {
+                    if (cResult[10] === voiceStates) {
+                      let tmp13 = cResult[11];
                     }
-                    const mapped = voiceStates.map(tmp13);
-                    cResult[10] = tmp13;
-                    cResult[11] = voiceStates;
-                    cResult[12] = mapped;
-                    tmp16 = mapped;
+                    if (cResult[12] === audienceCount) {
+                      if (cResult[13] === collapsed) {
+                        let tmp15 = cResult[14];
+                      }
+                      if (cResult[15] === collapsed) {
+                        if (cResult[16] === tmp13) {
+                        }
+                      }
+                      tmp5 = tmp5(17144);
+                      const obj2 = { collapsed, children: null };
+                      const items = [tmp13, tmp15];
+                      obj2.children = items;
+                      tmp2 = closure_7(tmp5, obj2);
+                      cResult[15] = collapsed;
+                      cResult[16] = tmp13;
+                      cResult[17] = tmp15;
+                      cResult[18] = tmp2;
+                    }
+                    let tmp16 = null != audienceCount && audienceCount > 0;
+                    if (tmp16) {
+                      const obj3 = { audienceCount, collapsed };
+                      tmp16 = closure_6(closure_13, obj3);
+                    }
+                    cResult[12] = audienceCount;
+                    cResult[13] = collapsed;
+                    cResult[14] = tmp16;
+                    tmp15 = tmp16;
                   }
+                  const mapped = voiceStates.map(tmp10);
+                  cResult[9] = tmp10;
+                  cResult[10] = voiceStates;
+                  cResult[11] = mapped;
+                  tmp13 = mapped;
                 }
-                function renderVoiceState(voiceState, arg1) {
-                  return timestampProducer(
-                    closure_12,
-                    { voiceState, channel, collapsed, isFirst: 0 === arg1 },
-                    "voice-user-item-" + voiceState.user.id + "-" + voiceState.voiceState.sessionId,
-                  );
-                }
-                cResult[7] = channel;
-                cResult[8] = collapsed;
-                cResult[9] = renderVoiceState;
-                tmp13 = renderVoiceState;
-                const tmpResult = tmp(7018);
               }
+              function renderVoiceState(voiceState, arg1) {
+                return timestampProducer(
+                  closure_12,
+                  { voiceState, channel, collapsed, isFirst: 0 === arg1 },
+                  "voice-user-item-" + voiceState.user.id + "-" + voiceState.voiceState.sessionId,
+                );
+              }
+              cResult[6] = channel;
+              cResult[7] = collapsed;
+              cResult[8] = renderVoiceState;
+              tmp10 = renderVoiceState;
+              const tmpResult = tmp(7231);
             }
-            if (null == guild_id) {
-              let tmp10 = closure_8;
-              cResult[4] = guild_id;
-              cResult[5] = arr2;
-              cResult[6] = tmp10;
-            }
-            const obj4 = {};
-            obj4[guild_id] = arr2;
-            tmp10 = obj4;
           }
+          if (null == guild_id) {
+            let tmp7 = closure_8;
+            cResult[3] = guild_id;
+            cResult[4] = arr2;
+            cResult[5] = tmp7;
+          }
+          const obj4 = {};
+          obj4[guild_id] = arr2;
+          tmp7 = obj4;
         }
       }
-      if (!tmp5) {
-        let mapped1 = closure_9;
-        cResult[0] = tmp5;
-        cResult[1] = guild_id;
-        cResult[2] = voiceStates;
-        cResult[3] = mapped1;
+      if (null != guild_id) {
+        const substr = voiceStates.slice(0, tmp(7231).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
+        let mapped1 = substr.map((user) => user.user.id);
+      } else {
+        mapped1 = closure_9;
       }
-      const substr = voiceStates.slice(0, tmp(7018).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
-      mapped1 = substr.map((user) => user.user.id);
+      cResult[0] = guild_id;
+      cResult[1] = voiceStates;
+      cResult[2] = mapped1;
       const obj = collapsed(576);
     }
   : function VoiceUsers(collapsed) {
@@ -482,53 +479,52 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ voiceStates, audienceCount } = collapsed);
       noop = undefined;
       const guild_id = channel.guild_id;
-      if (tmp3) {
-        if (null != guild_id) {
-          const substr = voiceStates.slice(0, collapsed(tmp2[17]).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
-          let mapped = substr.map((user) => user.user.id);
-        }
-        const tmp4Result = tmp4(mapped);
-        noop = tmp4Result;
-        const items = [guild_id, tmp4Result];
-        const memo = noop.useMemo(() => {
-          if (null != guild_id) {
-            if (length.length > 0) {
-              const obj = {};
-              obj[tmp] = tmp2;
-              let tmp3 = obj;
-            }
-            return tmp3;
-          }
-          tmp3 = closure_8;
-        }, items);
-        const subscribeGuildMembers = collapsed(tmp2[17]).useSubscribeGuildMembers(memo, "voice_channel_games");
-        let tmp15Result = null;
-        if (0 !== voiceStates.length) {
-          const obj2 = { collapsed, children: null };
-          const items1 = [
-            voiceStates.map(function renderVoiceState(voiceState, index) {
-              return timestampProducer(
-                closure_12,
-                { voiceState, channel, collapsed, isFirst: 0 === index },
-                "voice-user-item-" + voiceState.user.id + "-" + voiceState.voiceState.sessionId,
-              );
-            }),
-          ];
-          let tmp17 = null != audienceCount && audienceCount > 0;
-          if (tmp17) {
-            const obj3 = { audienceCount, collapsed };
-            tmp17 = closure_6(closure_13, obj3);
-          }
-          items1[1] = tmp17;
-          obj2.children = items1;
-          tmp15Result = closure_7(tmp(tmp2[19]), obj2);
-          const tmpResult = tmp(tmp2[19]);
-        }
-        return tmp15Result;
+      if (null != guild_id) {
+        const substr = voiceStates.slice(0, collapsed(tmp2[16]).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
+        let mapped = substr.map((user) => user.user.id);
+      } else {
+        mapped = closure_9;
       }
-      mapped = closure_9;
-      tmp = channel;
-      tmp3 = channel(guild_id[16])("channel_list");
+      const tmp3Result = channel(guild_id[17])(mapped);
+      noop = tmp3Result;
+      const items = [guild_id, tmp3Result];
+      const memo = noop.useMemo(() => {
+        if (null != guild_id) {
+          if (length.length > 0) {
+            const obj = {};
+            obj[tmp] = tmp2;
+            let tmp3 = obj;
+          }
+          return tmp3;
+        }
+        tmp3 = closure_8;
+      }, items);
+      const tmp = channel;
+      let tmp3 = channel(guild_id[17]);
+      const subscribeGuildMembers = collapsed(guild_id[16]).useSubscribeGuildMembers(memo, "voice_channel_games");
+      let tmp10Result = null;
+      if (0 !== voiceStates.length) {
+        const obj2 = { collapsed, children: null };
+        const items1 = [
+          voiceStates.map(function renderVoiceState(voiceState, index) {
+            return timestampProducer(
+              closure_12,
+              { voiceState, channel, collapsed, isFirst: 0 === index },
+              "voice-user-item-" + voiceState.user.id + "-" + voiceState.voiceState.sessionId,
+            );
+          }),
+        ];
+        let tmp12 = null != audienceCount && audienceCount > 0;
+        if (tmp12) {
+          const obj3 = { audienceCount, collapsed };
+          tmp12 = closure_6(closure_13, obj3);
+        }
+        items1[1] = tmp12;
+        obj2.children = items1;
+        tmp10Result = closure_7(tmp(tmp2[18]), obj2);
+        const tmpResult = tmp(tmp2[18]);
+      }
+      return tmp10Result;
     };
 export const getAudienceItemHeight = function getAudienceItemHeight(fontScale) {
   return 8 + Math.max(20, useScaledTextLineHeight.scaleTextLineHeight(c10, fontScale));

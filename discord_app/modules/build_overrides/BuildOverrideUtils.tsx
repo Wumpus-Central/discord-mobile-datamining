@@ -3,7 +3,7 @@ import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import BuildOverrideConstants from "BuildOverrideConstants.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import UrlAll from "../../../_runtime/01386_Url.js";
+import UrlAll from "../../../_runtime/01387_Url.js";
 import _modDef1389 from "../../../_runtime/metro/01389__.js";
 import ClientInfoUtils_mod from "../../utils/native/ClientInfoUtils.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";

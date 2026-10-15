@@ -1,13 +1,13 @@
 // discord_app/modules/spatial_audio/SpatialAudio.messages.js
 import AssetJsonUtils from "../asset_json/native/AssetJsonUtils.tsx";
-import _mod3784 from "../../../_runtime/metro/03784__.js";
+import _mod3797 from "../../../_runtime/metro/03797__.js";
 import module_1165_mod from "../../../_runtime/metro/01165__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let module_1165 = module_1165_mod;
 const loader = module_1165.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3784);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3797);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");

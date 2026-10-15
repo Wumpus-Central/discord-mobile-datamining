@@ -4,11 +4,11 @@ import AccessibilityAnnouncer2 from "../../../../../../../discord_common/js/pack
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp(5092);
+const Text_Text = tmp(5147);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({
   container: { justifyContent: "center", alignItems: "center", height: "100%", display: "flex" },
   text: { textAlign: "center", width: "75%" },

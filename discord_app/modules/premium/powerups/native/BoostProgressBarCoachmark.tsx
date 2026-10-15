@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[12] === tmp13) {
               let tmp16 = cResult[13];
             }
-            const coachmark = tmp(9452).useCoachmark(guild.targetRef, tmp16);
+            const coachmark = tmp(9663).useCoachmark(guild.targetRef, tmp16);
             return null;
           }
         }
@@ -155,6 +155,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.onButtonPress = callback1;
         return obj;
       }, items2);
-      const coachmark = guild(9452).useCoachmark(guild.targetRef, memo);
+      const coachmark = guild(9663).useCoachmark(guild.targetRef, memo);
       return null;
     };

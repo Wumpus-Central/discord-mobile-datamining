@@ -114,8 +114,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1085);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(12680).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(5938);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12973).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6149);
 ({
   BUNDLE_ID: closure_11,
   DEVICE_PUSH_VOIP_PROVIDER: closure_12,
@@ -216,7 +216,7 @@ export default {
               const obj7 = {
                 provider: tmp9,
                 token: closure_129_0,
-                push_sync_tokens: closure_128_1.filter(tmp2(1388).isNotNullish),
+                push_sync_tokens: closure_128_1.filter(tmp2(1386).isNotNullish),
                 bypass_server_throttling_supported: null,
                 bundle_id: null,
               };
@@ -240,8 +240,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12683).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12683);
+          const result = v2(12976).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12976);
         }
       }
       return value;

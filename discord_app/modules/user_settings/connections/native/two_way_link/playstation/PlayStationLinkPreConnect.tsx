@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import _modDef13455 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef13751 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const constants = fn(13451).PlayStationLinkModalScenes;
+const constants = fn(13747).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -54,7 +54,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
             return;
           }
         }
-        tmp9[0] = _modDef13455;
+        tmp9[0] = _modDef13751;
         cResult[4] = tmp9;
       } else {
         class S {
@@ -100,7 +100,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
       cResult[8] = tmp6;
       cResult[9] = platformType;
       cResult[10] = tmp4.image;
-      cResult[11] = jsx(navigation(9228).TwoWayLinkPreConnect, {
+      cResult[11] = jsx(navigation(9440).TwoWayLinkPreConnect, {
         platformType,
         onError: S,
         onNext: tmp6,
@@ -109,7 +109,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
         title: tmp11,
         body: tmp12,
       });
-      const tmp15 = jsx(navigation(9228).TwoWayLinkPreConnect, {
+      const tmp15 = jsx(navigation(9440).TwoWayLinkPreConnect, {
         platformType,
         onError: S,
         onNext: tmp6,
@@ -131,7 +131,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
       const callback1 = noop.useCallback(() => {
         navigation.push(constants.ERROR, {});
       }, items1);
-      const memo = noop.useMemo(() => ({ uri: _modDef13455 }), []);
+      const memo = noop.useMemo(() => ({ uri: _modDef13751 }), []);
       const obj2 = {
         platformType: platformType.platformType,
         onError: callback1,
@@ -145,7 +145,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
       obj2.title = intl.string(navigation(1126).t["6n+UPR"]);
       const intl2 = navigation(1126).intl;
       obj2.body = intl2.string(navigation(1126).t.JaaqIf);
-      return jsx(navigation(9228).TwoWayLinkPreConnect, {
+      return jsx(navigation(9440).TwoWayLinkPreConnect, {
         platformType: platformType.platformType,
         onError: callback1,
         onNext: callback,

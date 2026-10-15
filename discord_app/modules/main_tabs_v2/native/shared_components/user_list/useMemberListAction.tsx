@@ -21,11 +21,11 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "lineClamp", listActionHeight: "color" };
-const createStyles = fn(5096);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10234).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "test" };
+const createStyles = fn(5151);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10447).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const ReactCompilerGating = fn(558);
-let obj2 = { wrapper: { paddingTop: fn(10234).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
+let obj2 = { wrapper: { paddingTop: fn(10447).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx",
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (channel != null) {
           id = channel.id;
         }
-        id(6742)();
+        id(6958)();
         [r10096, dependencyMap] = noop.useState(undefined);
         const _Symbol = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {

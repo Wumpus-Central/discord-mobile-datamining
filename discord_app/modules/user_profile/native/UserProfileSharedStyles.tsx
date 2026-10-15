@@ -30,6 +30,7 @@ let closure_9 = createStyles.createStyles(() => {
     primaryInfo: { rowGap: 12, paddingBottom: 12 },
     primaryButtons: { paddingVertical: 12 },
     bannerButtons: null,
+    privateBanner: { zIndex },
     bannerButtonsWithPrivateBanner: { top: 54 },
     profileTablist: { paddingHorizontal, marginBottom: nativeDefault.space.PX_16 },
     cards: { rowGap: 16 },

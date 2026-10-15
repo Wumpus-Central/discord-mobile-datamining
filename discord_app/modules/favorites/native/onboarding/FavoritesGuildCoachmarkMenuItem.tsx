@@ -1,12 +1,12 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3442 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3444 from "../../intl/FavoritesGuild.messages.js";
 import FavoritesDismissibleContent from "../../FavoritesDismissibleContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FavoriteStore from "../../FavoriteStore.tsx";
 
-const LayerScope2 = LayerScope(6851);
+const LayerScope2 = LayerScope(7067);
 require = fn;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
@@ -43,7 +43,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = markPopoverAsDismissed(504);
       const favoritesMenuItemPopoverDismissibleContent =
-        markPopoverAsDismissed(10339).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
+        markPopoverAsDismissed(10562).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
       ({ shouldShowPopover, markPopoverAsDismissed } = favoritesMenuItemPopoverDismissibleContent);
       if (cResult[4] !== markPopoverAsDismissed) {
         class S {
@@ -86,7 +86,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp16 = _modDef3442;
+        const tmp16 = _modDef3444;
         const stringResult = obj4.string(stateFromStores ? tmp16.TWuDTt : tmp16["25YCHl"]);
         cResult[8] = stateFromStores;
         cResult[9] = stringResult;
@@ -105,7 +105,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const stringResult1 = obj5.string(_modDef3442.Ztl9ht);
+          const stringResult1 = obj5.string(_modDef3444.Ztl9ht);
           cResult[10] = stringResult1;
           const tmp19 = stringResult1;
         } else {
@@ -124,7 +124,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const stringResult2 = obj6.string(_modDef3442["+h9aza"]);
+          const stringResult2 = obj6.string(_modDef3444["+h9aza"]);
           cResult[11] = stringResult2;
           const tmp22 = stringResult2;
         } else {
@@ -159,7 +159,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[15] = tmp14;
         cResult[16] = obj2;
       }
-      const tmpResult2 = markPopoverAsDismissed(10339);
+      const tmpResult2 = markPopoverAsDismissed(10562);
     }
   : function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       let stateFromStores;
@@ -194,11 +194,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           description: null,
           onDismiss: null,
           renderImgComponent: "r",
-          buttonLabel: "T",
+          buttonLabel: "Symbol",
           onButtonPress: null,
         };
         const intl = util.intl;
-        const tmp4 = _modDef3442;
+        const tmp4 = _modDef3444;
         if (stateFromStores) {
           let TWuDTt = tmp4.TWuDTt;
           let tmp6 = importDefault;
@@ -208,10 +208,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj.title = intl.string(TWuDTt);
         const intl2 = util.intl;
-        obj.description = intl2.string(tmp6(3442).Ztl9ht);
+        obj.description = intl2.string(tmp6(3444).Ztl9ht);
         obj.onDismiss = onDismiss;
         const intl3 = util.intl;
-        obj.buttonLabel = intl3.string(tmp6(3442)["+h9aza"]);
+        obj.buttonLabel = intl3.string(tmp6(3444)["+h9aza"]);
         obj.onButtonPress = callback1;
         return obj;
       }, items3);

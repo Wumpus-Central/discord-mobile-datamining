@@ -21,9 +21,9 @@ import SearchHistoryStore from "../../../stores/SearchHistoryStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(9322);
+const SearchConstants = fn(9533);
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11, SearchListItemTypes: closure_12, SearchTabs: map1 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(12604).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12897).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1085).SearchTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -52,7 +52,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearA
     const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl2 = tmp(1126).intl;
     obj2.children = intl2.string(tmp(1126).t.LFTAUp);
-    const tmp9 = jsx(tmp(5092).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+    const tmp9 = jsx(tmp(5147).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
     cResult[3] = tmp9;
     let tmp7 = tmp9;
   } else {
@@ -60,7 +60,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearA
   }
   if (cResult[4] !== tmp4) {
     const obj3 = { onPress: tmp4, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: tmp5, children: tmp7 };
-    const tmp12 = jsx(tmp(6189).PressableHighlight, { onPress: tmp4, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: tmp5, children: tmp7 });
+    const tmp12 = jsx(tmp(6405).PressableHighlight, { onPress: tmp4, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: tmp5, children: tmp7 });
     cResult[4] = tmp4;
     cResult[5] = tmp12;
     let tmp10 = tmp12;
@@ -84,8 +84,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearA
   const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1126).intl;
   obj2.children = intl2.string(searchContext(1126).t.LFTAUp);
-  obj.children = jsx(searchContext(5092).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(6189).PressableHighlight, {
+  obj.children = jsx(searchContext(5147).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(6405).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -149,7 +149,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSug
   } else {
     first = cResult[0];
   }
-  const arr = onPressDMItem(10229)(first);
+  const arr = onPressDMItem(10442)(first);
   if (cResult[1] !== searchContext) {
     let obj3 = { searchContext };
     cResult[1] = searchContext;
@@ -670,16 +670,16 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const messages = stateFromStoresObject.messages;
   ({ isLoadingMediaGrid, isInitialSearchQuery } = stateFromStoresObject);
   if (cResult[3] !== searchContext) {
-    const searchContextId = tmp2(12595).getSearchContextId(searchContext);
+    const searchContextId = tmp2(12888).getSearchContextId(searchContext);
     cResult[3] = searchContext;
     cResult[4] = searchContextId;
     let tmp11 = searchContextId;
-    const tmp2Result2 = tmp2(12595);
+    const tmp2Result2 = tmp2(12888);
   } else {
     tmp11 = cResult[4];
   }
   const arr3 = closure_21(tmp11);
-  const tmp15 = messages(17432)(searchContext.width);
+  const tmp15 = messages(17672)(searchContext.width);
   dependencyMap = tmp15;
   if (null != messages) {
     if (0 !== messages.length) {
@@ -691,7 +691,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       items1 = [];
       const obj4 = messages[Symbol.iterator]();
       while (obj4 !== undefined) {
-        let obj5 = searchContext(12588);
+        let obj5 = searchContext(12881);
         let items2 = [tmp19];
         let media = obj5.getMedia(searchContext, items2);
         let item = media.forEach((item) => items1.push(item));
@@ -712,7 +712,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp30 = cResult[10];
     }
     let num11 = searchContext;
-    const onPressMediaItem = searchContext(17429).useOnPressMediaItem(tmp30);
+    const onPressMediaItem = searchContext(17669).useOnPressMediaItem(tmp30);
     if (cResult[11] === messages) {
       if (cResult[12] === onPressMediaItem) {
         let tmp35 = cResult[13];
@@ -725,7 +725,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       } else {
         tmp36 = cResult[14];
       }
-      const fullscreenPlaceholderCount = num11(17433).useFullscreenPlaceholderCount(tmp36);
+      const fullscreenPlaceholderCount = num11(17673).useFullscreenPlaceholderCount(tmp36);
       if (cResult[15] === tmp35) {
         if (cResult[16] === isInitialSearchQuery) {
           if (cResult[17] === EMPTY_MEDIA_RESULTS) {
@@ -1051,7 +1051,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           arr8.push(element);
         });
       }
-      const num11Result = num11(17433);
+      const num11Result = num11(17673);
     }
     class G {
       constructor(arg0) {
@@ -1081,7 +1081,7 @@ let closure_22 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[12] = onPressMediaItem;
     cResult[13] = G;
     tmp35 = G;
-    const obj7 = searchContext(17429);
+    const obj7 = searchContext(17669);
   }
   const obj13 = { searchContext, allMediaResults: EMPTY_MEDIA_RESULTS };
   cResult[8] = EMPTY_MEDIA_RESULTS;

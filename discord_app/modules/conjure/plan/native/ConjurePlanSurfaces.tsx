@@ -11,16 +11,16 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(6952).ConjureSupportedSurface.APP_CHANNEL] = fn(8241).AppsIcon;
-obj[fn(6952).ConjureSupportedSurface.VOICE_CHANNEL] = fn(8236).VoiceNormalIcon;
-obj[fn(6952).ConjureSupportedSurface.ACTIVITY] = fn(11947).ActivitiesIcon;
-obj[fn(6952).ConjureSupportedSurface.OVERLAY] = fn(9221).GameControllerIcon;
-obj[fn(6952).ConjureSupportedSurface.PROFILE_WIDGET] = fn(10296).UserCircleIcon;
-obj[fn(6952).ConjureSupportedSurface.AUTOMOD] = fn(10419).ShieldIcon;
-obj[fn(6952).ConjureSupportedSurface.BOT] = fn(11324).RobotIcon;
-obj[fn(6952).ConjureSupportedSurface.APPLICATION_COMMANDS] = fn(10630).SlashBoxIcon;
+obj[fn(7166).ConjureSupportedSurface.APP_CHANNEL] = fn(8451).AppsIcon;
+obj[fn(7166).ConjureSupportedSurface.VOICE_CHANNEL] = fn(8446).VoiceNormalIcon;
+obj[fn(7166).ConjureSupportedSurface.ACTIVITY] = fn(12174).ActivitiesIcon;
+obj[fn(7166).ConjureSupportedSurface.OVERLAY] = fn(9433).GameControllerIcon;
+obj[fn(7166).ConjureSupportedSurface.PROFILE_WIDGET] = fn(10519).UserCircleIcon;
+obj[fn(7166).ConjureSupportedSurface.AUTOMOD] = fn(10642).ShieldIcon;
+obj[fn(7166).ConjureSupportedSurface.BOT] = fn(11548).RobotIcon;
+obj[fn(7166).ConjureSupportedSurface.APPLICATION_COMMANDS] = fn(10853).SlashBoxIcon;
 const styles = { width: 72, height: 48 };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj3 = {
   single: { gap: nativeDefault.space.PX_12 },
   singleHeader: null,
@@ -544,7 +544,7 @@ export const ConjurePlanSurfaceNav = ReactCompilerGating.isReactCompilerEnabled(
       const tmp2 = closure_9();
       dependencyMap = tmp2;
       obj = previews(576);
-      const conjurePlanSurfaceCycle = previews(11949).useConjurePlanSurfaceCycle(rows.length, commandNames.cycling);
+      const conjurePlanSurfaceCycle = previews(12176).useConjurePlanSurfaceCycle(rows.length, commandNames.cycling);
       titleText = conjurePlanSurfaceCycle.selectedIndex;
       const select = conjurePlanSurfaceCycle.select;
       let first = rows[titleText];
@@ -734,14 +734,14 @@ export const ConjurePlanSurfaceNav = ReactCompilerGating.isReactCompilerEnabled(
       cResult[19] = tmp2.titleText;
       cResult[20] = fn;
       tmp8 = fn;
-      let obj2 = previews(11949);
+      let obj2 = previews(12176);
     }
   : function ConjurePlanSurfaceNav(commandNames) {
       ({ rows, previews } = commandNames);
       commandNames = commandNames.commandNames;
       const tmp = closure_9();
       dependencyMap = tmp;
-      const conjurePlanSurfaceCycle = previews(11949).useConjurePlanSurfaceCycle(rows.length, commandNames.cycling);
+      const conjurePlanSurfaceCycle = previews(12176).useConjurePlanSurfaceCycle(rows.length, commandNames.cycling);
       const selectedIndex = conjurePlanSurfaceCycle.selectedIndex;
       const select = conjurePlanSurfaceCycle.select;
       let first = rows[selectedIndex];
@@ -749,7 +749,7 @@ export const ConjurePlanSurfaceNav = ReactCompilerGating.isReactCompilerEnabled(
         first = rows[0];
       }
       let obj2 = { style: tmp.nav, children: null };
-      obj = previews(11949);
+      obj = previews(12176);
       let items = [
         closure_5(select, {
           style: tmp.rows,

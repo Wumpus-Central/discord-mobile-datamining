@@ -160,9 +160,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(12676).EventActionType;
+const EventActionType = fn(12969).EventActionType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_10 = fn(7489).NotificationAuthorizationStatus;
+let closure_10 = fn(7699).NotificationAuthorizationStatus;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()

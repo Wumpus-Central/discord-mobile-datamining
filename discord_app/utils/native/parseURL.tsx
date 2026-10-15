@@ -3,7 +3,7 @@ import AnalyticsUtilsDefault from "../AnalyticsUtils.tsx";
 import FingerprintUtils from "../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
 import PlatformUtils from "../PlatformUtils.tsx";
 import URLUtilsDefault from "../URLUtils.tsx";
-import UrlDefault from "../../../_runtime/01386_Url.js";
+import UrlDefault from "../../../_runtime/01387_Url.js";
 import _modDef1491 from "../../../_runtime/metro/01491__.js";
 import MetaQuestUtils from "../../modules/device/MetaQuestUtils.android.tsx";
 import _modDef1949 from "../../../_runtime/metro/01949__.js";
@@ -50,8 +50,8 @@ const Constants = fn(1085);
 } = Constants);
 const CollectiblesShopConstants = fn(1087);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const UPDATE_CONFIG = fn(5074).UPDATE_CONFIG;
-const PaymentConstants = fn(5075);
+const UPDATE_CONFIG = fn(5129).UPDATE_CONFIG;
+const PaymentConstants = fn(5130);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_11, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } =
   PaymentConstants);
 const re13 = /feature\/([\w-]+)/;
@@ -59,18 +59,17 @@ const re14 = /feature\/boost\/([0-9]+)/;
 const re15 = /users\/(\d+)/;
 const re16 = /(?:connect|oauth2)\/authorize/;
 const re17 = /login\/one-time/;
-const re18 = /promos\.discord\.gg/;
-const re19 = /mweb-handoff/;
-const re20 = /connections\/(xbox|playstation|playstation-stg|crunchyroll)\/link/;
-const re21 = /connections\/([a-z-]+)/;
-const re22 = /guilds\/(\d+)\/settings(?:\/([a-z-]+)(?:\/([a-z-]+))?)?/;
-const re23 = /guilds\/settings(?:\/([a-z-]+)(?:\/([a-z-]+))?)?/;
-const re24 = /activate/;
-const re25 = /^\/quests\/(\d+)/;
-const re26 = /^\/quest-preview\/(\d+)/;
-const re27 = /^\/quest-home/;
-const re28 = /^\/quest-bar-preview/;
-const re29 = /^\/subscriptions\/?$/;
+const re18 = /mweb-handoff/;
+const re19 = /connections\/(xbox|playstation|playstation-stg|crunchyroll)\/link/;
+const re20 = /connections\/([a-z-]+)/;
+const re21 = /guilds\/(\d+)\/settings(?:\/([a-z-]+)(?:\/([a-z-]+))?)?/;
+const re22 = /guilds\/settings(?:\/([a-z-]+)(?:\/([a-z-]+))?)?/;
+const re23 = /activate/;
+const re24 = /^\/quests\/(\d+)/;
+const re25 = /^\/quest-preview\/(\d+)/;
+const re26 = /^\/quest-home/;
+const re27 = /^\/quest-bar-preview/;
+const re28 = /^\/subscriptions\/?$/;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/parseURL.tsx");
 
@@ -87,15 +86,14 @@ export default function parseURL(ctaLink) {
     return obj3;
   } else {
     const parsed = UrlDefault.parse(sanitizeUrlResult);
-    ({ host, pathname, query } = parsed);
+    ({ host, hostname, pathname, query } = parsed);
     let str = query;
-    ({ protocol, hostname } = parsed);
     if (query == null) {
       str = "";
     }
-    const tmp143Result = parseQuery(str);
-    ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp143Result);
-    ({ username, didRegister, custom_id, link_id } = tmp143Result);
+    const tmp141Result = parseQuery(str);
+    ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp141Result);
+    ({ username, didRegister, custom_id, link_id } = tmp141Result);
     const tmpResult = UrlDefault;
     const findCodedLinkResult = findCodedLinks.findCodedLink(sanitizeUrlResult);
     if (null != findCodedLinkResult) {
@@ -215,14 +213,10 @@ export default function parseURL(ctaLink) {
       }
       const tmp5Result9 = QRLoginUtils;
       if (!tmpResult6.isDiscordHostname(host)) {
-        if (!tmpResult7.isDiscordProtocol(protocol)) {
+        if (!tmpResult7.isDiscordProtocol(parsed.protocol)) {
           URLUtilsDefault;
         }
-        let match;
-        if (host != null) {
-          match = host.match(re18);
-        }
-        if (null != match) {
+        if ("promos.discord.gg" === hostname) {
           const obj21 = { fingerprint, attemptId, installationId, payload: null };
           const obj23 = { type: React5.PROMOTIONS, url: sanitizeUrlResult };
           obj21.payload = obj23;
@@ -280,25 +274,25 @@ export default function parseURL(ctaLink) {
             obj30.payload = obj31;
             return obj30;
           } else {
-            const match1 = pathname.match(re25);
-            if (null != match1) {
-              if (match1.length > 1) {
+            const match = pathname.match(re24);
+            if (null != match) {
+              if (match.length > 1) {
                 const obj32 = { fingerprint, attemptId, installationId, payload: null };
-                const obj33 = { type: React5.QUESTS, questId: match1[1], referrerId: referrer_id, sort, filter };
+                const obj33 = { type: React5.QUESTS, questId: match[1], referrerId: referrer_id, sort, filter };
                 obj32.payload = obj33;
                 return obj32;
               }
             }
-            const match2 = pathname.match(re26);
-            if (null != match2) {
-              if (match2.length > 1) {
+            const match1 = pathname.match(re25);
+            if (null != match1) {
+              if (match1.length > 1) {
                 const obj34 = { fingerprint, attemptId, installationId, payload: null };
-                const obj36 = { type: React5.QUEST_PREVIEW_TOOL, questId: match2[1] };
+                const obj36 = { type: React5.QUEST_PREVIEW_TOOL, questId: match1[1] };
                 obj34.payload = obj36;
                 return obj34;
               }
             }
-            if (null != pathname.match(re28)) {
+            if (null != pathname.match(re27)) {
               let str5 = query;
               if (query == null) {
                 str5 = "";
@@ -317,12 +311,12 @@ export default function parseURL(ctaLink) {
               }
               const tmpResult9 = _modDef1491;
             }
-            if (null != pathname.match(re27)) {
-              let str26 = query;
+            if (null != pathname.match(re26)) {
+              let str27 = query;
               if (query == null) {
-                str26 = "";
+                str27 = "";
               }
-              let ad_creative_ids1 = _modDef1491.parse(str26).ad_creative_ids;
+              let ad_creative_ids1 = _modDef1491.parse(str27).ad_creative_ids;
               if (ad_creative_ids1 == null) {
                 ad_creative_ids1 = [];
               }
@@ -339,17 +333,17 @@ export default function parseURL(ctaLink) {
                 obj42.payload = obj43;
               }
               return obj42;
-            } else if (null != pathname.match(re29)) {
+            } else if (null != pathname.match(re28)) {
               const obj44 = { fingerprint, attemptId, installationId, payload: null };
               const obj46 = { type: React5.SUBSCRIPTION_SETTINGS };
               obj44.payload = obj46;
               return obj44;
             } else {
-              const match3 = pathname.match(re15);
-              if (null != match3) {
-                if (match3.length > 1) {
+              const match2 = pathname.match(re15);
+              if (null != match2) {
+                if (match2.length > 1) {
                   const obj47 = { fingerprint, attemptId, installationId, payload: null };
-                  const obj48 = { type: React5.USER_PROFILE, userId: match3[1] };
+                  const obj48 = { type: React5.USER_PROFILE, userId: match2[1] };
                   obj47.payload = obj48;
                   return obj47;
                 }
@@ -373,11 +367,11 @@ export default function parseURL(ctaLink) {
                 const tmp5Result12 = Authorize;
               }
               if (null != pathname.match(re17)) {
-                let str25 = query;
+                let str26 = query;
                 if (query == null) {
-                  str25 = "";
+                  str26 = "";
                 }
-                let token = parseQuery(str25).token;
+                let token = parseQuery(str26).token;
                 const obj51 = { fingerprint, attemptId, installationId, payload: null };
                 const obj52 = { type: React5.ONE_TIME_LOGIN, token: null };
                 if (token == null) {
@@ -387,20 +381,20 @@ export default function parseURL(ctaLink) {
                 obj51.payload = obj52;
                 return obj51;
               } else {
-                const match4 = pathname.match(re14);
-                if (null != match4) {
-                  if (match4.length > 1) {
+                const match3 = pathname.match(re14);
+                if (null != match3) {
+                  if (match3.length > 1) {
                     const obj53 = { fingerprint, attemptId, installationId, payload: null };
-                    const obj54 = { type: React5.BOOST_MARKETING, guildId: match4[1] };
+                    const obj54 = { type: React5.BOOST_MARKETING, guildId: match3[1] };
                     obj53.payload = obj54;
                     return obj53;
                   }
                 }
-                const match5 = pathname.match(re13);
-                if (null != match5) {
-                  if (match5.length > 1) {
+                const match4 = pathname.match(re13);
+                if (null != match4) {
+                  if (match4.length > 1) {
                     let tmp29 = null;
-                    switch (match5[1]) {
+                    switch (match4[1]) {
                       case "composeMessage":
                         const obj55 = { type: React5.COMPOSE_MESSAGE };
                         tmp29 = obj55;
@@ -456,7 +450,7 @@ export default function parseURL(ctaLink) {
                           action: obj38.action,
                         } = parseQuery(str17));
                         tmp29 = obj63;
-                        const tmp143Result8 = parseQuery(str17);
+                        const tmp141Result8 = parseQuery(str17);
                         break;
                       case "sessionManagement":
                         const obj65 = { type: React5.SESSION_MANAGEMENT };
@@ -483,7 +477,7 @@ export default function parseURL(ctaLink) {
                           highlight_message_id: obj35.highlightMessageId,
                         } = parseQuery(str16));
                         tmp29 = obj67;
-                        const tmp143Result9 = parseQuery(str16);
+                        const tmp141Result9 = parseQuery(str16);
                         break;
                       case "icymi":
                         const obj68 = { type: React5.ICYMI };
@@ -543,7 +537,7 @@ export default function parseURL(ctaLink) {
                           obj74.guildId = tmp52;
                           tmp29 = obj74;
                         }
-                        const tmp143Result10 = parseQuery(str13);
+                        const tmp141Result10 = parseQuery(str13);
                         break;
                       case "open-shop":
                         const obj75 = { type: React5.SHOP };
@@ -584,7 +578,7 @@ export default function parseURL(ctaLink) {
                           const items4 = [];
                           items2 = items3;
                           items3[Symbol.iterator]();
-                          const tmp143Result11 = parseQuery(str12);
+                          const tmp141Result11 = parseQuery(str12);
                         }
                         tmp5Result15 = PlatformUtils;
                         break;
@@ -610,7 +604,7 @@ export default function parseURL(ctaLink) {
                             tmp5Result16 = SecureFramesDeeplinkExperiment;
                           }
                         }
-                        const tmp143Result12 = parseQuery(str11);
+                        const tmp141Result12 = parseQuery(str11);
                         break;
                       case "agekey-return":
                         let str10 = query;
@@ -629,7 +623,7 @@ export default function parseURL(ctaLink) {
                           verificationId: obj22.verificationId,
                         } = parseQuery(str10));
                         tmp29 = obj78;
-                        const tmp143Result13 = parseQuery(str10);
+                        const tmp141Result13 = parseQuery(str10);
                         break;
                       case "gift":
                         const obj79 = { type: React5.GIFT };
@@ -674,7 +668,7 @@ export default function parseURL(ctaLink) {
                           const obj85 = { type: React5.CONJURE, projectId: project_id, guildId: tmp28 };
                           tmp29 = obj85;
                         }
-                        const tmp143Result14 = parseQuery(str7);
+                        const tmp141Result14 = parseQuery(str7);
                         break;
                     }
                   }
@@ -695,7 +689,7 @@ export default function parseURL(ctaLink) {
                   } = result3);
                   obj86.payload = obj87;
                   return obj86;
-                } else if (null != pathname.match(re19)) {
+                } else if (null != pathname.match(re18)) {
                   const _decodeURIComponent = decodeURIComponent;
                   ({ key, redirect, fingerprint: fingerprint3 } = parseQuery(decodeURIComponent(query)));
                   if (null != key) {
@@ -720,7 +714,7 @@ export default function parseURL(ctaLink) {
                       return obj88;
                     }
                   }
-                  const tmp108 = parseQuery(decodeURIComponent(query));
+                  const tmp106 = parseQuery(decodeURIComponent(query));
                   const obj90 = { reason: "invalid_query_params", fingerprint: null };
                   const obj64 = AnalyticsUtilsDefault;
                   obj90.fingerprint = FingerprintUtils.maybeExtractId(fingerprint3);
@@ -730,78 +724,78 @@ export default function parseURL(ctaLink) {
                   const error = new Error("Missing nonce or redirect query params");
                   throw error;
                 } else {
-                  const match6 = pathname.match(re20);
-                  if (null != match6) {
-                    let str22 = query;
+                  const match5 = pathname.match(re19);
+                  if (null != match5) {
+                    let str23 = query;
                     if (query == null) {
-                      str22 = "";
+                      str23 = "";
                     }
                     const obj92 = { fingerprint, attemptId, installationId, payload: null };
                     const obj93 = {
                       type: React5.USER_CONNECTIONS_LINK_CALLBACK,
-                      provider: match6[1],
+                      provider: match5[1],
                       callbackCode: null,
                       callbackState: null,
                     };
-                    ({ code: obj61.callbackCode, state: obj61.callbackState } = parseQuery(decodeURIComponent(str22)));
+                    ({ code: obj61.callbackCode, state: obj61.callbackState } = parseQuery(decodeURIComponent(str23)));
                     obj92.payload = obj93;
                     return obj92;
                   } else {
-                    const match7 = pathname.match(re21);
-                    if (null != match7) {
-                      const tmp97 = _slicedToArray(match7, 2);
-                      const first1 = tmp97[0];
-                      let str21 = query;
+                    const match6 = pathname.match(re20);
+                    if (null != match6) {
+                      const tmp95 = _slicedToArray(match6, 2);
+                      const first1 = tmp95[0];
+                      let str22 = query;
                       if (query == null) {
-                        str21 = "";
+                        str22 = "";
                       }
                       const obj95 = { fingerprint, attemptId, installationId, payload: null };
                       const obj97 = {
                         type: React5.USER_CONNECTIONS_CALLBACK,
-                        provider: tmp97[1],
-                        searchParams: parseQuery(decodeURIComponent(str21)),
+                        provider: tmp95[1],
+                        searchParams: parseQuery(decodeURIComponent(str22)),
                       };
                       obj95.payload = obj97;
                       return obj95;
                     } else {
-                      const match8 = pathname.match(re22);
-                      if (null != match8) {
-                        const tmp91 = _slicedToArray(match8, 4);
+                      const match7 = pathname.match(re21);
+                      if (null != match7) {
+                        const tmp89 = _slicedToArray(match7, 4);
                         const obj98 = { fingerprint, attemptId, installationId, payload: null };
                         const obj99 = {
                           type: React5.GUILD_SETTINGS,
-                          guildId: tmp91[1],
-                          settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp91[2]),
-                          settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp91[3]),
+                          guildId: tmp89[1],
+                          settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp89[2]),
+                          settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp89[3]),
                         };
                         obj98.payload = obj99;
                         return obj98;
                       } else {
-                        const match9 = pathname.match(re23);
-                        if (null != match9) {
-                          const tmp84 = _slicedToArray(match9, 3);
-                          let str20 = query;
+                        const match8 = pathname.match(re22);
+                        if (null != match8) {
+                          const tmp82 = _slicedToArray(match8, 3);
+                          let str21 = query;
                           if (query == null) {
-                            str20 = "";
+                            str21 = "";
                           }
                           const obj100 = { fingerprint, attemptId, installationId, payload: null };
                           const obj101 = {
                             type: React5.GUILD_SETTINGS_PICKER,
-                            settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp84[1]),
-                            settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp84[2]),
-                            feature: parseQuery(str20).feature,
+                            settingsSection: urlPartToSettingsEnumDefault(hasOwnProperty, tmp82[1]),
+                            settingsSubsection: urlPartToSettingsEnumDefault(timestampProducer, tmp82[2]),
+                            feature: parseQuery(str21).feature,
                           };
                           obj100.payload = obj101;
                           return obj100;
-                        } else if (null != pathname.match(re24)) {
-                          let str19 = query;
+                        } else if (null != pathname.match(re23)) {
+                          let str20 = query;
                           if (query == null) {
-                            str19 = "";
+                            str20 = "";
                           }
                           const obj102 = { fingerprint, attemptId, installationId, payload: null };
                           const obj103 = {
                             type: React5.ACTIVATE_DEVICE,
-                            userCode: parseQuery(decodeURIComponent(str19)).user_code,
+                            userCode: parseQuery(decodeURIComponent(str20)).user_code,
                           };
                           obj102.payload = obj103;
                           return obj102;

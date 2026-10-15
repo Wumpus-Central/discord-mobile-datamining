@@ -48,7 +48,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(5972).ReadStateTypes;
+const ReadStateTypes = fn(6183).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -370,8 +370,9 @@ export const useConjureProjectBadge = tmp2;
 export const useConjureUnreadProjectIds = tmp3;
 export const useConjureUnreadSummary = tmp4;
 export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useAckConjureProjectWhileViewing(projectId) {
+  ? function useAckConjureProjectWhileViewing(projectId, arg1) {
       _require = projectId;
+      importDefault = arg1;
       const cResult = require("c").c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore];
@@ -381,74 +382,131 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
         first = cResult[0];
       }
       if (cResult[1] !== projectId) {
-        const fn = function c() {
-          let tmp2 = null != closure_0;
-          if (tmp2) {
-            const mentionCount = ReadStateStore.getMentionCount(closure_0, ReadStateTypes.CONJURING_PROJECT);
-            const ackMessageIdResult = ReadStateStore.ackMessageId(closure_0, ReadStateTypes.CONJURING_PROJECT);
-            let tmp7 = mentionCount > 0;
-            if (!tmp7) {
-              let tmp8 = null != ackMessageIdResult;
-              if (tmp8) {
-                tmp8 = 0 !== SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+        class C {
+          constructor() {
+            tmp = closure_0;
+            tmp2 = null != closure_0;
+            if (tmp2) {
+              tmp3 = closure_5;
+              tmp4 = ReadStateTypes;
+              mentionCount = closure_5.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT);
+              ackMessageIdResult = closure_5.ackMessageId(tmp, ReadStateTypes.CONJURING_PROJECT);
+              num = 0;
+              tmp7 = mentionCount > 0;
+              if (!tmp7) {
+                tmp8 = null != ackMessageIdResult;
+                if (tmp8) {
+                  tmp9 = closure_1;
+                  tmp10 = closure_2;
+                  obj = closure_1(closure_2[6]);
+                  tmp8 = 0 !== obj.getNonTimestampBits(ackMessageIdResult);
+                }
+                tmp7 = tmp8;
               }
-              tmp7 = tmp8;
+              tmp2 = tmp7;
             }
-            tmp2 = tmp7;
+            return tmp2;
           }
-          return tmp2;
-        };
+        }
         const items1 = [projectId];
         cResult[1] = projectId;
-        cResult[2] = fn;
+        cResult[2] = C;
         cResult[3] = items1;
         let tmp7 = items1;
-        let tmp6 = fn;
       } else {
-        tmp6 = cResult[2];
+        class C {
+          constructor() {
+            tmp = closure_0;
+            tmp2 = null != closure_0;
+            if (tmp2) {
+              tmp3 = closure_5;
+              tmp4 = ReadStateTypes;
+              mentionCount = closure_5.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT);
+              ackMessageIdResult = closure_5.ackMessageId(tmp, ReadStateTypes.CONJURING_PROJECT);
+              num = 0;
+              tmp7 = mentionCount > 0;
+              if (!tmp7) {
+                tmp8 = null != ackMessageIdResult;
+                if (tmp8) {
+                  tmp9 = closure_1;
+                  tmp10 = closure_2;
+                  obj = closure_1(closure_2[6]);
+                  tmp8 = 0 !== obj.getNonTimestampBits(ackMessageIdResult);
+                }
+                tmp7 = tmp8;
+              }
+              tmp2 = tmp7;
+            }
+            return tmp2;
+          }
+        }
         tmp7 = cResult[3];
       }
       let obj = require("c");
-      const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      const tmp9 = stateFromStores(10687)();
-      dependencyMap = tmp9;
-      if (cResult[4] === tmp9) {
-        if (cResult[5] === projectId) {
-          if (cResult[6] === stateFromStores) {
-            let tmp10 = cResult[7];
-            let tmp11 = cResult[8];
+      stateFromStores = require("initialize").useStateFromStores(first, C, tmp7);
+      if (cResult[4] === arg1) {
+        class C {
+          constructor() {
+            tmp = closure_0;
+            tmp2 = null != closure_0;
+            if (tmp2) {
+              tmp3 = closure_5;
+              tmp4 = ReadStateTypes;
+              mentionCount = closure_5.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT);
+              ackMessageIdResult = closure_5.ackMessageId(tmp, ReadStateTypes.CONJURING_PROJECT);
+              num = 0;
+              tmp7 = mentionCount > 0;
+              if (!tmp7) {
+                tmp8 = null != ackMessageIdResult;
+                if (tmp8) {
+                  tmp9 = closure_1;
+                  tmp10 = closure_2;
+                  obj = closure_1(closure_2[6]);
+                  tmp8 = 0 !== obj.getNonTimestampBits(ackMessageIdResult);
+                }
+                tmp7 = tmp8;
+              }
+              tmp2 = tmp7;
+            }
+            return tmp2;
           }
-          const effect = noop.useEffect(tmp10, tmp11);
         }
       }
-      const fn2 = function j() {
-        let tmp2 = null != projectId;
-        if (tmp2) {
-          tmp2 = stateFromStores;
+      class R {
+        constructor() {
+          tmp2 = null != closure_0;
+          tmp = closure_0;
+          if (tmp2) {
+            tmp2 = closure_2;
+          }
+          if (tmp2) {
+            tmp2 = closure_1;
+          }
+          if (tmp2) {
+            tmp3 = closure_1;
+            tmp4 = closure_2;
+            obj = closure_1(closure_2[5]);
+            obj1 = { type: "CONJURE_PROJECT_ACK", projectId: null };
+            obj1.projectId = tmp;
+            dispatchResult = obj.dispatch(obj1);
+          }
+          return;
         }
-        if (tmp2) {
-          tmp2 = closure_2;
-        }
-        if (tmp2) {
-          const obj2 = { type: "CONJURE_PROJECT_ACK", projectId };
-          DispatcherDefault.dispatch(obj2);
-        }
-      };
-      const items2 = [projectId, stateFromStores, tmp9];
-      cResult[4] = tmp9;
+      }
+      const items2 = [projectId, stateFromStores, arg1];
+      cResult[4] = arg1;
       cResult[5] = projectId;
       cResult[6] = stateFromStores;
-      cResult[7] = fn2;
+      cResult[7] = R;
       cResult[8] = items2;
-      tmp11 = items2;
-      tmp10 = fn2;
       const tmpResult = require("initialize");
     }
-  : function useAckConjureProjectWhileViewing(projectId) {
+  : function useAckConjureProjectWhileViewing(projectId, arg1) {
       _require = projectId;
+      closure_1 = arg1;
       const items = [ReadStateStore];
       const items1 = [projectId];
-      const stateFromStores = require("initialize").useStateFromStores(
+      stateFromStores = require("initialize").useStateFromStores(
         items,
         () => {
           let tmp2 = null != closure_0;
@@ -469,16 +527,14 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
         },
         items1,
       );
-      let tmp2 = stateFromStores(10687)();
-      dependencyMap = tmp2;
-      const items2 = [projectId, stateFromStores, tmp2];
+      const items2 = [projectId, stateFromStores, arg1];
       const effect = noop.useEffect(() => {
         let tmp2 = null != projectId;
         if (tmp2) {
           tmp2 = stateFromStores;
         }
         if (tmp2) {
-          tmp2 = closure_2;
+          tmp2 = closure_1;
         }
         if (tmp2) {
           const obj2 = { type: "CONJURE_PROJECT_ACK", projectId };

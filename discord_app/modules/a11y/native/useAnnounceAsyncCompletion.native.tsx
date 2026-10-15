@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (undefined !== polite) {
             str = polite;
           }
-          const AccessibilityAnnouncer = ref(4971).AccessibilityAnnouncer;
+          const AccessibilityAnnouncer = ref(5025).AccessibilityAnnouncer;
           AccessibilityAnnouncer.announce(intl, str);
           if (obj.isIOS()) {
             if (tmpResult.getIsScreenReaderEnabled()) {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (polite === undefined) {
           str = "assertive";
         }
-        const AccessibilityAnnouncer = ref(4971).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = ref(5025).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl, str);
         if (obj.isIOS()) {
           if (tmpResult.getIsScreenReaderEnabled()) {

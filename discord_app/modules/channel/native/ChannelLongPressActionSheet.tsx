@@ -148,7 +148,7 @@ function getActionSheetButtons(channel) {
     favoritesCategoryAddAction,
     favoritesMoveAction,
   } = channel);
-  const vibegrationsProjectId = channel.vibegrationsProjectId;
+  const conjureProjectId = channel.conjureProjectId;
   let guildId;
   let obj = { sectionKey: "dm", buttons: [] };
   ({
@@ -257,7 +257,7 @@ function getActionSheetButtons(channel) {
       obj8.label = intl5.string(tmp8(isOptedIn[24]).t.OQ9MKu);
       obj8.IconComponent = tmp8(isOptedIn[33]).LinkIcon;
       obj8.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10298, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10521, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj8);
     }
@@ -324,7 +324,7 @@ function getActionSheetButtons(channel) {
     obj16.label = intl7.string(isMuted(isOptedIn[43]).jMMrDM);
     obj16.IconComponent = channel(isOptedIn[31]).PencilIcon;
     obj16.onPress = function onPress() {
-      router_utils.transitionTo(__initData4.CHANNEL(guildId, StaticChannelRoute.CONJURE, vibegrationsProjectId));
+      router_utils.transitionTo(__initData4.CHANNEL(guildId, StaticChannelRoute.CONJURE, conjureProjectId));
     };
     const items4 = [obj16];
     obj15.buttons = items4;
@@ -627,7 +627,7 @@ function getActionSheetButtons(channel) {
             obj36.IconComponent = tmp93(isOptedIn[70]).ChatIcon;
             obj36.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10362, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10585, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons18.push(obj36);
@@ -939,9 +939,9 @@ function getActionSheetButtons(channel) {
     };
     t3 = buttons28.push(obj48);
   }
-  tmp31 = null != vibegrationsProjectId && null != guildId;
+  tmp31 = null != conjureProjectId && null != guildId;
 }
-const SafetyWarningTypes = fn(10295).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10518).SafetyWarningTypes;
 const ChannelRecord = fn(2069);
 ({
   isGuildTextChannelType: closure_9,
@@ -963,7 +963,7 @@ const Constants = fn(1085);
   Routes: closure_32,
   ZERO_STRING_GUILD_ID: closure_33,
 } = Constants);
-let closure_34 = fn(9640).ChannelDetailsNavigatorScreens;
+let closure_34 = fn(9848).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
@@ -972,7 +972,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const onClose = channel.onClose;
       let obj = channel(576);
-      const analyticsLocations = onClose(6857)(onClose(6884).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
+      const analyticsLocations = onClose(7073)(onClose(7098).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
       if (cResult[0] !== channel) {
         const guildId = channel.getGuildId();
         cResult[0] = channel;
@@ -982,8 +982,8 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       dependencyMap = tmp5;
-      const tmp4 = onClose(6857);
-      const isFavoritesGuildSelected = channel(10323).useIsFavoritesGuildSelected();
+      const tmp4 = onClose(7073);
+      const isFavoritesGuildSelected = channel(10546).useIsFavoritesGuildSelected();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[2] = items;
@@ -1001,7 +1001,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp10 = cResult[4];
       }
-      const tmpResult = channel(10323);
+      const tmpResult = channel(10546);
       const stateFromStores = channel(504).useStateFromStores(tmp8, tmp10);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [PermissionStore];
@@ -1054,7 +1054,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const optInEnabledForGuild = channel(6083).useOptInEnabledForGuild(tmp5);
+      const optInEnabledForGuild = channel(6299).useOptInEnabledForGuild(tmp5);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class O {
           constructor() {
@@ -1118,7 +1118,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = channel.parent_id;
       cResult[11] = tmp5;
       cResult[12] = F;
-      const tmpResult6 = channel(6083);
+      const tmpResult6 = channel(6299);
     }
   : function ChannelLongPressActionSheetConnected(channel) {
       channel = channel.channel;
@@ -1312,7 +1312,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
         favorites: null,
         favoritesCategoryAddAction: null,
         favoritesMoveAction: null,
-        vibegrationsProjectId: null,
+        conjureProjectId: null,
       };
       let isStaffResult;
       if (stateFromStores7 != null) {
@@ -1329,7 +1329,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       if (id == null) {
         id = null;
       }
-      obj7.vibegrationsProjectId = id;
+      obj7.conjureProjectId = id;
       const tmp46Result = getActionSheetButtons(obj7);
       noop = tmp46Result;
       let formatToPlainStringResult;
@@ -1365,11 +1365,11 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
             str = "danger";
           }
           return closure_1_35(
-            channel(6900).ActionSheetRow,
+            channel(7114).ActionSheetRow,
             {
               variant: str,
               label,
-              icon: closure_1_35(channel(6900).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
+              icon: closure_1_35(channel(7114).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
               trailing,
               onPress() {
                 if (onPress != null) {

@@ -2,7 +2,7 @@
 import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06339_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06555_LegacyBaseButton.js";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import DCDVideoRendererDefault from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
@@ -14,12 +14,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12524);
+const VoicePanelConstants = fn(12817);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(12522).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17837).VoicePanelPIPModes;
-const SCALE_PHYSICS = fn(12525).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(12815).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18077).VoicePanelPIPModes;
+const SCALE_PHYSICS = fn(12818).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 50;
@@ -45,7 +45,7 @@ getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = {
   code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}",
 };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_22 = createStyles.createStyles({
   wrapper: {
     position: "absolute",

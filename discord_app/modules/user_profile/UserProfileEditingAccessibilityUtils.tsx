@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileEditingAccessibilityUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2958 from "../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2960 from "../display_name_styles/intl/DisplayNameStyles.messages.js";
 import ProfilePendingImageTypes from "../profile_customization/ProfilePendingImageTypes.tsx";
 import useDisplayNameStylesEffectConfigs from "../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
 import getDisplayNameStylesFontNameDefault from "../display_name_styles/getDisplayNameStylesFontName.tsx";
@@ -17,7 +17,7 @@ export const getDisplayNameStyleAccessibleValue = function getDisplayNameStyleAc
     const intl4 = util.intl;
     let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[displayNameStyles.effectId];
     if (OpWJ3f == null) {
-      OpWJ3f = _modDef2958.OpWJ3f;
+      OpWJ3f = _modDef2960.OpWJ3f;
     }
     const colors = displayNameStyles.colors;
     const stringResult = intl3.string(getDisplayNameStylesFontNameDefault(displayNameStyles.fontId));

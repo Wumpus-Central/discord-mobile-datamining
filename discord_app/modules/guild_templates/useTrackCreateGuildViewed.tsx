@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildTemplateStates = fn(7037).GuildTemplateStates;
+const GuildTemplateStates = fn(7250).GuildTemplateStates;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

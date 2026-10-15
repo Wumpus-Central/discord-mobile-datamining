@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,

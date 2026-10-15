@@ -13,7 +13,7 @@ let closure_3 = ["steps", "onWillFocus"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { container: { height: "100%" }, stepContainer: null };
 const rect = {
   flexDirection: "column",
@@ -22,7 +22,8 @@ const rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(6263).NAV_BAR_HEIGHT,
+  height: fn(6479).NAV_BAR_HEIGHT,
+  zIndex: 1,
 };
 obj2.stepContainer = rect;
 let closure_10 = createStyles.createStyles(obj2);

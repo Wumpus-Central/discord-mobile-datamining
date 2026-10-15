@@ -1,4 +1,5 @@
 // discord_app/modules/conjure/plan/conjurePlanFormat.tsx
+import Server from "../../../flow/Server.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanFormat.tsx");
@@ -15,18 +16,15 @@ export const formatConjurePlanRequirementName = function formatConjurePlanRequir
   });
   return mapped.join(" ");
 };
-export const conjurePlanCommandPrefix = function conjurePlanCommandPrefix(kind) {
+export const conjurePlanCommandPrefix = function conjurePlanCommandPrefix(type) {
   let str = "\u21EA /";
-  if ("launch" !== kind.kind) {
-    str = "\u21EA /";
-    if (4 !== kind.type) {
-      if (2 === kind.type) {
-        let str2 = "";
-      } else {
-        str2 = "/";
-      }
-      str = str2;
+  if (type.type !== Server.ApplicationCommandType.PRIMARY_ENTRY_POINT) {
+    if (type.type === Server.ApplicationCommandType.USER) {
+      let str2 = "";
+    } else {
+      str2 = "/";
     }
+    str = str2;
   }
   return str;
 };

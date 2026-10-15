@@ -56,26 +56,37 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
             closure_129_0 = undefined;
             closure_129_1 = undefined;
             let channel;
-            const _Date2 = Date;
+            const _Date3 = Date;
             closure_20 = Date.now();
             sessionId = sessionId.sessionId;
             const localPresenceState = require("GatewaySocketSingleton").localPresenceState;
             localPresenceState.handleConnectionOpen();
             closure_129_0 = {};
+            const Storage3 = require("Storage").Storage;
+            value = Storage3.get("discord_update_restart_timestamp");
+            let tmp18 = null != value;
+            if (tmp18) {
+              const _Date = Date;
+              const _parseInt = parseInt;
+              const timestamp = Date.now();
+              tmp18 = timestamp - parseInt(value, 10) < 300000;
+            }
+            const Storage = require("Storage").Storage;
+            Storage.remove("discord_update_restart_timestamp");
             voiceChannelId = voiceChannelId.getVoiceChannelId();
             closure_129_1 = voiceChannelId;
             if (null != voiceChannelId) {
-              const Storage2 = require("Storage").Storage;
-              value = Storage2.get("discord_watchdog_restart_timestamp");
-              let tmp18 = null != value;
-              if (tmp18) {
-                const _Date = Date;
-                const _parseInt = parseInt;
-                const timestamp = Date.now();
-                tmp18 = timestamp - parseInt(value, 10) < 60000;
+              const Storage4 = require("Storage").Storage;
+              value2 = Storage4.get("discord_watchdog_restart_timestamp");
+              let tmp25 = null != value2;
+              if (tmp25) {
+                const _Date2 = Date;
+                const _parseInt2 = parseInt;
+                const timestamp1 = Date.now();
+                tmp25 = timestamp1 - parseInt(value2, 10) < 60000;
               }
-              const Storage = require("Storage").Storage;
-              Storage.remove("discord_watchdog_restart_timestamp");
+              const Storage2 = require("Storage").Storage;
+              Storage2.remove("discord_watchdog_restart_timestamp");
               let type;
               if (window != null) {
                 const _performance = window.performance;
@@ -93,21 +104,23 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
                 }
               }
               if ("reload" !== type) {
-                if (!tmp18) {
-                  let lastCrash;
-                  if (processUtils != null) {
-                    processUtils = processUtils.processUtils;
+                if (!tmp25) {
+                  if (!tmp18) {
+                    let lastCrash;
                     if (processUtils != null) {
-                      const getLastCrash = processUtils.getLastCrash;
-                      if (getLastCrash != null) {
-                        lastCrash = getLastCrash();
+                      processUtils = processUtils.processUtils;
+                      if (processUtils != null) {
+                        const getLastCrash = processUtils.getLastCrash;
+                        if (getLastCrash != null) {
+                          lastCrash = getLastCrash();
+                        }
                       }
                     }
+                    c3 = 1;
+                    c4 = 1;
+                    const obj4 = { value: lastCrash, done: false };
+                    return obj4;
                   }
-                  c3 = 1;
-                  c4 = 1;
-                  const obj4 = { value: lastCrash, done: false };
-                  return obj4;
                 }
               }
               channel = closure_130_8.getChannel(closure_129_1);
@@ -146,9 +159,9 @@ let closure_25 = async function _handleConnectionOpen(arg0) {
         c4 = 3;
         const obj6 = { value, done: true };
         return obj6;
-      } catch (tmp47) {
+      } catch (tmp54) {
         c4 = tmp;
-        throw tmp47;
+        throw tmp54;
       }
     }
   })();
@@ -170,7 +183,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1085);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
-fn(14302).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(14599).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -513,13 +526,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(5905).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6116).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(14302).socket;
+          const socket = closure_0(14599).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(14302).socket;
+            const socket2 = closure_0(14599).socket;
             socket2.streamDelete(item);
           }
         });

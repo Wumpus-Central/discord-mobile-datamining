@@ -15,10 +15,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13027).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13323).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   rowContainer: {
     marginHorizontal: 16,
@@ -413,7 +413,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(13041).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(13337).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {
@@ -424,7 +424,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(5640).APIError(closure_128_0);
+                  const aPIError = new id(5851).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   constants(false);

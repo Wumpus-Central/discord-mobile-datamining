@@ -13,7 +13,7 @@ const View = fn(17).View;
 const ChannelFlags = fn(2072).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_9 = createStyles.createStyles({
   header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 },
   content: { flex: 1, marginBottom: 12 },

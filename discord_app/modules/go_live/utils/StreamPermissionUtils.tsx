@@ -105,7 +105,7 @@ function canWatchStream(basicChannel1, VoiceStateStore, GuildStore, PermissionSt
   }
 }
 const ChannelRecordBase = fn(2069).ChannelRecordBase;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4750).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4804).GUILD_VOCAL_CHANNELS_KEY;
 const Permissions = fn(1085).Permissions;
 const StreamUnavailableReasons = {
   REMOTE_MODE: 0,

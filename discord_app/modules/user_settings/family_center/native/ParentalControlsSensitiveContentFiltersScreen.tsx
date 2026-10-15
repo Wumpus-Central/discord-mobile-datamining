@@ -33,7 +33,7 @@ function getContentCategory() {
   items1[1] = obj2;
   return items1;
 }
-const MobileUserSettings = fn(8000).MobileUserSettings;
+const MobileUserSettings = fn(8210).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

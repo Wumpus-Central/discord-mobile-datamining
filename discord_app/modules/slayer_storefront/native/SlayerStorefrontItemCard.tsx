@@ -2,9 +2,9 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import LinearGradientDefault from "../../../../_runtime/05396_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05451_LinearGradient.js";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07280_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07490_tinycolor.js";
 import DominantColorUtils from "../../voice_panel/native/card/DominantColorUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   cardContainer: {
     borderRadius: nativeDefault.radii.md,

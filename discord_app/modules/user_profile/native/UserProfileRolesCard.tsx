@@ -18,7 +18,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 12;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" },
   role: {
@@ -103,7 +103,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[3] === role.id) {
             let tmp9 = cResult[4];
           }
-          const roleIconProps = tmp(6888).useRoleIconProps(tmp9);
+          const roleIconProps = tmp(7102).useRoleIconProps(tmp9);
           const tags = role.tags;
           let guild_connections;
           if (tags != null) {
@@ -119,7 +119,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[5] = obj2;
             cResult[6] = obj3;
           }
-          guildId(6890);
+          guildId(7104);
           if (cResult[7] === tmp4) {
             if (cResult[8] === role.id) {
               let tmp20 = cResult[9];
@@ -137,9 +137,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     intl = role(closure_2[15]).intl;
                     obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
                     obj.onPress = function onPress() {
-                      role(6891).copy(customIconSrc.id);
-                      const obj = role(6891);
-                      role(4810).roleIdCopied(dependencyMap);
+                      role(7105).copy(customIconSrc.id);
+                      const obj = role(7105);
+                      role(4864).roleIdCopied(dependencyMap);
                     };
                     items = [];
                     items[0] = obj;
@@ -199,9 +199,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 intl = role(closure_2[15]).intl;
                                 obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
                                 obj.onPress = function onPress() {
-                                  role(6891).copy(customIconSrc.id);
-                                  const obj = role(6891);
-                                  role(4810).roleIdCopied(dependencyMap);
+                                  role(7105).copy(customIconSrc.id);
+                                  const obj = role(7105);
+                                  role(4864).roleIdCopied(dependencyMap);
                                 };
                                 items = [];
                                 items[0] = obj;
@@ -251,9 +251,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   intl = role(closure_2[15]).intl;
                                   obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
                                   obj.onPress = function onPress() {
-                                    role(6891).copy(customIconSrc.id);
-                                    const obj = role(6891);
-                                    role(4810).roleIdCopied(dependencyMap);
+                                    role(7105).copy(customIconSrc.id);
+                                    const obj = role(7105);
+                                    role(4864).roleIdCopied(dependencyMap);
                                   };
                                   items = [];
                                   items[0] = obj;
@@ -295,7 +295,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               obj4.style = role2.role;
                               tmp2 = tmp23();
                               obj4.children = tmp2;
-                              let tmp24Result = tmp24(tmp(6189).PressableHighlight, obj4);
+                              let tmp24Result = tmp24(tmp(6405).PressableHighlight, obj4);
                             } else {
                               const obj5 = { style: null, children: null };
                               class T {
@@ -306,9 +306,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   intl = role(closure_2[15]).intl;
                                   obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
                                   obj.onPress = function onPress() {
-                                    role(6891).copy(customIconSrc.id);
-                                    const obj = role(6891);
-                                    role(4810).roleIdCopied(dependencyMap);
+                                    role(7105).copy(customIconSrc.id);
+                                    const obj = role(7105);
+                                    role(4864).roleIdCopied(dependencyMap);
                                   };
                                   items = [];
                                   items[0] = obj;
@@ -422,9 +422,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 intl = role(closure_2[15]).intl;
                 obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
                 obj.onPress = function onPress() {
-                  role(6891).copy(customIconSrc.id);
-                  const obj = role(6891);
-                  role(4810).roleIdCopied(dependencyMap);
+                  role(7105).copy(customIconSrc.id);
+                  const obj = role(7105);
+                  role(4864).roleIdCopied(dependencyMap);
                 };
                 items = [];
                 items[0] = obj;
@@ -471,7 +471,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = role.id;
           cResult[9] = E;
           tmp20 = E;
-          let tmpResult = tmp(6888);
+          let tmpResult = tmp(7102);
         }
         const obj6 = { guildId, roleId: role.id, size };
         cResult[2] = guildId;
@@ -739,7 +739,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[11] === style) {
             }
             const obj2 = { title: tmp13, style, children: tmp15 };
-            tmp2 = closure_9(guildId(6909), obj2);
+            tmp2 = closure_9(guildId(7123), obj2);
             cResult[11] = style;
             cResult[12] = tmp15;
             cResult[13] = tmp2;
@@ -790,8 +790,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.style = userId.style;
         const obj3 = { guildId, guildMemberRoleIds: roles };
         obj2.children = closure_9(closure_16, obj3);
-        tmp4 = closure_9(guildId(6909), obj2);
-        const tmp7 = guildId(6909);
+        tmp4 = closure_9(guildId(7123), obj2);
+        const tmp7 = guildId(7123);
       }
       return tmp4;
     };

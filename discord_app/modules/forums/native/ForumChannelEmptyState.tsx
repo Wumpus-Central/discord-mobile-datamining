@@ -5,15 +5,15 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef13081 from "../../../../_runtime/metro/13081__.js";
-import _modDef13082 from "../../../../_runtime/metro/13082__.js";
+import _modDef13377 from "../../../../_runtime/metro/13377__.js";
+import _modDef13378 from "../../../../_runtime/metro/13378__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({
   container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" },
   image: { width: 120, height: 80 },
@@ -49,9 +49,9 @@ export default noop.memo(
             let tmp9 = cResult[4];
           }
           if (tmpResult2.isThemeLight(tmpResult.useThemeContext().theme)) {
-            let tmp5Result = _modDef13081;
+            let tmp5Result = _modDef13377;
           } else {
-            tmp5Result = _modDef13082;
+            tmp5Result = _modDef13378;
           }
           if (cResult[5] === tmp4.image) {
             if (cResult[6] === tmp5Result) {
@@ -175,9 +175,9 @@ export default noop.memo(
         const obj = shared;
         const tmp9 = FastImageDefault;
         if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-          let tmp4Result = _modDef13081;
+          let tmp4Result = _modDef13377;
         } else {
-          tmp4Result = _modDef13082;
+          tmp4Result = _modDef13378;
         }
         const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), ,];
         const obj5 = {

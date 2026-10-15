@@ -6,6 +6,7 @@ const items = [
   GamePlatformAvailability.GamePlatformAvailability.DESKTOP,
   GamePlatformAvailability.GamePlatformAvailability.MOBILE,
   GamePlatformAvailability.GamePlatformAvailability.CONSOLE,
+  GamePlatformAvailability.GamePlatformAvailability.ROBLOX,
 ];
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/GamePlatformAvailabilityUtils.tsx");
 

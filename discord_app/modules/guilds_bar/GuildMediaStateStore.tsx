@@ -261,7 +261,7 @@ function computeGuildMediaState(id) {
           const basicChannel = ChannelStore.getBasicChannel(item);
           let tmp2 = null != basicChannel;
           if (tmp2) {
-            tmp2 = closure_1(5899)(basicChannel, PermissionStore);
+            tmp2 = closure_1(6110)(basicChannel, PermissionStore);
           }
           return tmp2;
         });
@@ -272,12 +272,12 @@ function computeGuildMediaState(id) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp29Result = tmp29(8520);
+        let tmp29Result = tmp29(8731);
         if (tmp29Result.isActivitiesInTextEnabled(ChannelStore.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
         } else {
           someResult2 = found.some((location) => {
-            const channel = ChannelStore.getChannel(id(4741).getEmbeddedActivityLocationChannelId(location.location));
+            const channel = ChannelStore.getChannel(id(4795).getEmbeddedActivityLocationChannelId(location.location));
             let tmp2 = null != channel;
             if (tmp2) {
               tmp2 = isVoiceChannel(channel.type);
@@ -294,7 +294,7 @@ function computeGuildMediaState(id) {
           activity: null,
           isCurrentUserConnected: false,
         };
-        let tmp29Result2 = tmp29(8660);
+        let tmp29Result2 = tmp29(8872);
         obj4.activeEvent = null != tmp29Result2.getGuildActiveEvent(arg0);
         obj4.activity = someResult2;
         return obj4;

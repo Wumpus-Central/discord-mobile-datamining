@@ -17,7 +17,7 @@ import JoinedThreadsStore from "JoinedThreadsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(13076).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(13372).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1096).Permissions;
 fn(558);
 let ReactCompilerGating = fn(558);

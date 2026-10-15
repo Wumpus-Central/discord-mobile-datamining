@@ -30,11 +30,11 @@ function showTooManyInvitesToast() {
   ToastActionCreatorsDefault.open("GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES", obj2);
 }
 const View = fn(17).View;
-let closure_6 = fn(8768).useInstantInviteSendStates;
+let closure_6 = fn(8981).useInstantInviteSendStates;
 const NOOP_NULL = fn(1096).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const stringResult = intl.string(combined(2438).nVMqjA);
-        const ActionSheet = formatToPlainString(6904).ActionSheet;
+        const ActionSheet = formatToPlainString(7118).ActionSheet;
         const _Symbol = Symbol;
         if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
           class N {
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const Stack = formatToPlainString(5382).Stack;
+        const Stack = formatToPlainString(5437).Stack;
         const PX_16 = centeredText(587).space.PX_16;
         const header = str.header;
         let obj2 = { spacing: centeredText(587).space.PX_4, children: null };
@@ -350,14 +350,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = formatToPlainString(1126).intl;
         const obj6 = { noun: stringResult };
         obj3.children = intl2.formatToPlainString(centeredText(2438).EnTIIr, obj6);
-        const items3 = [closure_10(formatToPlainString(5092).Heading, obj3)];
+        const items3 = [closure_10(formatToPlainString(5147).Heading, obj3)];
         const obj7 = { variant: "text-sm/medium", color: "text-muted", style: str.centeredText, children: null };
         const intl3 = formatToPlainString(1126).intl;
         const obj8 = { noun: stringResult };
         obj7.children = intl3.formatToPlainString(centeredText(2438).BBk7Qw, obj8);
-        items3[1] = closure_10(formatToPlainString(5092).Text, obj7);
+        items3[1] = closure_10(formatToPlainString(5147).Text, obj7);
         obj2.children = items3;
-        const tmp25 = closure_11(formatToPlainString(5382).Stack, obj2);
+        const tmp25 = closure_11(formatToPlainString(5437).Stack, obj2);
         const intl4 = formatToPlainString(1126).intl;
         formatToPlainString = intl4.formatToPlainString;
         const obj9 = { noun: stringResult };
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[27] = true;
         cResult[28] = true;
         cResult[29] = tmp21;
-        const SearchField = formatToPlainString(6743).SearchField;
+        const SearchField = formatToPlainString(6959).SearchField;
       }
       class U {
         constructor(arg0) {
@@ -508,25 +508,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl3 = guildId(1126).intl;
       obj6.children = intl3.formatToPlainString(combined(2438).EnTIIr, { noun: stringResult });
-      const items4 = [closure_10(guildId(5092).Heading, obj6)];
+      const items4 = [closure_10(guildId(5147).Heading, obj6)];
       const obj7 = { variant: "text-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
       const intl4 = guildId(1126).intl;
       obj7.children = intl4.formatToPlainString(combined(2438).BBk7Qw, { noun: stringResult });
-      items4[1] = closure_10(guildId(5092).Text, obj7);
+      items4[1] = closure_10(guildId(5147).Text, obj7);
       obj5.children = items4;
-      const items5 = [closure_11(guildId(5382).Stack, obj5)];
+      const items5 = [closure_11(guildId(5437).Stack, obj5)];
       const obj8 = { size: "md", round: true, onChange: callback, placeholder: null };
       const intl5 = guildId(1126).intl;
       obj8.placeholder = intl5.formatToPlainString(combined(2438).cRK6SQ, { noun: stringResult });
-      items5[1] = closure_10(guildId(6743).SearchField, obj8);
+      items5[1] = closure_10(guildId(6959).SearchField, obj8);
       obj4.children = items5;
-      obj3.header = closure_11(guildId(5382).Stack, obj4);
+      obj3.header = closure_11(guildId(5437).Stack, obj4);
       if (tmp7[0]) {
         let tmp14Result = closure_10(closure_15, {});
       } else {
         const obj9 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-        tmp14Result = closure_10(combined(14568), obj9);
+        tmp14Result = closure_10(combined(14865), obj9);
       }
       obj3.children = tmp14Result;
-      return closure_10(guildId(6904).ActionSheet, obj3);
+      return closure_10(guildId(7118).ActionSheet, obj3);
     };

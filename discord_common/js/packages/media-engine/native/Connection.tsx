@@ -2,18 +2,18 @@
 import inject from "inject.tsx";
 import VideoQualityManager from "../VideoQualityManager.tsx";
 import discord_common_BaseConnectionEvent from "../BaseConnectionEvent.tsx";
-import _modDef5159 from "../../../../../_runtime/metro/05159__.js";
+import _modDef5214 from "../../../../../_runtime/metro/05214__.js";
 import VideoCodecUtils from "../utils/VideoCodecUtils.tsx";
 import transformStatsDefault from "transformStats.tsx";
-import _modDef5206 from "../../../../../_runtime/metro/05206__.js";
+import _modDef5261 from "../../../../../_runtime/metro/05261__.js";
 import discord_common_VoiceEngine from "VoiceEngine.tsx";
-import reduceDefault from "../../../../../_runtime/05208_reduce.js";
-import _modDef5211 from "../../../../../_runtime/metro/05211__.js";
+import reduceDefault from "../../../../../_runtime/05263_reduce.js";
+import _modDef5266 from "../../../../../_runtime/metro/05266__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import BaseConnection from "../BaseConnection.tsx";
 
 require = fn;
-let Constants = fn(5121);
+let Constants = fn(5176);
 ({
   StatsFilter: closure_4,
   ExperimentFlags: hasOwnProperty,
@@ -23,7 +23,7 @@ let Constants = fn(5121);
   MediaTypes: closure_9,
   SIMULCAST_HQ_QUALITY: c10,
 } = Constants);
-Constants = fn(5143);
+Constants = fn(5198);
 ({
   NATIVE_MODE_VALUES: closure_11,
   InputModes: closure_12,
@@ -47,11 +47,11 @@ let c28 = 0;
 let Connection;
 class Connection extends tmp4 {
   constructor(arg0, arg1, arg2) {
-    tmp1 = new tmp(global, fn, tmp6, tmp5, tmp4, tmp3, global, tmp2, new.target);
+    tmp1 = new tmp(global, fn, tmp7, tmp6, tmp5, tmp4, tmp3, global, tmp2);
     closure_0 = tmp1;
-    tmp8 = +closure_28;
-    closure_28 = tmp8 + 1;
-    tmp1.mediaEngineConnectionId = `Native-${tmp8}`;
+    tmp9 = +closure_28;
+    closure_28 = tmp9 + 1;
+    tmp1.mediaEngineConnectionId = `Native-${tmp9}`;
     tmp1.selfVideo = false;
     tmp1.codecs = [];
     tmp1.initialCodecs = [];
@@ -62,12 +62,19 @@ class Connection extends tmp4 {
     tmp1.lastOverrideEncoderDenylist = "";
     tmp1.lastCaptureOverrides = "";
     tmp1.overrideCodecResetAt = 0;
+    tmp11 = closure_0;
+    tmp12 = closure_2;
     obj = closure_0(closure_2[4]);
     tmp1.desktopDegradationPreference = obj.getVoiceEngine().DegradationPreference.MAINTAIN_FRAMERATE;
     obj2 = closure_0(closure_2[4]);
-    tmp1.sourceDesktopDegradationPreference = obj2.getVoiceEngine().DegradationPreference.DISABLED;
-    obj3 = closure_0(closure_2[4]);
-    tmp1.videoDegradationPreference = obj3.getVoiceEngine().DegradationPreference.BALANCED;
+    DISABLED = obj2.getVoiceEngine().DegradationPreference.MAINTAIN_FRAMERATE_AND_RESOLUTION;
+    if (DISABLED == null) {
+      tmp11Result = tmp11(tmp12[4]);
+      DISABLED = tmp11Result.getVoiceEngine().DegradationPreference.DISABLED;
+    }
+    tmp1.sourceDesktopDegradationPreference = DISABLED;
+    tmp11Result1 = tmp11(tmp12[4]);
+    tmp1.videoDegradationPreference = tmp11Result1.getVoiceEngine().DegradationPreference.BALANCED;
     tmp1.localPans = {};
     tmp1.remoteAudioSSRCs = {};
     tmp1.remoteVideoSSRCs = {};
@@ -243,7 +250,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
-      const tmp2 = _modDef5159(closure_0.videoStreamParameters);
+      const tmp2 = _modDef5214(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
         if (null != arr) {
@@ -413,9 +420,9 @@ class Connection extends tmp4 {
               if (diff1 >= 0) {
                 closure_0.emit(
                   discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate,
-                  100 * _modDef5211(diff1 / (diff + diff1), 0, 1),
+                  100 * _modDef5266(diff1 / (diff + diff1), 0, 1),
                 );
-                const tmp6 = _modDef5211(diff1 / (diff + diff1), 0, 1);
+                const tmp6 = _modDef5266(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -495,7 +502,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.MLSFailure, arg0, arg1);
     };
     tmp1.videoSupported = importDefault;
-    logger1 = new closure_0(closure_2[5]).Logger("Connection(" + global + ")");
+    logger1 = new tmp11(tmp12[5]).Logger("Connection(" + global + ")");
     tmp1.logger = logger1;
     logger = tmp1.logger;
     enableNativeLoggerResult = logger.enableNativeLogger(true);
@@ -1045,15 +1052,15 @@ prototype["getStats"] = function getStats() {
         const obj = self(2014);
       }
     });
-    let obj = self(5203);
-    resolved = self(5203)
-      .timeout(promise, self(5152).STATS_INTERVAL)
+    let obj = self(5258);
+    resolved = self(5258)
+      .timeout(promise, self(5207).STATS_INTERVAL)
       .catch((error) => {
-        if (!(error instanceof self(5203).TimeoutError)) {
+        if (!(error instanceof self(5258).TimeoutError)) {
           throw error;
         }
       });
-    const timeoutResult = self(5203).timeout(promise, self(5152).STATS_INTERVAL);
+    const timeoutResult = self(5258).timeout(promise, self(5207).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -1084,7 +1091,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef5206(sorted, sorted1);
+  _modDef5261(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1499,6 +1506,10 @@ prototype["setVideoEncoderExperiments"] = function setVideoEncoderExperiments(vi
   this.videoEncoderExperiments = videoEncoderExperiments;
   const conn = this.conn;
   conn.setTransportOptions({ videoEncoderExperiments: this.videoEncoderExperiments });
+};
+prototype["setVideoEncoderLatencyProfile"] = function setVideoEncoderLatencyProfile(videoEncoderLatencyProfile) {
+  const conn = this.conn;
+  conn.setTransportOptions({ videoEncoderLatencyProfile });
 };
 prototype["setSingleCpuCopy"] = function setSingleCpuCopy(enabled) {
   this.singleCpuCopy = enabled;
@@ -1954,10 +1965,10 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "keys" };
+        return { v: "r" };
       } else {
         const items = [];
-        if (!_modDef5206(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef5261(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;

@@ -1,86 +1,65 @@
 // discord_app/modules/conjure/clarification/conjureClarificationLinks.tsx
-import ConjureWorkerTickets from "../connection/ConjureWorkerTickets.tsx";
+import conjureWorkerFetch from "../connection/conjureWorkerFetch.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
 let closure_3 = async function _approveCaller(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp2;
-          closure_130_0 = closure_1;
-          closure_130_1 = undefined;
-          let ticket;
-          let baseUrl;
-          c3 = 1;
-          c4 = 1;
-          const obj5 = { value: ConjureWorkerTickets.mintWorkerTicket(closure_0), done: false };
-          return obj5;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_130_1 = value;
-          ticket = closure_130_1.ticket;
-          baseUrl = closure_130_1.baseUrl;
-          const _fetch = fetch;
-          const _URLSearchParams = URLSearchParams;
-          const obj7 = { ticket };
-          const uRLSearchParams = new URLSearchParams(obj7);
-          const _HermesInternal = HermesInternal;
-          const request = { method: "PUT", body: null };
-          const _JSON = JSON;
-          const obj8 = { caller_project_id: closure_130_0 };
-          const combined = "" + baseUrl + "/agent/linked-apps?" + uRLSearchParams;
-          request.body = JSON.stringify(obj8);
-          c3 = 2;
-          c4 = 1;
-          const obj9 = { value: fetch(combined, request), done: false };
-          return obj9;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
+  closure_0 = arg0;
+  c3 = 0;
+  c2 = 0;
+  return (async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c4 = 3;
-        const obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        c4 = 3;
         return { value: "IconComponent", done: null };
       }
-    } catch (tmp10) {
-      c4 = tmp;
-      throw tmp10;
+    } else {
+      try {
+        c2 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c2 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            const obj5 = { method: "PUT", json: null };
+            const obj6 = { caller_project_id };
+            obj5.json = obj6;
+            c3 = 1;
+            c2 = 1;
+            const obj7 = {
+              value: conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/linked-apps", obj5),
+              done: false,
+            };
+            return obj7;
+          }
+        } else if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          c2 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp9) {
+        c2 = tmp;
+        throw tmp9;
+      }
     }
-  }
+  })();
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/clarification/conjureClarificationLinks.tsx");

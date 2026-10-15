@@ -184,7 +184,7 @@ function handleSpotifyUpdate() {
   }
   return false;
 }
-const EVERYONE_CHANNEL_ID = fn(6980).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(7193).EVERYONE_CHANNEL_ID;
 const Constants = fn(1085);
 ({ ChannelSections, ChannelTypes: closure_19 } = Constants);
 let closure_20 = new GuildSubscriptionsDefault((subscriptions) => {

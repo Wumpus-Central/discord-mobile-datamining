@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_5 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center" },
   containerLandscape: { justifyContent: "center" },
@@ -27,21 +27,21 @@ export default noop.memo(
         const participants = channel.participants;
         const tmp3 = closure_5();
         let obj = channel(576);
-        const isScreenLandscape = channel(8334).useIsScreenLandscape();
+        const isScreenLandscape = channel(8545).useIsScreenLandscape();
         let num = 3;
         if (0 === channel.row) {
           num = participants.length;
         }
         if (cResult[0] !== num) {
           if (1 === num) {
-            StageTileSize = tmp(11230).StageTileSize;
+            StageTileSize = tmp(11454).StageTileSize;
             let HALF = StageTileSize.FULL;
             cResult[0] = num;
             cResult[1] = HALF;
           } else if (2 !== num) {
-            HALF = tmp(11230).StageTileSize.THIRD;
+            HALF = tmp(11454).StageTileSize.THIRD;
           }
-          HALF = tmp(11230).StageTileSize.HALF;
+          HALF = tmp(11454).StageTileSize.HALF;
         } else {
           const size = tmp5;
           let containerLandscape = isScreenLandscape;
@@ -126,7 +126,7 @@ export default noop.memo(
           cResult[4] = items;
           tmp7 = items;
         }
-        let obj2 = channel(8334);
+        let obj2 = channel(8545);
       }
     : function StageGridRow(row) {
         ({ channel: require, participants } = row);

@@ -12,10 +12,20 @@ function recomputeAffinities() {
       return items;
     }),
   );
+  if (null != _null) {
+    value = map.get(_null.otherUserId);
+    if (value == null) {
+      value = null;
+    }
+    c5 = value;
+    const result = map.set(_null.otherUserId, _null);
+  }
 }
-const USER_AFFINITY_TTL = fn(7355).USER_AFFINITY_TTL;
+const USER_AFFINITY_TTL = fn(7565).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
+let c4 = null;
+let c5 = null;
 const frozen = Object.freeze({ userAffinities: [], lastFetched: 0 });
 let obj = {};
 let merged = Object.assign(frozen);
@@ -43,6 +53,14 @@ prototype["initialize"] = function initialize(userAffinities) {
         return items;
       }),
     );
+    if (null != _null) {
+      value = map.get(_null.otherUserId);
+      if (value == null) {
+        value = null;
+      }
+      c5 = value;
+      const result = map.set(_null.otherUserId, _null);
+    }
   }
   const items = [RelationshipStore];
   self.syncWith(items, recomputeAffinities);
@@ -61,6 +79,9 @@ prototype["getUserAffinities"] = function getUserAffinities() {
 };
 prototype["getUserAffinitiesMap"] = function getUserAffinitiesMap() {
   return map;
+};
+prototype["getDevToolsOverride"] = function getDevToolsOverride() {
+  return c4;
 };
 prototype["compare"] = function compare(arg0, arg1) {
   value = map.get(arg1);
@@ -135,18 +156,58 @@ const userAffinitiesV2Store = new UserAffinitiesV2Store(DispatcherDefault, {
         return items;
       }),
     );
+    if (null != _null) {
+      value = map.get(_null.otherUserId);
+      if (value == null) {
+        value = null;
+      }
+      c5 = value;
+      const result = map.set(_null.otherUserId, _null);
+    }
   },
   LOAD_USER_AFFINITIES_V2_FAILURE: function handleLoadUserAffinitiesFailure() {
     c3 = false;
+  },
+  DEV_TOOLS_SET_USER_AFFINITY_OVERRIDE: function handleSetDevToolsOverride(override) {
+    override = override.override;
+    if (!(null != _null || null != override)) {
+      return tmp;
+    } else {
+      if (null != _null) {
+        _null = override;
+        const result = map.set(override.otherUserId, override);
+      }
+      if (null == _null) {
+        if (null != override) {
+          value = map.get(override.otherUserId);
+          if (value == null) {
+            value = null;
+          }
+          c5 = value;
+          _null = override;
+          const result1 = map.set(override.otherUserId, override);
+        }
+      } else {
+        if (null != c5) {
+          const result2 = map.set(_null.otherUserId, c5);
+        } else {
+          map.delete(_null.otherUserId);
+        }
+        c5 = null;
+        _null = null;
+      }
+    }
   },
   LOGOUT: function handleLogout() {
     obj = {};
     const merged = Object.assign(frozen);
     map = new Map();
     c3 = false;
+    c4 = null;
+    c5 = null;
   },
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");
+let result = size.fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");
 
 export default userAffinitiesV2Store;

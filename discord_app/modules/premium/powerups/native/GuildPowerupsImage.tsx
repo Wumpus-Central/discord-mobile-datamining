@@ -8,7 +8,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_5 = createStyles.createStyles({
   image: { width: "75%", height: "100%", alignSelf: "center", resizeMode: "contain" },
 });

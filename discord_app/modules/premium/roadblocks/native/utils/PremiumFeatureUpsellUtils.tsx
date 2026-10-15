@@ -7,6 +7,10 @@ import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const AnalyticsPages = Constants.AnalyticsPages;
+const items = [
+  EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE,
+  EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS,
+];
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
@@ -15,6 +19,9 @@ export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroL
     tmp = categoryInfo.guild.id !== guild_id;
   }
   return tmp;
+};
+export const isEmojiPickerUpsellFeature = function isEmojiPickerUpsellFeature(featureName) {
+  return items.includes(featureName);
 };
 export const getAnalyticsPage = function getAnalyticsPage(featureName) {
   if (EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS === featureName) {

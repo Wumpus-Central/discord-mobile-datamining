@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MAX_PRESENTED_CITATIONS = fn(12590).MAX_PRESENTED_CITATIONS;
+const MAX_PRESENTED_CITATIONS = fn(12883).MAX_PRESENTED_CITATIONS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -133,7 +133,7 @@ export const SmartSearchResults = ReactCompilerGating.isReactCompilerEnabled()
             SearchSessionAnalyticsManagerDefault,
           );
           return () => {
-            hasKeywordResults(12612).setAnswer(null, hasKeywordResults(12610));
+            hasKeywordResults(12905).setAnswer(null, hasKeywordResults(12903));
           };
         };
         const items1 = [smartSearchQuery, citations, entry.answerText, hasKeywordResults];
@@ -187,7 +187,7 @@ export const SmartSearchResults = ReactCompilerGating.isReactCompilerEnabled()
           SearchSessionAnalyticsManagerDefault,
         );
         return () => {
-          hasKeywordResults(12612).setAnswer(null, hasKeywordResults(12610));
+          hasKeywordResults(12905).setAnswer(null, hasKeywordResults(12903));
         };
       }, items2);
       let obj = { children: null };

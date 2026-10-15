@@ -1495,380 +1495,396 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   importDefault = nowResult;
   dependencyMap = transport;
   VideoBackgroundStore = streamParameters;
-  transport = transport.transport;
-  let num = 1;
-  if (!obj.isWeb()) {
-    const receiverReports = transport.receiverReports;
-    let mapped;
-    if (receiverReports != null) {
-      let found = receiverReports.filter((item) => null != self.outboundStats[item.ssrc]);
-      mapped = found.map((id) => id.id);
+  receiverReports = transport.transport;
+  if (obj.isWeb()) {
+    const _Set = Set;
+    const set = new Set();
+    const _Set2 = Set;
+    const set1 = new Set();
+    const obj2 = { receivers: 1 };
+    self.updateSendState(obj2);
+    let tmp23 = self.connection.context === tmp(5196).MediaEngineContextTypes.DEFAULT;
+    if (tmp23) {
+      tmp23 = null != transport.camera;
     }
-    const set = new Set(mapped);
-    num = set.size;
-  }
-  const set1 = new Set();
-  const set2 = new Set();
-  self.updateSendState({ receivers: num });
-  let tmp14 = self.connection.context === tmp(5141).MediaEngineContextTypes.DEFAULT;
-  if (tmp14) {
-    tmp14 = null != transport.camera;
-  }
-  self.cameraDuration.value = tmp14;
-  let tmp16 = self.connection.context === tmp(5141).MediaEngineContextTypes.DEFAULT;
-  if (tmp16) {
-    tmp16 = null != transport.camera;
-  }
-  if (tmp16) {
-    tmp16 = self.callUserIdsCount > 1;
-  }
-  self.cameraOpportunityDuration.value = tmp16;
-  let tmp18 = self.connection.context === tmp(5141).MediaEngineContextTypes.DEFAULT;
-  if (tmp18) {
-    tmp18 = null != transport.camera;
-  }
-  if (tmp18) {
-    tmp18 = num > 0;
-  }
-  self.cameraSendDuration.value = tmp18;
-  if (tmp20) {
-    self.cameraToggles = self.cameraToggles + 1;
-  }
-  let liveBackgroundEnabled = self.connection.context === tmp(5141).MediaEngineContextTypes.DEFAULT;
-  if (liveBackgroundEnabled) {
-    liveBackgroundEnabled = null != transport.camera;
-  }
-  if (liveBackgroundEnabled) {
-    liveBackgroundEnabled = VideoBackgroundStore.liveBackgroundEnabled;
-  }
-  self.videoBackgroundEnabledDuration.value = liveBackgroundEnabled;
-  obj = videoEntropy(1382);
-  tmp20 = self.cameraDuration.value && !self.cameraDuration.value;
-  closure_7 = _modDef12.max(streamParameters.map((quality) => quality.quality));
-  const outbound = transport.rtp.outbound;
-  const first = outbound.filter((type) => {
-    let tmp = "video" === type.type;
-    if (tmp) {
-      videoEntropy = undefined;
-      if (type != null) {
-        videoEntropy = type.videoEntropy;
-      }
-      tmp = null != videoEntropy;
+    self.cameraDuration.value = tmp23;
+    let tmp25 = self.connection.context === tmp(5196).MediaEngineContextTypes.DEFAULT;
+    if (tmp25) {
+      tmp25 = null != transport.camera;
     }
-    return tmp;
-  })[0];
-  videoEntropy = undefined;
-  if (first != null) {
-    videoEntropy = first.videoEntropy;
-  }
-  const outbound1 = transport.rtp.outbound;
-  const found1 = outbound1.filter((type) => "video" === type.type);
-  const item = found1.forEach((ssrc) => {
-    if (null != ssrc) {
-      ssrc = ssrc.ssrc;
-      let obj = self.outboundStats[ssrc];
-      if (null == obj) {
-        const outboundStats = new VideoQualityStats.OutboundStats(self.timestampProducer);
-        self.outboundStats[ssrc] = outboundStats;
-        obj = outboundStats;
+    if (tmp25) {
+      tmp25 = self.callUserIdsCount > 1;
+    }
+    self.cameraOpportunityDuration.value = tmp25;
+    let tmp27 = self.connection.context === tmp(5196).MediaEngineContextTypes.DEFAULT;
+    if (tmp27) {
+      tmp27 = null != transport.camera;
+    }
+    if (tmp27) {
+      tmp27 = 1 > 0;
+    }
+    self.cameraSendDuration.value = tmp27;
+    if (tmp29) {
+      self.cameraToggles = self.cameraToggles + 1;
+    }
+    let liveBackgroundEnabled = self.connection.context === tmp(5196).MediaEngineContextTypes.DEFAULT;
+    if (liveBackgroundEnabled) {
+      liveBackgroundEnabled = null != transport.camera;
+    }
+    if (liveBackgroundEnabled) {
+      liveBackgroundEnabled = VideoBackgroundStore.liveBackgroundEnabled;
+    }
+    self.videoBackgroundEnabledDuration.value = liveBackgroundEnabled;
+    closure_7 = _modDef12.max(streamParameters.map((quality) => quality.quality));
+    const outbound = transport.rtp.outbound;
+    const first = outbound.filter((type) => {
+      let tmp = "video" === type.type;
+      if (tmp) {
+        videoEntropy = undefined;
+        if (type != null) {
+          videoEntropy = type.videoEntropy;
+        }
+        tmp = null != videoEntropy;
       }
-      let tmp7 = null == obj.timeToFirstFrame;
-      if (tmp7) {
-        let tmp8 = ssrc.framesEncoded > 0;
-        if (!tmp8) {
-          let num2 = ssrc.frameRateInput;
-          if (num2 == null) {
-            num2 = 0;
+      return tmp;
+    })[0];
+    let videoEntropy;
+    if (first != null) {
+      videoEntropy = first.videoEntropy;
+    }
+    const outbound1 = transport.rtp.outbound;
+    let found = outbound1.filter((type) => "video" === type.type);
+    const item = found.forEach((ssrc) => {
+      if (null != ssrc) {
+        ssrc = ssrc.ssrc;
+        let obj = self.outboundStats[ssrc];
+        if (null == obj) {
+          const outboundStats = new VideoQualityStats.OutboundStats(self.timestampProducer);
+          self.outboundStats[ssrc] = outboundStats;
+          obj = outboundStats;
+        }
+        let tmp7 = null == obj.timeToFirstFrame;
+        if (tmp7) {
+          let tmp8 = ssrc.framesEncoded > 0;
+          if (!tmp8) {
+            let num2 = ssrc.frameRateInput;
+            if (num2 == null) {
+              num2 = 0;
+            }
+            tmp8 = num2 > 0;
           }
-          tmp8 = num2 > 0;
+          tmp7 = tmp8;
         }
-        tmp7 = tmp8;
-      }
-      if (tmp7) {
-        const _Math = Math;
-        obj.timeToFirstFrame = Math.max(0, closure_1 - obj.startTime);
-      }
-      let tmp12 = null != videoEntropy;
-      if (tmp12) {
-        tmp12 = tmp11 >= 0;
-      }
-      if (tmp12) {
-        videoEntropy = self.videoEntropy;
-        videoEntropy.addSample(tmp11);
-      }
-      const found = streamParameters.find((ssrc) => ssrc.ssrc === ssrc);
-      let flag = true;
-      if (self.connection.context === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-        const connection = self.connection;
-        let num5 = connection.getRemoteVideoSinkWants(ssrc);
-        let tmp18 = null != num5;
-        if (tmp18) {
-          tmp18 = 0 !== num5;
+        if (tmp7) {
+          const _Math = Math;
+          obj.timeToFirstFrame = Math.max(0, closure_1 - obj.startTime);
         }
-        if (!tmp18) {
-          let quality;
-          if (found != null) {
-            quality = found.quality;
-          }
-          tmp18 = quality !== closure_7;
+        let tmp12 = null != videoEntropy;
+        if (tmp12) {
+          tmp12 = tmp11 >= 0;
         }
-        if (!tmp18) {
-          const connection2 = self.connection;
-          num5 = connection2.getRemoteVideoSinkWants("any");
+        if (tmp12) {
+          videoEntropy = self.videoEntropy;
+          videoEntropy.addSample(tmp11);
         }
-        if (num5 == null) {
-          num5 = 0;
-        }
-        flag = num5 > 0;
-      }
-      if ((self.videoStopped.value || !flag) !== obj.isVideoStopped) {
-        obj.setVideoStopped(tmp21, VideoQualityStats.VideoStoppedReasons.SenderStopped);
-      }
-      if (!(self.videoStopped.value || !flag)) {
-        const RawVideoStats = VideoQualityStats.RawVideoStats;
-        const parseOutboundStatsResult = RawVideoStats.parseOutboundStats(ssrc, closure_1);
+        const found = streamParameters.find((ssrc) => ssrc.ssrc === ssrc);
+        let flag = true;
         if (self.connection.context === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-          let num20 = transport.screenshare;
-          if (null == num20) {
-            parseOutboundStatsResult.screenshareFramesUnique = parseOutboundStatsResult.framesCodec;
-          } else {
-            if (null == num20.hybridDxgiFramesUnique) {
-              if (null == num20.hybridGdiBitBltFramesUnique) {
-                if (null == num20.hybridGdiPrintWindowFramesUnique) {
-                  if (null == num20.hybridVideohookFramesUnique) {
-                    if (null == num20.hybridGraphicsCaptureFramesUnique) {
-                      if (null == num20.hybridExternalFramesUnique) {
-                        let num8 = num20.screenshareFrames;
-                        if (num8 == null) {
-                          num8 = 0;
+          const connection = self.connection;
+          let num5 = connection.getRemoteVideoSinkWants(ssrc);
+          let tmp18 = null != num5;
+          if (tmp18) {
+            tmp18 = 0 !== num5;
+          }
+          if (!tmp18) {
+            let quality;
+            if (found != null) {
+              quality = found.quality;
+            }
+            tmp18 = quality !== closure_7;
+          }
+          if (!tmp18) {
+            const connection2 = self.connection;
+            num5 = connection2.getRemoteVideoSinkWants("any");
+          }
+          if (num5 == null) {
+            num5 = 0;
+          }
+          flag = num5 > 0;
+        }
+        if ((self.videoStopped.value || !flag) !== obj.isVideoStopped) {
+          obj.setVideoStopped(tmp21, VideoQualityStats.VideoStoppedReasons.SenderStopped);
+        }
+        if (!(self.videoStopped.value || !flag)) {
+          const RawVideoStats = VideoQualityStats.RawVideoStats;
+          const parseOutboundStatsResult = RawVideoStats.parseOutboundStats(ssrc, closure_1);
+          if (self.connection.context === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
+            let num20 = transport.screenshare;
+            if (null == num20) {
+              parseOutboundStatsResult.screenshareFramesUnique = parseOutboundStatsResult.framesCodec;
+            } else {
+              if (null == num20.hybridDxgiFramesUnique) {
+                if (null == num20.hybridGdiBitBltFramesUnique) {
+                  if (null == num20.hybridGdiPrintWindowFramesUnique) {
+                    if (null == num20.hybridVideohookFramesUnique) {
+                      if (null == num20.hybridGraphicsCaptureFramesUnique) {
+                        if (null == num20.hybridExternalFramesUnique) {
+                          let num8 = num20.screenshareFrames;
+                          if (num8 == null) {
+                            num8 = 0;
+                          }
+                          let num9 = num20.videohookFrames;
+                          if (num9 == null) {
+                            num9 = 0;
+                          }
+                          let num10 = num20.quartzFrames;
+                          const sum = num8 + num9;
+                          if (num10 == null) {
+                            num10 = 0;
+                          }
+                          let num11 = num20.screenCaptureKitFrames;
+                          const sum1 = sum + num10;
+                          if (num11 == null) {
+                            num11 = 0;
+                          }
+                          let num12 = num20.x11Frames;
+                          const sum2 = sum1 + num11;
+                          if (num12 == null) {
+                            num12 = 0;
+                          }
+                          let num13 = num20.pipewireFrames;
+                          const sum3 = sum2 + num12;
+                          if (num13 == null) {
+                            num13 = 0;
+                          }
+                          let num14 = num20.activityFrames;
+                          const sum4 = sum3 + num13;
+                          if (num14 == null) {
+                            num14 = 0;
+                          }
+                          let sum5 = sum4 + num14;
                         }
-                        let num9 = num20.videohookFrames;
-                        if (num9 == null) {
-                          num9 = 0;
-                        }
-                        let num10 = num20.quartzFrames;
-                        const sum = num8 + num9;
-                        if (num10 == null) {
-                          num10 = 0;
-                        }
-                        let num11 = num20.screenCaptureKitFrames;
-                        const sum1 = sum + num10;
-                        if (num11 == null) {
-                          num11 = 0;
-                        }
-                        let num12 = num20.x11Frames;
-                        const sum2 = sum1 + num11;
-                        if (num12 == null) {
-                          num12 = 0;
-                        }
-                        let num13 = num20.pipewireFrames;
-                        const sum3 = sum2 + num12;
-                        if (num13 == null) {
-                          num13 = 0;
-                        }
-                        let num14 = num20.activityFrames;
-                        const sum4 = sum3 + num13;
-                        if (num14 == null) {
-                          num14 = 0;
-                        }
-                        let sum5 = sum4 + num14;
                       }
                     }
                   }
                 }
               }
+              let num15 = num20.hybridDxgiFramesUnique;
+              if (num15 == null) {
+                num15 = 0;
+              }
+              let num16 = num20.hybridGdiBitBltFramesUnique;
+              if (num16 == null) {
+                num16 = 0;
+              }
+              let num17 = num20.hybridGdiPrintWindowFramesUnique;
+              const sum6 = num15 + num16;
+              if (num17 == null) {
+                num17 = 0;
+              }
+              let num18 = num20.hybridVideohookFramesUnique;
+              const sum7 = sum6 + num17;
+              if (num18 == null) {
+                num18 = 0;
+              }
+              let num19 = num20.hybridGraphicsCaptureFramesUnique;
+              const sum8 = sum7 + num18;
+              if (num19 == null) {
+                num19 = 0;
+              }
+              num20 = num20.hybridExternalFramesUnique;
+              const sum9 = sum8 + num19;
+              if (num20 == null) {
+                num20 = 0;
+              }
+              sum5 = sum9 + num20;
             }
-            let num15 = num20.hybridDxgiFramesUnique;
-            if (num15 == null) {
-              num15 = 0;
-            }
-            let num16 = num20.hybridGdiBitBltFramesUnique;
-            if (num16 == null) {
-              num16 = 0;
-            }
-            let num17 = num20.hybridGdiPrintWindowFramesUnique;
-            const sum6 = num15 + num16;
-            if (num17 == null) {
-              num17 = 0;
-            }
-            let num18 = num20.hybridVideohookFramesUnique;
-            const sum7 = sum6 + num17;
-            if (num18 == null) {
-              num18 = 0;
-            }
-            let num19 = num20.hybridGraphicsCaptureFramesUnique;
-            const sum8 = sum7 + num18;
-            if (num19 == null) {
-              num19 = 0;
-            }
-            num20 = num20.hybridExternalFramesUnique;
-            const sum9 = sum8 + num19;
-            if (num20 == null) {
-              num20 = 0;
-            }
-            sum5 = sum9 + num20;
           }
-        }
-        const result = obj.appendAndIncrementStats(parseOutboundStatsResult);
-        let tmp43 = null != ssrc.minResolutionWidth;
-        if (tmp43) {
-          tmp43 = ssrc.minResolutionWidth > 0;
-        }
-        if (tmp43) {
-          tmp43 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
-          const tmp44 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
-        }
-        if (tmp43) {
-          obj.minWidth = ssrc.minResolutionWidth;
-        }
-        let tmp45 = null != ssrc.minResolutionHeight;
-        if (tmp45) {
-          tmp45 = ssrc.minResolutionHeight > 0;
-        }
-        if (tmp45) {
-          tmp45 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
-          const tmp46 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
-        }
-        if (tmp45) {
-          obj.minHeight = ssrc.minResolutionHeight;
-        }
-        if (obj.encoderCodec !== VideoQualityStats.CodecTypes.UNKNOWN) {
-          set1.add(obj.encoderCodec);
-        }
-        let maxBitrate;
-        if (found != null) {
-          maxBitrate = found.maxBitrate;
-        }
-        let maxFrameRate;
-        if (found != null) {
-          maxFrameRate = found.maxFrameRate;
-        }
-        let bitrateTarget = ssrc.bitrateTarget;
-        if (bitrateTarget == null) {
-          let num23 = transport.availableOutgoingBitrate;
-          if (num23 == null) {
-            num23 = 0;
+          const result = obj.appendAndIncrementStats(parseOutboundStatsResult);
+          let tmp43 = null != ssrc.minResolutionWidth;
+          if (tmp43) {
+            tmp43 = ssrc.minResolutionWidth > 0;
           }
-          let num24 = maxBitrate;
-          if (maxBitrate == null) {
-            num24 = 0;
+          if (tmp43) {
+            tmp43 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
+            const tmp44 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
           }
-          bitrateTarget = Math.min(num23, num24);
+          if (tmp43) {
+            obj.minWidth = ssrc.minResolutionWidth;
+          }
+          let tmp45 = null != ssrc.minResolutionHeight;
+          if (tmp45) {
+            tmp45 = ssrc.minResolutionHeight > 0;
+          }
+          if (tmp45) {
+            tmp45 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
+            const tmp46 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
+          }
+          if (tmp45) {
+            obj.minHeight = ssrc.minResolutionHeight;
+          }
+          if (obj.encoderCodec !== VideoQualityStats.CodecTypes.UNKNOWN) {
+            set.add(obj.encoderCodec);
+          }
+          let maxBitrate;
+          if (found != null) {
+            maxBitrate = found.maxBitrate;
+          }
+          let maxFrameRate;
+          if (found != null) {
+            maxFrameRate = found.maxFrameRate;
+          }
+          let bitrateTarget = ssrc.bitrateTarget;
+          if (bitrateTarget == null) {
+            let num23 = receiverReports.availableOutgoingBitrate;
+            if (num23 == null) {
+              num23 = 0;
+            }
+            let num24 = maxBitrate;
+            if (maxBitrate == null) {
+              num24 = 0;
+            }
+            bitrateTarget = Math.min(num23, num24);
+          }
+          obj.appendTargetRates(maxFrameRate, bitrateTarget, maxBitrate, receiverReports.availableOutgoingBitrate);
+          let num25 = ssrc.averageEncodeTime;
+          if (num25 == null) {
+            num25 = 0;
+          }
+          obj.averageEncodeTime = num25;
+          let prop = ssrc.framesDroppedRateLimiter;
+          if (prop == null) {
+            prop = null;
+          }
+          obj.framesDroppedRateLimiter = prop;
+          let prop1 = ssrc.framesDroppedEncoderQueue;
+          if (prop1 == null) {
+            prop1 = null;
+          }
+          obj.framesDroppedEncoderQueue = prop1;
+          let prop2 = ssrc.framesDroppedCongestionWindow;
+          if (prop2 == null) {
+            prop2 = null;
+          }
+          obj.framesDroppedCongestionWindow = prop2;
+          let framesDroppedEncoder = ssrc.framesDroppedEncoder;
+          if (framesDroppedEncoder == null) {
+            framesDroppedEncoder = null;
+          }
+          obj.framesDroppedEncoder = framesDroppedEncoder;
+          let flag2 = ssrc.hqSimulcastStreamEncoded;
+          if (flag2 == null) {
+            flag2 = false;
+          }
+          self.hqSimulcastStreamEncoded.value = flag2;
+          let flag3 = ssrc.lqSimulcastStreamEncoded;
+          if (flag3 == null) {
+            flag3 = false;
+          }
+          self.lqSimulcastStreamEncoded.value = flag3;
+          value = self.hqSimulcastStreamEncoded.value;
+          if (value) {
+            value = self.lqSimulcastStreamEncoded.value;
+          }
+          self.bothSimulcastStreamsEncoded.value = value;
+          let flag4 = ssrc.bandwidthLimitedResolution;
+          if (flag4 == null) {
+            flag4 = false;
+          }
+          self.bandwidthLimitedResolution.value = flag4;
+          let flag5 = ssrc.bandwidthLimitedFrameRate;
+          if (flag5 == null) {
+            flag5 = false;
+          }
+          self.bandwidthLimitedFramerate.value = flag5;
         }
-        obj.appendTargetRates(maxFrameRate, bitrateTarget, maxBitrate, transport.availableOutgoingBitrate);
-        let num25 = ssrc.averageEncodeTime;
-        if (num25 == null) {
-          num25 = 0;
-        }
-        obj.averageEncodeTime = num25;
-        let prop = ssrc.framesDroppedRateLimiter;
-        if (prop == null) {
-          prop = null;
-        }
-        obj.framesDroppedRateLimiter = prop;
-        let prop1 = ssrc.framesDroppedEncoderQueue;
-        if (prop1 == null) {
-          prop1 = null;
-        }
-        obj.framesDroppedEncoderQueue = prop1;
-        let prop2 = ssrc.framesDroppedCongestionWindow;
-        if (prop2 == null) {
-          prop2 = null;
-        }
-        obj.framesDroppedCongestionWindow = prop2;
-        let framesDroppedEncoder = ssrc.framesDroppedEncoder;
-        if (framesDroppedEncoder == null) {
-          framesDroppedEncoder = null;
-        }
-        obj.framesDroppedEncoder = framesDroppedEncoder;
-        let flag2 = ssrc.hqSimulcastStreamEncoded;
-        if (flag2 == null) {
-          flag2 = false;
-        }
-        self.hqSimulcastStreamEncoded.value = flag2;
-        let flag3 = ssrc.lqSimulcastStreamEncoded;
-        if (flag3 == null) {
-          flag3 = false;
-        }
-        self.lqSimulcastStreamEncoded.value = flag3;
-        value = self.hqSimulcastStreamEncoded.value;
-        if (value) {
-          value = self.lqSimulcastStreamEncoded.value;
-        }
-        self.bothSimulcastStreamsEncoded.value = value;
-        let flag4 = ssrc.bandwidthLimitedResolution;
-        if (flag4 == null) {
-          flag4 = false;
-        }
-        self.bandwidthLimitedResolution.value = flag4;
-        let flag5 = ssrc.bandwidthLimitedFrameRate;
-        if (flag5 == null) {
-          flag5 = false;
-        }
-        self.bandwidthLimitedFramerate.value = flag5;
-      }
-    }
-  });
-  if (!self.paused.value) {
-    const item1 = _modDef12.forEach(transport.rtp.inbound, (arr, arg1) => {
-      const found = arr.find((type) => "video" === type.type);
-      if (null != found) {
-        let obj = self.inboundStats[arg1];
-        if (null == obj) {
-          const inboundStats = new VideoQualityStats.InboundStats(self.timestampProducer);
-          self.inboundStats[arg1] = inboundStats;
-          obj = inboundStats;
-        }
-        const RawVideoStats = VideoQualityStats.RawVideoStats;
-        const parseInboundStatsResult = RawVideoStats.parseInboundStats(found, closure_1);
-        const statCollectionPausedUsers = self.statCollectionPausedUsers;
-        if (!statCollectionPausedUsers.has(arg1)) {
-          const result = obj.appendAndIncrementStats(parseInboundStatsResult);
-          obj.appendTransportStats(transport);
-        }
-        let tmp15 = null != found.minResolutionWidth;
-        if (tmp15) {
-          tmp15 = found.minResolutionWidth > 0;
-        }
-        if (tmp15) {
-          tmp15 = null == obj.minWidth || found.minResolutionWidth < obj.minWidth;
-          const tmp16 = null == obj.minWidth || found.minResolutionWidth < obj.minWidth;
-        }
-        if (tmp15) {
-          obj.minWidth = found.minResolutionWidth;
-        }
-        let tmp17 = null != found.minResolutionHeight;
-        if (tmp17) {
-          tmp17 = found.minResolutionHeight > 0;
-        }
-        if (tmp17) {
-          tmp17 = null == obj.minHeight || found.minResolutionHeight < obj.minHeight;
-          const tmp18 = null == obj.minHeight || found.minResolutionHeight < obj.minHeight;
-        }
-        if (tmp17) {
-          obj.minHeight = found.minResolutionHeight;
-        }
-        if (parseInboundStatsResult.packets > 0) {
-          self.emit(obj.FpsUpdate, arg1, parseInboundStatsResult.framesCodec, parseInboundStatsResult.timestamp);
-        }
-        if (obj.decoderCodec !== VideoQualityStats.CodecTypes.UNKNOWN) {
-          set2.add(obj.decoderCodec);
-        }
-        if (tmp27) {
-          obj.timeToFirstFrame = closure_1 - obj.startTime;
-        }
-        tmp27 = null == obj.timeToFirstFrame && found.framesDecoded > 0;
       }
     });
-    const tmp23Result = _modDef12;
-  }
-  if (tmp28) {
-    if (tmpResult.areSetsEqual(set1, set2)) {
-      self.symmetricCodecUpdates = self.symmetricCodecUpdates + 1;
-    } else {
-      self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;
+    if (!self.paused.value) {
+      const item1 = _modDef12.forEach(transport.rtp.inbound, (arr, arg1) => {
+        const found = arr.find((type) => "video" === type.type);
+        if (null != found) {
+          let obj = self.inboundStats[arg1];
+          if (null == obj) {
+            const inboundStats = new VideoQualityStats.InboundStats(self.timestampProducer);
+            self.inboundStats[arg1] = inboundStats;
+            obj = inboundStats;
+          }
+          const RawVideoStats = VideoQualityStats.RawVideoStats;
+          const parseInboundStatsResult = RawVideoStats.parseInboundStats(found, closure_1);
+          const statCollectionPausedUsers = self.statCollectionPausedUsers;
+          if (!statCollectionPausedUsers.has(arg1)) {
+            const result = obj.appendAndIncrementStats(parseInboundStatsResult);
+            obj.appendTransportStats(receiverReports);
+          }
+          let tmp15 = null != found.minResolutionWidth;
+          if (tmp15) {
+            tmp15 = found.minResolutionWidth > 0;
+          }
+          if (tmp15) {
+            tmp15 = null == obj.minWidth || found.minResolutionWidth < obj.minWidth;
+            const tmp16 = null == obj.minWidth || found.minResolutionWidth < obj.minWidth;
+          }
+          if (tmp15) {
+            obj.minWidth = found.minResolutionWidth;
+          }
+          let tmp17 = null != found.minResolutionHeight;
+          if (tmp17) {
+            tmp17 = found.minResolutionHeight > 0;
+          }
+          if (tmp17) {
+            tmp17 = null == obj.minHeight || found.minResolutionHeight < obj.minHeight;
+            const tmp18 = null == obj.minHeight || found.minResolutionHeight < obj.minHeight;
+          }
+          if (tmp17) {
+            obj.minHeight = found.minResolutionHeight;
+          }
+          if (parseInboundStatsResult.packets > 0) {
+            self.emit(obj.FpsUpdate, arg1, parseInboundStatsResult.framesCodec, parseInboundStatsResult.timestamp);
+          }
+          if (obj.decoderCodec !== VideoQualityStats.CodecTypes.UNKNOWN) {
+            set1.add(obj.decoderCodec);
+          }
+          if (tmp27) {
+            obj.timeToFirstFrame = closure_1 - obj.startTime;
+          }
+          tmp27 = null == obj.timeToFirstFrame && found.framesDecoded > 0;
+        }
+      });
+      const tmp32Result = _modDef12;
     }
-    tmpResult = tmp(2082);
+    if (tmp38) {
+      if (tmpResult.areSetsEqual(set, set1)) {
+        self.symmetricCodecUpdates = self.symmetricCodecUpdates + 1;
+      } else {
+        self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;
+      }
+      tmpResult = tmp(2082);
+    }
+  } else {
+    const receiverReports2 = receiverReports.receiverReports;
+    let someResult;
+    if (receiverReports2 != null) {
+      someResult = receiverReports2.some((ssrc) => null == ssrc.ssrc);
+    }
+    if (someResult) {
+      ({ receiverReports, length } = receiverReports);
+    } else {
+      const receiverReports1 = receiverReports.receiverReports;
+      let mapped;
+      if (receiverReports1 != null) {
+        const found1 = receiverReports1.filter((ssrc) => {
+          let tmp = null != ssrc.ssrc;
+          if (tmp) {
+            tmp = null != self.outboundStats[ssrc.ssrc];
+          }
+          return tmp;
+        });
+        mapped = found1.map((id) => id.id);
+      }
+      const set2 = new Set(mapped);
+      length = set2.size;
+    }
   }
 };
 prototype["updateSystemResourceStats"] = function updateSystemResourceStats() {

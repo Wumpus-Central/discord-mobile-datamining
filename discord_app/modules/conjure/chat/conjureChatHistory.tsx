@@ -128,6 +128,9 @@ function newMessageFromHistory(ts) {
   if (null != ts.restore_proposal) {
     tmp.restoreProposal = ts.restore_proposal;
   }
+  if (null != ts.app_build_request) {
+    tmp.appBuildRequest = ts.app_build_request;
+  }
   if (null != ts.source_sha) {
     tmp.sourceSha = ts.source_sha;
   }

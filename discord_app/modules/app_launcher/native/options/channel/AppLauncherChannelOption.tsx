@@ -74,7 +74,7 @@ export default function AppLauncherChannelOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(11714, dependencyMap.paths),
+      asyncRequireImpl(11939, dependencyMap.paths),
       AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY,
       {
         option,

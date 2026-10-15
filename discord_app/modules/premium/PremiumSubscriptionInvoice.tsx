@@ -75,7 +75,7 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
           closure_129_11 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -243,7 +243,7 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
           closure_129_12 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -401,7 +401,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
           closure_129_8 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -518,7 +518,7 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
           closure_129_2 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

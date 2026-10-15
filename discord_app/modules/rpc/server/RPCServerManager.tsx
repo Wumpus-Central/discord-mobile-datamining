@@ -3,6 +3,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import frameDeepLinks from "../../frames/frameDeepLinks.tsx";
 import QuestTaskUtils from "../../quests/utils/QuestTaskUtils.tsx";
 import RPCHelpers from "../RPCHelpers.tsx";
 import transformUserDefault from "../helpers/transformUser.tsx";
@@ -24,7 +25,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-const TransportTypes = fn(5644).TransportTypes;
+const TransportTypes = fn(5855).TransportTypes;
 const Constants = fn(1085);
 ({
   ActivityActionTypes: closure_16,
@@ -35,8 +36,8 @@ const Constants = fn(1085);
   RPCCloseCodes: closure_21,
 } = Constants);
 const ActivityLayoutMode = fn(2024).ActivityLayoutMode;
-const FrameLayoutModes = fn(10697).FrameLayoutModes;
-const MediaEngineContextTypes = fn(5121).MediaEngineContextTypes;
+const FrameLayoutModes = fn(10919).FrameLayoutModes;
+const MediaEngineContextTypes = fn(5176).MediaEngineContextTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
 class RPCServerManager {
@@ -258,6 +259,36 @@ class RPCServerManager {
         const result2 = dispatchToSubscriptions(constants3.FRAME_LAYOUT_MODE_UPDATE, targetsFrame, obj2);
       }
     };
+    obj.handleFrameDeepLinkQueued = function handleFrameDeepLinkQueued(channelId) {
+      channelId = channelId.channelId;
+      const subscriptions = obj.rpcServer.subscriptions;
+      if (
+        subscriptions.some((evt) => {
+          let tmp = evt.evt === constants2.FRAME_DEEP_LINK;
+          if (tmp) {
+            obj = obj(7258);
+            tmp = obj.getFrameDeepLinkChannelId(getSocketFrameDefault(evt.socket)) === channelId;
+          }
+          return tmp;
+        })
+      ) {
+        obj = frameDeepLinks;
+        const takeFrameDeepLinkResult = obj.takeFrameDeepLink(channelId);
+        if (null != takeFrameDeepLinkResult) {
+          const rpcServer = tmp.rpcServer;
+          const obj2 = { hash: takeFrameDeepLinkResult };
+          const result = rpcServer.dispatchToSubscriptions(
+            constants3.FRAME_DEEP_LINK,
+            function targetsChannelFrame(socket) {
+              obj = obj(7258);
+              return obj.getFrameDeepLinkChannelId(getSocketFrameDefault(socket.socket)) === channelId;
+            },
+            obj2,
+          );
+        }
+      }
+      tmp = obj;
+    };
     obj.handleThermalStateChange = function handleThermalStateChange(applicationId) {
       applicationId = applicationId.applicationId;
       if (0 !== obj.rpcServer.subscriptions.length) {
@@ -396,6 +427,7 @@ class RPCServerManager {
     obj.handleLogout = function handleLogout() {
       obj = ConjureVoiceSessionCoordinatorDefault;
       obj.release();
+      frameDeepLinks.clearFrameDeepLinks();
       const sockets = obj.rpcServer.sockets;
       const item = sockets.forEach((close) => close.close(constants.CLOSE_NORMAL, "User logout"));
     };
@@ -408,7 +440,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(11019);
+            obj = obj(11243);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -423,7 +455,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(11019);
+            obj = obj(11243);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -438,7 +470,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(constants2.NONE, user);
           const rpcServer = tmp2.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(11019);
+            obj = obj(11243);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -460,7 +492,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(11019);
+              obj = obj(11243);
               rpcServer = obj.transformBaseRelationship(relationshipType, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) =>
@@ -487,7 +519,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(11019);
+              obj = obj(11243);
               rpcServer = obj.transformBaseRelationship(tmp, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) =>
@@ -519,7 +551,7 @@ class RPCServerManager {
             closure_0 = obj.transformBaseRelationship(relationshipType, user);
             const rpcServer = tmp.rpcServer;
             const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-              obj = obj(11019);
+              obj = obj(11243);
               return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
             });
           }
@@ -693,21 +725,22 @@ prototype["init"] = function init() {
     this.handleActivityLayoutModeUpdate,
   );
   const subscription12 = DispatcherDefault.subscribe("FRAME_UPDATE_LAYOUT_MODE", this.handleFrameUpdateLayoutMode);
-  const subscription13 = DispatcherDefault.subscribe("THERMAL_STATE_CHANGE", this.handleThermalStateChange);
-  const subscription14 = DispatcherDefault.subscribe(
+  const subscription13 = DispatcherDefault.subscribe("FRAME_DEEP_LINK_QUEUED", this.handleFrameDeepLinkQueued);
+  const subscription14 = DispatcherDefault.subscribe("THERMAL_STATE_CHANGE", this.handleThermalStateChange);
+  const subscription15 = DispatcherDefault.subscribe(
     "ACTIVITY_SCREEN_ORIENTATION_UPDATE",
     this.handleScreenOrientationUpdate,
   );
-  const subscription15 = DispatcherDefault.subscribe("EMBEDDED_ACTIVITY_UPDATE", this.handleEmbeddedActivityUpdate);
-  const subscription16 = DispatcherDefault.subscribe("RELATIONSHIP_ADD", this.handleRelationshipAdd);
-  const subscription17 = DispatcherDefault.subscribe("RELATIONSHIP_UPDATE", this.handleRelationshipUpdate);
-  const subscription18 = DispatcherDefault.subscribe("RELATIONSHIP_REMOVE", this.handleRelationshipRemove);
-  const subscription19 = DispatcherDefault.subscribe("PRESENCE_UPDATES", this.handlePresenceUpdates);
-  const subscription20 = DispatcherDefault.subscribe("PRESENCES_REPLACE", this.handlePresencesReplace);
-  const subscription21 = DispatcherDefault.subscribe("USER_UPDATE", this.handleUserUpdate);
-  const subscription22 = DispatcherDefault.subscribe("ENTITLEMENT_CREATE", this.handleEntitlementCreate);
-  const subscription23 = DispatcherDefault.subscribe("ENTITLEMENT_DELETE", this.handleEntitlementDelete);
-  const subscription24 = DispatcherDefault.subscribe("QUESTS_ENROLL_SUCCESS", this.handleQuestEnrollSuccess);
+  const subscription16 = DispatcherDefault.subscribe("EMBEDDED_ACTIVITY_UPDATE", this.handleEmbeddedActivityUpdate);
+  const subscription17 = DispatcherDefault.subscribe("RELATIONSHIP_ADD", this.handleRelationshipAdd);
+  const subscription18 = DispatcherDefault.subscribe("RELATIONSHIP_UPDATE", this.handleRelationshipUpdate);
+  const subscription19 = DispatcherDefault.subscribe("RELATIONSHIP_REMOVE", this.handleRelationshipRemove);
+  const subscription20 = DispatcherDefault.subscribe("PRESENCE_UPDATES", this.handlePresenceUpdates);
+  const subscription21 = DispatcherDefault.subscribe("PRESENCES_REPLACE", this.handlePresencesReplace);
+  const subscription22 = DispatcherDefault.subscribe("USER_UPDATE", this.handleUserUpdate);
+  const subscription23 = DispatcherDefault.subscribe("ENTITLEMENT_CREATE", this.handleEntitlementCreate);
+  const subscription24 = DispatcherDefault.subscribe("ENTITLEMENT_DELETE", this.handleEntitlementDelete);
+  const subscription25 = DispatcherDefault.subscribe("QUESTS_ENROLL_SUCCESS", this.handleQuestEnrollSuccess);
 };
 prototype["terminate"] = function terminate() {
   DispatcherDefault.unsubscribe("MESSAGE_CREATE", this.handleMessage);
@@ -723,6 +756,7 @@ prototype["terminate"] = function terminate() {
   DispatcherDefault.unsubscribe("ACTIVITY_JOIN", this.handleActivityJoin);
   DispatcherDefault.unsubscribe("ACTIVITY_LAYOUT_MODE_UPDATE", this.handleActivityLayoutModeUpdate);
   DispatcherDefault.unsubscribe("FRAME_UPDATE_LAYOUT_MODE", this.handleFrameUpdateLayoutMode);
+  DispatcherDefault.unsubscribe("FRAME_DEEP_LINK_QUEUED", this.handleFrameDeepLinkQueued);
   DispatcherDefault.unsubscribe("THERMAL_STATE_CHANGE", this.handleThermalStateChange);
   DispatcherDefault.unsubscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", this.handleScreenOrientationUpdate);
   DispatcherDefault.unsubscribe("EMBEDDED_ACTIVITY_UPDATE", this.handleEmbeddedActivityUpdate);

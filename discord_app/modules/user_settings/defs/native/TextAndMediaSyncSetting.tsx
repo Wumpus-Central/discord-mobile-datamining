@@ -7,7 +7,7 @@ import SelectivelySyncedUserSettingsStore from "../../SelectivelySyncedUserSetti
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useTextAndMediaSyncSettingValue() {
       const cResult = c.c(2);
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8000).MobileUserSettings.CHAT,
+  parent: fn(8210).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useTextAndMediaSyncSettingValue() {
         const cResult = c.c(2);

@@ -21,7 +21,7 @@ require = fn;
 const Constants = fn(1085);
 ({ InviteModalScenes: closure_9, Permissions: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   formContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 },
   formContent: null,
@@ -174,7 +174,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const unmountEffect = tmp(5401).useUnmountEffect(O);
+        const unmountEffect = tmp(5456).useUnmountEffect(O);
         if (cResult[9] !== channel) {
           class V {
             constructor() {
@@ -279,7 +279,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { onPress, text: null };
                   const intl = navigation(1126).intl;
                   obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-                  tmp = jsx(navigation(7095).HeaderActionButton, { onPress, text: null });
+                  tmp = jsx(navigation(7310).HeaderActionButton, { onPress, text: null });
                 }
                 return tmp;
               },
@@ -294,7 +294,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = navigation;
         cResult[14] = P;
         cResult[15] = items2;
-        const tmpResult3 = tmp(5401);
+        const tmpResult3 = tmp(5456);
       }
       const tmpResult = navigation(504);
       const isEqualResult = navigation(12).isEqual(settings, inviteSettings);
@@ -358,8 +358,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const tmp2Result = navigation(12);
-      const unmountEffect = navigation(5401).useUnmountEffect(() => {
-        channel(8695).resetSettings();
+      const unmountEffect = navigation(5456).useUnmountEffect(() => {
+        channel(8907).resetSettings();
       });
       const items2 = [channel];
       callback = noop.useCallback(() => {
@@ -386,26 +386,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj = { onPress, text: null };
               const intl = navigation(1126).intl;
               obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-              tmp = jsx(navigation(7095).HeaderActionButton, { onPress, text: null });
+              tmp = jsx(navigation(7310).HeaderActionButton, { onPress, text: null });
             }
             return tmp;
           },
         });
       }, items3);
       const callback1 = noop.useCallback((maxUses) => {
-        channel(8695).updateSettings({ maxUses });
+        channel(8907).updateSettings({ maxUses });
       }, []);
       const callback2 = noop.useCallback((maxAge) => {
-        channel(8695).updateSettings({ maxAge });
+        channel(8907).updateSettings({ maxAge });
       }, []);
       const callback3 = noop.useCallback((temporary) => {
-        channel(8695).updateSettings({ temporary });
+        channel(8907).updateSettings({ temporary });
       }, []);
       const callback4 = noop.useCallback((flags) => {
-        channel(8695).updateSettings({ flags });
+        channel(8907).updateSettings({ flags });
       }, []);
       const callback5 = noop.useCallback((roleIds) => {
-        channel(8695).updateSettings({ roleIds });
+        channel(8907).updateSettings({ roleIds });
       }, []);
       let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
       let obj5 = {
@@ -424,15 +424,15 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeFlags: null,
         onChangeRoleIds: null,
       };
-      const tmp2Result2 = navigation(5401);
-      obj5.maxUsesOptions = channel(8690).getMaxUsesOptions;
+      const tmp2Result2 = navigation(5456);
+      obj5.maxUsesOptions = channel(8902).getMaxUsesOptions;
       ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
       obj5.onChangeMaxAge = callback2;
       obj5.onChangeMaxUses = callback1;
       obj5.onChangeTemporary = callback3;
       obj5.onChangeFlags = callback4;
       obj5.onChangeRoleIds = callback5;
-      obj4.children = jsx(channel(18658), {
+      obj4.children = jsx(channel(18897), {
         style: tmp.formContent,
         channel: first,
         guild,
@@ -448,7 +448,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeFlags: null,
         onChangeRoleIds: null,
       });
-      return jsx(navigation(8587).Form, { contentContainerStyle: tmp.formContainer, children: null });
+      return jsx(navigation(8800).Form, { contentContainerStyle: tmp.formContainer, children: null });
     };
 ReactCompilerGating = fn(558);
 let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };

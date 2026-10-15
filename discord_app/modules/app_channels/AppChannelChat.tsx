@@ -1,6 +1,8 @@
 // discord_app/modules/app_channels/AppChannelChat.tsx
+import DispatcherDefault from "../../Dispatcher.tsx";
 import SidebarActionTypes from "../sidebar/SidebarActionTypes.tsx";
 import SidebarActionCreatorsDefault from "../sidebar/SidebarActionCreators.tsx";
+import noop from "../../../_runtime/metro/00019__.js";
 import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
@@ -8,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 fn(558);
-const ReactCompilerGating = fn(558);
+let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsAppChannelChatOpen(arg0) {
       _require = arg0;
@@ -21,7 +23,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function u() {
           let tmp2 = null != closure_0;
           if (tmp2) {
             tmp2 = ChannelSectionStore.getCurrentSidebarChannelId(closure_0) === closure_0;
@@ -57,6 +59,69 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
     };
+ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function useCloseAppChannelChatOnFrameDeepLink(arg0) {
+      _require = arg0;
+      const cResult = require("c").c(3);
+      if (cResult[0] !== arg0) {
+        const fn = function u() {
+          if (null != handleFrameDeepLinkQueued) {
+            handleFrameDeepLinkQueued = function handleFrameDeepLinkQueued(channelId) {
+              let tmp2 = channelId.channelId === handleFrameDeepLinkQueued;
+              if (tmp2) {
+                tmp2 =
+                  currentSidebarChannelId.getCurrentSidebarChannelId(handleFrameDeepLinkQueued) ===
+                  handleFrameDeepLinkQueued;
+              }
+              if (tmp2) {
+                SidebarActionCreatorsDefault.closeChannelSidebar(handleFrameDeepLinkQueued);
+              }
+            };
+            const subscription = DispatcherDefault.subscribe("FRAME_DEEP_LINK_QUEUED", handleFrameDeepLinkQueued);
+            return () => {
+              DispatcherDefault.unsubscribe("FRAME_DEEP_LINK_QUEUED", handleFrameDeepLinkQueued);
+            };
+          }
+        };
+        const items = [arg0];
+        cResult[0] = arg0;
+        cResult[1] = fn;
+        cResult[2] = items;
+        let tmp3 = items;
+        let tmp2 = fn;
+      } else {
+        tmp2 = cResult[1];
+        tmp3 = cResult[2];
+      }
+      const effect = noop.useEffect(tmp2, tmp3);
+    }
+  : function useCloseAppChannelChatOnFrameDeepLink(arg0) {
+      closure_0 = arg0;
+      const items = [arg0];
+      const effect = noop.useEffect(() => {
+        function handleFrameDeepLinkQueued(channelId) {
+          let tmp2 = channelId.channelId === handleFrameDeepLinkQueued;
+          if (tmp2) {
+            tmp2 =
+              currentSidebarChannelId.getCurrentSidebarChannelId(handleFrameDeepLinkQueued) ===
+              handleFrameDeepLinkQueued;
+          }
+          if (tmp2) {
+            SidebarActionCreatorsDefault.closeChannelSidebar(handleFrameDeepLinkQueued);
+          }
+        }
+        if (null != handleFrameDeepLinkQueued) {
+          const subscription = DispatcherDefault.subscribe("FRAME_DEEP_LINK_QUEUED", handleFrameDeepLinkQueued);
+          return () => {
+            DispatcherDefault.unsubscribe("FRAME_DEEP_LINK_QUEUED", handleFrameDeepLinkQueued);
+          };
+        }
+      }, items);
+    };
+function closeAppChannelChat(id) {
+  SidebarActionCreatorsDefault.closeChannelSidebar(id);
+}
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/AppChannelChat.tsx");
 
@@ -66,10 +131,9 @@ export const openAppChannelChat = function openAppChannelChat(guild_id, id, id2)
   obj2.details = { type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: id2 };
   obj.openChannelAsSidebar(obj2);
 };
-export const closeAppChannelChat = function closeAppChannelChat(id) {
-  SidebarActionCreatorsDefault.closeChannelSidebar(id);
-};
+export { closeAppChannelChat };
 export const useIsAppChannelChatOpen = tmp2;
+export const useCloseAppChannelChatOnFrameDeepLink = tmp3;
 export const useAppChannelChatUnread = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAppChannelChatUnread(arg0) {
       _require = arg0;
@@ -82,7 +146,7 @@ export const useAppChannelChatUnread = ReactCompilerGating.isReactCompilerEnable
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function o() {
+        const fn = function u() {
           let hasUnreadResult = null != closure_0;
           if (hasUnreadResult) {
             hasUnreadResult = ReadStateStore.hasUnread(closure_0);

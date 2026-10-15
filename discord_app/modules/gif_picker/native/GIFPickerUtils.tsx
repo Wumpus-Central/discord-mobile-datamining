@@ -95,9 +95,9 @@ export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled(
       tmp4 = tmp5;
     }
   : function useFavoriteGIFsMobile() {
-      sortedFavoriteGIFs = sortedFavoriteGIFs(9750).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+      sortedFavoriteGIFs = sortedFavoriteGIFs(9958).useSortedFavoriteGIFs(transformFavoriteGifUrl);
       const items = [sortedFavoriteGIFs];
-      let obj = sortedFavoriteGIFs(9750);
+      let obj = sortedFavoriteGIFs(9958);
       return {
         favorites: sortedFavoriteGIFs,
         favoritesCategory: noop.useMemo(() => {

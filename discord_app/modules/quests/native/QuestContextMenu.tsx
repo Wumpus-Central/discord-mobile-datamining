@@ -11,7 +11,7 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import _modDef8776 from "../../../../_runtime/metro/08776__.js";
+import _modDef8989 from "../../../../_runtime/metro/08989__.js";
 import QuestUtils from "QuestUtils.native.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
@@ -20,7 +20,7 @@ import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTyp
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
-import _modDef15783 from "../../../../_runtime/metro/15783__.js";
+import _modDef16079 from "../../../../_runtime/metro/16079__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import QuestStore from "../QuestStore.tsx";
@@ -29,7 +29,7 @@ require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef8776;
+  obj.icon = _modDef8989;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -390,7 +390,7 @@ export default noop.memo(
           const intl = util.intl;
           obj2.label = intl.string(util.t.GcsZKJ);
           obj2.action = callback2;
-          obj2.iconSource = _modDef15783;
+          obj2.iconSource = _modDef16079;
           items[1] = obj2;
           if (flag) {
             const obj3 = { label: null, IconComponent: null, action: null };

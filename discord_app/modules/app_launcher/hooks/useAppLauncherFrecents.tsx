@@ -11,9 +11,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AppLauncherLastUsedCommandStore from "../AppLauncherLastUsedCommandStore.tsx";
 
 require = fn;
-const FetchState = fn(6801).FetchState;
+const FetchState = fn(7017).FetchState;
 const WATCH_YOUTUBE_PROD_APP_ID = fn(2024).WATCH_YOUTUBE_PROD_APP_ID;
-const ApplicationCommandConstants = fn(5408);
+const ApplicationCommandConstants = fn(5463);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let filters = { commandTypes: null };
 let items = [fn(1998).ApplicationCommandType.CHAT, fn(1998).ApplicationCommandType.PRIMARY_ENTRY_POINT];
@@ -202,7 +202,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
       }
       dependencyMap = tmp20;
-      const sortApplicationsViaFrecency = context(11623).useSortApplicationsViaFrecency(cResult[10], tmp16);
+      const sortApplicationsViaFrecency = context(11848).useSortApplicationsViaFrecency(cResult[10], tmp16);
       const _Symbol = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
@@ -230,7 +230,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
         tmp22 = cResult[15];
       }
-      const tmpResult5 = context(11623);
+      const tmpResult5 = context(11848);
       stateFromStores1 = context(504).useStateFromStores(tmp21, tmp22);
       if (cResult[16] !== stateFromStores1) {
         class T {

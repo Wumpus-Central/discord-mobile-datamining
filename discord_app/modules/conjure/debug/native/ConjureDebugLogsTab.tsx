@@ -1,20 +1,21 @@
 // discord_app/modules/conjure/debug/native/ConjureDebugLogsTab.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
+import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureDebugLabels from "../ConjureDebugLabels.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ConjureDebugLogStore from "../ConjureDebugLogStore.tsx";
 
 const util = Text(1126);
-const Text_Text = Text(5092);
-const Card = Text(6186);
-const Pressables = Text(6189);
-const ChevronSmallRightIcon2 = Text(6911);
-const ChevronSmallDownIcon = Text(10543);
-const ConjureDebugJson = Text(12015);
-const ConjureDebugFormat = Text(12016);
+const Text_Text = Text(5147);
+const Card = Text(6402);
+const Pressables = Text(6405);
+const ChevronSmallRightIcon2 = Text(7125);
+const ChevronSmallDownIcon = Text(10766);
+const ConjureDebugJson = Text(12248);
+const ConjureDebugFormat = Text(12249);
 require = fn;
 function keyOf(key) {
   return String(key.key);
@@ -22,7 +23,7 @@ function keyOf(key) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = {
   list: { paddingHorizontal: nativeDefault.space.PX_16 },
   header: null,
@@ -181,7 +182,7 @@ let closure_11 = noop.memo(
                             const obj6 = { expanded };
                             obj5.accessibilityState = obj6;
                             const intl2 = util.intl;
-                            obj5.accessibilityLabel = intl2.string(_modDef3849["9CTzyV"]);
+                            obj5.accessibilityLabel = intl2.string(_modDef3862["9CTzyV"]);
                             obj5.onPress = function onPress() {
                               return onToggle(logKey);
                             };
@@ -190,9 +191,9 @@ let closure_11 = noop.memo(
                             const items3 = [tmp4.marker, " "];
                             const intl3 = util.intl;
                             if ("[\u2026]" === tmp4.marker) {
-                              let kUhyUv = _modDef3849.kUhyUv;
+                              let kUhyUv = _modDef3862.kUhyUv;
                             } else {
-                              kUhyUv = _modDef3849["N+fphl"];
+                              kUhyUv = _modDef3862["N+fphl"];
                             }
                             const obj8 = { variant: "text-xs/medium", color: "text-muted", children: null };
                             const obj9 = { count: tmp4.size };
@@ -264,7 +265,7 @@ let closure_11 = noop.memo(
                     children: null,
                   };
                   const intl = util.intl;
-                  obj15.children = intl.string(_modDef3849.TrC9c8);
+                  obj15.children = intl.string(_modDef3862.TrC9c8);
                   tmp19 = React5(Text_Text.Text, obj15);
                 }
                 cResult[16] = entry.kind;
@@ -317,10 +318,10 @@ let closure_11 = noop.memo(
           str = "text-feedback-critical";
         }
         if (expanded) {
-          let ChevronSmallRightIcon = tmp3(10543).ChevronSmallDownIcon;
+          let ChevronSmallRightIcon = tmp3(10766).ChevronSmallDownIcon;
           let tmp6 = tmp3;
         } else {
-          ChevronSmallRightIcon = tmp3(6911).ChevronSmallRightIcon;
+          ChevronSmallRightIcon = tmp3(7125).ChevronSmallRightIcon;
           tmp6 = tmp3;
         }
         const obj = { style: tmp.row, children: null };
@@ -328,9 +329,9 @@ let closure_11 = noop.memo(
         const obj3 = {
           variant: "text-xs/normal",
           color: "text-subtle",
-          children: tmp6(12016).formatClockTime(entry.ts),
+          children: tmp6(12249).formatClockTime(entry.ts),
         };
-        const items1 = [closure_7(tmp6(5092).Text, obj3), , ,];
+        const items1 = [closure_7(tmp6(5147).Text, obj3), , ,];
         const level = entry.level;
         let str2 = "text-feedback-critical";
         if ("error" !== level) {
@@ -340,7 +341,7 @@ let closure_11 = noop.memo(
           }
           str2 = str3;
         }
-        items1[1] = closure_7(tmp6(5092).Text, {
+        items1[1] = closure_7(tmp6(5147).Text, {
           variant: "text-xxs/semibold",
           color: str2,
           style: tmp.badge,
@@ -356,7 +357,7 @@ let closure_11 = noop.memo(
               style: tmp.badge,
               children: entry.source,
             };
-            tmp9Result = closure_7(tmp6(5092).Text, obj5);
+            tmp9Result = closure_7(tmp6(5147).Text, obj5);
           }
         }
         items1[2] = tmp9Result;
@@ -369,8 +370,8 @@ let closure_11 = noop.memo(
             children: null,
           };
           const intl = tmp6(1126).intl;
-          obj6.children = intl.string(_modDef3849.TrC9c8);
-          tmp9Result4 = closure_7(tmp6(5092).Text, obj6);
+          obj6.children = intl.string(_modDef3862.TrC9c8);
+          tmp9Result4 = closure_7(tmp6(5147).Text, obj6);
         }
         items1[3] = tmp9Result4;
         obj2.children = items1;
@@ -379,7 +380,7 @@ let closure_11 = noop.memo(
           let tmp9Result5 = null;
           if ("" !== memo.prefix) {
             const obj7 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.prefix };
-            tmp9Result5 = closure_7(tmp6(5092).Text, obj7);
+            tmp9Result5 = closure_7(tmp6(5147).Text, obj7);
           }
           const items3 = [tmp9Result5, ,];
           const obj8 = {
@@ -393,7 +394,7 @@ let closure_11 = noop.memo(
           const obj9 = { expanded };
           obj8.accessibilityState = obj9;
           const intl2 = tmp6(1126).intl;
-          obj8.accessibilityLabel = intl2.string(_modDef3849["9CTzyV"]);
+          obj8.accessibilityLabel = intl2.string(_modDef3862["9CTzyV"]);
           obj8.onPress = function onPress() {
             return dependencyMap(importDefault);
           };
@@ -402,23 +403,23 @@ let closure_11 = noop.memo(
           const items5 = [memo.marker, " "];
           const intl3 = tmp6(1126).intl;
           if ("[\u2026]" === memo.marker) {
-            let kUhyUv = _modDef3849.kUhyUv;
+            let kUhyUv = _modDef3862.kUhyUv;
           } else {
-            kUhyUv = _modDef3849["N+fphl"];
+            kUhyUv = _modDef3862["N+fphl"];
           }
           const obj11 = { variant: "text-xs/medium", color: "text-muted", children: null };
           const obj12 = { count: memo.size };
           items5[2] = intl3.formatToPlainString(kUhyUv, obj12);
           obj11.children = items5;
-          items4[1] = closure_8(tmp6(5092).Text, obj11);
+          items4[1] = closure_8(tmp6(5147).Text, obj11);
           obj8.children = items4;
-          items3[1] = closure_8(tmp6(6189).PressableOpacity, obj8);
+          items3[1] = closure_8(tmp6(6405).PressableOpacity, obj8);
           let tmp9Result6 = null;
           if (expanded) {
             const obj13 = { variant: "primary", children: null };
             const obj14 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.pretty };
-            obj13.children = closure_7(tmp6(5092).Text, obj14);
-            tmp9Result6 = closure_7(tmp6(6186).Card, obj13);
+            obj13.children = closure_7(tmp6(5147).Text, obj14);
+            tmp9Result6 = closure_7(tmp6(6402).Card, obj13);
           }
           const obj15 = { children: null };
           items3[2] = tmp9Result6;
@@ -426,7 +427,7 @@ let closure_11 = noop.memo(
           let tmp9Result7 = closure_8(closure_9, obj15);
         } else {
           const obj16 = { variant: "text-xs/normal", color: str, selectable: true, children: entry.message };
-          tmp9Result7 = closure_7(tmp6(5092).Text, obj16);
+          tmp9Result7 = closure_7(tmp6(5147).Text, obj16);
         }
         items2[1] = tmp9Result7;
         obj.children = items2;
@@ -442,8 +443,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjureDebugLogsTab(projectId) {
       const cResult = projectId(576).c(42);
       projectId = projectId.projectId;
-      closure_10();
-      const bottom = first1(1631)().bottom;
+      const tmp4 = closure_10();
+      const bottom = useSafeAreaInsetsDefault().bottom;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConjureDebugLogStore];
         cResult[0] = items;
@@ -459,123 +460,271 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = projectId;
         cResult[2] = fn;
         cResult[3] = items1;
-        let tmp8 = items1;
-        let tmp7 = fn;
+        let tmp9 = items1;
+        let tmp8 = fn;
       } else {
-        tmp7 = cResult[2];
-        tmp8 = cResult[3];
+        tmp8 = cResult[2];
+        tmp9 = cResult[3];
       }
       let obj = projectId(576);
-      const stateFromStores = projectId(504).useStateFromStores(first, tmp7, tmp8);
+      const stateFromStores = projectId(504).useStateFromStores(first, tmp8, tmp9);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ConjureDebugLogStore];
         cResult[4] = items2;
-        let tmp9 = items2;
+        let tmp10 = items2;
       } else {
-        tmp9 = cResult[4];
+        tmp10 = cResult[4];
       }
       if (cResult[5] !== projectId) {
-        class L {
-          constructor() {
-            return closure_6.getHistoryState(projectId, "logs");
-          }
-        }
+        const fn2 = function _() {
+          return ConjureDebugLogStore.getHistoryState(projectId, "logs");
+        };
         const items3 = [projectId];
         cResult[5] = projectId;
-        cResult[6] = L;
+        cResult[6] = fn2;
         cResult[7] = items3;
-        let tmp12 = items3;
+        let tmp13 = items3;
+        let tmp12 = fn2;
       } else {
-        class L {
-          constructor() {
-            return closure_6.getHistoryState(projectId, "logs");
-          }
-        }
-        tmp12 = cResult[7];
+        tmp12 = cResult[6];
+        tmp13 = cResult[7];
       }
-      let tmpResult = projectId(504);
-      const stateFromStores1 = projectId(504).useStateFromStores(tmp9, L, tmp12);
-      [first1, dependencyMap] = noop.useState("all");
-      const tmpResult3 = projectId(504);
-      let str = _slicedToArray(noop.useState(""), 2)[0];
+      const tmpResult = projectId(504);
+      const stateFromStores1 = projectId(504).useStateFromStores(tmp10, tmp12, tmp13);
+      const obj4 = noop;
+      const tmp15 = first2;
+      const tmpResult4 = projectId(504);
+      [tmp17, importDefault] = first2(noop.useState("all"), 2);
+      const tmp18 = first2(noop.useState(""), 2);
+      const first1 = tmp18[0];
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        class L {
-          constructor() {
-            return closure_6.getHistoryState(projectId, "logs");
-          }
-        }
-        const DEBUG_LOG_FILTERS = tmp(12017).DEBUG_LOG_FILTERS;
-        tmp18[1] = DEBUG_LOG_FILTERS.map((id) => {
-          const obj = { id, label: projectId(dependencyMap[20]).debugLogFilterLabel(id), page: null };
+        const obj2 = { pageWidth: 0, items: null, onSetActiveIndex: null };
+        const DEBUG_LOG_FILTERS = tmp(12250).DEBUG_LOG_FILTERS;
+        obj2.items = DEBUG_LOG_FILTERS.map((id) => {
+          const obj = { id, label: projectId(showSource[20]).debugLogFilterLabel(id), page: null };
           return obj;
         });
-        tmp18[2] = function onSetActiveIndex(arg0) {
+        obj2.onSetActiveIndex = function onSetActiveIndex(arg0) {
           let str = ConjureDebugLabels.DEBUG_LOG_FILTERS[arg0];
           if (str == null) {
             str = "all";
           }
-          return dependencyMap(str);
+          return importDefault(str);
         };
-        cResult[8] = tmp18;
+        cResult[8] = obj2;
+        let tmp20 = obj2;
       } else {
-        class L {
-          constructor() {
-            return closure_6.getHistoryState(projectId, "logs");
-          }
-        }
+        tmp20 = cResult[8];
       }
-      const tmp16 = _slicedToArray(noop.useState(""), 2);
-      const segmentedControlState = projectId(8537).useSegmentedControlState(tmp18);
-      if (cResult[9] === first1) {
-        class L {
-          constructor() {
-            return closure_6.getHistoryState(projectId, "logs");
-          }
-        }
-      }
-      const tmpResult4 = projectId(8537);
-      _slicedToArray = str.trim().toLowerCase();
-      const found = stateFromStores.filter((log) => {
-        let isRenderableLogResult = ConjureDebugLabels.isRenderableLog(log.log);
-        if (isRenderableLogResult) {
-          let tmp5 = "all" === first1;
-          if (!tmp5) {
-            tmp5 = ConjureDebugFormat.debugLogEnv(log.log.source) === tmp4;
-            const tmpResult = ConjureDebugFormat;
-          }
-          if (tmp5) {
-            let tmp7 = "" === closure_3;
-            if (!tmp7) {
-              const formatted = log.log.message.toLowerCase();
-              let hasItem = formatted.includes(closure_3);
-              if (!hasItem) {
-                const level = log.log.level;
-                hasItem = level.includes(closure_3);
+      const tmp16 = first2(noop.useState("all"), 2);
+      const segmentedControlState = projectId(8750).useSegmentedControlState(tmp20);
+      if (cResult[9] === tmp17) {
+        if (cResult[10] === stateFromStores) {
+          dependencyMap = tmp24;
+          const _Symbol = Symbol;
+          if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+            class G {
+              constructor() {
+                set = new Set();
+                return set;
               }
-              if (!hasItem) {
-                let flag;
-                if (log.log.source != null) {
-                  const formatted1 = str4.toLowerCase();
-                  flag = formatted1.includes(closure_3);
-                }
-                if (flag == null) {
-                  flag = false;
-                }
-                hasItem = flag;
-              }
-              tmp7 = hasItem;
             }
-            tmp5 = tmp7;
+            cResult[13] = G;
+          } else {
+            class G {
+              constructor() {
+                set = new Set();
+                return set;
+              }
+            }
           }
-          isRenderableLogResult = tmp5;
+          const tmp15Result = tmp15(obj4.useState(G), 2);
+          first2 = tmp15Result[0];
+          noop = tmp15Result[1];
+          const _Symbol2 = Symbol;
+          if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+            class N {
+              constructor(arg0) {
+                closure_0 = projectId;
+                tmp = closure_4((items) => {
+                  const set = new Set(items);
+                  if (!set.delete(closure_0)) {
+                    set.add(closure_0);
+                  }
+                  return set;
+                });
+                return;
+              }
+            }
+            cResult[14] = N;
+          } else {
+            class N {
+              constructor(arg0) {
+                closure_0 = projectId;
+                tmp = closure_4((items) => {
+                  const set = new Set(items);
+                  if (!set.delete(closure_0)) {
+                    set.add(closure_0);
+                  }
+                  return set;
+                });
+                return;
+              }
+            }
+          }
+          const onToggle = N;
+          if (cResult[15] === first2) {
+            class N {
+              constructor(arg0) {
+                closure_0 = projectId;
+                tmp = closure_4((items) => {
+                  const set = new Set(items);
+                  if (!set.delete(closure_0)) {
+                    set.add(closure_0);
+                  }
+                  return set;
+                });
+                return;
+              }
+            }
+            if (cResult[18] !== segmentedControlState) {
+              class N {
+                constructor(arg0) {
+                  closure_0 = projectId;
+                  tmp = closure_4((items) => {
+                    const set = new Set(items);
+                    if (!set.delete(closure_0)) {
+                      set.add(closure_0);
+                    }
+                    return set;
+                  });
+                  return;
+                }
+              }
+              const obj3 = { state: segmentedControlState, variant: "experimental_Small" };
+              const tmp31 = closure_7(tmp(8996).SegmentedControl, obj3);
+              cResult[18] = segmentedControlState;
+              cResult[19] = tmp31;
+            } else {
+              class N {
+                constructor(arg0) {
+                  closure_0 = projectId;
+                  tmp = closure_4((items) => {
+                    const set = new Set(items);
+                    if (!set.delete(closure_0)) {
+                      set.add(closure_0);
+                    }
+                    return set;
+                  });
+                  return;
+                }
+              }
+            }
+            const _Symbol3 = Symbol;
+            if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+              class N {
+                constructor(arg0) {
+                  closure_0 = projectId;
+                  tmp = closure_4((items) => {
+                    const set = new Set(items);
+                    if (!set.delete(closure_0)) {
+                      set.add(closure_0);
+                    }
+                    return set;
+                  });
+                  return;
+                }
+              }
+              const obj5 = { accessibilityLabel: null, placeholder: null, size: "sm", onChange: null };
+              const intl = tmp(1126).intl;
+              obj5.accessibilityLabel = intl.string(_modDef3862["m2+37Y"]);
+              const intl2 = tmp(1126).intl;
+              obj5.placeholder = intl2.string(_modDef3862["m2+37Y"]);
+              obj5.onChange = tmp18[1];
+              const tmp33 = closure_7(tmp(6959).SearchField, obj5);
+              cResult[20] = tmp33;
+              const tmp32 = tmp33;
+            } else {
+              class N {
+                constructor(arg0) {
+                  closure_0 = projectId;
+                  tmp = closure_4((items) => {
+                    const set = new Set(items);
+                    if (!set.delete(closure_0)) {
+                      set.add(closure_0);
+                    }
+                    return set;
+                  });
+                  return;
+                }
+              }
+            }
+            if (cResult[21] === stateFromStores1) {
+              class N {
+                constructor(arg0) {
+                  closure_0 = projectId;
+                  tmp = closure_4((items) => {
+                    const set = new Set(items);
+                    if (!set.delete(closure_0)) {
+                      set.add(closure_0);
+                    }
+                    return set;
+                  });
+                  return;
+                }
+              }
+              if (cResult[24] === tmp4.header) {
+                class N {
+                  constructor(arg0) {
+                    closure_0 = projectId;
+                    tmp = closure_4((items) => {
+                      const set = new Set(items);
+                      if (!set.delete(closure_0)) {
+                        set.add(closure_0);
+                      }
+                      return set;
+                    });
+                    return;
+                  }
+                }
+              }
+              const obj6 = { style: tmp4.header, children: null };
+              const items4 = [tmp30, tmp32, tmp35];
+              obj6.children = items4;
+              const tmp41 = closure_8(onToggle, obj6);
+              cResult[24] = tmp4.header;
+              cResult[25] = tmp30;
+              cResult[26] = tmp35;
+              cResult[27] = tmp41;
+            }
+            const obj7 = { state: stateFromStores1, hasRows: stateFromStores.length > 0 };
+            const tmp37 = closure_7(tmp(12251).ConjureHistoryNotice, obj7);
+            cResult[21] = stateFromStores1;
+            cResult[22] = stateFromStores.length > 0;
+            cResult[23] = tmp37;
+          }
+          const fn3 = function q(item) {
+            item = item.item;
+            return React5(closure_11, {
+              entry: item.log,
+              logKey: item.key,
+              showSource,
+              expanded: first2.has(item.key),
+              onToggle,
+            });
+          };
+          cResult[15] = first2;
+          cResult[16] = "all" === tmp17;
+          cResult[17] = fn3;
         }
-        return isRenderableLogResult;
-      });
-      cResult[9] = first1;
+      }
+      const tmpResult5 = projectId(8750);
+      const tmpResult6 = projectId(12250);
+      cResult[9] = tmp17;
       cResult[10] = stateFromStores;
-      cResult[11] = str;
-      cResult[12] = found;
-      const str2 = str.trim();
+      cResult[11] = first1;
+      cResult[12] = projectId(12250).filterDebugLogs(stateFromStores, tmp17, first1);
+      const filterDebugLogsResult = projectId(12250).filterDebugLogs(stateFromStores, tmp17, first1);
     }
   : function ConjureDebugLogsTab(projectId) {
       projectId = projectId.projectId;
@@ -618,45 +767,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items4 = [stateFromStores, first, first1];
       const segmentedControlState = projectId(first[21]).useSegmentedControlState(obj4);
       const showSource = tmp12;
-      const memo = first1.useMemo(() => {
-        closure_0 = first1.trim().toLowerCase();
-        return stateFromStores.filter((log) => {
-          let isRenderableLogResult = ConjureDebugLabels.isRenderableLog(log.log);
-          if (isRenderableLogResult) {
-            let tmp5 = "all" === first;
-            if (!tmp5) {
-              tmp5 = ConjureDebugFormat.debugLogEnv(log.log.source) === tmp4;
-              const tmpResult = ConjureDebugFormat;
-            }
-            if (tmp5) {
-              let tmp7 = "" === closure_0;
-              if (!tmp7) {
-                const formatted = log.log.message.toLowerCase();
-                let hasItem = formatted.includes(closure_0);
-                if (!hasItem) {
-                  const level = log.log.level;
-                  hasItem = level.includes(closure_0);
-                }
-                if (!hasItem) {
-                  let flag;
-                  if (log.log.source != null) {
-                    const formatted1 = str4.toLowerCase();
-                    flag = formatted1.includes(closure_0);
-                  }
-                  if (flag == null) {
-                    flag = false;
-                  }
-                  hasItem = flag;
-                }
-                tmp7 = hasItem;
-              }
-              tmp5 = tmp7;
-            }
-            isRenderableLogResult = tmp5;
-          }
-          return isRenderableLogResult;
-        });
-      }, items4);
+      const memo = first1.useMemo(() => ConjureDebugLabels.filterDebugLogs(stateFromStores, first, first1), items4);
       const tmp13 = _slicedToArray(
         first1.useState(() => new Set()),
         2,

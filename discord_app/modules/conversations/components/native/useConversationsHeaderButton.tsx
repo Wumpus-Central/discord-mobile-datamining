@@ -9,7 +9,7 @@ import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(7322);
+const ConversationConstants = fn(7532);
 ({
   CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty,
   MOBILE_FETCH_LIMIT: metroRequire,

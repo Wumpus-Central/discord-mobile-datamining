@@ -433,8 +433,8 @@ function getAnchorIndexFromId(arg0) {
     }
   }
 }
-const GuildsNodeType = fn(5968).GuildsNodeType;
-const GuildsBarConstants = fn(17080);
+const GuildsNodeType = fn(6179).GuildsNodeType;
+const GuildsBarConstants = fn(17320);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 const constants2 = {
@@ -1220,22 +1220,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj = {
               children: items1.map((item) => {
                 if ("unavailable-guilds" === item) {
-                  return closure_1_19(itemSize(17146), {}, item);
+                  return closure_1_19(itemSize(17386), {}, item);
                 } else if ("empty-nux" === item) {
-                  return closure_1_19(itemSize(17147), {}, item);
+                  return closure_1_19(itemSize(17387), {}, item);
                 } else if ("create-join-guild" === item) {
-                  return closure_1_19(itemSize(17148), {}, item);
+                  return closure_1_19(itemSize(17388), {}, item);
                 }
               }),
             };
             return jsx(GuildsBarFooterWrapperDefault, {
               children: items1.map((item) => {
                 if ("unavailable-guilds" === item) {
-                  return closure_1_19(itemSize(17146), {}, item);
+                  return closure_1_19(itemSize(17386), {}, item);
                 } else if ("empty-nux" === item) {
-                  return closure_1_19(itemSize(17147), {}, item);
+                  return closure_1_19(itemSize(17387), {}, item);
                 } else if ("create-join-guild" === item) {
-                  return closure_1_19(itemSize(17148), {}, item);
+                  return closure_1_19(itemSize(17388), {}, item);
                 }
               }),
             });

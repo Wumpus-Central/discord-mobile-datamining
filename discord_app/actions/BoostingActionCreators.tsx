@@ -48,7 +48,7 @@ let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
           closure_130_2 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -138,7 +138,7 @@ let closure_9 = async function _fetchAppliedGuildBoostsForUser() {
           closure_129_1 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -322,8 +322,12 @@ let closure_13 = async function _applyToGuild(arg0) {
           closure_131_2 = undefined;
           closure_131_0 = closure_0;
           closure_131_1 = closure_1;
-          let flag = closure_2;
+          let obj5 = closure_2;
           if (closure_2 === undefined) {
+            obj5 = {};
+          }
+          let flag = obj5.disablePowerupAutoApply;
+          if (flag === undefined) {
             flag = false;
           }
           closure_131_2 = flag;
@@ -332,7 +336,7 @@ let closure_13 = async function _applyToGuild(arg0) {
           closure_131_5 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -340,8 +344,8 @@ let closure_13 = async function _applyToGuild(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c8 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_132_1(closure_132_2[6]).dispatch({ type: "GUILD_APPLY_BOOST_START" });
           c6 = 1;
@@ -352,25 +356,25 @@ let closure_13 = async function _applyToGuild(arg0) {
             oldFormErrors: true,
             rejectWithError: null,
           };
-          const obj6 = {
+          const obj7 = {
             user_premium_guild_subscription_slot_ids: closure_131_1,
             disable_powerup_auto_apply: closure_131_2,
           };
-          request.body = obj6;
-          const obj10 = closure_132_1(closure_132_2[6]);
+          request.body = obj7;
+          const obj11 = closure_132_1(closure_132_2[6]);
           request.rejectWithError = closure_132_0(closure_132_2[5]).rejectWithMigratedError();
           c7 = 3;
           c8 = 1;
-          const obj7 = { value: HTTP.put(request), done: false };
-          return obj7;
+          const obj8 = { value: HTTP.put(request), done: false };
+          return obj8;
         }
       } else if (2 === tmp7) {
         c6 = 0;
         closure_131_6 = closure_5;
         const appliedGuildBoostError = new closure_132_0(closure_132_2[7]).AppliedGuildBoostError(closure_131_6);
         closure_131_5 = appliedGuildBoostError;
-        const obj8 = { type: "GUILD_APPLY_BOOST_FAIL", error: closure_131_5 };
-        closure_132_1(closure_132_2[6]).dispatch(obj8);
+        const obj9 = { type: "GUILD_APPLY_BOOST_FAIL", error: closure_131_5 };
+        closure_132_1(closure_132_2[6]).dispatch(obj9);
         throw closure_131_5;
       } else if (arg0 === 1) {
         c8 = 3;
@@ -378,8 +382,8 @@ let closure_13 = async function _applyToGuild(arg0) {
       } else if (arg0 === 2) {
         c6 = 0;
         c8 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
         closure_131_3 = value;
         const _Array = Array;
@@ -390,8 +394,8 @@ let closure_13 = async function _applyToGuild(arg0) {
           mapped = [closure_132_4.createFromServer(closure_131_3.body)];
         }
         closure_131_4 = mapped;
-        const obj11 = { type: "GUILD_APPLY_BOOST_SUCCESS", appliedGuildBoost: closure_131_4 };
-        closure_132_1(closure_132_2[6]).dispatch(obj11);
+        const obj12 = { type: "GUILD_APPLY_BOOST_SUCCESS", appliedGuildBoost: closure_131_4 };
+        closure_132_1(closure_132_2[6]).dispatch(obj12);
         closure_132_10();
         c6 = 0;
         c8 = 3;

@@ -1,6 +1,6 @@
 // discord_app/utils/AuthenticationUtils.tsx
 import TokenManagerAll from "../../discord_common/js/shared/lib/TokenManager.tsx";
-import _mod7364 from "../../_runtime/metro/07364__.js";
+import _mod7574 from "../../_runtime/metro/07574__.js";
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/AuthenticationUtils.tsx");
@@ -16,7 +16,7 @@ export const getArtForPath = function getArtForPath(arg0) {
   if (null != arg0) {
     tmp = null;
     if (obj.test(arg0)) {
-      tmp = _mod7364;
+      tmp = _mod7574;
     }
     obj = /^\/developers/;
   }

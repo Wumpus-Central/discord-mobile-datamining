@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" },
   avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -97,7 +97,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const tmpResult4 = tmp(8381);
+              const tmpResult4 = tmp(8592);
               class E {
                 constructor() {
                   return closure_1_3.useReducedMotion;
@@ -174,7 +174,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.size = size;
       if (undefined !== pendingAvatarSrc) {
         const obj4 = { source: null };
-        const tmp2Result = tmp2(8381);
+        const tmp2Result = tmp2(8592);
         obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
         const merged = Object.assign(obj3);
         let obj5 = obj4;

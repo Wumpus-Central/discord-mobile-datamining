@@ -211,6 +211,7 @@ export const ExperimentFlags = {
   WEB_STREAMING_MOTION_CONTENT_HINT: "web_streaming_motion_content_hint",
 };
 export const VideoQualityMode = { AUTO: 1, [1]: "AUTO", FULL: 2, [2]: "FULL" };
+export const VideoEncoderLatencyProfile = { DEFAULT: "default", ULTRA_LOW: "ultra_low" };
 export const NoiseCancellerError = {
   KRISP_CPU_OVERUSE: 1,
   [1]: "KRISP_CPU_OVERUSE",

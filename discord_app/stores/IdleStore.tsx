@@ -62,7 +62,7 @@ function checkIdleAFK() {
 }
 const Constants = fn(1085);
 ({ IDLE_DURATION: hasOwnProperty, AppStates: metroRequire } = Constants);
-const SpeakingFlags = fn(5121).SpeakingFlags;
+const SpeakingFlags = fn(5176).SpeakingFlags;
 const idleSince = Date.now();
 let idle = false;
 let afk = false;

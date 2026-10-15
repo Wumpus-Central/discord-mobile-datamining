@@ -24,7 +24,7 @@ const Constants = fn(1085);
 let closure_11 = fn(1253).BACKGROUND_GRADIENT_PRESETS_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: {
     padding: 24,
@@ -617,13 +617,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         angleOverride: 0,
         mixAmount: null,
       };
-      let obj3 = { dark: token(4938).OverlayOpacity.LEVEL_1 };
+      let obj3 = { dark: token(4992).OverlayOpacity.LEVEL_1 };
       obj2.mixAmount = obj3;
       const items6 = [closure_12(ThemedGradientDefault, obj2)];
       let obj4 = { style: tmp.container, children: null };
       let obj5 = { style: tmp.centerContent, children: null };
       const obj6 = { source: null, style: null };
-      obj6.source = token(14458);
+      obj6.source = token(14755);
       obj6.style = tmp.logo;
       const items7 = [closure_12(FastImageDefault, obj6)];
       const obj7 = { style: tmp.loadingContainer, children: null };
@@ -631,7 +631,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { variant: "text-lg/semibold", children: null };
       let intl = token(1126).intl;
       obj8.children = intl.string(token(1126).t.W9uNdG);
-      items8[1] = closure_12(token(5092).Text, obj8);
+      items8[1] = closure_12(token(5147).Text, obj8);
       obj7.children = items8;
       items7[1] = closure_13(callback1, obj7);
       obj5.children = items7;
@@ -640,7 +640,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { variant: "text-sm/normal", children: null };
       let intl2 = token(1126).intl;
       obj10.children = intl2.string(token(1126).t["ZXe5/Y"]);
-      const items10 = [closure_12(token(5092).Text, obj10)];
+      const items10 = [closure_12(token(5147).Text, obj10)];
       const obj11 = {
         textColor: "text-default",
         text: null,
@@ -652,7 +652,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj11.text = intl3.string(token(1126).t.FIEwfG);
       obj11.onPress = onPress;
       obj11.textStyle = tmp.link;
-      items10[1] = closure_12(token(6627).LinkButton, obj11);
+      items10[1] = closure_12(token(6843).LinkButton, obj11);
       obj9.children = items10;
       items9[1] = closure_13(callback1, obj9);
       obj4.children = items9;

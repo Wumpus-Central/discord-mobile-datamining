@@ -10,12 +10,12 @@ import UserProfileSharedStylesDefault from "../../../user_profile/native/UserPro
 import UserProfileWidgetsBoard from "../../../user_profile/native/UserProfileWidgetsBoard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const UserProfilePersonalWidgetCardDefault = tmp5(13748);
+const UserProfilePersonalWidgetCardDefault = tmp5(14044);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   title: { lineHeight: 16, marginBottom: 8 },

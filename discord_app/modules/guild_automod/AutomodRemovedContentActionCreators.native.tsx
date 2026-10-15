@@ -29,7 +29,7 @@ export const showRemovedMessageToast = function showRemovedMessageToast(arg0, ch
 };
 export const openRemovedContentModal = function openRemovedContentModal(action) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(18090, dependencyMap.paths),
+    asyncRequireImpl(18330, dependencyMap.paths),
     "AutomodRemovedContentSheet",
     { action },
   );

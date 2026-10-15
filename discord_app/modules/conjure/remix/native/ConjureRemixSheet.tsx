@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const VibegrationsRemixSheet = "VibegrationsRemixSheet";
-const createStyles = fn(5096);
+const ConjureRemixSheet = "ConjureRemixSheet";
+const createStyles = fn(5151);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   [r10032, View] = first1(noop.useState(null), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [title, stateFromStoresArray];
-    const fn = function f() {
+    const fn = function b() {
       const items = [];
       const flattenedGuildIds = title.getFlattenedGuildIds();
       while (tmp2 !== undefined) {
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
       class M {
         constructor() {
           obj = closure_0(closure_2[15]);
-          obj1 = { key: "VibegrationsRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
+          obj1 = { key: "ConjureRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
           obj4 = { title: closure_8 };
           obj1.header = obj4;
           result = obj.showSimpleActionSheet(obj1);
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
       class M {
         constructor() {
           obj = closure_0(closure_2[15]);
-          obj1 = { key: "VibegrationsRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
+          obj1 = { key: "ConjureRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
           obj4 = { title: closure_8 };
           obj1.header = obj4;
           result = obj.showSimpleActionSheet(obj1);
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
       class M {
         constructor() {
           obj = closure_0(closure_2[15]);
-          obj1 = { key: "VibegrationsRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
+          obj1 = { key: "ConjureRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
           obj4 = { title: closure_8 };
           obj1.header = obj4;
           result = obj.showSimpleActionSheet(obj1);
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
               closure_1_5(false);
             }
           }
-          onRemixed(first[17]).hideActionSheet(VibegrationsRemixSheet);
+          onRemixed(first[17]).hideActionSheet(ConjureRemixSheet);
           tmp2(closure_128_0.projectId, c2);
           c3 = 3;
           const obj7 = { value: undefined, done: true };
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
     class M {
       constructor() {
         obj = closure_0(closure_2[15]);
-        obj1 = { key: "VibegrationsRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
+        obj1 = { key: "ConjureRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
         obj4 = { title: closure_8 };
         obj1.header = obj4;
         result = obj.showSimpleActionSheet(obj1);
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
     class M {
       constructor() {
         obj = closure_0(closure_2[15]);
-        obj1 = { key: "VibegrationsRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
+        obj1 = { key: "ConjureRemixDestination", stackingBehavior: "stack", header: null, hasIcons: false, options: closure_7.map((label) => ({ label: label.name, onPress() { ... } })) };
         obj4 = { title: closure_8 };
         obj1.header = obj4;
         result = obj.showSimpleActionSheet(obj1);
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   const items1 = [stringResult, stateFromStoresArray];
   const callback = obj.useCallback(() => {
     const obj2 = {
-      key: "VibegrationsRemixDestination",
+      key: "ConjureRemixDestination",
       stackingBehavior: "stack",
       header: { title },
       hasIcons: false,
@@ -318,7 +318,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
               _undefined(null);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(11309).remixConjureProjectInto(project, first), done: false };
+              const obj5 = { value: tmp2(11533).remixConjureProjectInto(project, first), done: false };
               return obj5;
             }
           }
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
             closure_129_5(false);
           }
         }
-        tmp5(5060).hideActionSheet(VibegrationsRemixSheet);
+        tmp5(5115).hideActionSheet(ConjureRemixSheet);
         closure_129_1(closure_128_0.projectId, closure_129_2);
         c3 = 3;
         const obj7 = { value: undefined, done: true };
@@ -385,4 +385,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   obj3.children = closure_10(c6, obj5);
   return closure_9(project(first[23]).ActionSheet, obj3);
 });
-export const CONJURE_REMIX_SHEET_KEY = "VibegrationsRemixSheet";
+export const CONJURE_REMIX_SHEET_KEY = "ConjureRemixSheet";

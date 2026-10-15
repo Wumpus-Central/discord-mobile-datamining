@@ -368,7 +368,7 @@ prototype["initialize"] = function initialize() {
   ({
     selectedVoiceChannelId: c8,
     lastChannelFollowingDestination: closure_7,
-    lastConnectedTime: closure_1_9,
+    lastConnectedTime: closure_9,
     mostRecentSelectedTextChannelIds,
   } = value);
   if (mostRecentSelectedTextChannelIds == null) {
@@ -973,7 +973,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const values = closure_1_1(12)(selectedChannelIds).values();
             const obj2 = closure_1_1(12)(selectedChannelIds);
             const combined = values.concat(closure_1_1(12).values(mostRecentSelectedTextChannelIds));
-            const found = combined.filter(closure_1_0(1388).isNotNullish);
+            const found = combined.filter(closure_1_0(1386).isNotNullish);
             const obj4 = closure_1_1(12);
             const uniqResult = found.uniq();
             obj.knownThreadIds = found
@@ -1162,6 +1162,60 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
         return hasItem;
       });
     }
+  },
+  AUTO_UPDATER_QUIT_AND_INSTALL: function handleAutoUpdaterQuitAndInstall() {
+    let tmp = null == selectedVoiceChannelId;
+    if (!tmp) {
+      tmp = null == collapsed;
+    }
+    if (!tmp) {
+      const _Date = Date;
+      lastConnectedTime = Date.now();
+      const Storage = Storage3.Storage;
+      const obj = {
+        selectedChannelId,
+        selectedVoiceChannelId,
+        lastChannelFollowingDestination,
+        lastConnectedTime,
+        selectedChannelIds,
+        mostRecentSelectedTextChannelIds,
+        knownThreadIds: null,
+      };
+      const values = _modDef12(selectedChannelIds).values();
+      const obj2 = _modDef12(selectedChannelIds);
+      const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
+      const found = combined.filter(GlobalUtils.isNotNullish);
+      const uniqResult = found.uniq();
+      obj.knownThreadIds = found
+        .uniq()
+        .filter((item) => {
+          basicChannel = basicChannel.getBasicChannel(item);
+          let hasItem = set2.has(item);
+          if (!hasItem) {
+            let hasItem1 = null != basicChannel;
+            if (hasItem1) {
+              hasItem1 = set.has(basicChannel.type);
+            }
+            hasItem = hasItem1;
+          }
+          return hasItem;
+        })
+        .value();
+      const result = Storage.set(SelectedChannelStore, obj);
+      const iter = found.uniq().filter((item) => {
+        basicChannel = basicChannel.getBasicChannel(item);
+        let hasItem = set2.has(item);
+        if (!hasItem) {
+          let hasItem1 = null != basicChannel;
+          if (hasItem1) {
+            hasItem1 = set.has(basicChannel.type);
+          }
+          hasItem = hasItem1;
+        }
+        return hasItem;
+      });
+    }
+    return false;
   },
   LOGOUT: function handleLogout() {
     closure_27 = {};

@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import Suspender from "../../../../../_runtime/05335_Suspender.js";
+import Suspender from "../../../../../_runtime/05390_Suspender.js";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
@@ -25,17 +25,17 @@ function renderCard(key, item, transitionState, cleanUp) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12524);
+const VoicePanelConstants = fn(12817);
 ({
   LAYOUT_PHYSICS: closure_8,
   VoicePanelModes: closure_9,
   UI_SHOW_HIDE_PHYSICS,
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12522).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17837).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12527).EDGE_GUTTER;
-const isUserParticipant = fn(5119).isUserParticipant;
+const VoicePanelControlsModes = fn(12815).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18077).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12820).EDGE_GUTTER;
+const isUserParticipant = fn(5174).isUserParticipant;
 const jsx = fn(21).jsx;
 let SCALE_PHYSICS = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);
@@ -383,7 +383,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useLazyContentFreeze() {
       const cResult = mode(576).c(6);
       const obj = mode(576);
-      mode = mode(17838).usePIPState().mode;
+      mode = mode(18078).usePIPState().mode;
       const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = {};
@@ -407,7 +407,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = cResult[5];
         }
         const effect = noop.useEffect(tmp7, tmp8);
-        return mode === VoicePanelPIPModes.IN_APP && ref(6165)(ref);
+        return mode === VoicePanelPIPModes.IN_APP && ref(6381)(ref);
       }
       const fn = function l() {
         if (timeout === constants.IN_APP) {
@@ -429,10 +429,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = mode;
       cResult[3] = fn;
       tmp7 = fn;
-      const obj2 = mode(17838);
+      const obj2 = mode(18078);
     }
   : function useLazyContentFreeze() {
-      mode = mode(17838).usePIPState().mode;
+      mode = mode(18078).usePIPState().mode;
       const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
       dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
       const items = [mode];
@@ -452,8 +452,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           ref.current = false;
         }
       }, items);
-      const obj = mode(17838);
-      return mode === VoicePanelPIPModes.IN_APP && ref(6165)(ref);
+      const obj = mode(18078);
+      return mode === VoicePanelPIPModes.IN_APP && ref(6381)(ref);
     };
 ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
@@ -534,10 +534,10 @@ export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function VoicePanelCardView(viewableChunks) {
         const cResult = channelId(576).c(11);
-        channelId = noop.useContext(stateFromStoresArray(12523)).channelId;
+        channelId = noop.useContext(stateFromStoresArray(12816)).channelId;
         let obj = channelId(576);
         const tmp4 = closure_23(viewableChunks.viewableChunks);
-        const chunkedParticipants = channelId(17931).useChunkedParticipants(channelId, tmp4);
+        const chunkedParticipants = channelId(18171).useChunkedParticipants(channelId, tmp4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelRTCStore];
           cResult[0] = items;
@@ -560,7 +560,7 @@ export default noop.memo(
           tmp8 = cResult[2];
           tmp9 = cResult[3];
         }
-        const obj3 = channelId(17931);
+        const obj3 = channelId(18171);
         stateFromStoresArray = channelId(504).useStateFromStoresArray(first, tmp8, tmp9);
         dependencyMap = noop.useRef(stateFromStoresArray);
         if (cResult[4] !== stateFromStoresArray) {
@@ -702,7 +702,7 @@ export default noop.memo(
               getItemKey: getCardKey,
               lazyCleanUpDelay: 1000,
             };
-            obj4.children = jsx(tmp(4829).TransitionGroup, {
+            obj4.children = jsx(tmp(4883).TransitionGroup, {
               items: chunkedParticipants,
               renderItem: renderCard,
               getItemKey: getCardKey,

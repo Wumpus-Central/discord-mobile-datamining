@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5096);
+let createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ container: { width: "100%" } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -70,7 +70,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp6;
     };
-createStyles = fn(5096);
+createStyles = fn(5151);
 let obj4 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = useAgeSpecificText;
       const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp13, tmp14);
-      const tmp4Result = importDefault(tmp5 ? 15520 : 15521);
+      const tmp4Result = importDefault(tmp5 ? 15816 : 15817);
       if (cResult[4] === tmp6.art) {
         if (cResult[5] === tmp4Result) {
           let tmp19 = cResult[6];
@@ -239,7 +239,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const formatResult = intl3.format(_modDef2568.MXjDSv, {
         articleLink: "https://support.discord.com/hc/articles/14155060633623",
       });
-      obj5.source = importDefault(tmp3 ? 15520 : 15521);
+      obj5.source = importDefault(tmp3 ? 15816 : 15817);
       obj5.style = tmp4.art;
       const items = [
         React4(FastImageDefault, obj5),

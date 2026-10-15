@@ -3,8 +3,8 @@ import c from "../../../../_runtime/00576_c.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Server from "../../../flow/Server.tsx";
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils.tsx";
-import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
 import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
+import useGetOrFetchApplications from "../../applications/useGetOrFetchApplications.tsx";
 import leaveEmbeddedActivity from "../leaveEmbeddedActivity.tsx";
 import canLaunchContextlessFrame from "../../frames/utils/canLaunchContextlessFrame.tsx";
 import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication.tsx";
@@ -43,8 +43,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = referrerId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(6857)().analyticsLocations;
-  closure_13 = context(10994)();
+  analyticsLocations = context(7073)().analyticsLocations;
+  closure_13 = context(11218)();
   obj = canLaunchContextlessFrame;
   closure_14 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
@@ -310,7 +310,7 @@ function useOnActivityItemSelected(arg0) {
 }
 const STAFF_RELEASE_PHASES = fn(2024).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1085).ApplicationFlags;
-const MAIN_SURFACE = fn(10697).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10919).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);

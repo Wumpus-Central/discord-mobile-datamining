@@ -6,7 +6,7 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountIgnoredUsersSettingDescription() {
       const cResult = c.c(4);
@@ -42,7 +42,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
     };
 const route = SettingBuilders.createRoute({
-  IconComponent: fn(6654).EyeSlashIcon,
+  IconComponent: fn(6870).EyeSlashIcon,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["93ZDWE"]);
@@ -81,7 +81,7 @@ const route = SettingBuilders.createRoute({
         const intl = util.intl;
         return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
       },
-  parent: fn(8000).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8210).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1085).UserSettingsSections.IGNORED_USERS,
     getComponent() {

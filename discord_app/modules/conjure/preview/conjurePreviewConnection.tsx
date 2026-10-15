@@ -7,7 +7,7 @@ import conjurePreviewControlLease from "conjurePreviewControlLease.tsx";
 import conjurePreviewClaims from "conjurePreviewClaims.tsx";
 import ConjurePublishActionCreators from "../publish/ConjurePublishActionCreators.tsx";
 import conjureMediaTickets from "../connection/conjureMediaTickets.tsx";
-import ConjureWorkerTickets from "../connection/ConjureWorkerTickets.tsx";
+import conjureWorkerFetch from "../connection/conjureWorkerFetch.tsx";
 import conjurePreviewModeRequests from "conjurePreviewModeRequests.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -27,91 +27,70 @@ let closure_4 = async function _getPreviewScreenshotUrl() {
   return "" + baseUrl + "/agent/screenshots/" + encodeURIComponent(closure_130_0) + "?" + closure_130_4;
 };
 let closure_5 = async function _uploadOverlayBackground(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "IconComponent", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp2;
-          closure_130_0 = closure_1;
-          closure_130_1 = undefined;
-          let ticket;
-          let baseUrl;
-          closure_130_4 = undefined;
-          c3 = 1;
-          c4 = 1;
-          const obj5 = { value: ConjureWorkerTickets.mintWorkerTicket(closure_0), done: false };
-          return obj5;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_130_1 = value;
-          ticket = closure_130_1.ticket;
-          baseUrl = closure_130_1.baseUrl;
-          const _fetch = fetch;
-          const _URLSearchParams = URLSearchParams;
-          const obj7 = { ticket };
-          const uRLSearchParams = new URLSearchParams(obj7);
-          const _HermesInternal2 = HermesInternal;
-          const request = { method: "PUT", body: closure_130_0 };
-          c3 = 2;
-          c4 = 1;
-          const obj8 = {
-            value: fetch("" + baseUrl + "/agent/overlay-background?" + uRLSearchParams, request),
-            done: false,
-          };
-          return obj8;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        c4 = 3;
-        const obj = { value, done: true };
-        return obj;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        closure_130_4 = value;
-        if (closure_130_4.ok) {
-          c4 = 3;
-          return { value: "IconComponent", done: null };
-        } else {
-          const _Error = Error;
-          const _HermesInternal = HermesInternal;
-          const error = new Error("overlay background upload failed (" + closure_130_4.status + ")");
-          throw error;
-        }
+        return { value: "IconComponent", done: null };
       }
-    } catch (tmp19) {
-      c4 = tmp;
-      throw tmp19;
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_2 = tmp2;
+            closure_130_0 = undefined;
+            const request = { method: "PUT", body };
+            c3 = 1;
+            c4 = 1;
+            const obj5 = {
+              value: conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/overlay-background", request),
+              done: false,
+            };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_130_0 = value;
+          if (closure_130_0.ok) {
+            c4 = 3;
+            return { value: "IconComponent", done: null };
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("overlay background upload failed (" + closure_130_0.status + ")");
+            throw error;
+          }
+        }
+      } catch (tmp19) {
+        c4 = tmp;
+        throw tmp19;
+      }
     }
-  }
+  })();
 };
 let closure_6 = async function _resetOverlayBackground(arg0) {
   if (c3 === 2) {
@@ -121,8 +100,8 @@ let closure_6 = async function _resetOverlayBackground(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "IconComponent", done: null };
     }
@@ -135,43 +114,18 @@ let closure_6 = async function _resetOverlayBackground(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_1 = tmp2;
           closure_129_0 = undefined;
-          let ticket;
-          let baseUrl;
-          closure_129_3 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj5 = { value: ConjureWorkerTickets.mintWorkerTicket(closure_0), done: false };
-          return obj5;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_129_0 = value;
-          ticket = closure_129_0.ticket;
-          baseUrl = closure_129_0.baseUrl;
-          const _fetch = fetch;
-          const _URLSearchParams = URLSearchParams;
-          const obj7 = { ticket };
-          const uRLSearchParams = new URLSearchParams(obj7);
-          const _HermesInternal2 = HermesInternal;
-          c2 = 2;
-          c3 = 1;
-          const obj8 = {
-            value: fetch("" + baseUrl + "/agent/overlay-background?" + uRLSearchParams, { method: "DELETE" }),
+          const obj5 = {
+            value: conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/overlay-background", { method: "DELETE" }),
             done: false,
           };
-          return obj8;
+          return obj5;
         }
       } else if (arg0 === 1) {
         c3 = 3;
@@ -181,14 +135,14 @@ let closure_6 = async function _resetOverlayBackground(arg0) {
         const obj = { value, done: true };
         return obj;
       } else {
-        closure_129_3 = value;
-        if (closure_129_3.ok) {
+        closure_129_0 = value;
+        if (closure_129_0.ok) {
           c3 = 3;
           return { value: "IconComponent", done: null };
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const error = new Error("overlay background reset failed (" + closure_129_3.status + ")");
+          const error = new Error("overlay background reset failed (" + closure_129_0.status + ")");
           throw error;
         }
       }

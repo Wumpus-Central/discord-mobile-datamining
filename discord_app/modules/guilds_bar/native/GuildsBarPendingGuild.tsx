@@ -14,7 +14,7 @@ require = fn;
 const GuildRecord = fn(2083);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: metroRequire } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -418,14 +418,14 @@ export default noop.memo(
           selected: stateFromStores,
           sharedId: sharedValue,
           circle: !stateFromStores,
-          overState: "Set",
+          overState: "test",
           unread: null,
           label: null,
           config: null,
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "zib",
+          children: "tagName",
         };
         let str = guildName;
         const tmp2Result2 = guildId(stateFromStores[21]);
@@ -464,14 +464,14 @@ export default noop.memo(
           selected: stateFromStores,
           sharedId: sharedValue,
           circle: !stateFromStores,
-          overState: "Set",
+          overState: "test",
           unread: null,
           label: null,
           config: null,
           styles: null,
           externalChildren: null,
           expandedChildren: null,
-          children: "zib",
+          children: "tagName",
         });
       },
 );

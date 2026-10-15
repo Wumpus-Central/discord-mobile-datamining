@@ -4,9 +4,12 @@ import router_utils from "../routing/router_utils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import SelectedChannelActionCreatorsDefault from "../../actions/SelectedChannelActionCreators.tsx";
 import EditGuildEventUtils from "utils/EditGuildEventUtils.tsx";
+import guildEventEmbedFetchQueue from "guildEventEmbedFetchQueue.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
+
+const require = globalThis.__r;
 
 require = fn;
 const GuildScheduledEventsConstants = fn(2071);
@@ -19,7 +22,7 @@ const GuildScheduledEventsConstants = fn(2071);
 const Constants = fn(1085);
 ({ Endpoints: c10, Routes: closure_11 } = Constants);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsActionCreators.tsx");
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsActionCreators.tsx");
 
 export default {
   startEvent(arg0, arg1) {
@@ -93,23 +96,59 @@ export default {
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return HTTP.post(request);
   },
-  fetchGuildEvent(arg0, arg1) {
-    closure_0 = arg0;
+  fetchGuildEvent(arg0, arg1, arg2) {
+    _require = arg0;
     closure_1 = arg1;
-    return (async () => {
-      await tmp5(5649).httpGetWithCountryCodeQuery({
-        url: closure_1_10.GUILD_EVENT(tmp5, tmp2),
+    let obj = arg2;
+    if (arg2 === undefined) {
+      obj = {};
+    }
+    function fetch() {
+      const self = this;
+      const apply = closure_4.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    }
+    closure_4 = async function _fetch() {
+      await tmp5(5860).httpGetWithCountryCodeQuery({
+        url: closure_1_10.GUILD_EVENT(closure_2_0, closure_2_1),
         rejectWithError: tmp5(1295).rejectWithMigratedError(),
       });
       const body = value.body;
       tmp2(584).dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: body });
       return body;
-    })();
+    };
+    return require("guildEventFetchGuard").guardGuildEventFetch(
+      arg0,
+      arg1,
+      () => {
+        if ("foreground" === obj.priority) {
+          let result = fetch();
+        } else {
+          obj = guildEventEmbedFetchQueue;
+          result = obj.scheduleGuildEventFetch(() => {
+            guildScheduledEvent = guildScheduledEvent.getGuildScheduledEvent(closure_1_1);
+            if (null != guildScheduledEvent) {
+              let resolved = Promise.resolve(guildScheduledEvent);
+            } else {
+              resolved = fetch();
+            }
+            return resolved;
+          });
+        }
+        return result;
+      },
+      obj,
+    );
   },
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(5649).httpGetWithCountryCodeQuery({
+      await tmp5(5860).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5),
         rejectWithError: tmp5(1295).rejectWithMigratedError(),
       });
@@ -118,10 +157,10 @@ export default {
       return body;
     })();
   },
-  fetchGuildEventUserCounts(arg0, arg1, found) {
+  fetchGuildEventUserCounts(arg0, arg1, arg2) {
     closure_0 = arg0;
     closure_1 = arg1;
-    closure_2 = found;
+    closure_2 = arg2;
     return (async () => {
       const request = {
         url: closure_1_10.GUILD_EVENT_USER_COUNTS(tmp5, tmp2),
@@ -472,7 +511,7 @@ export default {
                 const obj5 = { value: self.createRsvpForGuildEvent(tmp47, tmp48, tmp37, closure_3), done: false };
                 return obj5;
               }
-              obj7 = closure_0(tmp37[11]);
+              obj7 = closure_0(tmp37[13]);
             }
           } else {
             if (1 === tmp8) {

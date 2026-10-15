@@ -18,7 +18,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1085).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(5096);
+let createStyles = fn(5151);
 let obj2 = {
   content: { gap: nativeDefault.space.PX_16 },
   roleLabel: null,
@@ -41,7 +41,7 @@ obj2.roleListFooter = {
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(5096);
+createStyles = fn(5151);
 let closure_14 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -77,7 +77,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_13();
       const roleLabel = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let items = [GuildRoleStore];
+        let items = [closure_7];
         cResult[0] = items;
         let first = items;
       } else {
@@ -149,38 +149,98 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor() {
-              set = new Set(initialSelectedRoleIds);
-              return set;
+          class H {
+            constructor(arg0, arg1) {
+              closure_0 = guildId;
+              closure_1 = arg1;
+              tmp = closure_5((size) => {
+                if (closure_1) {
+                  if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                    return size;
+                  }
+                }
+                const set = new Set(size);
+                if (closure_1) {
+                  set.add(closure_0);
+                } else {
+                  set.delete(closure_0);
+                }
+                return set;
+              });
+              return;
             }
           }
-          cResult[11] = tmp19;
+          cResult[11] = H;
         } else {
-          class P {
-            constructor() {
-              set = new Set(initialSelectedRoleIds);
-              return set;
+          class H {
+            constructor(arg0, arg1) {
+              closure_0 = guildId;
+              closure_1 = arg1;
+              tmp = closure_5((size) => {
+                if (closure_1) {
+                  if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                    return size;
+                  }
+                }
+                const set = new Set(size);
+                if (closure_1) {
+                  set.add(closure_0);
+                } else {
+                  set.delete(closure_0);
+                }
+                return set;
+              });
+              return;
             }
           }
         }
-        GuildRoleStore = tmp19;
+        closure_7 = H;
         if (cResult[12] === onSave) {
-          class P {
-            constructor() {
-              set = new Set(initialSelectedRoleIds);
-              return set;
+          class H {
+            constructor(arg0, arg1) {
+              closure_0 = guildId;
+              closure_1 = arg1;
+              tmp = closure_5((size) => {
+                if (closure_1) {
+                  if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                    return size;
+                  }
+                }
+                const set = new Set(size);
+                if (closure_1) {
+                  set.add(closure_0);
+                } else {
+                  set.delete(closure_0);
+                }
+                return set;
+              });
+              return;
             }
           }
           if (cResult[15] !== first1.size) {
-            class P {
-              constructor() {
-                set = new Set(initialSelectedRoleIds);
-                return set;
+            class H {
+              constructor(arg0, arg1) {
+                closure_0 = guildId;
+                closure_1 = arg1;
+                tmp = closure_5((size) => {
+                  if (closure_1) {
+                    if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                      return size;
+                    }
+                  }
+                  const set = new Set(size);
+                  if (closure_1) {
+                    set.add(closure_0);
+                  } else {
+                    set.delete(closure_0);
+                  }
+                  return set;
+                });
+                return;
               }
             }
             let obj2 = { count: first1.size, max: null };
-            class J {
+            class G {
               constructor() {
                 set = new Set(closure_4);
                 tmp2 = onSave(set);
@@ -193,23 +253,53 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[15] = first1.size;
             cResult[16] = formatToPlainStringResult;
           } else {
-            class P {
-              constructor() {
-                set = new Set(initialSelectedRoleIds);
-                return set;
+            class H {
+              constructor(arg0, arg1) {
+                closure_0 = guildId;
+                closure_1 = arg1;
+                tmp = closure_5((size) => {
+                  if (closure_1) {
+                    if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                      return size;
+                    }
+                  }
+                  const set = new Set(size);
+                  if (closure_1) {
+                    set.add(closure_0);
+                  } else {
+                    set.delete(closure_0);
+                  }
+                  return set;
+                });
+                return;
               }
             }
           }
           const _Symbol2 = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            class P {
-              constructor() {
-                set = new Set(initialSelectedRoleIds);
-                return set;
+            class H {
+              constructor(arg0, arg1) {
+                closure_0 = guildId;
+                closure_1 = arg1;
+                tmp = closure_5((size) => {
+                  if (closure_1) {
+                    if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                      return size;
+                    }
+                  }
+                  const set = new Set(size);
+                  if (closure_1) {
+                    set.add(closure_0);
+                  } else {
+                    set.delete(closure_0);
+                  }
+                  return set;
+                });
+                return;
               }
             }
             cResult[17] = obj6.string(initialSelectedRoleIds(tmp2[16]).un99lK);
-            class J {
+            class G {
               constructor() {
                 set = new Set(closure_4);
                 tmp2 = onSave(set);
@@ -220,24 +310,54 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const stringResult = obj6.string(initialSelectedRoleIds(tmp2[16]).un99lK);
           } else {
-            class P {
-              constructor() {
-                set = new Set(initialSelectedRoleIds);
-                return set;
+            class H {
+              constructor(arg0, arg1) {
+                closure_0 = guildId;
+                closure_1 = arg1;
+                tmp = closure_5((size) => {
+                  if (closure_1) {
+                    if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                      return size;
+                    }
+                  }
+                  const set = new Set(size);
+                  if (closure_1) {
+                    set.add(closure_0);
+                  } else {
+                    set.delete(closure_0);
+                  }
+                  return set;
+                });
+                return;
               }
             }
           }
-          if (cResult[18] !== tmp21) {
-            class P {
-              constructor() {
-                set = new Set(initialSelectedRoleIds);
-                return set;
+          if (cResult[18] !== tmp20) {
+            class H {
+              constructor(arg0, arg1) {
+                closure_0 = guildId;
+                closure_1 = arg1;
+                tmp = closure_5((size) => {
+                  if (closure_1) {
+                    if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                      return size;
+                    }
+                  }
+                  const set = new Set(size);
+                  if (closure_1) {
+                    set.add(closure_0);
+                  } else {
+                    set.delete(closure_0);
+                  }
+                  return set;
+                });
+                return;
               }
             }
-            const obj5 = { variant: "text-xs/normal", color: "text-muted", children: tmp21 };
-            const tmp27 = closure_10(tmp(tmp2[17]).Text, obj5);
-            cResult[18] = tmp21;
-            class J {
+            const obj5 = { variant: "text-xs/normal", color: "text-muted", children: tmp20 };
+            const tmp26 = closure_10(tmp(tmp2[17]).Text, obj5);
+            cResult[18] = tmp20;
+            class G {
               constructor() {
                 set = new Set(closure_4);
                 tmp2 = onSave(set);
@@ -246,16 +366,31 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            cResult[19] = tmp27;
+            cResult[19] = tmp26;
           } else {
-            class P {
-              constructor() {
-                set = new Set(initialSelectedRoleIds);
-                return set;
+            class H {
+              constructor(arg0, arg1) {
+                closure_0 = guildId;
+                closure_1 = arg1;
+                tmp = closure_5((size) => {
+                  if (closure_1) {
+                    if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                      return size;
+                    }
+                  }
+                  const set = new Set(size);
+                  if (closure_1) {
+                    set.add(closure_0);
+                  } else {
+                    set.delete(closure_0);
+                  }
+                  return set;
+                });
+                return;
               }
             }
           }
-          class J {
+          class G {
             constructor() {
               set = new Set(closure_4);
               tmp2 = onSave(set);
@@ -264,13 +399,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const obj7 = { style: tmp4.roleListFooter, children: tmp26 };
-          const tmp31 = closure_10(View, obj7);
+          const obj7 = { style: tmp4.roleListFooter, children: tmp25 };
+          const tmp30 = closure_10(View, obj7);
           cResult[20] = tmp4.roleListFooter;
-          cResult[21] = tmp26;
-          cResult[22] = tmp31;
+          cResult[21] = tmp25;
+          cResult[22] = tmp30;
         }
-        class J {
+        class G {
           constructor() {
             set = new Set(closure_4);
             tmp2 = onSave(set);
@@ -281,13 +416,28 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[12] = onSave;
         cResult[13] = first1;
-        cResult[14] = J;
+        cResult[14] = G;
       }
       if ("" !== tmp15) {
-        class P {
-          constructor() {
-            set = new Set(initialSelectedRoleIds);
-            return set;
+        class H {
+          constructor(arg0, arg1) {
+            closure_0 = guildId;
+            closure_1 = arg1;
+            tmp = closure_5((size) => {
+              if (closure_1) {
+                if (size.size >= guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES) {
+                  return size;
+                }
+              }
+              const set = new Set(size);
+              if (closure_1) {
+                set.add(closure_0);
+              } else {
+                set.delete(closure_0);
+              }
+              return set;
+            });
+            return;
           }
         }
       }
@@ -564,7 +714,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   }
   const tmp9Result10 = save(noop.useState(null), 2);
   const conjureProjectAccessSettings = require("ConjureUtils").getConjureProjectAccessSettings(flags);
-  const isPublic = conjureProjectAccessSettings.isPublic;
+  const isGuildCollaboration = conjureProjectAccessSettings.isGuildCollaboration;
   let tmp32 = null != stateFromStores;
   if (tmp32) {
     tmp32 = trimmed !== tmp11;
@@ -661,7 +811,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     save,
     save2,
     changed,
-    isPublic,
+    isGuildCollaboration,
     tmp32,
     stateFromStores,
     projectId,
@@ -732,7 +882,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
                       if (tmp58) {
                         if (!tmp56) {
                           if (tmp54) {
-                            tmp54 = isPublic;
+                            tmp54 = isGuildCollaboration;
                           }
                           tmp56 = tmp54;
                         }
@@ -849,13 +999,13 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     let obj7 = { hasIcons: false, children: null };
     let obj8 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
     let intl = tmp2(tmp3[15]).intl;
-    obj8.label = intl.string(tmp6(tmp3[16]).gchQFO);
+    obj8.label = intl.string(tmp6(tmp3[16]).ujIxRm);
     let intl2 = tmp2(tmp3[15]).intl;
-    obj8.subLabel = intl2.string(tmp6(tmp3[16]).mD4GBH);
-    obj8.checked = conjureProjectAccessSettings.isShared;
+    obj8.subLabel = intl2.string(tmp6(tmp3[16]).gT8zk1);
+    obj8.checked = conjureProjectAccessSettings.isPublic;
     obj8.disabled = first2;
     obj8.onPress = function onPress(arg0) {
-      return closure_30(ConjureProjectTypes.ConjureProjectFlags.SHAREABLE, arg0);
+      return closure_30(ConjureProjectTypes.ConjureProjectFlags.PUBLIC, arg0);
     };
     obj7.children = tmp43(tmp2(tmp3[22]).TableCheckboxRow, obj8);
     tmp43Result = tmp43(tmp2(tmp3[21]).TableRowGroup, obj7);
@@ -871,10 +1021,10 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       obj10.label = intl3.string(tmp6(tmp3[16]).lVvR4E);
       let intl4 = tmp2(tmp3[15]).intl;
       obj10.subLabel = intl4.string(tmp6(tmp3[16]).SQZGoV);
-      obj10.checked = isPublic;
+      obj10.checked = isGuildCollaboration;
       obj10.disabled = first2;
       obj10.onPress = function onPress(arg0) {
-        return closure_30(ConjureProjectTypes.ConjureProjectFlags.PUBLIC, arg0);
+        return closure_30(ConjureProjectTypes.ConjureProjectFlags.GUILD_COLLABORATION, arg0);
       };
       obj9.children = tmp43(tmp2(tmp3[22]).TableCheckboxRow, obj10);
       tmp43Result6 = tmp43(tmp2(tmp3[21]).TableRowGroup, obj9);
@@ -906,11 +1056,11 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     obj13.subLabel = intl7.string(tmp6(tmp3[16])["9MdtK9"]);
     let tmp48 = first2;
     if (!first2) {
-      tmp48 = !isPublic;
+      tmp48 = !isGuildCollaboration;
     }
     obj13.disabled = tmp48;
     let stringResult;
-    if (!isPublic) {
+    if (!isGuildCollaboration) {
       const intl8 = tmp2(tmp3[15]).intl;
       stringResult = intl8.string(tmp6(tmp3[16]).nZw5r9);
     }

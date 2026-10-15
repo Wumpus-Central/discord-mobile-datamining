@@ -28,10 +28,10 @@ import ApplicationAssetsStore from "../../ApplicationAssetsStore.tsx";
 import ApplicationStore from "../../ApplicationStore.tsx";
 
 require = fn;
-const FetchState = fn(8283).FetchState;
+const FetchState = fn(8493).FetchState;
 const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
-const MAIN_SURFACE = fn(10697).MAIN_SURFACE;
-const CodedLinkExtendedType = fn(9620).CodedLinkExtendedType;
+const MAIN_SURFACE = fn(10919).MAIN_SURFACE;
+const CodedLinkExtendedType = fn(9828).CodedLinkExtendedType;
 let closure_11 = ["embedded_cover"];
 let c12 = 512;
 const size = fn(2);
@@ -281,14 +281,14 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
     const bestActiveInput = ChatInputUtils.getBestActiveInput();
     if (bestActiveInput != null) {
       const obj13 = { type: KeyboardTypes.KeyboardTypes.APP_LAUNCHER, context: null };
-      const obj14 = {
+      const obj15 = {
         initialRouteName: AppLauncherRouteName.APPLICATION_VIEW,
         initiallyExpanded: true,
         applicationId: appId.appId,
         referrerId: id,
         customId: value2,
       };
-      obj13.context = obj14;
+      obj13.context = obj15;
       bestActiveInput.openCustomKeyboard(obj13);
     }
   } else if ("add_app" === actionId) {
@@ -306,7 +306,7 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
         integrationTypesConfig: null,
         source: "app_message_embed",
       });
-      const obj15 = {
+      const obj16 = {
         applicationId: null,
         customInstallUrl: null,
         installParams: null,

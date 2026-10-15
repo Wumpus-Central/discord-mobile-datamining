@@ -15,11 +15,11 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const MetaQuestUtils = fn(1628);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(12817).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13114).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(17974).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18214).MobilePhoneShareIcon;
 }
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj3 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj3.circle = size;

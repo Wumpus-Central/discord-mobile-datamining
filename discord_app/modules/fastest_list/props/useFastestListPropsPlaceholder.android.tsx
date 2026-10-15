@@ -16,34 +16,35 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "defineProperty",
-    borderTopRightRadius: "code",
-    borderBottomLeftRadius: "IconComponent",
-    borderBottomRightRadius: "item",
-    divider: "code",
-    dividerColor: "status",
-    dividerPaddingLeft: "useSharedValue",
-    dividerPaddingRight: "channel",
-    placeholderShape: "useMemo",
-    placeholderShapeColor: "now",
-    placeholderShapeCount: "a",
-    placeholderShapeGap: "toCharArray$esjava$1",
-    placeholderShapePaddingHorizontal: "scales",
-    placeholderShapePaddingVertical: "raw",
-    placeholderFeedBackgroundColor: "a",
-    placeholderFeedColor: "toCharArray$esjava$1",
-    placeholderFeedLabelPadding: "get",
-    placeholderFeedLabelPaddingInnerRatio: "messageId",
-    placeholderFeedLabelSize: "a",
-    placeholderFeedLabelSecondarySize: "toCharArray$esjava$1",
-    placeholderFeedPadding: "withTiming",
-    placeholderFeedShape: "split",
-    placeholderFeedShapeSize: "a",
+    borderTopLeftRadius: "ddd",
+    borderTopRightRadius: "ix",
+    borderBottomLeftRadius: "kind",
+    borderBottomRightRadius: "colors",
+    divider: "includes",
+    dividerColor: "withTiming",
+    dividerPaddingLeft: "justifyContent",
+    dividerPaddingRight: "state",
+    placeholderShape: "s",
+    placeholderShapeColor: "status",
+    placeholderShapeCount: "getChannel",
+    placeholderShapeGap: "gap",
+    placeholderShapePaddingHorizontal: "code",
+    placeholderShapePaddingVertical: "borderRadius",
+    placeholderFeedBackgroundColor: "__initData",
+    placeholderFeedColor: "apply",
+    placeholderFeedLabelPadding: "s",
+    placeholderFeedLabelPaddingInnerRatio: "marginBottom",
+    placeholderFeedLabelSize: "l",
+    placeholderFeedLabelSecondarySize: "ix",
+    placeholderFeedPadding: "window",
+    placeholderFeedShape: "ix",
+    placeholderFeedShapeSize: "Array",
     placeholderType: NONE,
-    width: true,
-    height: true,
-    verticalAlignment: true,
-    horizontalAlignment: true,
+    width:
+      -16240039613625281000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    height: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004450147717431806,
+    verticalAlignment: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008767647974780772,
+    horizontalAlignment: 15177143068303957000000000000000000000000000000000000000000000000000000000000000000,
   };
   if (null == listFooter) {
     return size;
@@ -162,9 +163,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(6755).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(6971).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(6755).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(6971).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

@@ -3,6 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
+import LegacyBaseButton from "../../../../_runtime/06555_LegacyBaseButton.js";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -11,12 +12,14 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5096);
-let closure_11 = createStyles.createStyles((height) => {
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5151);
+let closure_12 = createStyles.createStyles((height, marginVertical) => {
   const obj = {
+    swipeArea: { marginVertical: -marginVertical, paddingVertical: marginVertical },
     wrapper: { height, width: height },
     glyphOverlay: null,
     glyphButton: null,
@@ -24,7 +27,7 @@ let closure_11 = createStyles.createStyles((height) => {
     surrogates: null,
   };
   const obj2 = {};
-  const merged = Object.assign(hasOwnProperty.absoluteFillObject);
+  const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj2.alignItems = "center";
   obj2.justifyContent = "center";
   obj.glyphOverlay = obj2;
@@ -49,7 +52,7 @@ let closure_11 = createStyles.createStyles((height) => {
   };
   return obj;
 });
-let closure_12 = {
+let closure_13 = {
   code: "function EmojiSuggestionChatButtonTsx1(finished){const{runOnJS,setDisplayedEmoji}=this.__closure;if(finished===true){runOnJS(setDisplayedEmoji)(undefined);}}",
 };
 const __initData = {
@@ -57,6 +60,9 @@ const __initData = {
 };
 const __initData2 = {
   code: "function EmojiSuggestionChatButtonTsx3(){const{emojiAnimationProgress}=this.__closure;return{opacity:1-emojiAnimationProgress.get()};}",
+};
+let closure_16 = {
+  code: "function EmojiSuggestionChatButtonTsx4(){const{runOnJS,insertTopEmoji}=this.__closure;runOnJS(insertTopEmoji)();}",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionChatButton.tsx");
@@ -67,41 +73,60 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
   const merged = Object.assign(arg0, Object.assign({ style: 0, active: 0, showKeyboardIcon: 0, onPress: 0, ref: 0 }));
   let unlockedEmojis;
   let lockedEmojis;
-  noop = undefined;
+  c5 = undefined;
+  let dismissCoachmark;
   let sharedValue;
+  let callback1;
+  let gesture;
+  let gesture1;
+  let gesture2;
   let tmp4Result2Result = lockedEmojis;
-  const token = onPress(lockedEmojis[9]).useToken(
-    unlockedEmojis(lockedEmojis[7]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
+  const token = onPress(lockedEmojis[10]).useToken(
+    unlockedEmojis(lockedEmojis[8]).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE,
   );
-  const tmp6 = closure_11(token);
-  let obj = onPress(lockedEmojis[9]);
-  const emojiSuggestionBarState = onPress(lockedEmojis[10]).useEmojiSuggestionBarState(
+  let obj = onPress(lockedEmojis[10]);
+  const token1 = onPress(lockedEmojis[10]).useToken(
+    unlockedEmojis(lockedEmojis[8]).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT,
+  );
+  let obj2 = onPress(lockedEmojis[10]);
+  const tmp7 = closure_12(
+    token,
+    (token1 - token) / 2 +
+      onPress(lockedEmojis[10]).useToken(
+        unlockedEmojis(lockedEmojis[8]).modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL,
+      ),
+  );
+  let obj3 = onPress(lockedEmojis[10]);
+  const emojiSuggestionBarState = onPress(lockedEmojis[11]).useEmojiSuggestionBarState(
     merged,
-    onPress(lockedEmojis[10]).MAX_SUGGESTIONS_LARGE,
+    onPress(lockedEmojis[11]).MAX_SUGGESTIONS_LARGE,
     1,
     ref,
   );
   unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
   lockedEmojis = emojiSuggestionBarState.lockedEmojis;
+  const handlePress = emojiSuggestionBarState.handlePress;
   let first;
   if (true !== active) {
     first = unlockedEmojis[0];
   }
   let emojiIdentity;
   if (null != first) {
-    emojiIdentity = onPress(tmp4Result2Result[10]).getEmojiIdentity(first);
-    const tmp2Result = onPress(tmp4Result2Result[10]);
+    emojiIdentity = tmp2(tmp4Result2Result[11]).getEmojiIdentity(first);
+    const tmp2Result = tmp2(tmp4Result2Result[11]);
   }
-  let obj2 = onPress(lockedEmojis[10]);
-  [tmp11, c4] = first(noop.useState(first), 2);
-  const tmp10 = first(noop.useState(first), 2);
+  const obj4 = onPress(lockedEmojis[11]);
+  [tmp12, c5] = handlePress(first.useState(first), 2);
+  const ref1 = first.useRef(null);
+  dismissCoachmark = tmp4(tmp4Result2Result[12])(ref1, null != first).dismissCoachmark;
+  const tmp11 = handlePress(first.useState(first), 2);
   let num = 0;
   if (null != first) {
     num = 1;
   }
-  sharedValue = onPress(tmp4Result2Result[11]).useSharedValue(num);
+  sharedValue = onPress(tmp4Result2Result[13]).useSharedValue(num);
   let items = [emojiIdentity];
-  const effect = obj4.useEffect(() => {
+  const effect = obj6.useEffect(() => {
     if (null != first) {
       setDisplayedEmoji(tmp);
       const result = sharedValue.set(spring.withSpring(1, EmojiSuggestionBarUtils.ITEM_ENTRANCE_SPRING_CONFIG));
@@ -109,8 +134,8 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
       const obj2 = spring;
       const fn = function t(arg0) {
         if (true === arg0) {
-          onPress(lockedEmojis[11]).runOnJS(setDisplayedEmoji)(undefined);
-          const obj = onPress(lockedEmojis[11]);
+          onPress(lockedEmojis[13]).runOnJS(setDisplayedEmoji)(undefined);
+          const obj = onPress(lockedEmojis[13]);
         }
       };
       const obj3 = { runOnJS: ReanimatedRexport.runOnJS, setDisplayedEmoji };
@@ -122,91 +147,146 @@ export const EmojiSuggestionChatButton = function EmojiSuggestionChatButton(arg0
       );
     }
   }, items);
-  const tmp2Result5 = onPress(tmp4Result2Result[11]);
-  class G {
+  const tmp2Result5 = onPress(tmp4Result2Result[13]);
+  class V {
     constructor() {
-      obj = { opacity: closure_5.get(), transform: null };
-      obj1 = { scale: closure_5.get() };
+      obj = { opacity: closure_7.get(), transform: null };
+      obj1 = { scale: closure_7.get() };
       items = [];
       items[0] = obj1;
       obj.transform = items;
       return obj;
     }
   }
-  G.__closure = { emojiAnimationProgress: sharedValue };
-  G.__workletHash = 12888902078160;
-  G.__initData = __initData;
-  const animatedStyle = onPress(tmp4Result2Result[11]).useAnimatedStyle(G);
-  const tmp2Result6 = onPress(tmp4Result2Result[11]);
-  class M {
+  V.__closure = { emojiAnimationProgress: sharedValue };
+  V.__workletHash = 12888902078160;
+  V.__initData = __initData;
+  const animatedStyle = onPress(tmp4Result2Result[13]).useAnimatedStyle(V);
+  const tmp2Result6 = onPress(tmp4Result2Result[13]);
+  class X {
     constructor() {
-      obj = { opacity: 1 - closure_5.get() };
+      obj = { opacity: 1 - closure_7.get() };
       return obj;
     }
   }
-  M.__closure = { emojiAnimationProgress: sharedValue };
-  M.__workletHash = 3538426469891;
-  M.__initData = __initData2;
-  const items1 = [onPress, unlockedEmojis, lockedEmojis];
-  const animatedStyle1 = onPress(tmp4Result2Result[11]).useAnimatedStyle(M);
-  let obj3 = { style: null, children: null };
-  const items2 = [tmp6.wrapper, style];
-  obj3.style = items2;
-  const callback = obj4.useCallback(() => {
+  X.__closure = { emojiAnimationProgress: sharedValue };
+  X.__workletHash = 3538426469891;
+  X.__initData = __initData2;
+  let items1 = [dismissCoachmark, onPress, unlockedEmojis, lockedEmojis];
+  const animatedStyle1 = onPress(tmp4Result2Result[13]).useAnimatedStyle(X);
+  const items2 = [first, handlePress];
+  const callback = obj6.useCallback(() => {
+    dismissCoachmark(ContentDismissActionType.TAKE_ACTION);
     onPress(ExpressionPickerViewType.EMOJI, { unlocked: unlockedEmojis, locked: lockedEmojis });
   }, items1);
-  const obj5 = { style: animatedStyle1, pointerEvents: null, children: null };
+  callback1 = obj6.useCallback(() => {
+    if (null != first) {
+      handlePress(tmp);
+    }
+  }, items2);
+  gesture = obj6.useContext(tmp4(tmp4Result2Result[15])).gesture;
+  const context = obj6.useContext(tmp2(tmp4Result2Result[15]).MainTabsChannelScreenStackContext);
+  gesture1 = undefined;
+  if (context != null) {
+    gesture1 = context.gesture;
+  }
+  const context1 = obj6.useContext(tmp2(tmp4Result2Result[16]).SwipeForMemberListContext);
+  gesture2 = undefined;
+  if (context1 != null) {
+    gesture2 = context1.gesture;
+  }
+  const items3 = [first, callback1, gesture, gesture1, gesture2];
+  const memo = obj6.useMemo(() => {
+    const items = [gesture, gesture1, gesture2];
+    const found = items.filter((item) => null != item);
+    const Gesture = LegacyBaseButton.Gesture;
+    const PanResult = Gesture.Pan();
+    const items1 = [...found];
+    const enabledResult = Gesture.Pan().enabled(null != first);
+    const applyResult = Gesture.Pan()
+      .enabled(null != first)
+      .blocksExternalGesture.apply(items1);
+    const activeOffsetXResult = Gesture.Pan()
+      .enabled(null != first)
+      .blocksExternalGesture.apply(items1)
+      .activeOffsetX(-15);
+    const failOffsetXResult = Gesture.Pan()
+      .enabled(null != first)
+      .blocksExternalGesture.apply(items1)
+      .activeOffsetX(-15)
+      .failOffsetX(15);
+    const fn = function t() {
+      onPress(lockedEmojis[13]).runOnJS(callback1)();
+    };
+    const failOffsetYResult = Gesture.Pan()
+      .enabled(null != first)
+      .blocksExternalGesture.apply(items1)
+      .activeOffsetX(-15)
+      .failOffsetX(15)
+      .failOffsetY([-15, 15]);
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, insertTopEmoji: callback1 };
+    fn.__workletHash = 3138575008034;
+    fn.__initData = __initData2;
+    return failOffsetYResult.onStart(fn);
+  }, items3);
+  const obj5 = { gesture: memo, children: null };
+  const obj7 = { style: tmp7.swipeArea, children: null };
+  const obj8 = { ref: ref1, collapsable: false, style: null, children: null };
+  const items4 = [tmp7.wrapper, style];
+  obj8.style = items4;
+  const obj9 = { style: animatedStyle1, pointerEvents: null, children: null };
   let str = "auto";
-  if (null != tmp11) {
+  if (null != tmp12) {
     str = "none";
   }
-  obj5.pointerEvents = str;
-  obj5.children = closure_9(unlockedEmojis(tmp4Result2Result[13]), { active, showKeyboardIcon, onPress });
-  const items3 = [closure_9(unlockedEmojis(tmp4Result2Result[11]).View, obj5)];
-  if (null == tmp11) {
-    items3[1] = tmp20;
-    obj3.children = items3;
-    return closure_10(closure_6, obj3);
+  obj9.pointerEvents = str;
+  obj9.children = gesture1(unlockedEmojis(tmp4Result2Result[18]), { active, showKeyboardIcon, onPress });
+  const items5 = [gesture1(unlockedEmojis(tmp4Result2Result[13]).View, obj9)];
+  if (null == tmp12) {
+    items5[1] = tmp28;
+    obj8.children = items5;
+    obj7.children = gesture2(tmp26, obj8);
+    obj5.children = tmp25(tmp26, obj7);
+    return tmp25(tmp2(tmp4Result2Result[17]).GestureDetector, obj5);
   } else {
-    const obj6 = { style: null, pointerEvents: null, children: null };
-    const items4 = [tmp6.glyphOverlay, animatedStyle];
-    obj6.style = items4;
+    const obj10 = { style: null, pointerEvents: null, children: null };
+    const items6 = [tmp7.glyphOverlay, animatedStyle];
+    obj10.style = items6;
     let str2 = "none";
     if (null != first) {
       str2 = "auto";
     }
-    obj6.pointerEvents = str2;
-    const obj7 = {
-      style: tmp6.glyphButton,
+    obj10.pointerEvents = str2;
+    const obj11 = {
+      style: tmp7.glyphButton,
       accessibilityRole: "button",
       accessibilityLabel: null,
       onPress: null,
       children: null,
     };
-    const intl = onPress(tmp4Result2Result[15]).intl;
-    obj7.accessibilityLabel = intl.string(onPress(tmp4Result2Result[15]).t.iZ7Mz9);
-    obj7.onPress = callback;
-    if (null == tmp11.id) {
-      const obj8 = { allowFontScaling: false, style: tmp6.surrogates, children: tmp11.surrogates };
-      obj7.children = closure_9(onPress(tmp4Result2Result[21]).LegacyText, obj8);
-      obj6.children = closure_9(onPress(tmp4Result2Result[14]).PressableOpacity, obj7);
-      closure_9(tmp4(tmp4Result2Result[11]).View, obj6);
+    const intl = tmp2(tmp4Result2Result[20]).intl;
+    obj11.accessibilityLabel = intl.string(tmp2(tmp4Result2Result[20]).t.iZ7Mz9);
+    obj11.onPress = callback;
+    if (null == tmp12.id) {
+      const obj12 = { allowFontScaling: false, style: tmp7.surrogates, children: tmp12.surrogates };
+      obj11.children = tmp25(tmp2(tmp4Result2Result[26]).LegacyText, obj12);
+      obj10.children = tmp25(tmp2(tmp4Result2Result[19]).PressableOpacity, obj11);
+      tmp25(tmp4(tmp4Result2Result[13]).View, obj10);
     }
-    const obj9 = { resizeMode: "contain", style: tmp6.image, placeholder: null, source: null, usesSmallCache: true };
-    const tmp4Result = tmp4(tmp4Result2Result[16]);
-    if (tmp2Result8.isThemeDark(ThemeStore.theme)) {
-      let tmp4Result3 = tmp4(tmp4Result2Result[18]);
+    const obj13 = { resizeMode: "contain", style: tmp7.image, placeholder: null, source: null, usesSmallCache: true };
+    const tmp4Result = tmp4(tmp4Result2Result[21]);
+    if (tmp2Result8.isThemeDark(sharedValue.theme)) {
+      let tmp4Result3 = tmp4(tmp4Result2Result[23]);
     } else {
-      tmp4Result3 = tmp4(tmp4Result2Result[19]);
+      tmp4Result3 = tmp4(tmp4Result2Result[24]);
     }
-    obj9.placeholder = tmp4Result3;
-    const obj10 = { uri: null };
-    tmp2Result8 = onPress(tmp4Result2Result[17]);
-    tmp4Result2Result = tmp4(tmp4Result2Result[20])(tmp11, false, token - tmp4(tmp4Result2Result[7]).space.PX_8);
-    obj10.uri = tmp4Result2Result;
-    obj9.source = obj10;
-    closure_9(tmp4Result, obj9);
-    const tmp4Result4 = tmp4(tmp4Result2Result[20]);
+    obj13.placeholder = tmp4Result3;
+    const obj14 = { uri: null };
+    tmp2Result8 = tmp2(tmp4Result2Result[22]);
+    tmp4Result2Result = tmp4(tmp4Result2Result[25])(tmp12, false, token - tmp4(tmp4Result2Result[8]).space.PX_8);
+    obj14.uri = tmp4Result2Result;
+    obj13.source = obj14;
+    tmp25(tmp4Result, obj13);
+    const tmp4Result4 = tmp4(tmp4Result2Result[25]);
   }
-  const tmp2Result7 = onPress(tmp4Result2Result[11]);
 };

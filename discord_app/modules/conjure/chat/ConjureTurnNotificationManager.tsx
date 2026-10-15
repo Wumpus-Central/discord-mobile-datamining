@@ -1,17 +1,16 @@
 // discord_app/modules/conjure/chat/ConjureTurnNotificationManager.tsx
 import UserSettings from "../../user_settings/UserSettings.tsx";
-import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import conjureProjectMute from "../projects/conjureProjectMute.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import SoundUtils from "../../sound_playback/SoundUtils.tsx";
+import conjureMentions from "conjureMentions.tsx";
 import FamilyCenterStore from "../../parent_tools/FamilyCenterStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 import NotificationSettingsStore from "../../../stores/NotificationSettingsStore.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
-import UserStore from "../../../stores/UserStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
@@ -77,44 +76,38 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
       let conjureWorkspaceGuildId = guildId;
       if (guildId == null) {
         conjureWorkspaceGuildId = ConjureUtils.resolveConjureWorkspaceGuildId(VibegrationsChatStore);
-        const tmp8Result2 = ConjureUtils;
+        const tmp8Result3 = ConjureUtils;
       }
       const obj4 = {
         projectId,
         guildId: conjureWorkspaceGuildId,
         title,
-        body: body.replace(re22, (arg0, arg1) => {
-          let combined = arg0;
-          user = user.getUser(arg1);
-          if (null != user) {
-            const _HermesInternal = HermesInternal;
-            combined = "@" + UserUtilsDefault.getName(user);
-          }
-          return combined;
-        }),
+        body: null,
         route: null,
         sound: null,
         volume: null,
       };
+      const tmpResult2 = ConjurePlatformUtilsDefault;
+      obj4.body = conjureMentions.withConjureMentionNames(body);
       let CHANNELResult = null;
       if (null != conjureWorkspaceGuildId) {
-        CHANNELResult = closure_1_11.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
+        CHANNELResult = collapsed.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
       }
       obj4.route = CHANNELResult;
-      let tmp27;
+      let tmp26;
       if (!isSoundDisabledResult) {
-        tmp27 = bit_message1;
+        tmp26 = bit_message1;
       }
-      obj4.sound = tmp27;
+      obj4.sound = tmp26;
       obj4.volume = volume;
-      const result1 = ConjurePlatformUtilsDefault.presentTurnNotification(obj4);
-      const tmpResult2 = ConjurePlatformUtilsDefault;
+      const result1 = tmpResult2.presentTurnNotification(obj4);
+      const tmp8Result4 = conjureMentions;
     }
     obj3 = conjureProjectMute;
   }
 }
 const Constants = fn(1085);
-({ Routes: closure_11, StatusTypes: closure_12 } = Constants);
+({ Routes: c10, StatusTypes: closure_11 } = Constants);
 const StaticChannelRoute = fn(2072).StaticChannelRoute;
 const prototype = function ConjureTurnNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -129,8 +122,7 @@ class prototype extends tmp3 {}
 const bit_message1 = "bit_message1";
 const message1 = "message1";
 const VibegrationsChatStore = "VibegrationsChatStore";
-let c21 = 0.4;
-const re22 = /<@!?(\d+)>/g;
+let c20 = 0.4;
 const prototype1 = new prototype();
 const map = new Map();
 const size = fn(2);

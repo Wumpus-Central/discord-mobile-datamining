@@ -2,8 +2,8 @@
 import _mod19 from "../../../_runtime/metro/00019__.js";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
-import CheckpointActionCreators from "CheckpointActionCreators.tsx";
 import CheckpointStore2 from "CheckpointStore.tsx";
+import CheckpointActionCreators from "CheckpointActionCreators.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

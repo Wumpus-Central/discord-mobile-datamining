@@ -14,10 +14,10 @@ const prototype = function VoiceProcessingErrorManager() {
     },
   };
   applyArgumentsResult.handleNoiseCancellationError = function handleNoiseCancellationError() {
-    const result = applyArgumentsResult(4810).presentNoiseCancellationError();
+    const result = applyArgumentsResult(4864).presentNoiseCancellationError();
   };
   applyArgumentsResult.handleVoiceActivityDetectionError = function handleVoiceActivityDetectionError() {
-    const result = applyArgumentsResult(4810).presentVoiceActivityDetectionError();
+    const result = applyArgumentsResult(4864).presentVoiceActivityDetectionError();
   };
   return applyArgumentsResult;
 }.prototype;

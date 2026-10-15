@@ -273,9 +273,9 @@ Object.defineProperty(prototype, "disableApplicationSubscriptionCancellationSurv
   },
   set: undefined,
 });
-Object.defineProperty(prototype, "allowVibegrationsPictureInPictureOnNavigateAway", {
-  get: function allowVibegrationsPictureInPictureOnNavigateAway() {
-    let flag = closure_13.allowVibegrationsPictureInPictureOnNavigateAway;
+Object.defineProperty(prototype, "allowConjurePictureInPictureOnNavigateAway", {
+  get: function allowConjurePictureInPictureOnNavigateAway() {
+    let flag = closure_13.allowConjurePictureInPictureOnNavigateAway;
     if (flag == null) {
       flag = true;
     }

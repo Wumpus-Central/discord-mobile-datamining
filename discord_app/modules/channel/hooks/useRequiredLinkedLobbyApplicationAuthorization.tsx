@@ -1,7 +1,7 @@
 // discord_app/modules/channel/hooks/useRequiredLinkedLobbyApplicationAuthorization.tsx
 import _mod19 from "../../../../_runtime/metro/00019__.js";
-import AuthorizedAppsStore2 from "../../oauth2/AuthorizedAppsStore.tsx";
 import ApplicationActionCreatorsDefault from "../../applications/ApplicationActionCreators.tsx";
+import AuthorizedAppsStore2 from "../../oauth2/AuthorizedAppsStore.tsx";
 import AuthorizedAppsActionCreatorsDefault from "../../oauth2/AuthorizedAppsActionCreators.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";

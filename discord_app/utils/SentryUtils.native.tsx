@@ -213,7 +213,7 @@ export default {
                   event_id: timestamp.event_id,
                   timestamp: result,
                   level: formatted,
-                  tags: null,
+                  tags: "\u03BC\u03C0\u03BF\u03B3\u03B9\u03AC",
                 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";

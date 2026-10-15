@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5096);
+let createStyles = fn(5151);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -48,7 +48,7 @@ obj2.header = { marginBottom: nativeDefault.space.PX_8 };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let obj6 = { marginBottom: nativeDefault.space.PX_8 };
-createStyles = fn(5096);
+createStyles = fn(5151);
 const obj9 = { container: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function FamilyCenterLinkingBanner() {
@@ -283,7 +283,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = items;
       return hasOwnProperty(View, obj);
     };
-createStyles = fn(5096);
+createStyles = fn(5151);
 const obj13 = { container: null };
 const obj10 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 obj13.container = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -317,7 +317,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         children: React4(FamilyCenterBannerButton.FamilyCenterTeenQRCodeButton, {}),
       });
     };
-createStyles = fn(5096);
+createStyles = fn(5151);
 const obj17 = {
   row: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   gap: { marginBottom: 12 },

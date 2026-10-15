@@ -4,7 +4,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const ClipsConstants = fn(7769);
+const ClipsConstants = fn(7979);
 ({
   CLIPS_MAX_PARTICIPANTS: closure_4,
   CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty,
@@ -13,7 +13,7 @@ const ClipsConstants = fn(7769);
   CLIP_RUNTIME: closure_8,
 } = ClipsConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const SpeakingFlags = fn(5121).SpeakingFlags;
+const SpeakingFlags = fn(5176).SpeakingFlags;
 const ServerClipGameEventType = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",
@@ -24,6 +24,7 @@ const ServerClipGameEventType = {
   DEATH: 3,
   [3]: "DEATH",
 };
+let obj2 = { UNKNOWN: 0, [0]: "UNKNOWN", LAUGHTER: 1, [1]: "LAUGHTER", SHOUTING: 2, [2]: "SHOUTING" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");
 
@@ -51,6 +52,7 @@ export const getClipParticipantIds = function getClipParticipantIds(users) {
   return users.slice(0, React4);
 };
 export { ServerClipGameEventType };
+export const ServerClipEmotionType = obj2;
 export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
   _require = clip;
   const timeline = clip.timeline;
@@ -98,33 +100,51 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         return tmp2;
       });
       const sorted = found.sort((timestamp, timestamp2) => timestamp.timestamp - timestamp2.timestamp);
-      if (0 !== sorted.length) {
-        const _Map = Map;
-        const map = new Map();
-        const items = [];
-        const _Map2 = Map;
-        new Map();
-        for (const item10061 of sorted) {
-          if (item10061.signal.type !== constants.SPEAKING) {
-            continue;
-          } else {
-            if (item10061.timestamp >= sum1) {
-              obj5.return();
-              break;
-            } else {
-              let result = map.set(
-                item10061.signal.userId,
-                (item10061.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE,
-              );
-            }
-            break;
-          }
-          tmp10[Symbol.iterator]().return();
-          throw __exception;
-        }
-        const tmp10 = map;
+      const editMetadata2 = clip.editMetadata;
+      let voiceAudio;
+      if (editMetadata2 != null) {
+        voiceAudio = editMetadata2.voiceAudio;
       }
-      const obj2 = require("GameEventsOnPlayerExperiment");
+      if (false !== voiceAudio) {
+        let audioEvents = clip.audioEvents;
+        if (audioEvents == null) {
+          audioEvents = [];
+        }
+        let items = audioEvents;
+      } else {
+        items = [];
+      }
+      const _Map = Map;
+      const map = new Map();
+      const items1 = [];
+      for (const item10067 of sorted) {
+        if (item10067.signal.type !== constants.SPEAKING) {
+          continue;
+        } else {
+          if (item10067.timestamp >= sum1) {
+            obj5.return();
+            break;
+          } else {
+            let result = map.set(
+              item10067.signal.userId,
+              (item10067.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE,
+            );
+          }
+          break;
+        }
+        tmp11[Symbol.iterator]().return();
+        throw __exception;
+      }
+      obj2 = require("GameEventsOnPlayerExperiment");
+    }
+  } else {
+    const audioEvents1 = clip.audioEvents;
+    let num2;
+    if (audioEvents1 != null) {
+      num2 = audioEvents1.length;
+    }
+    if (num2 == null) {
+      num2 = 0;
     }
   }
 };

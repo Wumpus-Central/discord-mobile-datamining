@@ -16,11 +16,11 @@ export default function validateConjureAppFrame(arg0) {
   const tmp3 = validateEmbeddedAppFrameDefault(arg0);
   const applicationId = tmp3.frame.applicationId;
   const application = ApplicationStore.getApplication(applicationId);
-  let prop;
+  let conjureProjectId;
   if (application != null) {
-    prop = application.vibegrationsProjectId;
+    conjureProjectId = application.conjureProjectId;
   }
-  let result = null != prop;
+  let result = null != conjureProjectId;
   if (!result) {
     result = ConjureProjectStore.isConjureProjectApplication(applicationId);
   }
@@ -34,11 +34,11 @@ export default function validateConjureAppFrame(arg0) {
 }
 export const isConjureApplication = function isConjureApplication(applicationId) {
   const application = ApplicationStore.getApplication(applicationId);
-  let prop;
+  let conjureProjectId;
   if (application != null) {
-    prop = application.vibegrationsProjectId;
+    conjureProjectId = application.conjureProjectId;
   }
-  let result = null != prop;
+  let result = null != conjureProjectId;
   if (!result) {
     result = ConjureProjectStore.isConjureProjectApplication(applicationId);
   }

@@ -125,6 +125,7 @@ import ModalFloatingAction from "components/Modal/native/ModalFloatingAction.nat
 import ModalActionButton from "components/Modal/native/ModalActionButton.native.tsx";
 import Pile from "components/Pile/native/Pile.native.tsx";
 import PileOverflow from "components/Pile/native/PileOverflow.native.tsx";
+import Badge_Badge from "components/Badge/native/Badge.native.tsx";
 import GuildIconPile from "components/Pile/native/GuildIconPile.native.tsx";
 import TabsGradientDefault from "components/Tabs/native/TabsGradient.native.tsx";
 import Checkbox from "components/Checkbox/native/Checkbox.native.tsx";
@@ -152,7 +153,6 @@ import NitroGem18Lottie from "components/LottieIcon/native/generated/NitroGem18L
 import NitroGem24Lottie from "components/LottieIcon/native/generated/NitroGem24Lottie.tsx";
 import MessageRequestLottie from "components/LottieIcon/native/generated/MessageRequestLottie.tsx";
 import ToggleButton from "components/Button/native/ToggleButton.native.tsx";
-import Badge_Badge from "components/Badge/native/Badge.native.tsx";
 import ContextMenuItem from "components/ContextMenu/native/ContextMenuItem.native.tsx";
 import ContextMenuContainer from "components/ContextMenu/native/ContextMenuContainer.native.tsx";
 import useManaTextMigrationHighlightRestartNotice from "components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx";

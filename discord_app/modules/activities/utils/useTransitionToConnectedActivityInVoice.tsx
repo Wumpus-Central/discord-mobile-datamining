@@ -55,15 +55,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       _location = _location.location;
                       closure_129_0 = _location;
                       const embeddedActivityLocationChannelId =
-                        handler(4741).getEmbeddedActivityLocationChannelId(_location);
+                        handler(4795).getEmbeddedActivityLocationChannelId(_location);
                       closure_129_1 = embeddedActivityLocationChannelId;
                       if (null != embeddedActivityLocationChannelId) {
-                        if (closure_2_1(10491)(embeddedActivityLocationChannelId)) {
+                        if (closure_2_1(10714)(embeddedActivityLocationChannelId)) {
                           if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                             const obj4 = { channelId: embeddedActivityLocationChannelId };
                             c3 = 1;
                             c4 = 1;
-                            const obj5 = { value: closure_2_1(10953)(obj4), done: false };
+                            const obj5 = { value: closure_2_1(11177)(obj4), done: false };
                             return obj5;
                           }
                         }
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_129_3 = guild_id;
                   const _setTimeout = setTimeout;
                   const timerId = setTimeout(() => {
-                    closure_3_1(10904)(closure_1_3, _location);
+                    closure_3_1(11128)(closure_1_3, _location);
                     if (closure_0 != null) {
                       closure_0();
                     }
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     closure_129_3 = undefined;
                     c3 = 1;
                     c4 = 1;
-                    return { value: "Set", done: true };
+                    return { value: "test", done: true };
                   }
                 } else {
                   if (1 === tmp5) {
@@ -193,14 +193,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return obj4;
                     } else {
                       embeddedActivityLocationChannelId =
-                        handler(4741).getEmbeddedActivityLocationChannelId(_location2);
+                        handler(4795).getEmbeddedActivityLocationChannelId(_location2);
                       if (null != embeddedActivityLocationChannelId) {
-                        if (closure_2_1(10491)(embeddedActivityLocationChannelId)) {
+                        if (closure_2_1(10714)(embeddedActivityLocationChannelId)) {
                           if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                             const obj5 = { channelId: embeddedActivityLocationChannelId };
                             c3 = 2;
                             c4 = 1;
-                            const obj6 = { value: closure_2_1(10953)(obj5), done: false };
+                            const obj6 = { value: closure_2_1(11177)(obj5), done: false };
                             return obj6;
                           }
                         }
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_129_3 = guild_id;
                   const _setTimeout = setTimeout;
                   const timerId = setTimeout(() => {
-                    closure_3_1(10904)(closure_1_3, _location);
+                    closure_3_1(11128)(closure_1_3, _location);
                     if (closure_0 != null) {
                       closure_0();
                     }

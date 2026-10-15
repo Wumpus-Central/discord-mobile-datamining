@@ -1,28 +1,24 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerPremiumSearchUpsell.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
-import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import MobileEmojiPickerUpsellRestyleExperiment from "../../../premium/experiments/MobileEmojiPickerUpsellRestyleExperiment.tsx";
-import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
-import _modDef9530 from "../../../../../_runtime/metro/09530__.js";
+import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
+import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import usePremiumFeatureUpsellGetNitroDefault from "../../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
 import PremiumExpressionPickerSearchUpsellDefault from "../../../premium/roadblocks/native/views/PremiumExpressionPickerSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
-const util = NitroWheelIcon(1126);
-const native = NitroWheelIcon(1200);
-const PremiumUtils = NitroWheelIcon(4771);
-const NitroWheelIcon2 = NitroWheelIcon(9041);
+const PremiumUtilsDefault = PremiumUtils;
+
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7 } = Constants);
 const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumUpsellTypes: closure_9, SubscriptionPlans: c10 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -41,7 +37,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const effect = ref.useEffect(tmp3, tmp4);
         }
       }
-      const fn = function t() {
+      const fn = function l() {
         if (!ref.current) {
           tmp.current = true;
           let obj2 = { type: constants4.EMOJI_PICKER_SEARCH, location: null, location_stack: null, sku_id: null };
@@ -92,137 +88,85 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let closure_13 = tmp4;
 ReactCompilerGating = fn(558);
-const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useEmojiPickerPremiumSearchUpsellClick(analyticsLocations) {
-      const cResult = analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[7]).c(9);
-      analyticsLocations = analyticsLocations.analyticsLocations;
-      const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
-      let obj = analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[7]);
-      mobileEmojiPickerUpsellRestyleEnabled = analyticsLocations(
-        mobileEmojiPickerUpsellRestyleEnabled[9],
-      ).useMobileEmojiPickerUpsellRestyleEnabled("native.EmojiPickerPremiumSearchUpsell");
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function useEmojiPickerPremiumSearchUpsellClick(arg0) {
+      const cResult = onPress(576).c(6);
+      ({ analyticsLocations, useTier0UpsellContent } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const upsellType = tmp(tmp2[10]).getUpsellType(tmp(tmp2[11]).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
+        const upsellType = onPress(9502).getUpsellType(onPress(9501).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
         cResult[0] = upsellType;
         let first = upsellType;
-        const tmpResult = tmp(tmp2[10]);
+        const tmpResult = onPress(9502);
       } else {
         first = cResult[0];
       }
-      let obj2 = analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[9]);
-      const tmpResult2 = analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[12]);
-      ({ loading, onPress } = useTier0UpsellContent(mobileEmojiPickerUpsellRestyleEnabled[13])(
+      let obj = onPress(576);
+      const tmpResult2 = onPress(9490);
+      ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
         useTier0UpsellContent,
-        analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[12]).usePremiumUpsellConfig(first, analyticsLocations)
-          .onViewAllPerks,
+        onPress(9490).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
         constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
       ));
-      if (cResult[1] === analyticsLocations) {
-        if (cResult[2] === onPress) {
-          if (cResult[3] === mobileEmojiPickerUpsellRestyleEnabled) {
-            if (cResult[4] === useTier0UpsellContent) {
-              let tmp8 = cResult[5];
-            }
-            if (cResult[6] === loading) {
-              if (cResult[7] === tmp8) {
-                let tmp9 = cResult[8];
-              }
-              return tmp9;
-            }
-            let obj3 = { loading, onPress: tmp8 };
-            cResult[6] = loading;
-            cResult[7] = tmp8;
-            cResult[8] = obj3;
-            tmp9 = obj3;
-          }
-        }
-      }
-      class P {
-        constructor() {
-          currentUser = closure_4.getCurrentUser();
-          result = null == currentUser;
+      if (cResult[1] !== onPress) {
+        const fn = function u() {
+          const currentUser = UserStore.getCurrentUser();
+          let result = null == currentUser;
           if (!result) {
-            tmp3 = closure_1;
-            tmp4 = closure_2;
-            obj = closure_1(closure_2[14]);
-            result = obj.canUseEmojisEverywhere(currentUser);
+            result = PremiumUtilsDefault.canUseEmojisEverywhere(currentUser);
           }
           if (!result) {
-            tmp5 = closure_2;
-            if (closure_2) {
-              tmp14 = onPress;
-              tmp15 = onPress();
-            } else {
-              tmp6 = closure_1;
-              tmp7 = closure_2;
-              obj2 = closure_1(closure_2[15]);
-              hideActionSheetResult = obj2.hideActionSheet();
-              obj1 = { analyticsLocations: null, premiumFeatureCardOrder: null };
-              tmp10 = analyticsLocations;
-              obj1.analyticsLocations = analyticsLocations;
-              tmp11 = useTier0UpsellContent;
-              tmp12 = closure_0;
-              tmp9 = closure_1(closure_2[16]);
-              PremiumFeatureCardOrder = closure_0(closure_2[17]).PremiumFeatureCardOrder;
-              obj1.premiumFeatureCardOrder = useTier0UpsellContent
-                ? PremiumFeatureCardOrder.TIER_0_LEADING
-                : PremiumFeatureCardOrder.TIER_2_LEADING;
-              tmp9Result = tmp9(obj1);
-            }
+            onPress();
           }
-          return;
-        }
+        };
+        cResult[1] = onPress;
+        cResult[2] = fn;
+        let tmp7 = fn;
+      } else {
+        tmp7 = cResult[2];
       }
-      cResult[1] = analyticsLocations;
-      cResult[2] = onPress;
-      cResult[3] = mobileEmojiPickerUpsellRestyleEnabled;
-      cResult[4] = useTier0UpsellContent;
-      cResult[5] = P;
-      tmp8 = P;
-    }
-  : function useEmojiPickerPremiumSearchUpsellClick(analyticsLocations) {
-      analyticsLocations = analyticsLocations.analyticsLocations;
-      const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
-      let mobileEmojiPickerUpsellRestyleEnabled;
-      mobileEmojiPickerUpsellRestyleEnabled = analyticsLocations(
-        mobileEmojiPickerUpsellRestyleEnabled[9],
-      ).useMobileEmojiPickerUpsellRestyleEnabled("native.EmojiPickerPremiumSearchUpsell");
-      let obj = analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[9]);
-      let obj2 = analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[12]);
-      const tmp2 = useTier0UpsellContent(mobileEmojiPickerUpsellRestyleEnabled[13])(
+      if (cResult[3] === loading) {
+        if (cResult[4] === tmp7) {
+          let tmp8 = cResult[5];
+        }
+        return tmp8;
+      }
+      const obj2 = { loading, onPress: tmp7 };
+      cResult[3] = loading;
+      cResult[4] = tmp7;
+      cResult[5] = obj2;
+      tmp8 = obj2;
+      const tmp6 = usePremiumFeatureUpsellGetNitroDefault(
         useTier0UpsellContent,
-        obj2.usePremiumUpsellConfig(
-          analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[10]).getUpsellType(
-            analyticsLocations(mobileEmojiPickerUpsellRestyleEnabled[11]).EntitlementFeatureNames.EMOJIS_EVERYWHERE,
-          ),
+        onPress(9490).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
+        constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
+      );
+    }
+  : function useEmojiPickerPremiumSearchUpsellClick(arg0) {
+      let onPress;
+      ({ analyticsLocations, useTier0UpsellContent } = arg0);
+      let obj = onPress(9490);
+      const tmp = usePremiumFeatureUpsellGetNitroDefault(
+        useTier0UpsellContent,
+        obj.usePremiumUpsellConfig(
+          onPress(9502).getUpsellType(onPress(9501).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
           analyticsLocations,
         ).onViewAllPerks,
         constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
       );
-      const onPress = tmp2.onPress;
-      const obj4 = { loading: tmp2.loading, onPress: null };
-      const items = [analyticsLocations, useTier0UpsellContent, mobileEmojiPickerUpsellRestyleEnabled, onPress];
-      obj4.onPress = onPress.useCallback(() => {
+      onPress = tmp.onPress;
+      const obj3 = { loading: tmp.loading, onPress: null };
+      const items = [onPress];
+      obj3.onPress = noop.useCallback(() => {
         const currentUser = UserStore.getCurrentUser();
         let result = null == currentUser;
         if (!result) {
           result = PremiumUtilsDefault.canUseEmojisEverywhere(currentUser);
         }
         if (!result) {
-          if (mobileEmojiPickerUpsellRestyleEnabled) {
-            onPress();
-          } else {
-            ActionSheetActionCreatorsDefault.hideActionSheet();
-            const obj3 = { analyticsLocations, premiumFeatureCardOrder: null };
-            const PremiumFeatureCardOrder = PremiumFeaturesCards.PremiumFeatureCardOrder;
-            obj3.premiumFeatureCardOrder = useTier0UpsellContent
-              ? PremiumFeatureCardOrder.TIER_0_LEADING
-              : PremiumFeatureCardOrder.TIER_2_LEADING;
-            openPremiumModalDefault(obj3);
-          }
+          onPress();
         }
       }, items);
-      return obj4;
+      return obj3;
     };
 let closure_14 = tmp5;
 ReactCompilerGating = fn(558);
@@ -234,22 +178,16 @@ export const useEmojiPickerPremiumSearchUpsellClick = tmp5;
 export const PremiumSearchUpsell = noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function EmojiPickerListPremiumSearchUpsell(useTier0UpsellContent) {
-        let NitroWheelIcon = require;
-        const cResult = c.c(13);
-        let nitroIcon = closure_12();
+        const cResult = c.c(12);
+        const tmp4 = closure_12();
         ({ loading, onPress } = closure_14(useTier0UpsellContent));
-        const tmp3 = closure_14(useTier0UpsellContent);
-        const mobileEmojiPickerUpsellRestyleEnabled =
-          MobileEmojiPickerUpsellRestyleExperiment.useMobileEmojiPickerUpsellRestyleEnabled(
-            "native.EmojiPickerPremiumSearchUpsell",
-          );
         closure_13(useTier0UpsellContent);
         if (cResult[0] !== useTier0UpsellContent.useTier0UpsellContent) {
           const intl = util.intl;
           if (useTier0UpsellContent.useTier0UpsellContent) {
-            const obj3 = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
-            let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj3);
-            const NitroWheelIconResult = PremiumUtils;
+            const obj2 = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
+            let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj2);
+            const tmpResult = PremiumUtils;
           } else {
             formatToPlainStringResult = intl.string(util.t["5t3lw+"]);
           }
@@ -269,128 +207,81 @@ export const PremiumSearchUpsell = noop.memo(
           cResult[2] = useTier0UpsellContent;
           cResult[3] = stringResult;
         } else {
-          if (cResult[4] === nitroIcon.nitroIcon) {
-            if (cResult[5] === mobileEmojiPickerUpsellRestyleEnabled) {
-              if (cResult[7] === loading) {
-                if (cResult[8] === onPress) {
-                  if (cResult[9] === tmp6) {
-                    if (cResult[10] === tmp10) {
-                      if (cResult[11] === tmp14) {
-                        let tmp20 = cResult[12];
-                      }
-                      return tmp20;
-                    }
-                  }
-                }
-              }
-              const obj4 = { body: tmp6, ctaText: tmp10, icon: cResult[6], loading, onPress };
-              const tmp23 = jsx(PremiumExpressionPickerSearchUpsellDefault, {
-                body: tmp6,
-                ctaText: tmp10,
-                icon: cResult[6],
-                loading,
-                onPress,
-              });
-              cResult[7] = loading;
-              cResult[8] = onPress;
-              cResult[9] = tmp6;
-              cResult[10] = tmp10;
-              cResult[11] = cResult[6];
-              cResult[12] = tmp23;
-              tmp20 = tmp23;
-            }
-          }
-          if (mobileEmojiPickerUpsellRestyleEnabled) {
-            NitroWheelIcon = NitroWheelIcon2.NitroWheelIcon;
-            const obj5 = {
+          if (cResult[4] !== tmp4.nitroIcon) {
+            const obj3 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp4.nitroIcon };
+            const tmp18 = jsx(NitroWheelIcon.NitroWheelIcon, {
               size: "sm",
               color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-              style: nitroIcon.nitroIcon,
-            };
-            let tmp15Result = (
-              <NitroWheelIcon
-                size="sm"
-                color={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE}
-                style={nitroIcon.nitroIcon}
-              />
-            );
-          } else {
-            const obj6 = {
-              style: nitroIcon.nitroIcon,
-              source: _modDef9530,
-              disableColor: true,
-              size: native.Icon.Sizes.MEDIUM,
-            };
-            tmp15Result = jsx(native.Icon, {
-              style: nitroIcon.nitroIcon,
-              source: _modDef9530,
-              disableColor: true,
-              size: native.Icon.Sizes.MEDIUM,
+              style: tmp4.nitroIcon,
             });
+            cResult[4] = tmp4.nitroIcon;
+            cResult[5] = tmp18;
+            let tmp15 = tmp18;
+          } else {
+            tmp15 = cResult[5];
           }
-          nitroIcon = nitroIcon.nitroIcon;
-          cResult[4] = nitroIcon;
-          cResult[5] = mobileEmojiPickerUpsellRestyleEnabled;
-          cResult[6] = tmp15Result;
+          if (cResult[6] === loading) {
+            if (cResult[7] === onPress) {
+              if (cResult[8] === tmp7) {
+                if (cResult[9] === tmp11) {
+                  if (cResult[10] === tmp15) {
+                    let tmp19 = cResult[11];
+                  }
+                  return tmp19;
+                }
+              }
+            }
+          }
+          const obj4 = { body: tmp7, ctaText: cResult[3], icon: tmp15, loading, onPress };
+          const tmp22 = jsx(PremiumExpressionPickerSearchUpsellDefault, {
+            body: tmp7,
+            ctaText: cResult[3],
+            icon: tmp15,
+            loading,
+            onPress,
+          });
+          cResult[6] = loading;
+          cResult[7] = onPress;
+          cResult[8] = tmp7;
+          cResult[9] = cResult[3];
+          cResult[10] = tmp15;
+          cResult[11] = tmp22;
+          tmp19 = tmp22;
         }
+        const tmp5 = closure_14(useTier0UpsellContent);
       }
     : function EmojiPickerListPremiumSearchUpsell(useTier0UpsellContent) {
         const tmp = closure_12();
         ({ loading, onPress } = closure_14(useTier0UpsellContent));
-        const tmp2 = closure_14(useTier0UpsellContent);
-        const mobileEmojiPickerUpsellRestyleEnabled =
-          MobileEmojiPickerUpsellRestyleExperiment.useMobileEmojiPickerUpsellRestyleEnabled(
-            "native.EmojiPickerPremiumSearchUpsell",
-          );
         closure_13(useTier0UpsellContent);
+        const tmp2 = closure_14(useTier0UpsellContent);
         const intl = util.intl;
         if (useTier0UpsellContent.useTier0UpsellContent) {
-          const obj2 = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
-          let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj2);
-          const tmp3Result = PremiumUtils;
+          const obj = { planName: PremiumUtils.getTierDisplayNameByPlanId(collapsed.PREMIUM_MONTH_TIER_0) };
+          let formatToPlainStringResult = intl.formatToPlainString(util.t.kWBwlJ, obj);
+          let tmp10 = require;
+          const tmp8Result = PremiumUtils;
         } else {
           formatToPlainStringResult = intl.string(util.t["5t3lw+"]);
+          tmp10 = require;
         }
-        const obj3 = { body: formatToPlainStringResult, ctaText: null, icon: null, loading: null, onPress: null };
-        const intl2 = util.intl;
+        const obj2 = { body: formatToPlainStringResult, ctaText: null, icon: null, loading: null, onPress: null };
+        const intl2 = tmp10(1126).intl;
         const string = intl2.string;
-        const t = util.t;
+        const t = tmp10(1126).t;
         if (useTier0UpsellContent.useTier0UpsellContent) {
           let stringResult = string(t["9CM5v9"]);
         } else {
           stringResult = string(t.pj0XBN);
         }
-        obj3.ctaText = stringResult;
-        if (mobileEmojiPickerUpsellRestyleEnabled) {
-          const obj4 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon };
-          let tmp7Result = jsx(NitroWheelIcon2.NitroWheelIcon, {
-            size: "sm",
-            color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-            style: tmp.nitroIcon,
-          });
-        } else {
-          const obj5 = {
-            style: tmp.nitroIcon,
-            source: _modDef9530,
-            disableColor: true,
-            size: native.Icon.Sizes.MEDIUM,
-          };
-          tmp7Result = jsx(native.Icon, {
-            style: tmp.nitroIcon,
-            source: _modDef9530,
-            disableColor: true,
-            size: native.Icon.Sizes.MEDIUM,
-          });
-        }
-        obj3.icon = tmp7Result;
-        obj3.loading = loading;
-        obj3.onPress = onPress;
-        return jsx(PremiumExpressionPickerSearchUpsellDefault, {
-          body: formatToPlainStringResult,
-          ctaText: null,
-          icon: null,
-          loading: null,
-          onPress: null,
+        obj2.ctaText = stringResult;
+        obj2.icon = jsx(tmp10(9253).NitroWheelIcon, {
+          size: "sm",
+          color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
+          style: tmp.nitroIcon,
         });
+        obj2.loading = loading;
+        obj2.onPress = onPress;
+        return <tmp7 body={formatToPlainStringResult} ctaText={null} icon={null} loading={null} onPress={null} />;
       },
 );

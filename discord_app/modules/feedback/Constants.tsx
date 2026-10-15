@@ -10,7 +10,7 @@ const items = [
   preloaded_user_settings.InAppFeedbackType.VOICE,
   preloaded_user_settings.InAppFeedbackType.IN_APP_REPORTS,
   preloaded_user_settings.InAppFeedbackType.SEARCH_RESULTS,
-  preloaded_user_settings.InAppFeedbackType.VIBEGRATIONS,
+  preloaded_user_settings.InAppFeedbackType.CONJURE,
 ];
 const items1 = [, ,];
 ({ BAD: arr2[0], NEUTRAL: arr2[1], GOOD: arr2[2] } = obj);

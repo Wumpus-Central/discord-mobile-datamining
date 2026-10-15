@@ -246,7 +246,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
             isPrivate.id,
           );
         });
-        const found = mapped.filter(favoriteChannels(1388).isNotNullish);
+        const found = mapped.filter(favoriteChannels(1386).isNotNullish);
         const arr = _undefined(12)(items);
         closure_6 = found
           .sortBy((arg0) => {
@@ -273,7 +273,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined,
   });
-  const favoritesCategories = favoriteChannels(10323).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10546).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -420,7 +420,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                 isPrivate.id,
               );
             });
-            const found = mapped.filter(items(1388).isNotNullish);
+            const found = mapped.filter(items(1386).isNotNullish);
             const arr = closure_1(12)(items);
             closure_1 = found
               .sortBy((arg0) => {
@@ -627,10 +627,10 @@ function computeFavoritesState(favoriteChannels, arg1) {
 }
 const ChannelRecord = fn(2069);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: c10 } = ChannelRecord);
-let closure_19 = fn(4751).createFavoritesGuildChannelRecord;
+let closure_19 = fn(4805).createFavoritesGuildChannelRecord;
 const FavoritesConstants = fn(2078);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(7263).ChannelListChannelNoticeRow;
+const constants = fn(7473).ChannelListChannelNoticeRow;
 const Permissions = fn(1096).Permissions;
 let items = [
   EmbeddedActivitiesStore,
@@ -931,7 +931,7 @@ export const useFavoritesGuildChannelList = ReactCompilerGating.isReactCompilerE
           }
         }
         let flag2 = false;
-        if (tmp22 <= tmp(7257).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+        if (tmp22 <= tmp(7467).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
           class F {
             constructor() {
               tmp = hasAccess;

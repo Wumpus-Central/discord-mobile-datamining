@@ -18,11 +18,11 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const AbortCodes = fn(1085).AbortCodes;
-const UserRowModes = fn(10227).UserRowModes;
-const MessageSendLocation = fn(5089).MessageSendLocation;
+const UserRowModes = fn(10440).UserRowModes;
+const MessageSendLocation = fn(5144).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   footer: {
     display: "flex",
@@ -845,7 +845,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   c5 = 2;
                   c6 = 1;
-                  const obj6 = { value: entry(17302).sendMessageWithEmbed(obj5), done: false };
+                  const obj6 = { value: entry(17542).sendMessageWithEmbed(obj5), done: false };
                   return obj6;
                 }
               } else if (1 === tmp7) {
@@ -953,7 +953,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled()
                 };
                 c5 = 2;
                 c6 = 1;
-                const obj7 = { value: entry(17302).sendMessageWithEmbed(obj6), done: false };
+                const obj7 = { value: entry(17542).sendMessageWithEmbed(obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp7) {

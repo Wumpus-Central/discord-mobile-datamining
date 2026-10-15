@@ -14,9 +14,9 @@ require = fn;
 let closure_3 = fn(2069).isGuildSelectableChannelType;
 const Constants = fn(1085);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(9727);
+const ApplicationCommandsConstants = fn(9935);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5409);
+const ChannelAutocompleteConstants = fn(5464);
 ({
   CHANNEL_SENTINEL: closure_11,
   EMOJI_SENTINEL: closure_12,
@@ -25,7 +25,7 @@ const ChannelAutocompleteConstants = fn(5409);
 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -218,8 +218,8 @@ export const isSpaceJustTypedAtCaret = function isSpaceJustTypedAtCaret(text, se
   }
   return false;
 };
-export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(c22, selectionEnd, collapsedCategories) {
-  if (selectionEnd >= collapsedCategories.length + 2) {
+export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(c22, selectionEnd, constants) {
+  if (selectionEnd >= constants.length + 2) {
     if (" " === c22[selectionEnd - 1]) {
       const diff = selectionEnd - 1;
       let tmp3 = diff;
@@ -238,11 +238,11 @@ export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(c2
           }
         }
       }
-      if (c22.startsWith(collapsedCategories, tmp3)) {
-        if (c22.lastIndexOf(collapsedCategories, diff - collapsedCategories.length) !== tmp3) {
+      if (c22.startsWith(constants, tmp3)) {
+        if (c22.lastIndexOf(constants, diff - constants.length) !== tmp3) {
           return null;
         } else {
-          const obj = { tokenStart: tmp3, trigger: c22.slice(tmp3 + collapsedCategories.length, diff) };
+          const obj = { tokenStart: tmp3, trigger: c22.slice(tmp3 + constants.length, diff) };
           return obj;
         }
       } else {

@@ -37,8 +37,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6139).addPostConnectionCallback;
-let closure_10 = fn(7147).handleMobileWebCheckoutStatus;
+fn(6355).addPostConnectionCallback;
+let closure_10 = fn(7362).handleMobileWebCheckoutStatus;
 const Constants = fn(1085);
 ({
   AnalyticEvents: map1,
@@ -49,13 +49,13 @@ const Constants = fn(1085);
   ME: closure_18,
 } = Constants);
 const StaticChannelRoute = fn(2072).StaticChannelRoute;
-const StreamTypes = fn(5903).StreamTypes;
-const NativePermissionTypes = fn(7489).NativePermissionTypes;
-let closure_22 = fn(10700).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_23 = fn(7266).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_24 = fn(5075).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(14447).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8000).MobileUserSettings;
+const StreamTypes = fn(6114).StreamTypes;
+const NativePermissionTypes = fn(7699).NativePermissionTypes;
+let closure_22 = fn(10922).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_23 = fn(7476).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_24 = fn(5130).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(14744).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8210).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -211,7 +211,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj20 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: null };
+      const obj20 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "a" };
       const obj25 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj20.navigationSettings = obj25;
       rootNavigationRef1(inviteCode[31])(obj20);
@@ -302,7 +302,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(14459, dependencyMap.paths),
+                    asyncRequireImpl(14756, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -413,12 +413,12 @@ export default function handleSupportedURL(payload) {
                         guildScheduledEvent = guildScheduledEvent.getGuildScheduledEvent(closure_129_1);
                         payload = guildScheduledEvent;
                         if (guildScheduledEvent == null) {
+                          const guildEvent = tmp3(paths[48]).fetchGuildEvent(closure_129_0, closure_129_1, {
+                            priority: "foreground",
+                          });
                           paths = 2;
                           c4 = 1;
-                          const obj9 = {
-                            value: tmp3(paths[48]).fetchGuildEvent(closure_129_0, closure_129_1),
-                            done: false,
-                          };
+                          const obj9 = { value: guildEvent.catch(() => null), done: false };
                           return obj9;
                         }
                         _default = value.default;
@@ -673,15 +673,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(5939).popAll();
-                        const obj5 = closure_1(5939);
+                        closure_1(6150).popAll();
+                        const obj5 = closure_1(6150);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7100).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7100);
+                        dependencyMap(7315).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7315);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(6880).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(7094).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -699,8 +699,8 @@ export default function handleSupportedURL(payload) {
                     }
                     closure_133_1 = closure_1(1384).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(4808).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(4808);
+                      closure_1(4862).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(4862);
                     }
                     const obj12 = closure_1(1384);
                   }

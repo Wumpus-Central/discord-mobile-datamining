@@ -37,7 +37,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(18550, dependencyMap.paths),
+      asyncRequireImpl(18789, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -107,7 +107,7 @@ function StartEarningButton(isTermsAccepted) {
     const intl = tmp5(tmp3[12]).intl;
     obj9.text = intl.string(tmp5(tmp3[12]).t.NL5ZNS);
     const obj10 = {
-      source: require("../../../../../../_runtime/metro/10985__.js"),
+      source: require("../../../../../../_runtime/metro/11209__.js"),
       color: require("native").unsafe_rawColors.WHITE,
       size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20,
     };
@@ -123,12 +123,12 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(15850).CREATOR_REVENUE_PORTAL_URL;
+const creatorPortalUrl = fn(16146).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const constants = fn(18546).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(18785).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { flex: 1, padding: 24 },

@@ -1,6 +1,6 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _modDef2958 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2960 from "../intl/DisplayNameStyles.messages.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import DisplayNameLockeAbstractUI from "../../../design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_8 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
 });
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== tmp8) {
         const intl = markAsDismissed(1126).intl;
         const string = intl.string;
-        let h6sykk = _modDef2958;
+        let h6sykk = _modDef2960;
         if (tmp8) {
           h6sykk = h6sykk.h6sykk;
           let stringResult = string(h6sykk);
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else if (cResult[6] !== tmp8) {
         const intl2 = markAsDismissed(1126).intl;
         const string2 = intl2.string;
-        let TyUdka = _modDef2958;
+        let TyUdka = _modDef2960;
         if (tmp8) {
           TyUdka = TyUdka.TyUdka;
           let string2Result = string2(TyUdka);
@@ -167,10 +167,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj = visible(504);
       const tmp4 = markAsDismissed;
-      const result = markAsDismissed(4771).canUsePremiumProfileCustomization(stateFromStores);
+      const result = markAsDismissed(4825).canUsePremiumProfileCustomization(stateFromStores);
       const intl = visible(1126).intl;
       const string = intl.string;
-      const tmp6 = markAsDismissed(2958);
+      const tmp6 = markAsDismissed(2960);
       if (result) {
         let stringResult = string(tmp6.h6sykk);
       } else {
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = stringResult;
       const intl2 = tmp(1126).intl;
       const string2 = intl2.string;
-      const tmp4Result = tmp4(2958);
+      const tmp4Result = tmp4(2960);
       if (result) {
         let string2Result = string2(tmp4Result.TyUdka);
       } else {
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items2,
       );
-      const obj2 = markAsDismissed(4771);
-      const coachmark = visible(9452).useCoachmark(visible.targetRef, memo);
+      const obj2 = markAsDismissed(4825);
+      const coachmark = visible(9663).useCoachmark(visible.targetRef, memo);
       return null;
     };

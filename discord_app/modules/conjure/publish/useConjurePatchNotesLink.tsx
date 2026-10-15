@@ -8,7 +8,7 @@ import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const canPublishProject = fn(10662).canPublishProject;
+const canPublishProject = fn(10885).canPublishProject;
 const Routes = fn(1085).Routes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

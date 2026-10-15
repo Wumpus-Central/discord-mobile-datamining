@@ -53,7 +53,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[4];
       }
       if (cResult[5] !== guild) {
-        const obj3 = { guild, size: tmp(6163).GuildIconSizes.SMALL_32 };
+        const obj3 = { guild, size: tmp(6379).GuildIconSizes.SMALL_32 };
         const tmp14 = closure_4(GuildIconDefault, obj3);
         cResult[5] = guild;
         cResult[6] = tmp14;
@@ -85,7 +85,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp17 = closure_4(guild(6184).TableRow, {
+      const tmp17 = closure_4(guild(6400).TableRow, {
         label: guild.name,
         subLabel: tmp8,
         icon: tmp10,
@@ -117,7 +117,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.subLabel = formatToPlainStringResult;
       const obj4 = { guild, size: null };
       let obj = guild(504);
-      obj4.size = guild(6163).GuildIconSizes.SMALL_32;
+      obj4.size = guild(6379).GuildIconSizes.SMALL_32;
       obj2.icon = closure_4(GuildIconDefault, obj4);
       obj2.onPress = function onPress() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -126,7 +126,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.analyticsLocation = AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE;
         openGuildPowerupsModalDefault(obj2);
       };
-      return closure_4(guild(6184).TableRow, obj2);
+      return closure_4(guild(6400).TableRow, obj2);
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);

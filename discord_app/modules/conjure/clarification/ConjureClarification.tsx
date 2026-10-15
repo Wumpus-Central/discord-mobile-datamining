@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/clarification/ConjureClarification.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3862 from "../intl/ConjureUntranslated.messages.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -16,13 +16,13 @@ let closure_4 = {
 };
 let closure_5 = { channel: "#", role: "@", user: "@", project: "" };
 let obj = { channel: null, role: null, user: null, project: null };
-let items = [_modDef3849["9+dfPT"], _modDef3849.pGSJqE];
+let items = [_modDef3862["9+dfPT"], _modDef3862.pGSJqE];
 obj.channel = items;
-let items1 = [_modDef3849["2VkCoD"], _modDef3849.c8YlX8];
+let items1 = [_modDef3862["2VkCoD"], _modDef3862.c8YlX8];
 obj.role = items1;
-let items2 = [_modDef3849.GZIAxl, _modDef3849["4bptbQ"]];
+let items2 = [_modDef3862.GZIAxl, _modDef3862["4bptbQ"]];
 obj.user = items2;
-const items3 = [_modDef3849.twlOb6, _modDef3849.twlOb6];
+const items3 = [_modDef3862.twlOb6, _modDef3862.twlOb6];
 obj.project = items3;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");

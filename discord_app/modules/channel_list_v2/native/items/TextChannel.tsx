@@ -5,6 +5,7 @@ import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import useChannelRoleSubscriptionStatus from "../../../guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
+import preloadChannelAppFrame from "../../../frames/preloadChannelAppFrame.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import GatedChannelStore from "../../../channel/GatedChannelStore.tsx";
@@ -15,11 +16,11 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11572);
+const RedesignChannelListConstants = fn(11797);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   const obj = {
     container: {
@@ -109,26 +110,57 @@ export default noop.memo(
               if (cResult[11] !== id) {
                 class V {
                   constructor() {
-                    obj = closure_0(closure_2[23]);
+                    obj = closure_0(closure_2[24]);
                     result = obj.openChannelLongPressActionSheet(id);
                     return;
                   }
                 }
-                cResult[11] = id;
+                class O {
+                  constructor() {
+                    tmp = closure_2;
+                    obj = closure_0(closure_2[22]);
+                    tmp3 = undefined;
+                    tmp2 = id;
+                    if (isSuggestedSection) {
+                      obj1 = { source: null };
+                      tmp4 = closure_1;
+                      obj1.source = closure_1(tmp[23]).CHANNEL_LIST_SUGGESTED_SECTION;
+                      tmp3 = obj1;
+                    }
+                    transitionToChannelResult = obj.transitionToChannel(tmp2, tmp3);
+                    return;
+                  }
+                }
                 cResult[12] = V;
               } else {
                 class V {
                   constructor() {
-                    obj = closure_0(closure_2[23]);
+                    obj = closure_0(closure_2[24]);
                     result = obj.openChannelLongPressActionSheet(id);
                     return;
                   }
                 }
               }
+              class O {
+                constructor() {
+                  tmp = closure_2;
+                  obj = closure_0(closure_2[22]);
+                  tmp3 = undefined;
+                  tmp2 = id;
+                  if (isSuggestedSection) {
+                    obj1 = { source: null };
+                    tmp4 = closure_1;
+                    obj1.source = closure_1(tmp[23]).CHANNEL_LIST_SUGGESTED_SECTION;
+                    tmp3 = obj1;
+                  }
+                  transitionToChannelResult = obj.transitionToChannel(tmp2, tmp3);
+                  return;
+                }
+              }
               if (hasUnread) {
                 class V {
                   constructor() {
-                    obj = closure_0(closure_2[23]);
+                    obj = closure_0(closure_2[24]);
                     result = obj.openChannelLongPressActionSheet(id);
                     return;
                   }
@@ -137,7 +169,7 @@ export default noop.memo(
               let obj2 = {
                 muted,
                 selected,
-                unread: hasUnread,
+                unread: tmp19,
                 resolvedUnreadSetting: null,
                 mentionCount: null,
                 locked: false,
@@ -147,47 +179,79 @@ export default noop.memo(
                 constructor() {
                   obj = closure_1(closure_2[20]);
                   preloadResult = obj.preload(guild_id, id);
+                  obj2 = closure_0(closure_2[21]);
+                  result = obj2.preloadChannelAppFrame(id);
                   return;
                 }
               }
               obj2.mentionCount = mentionCount;
               obj2.channel = channel;
-              const channelMode = tmp(tmp2[24]).getChannelMode(obj2);
-              const tmpResult6 = tmp(tmp2[24]);
-              const isActivitiesInTextEnabled = tmp(tmp2[25]).useIsActivitiesInTextEnabled(id);
+              const channelMode = tmp(tmp2[25]).getChannelMode(obj2);
+              const tmpResult5 = tmp(tmp2[25]);
+              const isActivitiesInTextEnabled = tmp(tmp2[26]).useIsActivitiesInTextEnabled(id);
               if (channel.isRulesChannel) {
                 class V {
                   constructor() {
-                    obj = closure_0(closure_2[23]);
+                    obj = closure_0(closure_2[24]);
                     result = obj.openChannelLongPressActionSheet(id);
                     return;
                   }
                 }
                 let channelIcon = isSuggestedSection(tmp2[12]);
-                let BookCheckIcon = tmp(tmp2[13]).BookCheckIcon;
+                class O {
+                  constructor() {
+                    tmp = closure_2;
+                    obj = closure_0(closure_2[22]);
+                    tmp3 = undefined;
+                    tmp2 = id;
+                    if (isSuggestedSection) {
+                      obj1 = { source: null };
+                      tmp4 = closure_1;
+                      obj1.source = closure_1(tmp[23]).CHANNEL_LIST_SUGGESTED_SECTION;
+                      tmp3 = obj1;
+                    }
+                    transitionToChannelResult = obj.transitionToChannel(tmp2, tmp3);
+                    return;
+                  }
+                }
               } else {
                 class V {
                   constructor() {
-                    obj = closure_0(closure_2[23]);
+                    obj = closure_0(closure_2[24]);
                     result = obj.openChannelLongPressActionSheet(id);
                     return;
                   }
                 }
                 channelIcon = obj6.getChannelIcon(channel, { isRulesChannel: false });
-                BookCheckIcon = tmp(tmp2[14]).getChannelIconComponent(channel, { isRulesChannel: false });
-                const tmpResult8 = tmp(tmp2[14]);
+                class O {
+                  constructor() {
+                    tmp = closure_2;
+                    obj = closure_0(closure_2[22]);
+                    tmp3 = undefined;
+                    tmp2 = id;
+                    if (isSuggestedSection) {
+                      obj1 = { source: null };
+                      tmp4 = closure_1;
+                      obj1.source = closure_1(tmp[23]).CHANNEL_LIST_SUGGESTED_SECTION;
+                      tmp3 = obj1;
+                    }
+                    transitionToChannelResult = obj.transitionToChannel(tmp2, tmp3);
+                    return;
+                  }
+                }
+                const channelIconComponent = obj7.getChannelIconComponent(channel, { isRulesChannel: false });
               }
-              const tmpResult7 = tmp(tmp2[25]);
-              const obj3 = { mode: channelMode, source: channelIcon, IconComponent: BookCheckIcon };
+              const tmpResult6 = tmp(tmp2[26]);
+              const obj3 = { mode: channelMode, source: channelIcon, IconComponent: channelIconComponent };
               tmp(tmp2[15]).BaseChannelIcon(obj3);
-              const tmp25 = isSuggestedSection(tmp2[26])(channel);
+              const tmp26 = isSuggestedSection(tmp2[27])(channel);
               const channelLabelText = tmp4.channelLabelText;
-              const tmpResult9 = tmp(tmp2[15]);
+              const tmpResult7 = tmp(tmp2[15]);
               const channelNameTextProps = tmp(tmp2[15]).useChannelNameTextProps(channelMode);
-              if (cResult[13] === tmp25) {
+              if (cResult[13] === tmp26) {
                 class V {
                   constructor() {
-                    obj = closure_0(closure_2[23]);
+                    obj = closure_0(closure_2[24]);
                     result = obj.openChannelLongPressActionSheet(id);
                     return;
                   }
@@ -240,29 +304,39 @@ export default noop.memo(
                 }
               }
               const merged = Object.assign(channelNameTextProps);
-              obj4.children = tmp25;
-              const tmp32 = closure_13(tmp(tmp2[27]).Text, obj4);
-              cResult[13] = tmp25;
+              obj4.children = tmp26;
+              const tmp33 = closure_13(tmp(tmp2[28]).Text, obj4);
+              cResult[13] = tmp26;
               cResult[14] = tmp4.channelLabelText;
               cResult[15] = channelNameTextProps;
-              cResult[16] = tmp32;
-              const tmpResult10 = tmp(tmp2[15]);
+              cResult[16] = tmp33;
+              const tmpResult8 = tmp(tmp2[15]);
             }
-            const fn = function j() {
-              let tmp3;
-              if (isSuggestedSection) {
-                const obj2 = { source: RoutingSourcesDefault.CHANNEL_LIST_SUGGESTED_SECTION };
-                tmp3 = obj2;
+            class O {
+              constructor() {
+                tmp = closure_2;
+                obj = closure_0(closure_2[22]);
+                tmp3 = undefined;
+                tmp2 = id;
+                if (isSuggestedSection) {
+                  obj1 = { source: null };
+                  tmp4 = closure_1;
+                  obj1.source = closure_1(tmp[23]).CHANNEL_LIST_SUGGESTED_SECTION;
+                  tmp3 = obj1;
+                }
+                transitionToChannelResult = obj.transitionToChannel(tmp2, tmp3);
+                return;
               }
-              transitionToChannel.transitionToChannel(id, tmp3);
-            };
+            }
             cResult[8] = id;
             cResult[9] = isSuggestedSection;
-            cResult[10] = fn;
+            cResult[10] = O;
             class P {
               constructor() {
                 obj = closure_1(closure_2[20]);
                 preloadResult = obj.preload(guild_id, id);
+                obj2 = closure_0(closure_2[21]);
+                result = obj2.preloadChannelAppFrame(id);
                 return;
               }
             }
@@ -271,6 +345,8 @@ export default noop.memo(
             constructor() {
               obj = closure_1(closure_2[20]);
               preloadResult = obj.preload(guild_id, id);
+              obj2 = closure_0(closure_2[21]);
+              result = obj2.preloadChannelAppFrame(id);
               return;
             }
           }
@@ -395,6 +471,7 @@ export default noop.memo(
         const items3 = [id, isSuggestedSection];
         const callback = guild_id.useCallback(() => {
           ChannelActionCreatorsDefault.preload(guild_id, id);
+          const result = preloadChannelAppFrame.preloadChannelAppFrame(id);
         }, items2);
         const items4 = [id];
         const callback1 = guild_id.useCallback(() => {
@@ -413,7 +490,7 @@ export default noop.memo(
           tmp9 = !muted;
         }
         let obj = channel(id[19]);
-        const channelMode = channel(id[24]).getChannelMode({
+        const channelMode = channel(id[25]).getChannelMode({
           muted,
           selected,
           unread: tmp9,
@@ -422,8 +499,8 @@ export default noop.memo(
           locked: false,
           channel,
         });
-        const tmp3Result = channel(id[24]);
-        const isActivitiesInTextEnabled = channel(id[25]).useIsActivitiesInTextEnabled(id);
+        const tmp3Result = channel(id[25]);
+        const isActivitiesInTextEnabled = channel(id[26]).useIsActivitiesInTextEnabled(id);
         if (channel.isRulesChannel) {
           let channelIcon = isSuggestedSection(tmp4[12]);
           let BookCheckIcon = tmp3(tmp4[13]).BookCheckIcon;
@@ -433,7 +510,7 @@ export default noop.memo(
           BookCheckIcon = tmp3(tmp4[14]).getChannelIconComponent(channel, { isRulesChannel: false });
           const tmp3Result10 = tmp3(tmp4[14]);
         }
-        const tmp3Result8 = channel(id[25]);
+        const tmp3Result8 = channel(id[26]);
         const tmp3Result11 = channel(id[15]);
         const BaseChannelIconResult = channel(id[15]).BaseChannelIcon({
           mode: channelMode,
@@ -441,12 +518,12 @@ export default noop.memo(
           IconComponent: BookCheckIcon,
         });
         let obj2 = { experimental_useNativeText: true, lineClamp: 1, style: tmp.channelLabelText };
-        const tmp16 = isSuggestedSection(id[26])(channel);
+        const tmp16 = isSuggestedSection(id[27])(channel);
         const merged = Object.assign(channel(id[15]).useChannelNameTextProps(channelMode));
         obj2.children = tmp16;
-        const tmp19 = closure_13(channel(id[27]).Text, obj2);
+        const tmp19 = closure_13(channel(id[28]).Text, obj2);
         const tmp3Result12 = channel(id[15]);
-        const children = [closure_13(isSuggestedSection(id[28]), { unread: tmp9, resolvedUnreadSetting }), ,];
+        const children = [closure_13(isSuggestedSection(id[29]), { unread: tmp9, resolvedUnreadSetting }), ,];
         const obj3 = {
           onPressIn: callback,
           onPress: callback1,
@@ -459,7 +536,7 @@ export default noop.memo(
           children: null,
         };
         const items6 = [tmp.container];
-        const tmp21 = isSuggestedSection(id[34]);
+        const tmp21 = isSuggestedSection(id[35]);
         items6[1] = channelMode === channel(id[15]).ChannelModes.SELECTED && tmp.selected;
         obj3.style = items6;
         const obj4 = {
@@ -478,7 +555,7 @@ export default noop.memo(
         obj4.embeddedActivitiesCount = num;
         obj4.isSubscriptionGated = isSubscriptionGated;
         obj4.needSubscriptionToAccess = needSubscriptionToAccess;
-        obj3.accessibilityLabel = isSuggestedSection(id[29])(obj4);
+        obj3.accessibilityLabel = isSuggestedSection(id[30])(obj4);
         obj3.accessibilityState = { selected };
         let tmp17Result = channelMode === tmp3(tmp4[15]).ChannelModes.SELECTED;
         if (tmp17Result) {
@@ -497,14 +574,14 @@ export default noop.memo(
           const obj8 = { experimental_useNativeText: true, lineClamp: 1 };
           const merged1 = Object.assign(tmp3(tmp4[15]).getChannelSubtitleTextProps(channelMode));
           const tmp3Result13 = tmp3(tmp4[15]);
-          obj8.children = tmp3(tmp4[30]).getChannelSubtitleData(subtitle).subtitle;
-          items10[1] = closure_13(tmp3(tmp4[27]).Text, obj8);
+          obj8.children = tmp3(tmp4[31]).getChannelSubtitleData(subtitle).subtitle;
+          items10[1] = closure_13(tmp3(tmp4[28]).Text, obj8);
           obj7.children = items10;
           tmp20Result = closure_14(View, obj7);
-          const tmp3Result14 = tmp3(tmp4[30]);
+          const tmp3Result14 = tmp3(tmp4[31]);
         }
         items9[1] = tmp20Result;
-        items9[2] = closure_13(isSuggestedSection(id[31]), {
+        items9[2] = closure_13(isSuggestedSection(id[32]), {
           channel,
           isChannelSelected: selected,
           muted,
@@ -515,10 +592,10 @@ export default noop.memo(
         obj6.children = items9;
         items7[1] = closure_14(View, obj6);
         obj3.children = items7;
-        children[1] = closure_14(channel(id[32]).AnimatedPressableHighlight, obj3);
+        children[1] = closure_14(channel(id[33]).AnimatedPressableHighlight, obj3);
         if (selected) {
           const obj9 = { targetRef: ref, channelType: channel.type };
-          selected = closure_13(isSuggestedSection(tmp4[33]), obj9);
+          selected = closure_13(isSuggestedSection(tmp4[34]), obj9);
         }
         children[2] = selected;
         return closure_14(tmp21, { children });

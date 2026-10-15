@@ -9,9 +9,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 let c6 = "badge-directory";
-const createStyles = fn(5096);
-let obj2 = { sheetHeader: { height: fn(6263).NAV_BAR_HEIGHT }, view: null };
-let obj3 = { height: fn(6263).NAV_BAR_HEIGHT };
+const createStyles = fn(5151);
+let obj2 = { sheetHeader: { height: fn(6479).NAV_BAR_HEIGHT }, view: null };
+let obj3 = { height: fn(6479).NAV_BAR_HEIGHT };
 obj2.view = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -82,10 +82,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] === stateFromStores1) {
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const headerCloseButton = Navigator(6205).getHeaderCloseButton(Navigator(10585).closeBadgeDirectoryScreen);
+            const headerCloseButton = Navigator(6421).getHeaderCloseButton(Navigator(10808).closeBadgeDirectoryScreen);
             cResult[8] = headerCloseButton;
             let tmp15 = headerCloseButton;
-            const NavigatorResult2 = Navigator(6205);
+            const NavigatorResult2 = Navigator(6421);
           } else {
             tmp15 = cResult[8];
           }
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[14] === view.sheetHeader) {
                   }
                 }
-                Navigator = Navigator(6692).Navigator;
+                Navigator = Navigator(6908).Navigator;
                 const obj2 = {
                   screens: sheetHeader,
                   initialRouteName,
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmp18;
                 }
                 const obj3 = { screens: sheetHeader, initialRouteName, viewStyle: view.view };
-                const tmp21 = jsx(Navigator(10613).Modal, {
+                const tmp21 = jsx(Navigator(10836).Modal, {
                   screens: sheetHeader,
                   initialRouteName,
                   viewStyle: view.view,
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[19] = tmp21;
                 tmp18 = tmp21;
               }
-              NavigatorResult3 = Navigator(10585);
+              NavigatorResult3 = Navigator(10808);
             }
           }
           const obj4 = {};
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               viewStyle: null,
             };
             ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-            let tmp9Result = jsx(tmp2(6692).Navigator, {
+            let tmp9Result = jsx(tmp2(6908).Navigator, {
               screens: memo,
               initialRouteName,
               headerStatusBarHeight: 0,
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           } else {
             const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-            tmp9Result = jsx(tmp2(10613).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+            tmp9Result = jsx(tmp2(10836).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
           }
           return tmp9Result;
         }

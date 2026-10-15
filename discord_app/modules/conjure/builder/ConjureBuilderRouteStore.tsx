@@ -40,7 +40,7 @@ prototype["getLastProjectId"] = function getLastProjectId(guildId) {
   return tmp;
 };
 ConjureBuilderRouteStore.displayName = "ConjureBuilderRouteStore";
-ConjureBuilderRouteStore.persistKey = "VibegrationsBuilderRoute";
+ConjureBuilderRouteStore.persistKey = "ConjureBuilderRoute";
 const conjureBuilderRouteStore = new ConjureBuilderRouteStore(DispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect(channelId) {
     ({ guildId, messageId } = channelId);

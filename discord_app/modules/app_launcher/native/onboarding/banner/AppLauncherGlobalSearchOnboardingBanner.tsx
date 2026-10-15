@@ -8,7 +8,7 @@ const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1502).DEFAULT_CONTENT_PADDING;
 const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = { appsIcon: null, appsIconImage: null };
 let size = {
   height: 40,
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              Coachmark = Coachmark(9461).Coachmark;
+              Coachmark = Coachmark(9672).Coachmark;
               const obj2 = {
                 renderImgComponent: tmp9,
                 title: tmp12,
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.targetMeasurements = size;
         const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
         obj.surfaceMeasurements = size1;
-        tmp3 = jsx(markAsDismissed(9461).Coachmark, {
+        tmp3 = jsx(markAsDismissed(9672).Coachmark, {
           renderImgComponent: function appsIcon() {
             const obj = {
               style: closure_2.appsIcon,

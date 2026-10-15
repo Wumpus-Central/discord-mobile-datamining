@@ -44,7 +44,7 @@ let closure_5 = async function _writeCaches() {
     flag = false;
   }
   closure_129_0 = flag;
-  return "Set";
+  return "test";
 };
 const ChannelLoader = fn(2065).ChannelLoader;
 const size = fn(2);

@@ -279,8 +279,8 @@ export const canPublishProject = function canPublishProject(project) {
   }
   let tmp3 = project.owner_user_id === id;
   if (!tmp3) {
-    tmp3 = ConjureProjectTypes.isProjectPublic(project) && null != project.guild_id;
-    const tmp6 = ConjureProjectTypes.isProjectPublic(project) && null != project.guild_id;
+    tmp3 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
+    const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project) && null != project.guild_id;
   }
   return tmp3;
 };
@@ -290,13 +290,13 @@ export const canRemixProject = function canRemixProject(owner_user_id) {
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let isProjectSharedResult = owner_user_id.owner_user_id === id;
-  if (!isProjectSharedResult) {
-    isProjectSharedResult = ConjureProjectTypes.isProjectShared(owner_user_id);
+  let isProjectPublicResult = owner_user_id.owner_user_id === id;
+  if (!isProjectPublicResult) {
+    isProjectPublicResult = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
+    const tmp6 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(owner_user_id) && null != owner_user_id.guild_id;
   }
-  if (!isProjectSharedResult) {
-    isProjectSharedResult = ConjureProjectTypes.isProjectPublic(owner_user_id) && null != owner_user_id.guild_id;
-    const tmp8 = ConjureProjectTypes.isProjectPublic(owner_user_id) && null != owner_user_id.guild_id;
+  if (!isProjectPublicResult) {
+    isProjectPublicResult = ConjureProjectTypes.isProjectPublic(owner_user_id);
   }
-  return isProjectSharedResult;
+  return isProjectPublicResult;
 };

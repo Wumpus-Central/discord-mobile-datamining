@@ -7,6 +7,8 @@ import ApexExperiment from "../modules/experiments/apex/index.tsx";
 import SidebarActionTypes from "../modules/sidebar/SidebarActionTypes.tsx";
 import FriendsSidebarExperimentDefault from "../modules/friends/FriendsSidebarExperiment.tsx";
 import FriendsSidebarTracking from "../modules/friends/FriendsSidebarTracking.tsx";
+import conjureDMAppChannel from "../modules/conjure/app_channel/conjureDMAppChannel.tsx";
+import ApplicationStore from "../modules/applications/ApplicationStore.tsx";
 import ExperimentStore from "../modules/experiments/ExperimentStore.tsx";
 import SearchMessageStore from "../modules/search/SearchMessageStore.tsx";
 import ChannelStore from "ChannelStore.tsx";
@@ -48,25 +50,25 @@ function setIsFriendsOpen(arg0, trackClose) {
     FriendsSidebarExperimentDefault.getConfig({ location: "ChannelSectionStore" }).appBarToggleEnabled ? flag5 : flag4;
   }
 }
-function toggleSection(c17, arg1) {
+function toggleSection(c18, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   let flag2 = false;
-  if (c26) {
-    c26 = false;
+  if (c27) {
+    c27 = false;
     flag2 = true;
   }
   const channelId = SelectedChannelStore.getChannelId();
   let tmp4 = null;
   if (null != channelId) {
     tmp4 = channelId;
-    if (closure_1_14(channelId)) {
+    if (value2(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp8 = null;
       if (null != guildId) {
-        tmp8 = value2(channelId, guildId);
+        tmp8 = value3(channelId, guildId);
       }
       tmp4 = tmp8;
     }
@@ -88,9 +90,9 @@ function toggleSection(c17, arg1) {
       flag2 = true;
     }
     if (!flag2) {
-      let tmp19 = !c17;
+      let tmp19 = !c18;
     } else {
-      tmp19 = c17;
+      tmp19 = c18;
     }
     let tmp20 = tmp19;
     if (tmp19) {
@@ -137,18 +139,18 @@ function handlePermissionsChange() {
 }
 const isChannelChatInSidebar = fn(2069).isChannelChatInSidebar;
 const Constants = fn(1085);
-({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
+({ ChannelSections: map1, ComponentActions: closure_14 } = Constants);
 const ChannelConstants = fn(2072);
-({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
+({ isStaticChannelRoute: closure_15, buildGuildStaticChannelId: closure_16 } = ChannelConstants);
 const Permissions = fn(1096).Permissions;
-let c17 = false;
 let c18 = false;
 let c19 = false;
+let c20 = false;
 const isProfileOpen = true;
 let available = false;
 let sidebars = {};
 let guildSidebars = {};
-let c26 = false;
+let c27 = false;
 let searchContextId = null;
 const PersistedStore = initializeDefault.PersistedStore;
 class ChannelSectionStore extends PersistedStore {}
@@ -159,17 +161,17 @@ prototype["initialize"] = function initialize(isMembersOpen) {
     if (flag == null) {
       flag = false;
     }
-    c17 = flag;
+    c18 = flag;
     let flag2 = isMembersOpen.isSummariesOpen;
     if (flag2 == null) {
       flag2 = false;
     }
-    c18 = flag2;
+    c19 = flag2;
     let flag3 = isMembersOpen.isProfileOpen;
     if (flag3 == null) {
       flag3 = true;
     }
-    closure_20 = flag3;
+    closure_21 = flag3;
     flag4 = isMembersOpen.isFriendsOpen;
     if (flag4 == null) {
       flag4 = true;
@@ -190,6 +192,7 @@ prototype["initialize"] = function initialize(isMembersOpen) {
   const items = [PermissionStore];
   this.syncWith(items, handlePermissionsChange);
   this.waitFor(
+    ApplicationStore,
     ChannelStore,
     ExperimentStore,
     ApexExperiment.ApexExperimentStore,
@@ -213,17 +216,17 @@ prototype["getState"] = function getState() {
   };
 };
 prototype["getSection"] = function getSection(arg0, arg1) {
-  if (c26) {
+  if (c27) {
     return constants.SEARCH;
   } else {
     let tmp3 = null;
     if (null != arg0) {
       tmp3 = arg0;
-      if (closure_1_14(arg0)) {
+      if (value2(arg0)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = value2(arg0, guildId);
+          tmp7 = value3(arg0, guildId);
         }
         tmp3 = tmp7;
       }
@@ -241,13 +244,13 @@ prototype["getSection"] = function getSection(arg0, arg1) {
       tmp10Result = FriendsSidebarExperimentDefault;
     }
     if (arg1) {
-      if (closure_20) {
+      if (closure_21) {
         MEMBERS = constants.PROFILE;
       }
     }
-    if (c18) {
+    if (c19) {
       MEMBERS = constants.SUMMARIES;
-    } else if (c17) {
+    } else if (c18) {
       if (!arg1) {
         MEMBERS = constants.MEMBERS;
       }
@@ -259,11 +262,11 @@ prototype["getSidebarState"] = function getSidebarState(channelId) {
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (value2(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = value2(channelId, guildId);
+        tmp5 = value3(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -288,18 +291,18 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (value2(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = value2(channelId, guildId);
+        tmp5 = value3(channelId, guildId);
       }
       tmp = tmp5;
     }
   }
   if (null == tmp) {
     return null;
-  } else if (c26) {
+  } else if (c27) {
     return null;
   } else {
     let tmp10 = null;
@@ -318,18 +321,18 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (value2(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = value2(channelId, guildId);
+        tmp5 = value3(channelId, guildId);
       }
       tmp = tmp5;
     }
   }
   if (null == tmp) {
     return null;
-  } else if (c26) {
+  } else if (c27) {
     return null;
   } else {
     let tmp9 = null;
@@ -384,9 +387,9 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     if (hasSearchStateResult) {
       hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
     }
-    let flag = hasSearchStateResult !== c26;
+    let flag = hasSearchStateResult !== c27;
     if (flag) {
-      c26 = hasSearchStateResult;
+      c27 = hasSearchStateResult;
       flag = true;
     }
     return flag;
@@ -397,9 +400,9 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     if (tmp) {
       let hasItem = ids.includes(searchContextId);
       if (hasItem) {
-        let flag = !c26;
-        if (!c26) {
-          c26 = true;
+        let flag = !c27;
+        if (!c27) {
+          c27 = true;
           flag = true;
         }
         hasItem = flag;
@@ -411,9 +414,9 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
   SEARCH_MESSAGES_CLEAR: function handleSearchMessagesClear(id) {
     let tmp = id.id === searchContextId;
     if (tmp) {
-      let flag = c26;
+      let flag = c27;
       if (flag) {
-        c26 = false;
+        c27 = false;
         flag = true;
       }
       tmp = flag;
@@ -421,61 +424,61 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     return tmp;
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let flag = c26;
+    let flag = c27;
     if (flag) {
-      c26 = false;
+      c27 = false;
       flag = true;
     }
     return flag;
   },
   CHANNEL_TOGGLE_MEMBERS_SECTION: function handleChannelToggleMembersSection() {
-    if (c26) {
+    if (c27) {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
-    if (c18) {
-      c18 = toggleSection(tmp5);
-    }
     if (c19) {
-      c19 = toggleSection(tmp7);
+      c19 = toggleSection(tmp5);
     }
-    c17 = toggleSection(c17, true);
-  },
-  USER_PROFILE_SIDEBAR_TOGGLE_SECTION: function handleUserProfileSidebarToggleSection() {
-    if (!closure_20) {
-      const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-      ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
-    }
-    closure_20 = toggleSection(closure_20, true);
-  },
-  CHANNEL_TOGGLE_SUMMARIES_SECTION: function handleChannelToggleSummariesSection() {
-    if (c17) {
-      c17 = toggleSection(tmp);
-    }
-    if (c19) {
-      c19 = toggleSection(tmp3);
+    if (c20) {
+      c20 = toggleSection(tmp7);
     }
     c18 = toggleSection(c18, true);
   },
-  CHANNEL_TOGGLE_CONVERSATIONS_SECTION: function handleChannelToggleConversationsSection() {
-    if (c26) {
+  USER_PROFILE_SIDEBAR_TOGGLE_SECTION: function handleUserProfileSidebarToggleSection() {
+    if (!closure_21) {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
-    c17 = false;
-    c18 = false;
+    closure_21 = toggleSection(closure_21, true);
+  },
+  CHANNEL_TOGGLE_SUMMARIES_SECTION: function handleChannelToggleSummariesSection() {
+    if (c18) {
+      c18 = toggleSection(tmp);
+    }
+    if (c20) {
+      c20 = toggleSection(tmp3);
+    }
     c19 = toggleSection(c19, true);
   },
+  CHANNEL_TOGGLE_CONVERSATIONS_SECTION: function handleChannelToggleConversationsSection() {
+    if (c27) {
+      const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+      ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
+    }
+    c18 = false;
+    c19 = false;
+    c20 = toggleSection(c20, true);
+  },
   CHANNEL_OPEN_CONVERSATIONS_SECTION: function handleChannelOpenConversationsSection() {
-    let flag = !c19;
-    if (!c19) {
-      if (c26) {
+    let flag = !c20;
+    if (!c20) {
+      if (c27) {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
         ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
       }
-      c17 = false;
       c18 = false;
-      c19 = true;
+      c19 = false;
+      c20 = true;
       setIsFriendsOpen(false);
       flag = true;
     }
@@ -483,16 +486,16 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
   },
   SIDEBAR_VIEW_CHANNEL: function handleSidebarViewChannel(arg0) {
     ({ sidebarType, baseChannelId } = arg0);
-    c26 = false;
+    c27 = false;
     let tmp = null;
     ({ channelId, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (value2(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = value2(baseChannelId, guildId);
+          tmp5 = value3(baseChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -514,16 +517,16 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
   },
   SIDEBAR_VIEW_GUILD: function handleSidebarViewGuild(arg0) {
     ({ guildId, baseChannelId } = arg0);
-    c26 = false;
+    c27 = false;
     let tmp = null;
     ({ sidebarType, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (value2(baseChannelId)) {
         const guildId1 = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId1) {
-          tmp5 = value2(baseChannelId, guildId1);
+          tmp5 = value3(baseChannelId, guildId1);
         }
         tmp = tmp5;
       }
@@ -538,16 +541,16 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
   },
   SIDEBAR_CREATE_THREAD: function handleCreateThread(parentChannelId) {
     parentChannelId = parentChannelId.parentChannelId;
-    c26 = false;
+    c27 = false;
     let tmp = null;
     ({ parentMessageId, location: _location } = parentChannelId);
     if (null != parentChannelId) {
       tmp = parentChannelId;
-      if (closure_1_14(parentChannelId)) {
+      if (value2(parentChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = value2(parentChannelId, guildId);
+          tmp5 = value3(parentChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -567,11 +570,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     let tmp3 = null;
     if (null != baseChannelId) {
       tmp3 = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (value2(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = value2(baseChannelId, guildId);
+          tmp7 = value3(baseChannelId, guildId);
         }
         tmp3 = tmp7;
       }
@@ -582,8 +585,8 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
       if (hasSearchStateResult) {
         hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
       }
-      if (hasSearchStateResult !== c26) {
-        c26 = hasSearchStateResult;
+      if (hasSearchStateResult !== c27) {
+        c27 = hasSearchStateResult;
       }
     }
   },
@@ -596,8 +599,8 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
         hasSearchStateResult = SearchMessageStore.hasSearchState(searchContextId);
       }
       flag = true;
-      if (hasSearchStateResult !== c26) {
-        c26 = hasSearchStateResult;
+      if (hasSearchStateResult !== c27) {
+        c27 = hasSearchStateResult;
         flag = true;
       }
     }
@@ -610,10 +613,10 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
       if (null != SelectedChannelStore.getChannelId()) {
         delete tmp[tmp2];
       }
-      if (c26) {
+      if (c27) {
         const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
         ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
-        c26 = false;
+        c27 = false;
       }
     }
   },
@@ -668,32 +671,34 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ channelId, messageId } = arg0);
     let flag = false;
     if (tmp3) {
-      c17 = false;
       c18 = false;
       c19 = false;
+      c20 = false;
       flag = true;
     }
     if (null != channelId) {
       if (null != messageId) {
         let type;
         if (sidebars[channelId] != null) {
-          type = tmp10.type;
+          type = tmp9.type;
         }
         if (type === SidebarActionTypes.SidebarType.VIEW_CHANNEL) {
-          if (tmp10.channelId === channelId) {
+          if (tmp9.channelId === channelId) {
             return flag;
           }
         }
         const channel = ChannelStore.getChannel(channelId);
         let flag2 = flag;
         if (null != channel) {
-          flag2 = flag;
           if (isChannelChatInSidebar(channel.type)) {
             const obj = { type: SidebarActionTypes.SidebarType.VIEW_CHANNEL, channelId, details: null };
             const obj2 = { type: SidebarActionTypes.ViewChannelDetailType.CHAT, initialMessageId: messageId };
             obj.details = obj2;
             sidebars[channelId] = obj;
             flag2 = true;
+          } else {
+            conjureDMAppChannel;
+            flag2 = flag;
           }
         }
         return flag2;

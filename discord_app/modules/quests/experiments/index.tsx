@@ -187,6 +187,17 @@ const obj28 = { 1: null };
 obj28[1] = { enabled: true };
 obj27.variations = obj28;
 const apexExperiment13 = ApexExperiment.createApexExperiment(obj27);
+let ApexExperiment = ApexExperiment_mod;
+const obj29 = {
+  name: "2026-10-clickable-hero-banner",
+  kind: "user",
+  defaultConfig: { enabled: false },
+  variations: null,
+};
+const obj30 = { 1: null };
+obj30[1] = { enabled: true };
+obj29.variations = obj30;
+const apexExperiment14 = ApexExperiment.createApexExperiment(obj29);
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
@@ -250,3 +261,4 @@ export const QuestMobileBarSecondaryCtaExperiment = apexExperiment11;
 export const QuestOrbTierVariant = obj24;
 export const QuestOrbTierExperiment = apexExperiment12;
 export const MobileQuestRewardButtonToSecondaryButtonExperiment = apexExperiment13;
+export const ClickableHeroBannerExperiment = apexExperiment14;

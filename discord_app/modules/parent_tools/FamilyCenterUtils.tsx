@@ -1,12 +1,12 @@
 // discord_app/modules/parent_tools/FamilyCenterUtils.tsx
 import util from "../../intl/index.native.tsx";
 import _modDef2568 from "FamilyCenter.messages.js";
-import _modDef4704 from "../../../_runtime/metro/04704__.js";
+import _modDef4758 from "../../../_runtime/metro/04758__.js";
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators.tsx";
 import FamilyCenterStore from "FamilyCenterStore.tsx";
 
 require = fn;
-const FamilyCenterConstants = fn(7266);
+const FamilyCenterConstants = fn(7476);
 ({
   ACTION_TO_TEXT: closure_4,
   FAMILY_CENTER_ERROR_CODE_TO_FAILURE: hasOwnProperty,
@@ -50,10 +50,10 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   return tmp5;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  const diffResult = _modDef4704().diff(_modDef4704(time), "s");
+  const diffResult = _modDef4758().diff(_modDef4758(time), "s");
   const tmp3 = timestampFormatter();
-  const obj = _modDef4704();
-  _modDef4704(time).format("LL");
+  const obj = _modDef4758();
+  _modDef4758(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
   } else if (diffResult < c11) {
@@ -72,9 +72,9 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
   return yesterday;
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  const diffResult = _modDef4704().diff(_modDef4704(arg0), "s");
+  const diffResult = _modDef4758().diff(_modDef4758(arg0), "s");
   const time = SENT_TIMESTAMP_FORMATTER();
-  _modDef4704(arg0);
+  _modDef4758(arg0);
   if (diffResult < 60) {
     let yesterday = time.seconds;
   } else if (diffResult < 3600) {

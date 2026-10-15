@@ -20,7 +20,7 @@ import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 require = fn;
 const View = fn(17).View;
 const ActivityLayoutMode = fn(2024).ActivityLayoutMode;
-const ActivityPanelConstants = fn(6073);
+const ActivityPanelConstants = fn(6289);
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
   ActivityPanelModes: closure_11,
@@ -28,14 +28,14 @@ let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14,
 } = ActivityPanelConstants);
-const portraitSafeAreasConfig = fn(17802).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(18042).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1085).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(12525).PIP_WINDOW_OFFSET;
+const PIP_WINDOW_OFFSET = fn(12818).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 const native = fn(1200);
 const boxShadowStyle = native.generateBoxShadowStyle(fn(1200).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
@@ -915,7 +915,7 @@ export default noop.memo(
             transitionCleanUp,
             pipOrientationLockState: stateFromStores,
             hasActivity: tmp16,
-            context: applicationId(17799),
+            context: applicationId(18039),
             children: tmp17,
           };
           const tmp23 = (
@@ -924,7 +924,7 @@ export default noop.memo(
               transitionCleanUp={transitionCleanUp}
               pipOrientationLockState={stateFromStores}
               hasActivity={tmp16}
-              context={applicationId(17799)}
+              context={applicationId(18039)}
             >
               {tmp17}
             </closure_28>
@@ -936,7 +936,7 @@ export default noop.memo(
           cResult[15] = transitionState;
           cResult[16] = tmp23;
         }
-        const tmp18 = jsx(applicationId(10999), {
+        const tmp18 = jsx(applicationId(11223), {
           channel: stateFromStores1,
           layoutMode: ActivityLayoutMode.PIP,
           portraitSafeAreasConfig,

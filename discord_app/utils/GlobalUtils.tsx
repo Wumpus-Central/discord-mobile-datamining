@@ -10,6 +10,9 @@ export function isDiscordFrontendDevelopment() {
 export function isDiscordBackendDevelopment() {
   return closure_0;
 }
+export function getDevTunnelHostname() {
+  return null;
+}
 export const assertNever = function assertNever(type) {
   const error = new Error("Unhandled value: " + type);
   throw error;

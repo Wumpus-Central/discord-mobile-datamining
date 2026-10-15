@@ -7,9 +7,9 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import _modDef9795 from "../../../../../_runtime/metro/09795__.js";
-import _modDef9796 from "../../../../../_runtime/metro/09796__.js";
-import _modDef9797 from "../../../../../_runtime/metro/09797__.js";
+import _modDef10003 from "../../../../../_runtime/metro/10003__.js";
+import _modDef10004 from "../../../../../_runtime/metro/10004__.js";
+import _modDef10005 from "../../../../../_runtime/metro/10005__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef9795,
+    icon: _modDef10003,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -38,7 +38,7 @@ let items = [
   ,
 ];
 let obj = {
-  icon: _modDef9795,
+  icon: _modDef10003,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -46,28 +46,28 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE,
 };
 items[1] = {
-  icon: _modDef9796,
+  icon: _modDef10004,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 let obj2 = {
-  icon: _modDef9796,
+  icon: _modDef10004,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 items[2] = {
-  icon: _modDef9797,
+  icon: _modDef10005,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
   },
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN,
 };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj5 = {
   alert: { paddingTop: 18 },
   shortHeightAlert: { height: 500 },
@@ -82,7 +82,7 @@ let obj5 = {
   imageHeader: null,
 };
 let obj3 = {
-  icon: _modDef9797,
+  icon: _modDef10005,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -257,11 +257,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6] = cResult;
       }
       const effect = noop.useEffect(tmp5, tmp6);
-      const tmp9 = analyticsLocations(9406)(closure_10.PREMIUM_MONTH_TIER_2);
+      const tmp9 = analyticsLocations(9617)(closure_10.PREMIUM_MONTH_TIER_2);
       if (tmp9 != null) {
         const priceString = tmp9.priceString;
       }
-      analyticsLocations = tmp8(6857)().analyticsLocations;
+      analyticsLocations = tmp8(7073)().analyticsLocations;
       if (cResult[2] === analyticsLocation) {
         if (cResult[3] === analyticsLocations) {
           let tmp10 = cResult[4];
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol3 = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            let obj2 = { source: tmp8(7735) };
+            let obj2 = { source: tmp8(7945) };
             const tmp19 = closure_13(analyticsLocation(1200).Icon, obj2);
             cResult[10] = tmp19;
             let tmp17 = tmp19;
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[11] !== onClose) {
             let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: tmp17 };
-            const tmp22 = closure_13(analyticsLocation(6189).PressableOpacity, obj3);
+            const tmp22 = closure_13(analyticsLocation(6405).PressableOpacity, obj3);
             cResult[11] = onClose;
             cResult[12] = tmp22;
             let tmp20 = tmp22;
@@ -325,12 +325,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp27 = cResult[16];
             }
             if (cResult[17] !== tmp4.imageHeader) {
-              const obj4 = { source: tmp8(9798), style: tmp4.imageHeader };
-              const tmp31 = closure_13(tmp8(5034), obj4);
+              const obj4 = { source: tmp8(10006), style: tmp4.imageHeader };
+              const tmp31 = closure_13(tmp8(5088), obj4);
               cResult[17] = tmp4.imageHeader;
               cResult[18] = tmp31;
               let tmp28 = tmp31;
-              const tmp8Result = tmp8(5034);
+              const tmp8Result = tmp8(5088);
             } else {
               tmp28 = cResult[18];
             }
@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                     const items1 = [tmp23, tmp45];
                     obj7.children = items1;
-                    const tmp54 = closure_14(tmp8(5403), obj7);
+                    const tmp54 = closure_14(tmp8(5458), obj7);
                     cResult[32] = onClose;
                     cResult[33] = tmp10;
                     cResult[34] = tmp23;
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     cResult[36] = tmp16;
                     cResult[37] = tmp54;
                     tmp51 = tmp54;
-                    const tmp8Result2 = tmp8(5403);
+                    const tmp8Result2 = tmp8(5458);
                   }
                 }
               }
@@ -427,7 +427,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp45 = tmp50;
             }
             const obj10 = { style: tmp4.description, variant: "text-md/medium", children: tmp32 };
-            const tmp37 = closure_13(analyticsLocation(5092).Text, obj10);
+            const tmp37 = closure_13(analyticsLocation(5147).Text, obj10);
             cResult[21] = tmp4.description;
             cResult[22] = tmp32;
             cResult[23] = tmp37;
@@ -472,12 +472,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj = analyticsLocations(dependencyMap[16]);
         }
       }, []);
-      const tmp5 = analyticsLocations(9406)(closure_10.PREMIUM_MONTH_TIER_2);
+      const tmp5 = analyticsLocations(9617)(closure_10.PREMIUM_MONTH_TIER_2);
       let priceString;
       if (tmp5 != null) {
         priceString = tmp5.priceString;
       }
-      analyticsLocations = tmp3(6857)().analyticsLocations;
+      analyticsLocations = tmp3(7073)().analyticsLocations;
       let obj = {
         cancelText: null,
         confirmColor: null,
@@ -514,8 +514,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.style = items;
       let obj2 = { style: tmp.closeContainer, children: null };
       let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-      const tmp3Result = analyticsLocations(5403);
-      obj3.children = closure_13(native.Icon, { source: analyticsLocations(7735) });
+      const tmp3Result = analyticsLocations(5458);
+      obj3.children = closure_13(native.Icon, { source: analyticsLocations(7945) });
       obj2.children = closure_13(Pressables.PressableOpacity, obj3);
       const items1 = [closure_13(closure_4, obj2)];
       const obj5 = {
@@ -526,10 +526,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const obj6 = { source: null, style: null };
-      const obj4 = { source: analyticsLocations(7735) };
-      obj6.source = analyticsLocations(9798);
+      const obj4 = { source: analyticsLocations(7945) };
+      obj6.source = analyticsLocations(10006);
       obj6.style = tmp.imageHeader;
-      const items2 = [closure_13(analyticsLocations(5034), obj6), ,];
+      const items2 = [closure_13(analyticsLocations(5088), obj6), ,];
       const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
       const intl3 = util.intl;
       if (priceString == null) {
@@ -538,7 +538,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { children: null };
       obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
       items2[1] = closure_13(Text_Text.Text, obj7);
-      const tmp3Result2 = analyticsLocations(5034);
+      const tmp3Result2 = analyticsLocations(5088);
       items2[2] = closure_13(closure_4, {
         style: tmp.perks,
         children: items.map((perk, index) =>

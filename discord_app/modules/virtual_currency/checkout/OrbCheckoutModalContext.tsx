@@ -16,7 +16,7 @@ let obj = {
   skuId: "123",
   skuProductLine: null,
   skuApplicationId: "r",
-  loadId: "Set",
+  loadId: "test",
   analyticsLocations: null,
   analyticsSourceLocation: null,
   isRedeeming: null,

@@ -1089,11 +1089,11 @@ prototype["addSystemResources"] = function addSystemResources() {
   const systemResources = this.systemResources;
   systemResources.takeSample();
 };
-prototype["appendTransportStats"] = function appendTransportStats(transport) {
-  if (null != transport.inboundBitrateEstimate) {
+prototype["appendTransportStats"] = function appendTransportStats(receiverReports) {
+  if (null != receiverReports.inboundBitrateEstimate) {
     const self = this;
     const inboundBitrateEstimateHistogram = this.inboundBitrateEstimateHistogram;
-    inboundBitrateEstimateHistogram.addSample(transport.inboundBitrateEstimate);
+    inboundBitrateEstimateHistogram.addSample(receiverReports.inboundBitrateEstimate);
   }
 };
 prototype["getCodecsUsed"] = function getCodecsUsed() {

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/conjurePublishAction.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3862 from "../intl/ConjureUntranslated.messages.js";
 import conjurePreviewModes from "../preview/conjurePreviewModes.tsx";
 import ConjureHistoryFormat from "../history/ConjureHistoryFormat.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -46,7 +46,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
           str5 = "";
         }
         const obj4 = { server: str5 };
-        formatResult = intl.format(_modDef3849.N4NkyR, obj4);
+        formatResult = intl.format(_modDef3862.N4NkyR, obj4);
       }
     }
     const obj6 = {
@@ -99,7 +99,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
               str9 = "";
             }
             const obj8 = { server: str9 };
-            formatResult1 = intl2.format(_modDef3849.eHYXFg, obj8);
+            formatResult1 = intl2.format(_modDef3862.eHYXFg, obj8);
           }
         }
       }
@@ -124,7 +124,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
         const obj9 = {};
         const merged2 = Object.assign(obj7);
         const intl4 = util.intl;
-        obj9.label = intl4.string(_modDef3849["tUeY/h"]);
+        obj9.label = intl4.string(_modDef3862["tUeY/h"]);
         obj9.action = "review_permissions";
         let obj10 = obj9;
       }
@@ -133,7 +133,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
     obj10 = {};
     const merged3 = Object.assign(obj7);
     const intl3 = util.intl;
-    obj10.label = intl3.string(_modDef3849["120EFN"]);
+    obj10.label = intl3.string(_modDef3862["120EFN"]);
     obj10.action = "publish";
   } else if ("activity" === status2.surface) {
     let tmp8 = null == appChannelName;
@@ -175,7 +175,7 @@ export const conjurePublishTooltip = function conjurePublishTooltip(status) {
           time: ConjureHistoryFormat.formatHistoryDateTime(parseTimestampMsResult),
           version: publishedRevision,
         };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef3849.D9erxW, obj2);
+        formatToPlainStringResult = intl.formatToPlainString(_modDef3862.D9erxW, obj2);
       }
     }
   }

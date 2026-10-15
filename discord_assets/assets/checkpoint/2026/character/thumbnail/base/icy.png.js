@@ -1,0 +1,9 @@
+// discord_assets/assets/checkpoint/2026/character/thumbnail/base/icy.png.js
+import size from "../../../../../../../_runtime/metro/00002__.js";
+
+const result = size.fileFinishedImporting(
+  "../discord_assets/assets/checkpoint/2026/character/thumbnail/base/icy.png.js",
+);
+
+export default "https://cdn.discordapp.com/assets/content/c47a2af46e2489573ef55c9061ea03d0e0aaecbabf7d04b165e14bae3aefed4e.png";
+export const metadata = { fileBytes: 5719 };

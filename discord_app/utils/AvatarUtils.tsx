@@ -1,7 +1,7 @@
 // discord_app/utils/AvatarUtils.tsx
 import SnowflakeUtilsDefault from "SnowflakeUtils.tsx";
 import IntegerDefault from "../../_runtime/00014_Integer.js";
-import Url from "../../_runtime/01386_Url.js";
+import Url from "../../_runtime/01387_Url.js";
 import AvatarDecorationConstants from "../modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx";
 import utils_AvatarUtils from "native/AvatarUtils.tsx";
 import ImageLoaderUtils from "../modules/image_upload/ImageLoaderUtils.tsx";

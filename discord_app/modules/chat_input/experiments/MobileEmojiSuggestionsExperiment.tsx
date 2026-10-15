@@ -34,6 +34,6 @@ export const useMobileEmojiSuggestionsConfig = ReactCompilerGating.isReactCompil
   : function useMobileEmojiSuggestionsConfig(location) {
       return closure_2.useConfig({ location: location.location });
     };
-export const getIsMobileEmojiSuggestionsConfig = function getIsMobileEmojiSuggestionsConfig(location) {
-  return closure_2.getConfig({ location: location.location });
+export const trackMobileEmojiSuggestionsExposure = function trackMobileEmojiSuggestionsExposure(location) {
+  const config = closure_2.getConfig({ location: location.location });
 };

@@ -5,12 +5,13 @@ import _modDef2438 from "../../../../../../game_organization_invites/GameOrganiz
 import ColorUtils from "../../../../../../../utils/ColorUtils.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
+import getGameOrganizationDisplayNounDefault from "../../../../../../game_organization_invites/getGameOrganizationDisplayNoun.tsx";
 import GameOrganizationInviteStore from "../../../../../../game_organization_invites/GameOrganizationInviteStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(9620).CodedLinkExtendedType;
-const constants = fn(10496).GameOrganizationInviteStates;
-const InviteTypes = fn(7430).InviteTypes;
+const CodedLinkExtendedType = fn(9828).CodedLinkExtendedType;
+const constants = fn(10719).GameOrganizationInviteStates;
+const InviteTypes = fn(7640).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx",
@@ -26,74 +27,71 @@ export const createGameOrganizationInviteEmbed = function createGameOrganization
     const merged = Object.assign(baseColors);
     obj2.extendedType = CodedLinkExtendedType.GAME_ORGANIZATION_INVITE;
     obj2.type = InviteTypes.GUILD;
-    ({ titleColor: obj10.titleColor, bodyTextColor: obj10.bodyTextColor, subtitleColor: obj10.subtitleColor } = colors);
+    ({ titleColor: obj8.titleColor, bodyTextColor: obj8.bodyTextColor, subtitleColor: obj8.subtitleColor } = colors);
     if (invite.state === constants.RESOLVING) {
       const obj3 = {};
       const merged1 = Object.assign(obj2);
-      const intl7 = util.intl;
-      obj3.headerText = intl7.string(util.t["N/g9Z4"]).toUpperCase();
-      ({ resolvingGradientStart: obj9.resolvingGradientStart, resolvingGradientEnd: obj9.resolvingGradientEnd } =
+      const intl5 = util.intl;
+      obj3.headerText = intl5.string(util.t["N/g9Z4"]).toUpperCase();
+      ({ resolvingGradientStart: obj7.resolvingGradientStart, resolvingGradientEnd: obj7.resolvingGradientEnd } =
         colors);
       obj3.embedCanBeTapped = false;
       obj3.canBeAccepted = false;
       return obj3;
-    } else if (invite.state === tmp24.ERROR) {
+    } else if (invite.state === tmp19.ERROR) {
       const obj4 = {};
       const merged2 = Object.assign(obj2);
-      const intl5 = util.intl;
-      obj4.headerText = intl5.string(_modDef2438.GLe98U);
-      const intl6 = util.intl;
-      obj4.titleText = intl6.string(_modDef2438["2/aTr2"]);
+      const intl3 = util.intl;
+      obj4.headerText = intl3.string(_modDef2438.GLe98U);
+      const intl4 = util.intl;
+      obj4.titleText = intl4.string(_modDef2438["2/aTr2"]);
       obj4.titleColor = RowGeneratorStyleSheet.processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
       obj4.embedCanBeTapped = false;
       obj4.canBeAccepted = false;
       return obj4;
     } else {
       ({ organization, application, displayNoun } = invite);
-      if (displayNoun == null) {
-        const intl = util.intl;
-        displayNoun = intl.string(_modDef2438.nVMqjA);
-      }
+      const tmp20 = getGameOrganizationDisplayNounDefault(displayNoun);
       ({ memberCount, maxMembers } = organization);
-      const obj = {};
+      const obj5 = {};
       const merged3 = Object.assign(obj2);
-      const intl2 = util.intl;
-      const obj5 = { noun: displayNoun };
-      obj.headerText = intl2.formatToPlainString(_modDef2438["jKi+kc"], obj5);
-      ({ name: obj.titleText, iconUrl } = organization);
-      obj.thumbnailUrl = iconUrl;
-      obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
-      ({ name: obj.gameName, iconUrl: iconUrl2 } = application);
-      obj.gameIconUrl = iconUrl2;
+      const intl6 = util.intl;
+      const obj10 = { noun: tmp20 };
+      obj5.headerText = intl6.formatToPlainString(_modDef2438["jKi+kc"], obj10);
+      ({ name: obj9.titleText, iconUrl } = organization);
+      obj5.thumbnailUrl = iconUrl;
+      obj5.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
+      ({ name: obj9.gameName, iconUrl: iconUrl2 } = application);
+      obj5.gameIconUrl = iconUrl2;
       let formatToPlainStringResult;
       if (null != memberCount) {
         if (null != maxMembers) {
-          const intl3 = util.intl;
-          const obj6 = { count: memberCount, max: maxMembers };
-          formatToPlainStringResult = intl3.formatToPlainString(_modDef2438.VuENGl, obj6);
+          const intl = util.intl;
+          const obj = { count: memberCount, max: maxMembers };
+          formatToPlainStringResult = intl.formatToPlainString(_modDef2438.VuENGl, obj);
         }
       }
-      obj.memberCountText = formatToPlainStringResult;
+      obj5.memberCountText = formatToPlainStringResult;
       const description = organization.description;
-      obj.bodyText = description;
+      obj5.bodyText = description;
       const internal = nativeDefault.internal;
       const items = [
         ColorUtils.hexToRgba(
           internal.resolveSemanticColor(theme, nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_START),
         ),
       ];
-      const tmp9Result = ColorUtils;
+      const tmp24Result = ColorUtils;
       const internal2 = nativeDefault.internal;
       items[1] = ColorUtils.hexToRgba(
         internal2.resolveSemanticColor(theme, nativeDefault.colors.EXPRESSIVE_GRADIENT_PURPLE_END),
       );
-      obj.gradientColors = items;
-      const intl4 = util.intl;
-      const obj7 = { noun: displayNoun };
-      obj.acceptLabelText = intl4.formatToPlainString(_modDef2438["Cz/ZUM"], obj7);
-      obj.canBeAccepted = true;
-      obj.embedCanBeTapped = true;
-      return obj;
+      obj5.gradientColors = items;
+      const intl2 = util.intl;
+      const obj16 = { noun: tmp20 };
+      obj5.acceptLabelText = intl2.formatToPlainString(_modDef2438["Cz/ZUM"], obj16);
+      obj5.canBeAccepted = true;
+      obj5.embedCanBeTapped = true;
+      return obj5;
     }
   }
   const tmp3 = getEmbedThemeColorsDefault(theme);

@@ -67,7 +67,7 @@ require = fn;
 function getEventHistoryString() {
   const items = [];
   TimeUtils;
-  for (const item10012 of closure_35) {
+  for (const item10012 of closure_36) {
     let obj = {};
     let merged = Object.assign(item10012);
     obj.t = tmp2 - item10012.t;
@@ -84,10 +84,10 @@ let Constants = fn(1085);
   RTCConnectionQuality: closure_19,
   BoostedGuildTiers: closure_20,
 } = Constants);
-const StreamSettingsConstants = fn(5216);
+const StreamSettingsConstants = fn(5271);
 ({ ApplicationStreamFPS: closure_21, ApplicationStreamResolutions: closure_22 } = StreamSettingsConstants);
-let closure_23 = fn(5217).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5121);
+let closure_23 = fn(5272).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5176);
 ({
   Features: closure_24,
   MediaEngineContextTypes: closure_25,
@@ -96,13 +96,14 @@ Constants = fn(5121);
   MediaTypes: closure_28,
   SpeakingFlags: closure_29,
   DISABLED_DEVICE_ID: closure_30,
+  VideoEncoderLatencyProfile: items,
 } = Constants);
 let str = "ws:";
 if (obj.test("https:")) {
   str = "wss:";
 }
-const constants10 = { INIT: "init", EPOCH: "epoch", TRANSITION: "transition" };
-const __initData5 = {
+const constants11 = { INIT: "init", EPOCH: "epoch", TRANSITION: "transition" };
+const __initData6 = {
   CONNECTION_CREATE: 0,
   [0]: "CONNECTION_CREATE",
   CONNECTION_DESTROY: 1,
@@ -130,8 +131,8 @@ const __initData5 = {
   DOWNGRADE_REFUSED: 12,
   [12]: "DOWNGRADE_REFUSED",
 };
-let c34 = 0;
-let closure_35 = [];
+let c35 = 0;
+let closure_36 = [];
 class RTCConnection extends tmp5 {
   constructor(arg0) {
     ({ userId, sessionId, guildId, channelId, context } = global);
@@ -145,6 +146,7 @@ class RTCConnection extends tmp5 {
     obj = new RTCConnection(tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, sessionId, channelId, guildId, streamServerId);
     closure_0 = obj;
     closure_129_0 = obj;
+    obj._videoEncoderLatencyProfile = closure_31.DEFAULT;
     obj._isStageChannel = null;
     map = new Map();
     obj._secureFramesRosterMap = map;
@@ -288,7 +290,7 @@ class RTCConnection extends tmp5 {
       }
     };
     obj.context = context;
-    obj1 = { c: closure_33.CONNECTION_CREATE };
+    obj1 = { c: closure_34.CONNECTION_CREATE };
     recordEventResult = obj.recordEvent(obj1);
     obj3 = closure_11;
     asyncResources = closure_11.fetchAsyncResources();
@@ -308,8 +310,8 @@ class RTCConnection extends tmp5 {
     obj.streamChannelId = streamChannelId;
     obj.parentMediaSessionId = parentMediaSessionId;
     obj.joinVoiceId = joinVoiceId;
-    tmp16 = +closure_34;
-    closure_34 = tmp16 + 1;
+    tmp16 = +closure_35;
+    closure_35 = tmp16 + 1;
     obj._connectionSerial = tmp16;
     tmp17 = closure_1(closure_2[21]);
     tmp171 = new tmp17("RTCConnection(" + obj.trueServerId + ", " + obj.context + ")");
@@ -520,11 +522,11 @@ prototype["recordEvent"] = function recordEvent(arg0) {
   const merged = Object.assign(arg0);
   obj.t = TimeUtils.now();
   obj.n = this._connectionSerial;
-  closure_35.push(obj);
-  if (closure_35.length > 50) {
+  closure_36.push(obj);
+  if (closure_36.length > 50) {
     do {
-      let arr2 = closure_35.shift();
-      length = closure_35.length;
+      let arr2 = closure_36.shift();
+      length = closure_36.length;
     } while (length > 50);
   }
 };
@@ -559,7 +561,7 @@ Object.defineProperty(prototype, "endpoint", {
   get: undefined,
   set: function endpoint(arg0) {
     const self = this;
-    this.recordEvent({ c: constants11.SET_ENDPOINT, e: null != arg0 });
+    this.recordEvent({ c: constants12.SET_ENDPOINT, e: null != arg0 });
     if (null == arg0) {
       self._endpoint = null;
       self.hostname = null;
@@ -592,7 +594,7 @@ Object.defineProperty(prototype, "endpoint", {
       self.hostname = hostname;
       tmp5 = str;
     }
-    const obj = { c: constants11.SET_ENDPOINT, e: null != arg0 };
+    const obj = { c: constants12.SET_ENDPOINT, e: null != arg0 };
   },
 });
 prototype["connect"] = function connect(endpoint, token) {
@@ -602,7 +604,7 @@ prototype["connect"] = function connect(endpoint, token) {
     const error = new Error("RTCConnection.connect(...): Attempting to connect on destroyed instance.");
     throw error;
   } else {
-    const obj = { c: constants11.CONNECT, e: null != endpoint, h: null != token };
+    const obj = { c: constants12.CONNECT, e: null != endpoint, h: null != token };
     self.recordEvent(obj);
     self._cancelReconnect();
     endpoint = self.endpoint;
@@ -695,9 +697,9 @@ prototype["connect"] = function connect(endpoint, token) {
       const _handleMLSWelcome = self._handleMLSWelcome;
       obj5.on(RTCControlSocket.SocketEvent.MLSWelcome, _handleMLSWelcome.bind(self));
       const _recordMessageEvent = self._recordMessageEvent;
-      obj5.on(RTCControlSocket.SocketEvent.ReceiveMessage, _recordMessageEvent.bind(self, constants11.MESSAGE_RECEIVE));
+      obj5.on(RTCControlSocket.SocketEvent.ReceiveMessage, _recordMessageEvent.bind(self, constants12.MESSAGE_RECEIVE));
       const _recordMessageEvent2 = self._recordMessageEvent;
-      obj5.on(RTCControlSocket.SocketEvent.SendMessage, _recordMessageEvent2.bind(self, constants11.MESSAGE_SEND));
+      obj5.on(RTCControlSocket.SocketEvent.SendMessage, _recordMessageEvent2.bind(self, constants12.MESSAGE_SEND));
       self._connectStartTime = TimeUtils.now();
       self._connectCount = self._connectCount + 1;
       self._connecting = true;
@@ -746,7 +748,7 @@ prototype["destroy"] = function destroy() {
       powerMonitorListener();
     }
   }
-  self.recordEvent({ c: constants11.CONNECTION_DESTROY });
+  self.recordEvent({ c: constants12.CONNECTION_DESTROY });
   const WindowVisibilityVideoManager = WindowVisibilityVideoManager3.WindowVisibilityVideoManager;
   WindowVisibilityVideoManager.off(
     WindowVisibilityVideoManager3.WindowVisibilityEvent.IncomingVideoEnabledChanged,
@@ -801,7 +803,7 @@ prototype["destroy"] = function destroy() {
   self.removeAllListeners();
   self._destroyed = true;
   obj3 = PlatformUtils;
-  const obj4 = { c: constants11.CONNECTION_DESTROY };
+  const obj4 = { c: constants12.CONNECTION_DESTROY };
 };
 prototype["shouldSendSpeaking"] = function shouldSendSpeaking(_lastSentSpeakingStatus, _lastSentSSRC) {
   if (obj.isWeb()) {
@@ -1002,7 +1004,7 @@ prototype["setState"] = function setState(s) {
   if (arg1 === undefined) {
     obj = {};
   }
-  this.recordEvent({ c: constants11.SET_STATE, s });
+  this.recordEvent({ c: constants12.SET_STATE, s });
   const logger = this.logger;
   logger.info("RTC connection state: " + this.state + " => " + s);
   this.state = s;
@@ -1084,6 +1086,13 @@ prototype["setAvSyncEnabled"] = function setAvSyncEnabled(arg0, arg1) {
     _connection.setAvSyncEnabled(arg0, arg1);
   }
 };
+prototype["setVideoEncoderLatencyProfile"] = function setVideoEncoderLatencyProfile(_videoEncoderLatencyProfile) {
+  this._videoEncoderLatencyProfile = _videoEncoderLatencyProfile;
+  const _connection = this._connection;
+  if (_connection != null) {
+    const result = _connection.setVideoEncoderLatencyProfile(_videoEncoderLatencyProfile);
+  }
+};
 prototype["setSimulcastDebugOverride"] = function setSimulcastDebugOverride(arg0, arg1, arg2) {
   let tmp = arg1 === this.context;
   if (tmp) {
@@ -1121,7 +1130,7 @@ prototype["clearJoinVoiceId"] = function clearJoinVoiceId() {
 };
 prototype["setNextChannelId"] = function setNextChannelId(channelId) {
   const self = this;
-  this.recordEvent({ c: constants11.SET_NEXT_CHANNEL_ID });
+  this.recordEvent({ c: constants12.SET_NEXT_CHANNEL_ID });
   const channel = ChannelStore.getChannel(this.channelId);
   let type;
   if (channel != null) {
@@ -1227,17 +1236,19 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
   const tmpResult8 = PlatformUtils;
   if (tmpResult9.isWeb()) {
     if (self.context === constants6.STREAM) {
-      const WebStreamingOptimizationsExperiment =
-        WebStreamingOptimizationsExperiment2.WebStreamingOptimizationsExperiment;
-      const config1 = WebStreamingOptimizationsExperiment.getConfig({ location: "RTCConnection" });
-      const degradationPreference = config1.degradationPreference;
-      if ("maintain-framerate" === degradationPreference) {
-        items.push("web_streaming_maintain_framerate");
-      } else if ("balanced" === degradationPreference) {
-        items.push("web_streaming_balanced");
-      }
-      if (config1.motionContentHint) {
-        items.push("web_streaming_motion_content_hint");
+      if (self.isStreamSender()) {
+        const WebStreamingOptimizationsExperiment =
+          WebStreamingOptimizationsExperiment2.WebStreamingOptimizationsExperiment;
+        const config1 = WebStreamingOptimizationsExperiment.getConfig({ location: "RTCConnection" });
+        const degradationPreference = config1.degradationPreference;
+        if ("maintain-framerate" === degradationPreference) {
+          items.push("web_streaming_maintain_framerate");
+        } else if ("balanced" === degradationPreference) {
+          items.push("web_streaming_balanced");
+        }
+        if (config1.motionContentHint) {
+          items.push("web_streaming_motion_content_hint");
+        }
       }
     }
   }
@@ -1263,12 +1274,12 @@ prototype["_chooseExperiments"] = function _chooseExperiments() {
   const tmpResult11 = PlatformUtils;
   if (tmpResult13.isLinux()) {
     const mode2 = LinuxGpuDecodeExperiment.getLinuxGpuDecodeExperimentConfig("_chooseExperiments").mode;
-    let tmp21 = "disable_all" === mode2;
-    if (!tmp21) {
-      tmp21 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
-      const tmp22 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
+    let tmp22 = "disable_all" === mode2;
+    if (!tmp22) {
+      tmp22 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
+      const tmp23 = "disable_nvidia" === mode2 && MediaEngineStore.getHasNvidiaGpu();
     }
-    if (tmp21) {
+    if (tmp22) {
       items.push("disable_electron_decode");
     }
     const tmpResult14 = LinuxGpuDecodeExperiment;
@@ -2094,6 +2105,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   const result3 = connectResult.setVideoEncoderExperiments(
     MediaEngineStore.getVideoEncoderExperiments(self.context, self.getVoiceParticipantType()),
   );
+  const result4 = connectResult.setVideoEncoderLatencyProfile(self._videoEncoderLatencyProfile);
   connectResult.on(
     require("BaseConnectionEvent").BaseConnectionEvent.Speaking,
     (arg0, _lastSentSpeakingStatus, _lastSentSSRC) => {
@@ -2447,7 +2459,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   );
   const _handleMLSFailure = self._handleMLSFailure;
   connectResult.on(require("BaseConnectionEvent").BaseConnectionEvent.MLSFailure, _handleMLSFailure.bind(self));
-  const result4 = connectResult.setRemoteVideoSinkWants(self._remoteVideoSinkWants);
+  const result5 = connectResult.setRemoteVideoSinkWants(self._remoteVideoSinkWants);
   self._connection = connectResult;
   self._hasCodecs = false;
   self._mediaEngineConnectionId = connectResult.mediaEngineConnectionId;
@@ -3377,8 +3389,8 @@ prototype["_handleSecureFramesInit"] = function _handleSecureFramesInit(v) {
   const protocolVersion = v;
   const nowResult = require("TimeUtils").now();
   require = nowResult;
-  this.recordEvent({ c: constants11.SECURE_FRAMES_INIT, v });
-  if (!this._maybeRefuseDaveDowngrade(constants10.INIT, v)) {
+  this.recordEvent({ c: constants12.SECURE_FRAMES_INIT, v });
+  if (!this._maybeRefuseDaveDowngrade(constants11.INIT, v)) {
     if (v > 0) {
       const logger = self.logger;
       const _HermesInternal = HermesInternal;
@@ -3393,7 +3405,7 @@ prototype["_handleSecureFramesInit"] = function _handleSecureFramesInit(v) {
       let result1 = self._storeSecureFrameNextTransitionData(obj3);
       const _daveJoinTimer = self._daveJoinTimer;
       _daveJoinTimer.start(self._userIds.size <= 1);
-      const obj4 = { c: constants11.MLS_INIT };
+      const obj4 = { c: constants12.MLS_INIT };
       self.recordEvent(obj4);
       const tmpResult = tmp(tmp2[18]);
     } else {
@@ -3424,7 +3436,7 @@ prototype["_handleSecureFramesInit"] = function _handleSecureFramesInit(v) {
     }
   }
   let obj = require("TimeUtils");
-  let obj2 = { c: constants11.SECURE_FRAMES_INIT, v };
+  let obj2 = { c: constants12.SECURE_FRAMES_INIT, v };
   tmp = require;
   tmp2 = self;
 };
@@ -3477,7 +3489,7 @@ prototype["_maybeRefuseDaveDowngrade"] = function _maybeRefuseDaveDowngrade(EPOC
   const _latchIsStageChannelResult = this._latchIsStageChannel();
   let flag = 0 !== protocol_version;
   if (!flag) {
-    flag = EPOCH !== constants10.INIT;
+    flag = EPOCH !== constants11.INIT;
   }
   if (!flag) {
     flag = true !== _latchIsStageChannelResult;
@@ -3488,7 +3500,7 @@ prototype["_maybeRefuseDaveDowngrade"] = function _maybeRefuseDaveDowngrade(EPOC
     logger.error(
       "Refusing DAVE protocol downgrade to version " + protocol_version + " at " + EPOCH + ", disconnecting.",
     );
-    const obj = { c: constants11.DOWNGRADE_REFUSED, s: EPOCH };
+    const obj = { c: constants12.DOWNGRADE_REFUSED, s: EPOCH };
     self.recordEvent(obj);
     const obj3 = {};
     const merged = Object.assign(self._getAnalyticsProperties());
@@ -3521,7 +3533,7 @@ prototype["_handleSecureFramesPrepareTransition"] = function _handleSecureFrames
   logger.info("Preparing DAVE protocol transition: " + transition_id + ", protocol version: " + protocol_version);
   this._secureFramesTransitionPrepareCount = this._secureFramesTransitionPrepareCount + 1;
   _require = require("TimeUtils").now();
-  if (!this._maybeRefuseDaveDowngrade(constants10.TRANSITION, protocol_version, transition_id)) {
+  if (!this._maybeRefuseDaveDowngrade(constants11.TRANSITION, protocol_version, transition_id)) {
     const _connection = this._connection;
     if (_connection != null) {
       let result = _connection.prepareSecureFramesTransition(transition_id, protocol_version, () => {
@@ -3537,7 +3549,7 @@ prototype["_handleSecureFramesPrepareEpoch"] = function _handleSecureFramesPrepa
   const logger = this.logger;
   logger.info("Preparing DAVE protocol epoch: " + _1 + ", protocol version: " + protocol_version);
   const str1 = _1.toString();
-  if (!this._maybeRefuseDaveDowngrade(constants10.EPOCH, protocol_version)) {
+  if (!this._maybeRefuseDaveDowngrade(constants11.EPOCH, protocol_version)) {
     const _connection = self._connection;
     if (_connection != null) {
       const result = _connection.prepareSecureFramesEpoch(str1, protocol_version, self.trueChannelId);
@@ -3545,7 +3557,7 @@ prototype["_handleSecureFramesPrepareEpoch"] = function _handleSecureFramesPrepa
     if ("1" === str1) {
       self._mlsInitReceivedTime = TimeUtils.now();
       self._sendMLSKeyPackage();
-      const obj2 = { c: constants11.MLS_INIT };
+      const obj2 = { c: constants12.MLS_INIT };
       self.recordEvent(obj2);
     }
   }
@@ -3658,7 +3670,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5125).now();
+  const commitReceivedTime = _connection(5180).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3698,7 +3710,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5125).now();
+  const welcomeReceivedTime = _connection(5180).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3772,7 +3784,7 @@ prototype["_handleMLSFailure"] = function _handleMLSFailure(source, reason) {
   const self = this;
   const nowResult = TimeUtils.now();
   this._nextFailureId = +this._nextFailureId + 1;
-  this.recordEvent({ c: constants11.MLS_FAILURE, i: +this._nextFailureId });
+  this.recordEvent({ c: constants12.MLS_FAILURE, i: +this._nextFailureId });
   const _mlsFailures = this._mlsFailures;
   const obj3 = {
     id: +this._nextFailureId,
@@ -3807,7 +3819,7 @@ prototype["_handleMLSFailure"] = function _handleMLSFailure(source, reason) {
   } else {
     const result = self._alertMLSFailureDebouced(source, reason);
   }
-  const obj2 = { c: constants11.MLS_FAILURE, i: +this._nextFailureId };
+  const obj2 = { c: constants12.MLS_FAILURE, i: +this._nextFailureId };
 };
 prototype["_trackMLSFailures"] = function _trackMLSFailures(arg0) {
   const self = this;
@@ -3872,6 +3884,9 @@ prototype["getExtraConnectionOptions"] = function getExtraConnectionOptions() {
   return {};
 };
 prototype["getMediaStreamKey"] = function getMediaStreamKey() {};
+prototype["isStreamSender"] = function isStreamSender() {
+  return false;
+};
 prototype["shouldReport"] = function shouldReport() {
   const currentUser = UserStore.getCurrentUser();
   let isStaffResult;

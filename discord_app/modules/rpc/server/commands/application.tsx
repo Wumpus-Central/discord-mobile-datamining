@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/server/commands/application.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import TestModeUtils from "../../../game_store/TestModeUtils.tsx";
 import ApplicationFlagUtils from "../../../applications/utils/ApplicationFlagUtils.tsx";
+import TestModeUtils from "../../../game_store/TestModeUtils.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
@@ -72,7 +72,7 @@ export default {
     },
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(5644).RPC_LOCAL_SCOPE,
+    scope: fn(5855).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {

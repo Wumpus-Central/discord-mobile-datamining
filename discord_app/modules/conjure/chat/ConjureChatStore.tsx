@@ -2,7 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3862 from "../intl/ConjureUntranslated.messages.js";
 import conjureChatTurns from "conjureChatTurns.tsx";
 import conjureStepTimeline from "conjureStepTimeline.tsx";
 import conjureChatHistory from "conjureChatHistory.tsx";
@@ -569,17 +569,47 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       }
     }
   },
-  CONJURE_CHAT_MESSAGE_CANCELLED: function handleChatMessageCancelled(arg0) {
-    ({ projectId, id: require } = arg0);
+  CONJURE_CHAT_MESSAGE_CANCELLED: function handleChatMessageCancelled(withdrawn) {
+    ({ projectId, id: require } = withdrawn);
+    let id;
     value = map.get(projectId);
     if (null == value) {
       return false;
     } else {
-      const found = value.filter((id) => id.id !== require && id.in_reply_to !== tmp);
+      let tmp;
+      if (true === withdrawn.withdrawn) {
+        tmp = value[value.findIndex(value, (id) => id.id === require) + 1];
+      }
+      id = null;
+      if (null != tmp) {
+        id = null;
+        if ("assistant" === tmp.role) {
+          id = null;
+          if ("" === tmp.content) {
+            id = null;
+            if (null == tmp.turn_id) {
+              id = null;
+              if (0 === tmp.steps.length) {
+                id = tmp.id;
+              }
+            }
+          }
+        }
+      }
+      const found = value.filter((id) => {
+        let tmp2 = id.id !== require && id.in_reply_to !== tmp;
+        if (tmp2) {
+          tmp2 = id.id !== id;
+        }
+        return tmp2;
+      });
       if (found.length === value.length) {
         return false;
       } else {
         const result = map.set(projectId, found);
+        if (null != id) {
+          recordThinkingTransition(projectId);
+        }
       }
     }
   },
@@ -625,7 +655,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(10667).newMessage("assistant", content, obj3);
+      const newMessageResult = id(10890).newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
       newMessageResult.finished = true;
@@ -643,7 +673,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!tmpResult.turnSettled(value[findLastIndexResult])) {
           turn_id = value[findLastIndexResult];
         }
-        tmpResult = id(10665);
+        tmpResult = id(10888);
       }
       if (null != turn_id) {
         if (0 !== turn_id.steps.length) {
@@ -673,9 +703,9 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             obj6 = {};
           }
           arraySpreadResult4 = arraySpreadResult4 + 1;
-          items[arraySpreadResult4] = id(10667).newMessage("assistant", "", obj6);
+          items[arraySpreadResult4] = id(10890).newMessage("assistant", "", obj6);
           items = map.set(projectId, items);
-          const tmpResult2 = id(10667);
+          const tmpResult2 = id(10890);
         } else {
           const items1 = [,];
           const arraySpreadResult6 = HermesBuiltin.arraySpread(
@@ -692,7 +722,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items2);
       }
-      const obj2 = id(10667);
+      const obj2 = id(10890);
     }
   },
   CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
@@ -788,7 +818,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!obj.hasOpenTurn(map.get(projectId))) {
           return false;
         }
-        obj = step(10665);
+        obj = step(10888);
       }
     }
     value = map.get(projectId);
@@ -1042,7 +1072,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                   const items = [];
                   const obj2 = { type: "step", kind: "terminal_error", message: null };
                   const intl = util.intl;
-                  obj2.message = intl.string(_modDef3849.lmiuFX);
+                  obj2.message = intl.string(_modDef3862.lmiuFX);
                   items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                   obj.steps = items;
                   tmp7 = obj;

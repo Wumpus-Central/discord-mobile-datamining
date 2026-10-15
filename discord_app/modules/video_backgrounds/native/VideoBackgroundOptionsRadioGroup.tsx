@@ -18,11 +18,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = analyticsContext(576).c(13);
       title = title.title;
       let obj = analyticsContext(576);
-      analyticsContext = analyticsContext(9549).useAnalyticsContext();
-      let obj2 = analyticsContext(9549);
-      const lastUsedVideoBackgroundOption = analyticsContext(5263).useLastUsedVideoBackgroundOption();
-      let obj3 = analyticsContext(5263);
-      const videoBackgroundRadioOptions = analyticsContext(11166).useVideoBackgroundRadioOptions();
+      analyticsContext = analyticsContext(9758).useAnalyticsContext();
+      let obj2 = analyticsContext(9758);
+      const lastUsedVideoBackgroundOption = analyticsContext(5318).useLastUsedVideoBackgroundOption();
+      let obj3 = analyticsContext(5318);
+      const videoBackgroundRadioOptions = analyticsContext(11390).useVideoBackgroundRadioOptions();
       if (cResult[0] !== analyticsContext.location) {
         function handleChange(arg0) {
           const result = VideoBackgroundOptions.fromVideoBackgroundRadioValue(arg0);
@@ -41,11 +41,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[1];
       }
       if (cResult[2] !== lastUsedVideoBackgroundOption) {
-        let result = tmp(11166).toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
+        let result = tmp(11390).toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
         cResult[2] = lastUsedVideoBackgroundOption;
         cResult[3] = result;
         let tmp7 = result;
-        const tmpResult = tmp(11166);
+        const tmpResult = tmp(11390);
       } else {
         tmp7 = cResult[3];
       }
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = { hasIcons: true, title, value: tmp7, onChange: tmp6, accessibilityLabel: tmp9, children: tmp11 };
-        const tmp17 = jsx(tmp(6267).TableRadioGroup, {
+        const tmp17 = jsx(tmp(6483).TableRadioGroup, {
           hasIcons: true,
           title,
           value: tmp7,
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[11] = title;
         cResult[12] = tmp17;
       }
-      const obj4 = analyticsContext(11166);
+      const obj4 = analyticsContext(11390);
     }
   : function VideoBackgroundOptionsRadioGroup(title) {
       _require = undefined;

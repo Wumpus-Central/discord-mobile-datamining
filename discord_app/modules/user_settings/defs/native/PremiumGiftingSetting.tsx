@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       }, []);
     };
-const SettingBuilders = fn(10767);
+const SettingBuilders = fn(10991);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePremiumGiftingSettingTrailing() {
       const cResult = c.c(2);
@@ -69,7 +69,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(12327).GiftIcon,
+  IconComponent: fn(12562).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },

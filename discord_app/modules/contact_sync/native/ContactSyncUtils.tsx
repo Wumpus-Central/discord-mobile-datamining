@@ -53,7 +53,7 @@ let closure_18 = async function _uploadContacts(arg0) {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -108,13 +108,13 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(12948);
+const ContactSyncPersistedStore = fn(13244);
 ({
   useContactSyncStore: metroRequire,
   clearDismissState: closure_7,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(12947);
+const ContactSyncConstants = fn(13243);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: c10,

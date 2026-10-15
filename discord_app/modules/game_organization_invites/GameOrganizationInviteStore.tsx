@@ -45,7 +45,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
       code: invite.code,
       state: constants.RESOLVED,
       organization: {
-        id: game_organization.id,
+        id: game_organization.game_organization_id,
         name: game_organization.name,
         description: game_organization.description,
         iconUrl: game_organization.icon_url,

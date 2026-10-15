@@ -8,7 +8,7 @@ import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotSto
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5010);
+const GuildPowerupsConstants = fn(5064);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -80,14 +80,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (null != stateFromStores) {
           if (null != diff) {
             function activatePowerup() {}
-            if (closure_4 >= tmp14.cost) {
+            if (closure_4 >= tmp15.cost) {
               PERK(true);
             } else {
-              diff = tmp14.cost - tmp15;
+              diff = tmp15.cost - tmp16;
               let availableGuildBoostSlots = closure_0(onToggle[11]).getAvailableGuildBoostSlots(
                 analyticsLocations.boostSlots,
               );
-              if (tmp14.type === handleMobileWebRedirectCheckout.LEVEL) {
+              if (tmp15.type === handleMobileWebRedirectCheckout.LEVEL) {
                 PERK = shouldUseMobileWebRedirectCheckout.LEVEL;
               } else {
                 PERK = shouldUseMobileWebRedirectCheckout.PERK;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   },
                 };
                 closure_0(onToggle[14]).openTransferModal(obj2);
-                const tmp17Result = closure_0(onToggle[14]);
+                const tmp18Result = closure_0(onToggle[14]);
               } else if (shouldUseMobileWebRedirectCheckout) {
                 handleMobileWebRedirectCheckout(analyticsLocations, stateFromStores.id);
               } else {
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   },
                 };
                 const result = closure_0(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);
-                const tmp17Result2 = closure_0(onToggle[15]);
+                const tmp18Result2 = closure_0(onToggle[15]);
               }
               let obj = diff(onToggle[12]);
             }
@@ -193,15 +193,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.onActivate = stateFromStores.useCallback(() => {
         if (null != stateFromStores) {
           if (null != PERK) {
-            if (closure_4 >= tmp14.cost) {
+            if (closure_4 >= tmp15.cost) {
               onToggle(true);
             } else {
-              const diff = tmp14.cost - tmp15;
+              const diff = tmp15.cost - tmp16;
               closure_0 = diff;
               let availableGuildBoostSlots = closure_0(onToggle[11]).getAvailableGuildBoostSlots(
                 analyticsLocations.boostSlots,
               );
-              if (tmp14.type === handleMobileWebRedirectCheckout.LEVEL) {
+              if (tmp15.type === handleMobileWebRedirectCheckout.LEVEL) {
                 PERK = shouldUseMobileWebRedirectCheckout.LEVEL;
               } else {
                 PERK = shouldUseMobileWebRedirectCheckout.PERK;
@@ -219,8 +219,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   },
                 };
-                tmp17(onToggle[14]).openTransferModal(obj2);
-                const tmp17Result = tmp17(onToggle[14]);
+                tmp18(onToggle[14]).openTransferModal(obj2);
+                const tmp18Result = tmp18(onToggle[14]);
               } else if (shouldUseMobileWebRedirectCheckout) {
                 handleMobileWebRedirectCheckout(analyticsLocations, stateFromStores.id);
               } else {
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   analyticsLocations,
                   guildId: stateFromStores.id,
                   onBack() {
-                    return PERK(5939).popWithKey(diff(7136).PREMIUM_KEY);
+                    return PERK(6150).popWithKey(diff(7351).PREMIUM_KEY);
                   },
                   onPaymentSuccess() {
                     const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(
@@ -251,11 +251,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   },
                   onPaymentDismiss() {
-                    return PERK(5939).popWithKey(diff(7136).PREMIUM_KEY);
+                    return PERK(6150).popWithKey(diff(7351).PREMIUM_KEY);
                   },
                 };
-                const result = tmp17(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);
-                const tmp17Result2 = tmp17(onToggle[15]);
+                const result = tmp18(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);
+                const tmp18Result2 = tmp18(onToggle[15]);
               }
               let obj = PERK(onToggle[12]);
             }

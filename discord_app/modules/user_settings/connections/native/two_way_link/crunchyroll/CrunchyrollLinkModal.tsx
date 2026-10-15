@@ -3,7 +3,7 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import util from "../../../../../../intl/index.native.tsx";
 import Navigator from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef7735 from "../../../../../../../_runtime/metro/07735__.js";
+import _modDef7945 from "../../../../../../../_runtime/metro/07945__.js";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
 import useAccountLinkStepTracking from "../useAccountLinkStepTracking.tsx";
 import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators.tsx";
@@ -37,7 +37,7 @@ function getScreens(headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(onClose(9225).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return jsx(onClose(9437).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
         return jsx(CrunchyrollLinkPreConnectDefault, {});
@@ -48,7 +48,7 @@ function getScreens(headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(onClose(9225).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return jsx(onClose(9437).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
@@ -75,7 +75,7 @@ function getScreens(headerStyle) {
     },
   };
 }
-const constants = fn(13462).CrunchyrollLinkModalScenes;
+const constants = fn(13758).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1085).PlatformTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
@@ -92,11 +92,11 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef7735, onPress: first, accessibilityLabel: null };
+        const obj2 = { source: _modDef7945, onPress: first, accessibilityLabel: null };
         const intl = util.intl;
         obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
         const tmp8 = jsx(HeaderActionButton.HeaderActionButton, {
-          source: _modDef7735,
+          source: _modDef7945,
           onPress: first,
           accessibilityLabel: null,
         });
@@ -109,7 +109,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function CloseButton() {
       const obj = {
-        source: _modDef7735,
+        source: _modDef7945,
         onPress: function onClose() {
           return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
         },
@@ -118,7 +118,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
       return jsx(HeaderActionButton.HeaderActionButton, {
-        source: _modDef7735,
+        source: _modDef7945,
         onPress: function onClose() {
           return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
         },
@@ -181,11 +181,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function CrunchyrollLinkModal(locationStack) {
       let twoWayLinkStyles;
-      twoWayLinkStyles = twoWayLinkStyles(9224).useTwoWayLinkStyles();
+      twoWayLinkStyles = twoWayLinkStyles(9436).useTwoWayLinkStyles();
       const items = [twoWayLinkStyles];
       const memo = noop.useMemo(() => getScreens(twoWayLinkStyles), items);
-      const obj = twoWayLinkStyles(9224);
-      const accountLinkStepTracking = twoWayLinkStyles(13448).useAccountLinkStepTracking(
+      const obj = twoWayLinkStyles(9436);
+      const accountLinkStepTracking = twoWayLinkStyles(13744).useAccountLinkStepTracking(
         PlatformTypes.CRUNCHYROLL,
         locationStack.locationStack,
       );
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = twoWayLinkStyles(1126).intl;
       obj3.headerBackTitle = intl.string(twoWayLinkStyles(1126).t["13/7kX"]);
-      return jsx(twoWayLinkStyles(6692).Navigator, {
+      return jsx(twoWayLinkStyles(6908).Navigator, {
         onStateChange: accountLinkStepTracking,
         screens: memo,
         initialRouteName: constants.LANDING,

@@ -10,14 +10,14 @@ import noop from "../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../modules/a11y/AccessibilityStore.tsx";
 
 const MessageTypes2 = _default(1101);
-const AutoModerationSystemMessageViewNativeComponent = _default(9384);
-const MessageViewNativeComponent = _default(9385);
-const SystemMessageViewNativeComponent = _default(9386);
+const AutoModerationSystemMessageViewNativeComponent = _default(9595);
+const MessageViewNativeComponent = _default(9596);
+const SystemMessageViewNativeComponent = _default(9597);
 require = fn;
 let closure_3 = ["message"];
 const View = fn(17).View;
 const MessageTypes = fn(1085).MessageTypes;
-const RowGeneratorConstants = fn(7754);
+const RowGeneratorConstants = fn(7964);
 ({ RowType: c10, Changeset: closure_11 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -107,7 +107,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp3Result;
     };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_16 = createStyles.createStyles((marginLeft, marginTop, paddingTop) => {
   const obj = {
     container: { position: "relative", overflow: "hidden", paddingTop },
@@ -268,6 +268,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = messageSizeCacheRef(noop.useState(0), 2);
 }
-export const DCDMessageView = fn(9385).default;
-export const DCDSystemMessageView = fn(9386).default;
-export const DCDAutoModerationSystemMessageView = fn(9384).default;
+export const DCDMessageView = fn(9596).default;
+export const DCDSystemMessageView = fn(9597).default;
+export const DCDAutoModerationSystemMessageView = fn(9595).default;

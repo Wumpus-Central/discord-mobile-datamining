@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/ModeratorOverlayState.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import _mod4735 from "../../../../../_runtime/metro/04735__.js";
+import _mod4789 from "../../../../../_runtime/metro/04789__.js";
 import identity from "../../../../../_runtime/metro/01267__.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -33,7 +33,7 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
       } else {
         first = cResult[0];
       }
-      const obj2 = closure_2(first, _mod4735.shallow);
+      const obj2 = closure_2(first, _mod4789.shallow);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function o(dismissOverlay) {
           return dismissOverlay.dismissOverlay;
@@ -43,7 +43,7 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
       } else {
         tmp6 = cResult[1];
       }
-      const tmp5Result = closure_2(tmp6, _mod4735.shallow);
+      const tmp5Result = closure_2(tmp6, _mod4789.shallow);
       closure_1 = tmp5Result;
       if (cResult[2] === arg0) {
         if (cResult[5] === arg0) {
@@ -77,11 +77,11 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
     }
   : function useModeratorOverlayChannelState(arg0) {
       closure_0 = arg0;
-      closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4735.shallow);
+      closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4789.shallow);
       const items = [
         !closure_2(
           (overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds,
-          _mod4735.shallow,
+          _mod4789.shallow,
         ).has(arg0),
         () => closure_1(closure_0),
       ];

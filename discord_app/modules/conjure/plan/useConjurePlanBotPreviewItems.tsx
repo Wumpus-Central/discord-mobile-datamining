@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/plan/useConjurePlanBotPreviewItems.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3862 from "../intl/ConjureUntranslated.messages.js";
 import MessageRecordUtils from "../../messages/MessageRecordUtils.tsx";
 import InteractionTypes from "../../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
@@ -358,11 +358,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const obj3 = { message: null, reply: null, event: null };
         const intl = util.intl;
-        obj3.message = intl.string(_modDef3849.J7qggf);
+        obj3.message = intl.string(_modDef3862.J7qggf);
         const intl2 = util.intl;
-        obj3.reply = intl2.string(_modDef3849.nqYtiy);
+        obj3.reply = intl2.string(_modDef3862.nqYtiy);
         const intl3 = util.intl;
-        obj3.event = intl3.string(_modDef3849["05lU9W"]);
+        obj3.event = intl3.string(_modDef3862["05lU9W"]);
         items = conjurePlanBot.getConjurePlanBotExchanges(proposal, tmp4, obj3);
         const tmpResult2 = conjurePlanBot;
       }
@@ -383,11 +383,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj2 = { message: null, reply: null, event: null };
             const intl = util.intl;
-            obj2.message = intl.string(_modDef3849.J7qggf);
+            obj2.message = intl.string(_modDef3862.J7qggf);
             const intl2 = util.intl;
-            obj2.reply = intl2.string(_modDef3849.nqYtiy);
+            obj2.reply = intl2.string(_modDef3862.nqYtiy);
             const intl3 = util.intl;
-            obj2.event = intl3.string(_modDef3849["05lU9W"]);
+            obj2.event = intl3.string(_modDef3862["05lU9W"]);
             items = conjurePlanBot.getConjurePlanBotExchanges(closure_0, tmp, obj2);
           }
           return items;
@@ -548,7 +548,7 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
               return iconURL;
             }
           }
-          stringResult = obj5.string(application_id(3849).JEYq8M);
+          stringResult = obj5.string(application_id(3862).JEYq8M);
         }
         if (stateFromStores1 != null) {
           class I {
@@ -741,7 +741,7 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
             return iconURL;
           }
         }
-        const stringResult1 = obj7.string(application_id(3849)["9iAOsw"]);
+        const stringResult1 = obj7.string(application_id(3862)["9iAOsw"]);
         const obj2 = { discriminator: "0003" };
         cResult[17] = stringResult1;
         cResult[18] = obj2;
@@ -971,9 +971,9 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
                 const obj = { bot: tmp4, currentUser: tmp, viewer: tmp3, member: tmp5 };
                 const obj2 = { targetMessage: null, memberMessage: null };
                 const intl = util.intl;
-                obj2.targetMessage = intl.string(_modDef3849["y+QYes"]);
+                obj2.targetMessage = intl.string(_modDef3862["y+QYes"]);
                 const intl2 = util.intl;
-                obj2.memberMessage = intl2.string(_modDef3849.BUTRDc);
+                obj2.memberMessage = intl2.string(_modDef3862.BUTRDc);
                 buildPreviewItems(closure_1, obj, obj2);
               }
               return [];

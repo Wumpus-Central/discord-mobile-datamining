@@ -11,7 +11,7 @@ const frozen = Object.freeze({
   OVERLAY: 7,
   ACTIVITY: 8,
 });
-const frozen1 = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
+const frozen1 = Object.freeze({ GUILD_COLLABORATION: 1, PUBLIC: 2 });
 const result = size.fileFinishedImporting("modules/conjure/projects/ConjureProjectTypes.tsx");
 
 export const UNNAMED_PROJECT_NAME = "Untitled App";
@@ -21,22 +21,22 @@ export const MAX_PROJECT_NAME_LENGTH = 128;
 export const MAX_APP_DESCRIPTION_LENGTH = 400;
 export const MAX_PROJECT_COLLABORATOR_ROLES = 25;
 export const ConjureProjectFlags = frozen1;
+export const isProjectGuildCollaborationEnabled = function isProjectGuildCollaborationEnabled(flags) {
+  let num = flags.flags;
+  if (num == null) {
+    num = 0;
+  }
+  return num & frozen1.GUILD_COLLABORATION;
+};
+export const isPreviewlessProject = function isPreviewlessProject(project) {
+  return null != project.preview_application_id && project.preview_application_id === project.application_id;
+};
 export const isProjectPublic = function isProjectPublic(flags) {
   let num = flags.flags;
   if (num == null) {
     num = 0;
   }
   return num & frozen1.PUBLIC;
-};
-export const isPreviewlessProject = function isPreviewlessProject(project) {
-  return null != project.preview_application_id && project.preview_application_id === project.application_id;
-};
-export const isProjectShared = function isProjectShared(flags) {
-  let num = flags.flags;
-  if (num == null) {
-    num = 0;
-  }
-  return num & frozen1.SHAREABLE;
 };
 export const projectUsesAppChannels = function projectUsesAppChannels(project) {
   let supported_surfaces = project.supported_surfaces;

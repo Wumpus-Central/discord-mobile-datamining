@@ -9,7 +9,7 @@ import GuildIncidentsStore from "../../../guild_antiraid/GuildIncidentsStore.tsx
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ container: { paddingHorizontal: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -126,8 +126,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const mapped = keys.map(tmp16);
         const container = tmp4.container;
-        const Form = tmp(8587).Form;
-        const Stack = tmp(5382).Stack;
+        const Form = tmp(8800).Form;
+        const Stack = tmp(5437).Stack;
       }
     }
   : function UserSettingsCommunityNotifications() {
@@ -179,8 +179,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
           }),
         };
-        obj3.children = closure_4(tmp2(5382).Stack, obj4);
-        tmp5 = closure_4(tmp2(8587).Form, obj3);
+        obj3.children = closure_4(tmp2(5437).Stack, obj4);
+        tmp5 = closure_4(tmp2(8800).Form, obj3);
       }
       return tmp5;
     };

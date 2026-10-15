@@ -6,12 +6,12 @@ import FeedbackUtils from "../../../../feedback/FeedbackUtils.tsx";
 import FeedbackActionSheetDefault from "../../../../feedback/native/FeedbackActionSheet.tsx";
 import getInAppReportsFeedbackOptionsDefault from "../../../getInAppReportsFeedbackOptions.tsx";
 import trackInAppReportsFeedbackDefault from "../../../trackInAppReportsFeedback.tsx";
-import intl_migration from "../../../../../intl/migration.tsx";
+import improperGetEnglishIntlMessageText from "../../../../../intl/improperGetEnglishIntlMessageText.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const FeedbackType = fn(9661).FeedbackType;
+const FeedbackType = fn(9869).FeedbackType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       reportId = reportId.reportId;
       const reportType = reportId.reportType;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp6 = reportType(18145)();
+        const tmp6 = reportType(18385)();
         cResult[0] = tmp6;
         let first = tmp6;
       } else {
@@ -41,10 +41,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const result = tmp(18147).improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
+            const result = tmp(18387).improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
             cResult[7] = result;
             let tmp9 = result;
-            const tmpResult = tmp(18147);
+            const tmpResult = tmp(18387);
           } else {
             tmp9 = cResult[7];
           }
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             trackOpen: tmp7,
             trackReport: tmp8,
           };
-          const tmp21 = jsx(reportType(9682), {
+          const tmp21 = jsx(reportType(9890), {
             headerLabel: tmp11,
             showHeaderCloseButton: true,
             hideDontShowAgainCheckbox: true,
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function InAppReportsFeedbackActionSheet(arg0) {
       ({ reportId: require, reportType: importDefault } = arg0);
       const tmp = getInAppReportsFeedbackOptionsDefault();
-      const result = intl_migration.improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
+      const result = improperGetEnglishIntlMessageText.improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
       let obj2 = {
         headerLabel: null,
         showHeaderCloseButton: true,

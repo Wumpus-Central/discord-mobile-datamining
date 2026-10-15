@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp7) {
         tmp7 = !isFavoritesGuildSelected;
       }
-      const favoritesBetaTagDismissibleContent = tmp(10339).useFavoritesBetaTagDismissibleContent(tmp7);
+      const favoritesBetaTagDismissibleContent = tmp(10562).useFavoritesBetaTagDismissibleContent(tmp7);
       return {
         isExperimentEnabled,
         hasFavoritesAccess: hasAccess,

@@ -8,10 +8,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(12651).GamePlatformAvailability.DESKTOP] = fn(9102).ScreenIcon;
-obj[fn(12651).GamePlatformAvailability.MOBILE] = fn(6646).MobilePhoneIcon;
-obj[fn(12651).GamePlatformAvailability.CONSOLE] = fn(9221).GameControllerIcon;
-const createStyles = fn(5096);
+obj[fn(12944).GamePlatformAvailability.DESKTOP] = fn(9314).ScreenIcon;
+obj[fn(12944).GamePlatformAvailability.MOBILE] = fn(6862).MobilePhoneIcon;
+obj[fn(12944).GamePlatformAvailability.CONSOLE] = fn(9433).GameControllerIcon;
+obj[fn(12944).GamePlatformAvailability.ROBLOX] = fn(9118).RobloxNeutralIcon;
+const createStyles = fn(5151);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -91,7 +92,7 @@ export default noop.memo(
         const items = [platforms];
         const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
         const tmp = closure_6();
-        return jsx(platforms(5382).Stack, {
+        return jsx(platforms(5437).Stack, {
           direction: "horizontal",
           align: "center",
           spacing: nativeDefault.space.PX_4,
@@ -100,14 +101,14 @@ export default noop.memo(
             obj = {
               size: "xs",
               color: "icon-muted",
-              accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item),
+              accessibilityLabel: platforms(dependencyMap[10]).getGamePlatformAvailabilityLabel(item),
             };
             return jsx(
               obj[item],
               {
                 size: "xs",
                 color: "icon-muted",
-                accessibilityLabel: platforms(dependencyMap[9]).getGamePlatformAvailabilityLabel(item),
+                accessibilityLabel: platforms(dependencyMap[10]).getGamePlatformAvailabilityLabel(item),
               },
               item,
             );

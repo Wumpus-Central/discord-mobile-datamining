@@ -18,7 +18,7 @@ const View = fn(17).View;
 let closure_4 = fn(1502).AppLauncherOptionAutoFocusType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" },
   optionViewContainer: { flex: 1 },
@@ -1490,9 +1490,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   return onDismiss(name);
                 },
-                children: tmp13(tmp2(6300).CircleXIcon, { size: "md" }),
+                children: tmp13(tmp2(6516).CircleXIcon, { size: "md" }),
               };
-              items[1] = tmp13(tmp2(6189).PressableOpacity, obj9);
+              items[1] = tmp13(tmp2(6405).PressableOpacity, obj9);
               obj7.children = items;
               tmp62 = closure_6(View, obj7);
             }

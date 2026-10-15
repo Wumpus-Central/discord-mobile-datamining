@@ -2,9 +2,9 @@
 import c from "../../../../../_runtime/00576_c.js";
 import Constants from "../../../../Constants.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05396_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05451_LinearGradient.js";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
-import _modDef16365 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import _modDef12649 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { uri: _modDef16365 };
+        const obj4 = { uri: _modDef12649 };
         cResult[2] = obj4;
         let tmp10 = obj4;
       } else {
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       const obj3 = { source: null, style: null, resizeMode: "cover" };
-      const obj4 = { uri: _modDef16365 };
+      const obj4 = { uri: _modDef12649 };
       obj3.source = obj4;
       obj3.style = tmp.background;
       items[1] = hasOwnProperty(FastImageDefault, obj3);

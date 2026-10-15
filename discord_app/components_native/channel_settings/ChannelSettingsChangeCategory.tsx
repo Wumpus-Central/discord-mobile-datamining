@@ -24,7 +24,7 @@ require = fn;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   screenContainer: {
     flex: 1,
@@ -313,7 +313,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_14(Stack_Stack.Stack, obj2);
   return map1(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(4829).ThemeContext;
+ChannelSettingsChangeCategory.contextType = fn(4883).ThemeContext;
 const ReactCompilerGating = fn(558);
 let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = channelId(504);
       const navigation = channelId(1503).useNavigation();
       const tmpResult3 = channelId(1503);
-      const appChannelBotUserId = channelId(10867).useAppChannelBotUserId(stateFromStores);
+      const appChannelBotUserId = channelId(11091).useAppChannelBotUserId(stateFromStores);
       _modDef38(null != stateFromStores, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
       if (cResult[3] === appChannelBotUserId) {
         if (cResult[4] === stateFromStores) {
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = navigation;
       cResult[6] = tmp12;
       tmp11 = tmp12;
-      const tmpResult4 = channelId(10867);
+      const tmpResult4 = channelId(11091);
     }
   : function ConnectedChannelSettingsChangeCategory(channelId) {
       channelId = channelId.channelId;
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = channelId(504);
       const navigation = channelId(1503).useNavigation();
       const obj2 = channelId(1503);
-      const appChannelBotUserId = channelId(10867).useAppChannelBotUserId(channel);
+      const appChannelBotUserId = channelId(11091).useAppChannelBotUserId(channel);
       _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
       return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
     };

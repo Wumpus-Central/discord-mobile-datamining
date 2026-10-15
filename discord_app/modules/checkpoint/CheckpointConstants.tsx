@@ -1,28 +1,28 @@
 // discord_app/modules/checkpoint/CheckpointConstants.tsx
-import _modDef3118 from "Checkpoint2026.messages.js";
+import _modDef3120 from "Checkpoint2026.messages.js";
 
 const obj = {
-  [fn(5443).CheckpointTraitRarity.DEFAULT]: "#FFE047",
-  [fn(5443).CheckpointTraitRarity.COMMON]: "#35ED7E",
-  [fn(5443).CheckpointTraitRarity.RARE]: "#EF3054",
-  [fn(5443).CheckpointTraitRarity.EPIC]: "#7D53DE",
-  [fn(5443).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
+  [fn(5498).CheckpointTraitRarity.DEFAULT]: "#FFE047",
+  [fn(5498).CheckpointTraitRarity.COMMON]: "#35ED7E",
+  [fn(5498).CheckpointTraitRarity.RARE]: "#EF3054",
+  [fn(5498).CheckpointTraitRarity.EPIC]: "#7D53DE",
+  [fn(5498).CheckpointTraitRarity.ULTRA]: "#FC7A1E",
 };
-obj[fn(5443).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
+obj[fn(5498).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
 const obj2 = {};
-obj2[fn(5443).CheckpointTraitRarity.DEFAULT] = _modDef3118.bP4GV1;
-obj2[fn(5443).CheckpointTraitRarity.COMMON] = _modDef3118.QwkKWr;
-obj2[fn(5443).CheckpointTraitRarity.RARE] = _modDef3118.KLmNgL;
-obj2[fn(5443).CheckpointTraitRarity.EPIC] = _modDef3118.hAmdLZ;
-obj2[fn(5443).CheckpointTraitRarity.ULTRA] = _modDef3118.Tv4xyf;
-obj2[fn(5443).CheckpointTraitRarity.NITRO] = _modDef3118["0ModIv"];
+obj2[fn(5498).CheckpointTraitRarity.DEFAULT] = _modDef3120.bP4GV1;
+obj2[fn(5498).CheckpointTraitRarity.COMMON] = _modDef3120.QwkKWr;
+obj2[fn(5498).CheckpointTraitRarity.RARE] = _modDef3120.KLmNgL;
+obj2[fn(5498).CheckpointTraitRarity.EPIC] = _modDef3120.hAmdLZ;
+obj2[fn(5498).CheckpointTraitRarity.ULTRA] = _modDef3120.Tv4xyf;
+obj2[fn(5498).CheckpointTraitRarity.NITRO] = _modDef3120["0ModIv"];
 const items = [
-  fn(5443).CheckpointTraitRarity.ULTRA,
-  fn(5443).CheckpointTraitRarity.EPIC,
-  fn(5443).CheckpointTraitRarity.RARE,
-  fn(5443).CheckpointTraitRarity.COMMON,
-  fn(5443).CheckpointTraitRarity.DEFAULT,
-  fn(5443).CheckpointTraitRarity.NITRO,
+  fn(5498).CheckpointTraitRarity.ULTRA,
+  fn(5498).CheckpointTraitRarity.EPIC,
+  fn(5498).CheckpointTraitRarity.RARE,
+  fn(5498).CheckpointTraitRarity.COMMON,
+  fn(5498).CheckpointTraitRarity.DEFAULT,
+  fn(5498).CheckpointTraitRarity.NITRO,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");
@@ -45,6 +45,9 @@ export const CHECKPOINT_LOGO_SIZE = 40;
 export const TRAIT_OPTION_WIDTH = 72;
 export const TRAIT_OPTION_HEIGHT = 80;
 export const NATIVE_CHARACTER_LAYER_SIZE = 252;
+export const CHECKPOINT_2026_POWER_BAR_UNITS = 6;
+export const CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS = 1;
+export const CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS = 5;
 export const CHECKPOINT_RARITY_COLORS = obj;
 export const CHECKPOINT_RARITY_LABEL_MESSAGES = obj2;
 export const CHECKPOINT_RARITY_ORDER = items;

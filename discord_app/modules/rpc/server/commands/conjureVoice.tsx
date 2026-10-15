@@ -94,6 +94,18 @@ obj2[RPCCommands.UPDATE_VOICE_SPATIAL] = CONTEXT_MENU_ICON_NAMES.createRPCComman
   },
 });
 let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
+obj2[RPCCommands.SET_VOICE_SPATIAL_ACOUSTICS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
+  RPCCommands.SET_VOICE_SPATIAL_ACOUSTICS,
+  {
+    scope: obj,
+    handler(args) {
+      ({ session_id, acoustics } = args.args);
+      ConjureVoiceSessionCoordinatorDefault.setAcoustics(args.socket, session_id, acoustics);
+      return { success: true };
+    },
+  },
+);
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
 obj2[RPCCommands.STOP_VOICE_SESSION] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.STOP_VOICE_SESSION, {
   scope: obj,
   handler(socket) {

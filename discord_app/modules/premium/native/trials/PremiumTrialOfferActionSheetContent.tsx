@@ -19,7 +19,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1392).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = {
   contentContainer: {
     paddingHorizontal: 36,

@@ -40,7 +40,7 @@ let closure_5 = async function _fetchCheckpointData() {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

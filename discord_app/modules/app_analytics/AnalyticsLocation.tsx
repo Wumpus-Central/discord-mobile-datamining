@@ -501,6 +501,7 @@ export default {
   GIFTING_PROMOTION_COACHMARK: "gifting promotion coachmark",
   GIFTING_BADGE_POST_PURCHASE: "gifting badge post purchase",
   GIFTING_BADGE_COACHMARK: "gifting badge coachmark",
+  GIFTED_SUBSCRIPTIONS_COACHMARK: "gifted subscriptions coachmark",
   GIFTING_BADGE_INFO_ACTION_SHEET: "gifting badge info action sheet",
   PREMIUM_GIFT_PLAN_SELECTION: "premium gift plan selection",
   PREMIUM_GIFT_CUSTOMIZATION: "premium gift customization",

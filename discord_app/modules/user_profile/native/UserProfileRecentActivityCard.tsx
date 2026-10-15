@@ -60,7 +60,7 @@ function getEntryText(entry) {
           const obj5 = { title: entry.extra.activity_name };
           let obj6 = obj5;
         } else {
-          obj6 = { title: "keys" };
+          obj6 = { title: "r" };
         }
         return obj6;
       }
@@ -91,8 +91,8 @@ let obj = {
     return true;
   },
 };
-items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8279).isEntryNew };
-let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8279).isEntryNew };
+items[1] = { Badge: BadgesAll.NewGameBadge, predicate: fn(8489).isEntryNew };
+let obj2 = { Badge: BadgesAll.NewGameBadge, predicate: fn(8489).isEntryNew };
 items[2] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -150,7 +150,7 @@ items[5] = {
     return tmp3;
   },
 };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj7 = {
   body: null,
   content: null,
@@ -284,7 +284,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = "user-profile";
       cResult[5] = str.badges;
       cResult[6] = tmp10;
-      tmpResult = badgeCell(8467);
+      tmpResult = badgeCell(8678);
     }
   : function GamingEntryBadges(entry) {
       entry = entry.entry;
@@ -686,13 +686,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === user) {
             let tmp8 = cResult[5];
           }
-          const tmp9 = tmp6(13665)(tmp8);
+          const tmp9 = tmp6(13961)(tmp8);
           _require = tmp9;
           if (cResult[6] === tmp9) {
             if (cResult[7] === user.id) {
               let tmp10 = cResult[8];
             }
-            tmp6(13666)(tmp10);
+            tmp6(13962)(tmp10);
             let application_id;
             if ("application_id" in entry.extra) {
               application_id = entry.extra.application_id;
@@ -701,7 +701,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[10] === user.id) {
                 let tmp14 = cResult[11];
               }
-              const tmp15 = tmp6(8884)(tmp14);
+              const tmp15 = tmp6(9096)(tmp14);
               importDefault = tmp15;
               if (cResult[12] === tmp9) {
                 if (cResult[13] === tmp15) {

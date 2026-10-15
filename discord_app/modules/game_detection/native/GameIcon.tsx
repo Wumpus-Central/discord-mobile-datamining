@@ -2,10 +2,10 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef6868 from "../../../../_runtime/metro/06868__.js";
-import _modDef6869 from "../../../../_runtime/metro/06869__.js";
-import _modDef6870 from "../../../../_runtime/metro/06870__.js";
-import _modDef6871 from "../../../../_runtime/metro/06871__.js";
+import _modDef7082 from "../../../../_runtime/metro/07082__.js";
+import _modDef7083 from "../../../../_runtime/metro/07083__.js";
+import _modDef7084 from "../../../../_runtime/metro/07084__.js";
+import _modDef7085 from "../../../../_runtime/metro/07085__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -19,7 +19,7 @@ let obj2 = {
   [GameIconSizes.NORMAL]: 48,
   [GameIconSizes.LARGE]: 80,
 };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj4 = {
   gameIcon: { justifyContent: "center", alignItems: "center" },
   size24: null,
@@ -131,7 +131,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (null == tmp17) {
-                tmp17 = _modDef6871;
+                tmp17 = _modDef7085;
                 items1.push(tmp4.placeholder);
               }
               cResult[5] = game;
@@ -147,17 +147,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               tmp8 = items1;
             } else {
               if (PremiumSubscriptionSKUs.TIER_0 === skuId) {
-                let tmp11 = _modDef6868;
+                let tmp11 = _modDef7082;
                 cResult[14] = skuId;
                 cResult[15] = tmp11;
               } else if (PremiumSubscriptionSKUs.TIER_1 !== skuId) {
                 if (PremiumSubscriptionSKUs.TIER_2 === skuId) {
-                  tmp11 = _modDef6870;
+                  tmp11 = _modDef7084;
                 } else {
                   tmp11 = null;
                 }
               }
-              tmp11 = _modDef6869;
+              tmp11 = _modDef7083;
             }
           }
         }
@@ -200,7 +200,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (null == tmp12) {
-          tmp12 = _modDef6871;
+          tmp12 = _modDef7085;
           items.push(tmp2.placeholder);
         }
         const obj3 = { style: null, children: null };

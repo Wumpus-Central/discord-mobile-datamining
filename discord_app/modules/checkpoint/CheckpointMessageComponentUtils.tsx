@@ -2,13 +2,19 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef3086 from "Checkpoint.messages.js";
+import _modDef3088 from "Checkpoint.messages.js";
 import CheckpointTrait from "../../../discord_common/js/shared/shared-constants/CheckpointTrait.tsx";
 import CheckpointCharacterAssets from "CheckpointCharacterAssets.tsx";
 import CheckpointConstants from "CheckpointConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-({ NATIVE_CHARACTER_LAYER_SIZE: c3, CheckpointVersions: closure_4 } = CheckpointConstants);
+({
+  CHECKPOINT_2026_POWER_BAR_MAX_FILLED_UNITS: c3,
+  CHECKPOINT_2026_POWER_BAR_MIN_FILLED_UNITS: closure_4,
+  CHECKPOINT_2026_POWER_BAR_UNITS: hasOwnProperty,
+  NATIVE_CHARACTER_LAYER_SIZE: metroRequire,
+  CheckpointVersions: closure_7,
+} = CheckpointConstants);
 let obj = {};
 obj[CheckpointTrait.CheckpointTrait.BASE] = CheckpointCharacterAssets.CHARACTER_BASE_TRAIT_ASSETS;
 obj[CheckpointTrait.CheckpointTrait.SHOES] = CheckpointCharacterAssets.CHARACTER_SHOES_TRAIT_ASSETS;
@@ -21,7 +27,7 @@ let result = size.fileFinishedImporting("modules/checkpoint/CheckpointMessageCom
 
 export const transformCheckpoint2026CardComponent = function transformCheckpoint2026CardComponent(checkpoint_data) {
   let tmp2 = null;
-  if (obj.getIsCheckpointEnabled("transformCheckpoint2026CardComponent")) {
+  if (obj.getIsCheckpointCardEnabled("transformCheckpoint2026CardComponent")) {
     if (null != checkpoint_data.character) {
       const obj2 = { version: checkpoint_data.version, character: null, stats: null };
       let tmp5;
@@ -105,8 +111,19 @@ export const transformCheckpoint2026CardComponent = function transformCheckpoint
   return tmp2;
 };
 export const transformCheckpoint2026CardToRowGeneratedComponent =
-  function transformCheckpoint2026CardToRowGeneratedComponent(checkpointData, message) {
-    obj = { version: checkpointData.version, authorId: message.author.id, character: null, stats: null };
+  function transformCheckpoint2026CardToRowGeneratedComponent(checkpointData) {
+    checkpointData = checkpointData.checkpointData;
+    ({ message, primaryBackgroundColor, secondaryBackgroundColor, tertiaryBackgroundColor } = checkpointData);
+    obj = {
+      version: checkpointData.version,
+      authorId: message.author.id,
+      primaryBackgroundColor,
+      secondaryBackgroundColor,
+      tertiaryBackgroundColor,
+      character: null,
+      stats: null,
+      clickable: null,
+    };
     if (null == checkpointData.character) {
       obj.character = undefined;
       let tmp8;
@@ -121,7 +138,7 @@ export const transformCheckpoint2026CardToRowGeneratedComponent =
         const rounded = Math.round(stats.totalVoiceMinutes);
         const obj2 = {
           powerLevel: numberFormat.format(stats.powerLevel),
-          powerLevelUnits: character(tmp2[7]).getCheckpointPowerBarUnits(stats.powerLevelPercentile),
+          powerLevelUnits: null,
           messagesString: null,
           voiceString: null,
           reactionString: null,
@@ -131,22 +148,29 @@ export const transformCheckpoint2026CardToRowGeneratedComponent =
           topGuild: null,
           topGame: null,
         };
+        const _Math2 = Math;
+        const _Math3 = Math;
+        const _Math4 = Math;
+        obj2.powerLevelUnits = Math.min(
+          Math.max(Math.round((stats.powerLevelPercentile / 100) * closure_5), closure_4),
+          closure_3,
+        );
         if (stats.numMessagesSent > 0) {
           const numMessagesSent = stats.numMessagesSent;
           let toLocaleStringResult = numMessagesSent.toLocaleString(tmp9(tmp2[6]).intl.currentLocale);
         } else {
           const intl = tmp9(tmp2[6]).intl;
           const obj3 = { count: stats.numMessagesSent };
-          toLocaleStringResult = intl.formatToPlainString(tmp(tmp2[8]).foKBCN, obj3);
+          toLocaleStringResult = intl.formatToPlainString(tmp(tmp2[7]).foKBCN, obj3);
         }
         obj2.messagesString = toLocaleStringResult;
         if (rounded > 0) {
-          let voiceDurationString = tmp9(tmp2[7]).getVoiceDurationString(rounded);
-          const tmp9Result = tmp9(tmp2[7]);
+          let voiceDurationString = tmp9(tmp2[8]).getVoiceDurationString(rounded);
+          const tmp9Result = tmp9(tmp2[8]);
         } else {
           const intl2 = tmp9(tmp2[6]).intl;
-          const obj6 = { minutes: rounded };
-          voiceDurationString = intl2.formatToPlainString(tmp9(tmp2[6]).t.iXLF9W, obj6);
+          const obj5 = { minutes: rounded };
+          voiceDurationString = intl2.formatToPlainString(tmp9(tmp2[6]).t.iXLF9W, obj5);
         }
         obj2.voiceString = voiceDurationString;
         if (stats.numEmojisSent > 0) {
@@ -154,46 +178,53 @@ export const transformCheckpoint2026CardToRowGeneratedComponent =
           let toLocaleStringResult1 = numEmojisSent.toLocaleString(tmp9(tmp2[6]).intl.currentLocale);
         } else {
           const intl3 = tmp9(tmp2[6]).intl;
-          const obj7 = { count: stats.numEmojisSent };
-          toLocaleStringResult1 = intl3.formatToPlainString(tmp(tmp2[8]).RHYx1k, obj7);
+          const obj6 = { count: stats.numEmojisSent };
+          toLocaleStringResult1 = intl3.formatToPlainString(tmp(tmp2[7]).RHYx1k, obj6);
         }
         obj2.reactionString = toLocaleStringResult1;
         if (stats.totalDaysPlayed > 0) {
           const intl5 = tmp9(tmp2[6]).intl;
-          const obj8 = { days: stats.totalDaysPlayed };
-          let formatToPlainStringResult = intl5.formatToPlainString(tmp9(tmp2[6]).t.GBLpQ8, obj8);
+          const obj7 = { days: stats.totalDaysPlayed };
+          let formatToPlainStringResult = intl5.formatToPlainString(tmp9(tmp2[6]).t.GBLpQ8, obj7);
         } else {
           const intl4 = tmp9(tmp2[6]).intl;
-          formatToPlainStringResult = intl4.string(tmp(tmp2[8]).mg1NPe);
+          formatToPlainStringResult = intl4.string(tmp(tmp2[7]).mg1NPe);
         }
         obj2.daysPlayedString = formatToPlainStringResult;
         if (null != stats.topGuild) {
           const intl7 = tmp9(tmp2[6]).intl;
-          const obj9 = { days: stats.topGuildNumDaysInteracted };
-          let formatToPlainStringResult1 = intl7.formatToPlainString(tmp9(tmp2[6]).t.GBLpQ8, obj9);
+          const obj8 = { days: stats.topGuildNumDaysInteracted };
+          let formatToPlainStringResult1 = intl7.formatToPlainString(tmp9(tmp2[6]).t.GBLpQ8, obj8);
         } else {
           const intl6 = tmp9(tmp2[6]).intl;
-          formatToPlainStringResult1 = intl6.string(tmp(tmp2[8]).GultYJ);
+          formatToPlainStringResult1 = intl6.string(tmp(tmp2[7]).GultYJ);
         }
         obj2.topGuildDaysInteractedString = formatToPlainStringResult1;
-        let tmp19;
+        let tmp22;
         if (null != stats.topEmoji) {
-          const obj10 = {};
+          const obj9 = {};
           const merged = Object.assign(stats.topEmoji);
           let result;
           if (null == stats.topEmoji.emojiId) {
             result = tmp(tmp2[9]).convertSurrogateToName(stats.topEmoji.emojiName);
             const tmpResult = tmp(tmp2[9]);
           }
-          obj10.emojiSurrogateName = result;
-          tmp19 = obj10;
+          obj9.emojiSurrogateName = result;
+          tmp22 = obj9;
         }
-        obj2.topEmoji = tmp19;
+        obj2.topEmoji = tmp22;
         ({ topGuild: obj4.topGuild, topGame: obj4.topGame } = stats);
         tmp8 = obj2;
-        const obj5 = character(tmp2[7]);
       }
       obj.stats = tmp8;
+      let tmp27;
+      if (obj13.getIsCheckpointEnabled("getCheckpointClickable")) {
+        const obj10 = { ariaDescription: null };
+        const intl8 = character(tmp2[6]).intl;
+        obj10.ariaDescription = intl8.string(tmp(tmp2[10]).r8GEbK);
+        tmp27 = obj10;
+      }
+      obj.clickable = tmp27;
       return obj;
     } else {
       character = checkpointData.character;
@@ -239,7 +270,7 @@ export const getCheckpointDataFromMessage = function getCheckpointDataFromMessag
 export const getCheckpointLabel = function getCheckpointLabel(checkpointDataFromMessage) {
   if (V2025.V2025 === checkpointDataFromMessage.version) {
     const intl = util.intl;
-    return intl.string(_modDef3086.goiR2u);
+    return intl.string(_modDef3088.goiR2u);
   } else {
     const V2026 = tmp.V2026;
     return null;

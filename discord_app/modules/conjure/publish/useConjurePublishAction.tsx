@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/useConjurePublishAction.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3862 from "../intl/ConjureUntranslated.messages.js";
 import ApplicationActionCreators from "../../applications/ApplicationActionCreators.tsx";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
@@ -291,7 +291,7 @@ let closure_20 = async function _saveConjureFirstPublishDetails(arg0) {
           closure_131_5 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Set", done: true };
+          return { value: "test", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -591,7 +591,7 @@ function startPublish(project, isUpdate, arg2) {
           message = message.message;
         } else {
           const intl = util.intl;
-          message = intl.string(_modDef3849.gMWZeG);
+          message = intl.string(_modDef3862.gMWZeG);
         }
         dependencyMap.showError(message);
         const obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: false };
@@ -776,7 +776,7 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
                     const result = require("ConjureAnalytics").trackConjurePublishActionClicked(closure_0, obj4);
                     if (null != busy.disabledReason) {
                       platform.showPublishBlocked(
-                        num2(11365).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER,
+                        num2(11589).ConjurePublishBlockedReason.MISSING_MANAGE_SERVER,
                         busy.disabledReason,
                       );
                     }
@@ -787,7 +787,7 @@ let closure_27 = async function _runConjurePublishAction(arg0) {
                     const obj7 = { value: continuePublish(closure_0, busy, tmp23), done: false };
                     return obj7;
                   } else {
-                    num2 = num2(11365).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
+                    num2 = num2(11589).ConjurePublishBlockedReason.MISSING_MANAGE_CHANNELS;
                     flag = busy.confirmReason;
                     platform.showPublishBlocked(num2, flag, () => {
                       closure_2_28(closure_0, busy, closure_1).catch(() => {});
@@ -1017,13 +1017,13 @@ let closure_29 = async function _continuePublish() {
           closure_139_25.add(closure_138_0);
           c12 = 2;
           const requestConsent = closure_138_4.requestConsent;
-          f155563 = requestConsent;
+          f156143 = requestConsent;
           if (requestConsent == null) {
-            f155563 = (arg0) => closure_2_18(arg0, closure_1_3);
+            f156143 = (arg0) => closure_2_18(arg0, closure_1_3);
           }
           c14 = 5;
           c15 = 1;
-          const obj11 = { value: f155563(closure_138_0), done: false };
+          const obj11 = { value: f156143(closure_138_0), done: false };
           return obj11;
         }
       } catch (tmp105) {
@@ -1040,7 +1040,7 @@ let closure_29 = async function _continuePublish() {
     }
   })();
 };
-let ConjureProjectStore = fn(10662);
+let ConjureProjectStore = fn(10885);
 ({ canPublishProject: closure_11, isProjectOwner: closure_12 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const Permissions = fn(1085).Permissions;

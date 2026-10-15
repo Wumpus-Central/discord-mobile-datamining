@@ -174,8 +174,8 @@ export default {
       details,
     };
   },
-  closeChannelSidebar(baseChannelId) {
-    DispatcherDefault.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId });
+  closeChannelSidebar(handleFrameDeepLinkQueued) {
+    DispatcherDefault.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: handleFrameDeepLinkQueued });
   },
   openGuildSidebar(arg0) {
     ({ guildId, baseChannelId, sidebarType, details } = arg0);

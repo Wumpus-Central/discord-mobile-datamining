@@ -15,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(8834);
+const SecureFramesConstants = fn(9047);
 ({
   USER_VERIFICATION_CHUNK_SIZE: closure_9,
   USER_VERIFICATION_LENGTH: c10,
@@ -27,7 +27,7 @@ const Constants = fn(1085);
 const ANDROID_FOREGROUND_RIPPLE = fn(1204).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: {
     flex: 1,
@@ -289,15 +289,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj = { userId, channelId };
             const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
             if (enabled) {
-              let userVerificationDeeplink = showShareActionSheet(8833).getUserVerificationDeeplink(userId, tmp);
-              const showShareActionSheetResult = showShareActionSheet(8833);
+              let userVerificationDeeplink = showShareActionSheet(9046).getUserVerificationDeeplink(userId, tmp);
+              const showShareActionSheetResult = showShareActionSheet(9046);
             } else {
               userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
             }
-            showShareActionSheet = showShareActionSheet(8489).showShareActionSheet;
+            showShareActionSheet = showShareActionSheet(8700).showShareActionSheet;
             obj2 = { message: userVerificationDeeplink };
             showShareActionSheet(obj2, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-            const showShareActionSheetResult1 = showShareActionSheet(8489);
+            const showShareActionSheetResult1 = showShareActionSheet(8700);
           }
         }
       }, items4);

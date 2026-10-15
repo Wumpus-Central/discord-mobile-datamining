@@ -23,9 +23,11 @@ let closure_3 = [
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
+let FastImageApngExperiment = fn(5089);
+FastImageApngExperiment = FastImageApngExperiment.initializeFastImageApngExperiment();
 const ReactCompilerGating = fn(558);
 let size = fn(2);
-const result = size.fileFinishedImporting("components_native/common/FastImage.tsx");
+const result1 = size.fileFinishedImporting("components_native/common/FastImage.tsx");
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()

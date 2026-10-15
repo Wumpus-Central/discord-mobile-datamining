@@ -1,0 +1,9 @@
+// discord_assets/assets/checkpoint/2026/character/thumbnail/shoes/platforms.png.js
+import size from "../../../../../../../_runtime/metro/00002__.js";
+
+const result = size.fileFinishedImporting(
+  "../discord_assets/assets/checkpoint/2026/character/thumbnail/shoes/platforms.png.js",
+);
+
+export default "https://cdn.discordapp.com/assets/content/44f671ecfebd96960c0f17f6062abbd9a29e4ef661878a3c7da0d94c2c0a9412.png";
+export const metadata = { fileBytes: 3991 };

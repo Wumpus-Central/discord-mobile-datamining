@@ -7,13 +7,13 @@ import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const util = format(1126);
-const Text_Text = format(5092);
+const Text_Text = format(5147);
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8324).getSingleRequirementThreshold;
+let closure_4 = fn(8535).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_4, width: "100%" },
   barRow: null,

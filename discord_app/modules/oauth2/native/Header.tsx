@@ -14,7 +14,7 @@ const View = fn(17).View;
 const UserFlags = fn(1085).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj2 = {
   header: {
     paddingBottom: 16,

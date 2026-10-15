@@ -5,23 +5,23 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
 import utils_AvatarUtils from "../../../../utils/native/AvatarUtils.tsx";
-import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3862 from "../../intl/ConjureUntranslated.messages.js";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import ConjurePlanAutomodOutcomes from "../ConjurePlanAutomodOutcomes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5092);
+const Text_Text = Text(5147);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { blocked: fn(10419).ShieldIcon, alert: fn(8777).BellIcon, allowed: fn(6873).CircleCheckIcon };
+let obj = { blocked: fn(10642).ShieldIcon, alert: fn(8990).BellIcon, allowed: fn(7087).CircleCheckIcon };
 let obj2 = { blurple: { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND }, red: null, green: null };
 let obj3 = { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND };
 obj2.red = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let obj4 = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj2.green = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj7 = {
   heading: null,
   examples: null,
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
         const intl2 = util.intl;
-        obj3.children = intl2.string(_modDef3849.z4ZKYG);
+        obj3.children = intl2.string(_modDef3862.z4ZKYG);
         const tmp13 = React4(Text_Text.Text, obj3);
         cResult[2] = tmp13;
         let tmp10 = tmp13;
@@ -562,7 +562,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [React4(native.Avatar, obj3)];
       const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
       const intl2 = util.intl;
-      obj6.children = intl2.string(_modDef3849.z4ZKYG);
+      obj6.children = intl2.string(_modDef3862.z4ZKYG);
       items[1] = React4(Text_Text.Text, obj6);
       obj2.children = items;
       const items1 = [hasOwnProperty(View, obj2)];

@@ -5,7 +5,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import KeyboardManagerUtils from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _mod6818 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7034 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import SettingRenderer from "SettingRenderer.tsx";
 import SettingRendererUtils from "SettingRendererUtils.tsx";
 import useAutoScrollToSetting from "hooks/useAutoScrollToSetting.tsx";
@@ -74,9 +74,9 @@ function keyExtractor(type, arg1) {
   return "" + type.type + "-" + label;
 }
 const View = fn(17).View;
-const ListItemType = fn(10768).ListItemType;
+const ListItemType = fn(10992).ListItemType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5096);
+const createStyles = fn(5151);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 },
   contentContainer: { paddingHorizontal: 16 },
@@ -231,7 +231,7 @@ const memoResult = noop.memo(
               data: tmp7,
               getItemType,
             };
-            const tmp24 = jsx(_mod6818.FlashList, {
+            const tmp24 = jsx(_mod7034.FlashList, {
               ref,
               ListHeaderComponent: node.ListHeaderComponent,
               contentContainerStyle: tmp14,
@@ -270,7 +270,7 @@ const memoResult = noop.memo(
         const items = [field, node];
         const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
         const ref = noop.useRef(null);
-        node(15332).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+        node(15628).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
         const obj2 = { style: tmp.container, children: null };
         const obj3 = {
           ref,
@@ -291,7 +291,7 @@ const memoResult = noop.memo(
         obj3.renderItem = renderItem;
         obj3.data = memo;
         obj3.getItemType = getItemType;
-        obj2.children = jsx(node(6818).FlashList, {
+        obj2.children = jsx(node(7034).FlashList, {
           ref,
           ListHeaderComponent: node.ListHeaderComponent,
           contentContainerStyle: null,
@@ -381,7 +381,7 @@ export const SearchableSettingsList = noop.memo(
                           data: arr,
                           getItemType,
                         };
-                        const tmp29 = jsx(_mod6818.FlashList, {
+                        const tmp29 = jsx(_mod7034.FlashList, {
                           keyboardShouldPersistTaps: "always",
                           contentContainerStyle: tmp20,
                           ListHeaderComponentStyle: tmp13,

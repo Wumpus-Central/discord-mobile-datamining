@@ -1,0 +1,9 @@
+// discord_assets/assets/checkpoint/2026/character/thumbnail/hat/headphones.png.js
+import size from "../../../../../../../_runtime/metro/00002__.js";
+
+const result = size.fileFinishedImporting(
+  "../discord_assets/assets/checkpoint/2026/character/thumbnail/hat/headphones.png.js",
+);
+
+export default "https://cdn.discordapp.com/assets/content/b746828b959dd2177ca12ec63ee98c7fac4f7685dc164f4b6426a5273eb7f94e.png";
+export const metadata = { fileBytes: 5187 };

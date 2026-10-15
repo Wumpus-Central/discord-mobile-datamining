@@ -217,7 +217,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7322);
+const ConversationConstants = fn(7532);
 ({
   CONVERSATION_COLORS: closure_9,
   CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10,
@@ -536,8 +536,8 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7324).mapConversation);
-      const found = mapped.filter(set(1388).isNotNullish);
+      const mapped = rawConversations.map(set(7534).mapConversation);
+      const found = mapped.filter(set(1386).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
         let tmp5 = null;

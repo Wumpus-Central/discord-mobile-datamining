@@ -12,10 +12,10 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10365);
+const ChannelCallConstants = fn(10588);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(2024).OrientationLockState;
-const ParticipantTypes = fn(5119).ParticipantTypes;
+const ParticipantTypes = fn(5174).ParticipantTypes;
 const timeout = new fn(2060).Timeout();
 let obj = {
   focus: true,
@@ -27,10 +27,10 @@ let obj = {
 let obj2 = {};
 let size = {
   x: "Array",
-  y: "T",
+  y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8458).OrientationType.PORTRAIT,
+  screenOrientation: fn(8669).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -38,10 +38,10 @@ let size = {
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
-  y: "T",
+  y: "Symbol",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8458).OrientationType.PORTRAIT,
+  screenOrientation: fn(8669).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: false,
   isInitialized: null,
   isVisible: null,
@@ -174,7 +174,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
           tmp18 = cResult[5];
           tmp19 = cResult[6];
         }
-        tmpResult = tmp(10368);
+        tmpResult = tmp(10591);
         const stateFromStores = tmp(504).useStateFromStores(tmp17, tmp18, tmp19);
         const _Symbol3 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {

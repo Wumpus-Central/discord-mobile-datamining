@@ -4,16 +4,12 @@ import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import conjurePlanTags from "conjurePlanTags.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-function isAppCommand(kind) {
-  let hasItem = "launch" !== kind.kind;
-  if (hasItem) {
-    let CHAT = kind.type;
-    if (CHAT == null) {
-      CHAT = Server.ApplicationCommandType.CHAT;
-    }
-    hasItem = set.has(CHAT);
+function isAppCommand(type) {
+  let CHAT = type.type;
+  if (CHAT == null) {
+    CHAT = Server.ApplicationCommandType.CHAT;
   }
-  return hasItem;
+  return set.has(CHAT);
 }
 function isContextMenuExchange(kind) {
   let tmp = "user_command" === kind.kind;

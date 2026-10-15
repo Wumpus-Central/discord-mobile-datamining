@@ -11,11 +11,11 @@ const jsx = fn(21).jsx;
 let items = [
   {
     input: "o",
-    modifierFlags: fn(5378).KeyModifierFlags.keyModifierControl,
+    modifierFlags: fn(5433).KeyModifierFlags.keyModifierControl,
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
-      asyncRequireImpl(15190, dependencyMap.paths).then((navigateToDevTools) => {
+      asyncRequireImpl(15486, dependencyMap.paths).then((navigateToDevTools) => {
         navigateToDevTools.navigateToDevTools();
       });
       return true;
@@ -25,11 +25,11 @@ let items = [
 const ReactCompilerGating = fn(558);
 let obj = {
   input: "o",
-  modifierFlags: fn(5378).KeyModifierFlags.keyModifierControl,
+  modifierFlags: fn(5433).KeyModifierFlags.keyModifierControl,
   eventName: "keyCommandShowDevTools",
   discoverabilityTitle: "Open DevTools Panel",
   onKeyCommand() {
-    asyncRequireImpl(15190, dependencyMap.paths).then((navigateToDevTools) => {
+    asyncRequireImpl(15486, dependencyMap.paths).then((navigateToDevTools) => {
       navigateToDevTools.navigateToDevTools();
     });
     return true;
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         cResult[7] = tmp14;
       } else {
-        const keyCommands = tmp(5378).useKeyCommands(cResult[7]);
+        const keyCommands = tmp(5433).useKeyCommands(cResult[7]);
         class D {
           constructor() {
             return closure_1_5.showDevWidget;
@@ -135,10 +135,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj = PlatformUtils;
       });
       const obj2 = stateFromStores(504);
-      const keyCommands = stateFromStores(5378).useKeyCommands(stateFromStores ? items : []);
+      const keyCommands = stateFromStores(5433).useKeyCommands(stateFromStores ? items : []);
       if (stateFromStores) {
         if (stateFromStores1) {
-          return jsx(tmp(16690).default, {});
+          return jsx(tmp(16929).default, {});
         }
       }
       return null;

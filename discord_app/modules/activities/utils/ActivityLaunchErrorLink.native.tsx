@@ -1,6 +1,6 @@
 // discord_app/modules/activities/utils/ActivityLaunchErrorLink.native.tsx
 import c from "../../../../_runtime/00576_c.js";
-import migration from "../../../intl/native/migration.tsx";
+import IntlLink from "../../../intl/native/IntlLink.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp4;
       }
-      const tmp5 = jsx(migration.IntlLink, { target: href, children });
+      const tmp5 = jsx(IntlLink.IntlLink, { target: href, children });
       cResult[0] = children;
       cResult[1] = href;
       cResult[2] = tmp5;
@@ -27,5 +27,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ActivityLaunchErrorLink(arg0) {
       ({ href, children } = arg0);
-      return jsx(migration.IntlLink, { target, children });
+      return jsx(IntlLink.IntlLink, { target, children });
     };

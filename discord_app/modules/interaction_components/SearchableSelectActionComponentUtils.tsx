@@ -43,10 +43,10 @@ export const queryMentionables = function queryMentionables(type, query, channel
       checkRecentlyTalkedOnEmptyQuery: false,
       limit: 15,
     };
-    const obj = channel(5975);
-    ({ users, roles } = channel(5975).queryMentionResults(obj2));
+    const obj = channel(6186);
+    ({ users, roles } = channel(6186).queryMentionResults(obj2));
     const items = [];
-    const queryMentionResultsResult = channel(5975).queryMentionResults(obj2);
+    const queryMentionResultsResult = channel(6186).queryMentionResults(obj2);
     HermesBuiltin.arraySpread(
       roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })),
       HermesBuiltin.arraySpread(
@@ -166,7 +166,7 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
         }
       }
     });
-    let found = mapped.filter(tmp2(1388).isNotNullish);
+    let found = mapped.filter(tmp2(1386).isNotNullish);
   }
   let type;
   if (interactionComponentState != null) {
@@ -264,6 +264,6 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
         }
       }
     });
-    return mapped.filter(items(1388).isNotNullish);
+    return mapped.filter(items(1386).isNotNullish);
   }
 };
