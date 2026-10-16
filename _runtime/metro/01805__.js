@@ -1,15 +1,29 @@
 // === Module 1805: ? ===
 
 // Module 1805
-import _mod1806 from "module_1806" /* 1806 */;
-import module_1659 from "module_1659" /* 1659 */;
+import _mod19 from "module_19" /* 19 */;
+import WorkletEventHandlerNative from "WorkletEventHandlerNative" /* 1763 */;
 
-if (module_1659.shouldBeUseWeb()) {
-  function useAnimatedPropsJS(fn, items, arg2) {
-    return _mod1806.useAnimatedStyle(fn, items, arg2, true);
+const useRef = _mod19.useRef;
+
+export const useEvent = function useEvent(fn) {
+  let items = cResult;
+  if (cResult === undefined) {
+    items = [];
   }
-} else {
-  useAnimatedPropsJS = _mod1806.useAnimatedStyle;
-}
-
-export const useAnimatedProps = useAnimatedPropsJS;
+  let flag = doDependenciesDiffer;
+  if (doDependenciesDiffer === undefined) {
+    flag = false;
+  }
+  const tmp = useRef(null);
+  if (null === tmp.current) {
+    const workletEventHandler1 = new WorkletEventHandlerNative.WorkletEventHandler(fn, items);
+    const obj2 = { workletEventHandler: workletEventHandler1 };
+    tmp.current = obj2;
+  } else if (flag) {
+    tmp.current.workletEventHandler.updateEventHandler(fn, items);
+    const obj = { workletEventHandler: tmp.current.workletEventHandler };
+    tmp.current = obj;
+  }
+  return tmp.current;
+};

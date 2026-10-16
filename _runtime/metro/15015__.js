@@ -1,34 +1,18 @@
 // === Module 15015: ? ===
 
 // Module 15015
-import _mod14981 from "module_14981" /* 14981 */;
+let closure_0 = Object.freeze({ loose: true });
+let closure_1 = Object.freeze({});
 
-const require = globalThis.__r;
-
-
-export default (arr, arg1, arg2) => {
-  _require = arg2;
-  dependencyMap = null;
-  closure_2 = null;
-  let regex = null;
-  try {
-    let tmp9 = new require("module_15010")(arg1, arg2);
-    regex = tmp9;
-    const item = arr.forEach((item) => {
-      if (regex.test(item)) {
-        let tmp = closure_1;
-        if (closure_1) {
-          tmp = 1 !== closure_2.compare(item);
-        }
-        if (!tmp) {
-          closure_1 = item;
-          const tmp9 = new _mod14981(closure_1, closure_0);
-          closure_2 = tmp9;
-        }
-      }
-    });
-    return dependencyMap;
-  } catch (err) {
-    return tmp;
+export default (arg0) => {
+  let tmp = arg0;
+  if (arg0) {
+    if (typeof tmp !== "object") {
+      tmp = closure_0;
+    }
+    let tmp2 = tmp;
+  } else {
+    tmp2 = closure_1;
   }
+  return tmp2;
 };

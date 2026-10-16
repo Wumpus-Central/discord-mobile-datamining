@@ -1,7 +1,7 @@
 // === Module 299: NativeText ===
 
 // Module 299 (NativeText)
-import measureDefault from "measure" /* 68 */;
+import _modDef68 from "module_68" /* 68 */;
 import _mod103 from "module_103" /* 103 */;
 import _modDef300 from "module_300" /* 300 */;
 
@@ -16,7 +16,7 @@ if (global.RN$Bridgeless) {
   let tmp3 = _modDef300("RCTVirtualText", () => _mod103.createViewConfig(closure_3));
 } else {
   tmp3 = tmp2;
-  const importDefaultResult = measureDefault;
+  const importDefaultResult = _modDef68;
 }
 const javaScriptFlagGetter = fn(27);
 let tmp4 = tmp2;

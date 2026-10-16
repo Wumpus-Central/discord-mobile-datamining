@@ -4,4 +4,4 @@
 import _mod5007 from "module_5007" /* 5007 */;
 
 
-export default _mod5007;
+export default _mod5007();

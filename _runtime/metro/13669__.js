@@ -1,7 +1,7 @@
 // === Module 13669: ? ===
 
 // Module 13669
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "59c1068002b82917b518f48d03d4151e", name: "BookmarkOutlineIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8d2a9da7873a6a1912be7bfb3d52eaf6", name: "SpoilerIcon", type: "png" });

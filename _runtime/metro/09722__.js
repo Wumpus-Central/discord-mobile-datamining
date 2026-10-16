@@ -1,7 +1,7 @@
 // === Module 9722: ? ===
 
 // Module 9722
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 240, height: 152, scales: [2, 3], hash: "1c56c6a8d7541177ea8c3d88699db89c", name: "img_guild_cap_upsell_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/BeanieIcon", width: 60, height: 60, scales: [2, 3], hash: "5ed4f057d69445a6e4a7fd8ca936d32a", name: "BeanieIcon", type: "png" });

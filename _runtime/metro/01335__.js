@@ -2,4 +2,4 @@
 
 // Module 1335
 
-export default Math.round;
+export default Math.min;

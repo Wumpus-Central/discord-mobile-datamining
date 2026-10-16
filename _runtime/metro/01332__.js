@@ -2,4 +2,4 @@
 
 // Module 1332
 
-export default Math.max;
+export default Math.abs;

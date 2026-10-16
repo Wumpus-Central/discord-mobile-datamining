@@ -122,7 +122,7 @@ Object.defineProperty(obj, "StyleSheet", { get: () => require("get hairlineWidth
 Object.defineProperty(obj, "Systrace", { get: () => require("module_46"), set: undefined });
 Object.defineProperty(obj, "ToastAndroid", { get: () => require("SHORT").default, set: undefined });
 Object.defineProperty(obj, "TurboModuleRegistry", { get: () => require("module_30"), set: undefined });
-Object.defineProperty(obj, "UIManager", { get: () => require("measure").default, set: undefined });
+Object.defineProperty(obj, "UIManager", { get: () => require("module_68").default, set: undefined });
 obj.unstable_batchedUpdates = function unstable_batchedUpdates(fn, value) {
   fn(value);
 };

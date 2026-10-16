@@ -2,7 +2,7 @@
 
 // Module 292
 import _modDef38 from "module_38" /* 38 */;
-import measureDefault from "measure" /* 68 */;
+import _modDef68 from "module_68" /* 68 */;
 import PressabilityPerformanceEventEmitterDefault from "PressabilityPerformanceEventEmitter" /* 293 */;
 import SoundManagerDefault from "SoundManager" /* 294 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
@@ -548,7 +548,7 @@ const items = [
       const self = this;
       if (null != this._responderID) {
         if (typeof self._responderID === "number") {
-          measureDefault.measure(self._responderID, self._measureCallback);
+          _modDef68.measure(self._responderID, self._measureCallback);
         } else {
           const _responderID = self._responderID;
           _responderID.measureAsyncOnUI(self._measureCallback);

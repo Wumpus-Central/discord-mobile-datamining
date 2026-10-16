@@ -1,8 +1,8 @@
 // === Module 4525: ? ===
 
 // Module 4525
-import _typeof_mod from "module_4255" /* 4255 */;
-import requiredArgs_mod from "requiredArgs" /* 4256 */;
+import _typeof_mod from "module_4258" /* 4258 */;
+import requiredArgs_mod from "requiredArgs" /* 4259 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,8 +21,19 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getHours(arg0) {
+export default function isLeapYear(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getHours();
+  const fullYear = _typeof.default(arg0).getFullYear();
+  const result = fullYear % 400;
+  let tmp4 = result === 0;
+  if (result !== 0) {
+    const result1 = fullYear % 4;
+    let tmp6 = result1 === 0;
+    if (result1 === 0) {
+      tmp6 = fullYear % 100 !== 0;
+    }
+    tmp4 = tmp6;
+  }
+  return tmp4;
 };
 export default exports.default;

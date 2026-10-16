@@ -1,19 +1,15 @@
 // === Module 1881: ? ===
 
 // Module 1881
+import TEST_ID_KEYBOARD_TOOLBAR from "TEST_ID_KEYBOARD_TOOLBAR" /* 1876 */;
 import noop from "module_19" /* 19 */;
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: c2 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const styles = StyleSheet.create({ flex: { flex: 1 } });
 
-export const ToolbarContext = context;
-export const useToolbarContext = () => {
-  const tmp = useContext(context);
-  if (tmp) {
-    return tmp;
-  } else {
-    const _Error = Error;
-    const error = new Error("KeyboardToolbar.* component must be used inside <KeyboardToolbar>");
-    throw error;
-  }
+export default function _default(children) {
+  return <React2 style={styles.flex} testID={TEST_ID_KEYBOARD_TOOLBAR.TEST_ID_KEYBOARD_TOOLBAR_CONTENT}>{children.children}</React2>;
 };

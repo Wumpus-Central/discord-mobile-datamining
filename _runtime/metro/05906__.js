@@ -1,17 +1,20 @@
 // === Module 5906: ? ===
 
 // Module 5906
-import _mod1305 from "module_1305" /* 1305 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1339 */;
+import _mod1332 from "module_1332" /* 1332 */;
+import _mod1333 from "module_1333" /* 1333 */;
+import _mod1339 from "module_1339" /* 1339 */;
+import _mod5898 from "module_5898" /* 5898 */;
 
-const tmp = _mod1305("%Array%");
-const isArray = tmp.isArray;
-let tmp2 = !isArray;
-if (!isArray) {
-  tmp2 = callBoundIntrinsic("Object.prototype.toString");
-}
-let closure_0 = tmp2;
 
-export default tmp.isArray || (function IsArray(arg0) {
-  return "[object Array]" === closure_0(arg0);
-});
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!_mod1339(num)) {
+      if (_mod5898(num)) {
+        const tmp = _mod1332(num);
+        return _mod1333(tmp) === tmp;
+      }
+    }
+  }
+  return false;
+};

@@ -1,38 +1,89 @@
 // === Module 1669: ? ===
 
 // Module 1669
-let prop;
-if (nativeFabricUIManager != null) {
-  prop = nativeFabricUIManager.nativeFabricUIManager;
-}
-let obj = { borderBottomEndRadius: true, borderBottomLeftRadius: true, borderBottomRightRadius: true, borderBottomStartRadius: true, borderRadius: true, borderTopEndRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderTopStartRadius: true };
-let obj2 = obj;
-if (null == prop) {
-  obj2 = {};
-}
-let obj3 = { color: true, tintColor: true, shadowColor: true, placeholderTextColor: true };
-const obj4 = { opacity: true, transform: true, backgroundColor: true, borderRightColor: true, borderBottomColor: true, borderColor: true, borderEndColor: true, borderLeftColor: true, borderStartColor: true, borderTopColor: true, shadowOpacity: true, shadowRadius: true };
-const merged = Object.assign(obj2);
-obj4.scaleX = true;
-obj4.scaleY = true;
-obj4.translateX = true;
-obj4.translateY = true;
-let obj5 = obj3;
-if (null == prop) {
-  obj5 = {};
-}
-const obj6 = { UI_THREAD_PROPS_WHITELIST: null, NATIVE_THREAD_PROPS_WHITELIST: null };
-const merged1 = Object.assign(obj5);
-obj6.UI_THREAD_PROPS_WHITELIST = obj4;
-if (null != prop) {
-  obj3 = {};
-}
-const size = { borderBottomWidth: true, borderEndWidth: true, borderLeftWidth: true, borderRightWidth: true, borderStartWidth: true, borderTopWidth: true, borderWidth: true, bottom: true, boxShadow: true, flex: true, flexGrow: true, flexShrink: true, height: true, left: true, margin: true, marginBottom: true, marginEnd: true, marginHorizontal: true, marginLeft: true, marginRight: true, marginStart: true, marginTop: true, marginVertical: true, maxHeight: true, maxWidth: true, minHeight: true, minWidth: true, padding: true, paddingBottom: true, paddingEnd: true, paddingHorizontal: true, paddingLeft: true, paddingRight: true, paddingStart: true, paddingTop: true, paddingVertical: true, right: true, start: true, top: true, width: true, zIndex: true, elevation: true, fontSize: true, lineHeight: true, textShadowRadius: true, textShadowOffset: true, letterSpacing: true, aspectRatio: true, columnGap: true, end: true, flexBasis: true, gap: true, rowGap: true, display: true, backfaceVisibility: true, overflow: true, resizeMode: true, fontStyle: true, fontWeight: true, textAlign: true, textDecorationLine: true, fontFamily: true, textAlignVertical: true, fontVariant: true, textDecorationStyle: true, textTransform: true, writingDirection: true, alignContent: true, alignItems: true, alignSelf: true, direction: true, flexDirection: true, flexWrap: true, justifyContent: true, position: true };
-const merged2 = Object.assign(obj3);
-if (null != prop) {
-  obj = {};
-}
-const merged3 = Object.assign(obj);
-obj6.NATIVE_THREAD_PROPS_WHITELIST = size;
+import _slicedToArray from "module_32" /* 32 */;
 
-export const PropsAllowlists = obj6;
+const ReanimatedError = function t(arg0) {
+  let str = "[Reanimated]";
+  if (arg0) {
+    const _HermesInternal = HermesInternal;
+    str = "" + "[Reanimated]" + " " + arg0;
+  }
+  const error = new Error(str);
+  error.name = "ReanimatedError";
+  return error;
+};
+ReanimatedError.__closure = {};
+ReanimatedError.__workletHash = 17260882889510;
+ReanimatedError.__initData = { code: "function ReanimatedError_Pnpm_errorsTs1(message){const prefix='[Reanimated]';const errorInstance=new Error(message?prefix+\" \"+message:prefix);errorInstance.name='ReanimatedError';return errorInstance;}" };
+function registerReanimatedError() {
+  if (globalThis._WORKLET) {
+    global.ReanimatedError = ReanimatedError;
+  } else {
+    const _Error = Error;
+    const error = new Error("[Reanimated] registerReanimatedError() must be called on Worklet runtime");
+    throw error;
+  }
+}
+registerReanimatedError.__closure = { ReanimatedErrorConstructor: ReanimatedError };
+registerReanimatedError.__workletHash = 12525509537607;
+registerReanimatedError.__initData = { code: "function registerReanimatedError_Pnpm_errorsTs2(){const{ReanimatedErrorConstructor}=this.__closure;if(!_WORKLET){throw new Error('[Reanimated] registerReanimatedError() must be called on Worklet runtime');}global.ReanimatedError=ReanimatedErrorConstructor;}" };
+const map = new Map();
+
+export { ReanimatedError };
+export { registerReanimatedError };
+export const registerWorkletStackDetails = function registerWorkletStackDetails(arg0, arg1) {
+  const result = map.set(arg0, arg1);
+};
+export const reportFatalErrorOnJS = function reportFatalErrorOnJS(stack) {
+  const error = new Error();
+  error.message = stack.message;
+  let tmp2;
+  if (stack.stack) {
+    const match = str.match(/worklet_(\d+):(\d+):(\d+)/g);
+    let replaced = str;
+    if (match != null) {
+      const item = match.forEach((item) => {
+        const parts = item.split(/:|_/);
+        replaced = globalThis;
+        let concat = _slicedToArray;
+        const tmp = _slicedToArray(parts.map(Number), 4);
+        let str = tmp[3];
+        value = map.get(tmp[1]);
+        if (value) {
+          const combined = concat(value, 3);
+          let first = combined[0];
+          let tmp4 = combined[2];
+          let first1;
+          if (first.stack != null) {
+            first = str2.split("\n");
+            if (first != null) {
+              first1 = first[0];
+            }
+          }
+          if (!first1) {
+            let items = ["unknown", 0, 0];
+            const combined1 = concat(items, 3);
+            const sum = str + combined1[2] + tmp4;
+            tmp4 = replaced;
+            concat = replaced.HermesInternal.concat;
+            str = ":";
+            replaced = replaced.replace(item, concat(combined1[0], ":", tmp[2] + combined1[1] + combined[1], ":", sum));
+          } else {
+            first = /@([^@]+):(\d+):(\d+)/.exec(first1);
+            const obj2 = /@([^@]+):(\d+):(\d+)/;
+          }
+          const combined2 = concat(first, 4);
+          first = [combined2[1], replaced.Number(combined2[2]), replaced.Number(combined2[3])];
+          items = first;
+        }
+      });
+    }
+    tmp2 = replaced;
+  }
+  error.stack = tmp2;
+  error.name = "ReanimatedError";
+  error.jsEngine = "reanimated";
+  const _ErrorUtils = replaced.ErrorUtils;
+  _ErrorUtils.reportFatalError(error);
+};

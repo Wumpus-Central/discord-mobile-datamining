@@ -1,24 +1,28 @@
 // === Module 8060: ? ===
 
 // Module 8060
-import _mod8045 from "module_8045" /* 8045 */;
+import findOffsets from "findOffsets" /* 8057 */;
 
 require = arg1;
 const dependencyMap = arg6;
-let c2 = 0;
-let c3 = "<?xpacket begin";
 
 export default {
-  isXMLFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod8045.getStringFromDataView(dataView, c2, length.length) === length;
+  isAvifFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          parseBoxResult = "avif" === parseBoxResult.majorBrand;
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
     }
-    return tmp;
   },
-  findOffsets(byteLength) {
-    const xmpChunks = [];
-    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
-    return { xmpChunks };
+  findAvifOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
   }
 };

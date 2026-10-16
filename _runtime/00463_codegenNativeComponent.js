@@ -1,7 +1,7 @@
 // === Module 463: codegenNativeComponent ===
 
 // Module 463 (codegenNativeComponent)
-import measureDefault from "measure" /* 68 */;
+import _modDef68 from "module_68" /* 68 */;
 import _modDef464 from "module_464" /* 464 */;
 
 const global = arg0;
@@ -26,7 +26,7 @@ export default function codegenNativeComponent(arg0, paperComponentName) {
           if (tmp7Result.hasViewManagerConfig(paperComponentName.paperComponentNameDeprecated)) {
             paperComponentNameDeprecated = paperComponentName.paperComponentNameDeprecated;
           }
-          tmp7Result = measureDefault;
+          tmp7Result = _modDef68;
         }
         let str = paperComponentName.paperComponentNameDeprecated;
         if (str == null) {
@@ -36,7 +36,7 @@ export default function codegenNativeComponent(arg0, paperComponentName) {
         const error = new Error("Failed to find native component for either " + arg0 + " or " + str);
         throw error;
       }
-      obj2 = measureDefault;
+      obj2 = _modDef68;
     }
   }
   return _modDef464(paperComponentNameDeprecated);

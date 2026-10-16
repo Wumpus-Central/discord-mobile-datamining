@@ -3,7 +3,7 @@
 // Module 801 (markAsInstrumented)
 import _mod699 from "module_699" /* 699 */;
 import consoleSandbox from "consoleSandbox" /* 700 */;
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 715 */;
+import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "GEN_AI_CONVERSATION_ID_ATTRIBUTE" /* 715 */;
 import _mod742 from "module_742" /* 742 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
@@ -127,7 +127,7 @@ function instrumentAuthOperation(arg0) {
         str2 = "(admin) ";
       }
       let obj2 = { name: "auth " + str2 + name.name, attributes: null };
-      let obj3 = { [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
+      let obj3 = { [GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
       if (flag) {
         str = "admin.";
       }

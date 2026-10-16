@@ -1,18 +1,25 @@
 // === Module 15233: ? ===
 
 // Module 15233
-import _mod15224 from "module_15224" /* 15224 */;
-import _mod15232 from "module_15232" /* 15232 */;
-import _mod15234 from "module_15234" /* 15234 */;
-import _mod15235 from "module_15235" /* 15235 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default _mod15224 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = _mod15234("Symbol");
-  let tmpResultResult = _mod15232(tmp3);
-  if (tmpResultResult) {
-    tmpResultResult = _mod15235(tmp3.prototype, Object(arg0));
-    const tmpResult = _mod15235;
-  }
-  return tmpResultResult;
-});
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("module_15234").units;
+  return units.filter((item) => (function isSupported(unit, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const obj = { style: "unit", unit };
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+      return memoizedNumberFormat.resolvedOptions().unit === unit;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
+};

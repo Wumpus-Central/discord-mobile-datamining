@@ -1,7 +1,7 @@
 // === Module 766: convertSpanJsonToTransactionEvent ===
 
 // Module 766 (convertSpanJsonToTransactionEvent)
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 715 */;
+import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "GEN_AI_CONVERSATION_ID_ATTRIBUTE" /* 715 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -14,14 +14,14 @@ export const convertSpanJsonToTransactionEvent = function convertSpanJsonToTrans
   let profile_id = beforeSendSpanResult.profile_id;
   if (profile_id) {
     const obj4 = {};
-    obj4[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_PROFILE_ID] = beforeSendSpanResult.profile_id;
+    obj4[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_PROFILE_ID] = beforeSendSpanResult.profile_id;
     profile_id = obj4;
   }
   const merged1 = Object.assign(profile_id);
   let exclusive_time = beforeSendSpanResult.exclusive_time;
   if (exclusive_time) {
     const obj5 = {};
-    obj5[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME] = beforeSendSpanResult.exclusive_time;
+    obj5[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME] = beforeSendSpanResult.exclusive_time;
     exclusive_time = obj5;
   }
   const obj6 = { trace: null };
@@ -66,12 +66,12 @@ export const convertTransactionEventToSpanJson = function convertTransactionEven
   obj2.origin = origin;
   let tmp;
   if (data != null) {
-    tmp = data[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_PROFILE_ID];
+    tmp = data[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_PROFILE_ID];
   }
   obj2.profile_id = tmp;
   let tmp4;
   if (data != null) {
-    tmp4 = data[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME];
+    tmp4 = data[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME];
   }
   obj2.exclusive_time = tmp4;
   obj2.measurements = contexts.measurements;

@@ -1,7 +1,7 @@
 // === Module 14463: ? ===
 
 // Module 14463
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 16, height: 16, scales: [2, 3], hash: "3b34529117c1d3db6d78cba92e0c94bb", name: "member_list_badge_16px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 134, height: 56, scales: [2, 3], hash: "3d54a60f579be5dc72492b0eeac44a2b", name: "img_discord_nitro_logo_centered_light", type: "png" });

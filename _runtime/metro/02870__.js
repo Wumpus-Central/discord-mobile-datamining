@@ -1,7 +1,7 @@
 // === Module 2870: ? ===
 
 // Module 2870
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "40b524b5141cb83ddcff108447f3c5b1", name: "en-GB.messages.40b524b5141cb83ddcff108447f3c5b1.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "107b8182d613c984a64f5eed9eaa171c", name: "da.messages.107b8182d613c984a64f5eed9eaa171c.compiled.messages", type: "jsona" });

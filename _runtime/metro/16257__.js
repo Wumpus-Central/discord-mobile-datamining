@@ -1,7 +1,7 @@
 // === Module 16257: ? ===
 
 // Module 16257
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0071b2f7df228b871ee979869dc2eb38", name: "CircleMinusIcon-primary", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 161, scales: [1], hash: "0bdcf228295d7206b9649c79781a956c", name: "cap_2", type: "png" });

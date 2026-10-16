@@ -1,13 +1,10 @@
 // === Module 1820: ? ===
 
 // Module 1820
-import _mod19 from "module_19" /* 19 */;
+import module_1699 from "module_1699" /* 1699 */;
 
-_mod19.useCallback;
+let closure_0 = module_1699.isReducedMotionEnabledInSystem();
 
-export const useWorkletCallback = function useWorkletCallback(fn, items) {
-  if (items == null) {
-    items = [];
-  }
-  return useCallback(fn, items);
-};
+export function useReducedMotion() {
+  return closure_0;
+}

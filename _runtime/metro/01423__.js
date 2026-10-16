@@ -1,7 +1,7 @@
 // === Module 1423: ? ===
 
 // Module 1423
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 256, height: 256, scales: [1], hash: "3c6ccb83716d1e4fb91d3082f6b21d77", name: "default_avatar_4", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 256, height: 256, scales: [1], hash: "7c8f476123d28d103efe381543274c25", name: "default_avatar_2", type: "png" });

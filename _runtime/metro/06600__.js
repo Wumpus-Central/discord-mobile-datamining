@@ -1,41 +1,55 @@
 // === Module 6600: ? ===
 
 // Module 6600
-import _mod19 from "module_19" /* 19 */;
-import _modDef6590 from "module_6590" /* 6590 */;
-import needsToReattach from "needsToReattach" /* 6601 */;
-import dropHandlers from "dropHandlers" /* 6602 */;
-import attachHandlers from "attachHandlers" /* 6603 */;
-import _mod6604 from "module_6604" /* 6604 */;
+import cancelAnimation from "cancelAnimation" /* 1658 */;
+import reactNativeWorkletsCompat from "reactNativeWorkletsCompat" /* 4908 */;
+import tagMessage from "tagMessage" /* 6562 */;
+import ghQueueMicrotask from "ghQueueMicrotask" /* 6589 */;
+import _mod6601 from "module_6601" /* 6601 */;
 
-const require = globalThis.__r;
+try {
+  const _module = cancelAnimation;
+  try {
+    const _module1 = reactNativeWorkletsCompat;
+    if (_module1 != null) {
+      const fn = function t() {
 
-_mod19.useCallback;
-
-export const useDetectorUpdater = function useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers) {
-  _require = current;
-  const preparedGesture = current2;
-  dependencyMap = gesturesToAttach;
-  const forceRender = require("convertToHandlerTag").useForceRender();
-  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
-  return gesture((arg0) => {
-    const tmp3 = _modDef6590(current.viewRef);
-    if (tmp3 === current.previousViewTag) {
-      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
-        if (!arg0) {
-          _mod6604.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
-          const tmp5Result = _mod6604;
-        }
+      };
+      fn.__closure = {};
+      fn.__workletHash = 1792171573139;
+      fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
+      _module1.scheduleOnUI(fn);
+    }
+    const _module2 = ghQueueMicrotask;
+    _module2.ghQueueMicrotask(() => {
+      const NativeProxy = _mod6601.NativeProxy;
+      if (!NativeProxy.installUIRuntimeBindings()) {
+        const _console = console;
+        console.warn(tagMessage.tagMessage("Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues."));
+        const tmpResult = tagMessage;
       }
-      obj = needsToReattach;
+    });
+    let useSharedValue;
+    if (_module != null) {
+      useSharedValue = _module.useSharedValue;
     }
-    dropHandlers.dropHandlers(preparedGesture);
-    attachHandlers.attachHandlers({ preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 });
-    if (tmp3 !== current.previousViewTag) {
-      current.previousViewTag = tmp3;
-      current.forceRebuildReanimatedEvent = true;
-      forceRender();
+    let setGestureState = undefined === _module;
+    if (!setGestureState) {
+      setGestureState = _module.setGestureState;
     }
-    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
-  }, items);
-};
+    if (!setGestureState) {
+      const fn2 = function o() {
+        console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
+      };
+      const obj = { tagMessage: tagMessage.tagMessage };
+      fn2.__closure = obj;
+      fn2.__workletHash = 3596069664305;
+      fn2.__initData = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
+      _module.setGestureState = fn2;
+      const obj2 = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
+    }
+    exports.Reanimated = _module;
+  } catch (err) {
+  }
+} catch (err) {
+}

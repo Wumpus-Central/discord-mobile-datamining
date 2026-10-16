@@ -1,7 +1,12 @@
 // === Module 10300: ? ===
 
 // Module 10300
-import registerAsset from "module_1132" /* 1132 */;
+import _slicedToArray from "module_32" /* 32 */;
 
+const noop = fn(19);
+({ useCallback: closure_1, useState: c2 } = noop);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 82, height: 18, scales: [2, 3], hash: "45460b156c456430280e2b323f923e88", name: "img_logo_boost", type: "png" });
+export default function useForceUpdate() {
+  closure_0 = _slicedToArray(React2({}), 2)[1];
+  return framebus(() => closure_0({}), []);
+};

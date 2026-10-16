@@ -1,121 +1,159 @@
 // === Module 1886: ? ===
 
 // Module 1886
-import cancelAnimation from "cancelAnimation" /* 1656 */;
+import _mod17 from "module_17" /* 17 */;
+import noop_mod from "module_19" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import cancelAnimation_mod from "cancelAnimation" /* 1658 */;
 
-require = fn;
-const dependencyMap = arg6;
-fn = function t(height, value, offset) {
-  let interpolateResult = height;
-  if (0 !== offset) {
-    interpolateResult = height;
-    if (0 !== value) {
-      const items = [0, value];
-      const _Math = Math;
-      const items1 = [0, Math.max(value - offset, 0)];
-      interpolateResult = cancelAnimation.interpolate(height, items, items1);
-    }
+let noop = noop_mod;
+({ useCallback: c3, useMemo: closure_4, forwardRef } = noop);
+let noop = noop_mod;
+const StyleSheet = _mod17.StyleSheet;
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+let cancelAnimation = cancelAnimation_mod;
+let closure_8 = cancelAnimation.makeMutable(0);
+let cancelAnimation = cancelAnimation_mod;
+let closure_9 = cancelAnimation.makeMutable(0);
+const __initData = { code: "function pnpm_indexTsx1(){const{freeze}=this.__closure;return typeof freeze===\"boolean\"?freeze:freeze.value;}" };
+const __initData2 = { code: "function pnpm_indexTsx2(){const{blankSpace,padding,extraContentPadding}=this.__closure;return Math.max(blankSpace.value,padding.value+extraContentPadding.value);}" };
+const __initData3 = { code: "function pnpm_indexTsx3(){const{padding,extraContentPadding}=this.__closure;return padding.value+extraContentPadding.value;}" };
+const __initData4 = { code: "function pnpm_indexTsx4(){const{currentHeight}=this.__closure;return{transform:[{translateY:-currentHeight.value}]};}" };
+const styles = StyleSheet.create({ commitView: { display: "none", position: "absolute" } });
+
+export default forwardRef((onEndVisible, arg1) => {
+  let ScrollView = onEndVisible.ScrollViewComponent;
+  if (ScrollView === undefined) {
+    ScrollView = extraContentPadding(blankSpace[3]).ScrollView;
   }
-  return interpolateResult;
-};
-fn.__closure = { interpolate: fn(1656).interpolate };
-fn.__workletHash = 1787304919616;
-fn.__initData = { code: "function pnpm_helpersTs1(height,targetKeyboardHeight,offset){const{interpolate}=this.__closure;if(offset===0||targetKeyboardHeight===0){return height;}return interpolate(height,[0,targetKeyboardHeight],[0,Math.max(targetKeyboardHeight-offset,0)]);}" };
-const fn2 = function n(value, height, height2) {
-  let flag = inverted;
-  if (inverted === undefined) {
+  let flag = onEndVisible.inverted;
+  if (flag === undefined) {
     flag = false;
   }
-  if (flag) {
-    let tmp3 = value <= 20;
-  } else {
-    tmp3 = value + height >= height2 - 20;
+  let str = onEndVisible.keyboardLiftBehavior;
+  if (str === undefined) {
+    str = "always";
   }
-  return tmp3;
-};
-fn2.__closure = { AT_END_THRESHOLD: 20 };
-fn2.__workletHash = 3738364082991;
-fn2.__initData = { code: "function pnpm_helpersTs2(scrollOffset,layoutHeight,contentHeight,inverted=false){const{AT_END_THRESHOLD}=this.__closure;if(inverted){return scrollOffset<=AT_END_THRESHOLD;}return scrollOffset+layoutHeight>=contentHeight-AT_END_THRESHOLD;}" };
-const fn3 = function o(keyboardLiftBehavior, isScrollAtEndResult) {
-  if ("always" !== keyboardLiftBehavior) {
-    if ("persistent" !== keyboardLiftBehavior) {
-      if ("never" === keyboardLiftBehavior) {
-        return false;
-      } else if ("whenAtEnd" === keyboardLiftBehavior) {
-        return isScrollAtEndResult;
+  let flag2 = onEndVisible.freeze;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
+  let num = onEndVisible.offset;
+  if (num === undefined) {
+    num = 0;
+  }
+  extraContentPadding = onEndVisible.extraContentPadding;
+  if (extraContentPadding === undefined) {
+    extraContentPadding = onContentSizeChange2;
+  }
+  blankSpace = onEndVisible.blankSpace;
+  if (blankSpace === undefined) {
+    blankSpace = animatedStyle;
+  }
+  let flag3 = onEndVisible.applyWorkaroundForContentInsetHitTestBug;
+  if (flag3 === undefined) {
+    flag3 = false;
+  }
+  const onLayout = onEndVisible.onLayout;
+  const onContentSizeChange = onEndVisible.onContentSizeChange;
+  const merged = Object.assign(onEndVisible, Object.assign({ children: 0, ScrollViewComponent: 0, inverted: 0, keyboardLiftBehavior: 0, freeze: 0, offset: 0, extraContentPadding: 0, blankSpace: 0, applyWorkaroundForContentInsetHitTestBug: 0, onLayout: 0, onContentSizeChange: 0, onEndVisible: 0 }));
+  let padding;
+  let currentHeight;
+  onLayout2 = undefined;
+  onContentSizeChange2 = undefined;
+  animatedStyle = undefined;
+  const animatedRef = flag2(blankSpace[3]).useAnimatedRef();
+  let obj = flag2(blankSpace[3]);
+  const tmp5 = extraContentPadding(blankSpace[4])(arg1, animatedRef);
+  class M {
+    constructor() {
+      value = c0;
+      if (typeof c0 !== "boolean") {
+        value = c0.value;
       }
+      return value;
     }
   }
-  return true;
-};
-fn3.__closure = {};
-fn3.__workletHash = 14230532945867;
-fn3.__initData = { code: "function pnpm_helpersTs3(behavior,isAtEnd){switch(behavior){case\"always\":return true;case\"never\":return false;case\"whenAtEnd\":return isAtEnd;case\"persistent\":return true;}}" };
-const fn4 = function l(value, height, height2, value2, inverted) {
-  if (value2 <= 0) {
-    return 0;
-  } else if (inverted) {
-    const _Math3 = Math;
-    const _Math4 = Math;
-    return Math.max(0, Math.min(1, -value / value2));
-  } else {
-    const _Math = Math;
-    const _Math2 = Math;
-    return Math.max(0, Math.min(1, (value + height - height2) / value2));
+  M.__closure = { freeze: flag2 };
+  M.__workletHash = 1441280506731;
+  M.__initData = __initData;
+  const derivedValue = flag2(blankSpace[3]).useDerivedValue(M);
+  const obj2 = flag2(blankSpace[3]);
+  const chatKeyboard = flag2(blankSpace[5]).useChatKeyboard(animatedRef, { inverted: flag, keyboardLiftBehavior: str, freeze: derivedValue, offset: num, blankSpace, extraContentPadding });
+  padding = chatKeyboard.padding;
+  currentHeight = chatKeyboard.currentHeight;
+  ({ contentOffsetY, scroll, layout, size, onLayout: onLayout2 } = chatKeyboard);
+  onContentSizeChange2 = chatKeyboard.onContentSizeChange;
+  const obj3 = flag2(blankSpace[5]);
+  const extraContentPadding1 = flag2(blankSpace[6]).useExtraContentPadding({ scrollViewRef: animatedRef, extraContentPadding, keyboardPadding: padding, blankSpace, scroll, layout, size, contentOffsetY, inverted: flag, keyboardLiftBehavior: str, freeze: derivedValue });
+  const obj4 = flag2(blankSpace[6]);
+  const endVisible = flag2(blankSpace[7]).useEndVisible({ scroll, layout, size, inverted: flag, onEndVisible: onEndVisible.onEndVisible });
+  const obj5 = flag2(blankSpace[7]);
+  const fn = function q() {
+    return Math.max(blankSpace.value, padding.value + extraContentPadding.value);
+  };
+  fn.__closure = { blankSpace, padding, extraContentPadding };
+  fn.__workletHash = 5812718828105;
+  fn.__initData = __initData2;
+  const derivedValue1 = flag2(blankSpace[3]).useDerivedValue(fn);
+  const obj6 = flag2(blankSpace[3]);
+  class G {
+    constructor() {
+      return padding.value + closure_1.value;
+    }
   }
-};
-fn4.__closure = {};
-fn4.__workletHash = 10144434118496;
-fn4.__initData = { code: "function pnpm_helpersTs4(scrollOffset,layoutHeight,contentHeight,blankSpace,inverted){if(blankSpace<=0){return 0;}if(inverted){return Math.max(0,Math.min(1,-scrollOffset/blankSpace));}const pastContentEnd=scrollOffset+layoutHeight-contentHeight;return Math.max(0,Math.min(1,pastContentEnd/blankSpace));}" };
-const fn5 = function c(value, value2) {
-  return Math.max(0, value - value2);
-};
-fn5.__closure = {};
-fn5.__workletHash = 7722221146206;
-fn5.__initData = { code: "function pnpm_helpersTs5(blankSpace,extraContentPadding){return Math.max(0,blankSpace-extraContentPadding);}" };
-const fn6 = function h(effectiveHeight, minimumPaddingAbsorbed) {
-  return Math.max(0, effectiveHeight - minimumPaddingAbsorbed);
-};
-fn6.__closure = {};
-fn6.__workletHash = 8723258054557;
-fn6.__initData = { code: "function pnpm_helpersTs6(rawEffective,minimumPaddingAbsorbed){return Math.max(0,rawEffective-minimumPaddingAbsorbed);}" };
-const fn7 = function s(value, scrollEffective1, height, height2, bound3) {
-  let tmp = scrollEffective1;
-  if (undefined !== bound3) {
-    tmp = bound3;
+  G.__closure = { padding, extraContentPadding };
+  G.__workletHash = 17005251423398;
+  G.__initData = __initData3;
+  let items = [onLayout2, onLayout];
+  const derivedValue2 = flag2(blankSpace[3]).useDerivedValue(G);
+  const items1 = [onContentSizeChange2, onContentSizeChange];
+  const obj7 = flag2(blankSpace[3]);
+  const tmp12 = onLayout((arg0) => {
+    onLayout2(arg0);
+    if (onLayout != null) {
+      onLayout(arg0);
+    }
+  }, items);
+  const tmp13 = onLayout((arg0, arg1) => {
+    onContentSizeChange2(arg0, arg1);
+    if (onContentSizeChange != null) {
+      onContentSizeChange(arg0, arg1);
+    }
+  }, items1);
+  class J {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { translateY: -currentHeight.value };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
   }
-  const bound = Math.max(height - height2 + tmp, 0);
-  return Math.min(Math.max(value + scrollEffective1, 0), bound);
-};
-fn7.__closure = {};
-fn7.__workletHash = 16148763282691;
-fn7.__initData = { code: "function pnpm_helpersTs7(offsetBeforeScroll,keyboardHeight,contentHeight,layoutHeight,totalPaddingForMaxScroll){const paddingForMax=totalPaddingForMaxScroll!==undefined?totalPaddingForMaxScroll:keyboardHeight;const maxScroll=Math.max(contentHeight-layoutHeight+paddingForMax,0);return Math.min(Math.max(offsetBeforeScroll+keyboardHeight,0),maxScroll);}" };
-const fn8 = function u(arg0, arg1, arg2, arg3, arg4, arg5) {
-  let tmp = arg1;
-  if (undefined !== arg5) {
-    tmp = arg5;
-  }
-  const _Math = Math;
-  const diff = arg2 - arg3;
-  if (arg4) {
-    const _Math4 = Math;
-    const _Math5 = Math;
-    return Math.max(Math.min(arg0 - arg1, max(diff, 0)), -tmp);
-  } else {
-    const _Math2 = Math;
-    const _Math3 = Math;
-    return Math.min(Math.max(arg1 + arg0, 0), max(diff + tmp, 0));
-  }
-};
-fn8.__closure = {};
-fn8.__workletHash = 11573218187512;
-fn8.__initData = { code: "function pnpm_helpersTs8(relativeScroll,keyboardHeight,contentHeight,layoutHeight,inverted,totalPaddingForMaxScroll){const paddingForMax=totalPaddingForMaxScroll!==undefined?totalPaddingForMaxScroll:keyboardHeight;if(inverted){const maxScroll=Math.max(contentHeight-layoutHeight,0);return Math.max(Math.min(relativeScroll-keyboardHeight,maxScroll),-paddingForMax);}const maxScroll=Math.max(contentHeight-layoutHeight+paddingForMax,0);return Math.min(Math.max(keyboardHeight+relativeScroll,0),maxScroll);}" };
-
-export const getEffectiveHeight = fn;
-export const isScrollAtEnd = fn2;
-export const shouldShiftContent = fn3;
-export const getVisibleMinimumPaddingFraction = fn4;
-export const getMinimumPaddingAbsorbed = fn5;
-export const getScrollEffective = fn6;
-export const clampedScrollTarget = fn7;
-export const computeIOSContentOffset = fn8;
+  J.__closure = { currentHeight };
+  J.__workletHash = 2509855764315;
+  J.__initData = __initData4;
+  animatedStyle = flag2(blankSpace[3]).useAnimatedStyle(J, []);
+  const items2 = [animatedStyle];
+  const obj9 = { children: null };
+  const obj8 = flag2(blankSpace[3]);
+  const obj10 = { ref: tmp5 };
+  const tmp15 = onContentSizeChange(() => {
+    const items = [commitView.commitView, animatedStyle];
+    return items;
+  }, items2);
+  const merged1 = Object.assign(merged);
+  obj10.applyWorkaroundForContentInsetHitTestBug = flag3;
+  obj10.bottomPadding = derivedValue1;
+  obj10.contentOffsetY = contentOffsetY;
+  obj10.inverted = flag;
+  obj10.scrollIndicatorPadding = derivedValue2;
+  obj10.ScrollViewComponent = ScrollView;
+  obj10.onContentSizeChange = tmp13;
+  obj10.onLayout = tmp12;
+  obj10.children = onEndVisible.children;
+  const items3 = [padding(extraContentPadding(blankSpace[8]), obj10), padding(extraContentPadding(blankSpace[3]).View, { style: tmp15 })];
+  obj9.children = items3;
+  return onLayout2(currentHeight, obj9);
+});

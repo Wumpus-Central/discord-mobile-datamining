@@ -2,17 +2,17 @@
 
 // Module 4939
 import c from "c" /* 576 */;
-import _mod4937 from "module_4937" /* 4937 */;
+import _mod4940 from "module_4940" /* 4940 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getStringProperty(stringProperty, arg1) {
-  return stringProperty.stringProperty(arg1);
+function getNumberProperty(numberProperty, arg1) {
+  return numberProperty.numberProperty(arg1);
 }
 
-export const useRiveString = function useRiveString(arg0, arg1) {
+export const useRiveNumber = function useRiveNumber(arg0, arg1) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4937.useRiveProperty(arg1, arg0, getStringProperty);
+  [tmp3, tmp4, tmp5] = _mod4940.useRiveProperty(arg1, arg0, getNumberProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

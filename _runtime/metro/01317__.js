@@ -1,17 +1,37 @@
 // === Module 1317: ? ===
 
 // Module 1317
-import bind from "bind" /* 1319 */;
-import _mod1321 from "module_1321" /* 1321 */;
-import _mod1322 from "module_1322" /* 1322 */;
-import apply from "module_1318" /* 1318 */;
+import _mod1309 from "module_1309" /* 1309 */;
+import callBindBasic from "callBindBasic" /* 1318 */;
 
-if (apply) {
-  module.exports = apply;
-} else {
-  const _module1 = bind;
-  const call = _module1.call;
-  const _module2 = _mod1321;
-  const _module3 = _mod1322;
-  typeof call === "unknown" ? _module1(_module3) : call(_module2, _module3);
+try {
+  const _Array = Array;
+  let _module = [].__proto__ === Array.prototype;
+  if (_module) {
+    _module = _mod1309;
+  }
+  if (_module) {
+    const _Object = Object;
+    _module = _mod1309(Object.prototype, "__proto__");
+  }
+  const _Object2 = Object;
+  if (_module) {
+    if (typeof _module.get === "function") {
+      const items = [_module.get];
+      let getDunder = callBindBasic(items);
+    }
+    module.exports = getDunder;
+  }
+  getDunder = typeof getPrototypeOf === "function";
+  if (typeof getPrototypeOf === "function") {
+    getDunder = function getDunder(arg0) {
+      let tmp2 = arg0;
+      if (null != arg0) {
+        tmp2 = Object(arg0);
+      }
+      return getPrototypeOf(tmp2);
+    };
+  }
+} catch (tmp2) {
+  throw tmp2;
 }

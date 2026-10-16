@@ -1,12 +1,13 @@
 // === Module 15262: ? ===
 
 // Module 15262
-import _mod15209 from "module_15209" /* 15209 */;
-import _mod15243 from "module_15243" /* 15243 */;
-import _mod15260 from "module_15260" /* 15260 */;
+import _mod15241 from "module_15241" /* 15241 */;
 
+const tmp = _mod15241.navigator && _mod15241.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
 
-export default _mod15209 ? ((arg0, arg1, arg2) => _mod15260.f(arg0, arg1, _mod15243(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+export default str;

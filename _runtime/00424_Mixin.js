@@ -1,7 +1,7 @@
 // === Module 424: Mixin ===
 
 // Module 424 (Mixin)
-import measureDefault from "measure" /* 68 */;
+import _modDef68 from "module_68" /* 68 */;
 import get_VersionDefault from "get Version" /* 273 */;
 import SoundManagerDefault from "SoundManager" /* 294 */;
 import PositionDefault from "Position" /* 425 */;
@@ -10,7 +10,7 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const f20533 = (arg0) => {
+const f20578 = (arg0) => {
 
 };
 const NOT_RESPONDER = "NOT_RESPONDER";
@@ -159,7 +159,7 @@ const obj5 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f20533 === "function") {
+      if (typeof f20578 === "function") {
         ({ touches, changedTouches } = nativeEvent);
         let tmp12 = touches;
         if (touches) {
@@ -228,7 +228,7 @@ const obj5 = {
     const responderID = this.state.touchable.responderID;
     if (null != responderID) {
       if (typeof responderID === "number") {
-        measureDefault.measure(responderID, self._handleQueryLayout);
+        _modDef68.measure(responderID, self._handleQueryLayout);
       } else {
         responderID.measure(self._handleQueryLayout);
       }
@@ -328,7 +328,7 @@ const obj5 = {
   },
   _savePressInLocation(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f20533 === "function") {
+    if (typeof f20578 === "function") {
       ({ touches, changedTouches } = nativeEvent);
       let tmp = touches;
       if (touches) {

@@ -2,12 +2,36 @@
 
 // Module 4405
 import module_4406_mod from "module_4406" /* 4406 */;
-import _typeof_mod from "module_4255" /* 4255 */;
-import module_4259_mod from "module_4259" /* 4259 */;
-import requiredArgs_mod from "requiredArgs" /* 4256 */;
 import module_4407_mod from "module_4407" /* 4407 */;
-import module_4408_mod from "module_4408" /* 4408 */;
+import _typeof_mod from "module_4258" /* 4258 */;
+import requiredArgs_mod from "requiredArgs" /* 4259 */;
+import module_4262_mod from "module_4262" /* 4262 */;
 
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
 let module_4406 = module_4406_mod;
 if (!module_4406) {
   const obj = { default: module_4406 };
@@ -16,22 +40,22 @@ if (!module_4406) {
   tmp3 = module_4406;
 }
 module_4406 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  let obj2 = { default: _typeof };
+let module_4407 = module_4407_mod;
+if (!module_4407) {
+  const obj2 = { default: module_4407 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4407;
 }
-_typeof = tmp5;
-let module_4259 = module_4259_mod;
-if (!module_4259) {
-  const obj3 = { default: module_4259 };
+module_4407 = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4259;
+  tmp7 = _typeof;
 }
-module_4259 = tmp7;
+_typeof = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -40,80 +64,64 @@ if (!requiredArgs) {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
-let module_4407 = module_4407_mod;
-if (!module_4407) {
-  const obj5 = { default: module_4407 };
+let module_4262 = module_4262_mod;
+if (!module_4262) {
+  const obj5 = { default: module_4262 };
   let tmp11 = obj5;
 } else {
-  tmp11 = module_4407;
+  tmp11 = module_4262;
 }
-module_4407 = tmp11;
-let module_4408 = module_4408_mod;
-if (!module_4408) {
-  const obj6 = { default: module_4408 };
-  let tmp13 = obj6;
-} else {
-  tmp13 = module_4408;
-}
-module_4408 = tmp13;
+module_4262 = tmp11;
 
-export default function addBusinessDays(arg0, arg1) {
-  let diff;
+export default function add(arg0, years) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  let obj2 = module_4406;
-  let defaultResult2 = module_4406.default(defaultResult1);
-  const defaultResult3 = module_4259.default(arg1);
-  if (isNaN(defaultResult3)) {
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else {
-    let num3 = 1;
-    const hours = defaultResult1.getHours();
-    if (defaultResult3 < 0) {
-      num3 = -1;
-    }
-    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_4259.default(defaultResult3 / 5));
-    const _Math = Math;
-    let absolute = Math.abs(defaultResult3 % 5);
-    if (absolute > 0) {
-      do {
-        let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
-        diff = absolute;
-        if (!module_4406.default(defaultResult1)) {
-          diff = absolute - 1;
-        }
-        absolute = diff;
-        obj2 = module_4406;
-      } while (diff > 0);
-    }
-    if (defaultResult2) {
-      defaultResult2 = obj2.default(defaultResult1);
-    }
-    if (defaultResult2) {
-      defaultResult2 = 0 !== defaultResult3;
-    }
-    if (defaultResult2) {
-      if (module_4408.default(defaultResult1)) {
-        let num6 = -1;
-        if (num3 < 0) {
-          num6 = 2;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num6);
-        const date1 = defaultResult1.getDate();
+  if (years) {
+    if ("object" === _typeof(years)) {
+      let num = 0;
+      if (years.years) {
+        num = module_4262.default(years.years);
       }
-      if (module_4407.default(defaultResult1)) {
-        let num7 = -2;
-        if (num3 < 0) {
-          num7 = 1;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num7);
-        const date2 = defaultResult1.getDate();
+      let num2 = 0;
+      if (years.months) {
+        num2 = module_4262.default(years.months);
       }
+      let num3 = 0;
+      if (years.weeks) {
+        num3 = module_4262.default(years.weeks);
+      }
+      let num4 = 0;
+      if (years.days) {
+        num4 = module_4262.default(years.days);
+      }
+      let num5 = 0;
+      if (years.hours) {
+        num5 = module_4262.default(years.hours);
+      }
+      let num6 = 0;
+      if (years.minutes) {
+        num6 = module_4262.default(years.minutes);
+      }
+      let num7 = 0;
+      if (years.seconds) {
+        num7 = module_4262.default(years.seconds);
+      }
+      const defaultResult1 = _typeof.default(arg0);
+      if (num2) {
+        let defaultResult2 = module_4407.default(defaultResult1, num2 + 12 * num);
+      } else {
+        defaultResult2 = defaultResult1;
+      }
+      if (num4) {
+        let defaultResult3 = module_4406.default(defaultResult2, num4 + 7 * num3);
+      } else {
+        defaultResult3 = defaultResult2;
+      }
+      const _Date = Date;
+      const sum = num7 + 60 * (num6 + 60 * num5);
+      const date = new Date(defaultResult3.getTime() + 1000 * sum);
+      return date;
     }
-    defaultResult1.setHours(hours);
-    return defaultResult1;
   }
+  return new Date(NaN);
 };
 export default exports.default;

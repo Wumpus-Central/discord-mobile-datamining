@@ -1,152 +1,303 @@
 // === Module 986: ? ===
 
 // Module 986
-const require = arg1;
-const dependencyMap = arg6;
-function processEvent(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg2;
-  return fn(this, undefined, undefined, function*() {
-    const options = tmp3.getOptions();
-    const extra2 = value.extra;
-    if (null !== extra2) {
-      if (undefined !== extra2) {
-        const __sentry_release = extra2.__sentry_release;
-      }
+import _mod949 from "module_949" /* 949 */;
+import _getUnhandledRejectionError from "_getUnhandledRejectionError" /* 955 */;
+import registerSpanErrorInstrumentation from "module_693" /* 693 */;
+
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+const WebWorker = "WebWorker";
+
+export const INTEGRATION_NAME = "WebWorker";
+export const registerWebWorker = function registerWebWorker(self) {
+  const _self = self.self;
+  const _sentryDebugIds = _self._sentryDebugIds;
+  let obj = { _sentryMessage: true, _sentryDebugIds, _sentryModuleMetadata: null };
+  const _sentryModuleMetadata = _self._sentryModuleMetadata;
+  obj._sentryModuleMetadata = _sentryModuleMetadata;
+  _self.postMessage(obj);
+  const listener = _self.addEventListener("unhandledrejection", (event) => {
+    const obj = { reason: _getUnhandledRejectionError._getUnhandledRejectionError(event), filename: null };
+    const _location = _self.location;
+    let href;
+    if (_location != null) {
+      href = _location.href;
     }
-    if (typeof __sentry_release === "string") {
-      const _HermesInternal3 = HermesInternal;
-      value.release = "" + value.extra.__sentry_release;
-    } else {
-      let release;
-      if (null != options) {
-        release = options.release;
-      }
-      if (typeof release === "string") {
-        value.release = options.release;
-      }
+    obj.filename = href;
+    _self.postMessage({ _sentryMessage: true, _sentryWorkerError: obj });
+    if (_mod949.DEBUG_BUILD) {
+      const debug = registerSpanErrorInstrumentation.debug;
+      debug.log("[Sentry Worker] Forwarding unhandled rejection to parent", obj);
     }
-    const extra = value.extra;
-    if (null !== extra) {
-      if (undefined !== extra) {
-        const __sentry_dist = extra.__sentry_dist;
-      }
-    }
-    if (typeof __sentry_dist === "string") {
-      const _HermesInternal4 = HermesInternal;
-      value.dist = "" + value.extra.__sentry_dist;
-    } else {
-      let dist;
-      if (null != options) {
-        dist = options.dist;
-      }
-      if (typeof dist === "string") {
-        value.dist = options.dist;
-      }
-    }
-    if (value.release) {
-      if (value.dist) {
-        c5 = 3;
-        return { value, done: true };
-      }
-    }
-    const NATIVE = value(tmp3[0]).NATIVE;
-    yield NATIVE.fetchNativeRelease();
-    if (1 === tmp7) {
-      c3 = 0;
-      c5 = 3;
-    } else if (arg0 === 1) {
-      c5 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      closure_128_0 = value;
-      if (closure_128_0) {
-        if (!closure_129_0.release) {
-          const _HermesInternal = HermesInternal;
-          closure_129_0.release = "" + closure_128_0.id + "@" + closure_128_0.version + "+" + closure_128_0.build;
-        }
-        if (!closure_129_0.dist) {
-          const _HermesInternal2 = HermesInternal;
-          closure_129_0.dist = "" + closure_128_0.build;
-        }
-      }
-      c3 = 0;
-    }
-    return value;
   });
-}
-let fn = this;
-if (this) {
-  fn = this.__awaiter;
-}
-if (!fn) {
-  fn = (arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    let _Promise = arg2;
-    closure_3 = arg3;
-    if (!arg2) {
-      _Promise = Promise;
-    }
-    return new _Promise((fn, arg1) => {
-      closure_0 = fn;
-      closure_1 = arg1;
-      function fulfilled(result) {
-        try {
-          step(iter.next(result));
-        } catch (tmp5) {
-          closure_1(tmp5);
-        }
+  if (_self(949).DEBUG_BUILD) {
+    let debug = tmp3(693).debug;
+    debug.log("[Sentry Worker] Registered worker with unhandled rejection handling");
+  }
+  tmp3 = _self;
+};
+export const webWorkerIntegration = registerSpanErrorInstrumentation.defineIntegration((worker) => {
+  worker = worker.worker;
+  return {
+    name: WebWorker,
+    setupOnce() {
+      let arr = worker;
+      if (!Array.isArray(worker)) {
+        let items = [worker];
+        arr = items;
       }
-      function rejected(arg0) {
-        try {
-          step(iter.throw(arg0));
-        } catch (tmp5) {
-          closure_1(tmp5);
-        }
-      }
-      let iter = rejected;
-      function step(done) {
-        if (done.done) {
-          closure_0(done.value);
-        } else {
-          let tmp1 = done.value;
-          closure_0 = tmp1;
-          if (!(tmp1 instanceof Promise)) {
-            tmp1 = new tmp((fn) => {
-              fn(value);
-            });
+      const item = arr.forEach((addEventListener) => {
+        const listener = addEventListener.addEventListener("message", (event) => {
+          const data = event.data;
+          let flag = false;
+          if (obj.isPlainObject(data)) {
+            flag = false;
+            if (true === data._sentryMessage) {
+              if (!("_sentryDebugIds" in data)) {
+                if (!tmp34) {
+                  if (!tmp35) {
+                    flag = false;
+                  }
+                }
+              }
+              if ("_sentryDebugIds" in data) {
+                if (!tmpResult.isPlainObject(data._sentryDebugIds)) {
+                  flag = false;
+                }
+                tmpResult = tmp(693);
+              }
+              if ("_sentryModuleMetadata" in data) {
+                if (!tmpResult8.isPlainObject(data._sentryModuleMetadata)) {
+                  flag = false;
+                }
+                tmpResult8 = tmp(693);
+              }
+              if (!("_sentryWorkerError" in data)) {
+                flag = true;
+                if (tmp36) {
+                  const _Array = Array;
+                  if (!Array.isArray(data._sentryWasmImages)) {
+                    flag = false;
+                  } else {
+                    const _sentryWasmImages = data._sentryWasmImages;
+                    flag = true;
+                  }
+                }
+              } else {
+                tmp(693);
+                flag = false;
+              }
+              tmp36 = "_sentryWasmImages" in data;
+            }
           }
-          tmp1.then(fulfilled, iter);
+          if (flag) {
+            const result = event.stopImmediatePropagation();
+            if (event.data._sentryDebugIds) {
+              if (tmp(949).DEBUG_BUILD) {
+                const debug = tmp(693).debug;
+                debug.log("Sentry debugId web worker message received", event.data);
+              }
+              const obj2 = {};
+              const merged = Object.assign(event.data._sentryDebugIds);
+              const merged1 = Object.assign(tmp(905).WINDOW._sentryDebugIds);
+              tmp(905).WINDOW._sentryDebugIds = obj2;
+            }
+            if (event.data._sentryModuleMetadata) {
+              if (tmp(949).DEBUG_BUILD) {
+                const debug2 = tmp(693).debug;
+                debug2.log("Sentry module metadata web worker message received", event.data);
+              }
+              const obj3 = {};
+              const merged2 = Object.assign(event.data._sentryModuleMetadata);
+              const merged3 = Object.assign(tmp(905).WINDOW._sentryModuleMetadata);
+              tmp(905).WINDOW._sentryModuleMetadata = obj3;
+            }
+            if (event.data._sentryWasmImages) {
+              if (tmp(949).DEBUG_BUILD) {
+                const debug3 = tmp(693).debug;
+                debug3.log("Sentry WASM images web worker message received", event.data);
+              }
+              const tmp16 = tmp(905).WINDOW._sentryWasmImages || [];
+              closure_0 = tmp16;
+              const _sentryWasmImages1 = event.data._sentryWasmImages;
+              const found = _sentryWasmImages1.filter((code_file) => {
+                let tmp = closure_2_0(693).isPlainObject(code_file) && typeof code_file.code_file === "string";
+                if (tmp) {
+                  tmp = !code_file.some(() => { ... });
+                }
+                return tmp;
+              });
+              const items = [];
+              HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmp16, 0));
+              tmp(905).WINDOW._sentryWasmImages = items;
+            }
+            if (event.data._sentryWorkerError) {
+              if (tmp(949).DEBUG_BUILD) {
+                const debug4 = tmp(693).debug;
+                debug4.log("Sentry worker rejection message received", event.data._sentryWorkerError);
+              }
+              const _sentryWorkerError = event.data._sentryWorkerError;
+              const client = tmp(693).getClient();
+              if (client) {
+                const stackParser = client.getOptions().stackParser;
+                const attachStacktrace = client.getOptions().attachStacktrace;
+                const reason = _sentryWorkerError.reason;
+                if (tmpResult11.isPrimitive(reason)) {
+                  let result1 = tmp(955)._eventFromRejectionWithPrimitive(reason);
+                  const tmpResult12 = tmp(955);
+                } else {
+                  const tmpResult13 = tmp(908);
+                  result1 = tmpResult13.eventFromUnknownInput(stackParser, reason, undefined, attachStacktrace, true);
+                }
+                result1.level = "error";
+                if (_sentryWorkerError.filename) {
+                  const obj4 = {};
+                  const merged4 = Object.assign(result1.contexts);
+                  const obj5 = { filename: _sentryWorkerError.filename };
+                  obj4.worker = obj5;
+                  result1.contexts = obj4;
+                }
+                tmpResult11 = tmp(693);
+                const obj6 = { originalException: reason, mechanism: { handled: false, type: "auto.browser.web_worker.onunhandledrejection" } };
+                tmp(693).captureEvent(result1, obj6);
+                if (tmp(949).DEBUG_BUILD) {
+                  const debug5 = tmp(693).debug;
+                  debug5.log("Captured worker unhandled rejection", reason);
+                }
+                const tmpResult14 = tmp(693);
+              }
+              const tmpResult10 = tmp(693);
+            }
+          }
+          obj = closure_0(693);
+        });
+      });
+    },
+    addWorker(addEventListener) {
+      const listener = addEventListener.addEventListener("message", (event) => {
+        const data = event.data;
+        let flag = false;
+        if (obj.isPlainObject(data)) {
+          flag = false;
+          if (true === data._sentryMessage) {
+            if (!("_sentryDebugIds" in data)) {
+              if (!tmp34) {
+                if (!tmp35) {
+                  flag = false;
+                }
+              }
+            }
+            if ("_sentryDebugIds" in data) {
+              if (!tmpResult.isPlainObject(data._sentryDebugIds)) {
+                flag = false;
+              }
+              tmpResult = tmp(693);
+            }
+            if ("_sentryModuleMetadata" in data) {
+              if (!tmpResult8.isPlainObject(data._sentryModuleMetadata)) {
+                flag = false;
+              }
+              tmpResult8 = tmp(693);
+            }
+            if (!("_sentryWorkerError" in data)) {
+              flag = true;
+              if (tmp36) {
+                const _Array = Array;
+                if (!Array.isArray(data._sentryWasmImages)) {
+                  flag = false;
+                } else {
+                  const _sentryWasmImages = data._sentryWasmImages;
+                  flag = true;
+                }
+              }
+            } else {
+              tmp(693);
+              flag = false;
+            }
+            tmp36 = "_sentryWasmImages" in data;
+          }
         }
-      }
-      let items = closure_1;
-      if (!closure_1) {
-        items = [];
-      }
-      iter = iter.apply(closure_0, items);
-      const iter2 = iter.next();
-      value = iter2.value;
-      if (iter2.done) {
-        fn(value);
-      } else {
-        closure_0 = value;
-        let tmp32 = value;
-        if (!(value instanceof fulfilled)) {
-          tmp32 = new tmp3((fn) => {
-            fn(value);
-          });
+        if (flag) {
+          const result = event.stopImmediatePropagation();
+          if (event.data._sentryDebugIds) {
+            if (tmp(949).DEBUG_BUILD) {
+              const debug = tmp(693).debug;
+              debug.log("Sentry debugId web worker message received", event.data);
+            }
+            const obj2 = {};
+            const merged = Object.assign(event.data._sentryDebugIds);
+            const merged1 = Object.assign(tmp(905).WINDOW._sentryDebugIds);
+            tmp(905).WINDOW._sentryDebugIds = obj2;
+          }
+          if (event.data._sentryModuleMetadata) {
+            if (tmp(949).DEBUG_BUILD) {
+              const debug2 = tmp(693).debug;
+              debug2.log("Sentry module metadata web worker message received", event.data);
+            }
+            const obj3 = {};
+            const merged2 = Object.assign(event.data._sentryModuleMetadata);
+            const merged3 = Object.assign(tmp(905).WINDOW._sentryModuleMetadata);
+            tmp(905).WINDOW._sentryModuleMetadata = obj3;
+          }
+          if (event.data._sentryWasmImages) {
+            if (tmp(949).DEBUG_BUILD) {
+              const debug3 = tmp(693).debug;
+              debug3.log("Sentry WASM images web worker message received", event.data);
+            }
+            const tmp16 = tmp(905).WINDOW._sentryWasmImages || [];
+            closure_0 = tmp16;
+            const _sentryWasmImages1 = event.data._sentryWasmImages;
+            const found = _sentryWasmImages1.filter((code_file) => {
+              let tmp = closure_2_0(693).isPlainObject(code_file) && typeof code_file.code_file === "string";
+              if (tmp) {
+                tmp = !code_file.some((code_file) => code_file.code_file === code_file.code_file);
+              }
+              return tmp;
+            });
+            const items = [];
+            HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmp16, 0));
+            tmp(905).WINDOW._sentryWasmImages = items;
+          }
+          if (event.data._sentryWorkerError) {
+            if (tmp(949).DEBUG_BUILD) {
+              const debug4 = tmp(693).debug;
+              debug4.log("Sentry worker rejection message received", event.data._sentryWorkerError);
+            }
+            const _sentryWorkerError = event.data._sentryWorkerError;
+            const client = tmp(693).getClient();
+            if (client) {
+              const stackParser = client.getOptions().stackParser;
+              const attachStacktrace = client.getOptions().attachStacktrace;
+              const reason = _sentryWorkerError.reason;
+              if (tmpResult11.isPrimitive(reason)) {
+                let result1 = tmp(955)._eventFromRejectionWithPrimitive(reason);
+                const tmpResult12 = tmp(955);
+              } else {
+                const tmpResult13 = tmp(908);
+                result1 = tmpResult13.eventFromUnknownInput(stackParser, reason, undefined, attachStacktrace, true);
+              }
+              result1.level = "error";
+              if (_sentryWorkerError.filename) {
+                const obj4 = {};
+                const merged4 = Object.assign(result1.contexts);
+                const obj5 = { filename: _sentryWorkerError.filename };
+                obj4.worker = obj5;
+                result1.contexts = obj4;
+              }
+              tmpResult11 = tmp(693);
+              const obj6 = { originalException: reason, mechanism: { handled: false, type: "auto.browser.web_worker.onunhandledrejection" } };
+              tmp(693).captureEvent(result1, obj6);
+              if (tmp(949).DEBUG_BUILD) {
+                const debug5 = tmp(693).debug;
+                debug5.log("Captured worker unhandled rejection", reason);
+              }
+              const tmpResult14 = tmp(693);
+            }
+            const tmpResult10 = tmp(693);
+          }
         }
-        tmp32.then(fulfilled, rejected);
-      }
-    });
+        obj = closure_0(693);
+      });
+    }
   };
-}
-
-export () => ({
-  name: "Release",
-  setupOnce() {
-
-  },
-  processEvent
-})
+});

@@ -1,7 +1,16 @@
 // === Module 11668: ? ===
 
 // Module 11668
-import _mod11649 from "module_11649" /* 11649 */;
+import ar from "ar" /* 11679 */;
+import _mod11688 from "module_11688" /* 11688 */;
+import _mod11735 from "module_11735" /* 11735 */;
+import lt from "lt" /* 11736 */;
+import _mod11738 from "module_11738" /* 11738 */;
+import _mod11739 from "module_11739" /* 11739 */;
+import _mod11740 from "module_11740" /* 11740 */;
+import _mod11742 from "module_11742" /* 11742 */;
+
+const require = globalThis.__r;
 
 const self = this;
 let self2 = this;
@@ -53,130 +62,255 @@ if (self2) {
         return obj;
       };
     }
-    const _Object3 = Object;
-    exports.default = function default_1() {
-      if (typeof error === "function") {
-        const obj = { localeError: null };
-        const obj2 = { string: { unit: "merkki\u00E4", subject: "merkkijonon" }, file: { unit: "tavua", subject: "tiedoston" }, array: { unit: "alkiota", subject: "listan" }, set: { unit: "alkiota", subject: "joukon" }, number: { unit: "", subject: "luvun" }, bigint: { unit: "", subject: "suuren kokonaisluvun" }, int: { unit: "", subject: "kokonaisluvun" }, date: { unit: "", subject: "p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4n" } };
-        closure_1 = { regex: "s\u00E4\u00E4nn\u00F6llinen lauseke", email: "s\u00E4hk\u00F6postiosoite", url: "URL-osoite", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-aikaleima", date: "ISO-p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4", time: "ISO-aika", duration: "ISO-kesto", ipv4: "IPv4-osoite", ipv6: "IPv6-osoite", cidrv4: "IPv4-alue", cidrv6: "IPv6-alue", base64: "base64-koodattu merkkijono", base64url: "base64url-koodattu merkkijono", json_string: "JSON-merkkijono", e164: "E.164-luku", jwt: "JWT", template_literal: "templaattimerkkijono" };
-        closure_2 = { nan: "NaN" };
-        obj.localeError = (code) => {
-          switch (code.code) {
-            case "invalid_type":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp35 = closure_2[parsedTypeResult];
-              if (tmp35 == null) {
-                tmp35 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal15 = HermesInternal;
-                let combined = "Virheellinen tyyppi: odotettiin instanceof " + code.expected + ", oli " + tmp35;
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                combined = "Virheellinen tyyppi: odotettiin " + expected + ", oli " + tmp35;
-              }
-              return combined;
-            case "invalid_value":
-              if (1 === code.values.length) {
-                const _HermesInternal13 = HermesInternal;
-                let combined1 = "Virheellinen sy\u00F6te: t\u00E4ytyy olla " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal12 = HermesInternal;
-                combined1 = "Virheellinen valinta: t\u00E4ytyy olla yksi seuraavista: " + closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
-            case "too_big":
-              let str28 = "<";
-              if (code.inclusive) {
-                str28 = "<=";
-              }
-              let tmp20 = obj2[code.origin];
-              if (tmp20 == null) {
-                tmp20 = null;
-              }
-              if (tmp20) {
-                const _HermesInternal11 = HermesInternal;
-                let trimmed = "Liian suuri: " + tmp20.subject + " t\u00E4ytyy olla " + str28 + code.maximum.toString() + " " + tmp20.unit.trim();
-                const str35 = "Liian suuri: " + tmp20.subject + " t\u00E4ytyy olla " + str28 + code.maximum.toString() + " " + tmp20.unit;
-              } else {
-                const _HermesInternal10 = HermesInternal;
-                trimmed = "Liian suuri: arvon t\u00E4ytyy olla " + str28 + code.maximum.toString();
-              }
-              return trimmed;
-            case "too_small":
-              let str20 = ">";
-              if (code.inclusive) {
-                str20 = ">=";
-              }
-              let tmp13 = obj2[code.origin];
-              if (tmp13 == null) {
-                tmp13 = null;
-              }
-              if (tmp13) {
-                const _HermesInternal9 = HermesInternal;
-                let trimmed1 = "Liian pieni: " + tmp13.subject + " t\u00E4ytyy olla " + str20 + code.minimum.toString() + " " + tmp13.unit.trim();
-                const str27 = "Liian pieni: " + tmp13.subject + " t\u00E4ytyy olla " + str20 + code.minimum.toString() + " " + tmp13.unit;
-              } else {
-                const _HermesInternal8 = HermesInternal;
-                trimmed1 = "Liian pieni: arvon t\u00E4ytyy olla " + str20 + code.minimum.toString();
-              }
-              return trimmed1;
-            case "invalid_format":
-              if ("starts_with" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                let combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy alkaa \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy loppua \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                const _HermesInternal5 = HermesInternal;
-                combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                const _HermesInternal4 = HermesInternal;
-                combined2 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
-              } else {
-                let format = closure_1[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal3 = HermesInternal;
-                combined2 = "Virheellinen " + format;
-              }
-              return combined2;
-            case "not_multiple_of":
-              const _HermesInternal2 = HermesInternal;
-              return "Virheellinen luku: t\u00E4ytyy olla luvun " + code.divisor + " monikerta";
-            case "unrecognized_keys":
-              let str4 = "Tuntematon avain";
-              if (code.keys.length > 1) {
-                str4 = "Tuntemattomat avaimet";
-              }
-              const _HermesInternal = HermesInternal;
-              return "" + str4 + ": " + closure_2.joinValues(code.keys, ", ");
-            case "invalid_key":
-              return "Virheellinen avain tietueessa";
-            case "invalid_union":
-              return "Virheellinen unioni";
-            case "invalid_element":
-              return "Virheellinen arvo joukossa";
-            default:
-              return "Virheellinen sy\u00F6te";
-          }
-        };
-        return obj;
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    };
-    let closure_2 = fn(_mod11649);
-    function error() {
-
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__exportStar;
     }
-    module.exports = exports.default;
+    if (!fn2) {
+      fn2 = (obj, exports) => {
+        for (const key10007 in arg0) {
+          let tmp6 = "default" === key10007;
+          if (tmp6) {
+            if (tmp6) {
+              continue;
+            } else {
+              let tmp4 = self2(arg1, arg0, key10007);
+              continue;
+            }
+            continue;
+          } else {
+            let _Object = Object;
+            hasOwnProperty = Object.prototype.hasOwnProperty;
+            let call = hasOwnProperty.call;
+            if (typeof call === "unknown") {
+              let hasOwnPropertyResult = hasOwnProperty(key10007);
+            } else {
+              hasOwnPropertyResult = call(arg1, key10007);
+            }
+          }
+        }
+      };
+    }
+    let fn3 = self;
+    if (self) {
+      fn3 = self.__importDefault;
+    }
+    if (!fn3) {
+      fn3 = (__esModule) => {
+        if (!__esModule) {
+          const obj = { default: __esModule };
+          let tmp = obj;
+        } else {
+          tmp = __esModule;
+        }
+        return tmp;
+      };
+    }
+    const _Object3 = Object;
+    exports.core = undefined;
+    exports.globalRegistry = undefined;
+    exports.registry = undefined;
+    exports.config = undefined;
+    exports.$output = undefined;
+    exports.$input = undefined;
+    exports.$brand = undefined;
+    exports.clone = undefined;
+    exports.regexes = undefined;
+    exports.treeifyError = undefined;
+    exports.prettifyError = undefined;
+    exports.formatError = undefined;
+    exports.flattenError = undefined;
+    exports.TimePrecision = undefined;
+    exports.util = undefined;
+    exports.NEVER = undefined;
+    exports.toJSONSchema = undefined;
+    exports.fromJSONSchema = undefined;
+    exports.locales = undefined;
+    exports.ZodISODateTime = undefined;
+    exports.ZodISODate = undefined;
+    exports.ZodISOTime = undefined;
+    exports.ZodISODuration = undefined;
+    exports.iso = undefined;
+    exports.coerce = undefined;
+    exports.core = fn(require("module_11669"));
+    fn2(_mod11735, exports);
+    fn2(lt, exports);
+    fn2(_mod11739, exports);
+    fn2(_mod11738, exports);
+    fn2(_mod11740, exports);
+    require("module_11669").config(fn3(_mod11688).default());
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+            return require("module_11669").globalRegistry;
+          }
+    };
+    Object.defineProperty(exports, "globalRegistry", obj);
+    const _Object5 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").registry;
+          }
+    };
+    Object.defineProperty(exports, "registry", obj2);
+    const _Object6 = Object;
+    const obj3 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").config;
+          }
+    };
+    Object.defineProperty(exports, "config", obj3);
+    const _Object7 = Object;
+    const obj4 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").$output;
+          }
+    };
+    Object.defineProperty(exports, "$output", obj4);
+    const _Object8 = Object;
+    const obj5 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").$input;
+          }
+    };
+    Object.defineProperty(exports, "$input", obj5);
+    const _Object9 = Object;
+    const obj6 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").$brand;
+          }
+    };
+    Object.defineProperty(exports, "$brand", obj6);
+    const _Object10 = Object;
+    const obj7 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").clone;
+          }
+    };
+    Object.defineProperty(exports, "clone", obj7);
+    const _Object11 = Object;
+    const obj8 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").regexes;
+          }
+    };
+    Object.defineProperty(exports, "regexes", obj8);
+    const _Object12 = Object;
+    const obj9 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").treeifyError;
+          }
+    };
+    Object.defineProperty(exports, "treeifyError", obj9);
+    const _Object13 = Object;
+    const obj10 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").prettifyError;
+          }
+    };
+    Object.defineProperty(exports, "prettifyError", obj10);
+    const _Object14 = Object;
+    const obj11 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").formatError;
+          }
+    };
+    Object.defineProperty(exports, "formatError", obj11);
+    const _Object15 = Object;
+    const obj12 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").flattenError;
+          }
+    };
+    Object.defineProperty(exports, "flattenError", obj12);
+    const _Object16 = Object;
+    const obj13 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").TimePrecision;
+          }
+    };
+    Object.defineProperty(exports, "TimePrecision", obj13);
+    const _Object17 = Object;
+    const obj14 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").util;
+          }
+    };
+    Object.defineProperty(exports, "util", obj14);
+    const _Object18 = Object;
+    const obj15 = {
+      enumerable: true,
+      get() {
+            return require("module_11669").NEVER;
+          }
+    };
+    Object.defineProperty(exports, "NEVER", obj15);
+    const _Object19 = Object;
+    const obj16 = {
+      enumerable: true,
+      get() {
+            return require("stringProcessor").toJSONSchema;
+          }
+    };
+    Object.defineProperty(exports, "toJSONSchema", obj16);
+    const _Object20 = Object;
+    const obj17 = {
+      enumerable: true,
+      get() {
+            return require("convertBaseSchema").fromJSONSchema;
+          }
+    };
+    Object.defineProperty(exports, "fromJSONSchema", obj17);
+    exports.locales = fn(ar);
+    const _Object21 = Object;
+    const obj18 = {
+      enumerable: true,
+      get() {
+            return require("module_11737").ZodISODateTime;
+          }
+    };
+    Object.defineProperty(exports, "ZodISODateTime", obj18);
+    const _Object22 = Object;
+    const obj19 = {
+      enumerable: true,
+      get() {
+            return require("module_11737").ZodISODate;
+          }
+    };
+    Object.defineProperty(exports, "ZodISODate", obj19);
+    const _Object23 = Object;
+    const obj20 = {
+      enumerable: true,
+      get() {
+            return require("module_11737").ZodISOTime;
+          }
+    };
+    Object.defineProperty(exports, "ZodISOTime", obj20);
+    const _Object24 = Object;
+    const obj21 = {
+      enumerable: true,
+      get() {
+            return require("module_11737").ZodISODuration;
+          }
+    };
+    Object.defineProperty(exports, "ZodISODuration", obj21);
+    exports.iso = fn(require("module_11737"));
+    exports.coerce = fn(_mod11742);
+    const fn3Result = fn3(_mod11688);
   } else {
     const _Object2 = Object;
   }

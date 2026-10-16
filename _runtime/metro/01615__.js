@@ -1,40 +1,110 @@
 // === Module 1615: ? ===
 
 // Module 1615
-import BaseNavigationContainer from "BaseNavigationContainer" /* 1506 */;
-import clone from "clone" /* 1616 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Platform, Text: c3 } = get_ActivityIndicator);
 
-export const Link = function Link(arg0) {
-  ({ screen, params, action, href, style } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ screen: 0, params: 0, action: 0, href: 0, style: 0, target: 0 }));
-  const linkProps = clone.useLinkProps({ screen, params, action, href });
-  const theme = BaseNavigationContainer.useTheme();
-  const obj3 = {};
-  ({ colors, fonts } = theme);
-  const merged1 = Object.assign(linkProps);
-  const merged2 = Object.assign(merged);
-  obj3.onPress = function onPress(preventDefault) {
-    if (merged.disabled) {
-      preventDefault.preventDefault();
-      preventDefault.stopPropagation();
-    } else {
-      if ("onPress" in merged) {
-        const onPress = merged.onPress;
-        if (onPress != null) {
-          onPress(preventDefault);
+export const useThenable = function useThenable(arg0) {
+  const first = items(noop.useState(arg0), 1)[0];
+  items = [false, undefined];
+  first.then((result) => {
+    items = [true, result];
+  });
+  [tmp3, noop] = items(noop.useState(items), 2);
+  const first1 = items(tmp3, 1)[0];
+  let items1 = [first, first1];
+  const effect = noop.useEffect(() => {
+    c0 = first(function*() {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_1 = tmp3;
+              closure_0 = tmp7;
+              closure_128_0 = undefined;
+              c3 = 1;
+              c4 = 2;
+              c5 = 1;
+              const obj4 = { value, done: false };
+              return obj4;
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            if (!closure_0) {
+              items = [true, closure_128_0];
+              noop(items);
+            }
+            throw closure_2;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            if (!closure_0) {
+              const items1 = [true, closure_128_0];
+              noop(items1);
+            }
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            closure_128_0 = value;
+            c3 = 0;
+            if (!closure_0) {
+              const items2 = [true, closure_128_0];
+              noop(items2);
+            }
+            c5 = 3;
+            return { value: "IconComponent", done: null };
+          }
+        } catch (tmp28) {
+          closure_2 = tmp28;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp28;
+          } else {
+            c4 = tmp;
+          }
         }
       }
-      if (!preventDefault.defaultPrevented) {
-        linkProps.onPress(preventDefault);
-      }
+    });
+    if (!first1) {
+      (function resolve() {
+        const self = this;
+        const apply = c0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      })();
     }
-  };
-  const items = [{ color: colors.primary }, fonts.regular, style];
-  obj3.style = items;
-  return <React3 />;
+    return () => {
+      c0 = true;
+    };
+  }, items1);
+  return tmp3;
 };

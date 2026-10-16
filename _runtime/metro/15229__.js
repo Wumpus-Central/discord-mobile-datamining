@@ -1,11 +1,30 @@
 // === Module 15229: ? ===
 
 // Module 15229
-import _mod15213 from "module_15213" /* 15213 */;
-import _mod15230 from "module_15230" /* 15230 */;
+const require = globalThis.__r;
 
-let closure_2 = _mod15213({}.hasOwnProperty);
+const require = arg1;
+const dependencyMap = arg6;
 
-export default Object.hasOwn || (function hasOwn(arg0, arg1) {
-  return closure_2(_mod15230(arg0), arg1);
-});
+export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) => (function isSupportedNumberingSystem(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-nu-");
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+        if ("123" === memoizedNumberFormat.format(123)) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
+};

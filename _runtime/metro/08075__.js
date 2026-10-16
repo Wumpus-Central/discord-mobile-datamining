@@ -1,15 +1,16 @@
 // === Module 8075: ? ===
 
 // Module 8075
-const obj = {
-  0: {
-    name: "PentaxVersion",
-    description(join) {
-      return join.join(".");
-    }
-  },
-  5: "PentaxModelID",
-  555: "LevelInfo"
+import _mod8073 from "module_8073" /* 8073 */;
+
+require = arg1;
+const dependencyMap = arg6;
+const obj = { 1: "InteroperabilityIndex", 2: null, 4096: "RelatedImageFileFormat", 4097: "RelatedImageWidth", 4098: "RelatedImageHeight" };
+obj[2] = {
+  name: "InteroperabilityVersion",
+  description(value) {
+    return _mod8073.getStringValue(value);
+  }
 };
 
 export default obj;

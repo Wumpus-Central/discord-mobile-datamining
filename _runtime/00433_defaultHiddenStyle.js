@@ -4,7 +4,7 @@
 import _modDef434 from "module_434" /* 434 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
-import measure from "measure" /* 68 */;
+import module_68 from "module_68" /* 68 */;
 import __INTERNAL_VIEW_CONFIG_mod from "module_435" /* 435 */;
 
 let c0 = fn;
@@ -15,7 +15,7 @@ function defaultHiddenStyle(height) {
 const noop = fn(19);
 ({ startTransition: hasOwnProperty, useState: metroRequire } = noop);
 const jsx = fn(21).jsx;
-if (measure.hasViewManagerConfig("VirtualView")) {
+if (module_68.hasViewManagerConfig("VirtualView")) {
   if (!importDefaultResult1.hasViewManagerConfig("VirtualViewExperimental")) {
     let __INTERNAL_VIEW_CONFIG = _modDef434;
   }

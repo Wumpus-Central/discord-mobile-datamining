@@ -1,13 +1,14 @@
 // === Module 1073: ? ===
 
 // Module 1073
-import c2 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-let ScreenshotButtonManager = arg1;
+let FeedbackWidgetProvider = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,203 +28,226 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function NOOP_SET_VISIBILITY() {
-
-}
-class FeedbackManager {
-  constructor() {
-    tmp = closure_4(this, ScreenshotButtonManager);
-    return;
+get_ActivityIndicator = fn(17);
+({ Animated: metroRequire, Appearance: closure_7, Dimensions: closure_8, Easing: closure_9, Modal: c10, PanResponder: closure_11, Platform, ScrollView: closure_12, View: map1 } = get_ActivityIndicator);
+const module_1074 = fn(1074);
+const useNativeDriver = module_1074.isNativeDriverSupportedForColorAnimations();
+class FeedbackWidgetProvider {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, FeedbackWidgetProvider);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_4;
+    obj = closure_4(FeedbackWidgetProvider);
+    tmp3 = closure_3;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    obj1 = { isButtonVisible: false, isScreenshotButtonVisible: false, isVisible: false, backgroundOpacity: null, panY: null, isScrollAtTop: true };
+    value = new metroRequire.Value(0);
+    obj1.backgroundOpacity = value;
+    value1 = new metroRequire.Value(closure_8.get("screen").height);
+    obj1.panY = value1;
+    tmp3Result.state = obj1;
+    obj4 = {
+      onStartShouldSetPanResponder(arg0, dy) {
+            let isScrollAtTop = FeedbackWidgetProvider(879).notWeb();
+            if (isScrollAtTop) {
+              isScrollAtTop = closure_0.state.isScrollAtTop;
+            }
+            if (isScrollAtTop) {
+              isScrollAtTop = dy.dy > 0;
+            }
+            return isScrollAtTop;
+          },
+      onMoveShouldSetPanResponder(arg0, dy) {
+            let isScrollAtTop = FeedbackWidgetProvider(879).notWeb();
+            if (isScrollAtTop) {
+              isScrollAtTop = closure_0.state.isScrollAtTop;
+            }
+            if (isScrollAtTop) {
+              isScrollAtTop = dy.dy > 0;
+            }
+            return isScrollAtTop;
+          },
+      onPanResponderMove(arg0, dy) {
+            if (dy.dy > 0) {
+              const panY = closure_0.state.panY;
+              panY.setValue(dy.dy);
+            }
+          },
+      onPanResponderRelease(arg0, dy) {
+            if (dy.dy > FeedbackWidgetProvider(1075).PULL_DOWN_CLOSE_THRESHOLD) {
+              const obj = { toValue: closure_2_8.get("screen").height, duration: FeedbackWidgetProvider(1075).SLIDE_ANIMATION_DURATION, useNativeDriver: true };
+              RN.timing(closure_0.state.panY, obj).start(() => {
+                closure_1_0._handleClose();
+              });
+              const timingResult = RN.timing(closure_0.state.panY, obj);
+            } else {
+              RN.spring(closure_0.state.panY, { toValue: 0, useNativeDriver: true }).start();
+              const springResult = RN.spring(closure_0.state.panY, { toValue: 0, useNativeDriver: true });
+            }
+          }
+    };
+    tmp3Result._panResponder = closure_11.create(obj4);
+    tmp3Result._handleScroll = (nativeEvent) => {
+      closure_0.setState({ isScrollAtTop: nativeEvent.nativeEvent.contentOffset.y <= 0 });
+    };
+    tmp3Result._setVisibilityFunction = (isVisible) => {
+      if (isVisible) {
+        const obj2 = { isVisible };
+        isVisible.setState(obj2);
+      } else {
+        const obj = { toValue: null, duration: null, useNativeDriver: true, easing: null };
+        ({ parallel, timing } = RN);
+        obj.toValue = closure_1_8.get("screen").height;
+        obj.duration = isVisible(1075).SLIDE_ANIMATION_DURATION;
+        obj.easing = closure_1_9.out(closure_1_9.quad);
+        const items = [timing(isVisible.state.panY, obj), ];
+        const obj3 = { toValue: 0, duration: isVisible(1075).BACKGROUND_ANIMATION_DURATION, useNativeDriver, easing: closure_1_9.out(closure_1_9.quad) };
+        items[1] = RN.timing(isVisible.state.backgroundOpacity, obj3);
+        parallel(items).start(() => {
+          isVisible.setState({ isVisible });
+        });
+        const parallelResult = parallel(items);
+      }
+    };
+    tmp3Result._setButtonVisibilityFunction = (isButtonVisible) => {
+      closure_0.setState({ isButtonVisible });
+    };
+    tmp3Result._setScreenshotButtonVisibilityFunction = (isScreenshotButtonVisible) => {
+      closure_0.setState({ isScreenshotButtonVisible });
+    };
+    tmp3Result._handleClose = () => {
+      const FeedbackWidgetManager = closure_0(1075).FeedbackWidgetManager;
+      FeedbackWidgetManager.hide();
+    };
+    FeedbackButtonManager = closure_0(closure_1[9]).FeedbackButtonManager;
+    initializeResult = FeedbackButtonManager.initialize(tmp3Result._setButtonVisibilityFunction);
+    ScreenshotButtonManager = closure_0(closure_1[9]).ScreenshotButtonManager;
+    initializeResult1 = ScreenshotButtonManager.initialize(tmp3Result._setScreenshotButtonVisibilityFunction);
+    FeedbackWidgetManager = closure_0(closure_1[9]).FeedbackWidgetManager;
+    initializeResult2 = FeedbackWidgetManager.initialize(tmp3Result._setVisibilityFunction);
+    return tmp3Result;
   }
 }
-ScreenshotButtonManager = FeedbackManager;
-const items = [
+_inherits(FeedbackWidgetProvider, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const self = this;
+    this._themeListener = React5.addChangeListener(() => {
+      self.forceUpdate();
+    });
+  }
+};
+let items = [
+  entry,
   {
-    key: "_feedbackComponentName",
-    get() {
-      const error = new Error("Subclasses must override feedbackComponentName");
-      throw error;
-    }
-  },
-  {
-    key: "initialize",
-    value: function initialize(_setVisibility) {
-      this._setVisibility = _setVisibility;
-    }
-  },
-  {
-    key: "reset",
-    value: function reset() {
-
-    }
-  },
-  {
-    key: "show",
-    value: function show() {
-      const self = this;
-      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
-        self._isVisible = true;
-        self._setVisibility(true);
-      } else {
-        const _console = console;
-        const _HermesInternal = HermesInternal;
-        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' to be called before 'show" + self._feedbackComponentName + "()'.");
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this._themeListener) {
+        const _themeListener = this._themeListener;
+        _themeListener.remove();
       }
     }
   },
   {
-    key: "hide",
-    value: function hide() {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(arg0, isVisible) {
       const self = this;
-      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
-        self._isVisible = false;
-        self._setVisibility(false);
-      } else {
-        const _console = console;
-        const _HermesInternal = HermesInternal;
-        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' before interacting with the widget.");
+      if (!isVisible.isVisible) {
+        if (self.state.isVisible) {
+          const obj = { toValue: 1, duration: null, useNativeDriver: null, easing: null };
+          ({ parallel, timing } = RN);
+          obj.duration = FeedbackWidgetProvider(1075).BACKGROUND_ANIMATION_DURATION;
+          obj.useNativeDriver = useNativeDriver;
+          obj.easing = React6.in(React6.quad);
+          const items = [timing(self.state.backgroundOpacity, obj), ];
+          const obj2 = { toValue: 0, duration: FeedbackWidgetProvider(1075).SLIDE_ANIMATION_DURATION, useNativeDriver: true, easing: React6.in(React6.quad) };
+          items[1] = RN.timing(self.state.panY, obj2);
+          parallel(items).start(() => {
+            const debug = FeedbackWidgetProvider(dependencyMap[10]).debug;
+            debug.log("FeedbackWidgetProvider componentDidUpdate");
+          });
+          const parallelResult = parallel(items);
+        }
       }
+      if (tmp7) {
+        const backgroundOpacity = self.state.backgroundOpacity;
+        backgroundOpacity.setValue(0);
+      }
+      tmp7 = isVisible.isVisible && !self.state.isVisible;
     }
   },
   {
-    key: "isFormVisible",
-    value: function isFormVisible() {
-      return this._isVisible;
+    key: "render",
+    value: function render() {
+      const self = this;
+      if (obj.isModalSupported()) {
+        ({ isButtonVisible, isScreenshotButtonVisible, isVisible, backgroundOpacity } = self.state);
+        const obj2 = { inputRange: [0, 1], outputRange: ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.9)"] };
+        const theme = FeedbackWidgetProvider(1077).getTheme();
+        const Fragment = noop.Fragment;
+        const children = self.props.children;
+        const tmpResult = FeedbackWidgetProvider(1077);
+        if (isButtonVisible) {
+          const _Object = Object;
+          isButtonVisible = noop.createElement(FeedbackWidgetProvider(1078).FeedbackButton, Object.assign({}, FeedbackWidgetProvider(1010).getFeedbackButtonOptions()));
+          const tmpResult5 = FeedbackWidgetProvider(1010);
+        }
+        if (isScreenshotButtonVisible) {
+          const _Object2 = Object;
+          isScreenshotButtonVisible = noop.createElement(FeedbackWidgetProvider(1082).ScreenshotButton, Object.assign({}, FeedbackWidgetProvider(1010).getScreenshotButtonOptions()));
+          const tmpResult6 = FeedbackWidgetProvider(1010);
+        }
+        let element = isVisible;
+        if (isVisible) {
+          const obj3 = { style: null };
+          const items = [FeedbackWidgetProvider(1080).modalWrapper, ];
+          const obj5 = { backgroundColor: interpolateResult };
+          items[1] = obj5;
+          obj3.style = items;
+          const obj6 = { visible: isVisible, transparent: true, animationType: "none", onRequestClose: self._handleClose, testID: "feedback-form-modal" };
+          const obj7 = { style: null };
+          ({ createElement, createElement: createElement2 } = noop);
+          obj7.style = FeedbackWidgetProvider(1080).topSpacer;
+          const element2 = createElement2(map1, obj7);
+          const _Object3 = Object;
+          const obj8 = { style: null };
+          const items1 = [FeedbackWidgetProvider(1080).modalSheetContainer(theme), ];
+          const obj9 = { transform: null };
+          const obj10 = { translateY: self.state.panY };
+          const items2 = [obj10];
+          obj9.transform = items2;
+          items1[1] = obj9;
+          obj8.style = items1;
+          const obj11 = { bounces: false, keyboardShouldPersistTaps: "handled", automaticallyAdjustKeyboardInsets: false, onScroll: self._handleScroll };
+          const merged = Object.assign(obj8, self._panResponder.panHandlers);
+          ({ createElement: createElement3, createElement: createElement4 } = noop);
+          const _Object4 = Object;
+          const tmpResult7 = FeedbackWidgetProvider(1080);
+          ({ _handleClose: obj17.onFormClose, _handleClose: obj17.onFormSubmitted } = self);
+          element = <RN.View style={null}><collapsed visible={isVisible} transparent animationType="none" onRequestClose={self._handleClose} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(__initData, obj11, createElement4(FeedbackWidgetProvider(1083).FeedbackWidget, Object.assign({}, FeedbackWidgetProvider(1010).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></collapsed></RN.View>;
+          const obj12 = { onFormClose: null, onFormSubmitted: null };
+          const tmpResult8 = FeedbackWidgetProvider(1010);
+        }
+        return <>{children}{isButtonVisible}{isScreenshotButtonVisible}{element}</>;
+      } else {
+        const debug = FeedbackWidgetProvider(693).debug;
+        debug.error("FeedbackWidget Modal is not supported in React Native < 0.71 with Fabric renderer.");
+        return <>{self.props.children}</>;
+      }
+      obj = FeedbackWidgetProvider(1074);
     }
   }
 ];
-const importDefaultResult1Result = _createClass(FeedbackManager, null, items);
-importDefaultResult1Result._isVisible = false;
-class FeedbackWidgetManager {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ScreenshotButtonManager);
-    tmp2 = closure_3;
-    obj = closure_3(ScreenshotButtonManager);
-    tmp3 = c2;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-ScreenshotButtonManager = FeedbackWidgetManager;
-_inherits(FeedbackWidgetManager, importDefaultResult1Result);
-const items1 = [
-  {
-    key: "_feedbackComponentName",
-    get() {
-      return "FeedbackWidget";
-    }
-  }
-];
-const importDefaultResult1Result1 = _createClass(FeedbackWidgetManager, null, items1);
-class FeedbackButtonManager {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ScreenshotButtonManager);
-    tmp2 = closure_3;
-    obj = closure_3(ScreenshotButtonManager);
-    tmp3 = c2;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-ScreenshotButtonManager = FeedbackButtonManager;
-_inherits(FeedbackButtonManager, importDefaultResult1Result);
-const items2 = [
-  {
-    key: "_feedbackComponentName",
-    get() {
-      return "FeedbackButton";
-    }
-  }
-];
-const importDefaultResult1Result2 = _createClass(FeedbackButtonManager, null, items2);
-class ScreenshotButtonManager {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ScreenshotButtonManager);
-    tmp2 = closure_3;
-    obj = closure_3(ScreenshotButtonManager);
-    tmp3 = c2;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ScreenshotButtonManager, importDefaultResult1Result);
-const items3 = [
-  {
-    key: "_feedbackComponentName",
-    get() {
-      return "ScreenshotButton";
-    }
-  }
-];
-const importDefaultResult1Result3 = _createClass(ScreenshotButtonManager, null, items3);
 
-export const PULL_DOWN_CLOSE_THRESHOLD = 200;
-export const SLIDE_ANIMATION_DURATION = 200;
-export const BACKGROUND_ANIMATION_DURATION = 200;
-export const FeedbackWidgetManager = importDefaultResult1Result1;
-export const FeedbackButtonManager = importDefaultResult1Result2;
-export const ScreenshotButtonManager = importDefaultResult1Result3;
-export const showFeedbackButton = () => {
-  const result = ScreenshotButtonManager(1074).lazyLoadAutoInjectFeedbackButtonIntegration();
-  importDefaultResult1Result2.show();
-};
-export const hideFeedbackButton = () => {
-  importDefaultResult1Result2.hide();
-};
-export const showFeedbackWidget = () => {
-  const result = ScreenshotButtonManager(1074).lazyLoadAutoInjectFeedbackIntegration();
-  importDefaultResult1Result1.show();
-};
-export const showScreenshotButton = () => {
-  if (obj.isWeb()) {
-    const debug = ScreenshotButtonManager(693).debug;
-    debug.warn("ScreenshotButton is not supported on Web.");
-  } else {
-    const result = ScreenshotButtonManager(1074).lazyLoadAutoInjectScreenshotButtonIntegration();
-    importDefaultResult1Result3.show();
-    const tmpResult = ScreenshotButtonManager(1074);
-  }
-  obj = ScreenshotButtonManager(878);
-};
-export const hideScreenshotButton = () => {
-  importDefaultResult1Result3.hide();
-};
-export const resetFeedbackButtonManager = () => {
-  importDefaultResult1Result2.reset();
-};
-export const resetFeedbackWidgetManager = () => {
-  importDefaultResult1Result1.reset();
-};
-export const resetScreenshotButtonManager = () => {
-  importDefaultResult1Result3.reset();
-};
+export const FeedbackWidgetProvider = _createClass(FeedbackWidgetProvider, items);

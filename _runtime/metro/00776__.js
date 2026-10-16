@@ -1,7 +1,7 @@
 // === Module 776: ? ===
 
 // Module 776
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 715 */;
+import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "GEN_AI_CONVERSATION_ID_ATTRIBUTE" /* 715 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -16,14 +16,14 @@ export const getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUr
       str2 = "http.route";
     }
     obj[str2] = str;
-    obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "route";
+    obj[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "route";
   }
   method = undefined;
   if (method != null) {
     method = method.method;
   }
   if (method) {
-    obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] = method.method.toUpperCase();
+    obj[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] = method.method.toUpperCase();
   }
   if (hash) {
     if (hash.search) {
@@ -35,11 +35,11 @@ export const getHttpSpanDetailsFromUrlObject = function getHttpSpanDetailsFromUr
     if (hash.pathname) {
       obj["url.path"] = hash.pathname;
       if ("/" === hash.pathname) {
-        obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "route";
+        obj[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "route";
       }
     }
     if (!("isRelative" in hash)) {
-      obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_URL_FULL] = hash.href;
+      obj[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_URL_FULL] = hash.href;
       if (hash.port) {
         obj["url.port"] = hash.port;
       }

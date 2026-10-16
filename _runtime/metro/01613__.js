@@ -1,110 +1,164 @@
 // === Module 1613: ? ===
 
 // Module 1613
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import _slicedToArray from "module_32" /* 32 */;
+import extractPathFromURL from "extractPathFromURL" /* 1614 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
 
-export const useThenable = function useThenable(arg0) {
-  const first = items(noop.useState(arg0), 1)[0];
-  items = [false, undefined];
-  first.then((result) => {
-    items = [true, result];
-  });
-  [tmp3, noop] = items(noop.useState(items), 2);
-  const first1 = items(tmp3, 1)[0];
-  let items1 = [first, first1];
-  const effect = noop.useEffect(() => {
-    c0 = first(function*() {
-      if (c5 === 2) {
-        c5 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Linking: c3, Platform } = get_ActivityIndicator);
+
+export const useLinking = function useLinking(ref, enabled) {
+  _require = ref;
+  let flag = enabled.enabled;
+  if (flag === undefined) {
+    flag = true;
+  }
+  const prefixes = enabled.prefixes;
+  let filter = enabled.filter;
+  const config = enabled.config;
+  let current = enabled.getInitialURL;
+  if (current === undefined) {
+    current = function f() {
+      const items = [
+        filter.getInitialURL(),
+        new Promise((arg0) => {
+          const timerId = setTimeout(arg0, 150);
+        })
+      ];
+      return Promise.race(items);
+    };
+  }
+  let fn2 = enabled.subscribe;
+  if (fn2 === undefined) {
+    fn2 = function l(arg0) {
+      closure_0 = arg0;
+      callback = function callback(event) {
+        return closure_0(event.url);
+      };
+      closure_2 = filter.addEventListener("url", callback);
+      const removeEventListener = filter.removeEventListener;
+      let bindResult;
+      if (removeEventListener != null) {
+        bindResult = removeEventListener.bind(filter);
+      }
+      filter = bindResult;
+      return () => {
+        let remove;
+        if (closure_2 != null) {
+          remove = closure_2.remove;
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_1 = tmp3;
-              closure_0 = tmp7;
-              closure_128_0 = undefined;
-              c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              const obj4 = { value, done: false };
-              return obj4;
-            }
-          } else if (1 === tmp7) {
-            c3 = 0;
-            if (!closure_0) {
-              items = [true, closure_128_0];
-              noop(items);
-            }
-            throw closure_2;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            if (!closure_0) {
-              const items1 = [true, closure_128_0];
-              noop(items1);
-            }
-            c5 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            closure_128_0 = value;
-            c3 = 0;
-            if (!closure_0) {
-              const items2 = [true, closure_128_0];
-              noop(items2);
-            }
-            c5 = 3;
-            return { value: "IconComponent", done: null };
-          }
-        } catch (tmp28) {
-          closure_2 = tmp28;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp28;
-          } else {
-            c4 = tmp;
+        if (remove) {
+          closure_2.remove();
+        } else if (bindResult != null) {
+          tmp2("url", callback);
+        }
+      };
+    };
+  }
+  let getStateFromPath = enabled.getStateFromPath;
+  if (getStateFromPath === undefined) {
+    getStateFromPath = require("BaseNavigationContainer").getStateFromPath;
+  }
+  let getActionFromState = enabled.getActionFromState;
+  if (getActionFromState === undefined) {
+    getActionFromState = require("BaseNavigationContainer").getActionFromState;
+  }
+  let items = [flag, require("BaseNavigationContainer").useNavigationIndependentTree()];
+  const effect = prefixes.useEffect(() => {
+
+  }, items);
+  ref = prefixes.useRef(flag);
+  prefixes.useRef(prefixes);
+  prefixes.useRef(filter);
+  prefixes.useRef(config);
+  prefixes.useRef(current);
+  prefixes.useRef(getStateFromPath);
+  closure_15 = prefixes.useRef(getActionFromState);
+  const effect1 = prefixes.useEffect(() => {
+    closure_9.current = flag;
+    closure_10.current = prefixes;
+    closure_11.current = filter;
+    closure_12.current = config;
+    closure_13.current = current;
+    closure_14.current = getStateFromPath;
+    closure_15.current = getActionFromState;
+  });
+  let callback = prefixes.useCallback((AUTO_DISMISS) => {
+    if (AUTO_DISMISS) {
+      if (!ref3.current) {
+        const extractPathFromURLResult = extractPathFromURL.extractPathFromURL(ref2.current, AUTO_DISMISS);
+        if (undefined !== extractPathFromURLResult) {
+          try {
+            return ref6.current(extractPathFromURLResult, ref4.current);
+          } catch (tmp7) {
+            const _console = console;
+            console.error(tmp7);
           }
         }
       }
-    });
-    if (!first1) {
-      (function resolve() {
-        const self = this;
-        const apply = c0.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })();
     }
-    return () => {
-      c0 = true;
+  }, []);
+  const items1 = [callback];
+  const items2 = [flag, callback, ref, fn2];
+  const getInitialState = prefixes.useCallback(() => {
+    if (ref.current) {
+      const currentResult = ref5.current();
+      if (null != currentResult) {
+        if (typeof currentResult !== "string") {
+          return currentResult.then((result) => callback(result));
+        }
+      }
+      closure_0 = callback(currentResult);
+    }
+    return {
+      then(fn) {
+        if (fn) {
+          let tmp2 = fn(closure_0);
+        } else {
+          tmp2 = closure_0;
+        }
+        return Promise.resolve(tmp2);
+      },
+      catch() {
+        return obj;
+      }
     };
   }, items1);
-  return tmp3;
+  const effect2 = prefixes.useEffect(() => fn2((arg0) => {
+    if (flag) {
+      current = ref.current;
+      if (current) {
+        const tmp4 = callback(arg0);
+      }
+      if (current) {
+        if (tmp4) {
+          const currentResult = ref3.current(tmp4, ref2.current);
+          if (undefined !== currentResult) {
+            try {
+              current.dispatch(currentResult);
+            } catch (tmp11) {
+              let message = tmp11;
+              if (typeof tmp11 === "object") {
+                message = tmp11;
+                if (null != tmp11) {
+                  message = tmp11;
+                  if ("message" in tmp11) {
+                    message = tmp11.message;
+                  }
+                }
+              }
+              const _HermesInternal = HermesInternal;
+              console.warn("An error occurred when trying to handle the link '" + tmp + "': " + message);
+            }
+          } else {
+            current.resetRoot(tmp4);
+          }
+        }
+      }
+    }
+  }), items2);
+  return { getInitialState };
 };

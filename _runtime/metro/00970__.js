@@ -1,116 +1,177 @@
 // === Module 970: ? ===
 
 // Module 970
-import triggerHandlers from "triggerHandlers" /* 909 */;
-import _mod948 from "module_948" /* 948 */;
-import registerSpanErrorInstrumentation from "module_693" /* 693 */;
+import _mod693 from "module_693" /* 693 */;
+import ignoreNextOnError from "ignoreNextOnError" /* 905 */;
+import triggerHandlers from "triggerHandlers" /* 910 */;
+import _mod949 from "module_949" /* 949 */;
+import extractSafariExtensionDetails from "extractSafariExtensionDetails" /* 950 */;
+import breadcrumbsIntegration from "breadcrumbsIntegration" /* 954 */;
+import _wrapTimeFunction from "_wrapTimeFunction" /* 953 */;
+import browserSessionIntegration from "browserSessionIntegration" /* 958 */;
+import _getUnhandledRejectionError from "_getUnhandledRejectionError" /* 955 */;
+import httpContextIntegration from "httpContextIntegration" /* 957 */;
+import linkedErrorsIntegration from "module_956" /* 956 */;
+import INTEGRATION_NAME from "module_971" /* 971 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-const SpotlightBrowser = "SpotlightBrowser";
+const require = globalThis.__r;
 
-export const INTEGRATION_NAME = "SpotlightBrowser";
-export const isSpotlightInteraction = function isSpotlightInteraction(type) {
-  let spans = "transaction" === type.type;
-  if (spans) {
-    spans = type.spans;
-  }
-  if (spans) {
-    const contexts = type.contexts;
-    let trace;
-    if (contexts != null) {
-      trace = contexts.trace;
-    }
-    spans = trace;
-  }
-  if (spans) {
-    spans = "ui.action.click" === type.contexts.trace.op;
-  }
-  if (spans) {
-    const spans2 = type.spans;
-    spans = spans2.some((description) => {
-      description = description.description;
-      let hasItem;
-      if (description != null) {
-        hasItem = description.includes("#sentry-spotlight");
+function addPreviousTraceSpanLink(spanContext, spanContext2, propagationContext) {
+  _require = propagationContext;
+  const spanToJSONResult = require("module_693").spanToJSON(spanContext2);
+  dependencyMap = spanToJSONResult;
+  const obj2 = {
+    spanContext: spanContext2.spanContext(),
+    startTimestamp: spanToJSONResult.start_timestamp,
+    sampleRate: (function getSampleRate() {
+      try {
+        const dsc = propagationContext.dsc;
+        let sample_rate;
+        if (dsc != null) {
+          sample_rate = dsc.sample_rate;
+        }
+        let NumberResult = Number(sample_rate);
+        if (NumberResult == null) {
+          const data = spanToJSONResult.data;
+          let tmp7;
+          if (data != null) {
+            tmp7 = data[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+          }
+          NumberResult = Number(tmp7);
+        }
+        return NumberResult;
+      } catch (err) {
+        return 0;
       }
-      return hasItem;
+    })(),
+    sampleRand: propagationContext.sampleRand
+  };
+  if (spanContext) {
+    spanContext = spanContext.spanContext;
+    let tmp4 = spanContext;
+    if (spanContext.traceId !== spanToJSONResult.trace_id) {
+      const _Date = Date;
+      tmp4 = obj2;
+      if (Date.now() / 1000 - spanContext.startTimestamp <= 3600) {
+        if (tmp(949).DEBUG_BUILD) {
+          const debug = tmp(693).debug;
+          const _JSON = JSON;
+          const json = JSON.stringify(spanContext);
+          const _JSON2 = JSON;
+          const obj3 = { op: spanToJSONResult.op };
+          const merged = Object.assign(spanContext2.spanContext());
+          const _HermesInternal = HermesInternal;
+          debug.log("Adding previous_trace `" + json + "` link to span `" + JSON.stringify(obj3) + "`");
+        }
+        const obj4 = { context: spanContext, attributes: null };
+        const obj5 = {};
+        obj5[tmp(693).SEMANTIC_LINK_ATTRIBUTE_LINK_TYPE] = "previous_trace";
+        obj4.attributes = obj5;
+        spanContext2.addLink(obj4);
+        ({ traceId, spanId } = spanContext);
+        let num2 = 0;
+        if (1 === spanContext.traceFlags) {
+          num2 = 1;
+        }
+        const _HermesInternal2 = HermesInternal;
+        const attr = spanContext2.setAttribute(c3, "" + traceId + "-" + spanId + "-" + num2);
+        tmp4 = obj2;
+      }
+    }
+    return tmp4;
+  } else {
+    return obj2;
+  }
+  const obj = require("module_693");
+}
+function storePreviousTraceInSessionStorage(arg0) {
+  try {
+    const sessionStorage = ignoreNextOnError.WINDOW.sessionStorage;
+    const _JSON = JSON;
+    const result = sessionStorage.setItem(sentry_previous_trace, JSON.stringify(arg0));
+  } catch (tmp9) {
+    if (_mod949.DEBUG_BUILD) {
+      const debug = _mod693.debug;
+      debug.warn("Could not store previous trace in sessionStorage", tmp9);
+    }
+  }
+}
+function getPreviousTraceFromSessionStorage() {
+  try {
+    value = undefined;
+    const sessionStorage = ignoreNextOnError.WINDOW.sessionStorage;
+    if (sessionStorage != null) {
+      value = sessionStorage.getItem(sentry_previous_trace);
+    }
+    const _JSON = JSON;
+    return JSON.parse(value);
+  } catch (err) {
+  }
+}
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+triggerHandlers;
+const sentry_previous_trace = "sentry_previous_trace";
+let c3 = "sentry.previous_trace";
+
+export const PREVIOUS_TRACE_KEY = "sentry_previous_trace";
+export const PREVIOUS_TRACE_MAX_DURATION = 3600;
+export const PREVIOUS_TRACE_TMP_SPAN_ATTRIBUTE = "sentry.previous_trace";
+export { addPreviousTraceSpanLink };
+export { getPreviousTraceFromSessionStorage };
+export const linkTraces = function linkTraces(on, linkPreviousTrace) {
+  closure_1 = undefined;
+  c2 = undefined;
+  closure_0 = tmp;
+  let tmp2;
+  if ("session-storage" === linkPreviousTrace.linkPreviousTrace) {
+    tmp2 = getPreviousTraceFromSessionStorage();
+  }
+  closure_1 = tmp2;
+  on.on("spanStart", (spanContext2) => {
+    if (obj.getRootSpan(spanContext2) === spanContext2) {
+      const currentScope = _mod693.getCurrentScope();
+      const tmp5 = addPreviousTraceSpanLink(closure_1, spanContext2, currentScope.getPropagationContext());
+      closure_1 = tmp5;
+      if (closure_0) {
+        storePreviousTraceInSessionStorage(tmp5);
+      }
+      const tmpResult = _mod693;
+    }
+    obj = _mod693;
+  });
+  c2 = true;
+  if (linkPreviousTrace.consistentTraceSampling) {
+    on.on("beforeSampling", (spanAttributes) => {
+      if (closure_1) {
+        const currentScope = _mod693.getCurrentScope();
+        const propagationContext = currentScope.getPropagationContext();
+        if (c2) {
+          if (propagationContext.parentSpanId) {
+            c2 = false;
+          }
+        }
+        const obj2 = {};
+        const merged = Object.assign(propagationContext);
+        const obj3 = {};
+        const merged1 = Object.assign(propagationContext.dsc);
+        const _String = String;
+        obj3.sample_rate = String(closure_1.sampleRate);
+        const _String2 = String;
+        obj3.sampled = String(1 === closure_1.spanContext.traceFlags);
+        obj2.dsc = obj3;
+        obj2.sampleRand = closure_1.sampleRand;
+        const result = currentScope.setPropagationContext(obj2);
+        spanAttributes.parentSampled = 1 === closure_1.spanContext.traceFlags;
+        spanAttributes.parentSampleRate = closure_1.sampleRate;
+        const obj4 = {};
+        const merged2 = Object.assign(spanAttributes.spanAttributes);
+        obj4[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE] = closure_1.sampleRate;
+        spanAttributes.spanAttributes = obj4;
+      }
     });
   }
-  return Boolean(spans);
 };
-export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  closure_0 = obj.sidecarUrl || "http://localhost:8969/stream";
-  return {
-    name: SpotlightBrowser,
-    setup() {
-      if (_mod948.DEBUG_BUILD) {
-        const debug = registerSpanErrorInstrumentation.debug;
-        debug.log("Using Sidecar URL", closure_0);
-      }
-    },
-    processEvent(type) {
-      let spans = "transaction" === type.type;
-      if (spans) {
-        spans = type.spans;
-      }
-      if (spans) {
-        const contexts = type.contexts;
-        let trace;
-        if (contexts != null) {
-          trace = contexts.trace;
-        }
-        spans = trace;
-      }
-      if (spans) {
-        spans = "ui.action.click" === type.contexts.trace.op;
-      }
-      if (spans) {
-        const spans2 = type.spans;
-        spans = spans2.some((description) => {
-          description = description.description;
-          let hasItem;
-          if (description != null) {
-            hasItem = description.includes("#sentry-spotlight");
-          }
-          return hasItem;
-        });
-      }
-      let tmp3 = null;
-      if (!Boolean(spans)) {
-        tmp3 = type;
-      }
-      return tmp3;
-    },
-    afterAllSetup(on) {
-      const nativeImplementation = triggerHandlers.getNativeImplementation("fetch");
-      c2 = 0;
-      on.on("beforeEnvelope", (arg0) => {
-        if (c2 > 3) {
-          let debug = closure_0(693).debug;
-          debug.warn("[Spotlight] Disabled Sentry -> Spotlight integration due to too many failed requests:", c2);
-        } else {
-          const request = { method: "POST", body: closure_0(693).serializeEnvelope(arg0), headers: { "Content-Type": "application/x-sentry-envelope" }, mode: "cors" };
-          const obj2 = closure_0(693);
-          closure_1(closure_0, request).then((status) => {
-            let tmp = status.status >= 200;
-            if (tmp) {
-              tmp = status.status < 400;
-            }
-            if (tmp) {
-              closure_2 = 0;
-            }
-          }, (arg0) => {
-            closure_2 = closure_2 + 1;
-            const debug = closure_0(closure_1[1]).debug;
-            debug.error("Sentry SDK can't connect to Sidecar is it running? See: https://spotlightjs.com/sidecar/npx/", arg0);
-          });
-          const promise = closure_1(closure_0, request);
-        }
-      });
-    }
-  };
-});
+export const spanContextSampled = function spanContextSampled(traceFlags) {
+  return 1 === traceFlags.traceFlags;
+};
+export { storePreviousTraceInSessionStorage };

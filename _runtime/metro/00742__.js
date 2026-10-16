@@ -10,7 +10,7 @@ import generateSpanId from "generateSpanId" /* 705 */;
 import safeDateNow from "safeDateNow" /* 707 */;
 import _mod710 from "module_710" /* 710 */;
 import _mod712 from "module_712" /* 712 */;
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 715 */;
+import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "GEN_AI_CONVERSATION_ID_ATTRIBUTE" /* 715 */;
 import _mod717 from "module_717" /* 717 */;
 import _getSpanForScope from "_getSpanForScope" /* 720 */;
 import _mod724 from "module_724" /* 724 */;
@@ -154,14 +154,14 @@ function _startRootSpan(name, getPropagationContext, parentSampled) {
   [tmp9, tmp10, tmp11] = sampleSpanResult;
   const obj5 = {};
   const merged1 = Object.assign(name);
-  const obj6 = { [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom" };
+  const obj6 = { [GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom" };
   let tmp13;
   if (undefined !== tmp10) {
     if (tmp11) {
       tmp13 = tmp10;
     }
   }
-  obj6[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE] = tmp13;
+  obj6[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE] = tmp13;
   const merged2 = Object.assign(spanAttributes);
   obj5.attributes = obj6;
   obj5.sampled = tmp9;

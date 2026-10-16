@@ -1,12 +1,7 @@
 // === Module 14618: ? ===
 
 // Module 14618
-import _mod14632 from "module_14632" /* 14632 */;
-import assign from "module_14619" /* 14619 */;
-import Deflate from "Deflate" /* 14620 */;
-import Inflate from "Inflate" /* 14628 */;
+import registerAsset from "module_1134" /* 1134 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14632);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 203, height: 120, scales: [1, 2, 3], hash: "0c52217e1b36f758b126e56747a120ea", name: "guild_subscription_removal_light", type: "png" });

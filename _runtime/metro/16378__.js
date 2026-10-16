@@ -1,7 +1,7 @@
 // === Module 16378: ? ===
 
 // Module 16378
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "43a01bb0fa7bd2e9d7fb4172be185309", name: "es-419", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d54bf56841039bee9b0ab658257be5d8", name: "EmojiZanyFaceIcon", type: "png" });

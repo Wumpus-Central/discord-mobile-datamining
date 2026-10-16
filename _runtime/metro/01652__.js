@@ -1,11 +1,9 @@
 // === Module 1652: ? ===
 
 // Module 1652
-import _mod17 from "module_17" /* 17 */;
 import module_65 from "module_65" /* 65 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "ClippingScrollViewDecoratorView", validAttributes: { contentInsetBottom: true, contentInsetTop: true, applyWorkaroundForContentInsetHitTestBug: true } };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "OverKeyboardView", validAttributes: { visible: true } };
 
-export default module_65.get("ClippingScrollViewDecoratorView", () => obj);
+export default module_65.get("OverKeyboardView", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

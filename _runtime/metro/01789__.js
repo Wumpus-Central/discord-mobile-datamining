@@ -1,13 +1,13 @@
 // === Module 1789: ? ===
 
 // Module 1789
-import _slicedToArray_mod from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c2 from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const FadingTransition = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,19 +27,18 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _slicedToArray = _slicedToArray_mod;
-let closure_5 = { code: "function pnpm_LinearTransitionTs1(values){const{delayFunction,delay,animation,config,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,animation(values.targetOriginX,config)),originY:delayFunction(delay,animation(values.targetOriginY,config)),width:delayFunction(delay,animation(values.targetWidth,config)),height:delayFunction(delay,animation(values.targetHeight,config))},callback:callback};}" };
-class LinearTransition {
+let closure_6 = { code: "function pnpm_FadingTransitionTs1(values){const{delayFunction,delay,withSequence,withTiming,halfDuration,withDelay,callback}=this.__closure;return{initialValues:{opacity:1,originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{opacity:delayFunction(delay,withSequence(withTiming(0,{duration:halfDuration}),withTiming(1,{duration:halfDuration}))),originX:withDelay(delay+halfDuration,withTiming(values.targetOriginX,{duration:0})),originY:withDelay(delay+halfDuration,withTiming(values.targetOriginY,{duration:0})),width:withDelay(delay+halfDuration,withTiming(values.targetWidth,{duration:0})),height:withDelay(delay+halfDuration,withTiming(values.targetHeight,{duration:0}))},callback:callback};}" };
+class FadingTransition {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_1(this, LinearTransition);
+    tmp = c2(this, FadingTransition);
     items1 = [...items];
-    tmp2 = closure_3;
-    obj = closure_3(LinearTransition);
-    tmp3 = c2;
-    if (closure_4()) {
+    tmp2 = closure_4;
+    obj = closure_4(FadingTransition);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -49,38 +48,61 @@ class LinearTransition {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
-      const animation = tmp2[0];
-      closure_2 = tmp4;
-      const callbackV = closure_0.callbackV;
-      const delay = closure_0.getDelay();
+      delayFunction = delayFunction.getDelayFunction();
+      const callbackV = delayFunction.callbackV;
+      const delay = delayFunction.getDelay();
+      let num = delayFunction.durationV;
+      if (num == null) {
+        num = 500;
+      }
+      const result = num / 2;
+      closure_3 = result;
       const fn = function t(originX) {
-        const obj = { initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: null, callback: null };
-        const size = { originX: delayFunction(delay, first(originX.targetOriginX, closure_2)), originY: delayFunction(delay, first(originX.targetOriginY, closure_2)), width: delayFunction(delay, first(originX.targetWidth, closure_2)), height: delayFunction(delay, first(originX.targetHeight, closure_2)) };
+        const obj = { initialValues: { opacity: 1, originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: null, callback: null };
+        const size = { opacity: null, originX: null, originY: null, width: null, height: null };
+        const obj3 = delayFunction(1730);
+        const obj2 = { duration: result };
+        const obj4 = delayFunction(1730);
+        const withTimingResult = delayFunction(1730).withTiming(0, { duration: result });
+        size.opacity = delayFunction(delay, obj3.withSequence(withTimingResult, delayFunction(1730).withTiming(1, { duration: result })));
+        const obj5 = { duration: result };
+        const obj6 = delayFunction(1730);
+        const sum = delay + result;
+        const obj8 = delayFunction(1730);
+        size.originX = obj8.withDelay(sum, delayFunction(1730).withTiming(originX.targetOriginX, { duration: 0 }));
+        const obj9 = delayFunction(1730);
+        const sum1 = delay + result;
+        const obj10 = delayFunction(1730);
+        size.originY = obj10.withDelay(sum1, delayFunction(1730).withTiming(originX.targetOriginY, { duration: 0 }));
+        const obj11 = delayFunction(1730);
+        const sum2 = delay + result;
+        const obj12 = delayFunction(1730);
+        size.width = obj12.withDelay(sum2, delayFunction(1730).withTiming(originX.targetWidth, { duration: 0 }));
+        const obj13 = delayFunction(1730);
+        const sum3 = delay + result;
+        const obj14 = delayFunction(1730);
+        size.height = obj14.withDelay(sum3, delayFunction(1730).withTiming(originX.targetHeight, { duration: 0 }));
         obj.animations = size;
         obj.callback = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], callback: callbackV };
-      fn.__workletHash = 16224579837767;
+      fn.__closure = { delayFunction, delay, withSequence: FadingTransition(1730).withSequence, withTiming: FadingTransition(1730).withTiming, halfDuration: result, withDelay: FadingTransition(1730).withDelay, callback: callbackV };
+      fn.__workletHash = 3440645628303;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_slicedToArray = LinearTransition;
-_inherits(LinearTransition, fn(1726).ComplexAnimationBuilder);
+_inherits(FadingTransition, fn(1728).BaseAnimationBuilder);
 const entry = {
   key: "createInstance",
   value: function createInstance() {
-    return _slicedToArray();
+    return FadingTransition();
   }
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(LinearTransition, null, items);
-importDefaultResultResult.presetName = "LinearTransition";
+const importDefaultResultResult = _createClass(FadingTransition, null, items);
+importDefaultResultResult.presetName = "FadingTransition";
 
-export const LinearTransition = importDefaultResultResult;
-export const Layout = importDefaultResultResult;
+export const FadingTransition = importDefaultResultResult;

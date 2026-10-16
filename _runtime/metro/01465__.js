@@ -1,43 +1,98 @@
 // === Module 1465: ? ===
 
 // Module 1465
-import _mod1311 from "module_1311" /* 1311 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1339 */;
-import _mod1464 from "module_1464" /* 1464 */;
-import regexTester from "regexTester" /* 1466 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1341 */;
+import _mod1466 from "module_1466" /* 1466 */;
 
-let closure_3 = regexTester(/^\s*(?:function)?\*/);
-let closure_4 = _mod1464();
-let closure_5 = callBoundIntrinsic("Object.prototype.toString");
-let closure_6 = callBoundIntrinsic("Function.prototype.toString");
-
-export default function isGeneratorFunction(fn) {
-  if (typeof fn !== "function") {
-    return false;
-  } else if (closure_3(closure_6(fn))) {
-    return true;
-  } else if (closure_4) {
-    if (_mod1311) {
-      if (undefined === closure_2) {
-        const tmp6 = (() => {
-          if (closure_1_4) {
-            try {
-              const _Function = Function;
-              return Function("return function*() {}")();
-            } catch (err) {
-            }
-          } else {
-            return false;
-          }
-        })();
-        closure_2 = tmp6 && _mod1311(tmp6);
-        const tmp7 = tmp6 && _mod1311(tmp6);
-      }
-      return _mod1311(fn) === closure_2;
-    } else {
-      return false;
+let closure_0 = _mod1466();
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+function isArguments(obj) {
+  let tmp = closure_0;
+  if (closure_0) {
+    tmp = obj;
+  }
+  if (tmp) {
+    tmp = typeof obj === "object";
+  }
+  if (tmp) {
+    const _Symbol = Symbol;
+    tmp = Symbol.toStringTag in obj;
+  }
+  let tmp3 = !tmp;
+  if (!tmp) {
+    tmp3 = "[object Arguments]" === closure_1(obj);
+  }
+  return tmp3;
+}
+let isArguments2 = function isArguments(callee) {
+  if (typeof isArguments === "function") {
+    let tmp2 = closure_0;
+    if (closure_0) {
+      tmp2 = callee;
     }
+    if (tmp2) {
+      tmp2 = typeof callee === "object";
+    }
+    if (tmp2) {
+      const _Symbol = Symbol;
+      tmp2 = Symbol.toStringTag in callee;
+    }
+    let tmp4 = !tmp2;
+    if (!tmp2) {
+      tmp4 = "[object Arguments]" === closure_1(callee);
+    }
+    let tmp6 = tmp4;
+    if (!tmp6) {
+      let tmp8 = null !== callee && typeof callee === "object";
+      if (tmp8) {
+        tmp8 = "length" in callee;
+      }
+      if (tmp8) {
+        tmp8 = typeof callee.length === "number";
+      }
+      if (tmp8) {
+        tmp8 = callee.length >= 0;
+      }
+      if (tmp8) {
+        tmp8 = "[object Array]" !== closure_1(callee);
+      }
+      if (tmp8) {
+        tmp8 = "callee" in callee;
+      }
+      if (tmp8) {
+        tmp8 = "[object Function]" === closure_1(callee.callee);
+      }
+      tmp6 = tmp8;
+    }
+    return tmp6;
   } else {
-    return "[object GeneratorFunction]" === closure_5(fn);
+    throw new TypeError("Trying to call a non-function");
   }
 };
+isArguments.isLegacyArguments = isArguments2;
+if ((() => {
+  if (typeof isArguments === "function") {
+    let tmp = closure_0;
+    if (closure_0) {
+      tmp = arguments;
+    }
+    if (tmp) {
+      tmp = typeof arguments === "object";
+    }
+    if (tmp) {
+      const _Symbol = Symbol;
+      tmp = Symbol.toStringTag in arguments;
+    }
+    let tmp9 = !tmp;
+    if (!tmp) {
+      tmp9 = "[object Arguments]" === closure_1(arguments);
+    }
+    return tmp9;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+})()) {
+  isArguments2 = isArguments;
+}
+
+export default isArguments2;

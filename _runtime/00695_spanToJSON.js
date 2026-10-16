@@ -8,7 +8,7 @@ import _mod701 from "module_701" /* 701 */;
 import generateSpanId from "generateSpanId" /* 705 */;
 import _mod710 from "module_710" /* 710 */;
 import dateTimestampInSeconds from "dateTimestampInSeconds" /* 714 */;
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 715 */;
+import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "GEN_AI_CONVERSATION_ID_ATTRIBUTE" /* 715 */;
 import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 716 */;
 import _mod717 from "module_717" /* 717 */;
 import _getSpanForScope from "_getSpanForScope" /* 720 */;
@@ -97,8 +97,8 @@ function spanToJSON(getSpanJSON) {
         }
       }
       obj2.status = tmp16;
-      obj2.op = attributes[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP];
-      obj2.origin = attributes[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
+      obj2.op = attributes[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_OP];
+      obj2.origin = attributes[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
       let mapped;
       if (links) {
         if (links.length > 0) {

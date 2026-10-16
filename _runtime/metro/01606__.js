@@ -1,127 +1,40 @@
 // === Module 1606: ? ===
 
 // Module 1606
-import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const require = fn;
-const I18nManager = fn(17).I18nManager;
-const jsx = fn(21).jsx;
-const weakMap = new WeakMap();
-globalThis.REACT_NAVIGATION_DEVTOOLS = weakMap;
 
-export const NavigationContainer = noop.forwardRef(function NavigationContainerInner(direction, arg1) {
-  direction = direction.direction;
-  if (direction === undefined) {
-    let str = "ltr";
-    if (I18nManager.getConstants().isRTL) {
-      str = "rtl";
+export const useMemoArray = function useMemoArray(arr) {
+  const ref = noop.useRef(undefined);
+  const current = ref.current;
+  const mapped = arr.map((item, index) => {
+    [tmp, arr] = item;
+    let tmp3;
+    if (current != null) {
+      tmp3 = tmp2.entries[index];
     }
-    direction = str;
-  }
-  let DefaultTheme = direction.theme;
-  if (DefaultTheme === undefined) {
-    DefaultTheme = linking(1607).DefaultTheme;
-  }
-  linking = direction.linking;
-  let fallback = direction.fallback;
-  if (fallback === undefined) {
-    fallback = null;
-  }
-  let merged = Object.assign(direction, Object.assign({ direction: 0, theme: 0, linking: 0, fallback: 0, documentTitle: 0 }));
-  dependencyMap = undefined;
-  let ref;
-  let tmp6 = linking;
-  if (tmp6) {
-    tmp6 = false !== linking.enabled;
-  }
-  dependencyMap = tmp6;
-  let config;
-  if (linking != null) {
-    config = linking.config;
-  }
-  if (config) {
-    linking(1506).validatePathConfig(linking.config);
-    let obj = linking(1506);
-  }
-  ref = noop.useRef(null);
-  const backButton = linking(1609).useBackButton(ref);
-  const obj2 = linking(1609);
-  const documentTitle = linking(1610).useDocumentTitle(ref, direction.documentTitle);
-  const obj3 = linking(1610);
-  const merged1 = Object.assign(linking);
-  const items = [linking];
-  const memo = noop.useMemo(() => ({ options: linking }), items);
-  const effect = noop.useEffect(() => {
-    if (ref.current) {
-      let obj = {};
-      Object.defineProperty(obj, "linking", {
-        get: () => {
-            const obj = {};
-            const merged = Object.assign(closure_1_0);
-            obj.enabled = enabled;
-            let prefixes;
-            if (closure_1_0 != null) {
-              prefixes = closure_1_0.prefixes;
-            }
-            if (prefixes == null) {
-              prefixes = [];
-            }
-            obj.prefixes = prefixes;
-            let getStateFromPath;
-            if (closure_1_0 != null) {
-              getStateFromPath = closure_1_0.getStateFromPath;
-            }
-            if (getStateFromPath == null) {
-              getStateFromPath = linking(enabled[5]).getStateFromPath;
-            }
-            obj.getStateFromPath = getStateFromPath;
-            let getPathFromState;
-            if (closure_1_0 != null) {
-              getPathFromState = closure_1_0.getPathFromState;
-            }
-            if (getPathFromState == null) {
-              getPathFromState = linking(enabled[5]).getPathFromState;
-            }
-            obj.getPathFromState = getPathFromState;
-            let getActionFromState;
-            if (closure_1_0 != null) {
-              getActionFromState = closure_1_0.getActionFromState;
-            }
-            if (getActionFromState == null) {
-              getActionFromState = linking(enabled[5]).getActionFromState;
-            }
-            obj.getActionFromState = getActionFromState;
-            return obj;
-          },
-        set: undefined
-      });
-      const result = globalThis.REACT_NAVIGATION_DEVTOOLS.set(tmp.current, obj);
+    let everyResult = tmp3;
+    if (tmp3) {
+      everyResult = tmp3.deps.length === arr.length;
     }
+    if (everyResult) {
+      const deps = tmp3.deps;
+      everyResult = deps.every((item, index) => Object.is(item, current[index]));
+    }
+    if (!everyResult) {
+      const obj = { item: tmp, deps: arr };
+      tmp3 = obj;
+    }
+    return tmp3;
   });
-  const obj4 = linking(1611);
-  const obj5 = { enabled: tmp6, prefixes: [] };
-  const obj6 = linking(1613);
-  [tmp20, initialState] = ref(linking(1613).useThenable(obj4.useLinking(ref, obj5).getInitialState), 2);
-  const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current);
-  const obj7 = { value: direction, children: null };
-  if (tmp22) {
-    const obj8 = { value: memo, children: null };
-    const obj9 = {};
-    const merged2 = Object.assign(merged);
-    obj9.theme = DefaultTheme;
-    if (null != merged.initialState) {
-      initialState = merged.initialState;
+  if (current) {
+    if (current.entries.length === mapped.length) {
+      if (mapped.every((item, index) => item === current.entries[index])) {
+        return current.items;
+      }
     }
-    obj9.initialState = initialState;
-    obj9.ref = ref;
-    obj8.children = jsx(tmp12(1506).BaseNavigationContainer, {});
-    obj7.children = jsx(tmp12(1603).LinkingContext.Provider, { value: memo, children: null });
-    let tmp24 = obj7;
-  } else {
-    const obj10 = { value: DefaultTheme, children: fallback };
-    obj7.children = jsx(tmp12(1506).ThemeProvider, { value: DefaultTheme, children: fallback });
-    tmp24 = obj7;
   }
-  return jsx(linking(1614).LocaleDirContext.Provider, tmp24);
-});
+  const mapped1 = mapped.map((item) => item.item);
+  ref.current = { entries: mapped, items: mapped1 };
+  return mapped1;
+};

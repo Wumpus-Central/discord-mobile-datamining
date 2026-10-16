@@ -1,69 +1,62 @@
 // === Module 12314: ? ===
 
 // Module 12314
-import _mod12275 from "module_12275" /* 12275 */;
-import _mod12302 from "module_12302" /* 12302 */;
-import _mod12303 from "module_12303" /* 12303 */;
-import _mod12307 from "module_12307" /* 12307 */;
-import _mod12315 from "module_12315" /* 12315 */;
+import _mod12304 from "module_12304" /* 12304 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const _sentryMetrics = "_sentryMetrics";
 
-export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
-  if (obj.hasTracingEnabled(tracesSampler)) {
-    const isolationScope = _mod12302.getIsolationScope();
-    const obj2 = {};
-    const merged = Object.assign(normalizedRequest);
-    obj2.normalizedRequest = normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
-    if (typeof tracesSampler.tracesSampler === "function") {
-      let num = tracesSampler.tracesSampler(obj2);
-    } else if (undefined !== obj2.parentSampled) {
-      num = obj2.parentSampled;
-    } else {
-      num = 1;
-      if (undefined !== tracesSampler.tracesSampleRate) {
-        num = tracesSampler.tracesSampleRate;
+export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
+  if (self[_sentryMetrics]) {
+    const obj = {};
+    const tmp3 = tmp[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      [tmp9, tmp11] = tmp8;
+      let arr = obj[tmp9];
+      if (!arr) {
+        let items = [];
+        obj[tmp10] = items;
+        arr = items;
       }
+      let obj2 = _mod12304;
+      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
+      continue;
     }
-    const tmpResult = _mod12302;
-    const parseSampleRateResult = _mod12315.parseSampleRate(num);
-    if (undefined === parseSampleRateResult) {
-      if (_mod12303.DEBUG_BUILD) {
-        const logger3 = _mod12275.logger;
-        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
-      }
-      const items = [false];
-      let items3 = items;
-    } else if (parseSampleRateResult) {
-      const _Math = Math;
-      if (Math.random() < parseSampleRateResult) {
-        const items1 = [true, parseSampleRateResult];
-        let items2 = items1;
-      } else {
-        if (_mod12303.DEBUG_BUILD) {
-          const logger2 = _mod12275.logger;
-          const _Number = Number;
-          const _HermesInternal = HermesInternal;
-          logger2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(num) + ")");
-        }
-        items2 = [false, parseSampleRateResult];
-      }
-    } else {
-      if (_mod12303.DEBUG_BUILD) {
-        const logger = _mod12275.logger;
-        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
-        if (typeof tracesSampler.tracesSampler === "function") {
-          str = "tracesSampler returned 0 or false";
-        }
-        logger.log(`[Tracing] Discarding transaction because ${str}`);
-      }
-      items3 = [false, parseSampleRateResult];
-    }
-    return items3;
-  } else {
-    const items4 = [false];
-    return items4;
+    return obj;
   }
-  obj = _mod12307;
+};
+export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(activeSpan, metricType, sanitizeMetricKeyResult, min, sanitizeUnitResult, tags, bucketKey) {
+  let obj = activeSpan[_sentryMetrics];
+  if (!obj) {
+    const _Map = Map;
+    const map = new Map();
+    activeSpan[tmp] = map;
+    obj = map;
+  }
+  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
+  value = obj.get(bucketKey);
+  if (value) {
+    const range = _slicedToArray(value, 2)[1];
+    const items = [combined, ];
+    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
+    const _Math = Math;
+    range1.min = Math.min(range.min, min);
+    const _Math2 = Math;
+    range1.max = Math.max(range.max, min);
+    const sum = range.count + 1;
+    range.count = sum;
+    range1.count = sum;
+    const sum1 = range.sum + min;
+    range.sum = sum1;
+    range1.sum = sum1;
+    range1.tags = range.tags;
+    items[1] = range1;
+    const result = obj.set(bucketKey, items);
+  } else {
+    const items1 = [combined, ];
+    const range2 = { min, max: min, count: 1, sum: min, tags };
+    items1[1] = range2;
+    const result1 = obj.set(bucketKey, items1);
+  }
 };

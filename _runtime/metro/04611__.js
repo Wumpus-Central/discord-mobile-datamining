@@ -1,17 +1,17 @@
 // === Module 4611: ? ===
 
 // Module 4611
-import module_4600_mod from "module_4600" /* 4600 */;
-import requiredArgs_mod from "requiredArgs" /* 4256 */;
+import startOfSecond_mod from "startOfSecond" /* 4612 */;
+import requiredArgs_mod from "requiredArgs" /* 4259 */;
 
-let module_4600 = module_4600_mod;
-if (!module_4600) {
-  const obj = { default: module_4600 };
+let startOfSecond = startOfSecond_mod;
+if (!startOfSecond) {
+  const obj = { default: startOfSecond };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4600;
+  tmp3 = startOfSecond;
 }
-module_4600 = tmp3;
+startOfSecond = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisHour(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4600.default(Date.now(), arg0);
+export default function isSameSecond(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfSecond.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfSecond.default(arg1).getTime();
 };
 export default exports.default;

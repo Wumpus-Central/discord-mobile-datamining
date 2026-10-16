@@ -1,38 +1,133 @@
 // === Module 12361: ? ===
 
 // Module 12361
-import _mod12273 from "module_12273" /* 12273 */;
-import _mod12275 from "module_12275" /* 12275 */;
-import _mod12276 from "module_12276" /* 12276 */;
+import _mod12298 from "module_12298" /* 12298 */;
+import _mod12322 from "module_12322" /* 12322 */;
+import _mod12326 from "module_12326" /* 12326 */;
+import _mod12342 from "module_12342" /* 12342 */;
+import _mod12355 from "module_12355" /* 12355 */;
+import _mod12363 from "module_12363" /* 12363 */;
+
+const require = globalThis.__r;
 
 require = arg1;
-const dependencyMap = arg6;
-function instrumentConsole() {
-  if ("console" in _mod12276.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = _mod12275.CONSOLE_LEVELS;
-    const item = CONSOLE_LEVELS.forEach((item) => {
-      closure_0 = item;
-      if (item in closure_0(12276).GLOBAL_OBJ.console) {
-        tmp(12281).fill(tmp(12276).GLOBAL_OBJ.console, item, (arg0) => {
-          _mod12275.originalConsoleMethods[level] = arg0;
-          return () => {
-            const items = [...arguments];
-            level(12273).triggerHandlers("console", { args: items, level });
-            const obj3 = level(12275).originalConsoleMethods[level];
-            if (obj3) {
-              obj3.apply(level(12276).GLOBAL_OBJ.console, items);
-            }
-            const obj = { args: items, level };
-            const obj2 = level(12273);
-          };
-        });
-        const tmpResult = tmp(12281);
-      }
-    });
-  }
-}
+let dependencyMap = arg6;
 
-export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
-  _mod12273.addHandler("console", errorCallback);
-  _mod12273.maybeInstrument("console", instrumentConsole);
+export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
+export const createTransport = function createTransport(bufferSize, arg1) {
+  _require = bufferSize;
+  dependencyMap = arg1;
+  let promiseBuffer = arg2;
+  if (arg2 === undefined) {
+    let num = bufferSize.bufferSize;
+    if (!num) {
+      num = 64;
+    }
+    promiseBuffer = require("module_12362").makePromiseBuffer(num);
+    let obj = require("module_12362");
+  }
+  closure_3 = {};
+  return {
+    send(arg0) {
+      const items = [];
+      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        const result = _mod12342.envelopeItemTypeToDataCategory(arg1);
+        if (obj2.isRateLimited(closure_3, result)) {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp6;
+            if (Array.isArray(arg0)) {
+              tmp6 = arg0[1];
+            }
+            const tmp4 = tmp6;
+          }
+          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
+        } else {
+          items.push(arg0);
+        }
+        obj2 = _mod12363;
+      });
+      if (0 === items.length) {
+        return bufferSize(tmp2[3]).resolvedSyncPromise({});
+      } else {
+        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
+        function recordEnvelopeLoss(arg0) {
+
+        }
+        const tmpResult2 = bufferSize(tmp2[1]);
+        return recordEnvelopeLoss.add(() => {
+          const obj = { body: _mod12342.serializeEnvelope(dependencyMap) };
+          return dependencyMap(obj).then((statusCode) => {
+            let DEBUG_BUILD = undefined !== statusCode.statusCode;
+            if (DEBUG_BUILD) {
+              let tmp = statusCode.statusCode < 200;
+              if (!tmp) {
+                tmp = statusCode.statusCode >= 300;
+              }
+              DEBUG_BUILD = tmp;
+            }
+            if (DEBUG_BUILD) {
+              DEBUG_BUILD = items(12326).DEBUG_BUILD;
+            }
+            if (DEBUG_BUILD) {
+              const logger = items(12298).logger;
+              const _HermesInternal = HermesInternal;
+              logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
+            }
+            closure_3 = items(12363).updateRateLimits(closure_3, statusCode);
+            return statusCode;
+          }, (arg0) => {
+            if (typeof recordEnvelopeLoss === "function") {
+              const network_error = "network_error";
+              closure_0(12342).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
+                if ("event" === arg1) {
+                  const _Array = Array;
+                  let tmp4;
+                  if (Array.isArray(arg0)) {
+                    tmp4 = arg0[1];
+                  }
+                  const tmp = tmp4;
+                }
+                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              });
+              throw arg0;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          });
+        }).then((result) => result, (arg0) => {
+          if (arg0 instanceof _mod12355.SentryError) {
+            if (_mod12326.DEBUG_BUILD) {
+              const logger = _mod12298.logger;
+              logger.error("Skipped sending event because buffer is full.");
+            }
+            if (typeof recordEnvelopeLoss === "function") {
+              const queue_overflow = "queue_overflow";
+              _mod12342.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
+                if ("event" === arg1) {
+                  const _Array = Array;
+                  let tmp4;
+                  if (Array.isArray(arg0)) {
+                    tmp4 = arg0[1];
+                  }
+                  const tmp = tmp4;
+                }
+                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
+              });
+              const tmpResult = _mod12342;
+              return _mod12322.resolvedSyncPromise({});
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw arg0;
+          }
+        });
+      }
+      let obj = bufferSize(dependencyMap[1]);
+    },
+    flush(arg0) {
+      return promiseBuffer.drain(arg0);
+    }
+  };
 };

@@ -3,52 +3,114 @@
 // Module 1588
 import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
+const PrivateValueStore = fn(1509).PrivateValueStore;
 
-export const useOnGetState = function useOnGetState(getState) {
-  getState = getState.getState;
-  const getStateListeners = getState.getStateListeners;
-  let addKeyedListener;
-  let callback;
-  addKeyedListener = addKeyedListener.useContext(getState(getStateListeners[1]).NavigationBuilderContext).addKeyedListener;
-  const context = addKeyedListener.useContext(getState(getStateListeners[2]).NavigationRouteContext);
-  let str = "root";
-  if (context) {
-    str = context.key;
-  }
-  const items = [getState, getStateListeners];
-  callback = obj.useCallback(() => {
-    const tmp = getState();
-    const routes = tmp.routes;
-    const mapped = routes.map((state) => {
-      let tmpResult;
-      if (getStateListeners[state.key] != null) {
-        tmpResult = tmp();
+export const useNavigationHelpers = function useNavigationHelpers(id) {
+  id = id.id;
+  const onAction = id.onAction;
+  const onUnhandledAction = id.onUnhandledAction;
+  const getState = id.getState;
+  const emitter = id.emitter;
+  const router = id.router;
+  const context = onUnhandledAction.useContext(id(onAction[2]).NavigationContext);
+  const ref = onUnhandledAction.useRef(null);
+  ref.current = { state: id.state, base: getState() };
+  const insertionEffect = onUnhandledAction.useInsertionEffect(() => {
+    ref.current = null;
+  });
+  let items = [router, context, emitter.emit, getState, onAction, onUnhandledAction, id, ref];
+  return onUnhandledAction.useMemo(() => {
+    const merged = Object.assign(router.actionCreators);
+    const merged1 = Object.assign(id(onAction[3]).CommonActions);
+    const keys = Object.keys({});
+    const reduced = keys.reduce((acc, item) => {
+      closure_0 = item;
+      acc[item] = () => {
+        const items = [...HermesBuiltin.copyRestArgs()];
+        const applyResult = obj[closure_0].apply(items);
+        let applyResultResult = applyResult;
+        if (typeof applyResult === "function") {
+          applyResultResult = applyResult(closure_1_3());
+        }
+        if (!obj2(applyResultResult)) {
+          if (closure_1_2 != null) {
+            closure_1_2(applyResultResult);
+          }
+        }
+      };
+      return acc;
+    }, {});
+    let obj2 = {};
+    const merged2 = Object.assign(context);
+    const merged3 = Object.assign(reduced);
+    obj2.dispatch = function dispatch(fn) {
+      let tmp = fn;
+      if (typeof fn === "function") {
+        tmp = fn(getState());
       }
-      let tmp3 = state;
-      if (state.state !== tmpResult) {
-        const obj = {};
-        const merged = Object.assign(state);
-        obj.state = tmpResult;
-        tmp3 = obj;
+      if (!obj2(tmp)) {
+        if (onUnhandledAction != null) {
+          onUnhandledAction(tmp);
+        }
       }
-      return tmp3;
-    });
-    let tmp3 = tmp;
-    if (!obj.isArrayEqual(tmp.routes, mapped)) {
-      const obj2 = {};
-      let merged = Object.assign(tmp);
-      obj2.routes = mapped;
-      tmp3 = obj2;
-    }
-    return tmp3;
+    };
+    obj2.emit = emitter.emit;
+    obj2.isFocused = context ? context.isFocused : (() => true);
+    obj2.canGoBack = function canGoBack() {
+      const tmp = getState();
+      const CommonActions = id(onAction[3]).CommonActions;
+      let flag = null !== stateForAction.getStateForAction(tmp, CommonActions.goBack(), { routeNames: tmp.routeNames, routeParamList: {}, routeGetIdList: {} });
+      if (!flag) {
+        let canGoBackResult;
+        if (context != null) {
+          canGoBackResult = context.canGoBack();
+        }
+        flag = canGoBackResult;
+      }
+      if (!flag) {
+        flag = false;
+      }
+      return flag;
+    };
+    obj2.getId = function getId() {
+      return obj;
+    };
+    obj2.getParent = function getParent(arg0) {
+      if (undefined !== arg0) {
+        let tmp2 = obj2;
+        if (obj2) {
+          obj2 = obj;
+          tmp2 = obj;
+          if (arg0 !== obj.getId()) {
+            const parent = obj2.getParent();
+            tmp2 = parent;
+            while (parent) {
+              obj2 = parent;
+              tmp2 = parent;
+              if (arg0 === parent.getId()) {
+                break;
+              }
+            }
+          }
+        }
+        return tmp2;
+      } else {
+        return context;
+      }
+    };
+    obj2.getState = function getState() {
+      const tmp = getState();
+      const current = ref.current;
+      let state = tmp;
+      if (null != current) {
+        state = tmp;
+        if (current.base === tmp) {
+          state = current.state;
+        }
+      }
+      return state;
+    };
+    return obj2;
   }, items);
-  const items1 = [addKeyedListener, callback, str];
-  const effect = obj.useEffect(() => {
-    let tmpResult;
-    if (addKeyedListener != null) {
-      tmpResult = tmp("getState", str, callback);
-    }
-    return tmpResult;
-  }, items1);
 };

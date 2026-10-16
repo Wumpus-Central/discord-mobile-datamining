@@ -6,7 +6,7 @@ import unwrapScopeFromWeakRef from "unwrapScopeFromWeakRef" /* 696 */;
 import _mod698 from "module_698" /* 698 */;
 import MAX_BAGGAGE_STRING_LENGTH from "MAX_BAGGAGE_STRING_LENGTH" /* 711 */;
 import _mod713 from "module_713" /* 713 */;
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 715 */;
+import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "GEN_AI_CONVERSATION_ID_ATTRIBUTE" /* 715 */;
 import _mod724 from "module_724" /* 724 */;
 import DEFAULT_ENVIRONMENT2 from "DEFAULT_ENVIRONMENT" /* 734 */;
 
@@ -25,10 +25,10 @@ function getDynamicSamplingContextFromSpan(spanContext) {
       value = traceState.get("sentry.sample_rate");
     }
     if (value == null) {
-      value = data[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+      value = data[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
     }
     if (value == null) {
-      value = data[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE];
+      value = data[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE];
     }
     if (rootSpan[_frozenDsc]) {
       let tmp23 = typeof value !== "number";
@@ -75,7 +75,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         if (tmp14) {
           obj2.transaction = description;
         }
-        tmp14 = "url" !== data[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
+        tmp14 = "url" !== data[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
         if (tmpResult10.hasSpansEnabled()) {
           const _String = String;
           obj2.sampled = String(spanToJSON.spanIsSampled(rootSpan));

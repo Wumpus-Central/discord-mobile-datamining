@@ -1,12 +1,15 @@
 // === Module 5242: ? ===
 
 // Module 5242
-import baseGetAllKeys from "baseGetAllKeys" /* 668 */;
-import _mod5225 from "module_5225" /* 5225 */;
-import keysIn from "keysIn" /* 5227 */;
+import _process from "_process" /* 539 */;
+import baseUnary from "baseUnary" /* 540 */;
+import baseIsMap from "baseIsMap" /* 5243 */;
 
+const tmp = _process && _process.isMap;
+if (tmp) {
+  let _module = baseUnary(tmp);
+} else {
+  _module = baseIsMap;
+}
 
-export default function getAllKeysIn(arg0) {
-  const tmp = baseGetAllKeys;
-  return tmp(arg0, keysIn, _mod5225);
-};
+export default _module;

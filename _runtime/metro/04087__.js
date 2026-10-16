@@ -1,7 +1,7 @@
 // === Module 4087: ? ===
 
 // Module 4087
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/core/web/SystemTray", scales: [1], hash: "583747ddf8d5f6f15b7529afcdae5252", name: "SystemTray.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb3JlL3dlYi9TeXN0ZW1UcmF5", scales: [1], hash: "1ec4f8fe28585018b82bab9c2ee3e51e", name: "vi.messages.1ec4f8fe28585018b82bab9c2ee3e51e.compiled.messages", type: "jsona" });

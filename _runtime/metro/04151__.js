@@ -1,7 +1,7 @@
 // === Module 4151: ? ===
 
 // Module 4151
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/emojis/default_emojis", scales: [1], hash: "42fa967858ccf5cd0fc49ce9badfefd4", name: "DefaultEmojis.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9lbW9qaXMvZGVmYXVsdF9lbW9qaXM=", scales: [1], hash: "fc533bfe0d0c9f244d2e3fffe603d4d3", name: "vi.messages.fc533bfe0d0c9f244d2e3fffe603d4d3.compiled.messages", type: "jsona" });

@@ -1,7 +1,7 @@
 // === Module 13689: ? ===
 
 // Module 13689
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/images", width: 24, height: 24, scales: [2, 3, 4], hash: "61996c8880b718aa494df1b2d4a258fb", name: "arrow-right", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "6adfcc7a553215ee3085ec15a5a3e3a4", name: "ClockXIcon", type: "png" });

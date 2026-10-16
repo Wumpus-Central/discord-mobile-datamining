@@ -1,11 +1,52 @@
 // === Module 1599: ? ===
 
 // Module 1599
-import NavigationFocusedRouteStateContext from "NavigationFocusedRouteStateContext" /* 1571 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-require = arg1;
+const require = globalThis.__r;
 
-export const useStateForPath = function useStateForPath() {
-  return noop.useContext(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext);
+const require = arg1;
+
+export const usePreventRemove = function usePreventRemove(stateFromStores, arg1) {
+  _require = stateFromStores;
+  importDefault = arg1;
+  const first = navigation(key.useState(() => stateFromStores(first[2]).nanoid()), 1)[0];
+  navigation = require("module_1548").useNavigation();
+  let obj = require("module_1548");
+  key = require("module_1545").useRoute().key;
+  const obj2 = require("module_1545");
+  const preventRemoveContext = require("module_1600").usePreventRemoveContext();
+  const setPreventRemove = preventRemoveContext.setPreventRemove;
+  const notifyPreventRemove = preventRemoveContext.notifyPreventRemove;
+  const items = [setPreventRemove, first, key, stateFromStores];
+  const insertionEffect = key.useInsertionEffect(() => {
+    setPreventRemove(first, key, closure_0);
+    return () => {
+      setPreventRemove(first, key, false);
+    };
+  }, items);
+  const items1 = [first, key, stateFromStores, notifyPreventRemove];
+  const effect = key.useEffect(() => {
+    notifyPreventRemove();
+    return () => {
+      notifyPreventRemove();
+    };
+  }, items1);
+  const tmp6 = require("module_1527")((preventDefault) => {
+    if (closure_0) {
+      preventDefault.preventDefault();
+      const obj = { data: preventDefault.data };
+      closure_1(obj);
+    }
+  });
+  closure_7 = tmp6;
+  const items2 = [navigation, tmp6];
+  const effect1 = key.useEffect(() => {
+    let addListenerResult;
+    if (navigation != null) {
+      addListenerResult = navigation.addListener("beforeRemove", closure_7);
+    }
+    return addListenerResult;
+  }, items2);
 };

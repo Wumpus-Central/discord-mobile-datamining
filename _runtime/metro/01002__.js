@@ -2,15 +2,16 @@
 
 // Module 1002
 const require = arg1;
-let dependencyMap = arg6;
-function processEvent(arg0, arg1) {
+const dependencyMap = arg6;
+function processEvent(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return fn(this, undefined, undefined, function*() {
-    if (c6 === 2) {
-      c6 = 3;
+  closure_2 = arg2;
+  return closure_2(this, undefined, undefined, function*() {
+    if (c4 === 2) {
+      c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -21,18 +22,16 @@ function processEvent(arg0, arg1) {
       }
     } else {
       try {
-        c6 = 2;
-        if (0 === c5) {
+        c4 = 2;
+        if (0 === c3) {
           if (arg0 === 1) {
-            c6 = 3;
+            c4 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
+            c4 = 3;
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            closure_2 = tmp3;
-            dependencyMap = tmp7;
             closure_129_0 = undefined;
             const exception = value.exception;
             let values;
@@ -43,41 +42,49 @@ function processEvent(arg0, arg1) {
             }
             if (values) {
               if (value.exception.values.length > 0) {
-                closure_129_0 = null;
-                c4 = 1;
-                const NATIVE = value(877).NATIVE;
-                c5 = 2;
-                c6 = 1;
-                const obj4 = { value: NATIVE.fetchViewHierarchy(), done: false };
-                return obj4;
+                options = tmp5.getOptions();
+                const beforeScreenshot = options.beforeScreenshot;
+                if (null !== beforeScreenshot) {
+                  if (undefined !== beforeScreenshot) {
+                    const call = beforeScreenshot.call;
+                    if (typeof call === "unknown") {
+                      let beforeScreenshotResult = beforeScreenshot(tmp25, tmp2);
+                    } else {
+                      beforeScreenshotResult = call(tmp24, tmp25, tmp2);
+                    }
+                    tmp24 = options;
+                  }
+                }
+                if (false !== undefined) {
+                  const NATIVE = value(tmp2[0]).NATIVE;
+                  c3 = 1;
+                  c4 = 1;
+                  const obj4 = { value: NATIVE.captureScreenshot(), done: false };
+                  return obj4;
+                }
               }
             }
-            c6 = 3;
+            c4 = 3;
             const obj5 = { value, done: true };
             return obj5;
           }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
-          if (1 === tmp7) {
-            c4 = 0;
-            closure_129_1 = closure_3;
-            const debug = value(693).debug;
-            debug.error("Failed to get view hierarchy from native.", closure_129_1);
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            closure_129_0 = value;
-            c4 = 0;
-          }
+          closure_129_0 = value;
+          let tmp7 = closure_129_0;
           if (closure_129_0) {
-            const obj6 = { filename: "view-hierarchy.json", contentType: "application/json", attachmentType: "event.view_hierarchy", data: closure_129_0 };
-            const items = [obj6];
-            value = 1;
+            tmp7 = closure_129_0.length > 0;
+          }
+          if (tmp7) {
+            value = 0;
+            const items = [];
+            value = HermesBuiltin.arraySpread(closure_129_0, 0);
             let attachments;
             if (null != closure_130_1) {
               attachments = closure_130_1.attachments;
@@ -88,18 +95,13 @@ function processEvent(arg0, arg1) {
             value = HermesBuiltin.arraySpread(attachments, value);
             closure_130_1.attachments = items;
           }
-          c6 = 3;
-          const obj7 = { value: closure_130_0, done: true };
-          return obj7;
+          c4 = 3;
+          const obj = { value: closure_130_0, done: true };
+          return obj;
         }
-      } catch (tmp33) {
-        closure_3 = tmp33;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp33;
-        } else {
-          c5 = tmp;
-        }
+      } catch (tmp31) {
+        c4 = tmp;
+        throw tmp31;
       }
     }
   });
@@ -173,7 +175,7 @@ if (!fn) {
 }
 
 export () => ({
-  name: "ViewHierarchy",
+  name: "Screenshot",
   setupOnce() {
 
   },

@@ -1,44 +1,35 @@
 // === Module 4713: ? ===
 
 // Module 4713
-import module_4714 from "module_4714" /* 4714 */;
-import module_4715 from "module_4715" /* 4715 */;
-import module_4716 from "module_4716" /* 4716 */;
-import date_mod from "module_4717" /* 4717 */;
-import date_mod from "module_4718" /* 4718 */;
+import module_4260_mod from "module_4260" /* 4260 */;
 
-if (!module_4714) {
-  const obj = { default: module_4714 };
+let module_4260 = module_4260_mod;
+if (!module_4260) {
+  const obj = { default: module_4260 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4714;
+  tmp3 = module_4260;
 }
-if (!module_4715) {
-  const obj2 = { default: module_4715 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4715;
+function checkWeek(getTime, getTime2, arg2) {
+  let str = "eeee p";
+  if (!module_4260.default(getTime, getTime2, arg2)) {
+    const time = getTime.getTime();
+    let str2 = "'\u4E0A\u4E2A'eeee p";
+    if (time > getTime2.getTime()) {
+      str2 = "'\u4E0B\u4E2A'eeee p";
+    }
+    str = str2;
+  }
+  return str;
 }
-if (!module_4716) {
-  const obj3 = { default: module_4716 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4716;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+module_4260 = tmp3;
+let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
 
-export default { code: "zh-TW", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_1[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
+};
 export default exports.default;

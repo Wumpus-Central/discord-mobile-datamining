@@ -1,7 +1,7 @@
 // === Module 14520: ? ===
 
 // Module 14520
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 88, height: 40, scales: [2, 3], hash: "bb1baaeee62e8a609680d1082f363744", name: "img_gifting_empty", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 20, height: 20, scales: [2, 3], hash: "fb3286cfe401333b68936fe15653c8b9", name: "role", type: "png" });

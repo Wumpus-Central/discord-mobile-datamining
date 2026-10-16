@@ -1,23 +1,52 @@
 // === Module 1772: ? ===
 
 // Module 1772
-import startObservingProgress from "startObservingProgress" /* 1692 */;
+import module_1661 from "module_1661" /* 1661 */;
 
-const require = globalThis.__r;
+let closure_0 = require;
+let closure_1 = dependencyMap;
+if (module_1661.shouldBeUseWeb()) {
+  let fn = function t() {
 
-for (const key10015 in require("BaseAnimationBuilder")) {
-  arg5[key10015] = require("BaseAnimationBuilder")[key10015];
-  continue;
+  };
+} else {
+  closure_0 = [];
+  closure_1 = [];
+  let obj = {
+    update(arg0, arg1) {
+        if (arg1) {
+          closure_1.push(arg0);
+        } else {
+          closure_0.push(arg0);
+        }
+        if (closure_0.length + closure_1.length === 1) {
+          const self = this;
+          if (obj.isFabric()) {
+            self.flush();
+          } else {
+            const _setImmediate = setImmediate;
+            setImmediate(self.flush);
+          }
+          obj = closure_0(closure_1[0]);
+        }
+      },
+    flush() {
+        const result = closure_0(closure_1[1]).configureLayoutAnimationBatch(closure_0.concat(closure_1));
+        closure_0.length = 0;
+        closure_1.length = 0;
+      }
+  };
+  fn = function t(viewTag, type, arg2, sharedTransitionTag, arg4) {
+    obj = { viewTag, type, config: null, sharedTransitionTag: null };
+    let shareableCloneRecursive;
+    if (arg2) {
+      shareableCloneRecursive = closure_0(closure_1[1]).makeShareableCloneRecursive(arg2);
+      const obj2 = closure_0(closure_1[1]);
+    }
+    obj.config = shareableCloneRecursive;
+    obj.sharedTransitionTag = sharedTransitionTag;
+    return obj.update(obj, arg4);
+  };
 }
-for (const key10019 in require("module_1773")) {
-  arg5[key10019] = require("module_1773")[key10019];
-  continue;
-}
-for (const key10023 in require("module_1784")) {
-  arg5[key10023] = require("module_1784")[key10023];
-  continue;
-}
-for (const key10027 in require("ProgressTransitionManager")) {
-  arg5[key10027] = require("ProgressTransitionManager")[key10027];
-  continue;
-}
+
+export const updateLayoutAnimations = fn;

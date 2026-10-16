@@ -2,9 +2,7 @@
 
 // Module 8034
 import _mod8035 from "module_8035" /* 8035 */;
-import _mod8036 from "module_8036" /* 8036 */;
 import _mod8037 from "module_8037" /* 8037 */;
-import _mod8038 from "module_8038" /* 8038 */;
 
 const self = this;
 let self2 = this;
@@ -43,9 +41,7 @@ if (self2) {
   }
   const _Object2 = Object;
   fn(_mod8035, exports);
-  fn(_mod8036, exports);
   fn(_mod8037, exports);
-  fn(_mod8038, exports);
 } else {
   let _Object = Object;
 }

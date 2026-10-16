@@ -1,7 +1,7 @@
 // === Module 4028: ? ===
 
 // Module 4028
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX21vZGU=", scales: [1], hash: "a2fa35cf61e601a9c076ce460c8d7520", name: "cs.messages.a2fa35cf61e601a9c076ce460c8d7520.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/riot_credit_campaign", scales: [1], hash: "e3268bd141917880c9b07e45ce47ffee", name: "RiotCreditCampaign.compiled.messages", type: "jsona" });

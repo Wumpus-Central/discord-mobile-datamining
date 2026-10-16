@@ -1,18 +1,24 @@
 // === Module 15017: ? ===
 
 // Module 15017
-import _mod15010 from "module_15010" /* 15010 */;
-
-
-export default (arg0, arg1) => {
-  try {
-    const tmp8 = new _mod15010(arg0, arg1);
-    let str = tmp8.range;
-    if (!str) {
-      str = "*";
+if (typeof process === "object") {
+  const _process3 = process;
+  if (process.env) {
+    const _process = process;
+    if (process.env.NODE_DEBUG) {
+      const _process2 = process;
+      if (obj.test(process.env.NODE_DEBUG)) {
+        let fn = () => {
+          const items = ["SEMVER"];
+          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
+          return console.error.apply(items);
+        };
+      }
+      module.exports = fn;
+      obj = /\bsemver\b/i;
     }
-    return str;
-  } catch (err) {
-    return null;
   }
+}
+fn = () => {
+
 };

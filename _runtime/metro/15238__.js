@@ -1,11 +1,8 @@
 // === Module 15238: ? ===
 
 // Module 15238
+import _mod15307 from "module_15307" /* 15307 */;
+import module_15239 from "module_15239" /* 15239 */;
 
-export default (arg0) => {
-  try {
-    return String(arg0);
-  } catch (err) {
-    return "Object";
-  }
-};
+
+export default _mod15307.Object.assign;

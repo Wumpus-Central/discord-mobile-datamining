@@ -1,7 +1,7 @@
 // === Module 1443: ? ===
 
 // Module 1443
-import registerAsset from "module_1132" /* 1132 */;
+import registerAsset from "module_1134" /* 1134 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/group_dms", width: 96, height: 96, scales: [1], hash: "f7e38ac976a2a696161c923502a8345b", name: "icon6", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/group_dms", width: 96, height: 96, scales: [1], hash: "4aac976bd30a4f0cedf52ece91b5ef7b", name: "icon4", type: "png" });

@@ -2,4 +2,4 @@
 
 // Module 1323
 
-export default Error;
+export default Function.prototype.call;

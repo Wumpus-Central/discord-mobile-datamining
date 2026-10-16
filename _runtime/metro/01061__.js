@@ -1,15 +1,38 @@
 // === Module 1061: ? ===
 
 // Module 1061
-import _mod17 from "module_17" /* 17 */;
-import _mod878 from "module_878" /* 878 */;
+import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 692 */;
+import _mod879 from "module_879" /* 879 */;
 
-const Platform = _mod17.Platform;
+require = arg1;
+const dependencyMap = arg6;
 
-export const shouldEnableNativeNagger = function shouldEnableNativeNagger(enableNativeNagger) {
-  let tmp = enableNativeNagger;
-  if (typeof enableNativeNagger !== "boolean") {
-    tmp = !_mod878.isExpoGo();
+export const createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalReleaseConstants() {
+  const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
+  if (SENTRY_RELEASE) {
+    ({ name, version } = SENTRY_RELEASE);
+    if (name) {
+      if (version) {
+        const _HermesInternal = HermesInternal;
+        return "" + name + "@" + version;
+      }
+    }
   }
-  return tmp;
+};
+export const getDefaultRelease = function getDefaultRelease() {
+  if (!obj.notWeb()) {
+    const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
+    let combined;
+    if (SENTRY_RELEASE) {
+      ({ name, version } = SENTRY_RELEASE);
+      if (name) {
+        if (version) {
+          const _HermesInternal = HermesInternal;
+          combined = "" + name + "@" + version;
+        }
+      }
+    }
+    return combined;
+  }
+  obj = _mod879;
 };

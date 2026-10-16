@@ -1,65 +1,172 @@
 // === Module 1804: ? ===
 
 // Module 1804
-import noop from "module_19" /* 19 */;
+import _mod1669 from "module_1669" /* 1669 */;
+import _mod1683 from "module_1683" /* 1683 */;
 
-({ useEffect: c2, useRef: c3 } = noop);
-let closure_4 = { code: "function pnpm_useAnimatedKeyboardTs1(state,height){const{keyboardEventData}=this.__closure;keyboardEventData.state.value=state;keyboardEventData.height.value=height;}" };
-let closure_5 = { code: "function pnpm_useAnimatedKeyboardTs2(state,height){const{_keyboardEventData}=this.__closure;_keyboardEventData.state.value=state;_keyboardEventData.height.value=height;}" };
-
-export const useAnimatedKeyboard = function useAnimatedKeyboard() {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = { isStatusBarTranslucentAndroid: "Array", isNavigationBarTranslucentAndroid: "test" };
+require = arg1;
+const dependencyMap = arg6;
+function isAnimated(onFrame) {
+  if (Array.isArray(onFrame)) {
+    let someResult = onFrame.some(require);
+  } else {
+    someResult = typeof onFrame === "object";
+    if (typeof onFrame === "object") {
+      someResult = null !== onFrame;
+    }
+    if (someResult) {
+      let someResult1 = undefined !== onFrame.onFrame;
+      if (!someResult1) {
+        const _Object = Object;
+        const values = Object.values(onFrame);
+        someResult1 = values.some(require);
+      }
+      someResult = someResult1;
+    }
   }
-  let ref2;
-  let obj2;
-  const tmp = ref2(null);
-  dependencyMap = tmp;
-  const tmp2 = ref2(-1);
-  closure_2 = tmp2;
-  const tmp3 = ref2(false);
-  ref2 = tmp3;
-  if (null === tmp.current) {
-    obj2 = { state: obj(1700).makeMutable(obj(1681).KeyboardState.UNKNOWN), height: null };
-    const obj3 = obj(1700);
-    obj2.height = obj(1700).makeMutable(0);
-    const obj4 = obj(1700);
-    let fn = function c(value, value2) {
-      obj2.state.value = value;
-      obj2.height.value = value2;
+  return someResult;
+}
+let closure_129_0 = isAnimated;
+isAnimated.__closure = {};
+isAnimated.__workletHash = 4296700641760;
+isAnimated.__initData = { code: "function isAnimated_Pnpm_utilsTs1(prop){const isAnimated_Pnpm_utilsTs1=this._recur;if(Array.isArray(prop)){return prop.some(isAnimated_Pnpm_utilsTs1);}else if(typeof prop==='object'&&prop!==null){if(prop.onFrame!==undefined){return true;}else{return Object.values(prop).some(isAnimated_Pnpm_utilsTs1);}}return false;}" };
+function shallowEqual(c8, arg1) {
+  const keys = Object.keys(c8);
+  if (keys.length !== Object.keys(arg1).length) {
+    return false;
+  } else {
+    let num = 0;
+    if (0 < keys.length) {
+      while (c8[keys[num]] === arg1[keys[num]]) {
+        num = num + 1;
+      }
+      return false;
+    }
+    return true;
+  }
+}
+shallowEqual.__closure = {};
+shallowEqual.__workletHash = 6945711106539;
+shallowEqual.__initData = { code: "function shallowEqual_Pnpm_utilsTs2(a,b){const aKeys=Object.keys(a);const bKeys=Object.keys(b);if(aKeys.length!==bKeys.length){return false;}for(let i=0;i<aKeys.length;i++){if(a[aKeys[i]]!==b[aKeys[i]]){return false;}}return true;}" };
+function validateAnimatedStyles(obj) {
+  if (typeof obj !== "object") {
+    const _HermesInternal = HermesInternal;
+    const reanimatedError = new _mod1669.ReanimatedError("`useAnimatedStyle` has to return an object, found " + typeof obj + " instead.");
+    throw reanimatedError;
+  } else {
+    const _Array = Array;
+    if (Array.isArray(obj)) {
+      const reanimatedError1 = new _mod1669.ReanimatedError("`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.");
+      throw reanimatedError1;
+    }
+  }
+}
+validateAnimatedStyles.__closure = {};
+validateAnimatedStyles.__workletHash = 9250446401049;
+validateAnimatedStyles.__initData = { code: "function validateAnimatedStyles_Pnpm_utilsTs3(styles){if(typeof styles!=='object'){throw new ReanimatedError(\"`useAnimatedStyle` has to return an object, found \"+typeof styles+\" instead.\");}else if(Array.isArray(styles)){throw new ReanimatedError('`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.');}}" };
+
+export const buildWorkletsHash = function buildWorkletsHash(items1) {
+  const values = Object.values(items1);
+  return values.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), "");
+};
+export const buildDependencies = function buildDependencies(arr, memoizedGestureCallbacks) {
+  const values = Object.values(memoizedGestureCallbacks);
+  const found = values.filter((item) => undefined !== item);
+  let tmp2 = found;
+  if (arr) {
+    const _Object = Object;
+    const values2 = Object.values(found);
+    arr = arr.push(values2.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), ""));
+    tmp2 = arr;
+  }
+  return tmp2;
+};
+export const areDependenciesEqual = function areDependenciesEqual(dependencies, savedDependencies) {
+  if (typeof Object.is === "function") {
+    const _Object = Object;
+  } else {
+    is = function is(arg0, arg1) {
+      let tmp = arg0 === arg1;
+      if (tmp) {
+        let tmp2 = 0 !== arg0;
+        if (!tmp2) {
+          tmp2 = 1 / arg0 === 1 / arg1;
+        }
+        tmp = tmp2;
+      }
+      if (!tmp) {
+        const _Number = Number;
+        let isNaNResult = Number.isNaN(arg0);
+        if (isNaNResult) {
+          const _Number2 = Number;
+          isNaNResult = Number.isNaN(arg1);
+        }
+        tmp = isNaNResult;
+      }
+      return tmp;
     };
-    const obj6 = { keyboardEventData: obj2 };
-    fn.__closure = obj6;
-    fn.__workletHash = 4393537867728;
-    fn.__initData = obj2;
-    tmp2.current = obj(1700).subscribeForKeyboardEvents(fn, obj);
-    tmp.current = obj2;
-    tmp3.current = true;
-    const obj5 = obj(1700);
   }
-  closure_2(() => {
-    if (false === ref2.current) {
-      if (null !== ref.current) {
-        const current = ref.current;
-        obj = obj(ref[1]);
-        const fn = function u(value, value2) {
-          current.state.value = value;
-          current.height.value = value2;
-        };
-        obj2 = { _keyboardEventData: current };
-        fn.__closure = obj2;
-        fn.__workletHash = 5041909921996;
-        fn.__initData = __initData;
-        ref.current = obj.subscribeForKeyboardEvents(fn, current);
-        tmp.current = true;
+  let flag = false;
+  if (dependencies) {
+    flag = false;
+    if (savedDependencies) {
+      flag = false;
+      if (savedDependencies.length === dependencies.length) {
+        let num = 0;
+        flag = true;
+        if (0 < savedDependencies.length) {
+          while (true) {
+            let tmp2 = dependencies[num];
+            let tmp3 = savedDependencies[num];
+            if (is(tmp2, tmp3)) {
+              let sum = num + 1;
+              num = sum;
+              flag = true;
+              if (sum >= savedDependencies.length) {
+                break;
+              }
+            } else {
+              let obj = _mod1683;
+              flag = false;
+              if (!obj.isWorkletFunction(tmp2)) {
+                break;
+              } else {
+                let tmp5Result = _mod1683;
+                flag = false;
+                if (!tmp5Result.isWorkletFunction(tmp3)) {
+                  break;
+                } else {
+                  let __closure = tmp2;
+                  let __closure2 = tmp3;
+                  let flag2 = false;
+                  if (tmp2.__workletHash === tmp3.__workletHash) {
+                    let _Object2 = Object;
+                    let keys = Object.keys(tmp2.__closure);
+                    let _Object3 = Object;
+                    let tmp7 = keys.length === Object.keys(tmp3.__closure).length && keys.every((item) => {
+                      let tmp2 = item in __closure2.__closure;
+                      if (tmp2) {
+                        tmp2 = __closure.__closure[item] === tmp.__closure[item];
+                      }
+                      return tmp2;
+                    });
+                    flag2 = tmp7;
+                  }
+                  flag = false;
+                  if (!flag2) {
+                    break;
+                  }
+                }
+              }
+            }
+            break;
+          }
+        }
       }
     }
-    return () => {
-      obj = obj(closure_1[1]);
-      const result = obj.unsubscribeFromKeyboardEvents(ref.current);
-      ref2.current = false;
-    };
-  }, []);
-  return tmp.current;
+  }
+  return flag;
 };
+export { isAnimated };
+export { shallowEqual };
+export { validateAnimatedStyles };

@@ -1,7 +1,7 @@
 // === Module 690: symbolicateStackTrace ===
 
 // Module 690 (symbolicateStackTrace)
-import TurboModuleRegistry from "TurboModuleRegistry" /* 873 */;
+import TurboModuleRegistry from "TurboModuleRegistry" /* 874 */;
 
 require = arg1;
 const dependencyMap = arg6;

@@ -3,18 +3,25 @@
 // Module 69 (RN$LegacyInterop_UIManager_getConstants)
 import nullthrowsDefault from "nullthrows" /* 70 */;
 
+let c0 = arg1;
+let c1 = importDefault;
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
 let dependencyMap = {};
-const f19455 = () => {
+const f19500 = () => {
 
 };
-({ RN$LegacyInterop_UIManager_getConstantsForViewManager: closure_7, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8 } = global);
-let c0 = false;
-let c1 = null;
-const f82162 = () => {
+({ RN$LegacyInterop_UIManager_getConstantsForViewManager: closure_7, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8, RN$discordUiManagerOptimization } = global);
+if (RN$discordUiManagerOptimization == null) {
+  RN$discordUiManagerOptimization = 0;
+}
+let closure_9 = tmp2;
+c0 = false;
+c1 = null;
+const f82426 = () => {
 
 };
+dependencyMap = {};
 let obj = {};
 const merged = Object.assign({
   measure(arg0, arg1) {
@@ -47,12 +54,12 @@ const merged1 = Object.assign({
   },
   getDefaultEventTypes() {
     if (closure_1_8) {
-      if (typeof f82162 === "function") {
-        if (!closure_137_0) {
-          closure_137_1 = _null(70)(closure_1_8)();
-          closure_137_0 = true;
+      if (typeof f82426 === "function") {
+        if (!closure_138_0) {
+          closure_138_1 = _null(70)(closure_1_8)();
+          closure_138_0 = true;
         }
-        let items = closure_137_1;
+        let items = closure_138_1;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -117,17 +124,26 @@ const merged2 = Object.assign({
 });
 obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f19455 === "function") {
+    if (closure_9) {
+      let getConstantsForViewManager2 = null == dependencyMap[arg0];
+      if (getConstantsForViewManager2) {
+        getConstantsForViewManager2 = obj.getConstantsForViewManager;
+      }
+      if (getConstantsForViewManager2) {
+        dependencyMap[arg0] = obj.getConstantsForViewManager(arg0);
+      }
+      return dependencyMap[arg0];
+    } else if (typeof f19500 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(tmp)();
         c3 = true;
       }
-      let getConstantsForViewManager = !tmp15;
+      let getConstantsForViewManager = !tmp16;
       if (!dependencyMap[arg0]) {
         getConstantsForViewManager = obj.getConstantsForViewManager;
       }
       if (getConstantsForViewManager) {
-        tmp14[arg0] = obj.getConstantsForViewManager(arg0);
+        tmp15[arg0] = obj.getConstantsForViewManager(arg0);
       }
       return dependencyMap[arg0];
     } else {
@@ -154,7 +170,7 @@ obj.hasViewManagerConfig = function hasViewManagerConfig(arg0) {
 };
 obj.getConstants = function getConstants() {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f19455 === "function") {
+    if (typeof f19500 === "function") {
       if (!c3) {
         closure_4 = _null(70)(tmp)();
         c3 = true;
@@ -226,14 +242,18 @@ obj.configureNextLayoutAnimation = function configureNextLayoutAnimation(duratio
   obj = c0(71);
   const result = tmp(c0(71).getFabricUIManager()).configureNextLayoutAnimation(duration, onAnimationComplete, fn);
 };
+let tmp6 = RN$LegacyInterop_UIManager_getConstants;
 if (RN$LegacyInterop_UIManager_getConstants) {
+  tmp6 = !tmp2;
+}
+if (tmp6) {
   if (!c3) {
     dependencyMap = nullthrowsDefault(RN$LegacyInterop_UIManager_getConstants)();
     c3 = true;
   }
   const keys = Object.keys(dependencyMap);
   const item = keys.forEach((item) => {
-    if (typeof f19455 === "function") {
+    if (typeof f19500 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(RN$LegacyInterop_UIManager_getConstants)();
         c3 = true;
