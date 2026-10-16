@@ -1,5 +1,5 @@
 // _runtime/metro/08399__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "50398ad483a7c69d1d35b3cb9c9b7bde",
-  name: "ForumSpoilerIcon",
+  hash: "cb3e9c62b8b2529f17e6e1b9b76c6ce0",
+  name: "StageLockIcon",
   type: "png",
 });

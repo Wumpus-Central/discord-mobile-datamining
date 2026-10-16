@@ -1,13 +1,13 @@
 // _runtime/metro/01448__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/auto_moderation",
-  width: 256,
-  height: 256,
+  httpServerLocation: "/assets/images",
+  width: 498,
+  height: 498,
   scales: [1],
-  hash: "424407a78216a455f8fc1ac2080855a1",
-  name: "auto_moderation_avatar",
+  hash: "df3228db1e67e406cba743551d2b055e",
+  name: "clyde-avatar",
   type: "png",
 });

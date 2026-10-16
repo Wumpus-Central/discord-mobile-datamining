@@ -1,13 +1,13 @@
 // _runtime/metro/11865__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 128,
+  height: 128,
   scales: [2, 3],
-  hash: "fb5649f1f88852917c191effae556b38",
-  name: "BillIcon",
+  hash: "9ba5a3a00b166d9fbfaee0f42d9a0d05",
+  name: "app_dock_no_permissions_light",
   type: "png",
 });

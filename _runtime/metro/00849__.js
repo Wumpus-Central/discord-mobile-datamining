@@ -1,1970 +1,1250 @@
 // _runtime/metro/00849__.js
-import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "../00834_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
-import truncateTextByBytes from "../00837_truncateTextByBytes.js";
-import contentUnionToMessages from "../00851_contentUnionToMessages.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import SPAN_STATUS_ERROR from "../00716_SPAN_STATUS_ERROR.js";
+import captureCheckIn from "../00745_captureCheckIn.js";
+import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "../00836_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
+import extractSystemInstructions from "../00837_extractSystemInstructions.js";
+import _awaitAsyncGenerator from "../00843__awaitAsyncGenerator.js";
+import AsyncGenerator from "../00845_AsyncGenerator.js";
 
-const require = globalThis.__r;
-
-function addPrivateRequestAttributes(setAttributes, config) {
-  let systemInstruction = "config" in config && config.config && typeof config.config === "object";
-  if (systemInstruction) {
-    systemInstruction = "systemInstruction" in config.config;
+function AsyncFromSyncIterator(arg0) {
+  class AsyncFromSyncIterator {
+    constructor(arg0) {
+      return;
+    }
   }
-  if (systemInstruction) {
-    systemInstruction = config.config.systemInstruction;
-  }
-  const items = [];
-  if (systemInstruction) {
-    const push = items.push;
-    const items1 = [];
-    HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.config.systemInstruction, "system"), 0);
-    HermesBuiltin.apply(items1, items);
-  }
-  if ("history" in config) {
-    const push2 = items.push;
-    const items2 = [];
-    HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.history, "user"), 0);
-    HermesBuiltin.apply(items2, items);
-  }
-  if ("contents" in config) {
-    const push3 = items.push;
-    const items3 = [];
-    HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.contents, "user"), 0);
-    HermesBuiltin.apply(items3, items);
-  }
-  if ("message" in config) {
-    const push4 = items.push;
-    const items4 = [];
-    HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.message, "user"), 0);
-    HermesBuiltin.apply(items4, items);
-  }
-  if (tmp33) {
-    const obj5 = {};
-    obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = items.length;
-    const _JSON = JSON;
-    obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(truncateTextByBytes.truncateGenAiMessages(items));
-    setAttributes.setAttributes(obj5);
-  }
-  tmp33 = Array.isArray(items) && items.length;
+  AsyncFromSyncIterator.prototype = {
+    s: null,
+    n: null,
+    next() {
+      const n = this.n;
+      const apply = n.apply;
+      const s = this.s;
+      if (typeof apply === "unknown") {
+        let iter = HermesBuiltin.applyArguments(s);
+      } else {
+        iter = apply(s, arguments);
+      }
+      if (Object(iter) !== iter) {
+        const _TypeError = TypeError;
+        const typeError = new TypeError(iter + " is not an object.");
+        let rejectResult = Promise.reject(typeError);
+      } else {
+        const done = iter.done;
+        const resolved = Promise.resolve(iter.value);
+        rejectResult = resolved.then((value) => ({ value, done }));
+      }
+      return rejectResult;
+    },
+    return(value) {
+      const _return = this.s.return;
+      if (undefined === _return) {
+        const obj = { value, done: true };
+        let resolved = Promise.resolve(obj);
+      } else {
+        const apply = _return.apply;
+        const s = tmp.s;
+        if (typeof apply === "unknown") {
+          let iter = HermesBuiltin.applyArguments(s);
+        } else {
+          iter = apply(s, arguments);
+        }
+        const _Object = Object;
+        if (Object(iter) !== iter) {
+          const _TypeError = TypeError;
+          const typeError = new TypeError(iter + " is not an object.");
+          resolved = Promise.reject(typeError);
+        } else {
+          const done = iter.done;
+          const resolved1 = Promise.resolve(iter.value);
+          resolved = resolved1.then((value) => ({ value, done }));
+        }
+      }
+      return resolved;
+    },
+    throw(arg0) {
+      const _return = this.s.return;
+      if (undefined === _return) {
+        let rejectResult = Promise.reject(arg0);
+      } else {
+        const apply = _return.apply;
+        const s = tmp.s;
+        if (typeof apply === "unknown") {
+          let iter = HermesBuiltin.applyArguments(s);
+        } else {
+          iter = apply(s, arguments);
+        }
+        const _Object = Object;
+        if (Object(iter) !== iter) {
+          const _TypeError = TypeError;
+          const typeError = new TypeError(iter + " is not an object.");
+          rejectResult = Promise.reject(typeError);
+        } else {
+          const done = iter.done;
+          const resolved = Promise.resolve(iter.value);
+          rejectResult = resolved.then((value) => ({ value, done }));
+        }
+      }
+      return rejectResult;
+    },
+  };
+  return new AsyncFromSyncIterator(arg0);
 }
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-
-export const extractModel = function extractModel(model, model2) {
-  if ("model" in model) {
-    if (typeof model.model === "string") {
-      return model.model;
-    }
-  }
-  if (model2) {
-    if (typeof model2 === "object") {
-      if ("model" in model2) {
-        if (typeof model2.model === "string") {
-          return model2.model;
-        }
+function processEvent(type, finishReasons, arg2, setStatus) {
+  if (type) {
+    if (typeof type === "object") {
+      let flag = "type" in type && typeof type.type === "string";
+      if (flag) {
+        flag = "error" === type.type;
       }
-      if ("modelVersion" in model2) {
-        if (typeof model2.modelVersion === "string") {
-          return model2.modelVersion;
+      if (flag) {
+        let obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: null };
+        const error = type.error;
+        let str2;
+        if (error != null) {
+          str2 = error.type;
         }
+        if (str2 == null) {
+          str2 = "internal_error";
+        }
+        obj.message = str2;
+        setStatus.setStatus(obj);
+        let obj2 = { mechanism: { handled: false, type: "auto.ai.anthropic.anthropic_error" } };
+        captureCheckIn.captureException(type.error, obj2);
+        flag = true;
+        const tmp2Result = captureCheckIn;
       }
-    }
-  }
-  return "unknown";
-};
-export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(arg0, arg1) {
-  const client = require("00724__.js").getClient();
-  let sendDefaultPii;
-  if (client != null) {
-    sendDefaultPii = client.getOptions().sendDefaultPii;
-  }
-  const BooleanResult = Boolean(sendDefaultPii);
-  obj2 = { recordInputs: BooleanResult, recordOutputs: BooleanResult };
-  const merged = Object.assign(arg1);
-  _require = "";
-  const proxy = new Proxy(arg0, {
-    get(self, arg1, arg2) {
-      let value = Reflect.get(self, arg1, arg2);
-      let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
-      if (typeof value === "function") {
-        if (tmpResult.shouldInstrument(methodPath)) {
-          if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
-            dependencyMap = self;
-            closure_2 = dependencyMap;
-            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-            let _Proxy3 = Proxy;
-            let obj = {
-              apply(arr, arg1, arg2) {
-                      closure_0 = arr;
-                      dependencyMap = arg2;
-                      const first = arg2[0];
-                      const obj = {};
-                      obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
-                      obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
-                      if (first) {
-                        if ("model" in first) {
-                          if (typeof first.model === "string") {
-                            let str5 = first.model;
-                          }
-                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
-                          if ("config" in first) {
-                            if (typeof first.config === "object") {
-                              if (first.config) {
-                                const config = first.config;
-                                let tmp7 = "temperature" in config;
-                                if (tmp7) {
-                                  tmp7 = typeof config.temperature === "number";
-                                }
-                                let obj3 = {};
-                                if (tmp7) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
-                                }
-                                if (tmp8) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
-                                }
-                                if (tmp9) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
-                                }
-                                if (tmp10) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
-                                }
-                                if (tmp11) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
-                                }
-                                if (tmp12) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
-                                }
-                                const merged = Object.assign(obj, obj3);
-                                if ("tools" in config) {
-                                  let _Array = Array;
-                                  if (Array.isArray(config.tools)) {
-                                    const tools = config.tools;
-                                    let _JSON = JSON;
-                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations));
-                                    const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
-                                  }
-                                }
-                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                tmp8 = "topP" in config && typeof config.topP === "number";
-                                tmp9 = "topK" in config && typeof config.topK === "number";
-                              }
-                            }
-                          }
-                        }
-                        str5 = "unknown";
-                        if (tmp3) {
-                          str5 = "unknown";
-                          if (typeof tmp3 === "object") {
-                            if ("model" in tmp3) {
-                              if (typeof tmp3.model === "string") {
-                                str5 = tmp3.model;
-                              }
-                            }
-                            str5 = "unknown";
-                            if ("modelVersion" in tmp3) {
-                              str5 = "unknown";
-                              if (typeof tmp3.modelVersion === "string") {
-                                str5 = tmp3.modelVersion;
-                              }
-                            }
-                          }
-                        }
-                      } else {
-                        let obj4 = {};
-                        if ("model" in obj4) {
-                          if (typeof obj4.model === "string") {
-                            let str2 = obj4.model;
-                          }
-                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
-                        }
-                        str2 = "unknown";
-                        if (tmp3) {
-                          str2 = "unknown";
-                          if (typeof tmp3 === "object") {
-                            if ("model" in tmp3) {
-                              if (typeof tmp3.model === "string") {
-                                str2 = tmp3.model;
-                              }
-                            }
-                            str2 = "unknown";
-                            if ("modelVersion" in tmp3) {
-                              str2 = "unknown";
-                              if (typeof tmp3.modelVersion === "string") {
-                                str2 = tmp3.modelVersion;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      let str15 = obj[tmp4(undefined, tmp5[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
-                      if (str15 == null) {
-                        str15 = "unknown";
-                      }
-                      let obj2 = str(dependencyMap[3]);
-                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
-                      const tmp4Result = str(dependencyMap[3]);
-                      const tmp4Result5 = str(dependencyMap[5]);
-                      const tmp4Result6 = str(dependencyMap[7]);
-                      if (isStreamingMethodResult) {
-                        let obj5 = { name: null, op: null, attributes: null };
-                        const _HermesInternal2 = HermesInternal;
-                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
-                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                        obj5.attributes = obj;
-                        closure_0 = closure_2((_function) => {
-                          c5 = 0;
-                          c6 = 0;
-                          c4 = 0;
-                          return (function*(arg0) {
-                            if (c6 === 2) {
-                              c6 = 3;
-                              throw new TypeError("Generator functions may not be called on executing generators");
-                            } else if (tmp6 === 3) {
-                              if (arg0 === 1) {
-                                throw value;
-                              } else if (arg0 === 2) {
-                                const obj2 = { value, done: true };
-                                return obj2;
-                              } else {
-                                return { value: "IconComponent", done: null };
-                              }
-                            } else {
-                              try {
-                                c6 = 2;
-                                if (0 === c5) {
-                                  if (arg0 === 1) {
-                                    c6 = 3;
-                                    throw value;
-                                  } else if (arg0 === 2) {
-                                    c6 = 3;
-                                    const obj3 = { value, done: true };
-                                    return obj3;
-                                  } else {
-                                    closure_2 = tmp3;
-                                    dependencyMap = tmp7;
-                                    closure_129_0 = _function;
-                                    closure_129_1 = undefined;
-                                    c4 = 1;
-                                    let recordInputs = first.recordInputs;
-                                    if (recordInputs) {
-                                      recordInputs = closure_2;
-                                    }
-                                    if (recordInputs) {
-                                      tmp37(_function, closure_2);
-                                    }
-                                    c5 = 2;
-                                    c6 = 1;
-                                    const obj4 = { value: _function.apply(dependencyMap, dependencyMap), done: false };
-                                    return obj4;
-                                  }
-                                } else if (1 === tmp7) {
-                                  c4 = 0;
-                                  closure_129_2 = tmp37;
-                                  const obj6 = { code: str(dependencyMap[9]).SPAN_STATUS_ERROR, message: "internal_error" };
-                                  closure_129_0.setStatus(obj6);
-                                  const obj7 = { mechanism: null };
-                                  const obj8 = { handled: false, type: "auto.ai.google_genai", data: null };
-                                  const obj9 = { function: _function };
-                                  obj8.data = obj9;
-                                  obj7.mechanism = obj8;
-                                  str(dependencyMap[10]).captureException(closure_129_2, obj7);
-                                  closure_129_0.end();
-                                  throw closure_129_2;
-                                } else if (arg0 === 1) {
-                                  c6 = 3;
-                                  throw value;
-                                } else if (arg0 === 2) {
-                                  c4 = 0;
-                                  c6 = 3;
-                                  const obj10 = { value, done: true };
-                                  return obj10;
-                                } else {
-                                  closure_129_1 = value;
-                                  const _Boolean = Boolean;
-                                  c4 = 0;
-                                  c6 = 3;
-                                  const obj11 = { value: str(dependencyMap[8]).instrumentStream(closure_129_1, closure_129_0, Boolean(first.recordOutputs)), done: true };
-                                  return obj11;
-                                }
-                              } catch (tmp37) {
-                                if (tmp4 === c4) {
-                                  c6 = tmp2;
-                                  throw tmp37;
-                                } else {
-                                  c5 = tmp;
-                                }
-                              }
-                            }
-                          })();
-                        });
-                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
-                          const self = this;
-                          const apply = closure_0.apply;
-                          if (typeof apply === "unknown") {
-                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                          } else {
-                            applyArgumentsResult = apply(self, arguments);
-                          }
-                          return applyArgumentsResult;
-                        });
-                        const tmp4Result7 = tmp4(tmp5[3]);
-                      } else {
-                        const _HermesInternal = HermesInternal;
-                        if (closure_3) {
-                          let combined = concat(finalOperationName, " ", str15, " create");
-                        } else {
-                          combined = concat(finalOperationName, " ", str15);
-                        }
-                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                        startSpanManualResult = tmp4Result6.startSpan(obj6, (_function) => {
-                          if (tmp) {
-                            closure_3(_function, first);
-                          }
-                          return str(dependencyMap[11]).handleCallbackErrors(() => _function.apply(closure_1, dependencyMap), (arg0) => {
-                            const obj2 = { mechanism: null };
-                            const obj3 = { handled: false, type: "auto.ai.google_genai", data: { function: _function } };
-                            obj2.mechanism = obj3;
-                            _function(dependencyMap[10]).captureException(arg0, obj2);
-                          }, () => {
-
-                          }, (modelVersion) => {
-                            if (!closure_3) {
-                              recordOutputs = recordOutputs.recordOutputs;
-                              if (modelVersion) {
-                                if (typeof modelVersion === "object") {
-                                  if (modelVersion.modelVersion) {
-                                    const attr = closure_0.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
-                                  }
-                                  if (modelVersion.usageMetadata) {
-                                    if (typeof modelVersion.usageMetadata === "object") {
-                                      const usageMetadata = modelVersion.usageMetadata;
-                                      if (typeof usageMetadata.promptTokenCount === "number") {
-                                        const obj2 = {};
-                                        obj2[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
-                                        closure_0.setAttributes(obj2);
-                                      }
-                                      if (typeof usageMetadata.candidatesTokenCount === "number") {
-                                        const obj3 = {};
-                                        obj3[str(dependencyMap[1]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = usageMetadata.candidatesTokenCount;
-                                        closure_0.setAttributes(obj3);
-                                      }
-                                      if (typeof usageMetadata.totalTokenCount === "number") {
-                                        const obj4 = {};
-                                        obj4[str(dependencyMap[1]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = usageMetadata.totalTokenCount;
-                                        closure_0.setAttributes(obj4);
-                                      }
-                                    }
-                                  }
-                                  if (recordOutputs) {
-                                    let _Array = Array;
-                                    if (Array.isArray(modelVersion.candidates)) {
-                                      if (modelVersion.candidates.length > 0) {
-                                        const candidates = modelVersion.candidates;
-                                        let mapped = candidates.map(() => { ... });
-                                        let found = mapped.filter(() => { ... });
-                                        if (found.length > 0) {
-                                          const obj5 = {};
-                                          obj5[""(dependencyMap[1]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = found.join("");
-                                          closure_0.setAttributes(obj5);
-                                        }
-                                      }
-                                    }
-                                  }
-                                  if (recordOutputs) {
-                                    if (modelVersion.functionCalls) {
-                                      const functionCalls = modelVersion.functionCalls;
-                                      const _Array2 = Array;
-                                      let isArray = Array.isArray(functionCalls);
-                                      if (isArray) {
-                                        isArray = functionCalls.length > 0;
-                                      }
-                                      if (isArray) {
-                                        const obj6 = {};
-                                        const _JSON = JSON;
-                                        obj6[str(dependencyMap[1]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(functionCalls);
-                                        closure_0.setAttributes(obj6);
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          });
-                        });
-                        const tmp4Result8 = tmp4(tmp5[3]);
-                      }
-                      return startSpanManualResult;
-                    }
-            };
-            let proxy = new Proxy(value, obj);
-            str = proxy;
-            return function instrumentedAndProxiedCreate() {
-              let tmp = str(...HermesBuiltin.copyRestArgs());
-              let proxy = tmp;
-              if (tmp) {
-                proxy = tmp;
-                if (typeof tmp === "object") {
-                  closure_3_0(closure_3_1[2]).CHAT_PATH;
-                  str = undefined;
-                  closure_1 = undefined;
-                  if (str === undefined) {
-                    str = "";
+      if (!flag) {
+        let tmp7 = "message_delta" === type.type && type.usage;
+        if (tmp7) {
+          tmp7 = "output_tokens" in type.usage;
+        }
+        if (tmp7) {
+          tmp7 = typeof type.usage.output_tokens === "number";
+        }
+        if (tmp7) {
+          finishReasons.completionTokens = type.usage.output_tokens;
+        }
+        if (type.message) {
+          const message = type.message;
+          if (message.id) {
+            finishReasons.responseId = message.id;
+          }
+          if (message.model) {
+            finishReasons.responseModel = message.model;
+          }
+          if (message.stop_reason) {
+            finishReasons = finishReasons.finishReasons;
+            finishReasons.push(message.stop_reason);
+          }
+          if (message.usage) {
+            if (typeof message.usage.input_tokens === "number") {
+              finishReasons.promptTokens = message.usage.input_tokens;
+            }
+            if (typeof message.usage.cache_creation_input_tokens === "number") {
+              finishReasons.cacheCreationInputTokens = message.usage.cache_creation_input_tokens;
+            }
+            if (typeof message.usage.cache_read_input_tokens === "number") {
+              finishReasons.cacheReadInputTokens = message.usage.cache_read_input_tokens;
+            }
+          }
+        }
+        if (tmp10) {
+          let tmp11 = "tool_use" !== type.content_block.type;
+          if (tmp11) {
+            tmp11 = "server_tool_use" !== type.content_block.type;
+          }
+          if (!tmp11) {
+            const obj3 = { id: type.content_block.id, name: type.content_block.name, inputJsonParts: [] };
+            finishReasons.activeToolBlocks[type.index] = obj3;
+          }
+        }
+        if ("content_block_delta" === type.type) {
+          if (type.delta) {
+            if (typeof type.index === "number") {
+              if ("partial_json" in type.delta) {
+                if (typeof type.delta.partial_json === "string") {
+                  if (finishReasons.activeToolBlocks[type.index]) {
+                    let inputJsonParts = tmp16.inputJsonParts;
+                    inputJsonParts.push(type.delta.partial_json);
                   }
-                  closure_1 = closure_2_1;
-                  let _Proxy = Proxy;
-                  let obj = {
-                    get(self, arg1, arg2) {
-                          let value = Reflect.get(self, arg1, arg2);
-                          let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
-                          if (typeof value === "function") {
-                            if (tmpResult.shouldInstrument(methodPath)) {
-                              if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
-                                dependencyMap = self;
-                                closure_2 = dependencyMap;
-                                closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                let _Proxy3 = Proxy;
-                                let obj = {
-                                  apply(arr, arg1, arg2) {
-                                          closure_0 = arr;
-                                          dependencyMap = arg2;
-                                          const first = arg2[0];
-                                          const obj = {};
-                                          obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                          obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
-                                          obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                                          const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
-                                          if (first) {
-                                            if ("model" in first) {
-                                              if (typeof first.model === "string") {
-                                                let str5 = first.model;
-                                              }
-                                              obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
-                                              if ("config" in first) {
-                                                if (typeof first.config === "object") {
-                                                  if (first.config) {
-                                                    const config = first.config;
-                                                    let tmp7 = "temperature" in config;
-                                                    if (tmp7) {
-                                                      tmp7 = typeof config.temperature === "number";
-                                                    }
-                                                    let obj3 = {};
-                                                    if (tmp7) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
-                                                    }
-                                                    if (tmp8) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
-                                                    }
-                                                    if (tmp9) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
-                                                    }
-                                                    if (tmp10) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
-                                                    }
-                                                    if (tmp11) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
-                                                    }
-                                                    if (tmp12) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
-                                                    }
-                                                    const merged = Object.assign(obj, obj3);
-                                                    if ("tools" in config) {
-                                                      let _Array = Array;
-                                                      if (Array.isArray(config.tools)) {
-                                                        const tools = config.tools;
-                                                        let _JSON = JSON;
-                                                        obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(() => { ... }));
-                                                        const flatMapResult = tools.flatMap(() => { ... });
-                                                      }
-                                                    }
-                                                    tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                                    tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                                    tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                                    tmp8 = "topP" in config && typeof config.topP === "number";
-                                                    tmp9 = "topK" in config && typeof config.topK === "number";
-                                                  }
-                                                }
-                                              }
-                                            }
-                                            str5 = "unknown";
-                                            if (tmp3) {
-                                              str5 = "unknown";
-                                              if (typeof tmp3 === "object") {
-                                                if ("model" in tmp3) {
-                                                  if (typeof tmp3.model === "string") {
-                                                    str5 = tmp3.model;
-                                                  }
-                                                }
-                                                str5 = "unknown";
-                                                if ("modelVersion" in tmp3) {
-                                                  str5 = "unknown";
-                                                  if (typeof tmp3.modelVersion === "string") {
-                                                    str5 = tmp3.modelVersion;
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          } else {
-                                            let obj4 = {};
-                                            if ("model" in obj4) {
-                                              if (typeof obj4.model === "string") {
-                                                let str2 = obj4.model;
-                                              }
-                                              obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
-                                            }
-                                            str2 = "unknown";
-                                            if (tmp3) {
-                                              str2 = "unknown";
-                                              if (typeof tmp3 === "object") {
-                                                if ("model" in tmp3) {
-                                                  if (typeof tmp3.model === "string") {
-                                                    str2 = tmp3.model;
-                                                  }
-                                                }
-                                                str2 = "unknown";
-                                                if ("modelVersion" in tmp3) {
-                                                  str2 = "unknown";
-                                                  if (typeof tmp3.modelVersion === "string") {
-                                                    str2 = tmp3.modelVersion;
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                          let str15 = obj[tmp4(undefined, tmp5[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
-                                          if (str15 == null) {
-                                            str15 = "unknown";
-                                          }
-                                          let obj2 = str(dependencyMap[3]);
-                                          const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
-                                          const tmp4Result = str(dependencyMap[3]);
-                                          const tmp4Result5 = str(dependencyMap[5]);
-                                          const tmp4Result6 = str(dependencyMap[7]);
-                                          if (isStreamingMethodResult) {
-                                            let obj5 = { name: null, op: null, attributes: null };
-                                            const _HermesInternal2 = HermesInternal;
-                                            obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                            obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                            obj5.attributes = obj;
-                                            closure_0 = closure_2(/* F153580 */ function() { ... });
-                                            let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
-                                            const tmp4Result7 = tmp4(tmp5[3]);
-                                          } else {
-                                            const _HermesInternal = HermesInternal;
-                                            if (closure_3) {
-                                              let combined = concat(finalOperationName, " ", str15, " create");
-                                            } else {
-                                              combined = concat(finalOperationName, " ", str15);
-                                            }
-                                            let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                            startSpanManualResult = tmp4Result6.startSpan(obj6, () => { ... });
-                                            const tmp4Result8 = tmp4(tmp5[3]);
-                                          }
-                                          return startSpanManualResult;
-                                        }
-                                };
-                                let proxy = new Proxy(value, obj);
-                                str = proxy;
-                                return function instrumentedAndProxiedCreate() {
-                                  let tmp = str(...HermesBuiltin.copyRestArgs());
-                                  let proxy = tmp;
-                                  if (tmp) {
-                                    proxy = tmp;
-                                    if (typeof tmp === "object") {
-                                      closure_3_0(closure_3_1[2]).CHAT_PATH;
-                                      str = undefined;
-                                      closure_1 = undefined;
-                                      if (str === undefined) {
-                                        str = "";
-                                      }
-                                      closure_1 = closure_2_1;
-                                      let _Proxy = Proxy;
-                                      let obj = { get() { ... } };
-                                      proxy = new Proxy(tmp, obj);
-                                    }
-                                  }
-                                  return proxy;
-                                };
-                              } else {
-                                str = methodPath;
-                                dependencyMap = self;
-                                closure_2 = dependencyMap;
-                                closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                let _Proxy2 = Proxy;
-                                let obj3 = {
-                                  apply(arr, arg1, arg2) {
-                                          closure_0 = arr;
-                                          dependencyMap = arg2;
-                                          const first = arg2[0];
-                                          const obj = {};
-                                          obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                          obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
-                                          obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                                          const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
-                                          if (first) {
-                                            if ("model" in first) {
-                                              if (typeof first.model === "string") {
-                                                let str5 = first.model;
-                                              }
-                                              obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
-                                              if ("config" in first) {
-                                                if (typeof first.config === "object") {
-                                                  if (first.config) {
-                                                    const config = first.config;
-                                                    let tmp7 = "temperature" in config;
-                                                    if (tmp7) {
-                                                      tmp7 = typeof config.temperature === "number";
-                                                    }
-                                                    let obj3 = {};
-                                                    if (tmp7) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
-                                                    }
-                                                    if (tmp8) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
-                                                    }
-                                                    if (tmp9) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
-                                                    }
-                                                    if (tmp10) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
-                                                    }
-                                                    if (tmp11) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
-                                                    }
-                                                    if (tmp12) {
-                                                      obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
-                                                    }
-                                                    const merged = Object.assign(obj, obj3);
-                                                    if ("tools" in config) {
-                                                      let _Array = Array;
-                                                      if (Array.isArray(config.tools)) {
-                                                        const tools = config.tools;
-                                                        let _JSON = JSON;
-                                                        obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(() => { ... }));
-                                                        const flatMapResult = tools.flatMap(() => { ... });
-                                                      }
-                                                    }
-                                                    tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                                    tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                                    tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                                    tmp8 = "topP" in config && typeof config.topP === "number";
-                                                    tmp9 = "topK" in config && typeof config.topK === "number";
-                                                  }
-                                                }
-                                              }
-                                            }
-                                            str5 = "unknown";
-                                            if (tmp3) {
-                                              str5 = "unknown";
-                                              if (typeof tmp3 === "object") {
-                                                if ("model" in tmp3) {
-                                                  if (typeof tmp3.model === "string") {
-                                                    str5 = tmp3.model;
-                                                  }
-                                                }
-                                                str5 = "unknown";
-                                                if ("modelVersion" in tmp3) {
-                                                  str5 = "unknown";
-                                                  if (typeof tmp3.modelVersion === "string") {
-                                                    str5 = tmp3.modelVersion;
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          } else {
-                                            let obj4 = {};
-                                            if ("model" in obj4) {
-                                              if (typeof obj4.model === "string") {
-                                                let str2 = obj4.model;
-                                              }
-                                              obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
-                                            }
-                                            str2 = "unknown";
-                                            if (tmp3) {
-                                              str2 = "unknown";
-                                              if (typeof tmp3 === "object") {
-                                                if ("model" in tmp3) {
-                                                  if (typeof tmp3.model === "string") {
-                                                    str2 = tmp3.model;
-                                                  }
-                                                }
-                                                str2 = "unknown";
-                                                if ("modelVersion" in tmp3) {
-                                                  str2 = "unknown";
-                                                  if (typeof tmp3.modelVersion === "string") {
-                                                    str2 = tmp3.modelVersion;
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                          let str15 = obj[tmp4(undefined, tmp5[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
-                                          if (str15 == null) {
-                                            str15 = "unknown";
-                                          }
-                                          let obj2 = str(dependencyMap[3]);
-                                          const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
-                                          const tmp4Result = str(dependencyMap[3]);
-                                          const tmp4Result5 = str(dependencyMap[5]);
-                                          const tmp4Result6 = str(dependencyMap[7]);
-                                          if (isStreamingMethodResult) {
-                                            let obj5 = { name: null, op: null, attributes: null };
-                                            const _HermesInternal2 = HermesInternal;
-                                            obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                            obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                            obj5.attributes = obj;
-                                            closure_0 = closure_2(/* F153580 */ function() { ... });
-                                            let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
-                                            const tmp4Result7 = tmp4(tmp5[3]);
-                                          } else {
-                                            const _HermesInternal = HermesInternal;
-                                            if (closure_3) {
-                                              let combined = concat(finalOperationName, " ", str15, " create");
-                                            } else {
-                                              combined = concat(finalOperationName, " ", str15);
-                                            }
-                                            let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                            startSpanManualResult = tmp4Result6.startSpan(obj6, () => { ... });
-                                            const tmp4Result8 = tmp4(tmp5[3]);
-                                          }
-                                          return startSpanManualResult;
-                                        }
-                                };
-                                let proxy1 = new Proxy(value, obj3);
-                                return proxy1;
-                              }
-                            }
-                            tmpResult = tmp(tmp2[5]);
-                          }
-                          if (typeof value === "function") {
-                            let bindResult = value.bind(self);
-                          } else {
-                            bindResult = value;
-                            if (value) {
-                              bindResult = value;
-                              if (typeof value === "object") {
-                                str = methodPath;
-                                if (methodPath === undefined) {
-                                  str = "";
-                                }
-                                let _Proxy = Proxy;
-                                let obj4 = {
-                                  get(self, arg1, arg2) {
-                                          let value = Reflect.get(self, arg1, arg2);
-                                          let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
-                                          if (typeof value === "function") {
-                                            if (tmpResult.shouldInstrument(methodPath)) {
-                                              if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
-                                                dependencyMap = self;
-                                                closure_2 = dependencyMap;
-                                                closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                                let _Proxy3 = Proxy;
-                                                let obj = { apply() { ... } };
-                                                let proxy = new Proxy(value, obj);
-                                                str = proxy;
-                                                return function instrumentedAndProxiedCreate() { ... };
-                                              } else {
-                                                str = methodPath;
-                                                dependencyMap = self;
-                                                closure_2 = dependencyMap;
-                                                closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                                let _Proxy2 = Proxy;
-                                                let obj3 = { apply() { ... } };
-                                                let proxy1 = new Proxy(value, obj3);
-                                                return proxy1;
-                                              }
-                                            }
-                                            tmpResult = tmp(tmp2[5]);
-                                          }
-                                          if (typeof value === "function") {
-                                            let bindResult = value.bind(self);
-                                          } else {
-                                            bindResult = value;
-                                            if (value) {
-                                              bindResult = value;
-                                              if (typeof value === "object") {
-                                                str = methodPath;
-                                                if (methodPath === undefined) {
-                                                  str = "";
-                                                }
-                                                let _Proxy = Proxy;
-                                                let obj4 = { get() { ... } };
-                                                bindResult = new Proxy(value, obj4);
-                                              }
-                                            }
-                                          }
-                                          return bindResult;
-                                        }
-                                };
-                                bindResult = new Proxy(value, obj4);
-                              }
-                            }
-                          }
-                          return bindResult;
-                        }
-                  };
-                  proxy = new Proxy(tmp, obj);
                 }
               }
-              return proxy;
-            };
-          } else {
-            str = methodPath;
-            dependencyMap = self;
-            closure_2 = dependencyMap;
-            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-            let _Proxy2 = Proxy;
-            let obj3 = {
-              apply(arr, arg1, arg2) {
-                      closure_0 = arr;
-                      dependencyMap = arg2;
-                      const first = arg2[0];
-                      const obj = {};
-                      obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
-                      obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
-                      if (first) {
-                        if ("model" in first) {
-                          if (typeof first.model === "string") {
-                            let str5 = first.model;
-                          }
-                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
-                          if ("config" in first) {
-                            if (typeof first.config === "object") {
-                              if (first.config) {
-                                const config = first.config;
-                                let tmp7 = "temperature" in config;
-                                if (tmp7) {
-                                  tmp7 = typeof config.temperature === "number";
-                                }
-                                let obj3 = {};
-                                if (tmp7) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
-                                }
-                                if (tmp8) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
-                                }
-                                if (tmp9) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
-                                }
-                                if (tmp10) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
-                                }
-                                if (tmp11) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
-                                }
-                                if (tmp12) {
-                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
-                                }
-                                const merged = Object.assign(obj, obj3);
-                                if ("tools" in config) {
-                                  let _Array = Array;
-                                  if (Array.isArray(config.tools)) {
-                                    const tools = config.tools;
-                                    let _JSON = JSON;
-                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations));
-                                    const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
-                                  }
-                                }
-                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                tmp8 = "topP" in config && typeof config.topP === "number";
-                                tmp9 = "topK" in config && typeof config.topK === "number";
-                              }
-                            }
-                          }
-                        }
-                        str5 = "unknown";
-                        if (tmp3) {
-                          str5 = "unknown";
-                          if (typeof tmp3 === "object") {
-                            if ("model" in tmp3) {
-                              if (typeof tmp3.model === "string") {
-                                str5 = tmp3.model;
-                              }
-                            }
-                            str5 = "unknown";
-                            if ("modelVersion" in tmp3) {
-                              str5 = "unknown";
-                              if (typeof tmp3.modelVersion === "string") {
-                                str5 = tmp3.modelVersion;
-                              }
-                            }
-                          }
-                        }
-                      } else {
-                        let obj4 = {};
-                        if ("model" in obj4) {
-                          if (typeof obj4.model === "string") {
-                            let str2 = obj4.model;
-                          }
-                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
-                        }
-                        str2 = "unknown";
-                        if (tmp3) {
-                          str2 = "unknown";
-                          if (typeof tmp3 === "object") {
-                            if ("model" in tmp3) {
-                              if (typeof tmp3.model === "string") {
-                                str2 = tmp3.model;
-                              }
-                            }
-                            str2 = "unknown";
-                            if ("modelVersion" in tmp3) {
-                              str2 = "unknown";
-                              if (typeof tmp3.modelVersion === "string") {
-                                str2 = tmp3.modelVersion;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      let str15 = obj[tmp4(undefined, tmp5[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
-                      if (str15 == null) {
-                        str15 = "unknown";
-                      }
-                      let obj2 = str(dependencyMap[3]);
-                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
-                      const tmp4Result = str(dependencyMap[3]);
-                      const tmp4Result5 = str(dependencyMap[5]);
-                      const tmp4Result6 = str(dependencyMap[7]);
-                      if (isStreamingMethodResult) {
-                        let obj5 = { name: null, op: null, attributes: null };
-                        const _HermesInternal2 = HermesInternal;
-                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
-                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                        obj5.attributes = obj;
-                        closure_0 = closure_2((_function) => {
-                          c5 = 0;
-                          c6 = 0;
-                          c4 = 0;
-                          return (function*(arg0) {
-                            if (c6 === 2) {
-                              c6 = 3;
-                              throw new TypeError("Generator functions may not be called on executing generators");
-                            } else if (tmp6 === 3) {
-                              if (arg0 === 1) {
-                                throw value;
-                              } else if (arg0 === 2) {
-                                const obj2 = { value, done: true };
-                                return obj2;
-                              } else {
-                                return { value: "IconComponent", done: null };
-                              }
-                            } else {
-                              try {
-                                c6 = 2;
-                                if (0 === c5) {
-                                  if (arg0 === 1) {
-                                    c6 = 3;
-                                    throw value;
-                                  } else if (arg0 === 2) {
-                                    c6 = 3;
-                                    const obj3 = { value, done: true };
-                                    return obj3;
-                                  } else {
-                                    closure_2 = tmp3;
-                                    dependencyMap = tmp7;
-                                    closure_129_0 = _function;
-                                    closure_129_1 = undefined;
-                                    c4 = 1;
-                                    let recordInputs = first.recordInputs;
-                                    if (recordInputs) {
-                                      recordInputs = closure_2;
-                                    }
-                                    if (recordInputs) {
-                                      tmp37(_function, closure_2);
-                                    }
-                                    c5 = 2;
-                                    c6 = 1;
-                                    const obj4 = { value: _function.apply(dependencyMap, dependencyMap), done: false };
-                                    return obj4;
-                                  }
-                                } else if (1 === tmp7) {
-                                  c4 = 0;
-                                  closure_129_2 = tmp37;
-                                  const obj6 = { code: str(dependencyMap[9]).SPAN_STATUS_ERROR, message: "internal_error" };
-                                  closure_129_0.setStatus(obj6);
-                                  const obj7 = { mechanism: null };
-                                  const obj8 = { handled: false, type: "auto.ai.google_genai", data: null };
-                                  const obj9 = { function: _function };
-                                  obj8.data = obj9;
-                                  obj7.mechanism = obj8;
-                                  str(dependencyMap[10]).captureException(closure_129_2, obj7);
-                                  closure_129_0.end();
-                                  throw closure_129_2;
-                                } else if (arg0 === 1) {
-                                  c6 = 3;
-                                  throw value;
-                                } else if (arg0 === 2) {
-                                  c4 = 0;
-                                  c6 = 3;
-                                  const obj10 = { value, done: true };
-                                  return obj10;
-                                } else {
-                                  closure_129_1 = value;
-                                  const _Boolean = Boolean;
-                                  c4 = 0;
-                                  c6 = 3;
-                                  const obj11 = { value: str(dependencyMap[8]).instrumentStream(closure_129_1, closure_129_0, Boolean(first.recordOutputs)), done: true };
-                                  return obj11;
-                                }
-                              } catch (tmp37) {
-                                if (tmp4 === c4) {
-                                  c6 = tmp2;
-                                  throw tmp37;
-                                } else {
-                                  c5 = tmp;
-                                }
-                              }
-                            }
-                          })();
-                        });
-                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
-                          const self = this;
-                          const apply = closure_0.apply;
-                          if (typeof apply === "unknown") {
-                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                          } else {
-                            applyArgumentsResult = apply(self, arguments);
-                          }
-                          return applyArgumentsResult;
-                        });
-                        const tmp4Result7 = tmp4(tmp5[3]);
-                      } else {
-                        const _HermesInternal = HermesInternal;
-                        if (closure_3) {
-                          let combined = concat(finalOperationName, " ", str15, " create");
-                        } else {
-                          combined = concat(finalOperationName, " ", str15);
-                        }
-                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                        startSpanManualResult = tmp4Result6.startSpan(obj6, (_function) => {
-                          if (tmp) {
-                            closure_3(_function, first);
-                          }
-                          return str(dependencyMap[11]).handleCallbackErrors(() => _function.apply(closure_1, dependencyMap), (arg0) => {
-                            const obj2 = { mechanism: null };
-                            const obj3 = { handled: false, type: "auto.ai.google_genai", data: { function: _function } };
-                            obj2.mechanism = obj3;
-                            _function(dependencyMap[10]).captureException(arg0, obj2);
-                          }, () => {
-
-                          }, (modelVersion) => {
-                            if (!closure_3) {
-                              recordOutputs = recordOutputs.recordOutputs;
-                              if (modelVersion) {
-                                if (typeof modelVersion === "object") {
-                                  if (modelVersion.modelVersion) {
-                                    const attr = closure_0.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
-                                  }
-                                  if (modelVersion.usageMetadata) {
-                                    if (typeof modelVersion.usageMetadata === "object") {
-                                      const usageMetadata = modelVersion.usageMetadata;
-                                      if (typeof usageMetadata.promptTokenCount === "number") {
-                                        const obj2 = {};
-                                        obj2[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
-                                        closure_0.setAttributes(obj2);
-                                      }
-                                      if (typeof usageMetadata.candidatesTokenCount === "number") {
-                                        const obj3 = {};
-                                        obj3[str(dependencyMap[1]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = usageMetadata.candidatesTokenCount;
-                                        closure_0.setAttributes(obj3);
-                                      }
-                                      if (typeof usageMetadata.totalTokenCount === "number") {
-                                        const obj4 = {};
-                                        obj4[str(dependencyMap[1]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = usageMetadata.totalTokenCount;
-                                        closure_0.setAttributes(obj4);
-                                      }
-                                    }
-                                  }
-                                  if (recordOutputs) {
-                                    let _Array = Array;
-                                    if (Array.isArray(modelVersion.candidates)) {
-                                      if (modelVersion.candidates.length > 0) {
-                                        const candidates = modelVersion.candidates;
-                                        let mapped = candidates.map(() => { ... });
-                                        let found = mapped.filter(() => { ... });
-                                        if (found.length > 0) {
-                                          const obj5 = {};
-                                          obj5[""(dependencyMap[1]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = found.join("");
-                                          closure_0.setAttributes(obj5);
-                                        }
-                                      }
-                                    }
-                                  }
-                                  if (recordOutputs) {
-                                    if (modelVersion.functionCalls) {
-                                      const functionCalls = modelVersion.functionCalls;
-                                      const _Array2 = Array;
-                                      let isArray = Array.isArray(functionCalls);
-                                      if (isArray) {
-                                        isArray = functionCalls.length > 0;
-                                      }
-                                      if (isArray) {
-                                        const obj6 = {};
-                                        const _JSON = JSON;
-                                        obj6[str(dependencyMap[1]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(functionCalls);
-                                        closure_0.setAttributes(obj6);
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          });
-                        });
-                        const tmp4Result8 = tmp4(tmp5[3]);
-                      }
-                      return startSpanManualResult;
-                    }
-            };
-            let proxy1 = new Proxy(value, obj3);
-            return proxy1;
-          }
-        }
-        tmpResult = tmp(tmp2[5]);
-      }
-      if (typeof value === "function") {
-        let bindResult = value.bind(self);
-      } else {
-        bindResult = value;
-        if (value) {
-          bindResult = value;
-          if (typeof value === "object") {
-            str = methodPath;
-            if (methodPath === undefined) {
-              str = "";
             }
-            let _Proxy = Proxy;
-            let obj4 = {
-              get(self, arg1, arg2) {
-                      let value = Reflect.get(self, arg1, arg2);
-                      let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
-                      if (typeof value === "function") {
-                        if (tmpResult.shouldInstrument(methodPath)) {
-                          if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
-                            dependencyMap = self;
-                            closure_2 = dependencyMap;
-                            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                            let _Proxy3 = Proxy;
-                            let obj = {
-                              apply(arr, arg1, arg2) {
-                                      closure_0 = arr;
-                                      dependencyMap = arg2;
-                                      const first = arg2[0];
-                                      const obj = {};
-                                      obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
-                                      obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
-                                      if (first) {
-                                        if ("model" in first) {
-                                          if (typeof first.model === "string") {
-                                            let str5 = first.model;
-                                          }
-                                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
-                                          if ("config" in first) {
-                                            if (typeof first.config === "object") {
-                                              if (first.config) {
-                                                const config = first.config;
-                                                let tmp7 = "temperature" in config;
-                                                if (tmp7) {
-                                                  tmp7 = typeof config.temperature === "number";
-                                                }
-                                                let obj3 = {};
-                                                if (tmp7) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
-                                                }
-                                                if (tmp8) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
-                                                }
-                                                if (tmp9) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
-                                                }
-                                                if (tmp10) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
-                                                }
-                                                if (tmp11) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
-                                                }
-                                                if (tmp12) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
-                                                }
-                                                const merged = Object.assign(obj, obj3);
-                                                if ("tools" in config) {
-                                                  let _Array = Array;
-                                                  if (Array.isArray(config.tools)) {
-                                                    const tools = config.tools;
-                                                    let _JSON = JSON;
-                                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations));
-                                                    const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
-                                                  }
-                                                }
-                                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                                tmp8 = "topP" in config && typeof config.topP === "number";
-                                                tmp9 = "topK" in config && typeof config.topK === "number";
-                                              }
-                                            }
-                                          }
-                                        }
-                                        str5 = "unknown";
-                                        if (tmp3) {
-                                          str5 = "unknown";
-                                          if (typeof tmp3 === "object") {
-                                            if ("model" in tmp3) {
-                                              if (typeof tmp3.model === "string") {
-                                                str5 = tmp3.model;
-                                              }
-                                            }
-                                            str5 = "unknown";
-                                            if ("modelVersion" in tmp3) {
-                                              str5 = "unknown";
-                                              if (typeof tmp3.modelVersion === "string") {
-                                                str5 = tmp3.modelVersion;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      } else {
-                                        let obj4 = {};
-                                        if ("model" in obj4) {
-                                          if (typeof obj4.model === "string") {
-                                            let str2 = obj4.model;
-                                          }
-                                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
-                                        }
-                                        str2 = "unknown";
-                                        if (tmp3) {
-                                          str2 = "unknown";
-                                          if (typeof tmp3 === "object") {
-                                            if ("model" in tmp3) {
-                                              if (typeof tmp3.model === "string") {
-                                                str2 = tmp3.model;
-                                              }
-                                            }
-                                            str2 = "unknown";
-                                            if ("modelVersion" in tmp3) {
-                                              str2 = "unknown";
-                                              if (typeof tmp3.modelVersion === "string") {
-                                                str2 = tmp3.modelVersion;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                      let str15 = obj[tmp4(undefined, tmp5[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
-                                      if (str15 == null) {
-                                        str15 = "unknown";
-                                      }
-                                      let obj2 = str(dependencyMap[3]);
-                                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
-                                      const tmp4Result = str(dependencyMap[3]);
-                                      const tmp4Result5 = str(dependencyMap[5]);
-                                      const tmp4Result6 = str(dependencyMap[7]);
-                                      if (isStreamingMethodResult) {
-                                        let obj5 = { name: null, op: null, attributes: null };
-                                        const _HermesInternal2 = HermesInternal;
-                                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                        obj5.attributes = obj;
-                                        closure_0 = closure_2((_function) => {
-                                          c5 = 0;
-                                          c6 = 0;
-                                          c4 = 0;
-                                          return (/* F157871 */ function*() { ... })();
-                                        });
-                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
-                                          const self = this;
-                                          const apply = closure_0.apply;
-                                          if (typeof apply === "unknown") {
-                                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                                          } else {
-                                            applyArgumentsResult = apply(self, arguments);
-                                          }
-                                          return applyArgumentsResult;
-                                        });
-                                        const tmp4Result7 = tmp4(tmp5[3]);
-                                      } else {
-                                        const _HermesInternal = HermesInternal;
-                                        if (closure_3) {
-                                          let combined = concat(finalOperationName, " ", str15, " create");
-                                        } else {
-                                          combined = concat(finalOperationName, " ", str15);
-                                        }
-                                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                        startSpanManualResult = tmp4Result6.startSpan(obj6, (_function) => {
-                                          if (tmp) {
-                                            closure_3(_function, first);
-                                          }
-                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F153584 */ function() { ... }, () => { ... });
-                                        });
-                                        const tmp4Result8 = tmp4(tmp5[3]);
-                                      }
-                                      return startSpanManualResult;
-                                    }
-                            };
-                            let proxy = new Proxy(value, obj);
-                            str = proxy;
-                            return function instrumentedAndProxiedCreate() {
-                              let tmp = str(...HermesBuiltin.copyRestArgs());
-                              let proxy = tmp;
-                              if (tmp) {
-                                proxy = tmp;
-                                if (typeof tmp === "object") {
-                                  closure_3_0(closure_3_1[2]).CHAT_PATH;
-                                  str = undefined;
-                                  closure_1 = undefined;
-                                  if (str === undefined) {
-                                    str = "";
-                                  }
-                                  closure_1 = closure_2_1;
-                                  let _Proxy = Proxy;
-                                  let obj = {
-                                    get(self, arg1, arg2) {
-                                          let value = Reflect.get(self, arg1, arg2);
-                                          let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
-                                          if (typeof value === "function") {
-                                            if (tmpResult.shouldInstrument(methodPath)) {
-                                              if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
-                                                dependencyMap = self;
-                                                closure_2 = dependencyMap;
-                                                closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                                let _Proxy3 = Proxy;
-                                                let obj = { apply() { ... } };
-                                                let proxy = new Proxy(value, obj);
-                                                str = proxy;
-                                                return function instrumentedAndProxiedCreate() { ... };
-                                              } else {
-                                                str = methodPath;
-                                                dependencyMap = self;
-                                                closure_2 = dependencyMap;
-                                                closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                                let _Proxy2 = Proxy;
-                                                let obj3 = { apply() { ... } };
-                                                let proxy1 = new Proxy(value, obj3);
-                                                return proxy1;
-                                              }
-                                            }
-                                            tmpResult = tmp(tmp2[5]);
-                                          }
-                                          if (typeof value === "function") {
-                                            let bindResult = value.bind(self);
-                                          } else {
-                                            bindResult = value;
-                                            if (value) {
-                                              bindResult = value;
-                                              if (typeof value === "object") {
-                                                str = methodPath;
-                                                if (methodPath === undefined) {
-                                                  str = "";
-                                                }
-                                                let _Proxy = Proxy;
-                                                let obj4 = { get() { ... } };
-                                                bindResult = new Proxy(value, obj4);
-                                              }
-                                            }
-                                          }
-                                          return bindResult;
-                                        }
-                                  };
-                                  proxy = new Proxy(tmp, obj);
-                                }
-                              }
-                              return proxy;
-                            };
-                          } else {
-                            str = methodPath;
-                            dependencyMap = self;
-                            closure_2 = dependencyMap;
-                            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                            let _Proxy2 = Proxy;
-                            let obj3 = {
-                              apply(arr, arg1, arg2) {
-                                      closure_0 = arr;
-                                      dependencyMap = arg2;
-                                      const first = arg2[0];
-                                      const obj = {};
-                                      obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
-                                      obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
-                                      if (first) {
-                                        if ("model" in first) {
-                                          if (typeof first.model === "string") {
-                                            let str5 = first.model;
-                                          }
-                                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
-                                          if ("config" in first) {
-                                            if (typeof first.config === "object") {
-                                              if (first.config) {
-                                                const config = first.config;
-                                                let tmp7 = "temperature" in config;
-                                                if (tmp7) {
-                                                  tmp7 = typeof config.temperature === "number";
-                                                }
-                                                let obj3 = {};
-                                                if (tmp7) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
-                                                }
-                                                if (tmp8) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
-                                                }
-                                                if (tmp9) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
-                                                }
-                                                if (tmp10) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
-                                                }
-                                                if (tmp11) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
-                                                }
-                                                if (tmp12) {
-                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
-                                                }
-                                                const merged = Object.assign(obj, obj3);
-                                                if ("tools" in config) {
-                                                  let _Array = Array;
-                                                  if (Array.isArray(config.tools)) {
-                                                    const tools = config.tools;
-                                                    let _JSON = JSON;
-                                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations));
-                                                    const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
-                                                  }
-                                                }
-                                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                                tmp8 = "topP" in config && typeof config.topP === "number";
-                                                tmp9 = "topK" in config && typeof config.topK === "number";
-                                              }
-                                            }
-                                          }
-                                        }
-                                        str5 = "unknown";
-                                        if (tmp3) {
-                                          str5 = "unknown";
-                                          if (typeof tmp3 === "object") {
-                                            if ("model" in tmp3) {
-                                              if (typeof tmp3.model === "string") {
-                                                str5 = tmp3.model;
-                                              }
-                                            }
-                                            str5 = "unknown";
-                                            if ("modelVersion" in tmp3) {
-                                              str5 = "unknown";
-                                              if (typeof tmp3.modelVersion === "string") {
-                                                str5 = tmp3.modelVersion;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      } else {
-                                        let obj4 = {};
-                                        if ("model" in obj4) {
-                                          if (typeof obj4.model === "string") {
-                                            let str2 = obj4.model;
-                                          }
-                                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
-                                        }
-                                        str2 = "unknown";
-                                        if (tmp3) {
-                                          str2 = "unknown";
-                                          if (typeof tmp3 === "object") {
-                                            if ("model" in tmp3) {
-                                              if (typeof tmp3.model === "string") {
-                                                str2 = tmp3.model;
-                                              }
-                                            }
-                                            str2 = "unknown";
-                                            if ("modelVersion" in tmp3) {
-                                              str2 = "unknown";
-                                              if (typeof tmp3.modelVersion === "string") {
-                                                str2 = tmp3.modelVersion;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                      let str15 = obj[tmp4(undefined, tmp5[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
-                                      if (str15 == null) {
-                                        str15 = "unknown";
-                                      }
-                                      let obj2 = str(dependencyMap[3]);
-                                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
-                                      const tmp4Result = str(dependencyMap[3]);
-                                      const tmp4Result5 = str(dependencyMap[5]);
-                                      const tmp4Result6 = str(dependencyMap[7]);
-                                      if (isStreamingMethodResult) {
-                                        let obj5 = { name: null, op: null, attributes: null };
-                                        const _HermesInternal2 = HermesInternal;
-                                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                        obj5.attributes = obj;
-                                        closure_0 = closure_2((_function) => {
-                                          c5 = 0;
-                                          c6 = 0;
-                                          c4 = 0;
-                                          return (/* F157871 */ function*() { ... })();
-                                        });
-                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, function(arg0) {
-                                          const self = this;
-                                          const apply = closure_0.apply;
-                                          if (typeof apply === "unknown") {
-                                            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                                          } else {
-                                            applyArgumentsResult = apply(self, arguments);
-                                          }
-                                          return applyArgumentsResult;
-                                        });
-                                        const tmp4Result7 = tmp4(tmp5[3]);
-                                      } else {
-                                        const _HermesInternal = HermesInternal;
-                                        if (closure_3) {
-                                          let combined = concat(finalOperationName, " ", str15, " create");
-                                        } else {
-                                          combined = concat(finalOperationName, " ", str15);
-                                        }
-                                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                        startSpanManualResult = tmp4Result6.startSpan(obj6, (_function) => {
-                                          if (tmp) {
-                                            closure_3(_function, first);
-                                          }
-                                          return str(dependencyMap[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F153584 */ function() { ... }, () => { ... });
-                                        });
-                                        const tmp4Result8 = tmp4(tmp5[3]);
-                                      }
-                                      return startSpanManualResult;
-                                    }
-                            };
-                            let proxy1 = new Proxy(value, obj3);
-                            return proxy1;
-                          }
-                        }
-                        tmpResult = tmp(tmp2[5]);
-                      }
-                      if (typeof value === "function") {
-                        let bindResult = value.bind(self);
-                      } else {
-                        bindResult = value;
-                        if (value) {
-                          bindResult = value;
-                          if (typeof value === "object") {
-                            str = methodPath;
-                            if (methodPath === undefined) {
-                              str = "";
-                            }
-                            let _Proxy = Proxy;
-                            let obj4 = {
-                              get(self, arg1, arg2) {
-                                      let value = Reflect.get(self, arg1, arg2);
-                                      let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
-                                      if (typeof value === "function") {
-                                        if (tmpResult.shouldInstrument(methodPath)) {
-                                          if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
-                                            dependencyMap = self;
-                                            closure_2 = dependencyMap;
-                                            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                            let _Proxy3 = Proxy;
-                                            let obj = {
-                                              apply(arr, arg1, arg2) {
-                                                      closure_0 = arr;
-                                                      dependencyMap = arg2;
-                                                      const first = arg2[0];
-                                                      const obj = {};
-                                                      obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
-                                                      obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                                                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
-                                                      if (first) {
-                                                        if ("model" in first) {
-                                                          if (typeof first.model === "string") {
-                                                            let str5 = first.model;
-                                                          }
-                                                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
-                                                          if ("config" in first) {
-                                                            if (typeof first.config === "object") {
-                                                              if (first.config) {
-                                                                const config = first.config;
-                                                                let tmp7 = "temperature" in config;
-                                                                if (tmp7) {
-                                                                  tmp7 = typeof config.temperature === "number";
-                                                                }
-                                                                let obj3 = {};
-                                                                if (tmp7) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
-                                                                }
-                                                                if (tmp8) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
-                                                                }
-                                                                if (tmp9) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
-                                                                }
-                                                                if (tmp10) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
-                                                                }
-                                                                if (tmp11) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
-                                                                }
-                                                                if (tmp12) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
-                                                                }
-                                                                const merged = Object.assign(obj, obj3);
-                                                                if ("tools" in config) {
-                                                                  let _Array = Array;
-                                                                  if (Array.isArray(config.tools)) {
-                                                                    const tools = config.tools;
-                                                                    let _JSON = JSON;
-                                                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(() => { ... }));
-                                                                    const flatMapResult = tools.flatMap(() => { ... });
-                                                                  }
-                                                                }
-                                                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                                                tmp8 = "topP" in config && typeof config.topP === "number";
-                                                                tmp9 = "topK" in config && typeof config.topK === "number";
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                        str5 = "unknown";
-                                                        if (tmp3) {
-                                                          str5 = "unknown";
-                                                          if (typeof tmp3 === "object") {
-                                                            if ("model" in tmp3) {
-                                                              if (typeof tmp3.model === "string") {
-                                                                str5 = tmp3.model;
-                                                              }
-                                                            }
-                                                            str5 = "unknown";
-                                                            if ("modelVersion" in tmp3) {
-                                                              str5 = "unknown";
-                                                              if (typeof tmp3.modelVersion === "string") {
-                                                                str5 = tmp3.modelVersion;
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      } else {
-                                                        let obj4 = {};
-                                                        if ("model" in obj4) {
-                                                          if (typeof obj4.model === "string") {
-                                                            let str2 = obj4.model;
-                                                          }
-                                                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
-                                                        }
-                                                        str2 = "unknown";
-                                                        if (tmp3) {
-                                                          str2 = "unknown";
-                                                          if (typeof tmp3 === "object") {
-                                                            if ("model" in tmp3) {
-                                                              if (typeof tmp3.model === "string") {
-                                                                str2 = tmp3.model;
-                                                              }
-                                                            }
-                                                            str2 = "unknown";
-                                                            if ("modelVersion" in tmp3) {
-                                                              str2 = "unknown";
-                                                              if (typeof tmp3.modelVersion === "string") {
-                                                                str2 = tmp3.modelVersion;
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                      let str15 = obj[tmp4(undefined, tmp5[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
-                                                      if (str15 == null) {
-                                                        str15 = "unknown";
-                                                      }
-                                                      let obj2 = str(dependencyMap[3]);
-                                                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
-                                                      const tmp4Result = str(dependencyMap[3]);
-                                                      const tmp4Result5 = str(dependencyMap[5]);
-                                                      const tmp4Result6 = str(dependencyMap[7]);
-                                                      if (isStreamingMethodResult) {
-                                                        let obj5 = { name: null, op: null, attributes: null };
-                                                        const _HermesInternal2 = HermesInternal;
-                                                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                                        obj5.attributes = obj;
-                                                        closure_0 = closure_2(/* F153580 */ function() { ... });
-                                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
-                                                        const tmp4Result7 = tmp4(tmp5[3]);
-                                                      } else {
-                                                        const _HermesInternal = HermesInternal;
-                                                        if (closure_3) {
-                                                          let combined = concat(finalOperationName, " ", str15, " create");
-                                                        } else {
-                                                          combined = concat(finalOperationName, " ", str15);
-                                                        }
-                                                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                                        startSpanManualResult = tmp4Result6.startSpan(obj6, () => { ... });
-                                                        const tmp4Result8 = tmp4(tmp5[3]);
-                                                      }
-                                                      return startSpanManualResult;
-                                                    }
-                                            };
-                                            let proxy = new Proxy(value, obj);
-                                            str = proxy;
-                                            return function instrumentedAndProxiedCreate() {
-                                              let tmp = str(...HermesBuiltin.copyRestArgs());
-                                              let proxy = tmp;
-                                              if (tmp) {
-                                                proxy = tmp;
-                                                if (typeof tmp === "object") {
-                                                  closure_3_0(closure_3_1[2]).CHAT_PATH;
-                                                  str = undefined;
-                                                  closure_1 = undefined;
-                                                  if (str === undefined) {
-                                                    str = "";
-                                                  }
-                                                  closure_1 = closure_2_1;
-                                                  let _Proxy = Proxy;
-                                                  let obj = { get() { ... } };
-                                                  proxy = new Proxy(tmp, obj);
-                                                }
-                                              }
-                                              return proxy;
-                                            };
-                                          } else {
-                                            str = methodPath;
-                                            dependencyMap = self;
-                                            closure_2 = dependencyMap;
-                                            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                            let _Proxy2 = Proxy;
-                                            let obj3 = {
-                                              apply(arr, arg1, arg2) {
-                                                      closure_0 = arr;
-                                                      dependencyMap = arg2;
-                                                      const first = arg2[0];
-                                                      const obj = {};
-                                                      obj[str(dependencyMap[1]).GEN_AI_SYSTEM_ATTRIBUTE] = str(dependencyMap[2]).GOOGLE_GENAI_SYSTEM_NAME;
-                                                      obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[3]).getFinalOperationName(closure_0);
-                                                      obj[str(dependencyMap[4]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.google_genai";
-                                                      const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(dependencyMap[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
-                                                      if (first) {
-                                                        if ("model" in first) {
-                                                          if (typeof first.model === "string") {
-                                                            let str5 = first.model;
-                                                          }
-                                                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
-                                                          if ("config" in first) {
-                                                            if (typeof first.config === "object") {
-                                                              if (first.config) {
-                                                                const config = first.config;
-                                                                let tmp7 = "temperature" in config;
-                                                                if (tmp7) {
-                                                                  tmp7 = typeof config.temperature === "number";
-                                                                }
-                                                                let obj3 = {};
-                                                                if (tmp7) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = config.temperature;
-                                                                }
-                                                                if (tmp8) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = config.topP;
-                                                                }
-                                                                if (tmp9) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = config.topK;
-                                                                }
-                                                                if (tmp10) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = config.maxOutputTokens;
-                                                                }
-                                                                if (tmp11) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = config.frequencyPenalty;
-                                                                }
-                                                                if (tmp12) {
-                                                                  obj3[tmp4(tmp5[1]).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = config.presencePenalty;
-                                                                }
-                                                                const merged = Object.assign(obj, obj3);
-                                                                if ("tools" in config) {
-                                                                  let _Array = Array;
-                                                                  if (Array.isArray(config.tools)) {
-                                                                    const tools = config.tools;
-                                                                    let _JSON = JSON;
-                                                                    obj[tmp4(tmp5[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(tools.flatMap(() => { ... }));
-                                                                    const flatMapResult = tools.flatMap(() => { ... });
-                                                                  }
-                                                                }
-                                                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                                                tmp8 = "topP" in config && typeof config.topP === "number";
-                                                                tmp9 = "topK" in config && typeof config.topK === "number";
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                        str5 = "unknown";
-                                                        if (tmp3) {
-                                                          str5 = "unknown";
-                                                          if (typeof tmp3 === "object") {
-                                                            if ("model" in tmp3) {
-                                                              if (typeof tmp3.model === "string") {
-                                                                str5 = tmp3.model;
-                                                              }
-                                                            }
-                                                            str5 = "unknown";
-                                                            if ("modelVersion" in tmp3) {
-                                                              str5 = "unknown";
-                                                              if (typeof tmp3.modelVersion === "string") {
-                                                                str5 = tmp3.modelVersion;
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      } else {
-                                                        let obj4 = {};
-                                                        if ("model" in obj4) {
-                                                          if (typeof obj4.model === "string") {
-                                                            let str2 = obj4.model;
-                                                          }
-                                                          obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
-                                                        }
-                                                        str2 = "unknown";
-                                                        if (tmp3) {
-                                                          str2 = "unknown";
-                                                          if (typeof tmp3 === "object") {
-                                                            if ("model" in tmp3) {
-                                                              if (typeof tmp3.model === "string") {
-                                                                str2 = tmp3.model;
-                                                              }
-                                                            }
-                                                            str2 = "unknown";
-                                                            if ("modelVersion" in tmp3) {
-                                                              str2 = "unknown";
-                                                              if (typeof tmp3.modelVersion === "string") {
-                                                                str2 = tmp3.modelVersion;
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                      let str15 = obj[tmp4(undefined, tmp5[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
-                                                      if (str15 == null) {
-                                                        str15 = "unknown";
-                                                      }
-                                                      let obj2 = str(dependencyMap[3]);
-                                                      const finalOperationName = str(dependencyMap[3]).getFinalOperationName(tmp2);
-                                                      const tmp4Result = str(dependencyMap[3]);
-                                                      const tmp4Result5 = str(dependencyMap[5]);
-                                                      const tmp4Result6 = str(dependencyMap[7]);
-                                                      if (isStreamingMethodResult) {
-                                                        let obj5 = { name: null, op: null, attributes: null };
-                                                        const _HermesInternal2 = HermesInternal;
-                                                        obj5.name = "" + finalOperationName + " " + str15 + " stream-response";
-                                                        obj5.op = tmp4(tmp5[3]).getSpanOperation(tmp2);
-                                                        obj5.attributes = obj;
-                                                        closure_0 = closure_2(/* F153580 */ function() { ... });
-                                                        let startSpanManualResult = tmp4Result6.startSpanManual(obj5, () => { ... });
-                                                        const tmp4Result7 = tmp4(tmp5[3]);
-                                                      } else {
-                                                        const _HermesInternal = HermesInternal;
-                                                        if (closure_3) {
-                                                          let combined = concat(finalOperationName, " ", str15, " create");
-                                                        } else {
-                                                          combined = concat(finalOperationName, " ", str15);
-                                                        }
-                                                        let obj6 = { name: combined, op: tmp4(tmp5[3]).getSpanOperation(tmp2), attributes: obj };
-                                                        startSpanManualResult = tmp4Result6.startSpan(obj6, () => { ... });
-                                                        const tmp4Result8 = tmp4(tmp5[3]);
-                                                      }
-                                                      return startSpanManualResult;
-                                                    }
-                                            };
-                                            let proxy1 = new Proxy(value, obj3);
-                                            return proxy1;
-                                          }
-                                        }
-                                        tmpResult = tmp(tmp2[5]);
-                                      }
-                                      if (typeof value === "function") {
-                                        let bindResult = value.bind(self);
-                                      } else {
-                                        bindResult = value;
-                                        if (value) {
-                                          bindResult = value;
-                                          if (typeof value === "object") {
-                                            str = methodPath;
-                                            if (methodPath === undefined) {
-                                              str = "";
-                                            }
-                                            let _Proxy = Proxy;
-                                            let obj4 = {
-                                              get(self, arg1, arg2) {
-                                                      let value = Reflect.get(self, arg1, arg2);
-                                                      let methodPath = str(dependencyMap[3]).buildMethodPath(str, String(arg1));
-                                                      if (typeof value === "function") {
-                                                        if (tmpResult.shouldInstrument(methodPath)) {
-                                                          if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
-                                                            dependencyMap = self;
-                                                            closure_2 = dependencyMap;
-                                                            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                                            let _Proxy3 = Proxy;
-                                                            let obj = { apply() { ... } };
-                                                            let proxy = new Proxy(value, obj);
-                                                            str = proxy;
-                                                            return function instrumentedAndProxiedCreate() { ... };
-                                                          } else {
-                                                            str = methodPath;
-                                                            dependencyMap = self;
-                                                            closure_2 = dependencyMap;
-                                                            closure_3 = methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD;
-                                                            let _Proxy2 = Proxy;
-                                                            let obj3 = { apply() { ... } };
-                                                            let proxy1 = new Proxy(value, obj3);
-                                                            return proxy1;
-                                                          }
-                                                        }
-                                                        tmpResult = tmp(tmp2[5]);
-                                                      }
-                                                      if (typeof value === "function") {
-                                                        let bindResult = value.bind(self);
-                                                      } else {
-                                                        bindResult = value;
-                                                        if (value) {
-                                                          bindResult = value;
-                                                          if (typeof value === "object") {
-                                                            str = methodPath;
-                                                            if (methodPath === undefined) {
-                                                              str = "";
-                                                            }
-                                                            let _Proxy = Proxy;
-                                                            let obj4 = { get() { ... } };
-                                                            bindResult = new Proxy(value, obj4);
-                                                          }
-                                                        }
-                                                      }
-                                                      return bindResult;
-                                                    }
-                                            };
-                                            bindResult = new Proxy(value, obj4);
-                                          }
-                                        }
-                                      }
-                                      return bindResult;
-                                    }
-                            };
-                            bindResult = new Proxy(value, obj4);
-                          }
-                        }
-                      }
-                      return bindResult;
-                    }
-            };
-            bindResult = new Proxy(value, obj4);
+            let tmp13 = arg2;
+            if (arg2) {
+              tmp13 = typeof type.delta.text === "string";
+            }
+            if (tmp13) {
+              const responseTexts = finishReasons.responseTexts;
+              responseTexts.push(type.delta.text);
+            }
           }
         }
+        (function handleContentBlockStop(type, finishReasons) {
+          if ("content_block_stop" === type.type) {
+            if (typeof tmp3.index === "number") {
+              let activeToolBlocks = finishReasons;
+              name = finishReasons.activeToolBlocks[tmp3.index];
+              if (name) {
+                const inputJsonParts = name.inputJsonParts;
+                const joined = inputJsonParts.join("");
+                try {
+                  if (joined) {
+                    const _JSON = JSON;
+                    let parsed = JSON.parse(joined);
+                  } else {
+                    parsed = {};
+                  }
+                  let tmp6 = parsed;
+                  const toolCalls = activeToolBlocks.toolCalls;
+                  const obj = { type: "tool_use", id: null, name: null, input: null };
+                  ({ id: obj3.id, name } = name);
+                  obj.name = name;
+                  obj.input = tmp6;
+                  toolCalls.push(obj);
+                  activeToolBlocks = activeToolBlocks.activeToolBlocks;
+                  delete tmp2[tmp];
+                } catch (err) {
+                  const obj2 = { __unparsed: tmp7 };
+                  tmp6 = obj2;
+                }
+              }
+            }
+          }
+        })(type, finishReasons);
+        tmp10 = "content_block_start" === type.type && typeof type.index === "number" && type.content_block;
       }
-      return bindResult;
+    }
+  }
+}
+let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
+  closure_0 = arg0;
+  closure_1 = value;
+  closure_2 = arg2;
+  c11 = 0;
+  c12 = 0;
+  c9 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c12 === 2) {
+      c12 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp15 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c12 = 2;
+        switch (c11) {
+          case 0:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c12 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              closure_7 = tmp4;
+              closure_8 = tmp16;
+              closure_136_0 = closure_1;
+              closure_136_1 = closure_2;
+              closure_136_3 = undefined;
+              closure_136_6 = undefined;
+              closure_136_7 = undefined;
+              value4 = undefined;
+              const obj5 = {
+                responseTexts: [],
+                finishReasons: [],
+                responseId: "",
+                responseModel: "",
+                promptTokens: "r",
+                completionTokens: "__packager_asset",
+                cacheCreationInputTokens: "includes",
+                cacheReadInputTokens: "PX_16",
+                toolCalls: [],
+                activeToolBlocks: {},
+              };
+              closure_136_2 = obj5;
+              closure_136_4 = false;
+              closure_136_5 = false;
+              c9 = 4;
+              const iter = (function _asyncIterator(arg0) {
+                if (typeof Symbol !== "undefined") {
+                  const _Symbol = Symbol;
+                  let str2 = Symbol.asyncIterator;
+                  const _Symbol2 = Symbol;
+                  let str = Symbol.iterator;
+                }
+                let num = 1;
+                while (true) {
+                  let tmp = num;
+                  if (str2) {
+                    if (null != arg0[str2]) {
+                      break;
+                    }
+                  }
+                  if (str) {
+                    let tmp5 = arg0[str];
+                    if (null != tmp5) {
+                      let call = tmp5.call;
+                      let tmp11 = typeof call === "unknown" ? tmp5() : call(arg0);
+                      let tmp12 = new.target;
+                      let tmp13 = new.target;
+                      let tmp102 = new value2(tmp11);
+                      return tmp102;
+                    }
+                  }
+                  num = num - 1;
+                  str = "@@iterator";
+                  str2 = "@@asyncIterator";
+                  if (tmp) {
+                    continue;
+                  } else {
+                    let _TypeError = TypeError;
+                    let tmp6 = new.target;
+                    let str3 = "Object is not async iterable";
+                    let tmp7 = new.target;
+                    let typeError = new TypeError("Object is not async iterable");
+                    throw typeError;
+                  }
+                }
+                const call2 = tmp4.call;
+                return typeof call2 === "unknown" ? tmp4() : call2(arg0);
+              })(closure_0);
+              closure_136_7 = iter;
+              c11 = 5;
+              c12 = 1;
+              const obj6 = { value: _awaitAsyncGenerator(iter.next()), done: false };
+              return obj6;
+            }
+            break;
+          case 1:
+            c9 = 0;
+            if (closure_136_2.responseId) {
+              const obj7 = {};
+              obj7[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+              closure_136_0.setAttributes(obj7);
+            }
+            if (closure_136_2.responseModel) {
+              const obj8 = {};
+              obj8[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+              closure_136_0.setAttributes(obj8);
+            }
+            const obj72 = closure_135_0(closure_135_1[5]);
+            const result = obj72.setTokenUsageAttributes(
+              closure_136_0,
+              closure_136_2.promptTokens,
+              closure_136_2.completionTokens,
+              closure_136_2.cacheCreationInputTokens,
+              closure_136_2.cacheReadInputTokens,
+            );
+            const obj9 = {};
+            obj9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+            closure_136_0.setAttributes(obj9);
+            if (closure_136_2.finishReasons.length > 0) {
+              const obj10 = {};
+              const _JSON17 = JSON;
+              obj10[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                closure_136_2.finishReasons,
+              );
+              closure_136_0.setAttributes(obj10);
+            }
+            let tmp665 = closure_136_1;
+            if (closure_136_1) {
+              tmp665 = closure_136_2.responseTexts.length > 0;
+            }
+            if (tmp665) {
+              const obj12 = {};
+              const responseTexts9 = closure_136_2.responseTexts;
+              obj12[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts9.join("");
+              closure_136_0.setAttributes(obj12);
+            }
+            let tmp675 = closure_136_1;
+            if (closure_136_1) {
+              tmp675 = closure_136_2.toolCalls.length > 0;
+            }
+            if (tmp675) {
+              const obj13 = {};
+              const _JSON18 = JSON;
+              obj13[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                closure_136_2.toolCalls,
+              );
+              closure_136_0.setAttributes(obj13);
+            }
+            closure_136_0.end();
+            throw closure_10;
+          case 2:
+            closure_6 = closure_10;
+            c9 = 3;
+            let tmp615 = closure_136_4;
+            if (closure_136_4) {
+              tmp615 = null != closure_136_7.return;
+            }
+            if (!tmp615) {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                throw closure_6;
+              }
+            } else {
+              c11 = 16;
+              c12 = 1;
+              const obj14 = { value: closure_135_2(closure_136_7.return()), done: false };
+              return obj14;
+            }
+            break;
+          case 3:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp608;
+            }
+            break;
+          case 4:
+            c9 = 2;
+            closure_136_5 = true;
+            closure_136_3 = closure_10;
+            c9 = 8;
+            let tmp535 = closure_136_4;
+            if (closure_136_4) {
+              tmp535 = null != closure_136_7.return;
+            }
+            if (tmp535) {
+              c11 = 15;
+              c12 = 1;
+              const obj15 = { value: closure_135_2(closure_136_7.return()), done: false };
+              return obj15;
+            } else {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                c9 = 0;
+                if (closure_136_2.responseId) {
+                  const obj16 = {};
+                  obj16[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj16);
+                }
+                if (closure_136_2.responseModel) {
+                  const obj17 = {};
+                  obj17[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj17);
+                }
+                const obj63 = closure_135_0(closure_135_1[5]);
+                const result1 = obj63.setTokenUsageAttributes(
+                  closure_136_0,
+                  closure_136_2.promptTokens,
+                  closure_136_2.completionTokens,
+                  closure_136_2.cacheCreationInputTokens,
+                  closure_136_2.cacheReadInputTokens,
+                );
+                const obj18 = {};
+                obj18[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj18);
+                if (closure_136_2.finishReasons.length > 0) {
+                  const obj20 = {};
+                  const _JSON15 = JSON;
+                  obj20[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.finishReasons,
+                  );
+                  closure_136_0.setAttributes(obj20);
+                }
+                let tmp580 = closure_136_1;
+                if (closure_136_1) {
+                  tmp580 = closure_136_2.responseTexts.length > 0;
+                }
+                if (tmp580) {
+                  const obj21 = {};
+                  const responseTexts8 = closure_136_2.responseTexts;
+                  obj21[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts8.join("");
+                  closure_136_0.setAttributes(obj21);
+                }
+                let tmp590 = closure_136_1;
+                if (closure_136_1) {
+                  tmp590 = closure_136_2.toolCalls.length > 0;
+                }
+                if (tmp590) {
+                  const obj22 = {};
+                  const _JSON16 = JSON;
+                  obj22[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                  closure_136_0.setAttributes(obj22);
+                }
+                closure_136_0.end();
+                c12 = 3;
+                return { value: "IconComponent", done: null };
+              }
+            }
+            break;
+          case 5:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else {
+              value3 = value;
+              if (arg0 === 2) {
+                c9 = 5;
+                let tmp458 = closure_136_4;
+                if (closure_136_4) {
+                  tmp458 = null != closure_136_7.return;
+                }
+                if (tmp458) {
+                  c11 = 9;
+                  c12 = 1;
+                  const obj23 = { value: closure_135_2(closure_136_7.return()), done: false };
+                  return obj23;
+                } else {
+                  c9 = 1;
+                  if (closure_136_5) {
+                    throw closure_136_3;
+                  } else {
+                    c9 = 0;
+                    if (closure_136_2.responseId) {
+                      const obj24 = {};
+                      obj24[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                      closure_136_0.setAttributes(obj24);
+                    }
+                    if (closure_136_2.responseModel) {
+                      const obj25 = {};
+                      obj25[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                        closure_136_2.responseModel;
+                      closure_136_0.setAttributes(obj25);
+                    }
+                    const obj54 = closure_135_0(closure_135_1[5]);
+                    const result2 = obj54.setTokenUsageAttributes(
+                      closure_136_0,
+                      closure_136_2.promptTokens,
+                      closure_136_2.completionTokens,
+                      closure_136_2.cacheCreationInputTokens,
+                      closure_136_2.cacheReadInputTokens,
+                    );
+                    const obj26 = {};
+                    obj26[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    closure_136_0.setAttributes(obj26);
+                    if (closure_136_2.finishReasons.length > 0) {
+                      const obj28 = {};
+                      const _JSON13 = JSON;
+                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                        closure_136_2.finishReasons,
+                      );
+                      closure_136_0.setAttributes(obj28);
+                    }
+                    let tmp503 = closure_136_1;
+                    if (closure_136_1) {
+                      tmp503 = closure_136_2.responseTexts.length > 0;
+                    }
+                    if (tmp503) {
+                      const obj29 = {};
+                      const responseTexts7 = closure_136_2.responseTexts;
+                      obj29[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts7.join("");
+                      closure_136_0.setAttributes(obj29);
+                    }
+                    let tmp513 = closure_136_1;
+                    if (closure_136_1) {
+                      tmp513 = closure_136_2.toolCalls.length > 0;
+                    }
+                    if (tmp513) {
+                      const obj30 = {};
+                      const _JSON14 = JSON;
+                      obj30[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                        closure_136_2.toolCalls,
+                      );
+                      closure_136_0.setAttributes(obj30);
+                    }
+                    closure_136_0.end();
+                    c12 = 3;
+                    const obj31 = { value: value3, done: true };
+                    return obj31;
+                  }
+                }
+              } else {
+                closure_136_6 = value;
+                const done2 = value.done;
+                closure_136_4 = !done2;
+                if (done2) {
+                  c9 = 2;
+                } else {
+                  value4 = closure_136_6.value;
+                  closure_135_5(value4, closure_136_2, closure_136_1, closure_136_0);
+                  c11 = 6;
+                  c12 = 1;
+                  c9 = 6;
+                  let tmp295 = closure_136_4;
+                  if (closure_136_4) {
+                    tmp295 = null != closure_136_7.return;
+                  }
+                  if (tmp295) {
+                    c11 = 11;
+                    c12 = 1;
+                    const obj32 = { value: closure_135_2(closure_136_7.return()), done: false };
+                    return obj32;
+                  } else {
+                    c9 = 1;
+                    if (closure_136_5) {
+                      throw closure_136_3;
+                    } else {
+                      c9 = 0;
+                      if (closure_136_2.responseId) {
+                        const obj33 = {};
+                        obj33[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                        closure_136_0.setAttributes(obj33);
+                      }
+                      if (closure_136_2.responseModel) {
+                        const obj34 = {};
+                        obj34[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                          closure_136_2.responseModel;
+                        closure_136_0.setAttributes(obj34);
+                      }
+                      const obj35 = closure_135_0(closure_135_1[5]);
+                      const result3 = obj35.setTokenUsageAttributes(
+                        closure_136_0,
+                        closure_136_2.promptTokens,
+                        closure_136_2.completionTokens,
+                        closure_136_2.cacheCreationInputTokens,
+                        closure_136_2.cacheReadInputTokens,
+                      );
+                      const obj36 = {};
+                      obj36[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                      closure_136_0.setAttributes(obj36);
+                      if (closure_136_2.finishReasons.length > 0) {
+                        const obj37 = {};
+                        const _JSON9 = JSON;
+                        obj37[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                          JSON.stringify(closure_136_2.finishReasons);
+                        closure_136_0.setAttributes(obj37);
+                      }
+                      let tmp340 = closure_136_1;
+                      if (closure_136_1) {
+                        tmp340 = closure_136_2.responseTexts.length > 0;
+                      }
+                      if (tmp340) {
+                        const obj38 = {};
+                        const responseTexts5 = closure_136_2.responseTexts;
+                        obj38[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts5.join("");
+                        closure_136_0.setAttributes(obj38);
+                      }
+                      let tmp350 = closure_136_1;
+                      if (closure_136_1) {
+                        tmp350 = closure_136_2.toolCalls.length > 0;
+                      }
+                      if (tmp350) {
+                        const obj39 = {};
+                        const _JSON10 = JSON;
+                        obj39[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                          closure_136_2.toolCalls,
+                        );
+                        closure_136_0.setAttributes(obj39);
+                      }
+                      closure_136_0.end();
+                      c12 = 3;
+                      const obj40 = { value: value2, done: true };
+                      return obj40;
+                    }
+                  }
+                }
+              }
+            }
+            break;
+          case 6:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 7;
+              let tmp373 = closure_136_4;
+              if (closure_136_4) {
+                tmp373 = null != closure_136_7.return;
+              }
+              if (tmp373) {
+                c11 = 13;
+                c12 = 1;
+                const obj41 = { value: closure_135_2(closure_136_7.return()), done: false };
+                return obj41;
+              } else {
+                c9 = 1;
+                if (closure_136_5) {
+                  throw closure_136_3;
+                } else {
+                  c9 = 0;
+                  if (closure_136_2.responseId) {
+                    const obj42 = {};
+                    obj42[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                    closure_136_0.setAttributes(obj42);
+                  }
+                  if (closure_136_2.responseModel) {
+                    const obj43 = {};
+                    obj43[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                      closure_136_2.responseModel;
+                    closure_136_0.setAttributes(obj43);
+                  }
+                  const obj45 = closure_135_0(closure_135_1[5]);
+                  const result4 = obj45.setTokenUsageAttributes(
+                    closure_136_0,
+                    closure_136_2.promptTokens,
+                    closure_136_2.completionTokens,
+                    closure_136_2.cacheCreationInputTokens,
+                    closure_136_2.cacheReadInputTokens,
+                  );
+                  const obj44 = {};
+                  obj44[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                  closure_136_0.setAttributes(obj44);
+                  if (closure_136_2.finishReasons.length > 0) {
+                    const obj46 = {};
+                    const _JSON11 = JSON;
+                    obj46[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                      closure_136_2.finishReasons,
+                    );
+                    closure_136_0.setAttributes(obj46);
+                  }
+                  let tmp418 = closure_136_1;
+                  if (closure_136_1) {
+                    tmp418 = closure_136_2.responseTexts.length > 0;
+                  }
+                  if (tmp418) {
+                    const obj47 = {};
+                    const responseTexts6 = closure_136_2.responseTexts;
+                    obj47[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts6.join("");
+                    closure_136_0.setAttributes(obj47);
+                  }
+                  let tmp428 = closure_136_1;
+                  if (closure_136_1) {
+                    tmp428 = closure_136_2.toolCalls.length > 0;
+                  }
+                  if (tmp428) {
+                    const obj48 = {};
+                    const _JSON12 = JSON;
+                    obj48[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                      closure_136_2.toolCalls,
+                    );
+                    closure_136_0.setAttributes(obj48);
+                  }
+                  closure_136_0.end();
+                  c12 = 3;
+                  const obj49 = { value, done: true };
+                  return obj49;
+                }
+              }
+            } else {
+              closure_136_4 = false;
+              c11 = 7;
+              c12 = 1;
+              const obj50 = { value: closure_135_2(closure_136_7.next()), done: false };
+              return obj50;
+            }
+            break;
+          case 7:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else {
+              value2 = value;
+              if (arg0 !== 2) {
+                closure_136_6 = value;
+                const done = value.done;
+                closure_136_4 = !done;
+              }
+            }
+            break;
+          case 8:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp289;
+            }
+            break;
+          case 9:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                c9 = 0;
+                if (closure_136_2.responseId) {
+                  const obj51 = {};
+                  obj51[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj51);
+                }
+                if (closure_136_2.responseModel) {
+                  const obj52 = {};
+                  obj52[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj52);
+                }
+                const obj27 = closure_135_0(closure_135_1[5]);
+                const result5 = obj27.setTokenUsageAttributes(
+                  closure_136_0,
+                  closure_136_2.promptTokens,
+                  closure_136_2.completionTokens,
+                  closure_136_2.cacheCreationInputTokens,
+                  closure_136_2.cacheReadInputTokens,
+                );
+                const obj53 = {};
+                obj53[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj53);
+                if (closure_136_2.finishReasons.length > 0) {
+                  const obj55 = {};
+                  const _JSON7 = JSON;
+                  obj55[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.finishReasons,
+                  );
+                  closure_136_0.setAttributes(obj55);
+                }
+                let tmp265 = closure_136_1;
+                if (closure_136_1) {
+                  tmp265 = closure_136_2.responseTexts.length > 0;
+                }
+                if (tmp265) {
+                  const obj56 = {};
+                  const responseTexts4 = closure_136_2.responseTexts;
+                  obj56[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts4.join("");
+                  closure_136_0.setAttributes(obj56);
+                }
+                let tmp275 = closure_136_1;
+                if (closure_136_1) {
+                  tmp275 = closure_136_2.toolCalls.length > 0;
+                }
+                if (tmp275) {
+                  const obj57 = {};
+                  const _JSON8 = JSON;
+                  obj57[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                  closure_136_0.setAttributes(obj57);
+                }
+                closure_136_0.end();
+                c12 = 3;
+                const obj58 = { value, done: true };
+                return obj58;
+              }
+            }
+            break;
+          case 10:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp220;
+            }
+            break;
+          case 11:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                c9 = 0;
+                if (closure_136_2.responseId) {
+                  const obj59 = {};
+                  obj59[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj59);
+                }
+                if (closure_136_2.responseModel) {
+                  const obj60 = {};
+                  obj60[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj60);
+                }
+                const obj19 = closure_135_0(closure_135_1[5]);
+                const result6 = obj19.setTokenUsageAttributes(
+                  closure_136_0,
+                  closure_136_2.promptTokens,
+                  closure_136_2.completionTokens,
+                  closure_136_2.cacheCreationInputTokens,
+                  closure_136_2.cacheReadInputTokens,
+                );
+                const obj61 = {};
+                obj61[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj61);
+                if (closure_136_2.finishReasons.length > 0) {
+                  const obj62 = {};
+                  const _JSON5 = JSON;
+                  obj62[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.finishReasons,
+                  );
+                  closure_136_0.setAttributes(obj62);
+                }
+                let tmp196 = closure_136_1;
+                if (closure_136_1) {
+                  tmp196 = closure_136_2.responseTexts.length > 0;
+                }
+                if (tmp196) {
+                  const obj64 = {};
+                  const responseTexts3 = closure_136_2.responseTexts;
+                  obj64[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts3.join("");
+                  closure_136_0.setAttributes(obj64);
+                }
+                let tmp206 = closure_136_1;
+                if (closure_136_1) {
+                  tmp206 = closure_136_2.toolCalls.length > 0;
+                }
+                if (tmp206) {
+                  const obj65 = {};
+                  const _JSON6 = JSON;
+                  obj65[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                  closure_136_0.setAttributes(obj65);
+                }
+                closure_136_0.end();
+                c12 = 3;
+                const obj66 = { value, done: true };
+                return obj66;
+              }
+            }
+            break;
+          case 12:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp151;
+            }
+            break;
+          case 13:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                c9 = 0;
+                if (closure_136_2.responseId) {
+                  const obj67 = {};
+                  obj67[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj67);
+                }
+                if (closure_136_2.responseModel) {
+                  const obj68 = {};
+                  obj68[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj68);
+                }
+                const obj11 = closure_135_0(closure_135_1[5]);
+                const result7 = obj11.setTokenUsageAttributes(
+                  closure_136_0,
+                  closure_136_2.promptTokens,
+                  closure_136_2.completionTokens,
+                  closure_136_2.cacheCreationInputTokens,
+                  closure_136_2.cacheReadInputTokens,
+                );
+                const obj69 = {};
+                obj69[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj69);
+                if (closure_136_2.finishReasons.length > 0) {
+                  const obj70 = {};
+                  const _JSON3 = JSON;
+                  obj70[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.finishReasons,
+                  );
+                  closure_136_0.setAttributes(obj70);
+                }
+                let tmp127 = closure_136_1;
+                if (closure_136_1) {
+                  tmp127 = closure_136_2.responseTexts.length > 0;
+                }
+                if (tmp127) {
+                  const obj71 = {};
+                  const responseTexts2 = closure_136_2.responseTexts;
+                  obj71[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
+                  closure_136_0.setAttributes(obj71);
+                }
+                let tmp137 = closure_136_1;
+                if (closure_136_1) {
+                  tmp137 = closure_136_2.toolCalls.length > 0;
+                }
+                if (tmp137) {
+                  const obj73 = {};
+                  const _JSON4 = JSON;
+                  obj73[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                  closure_136_0.setAttributes(obj73);
+                }
+                closure_136_0.end();
+                c12 = 3;
+                const obj74 = { value, done: true };
+                return obj74;
+              }
+            }
+            break;
+          case 14:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp82;
+            }
+            break;
+          case 15:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                c9 = 0;
+                if (closure_136_2.responseId) {
+                  const obj = {};
+                  obj[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj);
+                }
+                if (closure_136_2.responseModel) {
+                  const obj75 = {};
+                  obj75[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj75);
+                }
+                const obj3 = closure_135_0(closure_135_1[5]);
+                const result8 = obj3.setTokenUsageAttributes(
+                  closure_136_0,
+                  closure_136_2.promptTokens,
+                  closure_136_2.completionTokens,
+                  closure_136_2.cacheCreationInputTokens,
+                  closure_136_2.cacheReadInputTokens,
+                );
+                const obj76 = {};
+                obj76[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj76);
+                if (closure_136_2.finishReasons.length > 0) {
+                  const obj77 = {};
+                  const _JSON = JSON;
+                  obj77[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.finishReasons,
+                  );
+                  closure_136_0.setAttributes(obj77);
+                }
+                let tmp58 = closure_136_1;
+                if (closure_136_1) {
+                  tmp58 = closure_136_2.responseTexts.length > 0;
+                }
+                if (tmp58) {
+                  const obj78 = {};
+                  const responseTexts = closure_136_2.responseTexts;
+                  obj78[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
+                  closure_136_0.setAttributes(obj78);
+                }
+                let tmp68 = closure_136_1;
+                if (closure_136_1) {
+                  tmp68 = closure_136_2.toolCalls.length > 0;
+                }
+                if (tmp68) {
+                  const obj79 = {};
+                  const _JSON2 = JSON;
+                  obj79[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                  closure_136_0.setAttributes(obj79);
+                }
+                closure_136_0.end();
+                c12 = 3;
+                const obj80 = { value, done: true };
+                return obj80;
+              }
+            }
+            break;
+          default:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                c9 = 0;
+                if (closure_136_2.responseId) {
+                  const obj82 = {};
+                  obj82[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+                  closure_136_0.setAttributes(obj82);
+                }
+                if (closure_136_2.responseModel) {
+                  const obj83 = {};
+                  obj83[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_136_2.responseModel;
+                  closure_136_0.setAttributes(obj83);
+                }
+                const obj81 = closure_135_0(closure_135_1[5]);
+                const result9 = obj81.setTokenUsageAttributes(
+                  closure_136_0,
+                  closure_136_2.promptTokens,
+                  closure_136_2.completionTokens,
+                  closure_136_2.cacheCreationInputTokens,
+                  closure_136_2.cacheReadInputTokens,
+                );
+                const obj84 = {};
+                obj84[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_0.setAttributes(obj84);
+                if (closure_136_2.finishReasons.length > 0) {
+                  const obj85 = {};
+                  const _JSON19 = JSON;
+                  obj85[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.finishReasons,
+                  );
+                  closure_136_0.setAttributes(obj85);
+                }
+                let tmp734 = closure_136_1;
+                if (closure_136_1) {
+                  tmp734 = closure_136_2.responseTexts.length > 0;
+                }
+                if (tmp734) {
+                  const obj86 = {};
+                  const responseTexts10 = closure_136_2.responseTexts;
+                  obj86[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts10.join("");
+                  closure_136_0.setAttributes(obj86);
+                }
+                let tmp744 = closure_136_1;
+                if (closure_136_1) {
+                  tmp744 = closure_136_2.toolCalls.length > 0;
+                }
+                if (tmp744) {
+                  const obj87 = {};
+                  const _JSON20 = JSON;
+                  obj87[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                  closure_136_0.setAttributes(obj87);
+                }
+                closure_136_0.end();
+                c12 = 3;
+                const obj88 = { value, done: true };
+                return obj88;
+              }
+            }
+        }
+      } catch (tmp757) {
+        closure_10 = tmp757;
+        if (tmp5 === c9) {
+          c12 = tmp3;
+          throw tmp757;
+        } else if (tmp2 === tmp759) {
+          c11 = tmp2;
+        } else if (tmp === tmp759) {
+          c11 = tmp;
+        } else if (tmp3 === tmp759) {
+          c11 = tmp3;
+        } else if (tmp13 === tmp759) {
+          c11 = tmp13;
+        } else if (tmp6 === tmp759) {
+          c11 = tmp12;
+        } else if (tmp7 === tmp759) {
+          c11 = tmp11;
+        } else if (tmp8 === tmp759) {
+          c11 = tmp10;
+        } else {
+          c11 = tmp9;
+        }
+      }
+    }
+  })();
+};
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export const instrumentAsyncIterableStream = function instrumentAsyncIterableStream(arg0, arg1, c1) {
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
+  closure_0 = arg1;
+  closure_1 = flag;
+  closure_2 = {
+    responseTexts: [],
+    finishReasons: [],
+    responseId: "",
+    responseModel: "",
+    promptTokens: "r",
+    completionTokens: "__packager_asset",
+    cacheCreationInputTokens: "includes",
+    cacheReadInputTokens: "PX_16",
+    toolCalls: [],
+    activeToolBlocks: {},
+  };
+  applyResult.on("streamEvent", (arg0) => {
+    processEvent(arg0, closure_2, closure_1, closure_0);
+  });
+  applyResult.on("message", () => {
+    let tmp2 = closure_1;
+    if (closure_0.isRecording()) {
+      if (closure_2.responseId) {
+        const obj2 = {};
+        obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_2.responseId;
+        closure_0.setAttributes(obj2);
+      }
+      if (closure_2.responseModel) {
+        const obj3 = {};
+        obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = closure_2.responseModel;
+        closure_0.setAttributes(obj3);
+      }
+      const obj4 = extractSystemInstructions;
+      const result = obj4.setTokenUsageAttributes(
+        closure_0,
+        closure_2.promptTokens,
+        closure_2.completionTokens,
+        closure_2.cacheCreationInputTokens,
+        closure_2.cacheReadInputTokens,
+      );
+      const obj5 = {};
+      obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+      closure_0.setAttributes(obj5);
+      if (closure_2.finishReasons.length > 0) {
+        const obj6 = {};
+        const _JSON = JSON;
+        obj6[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+          closure_2.finishReasons,
+        );
+        closure_0.setAttributes(obj6);
+      }
+      let tmp21 = tmp2;
+      if (tmp2) {
+        tmp21 = closure_2.responseTexts.length > 0;
+      }
+      if (tmp21) {
+        const obj7 = {};
+        const responseTexts = closure_2.responseTexts;
+        obj7[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
+        closure_0.setAttributes(obj7);
+      }
+      if (tmp2) {
+        tmp2 = closure_2.toolCalls.length > 0;
+      }
+      if (tmp2) {
+        const obj8 = {};
+        const _JSON2 = JSON;
+        obj8[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+          closure_2.toolCalls,
+        );
+        closure_0.setAttributes(obj8);
+      }
+      closure_0.end();
     }
   });
-  return proxy;
+  applyResult.on("error", (error) => {
+    captureCheckIn.captureException(error, { mechanism: { handled: false, type: "auto.ai.anthropic.stream_error" } });
+    if (closure_0.isRecording()) {
+      const obj3 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "stream_error" };
+      closure_0.setStatus(obj3);
+      closure_0.end();
+    }
+  });
+  return applyResult;
 };

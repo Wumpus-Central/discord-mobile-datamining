@@ -1,42 +1,7 @@
 // _runtime/metro/04397__.js
-import 04398__ from "04398__.js";
-import 04399__ from "04399__.js";
-import 04400__ from "04400__.js";
-import date_mod from "04699__.js";
-import date_mod from "04700__.js";
+let closure_0 = { lastWeek: "'ge\u00E7en hafta' eeee 'saat' p", yesterday: "'d\u00FCn saat' p", today: "'bug\u00FCn saat' p", tomorrow: "'yar\u0131n saat' p", nextWeek: "eeee 'saat' p", other: "P" };
 
-if (!module_4398) {
-  const obj = { default: module_4398 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4398;
-}
-if (!module_4399) {
-  const obj2 = { default: module_4399 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4399;
-}
-if (!module_4400) {
-  const obj3 = { default: module_4400 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4400;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
+};
 export default exports.default;

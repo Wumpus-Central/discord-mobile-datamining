@@ -1,5 +1,5 @@
 // _runtime/00299_NativeText.js
-import measureDefault from "00068_measure.js";
+import _modDef68 from "metro/00068__.js";
 import _mod103 from "metro/00103__.js";
 import _modDef300 from "metro/00300__.js";
 
@@ -55,7 +55,7 @@ if (global.RN$Bridgeless) {
   let tmp3 = _modDef300("RCTVirtualText", () => _mod103.createViewConfig(closure_3));
 } else {
   tmp3 = tmp2;
-  const importDefaultResult = measureDefault;
+  const importDefaultResult = _modDef68;
 }
 const javaScriptFlagGetter = fn(27);
 let tmp4 = tmp2;

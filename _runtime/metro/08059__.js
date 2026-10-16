@@ -1,20 +1,5 @@
 // _runtime/metro/08059__.js
-import _mod8045 from "08045__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let c2 = 6;
-let closure_3 = ["GIF87a", "GIF89a"];
-
-export default {
-  isGifFile(dataView) {
-    let hasItem = dataView;
-    if (hasItem) {
-      hasItem = closure_3.includes(_mod8045.getStringFromDataView(dataView, 0, c2));
-    }
-    return hasItem;
-  },
-  findOffsets() {
-    return { gifHeaderOffset: 0 };
-  },
+export const get64BitValue = function get64BitValue(getUint32, sum4) {
+  return getUint32.getUint32(sum4 + 4);
 };

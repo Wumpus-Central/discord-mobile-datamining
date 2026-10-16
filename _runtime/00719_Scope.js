@@ -79,7 +79,7 @@ const entry = {
     obj4._sdkProcessingMetadata = {};
     const merged5 = Object.assign(self._propagationContext);
     obj4._propagationContext = {};
-    ({ _client: tmp._client, _lastEventId: tmp._lastEventId } = self);
+    ({ _client: tmp._client, _lastEventId: tmp._lastEventId, _conversationId: tmp._conversationId } = self);
     const obj10 = {};
     const obj11 = {};
     const obj3 = Scope(707);
@@ -137,7 +137,7 @@ let items = [
     key: "setUser",
     value: function setUser(user) {
       if (!user) {
-        user = { email: "ix", id: "isReactCompilerEnabled", ip_address: "section", username: "Array" };
+        user = { email: "unicodeVersion", id: "marginTop", ip_address: "shapes", username: "Array" };
       }
       const self = this;
       this._user = user;
@@ -154,6 +154,14 @@ let items = [
     key: "getUser",
     value: function getUser() {
       return this._user;
+    },
+  },
+  {
+    key: "setConversationId",
+    value: function setConversationId(_conversationId) {
+      this._conversationId = _conversationId;
+      const result = this._notifyScopeListeners();
+      return this;
     },
   },
   {
@@ -302,7 +310,7 @@ let items = [
         if (undefined === fingerprint) {
           fingerprint = [];
         }
-        const propagationContext = scopeData.propagationContext;
+        ({ propagationContext, conversationId } = scopeData);
         const obj3 = {};
         const merged = Object.assign(self._tags);
         const merged1 = Object.assign(tags);
@@ -336,6 +344,9 @@ let items = [
         if (propagationContext) {
           self._propagationContext = propagationContext;
         }
+        if (conversationId) {
+          self._conversationId = conversationId;
+        }
         return self;
       } else {
         return self;
@@ -356,6 +367,7 @@ let items = [
         _transactionName: undefined,
         _fingerprint: undefined,
         _session: undefined,
+        _conversationId: undefined,
       };
       Scope(720)._setSpanForScope(obj, undefined);
       obj._attachments = [];
@@ -449,6 +461,7 @@ let items = [
         sdkProcessingMetadata: self._sdkProcessingMetadata,
         transactionName: self._transactionName,
         span: Scope(720)._getSpanForScope(self),
+        conversationId: self._conversationId,
       };
       return obj;
     },

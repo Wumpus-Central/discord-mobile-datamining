@@ -1,13 +1,36 @@
 // _runtime/metro/01061__.js
-import _mod17 from "00017__.js";
-import _mod878 from "00878__.js";
+import RN_GLOBAL_OBJ from "../00692_RN_GLOBAL_OBJ.js";
+import _mod879 from "00879__.js";
 
-const Platform = _mod17.Platform;
+require = arg1;
+const dependencyMap = arg6;
 
-export const shouldEnableNativeNagger = function shouldEnableNativeNagger(enableNativeNagger) {
-  let tmp = enableNativeNagger;
-  if (typeof enableNativeNagger !== "boolean") {
-    tmp = !_mod878.isExpoGo();
+export const createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalReleaseConstants() {
+  const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
+  if (SENTRY_RELEASE) {
+    ({ name, version } = SENTRY_RELEASE);
+    if (name) {
+      if (version) {
+        const _HermesInternal = HermesInternal;
+        return "" + name + "@" + version;
+      }
+    }
   }
-  return tmp;
+};
+export const getDefaultRelease = function getDefaultRelease() {
+  if (!obj.notWeb()) {
+    const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
+    let combined;
+    if (SENTRY_RELEASE) {
+      ({ name, version } = SENTRY_RELEASE);
+      if (name) {
+        if (version) {
+          const _HermesInternal = HermesInternal;
+          combined = "" + name + "@" + version;
+        }
+      }
+    }
+    return combined;
+  }
+  obj = _mod879;
 };

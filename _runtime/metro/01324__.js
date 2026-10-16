@@ -1,3 +1,3 @@
 // _runtime/metro/01324__.js
 
-export default EvalError;
+export default Function.prototype.apply;

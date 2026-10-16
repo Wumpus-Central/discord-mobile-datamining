@@ -1,15 +1,15 @@
 // _runtime/metro/04605__.js
-import startOfMinute_mod from "../04464_startOfMinute.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import module_4606_mod from "04606__.js";
+import requiredArgs_mod from "../04259_requiredArgs.js";
 
-let startOfMinute = startOfMinute_mod;
-if (!startOfMinute) {
-  const obj = { default: startOfMinute };
+let module_4606 = module_4606_mod;
+if (!module_4606) {
+  const obj = { default: module_4606 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfMinute;
+  tmp3 = module_4606;
 }
-startOfMinute = tmp3;
+module_4606 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,10 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameMinute(arg0, arg1) {
+export default function isSameISOWeek(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfMinute.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfMinute.default(arg1).getTime();
+  return module_4606.default(arg0, arg1, { weekStartsOn: 1 });
 };
 export default exports.default;

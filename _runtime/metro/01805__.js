@@ -1,13 +1,27 @@
 // _runtime/metro/01805__.js
-import _mod1806 from "01806__.js";
-import 01659__ from "01659__.js";
+import _mod19 from "00019__.js";
+import WorkletEventHandlerNative from "../01763_WorkletEventHandlerNative.js";
 
-if (module_1659.shouldBeUseWeb()) {
-  function useAnimatedPropsJS(fn, items, arg2) {
-    return _mod1806.useAnimatedStyle(fn, items, arg2, true);
+const useRef = _mod19.useRef;
+
+export const useEvent = function useEvent(fn) {
+  let items = cResult;
+  if (cResult === undefined) {
+    items = [];
   }
-} else {
-  useAnimatedPropsJS = _mod1806.useAnimatedStyle;
-}
-
-export const useAnimatedProps = useAnimatedPropsJS;
+  let flag = doDependenciesDiffer;
+  if (doDependenciesDiffer === undefined) {
+    flag = false;
+  }
+  const tmp = useRef(null);
+  if (null === tmp.current) {
+    const workletEventHandler1 = new WorkletEventHandlerNative.WorkletEventHandler(fn, items);
+    const obj2 = { workletEventHandler: workletEventHandler1 };
+    tmp.current = obj2;
+  } else if (flag) {
+    tmp.current.workletEventHandler.updateEventHandler(fn, items);
+    const obj = { workletEventHandler: tmp.current.workletEventHandler };
+    tmp.current = obj;
+  }
+  return tmp.current;
+};

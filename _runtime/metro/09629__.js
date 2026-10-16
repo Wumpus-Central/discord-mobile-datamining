@@ -1,13 +1,13 @@
 // _runtime/metro/09629__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "45844ffe000e8da4174843bafa8614af",
-  name: "SuperReactionIcon",
+  httpServerLocation: "/assets/images/native/wumpus",
+  width: 84,
+  height: 66,
+  scales: [1],
+  hash: "6220c6fc32c3a2a05a977c59f0c7790d",
+  name: "wumpus-ash",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/metro/09330__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f707107902b0c142d4942c459b0a28b3",
-  name: "TwitchNeutralIcon",
+  hash: "36a084fbace40e0af86aab037df7e8b7",
+  name: "PlaystationNeutralIcon",
   type: "png",
 });

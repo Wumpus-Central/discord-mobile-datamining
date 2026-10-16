@@ -1,13 +1,15 @@
 // _runtime/metro/18804__.js
-import registerAsset from "01132__.js";
+import arrayReduce from "../05266_arrayReduce.js";
+import words from "../18805_words.js";
+import deburr from "../18809_deburr.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 40,
-  height: 40.5,
-  scales: [2, 3],
-  hash: "a3768a48fee4076951a25e660d265530",
-  name: "role_subscription_benefit_wise_avatar",
-  type: "png",
-});
+let closure_2 = RegExp("['\u2019]", "g");
+
+export default function createCompounder(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const tmp = arrayReduce;
+    const tmp2 = words;
+    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
+  };
+}

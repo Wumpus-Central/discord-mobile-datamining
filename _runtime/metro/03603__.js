@@ -1,11 +1,11 @@
 // _runtime/metro/03603__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/rust_3pp",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3J1c3RfM3Bw",
   scales: [1],
-  hash: "354571feac5b6fb5fc9502ef0519a4c8",
-  name: "Rust3PP.compiled.messages",
+  hash: "38af0a5ffbde4d8bf7284d92485bacdb",
+  name: "vi.messages.38af0a5ffbde4d8bf7284d92485bacdb.compiled.messages",
   type: "jsona",
 });

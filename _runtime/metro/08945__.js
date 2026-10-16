@@ -1,13 +1,13 @@
 // _runtime/metro/08945__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24.5,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 254,
+  height: 154,
   scales: [2, 3],
-  hash: "8baf8e74a5de42544f8c13cd8c4c504d",
-  name: "ic_share_android",
+  hash: "82ae7189682c36bee3dc3a129ab02a11",
+  name: "img_app_crash_darker",
   type: "png",
 });

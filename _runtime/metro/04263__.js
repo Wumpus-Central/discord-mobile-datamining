@@ -1,42 +1,9 @@
 // _runtime/metro/04263__.js
-import 04264__ from "04264__.js";
-import 04265__ from "04265__.js";
-import 04266__ from "04266__.js";
-import date_mod from "04267__.js";
-import date_mod from "04268__.js";
+let global = {};
 
-if (!module_4264) {
-  const obj = { default: module_4264 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4264;
+export function getDefaultOptions() {
+  return global;
 }
-if (!module_4265) {
-  const obj2 = { default: module_4265 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4265;
+export function setDefaultOptions(arg0) {
+  global = arg0;
 }
-if (!module_4266) {
-  const obj3 = { default: module_4266 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4266;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "cs", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
-export default exports.default;

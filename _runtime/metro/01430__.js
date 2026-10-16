@@ -1,5 +1,5 @@
 // _runtime/metro/01430__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 96,
   height: 96,
   scales: [1],
-  hash: "13b5174c70f36a12e9398dc83e0105cd",
-  name: "default_avatar_5_small",
+  hash: "f27907bace32e5b04cd2a7e2a779c82b",
+  name: "default_avatar_3_small",
   type: "png",
 });

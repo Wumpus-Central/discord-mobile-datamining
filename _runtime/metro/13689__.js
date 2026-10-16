@@ -1,13 +1,13 @@
 // _runtime/metro/13689__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [2, 3, 4],
-  hash: "61996c8880b718aa494df1b2d4a258fb",
-  name: "arrow-right",
+  scales: [2, 3],
+  hash: "6adfcc7a553215ee3085ec15a5a3e3a4",
+  name: "ClockXIcon",
   type: "png",
 });

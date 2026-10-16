@@ -1,65 +1,27 @@
 // _runtime/metro/10356__.js
-import cancelAnimation from "../01656_cancelAnimation.js";
-import SINGLE_ITEM from "../10342_SINGLE_ITEM.js";
+import _mod10357 from "10357__.js";
+import _mod10360 from "10360__.js";
+import _mod10364 from "10364__.js";
+import _mod10365 from "10365__.js";
+import CarouselLayout from "../10366_CarouselLayout.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_useOnProgressChangeTs1(){const{offsetX}=this.__closure;return offsetX.value;}" };
-let closure_3 = {
-  code: "function pnpm_useOnProgressChangeTs2(_value){const{computedOffsetXValueWithAutoFillData,rawDataLength,size,autoFillData,loop,onProgressChange,isFunc,runOnJS}=this.__closure;let value=computedOffsetXValueWithAutoFillData({value:_value,rawDataLength:rawDataLength,size:size,autoFillData:autoFillData,loop:loop});if(!loop){value=Math.max(-((rawDataLength-1)*size),Math.min(value,0));}let absoluteProgress=Math.abs(value/size);if(value>0)absoluteProgress=rawDataLength-absoluteProgress;if(onProgressChange){if(isFunc)runOnJS(onProgressChange)(value,absoluteProgress);else onProgressChange.value=absoluteProgress;}}",
-};
+require = fn;
+const jsx = fn(21).jsx;
 
-export const useOnProgressChange = function useOnProgressChange(autoFillData) {
-  autoFillData = autoFillData.autoFillData;
-  const loop = autoFillData.loop;
-  const offsetX = autoFillData.offsetX;
-  const size = autoFillData.size;
-  const rawDataLength = autoFillData.rawDataLength;
-  const onProgressChange = autoFillData.onProgressChange;
-  closure_6 = tmp;
-  const fn = function n() {
-    return offsetX.value;
+export default noop.forwardRef((defaultIndex, ref) => {
+  const initProps = _mod10357.useInitProps(defaultIndex);
+  const commonVariables = _mod10360.useCommonVariables(initProps);
+  const obj4 = {};
+  const merged = Object.assign(initProps);
+  obj4.dataLength = initProps.dataLength;
+  const propsErrorBoundary = _mod10364.usePropsErrorBoundary(obj4);
+  const obj5 = {
+    value: { props: initProps, common: commonVariables },
+    children: jsx(CarouselLayout.CarouselLayout, { ref }),
   };
-  fn.__closure = { offsetX };
-  fn.__workletHash = 355184931449;
-  fn.__initData = offsetX;
-  const fn2 = function u(value) {
-    const result = SINGLE_ITEM.computedOffsetXValueWithAutoFillData({ value, rawDataLength, size, autoFillData, loop });
-    let bound = result;
-    if (!loop) {
-      const _Math = Math;
-      const _Math2 = Math;
-      const result1 = -rawDataLength - 1 * size;
-      bound = Math.max(result1, Math.min(result, 0));
-    }
-    const absolute = Math.abs(bound / size);
-    let diff = absolute;
-    if (bound > 0) {
-      diff = rawDataLength - absolute;
-    }
-    if (onProgressChange) {
-      if (closure_6) {
-        cancelAnimation.runOnJS(onProgressChange)(bound, diff);
-        const tmpResult = cancelAnimation;
-      } else {
-        onProgressChange.value = diff;
-      }
-    }
-    const obj2 = { value, rawDataLength, size, autoFillData, loop };
-  };
-  let obj = autoFillData(loop[0]);
-  fn2.__closure = {
-    computedOffsetXValueWithAutoFillData: autoFillData(loop[1]).computedOffsetXValueWithAutoFillData,
-    rawDataLength,
-    size,
-    autoFillData,
-    loop,
-    onProgressChange,
-    isFunc: typeof onProgressChange === "function",
-    runOnJS: autoFillData(loop[0]).runOnJS,
-  };
-  fn2.__workletHash = 12473781608319;
-  fn2.__initData = size;
-  const items = [loop, autoFillData, rawDataLength, onProgressChange, size];
-  const animatedReaction = obj.useAnimatedReaction(fn, fn2, items);
-};
+  return jsx(_mod10365.GlobalStateProvider, {
+    value: { props: initProps, common: commonVariables },
+    children: jsx(CarouselLayout.CarouselLayout, { ref }),
+  });
+});

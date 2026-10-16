@@ -1,13 +1,13 @@
 // _runtime/metro/10004__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/perks",
-  width: 20,
-  height: 20,
-  scales: [2, 3],
-  hash: "41b77a6677a2cd0322d1116c3e0298ad",
-  name: "img_nitro_premium_guilds_20px",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 18,
+  height: 18,
+  scales: [1, 2, 3],
+  hash: "2ed56d0310ca0815cf3884cb061fb3d0",
+  name: "ic_play",
   type: "png",
 });

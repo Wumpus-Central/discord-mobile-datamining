@@ -1,227 +1,109 @@
 // _runtime/metro/01017__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
-
-let ErrorBoundary = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+function getStatics($$typeof) {
+  let tmp = typeof $$typeof === "object";
+  if (typeof $$typeof === "object") {
+    tmp = null !== $$typeof;
+  }
+  if (tmp) {
+    tmp = $$typeof.$$typeof === forResult1;
+  }
+  if (tmp) {
+    return obj;
+  } else {
+    $$typeof = $$typeof.$$typeof;
+    let tmp3 = $$typeof;
+    if ($$typeof) {
+      tmp3 = obj2[$$typeof];
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-const unknown = "unknown";
-let state = { componentStack: null, error: null, eventId: null };
-class ErrorBoundary {
-  constructor(arg0) {
-    self = this;
-    closure_0 = global;
-    tmp = c2(this, ErrorBoundary);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_4;
-    obj = closure_4(ErrorBoundary);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
+    if (!tmp3) {
+      tmp3 = closure_0;
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_1 = tmp3Result;
-    tmp3Result.state = closure_8;
-    tmp3Result._openFallbackReportDialog = true;
-    obj2 = closure_0(closure_1[6]);
-    client = obj2.getClient();
-    showDialog = client;
-    if (client) {
-      showDialog = global.showDialog;
-    }
-    if (showDialog) {
-      flag = false;
-      tmp3Result._openFallbackReportDialog = false;
-      str = "afterSendEvent";
-      tmp3Result._cleanupHook = client.on("afterSendEvent", (type) => {
-        type = type.type;
-        let _lastEventId = !type;
-        if (!type) {
-          _lastEventId = closure_1._lastEventId;
-        }
-        if (_lastEventId) {
-          _lastEventId = type.event_id === closure_1._lastEventId;
-        }
-        if (_lastEventId) {
-          const obj2 = {};
-          const merged = Object.assign(showDialog.dialogOptions);
-          obj2.eventId = closure_1._lastEventId;
-          ErrorBoundary(900).showReportDialog(obj2);
-          const obj = ErrorBoundary(900);
-        }
-      });
-    }
-    return tmp3Result;
+    return tmp3;
   }
 }
-_inherits(ErrorBoundary, noop.Component);
-const entry = {
-  key: "componentDidCatch",
-  value: function componentDidCatch(error, componentStack) {
-    const self = this;
-    dependencyMap = error;
-    closure_2 = componentStack;
-    componentStack = componentStack.componentStack;
-    ({
-      beforeCapture: _getPrototypeOf,
-      onError: _isNativeReflectConstruct,
-      showDialog: noop,
-      dialogOptions: ErrorBoundary,
-    } = this.props);
-    ErrorBoundary(900).withScope((arg0) => {
-      if (_getPrototypeOf) {
-        tmp(arg0, error, componentStack);
-      }
-      if (null != self.props.handled) {
-        let handled = self.props.handled;
-      } else {
-        handled = self.props.fallback;
-      }
-      const result = ErrorBoundary(1013).captureReactException(error, closure_2, {
-        mechanism: { handled, type: "auto.function.react.error_boundary" },
-      });
-      if (_isNativeReflectConstruct) {
-        tmp10(error, componentStack, result);
-      }
-      if (noop) {
-        self._lastEventId = result;
-        if (self._openFallbackReportDialog) {
-          const obj4 = {};
-          const merged = Object.assign(closure_1_0);
-          obj4.eventId = result;
-          ErrorBoundary(900).showReportDialog(obj4);
-          const tmp6Result = ErrorBoundary(900);
-        }
-      }
-      self.setState({ error, componentStack, eventId: result });
-      const obj2 = ErrorBoundary(1013);
-      const obj3 = { mechanism: { handled, type: "auto.function.react.error_boundary" } };
-      const obj5 = { error, componentStack, eventId: result };
-    });
-  },
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+let closure_0 = {
+  childContextTypes: true,
+  contextType: true,
+  contextTypes: true,
+  defaultProps: true,
+  displayName: true,
+  getDefaultProps: true,
+  getDerivedStateFromError: true,
+  getDerivedStateFromProps: true,
+  mixins: true,
+  propTypes: true,
+  type: true,
 };
-let items = [
-  entry,
-  {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      const onMount = this.props.onMount;
-      if (onMount) {
-        onMount();
+let closure_1 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
+let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
+const forResult1 = Symbol.for("react.memo");
+const obj2 = {};
+obj2[Symbol.for("react.forward_ref")] = {
+  $$typeof: true,
+  render: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true,
+};
+obj2[forResult1] = obj;
+let closure_6 = defineProperty.bind(Object);
+let closure_7 = getOwnPropertyNames.bind(Object);
+let bindResult;
+if (getOwnPropertySymbols != null) {
+  const _Object = Object;
+  bindResult = getOwnPropertySymbols.bind(Object);
+}
+let closure_9 = getOwnPropertyDescriptor.bind(Object);
+let closure_10 = getPrototypeOf.bind(Object);
+let closure_11 = Object.prototype;
+function hoistNonReactStatics(arg0, str, arg2) {
+  if (typeof str !== "string") {
+    if (closure_11) {
+      const tmp2 = closure_10(str);
+      let tmp3 = tmp2;
+      if (tmp2) {
+        tmp3 = tmp2 !== tmp32;
       }
-    },
-  },
-  {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      const self = this;
-      const onUnmount = this.props.onUnmount;
-      if (onUnmount) {
-        if (self.state === closure_8) {
-          onUnmount(null, null, null);
-        } else {
-          onUnmount(tmp, tmp2, tmp3);
+      if (tmp3) {
+        hoistNonReactStatics(arg0, tmp2);
+      }
+    }
+    obj = closure_7(str);
+    let combined = obj;
+    if (bindResult) {
+      combined = obj.concat(tmp7(str));
+    }
+    const tmp10 = getStatics(arg0);
+    const tmp11 = getStatics(str);
+    const iter = combined[Symbol.iterator]();
+    const nextResult = iter.next();
+    if (iter !== undefined) {
+      if (!closure_1[nextResult]) {
+        let tmp19;
+        if (tmp11 != null) {
+          tmp19 = tmp11[tmp17];
         }
-      }
-      if (self._cleanupHook) {
-        self._cleanupHook();
-        self._cleanupHook = undefined;
-      }
-    },
-  },
-  {
-    key: "resetErrorBoundary",
-    value: function resetErrorBoundary() {
-      const self = this;
-      const onReset = this.props.onReset;
-      if (onReset) {
-        onReset(tmp, tmp2, tmp3);
-      }
-      self.setState(closure_8);
-    },
-  },
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      ({ fallback, children } = this.props);
-      state = this.state;
-      if (null === state.componentStack) {
-        let childrenResult = children;
-        if (typeof children === "function") {
-          childrenResult = children();
-        }
-        return childrenResult;
-      } else {
-        let element = fallback;
-        if (typeof fallback === "function") {
-          const obj = { error: null, componentStack: null, resetError: null, eventId: null };
-          ({ error: obj.error, componentStack: obj.componentStack } = state);
-          obj.resetError = function resetError() {
-            return self.resetErrorBoundary();
-          };
-          obj.eventId = state.eventId;
-          element = <fallback error={null} componentStack={null} resetError={null} eventId={null} />;
-        }
-        if (!noop.isValidElement(element)) {
-          if (fallback) {
-            fallback = ErrorBoundary(1018).DEBUG_BUILD;
+        if (!tmp19) {
+          let tmp21;
+          if (tmp10 != null) {
+            tmp21 = tmp10[tmp17];
           }
-          element = null;
-          if (fallback) {
-            const debug = ErrorBoundary(693).debug;
-            debug.warn("fallback did not produce a valid ReactElement");
-            element = null;
+          if (!tmp21) {
+            if (!closure_9(arg0, tmp17)) {
+              const tmp23Result = closure_9(str, tmp17);
+              if (tmp23Result) {
+                try {
+                  closure_6(arg0, tmp17, tmp27);
+                } catch (err) {}
+              }
+            }
           }
         }
-        return element;
       }
-    },
-  },
-];
-const _moduleResult = _createClass(ErrorBoundary, items);
+    }
+  }
+  return arg0;
+}
 
-export const ErrorBoundary = _moduleResult;
-export const UNKNOWN_COMPONENT = "unknown";
-export const withErrorBoundary = function withErrorBoundary(displayName, arg1) {
-  ErrorBoundary = displayName;
-  dependencyMap = arg1;
-  const memoResult = noop.memo((arg0) => {
-    const merged = Object.assign(closure_1);
-    const merged1 = Object.assign(arg0);
-    return (
-      <_moduleResult>
-        <closure_0 />
-      </_moduleResult>
-    );
-  });
-  memoResult.displayName = "errorBoundary(" + displayName.displayName || displayName.name || unknown + ")";
-  ErrorBoundary(1016).hoistNonReactStatics(memoResult, displayName);
-  return memoResult;
-};
+export { hoistNonReactStatics };

@@ -1,5 +1,13 @@
 // _runtime/metro/10535__.js
-import baseRest from "../08722_baseRest.js";
-import baseDelay from "../10536_baseDelay.js";
+import registerAsset from "01134__.js";
 
-export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "aeb97360fc8a478ac4fc8b1c1de862ea",
+  name: "UserCircleIcon",
+  type: "png",
+});

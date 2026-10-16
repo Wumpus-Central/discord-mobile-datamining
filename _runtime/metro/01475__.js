@@ -1,69 +1,188 @@
 // _runtime/metro/01475__.js
-import _mod1305 from "01305__.js";
-import _mod1306 from "01306__.js";
-import _mod1307 from "01307__.js";
-import _mod1476 from "01476__.js";
-import defineDataProperty from "../01477_defineDataProperty.js";
-
-let closure_2 = _mod1476();
-let closure_3 = _mod1305("%Math.floor%");
-
-export default function setFunctionLength(fn, num) {
-  if (typeof fn !== "function") {
-    const tmp25 = new _mod1306("`fn` is not a function");
-    throw tmp25;
-  } else {
-    if (typeof num === "number") {
-      if (0 >= 0) {
-        if (num <= 4294967295) {
-          if (closure_3(num) === num) {
-            let flag = true;
-            let flag2 = true;
-            if ("length" in fn) {
-              flag = true;
-              flag2 = true;
-              if (_mod1307) {
-                const tmp4 = _mod1307(fn, "length");
-                let tmp5 = tmp4;
-                if (tmp4) {
-                  tmp5 = !tmp4.configurable;
-                }
-                let flag3 = true;
-                if (tmp5) {
-                  flag3 = false;
-                }
-                let tmp6 = tmp4;
-                if (tmp4) {
-                  tmp6 = !tmp4.writable;
-                }
-                flag = true;
-                flag2 = flag3;
-                if (tmp6) {
-                  flag = false;
-                  flag2 = flag3;
-                }
-              }
-            }
-            if (!flag2) {
-              flag2 = flag;
-            }
-            if (!flag2) {
-              flag2 = !tmp;
-            }
-            if (flag2) {
-              const tmp10 = defineDataProperty;
-              if (closure_2) {
-                tmp10(fn, "length", num, true, true);
-              } else {
-                tmp10(fn, "length", num);
-              }
-            }
-            return fn;
-          }
-        }
+let apply = typeof Reflect === "object";
+if (typeof Reflect === "object") {
+  const _Reflect2 = Reflect;
+  apply = null !== Reflect;
+}
+if (apply) {
+  const _Reflect = Reflect;
+  apply = Reflect.apply;
+}
+let c3 = apply;
+if (typeof apply === "function") {
+  const _Object3 = Object;
+  if (typeof Object.defineProperty === "function") {
+    try {
+      const _Object = Object;
+      let obj = {
+        get() {
+          throw obj2;
+        },
+      };
+      apply(
+        () => {
+          throw 42;
+        },
+        null,
+        Object.defineProperty({}, "length", obj),
+      );
+      let tmp3 = apply;
+      const definePropertyResult = Object.defineProperty({}, "length", obj);
+      const obj2 = {};
+    } catch (tmp8) {
+      tmp3 = tmp2;
+      if (tmp8 !== tmp) {
+        c3 = null;
+        tmp3 = null;
       }
     }
-    const tmp19 = new _mod1306("`length` must be a positive 32-bit integer");
-    throw tmp19;
   }
+  const re4 = /^\s*class\b/;
+  function isES6ClassFunction(fn) {
+    try {
+      let tmp2 = toString;
+      const call = toString.call;
+      if (typeof call === "unknown") {
+        let callResult = tmp2();
+      } else {
+        callResult = call(fn);
+      }
+      tmp2 = re4;
+      const isMatch = re4.test(callResult);
+    } catch (err) {
+      return false;
+    }
+  }
+  function tryFunctionToStr(fn) {
+    try {
+      const tmp3 = isES6ClassFunction(fn);
+      let flag = !tmp3;
+      if (!tmp3) {
+        const call = toString.call;
+        if (typeof call === "unknown") {
+          toString();
+          flag = true;
+        } else {
+          call(fn);
+          flag = true;
+        }
+      }
+      return flag;
+    } catch (err) {
+      return false;
+    }
+  }
+  const _Object2 = Object;
+  toString = Object.prototype.toString;
+  const _Symbol = Symbol;
+  let toStringTag = typeof Symbol === "function";
+  if (typeof Symbol === "function") {
+    const _Symbol2 = Symbol;
+    toStringTag = Symbol.toStringTag;
+  }
+  const items = [];
+  items.length = 1;
+  let closure_9 = !(0 in items);
+  function isDocumentDotAll() {
+    return false;
+  }
+  const _document = document;
+  if (typeof document === "object") {
+    const _document3 = document;
+    ({ call: call2, call } = toString);
+    const _document2 = document;
+    if (tmp11 === (typeof call === "unknown" ? toString() : call(all))) {
+      isDocumentDotAll = function isDocumentDotAll(obj) {
+        if (closure_9) {
+          try {
+            const call = toString.call;
+            if (typeof call === "unknown") {
+              let callResult = toString();
+            } else {
+              callResult = call(obj);
+            }
+            let tmp4 = "[object HTMLAllCollection]" === callResult;
+            if (!tmp4) {
+              tmp4 = "[object HTML document.all class]" === tmp3;
+            }
+            if (!tmp4) {
+              tmp4 = "[object HTMLCollection]" === tmp3;
+            }
+            if (!tmp4) {
+              tmp4 = "[object Object]" === tmp3;
+            }
+            if (tmp4) {
+              tmp4 = null == obj("");
+            }
+            return tmp4;
+          } catch (err) {}
+        }
+        return false;
+      };
+    }
+    tmp11 = typeof call2 === "unknown" ? toString() : call2(all2);
+  }
+  module.exports = tmp3
+    ? function isCallable(fn) {
+        if (isDocumentDotAll(fn)) {
+          return true;
+        } else if (fn) {
+          if (typeof fn !== "function") {
+            if (typeof fn !== "object") {
+              return false;
+            }
+          }
+          try {
+            _null(fn, null, definePropertyResult);
+            const tmp8 = isES6ClassFunction(fn);
+            let tmp9 = !tmp8;
+            if (!tmp8) {
+              tmp9 = tryFunctionToStr(fn);
+            }
+            return tmp9;
+          } catch (tmp5) {
+            if (tmp5 !== obj2) {
+              return false;
+            }
+          }
+        } else {
+          return false;
+        }
+      }
+    : function isCallable(fn) {
+        if (isDocumentDotAll(fn)) {
+          return true;
+        } else if (fn) {
+          if (typeof fn !== "function") {
+            if (typeof fn !== "object") {
+              return false;
+            }
+          }
+          if (toStringTag) {
+            return tryFunctionToStr(fn);
+          } else if (isES6ClassFunction(fn)) {
+            return false;
+          } else {
+            const call = toString.call;
+            const tmp4 = typeof call === "unknown" ? toString() : call(fn);
+            let tmp5 = "[object Function]" !== tmp4;
+            if (tmp5) {
+              tmp5 = "[object GeneratorFunction]" !== tmp4;
+            }
+            if (tmp5) {
+              tmp5 = !/^\[object HTML/.test(tmp4);
+              const obj = /^\[object HTML/;
+            }
+            let tmp6 = !tmp5;
+            if (!tmp5) {
+              tmp6 = tryFunctionToStr(fn);
+            }
+            return tmp6;
+          }
+        } else {
+          return false;
+        }
+      };
 }
+tmp3 = null;
+c3 = null;

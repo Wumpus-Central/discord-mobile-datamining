@@ -1,7 +1,7 @@
 // _runtime/00801_markAsInstrumented.js
 import _mod699 from "metro/00699__.js";
 import consoleSandbox from "00700_consoleSandbox.js";
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "00715_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
+import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "00715_GEN_AI_CONVERSATION_ID_ATTRIBUTE.js";
 import _mod742 from "metro/00742__.js";
 import _slicedToArray from "metro/00032__.js";
 import _toArray from "00729__toArray.js";
@@ -125,7 +125,7 @@ function instrumentAuthOperation(arg0) {
         str2 = "(admin) ";
       }
       let obj2 = { name: "auth " + str2 + name.name, attributes: null };
-      let obj3 = { [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
+      let obj3 = { [GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
       if (flag) {
         str = "admin.";
       }

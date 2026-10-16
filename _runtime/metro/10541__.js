@@ -1,13 +1,13 @@
 // _runtime/metro/10541__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 256,
-  height: 128,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "fe7e2c7efcbe72663147a76476794c5c",
-  name: "img_invite_empty_dark",
+  hash: "1cda1329ef5dd669ec53160c74e5d945",
+  name: "ArrowSmallRightIcon",
   type: "png",
 });

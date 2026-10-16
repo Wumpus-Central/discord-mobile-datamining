@@ -1,13 +1,13 @@
 // _runtime/metro/08890__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 88,
-  height: 80,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "cdacc9b330d74f767eb28d253e6930f0",
-  name: "stage-sparkles",
+  hash: "9f54567445c4adae5611d0c5070bb14f",
+  name: "ic_more_24px",
   type: "png",
 });

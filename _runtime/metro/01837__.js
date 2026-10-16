@@ -1,5 +1,35 @@
 // _runtime/metro/01837__.js
+import _mod1662 from "01662__.js";
+import 01661__ from "01661__.js";
 
-export function getUseOfValueInStyleWarning() {
-  return "It looks like you might be using shared value's .value inside reanimated inline style. If you want a component to update when shared value changes you should use the shared value directly instead of its current state represented by `.value`. See documentation here: https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/glossary/#animations-in-inline-styling";
+function setGestureStateNative(arg0, arg1) {
+  if (globalThis._WORKLET) {
+    global._setGestureState(arg0, arg1);
+  } else {
+    const logger = _mod1662.logger;
+    logger.warn("You can not use setGestureState in non-worklet function.");
+  }
+}
+setGestureStateNative.__closure = { logger: _mod1662.logger };
+setGestureStateNative.__workletHash = 13301434022691;
+setGestureStateNative.__initData = { code: "function setGestureStateNative_Pnpm_setGestureStateTs1(handlerTag,newState){const{logger}=this.__closure;if(!_WORKLET){logger.warn('You can not use setGestureState in non-worklet function.');return;}global._setGestureState(handlerTag,newState);}" };
+if (!module_1661.shouldBeUseWeb()) {
+  exports.setGestureState = setGestureStateNative;
+} else {
+  const _module1 = module_1661;
+  if (_module1.isJest()) {
+    function setGestureStateJest() {
+      const logger = _mod1662.logger;
+      logger.warn("setGestureState() cannot be used with Jest.");
+    }
+  } else {
+    const _module2 = module_1661;
+    setGestureStateJest = _module2.isChromeDebugger() ? (function setGestureStateChromeDebugger() {
+      const logger = _mod1662.logger;
+      logger.warn("setGestureState() cannot be used with Chrome Debugger.");
+    }) : (function setGestureStateDefault() {
+      const logger = _mod1662.logger;
+      logger.warn("setGestureState() is not supported on this configuration.");
+    });
+  }
 }

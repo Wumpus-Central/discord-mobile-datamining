@@ -1,24 +1,42 @@
 // _runtime/metro/04284__.js
-let closure_0 = {
-  lastWeek(getUTCDay) {
-    let str = "'\u03C4\u03B7\u03BD \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03B7' eeee '\u03C3\u03C4\u03B9\u03C2' p";
-    if (6 === getUTCDay.getUTCDay()) {
-      str = "'\u03C4\u03BF \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03BF' eeee '\u03C3\u03C4\u03B9\u03C2' p";
-    }
-    return str;
-  },
-  yesterday: "'\u03C7\u03B8\u03B5\u03C2 \u03C3\u03C4\u03B9\u03C2' p",
-  today: "'\u03C3\u03AE\u03BC\u03B5\u03C1\u03B1 \u03C3\u03C4\u03B9\u03C2' p",
-  tomorrow: "'\u03B1\u03CD\u03C1\u03B9\u03BF \u03C3\u03C4\u03B9\u03C2' p",
-  nextWeek: "eeee '\u03C3\u03C4\u03B9\u03C2' p",
-  other: "P"
-};
+import 04285__ from "04285__.js";
+import 04286__ from "04286__.js";
+import 04287__ from "04287__.js";
+import date_mod from "04288__.js";
+import date_mod from "04289__.js";
 
-export default function formatRelative(arg0, arg1) {
-  let tmpResult = tmp;
-  if (typeof closure_0[arg0] === "function") {
-    tmpResult = tmp(arg1);
-  }
-  return tmpResult;
-};
+if (!module_4285) {
+  const obj = { default: module_4285 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4285;
+}
+if (!module_4286) {
+  const obj2 = { default: module_4286 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4286;
+}
+if (!module_4287) {
+  const obj3 = { default: module_4287 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4287;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "el", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

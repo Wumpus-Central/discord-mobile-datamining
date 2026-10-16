@@ -4,12 +4,11 @@ import _mod6536 from "06536__.js";
 
 const useContext = _mod19.useContext;
 
-export const useBottomSheetInternal = function useBottomSheetInternal(arg0) {
-  const tmp = useContext(_mod6536.BottomSheetInternalContext);
-  if (true !== arg0) {
-    if (null === tmp) {
-      throw "'useBottomSheetInternal' cannot be used out of the BottomSheet!";
-    }
+export const useBottomSheet = () => {
+  const tmp = useContext(_mod6536.BottomSheetContext);
+  if (null === tmp) {
+    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
   }
-  return tmp;
 };

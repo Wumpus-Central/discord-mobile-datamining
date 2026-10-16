@@ -1,13 +1,13 @@
 // _runtime/metro/12781__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/emoji",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 36,
+  height: 36,
   scales: [2, 3],
-  hash: "79fe2790d902aba7709041b8b44a4ced",
-  name: "ic_emoji_recent_color_24px",
+  hash: "bde7994716d98a3897a327489b8b2f6d",
+  name: "gif",
   type: "png",
 });

@@ -1,0 +1,16 @@
+// _runtime/01472_availableTypedArrays.js
+import _mod1473 from "metro/01473__.js";
+
+if (typeof globalThis !== "undefined") {
+  const global = globalThis;
+}
+
+export default function availableTypedArrays() {
+  const items = [];
+  for (let num = 0; num < _mod1473.length; num = num + 1) {
+    if (typeof global[_mod1473[num]] === "function") {
+      items[items.length] = _mod1473[num];
+    }
+  }
+  return items;
+}

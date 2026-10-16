@@ -1,13 +1,13 @@
 // _runtime/metro/13360__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/empty_channel",
+  httpServerLocation: "/assets/modules/hub/native/images",
   width: 48,
   height: 48,
-  scales: [2, 3],
-  hash: "8d7c88bf2a3c70b7581717d42e9c4ec1",
-  name: "send_message_32px",
+  scales: [1, 2, 3],
+  hash: "3c685966e643346896f1eed744338b14",
+  name: "study",
   type: "png",
 });

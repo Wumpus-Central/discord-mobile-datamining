@@ -1,5 +1,5 @@
 // _runtime/metro/11303__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1, 2, 3],
-  hash: "bb061f50f0c26bcf1817896eee7a9443",
-  name: "ic_raised_hand_list",
+  hash: "c96b5baebc148eb3fd1d195aba65f577",
+  name: "ic_stage_music_disabled",
   type: "png",
 });

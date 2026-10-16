@@ -1,13 +1,13 @@
 // _runtime/metro/09709__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/HoloWavesIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/ColorWaveIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "88fd60fc6961a4cc52d32c54b3209f38",
-  name: "HoloWavesIcon",
+  hash: "c1f01c1cb21b1b0825a7707e0be435be",
+  name: "ColorWaveIcon",
   type: "png",
 });

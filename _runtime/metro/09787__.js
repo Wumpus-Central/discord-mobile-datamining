@@ -1,5 +1,5 @@
 // _runtime/metro/09787__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aa86e9bedf9e29074b68adcd3222cf32",
-  name: "NatureIcon",
+  hash: "3246c14a68781de782d6622fffa7ce47",
+  name: "StarOutlineIcon",
   type: "png",
 });

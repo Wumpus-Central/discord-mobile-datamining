@@ -1,13 +1,13 @@
 // _runtime/metro/06037__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "0351fb913e7f70cdcd36a98d12d92c64",
-  name: "img_account_sync_xbox_white",
-  type: "png",
+  hash: "3aff35dbf63c31bb9e5c01dc80563b2f",
+  name: "img_account_sync_spotify_white",
+  type: "svg",
 });

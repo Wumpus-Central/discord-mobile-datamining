@@ -1,13 +1,13 @@
 // _runtime/metro/14199__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/images",
-  width: 608,
-  height: 608,
-  scales: [2, 3],
-  hash: "6936c050862daceed7175a327466cd4a",
-  name: "quests_embed_mobile_missing",
+  httpServerLocation: "/assets/images/native/gifting/standard",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "e32285515cb51d557a374cd91c39dd3d",
+  name: "box_idle",
   type: "png",
 });

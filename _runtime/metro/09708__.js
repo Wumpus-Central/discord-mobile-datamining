@@ -1,13 +1,13 @@
 // _runtime/metro/09708__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "68832d737c55ed046c40e8d11571a54e",
-  name: "CircuitIcon",
+  hash: "44efb56cf36c8202533bcbc557ebf8e5",
+  name: "MidnightPrismIcon",
   type: "png",
 });

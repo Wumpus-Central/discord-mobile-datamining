@@ -1,13 +1,13 @@
 // _runtime/metro/11918__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "d51dcd36c49102cc28f65e2bcdf9f203",
-  name: "ic_file_small_spreadsheet",
+  httpServerLocation: "/assets/images/native/empties",
+  width: 141,
+  height: 128,
+  scales: [2, 3],
+  hash: "2d906861c73988d1392c3f207cda799f",
+  name: "empty_quick_switcher",
   type: "png",
 });

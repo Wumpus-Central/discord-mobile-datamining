@@ -1,13 +1,13 @@
 // _runtime/metro/09713__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/ControllerIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/MatteDarkIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "6f32787e0c52eb22e7f564f5312dfb32",
-  name: "ControllerIcon",
+  hash: "5e2f785032385a803c0dd3d91ffe95da",
+  name: "MatteDarkIcon",
   type: "png",
 });

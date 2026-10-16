@@ -1,5 +1,5 @@
 // _runtime/metro/11563__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3ef4b3974aa9916e2392a41f76914807",
-  name: "ImagePlusIcon",
+  hash: "5d10367ba9fc709d8c368aae16aadbae",
+  name: "RemixIcon",
   type: "png",
 });

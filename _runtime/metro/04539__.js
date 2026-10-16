@@ -1,35 +1,33 @@
 // _runtime/metro/04539__.js
-import _mod4260 from "04260__.js";
-import module_4517_mod from "04517__.js";
-import module_4518_mod from "04518__.js";
-import startOfMonth_mod from "../04471_startOfMonth.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
-import module_4259_mod from "04259__.js";
+import startOfWeek_mod from "../04417_startOfWeek.js";
+import startOfWeekYear_mod from "../04540_startOfWeekYear.js";
+import _typeof_mod from "04258__.js";
+import requiredArgs_mod from "../04259_requiredArgs.js";
 
-let module_4517 = module_4517_mod;
-if (!module_4517) {
-  const obj = { default: module_4517 };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4517;
+  tmp3 = startOfWeek;
 }
-module_4517 = tmp3;
-let module_4518 = module_4518_mod;
-if (!module_4518) {
-  const obj2 = { default: module_4518 };
+startOfWeek = tmp3;
+let startOfWeekYear = startOfWeekYear_mod;
+if (!startOfWeekYear) {
+  const obj2 = { default: startOfWeekYear };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4518;
+  tmp5 = startOfWeekYear;
 }
-module_4518 = tmp5;
-let startOfMonth = startOfMonth_mod;
-if (!startOfMonth) {
-  const obj3 = { default: startOfMonth };
+startOfWeekYear = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfMonth;
+  tmp7 = _typeof;
 }
-startOfMonth = tmp7;
+_typeof = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -38,83 +36,13 @@ if (!requiredArgs) {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
-let module_4259 = module_4259_mod;
-if (!module_4259) {
-  const obj5 = { default: module_4259 };
-  let tmp11 = obj5;
-} else {
-  tmp11 = module_4259;
-}
-module_4259 = tmp11;
+let c4 = 604800000;
 
-export default function getWeekOfMonth(arg0, weekStartsOn) {
+export default function getWeek(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  const defaultOptions = _mod4260.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      locale = weekStartsOn.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
-            }
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn1;
-  }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult1 = module_4259.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = module_4517.default(arg0);
-      const _isNaN = isNaN;
-      if (isNaN(defaultResult2)) {
-        return NaN;
-      } else {
-        const diff = defaultResult1 - module_4518.default(startOfMonth.default(arg0));
-        let sum = diff;
-        if (diff <= 0) {
-          sum = diff + 7;
-        }
-        const _Math = Math;
-        return Math.ceil((defaultResult2 - sum) / 7) + 1;
-      }
-    }
-  }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  throw rangeError;
+  const defaultResult1 = _typeof.default(arg0);
+  const time = startOfWeek.default(defaultResult1, arg1).getTime();
+  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
+  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
 };
 export default exports.default;

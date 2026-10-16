@@ -1,5 +1,5 @@
 // _runtime/metro/06070__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "65690d7389997bdd64f7d1687ed64321",
+  hash: "e0fcff705b60ad228f8934b127b63657",
   name: "img_account_sync_paypal_light_and_dark",
-  type: "svg",
+  type: "png",
 });

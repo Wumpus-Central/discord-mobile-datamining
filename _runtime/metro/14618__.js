@@ -1,10 +1,13 @@
 // _runtime/metro/14618__.js
-import _mod14632 from "14632__.js";
-import assign from "14619__.js";
-import Deflate from "../14620_Deflate.js";
-import Inflate from "../14628_Inflate.js";
+import registerAsset from "01134__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod14632);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting",
+  width: 203,
+  height: 120,
+  scales: [1, 2, 3],
+  hash: "0c52217e1b36f758b126e56747a120ea",
+  name: "guild_subscription_removal_light",
+  type: "png",
+});

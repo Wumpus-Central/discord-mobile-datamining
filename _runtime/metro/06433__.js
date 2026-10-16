@@ -1,14 +1,14 @@
 // _runtime/metro/06433__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation:
-    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_ogrwmflqwrxbxbb3hpokpwnsgq/node_modules/@react-navigation/elements/lib/module/assets",
+    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_q24d6q3uhfxepiakt6efkli26q/node_modules/@react-navigation/elements/lib/module/assets",
   width: 24,
   height: 24,
   scales: [1, 2, 3, 4],
-  hash: "940453dc5cbfaa96cf907b3aa7791ece",
-  name: "search-icon",
+  hash: "dbc3af23c3cbbe45d326afc1d31c2e92",
+  name: "back-icon",
   type: "png",
 });

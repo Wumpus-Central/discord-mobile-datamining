@@ -1,28 +1,36 @@
 // _runtime/metro/01047__.js
-import NativeModules from "../00877_NativeModules.js";
+import _mod879 from "00879__.js";
+import feedbackAsyncIntegration from "../00901_feedbackAsyncIntegration.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const PrimitiveTagIntegration = "PrimitiveTagIntegration";
 
-export const INTEGRATION_NAME = "PrimitiveTagIntegration";
-export () => ({
-  name: PrimitiveTagIntegration,
-  setup(on) {
-    on.on("beforeSendEvent", (tags) => {
-      if (tags.tags) {
-        const _Object = Object;
-        const keys = Object.keys(tags.tags);
-        const item = keys.forEach((item) => {
-          tags.tags[item] = closure_2_0(closure_2_1[0]).PrimitiveToString(tags.tags[item]);
-        });
-      }
-    });
-  },
-  afterAllSetup() {
-    if (NativeModules.NATIVE.enableNative) {
-      const NATIVE = NativeModules.NATIVE;
-      const result = NATIVE._setPrimitiveProcessor((arg0) => closure_1_0(closure_1_1[0]).PrimitiveToString(arg0));
-    }
+export const breadcrumbsIntegration = () => {
+  let obj = merged1;
+  if (merged1 === undefined) {
+    obj = {};
   }
-})
+  let _fetch = obj.fetch;
+  const merged = Object.assign({ xhr: true, console: true, sentry: true }, obj);
+  if (null === _fetch) {
+    _fetch = _mod879.isWeb();
+  }
+  const obj3 = { fetch: _fetch, dom: null, history: null };
+  let isWebResult = _mod879.isWeb();
+  if (isWebResult) {
+    const dom = obj.dom;
+    isWebResult = null === dom || undefined === dom || dom;
+    const tmp7 = null === dom || undefined === dom || dom;
+  }
+  obj3.dom = isWebResult;
+  let isWebResult1 = _mod879.isWeb();
+  if (isWebResult1) {
+    const history = obj.history;
+    isWebResult1 = null === history || undefined === history || history;
+    const tmp9 = null === history || undefined === history || history;
+  }
+  obj3.history = isWebResult1;
+  merged1 = Object.assign(merged, obj3);
+  const tmp4Result = _mod879;
+  return feedbackAsyncIntegration.breadcrumbsIntegration(merged1);
+};

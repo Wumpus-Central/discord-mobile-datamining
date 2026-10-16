@@ -1,23 +1,39 @@
 // _runtime/metro/12333__.js
-import _mod12289 from "12289__.js";
-import _mod12319 from "12319__.js";
+import _mod12305 from "12305__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
-  let result = arg2;
-  const items = [{ type: "client_report" }];
-  if (!arg2) {
-    result = _mod12289.dateTimestampInSeconds();
+export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
+  if (arg2 === undefined) {
+    fn = function t() {};
   }
-  items[1] = { timestamp: result, discarded_events };
-  if (dsn) {
-    const obj3 = { dsn };
-    let obj4 = obj3;
-  } else {
-    obj4 = {};
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then(
+          (result) => {
+            closure_1();
+            return result;
+          },
+          (arg0) => {
+            closure_0(arg0);
+            closure_1();
+            throw arg0;
+          },
+        );
+      } else {
+        fn();
+        return promise;
+      }
+      obj = _mod12305;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
   }
-  const items1 = [items];
-  return _mod12319.createEnvelope(obj4, items1);
 };

@@ -1,35 +1,42 @@
 // _runtime/metro/01815__.js
-import FrameCallbackRegistryJSDefault from "../01816_FrameCallbackRegistryJS.js";
-import noop from "00019__.js";
+const require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {
+  code: "function pnpm_useComposedEventHandlerTs1(event){const{workletsMap}=this.__closure;if(workletsMap[event.eventName]){workletsMap[event.eventName].forEach(function(worklet){return worklet(event);});}}",
+};
 
-({ useEffect: closure_0, useRef: closure_1 } = noop);
-let closure_2 = new FrameCallbackRegistryJSDefault();
-
-export const useFrameCallback = function useFrameCallback(fn, arg1) {
-  closure_0 = fn;
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = true;
-  }
-  closure_1 = undefined;
-  const tmp = closure_1({
-    setActive(isActive) {
-      const result = closure_2.manageStateFrameCallback(closure_1.current.callbackId, isActive);
-      closure_1.current.isActive = isActive;
-    },
-    isActive: flag,
-    callbackId: -1,
+export const useComposedEventHandler = function useComposedEventHandler(tmp8Result4) {
+  const obj = {};
+  const set = new Set();
+  const obj2 = {};
+  const found = tmp8Result4.filter((item) => null !== item);
+  let item = found.forEach((workletEventHandler) => {
+    workletEventHandler = workletEventHandler.workletEventHandler;
+    if (workletEventHandler instanceof obj(set[0]).WorkletEventHandler) {
+      const eventNames = workletEventHandler.eventNames;
+      const item = eventNames.forEach((item) => {
+        set.add(item);
+        if (obj2[item]) {
+          obj2[item].push(workletEventHandler.worklet);
+          let tmp3 = workletEventHandler;
+        } else {
+          tmp3 = workletEventHandler;
+          const items = [workletEventHandler.worklet];
+          obj2[item] = items;
+        }
+        obj[item + "" + obj2[item].length] = tmp3.worklet;
+      });
+    }
   });
-  closure_1 = tmp;
-  const items = [fn, flag];
-  closure_0(() => {
-    closure_1.current.callbackId = closure_2.registerFrameCallback(callbackId);
-    ({ current: closure_0, current } = closure_1);
-    current.setActive(closure_1.current.isActive);
-    return () => {
-      const result = closure_2_2.unregisterFrameCallback(callbackId.callbackId);
-      callbackId.callbackId = -1;
-    };
-  }, items);
-  return tmp.current;
+  const obj3 = obj(set[1]);
+  const fn = function v(arg0) {
+    closure_0 = arg0;
+    if (obj2[arg0.eventName]) {
+      const item = tmp[arg0.eventName].forEach((fn) => fn(closure_0));
+    }
+  };
+  fn.__closure = { workletsMap: obj2 };
+  fn.__workletHash = 14960316830945;
+  fn.__initData = obj2;
+  return obj(set[2]).useEvent(fn, Array.from(set), obj3.useHandler(obj).doDependenciesDiffer);
 };

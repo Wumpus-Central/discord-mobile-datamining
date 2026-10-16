@@ -1,13 +1,13 @@
 // _runtime/metro/14596__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 251,
-  height: 120,
-  scales: [1, 2, 3],
-  hash: "ded9c31a2e9dd512048ecebbadd9fab8",
-  name: "audience_welcome",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 26,
+  height: 23,
+  scales: [2, 3],
+  hash: "003a42f0642dbbdd7138be5c1629ced9",
+  name: "support",
   type: "png",
 });

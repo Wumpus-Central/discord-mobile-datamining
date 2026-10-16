@@ -1,7 +1,42 @@
 // _runtime/metro/04334__.js
-let closure_0 = { lastWeek: "'\uC9C0\uB09C' eeee p", yesterday: "'\uC5B4\uC81C' p", today: "'\uC624\uB298' p", tomorrow: "'\uB0B4\uC77C' p", nextWeek: "'\uB2E4\uC74C' eeee p", other: "P" };
+import 04335__ from "04335__.js";
+import 04336__ from "04336__.js";
+import 04337__ from "04337__.js";
+import date_mod from "04338__.js";
+import date_mod from "04339__.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
+if (!module_4335) {
+  const obj = { default: module_4335 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4335;
+}
+if (!module_4336) {
+  const obj2 = { default: module_4336 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4336;
+}
+if (!module_4337) {
+  const obj3 = { default: module_4337 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4337;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "ko", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
 export default exports.default;

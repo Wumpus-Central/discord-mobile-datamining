@@ -1,72 +1,63 @@
 // _runtime/metro/01811__.js
-import _mod1801 from "01801__.js";
-import _mod1803 from "01803__.js";
+import _mod19 from "00019__.js";
+import runOnRuntime from "../01702_runOnRuntime.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const __initData = {
-  code: "function pnpm_useAnimatedScrollHandlerTs1(event){const{scrollHandlers,context}=this.__closure;const{onScroll:onScroll,onBeginDrag:onBeginDrag,onEndDrag:onEndDrag,onMomentumBegin:onMomentumBegin,onMomentumEnd:onMomentumEnd}=scrollHandlers;if(onScroll&&event.eventName.endsWith('onScroll')){onScroll(event,context);}else if(onBeginDrag&&event.eventName.endsWith('onScrollBeginDrag')){onBeginDrag(event,context);}else if(onEndDrag&&event.eventName.endsWith('onScrollEndDrag')){onEndDrag(event,context);}else if(onMomentumBegin&&event.eventName.endsWith('onMomentumScrollBegin')){onMomentumBegin(event,context);}else if(onMomentumEnd&&event.eventName.endsWith('onMomentumScrollEnd')){onMomentumEnd(event,context);}}",
+const require = globalThis.__r;
+
+let useEffect = _mod19.useEffect;
+let closure_3 = {
+  code: "function pnpm_useAnimatedReactionTs1(){const{prepare,react,previous}=this.__closure;const input=prepare();react(input,previous.value);previous.value=input;}",
 };
 
-export const useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, items) {
-  let tmp = fn;
-  if (typeof fn === "function") {
-    let obj2 = { onScroll: fn };
-    tmp = obj2;
+export const useAnimatedReaction = function useAnimatedReaction(fn, fn2, items) {
+  _require = fn;
+  dependencyMap = fn2;
+  useEffect = require("01810__.js").useSharedValue(null);
+  let __closure = fn.__closure;
+  if (__closure == null) {
+    __closure = {};
   }
-  obj2 = tmp;
-  const handler = _mod1801.useHandler(tmp, items);
-  const context = handler.context;
-  items = ["onScroll"];
-  if (undefined !== tmp.onBeginDrag) {
-    items.push("onScrollBeginDrag");
+  const values = Object.values(__closure);
+  const obj = require("01810__.js");
+  let tmp3 = require("01661__.js").shouldBeUseWeb() && !values.length;
+  let arr2 = items;
+  if (tmp3) {
+    let length;
+    if (arr2 != null) {
+      length = arr2.length;
+    }
+    tmp3 = length;
   }
-  if (undefined !== tmp.onEndDrag) {
-    items.push("onScrollEndDrag");
+  if (undefined === arr2) {
+    let __closure1 = fn.__closure;
+    if (__closure1 == null) {
+      __closure1 = {};
+    }
+    items = [,];
+    const arraySpreadResult = HermesBuiltin.arraySpread(Object.values(__closure1), 0);
+    let __closure2 = fn2.__closure;
+    if (__closure2 == null) {
+      __closure2 = {};
+    }
+    const arraySpreadResult2 = HermesBuiltin.arraySpread(Object.values(__closure2), arraySpreadResult);
+    items[arraySpreadResult2] = fn.__workletHash;
+    items[arraySpreadResult2 + 1] = fn2.__workletHash;
+    arr2 = items;
+  } else {
+    arr2.push(fn.__workletHash, fn2.__workletHash);
   }
-  if (undefined !== tmp.onMomentumBegin) {
-    items.push("onMomentumScrollBegin");
-  }
-  if (undefined !== tmp.onMomentumEnd) {
-    items.push("onMomentumScrollEnd");
-  }
-  fn = function l(eventName) {
-    ({ onScroll, onBeginDrag, onEndDrag, onMomentumBegin, onMomentumEnd } = obj2);
-    if (onScroll) {
-      eventName = eventName.eventName;
-      if (eventName.endsWith("onScroll")) {
-        onScroll(eventName, context);
-      }
-    }
-    if (onBeginDrag) {
-      const eventName2 = eventName.eventName;
-      if (eventName2.endsWith("onScrollBeginDrag")) {
-        onBeginDrag(eventName, context);
-      }
-    }
-    if (onEndDrag) {
-      const eventName3 = eventName.eventName;
-      if (eventName3.endsWith("onScrollEndDrag")) {
-        onEndDrag(eventName, context);
-      }
-    }
-    if (onMomentumBegin) {
-      const eventName4 = eventName.eventName;
-      if (eventName4.endsWith("onMomentumScrollBegin")) {
-        onMomentumBegin(eventName, context);
-      }
-    }
-    let endsWithResult = onMomentumEnd;
-    if (onMomentumEnd) {
-      const eventName5 = eventName.eventName;
-      endsWithResult = eventName5.endsWith("onMomentumScrollEnd");
-    }
-    if (endsWithResult) {
-      onMomentumEnd(eventName, context);
-    }
-  };
-  fn.__closure = { scrollHandlers: tmp, context };
-  fn.__workletHash = 480432859268;
-  fn.__initData = __initData;
-  return _mod1803.useEvent(fn, items, handler.doDependenciesDiffer);
+  useEffect(() => {
+    const fn = function t() {
+      const tmp = closure_0();
+      react(tmp, value.value);
+      value.value = tmp;
+    };
+    fn.__closure = { prepare, react, previous };
+    fn.__workletHash = 3026350450260;
+    fn.__initData = arr2;
+    prepare = prepare(react[3]).startMapper(fn, arr2);
+    return () => {
+      runOnRuntime.stopMapper(closure_0);
+    };
+  }, arr2);
 };

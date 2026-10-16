@@ -1,11 +1,8 @@
 // _runtime/metro/01820__.js
-import _mod19 from "00019__.js";
+import 01699__ from "01699__.js";
 
-_mod19.useCallback;
+let closure_0 = module_1699.isReducedMotionEnabledInSystem();
 
-export const useWorkletCallback = function useWorkletCallback(fn, items) {
-  if (items == null) {
-    items = [];
-  }
-  return useCallback(fn, items);
-};
+export function useReducedMotion() {
+  return closure_0;
+}

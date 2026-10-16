@@ -1,24 +1,24 @@
 // _runtime/metro/04424__.js
-import module_4259_mod from "04259__.js";
-import module_4404_mod from "04404__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import module_4262_mod from "04262__.js";
+import module_4407_mod from "04407__.js";
+import requiredArgs_mod from "../04259_requiredArgs.js";
 
-let module_4259 = module_4259_mod;
-if (!module_4259) {
-  const obj = { default: module_4259 };
+let module_4262 = module_4262_mod;
+if (!module_4262) {
+  const obj = { default: module_4262 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4259;
+  tmp3 = module_4262;
 }
-module_4259 = tmp3;
-let module_4404 = module_4404_mod;
-if (!module_4404) {
-  const obj2 = { default: module_4404 };
+module_4262 = tmp3;
+let module_4407 = module_4407_mod;
+if (!module_4407) {
+  const obj2 = { default: module_4407 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4404;
+  tmp5 = module_4407;
 }
-module_4404 = tmp5;
+module_4407 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -28,8 +28,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function addYears(interval, arg1) {
+export default function addQuarters(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4404.default(interval, 12 * module_4259.default(arg1));
+  return module_4407.default(arg0, 3 * module_4262.default(arg1));
 };
 export default exports.default;

@@ -1,6 +1,13 @@
 // _runtime/metro/18764__.js
-const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+import registerAsset from "01134__.js";
 
-export default function hasUnicodeWord(arg0) {
-  return re0.test(arg0);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 165,
+  height: 178,
+  scales: [2, 3],
+  hash: "b685c2aca3ddb21997a856f7601ff6ad",
+  name: "img_vanity_urls",
+  type: "png",
+});

@@ -6,7 +6,7 @@ import _mod701 from "metro/00701__.js";
 import generateSpanId from "00705_generateSpanId.js";
 import _mod710 from "metro/00710__.js";
 import dateTimestampInSeconds from "00714_dateTimestampInSeconds.js";
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "00715_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
+import GEN_AI_CONVERSATION_ID_ATTRIBUTE from "00715_GEN_AI_CONVERSATION_ID_ATTRIBUTE.js";
 import SPAN_STATUS_ERROR from "00716_SPAN_STATUS_ERROR.js";
 import _mod717 from "metro/00717__.js";
 import _getSpanForScope from "00720__getSpanForScope.js";
@@ -107,8 +107,8 @@ function spanToJSON(getSpanJSON) {
         }
       }
       obj2.status = tmp16;
-      obj2.op = attributes[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP];
-      obj2.origin = attributes[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
+      obj2.op = attributes[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_OP];
+      obj2.origin = attributes[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
       let mapped;
       if (links) {
         if (links.length > 0) {

@@ -1,12 +1,11 @@
 // _runtime/metro/01777__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _slicedToArray from "00032__.js";
+import _slicedToArray_mod from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c2 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-let LightSpeedOutLeft = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,21 +24,21 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-let closure_7 = {
-  code: "function pnpm_LightspeedTs1(values){const{delayFunction,delay,withTiming,duration,animation,config,withSequence,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,withTiming(1,{duration:duration})),transform:[{translateX:delayFunction(delay,animation(0,{...config,duration:duration*0.7}))},{skewX:delayFunction(delay,withSequence(withTiming('10deg',{duration:duration*0.7}),withTiming('-5deg',{duration:duration*0.15}),withTiming('0deg',{duration:duration*0.15})))}]},initialValues:{opacity:0,transform:[{translateX:values.windowWidth},{skewX:'-45deg'}],...initialValues},callback:callback};}",
+let _slicedToArray = _slicedToArray_mod;
+let closure_5 = {
+  code: "function pnpm_FadeTs1(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config))},initialValues:{opacity:0,...initialValues},callback:callback};}",
 };
-class LightSpeedInRight {
+class FadeIn {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_3(this, LightSpeedOutLeft);
+    tmp = closure_1(this, FadeOutDown);
     items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(LightSpeedOutLeft);
-    tmp3 = closure_4;
-    if (metroRequire()) {
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -49,98 +48,57 @@ class LightSpeedInRight {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _slicedToArray(delayFunction.getAnimationAndConfig(), 2);
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
       const animation = tmp2[0];
       closure_2 = tmp4;
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(translateX) {
-        const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = {
-          opacity: delayFunction(delay, delayFunction(1728).withTiming(1, { duration })),
-          transform: null,
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const delay = closure_0.getDelay();
+      const fn = function t() {
+        const obj = {
+          animations: { opacity: delayFunction(delay, first(1, closure_2)) },
+          initialValues: null,
+          callback: null,
         };
-        const obj5 = { translateX: null };
-        const obj6 = {};
-        const merged = Object.assign(closure_2);
-        obj6.duration = 0.7 * duration;
-        obj5.translateX = delayFunction(delay, first(0, obj6));
-        const items = [obj5];
-        const obj7 = { skewX: null };
-        const obj3 = delayFunction(1728);
-        const obj4 = { duration };
-        const obj8 = delayFunction(1728);
-        const obj10 = { duration: 0.7 * duration };
-        const obj9 = delayFunction(1728);
-        const withTimingResult = delayFunction(1728).withTiming("10deg", { duration: 0.7 * duration });
-        const obj11 = delayFunction(1728);
-        const obj12 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1728).withTiming("-5deg", { duration: 0.15 * duration });
-        obj7.skewX = delayFunction(
-          delay,
-          obj8.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            delayFunction(1728).withTiming("0deg", { duration: 0.15 * duration }),
-          ),
-        );
-        items[1] = obj7;
-        obj2.transform = items;
-        obj.animations = obj2;
-        const obj15 = { opacity: 0, transform: null };
-        const items1 = [{ translateX: translateX.windowWidth }, { skewX: "-45deg" }];
-        obj15.transform = items1;
-        const merged1 = Object.assign(initialValues);
-        obj.initialValues = obj15;
+        const merged = Object.assign(initialValues);
+        obj.initialValues = { opacity: 0 };
         obj.callback = callbackV;
         return obj;
       };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withTiming: LightSpeedOutLeft(1728).withTiming,
-        duration,
-        animation,
-        config: tmp2[1],
-        withSequence: LightSpeedOutLeft(1728).withSequence,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 14533434616043;
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 4187624806586;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-LightSpeedOutLeft = LightSpeedInRight;
-_inherits(LightSpeedInRight, fn(1726).ComplexAnimationBuilder);
+_slicedToArray = FadeIn;
+_inherits(FadeIn, fn(1728).ComplexAnimationBuilder);
 const entry = {
   key: "createInstance",
   value: function createInstance() {
-    return LightSpeedOutLeft();
+    return _slicedToArray();
   },
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(LightSpeedInRight, null, items);
-importDefaultResultResult.presetName = "LightSpeedInRight";
-let closure_8 = {
-  code: "function pnpm_LightspeedTs2(values){const{delayFunction,delay,withTiming,duration,animation,config,withSequence,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,withTiming(1,{duration:duration})),transform:[{translateX:delayFunction(delay,animation(0,{...config,duration:duration*0.7}))},{skewX:delayFunction(delay,withSequence(withTiming('-10deg',{duration:duration*0.7}),withTiming('5deg',{duration:duration*0.15}),withTiming('0deg',{duration:duration*0.15})))}]},initialValues:{opacity:0,transform:[{translateX:-values.windowWidth},{skewX:'45deg'}],...initialValues},callback:callback};}",
+const importDefaultResultResult = _createClass(FadeIn, null, items);
+importDefaultResultResult.presetName = "FadeIn";
+let closure_6 = {
+  code: "function pnpm_FadeTs2(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateX:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateX:25}],...initialValues},callback:callback};}",
 };
-class LightSpeedInLeft {
+class FadeInRight {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_3(this, LightSpeedOutLeft);
+    tmp = closure_1(this, FadeOutDown);
     items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(LightSpeedOutLeft);
-    tmp3 = closure_4;
-    if (metroRequire()) {
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -150,98 +108,60 @@ class LightSpeedInLeft {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.build = () => {
-      delayFunction = delayFunction.getDelayFunction();
-      const tmp2 = _slicedToArray(delayFunction.getAnimationAndConfig(), 2);
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
       const animation = tmp2[0];
       closure_2 = tmp4;
-      const delay = delayFunction.getDelay();
-      const duration = delayFunction.getDuration();
-      const callbackV = delayFunction.callbackV;
-      const initialValues = delayFunction.initialValues;
-      const fn = function n(translateX) {
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const delay = closure_0.getDelay();
+      const fn = function t() {
         const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = {
-          opacity: delayFunction(delay, delayFunction(1728).withTiming(1, { duration })),
-          transform: null,
-        };
-        const obj5 = { translateX: null };
-        const obj6 = {};
-        const merged = Object.assign(closure_2);
-        obj6.duration = 0.7 * duration;
-        obj5.translateX = delayFunction(delay, first(0, obj6));
-        const items = [obj5];
-        const obj7 = { skewX: null };
-        const obj3 = delayFunction(1728);
-        const obj4 = { duration };
-        const obj8 = delayFunction(1728);
-        const obj10 = { duration: 0.7 * duration };
-        const obj9 = delayFunction(1728);
-        const withTimingResult = delayFunction(1728).withTiming("-10deg", { duration: 0.7 * duration });
-        const obj11 = delayFunction(1728);
-        const obj12 = { duration: 0.15 * duration };
-        const withTimingResult1 = delayFunction(1728).withTiming("5deg", { duration: 0.15 * duration });
-        obj7.skewX = delayFunction(
-          delay,
-          obj8.withSequence(
-            withTimingResult,
-            withTimingResult1,
-            delayFunction(1728).withTiming("0deg", { duration: 0.15 * duration }),
-          ),
-        );
-        items[1] = obj7;
+        const obj2 = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
-        const obj15 = { opacity: 0, transform: null };
-        const items1 = [{ translateX: -translateX.windowWidth }, { skewX: "45deg" }];
-        obj15.transform = items1;
-        const merged1 = Object.assign(initialValues);
-        obj.initialValues = obj15;
+        const obj4 = { opacity: 0, transform: null };
+        const items1 = [{ translateX: 25 }];
+        obj4.transform = items1;
+        const merged = Object.assign(initialValues);
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
-      fn.__closure = {
-        delayFunction,
-        delay,
-        withTiming: LightSpeedOutLeft(1728).withTiming,
-        duration,
-        animation,
-        config: tmp2[1],
-        withSequence: LightSpeedOutLeft(1728).withSequence,
-        initialValues,
-        callback: callbackV,
-      };
-      fn.__workletHash = 7816705328872;
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 5328703857616;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-LightSpeedOutLeft = LightSpeedInLeft;
-_inherits(LightSpeedInLeft, fn(1726).ComplexAnimationBuilder);
+_slicedToArray = FadeInRight;
+_inherits(FadeInRight, fn(1728).ComplexAnimationBuilder);
 const entry1 = {
   key: "createInstance",
   value: function createInstance() {
-    return LightSpeedOutLeft();
+    return _slicedToArray();
   },
 };
 let items1 = [entry1];
-const importDefaultResultResult1 = _createClass(LightSpeedInLeft, null, items1);
-importDefaultResultResult1.presetName = "LightSpeedInLeft";
-let closure_9 = {
-  code: "function pnpm_LightspeedTs3(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(values.windowWidth,config))},{skewX:delayFunction(delay,animation('-45deg',config))}]},initialValues:{opacity:1,transform:[{translateX:0},{skewX:'0deg'}],...initialValues},callback:callback};}",
+const importDefaultResultResult1 = _createClass(FadeInRight, null, items1);
+importDefaultResultResult1.presetName = "FadeInRight";
+let closure_7 = {
+  code: "function pnpm_FadeTs3(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateX:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateX:-25}],...initialValues},callback:callback};}",
 };
-class LightSpeedOutRight {
+class FadeInLeft {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_3(this, LightSpeedOutLeft);
+    tmp = closure_1(this, FadeOutDown);
     items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(LightSpeedOutLeft);
-    tmp3 = closure_4;
-    if (metroRequire()) {
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -255,58 +175,56 @@ class LightSpeedOutRight {
       const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
       const animation = tmp2[0];
       closure_2 = tmp4;
-      const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function n(windowWidth) {
+      const delay = closure_0.getDelay();
+      const fn = function t() {
         const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        const items = [{ translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(windowWidth.windowWidth, closure_2)) };
-        items[1] = { skewX: delayFunction(delay, first("-45deg", closure_2)) };
+        const obj2 = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const items = [{ translateX: delayFunction(delay, first(0, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
-        const obj5 = { opacity: 1, transform: null };
-        const items1 = [{ translateX: 0 }, { skewX: "0deg" }];
-        obj5.transform = items1;
+        const obj4 = { opacity: 0, transform: null };
+        const items1 = [{ translateX: -25 }];
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 222611120175;
+      fn.__workletHash = 3876464806620;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-LightSpeedOutLeft = LightSpeedOutRight;
-_inherits(LightSpeedOutRight, fn(1726).ComplexAnimationBuilder);
+_slicedToArray = FadeInLeft;
+_inherits(FadeInLeft, fn(1728).ComplexAnimationBuilder);
 const entry2 = {
   key: "createInstance",
   value: function createInstance() {
-    return LightSpeedOutLeft();
+    return _slicedToArray();
   },
 };
 const items2 = [entry2];
-const importDefaultResultResult2 = _createClass(LightSpeedOutRight, null, items2);
-importDefaultResultResult2.presetName = "LightSpeedOutRight";
-let closure_10 = {
-  code: "function pnpm_LightspeedTs4(values){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(-values.windowWidth,config))},{skewX:delayFunction(delay,animation('45deg',config))}]},initialValues:{opacity:1,transform:[{translateX:0},{skewX:'0deg'}],...initialValues},callback:callback};}",
+const importDefaultResultResult2 = _createClass(FadeInLeft, null, items2);
+importDefaultResultResult2.presetName = "FadeInLeft";
+let closure_8 = {
+  code: "function pnpm_FadeTs4(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateY:-25}],...initialValues},callback:callback};}",
 };
-class LightSpeedOutLeft {
+class FadeInUp {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_3(this, LightSpeedOutLeft);
+    tmp = closure_1(this, FadeOutDown);
     items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(LightSpeedOutLeft);
-    tmp3 = closure_4;
-    if (metroRequire()) {
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -320,45 +238,425 @@ class LightSpeedOutLeft {
       const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
       const animation = tmp2[0];
       closure_2 = tmp4;
-      const delay = closure_0.getDelay();
       const callbackV = closure_0.callbackV;
       const initialValues = closure_0.initialValues;
-      const fn = function n(windowWidth) {
+      const delay = closure_0.getDelay();
+      const fn = function t() {
         const obj = { animations: null, initialValues: null, callback: null };
-        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
-        const items = [{ translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) }];
-        const obj3 = { translateX: delayFunction(delay, first(-windowWidth.windowWidth, closure_2)) };
-        items[1] = { skewX: delayFunction(delay, first("45deg", closure_2)) };
+        const obj2 = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const items = [{ translateY: delayFunction(delay, first(0, closure_2)) }];
         obj2.transform = items;
         obj.animations = obj2;
-        const obj5 = { opacity: 1, transform: null };
-        const items1 = [{ translateX: 0 }, { skewX: "0deg" }];
-        obj5.transform = items1;
+        const obj4 = { opacity: 0, transform: null };
+        const items1 = [{ translateY: -25 }];
+        obj4.transform = items1;
         const merged = Object.assign(initialValues);
-        obj.initialValues = obj5;
+        obj.initialValues = obj4;
         obj.callback = callbackV;
         return obj;
       };
       fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
-      fn.__workletHash = 766058259752;
+      fn.__workletHash = 14652570092763;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_inherits(LightSpeedOutLeft, fn(1726).ComplexAnimationBuilder);
+_slicedToArray = FadeInUp;
+_inherits(FadeInUp, fn(1728).ComplexAnimationBuilder);
 const entry3 = {
   key: "createInstance",
   value: function createInstance() {
-    return LightSpeedOutLeft();
+    return _slicedToArray();
   },
 };
 const items3 = [entry3];
-const importDefaultResultResult3 = _createClass(LightSpeedOutLeft, null, items3);
-importDefaultResultResult3.presetName = "LightSpeedOutLeft";
+const importDefaultResultResult3 = _createClass(FadeInUp, null, items3);
+importDefaultResultResult3.presetName = "FadeInUp";
+let closure_9 = {
+  code: "function pnpm_FadeTs5(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(1,config)),transform:[{translateY:delayFunction(delay,animation(0,config))}]},initialValues:{opacity:0,transform:[{translateY:25}],...initialValues},callback:callback};}",
+};
+class FadeInDown {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_1(this, FadeOutDown);
+    items1 = [...items];
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const delay = closure_0.getDelay();
+      const fn = function t() {
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(1, closure_2)), transform: null };
+        const items = [{ translateY: delayFunction(delay, first(0, closure_2)) }];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj4 = { opacity: 0, transform: null };
+        const items1 = [{ translateY: 25 }];
+        obj4.transform = items1;
+        const merged = Object.assign(initialValues);
+        obj.initialValues = obj4;
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 3370389664855;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+_slicedToArray = FadeInDown;
+_inherits(FadeInDown, fn(1728).ComplexAnimationBuilder);
+const entry4 = {
+  key: "createInstance",
+  value: function createInstance() {
+    return _slicedToArray();
+  },
+};
+const items4 = [entry4];
+const importDefaultResultResult4 = _createClass(FadeInDown, null, items4);
+importDefaultResultResult4.presetName = "FadeInDown";
+let closure_10 = {
+  code: "function pnpm_FadeTs6(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config))},initialValues:{opacity:1,...initialValues},callback:callback};}",
+};
+class FadeOut {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_1(this, FadeOutDown);
+    items1 = [...items];
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const delay = closure_0.getDelay();
+      const fn = function t() {
+        const obj = {
+          animations: { opacity: delayFunction(delay, first(0, closure_2)) },
+          initialValues: null,
+          callback: null,
+        };
+        const merged = Object.assign(initialValues);
+        obj.initialValues = { opacity: 1 };
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 12496093665501;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+_slicedToArray = FadeOut;
+_inherits(FadeOut, fn(1728).ComplexAnimationBuilder);
+const entry5 = {
+  key: "createInstance",
+  value: function createInstance() {
+    return _slicedToArray();
+  },
+};
+const items5 = [entry5];
+const importDefaultResultResult5 = _createClass(FadeOut, null, items5);
+importDefaultResultResult5.presetName = "FadeOut";
+let closure_11 = {
+  code: "function pnpm_FadeTs7(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(25,config))}]},initialValues:{opacity:1,transform:[{translateX:0}],...initialValues},callback:callback};}",
+};
+class FadeOutRight {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_1(this, FadeOutDown);
+    items1 = [...items];
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const delay = closure_0.getDelay();
+      const fn = function t() {
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ translateX: delayFunction(delay, first(25, closure_2)) }];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj4 = { opacity: 1, transform: null };
+        const items1 = [{ translateX: 0 }];
+        obj4.transform = items1;
+        const merged = Object.assign(initialValues);
+        obj.initialValues = obj4;
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 8966511332149;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+_slicedToArray = FadeOutRight;
+_inherits(FadeOutRight, fn(1728).ComplexAnimationBuilder);
+const entry6 = {
+  key: "createInstance",
+  value: function createInstance() {
+    return _slicedToArray();
+  },
+};
+const items6 = [entry6];
+const importDefaultResultResult6 = _createClass(FadeOutRight, null, items6);
+importDefaultResultResult6.presetName = "FadeOutRight";
+let closure_12 = {
+  code: "function pnpm_FadeTs8(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateX:delayFunction(delay,animation(-25,config))}]},initialValues:{opacity:1,transform:[{translateX:0}],...initialValues},callback:callback};}",
+};
+class FadeOutLeft {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_1(this, FadeOutDown);
+    items1 = [...items];
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const delay = closure_0.getDelay();
+      const fn = function t() {
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ translateX: delayFunction(delay, first(-25, closure_2)) }];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj4 = { opacity: 1, transform: null };
+        const items1 = [{ translateX: 0 }];
+        obj4.transform = items1;
+        const merged = Object.assign(initialValues);
+        obj.initialValues = obj4;
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 7570822684087;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+_slicedToArray = FadeOutLeft;
+_inherits(FadeOutLeft, fn(1728).ComplexAnimationBuilder);
+const entry7 = {
+  key: "createInstance",
+  value: function createInstance() {
+    return _slicedToArray();
+  },
+};
+const items7 = [entry7];
+const importDefaultResultResult7 = _createClass(FadeOutLeft, null, items7);
+importDefaultResultResult7.presetName = "FadeOutLeft";
+let closure_13 = {
+  code: "function pnpm_FadeTs9(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateY:delayFunction(delay,animation(-25,config))}]},initialValues:{opacity:1,transform:[{translateY:0}],...initialValues},callback:callback};}",
+};
+class FadeOutUp {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_1(this, FadeOutDown);
+    items1 = [...items];
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const delay = closure_0.getDelay();
+      const fn = function t() {
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ translateY: delayFunction(delay, first(-25, closure_2)) }];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj4 = { opacity: 1, transform: null };
+        const items1 = [{ translateY: 0 }];
+        obj4.transform = items1;
+        const merged = Object.assign(initialValues);
+        obj.initialValues = obj4;
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 7080775562358;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+_slicedToArray = FadeOutUp;
+_inherits(FadeOutUp, fn(1728).ComplexAnimationBuilder);
+const entry8 = {
+  key: "createInstance",
+  value: function createInstance() {
+    return _slicedToArray();
+  },
+};
+const items8 = [entry8];
+const importDefaultResultResult8 = _createClass(FadeOutUp, null, items8);
+importDefaultResultResult8.presetName = "FadeOutUp";
+let closure_14 = {
+  code: "function pnpm_FadeTs10(){const{delayFunction,delay,animation,config,initialValues,callback}=this.__closure;return{animations:{opacity:delayFunction(delay,animation(0,config)),transform:[{translateY:delayFunction(delay,animation(25,config))}]},initialValues:{opacity:1,transform:[{translateY:0}],...initialValues},callback:callback};}",
+};
+class FadeOutDown {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_1(this, FadeOutDown);
+    items1 = [...items];
+    tmp2 = closure_3;
+    obj = closure_3(FadeOutDown);
+    tmp3 = c2;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.build = () => {
+      const delayFunction = closure_0.getDelayFunction();
+      const tmp2 = _slicedToArray(closure_0.getAnimationAndConfig(), 2);
+      const animation = tmp2[0];
+      closure_2 = tmp4;
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
+      const delay = closure_0.getDelay();
+      const fn = function t() {
+        const obj = { animations: null, initialValues: null, callback: null };
+        const obj2 = { opacity: delayFunction(delay, first(0, closure_2)), transform: null };
+        const items = [{ translateY: delayFunction(delay, first(25, closure_2)) }];
+        obj2.transform = items;
+        obj.animations = obj2;
+        const obj4 = { opacity: 1, transform: null };
+        const items1 = [{ translateY: 0 }];
+        obj4.transform = items1;
+        const merged = Object.assign(initialValues);
+        obj.initialValues = obj4;
+        obj.callback = callbackV;
+        return obj;
+      };
+      fn.__closure = { delayFunction, delay, animation, config: tmp2[1], initialValues, callback: callbackV };
+      fn.__workletHash = 4897427935171;
+      fn.__initData = __initData;
+      return fn;
+    };
+    return tmp3Result;
+  }
+}
+_slicedToArray = FadeOutDown;
+_inherits(FadeOutDown, fn(1728).ComplexAnimationBuilder);
+const entry9 = {
+  key: "createInstance",
+  value: function createInstance() {
+    return _slicedToArray();
+  },
+};
+const items9 = [entry9];
+const importDefaultResultResult9 = _createClass(FadeOutDown, null, items9);
+importDefaultResultResult9.presetName = "FadeOutDown";
 
-export const LightSpeedInRight = importDefaultResultResult;
-export const LightSpeedInLeft = importDefaultResultResult1;
-export const LightSpeedOutRight = importDefaultResultResult2;
-export const LightSpeedOutLeft = importDefaultResultResult3;
+export const FadeIn = importDefaultResultResult;
+export const FadeInRight = importDefaultResultResult1;
+export const FadeInLeft = importDefaultResultResult2;
+export const FadeInUp = importDefaultResultResult3;
+export const FadeInDown = importDefaultResultResult4;
+export const FadeOut = importDefaultResultResult5;
+export const FadeOutRight = importDefaultResultResult6;
+export const FadeOutLeft = importDefaultResultResult7;
+export const FadeOutUp = importDefaultResultResult8;
+export const FadeOutDown = importDefaultResultResult9;

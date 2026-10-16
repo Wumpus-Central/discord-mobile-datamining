@@ -1,11 +1,11 @@
 // _runtime/metro/02570__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJlbnRfdG9vbHM=",
+  httpServerLocation: "/assets/modules/guild_settings/server_monetization/guild_theme/web",
   scales: [1],
-  hash: "e1749ebde463075cd4597bf4bc77cfdd",
-  name: "cs.messages.e1749ebde463075cd4597bf4bc77cfdd.compiled.messages",
+  hash: "568a306e5dbbd7f0a78da5ed8e4b8801",
+  name: "GuildSettingsGuildTheme.compiled.messages",
   type: "jsona",
 });

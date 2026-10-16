@@ -11,7 +11,7 @@ Object.defineProperty(obj, "ReactNativeViewConfigRegistry", {
   set: undefined,
 });
 Object.defineProperty(obj, "TextInputState", { get: () => require("metro/00144__.js").default, set: undefined });
-Object.defineProperty(obj, "UIManager", { get: () => require("measure").default, set: undefined });
+Object.defineProperty(obj, "UIManager", { get: () => require("metro/00068__.js").default, set: undefined });
 Object.defineProperty(obj, "deepDiffer", { get: () => require("deepDiffer").default, set: undefined });
 Object.defineProperty(obj, "deepFreezeAndThrowOnMutationInDev", {
   get: () => require("deepFreezeAndThrowOnMutationInDev").default,

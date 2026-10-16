@@ -1,13 +1,13 @@
 // _runtime/metro/14368__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 167.5,
+  height: 16,
   scales: [2, 3],
-  hash: "337f717407aa04f32bdedf504de7310b",
-  name: "emoji",
+  hash: "48c1555b13d7692f2f1f3a2ca57206f1",
+  name: "server_boost_logo_light",
   type: "png",
 });

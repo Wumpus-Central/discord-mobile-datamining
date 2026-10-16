@@ -1,17 +1,7 @@
 // _runtime/metro/12297__.js
-import _mod12281 from "12281__.js";
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-require = arg1;
-const dependencyMap = arg6;
-const _sentrySpan = "_sentrySpan";
-
-export const _getSpanForScope = function _getSpanForScope(currentScope) {
-  return currentScope[_sentrySpan];
-};
-export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
-  if (arg1) {
-    const result = _mod12281.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
-  } else {
-    delete tmp2[tmp];
-  }
-};
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

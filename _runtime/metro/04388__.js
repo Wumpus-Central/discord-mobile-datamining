@@ -1,7 +1,42 @@
 // _runtime/metro/04388__.js
-let closure_0 = { lastWeek: "eeee'\u0E17\u0E35\u0E48\u0E41\u0E25\u0E49\u0E27\u0E40\u0E27\u0E25\u0E32' p", yesterday: "'\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E27\u0E32\u0E19\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", today: "'\u0E27\u0E31\u0E19\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", tomorrow: "'\u0E1E\u0E23\u0E38\u0E48\u0E07\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", nextWeek: "eeee '\u0E40\u0E27\u0E25\u0E32' p", other: "P" };
+import 04389__ from "04389__.js";
+import 04390__ from "04390__.js";
+import 04391__ from "04391__.js";
+import date_mod from "04392__.js";
+import date_mod from "04393__.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
+if (!module_4389) {
+  const obj = { default: module_4389 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4389;
+}
+if (!module_4390) {
+  const obj2 = { default: module_4390 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4390;
+}
+if (!module_4391) {
+  const obj3 = { default: module_4391 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4391;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "th", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
 export default exports.default;

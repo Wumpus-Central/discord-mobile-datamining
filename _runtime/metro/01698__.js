@@ -1,986 +1,479 @@
 // _runtime/metro/01698__.js
-import _mod1667 from "01667__.js";
-import _slicedToArray from "00032__.js";
+import runWorkletOnJS from "../01665_runWorkletOnJS.js";
+import _mod1669 from "01669__.js";
+import _mod1683 from "01683__.js";
+import _mod1699 from "01699__.js";
+import _mod1700 from "01700__.js";
+import _mod1701 from "01701__.js";
+import module_1661_mod from "01661__.js";
 
-require = arg1;
-function isAffineMatrixFlat(arr) {
-  let isArray = Array.isArray(arr);
-  if (isArray) {
-    isArray = 16 === arr.length;
-  }
-  if (isArray) {
-    isArray = arr.every((item) => {
-      let tmp = typeof item === "number";
-      if (typeof item === "number") {
-        const _isNaN = isNaN;
-        tmp = !isNaN(item);
-      }
-      return tmp;
-    });
-  }
-  return isArray;
-}
-isAffineMatrixFlat.__closure = {};
-isAffineMatrixFlat.__workletHash = 7766400476414;
-isAffineMatrixFlat.__initData = {
-  code: "function isAffineMatrixFlat_Pnpm_matrixUtilsTsx1(x){return Array.isArray(x)&&x.length===16&&x.every(function(element){return typeof element==='number'&&!isNaN(element);});}",
+const React2 = false;
+let module_1661 = module_1661_mod;
+module_1661 = module_1661.shouldBeUseWeb();
+const size = {
+  originX: true,
+  originY: true,
+  width: true,
+  height: true,
+  borderRadius: true,
+  globalOriginX: true,
+  globalOriginY: true,
+  opacity: true,
+  transform: true,
+  backgroundColor: true,
 };
-function isAffineMatrix(arr) {
-  let isArray = Array.isArray(arr);
-  if (isArray) {
-    isArray = 4 === arr.length;
-  }
-  if (isArray) {
-    isArray = arr.every((arr) => {
-      let isArray = Array.isArray(arr);
-      if (isArray) {
-        isArray = 4 === arr.length;
-      }
-      if (isArray) {
-        isArray = arr.every((item) => {
-          let tmp = typeof item === "number";
-          if (typeof item === "number") {
-            const _isNaN = isNaN;
-            tmp = !isNaN(item);
-          }
-          return tmp;
-        });
-      }
-      return isArray;
-    });
-  }
-  return isArray;
+function isValidLayoutAnimationProp(arg0) {
+  return arg0 in size;
 }
-isAffineMatrix.__closure = {};
-isAffineMatrix.__workletHash = 3452211777657;
-isAffineMatrix.__initData = {
-  code: "function isAffineMatrix_Pnpm_matrixUtilsTsx2(x){return Array.isArray(x)&&x.length===4&&x.every(function(row){return Array.isArray(row)&&row.length===4&&row.every(function(element){return typeof element==='number'&&!isNaN(element);});});}",
+isValidLayoutAnimationProp.__closure = { LAYOUT_ANIMATION_SUPPORTED_PROPS: size };
+isValidLayoutAnimationProp.__workletHash = 13235833688548;
+isValidLayoutAnimationProp.__initData = {
+  code: "function isValidLayoutAnimationProp_Pnpm_utilTs1(prop){const{LAYOUT_ANIMATION_SUPPORTED_PROPS}=this.__closure;return prop in LAYOUT_ANIMATION_SUPPORTED_PROPS;}",
 };
-function flatten(arr) {
-  return arr.flat();
-}
-flatten.__closure = {};
-flatten.__workletHash = 9900628528512;
-flatten.__initData = { code: "function flatten_Pnpm_matrixUtilsTsx3(matrix){return matrix.flat();}" };
-function unflatten(arg0) {
-  const items = [, , ,];
-  [arr[0], arr[1], arr[2], arr[3]] = arg0;
-  const items1 = [items, , ,];
-  const items2 = [arg0[4], arg0[5], arg0[6], arg0[7]];
-  items1[1] = items2;
-  const items3 = [arg0[8], arg0[9], arg0[10], arg0[11]];
-  items1[2] = items3;
-  const items4 = [arg0[12], arg0[13], arg0[14], arg0[15]];
-  items1[3] = items4;
-  return items1;
-}
-unflatten.__closure = {};
-unflatten.__workletHash = 17503333305803;
-unflatten.__initData = {
-  code: "function unflatten_Pnpm_matrixUtilsTsx4(m){return[[m[0],m[1],m[2],m[3]],[m[4],m[5],m[6],m[7]],[m[8],m[9],m[10],m[11]],[m[12],m[13],m[14],m[15]]];}",
-};
-function maybeFlattenMatrix(arr) {
-  if (typeof isAffineMatrix === "function") {
-    const _Array = Array;
-    let isArray = Array.isArray(arr);
-    if (isArray) {
-      isArray = 4 === arr.length;
-    }
-    if (isArray) {
-      isArray = arr.every((arr) => {
-        let isArray = Array.isArray(arr);
-        if (isArray) {
-          isArray = 4 === arr.length;
+function assertEasingIsWorklet(factory) {
+  if (!globalThis._WORKLET) {
+    if (!module_1661) {
+      factory = undefined;
+      if (factory != null) {
+        factory = factory.factory;
+      }
+      if (!factory) {
+        if (!obj.isWorkletFunction(factory)) {
+          const reanimatedError = new _mod1669.ReanimatedError(
+            "The easing function is not a worklet. Please make sure you import `Easing` from react-native-reanimated.",
+          );
+          throw reanimatedError;
         }
-        if (isArray) {
-          isArray = arr.every((item) => {
-            let tmp = typeof item === "number";
-            if (typeof item === "number") {
-              const _isNaN = isNaN;
-              tmp = !isNaN(item);
-            }
-            return tmp;
-          });
-        }
-        return isArray;
-      });
-    }
-    let flatResult = arr;
-    if (isArray) {
-      if (typeof flatten === "function") {
-        flatResult = arr.flat();
-      } else {
-        throw new TypeError("Trying to call a non-function");
+        obj = _mod1683;
       }
     }
-    return flatResult;
+  }
+}
+assertEasingIsWorklet.__closure = { SHOULD_BE_USE_WEB: module_1661, isWorkletFunction: _mod1683.isWorkletFunction };
+assertEasingIsWorklet.__workletHash = 8431488219943;
+assertEasingIsWorklet.__initData = {
+  code: "function assertEasingIsWorklet_Pnpm_utilTs2(easing){const{SHOULD_BE_USE_WEB,isWorkletFunction}=this.__closure;if(_WORKLET){return;}if(SHOULD_BE_USE_WEB){return;}if(easing!==null&&easing!==void 0&&easing.factory){return;}if(!isWorkletFunction(easing)){throw new ReanimatedError('The easing function is not a worklet. Please make sure you import `Easing` from react-native-reanimated.');}}",
+};
+function recognizePrefixSuffix(current) {
+  if (typeof current === "string") {
+    const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+    if (match) {
+      let str2 = match[3];
+      if (str2 == null) {
+        str2 = "";
+      }
+      const obj = { prefix: match[1], suffix: match[4], strippedValue: null };
+      const _parseFloat = parseFloat;
+      obj.strippedValue = parseFloat(match[2] + str2);
+      return obj;
+    } else {
+      const reanimatedError = new _mod1669.ReanimatedError("Couldn't parse animation value.");
+      throw reanimatedError;
+    }
   } else {
-    throw new TypeError("Trying to call a non-function");
+    const obj2 = { strippedValue: current };
+    return obj2;
   }
 }
-maybeFlattenMatrix.__closure = { isAffineMatrix, flatten };
-maybeFlattenMatrix.__workletHash = 13544286880330;
-maybeFlattenMatrix.__initData = {
-  code: "function maybeFlattenMatrix_Pnpm_matrixUtilsTsx5(matrix){const{isAffineMatrix,flatten}=this.__closure;return isAffineMatrix(matrix)?flatten(matrix):matrix;}",
+recognizePrefixSuffix.__closure = {};
+recognizePrefixSuffix.__workletHash = 11076682371077;
+recognizePrefixSuffix.__initData = {
+  code: "function recognizePrefixSuffix_Pnpm_utilTs3(value){if(typeof value==='string'){var _match$;const match=value.match(/([A-Za-z]*)(-?\\d*\\.?\\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);if(!match){throw new ReanimatedError(\"Couldn't parse animation value.\");}const prefix=match[1];const suffix=match[4];const number=match[2]+((_match$=match[3])!==null&&_match$!==void 0?_match$:'');return{prefix:prefix,suffix:suffix,strippedValue:parseFloat(number)};}else{return{strippedValue:value};}}",
 };
-function multiplyMatrices(arg0, arg1) {
-  const items = [
-    arg0[0][0] * arg1[0][0] + arg0[0][1] * arg1[1][0] + arg0[0][2] * arg1[2][0] + arg0[0][3] * arg1[3][0],
-    arg0[0][0] * arg1[0][1] + arg0[0][1] * arg1[1][1] + arg0[0][2] * arg1[2][1] + arg0[0][3] * arg1[3][1],
-    arg0[0][0] * arg1[0][2] + arg0[0][1] * arg1[1][2] + arg0[0][2] * arg1[2][2] + arg0[0][3] * arg1[3][2],
-    arg0[0][0] * arg1[0][3] + arg0[0][1] * arg1[1][3] + arg0[0][2] * arg1[2][3] + arg0[0][3] * arg1[3][3],
-  ];
-  const items1 = [items, , ,];
-  const items2 = [
-    arg0[1][0] * arg1[0][0] + arg0[1][1] * arg1[1][0] + arg0[1][2] * arg1[2][0] + arg0[1][3] * arg1[3][0],
-    arg0[1][0] * arg1[0][1] + arg0[1][1] * arg1[1][1] + arg0[1][2] * arg1[2][1] + arg0[1][3] * arg1[3][1],
-    arg0[1][0] * arg1[0][2] + arg0[1][1] * arg1[1][2] + arg0[1][2] * arg1[2][2] + arg0[1][3] * arg1[3][2],
-    arg0[1][0] * arg1[0][3] + arg0[1][1] * arg1[1][3] + arg0[1][2] * arg1[2][3] + arg0[1][3] * arg1[3][3],
-  ];
-  items1[1] = items2;
-  const items3 = [
-    arg0[2][0] * arg1[0][0] + arg0[2][1] * arg1[1][0] + arg0[2][2] * arg1[2][0] + arg0[2][3] * arg1[3][0],
-    arg0[2][0] * arg1[0][1] + arg0[2][1] * arg1[1][1] + arg0[2][2] * arg1[2][1] + arg0[2][3] * arg1[3][1],
-    arg0[2][0] * arg1[0][2] + arg0[2][1] * arg1[1][2] + arg0[2][2] * arg1[2][2] + arg0[2][3] * arg1[3][2],
-    arg0[2][0] * arg1[0][3] + arg0[2][1] * arg1[1][3] + arg0[2][2] * arg1[2][3] + arg0[2][3] * arg1[3][3],
-  ];
-  items1[2] = items3;
-  const items4 = [
-    arg0[3][0] * arg1[0][0] + arg0[3][1] * arg1[1][0] + arg0[3][2] * arg1[2][0] + arg0[3][3] * arg1[3][0],
-    arg0[3][0] * arg1[0][1] + arg0[3][1] * arg1[1][1] + arg0[3][2] * arg1[2][1] + arg0[3][3] * arg1[3][1],
-    arg0[3][0] * arg1[0][2] + arg0[3][1] * arg1[1][2] + arg0[3][2] * arg1[2][2] + arg0[3][3] * arg1[3][2],
-    arg0[3][0] * arg1[0][3] + arg0[3][1] * arg1[1][3] + arg0[3][2] * arg1[2][3] + arg0[3][3] * arg1[3][3],
-  ];
-  items1[3] = items4;
-  return items1;
+const uiValue = _mod1699.ReducedMotionManager.uiValue;
+function getReduceMotionFromConfig(reduceMotion) {
+  if (reduceMotion) {
+    if (reduceMotion !== _mod1683.ReduceMotion.System) {
+      value = reduceMotion === _mod1683.ReduceMotion.Always;
+    }
+    return value;
+  }
+  value = uiValue.value;
 }
-multiplyMatrices.__closure = {};
-multiplyMatrices.__workletHash = 4575994159882;
-multiplyMatrices.__initData = {
-  code: "function multiplyMatrices_Pnpm_matrixUtilsTsx6(a,b){return[[a[0][0]*b[0][0]+a[0][1]*b[1][0]+a[0][2]*b[2][0]+a[0][3]*b[3][0],a[0][0]*b[0][1]+a[0][1]*b[1][1]+a[0][2]*b[2][1]+a[0][3]*b[3][1],a[0][0]*b[0][2]+a[0][1]*b[1][2]+a[0][2]*b[2][2]+a[0][3]*b[3][2],a[0][0]*b[0][3]+a[0][1]*b[1][3]+a[0][2]*b[2][3]+a[0][3]*b[3][3]],[a[1][0]*b[0][0]+a[1][1]*b[1][0]+a[1][2]*b[2][0]+a[1][3]*b[3][0],a[1][0]*b[0][1]+a[1][1]*b[1][1]+a[1][2]*b[2][1]+a[1][3]*b[3][1],a[1][0]*b[0][2]+a[1][1]*b[1][2]+a[1][2]*b[2][2]+a[1][3]*b[3][2],a[1][0]*b[0][3]+a[1][1]*b[1][3]+a[1][2]*b[2][3]+a[1][3]*b[3][3]],[a[2][0]*b[0][0]+a[2][1]*b[1][0]+a[2][2]*b[2][0]+a[2][3]*b[3][0],a[2][0]*b[0][1]+a[2][1]*b[1][1]+a[2][2]*b[2][1]+a[2][3]*b[3][1],a[2][0]*b[0][2]+a[2][1]*b[1][2]+a[2][2]*b[2][2]+a[2][3]*b[3][2],a[2][0]*b[0][3]+a[2][1]*b[1][3]+a[2][2]*b[2][3]+a[2][3]*b[3][3]],[a[3][0]*b[0][0]+a[3][1]*b[1][0]+a[3][2]*b[2][0]+a[3][3]*b[3][0],a[3][0]*b[0][1]+a[3][1]*b[1][1]+a[3][2]*b[2][1]+a[3][3]*b[3][1],a[3][0]*b[0][2]+a[3][1]*b[1][2]+a[3][2]*b[2][2]+a[3][3]*b[3][2],a[3][0]*b[0][3]+a[3][1]*b[1][3]+a[3][2]*b[2][3]+a[3][3]*b[3][3]]];}",
+let obj = { SHOULD_BE_USE_WEB: module_1661, isWorkletFunction: _mod1683.isWorkletFunction };
+getReduceMotionFromConfig.__closure = { ReduceMotion: _mod1683.ReduceMotion, isReduceMotionOnUI: uiValue };
+getReduceMotionFromConfig.__workletHash = 7977910521960;
+getReduceMotionFromConfig.__initData = {
+  code: "function getReduceMotionFromConfig_Pnpm_utilTs4(config){const{ReduceMotion,isReduceMotionOnUI}=this.__closure;return!config||config===ReduceMotion.System?isReduceMotionOnUI.value:config===ReduceMotion.Always;}",
 };
-function subtractMatrices(arr, arr2) {
-  if (typeof isAffineMatrixFlat === "function") {
-    const _Array = Array;
-    let isArray = Array.isArray(arr);
-    if (isArray) {
-      isArray = 16 === arr.length;
+function getReduceMotionForAnimation(reduceMotion) {
+  if (reduceMotion) {
+    if (typeof getReduceMotionFromConfig === "function") {
+      if (reduceMotion) {
+        if (reduceMotion !== _mod1683.ReduceMotion.System) {
+          value = reduceMotion === _mod1683.ReduceMotion.Always;
+        }
+        return value;
+      }
+      value = uiValue.value;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    if (isArray) {
-      isArray = arr.every((item) => {
-        let tmp = typeof item === "number";
-        if (typeof item === "number") {
-          const _isNaN = isNaN;
-          tmp = !isNaN(item);
-        }
-        return tmp;
-      });
-    }
-    if (typeof maybeFlattenMatrix === "function") {
-      if (typeof isAffineMatrix === "function") {
-        const _Array2 = Array;
-        let isArray1 = Array.isArray(arr);
-        if (isArray1) {
-          isArray1 = 4 === arr.length;
-        }
-        if (isArray1) {
-          isArray1 = arr.every((arr) => {
-            let isArray = Array.isArray(arr);
-            if (isArray) {
-              isArray = 4 === arr.length;
-            }
-            if (isArray) {
-              isArray = arr.every((item) => {
-                let tmp = typeof item === "number";
-                if (typeof item === "number") {
-                  const _isNaN = isNaN;
-                  tmp = !isNaN(item);
-                }
-                return tmp;
-              });
-            }
-            return isArray;
-          });
-        }
-        let flatResult = arr;
-        if (isArray1) {
-          if (typeof flatten === "function") {
-            flatResult = arr.flat();
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-        require = flatResult;
-        if (typeof tmp4 === "function") {
-          if (typeof tmp5 === "function") {
-            const _Array3 = Array;
-            let isArray2 = Array.isArray(arr2);
-            if (isArray2) {
-              isArray2 = 4 === arr2.length;
-            }
-            if (isArray2) {
-              isArray2 = arr2.every((arr) => {
-                let isArray = Array.isArray(arr);
-                if (isArray) {
-                  isArray = 4 === arr.length;
-                }
-                if (isArray) {
-                  isArray = arr.every((item) => {
-                    let tmp = typeof item === "number";
-                    if (typeof item === "number") {
-                      const _isNaN = isNaN;
-                      tmp = !isNaN(item);
-                    }
-                    return tmp;
-                  });
-                }
-                return isArray;
-              });
-            }
-            if (isArray2) {
-              if (typeof flatten === "function") {
-                arr2.flat();
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            }
-            const mapped = flatResult.map((item, index) => flatResult[index] - flatResult1[index]);
-            let tmp13 = mapped;
-            if (!isArray) {
-              if (typeof unflatten === "function") {
-                const items = [, , ,];
-                [arr2[0], arr2[1], arr2[2], arr2[3]] = mapped;
-                const items1 = [items, , ,];
-                const items2 = [mapped[4], mapped[5], mapped[6], mapped[7]];
-                items1[1] = items2;
-                const items3 = [mapped[8], mapped[9], mapped[10], mapped[11]];
-                items1[2] = items3;
-                const items4 = [mapped[12], mapped[13], mapped[14], mapped[15]];
-                items1[3] = items4;
-                tmp13 = items1;
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            }
-            return tmp13;
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
+  }
+}
+getReduceMotionForAnimation.__closure = { getReduceMotionFromConfig };
+getReduceMotionForAnimation.__workletHash = 10866808344662;
+getReduceMotionForAnimation.__initData = {
+  code: "function getReduceMotionForAnimation_Pnpm_utilTs5(config){const{getReduceMotionFromConfig}=this.__closure;if(!config){return undefined;}return getReduceMotionFromConfig(config);}",
+};
+function applyProgressToMatrix(arg0, arr, arr) {
+  const obj = _mod1700;
+  const obj2 = _mod1700;
+  return obj.addMatrices(arr, obj2.scaleMatrix(_mod1700.subtractMatrices(arr, arr), arg0));
+}
+let obj2 = { ReduceMotion: _mod1683.ReduceMotion, isReduceMotionOnUI: uiValue };
+applyProgressToMatrix.__closure = {
+  addMatrices: _mod1700.addMatrices,
+  scaleMatrix: _mod1700.scaleMatrix,
+  subtractMatrices: _mod1700.subtractMatrices,
+};
+applyProgressToMatrix.__workletHash = 4822273347900;
+applyProgressToMatrix.__initData = {
+  code: "function applyProgressToMatrix_Pnpm_utilTs6(progress,a,b){const{addMatrices,scaleMatrix,subtractMatrices}=this.__closure;return addMatrices(a,scaleMatrix(subtractMatrices(b,a),progress));}",
+};
+function applyProgressToNumber(arg0, arg1, arg2) {
+  return arg1 + arg0 * (arg2 - arg1);
+}
+applyProgressToNumber.__closure = {};
+applyProgressToNumber.__workletHash = 954128472665;
+applyProgressToNumber.__initData = {
+  code: "function applyProgressToNumber_Pnpm_utilTs7(progress,a,b){return a+progress*(b-a);}",
+};
+function decorateAnimation(isHigherOrder) {
+  ({ onStart: require, onFrame: dependencyMap } = isHigherOrder);
+  if (isHigherOrder.isHigherOrder) {
+    isHigherOrder.onStart = (reduceMotion, keys, length, height) => {
+      if (undefined === reduceMotion.reduceMotion) {
+        if (typeof getReduceMotionFromConfig === "function") {
+          reduceMotion.reduceMotion = value.value;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-      } else {
-        throw new TypeError("Trying to call a non-function");
       }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
+      return fn(reduceMotion, keys, length, height);
+    };
   } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-subtractMatrices.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
-subtractMatrices.__workletHash = 12538691088788;
-subtractMatrices.__initData = {
-  code: "function subtractMatrices_Pnpm_matrixUtilsTsx7(maybeFlatA,maybeFlatB){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=maybeFlattenMatrix(maybeFlatB);const c=a.map(function(_,i){return a[i]-b[i];});return isFlatOnStart?c:unflatten(c);}",
-};
-function addMatrices(arr, arr2) {
-  if (typeof isAffineMatrixFlat === "function") {
-    const _Array = Array;
-    let isArray = Array.isArray(arr);
-    if (isArray) {
-      isArray = 16 === arr.length;
-    }
-    if (isArray) {
-      isArray = arr.every((item) => {
-        let tmp = typeof item === "number";
-        if (typeof item === "number") {
-          const _isNaN = isNaN;
-          tmp = !isNaN(item);
-        }
-        return tmp;
-      });
-    }
-    if (typeof maybeFlattenMatrix === "function") {
-      if (typeof isAffineMatrix === "function") {
-        const _Array2 = Array;
-        let isArray1 = Array.isArray(arr);
-        if (isArray1) {
-          isArray1 = 4 === arr.length;
-        }
-        if (isArray1) {
-          isArray1 = arr.every((arr) => {
-            let isArray = Array.isArray(arr);
-            if (isArray) {
-              isArray = 4 === arr.length;
-            }
-            if (isArray) {
-              isArray = arr.every((item) => {
-                let tmp = typeof item === "number";
-                if (typeof item === "number") {
-                  const _isNaN = isNaN;
-                  tmp = !isNaN(item);
-                }
-                return tmp;
-              });
-            }
-            return isArray;
-          });
-        }
-        let flatResult = arr;
-        if (isArray1) {
-          if (typeof flatten === "function") {
-            flatResult = arr.flat();
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-        require = flatResult;
-        if (typeof tmp4 === "function") {
-          if (typeof tmp5 === "function") {
-            const _Array3 = Array;
-            let isArray2 = Array.isArray(arr2);
-            if (isArray2) {
-              isArray2 = 4 === arr2.length;
-            }
-            if (isArray2) {
-              isArray2 = arr2.every((arr) => {
-                let isArray = Array.isArray(arr);
-                if (isArray) {
-                  isArray = 4 === arr.length;
-                }
-                if (isArray) {
-                  isArray = arr.every((item) => {
-                    let tmp = typeof item === "number";
-                    if (typeof item === "number") {
-                      const _isNaN = isNaN;
-                      tmp = !isNaN(item);
-                    }
-                    return tmp;
-                  });
-                }
-                return isArray;
-              });
-            }
-            if (isArray2) {
-              if (typeof flatten === "function") {
-                arr2.flat();
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            }
-            const mapped = flatResult.map((item, index) => flatResult[index] + flatResult1[index]);
-            let tmp13 = mapped;
-            if (!isArray) {
-              if (typeof unflatten === "function") {
-                const items = [, , ,];
-                [arr2[0], arr2[1], arr2[2], arr2[3]] = mapped;
-                const items1 = [items, , ,];
-                const items2 = [mapped[4], mapped[5], mapped[6], mapped[7]];
-                items1[1] = items2;
-                const items3 = [mapped[8], mapped[9], mapped[10], mapped[11]];
-                items1[2] = items3;
-                const items4 = [mapped[12], mapped[13], mapped[14], mapped[15]];
-                items1[3] = items4;
-                tmp13 = items1;
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            }
-            return tmp13;
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      } else {
-        throw new TypeError("Trying to call a non-function");
+    const _Object = Object;
+    closure_2 = Object.assign({}, isHigherOrder);
+    delete tmp2[tmp];
+    function prefNumberSuffOnFrame(strippedCurrent, arg1) {
+      strippedCurrent.current = strippedCurrent.strippedCurrent;
+      ({ current: strippedCurrent.strippedCurrent, __prefix } = strippedCurrent);
+      if (__prefix == null) {
+        __prefix = "";
       }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-addMatrices.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
-addMatrices.__workletHash = 17429737879880;
-addMatrices.__initData = {
-  code: "function addMatrices_Pnpm_matrixUtilsTsx8(maybeFlatA,maybeFlatB){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=maybeFlattenMatrix(maybeFlatB);const c=a.map(function(_,i){return a[i]+b[i];});return isFlatOnStart?c:unflatten(c);}",
-};
-function scaleMatrix(arr, arg1) {
-  closure_0 = arg1;
-  if (typeof isAffineMatrixFlat === "function") {
-    const _Array = Array;
-    let isArray = Array.isArray(arr);
-    if (isArray) {
-      isArray = 16 === arr.length;
-    }
-    if (isArray) {
-      isArray = arr.every((item) => {
-        let tmp = typeof item === "number";
-        if (typeof item === "number") {
-          const _isNaN = isNaN;
-          tmp = !isNaN(item);
-        }
-        return tmp;
-      });
-    }
-    if (typeof maybeFlattenMatrix === "function") {
-      if (typeof isAffineMatrix === "function") {
-        const _Array2 = Array;
-        let isArray1 = Array.isArray(arr);
-        if (isArray1) {
-          isArray1 = 4 === arr.length;
-        }
-        if (isArray1) {
-          isArray1 = arr.every((arr) => {
-            let isArray = Array.isArray(arr);
-            if (isArray) {
-              isArray = 4 === arr.length;
-            }
-            if (isArray) {
-              isArray = arr.every((item) => {
-                let tmp = typeof item === "number";
-                if (typeof item === "number") {
-                  const _isNaN = isNaN;
-                  tmp = !isNaN(item);
-                }
-                return tmp;
-              });
-            }
-            return isArray;
-          });
-        }
-        let flatResult = arr;
-        if (isArray1) {
-          if (typeof flatten === "function") {
-            flatResult = arr.flat();
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-        const mapped = flatResult.map((item) => item * closure_0);
-        let tmp9 = mapped;
-        if (!isArray) {
-          if (typeof unflatten === "function") {
-            const items = [, , ,];
-            [arr2[0], arr2[1], arr2[2], arr2[3]] = mapped;
-            const items1 = [items, , ,];
-            const items2 = [mapped[4], mapped[5], mapped[6], mapped[7]];
-            items1[1] = items2;
-            const items3 = [mapped[8], mapped[9], mapped[10], mapped[11]];
-            items1[2] = items3;
-            const items4 = [mapped[12], mapped[13], mapped[14], mapped[15]];
-            items1[3] = items4;
-            tmp9 = items1;
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-        return tmp9;
-      } else {
-        throw new TypeError("Trying to call a non-function");
+      let str = strippedCurrent.__suffix;
+      const sum = __prefix + strippedCurrent.current;
+      if (str == null) {
+        str = "";
       }
-    } else {
-      throw new TypeError("Trying to call a non-function");
+      strippedCurrent.current = sum + str;
+      return dependencyMap(strippedCurrent, arg1);
     }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-scaleMatrix.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
-scaleMatrix.__workletHash = 11907224908685;
-scaleMatrix.__initData = {
-  code: "function scaleMatrix_Pnpm_matrixUtilsTsx9(maybeFlatA,scalar){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=a.map(function(x){return x*scalar;});return isFlatOnStart?b:unflatten(b);}",
-};
-function getRotationMatrix(sum) {
-  let str = item;
-  if (item === undefined) {
-    str = "z";
-  }
-  const cosResult = Math.cos(sum);
-  const sinResult = Math.sin(sum);
-  if ("z" === str) {
-    const items = [cosResult, sinResult, 0, 0];
-    const items1 = [items, , ,];
-    const items2 = [-sinResult, cosResult, 0, 0];
-    items1[1] = items2;
-    items1[2] = [0, 0, 1, 0];
-    items1[3] = [0, 0, 0, 1];
-    return items1;
-  } else if ("y" === str) {
-    const items3 = [cosResult, 0, -sinResult, 0];
-    const items4 = [items3, [0, 1, 0, 0], ,];
-    const items5 = [sinResult, 0, cosResult, 0];
-    items4[2] = items5;
-    items4[3] = [0, 0, 0, 1];
-    return items4;
-  } else if ("x" === str) {
-    const items6 = [[1, 0, 0, 0], , ,];
-    const items7 = [0, cosResult, sinResult, 0];
-    items6[1] = items7;
-    const items8 = [0, -sinResult, cosResult, 0];
-    items6[2] = items8;
-    items6[3] = [0, 0, 0, 1];
-    return items6;
-  }
-}
-getRotationMatrix.__closure = {};
-getRotationMatrix.__workletHash = 14367317296086;
-getRotationMatrix.__initData = {
-  code: "function getRotationMatrix_Pnpm_matrixUtilsTsx10(angle,axis='z'){const cos=Math.cos(angle);const sin=Math.sin(angle);switch(axis){case'z':return[[cos,sin,0,0],[-sin,cos,0,0],[0,0,1,0],[0,0,0,1]];case'y':return[[cos,0,-sin,0],[0,1,0,0],[sin,0,cos,0],[0,0,0,1]];case'x':return[[1,0,0,0],[0,cos,sin,0],[0,-sin,cos,0],[0,0,0,1]];}}",
-};
-function norm3d(arg0, arg1, arg2) {
-  return Math.sqrt(arg0 * arg0 + arg1 * arg1 + arg2 * arg2);
-}
-norm3d.__closure = {};
-norm3d.__workletHash = 3613705554848;
-norm3d.__initData = { code: "function norm3d_Pnpm_matrixUtilsTsx11(x,y,z){return Math.sqrt(x*x+y*y+z*z);}" };
-function transposeMatrix(arr) {
-  if (typeof flatten === "function") {
-    const flatResult = arr.flat();
-    const items = [flatResult[0], flatResult[4], flatResult[8], flatResult[12]];
-    const items1 = [items, , ,];
-    const items2 = [flatResult[1], flatResult[5], flatResult[9], flatResult[13]];
-    items1[1] = items2;
-    const items3 = [flatResult[2], flatResult[6], flatResult[10], flatResult[14]];
-    items1[2] = items3;
-    const items4 = [flatResult[3], flatResult[7], flatResult[11], flatResult[15]];
-    items1[3] = items4;
-    return items1;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-transposeMatrix.__closure = { flatten };
-transposeMatrix.__workletHash = 17306716053169;
-transposeMatrix.__initData = {
-  code: "function transposeMatrix_Pnpm_matrixUtilsTsx12(matrix){const{flatten}=this.__closure;const m=flatten(matrix);return[[m[0],m[4],m[8],m[12]],[m[1],m[5],m[9],m[13]],[m[2],m[6],m[10],m[14]],[m[3],m[7],m[11],m[15]]];}",
-};
-function assertVectorsHaveEqualLengths(arg0, arg1) {}
-assertVectorsHaveEqualLengths.__closure = { __DEV__: false };
-assertVectorsHaveEqualLengths.__workletHash = 14349158134583;
-assertVectorsHaveEqualLengths.__initData = {
-  code: 'function assertVectorsHaveEqualLengths_Pnpm_matrixUtilsTsx13(a,b){const{__DEV__}=this.__closure;if(__DEV__&&a.length!==b.length){throw new ReanimatedError("Cannot calculate inner product of two vectors of different lengths. Length of "+a.toString()+" is "+a.length+" and length of "+b.toString()+" is "+b.length+".");}}',
-};
-function innerProduct(arr, arg1) {
-  closure_0 = arr;
-  closure_1 = arg1;
-  if (typeof assertVectorsHaveEqualLengths === "function") {
-    return arr.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-innerProduct.__closure = { assertVectorsHaveEqualLengths };
-innerProduct.__workletHash = 6022428100775;
-innerProduct.__initData = {
-  code: "function innerProduct_Pnpm_matrixUtilsTsx14(a,b){const{assertVectorsHaveEqualLengths}=this.__closure;assertVectorsHaveEqualLengths(a,b);return a.reduce(function(acc,_,i){return acc+a[i]*b[i];},0);}",
-};
-function projection(arr, arg1) {
-  if (typeof assertVectorsHaveEqualLengths === "function") {
-    if (typeof innerProduct === "function") {
-      closure_0 = arr;
+    closure_4 = ["R", "G", "B", "A"];
+    function colorOnFrame(nonscaledCurrent, arg1) {
       closure_1 = arg1;
-      if (typeof assertVectorsHaveEqualLengths === "function") {
-        if (typeof tmp2 === "function") {
-          closure_0 = arr;
-          closure_1 = arr;
-          if (typeof assertVectorsHaveEqualLengths === "function") {
-            closure_0 = tmp5 / arr.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
-            return arr.map((item) => item * closure_0);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
+      const items = [];
+      c3 = true;
+      nonscaledCurrent.current = nonscaledCurrent.nonscaledCurrent;
+      const item = closure_4.forEach((item) => {
+        let onFrameResult = c3;
+        if (c3) {
+          onFrameResult = obj.onFrame(nonscaledCurrent[item], closure_1);
+        }
+        c3 = onFrameResult;
+        items.push(nonscaledCurrent[item].current);
+        obj = nonscaledCurrent[item];
+      });
+      nonscaledCurrent(1701).clampRGBA(items);
+      nonscaledCurrent.nonscaledCurrent = items;
+      let obj = nonscaledCurrent(1701);
+      const obj2 = nonscaledCurrent(1701);
+      nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(nonscaledCurrent(1701).toGammaSpace(items));
+      return c3;
+    }
+    function transformationMatrixOnFrame(arg0, arg1) {
+      const stopMatrices = arg0;
+      const first = arg0[0];
+      dependencyMap = arg0[0].current / 100;
+      const items = [];
+      const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
+      const item = items1.forEach((item, index) => {
+        if (typeof objectOnFrame === "function") {
+          const obj = fn(1700);
+          const obj2 = fn(1700);
+          return tmp2(obj.addMatrices(tmp4, obj2.scaleMatrix(fn(1700).subtractMatrices(tmp5, tmp4), tmp3)));
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
+      });
+      const items2 = [];
+      const items3 = ["x", "y", "z"];
+      [tmp3, tmp4, tmp5] = items;
+      const item1 = items3.forEach((item, index) => {
+        if (typeof closure_2_9 === "function") {
+          const sum = tmp2 + tmp * (stopMatrices.stopMatrices["r" + item] - tmp2);
+          items2.push(fn(1700).getRotationMatrix(sum, item));
+          const obj = fn(1700);
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      });
+      [tmp7, tmp8, tmp9] = items2;
+      const onFrameResult = first.onFrame(arg0[0], arg1);
+      let obj2 = stopMatrices(1700);
+      const obj3 = stopMatrices(1700);
+      const multiplyMatricesResult = obj2.multiplyMatrices(tmp7, stopMatrices(1700).multiplyMatrices(tmp8, tmp9));
+      const obj4 = stopMatrices(1700);
+      const obj5 = stopMatrices(1700);
+      const obj6 = stopMatrices(1700);
+      arg0.current = obj4.flatten(
+        obj5.multiplyMatrices(
+          obj6.multiplyMatrices(tmp4, stopMatrices(1700).multiplyMatrices(tmp5, multiplyMatricesResult)),
+          tmp3,
+        ),
+      );
+      return onFrameResult;
     }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-projection.__closure = { assertVectorsHaveEqualLengths, innerProduct };
-projection.__workletHash = 12191208971941;
-projection.__initData = {
-  code: "function projection_Pnpm_matrixUtilsTsx15(u,a){const{assertVectorsHaveEqualLengths,innerProduct}=this.__closure;assertVectorsHaveEqualLengths(u,a);const s=innerProduct(u,a)/innerProduct(u,u);return u.map(function(e){return e*s;});}",
-};
-function subtractVectors(arr, arg1) {
-  closure_0 = arr;
-  closure_1 = arg1;
-  if (typeof assertVectorsHaveEqualLengths === "function") {
-    return arr.map((item, index) => arr11[index] - arr3[index]);
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-}
-subtractVectors.__closure = { assertVectorsHaveEqualLengths };
-subtractVectors.__workletHash = 9047017498478;
-subtractVectors.__initData = {
-  code: "function subtractVectors_Pnpm_matrixUtilsTsx16(a,b){const{assertVectorsHaveEqualLengths}=this.__closure;assertVectorsHaveEqualLengths(a,b);return a.map(function(_,i){return a[i]-b[i];});}",
-};
-function scaleVector(arr, arg1) {
-  closure_0 = arg1;
-  return arr.map((item) => item * closure_0);
-}
-scaleVector.__closure = {};
-scaleVector.__workletHash = 11236256734309;
-scaleVector.__initData = {
-  code: "function scaleVector_Pnpm_matrixUtilsTsx17(u,a){return u.map(function(e){return e*a;});}",
-};
-function gramSchmidtAlgorithm(items7) {
-  [tmp3, arr, arr2, arr3] = items7;
-  if (typeof subtractVectors === "function") {
-    arr11 = arr;
-    arr3 = tmp5;
-    if (typeof assertVectorsHaveEqualLengths === "function") {
-      const mapped = arr.map((item, index) => arr11[index] - arr3[index]);
-      if (typeof subtractVectors === "function") {
-        arr11 = arr2;
-        arr3 = tmp8;
-        if (typeof assertVectorsHaveEqualLengths === "function") {
-          const mapped1 = arr2.map((item, index) => arr11[index] - arr3[index]);
-          if (typeof subtractVectors === "function") {
-            arr11 = mapped1;
-            arr3 = tmp9;
-            if (typeof assertVectorsHaveEqualLengths === "function") {
-              const mapped2 = mapped1.map((item, index) => arr11[index] - arr3[index]);
-              const items = [tmp3, mapped, mapped2];
-              if (typeof subtractVectors === "function") {
-                arr11 = arr3;
-                arr3 = tmp11;
-                if (typeof assertVectorsHaveEqualLengths === "function") {
-                  const mapped3 = arr3.map((item, index) => arr11[index] - arr3[index]);
-                  if (typeof subtractVectors === "function") {
-                    arr11 = mapped3;
-                    arr3 = tmp12;
-                    if (typeof assertVectorsHaveEqualLengths === "function") {
-                      const mapped4 = mapped3.map((item, index) => arr11[index] - arr3[index]);
-                      if (typeof subtractVectors === "function") {
-                        arr11 = mapped4;
-                        arr3 = tmp13;
-                        if (typeof assertVectorsHaveEqualLengths === "function") {
-                          items[3] = mapped4.map((item, index) => arr11[index] - arr3[index]);
-                          [arr8, arr9, arr10, arr11] = items.map((arr) => {
-                            if (typeof innerProduct === "function") {
-                              closure_0 = arr;
-                              closure_1 = arr;
-                              if (typeof assertVectorsHaveEqualLengths === "function") {
-                                if (typeof tmp === "function") {
-                                  closure_0 =
-                                    1 /
-                                    tmp3(
-                                      arr.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0),
-                                    );
-                                  return arr.map((item) => item * closure_0);
-                                } else {
-                                  throw new TypeError("Trying to call a non-function");
-                                }
-                              } else {
-                                throw new TypeError("Trying to call a non-function");
-                              }
-                            } else {
-                              throw new TypeError("Trying to call a non-function");
+    function arrayOnFrame(current, arg1) {
+      dependencyMap = current;
+      closure_1 = arg1;
+      c2 = true;
+      current = current.current;
+      const item = current.forEach((item, index) => {
+        let onFrameResult = c2;
+        if (c2) {
+          onFrameResult = obj.onFrame(dependencyMap[index], closure_1);
+        }
+        c2 = onFrameResult;
+        dependencyMap.current[index] = dependencyMap[index].current;
+        obj = dependencyMap[index];
+      });
+      return c2;
+    }
+    function objectOnFrame(current, arg1) {
+      const obj = {};
+      let flag = true;
+      let flag2 = true;
+      const keys = Object.keys();
+      if (keys !== undefined) {
+        flag2 = flag;
+        while (keys[tmp] !== undefined) {
+          let obj2 = current[tmp4];
+          let onFrameResult = flag;
+          if (flag) {
+            onFrameResult = obj2.onFrame(current[tmp4], arg1);
+          }
+          obj[tmp4] = current[tmp4].current;
+          flag = onFrameResult;
+          continue;
+        }
+      }
+      current.current = obj;
+      return flag2;
+    }
+    isHigherOrder.onStart = (reduceMotion, current, arg2, current2) => {
+      if (undefined === reduceMotion.reduceMotion) {
+        if (typeof arrayOnFrame === "function") {
+          reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      }
+      if (reduceMotion.reduceMotion) {
+        if (undefined !== reduceMotion.toValue) {
+          reduceMotion.current = reduceMotion.toValue;
+        } else {
+          toValue(reduceMotion, current, arg2, current2);
+        }
+        reduceMotion.startTime = 0;
+        reduceMotion.onFrame = () => true;
+      } else {
+        if (obj.isColor(current)) {
+          closure_129_0 = reduceMotion;
+          closure_129_1 = arg2;
+          closure_129_2 = current2;
+          const items = [];
+          closure_129_6 = items;
+          if (tmp3Result.isColor(current)) {
+            const tmp3Result13 = fn(1701);
+            closure_129_4 = tmp3Result13.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.current));
+            const tmp3Result14 = fn(1701);
+            const tmp3Result15 = fn(1701);
+            closure_129_3 = tmp3Result15.toLinearSpace(fn(1701).convertToRGBA(current));
+            if (reduceMotion.toValue) {
+              const tmp3Result17 = fn(1701);
+              closure_129_5 = tmp3Result17.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.toValue));
+              const tmp3Result18 = fn(1701);
+            }
+            const tmp3Result16 = fn(1701);
+          }
+          const item = closure_4.forEach((item, index) => {
+            toValue[item] = Object.assign({}, dependencyMap);
+            toValue[item].current = closure_1_4[index];
+            let tmp2;
+            if (colorOnFrame) {
+              tmp2 = colorOnFrame[index];
+            }
+            toValue[item].toValue = tmp2;
+            let tmp4;
+            if (dependencyMap) {
+              tmp4 = dependencyMap[item];
+            }
+            toValue[item].onStart(toValue[item], prefNumberSuffOnFrame[index], closure_1, tmp4);
+            transformationMatrixOnFrame.push(toValue[item].current);
+          });
+          reduceMotion.unroundedCurrent = items;
+          tmp3Result = fn(1701);
+          fn(1701).clampRGBA(items);
+          const tmp3Result19 = fn(1701);
+          const tmp3Result20 = fn(1701);
+          reduceMotion.current = tmp3Result20.rgbaArrayToRGBAColor(fn(1701).toGammaSpace(items));
+          reduceMotion.onFrame = colorOnFrame;
+          const tmp3Result21 = fn(1701);
+        } else {
+          if (tmp3Result22.isAffineMatrixFlat(current)) {
+            reduceMotion.startMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(current);
+            const tmp3Result23 = fn(1700);
+            reduceMotion.stopMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(reduceMotion.toValue);
+            const _Object = Object;
+            reduceMotion[0] = Object.assign({}, dependencyMap);
+            reduceMotion[0].current = 0;
+            reduceMotion[0].toValue = 100;
+            const first = reduceMotion[0];
+            const first1 = reduceMotion[0];
+            let first2;
+            if (current2) {
+              first2 = current2[0];
+            }
+            first.onStart(first1, 0, arg2, first2);
+            reduceMotion.current = current;
+            reduceMotion.onFrame = transformationMatrixOnFrame;
+            const tmp3Result24 = fn(1700);
+          } else {
+            prefix = globalThis;
+            const _Array = Array;
+            if (Array.isArray(current)) {
+              toValue = reduceMotion;
+              closure_1 = arg2;
+              dependencyMap = current2;
+              const item1 = current.forEach((current, index) => {
+                toValue[index] = Object.assign({}, dependencyMap);
+                toValue[index].current = current;
+                toValue[index].toValue = toValue.toValue[index];
+                let tmp2;
+                if (dependencyMap) {
+                  tmp2 = dependencyMap[index];
+                }
+                toValue[index].onStart(toValue[index], current, closure_1, tmp2);
+              });
+              const items1 = [];
+              HermesBuiltin.arraySpread(current, 0);
+              reduceMotion.current = items1;
+              reduceMotion.onFrame = arrayOnFrame;
+            } else if (typeof current === "string") {
+              if (typeof colorOnFrame === "function") {
+                if (typeof current === "string") {
+                  const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+                  if (match) {
+                    let str2 = match[3];
+                    if (str2 == null) {
+                      str2 = "";
+                    }
+                    const obj2 = { prefix: match[1], suffix: match[4], strippedValue: null };
+                    const _parseFloat = parseFloat;
+                    obj2.strippedValue = parseFloat(match[2] + str2);
+                    let obj3 = obj2;
+                  } else {
+                    const reanimatedError = new fn(1669).ReanimatedError("Couldn't parse animation value.");
+                    throw reanimatedError;
+                  }
+                } else {
+                  obj3 = { strippedValue: current };
+                }
+                ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj3);
+                reduceMotion.strippedCurrent = strippedValue;
+                if (typeof colorOnFrame === "function") {
+                  if (typeof str3 === "string") {
+                    const match1 = str3.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+                    if (match1) {
+                      let str5 = match1[3];
+                      if (str5 == null) {
+                        str5 = "";
+                      }
+                      const obj4 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
+                      const _parseFloat2 = parseFloat;
+                      obj4.strippedValue = parseFloat(match1[2] + str5);
+                      let obj5 = obj4;
+                    } else {
+                      const reanimatedError1 = new fn(1669).ReanimatedError("Couldn't parse animation value.");
+                      throw reanimatedError1;
+                    }
+                  } else {
+                    obj5 = { strippedValue: str3 };
+                  }
+                  reduceMotion.current = strippedValue;
+                  reduceMotion.startValue = strippedValue;
+                  reduceMotion.toValue = obj5.strippedValue;
+                  if (current2) {
+                    if (current2 !== reduceMotion) {
+                      if (typeof colorOnFrame === "function") {
+                        if (typeof str7 === "string") {
+                          const match2 = str7.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+                          if (match2) {
+                            let str8 = match2[3];
+                            if (str8 == null) {
+                              str8 = "";
                             }
-                          });
-                          const items1 = [arr8[0], arr9[0], arr10[0], arr11[0]];
-                          const items2 = [items1, , ,];
-                          const items3 = [arr8[1], arr9[1], arr10[1], arr11[1]];
-                          items2[1] = items3;
-                          const items4 = [arr8[2], arr9[2], arr10[2], arr11[2]];
-                          items2[2] = items4;
-                          const items5 = [arr8[3], arr9[3], arr10[3], arr11[3]];
-                          items2[3] = items5;
-                          if (typeof innerProduct === "function") {
-                            arr11 = arr8;
-                            arr3 = tmp3;
-                            if (typeof assertVectorsHaveEqualLengths === "function") {
-                              const items6 = [
-                                arr8.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0),
-                                ,
-                                ,
-                              ];
-                              if (typeof innerProduct === "function") {
-                                arr11 = arr8;
-                                arr3 = arr;
-                                if (typeof assertVectorsHaveEqualLengths === "function") {
-                                  items6[1] = arr8.reduce(
-                                    (acc, item, index) => acc + closure_0[index] * closure_1[index],
-                                    0,
-                                  );
-                                  if (typeof innerProduct === "function") {
-                                    arr11 = arr8;
-                                    arr3 = arr2;
-                                    if (typeof assertVectorsHaveEqualLengths === "function") {
-                                      items6[2] = arr8.reduce(
-                                        (acc, item, index) => acc + closure_0[index] * closure_1[index],
-                                        0,
-                                      );
-                                      if (typeof innerProduct === "function") {
-                                        arr11 = arr8;
-                                        if (typeof assertVectorsHaveEqualLengths === "function") {
-                                          items6[3] = arr8.reduce(
-                                            (acc, item, index) => acc + closure_0[index] * closure_1[index],
-                                            0,
-                                          );
-                                          items7 = [items6, , ,];
-                                          if (typeof innerProduct === "function") {
-                                            arr11 = arr9;
-                                            arr3 = arr;
-                                            if (typeof assertVectorsHaveEqualLengths === "function") {
-                                              const items8 = [
-                                                0,
-                                                arr9.reduce(
-                                                  (acc, item, index) => acc + closure_0[index] * closure_1[index],
-                                                  0,
-                                                ),
-                                              ];
-                                              if (typeof innerProduct === "function") {
-                                                arr11 = arr9;
-                                                arr3 = arr2;
-                                                if (typeof assertVectorsHaveEqualLengths === "function") {
-                                                  items8[2] = arr9.reduce(
-                                                    (acc, item, index) => acc + closure_0[index] * closure_1[index],
-                                                    0,
-                                                  );
-                                                  if (typeof innerProduct === "function") {
-                                                    arr11 = arr9;
-                                                    if (typeof assertVectorsHaveEqualLengths === "function") {
-                                                      items8[3] = arr9.reduce(
-                                                        (acc, item, index) => acc + closure_0[index] * closure_1[index],
-                                                        0,
-                                                      );
-                                                      items7[1] = items8;
-                                                      if (typeof innerProduct === "function") {
-                                                        arr11 = arr10;
-                                                        arr3 = arr2;
-                                                        if (typeof assertVectorsHaveEqualLengths === "function") {
-                                                          const items9 = [
-                                                            0,
-                                                            0,
-                                                            arr10.reduce(
-                                                              (acc, item, index) =>
-                                                                acc + closure_0[index] * closure_1[index],
-                                                              0,
-                                                            ),
-                                                          ];
-                                                          if (typeof innerProduct === "function") {
-                                                            arr11 = arr10;
-                                                            if (typeof assertVectorsHaveEqualLengths === "function") {
-                                                              items9[3] = arr10.reduce(
-                                                                (acc, item, index) =>
-                                                                  acc + closure_0[index] * closure_1[index],
-                                                                0,
-                                                              );
-                                                              items7[2] = items9;
-                                                              if (typeof innerProduct === "function") {
-                                                                if (
-                                                                  typeof assertVectorsHaveEqualLengths === "function"
-                                                                ) {
-                                                                  const items10 = [
-                                                                    0,
-                                                                    0,
-                                                                    0,
-                                                                    arr11.reduce(
-                                                                      (acc, item, index) =>
-                                                                        acc + closure_0[index] * closure_1[index],
-                                                                      0,
-                                                                    ),
-                                                                  ];
-                                                                  items7[3] = items10;
-                                                                  if (typeof transposeMatrix === "function") {
-                                                                    if (typeof flatten === "function") {
-                                                                      const obj = {
-                                                                        rotationMatrix: null,
-                                                                        skewMatrix: null,
-                                                                      };
-                                                                      const flatResult = items2.flat();
-                                                                      const items11 = [
-                                                                        flatResult[0],
-                                                                        flatResult[4],
-                                                                        flatResult[8],
-                                                                        flatResult[12],
-                                                                      ];
-                                                                      const items12 = [items11, , ,];
-                                                                      const items13 = [
-                                                                        flatResult[1],
-                                                                        flatResult[5],
-                                                                        flatResult[9],
-                                                                        flatResult[13],
-                                                                      ];
-                                                                      items12[1] = items13;
-                                                                      const items14 = [
-                                                                        flatResult[2],
-                                                                        flatResult[6],
-                                                                        flatResult[10],
-                                                                        flatResult[14],
-                                                                      ];
-                                                                      items12[2] = items14;
-                                                                      const items15 = [
-                                                                        flatResult[3],
-                                                                        flatResult[7],
-                                                                        flatResult[11],
-                                                                        flatResult[15],
-                                                                      ];
-                                                                      items12[3] = items15;
-                                                                      obj.rotationMatrix = items12;
-                                                                      if (typeof tmp16 === "function") {
-                                                                        if (typeof tmp17 === "function") {
-                                                                          const flatResult1 = items7.flat();
-                                                                          const items16 = [
-                                                                            flatResult1[0],
-                                                                            flatResult1[4],
-                                                                            flatResult1[8],
-                                                                            flatResult1[12],
-                                                                          ];
-                                                                          const items17 = [items16, , ,];
-                                                                          const items18 = [
-                                                                            flatResult1[1],
-                                                                            flatResult1[5],
-                                                                            flatResult1[9],
-                                                                            flatResult1[13],
-                                                                          ];
-                                                                          items17[1] = items18;
-                                                                          const items19 = [
-                                                                            flatResult1[2],
-                                                                            flatResult1[6],
-                                                                            flatResult1[10],
-                                                                            flatResult1[14],
-                                                                          ];
-                                                                          items17[2] = items19;
-                                                                          const items20 = [
-                                                                            flatResult1[3],
-                                                                            flatResult1[7],
-                                                                            flatResult1[11],
-                                                                            flatResult1[15],
-                                                                          ];
-                                                                          items17[3] = items20;
-                                                                          obj.skewMatrix = items17;
-                                                                          return obj;
-                                                                        } else {
-                                                                          throw new TypeError(
-                                                                            "Trying to call a non-function",
-                                                                          );
-                                                                        }
-                                                                      } else {
-                                                                        throw new TypeError(
-                                                                          "Trying to call a non-function",
-                                                                        );
-                                                                      }
-                                                                    } else {
-                                                                      throw new TypeError(
-                                                                        "Trying to call a non-function",
-                                                                      );
-                                                                    }
-                                                                  } else {
-                                                                    throw new TypeError(
-                                                                      "Trying to call a non-function",
-                                                                    );
-                                                                  }
-                                                                } else {
-                                                                  throw new TypeError("Trying to call a non-function");
-                                                                }
-                                                              } else {
-                                                                throw new TypeError("Trying to call a non-function");
-                                                              }
-                                                            } else {
-                                                              throw new TypeError("Trying to call a non-function");
-                                                            }
-                                                          } else {
-                                                            throw new TypeError("Trying to call a non-function");
-                                                          }
-                                                        } else {
-                                                          throw new TypeError("Trying to call a non-function");
-                                                        }
-                                                      } else {
-                                                        throw new TypeError("Trying to call a non-function");
-                                                      }
-                                                    } else {
-                                                      throw new TypeError("Trying to call a non-function");
-                                                    }
-                                                  } else {
-                                                    throw new TypeError("Trying to call a non-function");
-                                                  }
-                                                } else {
-                                                  throw new TypeError("Trying to call a non-function");
-                                                }
-                                              } else {
-                                                throw new TypeError("Trying to call a non-function");
-                                              }
-                                            } else {
-                                              throw new TypeError("Trying to call a non-function");
-                                            }
-                                          } else {
-                                            throw new TypeError("Trying to call a non-function");
-                                          }
-                                        } else {
-                                          throw new TypeError("Trying to call a non-function");
-                                        }
-                                      } else {
-                                        throw new TypeError("Trying to call a non-function");
-                                      }
-                                    } else {
-                                      throw new TypeError("Trying to call a non-function");
-                                    }
-                                  } else {
-                                    throw new TypeError("Trying to call a non-function");
-                                  }
-                                } else {
-                                  throw new TypeError("Trying to call a non-function");
-                                }
-                              } else {
-                                throw new TypeError("Trying to call a non-function");
-                              }
-                            } else {
-                              throw new TypeError("Trying to call a non-function");
-                            }
+                            const obj6 = {
+                              prefix: match2[1],
+                              suffix: match2[4],
+                              strippedValue: prefix.parseFloat(match2[2] + str8),
+                            };
+                            let obj7 = obj6;
                           } else {
-                            throw new TypeError("Trying to call a non-function");
+                            const reanimatedError2 = new fn(1669).ReanimatedError("Couldn't parse animation value.");
+                            throw reanimatedError2;
                           }
-                          const tmpResult = _slicedToArray(
-                            items.map((arr) => {
-                              if (typeof innerProduct === "function") {
-                                closure_0 = arr;
-                                closure_1 = arr;
-                                if (typeof assertVectorsHaveEqualLengths === "function") {
-                                  if (typeof tmp === "function") {
-                                    closure_0 =
-                                      1 /
-                                      tmp3(
-                                        arr.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0),
-                                      );
-                                    return arr.map((item) => item * closure_0);
-                                  } else {
-                                    throw new TypeError("Trying to call a non-function");
-                                  }
-                                } else {
-                                  throw new TypeError("Trying to call a non-function");
-                                }
-                              } else {
-                                throw new TypeError("Trying to call a non-function");
-                              }
-                            }),
-                            4,
-                          );
                         } else {
-                          throw new TypeError("Trying to call a non-function");
+                          obj7 = { strippedValue: str7 };
                         }
+                        ({ prefix, strippedValue: current2.current } = obj7);
+                        current2.__prefix = prefix;
+                        current2.__suffix = obj7.suffix;
                       } else {
                         throw new TypeError("Trying to call a non-function");
                       }
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
                     }
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
                   }
+                  toValue(reduceMotion, strippedValue, arg2, current2);
+                  let str9 = reduceMotion.__prefix;
+                  if (str9 == null) {
+                    str9 = "";
+                  }
+                  let str10 = reduceMotion.__suffix;
+                  const sum = str9 + reduceMotion.current;
+                  if (str10 == null) {
+                    str10 = "";
+                  }
+                  reduceMotion.current = sum + str10;
+                  let tmp48 = current2;
+                  if (current2) {
+                    tmp48 = current2 !== reduceMotion;
+                  }
+                  if (tmp48) {
+                    let str11 = current2.__prefix;
+                    if (str11 == null) {
+                      str11 = "";
+                    }
+                    let str12 = current2.__suffix;
+                    const sum1 = str11 + current2.current;
+                    if (str12 == null) {
+                      str12 = "";
+                    }
+                    current2.current = sum1 + str12;
+                  }
+                  reduceMotion.onFrame = prefNumberSuffOnFrame;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
@@ -988,175 +481,905 @@ function gramSchmidtAlgorithm(items7) {
                 throw new TypeError("Trying to call a non-function");
               }
             } else {
-              throw new TypeError("Trying to call a non-function");
+              if (typeof current === "object") {
+                if (null !== current) {
+                  for (const key10034 in arg1) {
+                    let _Object2 = Object;
+                    arg0[key10034] = Object.assign({}, dependencyMap);
+                    arg0[key10034].onStart = arg0.onStart;
+                    arg0[key10034].current = arg1[key10034];
+                    arg0[key10034].toValue = arg0.toValue[key10034];
+                    let obj22 = arg0[key10034];
+                    let tmp79 = arg0[key10034];
+                    let tmp80 = arg1[key10034];
+                    let tmp13;
+                    if (arg3) {
+                      tmp13 = arg3[key10034];
+                    }
+                    let onStartResult1 = obj22.onStart(tmp79, tmp80, arg2, tmp13);
+                    continue;
+                  }
+                  reduceMotion.current = current;
+                  reduceMotion.onFrame = objectOnFrame;
+                }
+              }
+              toValue(reduceMotion, current, arg2, current2);
             }
-          } else {
-            throw new TypeError("Trying to call a non-function");
           }
-        } else {
-          throw new TypeError("Trying to call a non-function");
+          tmp3Result22 = fn(1700);
         }
+        return tmp11;
+      }
+    };
+  }
+}
+let obj3 = {
+  addMatrices: _mod1700.addMatrices,
+  scaleMatrix: _mod1700.scaleMatrix,
+  subtractMatrices: _mod1700.subtractMatrices,
+};
+decorateAnimation.__closure = {
+  getReduceMotionFromConfig,
+  recognizePrefixSuffix,
+  isColor: _mod1701.isColor,
+  toLinearSpace: _mod1701.toLinearSpace,
+  convertToRGBA: _mod1701.convertToRGBA,
+  clampRGBA: _mod1701.clampRGBA,
+  rgbaArrayToRGBAColor: _mod1701.rgbaArrayToRGBAColor,
+  toGammaSpace: _mod1701.toGammaSpace,
+  decomposeMatrixIntoMatricesAndAngles: _mod1700.decomposeMatrixIntoMatricesAndAngles,
+  applyProgressToMatrix,
+  applyProgressToNumber,
+  getRotationMatrix: _mod1700.getRotationMatrix,
+  multiplyMatrices: _mod1700.multiplyMatrices,
+  flatten: _mod1700.flatten,
+  isAffineMatrixFlat: _mod1700.isAffineMatrixFlat,
+};
+decorateAnimation.__workletHash = 6240615473022;
+decorateAnimation.__initData = {
+  code: "function decorateAnimation_Pnpm_utilTs8(animation){const{getReduceMotionFromConfig,recognizePrefixSuffix,isColor,toLinearSpace,convertToRGBA,clampRGBA,rgbaArrayToRGBAColor,toGammaSpace,decomposeMatrixIntoMatricesAndAngles,applyProgressToMatrix,applyProgressToNumber,getRotationMatrix,multiplyMatrices,flatten,isAffineMatrixFlat}=this.__closure;const baseOnStart=animation.onStart;const baseOnFrame=animation.onFrame;if(animation.isHigherOrder){animation.onStart=function(animation,value,timestamp,previousAnimation){if(animation.reduceMotion===undefined){animation.reduceMotion=getReduceMotionFromConfig();}return baseOnStart(animation,value,timestamp,previousAnimation);};return;}const animationCopy=Object.assign({},animation);delete animationCopy.callback;const prefNumberSuffOnStart=function(animation,value,timestamp,previousAnimation){var _animation$__prefix,_animation$__suffix;const{prefix:prefix,suffix:suffix,strippedValue:strippedValue}=recognizePrefixSuffix(value);animation.__prefix=prefix;animation.__suffix=suffix;animation.strippedCurrent=strippedValue;const{strippedValue:strippedToValue}=recognizePrefixSuffix(animation.toValue);animation.current=strippedValue;animation.startValue=strippedValue;animation.toValue=strippedToValue;if(previousAnimation&&previousAnimation!==animation){const{prefix:paPrefix,suffix:paSuffix,strippedValue:paStrippedValue}=recognizePrefixSuffix(previousAnimation.current);previousAnimation.current=paStrippedValue;previousAnimation.__prefix=paPrefix;previousAnimation.__suffix=paSuffix;}baseOnStart(animation,strippedValue,timestamp,previousAnimation);animation.current=((_animation$__prefix=animation.__prefix)!==null&&_animation$__prefix!==void 0?_animation$__prefix:'')+animation.current+((_animation$__suffix=animation.__suffix)!==null&&_animation$__suffix!==void 0?_animation$__suffix:'');if(previousAnimation&&previousAnimation!==animation){var _previousAnimation$__,_previousAnimation$__2;previousAnimation.current=((_previousAnimation$__=previousAnimation.__prefix)!==null&&_previousAnimation$__!==void 0?_previousAnimation$__:'')+previousAnimation.current+((_previousAnimation$__2=previousAnimation.__suffix)!==null&&_previousAnimation$__2!==void 0?_previousAnimation$__2:'');}};const prefNumberSuffOnFrame=function(animation,timestamp){var _animation$__prefix2,_animation$__suffix2;animation.current=animation.strippedCurrent;const res=baseOnFrame(animation,timestamp);animation.strippedCurrent=animation.current;animation.current=((_animation$__prefix2=animation.__prefix)!==null&&_animation$__prefix2!==void 0?_animation$__prefix2:'')+animation.current+((_animation$__suffix2=animation.__suffix)!==null&&_animation$__suffix2!==void 0?_animation$__suffix2:'');return res;};const tab=['R','G','B','A'];const colorOnStart=function(animation,value,timestamp,previousAnimation){let RGBAValue;let RGBACurrent;let RGBAToValue;const res=[];if(isColor(value)){RGBACurrent=toLinearSpace(convertToRGBA(animation.current));RGBAValue=toLinearSpace(convertToRGBA(value));if(animation.toValue){RGBAToValue=toLinearSpace(convertToRGBA(animation.toValue));}}tab.forEach(function(i,index){animation[i]=Object.assign({},animationCopy);animation[i].current=RGBACurrent[index];animation[i].toValue=RGBAToValue?RGBAToValue[index]:undefined;animation[i].onStart(animation[i],RGBAValue[index],timestamp,previousAnimation?previousAnimation[i]:undefined);res.push(animation[i].current);});animation.unroundedCurrent=res;clampRGBA(res);animation.current=rgbaArrayToRGBAColor(toGammaSpace(res));};const colorOnFrame=function(animation,timestamp){const res=[];let finished=true;animation.current=animation.nonscaledCurrent;tab.forEach(function(i){const result=animation[i].onFrame(animation[i],timestamp);finished=finished&&result;res.push(animation[i].current);});clampRGBA(res);animation.nonscaledCurrent=res;animation.current=rgbaArrayToRGBAColor(toGammaSpace(res));return finished;};const transformationMatrixOnStart=function(animation,value,timestamp,previousAnimation){const toValue=animation.toValue;animation.startMatrices=decomposeMatrixIntoMatricesAndAngles(value);animation.stopMatrices=decomposeMatrixIntoMatricesAndAngles(toValue);animation[0]=Object.assign({},animationCopy);animation[0].current=0;animation[0].toValue=100;animation[0].onStart(animation[0],0,timestamp,previousAnimation?previousAnimation[0]:undefined);animation.current=value;};const transformationMatrixOnFrame=function(animation,timestamp){let finished=true;const result=animation[0].onFrame(animation[0],timestamp);finished=finished&&result;const progress=animation[0].current/100;const transforms=['translationMatrix','scaleMatrix','skewMatrix'];const mappedTransforms=[];transforms.forEach(function(key,_){return mappedTransforms.push(applyProgressToMatrix(progress,animation.startMatrices[key],animation.stopMatrices[key]));});const[currentTranslation,currentScale,skewMatrix]=mappedTransforms;const rotations=['x','y','z'];const mappedRotations=[];rotations.forEach(function(key,_){const angle=applyProgressToNumber(progress,animation.startMatrices['r'+key],animation.stopMatrices['r'+key]);mappedRotations.push(getRotationMatrix(angle,key));});const[rotationMatrixX,rotationMatrixY,rotationMatrixZ]=mappedRotations;const rotationMatrix=multiplyMatrices(rotationMatrixX,multiplyMatrices(rotationMatrixY,rotationMatrixZ));const updated=flatten(multiplyMatrices(multiplyMatrices(currentScale,multiplyMatrices(skewMatrix,rotationMatrix)),currentTranslation));animation.current=updated;return finished;};const arrayOnStart=function(animation,value,timestamp,previousAnimation){value.forEach(function(v,i){animation[i]=Object.assign({},animationCopy);animation[i].current=v;animation[i].toValue=animation.toValue[i];animation[i].onStart(animation[i],v,timestamp,previousAnimation?previousAnimation[i]:undefined);});animation.current=[...value];};const arrayOnFrame=function(animation,timestamp){let finished=true;animation.current.forEach(function(_,i){const result=animation[i].onFrame(animation[i],timestamp);finished=finished&&result;animation.current[i]=animation[i].current;});return finished;};const objectOnStart=function(animation,value,timestamp,previousAnimation){for(const key in value){animation[key]=Object.assign({},animationCopy);animation[key].onStart=animation.onStart;animation[key].current=value[key];animation[key].toValue=animation.toValue[key];animation[key].onStart(animation[key],value[key],timestamp,previousAnimation?previousAnimation[key]:undefined);}animation.current=value;};const objectOnFrame=function(animation,timestamp){let finished=true;const newObject={};for(const key in animation.current){const result=animation[key].onFrame(animation[key],timestamp);finished=finished&&result;newObject[key]=animation[key].current;}animation.current=newObject;return finished;};animation.onStart=function(animation,value,timestamp,previousAnimation){if(animation.reduceMotion===undefined){animation.reduceMotion=getReduceMotionFromConfig();}if(animation.reduceMotion){if(animation.toValue!==undefined){animation.current=animation.toValue;}else{baseOnStart(animation,value,timestamp,previousAnimation);}animation.startTime=0;animation.onFrame=function(){return true;};return;}if(isColor(value)){colorOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=colorOnFrame;return;}else if(isAffineMatrixFlat(value)){transformationMatrixOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=transformationMatrixOnFrame;return;}else if(Array.isArray(value)){arrayOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=arrayOnFrame;return;}else if(typeof value==='string'){prefNumberSuffOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=prefNumberSuffOnFrame;return;}else if(typeof value==='object'&&value!==null){objectOnStart(animation,value,timestamp,previousAnimation);animation.onFrame=objectOnFrame;return;}baseOnStart(animation,value,timestamp,previousAnimation);};}",
+};
+const __initData = {
+  code: "function pnpm_utilTs10(){const{factory,decorateAnimation}=this.__closure;const animation=factory();decorateAnimation(animation);return animation;}",
+};
+function defineAnimation(substr, fn) {
+  if (c2) {
+    return substr;
+  } else {
+    let factory = function o() {
+      const tmp3 = closure_0();
+      if (typeof decorateAnimation === "function") {
+        ({ onStart: closure_0, onFrame: closure_1 } = tmp3);
+        if (tmp3.isHigherOrder) {
+          tmp3.onStart = (reduceMotion, keys, length, height) => {
+            if (undefined === reduceMotion.reduceMotion) {
+              if (typeof getReduceMotionFromConfig === "function") {
+                reduceMotion.reduceMotion = value.value;
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }
+            return fn(reduceMotion, keys, length, height);
+          };
+        } else {
+          let _Object = Object;
+          closure_2 = Object.assign({}, tmp3);
+          delete tmp2[tmp];
+          function prefNumberSuffOnFrame(strippedCurrent, arg1) {
+            strippedCurrent.current = strippedCurrent.strippedCurrent;
+            ({ current: strippedCurrent.strippedCurrent, __prefix } = strippedCurrent);
+            if (__prefix == null) {
+              __prefix = "";
+            }
+            let str = strippedCurrent.__suffix;
+            const sum = __prefix + strippedCurrent.current;
+            if (str == null) {
+              str = "";
+            }
+            strippedCurrent.current = sum + str;
+            return dependencyMap(strippedCurrent, arg1);
+          }
+          closure_4 = ["R", "G", "B", "A"];
+          function colorOnFrame(nonscaledCurrent, arg1) {
+            closure_1 = arg1;
+            const items = [];
+            c3 = true;
+            nonscaledCurrent.current = nonscaledCurrent.nonscaledCurrent;
+            const item = closure_4.forEach((item) => {
+              let onFrameResult = c3;
+              if (c3) {
+                onFrameResult = obj.onFrame(nonscaledCurrent[item], closure_1);
+              }
+              c3 = onFrameResult;
+              items.push(nonscaledCurrent[item].current);
+              obj = nonscaledCurrent[item];
+            });
+            nonscaledCurrent(1701).clampRGBA(items);
+            nonscaledCurrent.nonscaledCurrent = items;
+            let obj = nonscaledCurrent(1701);
+            const obj2 = nonscaledCurrent(1701);
+            nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(nonscaledCurrent(1701).toGammaSpace(items));
+            return c3;
+          }
+          function transformationMatrixOnFrame(arg0, arg1) {
+            const stopMatrices = arg0;
+            const first = arg0[0];
+            dependencyMap = arg0[0].current / 100;
+            const items = [];
+            const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
+            const item = items1.forEach((item, index) => {
+              if (typeof objectOnFrame === "function") {
+                const obj = fn(1700);
+                const obj2 = fn(1700);
+                return tmp2(obj.addMatrices(tmp4, obj2.scaleMatrix(fn(1700).subtractMatrices(tmp5, tmp4), tmp3)));
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            });
+            const items2 = [];
+            const items3 = ["x", "y", "z"];
+            [tmp3, tmp4, tmp5] = items;
+            const item1 = items3.forEach((item, index) => {
+              if (typeof closure_2_9 === "function") {
+                const sum = tmp2 + tmp * (stopMatrices.stopMatrices["r" + item] - tmp2);
+                items2.push(fn(1700).getRotationMatrix(sum, item));
+                const obj = fn(1700);
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            });
+            [tmp7, tmp8, tmp9] = items2;
+            const onFrameResult = first.onFrame(arg0[0], arg1);
+            let obj2 = stopMatrices(1700);
+            const obj3 = stopMatrices(1700);
+            const multiplyMatricesResult = obj2.multiplyMatrices(tmp7, stopMatrices(1700).multiplyMatrices(tmp8, tmp9));
+            const obj4 = stopMatrices(1700);
+            const obj5 = stopMatrices(1700);
+            const obj6 = stopMatrices(1700);
+            arg0.current = obj4.flatten(
+              obj5.multiplyMatrices(
+                obj6.multiplyMatrices(tmp4, stopMatrices(1700).multiplyMatrices(tmp5, multiplyMatricesResult)),
+                tmp3,
+              ),
+            );
+            return onFrameResult;
+          }
+          function arrayOnFrame(current, arg1) {
+            dependencyMap = current;
+            closure_1 = arg1;
+            c2 = true;
+            current = current.current;
+            const item = current.forEach((item, index) => {
+              let onFrameResult = c2;
+              if (c2) {
+                onFrameResult = obj.onFrame(dependencyMap[index], closure_1);
+              }
+              c2 = onFrameResult;
+              dependencyMap.current[index] = dependencyMap[index].current;
+              obj = dependencyMap[index];
+            });
+            return c2;
+          }
+          function objectOnFrame(current, arg1) {
+            const obj = {};
+            let flag = true;
+            let flag2 = true;
+            const keys = Object.keys();
+            if (keys !== undefined) {
+              flag2 = flag;
+              while (keys[tmp] !== undefined) {
+                let obj2 = current[tmp4];
+                let onFrameResult = flag;
+                if (flag) {
+                  onFrameResult = obj2.onFrame(current[tmp4], arg1);
+                }
+                obj[tmp4] = current[tmp4].current;
+                flag = onFrameResult;
+                continue;
+              }
+            }
+            current.current = obj;
+            return flag2;
+          }
+          tmp3.onStart = (reduceMotion, current, arg2, current2) => {
+            if (undefined === reduceMotion.reduceMotion) {
+              if (typeof arrayOnFrame === "function") {
+                reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            }
+            if (reduceMotion.reduceMotion) {
+              if (undefined !== reduceMotion.toValue) {
+                reduceMotion.current = reduceMotion.toValue;
+              } else {
+                toValue(reduceMotion, current, arg2, current2);
+              }
+              reduceMotion.startTime = 0;
+              reduceMotion.onFrame = () => true;
+            } else {
+              if (obj.isColor(current)) {
+                closure_129_0 = reduceMotion;
+                closure_129_1 = arg2;
+                closure_129_2 = current2;
+                const items = [];
+                closure_129_6 = items;
+                if (tmp3Result.isColor(current)) {
+                  const tmp3Result13 = fn(1701);
+                  closure_129_4 = tmp3Result13.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.current));
+                  const tmp3Result14 = fn(1701);
+                  const tmp3Result15 = fn(1701);
+                  closure_129_3 = tmp3Result15.toLinearSpace(fn(1701).convertToRGBA(current));
+                  if (reduceMotion.toValue) {
+                    const tmp3Result17 = fn(1701);
+                    closure_129_5 = tmp3Result17.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.toValue));
+                    const tmp3Result18 = fn(1701);
+                  }
+                  const tmp3Result16 = fn(1701);
+                }
+                const item = closure_4.forEach((item, index) => {
+                  toValue[item] = Object.assign({}, dependencyMap);
+                  toValue[item].current = closure_1_4[index];
+                  let tmp2;
+                  if (colorOnFrame) {
+                    tmp2 = colorOnFrame[index];
+                  }
+                  toValue[item].toValue = tmp2;
+                  let tmp4;
+                  if (dependencyMap) {
+                    tmp4 = dependencyMap[item];
+                  }
+                  toValue[item].onStart(toValue[item], prefNumberSuffOnFrame[index], closure_1, tmp4);
+                  transformationMatrixOnFrame.push(toValue[item].current);
+                });
+                reduceMotion.unroundedCurrent = items;
+                tmp3Result = fn(1701);
+                fn(1701).clampRGBA(items);
+                const tmp3Result19 = fn(1701);
+                const tmp3Result20 = fn(1701);
+                reduceMotion.current = tmp3Result20.rgbaArrayToRGBAColor(fn(1701).toGammaSpace(items));
+                reduceMotion.onFrame = colorOnFrame;
+                const tmp3Result21 = fn(1701);
+              } else {
+                if (tmp3Result22.isAffineMatrixFlat(current)) {
+                  reduceMotion.startMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(current);
+                  const tmp3Result23 = fn(1700);
+                  reduceMotion.stopMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(reduceMotion.toValue);
+                  const _Object = Object;
+                  reduceMotion[0] = Object.assign({}, dependencyMap);
+                  reduceMotion[0].current = 0;
+                  reduceMotion[0].toValue = 100;
+                  const first = reduceMotion[0];
+                  const first1 = reduceMotion[0];
+                  let first2;
+                  if (current2) {
+                    first2 = current2[0];
+                  }
+                  first.onStart(first1, 0, arg2, first2);
+                  reduceMotion.current = current;
+                  reduceMotion.onFrame = transformationMatrixOnFrame;
+                  const tmp3Result24 = fn(1700);
+                } else {
+                  prefix = globalThis;
+                  const _Array = Array;
+                  if (Array.isArray(current)) {
+                    toValue = reduceMotion;
+                    closure_1 = arg2;
+                    dependencyMap = current2;
+                    const item1 = current.forEach((current, index) => {
+                      toValue[index] = Object.assign({}, dependencyMap);
+                      toValue[index].current = current;
+                      toValue[index].toValue = toValue.toValue[index];
+                      let tmp2;
+                      if (dependencyMap) {
+                        tmp2 = dependencyMap[index];
+                      }
+                      toValue[index].onStart(toValue[index], current, closure_1, tmp2);
+                    });
+                    const items1 = [];
+                    HermesBuiltin.arraySpread(current, 0);
+                    reduceMotion.current = items1;
+                    reduceMotion.onFrame = arrayOnFrame;
+                  } else if (typeof current === "string") {
+                    if (typeof colorOnFrame === "function") {
+                      if (typeof current === "string") {
+                        const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+                        if (match) {
+                          let str2 = match[3];
+                          if (str2 == null) {
+                            str2 = "";
+                          }
+                          const obj2 = { prefix: match[1], suffix: match[4], strippedValue: null };
+                          const _parseFloat = parseFloat;
+                          obj2.strippedValue = parseFloat(match[2] + str2);
+                          let obj3 = obj2;
+                        } else {
+                          const reanimatedError = new fn(1669).ReanimatedError("Couldn't parse animation value.");
+                          throw reanimatedError;
+                        }
+                      } else {
+                        obj3 = { strippedValue: current };
+                      }
+                      ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj3);
+                      reduceMotion.strippedCurrent = strippedValue;
+                      if (typeof colorOnFrame === "function") {
+                        if (typeof str3 === "string") {
+                          const match1 = str3.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+                          if (match1) {
+                            let str5 = match1[3];
+                            if (str5 == null) {
+                              str5 = "";
+                            }
+                            const obj4 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
+                            const _parseFloat2 = parseFloat;
+                            obj4.strippedValue = parseFloat(match1[2] + str5);
+                            let obj5 = obj4;
+                          } else {
+                            const reanimatedError1 = new fn(1669).ReanimatedError("Couldn't parse animation value.");
+                            throw reanimatedError1;
+                          }
+                        } else {
+                          obj5 = { strippedValue: str3 };
+                        }
+                        reduceMotion.current = strippedValue;
+                        reduceMotion.startValue = strippedValue;
+                        reduceMotion.toValue = obj5.strippedValue;
+                        if (current2) {
+                          if (current2 !== reduceMotion) {
+                            if (typeof colorOnFrame === "function") {
+                              if (typeof str7 === "string") {
+                                const match2 = str7.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+                                if (match2) {
+                                  let str8 = match2[3];
+                                  if (str8 == null) {
+                                    str8 = "";
+                                  }
+                                  const obj6 = {
+                                    prefix: match2[1],
+                                    suffix: match2[4],
+                                    strippedValue: prefix.parseFloat(match2[2] + str8),
+                                  };
+                                  let obj7 = obj6;
+                                } else {
+                                  const reanimatedError2 = new fn(1669).ReanimatedError(
+                                    "Couldn't parse animation value.",
+                                  );
+                                  throw reanimatedError2;
+                                }
+                              } else {
+                                obj7 = { strippedValue: str7 };
+                              }
+                              ({ prefix, strippedValue: current2.current } = obj7);
+                              current2.__prefix = prefix;
+                              current2.__suffix = obj7.suffix;
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          }
+                        }
+                        toValue(reduceMotion, strippedValue, arg2, current2);
+                        let str9 = reduceMotion.__prefix;
+                        if (str9 == null) {
+                          str9 = "";
+                        }
+                        let str10 = reduceMotion.__suffix;
+                        const sum = str9 + reduceMotion.current;
+                        if (str10 == null) {
+                          str10 = "";
+                        }
+                        reduceMotion.current = sum + str10;
+                        let tmp48 = current2;
+                        if (current2) {
+                          tmp48 = current2 !== reduceMotion;
+                        }
+                        if (tmp48) {
+                          let str11 = current2.__prefix;
+                          if (str11 == null) {
+                            str11 = "";
+                          }
+                          let str12 = current2.__suffix;
+                          const sum1 = str11 + current2.current;
+                          if (str12 == null) {
+                            str12 = "";
+                          }
+                          current2.current = sum1 + str12;
+                        }
+                        reduceMotion.onFrame = prefNumberSuffOnFrame;
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    if (typeof current === "object") {
+                      if (null !== current) {
+                        for (const key10034 in arg1) {
+                          let _Object2 = Object;
+                          arg0[key10034] = Object.assign({}, dependencyMap);
+                          arg0[key10034].onStart = arg0.onStart;
+                          arg0[key10034].current = arg1[key10034];
+                          arg0[key10034].toValue = arg0.toValue[key10034];
+                          let obj22 = arg0[key10034];
+                          let tmp79 = arg0[key10034];
+                          let tmp80 = arg1[key10034];
+                          let tmp13;
+                          if (arg3) {
+                            tmp13 = arg3[key10034];
+                          }
+                          let onStartResult1 = obj22.onStart(tmp79, tmp80, arg2, tmp13);
+                          continue;
+                        }
+                        reduceMotion.current = current;
+                        reduceMotion.onFrame = objectOnFrame;
+                      }
+                    }
+                    toValue(reduceMotion, current, arg2, current2);
+                  }
+                }
+                tmp3Result22 = fn(1700);
+              }
+              return tmp11;
+            }
+          };
+        }
+        return tmp3;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-    } else {
-      throw new TypeError("Trying to call a non-function");
+    };
+    let obj = { factory, decorateAnimation };
+    factory.__closure = obj;
+    factory.__workletHash = 9825023081203;
+    factory.__initData = __initData;
+    if (!globalThis._WORKLET) {
+      if (!module_1661) {
+        factory.__isAnimationDefinition = true;
+      }
+      return factory;
     }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-  const tmp2 = _slicedToArray(items7, 4);
-}
-gramSchmidtAlgorithm.__closure = { subtractVectors, projection, scaleVector, innerProduct, transposeMatrix };
-gramSchmidtAlgorithm.__workletHash = 1839555089531;
-gramSchmidtAlgorithm.__initData = {
-  code: "function gramSchmidtAlgorithm_Pnpm_matrixUtilsTsx18(matrix){const{subtractVectors,projection,scaleVector,innerProduct,transposeMatrix}=this.__closure;const[a0,a1,a2,a3]=matrix;const u0=a0;const u1=subtractVectors(a1,projection(u0,a1));const u2=subtractVectors(subtractVectors(a2,projection(u0,a2)),projection(u1,a2));const u3=subtractVectors(subtractVectors(subtractVectors(a3,projection(u0,a3)),projection(u1,a3)),projection(u2,a3));const[e0,e1,e2,e3]=[u0,u1,u2,u3].map(function(u){return scaleVector(u,1/Math.sqrt(innerProduct(u,u)));});const rotationMatrix=[[e0[0],e1[0],e2[0],e3[0]],[e0[1],e1[1],e2[1],e3[1]],[e0[2],e1[2],e2[2],e3[2]],[e0[3],e1[3],e2[3],e3[3]]];const skewMatrix=[[innerProduct(e0,a0),innerProduct(e0,a1),innerProduct(e0,a2),innerProduct(e0,a3)],[0,innerProduct(e1,a1),innerProduct(e1,a2),innerProduct(e1,a3)],[0,0,innerProduct(e2,a2),innerProduct(e2,a3)],[0,0,0,innerProduct(e3,a3)]];return{rotationMatrix:transposeMatrix(rotationMatrix),skewMatrix:transposeMatrix(skewMatrix)};}",
-};
-function decomposeMatrix(arr) {
-  if (typeof maybeFlattenMatrix === "function") {
-    if (typeof isAffineMatrix === "function") {
-      const _Array = Array;
-      let isArray = Array.isArray(arr);
-      if (isArray) {
-        isArray = 4 === arr.length;
-      }
-      if (isArray) {
-        isArray = arr.every((arr) => {
-          let isArray = Array.isArray(arr);
-          if (isArray) {
-            isArray = 4 === arr.length;
-          }
-          if (isArray) {
-            isArray = arr.every((item) => {
-              let tmp = typeof item === "number";
-              if (typeof item === "number") {
-                const _isNaN = isNaN;
-                tmp = !isNaN(item);
-              }
-              return tmp;
-            });
-          }
-          return isArray;
-        });
-      }
-      let flatResult = arr;
-      if (isArray) {
-        if (typeof flatten === "function") {
-          flatResult = arr.flat();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      require = flatResult;
-      if (0 === flatResult[15]) {
-        const reanimatedError = new _mod1667.ReanimatedError("Invalid transform matrix.");
-        throw reanimatedError;
-      } else {
-        const item = flatResult.forEach((item, index) => {
-          const result = flatResult[index] / flatResult[15];
-          flatResult[index] = result;
-          return result;
-        });
-        const items = [
-          [1, 0, 0, 0],
-          [0, 1, 0, 0],
-          [0, 0, 1, 0],
-        ];
-        const items1 = [flatResult[12], flatResult[13], flatResult[14], 1];
-        items[3] = items1;
-        const first = flatResult[0];
-        if (typeof norm3d === "function") {
-          const _Math = Math;
-          let result = tmp26 * Math.sqrt(first * first + tmp29 * tmp29 + tmp30 * tmp30);
-          if (typeof norm3d === "function") {
-            const _Math2 = Math;
-            const result1 = tmp7 * Math.sqrt(tmp8 * tmp8 + tmp9 * tmp9 + tmp10 * tmp10);
-            if (typeof norm3d === "function") {
-              const _Math3 = Math;
-              const result2 = tmp12 * Math.sqrt(tmp13 * tmp13 + tmp14 * tmp14 + tmp15 * tmp15);
-              const items2 = [result, 0, 0, 0];
-              const items3 = [items2, , ,];
-              const items4 = [0, result1, 0, 0];
-              items3[1] = items4;
-              const items5 = [0, 0, result2, 0];
-              items3[2] = items5;
-              items3[3] = [0, 0, 0, 1];
-              const items6 = [flatResult[0] / result, flatResult[1] / result, flatResult[2] / result, 0];
-              const items7 = [items6, , ,];
-              const items8 = [flatResult[4] / result1, flatResult[5] / result1, flatResult[6] / result1, 0];
-              items7[1] = items8;
-              const items9 = [flatResult[8] / result2, flatResult[9] / result2, flatResult[10] / result2, 0];
-              items7[2] = items9;
-              items7[3] = [0, 0, 0, 1];
-              const obj = { translationMatrix: items, scaleMatrix: items3, rotationMatrix: null, skewMatrix: null };
-              ({ rotationMatrix: obj.rotationMatrix, skewMatrix: obj.skewMatrix } = gramSchmidtAlgorithm(items7));
-              return obj;
+    const tmp7 = factory();
+    if (typeof decorateAnimation === "function") {
+      ({ onStart: closure_129_0, onFrame: closure_129_1 } = tmp7);
+      if (tmp7.isHigherOrder) {
+        tmp7.onStart = (reduceMotion, keys, length, height) => {
+          if (undefined === reduceMotion.reduceMotion) {
+            if (typeof getReduceMotionFromConfig === "function") {
+              reduceMotion.reduceMotion = value.value;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
-          } else {
-            throw new TypeError("Trying to call a non-function");
           }
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
+          return fn(reduceMotion, keys, length, height);
+        };
+        factory = tmp7;
+      } else {
+        let _Object = Object;
+        closure_129_2 = Object.assign({}, tmp7);
+        delete tmp2[tmp];
+        closure_129_3 = function prefNumberSuffOnFrame(strippedCurrent, arg1) {
+          strippedCurrent.current = strippedCurrent.strippedCurrent;
+          ({ current: strippedCurrent.strippedCurrent, __prefix } = strippedCurrent);
+          if (__prefix == null) {
+            __prefix = "";
+          }
+          let str = strippedCurrent.__suffix;
+          const sum = __prefix + strippedCurrent.current;
+          if (str == null) {
+            str = "";
+          }
+          strippedCurrent.current = sum + str;
+          return dependencyMap(strippedCurrent, arg1);
+        };
+        closure_129_4 = ["R", "G", "B", "A"];
+        closure_129_5 = function colorOnFrame(nonscaledCurrent, arg1) {
+          closure_1 = arg1;
+          const items = [];
+          c3 = true;
+          nonscaledCurrent.current = nonscaledCurrent.nonscaledCurrent;
+          const item = closure_4.forEach((item) => {
+            let onFrameResult = c3;
+            if (c3) {
+              onFrameResult = obj.onFrame(nonscaledCurrent[item], closure_1);
+            }
+            c3 = onFrameResult;
+            items.push(nonscaledCurrent[item].current);
+            obj = nonscaledCurrent[item];
+          });
+          nonscaledCurrent(1701).clampRGBA(items);
+          nonscaledCurrent.nonscaledCurrent = items;
+          let obj = nonscaledCurrent(1701);
+          const obj2 = nonscaledCurrent(1701);
+          nonscaledCurrent.current = obj2.rgbaArrayToRGBAColor(nonscaledCurrent(1701).toGammaSpace(items));
+          return c3;
+        };
+        closure_129_6 = function transformationMatrixOnFrame(arg0, arg1) {
+          const stopMatrices = arg0;
+          const first = arg0[0];
+          dependencyMap = arg0[0].current / 100;
+          const items = [];
+          const items1 = ["translationMatrix", "scaleMatrix", "skewMatrix"];
+          const item = items1.forEach((item, index) => {
+            if (typeof objectOnFrame === "function") {
+              const obj = fn(1700);
+              const obj2 = fn(1700);
+              return tmp2(obj.addMatrices(tmp4, obj2.scaleMatrix(fn(1700).subtractMatrices(tmp5, tmp4), tmp3)));
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          });
+          const items2 = [];
+          const items3 = ["x", "y", "z"];
+          [tmp3, tmp4, tmp5] = items;
+          const item1 = items3.forEach((item, index) => {
+            if (typeof closure_2_9 === "function") {
+              const sum = tmp2 + tmp * (stopMatrices.stopMatrices["r" + item] - tmp2);
+              items2.push(fn(1700).getRotationMatrix(sum, item));
+              const obj = fn(1700);
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          });
+          [tmp7, tmp8, tmp9] = items2;
+          const onFrameResult = first.onFrame(arg0[0], arg1);
+          let obj2 = stopMatrices(1700);
+          const obj3 = stopMatrices(1700);
+          const multiplyMatricesResult = obj2.multiplyMatrices(tmp7, stopMatrices(1700).multiplyMatrices(tmp8, tmp9));
+          const obj4 = stopMatrices(1700);
+          const obj5 = stopMatrices(1700);
+          const obj6 = stopMatrices(1700);
+          arg0.current = obj4.flatten(
+            obj5.multiplyMatrices(
+              obj6.multiplyMatrices(tmp4, stopMatrices(1700).multiplyMatrices(tmp5, multiplyMatricesResult)),
+              tmp3,
+            ),
+          );
+          return onFrameResult;
+        };
+        closure_129_7 = function arrayOnFrame(current, arg1) {
+          dependencyMap = current;
+          closure_1 = arg1;
+          c2 = true;
+          current = current.current;
+          const item = current.forEach((item, index) => {
+            let onFrameResult = c2;
+            if (c2) {
+              onFrameResult = obj.onFrame(dependencyMap[index], closure_1);
+            }
+            c2 = onFrameResult;
+            dependencyMap.current[index] = dependencyMap[index].current;
+            obj = dependencyMap[index];
+          });
+          return c2;
+        };
+        closure_129_8 = function objectOnFrame(current, arg1) {
+          const obj = {};
+          let flag = true;
+          let flag2 = true;
+          const keys = Object.keys();
+          if (keys !== undefined) {
+            flag2 = flag;
+            while (keys[tmp] !== undefined) {
+              let obj2 = current[tmp4];
+              let onFrameResult = flag;
+              if (flag) {
+                onFrameResult = obj2.onFrame(current[tmp4], arg1);
+              }
+              obj[tmp4] = current[tmp4].current;
+              flag = onFrameResult;
+              continue;
+            }
+          }
+          current.current = obj;
+          return flag2;
+        };
+        tmp7.onStart = (reduceMotion, current, arg2, current2) => {
+          if (undefined === reduceMotion.reduceMotion) {
+            if (typeof arrayOnFrame === "function") {
+              reduceMotion.reduceMotion = transformationMatrixOnFrame.value;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          }
+          if (reduceMotion.reduceMotion) {
+            if (undefined !== reduceMotion.toValue) {
+              reduceMotion.current = reduceMotion.toValue;
+            } else {
+              toValue(reduceMotion, current, arg2, current2);
+            }
+            reduceMotion.startTime = 0;
+            reduceMotion.onFrame = () => true;
+          } else {
+            if (obj.isColor(current)) {
+              closure_129_0 = reduceMotion;
+              closure_129_1 = arg2;
+              closure_129_2 = current2;
+              const items = [];
+              closure_129_6 = items;
+              if (tmp3Result.isColor(current)) {
+                const tmp3Result13 = fn(1701);
+                closure_129_4 = tmp3Result13.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.current));
+                const tmp3Result14 = fn(1701);
+                const tmp3Result15 = fn(1701);
+                closure_129_3 = tmp3Result15.toLinearSpace(fn(1701).convertToRGBA(current));
+                if (reduceMotion.toValue) {
+                  const tmp3Result17 = fn(1701);
+                  closure_129_5 = tmp3Result17.toLinearSpace(fn(1701).convertToRGBA(reduceMotion.toValue));
+                  const tmp3Result18 = fn(1701);
+                }
+                const tmp3Result16 = fn(1701);
+              }
+              const item = closure_4.forEach((item, index) => {
+                toValue[item] = Object.assign({}, dependencyMap);
+                toValue[item].current = closure_1_4[index];
+                let tmp2;
+                if (colorOnFrame) {
+                  tmp2 = colorOnFrame[index];
+                }
+                toValue[item].toValue = tmp2;
+                let tmp4;
+                if (dependencyMap) {
+                  tmp4 = dependencyMap[item];
+                }
+                toValue[item].onStart(toValue[item], prefNumberSuffOnFrame[index], closure_1, tmp4);
+                transformationMatrixOnFrame.push(toValue[item].current);
+              });
+              reduceMotion.unroundedCurrent = items;
+              tmp3Result = fn(1701);
+              fn(1701).clampRGBA(items);
+              const tmp3Result19 = fn(1701);
+              const tmp3Result20 = fn(1701);
+              reduceMotion.current = tmp3Result20.rgbaArrayToRGBAColor(fn(1701).toGammaSpace(items));
+              reduceMotion.onFrame = colorOnFrame;
+              const tmp3Result21 = fn(1701);
+            } else {
+              if (tmp3Result22.isAffineMatrixFlat(current)) {
+                reduceMotion.startMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(current);
+                const tmp3Result23 = fn(1700);
+                reduceMotion.stopMatrices = fn(1700).decomposeMatrixIntoMatricesAndAngles(reduceMotion.toValue);
+                const _Object = Object;
+                reduceMotion[0] = Object.assign({}, dependencyMap);
+                reduceMotion[0].current = 0;
+                reduceMotion[0].toValue = 100;
+                const first = reduceMotion[0];
+                const first1 = reduceMotion[0];
+                let first2;
+                if (current2) {
+                  first2 = current2[0];
+                }
+                first.onStart(first1, 0, arg2, first2);
+                reduceMotion.current = current;
+                reduceMotion.onFrame = transformationMatrixOnFrame;
+                const tmp3Result24 = fn(1700);
+              } else {
+                prefix = globalThis;
+                const _Array = Array;
+                if (Array.isArray(current)) {
+                  toValue = reduceMotion;
+                  closure_1 = arg2;
+                  dependencyMap = current2;
+                  const item1 = current.forEach((current, index) => {
+                    toValue[index] = Object.assign({}, dependencyMap);
+                    toValue[index].current = current;
+                    toValue[index].toValue = toValue.toValue[index];
+                    let tmp2;
+                    if (dependencyMap) {
+                      tmp2 = dependencyMap[index];
+                    }
+                    toValue[index].onStart(toValue[index], current, closure_1, tmp2);
+                  });
+                  const items1 = [];
+                  HermesBuiltin.arraySpread(current, 0);
+                  reduceMotion.current = items1;
+                  reduceMotion.onFrame = arrayOnFrame;
+                } else if (typeof current === "string") {
+                  if (typeof colorOnFrame === "function") {
+                    if (typeof current === "string") {
+                      const match = current.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+                      if (match) {
+                        let str2 = match[3];
+                        if (str2 == null) {
+                          str2 = "";
+                        }
+                        const obj2 = { prefix: match[1], suffix: match[4], strippedValue: null };
+                        const _parseFloat = parseFloat;
+                        obj2.strippedValue = parseFloat(match[2] + str2);
+                        let obj3 = obj2;
+                      } else {
+                        const reanimatedError = new fn(1669).ReanimatedError("Couldn't parse animation value.");
+                        throw reanimatedError;
+                      }
+                    } else {
+                      obj3 = { strippedValue: current };
+                    }
+                    ({ strippedValue, prefix: reduceMotion.__prefix, suffix: reduceMotion.__suffix } = obj3);
+                    reduceMotion.strippedCurrent = strippedValue;
+                    if (typeof colorOnFrame === "function") {
+                      if (typeof str3 === "string") {
+                        const match1 = str3.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+                        if (match1) {
+                          let str5 = match1[3];
+                          if (str5 == null) {
+                            str5 = "";
+                          }
+                          const obj4 = { prefix: match1[1], suffix: match1[4], strippedValue: null };
+                          const _parseFloat2 = parseFloat;
+                          obj4.strippedValue = parseFloat(match1[2] + str5);
+                          let obj5 = obj4;
+                        } else {
+                          const reanimatedError1 = new fn(1669).ReanimatedError("Couldn't parse animation value.");
+                          throw reanimatedError1;
+                        }
+                      } else {
+                        obj5 = { strippedValue: str3 };
+                      }
+                      reduceMotion.current = strippedValue;
+                      reduceMotion.startValue = strippedValue;
+                      reduceMotion.toValue = obj5.strippedValue;
+                      if (current2) {
+                        if (current2 !== reduceMotion) {
+                          if (typeof colorOnFrame === "function") {
+                            if (typeof str7 === "string") {
+                              const match2 = str7.match(/([A-Za-z]*)(-?\d*\.?\d*)([eE][-+]?[0-9]+)?([A-Za-z%]*)/);
+                              if (match2) {
+                                let str8 = match2[3];
+                                if (str8 == null) {
+                                  str8 = "";
+                                }
+                                const obj6 = {
+                                  prefix: match2[1],
+                                  suffix: match2[4],
+                                  strippedValue: prefix.parseFloat(match2[2] + str8),
+                                };
+                                let obj7 = obj6;
+                              } else {
+                                const reanimatedError2 = new fn(1669).ReanimatedError(
+                                  "Couldn't parse animation value.",
+                                );
+                                throw reanimatedError2;
+                              }
+                            } else {
+                              obj7 = { strippedValue: str7 };
+                            }
+                            ({ prefix, strippedValue: current2.current } = obj7);
+                            current2.__prefix = prefix;
+                            current2.__suffix = obj7.suffix;
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        }
+                      }
+                      toValue(reduceMotion, strippedValue, arg2, current2);
+                      let str9 = reduceMotion.__prefix;
+                      if (str9 == null) {
+                        str9 = "";
+                      }
+                      let str10 = reduceMotion.__suffix;
+                      const sum = str9 + reduceMotion.current;
+                      if (str10 == null) {
+                        str10 = "";
+                      }
+                      reduceMotion.current = sum + str10;
+                      let tmp48 = current2;
+                      if (current2) {
+                        tmp48 = current2 !== reduceMotion;
+                      }
+                      if (tmp48) {
+                        let str11 = current2.__prefix;
+                        if (str11 == null) {
+                          str11 = "";
+                        }
+                        let str12 = current2.__suffix;
+                        const sum1 = str11 + current2.current;
+                        if (str12 == null) {
+                          str12 = "";
+                        }
+                        current2.current = sum1 + str12;
+                      }
+                      reduceMotion.onFrame = prefNumberSuffOnFrame;
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                } else {
+                  if (typeof current === "object") {
+                    if (null !== current) {
+                      for (const key10034 in arg1) {
+                        let _Object2 = Object;
+                        arg0[key10034] = Object.assign({}, dependencyMap);
+                        arg0[key10034].onStart = arg0.onStart;
+                        arg0[key10034].current = arg1[key10034];
+                        arg0[key10034].toValue = arg0.toValue[key10034];
+                        let obj22 = arg0[key10034];
+                        let tmp79 = arg0[key10034];
+                        let tmp80 = arg1[key10034];
+                        let tmp13;
+                        if (arg3) {
+                          tmp13 = arg3[key10034];
+                        }
+                        let onStartResult1 = obj22.onStart(tmp79, tmp80, arg2, tmp13);
+                        continue;
+                      }
+                      reduceMotion.current = current;
+                      reduceMotion.onFrame = objectOnFrame;
+                    }
+                  }
+                  toValue(reduceMotion, current, arg2, current2);
+                }
+              }
+              tmp3Result22 = fn(1700);
+            }
+            return tmp11;
+          }
+        };
+        factory = tmp7;
       }
     } else {
       throw new TypeError("Trying to call a non-function");
     }
+  }
+}
+defineAnimation.__closure = { IN_STYLE_UPDATER: React2, decorateAnimation, SHOULD_BE_USE_WEB: module_1661 };
+defineAnimation.__workletHash = 8998026617746;
+defineAnimation.__initData = {
+  code: "function defineAnimation_Pnpm_utilTs9(starting,factory){const{IN_STYLE_UPDATER,decorateAnimation,SHOULD_BE_USE_WEB}=this.__closure;if(IN_STYLE_UPDATER){return starting;}const create=function(){'worklet';const animation=factory();decorateAnimation(animation);return animation;};if(_WORKLET||SHOULD_BE_USE_WEB){return create();}create.__isAnimationDefinition=true;return create;}",
+};
+const __initData2 = {
+  code: "function pnpm_utilTs12(){const{sharedValue}=this.__closure;sharedValue.value=sharedValue.value;}",
+};
+let cancelAnimationWeb = function cancelAnimationNative(sharedValue) {
+  if (globalThis._WORKLET) {
+    sharedValue.value = sharedValue.value;
   } else {
-    throw new TypeError("Trying to call a non-function");
+    const fn = function n() {
+      sharedValue.value = sharedValue.value;
+    };
+    const obj2 = { sharedValue };
+    fn.__closure = obj2;
+    fn.__workletHash = 14261344384038;
+    fn.__initData = __initData2;
+    runWorkletOnJS.runOnUI(fn)();
   }
-}
-decomposeMatrix.__closure = { maybeFlattenMatrix, norm3d, gramSchmidtAlgorithm };
-decomposeMatrix.__workletHash = 244684068165;
-decomposeMatrix.__initData = {
-  code: "function decomposeMatrix_Pnpm_matrixUtilsTsx19(unknownTypeMatrix){const{maybeFlattenMatrix,norm3d,gramSchmidtAlgorithm}=this.__closure;const matrix=maybeFlattenMatrix(unknownTypeMatrix);if(matrix[15]===0){throw new ReanimatedError('Invalid transform matrix.');}matrix.forEach(function(_,i){return matrix[i]/=matrix[15];});const translationMatrix=[[1,0,0,0],[0,1,0,0],[0,0,1,0],[matrix[12],matrix[13],matrix[14],1]];const sx=matrix[15]*norm3d(matrix[0],matrix[4],matrix[8]);const sy=matrix[15]*norm3d(matrix[1],matrix[5],matrix[9]);const sz=matrix[15]*norm3d(matrix[2],matrix[6],matrix[10]);const scaleMatrix=[[sx,0,0,0],[0,sy,0,0],[0,0,sz,0],[0,0,0,1]];const rotationAndSkewMatrix=[[matrix[0]/sx,matrix[1]/sx,matrix[2]/sx,0],[matrix[4]/sy,matrix[5]/sy,matrix[6]/sy,0],[matrix[8]/sz,matrix[9]/sz,matrix[10]/sz,0],[0,0,0,1]];const{rotationMatrix:rotationMatrix,skewMatrix:skewMatrix}=gramSchmidtAlgorithm(rotationAndSkewMatrix);return{translationMatrix:translationMatrix,scaleMatrix:scaleMatrix,rotationMatrix:rotationMatrix,skewMatrix:skewMatrix};}",
 };
-function decomposeMatrixIntoMatricesAndAngles(toValue) {
-  const tmp = decomposeMatrix(toValue);
-  const rotationMatrix = tmp.rotationMatrix;
-  ({ scaleMatrix, translationMatrix, skewMatrix } = tmp);
-  let num = Math.asin(tmp2);
-  if (1 !== -rotationMatrix[0][2]) {
-    if (-1 !== tmp2) {
-      const _Math = Math;
-      let num3 = Math.atan2(rotationMatrix[0][1], rotationMatrix[0][0]);
-      const _Math2 = Math;
-      let num4 = Math.atan2(rotationMatrix[1][2], rotationMatrix[2][2]);
-    }
-    const obj = { scaleMatrix, rotationMatrix, translationMatrix, skewMatrix, rx: null, ry: null, rz: null };
-    if (!num4) {
-      num4 = 0;
-    }
-    obj.rx = num4;
-    if (!num) {
-      num = 0;
-    }
-    obj.ry = num;
-    if (!num3) {
-      num3 = 0;
-    }
-    obj.rz = num3;
-    return obj;
-  }
-  num4 = Math.atan2(tmp2 * rotationMatrix[0][1], tmp2 * rotationMatrix[0][2]);
-  num3 = 0;
-}
-decomposeMatrixIntoMatricesAndAngles.__closure = { decomposeMatrix };
-decomposeMatrixIntoMatricesAndAngles.__workletHash = 633682731757;
-decomposeMatrixIntoMatricesAndAngles.__initData = {
-  code: "function decomposeMatrixIntoMatricesAndAngles_Pnpm_matrixUtilsTsx20(matrix){const{decomposeMatrix}=this.__closure;const{scaleMatrix:scaleMatrix,rotationMatrix:rotationMatrix,translationMatrix:translationMatrix,skewMatrix:skewMatrix}=decomposeMatrix(matrix);const sinRy=-rotationMatrix[0][2];const ry=Math.asin(sinRy);let rx;let rz;if(sinRy===1||sinRy===-1){rz=0;rx=Math.atan2(sinRy*rotationMatrix[0][1],sinRy*rotationMatrix[0][2]);}else{rz=Math.atan2(rotationMatrix[0][1],rotationMatrix[0][0]);rx=Math.atan2(rotationMatrix[1][2],rotationMatrix[2][2]);}return{scaleMatrix:scaleMatrix,rotationMatrix:rotationMatrix,translationMatrix:translationMatrix,skewMatrix:skewMatrix,rx:rx||0,ry:ry||0,rz:rz||0};}",
+let obj4 = {
+  getReduceMotionFromConfig,
+  recognizePrefixSuffix,
+  isColor: _mod1701.isColor,
+  toLinearSpace: _mod1701.toLinearSpace,
+  convertToRGBA: _mod1701.convertToRGBA,
+  clampRGBA: _mod1701.clampRGBA,
+  rgbaArrayToRGBAColor: _mod1701.rgbaArrayToRGBAColor,
+  toGammaSpace: _mod1701.toGammaSpace,
+  decomposeMatrixIntoMatricesAndAngles: _mod1700.decomposeMatrixIntoMatricesAndAngles,
+  applyProgressToMatrix,
+  applyProgressToNumber,
+  getRotationMatrix: _mod1700.getRotationMatrix,
+  multiplyMatrices: _mod1700.multiplyMatrices,
+  flatten: _mod1700.flatten,
+  isAffineMatrixFlat: _mod1700.isAffineMatrixFlat,
 };
+let obj5 = { IN_STYLE_UPDATER: React2, decorateAnimation, SHOULD_BE_USE_WEB: module_1661 };
+cancelAnimationWeb.__closure = { runOnUI: runWorkletOnJS.runOnUI };
+cancelAnimationWeb.__workletHash = 796831326214;
+cancelAnimationWeb.__initData = {
+  code: "function cancelAnimationNative_Pnpm_utilTs11(sharedValue){const{runOnUI}=this.__closure;if(_WORKLET){sharedValue.value=sharedValue.value;}else{runOnUI(function(){'worklet';sharedValue.value=sharedValue.value;})();}}",
+};
+if (module_1661) {
+  cancelAnimationWeb = function cancelAnimationWeb(value) {
+    value.value = value.value;
+  };
+}
 
-export { isAffineMatrixFlat };
-export { isAffineMatrix };
-export { flatten };
-export { unflatten };
-export { multiplyMatrices };
-export { subtractMatrices };
-export { addMatrices };
-export { scaleMatrix };
-export { getRotationMatrix };
-export { decomposeMatrix };
-export { decomposeMatrixIntoMatricesAndAngles };
+export { isValidLayoutAnimationProp };
+export { assertEasingIsWorklet };
+export const initialUpdaterRun = function initialUpdaterRun(updater) {
+  c2 = false;
+  return updater();
+};
+export { recognizePrefixSuffix };
+export { getReduceMotionFromConfig };
+export { getReduceMotionForAnimation };
+export { defineAnimation };
+export const cancelAnimation = cancelAnimationWeb;

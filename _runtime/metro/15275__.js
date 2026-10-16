@@ -1,4 +1,36 @@
 // _runtime/metro/15275__.js
-import _mod17 from "00017__.js";
+import _mod15266 from "15266__.js";
+import _mod15267 from "15267__.js";
+import _mod15274 from "15274__.js";
 
-const parsed = parseInt(_mod17.Platform.Version, 10);
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod15267(toString)) {
+      const tmp4 = _mod15274(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
+      }
+      tmpResult = _mod15266;
+    }
+  }
+  const valueOf = arg0.valueOf;
+  if (_mod15267(valueOf)) {
+    const tmp8 = _mod15274(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+    tmp5Result = _mod15266;
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod15267(toString2)) {
+      const tmp10 = _mod15274(toString2, arg0);
+      if (!tmp5Result2(tmp10)) {
+        return tmp10;
+      }
+      tmp5Result2 = _mod15266;
+    }
+  }
+  throw new TypeError("Can't convert object to primitive value");
+};

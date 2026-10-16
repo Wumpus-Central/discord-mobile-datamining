@@ -1,13 +1,13 @@
 // _runtime/metro/06082__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 1005,
-  height: 1005,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "3810c84a1fa3c892d5176145d44c5346",
+  hash: "409fe2e37775c47f20538750422d7e2c",
   name: "img_account_sync_instagram_light_and_dark",
-  type: "svg",
+  type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/14376__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 134.5,
+  height: 82,
   scales: [2, 3],
-  hash: "cb2a2e3b1b856419d08252c8139a8321",
-  name: "entrace_sounds",
+  hash: "db25e5ae76d4f6a3f9af5fda0e269762",
+  name: "img_what_you_lose_uploads",
   type: "png",
 });

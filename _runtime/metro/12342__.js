@@ -1,198 +1,252 @@
 // _runtime/metro/12342__.js
-import _mod12319 from "12319__.js";
-import _mod12322 from "12322__.js";
-import _mod12329 from "12329__.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _mod12299 from "12299__.js";
+import _mod12304 from "12304__.js";
+import _mod12343 from "12343__.js";
+import _mod12345 from "12345__.js";
+import _slicedToArray from "00032__.js";
 
-function eventFromEnvelope(arg0, arg1) {
+function forEachEnvelopeItem(arg0, fn) {
+  for (const item10007 of tmp) {
+    if (arg1(item10007, item10007[0].type)) {
+      obj.return();
+      let flag = true;
+      return true;
+    }
+  }
+  return false;
+}
+let closure_4 = {
+  session: "session",
+  sessions: "session",
+  attachment: "attachment",
+  transaction: "transaction",
+  event: "error",
+  client_report: "internal",
+  user_report: "default",
+  profile: "profile",
+  profile_chunk: "profile",
+  replay_event: "replay",
+  replay_recording: "replay",
+  check_in: "monitor",
+  feedback: "feedback",
+  span: "span",
+  statsd: "metric_bucket",
+  raw_security: "security",
+};
+
+export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
+  const tmp = _slicedToArray(arg0, 2);
+  const items = [tmp[0]];
+  const items1 = [];
+  items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
+  items[1] = items1;
+  return items;
+};
+export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
+  if (typeof data.data === "string") {
+    data = data.data;
+    let __SENTRY__ = require;
+    let encodePolyfill = dependencyMap;
+    if (!_mod12299.GLOBAL_OBJ.__SENTRY__) {
+      const _TextEncoder = TextEncoder;
+      const encoder = new TextEncoder();
+      let encodeResult = encoder.encode(data);
+    }
+    __SENTRY__ = __SENTRY__(12299).GLOBAL_OBJ.__SENTRY__;
+    encodePolyfill = __SENTRY__.encodePolyfill;
+    encodeResult = encodePolyfill(data);
+  } else {
+    const data1 = data.data;
+    const obj3 = {
+      type: "attachment",
+      length: data1.length,
+      filename: null,
+      content_type: null,
+      attachment_type: null,
+    };
+    ({ filename: obj2.filename, contentType: obj2.content_type, attachmentType: obj2.attachment_type } = data);
+    const items = [_mod12304.dropUndefinedKeys(obj3), data1];
+    return items;
+  }
+};
+export function createEnvelope(eventEnvelopeHeaders) {
+  let items = items1;
+  if (items1 === undefined) {
+    items = [];
+  }
+  items1 = [eventEnvelopeHeaders, items];
+  return items1;
+}
+export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id, sdk, arg2, url) {
+  const obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
+  let tmp2 = sdk;
+  if (sdk) {
+    const obj2 = { sdk };
+    tmp2 = obj2;
+  }
+  const merged = Object.assign(tmp2);
+  let tmp4 = arg2 && url;
+  if (tmp4) {
+    const obj3 = { dsn: _mod12345.dsnToString(url) };
+    tmp4 = obj3;
+  }
+  const merged1 = Object.assign(tmp4);
+  let tmp8 = tmp;
+  if (event_id.sdkProcessingMetadata && event_id.sdkProcessingMetadata.dynamicSamplingContext) {
+    const obj4 = { trace: null };
+    const obj6 = {};
+    const merged2 = Object.assign(tmp);
+    obj4.trace = _mod12304.dropUndefinedKeys(obj6);
+    tmp8 = obj4;
+  }
+  const merged3 = Object.assign(tmp8);
+  return obj;
+};
+export function createSpanEnvelopeItem(arg0) {
+  const items = [{ type: "span" }, arg0];
+  return items;
+}
+export const envelopeContainsItemType = function envelopeContainsItemType(arg0, arg1) {
   closure_0 = arg1;
-  _mod12319.forEachEnvelopeItem(arg0, (arg0, arg1) => {
-    if (items.includes(arg1)) {
-      const _Array = Array;
-      let tmp3;
-      if (Array.isArray(arg0)) {
-        tmp3 = arg0[1];
-      }
-      closure_1 = tmp3;
+  return forEachEnvelopeItem(arg0, (arg0, arg1) => closure_0.includes(arg1));
+};
+export const envelopeItemTypeToDataCategory = function envelopeItemTypeToDataCategory(arg0) {
+  return closure_4[arg0];
+};
+export { forEachEnvelopeItem };
+export const getSdkMetadataForEnvelopeHeader = function getSdkMetadataForEnvelopeHeader(sdk) {
+  if (sdk) {
+    if (sdk.sdk) {
+      const obj = { name: null, version: null };
+      ({ name: obj.name, version: obj.version } = sdk.sdk);
+      return obj;
     }
-    return closure_1;
-  });
-  return dependencyMap;
-}
-
-export { eventFromEnvelope };
-export function makeMultiplexedTransport(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0) => {
-    let tunnel = arg0;
-    function getTransport(arg0, arg1) {
-      let combined = arg0;
-      if (arg1) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + arg0 + ":" + arg1;
+  }
+};
+export const parseEnvelope = function parseEnvelope(arr) {
+  if (typeof arr !== "string") {
+    function readJson() {
+      let length = closure_0.indexOf(10);
+      if (length < 0) {
+        length = closure_0.length;
       }
-      value = map.get(combined);
-      if (value) {
-        const items = [arg0, value];
-        return items;
+      const subarrayResult = closure_0.subarray(0, length);
+      closure_0 = closure_0.subarray(length + 1);
+      if (_mod12299.GLOBAL_OBJ.__SENTRY__) {
+        if (_mod12299.GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
+          const __SENTRY__ = _mod12299.GLOBAL_OBJ.__SENTRY__;
+          let decodePolyfillResult = __SENTRY__.decodePolyfill(subarrayResult);
+        }
+        return JSON.parse(decodePolyfillResult);
+      }
+      const decoder = new TextDecoder();
+      decodePolyfillResult = decoder.decode(subarrayResult);
+    }
+    _require = arr;
+    const items = [];
+    const json = readJson();
+    while (_require.length) {
+      let json1 = readJson();
+      let length;
+      if (typeof json1.length === "number") {
+        length = json1.length;
+      }
+      let items1 = [json1];
+      if (length) {
+        let subarrayResult = require("Discord");
+        _require = _require.subarray(length + 1);
       } else {
-        const dsnFromStringResult = _mod12322.dsnFromString(arg0);
-        if (dsnFromStringResult) {
-          let merged = tunnel;
-          const envelopeEndpointWithUrlEncodedAuth = _mod12329.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
-          let tmp9 = tunnel;
-          let obj3 = {};
-          if (arg1) {
-            merged = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            const tmp9Result = tmp9(obj3);
-            closure_1 = tmp9Result;
-            const obj4 = {};
-            const merged1 = Object.assign(tmp9Result);
-            tmp9 = asyncGeneratorStep;
-            tunnel = asyncGeneratorStep(async (release) => {
-              c1 = 0;
-              return (async (arg0) => {
-                if (c1 === 2) {
-                  c1 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "IconComponent", done: null };
-                  }
-                } else {
-                  try {
-                    c1 = 2;
-                    if (arg0 === 1) {
-                      c1 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c1 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
-                    } else {
-                      const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
-                      if (tmp6) {
-                        tmp6.release = release;
-                      }
-                      c1 = 3;
-                      const obj = { value: closure_1.send(release), done: true };
-                      return obj;
-                    }
-                  } catch (tmp9) {
-                    c1 = tmp;
-                    throw tmp9;
-                  }
-                }
-              })();
-            });
-            obj4.send = function send(arg0) {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-            let tmp9Result2 = obj4;
-          } else {
-            const merged2 = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            tmp9Result2 = tmp9(obj3);
+        subarrayResult = readJson();
+      }
+      items1[1] = subarrayResult;
+      arr = items.push(items1);
+    }
+    const items2 = [json, items];
+    return items2;
+  } else {
+    let __SENTRY__ = _require;
+    let encodePolyfill = dependencyMap;
+    if (!require("12299__.js").GLOBAL_OBJ.__SENTRY__) {
+      const _TextEncoder = TextEncoder;
+      const encoder = new TextEncoder();
+      let encodeResult = encoder.encode(arr);
+    }
+    __SENTRY__ = __SENTRY__(12299).GLOBAL_OBJ.__SENTRY__;
+    encodePolyfill = __SENTRY__.encodePolyfill;
+    encodeResult = encodePolyfill(arr);
+  }
+};
+export const serializeEnvelope = function serializeEnvelope(dependencyMap) {
+  function append(json) {
+    if (typeof sum === "string") {
+      if (typeof json === "string") {
+        sum = arr + json;
+      } else {
+        if (_mod12299.GLOBAL_OBJ.__SENTRY__) {
+          if (_mod12299.GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
+            const __SENTRY__2 = _mod12299.GLOBAL_OBJ.__SENTRY__;
+            let encodePolyfillResult = __SENTRY__2.encodePolyfill(arr);
           }
-          obj3 = map.set(combined, tmp9Result2);
-          const tmp4Result = _mod12329;
+          sum = [encodePolyfillResult, json];
+        }
+        const _TextEncoder2 = TextEncoder;
+        const encoder2 = new TextEncoder();
+        encodePolyfillResult = encoder2.encode(arr);
+      }
+    } else if (typeof json !== "string") {
+      arr.push(json);
+    } else {
+      let __SENTRY__ = require;
+      let encodePolyfill = dependencyMap;
+      if (!_mod12299.GLOBAL_OBJ.__SENTRY__) {
+        const _TextEncoder = TextEncoder;
+        const encoder = new TextEncoder();
+        let encodeResult = encoder.encode(json);
+      }
+      __SENTRY__ = __SENTRY__(12299).GLOBAL_OBJ.__SENTRY__;
+      encodePolyfill = __SENTRY__.encodePolyfill;
+      encodeResult = encodePolyfill(json);
+    }
+  }
+  const tmp4 = _slicedToArray(dependencyMap, 2);
+  const require = JSON.stringify(tmp4[0]);
+  if (tmp5 === undefined) {
+    let tmp22 = require;
+    if (typeof require !== "string") {
+      tmp22 = (function concatBuffers(arr) {
+        const uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
+        let num = 0;
+        const iter = arr[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let result = uint8Array.set(nextResult, num);
+          num = num + nextResult.length;
+          continue;
+        }
+        return uint8Array;
+      })(tmp21);
+    }
+    return tmp22;
+  } else {
+    const tmp8 = _slicedToArray(tmp6, 2);
+    const _JSON = JSON;
+    const _HermesInternal = HermesInternal;
+    append("\n" + JSON.stringify(tmp8[0]) + "\n");
+    if (typeof tmp8[1] !== "string") {
+      const _Uint8Array = Uint8Array;
+      if (!(tmp10 instanceof Uint8Array)) {
+        try {
+          const _JSON2 = JSON;
+          let json = JSON.stringify(tmp10);
+          append(json);
+        } catch (err) {
+          const _JSON3 = tmp2.JSON;
+          const normalizer = _mod12343;
+          json = _JSON3.stringify(normalizer.normalize(tmp3));
         }
       }
     }
-    closure_4 = async function _send() {
-      c2 = 0;
-      c1 = 0;
-      return (async (arg0) => {
-        const mapped = v3({
-          envelope,
-          getEvent(arg0) {
-            let items = arg0;
-            if (!arg0) {
-              items = ["event"];
-            }
-            dependencyMap(12319).forEachEnvelopeItem(dependencyMap, () => { ... });
-            return dependencyMap2;
-          }
-        }).map((dsn) => {
-          if (typeof dsn === "string") {
-            let tmp2 = closure_1_3(dsn, undefined);
-          } else {
-            tmp2 = closure_1_3(dsn.dsn, dsn.release);
-          }
-          return tmp2;
-        });
-        const found = mapped.filter((item) => item);
-        let arr3 = found;
-        if (!found.length) {
-          let items = ["", closure_2_1];
-          const items1 = [items];
-          arr3 = items1;
-        }
-        await Promise.all(arr3.map((item) => {
-          [tmp, obj] = item;
-          const first = 5;
-          if (tmp) {
-            const obj3 = {};
-            const merged = Object.assign(first);
-            obj3.dsn = tmp;
-            let tmp4 = obj3;
-          } else {
-            tmp4 = first;
-          }
-          return obj.send(dependencyMap(12319).createEnvelope(tmp4, 12319));
-        }));
-        return value[0];
-      })();
-    };
-    closure_5 = async function _flush() {
-      closure_2 = tmp2;
-      closure_130_0 = closure_0;
-      closure_1 = 0;
-      const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
-      closure_1 = arraySpreadResult;
-      items[arraySpreadResult] = closure_2_1;
-      closure_1 = closure_1 + 1;
-      await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
-      return value.every((item) => item);
-    };
-    closure_1 = tunnel(arg0);
-    const map = new Map();
-    return {
-      send(arg0) {
-        const self = this;
-        const apply = closure_4.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      },
-      flush(arg0) {
-        const self = this;
-        const apply = closure_5.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      }
-    };
-  };
-}
+    append(tmp8[1]);
+  }
+  tmp5 = tmp4[1][Symbol.iterator]();
+};

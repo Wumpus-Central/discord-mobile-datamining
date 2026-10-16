@@ -1,131 +1,68 @@
 // _runtime/metro/01058__.js
-import NativeModules from "../00877_NativeModules.js";
-import convertToNormalizedObject from "../00890_convertToNormalizedObject.js";
-import DEFAULT_BREADCRUMB_LEVEL2 from "../00891_DEFAULT_BREADCRUMB_LEVEL.js";
-import init from "../01011_init.js";
+import _createClassDefault from "00042__createClass.js";
+import _classCallCheck from "00041__classCallCheck.js";
 
-const require = globalThis.__r;
-
-require = arg1;
-let dependencyMap = arg6;
-const weakMap = new WeakMap();
-
-export const enableSyncToNative = function enableSyncToNative(globalScope) {
-  _require = globalScope;
-  if (!weakMap.has(globalScope)) {
-    let result = weakMap.set(globalScope, true);
-    require("fillTyped").fillTyped(globalScope, "setUser", (arg0) => {
-      closure_0 = arg0;
-      return (arg0) => {
-        const NATIVE = NativeModules.NATIVE;
-        NATIVE.setUser(arg0);
-        const call = closure_0.call;
-        return typeof call === "unknown" ? closure_0(arg0) : call(closure_0, arg0);
-      };
-    });
-    let obj2 = require("fillTyped");
-    require("fillTyped").fillTyped(globalScope, "setTag", (arg0) => {
-      closure_0 = arg0;
-      return (arg0, dependencyMap) => {
-        const NATIVE = NativeModules.NATIVE;
-        const NATIVE2 = NativeModules.NATIVE;
-        NATIVE.setTag(arg0, NATIVE2.primitiveProcessor(dependencyMap));
-        const call = closure_0.call;
-        return typeof call === "unknown" ? closure_0(arg0, dependencyMap) : call(closure_0, arg0, dependencyMap);
-      };
-    });
-    const obj3 = require("fillTyped");
-    require("fillTyped").fillTyped(globalScope, "setTags", (arg0) => {
-      closure_0 = arg0;
-      return (arg0) => {
-        dependencyMap = arg0;
-        const keys = Object.keys(arg0);
-        const item = keys.forEach((item) => {
-          const NATIVE = dependencyMap(877).NATIVE;
-          const NATIVE2 = dependencyMap(877).NATIVE;
-          NATIVE.setTag(item, NATIVE2.primitiveProcessor(dependencyMap[item]));
-        });
-        const call = dependencyMap.call;
-        return typeof call === "unknown" ? dependencyMap(arg0) : call(dependencyMap, arg0);
-      };
-    });
-    const obj4 = require("fillTyped");
-    require("fillTyped").fillTyped(globalScope, "setExtras", (arg0) => {
-      closure_0 = arg0;
-      return (arg0) => {
-        dependencyMap = arg0;
-        const keys = Object.keys(arg0);
-        const item = keys.forEach((item) => {
-          const NATIVE = dependencyMap(closure_2_1[1]).NATIVE;
-          NATIVE.setExtra(item, dependencyMap[item]);
-        });
-        const call = dependencyMap.call;
-        return typeof call === "unknown" ? dependencyMap(arg0) : call(dependencyMap, arg0);
-      };
-    });
-    const obj5 = require("fillTyped");
-    require("fillTyped").fillTyped(globalScope, "setExtra", (arg0) => {
-      closure_0 = arg0;
-      return (arg0, arg1) => {
-        const NATIVE = NativeModules.NATIVE;
-        NATIVE.setExtra(arg0, arg1);
-        const call = closure_0.call;
-        return typeof call === "unknown" ? closure_0(arg0, arg1) : call(closure_0, arg0, arg1);
-      };
-    });
-    const obj6 = require("fillTyped");
-    require("fillTyped").fillTyped(globalScope, "addBreadcrumb", (arg0) => {
-      let lastBreadcrumb = arg0;
-      return (level, arg1) => {
-        let DEFAULT_BREADCRUMB_LEVEL = level.level;
-        const merged = Object.assign({}, level);
-        if (!DEFAULT_BREADCRUMB_LEVEL) {
-          DEFAULT_BREADCRUMB_LEVEL = DEFAULT_BREADCRUMB_LEVEL2.DEFAULT_BREADCRUMB_LEVEL;
-        }
-        const obj = { level: DEFAULT_BREADCRUMB_LEVEL, data: null };
-        let result;
-        if (level.data) {
-          result = convertToNormalizedObject.convertToNormalizedObject(level.data);
-        }
-        obj.data = result;
-        const merged1 = Object.assign(merged, obj);
-        const call = lastBreadcrumb.call;
-        if (typeof call === "unknown") {
-          lastBreadcrumb(merged1, arg1);
-        } else {
-          call(lastBreadcrumb, merged1, arg1);
-        }
-        lastBreadcrumb = lastBreadcrumb.getLastBreadcrumb();
-        if (lastBreadcrumb) {
-          const NATIVE = NativeModules.NATIVE;
-          NATIVE.addBreadcrumb(lastBreadcrumb);
-        } else {
-          const logger = init.logger;
-          logger.warn("[ScopeSync] Last created breadcrumb is undefined. Skipping sync to native.");
-        }
-        return lastBreadcrumb;
-      };
-    });
-    const obj7 = require("fillTyped");
-    require("fillTyped").fillTyped(globalScope, "clearBreadcrumbs", (arg0) => {
-      closure_0 = arg0;
-      return () => {
-        const NATIVE = NativeModules.NATIVE;
-        NATIVE.clearBreadcrumbs();
-        const call = closure_0.call;
-        return typeof call === "unknown" ? closure_0() : call(closure_0);
-      };
-    });
-    const obj8 = require("fillTyped");
-    require("fillTyped").fillTyped(globalScope, "setContext", (arg0) => {
-      closure_0 = arg0;
-      return (arg0, arg1) => {
-        const NATIVE = NativeModules.NATIVE;
-        NATIVE.setContext(arg0, arg1);
-        const call = closure_0.call;
-        return typeof call === "unknown" ? closure_0(arg0, arg1) : call(closure_0, arg0, arg1);
-      };
-    });
-    const obj9 = require("fillTyped");
+const NativeTransport = arg1;
+function makeNativeTransport() {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
   }
+  return new closure_3(obj);
+}
+class NativeTransport {
+  constructor() {
+    obj = global;
+    if (global === undefined) {
+      obj = {};
+    }
+    tmp = c2(this, NativeTransport);
+    obj2 = closure_0(closure_1[2]);
+    num = obj.bufferSize;
+    if (!num) {
+      num = 30;
+    }
+    this._buffer = obj2.makePromiseBuffer(num);
+    return;
+  }
+}
+const entry = {
+  key: "send",
+  value: function send(arg0) {
+    closure_0 = arg0;
+    const _buffer = this._buffer;
+    return _buffer
+      .add(() => {
+        const NATIVE = NativeTransport(878).NATIVE;
+        return NATIVE.sendEnvelope(closure_0);
+      })
+      .then(() => ({}));
+  },
+};
+const items = [
+  entry,
+  {
+    key: "flush",
+    value: function flush(arg0) {
+      const _buffer = this._buffer;
+      return _buffer.drain(arg0);
+    },
+  },
+];
+const tmp2 = _createClassDefault(NativeTransport, items);
+let closure_3 = tmp2;
+
+export const DEFAULT_BUFFER_SIZE = 30;
+export const NativeTransport = tmp2;
+export { makeNativeTransport };
+export const makeNativeTransportFactory = function makeNativeTransportFactory(enableNative) {
+  let tmp = null;
+  if (enableNative.enableNative) {
+    const NATIVE = NativeTransport(878).NATIVE;
+    tmp = null;
+    if (NATIVE.isNativeAvailable()) {
+      tmp = makeNativeTransport;
+    }
+  }
+  return tmp;
 };

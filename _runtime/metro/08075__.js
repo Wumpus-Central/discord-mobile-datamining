@@ -1,13 +1,20 @@
 // _runtime/metro/08075__.js
+import _mod8073 from "08073__.js";
+
+require = arg1;
+const dependencyMap = arg6;
 const obj = {
-  0: {
-    name: "PentaxVersion",
-    description(join) {
-      return join.join(".");
-    },
+  1: "InteroperabilityIndex",
+  2: null,
+  4096: "RelatedImageFileFormat",
+  4097: "RelatedImageWidth",
+  4098: "RelatedImageHeight",
+};
+obj[2] = {
+  name: "InteroperabilityVersion",
+  description(value) {
+    return _mod8073.getStringValue(value);
   },
-  5: "PentaxModelID",
-  555: "LevelInfo",
 };
 
 export default obj;

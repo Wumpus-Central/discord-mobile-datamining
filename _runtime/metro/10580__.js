@@ -1,5 +1,5 @@
 // _runtime/metro/10580__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "fce86bae946901aed4dd9d012c5d05d2",
-  name: "BellSlashIcon",
+  hash: "97b88511d0fe85beb9ea20d66572b94a",
+  name: "GroupPlusIcon",
   type: "png",
 });

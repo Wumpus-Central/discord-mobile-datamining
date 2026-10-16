@@ -1,5 +1,5 @@
 // _runtime/metro/09127__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "eb011b89d6ca95998a19fc9752810bf1",
-  name: "MinecraftNeutralIcon-tertiary",
+  hash: "54b1df301be8a48609dd405b7597a135",
+  name: "RobloxNeutralIcon",
   type: "png",
 });

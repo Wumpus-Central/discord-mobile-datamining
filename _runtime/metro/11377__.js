@@ -1,5 +1,5 @@
 // _runtime/metro/11377__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b749a15e15191bd4c7ec2a36a9470ea1",
-  name: "VoiceXIcon",
+  hash: "4e9d569d897ff379f07644deddf6baf5",
+  name: "ScreenXIcon",
   type: "png",
 });

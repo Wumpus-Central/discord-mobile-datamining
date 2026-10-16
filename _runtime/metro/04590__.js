@@ -1,5 +1,5 @@
 // _runtime/metro/04590__.js
-import _mod4561 from "04561__.js";
+import _mod4564 from "04564__.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -26,15 +26,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(Hour1To24Parser, Parser) {
+function _setPrototypeOf(Hour1to12Parser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour1To24Parser, Parser) {
-      Hour1To24Parser.__proto__ = Parser;
-      return Hour1To24Parser;
+    _setPrototypeOf = function _setPrototypeOf(Hour1to12Parser, Parser) {
+      Hour1to12Parser.__proto__ = Parser;
+      return Hour1to12Parser;
     };
   }
-  return _setPrototypeOf(Hour1To24Parser, Parser);
+  return _setPrototypeOf(Hour1to12Parser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -52,9 +52,9 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4561.Parser;
+const Parser = _mod4564.Parser;
 let _createSuperInternal;
-class Hour1To24Parser {
+class Hour1to12Parser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -109,7 +109,7 @@ class Hour1To24Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["a", "b", "h", "H", "K", "t", "T"];
+          items1 = ["H", "K", "k", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -133,7 +133,7 @@ class Hour1To24Parser {
     }
   }
 }
-let dependencyMap = Hour1To24Parser;
+let dependencyMap = Hour1to12Parser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,11 +145,11 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-Hour1To24Parser.prototype = Object.create(prototype, {
-  constructor: { value: Hour1To24Parser, writable: true, configurable: true },
+Hour1to12Parser.prototype = Object.create(prototype, {
+  constructor: { value: Hour1to12Parser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(Hour1To24Parser, Parser);
+  _setPrototypeOf(Hour1to12Parser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -211,12 +211,12 @@ _createSuperInternal = function _createSuperInternal() {
 const entry = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("k" === arg1) {
-      return _createSuperInternal(4563).parseNumericPattern(_createSuperInternal(4564).numericPatterns.hour24h, arg0);
-    } else if ("ko" === arg1) {
+    if ("h" === arg1) {
+      return _createSuperInternal(4566).parseNumericPattern(_createSuperInternal(4567).numericPatterns.hour12h, arg0);
+    } else if ("ho" === arg1) {
       return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
     } else {
-      return _createSuperInternal(4563).parseNDigits(arg1.length, arg0);
+      return _createSuperInternal(4566).parseNDigits(arg1.length, arg0);
     }
   },
 };
@@ -227,20 +227,27 @@ let items = [
     value: function validate(arg0, arg1) {
       let tmp = arg1 >= 1;
       if (tmp) {
-        tmp = arg1 <= 24;
+        tmp = arg1 <= 12;
       }
       return tmp;
     },
   },
   {
     key: "set",
-    value: function set(setUTCHours, arg1, arg2) {
-      let result = arg2;
-      if (arg2 <= 24) {
-        result = arg2 % 24;
+    value: function set(getUTCHours, arg1, arg2) {
+      const tmp = getUTCHours.getUTCHours() >= 12;
+      if (tmp) {
+        if (arg2 < 12) {
+          getUTCHours.setUTCHours(arg2 + 12, 0, 0, 0);
+        }
+        return getUTCHours;
       }
-      setUTCHours.setUTCHours(result, 0, 0, 0);
-      return setUTCHours;
+      if (!tmp) {
+        if (12 === arg2) {
+          getUTCHours.setUTCHours(0, 0, 0, 0);
+        }
+      }
+      getUTCHours.setUTCHours(arg2, 0, 0, 0);
     },
   },
 ];
@@ -262,4 +269,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { Hour1To24Parser };
+export { Hour1to12Parser };

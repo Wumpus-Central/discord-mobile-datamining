@@ -1,13 +1,13 @@
 // _runtime/metro/09710__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BlushIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/BlurpleTwilightIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "def0b6d35103453cf4894471df6b84ad",
-  name: "BlushIcon",
+  hash: "f385b38a044809a0b451d707fc7cd058",
+  name: "BlurpleTwilightIcon",
   type: "png",
 });

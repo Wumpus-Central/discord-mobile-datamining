@@ -1,13 +1,13 @@
 // _runtime/metro/05986__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "8b42912ce44ddbe707d5a6f54419c49d",
+  hash: "344ee148b183cbe058428a0b2e53672e",
   name: "img_account_sync_youtube_light_and_dark",
-  type: "svg",
+  type: "png",
 });

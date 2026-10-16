@@ -1,20 +1,24 @@
 // _runtime/metro/04426__.js
-import _typeof_mod from "04427__.js";
-import _typeof_mod from "04428__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import module_4262_mod from "04262__.js";
+import module_4406_mod from "04406__.js";
+import requiredArgs_mod from "../04259_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4262 = module_4262_mod;
+if (!module_4262) {
+  const obj = { default: module_4262 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4262;
 }
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+module_4262 = tmp3;
+let module_4406 = module_4406_mod;
+if (!module_4406) {
+  const obj2 = { default: module_4406 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4406;
 }
-_typeof = tmp5;
+module_4406 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -24,11 +28,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function clamp(arg0, arg1) {
-  ({ start, end } = arg1);
+export default function addWeeks(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const items = [arg0, start];
-  const items1 = [_typeof.default(items), end];
-  return _typeof.default(items1);
+  return module_4406.default(arg0, 7 * module_4262.default(arg1));
 };
 export default exports.default;

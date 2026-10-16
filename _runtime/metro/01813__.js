@@ -1,42 +1,72 @@
 // _runtime/metro/01813__.js
-const require = arg1;
+import _mod1803 from "01803__.js";
+import _mod1805 from "01805__.js";
+
+require = arg1;
 const dependencyMap = arg6;
-let closure_2 = {
-  code: "function pnpm_useComposedEventHandlerTs1(event){const{workletsMap}=this.__closure;if(workletsMap[event.eventName]){workletsMap[event.eventName].forEach(function(worklet){return worklet(event);});}}",
+const __initData = {
+  code: "function pnpm_useAnimatedScrollHandlerTs1(event){const{scrollHandlers,context}=this.__closure;const{onScroll:onScroll,onBeginDrag:onBeginDrag,onEndDrag:onEndDrag,onMomentumBegin:onMomentumBegin,onMomentumEnd:onMomentumEnd}=scrollHandlers;if(onScroll&&event.eventName.endsWith('onScroll')){onScroll(event,context);}else if(onBeginDrag&&event.eventName.endsWith('onScrollBeginDrag')){onBeginDrag(event,context);}else if(onEndDrag&&event.eventName.endsWith('onScrollEndDrag')){onEndDrag(event,context);}else if(onMomentumBegin&&event.eventName.endsWith('onMomentumScrollBegin')){onMomentumBegin(event,context);}else if(onMomentumEnd&&event.eventName.endsWith('onMomentumScrollEnd')){onMomentumEnd(event,context);}}",
 };
 
-export const useComposedEventHandler = function useComposedEventHandler(tmp8Result4) {
-  const obj = {};
-  const set = new Set();
-  const obj2 = {};
-  const found = tmp8Result4.filter((item) => null !== item);
-  let item = found.forEach((workletEventHandler) => {
-    workletEventHandler = workletEventHandler.workletEventHandler;
-    if (workletEventHandler instanceof obj(set[0]).WorkletEventHandler) {
-      const eventNames = workletEventHandler.eventNames;
-      const item = eventNames.forEach((item) => {
-        set.add(item);
-        if (obj2[item]) {
-          obj2[item].push(workletEventHandler.worklet);
-          let tmp3 = workletEventHandler;
-        } else {
-          tmp3 = workletEventHandler;
-          const items = [workletEventHandler.worklet];
-          obj2[item] = items;
-        }
-        obj[item + "" + obj2[item].length] = tmp3.worklet;
-      });
+export const useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, items) {
+  let tmp = fn;
+  if (typeof fn === "function") {
+    let obj2 = { onScroll: fn };
+    tmp = obj2;
+  }
+  obj2 = tmp;
+  const handler = _mod1803.useHandler(tmp, items);
+  const context = handler.context;
+  items = ["onScroll"];
+  if (undefined !== tmp.onBeginDrag) {
+    items.push("onScrollBeginDrag");
+  }
+  if (undefined !== tmp.onEndDrag) {
+    items.push("onScrollEndDrag");
+  }
+  if (undefined !== tmp.onMomentumBegin) {
+    items.push("onMomentumScrollBegin");
+  }
+  if (undefined !== tmp.onMomentumEnd) {
+    items.push("onMomentumScrollEnd");
+  }
+  fn = function l(eventName) {
+    ({ onScroll, onBeginDrag, onEndDrag, onMomentumBegin, onMomentumEnd } = obj2);
+    if (onScroll) {
+      eventName = eventName.eventName;
+      if (eventName.endsWith("onScroll")) {
+        onScroll(eventName, context);
+      }
     }
-  });
-  const obj3 = obj(set[1]);
-  const fn = function v(arg0) {
-    closure_0 = arg0;
-    if (obj2[arg0.eventName]) {
-      const item = tmp[arg0.eventName].forEach((fn) => fn(closure_0));
+    if (onBeginDrag) {
+      const eventName2 = eventName.eventName;
+      if (eventName2.endsWith("onScrollBeginDrag")) {
+        onBeginDrag(eventName, context);
+      }
+    }
+    if (onEndDrag) {
+      const eventName3 = eventName.eventName;
+      if (eventName3.endsWith("onScrollEndDrag")) {
+        onEndDrag(eventName, context);
+      }
+    }
+    if (onMomentumBegin) {
+      const eventName4 = eventName.eventName;
+      if (eventName4.endsWith("onMomentumScrollBegin")) {
+        onMomentumBegin(eventName, context);
+      }
+    }
+    let endsWithResult = onMomentumEnd;
+    if (onMomentumEnd) {
+      const eventName5 = eventName.eventName;
+      endsWithResult = eventName5.endsWith("onMomentumScrollEnd");
+    }
+    if (endsWithResult) {
+      onMomentumEnd(eventName, context);
     }
   };
-  fn.__closure = { workletsMap: obj2 };
-  fn.__workletHash = 14960316830945;
-  fn.__initData = obj2;
-  return obj(set[2]).useEvent(fn, Array.from(set), obj3.useHandler(obj).doDependenciesDiffer);
+  fn.__closure = { scrollHandlers: tmp, context };
+  fn.__workletHash = 480432859268;
+  fn.__initData = __initData;
+  return _mod1805.useEvent(fn, items, handler.doDependenciesDiffer);
 };

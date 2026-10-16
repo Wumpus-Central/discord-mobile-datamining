@@ -1,36 +1,77 @@
 // _runtime/metro/15240__.js
-import _mod15231 from "15231__.js";
-import _mod15232 from "15232__.js";
-import _mod15239 from "15239__.js";
+import _mod15241 from "15241__.js";
+import _mod15242 from "15242__.js";
+import _mod15243 from "15243__.js";
+import _mod15280 from "15280__.js";
+import _mod15281 from "15281__.js";
+import _mod15297 from "15297__.js";
+import _mod15298 from "15298__.js";
 
-export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (_mod15232(toString)) {
-      const tmp4 = _mod15239(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
+export default (dontCallGetSet, obj) => {
+  ({ target, global: _global, stat } = dontCallGetSet);
+  const tmp3 = _mod15241;
+  if (_global) {
+    let prototype = tmp3;
+  } else {
+    let tmp4 = tmp3[target];
+    if (stat) {
+      if (!tmp4) {
+        tmp4 = _mod15242(target, {});
       }
-      tmpResult = _mod15231;
-    }
-  }
-  const valueOf = arg0.valueOf;
-  if (_mod15232(valueOf)) {
-    const tmp8 = _mod15239(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-    tmp5Result = _mod15231;
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (_mod15232(toString2)) {
-      const tmp10 = _mod15239(toString2, arg0);
-      if (!tmp5Result2(tmp10)) {
-        return tmp10;
+      prototype = tmp4;
+    } else {
+      prototype = tmp4;
+      if (tmp4) {
+        prototype = _mod15241[target].prototype;
       }
-      tmp5Result2 = _mod15231;
     }
   }
-  throw new TypeError("Can't convert object to primitive value");
+  if (prototype) {
+    for (const key10024 in arg1) {
+      let tmp21 = arg1[key10024];
+      if (arg0.dontCallGetSet) {
+        obj = _mod15243;
+        let iter = obj.f(prototype, key10024);
+        value = iter;
+        if (iter) {
+          value = iter.value;
+        }
+        let tmp7 = value;
+      } else {
+        tmp7 = prototype[key10024];
+      }
+      let sum = key10024;
+      let tmp12 = _mod15280;
+      if (!_global) {
+        let str4 = "#";
+        if (stat) {
+          str4 = ".";
+        }
+        sum = target + str4 + key10024;
+      }
+      if (!tmp12(sum, arg0.forced)) {
+        if (undefined !== tmp7) {
+          if (typeof tmp21 === typeof tmp7) {
+            continue;
+          } else {
+            let tmp22 = _mod15281(tmp21, tmp7);
+          }
+        }
+        continue;
+      }
+      let sham = arg0.sham;
+      if (!sham) {
+        let sham2 = tmp7;
+        if (tmp7) {
+          sham2 = tmp7.sham;
+        }
+        sham = sham2;
+      }
+      if (sham) {
+        let tmp14 = _mod15297(tmp21, "sham", true);
+      }
+      let tmp19 = _mod15298(prototype, key10024, tmp21, arg0);
+      continue;
+    }
+  }
 };

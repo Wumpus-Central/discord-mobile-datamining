@@ -1,23 +1,29 @@
 // _runtime/metro/01854__.js
-const require = globalThis.__r;
+import _slicedToArray from "00032__.js";
 
-for (const key10013 in require("01855__.js")) {
-  arg5[key10013] = require("01855__.js")[key10013];
-  continue;
-}
-for (const key10017 in require("01856__.js")) {
-  arg5[key10017] = require("01856__.js")[key10017];
-  continue;
-}
-for (const key10021 in require("01857__.js")) {
-  arg5[key10021] = require("01857__.js")[key10021];
-  continue;
-}
-for (const key10025 in require("01858__.js")) {
-  arg5[key10025] = require("01858__.js")[key10025];
-  continue;
-}
-for (const key10029 in require("01859__.js")) {
-  arg5[key10029] = require("01859__.js")[key10029];
-  continue;
-}
+const require = fn;
+const noop = fn(19);
+({ useEffect: c3, useState: closure_4 } = noop);
+const Dimensions = fn(17).Dimensions;
+const size = Dimensions.get("window");
+let global = { width: size.width, height: size.height };
+let WindowDimensionsEvents = fn(1648).WindowDimensionsEvents;
+WindowDimensionsEvents.addListener("windowDidResize", (arg0) => {
+  global = arg0;
+});
+
+export const useWindowDimensions = () => {
+  const tmp = _slicedToArray(closure_4(global), 2);
+  closure_0 = tmp[1];
+  closure_3(() => {
+    const WindowDimensionsEvents = closure_0(dependencyMap[3]).WindowDimensionsEvents;
+    closure_0 = WindowDimensionsEvents.addListener("windowDidResize", (arg0) => {
+      closure_0(arg0);
+    });
+    closure_0(global);
+    return () => {
+      closure_0.remove();
+    };
+  }, []);
+  return tmp[0];
+};

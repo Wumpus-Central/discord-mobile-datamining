@@ -1,11 +1,11 @@
 // _runtime/metro/04217__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/promotions/third_party/macaron",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==",
   scales: [1],
-  hash: "210ab9b8443223b37cc7fa718c0a10f7",
-  name: "MacaronPhase2.compiled.messages",
+  hash: "7b1e3854e70c97d1dc966fa6b906be9e",
+  name: "zh-TW.messages.7b1e3854e70c97d1dc966fa6b906be9e.compiled.messages",
   type: "jsona",
 });

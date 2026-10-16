@@ -1,121 +1,180 @@
 // _runtime/metro/01729__.js
-import _mod1660 from "01660__.js";
-import _mod1696 from "01696__.js";
+import _createClassDefault from "00042__createClass.js";
+import _classCallCheck from "00041__classCallCheck.js";
 
-require = fn;
-let dependencyMap = arg6;
+const BaseAnimationBuilder = arg1;
 const __initData = {
-  code: "function pnpm_clampTs2(){const{_animationToClamp,config,recognizePrefixSuffix,logger,getReduceMotionForAnimation}=this.__closure;const animationToClamp=typeof _animationToClamp==='function'?_animationToClamp():_animationToClamp;const strippedMin=config.min===undefined?undefined:recognizePrefixSuffix(config.min).strippedValue;const strippedMax=config.max===undefined?undefined:recognizePrefixSuffix(config.max).strippedValue;function clampOnFrame(animation,now){const finished=animationToClamp.onFrame(animationToClamp,now);if(animationToClamp.current===undefined){logger.warn(\"Error inside 'withClamp' animation, the inner animation has invalid current value\");return true;}else{const{prefix:prefix,strippedValue:strippedValue,suffix:suffix}=recognizePrefixSuffix(animationToClamp.current);let newValue;if(strippedMax!==undefined&&strippedMax<strippedValue){newValue=strippedMax;}else if(strippedMin!==undefined&&strippedMin>strippedValue){newValue=strippedMin;}else{newValue=strippedValue;}animation.current=typeof animationToClamp.current==='number'?newValue:\"\"+(prefix===undefined?'':prefix)+newValue+(suffix===undefined?'':suffix);}return finished;}function onStart(animation,value,now,previousAnimation){animation.current=value;animation.previousAnimation=animationToClamp;const animationBeforeClamped=previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.previousAnimation;if(config.max!==undefined&&config.min!==undefined&&config.max<config.min){logger.warn('Wrong config was provided to withClamp. Min value is bigger than max');}animationToClamp.onStart(animationToClamp,(animationBeforeClamped===null||animationBeforeClamped===void 0?void 0:animationBeforeClamped.current)||value,now,animationBeforeClamped);}const callback=function(finished){if(animationToClamp.callback){animationToClamp.callback(finished);}};return{isHigherOrder:true,onFrame:clampOnFrame,onStart:onStart,current:animationToClamp.current,callback:callback,previousAnimation:null,reduceMotion:getReduceMotionForAnimation(config.reduceMotion)};}",
+  code: "function pnpm_BaseAnimationBuilderTs1(delay,animation){const{withDelay,reduceMotion}=this.__closure;return withDelay(delay,animation,reduceMotion);}",
 };
-fn = function n(config, _animationToClamp) {
-  _require = config;
-  dependencyMap = _animationToClamp;
-  const fn = function u() {
-    let tmpResult = strippedValue;
-    if (typeof strippedValue === "function") {
-      tmpResult = tmp();
-    }
-    config = tmpResult;
-    let range = config;
-    strippedValue = undefined;
-    if (undefined !== config.min) {
-      strippedValue = config(1696).recognizePrefixSuffix(range.min).strippedValue;
-      const obj = config(1696);
-    }
-    let strippedValue1;
-    if (undefined !== range.max) {
-      strippedValue1 = config(1696).recognizePrefixSuffix(range.max).strippedValue;
-      const obj2 = config(1696);
-    }
-    const obj3 = {
-      isHigherOrder: true,
-      onFrame: function clampOnFrame(arg0, arg1) {
-        if (undefined === previousAnimation.current) {
-          const logger = _mod1660.logger;
-          logger.warn("Error inside 'withClamp' animation, the inner animation has invalid current value");
-          return true;
-        } else {
-          const result = _mod1696.recognizePrefixSuffix(previousAnimation.current);
-          ({ prefix, strippedValue, suffix } = result);
-          let tmp5 = strippedValue1;
-          if (undefined === strippedValue1) {
-            let tmp4 = strippedValue;
-            if (undefined !== strippedValue) {
-              tmp4 = strippedValue;
-              if (strippedValue > strippedValue) {
-                tmp4 = strippedValue;
-              }
-            }
-            tmp5 = tmp4;
-          }
-          let combined = tmp5;
-          if (typeof previousAnimation.current !== "number") {
-            let str = "";
-            if (undefined !== prefix) {
-              str = prefix;
-            }
-            let str2 = "";
-            if (undefined !== suffix) {
-              str2 = suffix;
-            }
-            const _HermesInternal = HermesInternal;
-            combined = "" + str + tmp5 + str2;
-          }
-          arg0.current = combined;
-          return tmp2;
-        }
-      },
-      onStart(arg0, current, arg2, previousAnimation) {
-        arg0.current = current;
-        arg0.previousAnimation = previousAnimation;
-        previousAnimation = undefined;
-        if (previousAnimation != null) {
-          previousAnimation = previousAnimation.previousAnimation;
-        }
-        const range = previousAnimation;
-        if (tmp2) {
-          const logger = _mod1660.logger;
-          logger.warn("Wrong config was provided to withClamp. Min value is bigger than max");
-        }
-        current = undefined;
-        if (previousAnimation != null) {
-          current = previousAnimation.current;
-        }
-        previousAnimation.onStart(previousAnimation, current, arg2, previousAnimation);
-        tmp2 = undefined !== previousAnimation.max && undefined !== range.min && range.max < range.min;
-      },
-      current: tmpResult.current,
-      callback(arg0) {
-        if (previousAnimation.callback) {
-          previousAnimation.callback(arg0);
-        }
-      },
-      previousAnimation: null,
-      reduceMotion: config(1696).getReduceMotionForAnimation(range.reduceMotion),
+const __initData2 = {
+  code: "function pnpm_BaseAnimationBuilderTs2(_,animation){const{getReduceMotionFromConfig,reduceMotion}=this.__closure;animation.reduceMotion=getReduceMotionFromConfig(reduceMotion);return animation;}",
+};
+class BaseAnimationBuilder {
+  constructor() {
+    tmp = c2(this, BaseAnimationBuilder);
+    this.reduceMotionV = closure_0(closure_1[2]).ReduceMotion.System;
+    this.randomizeDelay = false;
+    this.build = () => {
+      const reanimatedError = new BaseAnimationBuilder(dependencyMap[3]).ReanimatedError(
+        "Unimplemented method in child class.",
+      );
+      throw reanimatedError;
     };
-    return obj3;
-  };
-  let obj = require("01696__.js");
-  fn.__closure = {
-    _animationToClamp,
-    config,
-    recognizePrefixSuffix: require("01696__.js").recognizePrefixSuffix,
-    logger: require("01660__.js").logger,
-    getReduceMotionForAnimation: require("01696__.js").getReduceMotionForAnimation,
-  };
-  fn.__workletHash = 9293031098818;
-  fn.__initData = __initData;
-  return obj.defineAnimation(_animationToClamp, fn);
+    return;
+  }
+}
+const entry = {
+  key: "duration",
+  value: function duration(durationV) {
+    this.durationV = durationV;
+    return this;
+  },
 };
-fn.__closure = {
-  defineAnimation: fn(1696).defineAnimation,
-  recognizePrefixSuffix: fn(1696).recognizePrefixSuffix,
-  logger: fn(1660).logger,
-  getReduceMotionForAnimation: fn(1696).getReduceMotionForAnimation,
+const items = [
+  entry,
+  {
+    key: "delay",
+    value: function delay(delayV) {
+      this.delayV = delayV;
+      return this;
+    },
+  },
+  {
+    key: "withCallback",
+    value: function withCallback(callbackV) {
+      this.callbackV = callbackV;
+      return this;
+    },
+  },
+  {
+    key: "reduceMotion",
+    value: function reduceMotion(reduceMotionV) {
+      this.reduceMotionV = reduceMotionV;
+      return this;
+    },
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      let num = this.durationV;
+      if (num == null) {
+        num = 300;
+      }
+      return num;
+    },
+  },
+  {
+    key: "randomDelay",
+    value: function randomDelay() {
+      this.randomizeDelay = true;
+      return this;
+    },
+  },
+  {
+    key: "getDelay",
+    value: function getDelay() {
+      const self = this;
+      if (this.randomizeDelay) {
+        const _Math = Math;
+        let num2 = self.delayV;
+        const random = Math.random();
+        if (num2 == null) {
+          num2 = 1000;
+        }
+        let num = random * num2;
+      } else {
+        num = self.delayV;
+        if (num == null) {
+          num = 0;
+        }
+      }
+      return num;
+    },
+  },
+  {
+    key: "getReduceMotion",
+    value: function getReduceMotion() {
+      return this.reduceMotionV;
+    },
+  },
+  {
+    key: "getDelayFunction",
+    value: function getDelayFunction() {
+      const self = this;
+      const reduceMotion = self.getReduceMotion();
+      if (tmp) {
+        const fn2 = function n(c10, tmpResult) {
+          return BaseAnimationBuilder(1730).withDelay(c10, tmpResult, reduceMotion);
+        };
+        const obj2 = { withDelay: reduceMotion(1730).withDelay, reduceMotion };
+        fn2.__closure = obj2;
+        fn2.__workletHash = 15544853359686;
+        fn2.__initData = __initData;
+        let fn = fn2;
+      } else {
+        fn = function t(arg0, arg1) {
+          arg1.reduceMotion = BaseAnimationBuilder(1698).getReduceMotionFromConfig(reduceMotion);
+          return arg1;
+        };
+        const obj = { getReduceMotionFromConfig: reduceMotion(1698).getReduceMotionFromConfig, reduceMotion };
+        fn.__closure = obj;
+        fn.__workletHash = 8417033392474;
+        fn.__initData = __initData2;
+      }
+      return fn;
+    },
+  },
+];
+const entry1 = {
+  key: "duration",
+  value: function duration(arg0) {
+    const instance = this.createInstance();
+    return instance.duration(arg0);
+  },
 };
-fn.__workletHash = 2452826107198;
-fn.__initData = {
-  code: "function pnpm_clampTs1(config,_animationToClamp){const{defineAnimation,recognizePrefixSuffix,logger,getReduceMotionForAnimation}=this.__closure;return defineAnimation(_animationToClamp,function(){'worklet';const animationToClamp=typeof _animationToClamp==='function'?_animationToClamp():_animationToClamp;const strippedMin=config.min===undefined?undefined:recognizePrefixSuffix(config.min).strippedValue;const strippedMax=config.max===undefined?undefined:recognizePrefixSuffix(config.max).strippedValue;function clampOnFrame(animation,now){const finished=animationToClamp.onFrame(animationToClamp,now);if(animationToClamp.current===undefined){logger.warn(\"Error inside 'withClamp' animation, the inner animation has invalid current value\");return true;}else{const{prefix:prefix,strippedValue:strippedValue,suffix:suffix}=recognizePrefixSuffix(animationToClamp.current);let newValue;if(strippedMax!==undefined&&strippedMax<strippedValue){newValue=strippedMax;}else if(strippedMin!==undefined&&strippedMin>strippedValue){newValue=strippedMin;}else{newValue=strippedValue;}animation.current=typeof animationToClamp.current==='number'?newValue:\"\"+(prefix===undefined?'':prefix)+newValue+(suffix===undefined?'':suffix);}return finished;}function onStart(animation,value,now,previousAnimation){animation.current=value;animation.previousAnimation=animationToClamp;const animationBeforeClamped=previousAnimation===null||previousAnimation===void 0?void 0:previousAnimation.previousAnimation;if(config.max!==undefined&&config.min!==undefined&&config.max<config.min){logger.warn('Wrong config was provided to withClamp. Min value is bigger than max');}animationToClamp.onStart(animationToClamp,(animationBeforeClamped===null||animationBeforeClamped===void 0?void 0:animationBeforeClamped.current)||value,now,animationBeforeClamped);}const callback=function(finished){if(animationToClamp.callback){animationToClamp.callback(finished);}};return{isHigherOrder:true,onFrame:clampOnFrame,onStart:onStart,current:animationToClamp.current,callback:callback,previousAnimation:null,reduceMotion:getReduceMotionForAnimation(config.reduceMotion)};});}",
-};
+const items1 = [
+  entry1,
+  {
+    key: "delay",
+    value: function delay(arg0) {
+      const instance = this.createInstance();
+      return instance.delay(arg0);
+    },
+  },
+  {
+    key: "withCallback",
+    value: function withCallback(arg0) {
+      const instance = this.createInstance();
+      return instance.withCallback(arg0);
+    },
+  },
+  {
+    key: "reduceMotion",
+    value: function reduceMotion(arg0) {
+      const instance = this.createInstance();
+      return instance.reduceMotion(arg0);
+    },
+  },
+  {
+    key: "getDuration",
+    value: function getDuration() {
+      return 300;
+    },
+  },
+  {
+    key: "randomDelay",
+    value: function randomDelay() {
+      const instance = this.createInstance();
+      return instance.randomDelay();
+    },
+  },
+  {
+    key: "build",
+    value: function build() {
+      const instance = this.createInstance();
+      return instance.build();
+    },
+  },
+];
 
-export const withClamp = fn;
+export const BaseAnimationBuilder = _createClassDefault(BaseAnimationBuilder, items, items1);

@@ -1,5 +1,5 @@
 // _runtime/00424_Mixin.js
-import measureDefault from "00068_measure.js";
+import _modDef68 from "metro/00068__.js";
 import get_VersionDefault from "00273_get_Version.js";
 import SoundManagerDefault from "00294_SoundManager.js";
 import PositionDefault from "00425_Position.js";
@@ -8,7 +8,7 @@ import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import noop from "metro/00019__.js";
 
 const jsx = fn(21).jsx;
-const f20533 = (arg0) => {};
+const f20578 = (arg0) => {};
 const NOT_RESPONDER = "NOT_RESPONDER";
 const RESPONDER_INACTIVE_PRESS_IN = "RESPONDER_INACTIVE_PRESS_IN";
 const RESPONDER_ACTIVE_PRESS_IN = "RESPONDER_ACTIVE_PRESS_IN";
@@ -237,7 +237,7 @@ const obj5 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f20533 === "function") {
+      if (typeof f20578 === "function") {
         ({ touches, changedTouches } = nativeEvent);
         let tmp12 = touches;
         if (touches) {
@@ -310,7 +310,7 @@ const obj5 = {
     const responderID = this.state.touchable.responderID;
     if (null != responderID) {
       if (typeof responderID === "number") {
-        measureDefault.measure(responderID, self._handleQueryLayout);
+        _modDef68.measure(responderID, self._handleQueryLayout);
       } else {
         responderID.measure(self._handleQueryLayout);
       }
@@ -426,7 +426,7 @@ const obj5 = {
   },
   _savePressInLocation(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f20533 === "function") {
+    if (typeof f20578 === "function") {
       ({ touches, changedTouches } = nativeEvent);
       let tmp = touches;
       if (touches) {

@@ -1,11 +1,11 @@
 // _runtime/metro/03895__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/custom_typing_indicator/intl",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jdXN0b21fdHlwaW5nX2luZGljYXRvci9pbnRs",
   scales: [1],
-  hash: "672e676a157080143ff3e4323d55de8e",
-  name: "CustomTypingIndicator.compiled.messages",
+  hash: "9770810ced6abf36b75c25530a7d5ddf",
+  name: "vi.messages.9770810ced6abf36b75c25530a7d5ddf.compiled.messages",
   type: "jsona",
 });

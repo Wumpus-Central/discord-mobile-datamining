@@ -1,13 +1,13 @@
 // _runtime/metro/10303__.js
-import registerAsset from "01132__.js";
+import _mod19 from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/activated",
-  width: 279,
-  height: 48,
-  scales: [2, 3],
-  hash: "03a20a682965583c41d600bd770a621d",
-  name: "img_nitro_tier_1_activated_dark",
-  type: "png",
-});
+const useRef = _mod19.useRef;
+let closure_1 = {};
+
+export default function useLazyValue(fn) {
+  const tmp = useRef(closure_1);
+  if (tmp.current === closure_1) {
+    tmp.current = fn();
+  }
+  return tmp.current;
+}

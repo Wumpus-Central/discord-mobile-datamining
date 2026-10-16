@@ -1,42 +1,7 @@
 // _runtime/metro/04355__.js
-import 04356__ from "04356__.js";
-import 04357__ from "04357__.js";
-import dayAndTimeWithAdjective from "../04358_dayAndTimeWithAdjective.js";
-import date_mod from "04359__.js";
-import date_mod from "04360__.js";
+let closure_0 = { lastWeek: "'forrige' eeee 'kl.' p", yesterday: "'i g\u00E5r kl.' p", today: "'i dag kl.' p", tomorrow: "'i morgen kl.' p", nextWeek: "EEEE 'kl.' p", other: "P" };
 
-if (!module_4356) {
-  const obj = { default: module_4356 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4356;
-}
-if (!module_4357) {
-  const obj2 = { default: module_4357 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4357;
-}
-if (!dayAndTimeWithAdjective) {
-  const obj3 = { default: dayAndTimeWithAdjective };
-  let tmp7 = obj3;
-} else {
-  tmp7 = dayAndTimeWithAdjective;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "pl", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
+};
 export default exports.default;

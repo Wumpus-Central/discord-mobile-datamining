@@ -2,7 +2,7 @@
 import _modDef434 from "metro/00434__.js";
 import _slicedToArray from "metro/00032__.js";
 import "module_19";
-import measure from "00068_measure.js";
+import 00068__ from "metro/00068__.js";
 import __INTERNAL_VIEW_CONFIG_mod from "metro/00435__.js";
 
 let c0 = fn;
@@ -13,7 +13,7 @@ function defaultHiddenStyle(height) {
 const noop = fn(19);
 ({ startTransition: hasOwnProperty, useState: metroRequire } = noop);
 const jsx = fn(21).jsx;
-if (measure.hasViewManagerConfig("VirtualView")) {
+if (module_68.hasViewManagerConfig("VirtualView")) {
   if (!importDefaultResult1.hasViewManagerConfig("VirtualViewExperimental")) {
     let __INTERNAL_VIEW_CONFIG = _modDef434;
   }
@@ -31,16 +31,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
     closure_3 = tmp3;
     obj = c0(436);
     ref = obj.useVirtualViewLogging(tmp3, nativeID);
-    let obj2 = {
-      initialHidden,
-      nativeID,
-      ref,
-      removeClippedSubviews: hiddenStyle.removeClippedSubviews,
-      renderState: null,
-      style: null,
-      onModeChange: null,
-      children: null,
-    };
+    let obj2 = { initialHidden, nativeID, ref, removeClippedSubviews: hiddenStyle.removeClippedSubviews, renderState: null, style: null, onModeChange: null, children: null };
     obj2.renderState = tmp2 !== c9 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered;
     let composeResult = style;
     if (tmp2 !== c9) {
@@ -50,13 +41,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
     obj2.style = composeResult;
     obj2.onModeChange = function onModeChange(nativeEvent) {
       const tmpResult = initialHidden(_undefined[7])(globalThis.VirtualViewMode.cast(nativeEvent.nativeEvent.mode));
-      obj = {
-        mode: tmpResult,
-        renderState: null,
-        target: nativeEvent.currentTarget,
-        targetRect: nativeEvent.nativeEvent.targetRect,
-        thresholdRect: nativeEvent.nativeEvent.thresholdRect,
-      };
+      obj = { mode: tmpResult, renderState: null, target: nativeEvent.currentTarget, targetRect: nativeEvent.nativeEvent.targetRect, thresholdRect: nativeEvent.nativeEvent.thresholdRect };
       obj.renderState = closure_3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered;
       const current = ref.current;
       if (current != null) {
@@ -71,10 +56,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
         if (tmpResult !== globalThis.VirtualViewMode.Prerender) {
           if (tmpResult !== globalThis.VirtualViewMode.Hidden) {
             const _Error = Error;
-            throw Error(
-              "Match: No case succesfully matched. Make exhaustive or add a wildcard case using '_'. Argument: " +
-                tmpResult,
-            );
+            throw Error("Match: No case succesfully matched. Make exhaustive or add a wildcard case using '_'. Argument: " + tmpResult);
           } else {
             closure_1_5(() => {
               obj = hiddenStyle(nativeEvent.nativeEvent.targetRect);
@@ -109,19 +91,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
       children = hiddenStyle.children;
     }
     obj2.children = children;
-    return (
-      <__INTERNAL_VIEW_CONFIG
-        initialHidden={initialHidden}
-        nativeID={nativeID}
-        ref={ref}
-        removeClippedSubviews={hiddenStyle.removeClippedSubviews}
-        renderState={null}
-        style={null}
-        onModeChange={null}
-      >
-        {null}
-      </__INTERNAL_VIEW_CONFIG>
-    );
+    return <__INTERNAL_VIEW_CONFIG initialHidden={initialHidden} nativeID={nativeID} ref={ref} removeClippedSubviews={hiddenStyle.removeClippedSubviews} renderState={null} style={null} onModeChange={null}>{null}</__INTERNAL_VIEW_CONFIG>;
   });
   exports.createHiddenVirtualView = function createHiddenVirtualView(arg0) {
     let obj = arg0;
@@ -140,16 +110,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
       closure_3 = tmp3;
       obj = c0(436);
       ref = obj.useVirtualViewLogging(tmp3, nativeID);
-      let obj2 = {
-        initialHidden,
-        nativeID,
-        ref,
-        removeClippedSubviews: hiddenStyle.removeClippedSubviews,
-        renderState: null,
-        style: null,
-        onModeChange: null,
-        children: null,
-      };
+      let obj2 = { initialHidden, nativeID, ref, removeClippedSubviews: hiddenStyle.removeClippedSubviews, renderState: null, style: null, onModeChange: null, children: null };
       obj2.renderState = tmp2 !== c9 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered;
       let composeResult = style;
       if (tmp2 !== c9) {
@@ -159,13 +120,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
       obj2.style = composeResult;
       obj2.onModeChange = function onModeChange(nativeEvent) {
         const tmpResult = initialHidden(_undefined[7])(globalThis.VirtualViewMode.cast(nativeEvent.nativeEvent.mode));
-        obj = {
-          mode: tmpResult,
-          renderState: null,
-          target: nativeEvent.currentTarget,
-          targetRect: nativeEvent.nativeEvent.targetRect,
-          thresholdRect: nativeEvent.nativeEvent.thresholdRect,
-        };
+        obj = { mode: tmpResult, renderState: null, target: nativeEvent.currentTarget, targetRect: nativeEvent.nativeEvent.targetRect, thresholdRect: nativeEvent.nativeEvent.thresholdRect };
         obj.renderState = closure_3 ? VirtualViewRenderState.None : VirtualViewRenderState.Rendered;
         const current = ref.current;
         if (current != null) {
@@ -180,10 +135,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
           if (tmpResult !== globalThis.VirtualViewMode.Prerender) {
             if (tmpResult !== globalThis.VirtualViewMode.Hidden) {
               const _Error = Error;
-              throw Error(
-                "Match: No case succesfully matched. Make exhaustive or add a wildcard case using '_'. Argument: " +
-                  tmpResult,
-              );
+              throw Error("Match: No case succesfully matched. Make exhaustive or add a wildcard case using '_'. Argument: " + tmpResult);
             } else {
               closure_1_5(() => {
                 obj = hiddenStyle(nativeEvent.nativeEvent.targetRect);
@@ -218,19 +170,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
         children = hiddenStyle.children;
       }
       obj2.children = children;
-      return (
-        <__INTERNAL_VIEW_CONFIG
-          initialHidden={initialHidden}
-          nativeID={nativeID}
-          ref={ref}
-          removeClippedSubviews={hiddenStyle.removeClippedSubviews}
-          renderState={null}
-          style={null}
-          onModeChange={null}
-        >
-          {null}
-        </__INTERNAL_VIEW_CONFIG>
-      );
+      return <__INTERNAL_VIEW_CONFIG initialHidden={initialHidden} nativeID={nativeID} ref={ref} removeClippedSubviews={hiddenStyle.removeClippedSubviews} renderState={null} style={null} onModeChange={null}>{null}</__INTERNAL_VIEW_CONFIG>;
     });
   };
   exports._logs = {};

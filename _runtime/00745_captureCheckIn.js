@@ -250,6 +250,10 @@ export const setContext = function setContext(arg0, arg1) {
   const isolationScope = _mod724.getIsolationScope();
   isolationScope.setContext(arg0, arg1);
 };
+export const setConversationId = function setConversationId(arg0) {
+  const isolationScope = _mod724.getIsolationScope();
+  isolationScope.setConversationId(arg0);
+};
 export const setExtra = function setExtra(arg0, arg1) {
   const isolationScope = _mod724.getIsolationScope();
   isolationScope.setExtra(arg0, arg1);

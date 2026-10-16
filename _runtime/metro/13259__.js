@@ -1,13 +1,13 @@
 // _runtime/metro/13259__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/contact_sync/native/images",
-  width: 215.5,
-  height: 135,
+  httpServerLocation: "/assets/modules/age_gate/native/images",
+  width: 274.5,
+  height: 110,
   scales: [2, 3],
-  hash: "fad7ba73a3f13e1d6de72f833c30efc1",
-  name: "header-art-onboarding",
+  hash: "43e5ff0d9ea5f04fe209ebfd15e2d439",
+  name: "nsfw_gate_unavailable",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/14552__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 88,
+  height: 40,
   scales: [2, 3],
-  hash: "ffb75c82f97e39285286ef89f1767a3c",
-  name: "ServerGridIcon",
+  hash: "bb1baaeee62e8a609680d1082f363744",
+  name: "img_gifting_empty",
   type: "png",
 });

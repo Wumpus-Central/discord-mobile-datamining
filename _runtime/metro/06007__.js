@@ -1,13 +1,13 @@
 // _runtime/metro/06007__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "25ba997e1d3e8344c193637ad6eeccd3",
-  name: "img_account_sync_league_of_legends_white",
-  type: "png",
+  hash: "e0157f8261da28670f8ce7828f01db25",
+  name: "img_account_sync_skype_white",
+  type: "svg",
 });

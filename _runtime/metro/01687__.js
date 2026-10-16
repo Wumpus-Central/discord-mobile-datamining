@@ -1,33 +1,52 @@
 // _runtime/metro/01687__.js
-import module_1659_mod from "01659__.js";
+import ReactFabric from "../00116_ReactFabric.js";
+import _mod1669 from "01669__.js";
 
-let module_1659 = module_1659_mod;
-module_1659 = module_1659.shouldBeUseWeb();
-const SymbolResult = Symbol("shareable flag");
-let weakMap = null;
-if (!module_1659) {
-  const _WeakMap = WeakMap;
-  weakMap = new WeakMap();
-}
-const obj = { set: null, get: null };
-if (module_1659) {
-  obj.set = function set() {};
-  obj.get = function get() {
-    return null;
-  };
-  let tmp7 = obj;
-} else {
-  obj.set = function set(arg0, arg1) {
-    let tmp = arg1;
-    if (!arg1) {
-      tmp = SymbolResult;
+require = arg1;
+const dependencyMap = arg6;
+
+export const findHostInstance = function findHostInstance(_componentRef) {
+  _componentRef = _componentRef._componentRef;
+  let tmp;
+  if (_componentRef) {
+    if (_componentRef.__internalInstanceHandle) {
+      if (_componentRef.__nativeTag) {
+        if (!_componentRef.__viewConfig) {
+          tmp = tmp2;
+        }
+      }
+      tmp2 = _componentRef;
     }
-    const result = weakMap.set(arg0, tmp);
-  };
-  const get = weakMap.get;
-  obj.get = get.bind(weakMap);
-  tmp7 = obj;
-}
-
-export const shareableMappingFlag = SymbolResult;
-export const shareableMappingCache = tmp7;
+  }
+  if (undefined === tmp) {
+    (function resolveFindHostInstance_DEPRECATED() {
+      if (undefined === prop) {
+        try {
+          const tmp4 = ReactFabric;
+          prop = undefined;
+          if (tmp4 != null) {
+            if (tmp4.default != null) {
+              prop = _default.findHostInstance_DEPRECATED;
+            }
+          }
+          if (prop == null) {
+            let prop1;
+            if (tmp4 != null) {
+              prop1 = tmp4.findHostInstance_DEPRECATED;
+            }
+            prop = prop1;
+          }
+        } catch (err) {
+          const reanimatedError = new _mod1669.ReanimatedError("Failed to resolve findHostInstance_DEPRECATED");
+          throw reanimatedError;
+        }
+      }
+    })();
+    let _componentRef2 = _componentRef._componentRef;
+    if (_componentRef2 == null) {
+      _componentRef2 = _componentRef;
+    }
+    tmp = React2(_componentRef2);
+  }
+  return tmp;
+};

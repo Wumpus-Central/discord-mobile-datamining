@@ -1,6 +1,6 @@
 // _runtime/metro/00292__.js
 import _modDef38 from "00038__.js";
-import measureDefault from "../00068_measure.js";
+import _modDef68 from "00068__.js";
 import PressabilityPerformanceEventEmitterDefault from "../00293_PressabilityPerformanceEventEmitter.js";
 import SoundManagerDefault from "../00294_SoundManager.js";
 import _classCallCheck from "00041__classCallCheck.js";
@@ -633,7 +633,7 @@ const items = [
       const self = this;
       if (null != this._responderID) {
         if (typeof self._responderID === "number") {
-          measureDefault.measure(self._responderID, self._measureCallback);
+          _modDef68.measure(self._responderID, self._measureCallback);
         } else {
           const _responderID = self._responderID;
           _responderID.measureAsyncOnUI(self._measureCallback);

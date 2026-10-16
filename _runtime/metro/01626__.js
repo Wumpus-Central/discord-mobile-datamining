@@ -1,13 +1,51 @@
 // _runtime/metro/01626__.js
-import registerAsset from "01132__.js";
+import BaseNavigationContainer from "../01508_BaseNavigationContainer.js";
+import get_options from "../01605_get_options.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 64,
-  height: 64,
-  scales: [2, 3],
-  hash: "bf72a3c3e6e6f62a6b213dc37c4f0f29",
-  name: "ic_application_command_built_in",
-  type: "png",
-});
+require = arg1;
+
+export const useRoutePath = function useRoutePath() {
+  const options = noop.useContext(get_options.LinkingContext).options;
+  const stateForPath = BaseNavigationContainer.useStateForPath();
+  if (undefined === stateForPath) {
+    const _Error = Error;
+    const error = new Error(
+      "Couldn't find a state for the route object. Is your component inside a screen in a navigator?",
+    );
+    throw error;
+  } else {
+    let getPathFromState;
+    if (options != null) {
+      getPathFromState = options.getPathFromState;
+    }
+    if (getPathFromState == null) {
+      getPathFromState = BaseNavigationContainer.getPathFromState;
+    }
+    let enabled;
+    if (options != null) {
+      enabled = options.enabled;
+    }
+    const items = [enabled, , ,];
+    let config;
+    if (options != null) {
+      config = options.config;
+    }
+    items[1] = config;
+    items[2] = stateForPath;
+    items[3] = getPathFromState;
+    return noop.useMemo(() => {
+      let enabled;
+      if (options != null) {
+        enabled = options.enabled;
+      }
+      if (false !== enabled) {
+        let config;
+        if (options != null) {
+          config = options.config;
+        }
+        return getPathFromState(stateForPath, config);
+      }
+    }, items);
+  }
+};

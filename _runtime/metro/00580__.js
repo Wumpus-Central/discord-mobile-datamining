@@ -365,13 +365,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = {
-            fired: false,
-            wrapFn: "a",
-            target: "_enabledPaymentMethods",
-            type: "palms_up_together_tone1",
-            listener: "writeInt32LE",
-          };
+          obj = { fired: false, wrapFn: "a", target: 11.5, type: -9.25, listener: 0 };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -398,13 +392,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = {
-            fired: false,
-            wrapFn: "a",
-            target: "_enabledPaymentMethods",
-            type: "palms_up_together_tone1",
-            listener: "writeInt32LE",
-          };
+          obj = { fired: false, wrapFn: "a", target: 11.5, type: -9.25, listener: 0 };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

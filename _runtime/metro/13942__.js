@@ -1,13 +1,13 @@
 // _runtime/metro/13942__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/conjure/presence/native/images",
-  width: 80,
-  height: 80,
-  scales: [1, 2, 3],
-  hash: "147a8fcf8f2b95ff7d26fea87214d381",
-  name: "conjure_activity_dark",
+  httpServerLocation: "/assets/images/native/empties",
+  width: 120,
+  height: 96,
+  scales: [2, 3],
+  hash: "21dd2828907413d4c11bf84cb61743df",
+  name: "search_empty_state_light",
   type: "png",
 });

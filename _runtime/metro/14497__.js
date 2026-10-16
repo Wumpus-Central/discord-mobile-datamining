@@ -1,13 +1,13 @@
 // _runtime/metro/14497__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 177.5,
+  width: 420,
   height: 112,
-  scales: [2, 3],
-  hash: "047720876ededd06daff5402c5798f99",
-  name: "guild_subscription_no_guilds_light",
+  scales: [1, 2, 3],
+  hash: "ac80f7b470e8847053e22e988a30fa87",
+  name: "subscription_placeholder_pattern_dark",
   type: "png",
 });

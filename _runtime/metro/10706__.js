@@ -1,5 +1,5 @@
 // _runtime/metro/10706__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8f839a723b53700388132c9e91d8b71b",
-  name: "ArrowLargeUpIcon",
+  hash: "faa248a786366f008b1ac80b3ae581a2",
+  name: "LockUnlockedIcon",
   type: "png",
 });

@@ -1,18 +1,15 @@
 // _runtime/metro/12385__.js
 
-export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
-  let tmp;
-  if (undefined !== arg0) {
-    if (arg0 < 400) {
-      let str2;
-      if (arg0 >= 500) {
-        str2 = "error";
-      }
-      let str = str2;
-    } else {
-      str = "warning";
+export const severityLevelFromString = function severityLevelFromString(level) {
+  let str = "warning";
+  if ("warn" !== level) {
+    const items = ["fatal", "error", "warning", "log", "info", "debug"];
+    let str2 = "log";
+    if (items.includes(level)) {
+      str2 = level;
     }
-    tmp = str;
+    str = str2;
   }
-  return tmp;
+  return str;
 };
+export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];

@@ -1,5 +1,5 @@
 // _runtime/00690_symbolicateStackTrace.js
-import TurboModuleRegistry from "00873_TurboModuleRegistry.js";
+import TurboModuleRegistry from "00874_TurboModuleRegistry.js";
 
 require = arg1;
 const dependencyMap = arg6;

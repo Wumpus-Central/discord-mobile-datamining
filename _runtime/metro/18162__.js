@@ -1,13 +1,13 @@
 // _runtime/metro/18162__.js
-import registerAsset from "01132__.js";
+import registerAsset from "01134__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/badge",
-  width: 30,
-  height: 30,
-  scales: [2, 3],
-  hash: "394e48046e846651a339ee88e4f1b0b4",
-  name: "ic_profile_badge_active_developer",
+  httpServerLocation: "/assets/modules/voice_panel/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3, 4],
+  hash: "10d4fca455cecd708fd329431845cd33",
+  name: "deafen",
   type: "png",
 });
